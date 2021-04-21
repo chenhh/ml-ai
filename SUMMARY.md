@@ -11,6 +11,7 @@
 
 ## 學習理論 <a id="learning-theory"></a>
 
+* [學習問題](learning-theory/learning-problem.md)
 * [支持向量機 \(SVM, support vector machine\)](learning-theory/support-vector-machine.md)
 
 ## 強化學習 <a id="reinforcement-learning"></a>
@@ -21,8 +22,8 @@
 
 * [Nash均衡](game-theory/nash-equilibrium.md)
 
-## 凸優化
+## 凸優化 <a id="convex-optimization"></a>
 
-* [凸集合 \(convex set\)](tu-you-hua/convex-set.md)
-* [凸函數 \(convex function\)](tu-you-hua/convex-function.md)
+* [凸集合 \(convex set\)](convex-optimization/convex-set.md)
+* [凸函數 \(convex function\)](convex-optimization/convex-function.md)
 

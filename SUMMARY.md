@@ -19,7 +19,7 @@
 
 ## 資訊理論 <a id="information-theory"></a>
 
-* [資訊理論簡介](information-theory/information-theory-introduction.md)
+* [點對點模型與資訊熵](information-theory/p2p-model-entropy.md)
 * [資訊熵\(information entropy\)](information-theory/information-entropy.md)
 
 ## 學習理論 <a id="learning-theory"></a>

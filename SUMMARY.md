@@ -9,6 +9,10 @@
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
 * [隨機過程](probability-and-statistics/random-process.md)
 
+## 時間序列 <a id="time-series"></a>
+
+* [簡介](time-series/time-series-introduction.md)
+
 ## 學習理論 <a id="learning-theory"></a>
 
 * [學習問題](learning-theory/learning-problem.md)

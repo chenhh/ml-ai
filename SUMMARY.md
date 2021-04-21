@@ -7,6 +7,7 @@
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
+* [隨機過程](probability-and-statistics/random-process.md)
 
 ## 學習理論 <a id="learning-theory"></a>
 
@@ -14,11 +15,11 @@
 
 ## 強化學習 <a id="reinforcement-learning"></a>
 
-* [Untitled](reinforcement-learning/untitled.md)
+* [Markov decision process](reinforcement-learning/untitled.md)
 
 ## 賽局理論 <a id="game-theory"></a>
 
-* [Untitled](game-theory/untitled.md)
+* [Nash均衡](game-theory/nash-equilibrium.md)
 
 ## 凸優化
 

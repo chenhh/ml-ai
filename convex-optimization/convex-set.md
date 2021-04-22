@@ -17,3 +17,7 @@
 
 ## 仿射集合\(affine set\)
 
+> definition: affine set
+>
+> C is affine set if
+

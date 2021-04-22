@@ -19,5 +19,5 @@
 
 > definition: affine set
 >
-> C is affine set if
+> $$C$$ is affine set if $$ C = \{ \lambda x_1 + (1-\lambda) x_2 , \forall \lambda \in \mathbb{R}, \forall x_1, x_2 \in X  \} $$.
 

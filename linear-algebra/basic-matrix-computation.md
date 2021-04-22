@@ -9,8 +9,9 @@
 
 ### 矩陣相等
 
-> $$ A=B\in F^{M\times N} \Leftrightarrow 
-> A=[a_{ij}]\in F^{M \times N}, B=[b_{ij}]\in F^{M \times N}, a_{ij} = b_{ij}, \forall i, j$$
+> $$ A=B\in F^{M\times N} \Leftrightarrow $$
+> 
+> $$ A=[a_{ij}]\in F^{M \times N}, B=[b_{ij}]\in F^{M \times N}, a_{ij} = b_{ij}, \forall i, j$$
 
 
 

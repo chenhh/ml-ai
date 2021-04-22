@@ -39,15 +39,10 @@
 
 ## 機率為0的概念
 
-樣本空間是一個機率空間 $$ \displaystyle  (\Omega ,\mathcal{F},P\) $$
+給定機率空間 $$ \displaystyle  (\Omega ,\mathcal{F},P) $$，集合$$\Omega$$的子集構成的sigma-algebra $$\mathcal{F}$$ \(其中的元素為事件 $$A$$\)，
+以及定義在$$\mathcal{F}$$上的機率測度$$P$$應該滿足以下性質：
+* $$ \forall A \in \subseteq \mathcal{F},\ 0 \leq P(A) \leq 1 $$
+* $$ P(\Omega) = 1 $$
+* $$ A_1, A_2 \cdots \in \mathcal{F}, A_i \cap A_j = \phi, \forall i \neq j,\ P(\cup_{i=1}^{\infty} A_i ) = \sum_{i=1}^{\infty} P(A_i)$$
 
-	• 集合Ω的子集構成的sigma-algebra B\(其中的元素叫做事件\)，
-
-	• 以及定義在B上機率測度P應該滿足以下性質.
-
-		○ ∀E∈B, 0≤P\(E\)≤1,
-
-		○ P\(Ω\)=1,
-
-E\_1,E\_2,⋯∈B, E\_i∩E\_j=ϕ, ∀i≠j, P\(∪\_\(i=1\)^∞ E\_i \)=∑\_\(i=1\)^∞▒P\(E\_i \) .
 

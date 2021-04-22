@@ -15,7 +15,9 @@
 
 ## sigma-field \(sigma-algebra\)
 
-> definition: sigma-field 令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
+> definition: sigma-field 
+>
+> 令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
 >
 > * $$\forall A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$$
 > * $$\forall n \in \mathbb{N}, \ A_n \in \mathcal{F} \Rightarrow  \cup_{n=1}^{\infty} A_n \in \mathcal{F}\  \text{and}\ \cap_{n=1}^{\infty}A_n \in \mathcal{F}$$

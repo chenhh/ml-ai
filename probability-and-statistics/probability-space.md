@@ -15,10 +15,14 @@
 
 令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
 
+> 令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
+
 * $$\forall A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$$
 * $$\forall n \in \mathbb{N}, \ A_n \in \mathcal{F} \Rightarrow  \cup_{n=1}^{\infty} A_n \in \mathcal{F}\  \text{and}\ \cap_{n=1}^{\infty}A_n \in \mathcal{F}$$
 
-滿足以上兩條件的集合$$\mathcal{F}$$稱為sigma-field.
+滿足以上兩條件的集合$$\mathcal{F}$$稱為sigma-field。
+
+
 
 * 由以上定義可知空集合和宇集合都是sigma-field的元素，即 $$\phi,\ \Omega \in \mathcal{F}$$。
 * 一個非空集合$$\Omega$$的冪集合必為sigma-field。

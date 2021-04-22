@@ -35,6 +35,7 @@
 
 ## 賽局理論 <a id="game-theory"></a>
 
+* [賽局數學模型](game-theory/game-theory-model.md)
 * [Nash均衡](game-theory/nash-equilibrium.md)
 
 ## 凸優化 <a id="convex-optimization"></a>

@@ -19,5 +19,7 @@
 
 > definition: affine set
 >
-> $$C$$ is affine set if $$ C = \{ \lambda x_1 + (1-\lambda) x_2 , \forall \lambda \in \mathbb{R}, \forall x_1, x_2 \in X  \} $$.
+> $$C$$ is affine set if $$C = \{ \lambda x_1 + (1-\lambda) x_2 , \forall \lambda \in \mathbb{R}, \forall x_1, x_2 \in X \}$$.
+
+$$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_1, x_2$$形成的直線，而非線段。
 

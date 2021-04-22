@@ -11,20 +11,24 @@
 * 因此若$$A \in \mathcal{F}$$，則 $$A^c\in \mathcal{F}$$
 * 若$$A,B \in \mathcal{F}$$, 則 $$A \cup B,\ A\cap B \in \mathcal{F}$$
 
-## definition: sigma-field \(sigma-algebra\)
-
+# sigma-field \(sigma-algebra\)
+> definition: sigma-field
 > 令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
 > * $$\forall A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$$
 > * $$\forall n \in \mathbb{N}, \ A_n \in \mathcal{F} \Rightarrow  \cup_{n=1}^{\infty} A_n \in \mathcal{F}\  \text{and}\ \cap_{n=1}^{\infty}A_n \in \mathcal{F}$$
 > 滿足以上兩條件的集合$$\mathcal{F}$$稱為sigma-field。
 
-
-
 * 由以上定義可知空集合和宇集合都是sigma-field的元素，即 $$\phi,\ \Omega \in \mathcal{F}$$。
 * 一個非空集合$$\Omega$$的冪集合必為sigma-field。
 * 例 $$\Omega={1,2,3,4,5,6}$$， 則$$\mathcal{F}_1=\{\phi,\Omega, \{1\}, \{2,3,4,5,6\}\}$$, $$\mathcal{F}_2=\{\phi, \Omega, \{1,3,5\}, \{2,4,6\}\}$$均為sigma-field.
 
-### Borel集合
+## Borel集合
 
 $$\Omega=\mathbb{R}=(−\infty,\infty)$$，則存在一包含所有開區間$$(a,b) -\infty < a < b < \infty$$的sigma-field，記為$$\mathcal{B}$$，而任一集合$$A \in \mathcal{B}$$稱為Borel集合。
+
+# 測度(measure)
+> Definition: mesure
+> 假設$$\Omega$$為非空集合，$$\mathcal{F}$$為$$\Omega$$子集合形成之sigma-field。
+> 若函數$$\mu:\mathcal{F} \rightarrow [0, \infty\)$$ 滿足
+> *	$$\forall A_1, A_2, \cdots \in \mathcal{F} \ A_i \cap A_j =\phi,\ \forall i \neq j $$, $$ \mu(\cup_{i=1}^{\infty} A_i )=\sum_{i=1}^{\infty}\mu(A_i) $$。即對互斥子集合聯合的測度等於各別子集合測度的加總，則稱$$\mu\(\cdot\)$$為測度。
 

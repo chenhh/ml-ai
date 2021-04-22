@@ -26,7 +26,7 @@
 $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_1, x_2$$形成的直線，而非線段。因此 $$C$$ 為集合$$X$$中任意兩點的直線集合。
 
 * 例：線性方程式的解集合 $$\{\mathbf{x}\ \vert \ \mathbf{Ax = b} \}$$。
-* 例：歐式空間$$\mathbb{R}^3$$中的平面以及空集合$\phi$。
+* 例：歐式空間$$\mathbb{R}^3$$中的平面以及空集合$$\phi$$。
 
 凸集是在仿射集的定義中，對$$\lambda$$的範圍進行了限定，導致的結果是:仿射集要求的是集合中經過任意兩點的直線上的任意點都在集合中；而，凸集只是要求連接任意集合中兩點的線段上的點在集合中；所以對凸集定義比仿射集的定義更加苛刻，但是條件更加的苛刻不等於就是子集，不等於他們就是同一類。
 
@@ -36,7 +36,8 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 
 > definition: spanning set S
 >
-> $$span(S) = {\mathbf{v} \ \vert \ \mathbf{v} \text{ is a linear combination of set } S}$$. i.e. $$\forall \mathbf{v}_1, \mathbf{v}_2, \cdots, \mathbf{v}_n \in V$$, $$\lambda_1, \lambda_2, \cdots, \lambda_n \in F$$, $$\mathbf{v} = \sum_{i=1}^n \lambda_i \mathbf{v}_i$$.
+> * $$ span(S) = \{\mathbf{v} \ \vert \ \mathbf{v} \text{ is a linear combination of set } S\}$$. 
+> * i.e. $$\forall \mathbf{v}_1, \mathbf{v}_2, \cdots, \mathbf{v}_n \in V$$, $$\lambda_1, \lambda_2, \cdots, \lambda_n \in F$$, $$\mathbf{v} = \sum_{i=1}^n \lambda_i \mathbf{v}_i$$.
 
 向量空間$$V$$的子空間$$S$$為滿足線性組合封閉性的空間, 即 $$\forall \lambda\_1, \lambda\_2 \in F, u,v \in S, \lambda\_1 u + \lambda\_2 v \in S$. 而$$S$$為子空間的必要條件是：
 

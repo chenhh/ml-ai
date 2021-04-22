@@ -2,6 +2,15 @@
 
 * [機器學習與人工智慧](README.md)
 
+## 數學分析
+
+* [自然數](shu-xue-fen-xi/natural_number.md)
+* [實數](shu-xue-fen-xi/real-number.md)
+
+## 線性代數 <a id="linear-algebra"></a>
+
+* [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
+
 ## 機率與統計 <a id="probability-and-statistics"></a>
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
@@ -42,13 +51,4 @@
 
 * [凸集合 \(convex set\)](convex-optimization/convex-set.md)
 * [凸函數 \(convex function\)](convex-optimization/convex-function.md)
-
-## 線性代數 <a id="linear-algebra"></a>
-
-* [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
-
-## 數學分析
-
-* [自然數](shu-xue-fen-xi/natural_number.md)
-* [實數](shu-xue-fen-xi/real-number.md)
 

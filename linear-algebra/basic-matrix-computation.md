@@ -87,7 +87,7 @@ $$A,B, C\in F^{M\times N}, a,b\in F$$ 可得
 * $$(A^{\mathrm{H}})^{\mathrm{H}} = A$$
 * $$(AB)^{\mathrm{H}} = B^{\mathrm{H}} A^{\mathrm{H}}$$
 
-## 對稱矩陣
+## 對稱矩陣\(symmetric matrix\)
 
 * $$A = [a_{ij}]\in F^{M\times M}$$\(必須為方陣\)
 * symmetric matrix $$A^{\top} = A$$

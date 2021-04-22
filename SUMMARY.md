@@ -47,3 +47,7 @@
 
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
 
+## 數學分析
+
+* [自然數](shu-xue-fen-xi/natural_number.md)
+

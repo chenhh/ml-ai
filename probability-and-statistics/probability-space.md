@@ -26,5 +26,5 @@
 
 ### Borel集合
 
-$$ \Omega=\mathbb{R}=\(−\infty,\infty\)$$，則存在一包含所有開區間$$\(a,b\)  -\infty \leq a \leq b \leq \infty$$的sigma-field，記為$$\mathcal{B}$$，而任一集合$$A \in \mathcal{B}$$稱為Borel集合。
+$$\Omega=\mathbb{R}=(−\infty,\infty)$$，則存在一包含所有開區間$$(a,b) -\infty < a < b < \infty$$的sigma-field，記為$$\mathcal{B}$$，而任一集合$$A \in \mathcal{B}$$稱為Borel集合。
 

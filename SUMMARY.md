@@ -4,7 +4,7 @@
 
 ## 數學分析
 
-* [集合論](shu-xue-fen-xi/set.md)
+* [集合](shu-xue-fen-xi/set.md)
 * [自然數](shu-xue-fen-xi/natural_number.md)
 * [實數](shu-xue-fen-xi/real-number.md)
 

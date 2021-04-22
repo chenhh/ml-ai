@@ -13,16 +13,22 @@
 
 ## definition: sigma-field \(sigma-algebra\)
 
----------------------------------------------------------------------
-|
-|令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
-|
-| * $$\forall A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$$
-| * $$\forall n \in \mathbb{N}, \ A_n \in \mathcal{F} \Rightarrow  \cup_{n=1}^{\infty} A_n \in \mathcal{F}\  \text{and}\ \cap_{n=1}^{\infty}A_n \in \mathcal{F}$$
-|
-| 滿足以上兩條件的集合$$\mathcal{F}$$稱為sigma-field.
-|
----------------------------------------------------------------------
+令 $$\Omega$$為樣本空間，當集合 $$\mathcal{F}$$滿足
+
+ * $$\forall A \in \mathcal{F} \Rightarrow A^c \in \mathcal{F}$$
+ * $$\forall n \in \mathbb{N}, \ A_n \in \mathcal{F} \Rightarrow  \cup_{n=1}^{\infty} A_n \in \mathcal{F}\  \text{and}\ \cap_{n=1}^{\infty}A_n \in \mathcal{F}$$
+
+滿足以上兩條件的集合$$\mathcal{F}$$稱為sigma-field.
+
+* 由以上定義可知空集合和宇集合都是sigma-field的元素，即 $$\phi,\ \Omega \in \mathcal{F}$$。
+* 一個非空集合$$ \Omega $$的冪集合必為sigma-field。
+* 例 $$\Omega={1,2,3,4,5,6} $$， 則$$ \mathcalF}_1={\phi,\Omega, {1}, {2,3,4,5,6}}$$, $$\mathcal{F}_2={\phi, \Omega, {1,3,5}, {2,4,6}}$$均為sigma-field.
+
+
+### Borel集合
+##\Omega=\mathbb{R}=(−\infty,\infty)$$，則存在一包含所有開區間$$(a,b) \ -\infty < a < b< \infty$的sigma-field，記為$$\mathcal{B}$$，而任一集合$$A \in \mathcal{B}$$稱為Borel集合。
+
+
 
 
 

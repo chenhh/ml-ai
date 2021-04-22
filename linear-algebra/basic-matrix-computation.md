@@ -37,3 +37,36 @@
 >
 > $$C = AB \Leftrightarrow c_{ij} = \sum_{k=1}^N a_{ik}b_{kj}, \forall i,j$$.
 
+## 矩陣計算性質
+
+$$A,B, C\in F^{M\times N}, a,b\in F $$ 可得
+
+* $$A+B = B+A$$
+* $$(A+B)+C = (A+B)+C$$
+* $$ A+O = A = O+A$$
+* $$A+(-A) = O = (-A) + A$$
+* $$(a+b)A = aA+ bA$$
+* $$(ab)A = a(bA)$$
+* $$a(A+B) = aA + aB$$
+* $$(-1)A = -A$$
+* $$0A = O$$
+* $$aO = O$$
+
+矩陣大小不同時
+
+* $$(AB)C = A(BC), \ A\in F^{M\times N}, B\in F^{N\times P}, C\in F^{P \times Q}$$
+* $$A(B \pm C) = AB \pm AC, \ A\in F^{M\times N}, B, C\in F^{N\times P}$$
+* $$ (A \pm B) C = AC \pm BC,\ A,B \in F^{M \times N}, C \in F^{N\times P}$$
+* $$ A I_N=A, A\in F^{M\times N} $$
+* $$I_M A = A,\ A \in F^{M\times N}$$
+* $$a(AB)=(aA)B=A(aB), \ A\in F^{M \times N}, B \in F^{N \times P}, a \in F$$
+
+### 注意
+
+* $$AB$$不保證等於 $$BA$$
+* $$A^n =0$$不保證 $$A=0$$。如$$ A=\begin{bmatrix} 0 & 0 \\ 0 & 1  \end{bmatrix}$$
+* $$A^2 = A$$不保證 $$A=I$$。如 $$A=\begin{bmatrix} 1 & 0 \\ 0 & 0  \end{bmatrix}$$
+* $$A \neq O$$且 $$B \neq O$$不保證 $$AB \neq O$$。如$$ A= \begin{bmatrix} 0 & 0 \\ 1 & 0  \end{bmatrix}, B=\begin{bmatrix} 0 & 0 \\ 2 & 0  \end{bmatrix}, AB=O$$
+* $$AB=AC$$且 $$A \neq O$$不保證 $$B=C$$，即不具消去性。如 $$A=\begin{bmatrix} 1 & 0 \\ 2 & 0  \end{bmatrix}, B=\begin{bmatrix} 1 & 2 \\ 0 & 0  \end{bmatrix}, C=\begin{bmatrix} 1 & 2 \\ 1 & 1  \end{bmatrix}$$
+* $$(A+B)^2 = A^2 + 2AB + B^2$$只在  $$AB=BA$$時成立。
+

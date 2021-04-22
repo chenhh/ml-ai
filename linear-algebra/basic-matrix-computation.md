@@ -72,9 +72,9 @@ $$A,B, C\in F^{M\times N}, a,b\in F $$ 可得
 
 ## 轉置\(transpose\)、共軛轉置\(conjugate transpose\)矩陣
 
-* $$A = [a_{ij}]\in F^{M\times N}$$
-* transpose $$A^{\top} = [b_{ij}] \in F^{N \times N}, b_{ij} = a_{ji}, \ \forall i, j$$
-* conjugate transpose $$ A^{\mathrm {H}} = [b_{ij}] \in F^{N \times M}, b_{ij} = \overline{a_{ji}}, \forall i, j$$
+> * $$A = [a_{ij}]\in F^{M\times N}$$
+> * transpose $$A^{\top} = [b_{ij}] \in F^{N \times N}, b_{ij} = a_{ji}, \ \forall i, j$$
+> * conjugate transpose $$ A^{\mathrm {H}} = [b_{ij}] \in F^{N \times M}, b_{ij} = \overline{a_{ji}}, \forall i, j$$
 
 可得 $$A^{\mathrm{H}} = \overline{A}^{\top} = \overline{A^{\top}}$$
 

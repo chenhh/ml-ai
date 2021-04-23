@@ -1,5 +1,15 @@
 # 實數
 
+## 簡介
+
+分析數學中的主要概念，如收斂性、微分與積分等，對其討論時，必定都將追溯到實數系的基本性質。	• 我們需證明實數集合$$\mathbb{R}$$ 為一個具有完備性的有序體\(complete ordered field\)。
+
+![&#x5BE6;&#x6578;&#x4E2D;&#x7684;&#x96C6;&#x5408;](../.gitbook/assets/real_number_sets-min.png)
+
+
+
+
+
 ## 整數\(integer\)
 
 * 整數集合 $$\mathbb{Z} = \{ \cdots, -2, -1, 0, 1, 2, \cdots \} $$

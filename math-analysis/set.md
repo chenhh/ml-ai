@@ -51,17 +51,3 @@ the Cartesian product $$A\times B=\{ (a,b) \ \vert \ \forall a \in A, b\forall b
 
 給定一群基底集合，則由此基底集合所構成的空間中的任意集合，必須可以用此基底集合的\(有限或無限\)聯集\(union\)、交集\(intersection\)、補集\(complement\)操作所得出。
 
-
-
-
-
-## 
-
-
-
-## 
-
-
-
-
-

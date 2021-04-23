@@ -21,6 +21,16 @@
 
 如 $$X=\{1,2,3\}, Y=\{a,b,c,d\} $$，$$\{1\rightarrow a, 2 \rightarrow b, 3 \rightarrow c\}$$ 為1-1映射，但不是onto映射。
 
+### 等勢集合
+
+$$|X| = |Y| $$稱為等勢若且唯若集合$$X$$與$$Y$$之間存在一對一且映成\(雙射, bijections\)的函數。
+
+###  Cantor-Bernstein-Schroeder定理
+
+兩集合$$X, Y$$ 若 $$|X| \leq |Y|$$且 $$|X| \geq |Y| \Leftrightarrow |X| = |Y|$$
+
+
+
 
 
 

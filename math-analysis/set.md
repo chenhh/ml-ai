@@ -44,9 +44,18 @@ the Cartesian product $$A\times B=\{ (a,b) \ \vert \ \forall a \in A, b\forall b
 
 * 補集\(complement\)。$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
 * 差集\(difference\)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
+
   * $$ X\setminus Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
 
+## 布林代數與sigma field\(algebra\)
 
+給定一群基底集合，則由此基底集合所構成的空間中的任意集合，必須可以用此基底集合的\(有限或無限\)聯集\(union\)、交集\(intersection\)、補集\(complement\)操作所得出。
+
+
+
+
+
+## 
 
 
 

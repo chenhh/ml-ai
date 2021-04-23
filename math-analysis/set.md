@@ -22,6 +22,35 @@ the Cartesian product $$A\times B=\{ (a,b) \ \vert \ \forall a \in A, b\forall b
 
 * 聯集\(union\): 屬於任一個集合的元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
 * 交集\(intersection\): 同時屬於所有集合的元素。$$X \cup Y= \{z \vert  z \in X \land z \in Y\}$$
+* 多集合的聯集: 元素只須存在於某一個集合。$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
+
+
+
+* 多集合的交集: 元素必須存在於所有的集合。 $$\cap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$
+* 
+  交換律 \(commutative law\)。 $$X \cup Y = Y \cup X$$， $$X\cap Y = Y \cap X$$
+
+* 結合律 \(associative law\)。$$(X \cup Y) \cup Z = X \cup (Y \cup Z)$$，$$ (X \cap Y) \cap Z = X \cap (Y \cap Z)$$
+* 
+
+
+  分配律 \(distributive law\)。$$ X \cap (\cup_{i \in I} Y_i) = \cup_{i \in I} (X \cap Y_i)$$，$$ X \cup (\cap_{i \in I} Y_i) = \cap_{i \in I} (X \cup Y_i)$$
+
+* 吸收律\(absorb law\)。 $$X\cup(X\cap Y) = X$$， $$ X \cap (X \cup Y) = X$$
+
+## 差集與補集運算\(difference and complement\)
+
+令$$U$$為宇集合\(universal set\)，即為全部元素的集合。
+
+* 補集\(complement\)。$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
+* 差集\(difference\)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
+  * $$ X\setminus Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
+
+
+
+
+
+## 
 
 
 

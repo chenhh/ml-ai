@@ -4,8 +4,8 @@
 
 ## 數學分析 <a id="math-analysis"></a>
 
-* [集合](math-analysis/set.md)
-* [基數](math-analysis/cardinal-number.md)
+* [集合](math-analysis/set/README.md)
+  * [基數](math-analysis/set/cardinal-number.md)
 * [自然數](math-analysis/natural_number.md)
 * [實數](math-analysis/real-number.md)
 

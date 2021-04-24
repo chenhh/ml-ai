@@ -11,6 +11,8 @@ $$\mathbb{N}$$為自然數集合，$$\mathbb{Z}$$為整數集合，$$\mathbb{Q}$
 * $$\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{A}_R \subset \mathbb{R} \subset \mathbb{C}$$
 * $$\mathbb{Q} \cup \mathbb{\Gamma} = \mathbb{R}$$ and $$\mathbb{Q} \cap \mathbb{\Gamma} = \emptyset$$
 * $$\mathbb{A}_R \cup \mathbb{T}_R = \mathbb{R}$$and $$\mathbb{A}_R \cap \mathbb{T}_R= \emptyset$$
+* $$\mathbb{Q} \subset \mathbb{A}_R$$
+* $$\mathbb{T}_R \subset \mathbb{\Gamma}$$
 
 ![&#x5BE6;&#x6578;&#x4E2D;&#x7684;&#x96C6;&#x5408;](../.gitbook/assets/real_number_sets-min.png)
 

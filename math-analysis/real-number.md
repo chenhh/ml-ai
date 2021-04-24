@@ -27,5 +27,25 @@
 
 有理數的有限個數十進位表示法$$ r = a_0 + \frac{a_1}{10}+\frac{a_2}{10^2}+\cdots + \frac{a_n}{10^n}=a_0.a_1a_2\cdots a_n, a_0 \in \mathbb{Z}, a_1,\cdots, a_n \in \{0,1,2,\cdots, 9\}$$
 
+## 無理數 \(irrational number\)
+
+* 無理數即實數中，無法表示為有理數之數，定義為集合$$\mathbb{\Gamma}$$。
+* 
+  任一無理數均可表示為不循環的小數。
+
+* 實數為有理數與無理數的聯集，$$\mathbb{R} = \mathbb{Q} \cup \mathbb{\Gamma}$$ 且$$ \mathbb{Q} \cap \mathbb{\Gamma} = \emptyset$$。
+
+無理數主要有以下三種定義方法：
+
+* \[最常見且直覺\] Dedekind以分劃\(cut\)定義無理數。
+* Cantor以收斂有理數數列定義無理數 \(converge sequence of rational numbers\)。
+* Weierstrass以nested interval定義無理數。
+
+
+
+
+
+## 
+
 
 

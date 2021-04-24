@@ -7,7 +7,7 @@
 * [集合](math-analysis/set/README.md)
   * [基數](math-analysis/set/cardinal-number.md)
 * [自然數](math-analysis/natural_number.md)
-* [實數](math-analysis/real-number.md)
+* [實數中的集合](math-analysis/real-number.md)
 
 ## 線性代數 <a id="linear-algebra"></a>
 

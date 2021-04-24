@@ -12,8 +12,10 @@
 
 ## 整數\(integer\)
 
-* 整數集合 $$\mathbb{Z} = \{ \cdots, -2, -1, 0, 1, 2, \cdots \} $$
+* 整數集合 $$\mathbb{Z} = \{ \cdots, -2, -1, 0, 1, 2, \cdots \}  = - \mathbb{N} \cup \{0\} \cup \mathbb{N}$$
 * 可以處理$$ a−b,  a<b  \text{ and } a, b \in \mathbb{N}$$ 擴展定義
+* 由定義可得自然數為整數的子集合，$$\mathbb{N} \subset \mathbb{Z}$$。
+* 雖然自然數為整數的子集合，但因為兩者均為無限集合，且兩者可找出一對一且映成的函數，所以兩集合元素個數相等，$$| \mathbb{N} | = | \mathbb{Z} |$$。
 
 ## 有理數\(rational number\)
 

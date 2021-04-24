@@ -13,16 +13,6 @@
 
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
 
-## 機率與統計 <a id="probability-and-statistics"></a>
-
-* [機率的解釋](probability-and-statistics/definition-of-probability.md)
-* [機率空間](probability-and-statistics/probability-space.md)
-* [離散分佈](probability-and-statistics/discrete-distribution.md)
-* [連續分佈](probability-and-statistics/continuous-distribution.md)
-* [假設檢定](probability-and-statistics/hypothesis-test.md)
-* [隨機過程](probability-and-statistics/random-process.md)
-* [關聯結構, copula](probability-and-statistics/copula.md)
-
 ## 時間序列 <a id="time-series"></a>
 
 * [簡介](time-series/time-series-introduction.md)

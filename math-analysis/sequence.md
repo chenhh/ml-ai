@@ -30,6 +30,10 @@ $$\lim_{n \rightarrow \infty} a_n = a$$ converge $$ \Leftrightarrow $$$$\forall 
 
 take $$i \geq n_0$$then $$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon$$ \(QED\)
 
+### 數列奇數項與偶數項收斂至同一值，則數列數斂
+
+> $$\lim_{n \rightarrow \infty} a_{2n} = a$$and $$\lim_{n \rightarrow \infty} a_{2n+1} = a$$ $$\Rightarrow $$$$\lim_{n \rightarrow \infty} a_n = a$$
+
 ### 
 
 

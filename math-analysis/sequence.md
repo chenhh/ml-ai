@@ -2,9 +2,11 @@
 
 ## 收斂與發散數列
 
-> \[收斂數列\]$$ {a_n} \subseteq \mathbb{R}$$ and $$\lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon \forall n \geq n_0$$
+> \[收斂數列\]$$ {a_n} \subseteq \mathbb{R}$$ and $$\lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon\ \forall n \geq n_0$$
 >
 > 如果$${a_n}$$不是收斂數列\(convergent sequence\)，則為發散數列\(divergent sequence\)。
+
+![&#x6536;&#x6582;&#x6578;&#x5217;&#x6703;&#x5728;&#x6536;&#x6582;&#x503C;&#x9644;&#x8FD1;&#x8D8A;&#x7E2E;&#x8D8A;&#x8FD1;](../.gitbook/assets/limit_sequence-min.png)
 
 ### 收斂數列的四則運算仍為收斂數列
 

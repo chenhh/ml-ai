@@ -18,5 +18,17 @@ $$\lim_{n \rightarrow \infty} a_n = a$$  and $$\lim_{n \rightarrow \infty} b_n =
 
 可由收斂數列的定義簡單得出。
 
+### 收斂數列的子數列必為收斂數列
+
+> $$\lim_{n \rightarrow \infty} a_n = a$$converge $$\Rightarrow$$$$\lim_{i \rightarrow \infty} a_{n_i}=a$$converge
+
+proof:
+
+$$\lim_{n \rightarrow \infty} a_n = a$$ converge $$ \Leftrightarrow $$$$\forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n - a| < \epsilon, \ \forall n \geq n_0$$
+
+take $$i \geq n_0$$then $$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon$$ \(QED\)
+
+### 
+
 
 

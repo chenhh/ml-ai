@@ -21,6 +21,8 @@ $$\lim_{n \rightarrow \infty} a_n = a$$  and $$\lim_{n \rightarrow \infty} b_n =
 ### 收斂數列的子數列必為收斂數列
 
 > $$\lim_{n \rightarrow \infty} a_n = a$$converge $$\Rightarrow$$$$\lim_{i \rightarrow \infty} a_{n_i}=a$$converge
+>
+> 反向不成立，因為子數列可能是從發散數列中得出。
 
 proof:
 

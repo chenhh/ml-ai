@@ -34,6 +34,12 @@ take $$i \geq n_0$$then $$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon
 
 > $$\lim_{n \rightarrow \infty} a_{2n} = a$$and $$\lim_{n \rightarrow \infty} a_{2n+1} = a$$ $$\Rightarrow $$$$\lim_{n \rightarrow \infty} a_n = a$$
 
+proof:
+
+$$ \forall \epsilon > 0 \  \exists n_0 \in \mathbb{N} \ni |a_{2n} - a| < \epsilon,  \forall 2n \geq n_0$$and $$ \exists n_1 \in \mathbb{N} \ni |a_{2n+1} - a| < \epsilon,  \forall 2n+1 \geq n_1$$
+
+take $$n_3=2n_0+2n_1+1$$ then $$|a_n - a| < \epsilon\  \forall n \geq n_3$$\(QED\)
+
 ### 
 
 

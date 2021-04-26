@@ -30,6 +30,8 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 ![&#x51FD;&#x6578;&#x503C;&#x5FC5;&#x552F;&#x4E00;&#xFF0C;&#x53EF;&#x70BA;&#x4E00;&#x5C0D;&#x4E00;&#x6216;&#x591A;&#x5C0D;&#x4E00;&#xFF0C;&#x4F46;&#x4E0D;&#x53EF;&#x70BA;&#x4E00;&#x5C0D;&#x591A;&#x95DC;&#x4FC2;](../.gitbook/assets/function-min%20%281%29.png)
 
+• 以$$x$$軸做垂直線，如果一個映射$$f$$對映的$$f(x)$$有兩點以上，則$$f$$不滿足函數的定義。
+
 ![&#x7E6A;&#x5716;&#x5F8C;&#xFF0C;&#x5BB9;&#x6613;&#x5224;&#x65B7;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E00;&#x5C0D;&#x591A;&#x7684;&#x95DC;&#x4FC2;](../.gitbook/assets/not_function-min.png)
 
 

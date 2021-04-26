@@ -2,7 +2,9 @@
 
 ## 收斂與發散數列
 
-> \[收斂數列\]$$ {a_n} \subseteq \mathbb{R}$$ and $$\lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon\ \forall n \geq n_0$$
+> definition: 收斂數列
+>
+> $$ {a_n} \subseteq \mathbb{R}$$ and $$\lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon\ \forall n \geq n_0$$
 >
 > 如果$${a_n}$$不是收斂數列\(convergent sequence\)，則為發散數列\(divergent sequence\)。
 
@@ -39,6 +41,14 @@ proof:
 $$ \forall \epsilon > 0 \  \exists n_0 \in \mathbb{N} \ni |a_{2n} - a| < \epsilon,  \forall 2n \geq n_0$$and $$ \exists n_1 \in \mathbb{N} \ni |a_{2n+1} - a| < \epsilon,  \forall 2n+1 \geq n_1$$
 
 take $$n_3=2n_0+2n_1+1$$ then $$|a_n - a| < \epsilon\  \forall n \geq n_3$$\(QED\)
+
+## 有界數列 \(bounded sequence\)
+
+> definition: 有界數列
+>
+> if $$\exists M \in \mathbb{R} \ni a_n \leq M , \forall n$$then $$\{ a_n \}$$be a bounded sequence.
+
+
 
 ### 
 

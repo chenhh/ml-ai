@@ -10,7 +10,7 @@
 * 任一數$$a$$必定是屬於集合$$S$$或是不屬於集合$$S$$，只能有一成立\(true or false，為一命題\)。
 * 兩集合$$S,Q$$相等，即$$S = Q \Leftrightarrow S \subseteq Q \land Q \subseteq S$$。
   * note: 集合中的元素無順序性，$$\therefore \{ 1, 2, 3,4, 5\} = \{ 2, 1, 4, 5, 3\}$$
-  * 
+  * 集合中的重複元素只算一個，$$\therefore \{ 1,2, 1, 2, 3, 4,5\} = \{ 1,2,3,4,5\}$$
 
 ## 卡式積\(Cartesian product\)
 

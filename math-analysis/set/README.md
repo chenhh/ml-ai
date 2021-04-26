@@ -8,6 +8,9 @@
 * 符合此條件的每個數$$a$$均屬於此集合，記為$$a \in S$$。
 * 不符合此條件的每個數$$b$$均不屬於此集合，記為$$b \not \in S$$。
 * 任一數$$a$$必定是屬於集合$$S$$或是不屬於集合$$S$$，只能有一成立\(true or false，為一命題\)。
+* 兩集合$$S,Q$$相等，即$$S = Q \Leftrightarrow S \subseteq Q \land Q \subseteq S$$。
+  * note: 集合中的元素無順序性，$$\therefore \{ 1, 2, 3,4, 5\} = \{ 2, 1, 4, 5, 3\}$$
+  * 
 
 ## 卡式積\(Cartesian product\)
 

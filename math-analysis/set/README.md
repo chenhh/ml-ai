@@ -40,11 +40,14 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
 
 ## 聯集與交集運算\(intersection and union\)
 
-令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合\(index set\)\(有限或無窮多個\)。
+令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合\(index set\)\(有限或無窮多個\)，$$U$$為包含$$X,Y$$的宇集合。
 
 * 聯集\(union\): 屬於任一個集合的元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
   * $$X\cup X = X \cup \emptyset = \emptyset \cup X = X$$
+  * $$X \cup U = U$$
 * 交集\(intersection\): 同時屬於所有集合的元素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
+  * $$X \cap \emptyset = \emptyset$$
+  * $$X\cap X  = X \cap U= X$$
 * 多集合的聯集: 元素只須存在於某一個集合。$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
 
 
@@ -66,6 +69,9 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
 令$$U$$為宇集合\(universal set\)，即為全部元素的集合。
 
 * 補集\(complement\)。$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
+  * $$X^c = U \setminus X$$
+  * $$ X \cup X^c = U$$
+  * $$X \cap X^c = \emptyset$$
 * 差集\(difference\)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
   * $$ X\setminus Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
 
@@ -78,8 +84,6 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
 * $$X \subseteq Y$$and $$Y \subseteq Z$$then $$ X\subseteq Z$$。
 * $$ X \subseteq Y$$ and $$Y \subseteq X$$$$\Leftrightarrow$$ $$Ｘ=Y$$。
 * 元素屬於集合，但不是子集合。如$$2 \in \{1,2,3\}$$but $$ 2 \subsetneq \{1,2,3\}$$。須改為 $$\{2\} \subseteq \{1,2,3\}$$。因為2為元素，而$$\{2\}$$是集合。
-
-
 
 ## 布林代數與sigma field\(algebra\)
 

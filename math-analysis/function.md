@@ -34,5 +34,21 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 ![&#x7E6A;&#x5716;&#x5F8C;&#xFF0C;&#x5BB9;&#x6613;&#x5224;&#x65B7;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E00;&#x5C0D;&#x591A;&#x7684;&#x95DC;&#x4FC2;](../.gitbook/assets/not_function-min.png)
 
+### 一對一與映成函數\(one-to-one and mapping function\)
+
+一對一和映成函數可判斷兩集合\(定義域和對應域\)的勢，詳見[基數](set/cardinal-number.md#shi-yong-han-shu-pan-duan-ji-he-shi-de-da-xiao)。
+
+* 一對一函數\(單射\)\(one-to-one function, injection\)
+  * $$\forall x,y\in X, \ f(x)=f(y) \Rightarrow x = y$$
+  * 等價於 $$\forall x,y \in X, x\neq y \Rightarrow f(x) \neq f(y)$$
+  * 可保證值域和定義域等勢，$$|f(X)| = |X|$$，因此對應域的勢大於等於定義域，即 $$ |X| \leq |Y|$$。
+* 映成函數\(滿射\)\(onto function,  surjection\)
+  * $$\forall y \in Y \ \exists x \in X \ni f(x)=y$$
+  * 等價於 $$\forall y \in Y, f^{-1}(y) \subseteq X \neq \emptyset$$
+  * 對應域中每一個元素都被對應到，因此值域等於對應域，即$$|f(X)| = |Y|$$。
+  * 可保證對應域每一個元素都被對應，但可能是多對一的關係，因此定義域的勢大於等於對應域，即$$|X| \geq |Y|$$。
+
+
+
 
 

@@ -20,3 +20,11 @@ note: relation比function更一般化，因為可為一對多的對應。
 
 e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x-y) \}$$為等價關係。
 
+## 函數 \(function\)
+
+> $$X,Y$$為兩集合\(相同或相異均可\)，函數$$f: X \rightarrow Y$$定義對於$$X$$中的每一個元素$$x$$，均存在唯一的函數值$$f(x) \in Y$$。$$\forall x \in X, \exists! y \in Y \ni f(x)=y$$
+>
+> * $$X$$為函數$$f$$的定義域\(domain\)。
+> * $$Y$$為函數$$f$$的對應域\(codomain\)。
+> * $$f(X) = \{ f(x), x\in X \} \subseteq Y$$為函數$$f$$的值域，其中等號成立於$$f$$為映成函數。
+

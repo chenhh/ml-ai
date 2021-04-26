@@ -74,6 +74,9 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
   * $$X \cap X^c = \emptyset$$
 * 差集\(difference\)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
   * $$ X\setminus Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
+* De Morgan law:
+  *  $$U \setminus  (X \cup Y) = (U \setminus X) \cap (U \setminus Y)$$
+  * $$U \setminus (X \cap Y) = (U \setminus X) \cup (U \setminus Y)$$
 
 ## 子集合\(subset\)
 

@@ -7,11 +7,11 @@
 * [集合](math-analysis/set/README.md)
   * [基數](math-analysis/set/cardinal-number.md)
   * [無限集合](math-analysis/set/infinite_set.md)
+  * [函數\(function\)](math-analysis/set/function.md)
 * [自然數](math-analysis/natural_number.md)
 * [實數中的集合](math-analysis/real-number.md)
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series.md)
-* [函數\(function\)](math-analysis/function.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space.md)
 
 ## 線性代數 <a id="linear-algebra"></a>

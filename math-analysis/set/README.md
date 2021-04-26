@@ -92,3 +92,23 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
 
 給定一群基底集合，則由此基底集合所構成的空間中的任意集合，必須可以用此基底集合的\(有限或無限\)聯集\(union\)、交集\(intersection\)、補集\(complement\)操作所得出。
 
+## Russell誖論 \(Russell paradox\)
+
+前述在討論集合時，是定義集合內的元素均符合相同的性質\(條件\)。
+
+> 令對於元素$$x$$, $$P(x) \in \{ true, false\}$$為做用在$$x$$的某種性質。因此可得集合$$\{x \vert P(x) \text{ is true} \}$$。
+>
+> 推論可得 $$\forall y, \ y \in \{x \vert P(x) \text{ is true}\} \Leftrightarrow P(y) \text{ is true}$$
+
+但此此推論在集合論中有矛盾 \(by Russell\)，令 $$P(x)$$為 $$ x$$is a set and $$x \notin x$$。即當$$x$$為一集合且不包含自已時，$$P(x)$$才為真。
+
+* 如$$P({1,2,3})$$為true，因為$$\{1,2,3\} \notin \{1,2,3\}$$. 
+* 令$$S$$為包含所有集合的集合，因此$$S$$為集合，而且$$S \in S$$，所以$$P(S)$$為false。
+* 考慮 $$\Omega = \{ x \vert P(x) \text{ is true}\} =\{ x \vert x \text{ is a set and } x \notin x\}$$，即$$\Omega$$為所有不包含自已集合的集合。
+
+  * 考慮$$\Omega \in \Omega$$時，由定義知$$P(\Omega)$$為true，即$$\Omega$$為集合，且$$\Omega \notin \Omega$$。
+  * 考慮 $$\Omega \notin \Omega$$時，由定義知$$P(\Omega)$$為true，此時$$\Omega$$在集合，因此$$\Omega \in \Omega$$。
+  * 兩種推論都得到矛盾的結論。
+
+得到上述矛盾結果的原因是因為討論的集合包含了"全部"的集合\(包含了全部集合的集合\)。如果要避開Russell誖論，可建構出不會產生Russell誖論的集合來討論即可。一般分析中的集合不會產生Russell誖論。
+

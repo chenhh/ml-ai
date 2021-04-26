@@ -14,7 +14,7 @@ $$\mathbb{N}$$為自然數集合，$$\mathbb{Z}$$為整數集合，$$\mathbb{Q}$
 * $$\mathbb{Q} \subset \mathbb{A}_R$$
 * $$\mathbb{T}_R \subset \mathbb{\Gamma}$$
 
-![&#x5BE6;&#x6578;&#x4E2D;&#x7684;&#x96C6;&#x5408;](../.gitbook/assets/real_number_sets-min.png)
+![&#x5BE6;&#x6578;&#x4E2D;&#x7684;&#x96C6;&#x5408;](../../.gitbook/assets/real_number_sets-min.png)
 
 
 

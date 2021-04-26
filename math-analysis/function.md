@@ -55,6 +55,28 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 由上述條件可知當$$f$$為一對一且映成函數時，定義域與對應域等勢，即$$|X|  = |Y|$$。
 
+### 可逆函數\(invertible function\)
+
+> $$f: X \rightarrow Y$$be a function, if there is a function $$g: Y \rightarrow X$$ such that $$ g \circ f = I_X$$ and $$ f \circ g = I_Y$$, then $$f$$ is invertible.
+
+* 反函數\(inverse function\) 若存在時必唯一，記為 $$g \equiv f^{-1}$$
+* 反函數存在時，$$(f^{-1})^{-1} = f$$
+* 反函數與前像\(preimage\)為不同的概念，反函數$$f^{-1}$$為函數，而前像$$f^{-1}(Y)$$為集合。
+
+### 可逆函數等價於一對一且映成函數
+
+proof: 
+
+$$\Leftarrow$$可由定義直接得出。
+
+$$\Rightarrow$$
+
+* 若$$f$$不為一對一函數，則 $$\exists x_1, x_2 \in X, \ x_1 \neq x_2 \ni f(x_1) = f(x_2)$$
+* 因此關係$$g(f(x_1)), g(f(x_2)) $$為一對多的映射，不滿足函數的定義。
+* 若$$f$$不為映成函數，則 $$\exists y \in Y \ni f^{-1}(y) = \emptyset$$，因此關係$$g(y)$$存在部份定義域的元素無函數值，不滿足函數的定義 \(QED\)。
+
+
+
 
 
 

@@ -21,6 +21,8 @@
 > * 它有至少一個真子集和它等勢。
 > * 存在自然數集合到它的\(子集\)的單射\(一對一函數\)。
 
+無限集可分為可數集與不可數集。
+
 無限集合有至少一個真子集合它等勢，其中一個例子是整數集合$$\mathbb{Z}$$與自然數集合$$\mathbb{N}$$等勢，兩者間存在一對一且映成的函數$$f=\Bigg\{ \begin{align}& \frac{n}{2} &,& n \text { is even} \\ &-\frac{n-1}{2} &,& n \text { is odd} \\ \end{align} $$
 
 ![&#x81EA;&#x7136;&#x6578;&#x8207;&#x6574;&#x6578;&#x70BA;&#x7B49;&#x50F9;&#x7684;&#x96C6;&#x5408;](../../.gitbook/assets/natural_integer_mapping.png)

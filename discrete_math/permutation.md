@@ -20,7 +20,7 @@
 >
 > * $$n$$件相異物，不允許重覆取$$r$$件排列的方法數。
 > * 或$$r$$件不同物品，放在$$n$$個不同位置的排列方法數。
-> * $$P\begin{pmatrix} n \\ r \end{pmatrix} =  \frac{n!}{(n-r)!}, \ \ n \geq r$$
+> * $$P\begin{pmatrix} n \\ r \end{pmatrix}  \equiv P(n,r)=  \frac{n!}{(n-r)!}, \ \ n \geq r$$
 
 proof:
 

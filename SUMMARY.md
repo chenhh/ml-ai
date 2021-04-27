@@ -49,3 +49,7 @@
 * [凸集合 \(convex set\)](convex-optimization/convex-set.md)
 * [凸函數 \(convex function\)](convex-optimization/convex-function.md)
 
+## 離散數學 <a id="discrete_math"></a>
+
+* [排列\(permutation\)](discrete_math/permutation.md)
+

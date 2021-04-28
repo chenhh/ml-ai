@@ -100,11 +100,8 @@ proof:
 * 以此類別，$$a_m$$的函數值可對應至$$\{b_1,b_2, \ldots, b_n \} \setminus \{ f(a_1),f(a_2), \ldots, f(a_{m-1}) \}$$，有$$(n-m+1)$$種選擇。
 * 因此共有 $$n\times(n-1)\times \ldots \times (n-m+1) = \frac{n!}{(n-m+1)!} = P(n,m)$$個函數 。 \(QED\)。
 
+映成函數：
 
-
-
-
-
-
-
+* $$\forall b \in B\ \exists a \in A \ni f(a)=b$$。
+* 等同於$$m$$個相異物，放入$$n$$個相異箱子，不允許有空箱的方法數。
 

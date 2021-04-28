@@ -41,5 +41,21 @@
 
 $$\begin{pmatrix} n -1 \\ r-1 \end{pmatrix} + \begin{pmatrix} n -1 \\ r \end{pmatrix} = \frac{(n-1)!}{(r-1)!(n-r)!}+\frac{(n-1)!}{r!(n-r-1)!} = \frac{r(n-1)!}{r!(n-r)!} + \frac{((n-r)(n-1)!}{r!(n-r)!} = \frac{n!}{r!(n-r)!} = \begin{pmatrix} n \\ r \end{pmatrix}$$
 
+## 二項式定理\(binomial theorem\)
 
+> $$x,y$$為變數，$$n \in \mathbb{N}$$，則 $$(x+y)^n = \sum_{k=0}^n \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k}$$
+>
+> * $$x=1, y=1$$代入後可得 $$2^n= \begin{pmatrix} n \\ 0 \end{pmatrix}  \begin{pmatrix} n \\ 1 \end{pmatrix} + \ldots + \begin{pmatrix} n \\  n \end{pmatrix}$$
+> * $$x=1, y=-1$$代入後可得 $$0 = \begin{pmatrix} n \\ 0 \end{pmatrix} - \begin{pmatrix} n \\ 1 \end{pmatrix} + \begin{pmatrix} n \\ 2 \end{pmatrix} + \ldots + (-1)^n \begin{pmatrix} n \\  n \end{pmatrix}$$
+
+* $$(x+y)^n = (x+y)(x+y) \ldots (x+y)$$
+* 而$$x^k y^{n-k}$$的係數為上式$$n$$個乘項中選$$k$$個$$x$$，$$n-k$$個$$y$$，因此為 $$\frac{n!}{k!(n-k)!} = \begin{pmatrix} n \\ k \end{pmatrix} , k=0,1,2\ldots, n$$\(QED\)。
+
+## 多項方程式
+
+> $$(x_1 +x_2+ \ldots +x_k)^n = \sum_{0 \leq n_i \leq n, n_1+n_2+\ldots + n_k=n} \begin{pmatrix} n \\ n_1, n_2,\ldots, n_k \end{pmatrix}x_1^{n_1} x_2^{n_2}\ldots x_k^{n_k}$$
+
+* $$x_1^{n_1} x_2^{n_2}\ldots x_k^{n_k}$$的係數，等同於$$n$$個不全相異物，共有$$k$$類的排列方法。
+* 因為$$n$$項乘積中先選$$n_1$$ 個$$x_1$$，再由剩下的$$n−n_1$$ 個乘積中選$$n_2$$ 個$$x_2$$，以此類推到$$n−n_1−\ldots−n_{k−1}$$個乘積中選$$n_k$$ 個$$x_k$$。
+* 有 $$\begin{pmatrix} n \\ n_1 \end{pmatrix} \begin{pmatrix} n  - n_1\\ n_2 \end{pmatrix} \begin{pmatrix} n -n_1 - n_2 \\ n_3 \end{pmatrix} \ldots \begin{pmatrix} n - n_1 \ldots - n_{k-1} \\ n_k \end{pmatrix} = \frac{n!}{n_1! n_2! \ldots n_k!}$$
 

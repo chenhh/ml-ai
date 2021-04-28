@@ -1,6 +1,6 @@
 # Table of contents
 
-* [機器學習與人工智慧](README.md)
+* [數理機器學習](README.md)
 
 ## 數學分析 <a id="math-analysis"></a>
 

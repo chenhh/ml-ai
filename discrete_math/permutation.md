@@ -80,7 +80,7 @@ proof:
 > * $$A, B$$為兩集合，其元素個數分別為$$|A|=m, |B|=n$$，則
 > * $$A \mapsto B$$的函數個數有$$n^m$$ 個。
 > * 由$$A \mapsto B$$的一對一函數個數有$$P(n, m)$$個。
-> * 由$$A \mapsto B$$的映成函數個數有$$Onto(m,n) = \sum_{i=0}^n(-1)C(n, i)(n-i)^m$$個。
+> * 由$$A \mapsto B$$的映成函數個數有$$Onto(m,n) = \sum_{i=0}^n(-1)^iC(n, i)(n-i)^m$$個。
 
 * 令 $$A =\{ a_1, a_2, \ldots, a_m\}, B=\{ b_1, b_2, \ldots, b_n\}$$。
 * $$A \mapsto B$$的函數定義為 $$\forall a \in A \ \exists! b \in B \ni f(a)=b$$，每一個定義域的元素均有唯一的函數值。
@@ -104,4 +104,11 @@ proof:
 
 * $$\forall b \in B\ \exists a \in A \ni f(a)=b$$。
 * 等同於$$m$$個相異物，放入$$n$$個相異箱子，不允許有空箱的方法數。
+* 使用排容原理，令$$N(b_i)$$為值域不包含元素$$b_i$$的函數個數，求$$N(b_1^c b_2^c \ldots , b_n^c)=N - \sum_{i \leq i \leq n} N(b_i) + \sum_{ 1 \leq i  < j \leq n} N(b_i b_j)  - \sum_{ 1 \leq i < j < k \leq n} N(b_i b_j b_k) + \ldots + (-1)^n N(b_1 b_2 \ldots , b_n)$$
+* $$N(b_i)$$相當於$$m$$個定義域元素至$$n-1$$個值域元素的函數個數，有$$(n-1)^m$$個。
+* $$N(b_i b_j)$$為值域不含$$b_i$$與$$b_j$$的函數個數，相當於$$m$$個定義域元素至$$n-2$$個值域元素的函數個數，有$$(n-2)^m$$個。
+* 同理可得 $$N(b_1 \ldots, b_k)=(n-k)^m$$個。
+* 因此$$N(b_1^c b_2^c \ldots , b_n^c)=n^m - C(n,1) (n-1)^m + C(n,2) (n-2)^m \ldots + (-1)^n (n-n)^m = \sum_{i=0}^n (-1)^i C(n,i)(n-i)^m = Onto(m,n)$$
+
+\(QED\)
 

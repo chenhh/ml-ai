@@ -52,4 +52,5 @@
 ## 離散數學 <a id="discrete_math"></a>
 
 * [排列\(permutation\)](discrete_math/permutation.md)
+* [組合\(combination\)](discrete_math/combination.md)
 

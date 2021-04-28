@@ -87,5 +87,12 @@ $$\begin{pmatrix} n \\ \ n_1, n_2,\ldots, n_k \end{pmatrix}$$
 * 因為$$n$$項乘積中先選$$n_1$$ 個$$x_1$$，再由剩下的$$n−n_1$$ 個乘積中選$$n_2$$ 個$$x_2$$，以此類推到$$n−n_1−\ldots−n_{k−1}$$個乘積中選$$n_k$$ 個$$x_k$$。
 * 有 $$\begin{pmatrix} n \\ n_1 \end{pmatrix} \begin{pmatrix} n  - n_1\\ n_2 \end{pmatrix} \begin{pmatrix} n -n_1 - n_2 \\ n_3 \end{pmatrix} \ldots \begin{pmatrix} n - n_1 \ldots - n_{k-1} \\ n_k \end{pmatrix} = \frac{n!}{n_1! n_2! \ldots n_k!}$$ \(QED\)
 
+## Vandermonde's convolution
 
+> $$\sum_{k=0}^n \begin{pmatrix} r \\ k \end{pmatrix}  \begin{pmatrix} s \\ n-k \end{pmatrix} = \begin{pmatrix} r+s \\ n \end{pmatrix}$$
+
+* $$\begin{pmatrix} r+s \\ n \end{pmatrix}$$為$$r+s$$相異物品中，取$$n$$個的組合個數。
+* 而$$r+s$$個相異物品，可分為兩堆：一堆有$$r$$個，另一堆有$$s$$個相異物品。
+* 因此選$$n$$件的方法，可從第一堆取$$k$$個，有$$\begin{pmatrix} r \\ k \end{pmatrix}$$種方法；第二堆取$$n-k$$個，有$$\begin{pmatrix} s \\ n-  k \end{pmatrix}$$種方法，$$k=0,1,2,\ldots, n$$。
+* 因此總選取方法有$$\sum_{k=0}^n \begin{pmatrix} r \\ k \end{pmatrix} \begin{pmatrix} s \\ n-k \end{pmatrix}$$ \(QED\)。
 

@@ -54,3 +54,7 @@
 * [排列\(permutation\)](discrete_math/permutation.md)
 * [組合\(combination\)](discrete_math/combination.md)
 
+## 計算理論 <a id="computation-theory"></a>
+
+* [計算理論簡介](computation-theory/computation-theory-introduction.md)
+

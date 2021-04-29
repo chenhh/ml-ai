@@ -48,6 +48,7 @@
 
 * [凸集合 \(convex set\)](convex-optimization/convex-set.md)
 * [凸函數 \(convex function\)](convex-optimization/convex-function.md)
+* [凸最佳化\(convex optimization\)](convex-optimization/convex-optimization.md)
 
 ## 離散數學 <a id="discrete_math"></a>
 

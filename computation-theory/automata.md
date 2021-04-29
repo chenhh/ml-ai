@@ -85,6 +85,15 @@
 
 * $$A\cup B = \{good, bad, boy, girl \}$$
 * $$A \circ B =\{ goodboy, goodgirl, badboy, badgirl\}$$
+* $$ A^{*}= \{ \epsilon, good, bad, goodgood, goodbad, badgood, badbad, \\goodgoodgood, goodgoodbad, goodbadgood, goodbadbad, \ldots\}$$
+
+### 正規運算的封閉性
+
+> 如果$$A_1, A_2$$是正規語言\(即兩個語言分別有FSM $$M_1, M_2$$可識別之\)，則
+>
+> * $$A_1 \cup A_2$$是正規語言\(存在FSM $$M$$可識別之\)
+> * $$A_1 \circ A_2$$是正規語言
+> * $$A_1^{*}$$是正規語言。
 
 
 

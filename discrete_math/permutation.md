@@ -96,3 +96,14 @@ $$\begin{pmatrix} n \\ \ n_1, n_2,\ldots, n_k \end{pmatrix}$$
 * 因此選$$n$$件的方法，可從第一堆取$$k$$個，有$$\begin{pmatrix} r \\ k \end{pmatrix}$$種方法；第二堆取$$n-k$$個，有$$\begin{pmatrix} s \\ n-  k \end{pmatrix}$$種方法，$$k=0,1,2,\ldots, n$$。
 * 因此總選取方法有$$\sum_{k=0}^n \begin{pmatrix} r \\ k \end{pmatrix} \begin{pmatrix} s \\ n-k \end{pmatrix}$$ \(QED\)。
 
+## 史特靈近似\(Stirling approximation\)
+
+> * $$n! \approx \sqrt{2 \pi n} (\frac{n}{e} )^n$$
+> *  $$ \lim_{n \rightarrow \infty} \frac{n!}{\sqrt{2 \pi n} (\frac{n}{e} )^n} = 1$$
+
+史特靈公式是一條用來取$$n$$階乘近似值的數學公式。即使在$$n$$很小的時候，史特靈公式的取值已經十分準確。
+
+詳細證明見[Wikipedia](https://zh.wikipedia.org/wiki/%E5%8F%B2%E7%89%B9%E9%9D%88%E5%85%AC%E5%BC%8F)。
+
+
+

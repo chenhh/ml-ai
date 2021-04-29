@@ -59,8 +59,6 @@ $$
 
 資訊熵不僅定量衡量了資訊的大小，同時為資訊編碼提供了理論上的最佳值：**實用的編碼平均碼長的理論下界就是資訊熵。即信息熵為資料壓縮的極限**。**更準確的說法是資訊熵是用來度量資訊所要消除的不確定性的量**。
 
-
-
 ## 參考資料
 
 * Claude E. Shannon,  "A mathematical theory of communication." The Bell system technical journal 27.3 \(1948\): 379-423.

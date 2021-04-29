@@ -45,6 +45,8 @@
 * 如果機器不接受任何字串，則此機器只識別一種語言，即空語言$$\emptyset$$。
 * 如果機器能接受亦能拒絕任一輸入字串，我們稱這機器可決定\(decide\)一語言，此語言可被機器決定\(decidable\)。
 
+## 正規語言\(regular language\)
+
 > definition: FSM accepts a string
 >
 > 令$$M=(Q, \Sigma, \delta, q_0, F)$$為FSM，$$\omega = \omega_1 \omega_2 \ldots \omega_n, \omega_i \in \Sigma$$為一字串。
@@ -56,6 +58,12 @@
 > 3. \[機器結束於接受狀態\]$$r_n \in F$$
 >
 > 如果$$A= \{ \omega \vert \ M \text{ accepts } \omega\}$$，則稱$$M$$識別\(接受\)語言$$A$$。
+
+
+
+> definition: regular language
+>
+> 給定語言$$A$$，如果存在有限自動機$$M$$可識別$$A$$時，則$$A$$稱為正規語言\(regular language\)。
 
 
 

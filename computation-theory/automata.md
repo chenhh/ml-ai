@@ -131,7 +131,7 @@ NFA N1的轉移函數如下表，其中輸入$$\epsilon$$\(空字串\)表示不�
 
 ![NFA N1](../.gitbook/assets/nfa_n1.png)
 
-![NFA&#x5728;&#x8B80;&#x53D6;&#x5B57;&#x5143;&#x5F8C;&#xFF0C;&#x6703;&#x5099;&#x4EFD;&#x6210;&#x591A;&#x500B;&#x6A5F;&#x5668;&#xFF0C;&#x5E73;&#x884C;&#x57F7;&#x884C;&#x6240;&#x6709;&#x72C0;&#x614B;](../.gitbook/assets/dfa_nfa-min.png)
+![NFA&#x5728;&#x8B80;&#x53D6;&#x5B57;&#x5143;&#x5F8C;&#xFF0C;&#x6703;&#x5206;&#x652F;&#x6210;&#x591A;&#x500B;&#x6A5F;&#x5668;\(&#x985E;&#x4F3C;&#x884C;&#x7A0B;&#x7684;fork\)&#xFF0C;&#x5E73;&#x884C;&#x57F7;&#x884C;&#x6240;&#x6709;&#x72C0;&#x614B;](../.gitbook/assets/dfa_nfa-min.png)
 
 
 

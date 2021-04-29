@@ -67,6 +67,29 @@
 
 建構識別$$A$$的有限自動機時，要把自已當成機器，使用可利用的所有資料來建構滿足條件的機器。
 
+## 正規運算\(regular operation\)
+
+> definition: regular operation
+>
+> $$A,B$$為兩種語言，定義
+>
+> * 聯集 \(union\) $$A\cup B = \{ x \vert x \in A \lor x \in B \}$$
+> * 連接\(concatenation\) $$A \circ B = \{ xy \vert x \in A \land y \in B\}$$
+> * 星號\(star\) $$A^{*} = \{ x_1 x_2 \ldots x_k \vert k \geq 0, \ x_i \in A\}$$
+
+* 聯集將$$A,B$$中的所有字串放在同一語言中。
+* 連接是以所有可能的方式，將$$A$$中的任一字串接在$$B$$中所有字串的前面。
+* 星號是將$$A$$中任一個字串，任意數量個串接得到新的語言。因為是任意個字串的串接，所以包含空字串$$\epsilon$$，即$$\epsilon$$必為$$A^{*}$$的元素。
+
+例：$$\Sigma = \{a,b,c,\ldots,z\}$$, $$A=\{good, bad\}$$, $$B=\{boy, girl\}$$
+
+* $$A\cup B = \{good, bad, boy, girl \}$$
+* $$A \circ B =\{ goodboy, goodgirl, badboy, badgirl\}$$
+
+
+
+
+
 
 
 

@@ -101,6 +101,8 @@ DFA M1如下：
 
 ## 非確定型有限自動機\(non-deterministic finite automata, NFA\)
 
+非確定性在FA中，指的是在任何一個狀態時，對於相同的輸入，下一個狀態可能存在多個選擇，而不是唯一確定。因此DFA為NFA的特例。
+
 DFA與NFA主要是在轉移函數$$\delta$$不同。
 
 * 在DFA中，$$\delta: Q\ \times \Sigma \rightarrow Q$$產生的是下一個確定的狀態；
@@ -116,7 +118,7 @@ DFA與NFA主要是在轉移函數$$\delta$$不同。
 > * $$q_0 \in Q$$為起始狀態 \(start state\)。
 > * $$F \subseteq Q$$為接受狀態集\(set of accept states\)。
 
-NFA N1的轉移函數如下表：
+NFA N1的轉移函數如下表，其中輸入$$\epsilon$$\(空字串\)表示不必有輸入值，就會自動轉移對應的狀態集合。
 
 |  | 0 | 1 | $$\epsilon$$ |
 | :--- | :--- | :--- | :--- |
@@ -129,7 +131,7 @@ NFA N1的轉移函數如下表：
 
 ![NFA N1](../.gitbook/assets/nfa_n1.png)
 
-
+![NFA&#x5728;&#x8B80;&#x53D6;&#x5B57;&#x5143;&#x5F8C;&#xFF0C;&#x6703;&#x5099;&#x4EFD;&#x6210;&#x591A;&#x500B;&#x6A5F;&#x5668;&#xFF0C;&#x5E73;&#x884C;&#x57F7;&#x884C;&#x6240;&#x6709;&#x72C0;&#x614B;](../.gitbook/assets/dfa_nfa-min.png)
 
 
 

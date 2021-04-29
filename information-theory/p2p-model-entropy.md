@@ -64,4 +64,6 @@ $$
 * Claude E. Shannon,  "A mathematical theory of communication." The Bell system technical journal 27.3 \(1948\): 379-423.
 * David JC MacKay, "Information theory, inference and learning algorithms." Cambridge university press, 2003.
 * Thomas M. Cover,  "Elements of information theory." John Wiley & Sons, 1999.
+* Raymond W. Yeung,  "Information theory and network coding." Springer Science & Business Media, 2008.
+* Fady Alajaji and Po-Ning Chen, "An Introduction to Single-User Information Theory." Singapore: Springer, 2018.
 

@@ -10,7 +10,7 @@
 
 這台機器的運作過程會有許多狀態，也就是許多步驟、流程。**如果這台機器的步驟及接受的字元種類是有限的，也就是數量是可數的，並面對所有字元都能對應一種狀態，而且具有起始及結束的狀態，那麼我們稱這台機器叫「有限自動機」\(Finite Automaton\)**。能夠被有限狀態機認識的語言，我們稱這語言叫**正規語言 \(Regular Language\)**。
 
-> definition: finite automata \(FA\) or finite state machine\(FSM\)
+> definition: deterministic finite automata \(DFA\) or finite state machine\(FSM\)
 >
 > 有限自動機是5元組 $$(Q, \Sigma, \delta, q_0, F)$$ ，
 >
@@ -23,7 +23,7 @@
 * 接受狀態集$$F$$可以為空集合，此時自動機沒有接受狀態。
 * 轉移函數$$\delta$$在輸入一個字母時，會轉移到下一個狀態，此狀態依函數的定義唯一。轉移函數經常使用列表的方式表示。
 
-有限自動機M1如下：
+DFA M1如下：
 
 * $$Q=\{q_1, q_2, q_3 \}$$
 * $$\Sigma=\{0,1\}$$
@@ -51,7 +51,7 @@
 >
 > 令$$M=(Q, \Sigma, \delta, q_0, F)$$為FSM，$$\omega = \omega_1 \omega_2 \ldots \omega_n, \omega_i \in \Sigma$$為一字串。
 >
-> 若狀態序列 $$r_0, r_1, \ldots, r_n, in Q$$ 滿足以下三個條件時，則$$M$$識別\(接受\)字串$$\omega$$。
+> 若狀態序列 $$r_0, r_1, \ldots, r_n, \text{ in } Q$$ 滿足以下三個條件時，則$$M$$識別\(接受\)字串$$\omega$$。
 >
 > 1. \[機器從初始狀態開始\]$$r_0 = q_0$$
 > 2. \[狀態轉移符合轉移函數\]$$\delta(r_i, w_{i+1}) =r_{i+1}, \ \forall i = 0,1,\ldots, n-1$$
@@ -94,6 +94,42 @@
 > * $$A_1 \cup A_2$$是正規語言\(存在FSM $$M$$可識別之\)
 > * $$A_1 \circ A_2$$是正規語言
 > * $$A_1^{*}$$是正規語言。
+>
+> 使用非確定型有限自動機\(non-deterministic finite automata, NFA\)證明會比直接建構DFA簡單。
+
+
+
+## 非確定型有限自動機\(non-deterministic finite automata, NFA\)
+
+DFA與NFA主要是在轉移函數$$\delta$$不同。
+
+* 在DFA中，$$\delta: Q\ \times \Sigma \rightarrow Q$$產生的是下一個確定的狀態；
+* 在NFA中，$$\delta: Q\times \Sigma_{\epsilon} \rightarrow P(Q)$$產生的是下一個狀態的集合，其中$$\Sigma_{\epsilon} = \Sigma \cup {\epsilon}$$為含有空字元的字母集合，而$$P(Q)$$為$$Q$$的冪集\(power set\)。
+
+> definition: non-deterministic finite automata \(NFA\) 
+>
+> NFA是5元組 $$(Q, \Sigma, \delta, q_0, F)$$ ，
+>
+> * $$Q$$為有限集合，稱為狀態集\(states \)。
+> * $$\Sigma$$為有限集合，稱為字母集\(alphabets\)。
+> * $$\delta: Q \times \Sigma_{\epsilon} \rightarrow P(Q)$$為轉移函數\(transition function\)。
+> * $$q_0 \in Q$$為起始狀態 \(start state\)。
+> * $$F \subseteq Q$$為接受狀態集\(set of accept states\)。
+
+NFA N1的轉移函數如下表：
+
+|  | 0 | 1 | $$\epsilon$$ |
+| :--- | :--- | :--- | :--- |
+| $$q_1$$ | $$\{q_1\}$$ | $$\{q_1, q_2\}$$ | $$\emptyset$$ |
+| $$q_2$$ | $$\{q_3\}$$ | $$\emptyset$$ | $$\{q_3\}$$ |
+| $$q_3$$ | $$\emptyset$$ | $$\{q_4\}$$ | $$\emptyset$$ |
+| $$q_4$$ | $$\{q_4\}$$ | $$\{q_4\}$$ | $$\emptyset$$ |
+
+
+
+![NFA N1](../.gitbook/assets/nfa_n1.png)
+
+
 
 
 

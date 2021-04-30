@@ -35,9 +35,9 @@
 * [學習問題](learning-theory/learning-problem.md)
 * [支持向量機 \(SVM, support vector machine\)](learning-theory/support-vector-machine.md)
 
-## 強化學習 <a id="reinforcement-learning"></a>
+## 強化學習與決策理論 <a id="reinforcement-learning"></a>
 
-* [Markov decision process](reinforcement-learning/untitled.md)
+* [Markov decision process \(MDP\)](reinforcement-learning/untitled.md)
 
 ## 賽局理論 <a id="game-theory"></a>
 

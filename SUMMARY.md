@@ -37,7 +37,7 @@
 
 ## 強化學習與決策理論 <a id="reinforcement-learning"></a>
 
-* [Markov decision process \(MDP\)](reinforcement-learning/untitled.md)
+* [Markov decision process \(MDP\)](reinforcement-learning/mdp.md)
 
 ## 賽局理論 <a id="game-theory"></a>
 

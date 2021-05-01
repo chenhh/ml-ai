@@ -34,6 +34,7 @@
 
 * [學習問題](learning-theory/learning-problem.md)
 * [支持向量機 \(SVM, support vector machine\)](learning-theory/support-vector-machine.md)
+* [類神經網路\(neural network\)](learning-theory/ann.md)
 
 ## 強化學習與決策理論 <a id="reinforcement-learning"></a>
 

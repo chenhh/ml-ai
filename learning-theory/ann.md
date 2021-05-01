@@ -15,6 +15,26 @@
 
 也可將偏差值與輸出合併視為輸入與權重$$\mathbf{x, w} \in \mathbb{R}^{(M+1) \times 1}$$，其中 $$x_{M+1} = b, w_{M+1}=1$$。
 
+## 前饋神經網路\(Feed-forward network, FNN\)
+
+* 此類網路資訊只有從輸入傳遞到輸出，沒有由輸出送回輸入的連結。
+* single-hidden layer feedforward neural networks \(SLFNs\)是一個層狀的前饋結構，分為輸入層\(input layer\)，隱藏層\(hidden layer\)，與輸出層\(output layer\)，每一層都包含許多處理單元\(神經元\)。
+* 網路系統中的每個處理單元都和其下一層的所有處理單元連接，但是同一層內的處理單元都不互相連接。
+
+## 單隱藏層前饋神經網路\(Single hidden layer feedforward network, SLFN\)
+
+
+
+
+
+
+
+
+
+## 
+
+
+
 ## 
 
 

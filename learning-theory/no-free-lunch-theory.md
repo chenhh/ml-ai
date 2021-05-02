@@ -31,6 +31,6 @@ NFL告訴我們，沒有哪個演算法比其他演算法高效。但這並不�
 ## 參考資料
 
 * [https://www.no-free-lunch.org/](https://www.no-free-lunch.org/)
-* 
+
 
 

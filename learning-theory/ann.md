@@ -41,6 +41,10 @@
   * 輸入值為 $$z_j^{(k)} =\sum_{i=1}^{N_{k-1}}w_{i,j}^{(k)}o_{i}^{(k-1)}$$
   * 輸出值為 $$oj^{(k)} =f^{(k)}(z_j^{(k)}), \ k=0,1,\ldots, L, \ j=1,2,\ldots, N_k$$
 
+因此令輸入的資料$$\mathbf{x}=\mathbf{o}^{(0)}\in \mathbb{R}^M$$， 多層的前饋神經網路的輸出為 $$\mathbf{o}^{(k+1)}=f^{(k+1)} ((\mathbf{w}^{(k+1)})^{\top}\mathbf{o}^{(k)}+\mathbf{b}^{(k)}) \in \mathbb{R}^{N_k+1}$$, $$k=0,1,\ldots, L-1$$。而SLFN為$$L=3$$的特例。
+
+
+
 
 
 

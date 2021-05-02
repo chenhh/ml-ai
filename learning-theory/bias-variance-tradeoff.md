@@ -31,3 +31,7 @@
 
 ![&#x6A21;&#x578B;&#x8907;&#x96DC;&#x5EA6;&#x5C0D;&#x9810;&#x6E2C;&#x504F;&#x5DEE;-&#x8B8A;&#x7570;&#x6578;&#x7684;&#x5F71;&#x97FF;](../.gitbook/assets/bias-variance-tradeoff.jpg)
 
+## 訓練誤差與測試誤差
+
+![](../.gitbook/assets/over-under-fitting-min.png)
+

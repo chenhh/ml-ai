@@ -33,6 +33,7 @@
 ## 學習理論 <a id="learning-theory"></a>
 
 * [學習問題](learning-theory/learning-problem.md)
+* [Bias-Variance Tradeoff](learning-theory/bias-variance-tradeoff.md)
 * [支持向量機 \(SVM, support vector machine\)](learning-theory/support-vector-machine.md)
 * [類神經網路\(neural network\)](learning-theory/ann.md)
 

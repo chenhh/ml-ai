@@ -38,6 +38,7 @@
 * [類神經網路\(neural network\)](learning-theory/ann.md)
 * [奥卡姆剃刀（Occam's Razor）](learning-theory/occams-razor.md)
 * [貝式方法](learning-theory/baye-method.md)
+* [No Free Lunch Theory](learning-theory/no-free-lunch-theory.md)
 
 ## 強化學習與決策理論 <a id="reinforcement-learning"></a>
 

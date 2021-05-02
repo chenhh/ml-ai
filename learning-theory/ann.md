@@ -23,6 +23,18 @@
 
 ## 單隱藏層前饋神經網路\(Single hidden layer feedforward network, SLFN\)
 
+![SLFN](../.gitbook/assets/slfn-min.png)
+
+令$$D$$為相異樣本的數量，$$(\mathbf{x}_i,\mathbf{y}_i)\in \mathbb{R}^{M+N}$$, $$i=1,2,\ldots, D$$，資料的維度為$$D\times (M+N)$$。
+
+* $$\mathbf{x}_i = \begin{bmatrix} x_{i,1} \\ x_{i,2} \\ \vdots \\ x_{i, M}\end{bmatrix} \in \mathbb{R}^{M \times 1}, \ i=1,2,\ldots, D$$，每筆輸入資料有$$M$$個特徵。
+* $$\mathbf{y}_i = \begin{bmatrix} y_{i,1} \\ y_{i,2} \\ \vdots \\ y_{i, N}\end{bmatrix} \in \mathbb{R}^{N \times 1}, \ i=1,2,\ldots, D$$，每筆資料的輸出有$$N$$個特徵。
+* 輸入層為第0層，隱藏層為第$$1,2,\ldots, (L-1)$$層，輸出層為第$$L$$層。
+* 每一層的神經元個數為$$N_0, N_1,\ldots, N_L$$。
+* $$\mathbf{W}^{(k)} \equiv [w_{i,j}^{(k)}] \in \mathbb{R}^{N_{k-1} \times N_k}, \ k=1,2,\ldots, L$$為連接第$$k-1$$層與第$$k$$層的權重矩陣。
+  * $$\mathbf{w}_{i, \cdot}^{(k)} \in \mathbb{R}^{N_k}$$為權重矩陣第$$i$$列\(row\)之向量，為第$$k-1$$層的第$$i$$個神經元的輸出權重向量。
+  * $$\mathbf{w}_{\cdot,j}^{(k)} \in \mathbb{R}^{N_k-1}$$為權重矩陣第$$j$$行\(column\)之向量，為第$$k$$層的第$$j$$個神經元的輸入權重向量。
+
 
 
 

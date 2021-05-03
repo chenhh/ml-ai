@@ -31,7 +31,7 @@
 * 令$$|A|=k+1$$，因為$$A\sim \mathbb{N}_{k+1}$$，所以$$A$$的每個真子集等價於$$\mathbb{N}_{k+1}$$的某個真子集。
 * \[反證法\] 
 
-### 自然數與其子集的性質
+### 自然數為無限集
 
 > 1. $$\forall a, b \in \mathbb{N}$$且$$a \neq b$$ 則 $$\mathbb{N}_a$$與$$\mathbb{N}_b$$不等價。
 > 2. $$\mathbb{N}$$為\(可數\)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
@@ -42,6 +42,11 @@
 * 令$$E$$為所有正偶數形成的集合，則$$E \subset \mathbb{N}$$。
 * 令函數$$f: \mathbb{N} \rightarrow E$$, $$f(n)=2n, \forall n \in \mathbb{N}$$，則$$f$$為一對一且映成的函數。
 * 依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 \(QED\)。
+
+### 無限集的充分必要條件
+
+> * $$A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合A的勢大於自然數\]
+> * $$A$$為無限集 $$\Leftrightarrow$$$$A$$與其真子集等價。\[$$ \exists B\subset A \ni A \sim B$$\]
 
 ## 可數集合 \(countable set\)
 

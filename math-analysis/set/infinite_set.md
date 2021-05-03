@@ -2,7 +2,7 @@
 
 ## 有限集與無限集 \(finite and infinite set\)
 
-> $$\forall k \in \mathbb{N}$$, let $$\mathbb{N}_k \equiv \{1,2,\ldots, k\}$$
+> $$\forall k \in \mathbb{N}$$, 令 $$\mathbb{N}_k \equiv \{1,2,\ldots, k\}$$
 >
 > 若存在$$k \in \mathbb{N} \ni A \sim \mathbb{N}_k$$\(集合$$A$$等價於$$\mathbb{N}_k$$\)，則稱$$A$$為有限集合，且包含$$k$$個元素。
 >

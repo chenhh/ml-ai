@@ -27,10 +27,16 @@
 
 如果現在$$P( [ X<\epsilon ] )>(1-\delta )$$，表示有大於$$(1-\delta )$$ 的機率 $$X$$ 會小於$$\epsilon$$ ；而$$\epsilon$$ 通常用來描述誤差的程度。
 
+為什麼我們要討論誤差？誤差哪裡來的？別我們最後獲得的理想函數，都是經由觀察訓練資料 $$S$$ 並從 $$H$$ 中選出來的，這個理想函數現在把它寫成 $$h_S$$。無論$$h_S$$  是由什麼樣的演算法選出來的，它一定會跟 $$S$$ 有關係；之前說為了要讓 $$S$$ 具有普遍性，$$S$$ 是從某個分佈 $$D$$ 中 i.i.d.地選出來的。而很可能會有一些機率，我們的訓練資料很不幸的不具代表性，也就是跟實際分佈情形差得很遠，而導致雖然那個演算法在 $$S$$ 上雖然學得很好，但是學出來的函數其實有很大的偏差。
+
+例如：我們想在某間水果攤買水果，老闆人很好提供試吃，但很不幸的被我們吃到的那幾塊都不好吃，藉著這個經驗我們判斷：這間水果攤的水果不好吃。但是其實實際上這裡不好吃的水果佔的比例只有20%，只是很剛好地都被選到了，這樣就造成了「誤判」。而「誤判」將會影響到我們的學習成果。
+
+因為有資料選不好而「誤判」的可能，應該很難達成「每次」都「零失誤」的學習。那只好退而求其次了，既然不能每次都零失誤，那我們要求大部分的時候﹝Probably, $$\delta$$﹞失誤率很小，也就是很接近正確的﹝Approximately Correct, $$\epsilon$$﹞就好。因此稱為PAC learnability，只要能達成給定的一些標準，我們就說這模型表現的還不錯。
+
 
 
 ## 參考資料
 
 * [Probably Approximately Correct — a Formal Theory of Learning](https://jeremykun.com/2014/01/02/probably-approximately-correct-a-formal-theory-of-learning/)
-* [https://angnotes.wordpress.com/2017/02/14/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%8F%AF%E8%A1%8C%E5%97%8E2-pac-learnable/](https://angnotes.wordpress.com/2017/02/14/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%8F%AF%E8%A1%8C%E5%97%8E2-pac-learnable/)
+* [機器學習可行嗎\(2\)–PAC learnable](https://angnotes.wordpress.com/2017/02/14/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%8F%AF%E8%A1%8C%E5%97%8E2-pac-learnable/)
 

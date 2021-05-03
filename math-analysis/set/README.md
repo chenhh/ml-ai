@@ -2,7 +2,9 @@
 
 ## 集合的元素
 
-一個集合\(set\)就是一些事物收集起來的結果。集合只討論元素間的關係，如果加上其它的函數，則會形成特定的空間。如考慮距離函數\(distance function\)則變成度量空間\(metric space\)。如果考慮角度和額外的性質，則會變成內積空間\(inner product space\)。
+**一個集合\(set\)就是一些具有相同性質的事物收集起來的結果**。
+
+集合只討論元素間的關係，如果加上其它的函數，則會形成特定的空間。如考慮距離函數\(distance function\)則變成度量空間\(metric space\)。如果考慮角度和額外的性質，則會變成內積空間\(inner product space\)。
 
 * 符合某一條件的數的全體稱為集合\(set\)，記為$$S$$。
 * 符合此條件的每個數$$a$$均屬於此集合，記為$$a \in S$$。
@@ -28,8 +30,6 @@
 
 * 由集合相等的定義知$$\{x,y\} = \{y,x\}$$，且$$\{x, x\} = \{x\}$$。
 * 空集合的singleton set 為$$\{ \emptyset\}$$,，因此$$\emptyset \in \{\emptyset\}$$ 。可得 $$\{ \emptyset, \{ \emptyset\} \}$$也是集合。
-
-
 
 ## 卡式積\(Cartesian product\)
 

@@ -22,6 +22,14 @@ $$
 
 ![MSE&#x70BA;&#x4E8C;&#x6B21;&#x51FD;&#x6578;&#xFF0C;&#x4F7F;&#x7528;&#x68AF;&#x5EA6;&#x4E0B;&#x964D;&#x6CD5;&#x5BB9;&#x6613;&#x627E;&#x5230;&#x6975;&#x5C0F;&#x503C;](../.gitbook/assets/mse-min.png)
 
+```python
+def mse(pred, real):
+    return np.mean((pred-real)**2)
+    
+def rmse(pred, real):
+    return np.sqrt(mse(pred,real))
+```
+
 ## 平均絕對誤差，L1損失\(Mean Absolute Error, L1 Loss\)
 
 平均絕對誤差（MAE）是另一種用於回歸模型的損失函數。MAE是目標變量和預測變量之間差異絕對值之和。因此，它在一組預測中衡量誤差的平均大小，而不考慮誤差的方向。損失范圍也是 0 到 $$\infty$$。
@@ -31,6 +39,11 @@ MAE=\frac{1}{N} \sum_{i=1}^N | y_i - \hat{y}_i|
 $$
 
 ![MAE&#x5728;&#x6975;&#x5C0F;&#x503C;&#x8655;&#x70BA;&#x5C16;&#x9EDE;](../.gitbook/assets/mae-min.png)
+
+```python
+def mae(pred, real):
+    return np.mean(np.abs(pred - real))
+```
 
 ### MSE vs MAE （L2損失 vs L1損失）
 

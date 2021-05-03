@@ -32,4 +32,5 @@
 ## 參考資料
 
 * [Probably Approximately Correct — a Formal Theory of Learning](https://jeremykun.com/2014/01/02/probably-approximately-correct-a-formal-theory-of-learning/)
+* [https://angnotes.wordpress.com/2017/02/14/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%8F%AF%E8%A1%8C%E5%97%8E2-pac-learnable/](https://angnotes.wordpress.com/2017/02/14/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E5%8F%AF%E8%A1%8C%E5%97%8E2-pac-learnable/)
 

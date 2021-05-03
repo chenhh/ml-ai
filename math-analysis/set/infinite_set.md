@@ -27,9 +27,18 @@
 一樣使用數學歸納法證明。
 
 * 若$$A \sim \mathbb{N}_1$$，則$$A$$只有一個真子集$$\emptyset$$，但$$A$$不是空集合，所以兩者不等價。
-* 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
+* \[歸納假設\] 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
 * 令$$|A|=k+1$$，因為$$A\sim \mathbb{N}_{k+1}$$，所以$$A$$的每個真子集等價於$$\mathbb{N}_{k+1}$$的某個真子集。
-* \[反證法\] 
+* \[反證法\] 不失一般性，令$$A=\mathbb{N}_{k+1}$$，$$B\subset \mathbb{N}_{k+1}$$且$$B \sim \mathbb{N}_{k+1}$$，即存在一對一且映成的函數$$f: \mathbb{N}_{k+1} \rightarrow B$$。可分成$$B$$是否包含正整數$$k+1$$討論。
+* 若$$k+1 \notin B$$，由假設知$$ B \subset \mathbb{N}_{k+1}$$，去除一個元素仍為真子集，即$$B \setminus \{ f(k+1)\} \subset \mathbb{N}_{k+1}$$。
+  * 因為函數$$f$$為一對一且映成，去除掉一個元素後，仍為一對一且映成，變成$$f: \mathbb{N}_k \rightarrow B \setminus \{f(k+1)\}$$，可得$$B \setminus \{ f(k+1)\} \sim \mathbb{N}_k$$，但此與歸納假設矛盾。
+* 若$$k+1 \in B$$且 $$f(k+1) = k+1$$，則$$B \setminus \{ (k+1)\} \subset \mathbb{N}_{k+1}$$，同上推論可得$$B \setminus \{ (k+1)\} \sim \mathbb{N}_k$$但此與歸納假設矛盾。
+* 若$$k+1 \in B$$但$$f(k+1) \neq k+1$$，可定義函數$$g: B \rightarrow B$$使得 
+  * $$g(i) = i, \text{ if }i \neq k+1, i \neq f(k+1)$$
+  * $$g(i) = k+1, \text{ if } i = f(k+1)$$
+  * $$g(i) = f(k+1), \text{ if } i = k+1$$
+  * 則$$g$$為一對一且映成的函數，則合成函數$$g\circ f: \mathbb{N}_{k+1} \rightarrow B$$為一對一且映成的函數，同上推論可得與歸納假設矛盾的結果。
+* 因此由數學歸納法可得有限集與不與其任何真子集等價 \(QED\)。
 
 ### 自然數為無限集
 

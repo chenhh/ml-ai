@@ -28,6 +28,32 @@
 *  自然數$$\mathbb{N}$$的基數記為$$\aleph _{0}$$\(aleph null\)，是最小的阿列夫數。
 * Cantor證明**有理數集合與代數數集合也是可數**的。  在1874年初，他嘗試證明是否所有無限集合均是可數，其後他得出了**實數集不可數**的結論。
 
+### 等價集合的性質
+
+等價關係$$\sim$$滿足反身性、對稱性、遞移性。
+
+> * 反身性：對於任意的集合$$X$$, $$X \sim X$$。
+> * 對稱性：對於任意的集合$$X,Y$$，若 $$X\sim Y$$，則$$Y \sim X$$。
+> * 遞移性：對於任意的集合$$X,Y,Z$$，若$$X \sim Y$$且$$Y \sim Z$$，則$$X \sim Z$$。
+
+#### 整數與自然數集合等價
+
+$$\mathbb{Z} \sim \mathbb{N}$$，定義函數$$f: \mathbb{N} \rightarrow \mathbb{Z}$$, $$\forall n \in \mathbb{N}$$, $$f(n) = \frac{n}{2} \text{ if n is even}, \frac{-(n-1)}{2}, \text{ if n is odd}$$。
+
+#### 自然數平面與自然數等價
+
+$$\mathbb{N} \times \mathbb{N} \sim \mathbb{N}$$, 函數$$f: \mathbb{N} \times \mathbb{N} \rightarrow \mathbb{N}$$, $$\forall (m.n) \in \mathbb{N} \times \mathbb{N}$$, $$f(m,n) =(m+n-2)(m+n-1)/2 +m$$。
+
+#### 實數集與\(-1,1\)等價
+
+$$f(x)=\frac{x}{1+|x|}$$ 或$$g(x) = \frac{2}{\pi} \tan^{-1}(x)$$
+
+#### 任意實數開區間\(a,b\)與\(0,1\)等價
+
+$$f(x) = \frac{(x-a)}{(b-a)}$$
+
+
+
 ## 使用函數判斷集合勢的大小
 
 > 如果存在從$$X$$到$$Y$$的一個單射（一對一映射），則集合$$ Y$$大於等於一個集合$$X$$，記為$$ |Y| \geq |X|$$，或稱集合$$Y$$有大於等於$$X$$的勢。

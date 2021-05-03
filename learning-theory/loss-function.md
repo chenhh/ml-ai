@@ -113,11 +113,13 @@ def logcosh(pred, real):
 
 ![Quantile&#x56DE;&#x6B78;&#xFF1A;&#x865B;&#x7DDA;&#x8868;&#x793A;&#x57FA;&#x65BC;0.05&#x548C;0.95 &#x5206;&#x4F4D;&#x6578;&#x640D;&#x5931;&#x51FD;&#x6578;&#x7684;&#x8FF4;&#x6B78;&#x4F30;&#x8A08;](../.gitbook/assets/quantile_regression-min.png)
 
-基於 Quantile 回歸的目的是，在給定預測變量的某些值時，估計應變量的條件「分位數」。Quantile Loss 實際上只是 MAE 的擴展形式（當分位數是第 50 個百分位時，Quantile Loss 退化為 MAE）。
+基於 Quantile 迴歸的目的是，在給定預測變量的某些值時，估計應變量的條件「分位數」。Quantile Loss 實際上只是 MAE 的擴展形式（當分位數是第 50 個百分位時，Quantile Loss 退化為 MAE）。
 
 **Quantile Loss 的思想是根據我們是打算給正誤差還是負誤差更多的值來選擇分位數數值**。損失函數根據所選 quantile  $$\gamma$$ 的值對高估和低估的預測值給予不同的懲罰值。個例子，$$\gamma= 0.25$$ 的 Quantile Loss 函數給高估的預測值更多的懲罰，並試圖使預測值略低於中位數。
 
 $$
 L_{\gamma}(y,f(x))=\sum_{\{i \vert y_i < f(x_i) \} } (\gamma-1)|y_i - f(x_i)| + \sum_{i \vert y_i \geq f(x_i)} \gamma|y_i - f(x_i)|,\ 0 \leq \gamma \leq 1
 $$
+
+![Quantile Loss&#xFF08;Y&#x8EF8;&#xFF09;&#x8207;&#x9810;&#x6E2C;&#x503C;&#xFF08;X&#x8EF8;&#xFF09;&#x95DC;&#x4FC2;&#x5716;](../.gitbook/assets/quantile_loss-min.png)
 

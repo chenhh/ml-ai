@@ -14,6 +14,15 @@
 * [級數\(series\)](math-analysis/series.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space.md)
 
+## 機率與統計 <a id="probability-and-statistics"></a>
+
+* [機率的解釋](probability-and-statistics/definition-of-probability.md)
+* [離散分佈](probability-and-statistics/discrete-distribution.md)
+* [連續分佈](probability-and-statistics/continuous-distribution.md)
+* [假設檢定](probability-and-statistics/hypothesis-test.md)
+* [隨機過程](probability-and-statistics/random-process.md)
+* [關聯結構, copula](probability-and-statistics/copula.md)
+
 ## 線性代數 <a id="linear-algebra"></a>
 
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)

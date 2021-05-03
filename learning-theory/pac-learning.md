@@ -20,7 +20,7 @@
 
 ## Probably Approximately Correct
 
-由於訓練資料是 i.i.d. 選出來的，意味著仍有可能取到離群值。為了配合機率的因素，再定義兩個參數：『信心指數』還有『正確指數』：
+由於訓練資料是 i.i.d. 選出來的，意味著仍有可能取到不具代表性的資料集合。為了配合機率的因素，再定義兩個參數：『信心指數』還有『正確指數』：
 
 * 信心指數\(confidence parameter\):$$1-\delta$$ 。
 * 正確指數\(accuracy parameter\): $$\epsilon $$。

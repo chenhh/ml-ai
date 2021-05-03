@@ -1,4 +1,26 @@
-# 無限集合
+# 有限集與無限集
+
+## 有限集與無限集 \(finite and infinite set\)
+
+> $$\forall k \in \mathbb{N}$$, let $$\mathbb{N}_k \equiv \{1,2,\ldots, k\}$$
+>
+> 若存在$$k \in \mathbb{N} \ni A \sim \mathbb{N}_k$$\(集合$$A$$等價於$$\mathbb{N}_k$$\)，則稱$$A$$為有限集合，且包含$$k$$個元素。
+>
+> 若$$A$$不是有限集，則$$A$$為無限集。
+
+根據定義，若$$A\sim \mathbb{N}_k$$為非空有限集，則存在一對一且映成的函數$$f: \mathbb{N}_k \rightarrow A$$使得$$A=\{ f(1), f(2), \ldots, f(k)\}$$。
+
+### 有限集的子集必為有限集
+
+若$$A$$為有限集，則對$$A$$的元素個數使用數學歸納法可證明。
+
+* $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
+* 令$$A\sim \mathbb{N}_1$$，則$$A$$只有兩個子集，$$\emptyset$$與$$A$$，兩者均為有限集
+* 假設對含有$$k$$個元素的每個有限集均成立。
+* 令$$B\subseteq A$$，若$$ k+1 \notin B$$，則$$B\subseteq \mathbb{N}_k$$，因此$$B$$為有限集。
+* 若$$k+1 \in B$$，令$$C=B \setminus \{k+1\}$$，則$$C \subseteq \mathbb{N}_k$$，即$$C$$為有限集。而$$B = C \cup \{ k+1 \}$$，所以$$B$$為有限集。
+* 可得$$A$$有$$k+1$$個元素時的子集為有限集。
+* 依數學歸納法可得有限集的子集為有限集。\(QED\)。
 
 ## 可數集合 \(countable set\)
 

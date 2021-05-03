@@ -27,11 +27,21 @@
 一樣使用數學歸納法證明。
 
 * 若$$A \sim \mathbb{N}_1$$，則$$A$$只有一個真子集$$\emptyset$$，但$$A$$不是空集合，所以兩者不等價。
-* 假設對於所有含有$$k$$個元素的每個有限集合該性質均成立。
+* 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
 * 令$$|A|=k+1$$，因為$$A\sim \mathbb{N}_{k+1}$$，所以$$A$$的每個真子集等價於$$\mathbb{N}_{k+1}$$的某個真子集。
-* 不失一般性令$$A=\mathbb{N}_{k+1}$$，令$$B\subset A$$且$$B\sim \mathbb{N}_{k+1}$$，則依定義存在一對一且映成的函數$$f: \mathbb{N}_{k+1} \rightarrow B$$。$$B=\{f(1),f(2),\ldots, f(k+1)\}$$
-* 若$$k+1 \notin B$$
-  * 則 $$B \setminus \{f(k+1)\} \subset \mathbb{N}_k$$
+* \[反證法\] 
+
+### 自然數與其子集的性質
+
+> 1. $$\forall a, b \in \mathbb{N}$$且$$a \neq b$$ 則 $$\mathbb{N}_a$$與$$\mathbb{N}_b$$不等價。
+> 2. $$\mathbb{N}$$為\(可數\)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
+
+1.  不失一般性 令$$a<b$$，則$$\mathbb{N}_a \subset \mathbb{N}_b$$且$$\mathbb{N}_b$$為有限集，因此兩者不等價 \(QED\)。
+2. \[反證法\]
+
+* 令$$E$$為所有正偶數形成的集合，則$$E \subset \mathbb{N}$$。
+* 令函數$$f: \mathbb{N} \rightarrow E$$, $$f(n)=2n, \forall n \in \mathbb{N}$$，則$$f$$為一對一且映成的函數。
+* 依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 \(QED\)。
 
 ## 可數集合 \(countable set\)
 

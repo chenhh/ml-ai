@@ -94,6 +94,7 @@ $$\Rightarrow$$
 * 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
 * $$f(f^{-1}(C)) \subset C$$
 * 若$$f$$為映成函數，則$$f(f^{-1}(C)) = C$$
+* 若$$f: X \rightarrow Y$$為一對一函數，則存在函數$$g: Y \rightarrow X$$使得$$g \circ f (X)\equiv g(f(X))=X$$
 
 
 

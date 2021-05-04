@@ -35,7 +35,7 @@
 
 ### 熵可改寫為期望值型式
 
-> $$H(X) = - \sum_{x \in X}P(x) \log P(x) = E_P(\log \frac{1}{P(x)})$$
+> $$H(X) = - \sum_{x \in X}P(x) \log P(x) =E(\log \frac{1}{P(x)}) = -E(\log P(x))$$
 
 ### 不同對數基底的熵的差異為常數備
 
@@ -70,7 +70,11 @@
 >
 > 等號成立於$$X$$在$$\mathcal{X}$$中發生的機率均等時。
 
+## 聯合熵\(joint entropy\)
 
+> 兩個隨機變數$$X,Y$$的熵，可解釋為兩個隨機變數包含的資訊總量。
+>
+> 令$$P(X,Y)$$為聯合機率密度函數，$$H(X,Y) = - \sum_{x \in X} \sum_{y \in Y} P(x,y) \log P(x,y) = - E(\log P(x,y))$$
 
 ### 
 

@@ -89,13 +89,13 @@ $$\Rightarrow$$
 
 ### 函數前像與映像的性質
 
-令$$A, B \subset X$$，$$C,D \subset Y$$
+令$$A, B \subseteq X$$，$$C,D \subseteq Y$$
 
-> $$A \subset B \Rightarrow f(A) \subset f(B)$$
+> $$A \subseteq B \Rightarrow f(A) \subseteq f(B)$$
 
 \[反向不成立，因為函數可為多對一\]
 
-> $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+> $$C \subseteq D \Rightarrow f^{-1}(C) \subseteq f^{-1}(D)$$
 
 
 
@@ -127,15 +127,23 @@ $$\Rightarrow$$
 
 
 
-> $$A \subset f^{-1}(f(A))$$
+> $$A \subseteq f^{-1}(f(A))$$
 >
 > 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
 
 
 
-> $$f(f^{-1}(C)) \subset C$$
+> $$f(f^{-1}((f(A)))=f(A)$$
+
+
+
+> $$f(f^{-1}(C)) \subseteq C$$
 >
 > 若$$f$$為映成函數，則$$f(f^{-1}(C)) = C$$
+
+
+
+> $$f^{-1}(f(f^{-1}(C)))=f^{-1}(C)$$
 
 
 

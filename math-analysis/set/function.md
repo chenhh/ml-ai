@@ -85,7 +85,8 @@ $$\Rightarrow$$
 
 \[反向不成立，因為函數可為多對一\]
 
-* $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+### $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+
 * $$f(A \cup B) = f(A) \cup f(B)$$
 * $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
 * $$f(A \cap B) \subset f(A) \cap f(B)$$

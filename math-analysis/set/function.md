@@ -111,7 +111,7 @@ todo: 反向
 
 > $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
 
-
+* 證明 $$f^{-1}(C \cup D) \subseteq f^{-1}(C) \cup f^{-1}(D)$$且 $$f^{-1}(C) \cup f^{-1}(D) \subseteq f^{-1}(C \cup D)$$
 
 > $$f(A \cap B) \subseteq f(A) \cap f(B)$$
 

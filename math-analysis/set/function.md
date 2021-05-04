@@ -79,27 +79,63 @@ $$\Rightarrow$$
 
 令$$f: X \rightarrow Y$$，則定義域為$$X$$，對應域為$$Y$$，值域\(映像\)為$$f(X)$$。給定$$D \subseteq Y$$，則$$f^{-1}(D)$$為此集合的前像，在此$$f^{-1}$$只代表該值域的**前像集合\(pre-image\)**，不是函數。
 
+![&#x5B9A;&#x7FA9;&#x57DF;&#x3001;&#x5C0D;&#x61C9;&#x57DF;&#x3001;&#x503C;&#x57DF;&#x3001;&#x524D;&#x50CF;](../../.gitbook/assets/pre-image-min.png)
+
+### 函數前像與映像的性質
+
 令$$A, B \subset X$$，$$C,D \subset Y$$
 
-### $$A \subset B \Rightarrow f(A) \subset f(B)$$ 
+*  $$A \subset B \Rightarrow f(A) \subset f(B)$$ 
 
 \[反向不成立，因為函數可為多對一\]
 
-### $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+* $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+
+
 
 * $$f(A \cup B) = f(A) \cup f(B)$$
+
+
+
 * $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
+
+
+
 * $$f(A \cap B) \subset f(A) \cap f(B)$$
+
+
+
 * 若$$f$$為一對一函數，則$$f(A\cap B) = f(A) \cap f(B)$$
+
+
+
 * $$f^{-1}(C \cap D) = f^{-1}(C) \cap f^{-1}(D)$$
+
+
+
 * $$f(A) \setminus f(B) \subset f(A \setminus B) \subset f(A)$$
+
+
+
 * $$f^{-1}(C \setminus D) = f^{-1}(C) \setminus f^{-1}(D)$$
+
+
+
 * $$A \subset f^{-1}(f(A))$$
 * 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
+
+
+
 * $$f(f^{-1}(C)) \subset C$$
 * 若$$f$$為映成函數，則$$f(f^{-1}(C)) = C$$
+
+
+
 * 若$$f: X \rightarrow Y$$為一對一函數，則存在函數$$g: Y \rightarrow X$$使得$$g \circ f (X)\equiv g(f(X))=X$$
 * 若$$f: X \rightarrow Y$$為映成函數，則存在函數$$h: Y \rightarrow X$$使得 $$f \circ h(Y) \equiv f(h(Y))=Y$$。
+
+
+
 * $$g:Y \rightarrow Z$$為任意函數。
 
   * 若$$g \circ f$$為一對一函數，則$$f$$為一對一函數。

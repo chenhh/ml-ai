@@ -64,6 +64,19 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
 
 * 吸收律\(absorb law\)。 $$X\cup(X\cap Y) = X$$， $$ X \cap (X \cup Y) = X$$
 
+### 兩集合的關係必為不相交、部份相交或者子集合三種其中之一
+
+![&#x5169;&#x96C6;&#x5408;&#x7684;&#x95DC;&#x4FC2;&#x70BA;&#x4E09;&#x7A2E;&#x4E4B;&#x4E00;](../../.gitbook/assets/set_algebra-min.png)
+
+### additive function
+
+> 函數$$f: U \rightarrow \mathbb{R}$$稱為additive function 若滿足 $$f(X \cup Y)=f(X)+f(Y), \ X,Y \subseteq U, \ X \cap Y = \emptyset$$。且具有以下性質：
+>
+> * $$f(X \cup Y) = f(X) + f(Y \setminus X)$$
+> * $$f(X \cap Y) = f(X) + f(Y) - f(X \cap Y)$$
+
+由定義可得知additive function在集合經函數變換後，其性質和變換前近似。
+
 ## 差集與補集運算\(difference and complement\)
 
 令$$U$$為宇集合\(universal set\)，即為全部元素的集合。

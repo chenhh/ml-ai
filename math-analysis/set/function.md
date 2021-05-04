@@ -107,7 +107,7 @@ todo: 反向
 
 > $$f(A \cup B) = f(A) \cup f(B)$$
 
-
+* 證明 $$f(A \cup B) \subseteq f(A) \cup f(B)$$且 $$f(A) \cup f(B) \subseteq f(A \cup B)$$
 
 > $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
 

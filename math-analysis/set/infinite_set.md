@@ -58,7 +58,7 @@
 
 ### 無限集的充分必要條件
 
-> * $$A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合A的勢大於自然數\]
+> * $$A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數\]
 > * $$A$$為無限集 $$\Leftrightarrow$$$$A$$與其真子集等價。\[$$ \exists B\subset A \ni A \sim B$$\]
 
 ## 可數與不可數集合 \(countable and uncountable set\)

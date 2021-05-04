@@ -85,6 +85,15 @@ $$\Rightarrow$$
 * $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
 * $$f(A \cup B) = f(A) \cup f(B)$$
 * $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
+* $$f(A \cap B) \subset f(A) \cap f(B)$$
+* 若$$f$$為一對一函數，則$$f(A\cap B) = f(A) \cap f(B)$$
+* $$f^{-1}(C \cap D) = f^{-1}(C) \cap f^{-1}(D)$$
+* $$f(A) \setminus f(B) \subset f(A \setminus B) \subset f(A)$$
+* $$f^{-1}(C \setminus D) = f^{-1}(C) \setminus f^{-1}(D)$$
+* $$A \subset f^{-1}(f(A))$$
+* 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
+* $$f(f^{-1}(C)) \subset C$$
+* 若$$f$$為映成函數，則$$f(f^{-1}(C)) = C$$
 
 
 

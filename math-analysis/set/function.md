@@ -20,7 +20,7 @@ note: relation比function更一般化，因為可為一對多的對應。
 
 e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x-y) \}$$為等價關係。
 
-## 函數 \(function\)
+## 函數、映射 \(function, mapping\)
 
 > $$X,Y$$為兩集合\(相同或相異均可\)，函數$$f: X \rightarrow Y$$定義對於$$X$$中的每一個元素$$x$$，均存在唯一的函數值$$f(x) \in Y$$。$$\forall x \in X, \exists! y \in Y \ni f(x)=y$$
 >
@@ -38,14 +38,14 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 一對一和映成函數可判斷兩集合\(定義域和對應域\)的勢，詳見[基數](cardinal-number.md#shi-yong-han-shu-pan-duan-ji-he-shi-de-da-xiao)。
 
-* 一對一函數\(單射\)\(one-to-one function, injection\)
+* 一對一函數\(單射\)\(one-to-one function, injection, injective mapping\)
   * $$\forall x,y\in X, \ f(x)=f(y) \Rightarrow x = y$$
   * 等價於 $$\forall x,y \in X, x\neq y \Rightarrow f(x) \neq f(y)$$
   * 可保證值域和定義域等勢，$$|f(X)| = |X|$$，因此對應域的勢大於等於定義域，即 $$ |X| \leq |Y|$$。
 
 ![&#x55AE;&#x5C04;&#x4F46;&#x975E;&#x6EFF;&#x5C04;](../../.gitbook/assets/injection_not_onto.png)
 
-* 映成函數\(滿射\)\(onto function,  surjection\)
+* 映成函數\(滿射\)\(onto function,  surjection, surjective mapping\)
   * $$\forall y \in Y \ \exists x \in X \ni f(x)=y$$
   * 等價於 $$\forall y \in Y, f^{-1}(y) \subseteq X \neq \emptyset$$
   * 對應域中每一個元素都被對應到，因此值域等於對應域，即$$|f(X)| = |Y|$$。
@@ -53,7 +53,7 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 ![&#x6EFF;&#x5C04;&#x4F46;&#x975E;&#x55AE;&#x5C04;](../../.gitbook/assets/onto_not_1-1.png)
 
-由上述條件可知當$$f$$為一對一且映成函數時，定義域與對應域等勢，即$$|X|  = |Y|$$。
+由上述條件可知當$$f$$為一對一且映成函數\(bijection, bijective mapping\)時，定義域與對應域等勢，即$$|X|  = |Y|$$。
 
 ### 可逆函數\(invertible function\)
 
@@ -78,6 +78,8 @@ $$\Rightarrow$$
 ## 函數的映像與前像
 
 令$$f: X \rightarrow Y$$，則定義域為$$X$$，對應域為$$Y$$，值域\(映像\)為$$f(X)$$。給定$$D \subseteq Y$$，則$$f^{-1}(D)$$為此集合的前像，在此$$f^{-1}$$只代表該值域的**前像集合\(pre-image\)**，不是反函數。
+
+
 
 
 

@@ -52,7 +52,13 @@ $$f(x)=\frac{x}{1+|x|}$$ 或$$g(x) = \frac{2}{\pi} \tan^{-1}(x)$$
 
 $$f(x) = \frac{(x-a)}{(b-a)}$$
 
+#### 任意集合$$A$$不會與其冪集合$$P(A)$$等價
 
+* $$P(A)$$為$$A$$的所有子集形成的集合。
+* 只要證明所有的函數$$f:A \rightarrow P(A)$$均不為映成函數即可。
+* 令$$B= \{ a\in A | a\notin f(a)\}$$，則$$B \subset A$$，可得$$B \in P(A)$$且$$B \neq f(a)$$。
+* $$\forall b \in A \setminus B$$, $$b \notin B$$且 $$b \in f(b)$$，所以$$B \neq f(b)$$。
+* 因此可得$$B \notin f(A)$$，因此$$f$$不是映成函數 \(QED\)。
 
 ## 使用函數判斷集合勢的大小
 

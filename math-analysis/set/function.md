@@ -81,15 +81,21 @@ $$\Rightarrow$$
 
 ![&#x5B9A;&#x7FA9;&#x57DF;&#x3001;&#x5C0D;&#x61C9;&#x57DF;&#x3001;&#x503C;&#x57DF;&#x3001;&#x524D;&#x50CF;](../../.gitbook/assets/pre-image-min.png)
 
+| 函數類型 | 值域元素 | 前像元素 |
+| :--- | :--- | :--- |
+| 映成\(surjection\) | 對每一個 $$y\in Y$$ | $$f^{-1}(y)$$至少有一個元素。 |
+| 一對一\(injection\) | 對每一個 $$y \in Y$$ | $$f^{-1}(y)$$最多只有一個元素，可能為空集合。 |
+| 一對一且映成\(bijection\) | 對每一個 $$y\in Y$$ | $$f^{-1}(y)$$剛好只有一個元素。 |
+
 ### 函數前像與映像的性質
 
 令$$A, B \subset X$$，$$C,D \subset Y$$
 
-*  $$A \subset B \Rightarrow f(A) \subset f(B)$$ 
+> $$A \subset B \Rightarrow f(A) \subset f(B)$$
 
 \[反向不成立，因為函數可為多對一\]
 
-* $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+> $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
 
 
 

@@ -26,7 +26,7 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 >
 > * $$X$$為函數$$f$$的定義域\(domain\)。
 > * $$Y$$為函數$$f$$的對應域\(codomain\)。
-> * $$f(X) = \{ f(x), x\in X \} \subseteq Y$$為函數$$f$$的值域，其中等號成立於$$f$$為映成函數。
+> * $$f(X) = \{ f(x)\ \vert \ x\in X \} \subseteq Y$$為函數$$f$$的值域，其中等號成立於$$f$$為映成函數。
 
 ![&#x51FD;&#x6578;&#x503C;&#x5FC5;&#x552F;&#x4E00;&#xFF0C;&#x53EF;&#x70BA;&#x4E00;&#x5C0D;&#x4E00;&#x6216;&#x591A;&#x5C0D;&#x4E00;&#xFF0C;&#x4F46;&#x4E0D;&#x53EF;&#x70BA;&#x4E00;&#x5C0D;&#x591A;&#x95DC;&#x4FC2;](../../.gitbook/assets/function-min%20%281%29.png)
 
@@ -77,7 +77,7 @@ $$\Rightarrow$$
 
 ## 函數的映像與前像
 
-令$$f: X \rightarrow Y$$，則定義域為$$X$$，對應域為$$Y$$，值域\(映像\)為$$f(X)$$。給定$$D \subseteq Y$$，則$$f^{-1}(D)$$為此集合的前像，在此$$f^{-1}$$只代表該值域的**前像集合\(pre-image\)**，不是函數。
+令$$f: X \rightarrow Y$$，則定義域為$$X$$，對應域為$$Y$$，值域\(映像\)為$$f(X)$$。給定$$D \subseteq Y$$，則$$f^{-1}(D) = \{x \in X \ \vert \ f(x) \in D \}$$為此集合的前像，在此$$f^{-1}$$只代表該值域的**前像集合\(pre-image\)**，不是函數。
 
 ![&#x5B9A;&#x7FA9;&#x57DF;&#x3001;&#x5C0D;&#x61C9;&#x57DF;&#x3001;&#x503C;&#x57DF;&#x3001;&#x524D;&#x50CF;](../../.gitbook/assets/pre-image-min.png)
 
@@ -99,53 +99,59 @@ $$\Rightarrow$$
 
 
 
-* $$f(A \cup B) = f(A) \cup f(B)$$
+> $$f(A \cup B) = f(A) \cup f(B)$$
 
 
 
-* $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
+> $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
 
 
 
-* $$f(A \cap B) \subset f(A) \cap f(B)$$
+> $$f(A \cap B) \subset f(A) \cap f(B)$$
 
 
 
-* 若$$f$$為一對一函數，則$$f(A\cap B) = f(A) \cap f(B)$$
+> 若$$f$$為一對一函數，則$$f(A\cap B) = f(A) \cap f(B)$$
 
 
 
-* $$f^{-1}(C \cap D) = f^{-1}(C) \cap f^{-1}(D)$$
+> $$f^{-1}(C \cap D) = f^{-1}(C) \cap f^{-1}(D)$$
 
 
 
-* $$f(A) \setminus f(B) \subset f(A \setminus B) \subset f(A)$$
+> $$f(A) \setminus f(B) \subset f(A \setminus B) \subset f(A)$$
 
 
 
-* $$f^{-1}(C \setminus D) = f^{-1}(C) \setminus f^{-1}(D)$$
+> $$f^{-1}(C \setminus D) = f^{-1}(C) \setminus f^{-1}(D)$$
 
 
 
-* $$A \subset f^{-1}(f(A))$$
-* 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
+> $$A \subset f^{-1}(f(A))$$
+>
+> 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
 
 
 
-* $$f(f^{-1}(C)) \subset C$$
-* 若$$f$$為映成函數，則$$f(f^{-1}(C)) = C$$
+> $$f(f^{-1}(C)) \subset C$$
+>
+> 若$$f$$為映成函數，則$$f(f^{-1}(C)) = C$$
 
 
 
-* 若$$f: X \rightarrow Y$$為一對一函數，則存在函數$$g: Y \rightarrow X$$使得$$g \circ f (X)\equiv g(f(X))=X$$
-* 若$$f: X \rightarrow Y$$為映成函數，則存在函數$$h: Y \rightarrow X$$使得 $$f \circ h(Y) \equiv f(h(Y))=Y$$。
+> 若$$f: X \rightarrow Y$$為一對一函數，則存在函數$$g: Y \rightarrow X$$使得$$g \circ f (X)\equiv g(f(X))=X$$
+
+> 若$$f: X \rightarrow Y$$為映成函數，則存在函數$$h: Y \rightarrow X$$使得 $$f \circ h(Y) \equiv f(h(Y))=Y$$。
 
 
 
-* $$g:Y \rightarrow Z$$為任意函數。
+> $$g:Y \rightarrow Z$$為任意函數。
+>
+> 若$$g \circ f$$為一對一函數，則$$f$$為一對一函數。
+>
+> 若$$g \circ f$$為映成函數，則$$g$$為映成函數。
 
-  * 若$$g \circ f$$為一對一函數，則$$f$$為一對一函數。
-  * 若$$g \circ f$$為映成函數，則$$g$$為映成函數。
+
 
 
 

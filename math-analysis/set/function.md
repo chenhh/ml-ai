@@ -93,11 +93,17 @@ $$\Rightarrow$$
 
 > $$A \subseteq B \Rightarrow f(A) \subseteq f(B)$$
 
-\[反向不成立，因為函數可為多對一\]
+* $$f(A) = \{f(x) \vert x \in A \}, \ f(B) = \{ f(x) | x \in B\}$$
+* $$ \because A\subseteq B \therefore x \in A \Rightarrow x \in B$$
+* $$\therefore f(A) \subseteq f(B)$$ \(QED\)
+
+todo: 反向
 
 > $$C \subseteq D \Rightarrow f^{-1}(C) \subseteq f^{-1}(D)$$
 
-
+* $$f^{-1}(C) = \{x\in X | f(x) \in C\}$$, $$f^{-1}(D) = \{x\in X | f(x) \in D\}$$
+* $$\because C \subseteq D \therefore f(x) \in C \Rightarrow f(x) \in D$$
+* $$\therefore f^{-1}(C) \subseteq f^{-1}(D)$$
 
 > $$f(A \cup B) = f(A) \cup f(B)$$
 
@@ -107,7 +113,7 @@ $$\Rightarrow$$
 
 
 
-> $$f(A \cap B) \subset f(A) \cap f(B)$$
+> $$f(A \cap B) \subseteq f(A) \cap f(B)$$
 
 
 

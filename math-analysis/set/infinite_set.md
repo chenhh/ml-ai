@@ -2,6 +2,8 @@
 
 有限集直觀上來說，就是集合內的元素可以一個一個數盡。無限多個元素表示我們無法一個一個的將元數盡。
 
+![&#x6709;&#x9650;&#x96C6;&#x3001;&#x53EF;&#x6578;&#x96C6;&#x3001;&#x7121;&#x9650;&#x96C6;&#x3001;&#x4E0D;&#x53EF;&#x6578;&#x96C6;&#x7684;&#x95DC;&#x4FC2;](../../.gitbook/assets/finite_countable_set_relation-min.png)
+
 ## 有限集與無限集 \(finite and infinite set\)
 
 > $$\forall k \in \mathbb{N}$$, 令 $$\mathbb{N}_k \equiv \{1,2,\ldots, k\}$$

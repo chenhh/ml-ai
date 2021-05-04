@@ -1,5 +1,7 @@
 # 有限集與無限集
 
+有限集直觀上來說，就是集合內的元素可以一個一個數盡。無限多個元素表示我們無法一個一個的將元數盡。
+
 ## 有限集與無限集 \(finite and infinite set\)
 
 > $$\forall k \in \mathbb{N}$$, 令 $$\mathbb{N}_k \equiv \{1,2,\ldots, k\}$$

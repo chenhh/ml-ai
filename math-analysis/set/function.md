@@ -79,6 +79,13 @@ $$\Rightarrow$$
 
 令$$f: X \rightarrow Y$$，則定義域為$$X$$，對應域為$$Y$$，值域\(映像\)為$$f(X)$$。給定$$D \subseteq Y$$，則$$f^{-1}(D)$$為此集合的前像，在此$$f^{-1}$$只代表該值域的**前像集合\(pre-image\)**，不是反函數。
 
+令$$A, B \subset X$$，$$C,D \subset Y$$
+
+* $$A \subset B \Rightarrow f(A) \subset f(B)$$ \[反向不成立，因為函數可為多對一\]
+* $$C \subset D \Rightarrow f^{-1}(C) \subset f^{-1}(D)$$
+* $$f(A \cup B) = f(A) \cup f(B)$$
+* $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
+
 
 
 

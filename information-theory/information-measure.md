@@ -115,3 +115,46 @@
 * 等號成立在$$X$$與$$Y$$為獨立時，即$$I(X;Y)=0$$。
 * $$H(Y|X) \leq H(Y)$$ 是考慮所有實現值的平均值，而非特定實現值$$Y=y$$時的不等式。
 
+## 互資訊\(mutual information\)
+
+> 互資訊為兩個隨機變數中相同的資訊量，可想成集合論中的交集部份。
+>
+> $$\begin{align} I(X;Y) &=\sum_{x \in X}  \sum_{y \in Y}P(x,y) \log{\frac{P(x,y)}{P(x)P(y)}} \\ &=D(P(x,y)\| P(x)P(y)) \\ & =\operatorname {E}_{P(x,y)}\big( \frac{P(x,y)}{P(x)P(y)}\big) \end{align}$$
+
+* $$D(P(x,y) \| P(x)P(y))$$: 可解釋為聯合分佈相對於兩變數為獨立分佈的分散程度。
+
+### 互資訊為兩隨機變數中相同的資訊量
+
+> * $$H(X,Y)= H(X)+H(Y|X)=H(Y) + H(X|Y)$$
+> * $$I(X;Y)=H(Y) - H(X|Y)=H(X) - H(Y|X)=H(X)+H(Y)-H(X,Y)$$
+
+### 互資訊有對稱性
+
+> $$I(X;Y) = I(Y;X)$$
+>
+> 因為互資訊為兩個隨機變數共同的資訊量，因此有對稱性。
+>
+> $$IX;Y) = \sum_x \sum_yP(x,y) \log{\frac{P(x,y)} {P(x)P(y)}} = \sum_y \sum_x P(x,y) \log{\frac{P(x,y)} {P(x)P(y)}} = I(Y;X)$$\(QED\)
+
+### 互資訊為0若且唯若兩隨機變數獨立
+
+> $$I(X;Y) = 0 \Leftrightarrow \log{\frac{P(x,y)}{P(x)P(y)}}=0$$
+
+$$P(x,y)=P(x)P(y)$$, 即兩隨機變數獨立\(indepedent\)，因為彼此之間沒有任何相關的訊息。
+
+### 資訊本體\(self information\)
+
+> * $$I(X;X)=H(X)-H(X|X)=H(X)-0=H(X)$$
+> * $$I(X;X)=\operatorname{E}\big( \log{\frac{P(X)}{P(X)^2}}\big) = -\operatorname{E}(\log P(X))=H(X)$$
+
+$$H(X|X)$$解釋為給定隨機變數$$X$$的訊息後，因為已經有$$X$$的所有資訊，所以$$H(X|X)$$不含任何資訊量，因此值為0。
+
+### 互資訊鏈法則
+
+> $$I(X_1, X_2,\ldots, X_N; Y)=\sum_{i=1}^N I(X_i;Y|X_{i-1}, \ldots, X_2, X_1)$$
+
+* $$I(X_1,X_2;Y)=I(X_1;Y)+I(X_2;Y|X_1)$$
+* $$I(X_1,X_2,X_3;Y)=I(X_1;Y)+I(X_2;Y|X_1)+I(X_3;Y|X_1,X_2)$$
+
+
+

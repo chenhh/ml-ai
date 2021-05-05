@@ -156,5 +156,9 @@ $$H(X|X)$$解釋為給定隨機變數$$X$$的訊息後，因為已經有$$X$$的
 * $$I(X_1,X_2;Y)=I(X_1;Y)+I(X_2;Y|X_1)$$
 * $$I(X_1,X_2,X_3;Y)=I(X_1;Y)+I(X_2;Y|X_1)+I(X_3;Y|X_1,X_2)$$
 
+## 條件互資訊\(conditional mutual information\)
+
+> $$\begin{align} I(X;Y|Z) & =H(X|Z)-H(X|Y,Z) \\& =H(Y|Z) - H(Y|X,Z) \\ &=H(X|Z)+H(Y|Z)-H(X,Y|Z) \\& =\operatorname{E}_{P(X,Y,Z)}\big( \log{\frac{P(X,Y|Z)}{P(X|Z) P(Y|Z)}} \big) \end{align}$$
+
 
 

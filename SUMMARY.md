@@ -23,6 +23,7 @@
 * [機率測度\(probability measure\)](probability-and-statistics/probability-measure.md)
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
+* [動差生成函數\(moment generating function\)](probability-and-statistics/moment-generating-function.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
 * [隨機過程](probability-and-statistics/random-process.md)
 * [貝式機率](probability-and-statistics/bayes-probability.md)

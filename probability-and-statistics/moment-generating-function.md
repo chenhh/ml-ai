@@ -1,5 +1,5 @@
 ---
-description: moment：動差(台灣)，矩(中國)
+description: moment：動差(tw)，矩(cn)
 ---
 
 # 動差生成函數\(moment generating function\)

@@ -28,3 +28,20 @@
 
 由定義知全序集中，任意兩個元素均可以比較大小。
 
+## 小於\(less than\)
+
+> 令$$(S, \leq)$$為偏序集，$$\forall x,y \in S$$且$$x \neq y$$則 $$x < y$$。
+
+## 三一律\(trichotomy rule\)
+
+> $$x,y,z \in \mathbb{R}$$，則$$x > y, \ x=y,\ x< y$$恰有一成立。
+
+## 集合有上\(下\)界\(bounded above, below\)
+
+> $$(S,\leq)$$為偏序集，$$\emptyset \neq E \subseteq S$$為非空子集合。
+>
+> * 若$$\exists b \in S \ni \forall x \in E,\ x \leq b$$，稱$$b$$為集合$$E$$的上界。
+> * 若$$\exists a \in S \ni \forall x \in E,\ a \leq x$$，稱$$a$$為集合$$E$$的下界。
+
+上、下界不必為集合$$E$$中的元素，因為當$$E$$為度量空間中的開集合或非連續集合時，可能無法直接用集合內的元素定義上下界。
+

@@ -20,5 +20,5 @@
 
 ## 有理數系\(rational number system\)
 
-因為有理數體為全序集\(集合中任意兩個元素可以比較大小\)，而把$$(\mathbb{Q}, + , \cdot, \leq)$$稱為有理數系。
+因為有理數體為[全序集](partial-total-order-set.md#quan-xu-ji-total-order-set)\(集合中任意兩個元素可以比較大小\)，而把$$(\mathbb{Q}, + , \cdot, \leq)$$稱為有理數系。
 

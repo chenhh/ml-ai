@@ -15,6 +15,8 @@
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
 * 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$  。
 
+![&#x963F;&#x57FA;&#x7C73;&#x5FB7;&#x6027;&#x8CEA;](../.gitbook/assets/archimedean_property.png)
+
 ##  實數集的稠密性
 
 > $$\forall a,b \in \mathbb{R}, \ a <b$$ $$ \exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$ a < v < b$$。

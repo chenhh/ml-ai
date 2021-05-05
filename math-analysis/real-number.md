@@ -8,6 +8,13 @@
 
 實數可分為有理數和無理數，或者代數數和超越數。實數可實現的基本運算有加、減、乘、除、乘方等，對非負數（即正數和 ）還可以進行開方運算。實數加、減、乘、除（除數不為零）、平方後結果還是實數。任何實數都可以開奇次方，結果仍是實數，只有非負實數，才能開偶次方其結果還是實數。
 
+## 阿基米德性質\(Archimedean property\)
+
+> $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。
+
+* 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
+* 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$  。
+
 ##  實數集的稠密性
 
 > $$\forall a,b \in \mathbb{R}, \ a <b$$ $$ \exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$ a < v < b$$。

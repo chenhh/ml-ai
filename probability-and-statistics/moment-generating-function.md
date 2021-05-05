@@ -1,3 +1,7 @@
+---
+description: moment：動差(台灣)，矩(中國)
+---
+
 # 動差生成函數\(moment generating function\)
 
 ## 簡介

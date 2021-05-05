@@ -2,7 +2,7 @@
 
 ## 簡介
 
-分析數學中的主要概念，如收斂性、微分與積分等，對其討論時，必定都將追溯到實數系的基本性質。	• 我們需證明實數集合$$\mathbb{R}$$ 為一個具有完備性的有序體\(complete ordered field\)。
+分析數學中的主要概念，如收斂性、微分與積分等，對其討論時，必定都將追溯到實數系的基本性質。 我們需證明實數集合$$\mathbb{R}$$ 為一個具有完備性的有序體\(complete ordered field\)。
 
 ### 實數的組成
 
@@ -29,7 +29,7 @@ $$\mathbb{N}$$為自然數集合，$$\mathbb{Z}$$為整數集合，$$\mathbb{Q}$
 
 ## 有理數\(rational number\)
 
-* 有理數定義為 $$r = \frac{n}{m}, \forall n, m \in \mathbb{Z}$$，$$gcd(n,m)=1$$，是為了處理$$ \frac{n}{m}$$ 不為整數的擴展定義。
+* 有理數定義為 $$r = \frac{n}{m}, \forall n \in \mathbb{Z}, m \in \mathbb{N}$$，$$gcd(n,m)=1$$，是為了處理$$ \frac{n}{m}$$ 不為整數的擴展定義。
 * 有理數集合記為$$\mathbb{Q}$$
 * 兩個有理數之間，必定存在一個相異有理數，所以**有理數處處稠密\(dense\)**。
   * $$\forall a,b \in \mathbb{Q} ,\text {let } c = \frac{a+b}{2} \Rightarrow c \in \mathbb{Q}$$

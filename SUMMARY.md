@@ -10,6 +10,7 @@
   * [偏序集或全序集](math-analysis/set/partial-total-order-set.md)
   * [函數\(function\)](math-analysis/set/function.md)
   * [自然數](math-analysis/set/natural_number.md)
+  * [有理數](math-analysis/set/rational-number.md)
   * [實數中的集合](math-analysis/set/real-number.md)
 * [實數\(real number\)](math-analysis/real-number.md)
 * [數列\(sequence\)](math-analysis/sequence.md)

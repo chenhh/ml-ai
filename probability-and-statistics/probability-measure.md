@@ -1,5 +1,11 @@
 # 機率測度\(probability measure\)
 
+* 出象\(outcome\)$$\omega$$為樣本空間$$\Omega$$的一個元素。
+* 而樣本空間的任一子集稱為事件\(event\)，$$E \subseteq \Omega$$，因此事件中包含了許多的出像。
+* sigma-field $$\mathcal{F}$$為滿足特定條件的事件集合的集合。
+* 隨機變數$$X: \mathcal{F} \rightarrow \mathbb{R}$$為函數，將sigma-field中的元素\(事件\)，映射到實數值。因此給定實數值$$a$$，可得前像為事件集合的集合，可得$$X^{-1}(a) \in \mathcal{F}$$。
+* 機率測度$$P$$量測的是滿足某個實數值$$a$$的前像\(事件集合的集合, $$X^{-1}(a)$$\)發生的機率。
+
 給定機率空間為$$(\Omega, \mathcal{F}, P)$$
 
 * $$\forall X \in \mathcal{F}, P(X^c)=1 - P(X)$$

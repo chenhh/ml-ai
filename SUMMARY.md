@@ -83,3 +83,7 @@
 * [計算理論簡介](computation-theory/computation-theory-introduction.md)
 * [自動機\(automata\)](computation-theory/automata.md)
 
+## 因果推論 <a id="casualty-inference"></a>
+
+* [簡介](casualty-inference/introduction.md)
+

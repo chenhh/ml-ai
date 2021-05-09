@@ -86,4 +86,5 @@
 ## 因果推論 <a id="casualty-inference"></a>
 
 * [簡介](casualty-inference/introduction.md)
+* [因果的三個層級](casualty-inference/ladder-of-causation.md)
 

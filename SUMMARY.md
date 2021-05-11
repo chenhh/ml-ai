@@ -33,7 +33,7 @@
 
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
 
-## 時間序列 <a id="time-series"></a>
+## 時間序列與訊號處理 <a id="time-series"></a>
 
 * [簡介](time-series/time-series-introduction.md)
 * [ARMA](time-series/arma.md)

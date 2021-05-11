@@ -39,6 +39,7 @@
 * [ARMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)
 * [共整合\(cointegrating\)](time-series/cointegrating.md)
+* [Hilbert-Huang transform \(HHT\)](time-series/hilbert-huang-transform.md)
 
 ## 資訊理論 <a id="information-theory"></a>
 

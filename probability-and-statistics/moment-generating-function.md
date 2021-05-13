@@ -30,6 +30,12 @@ description: moment：動差(tw)，矩(cn)
 * 三階中央動差為偏度\(skewness\)，描述分佈左、右偏移的程度。
 * 四階中央動差為峰度\(kurtosis\)，述述分佈尖聳的程度。
 
+## 動差生成函數\(MGF\)
+
+> 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x)$$，可視為隨機變數的（反）Laplace轉換。
+
+> 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x)$$，可視為隨機變數的（反）Fourier轉換。
+
 
 
 

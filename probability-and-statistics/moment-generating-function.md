@@ -42,11 +42,12 @@ description: moment：動差(tw)，矩(cn)
 >
 > 隨機變數的CHF 一定存在，且與機率分佈$$F(x)$$有一對一的關係。即$$F_X = F_Y \Leftrightarrow\phi_X(t)=\phi_Y(t)$$。
 
+**MGF與CHF主要用途，是證明兩個相異隨機變數有相同的機率分佈**。
 
+由泰勒展開式可知：
 
-
-
-
+* $$\operatorname{E}(X^k) = \frac{d^k}{dt^k}M_X(t)|_{t=0}$$
+* $$\operatorname{E}(X^k) = i^{-k} \frac{d^k}{dt^k}\phi_X(t)|_{t=0}$$
 
 
 

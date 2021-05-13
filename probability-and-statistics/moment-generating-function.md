@@ -19,11 +19,13 @@ description: moment：動差(tw)，矩(cn)
 
 
 
-> 令隨機變數$$X$$的機率密度函數為$$f$$，則$$k$$次動差為：
+> 令隨機變數$$X$$的機率密度函數為$$f$$，則（以0為中心）$$k$$次動差為：
 >
 > * $$X$$為離散隨機變數，$$\operatorname{E}(X^k) = \sum_{i=1}^{\infty} x_i^k f(x_i)$$, $$x_i$$為可能的實現值。
-> * $$X$$為連續隨機變數，$$\operatorname{E}(X^k) = \int_{-\infty}^{\infty} x^k f(x)dx$$
+> * $$X$$為連續隨機變數，$$\operatorname{E}(X^k) = \int_{-\infty}^{\infty} x^k f(x)dx = \int_{-\infty}^{\infty} x^k dF(x)$$
 > * 如果$$X$$的觀察值\(樣本\)為$$x_1, x_2,\ldots, x_N$$，則$$k$$次動差為$$\operatorname{E}(X^k) = \frac{1}{N} \sum_{i=1}^N x_i^k$$。
+>
+> 以期望值為中心的$$k$$次動差為 $$\operatorname{E}((X-\mu)^k)=\int_{-\infty}^{\infty}x^k dF(x)$$
 
 *  一階動差為平均值\(mean\)，描述分佈的集中程度。
 * 二階中央動差為變異數\(variance\)，描述分佈的分散程度。
@@ -33,8 +35,12 @@ description: moment：動差(tw)，矩(cn)
 ## 動差生成函數\(MGF\)
 
 > 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x)$$，可視為隨機變數的（反）Laplace轉換。
+>
+> 隨機變數的MGF$$M(t)$$不一定存在，但存在時與機率分佈$$F(x)$$有一對一的關係。若$$M_X(t), M_Y(t)$$存在，則$$F_X=F_Y \Leftrightarrow M_X(t)=M_Y(t)$$。
 
 > 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x)$$，可視為隨機變數的（反）Fourier轉換。
+>
+> 隨機變數的CHF 一定存在，且與機率分佈$$F(x)$$有一對一的關係。即$$F_X = F_Y \Leftrightarrow\phi_X(t)=\phi_Y(t)$$。
 
 
 

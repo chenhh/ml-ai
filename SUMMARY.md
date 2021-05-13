@@ -21,6 +21,7 @@
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
 * [機率測度\(probability measure\)](probability-and-statistics/probability-measure.md)
+* [隨機變數（random variable）](probability-and-statistics/random-variable.md)
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [動差生成函數\(moment generating function\)](probability-and-statistics/moment-generating-function.md)

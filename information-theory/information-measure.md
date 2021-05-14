@@ -18,40 +18,40 @@
 
 > definition: information entropy
 >
-> $$H(X) = -\sum_{x \in X} P(x) \log P(x)$$, $$X$$為離散隨機變數$$x$$的樣本空間。
+> $$ \mathrm{H}(X) = -\sum_{x \in X} \mathrm{P}(x) \log \mathrm{P}(x)$$, $$X$$為離散隨機變數$$x$$的樣本空間。
 >
 > 令 $$0 \log 0 \equiv 0$$\($$\because x \log x \rightarrow 0 \text{ as } x \rightarrow 0$$\)
 
-由於隨機變數$$X$$為函數，因此$$H(\cdot)$$為泛函\(functional\)，且熵的計算與隨機變數$$X$$的實現值$$x$$無關，而與其機率$$P(X=x)$$有關。
+由於隨機變數$$X$$為函數，因此$$\mathrm{H}(\cdot)$$為泛函\(functional\)，且熵的計算與隨機變數$$X$$的實現值$$x$$無關，而與其機率$$\mathrm{P}(X=x)$$有關。
 
 * 熵是隨機變數的不確定性的平均度量值，隨機變數變異數越大，即隨機變數越「亂」，則熵之值越大。
 * 熵最大值發生在隨機變數為平均分佈\(uniform distribution\)時 \(參考 maxinum entropy principle\)。
-* 公式中，$$\log$$以2為底時，$$H(X)$$之值的單位為bit；而以自然數$$e$$為底時，$$H(X)$$之值的單位為nats.
+* 公式中，$$\log$$以2為底時，$$\mathrm{H}(X)$$之值的單位為bit；而以自然數$$e$$為底時，$$\mathrm{H}(X)$$之值的單位為nats。
 * 熵的值可解釋為使用二進位編碼隨機變數時，其值等於變數的平均編碼長度。
 
 ### 熵必為正實數
 
-> $$H(X) \geq 0$$
+> $$\mathrm{H}(X) \geq 0$$
 
 ### 熵可改寫為期望值型式
 
-> $$H(X) = - \sum_{x \in X}P(x) \log P(x) =E(\log \frac{1}{P(x)}) = -E(\log P(x))$$
+> $$\begin{aligned} \mathrm{H}(X) &= - \sum_{x \in X}\mathrm{P}(x) \log \mathrm{P}(x) \\ &=\mathrm{E}\big(\log \frac{1}{\mathrm{P}(x)} \big) \\& = -\mathrm{E}(\log \mathrm{P}(x)) \end{aligned}$$
 
-### 不同對數基底的熵的差異為常數備
+### 不同對數基底的熵的差異為常數倍
 
-> $$H_b(X) = (\log_b(a))H_a(X)$$
+> $$\mathrm{H}_b(X) = (\log_b(a))\mathrm{H}_a(X)$$
 
 ### 熵值為0若且唯若隨機變數退化為確定值
 
-> $$H(X) = 0 \Leftrightarrow$$$$X$$的實現值為確定值。
+> $$\mathrm{H}(X) = 0 \Leftrightarrow$$$$X$$的實現值為確定值。
 
 ### 熵為凹函數\(開口向下\)
 
-> $$H(\lambda X_1 + (1-\lambda)X_2) \geq \lambda H(X_1) + (1-\lambda)H(X_2)$$
+> $$\mathrm{H}(\lambda X_1 + (1-\lambda)X_2) \geq \lambda \mathrm{H}(X_1) + (1-\lambda)\mathrm{H}(X_2)$$
 
 ### 熵與聯合熵的關係\(鏈法則\)
 
-> * $$H(X,Y) = H(X) + H(Y|X) = H(Y) + H(X|Y)$$
+> * $$\mathrm{H}(X,Y) = \mathrm{H}(X) + \mathrm{H}(Y|X) = \mathrm{H}(Y) + \mathrm{H}(X|Y)$$
 
 
 

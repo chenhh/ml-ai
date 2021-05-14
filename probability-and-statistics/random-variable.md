@@ -16,6 +16,10 @@
 
 > 隨機變數$$X$$在區間$$(a,b]$$發生的機率為$$P(a< X \leq b) = P(\omega \in \Omega | X(\omega) \in (a,b] )$$，則分佈函數（distribution function）為 $$F(x) = P(X \leq x)$$。
 
+連續隨機變數恰好等於某數值$$c$$的機率為0，即$$P(X=c)=0$$，因此$$P(a < x \leq b) = P(a < X < b)=(a \leq X<b)=P(a \leq X \leq b)$$
+
+但離散隨機變數無此性質。
+
 ## 分佈函數（distribution function）
 
 $$F(x)$$為隨機變數$$X$$的分佈函數，則

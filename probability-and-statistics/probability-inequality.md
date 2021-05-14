@@ -48,5 +48,15 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 
 使用數學歸納法可證明。
 
+* 對於一個事件，$$P(E_1) \leq P(E_1)$$。
+* 假設對$$n$$個事件不等式成立，即假設 $$P(\cup_{i=1}^n E_i) \leq \sum_{i=1}^n P(E_i)$$。
+* 對於$$n+1$$個事件：
+  * $$P(E \cup F) = P(E) + P(F) - P(E \cap F)$$
+  * $$P(\cup_{i=1}^{n+1}E_i) = P(\cup_{i=1}^{n}E_i) + P(E_{n+1}) - P(\cup_{i=1}^{n}E_i \cap E_{n+1})$$
+  * 因為機率大於等於0，所以 $$P(\cup_{i=1}^{n}E_i \cap E_{n+1}) \geq 0$$
+  * 可得$$P(\cup_{i=1}^{n+1}E_i) \leq P(\cup_{i=1}^{n}E_i) + P(E_{n+1})$$
+  * 再由歸納假設得 $$P(\cup_{i=1}^{n+1}E_i) \leq  \sum_{i=1}^n P(E_i) + P(E_{n+1}) =  \sum_{i=1}^{n+1} P(E_i)$$
+  * \(QED\)
+
 
 

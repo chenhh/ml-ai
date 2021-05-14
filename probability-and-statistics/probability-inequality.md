@@ -39,11 +39,11 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 
 \(1\)\(2\)得 $$P(|X-\mu| \geq k) \leq \frac{\sigma^2}{k^2}$$\(QED\)
 
-## Boole不等式
+## Boole不等式（union bound）
 
 > $$P(\cup_{ i \in \mathbb{N}} E_i) \leq  \sum_{i \in \mathbb{N}} P(E_i)$$
 >
-> * 指對於全部事件的機率不大於單個事件的機率總和。
+> * 指對於至少一事件發生的機率不大於單個事件發生的機率總和。
 > * 在測度論中，不等式滿足$$\sigma$$次可加性。
 
 #### 使用數學歸納法可證明。
@@ -80,4 +80,15 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 * $$\because P((E \cap F)^c) = 1- P(E\cap F)$$ and $$P(E^c)=1-P(E)$$, $$P(F^c) = 1- P(F)$$
 * $$1-P(E\cap F) \leq 1 - P(E) + 1- P(F)$$
 * $$\therefore  P(E \cap F) \leq P(E) + P(F) - 1$$ \(QED\)
+
+## Hoeffding不等式
+
+> 設有兩兩獨立的一系列隨機變量$$X_{1},\dots ,X_{n}$$。假設對所有的$$ 1\leq i\leq n$$}$$X_{i}$$都是幾乎有界的變量，即滿足$$P(X_i \in [a_i, b_i])=1$$
+>
+> 那麼這$$n$$個隨機變量的經驗期望值：$${\overline {X}}={\frac {X_{1}+\cdots +X_{n}}{n}}$$滿足以下的不等式：
+>
+> * $${\displaystyle {P} ({\overline {X}}-\mathrm {E} [{\overline {X}}]\geq t)\leq \exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
+> * $${\displaystyle {P} (|{\overline {X}}-\mathrm {E} [{\overline {X}}]|\geq t)\leq 2\exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
+
+
 

@@ -30,7 +30,6 @@
 * If $$E \subseteq F$$ then $$P(F \setminus E) = P(F) - P(E)$$ and $$P(E) \leq P(F)$$
 * \[Bonferroni inequality\] $$P(E \cap F) \geq P(E) + P(F) -1$$
 * 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割\(partition\)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$P(F) = \sum_{i \in \mathbb{N}} P(F \cap E_i), \forall F \in \mathcal{F}$$。
-* \[Boole inequality\] $$P(\cup_{ i \in \mathbb{N}} E_i) \leq  \sum_{i \in \mathbb{N}} P(E_i)$$
 
 ### 多事件聯集的機率
 

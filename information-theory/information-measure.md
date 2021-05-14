@@ -55,18 +55,18 @@
 
 
 
-> $$H(X_1, H_2, \ldots, H_N) = \sum_{i=1}^N H(X_i |X_{i-1}, \ldots, X_2, X_1)$$
+> $$\mathrm{H}(X_1, X_2, \ldots, X_N) = \sum_{i=1}^N \mathrm{H}(X_i |X_{i-1}, \ldots, X_2, X_1)$$
 
-* $$H(X_1, H_2)= H(X_1)+H(X_2| X_1)$$
-* $$\begin{align} H(X_1, X_2, X_3) & =H(X_1)+H(X_2,X_3|X_1)\\ & =H(X_1)+H(X_2|X_1)+H(X_3|X_1, X_2) \\ \end{align}$$
+* $$\mathrm{H}(X_1, H_2)= \mathrm{H}(X_1)+\mathrm{H}(X_2| X_1)$$
+* $$\begin{align} \mathrm{H}(X_1, X_2, X_3) & =\mathrm{H}(X_1)+\mathrm{H}(X_2,X_3|X_1)\\ & =\mathrm{H}(X_1)+\mathrm{H}(X_2|X_1)+\mathrm{H}(X_3|X_1, X_2) \\ \end{align}$$
 
 
 
 ### 熵的上界受限於隨機變數實現值集合的大小
 
-> 隨機變數$$X$$熵$$H(X)$$的上界，受限於該隨機變數的實現值集合 $$\mathcal{X}$$的機率分佈。
+> 隨機變數$$X$$熵$$\mathrm{H}(X)$$的上界，受限於該隨機變數的實現值集合 $$\mathcal{X}$$的機率分佈。
 
-> 對於任意的隨機變數$$X$$, $$H(X)≤log⁡(|\mathcal{X}|)$$，$$|\cdot|$$為集合的基數。
+> 對於任意的隨機變數$$X$$, $$\mathrm{H}(X)≤log⁡(|\mathcal{X}|)$$，$$|\cdot|$$為集合的基數。
 >
 > 等號成立於$$X$$在$$\mathcal{X}$$中發生的機率均等時。
 
@@ -74,11 +74,11 @@
 
 > 兩個隨機變數$$X,Y$$的熵，可解釋為兩個隨機變數包含的資訊總量。
 >
-> 令$$P(X,Y)$$為聯合機率密度函數，$$H(X,Y) = - \sum_{x \in X} \sum_{y \in Y} P(x,y) \log P(x,y) = - E(\log P(x,y))$$
+> 令$$\mathrm{P}(X,Y)$$為聯合機率密度函數，$$\displaystyle \mathrm{H}(X,Y) = - \sum_{x \in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \mathrm{P}(x,y) = - \mathrm{E}(\log \mathrm{P}(x,y))$$
 
 ### 獨立隨機變數熵的總和為其聯合熵的上界
 
-> $$H(X_1, H_2, \ldots, H_N ) \leq \sum_{i=1}^{N} H(X_i)$$
+> $$\mathrm{H}(X_1, X_2, \ldots, X_N ) \leq \sum_{i=1}^{N} \mathrm{H}(X_i)$$
 >
 > 等號成立於$$X_i$$與$$X_j$$為兩兩獨立的隨機變數。
 >
@@ -86,79 +86,79 @@
 
 ## 條件熵 \(conditional entropy\)
 
-> 條件熵$$H(X|Y)$$可解釋為給定隨機變數$$Y$$的資訊後，$$X$$殘餘的資訊量。
+> 條件熵$$\mathrm{H}(X|Y)$$可解釋為給定隨機變數$$Y$$的資訊後，$$X$$殘餘的資訊量。
 >
-> $$\begin{align} H(X|Y) &= -\sum_{x \in X} P(x)H(Y|X=x) \\  &= -\sum_{x \in X} P(x) \sum_{y \in Y}P(y|x)\log P(y|x) \\ & = -\sum_{x \in X} \sum_{y \in Y} P(x,y) \log P(y|x) \\ &= -E(\log P(Y|X)) \end{align}$$
+> $$\begin{align} \mathrm{H}(X|Y) &= -\sum_{x \in X} \mathrm{P}(x)\mathrm{H}(Y|X=x) \\  &= -\sum_{x \in X} \mathrm{P}(x) \sum_{y \in Y} \mathrm{P}(y|x)\log \mathrm{P}(y|x) \\ & = -\sum_{x \in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \mathrm{P}(y|x) \\ &= -\mathrm{E}(\log \mathrm{P}(Y|X)) \end{align}$$
 
-$$H(X)−H(X|Y)$$為隨機變數$$X$$的資訊量減去給定隨機變數$$Y$$後$$X$$的資訊量，此時剩下的為$$X$$與$$Y$$共同含有的資訊量$$I(X;Y)$$。
+$$\mathrm{H}(X)−\mathrm{H}(X|Y)$$為隨機變數$$X$$的資訊量減去給定隨機變數$$Y$$後$$X$$的資訊量，此時剩下的為$$X$$與$$Y$$共同含有的資訊量$$\mathrm{I}(X;Y)$$。
 
 ### 條件熵不具有交換性
 
-> $$H(X|Y) \neq H(Y|X)$$，因相異隨機變數的資訊量不相等。
+> $$\mathrm{H}(X|Y) \neq \mathrm{H}(Y|X)$$，因相異隨機變數的資訊量不相等。
 
 ### 兩隨機變數的聯合熵等於單個隨機變數的熵加上條件熵
 
-> $$H(X,Y)=H(X) +H(Y|X) = H(Y) +H(X|Y)$$
+> $$\mathrm{H}(X,Y)=\mathrm{H}(X) +\mathrm{H}(Y|X) = \mathrm{H}(Y) +\mathrm{H}(X|Y)$$
 
-推廣可得 $$H(X,Y|Z)=H(X|Z) +H(Y|X,Z)$$
+推廣可得 $$\mathrm{H}(X,Y|Z)=\mathrm{H}(X|Z) +\mathrm{H}(Y|X,Z)$$
 
 ### 條件熵為0若且若且隨機變數為給定隨機變數的函數
 
-> $$H(Y|X) = 0 \Leftrightarrow  \exists f \ni f(X)=Y$$
+> $$\mathrm{H}(Y|X) = 0 \Leftrightarrow  \exists f \ni f(X)=Y$$
 >
 > 若隨機變數$$Y$$為給定隨機變數$$X$$的函數時，即$$Y=f(X)$$，則$$X=x$$的實現值已知時，$$Y$$的實現值$$y=f(x)$$也可得出，不再具有隨機性，因此條件熵為0。
 
 ### 給定條件資訊不會增加熵的量\(給定資訊可減少不確定性\)
 
-> $$H(Y|X) \leq H(Y)$$
+> $$\mathrm{H}(Y|X) \leq \mathrm{H}(Y)$$
 
-* 等號成立在$$X$$與$$Y$$為獨立時，即$$I(X;Y)=0$$。
-* $$H(Y|X) \leq H(Y)$$ 是考慮所有實現值的平均值，而非特定實現值$$Y=y$$時的不等式。
+* 等號成立在$$X$$與$$Y$$為獨立時，即$$\mathrm{I}(X;Y)=0$$。
+* $$\mathrm{H}(Y|X) \leq \mathrm{H}(Y)$$ 是考慮所有實現值的平均值，而非特定實現值$$Y=y$$時的不等式。
 
 ## 互資訊\(mutual information\)
 
 > 互資訊為兩個隨機變數中相同的資訊量，可想成集合論中的交集部份。
 >
-> $$\begin{align} I(X;Y) &=\sum_{x \in X}  \sum_{y \in Y}P(x,y) \log{\frac{P(x,y)}{P(x)P(y)}} \\ &=D(P(x,y)\| P(x)P(y)) \\ & =\operatorname {E}_{P(x,y)}\big( \frac{P(x,y)}{P(x)P(y)}\big) \end{align}$$
+> $$\begin{align} \mathrm{I}(X;Y) &=\sum_{x \in X}  \sum_{y \in Y}\mathrm{P}(x,y) \log{\frac{\mathrm{P}(x,y)}{\mathrm{P}(x)\mathrm{P}(y)}} \\ &=\mathrm{D}(\mathrm{P}(x,y)\| \mathrm{P}(x)\mathrm{P}(y)) \\ & =\mathrm{E}_{\mathrm{P}(x,y)}\big( \frac{\mathrm{P}(x,y)}{\mathrm{P}(x)\mathrm{P}(y)}\big) \end{align}$$
 
-* $$D(P(x,y) \| P(x)P(y))$$: 可解釋為聯合分佈相對於兩變數為獨立分佈的分散程度。
+* $$\mathrm{D}(\mathrm{P}(x,y) \| \mathrm{P}(x)\mathrm{P}(y))$$: 可解釋為聯合分佈相對於兩變數為獨立分佈的分散程度。
 
 ### 互資訊為兩隨機變數中相同的資訊量
 
-> * $$H(X,Y)= H(X)+H(Y|X)=H(Y) + H(X|Y)$$
-> * $$I(X;Y)=H(Y) - H(X|Y)=H(X) - H(Y|X)=H(X)+H(Y)-H(X,Y)$$
+> * $$\mathrm{H}(X,Y)= \mathrm{H}(X)+\mathrm{H}(Y|X)=\mathrm{H}(Y) + \mathrm{H}(X|Y)$$
+> * $$\mathrm{I}(X;Y)=\mathrm{H}(Y) - \mathrm{H}(X|Y)=\mathrm{H}(X) - \mathrm{H}(Y|X)=\mathrm{H}(X)+\mathrm{H}(Y)-\mathrm{H}(X,Y)$$
 
 ### 互資訊有對稱性
 
-> $$I(X;Y) = I(Y;X)$$
+> $$\mathrm{I}(X;Y) = \mathrm{I}(Y;X)$$
 >
 > 因為互資訊為兩個隨機變數共同的資訊量，因此有對稱性。
 >
-> $$IX;Y) = \sum_x \sum_yP(x,y) \log{\frac{P(x,y)} {P(x)P(y)}} = \sum_y \sum_x P(x,y) \log{\frac{P(x,y)} {P(x)P(y)}} = I(Y;X)$$\(QED\)
+> $$\displaystyle \mathrm{I}(X;Y) = \sum_x \sum_y \mathrm{P}(x,y) \log{\frac{\mathrm{P}(x,y)} {\mathrm{P}(x)\mathrm{P}(y)}} = \sum_y \sum_x \mathrm{P}(x,y) \log{\frac{\mathrm{P}(x,y)} {\mathrm{P}(x)\mathrm{P}(y)}} = \mathrm{I}(Y;X)$$\(QED\)
 
 ### 互資訊為0若且唯若兩隨機變數獨立
 
-> $$I(X;Y) = 0 \Leftrightarrow \log{\frac{P(x,y)}{P(x)P(y)}}=0$$
+> $$\mathrm{I}(X;Y) = 0 \Leftrightarrow \log{\frac{\mathrm{P}(x,y)}{\mathrm{P}(x)\mathrm{P}(y)}}=0$$
 
-$$P(x,y)=P(x)P(y)$$, 即兩隨機變數獨立\(indepedent\)，因為彼此之間沒有任何相關的訊息。
+$$\mathrm{P}(x,y)=\mathrm{P}(x)\mathrm{P}(y)$$, 即兩隨機變數獨立\(independent\)，因為彼此之間沒有任何相關的訊息。
 
 ### 資訊本體\(self information\)
 
-> * $$I(X;X)=H(X)-H(X|X)=H(X)-0=H(X)$$
-> * $$I(X;X)=\operatorname{E}\big( \log{\frac{P(X)}{P(X)^2}}\big) = -\operatorname{E}(\log P(X))=H(X)$$
+> * $$\mathrm{I}(X;X)=\mathrm{H}(X)-\mathrm{H}(X|X)=\mathrm{H}(X)-0=\mathrm{H}(X)$$
+> * $$\mathrm{I}(X;X)=\mathrm{E}\big( \log{\frac{\mathrm{P}(X)}{\mathrm{P}(X)^2}}\big) = -\mathrm{E}(\log \mathrm{P}(X))=\mathrm{H}(X)$$
 
-$$H(X|X)$$解釋為給定隨機變數$$X$$的訊息後，因為已經有$$X$$的所有資訊，所以$$H(X|X)$$不含任何資訊量，因此值為0。
+$$\mathrm{H}(X|X)$$解釋為給定隨機變數$$X$$的訊息後，因為已經有$$X$$的所有資訊，所以$$\mathrm{H}(X|X)$$不含任何資訊量，因此值為0。
 
 ### 互資訊鏈法則
 
-> $$I(X_1, X_2,\ldots, X_N; Y)=\sum_{i=1}^N I(X_i;Y|X_{i-1}, \ldots, X_2, X_1)$$
+> $$\mathrm{I}(X_1, X_2,\ldots, X_N; Y)=\sum_{i=1}^N \mathrm{I}(X_i;Y|X_{i-1}, \ldots, X_2, X_1)$$
 
-* $$I(X_1,X_2;Y)=I(X_1;Y)+I(X_2;Y|X_1)$$
-* $$I(X_1,X_2,X_3;Y)=I(X_1;Y)+I(X_2;Y|X_1)+I(X_3;Y|X_1,X_2)$$
+* $$\mathrm{I}(X_1,X_2;Y)=\mathrm{I}(X_1;Y)+\mathrm{I}(X_2;Y|X_1)$$
+* $$\mathrm{I}(X_1,X_2,X_3;Y)=\mathrm{I}(X_1;Y)+\mathrm{I}(X_2;Y|X_1)+\mathrm{I}(X_3;Y|X_1,X_2)$$
 
 ## 條件互資訊\(conditional mutual information\)
 
-> $$\begin{align} I(X;Y|Z) & =H(X|Z)-H(X|Y,Z) \\& =H(Y|Z) - H(Y|X,Z) \\ &=H(X|Z)+H(Y|Z)-H(X,Y|Z) \\& =\operatorname{E}_{P(X,Y,Z)}\big( \log{\frac{P(X,Y|Z)}{P(X|Z) P(Y|Z)}} \big) \end{align}$$
+> $$\begin{align} \mathrm{I}(X;Y|Z) & =\mathrm{H}(X|Z)-\mathrm{H}(X|Y,Z) \\& =\mathrm{H}(Y|Z) - \mathrm{H}(Y|X,Z) \\ &=\mathrm{H}(X|Z)+\mathrm{H}(Y|Z)-\mathrm{H}(X,Y|Z) \\& =\mathrm{E}_{\mathrm{P}(X,Y,Z)}\big( \log{\frac{\mathrm{P}(X,Y|Z)}{\mathrm{P}(X|Z) \mathrm{P}(Y|Z)}} \big) \end{align}$$
 
 
 

@@ -71,3 +71,13 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 
 所以$$ P(\cup_{i=1}^n E_i)= \sum_{i=1}^n P(E_i)$$\(QED\)
 
+## Bonferroni不等式
+
+> * $$P(E \cap F) \geq P(E) + P(F) -1$$
+> * $$P(E_1 \cap E_2 \cap \ldots \cap E_n) \geq P(E_1) +P(E_2) +\ldots + P(E_n) - (n-1)$$
+
+* $$P((E \cap F)^c) = P(E^c \cup F^c) \leq P(E^c)+P(F^c)$$
+* $$\because P((E \cap F)^c) = 1- P(E\cap F)$$ and $$P(E^c)=1-P(E)$$, $$P(F^c) = 1- P(F)$$
+* $$1-P(E\cap F) \leq 1 - P(E) + 1- P(F)$$
+* $$\therefore  P(E \cap F) \leq P(E) + P(F) - 1$$ \(QED\)
+

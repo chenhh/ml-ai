@@ -65,6 +65,21 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 >
 > * 機率質量函數\(pmf\)定義為$$P_{XY}(x,y)\equiv P(X=x, Y=y)$$
 > * 分佈函數$$\displaystyle F_{XY}(x,y) = \sum_{a \leq x} \sum_{b \leq y}P_{XY}(a,b)$$
+> * 邊際密度函數\(marginal density function\) 
+>   * $$\displaystyle P_X(x) = \sum_y P_{XY}(x,y)$$
+>   * $$\displaystyle P_Y(y) = \sum_x P_{XY}(x,y)$$
+> * 兩隨機變數獨立記為$$X \perp Y$$滿足 $$P_{XY}(x,y)=P_X(x) P_Y(y)$$
+>
+> 若$$X,Y$$為連續型隨機變數，則
+>
+> * 分佈函數 $$\displaystyle F_{XY}(x,y) = \int_{-\infty}^x \int_{-\infty}^y f_{XY}(u,v)dudv$$
+> * 機率密度函數$$f_{XY}(x,y) = \frac{\partial^2}{\partial x \partial y} F(x,y)$$
+> * 邊際密度函數
+>   * $$\displaystyle f_X(x) = \int_{-\infty}^{\infty} f_{XY}(x,y)dy$$
+>   * $$\displaystyle f_Y(y) = \int_{-\infty}^{\infty} f_{XY}(x,y)dx$$
+> * 兩隨機變數獨立記為$$X \perp Y$$滿足 $$F_{XY}(x,y)=F_X(x) F_Y(y)$$
+
+>
 
 
 

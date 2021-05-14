@@ -39,3 +39,14 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 
 \(1\)\(2\)得 $$P(|X-\mu| \geq k) \leq \frac{\sigma^2}{k^2}$$\(QED\)
 
+## Boole不等式
+
+> $$P(\cup_{ i \in \mathbb{N}} E_i) \leq  \sum_{i \in \mathbb{N}} P(E_i)$$
+>
+> * 指對於全部事件的機率不大於單個事件的機率總和。
+> * 在測度論中，不等式滿足$$\sigma$$次可加性。
+
+使用數學歸納法可證明。
+
+
+

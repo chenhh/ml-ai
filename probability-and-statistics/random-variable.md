@@ -83,7 +83,19 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 >   * $$\displaystyle f_Y(y) = \int_{-\infty}^{\infty} f_{XY}(x,y)dx$$
 > * 兩隨機變數獨立記為$$X \perp Y$$滿足 $$F_{XY}(x,y)=F_X(x) F_Y(y)$$
 
+## 共變異數與相關係數
+
+> 隨機變數$$X,Y$$的
 >
+> * 共變異數（covariance） $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]$$
+> * 相關係數（correlation coefficient） $$\rho \equiv \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y}$$
 
-
+* $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mu_X)(Y-\mu_Y)] = E(XY) - \mu_X \mu_Y$$
+* $$-1\leq \rho \leq 1$$
+  * $$\rho = -1$$表$$X,Y$$為完全（線性）負相關。
+  * $$\rho=1$$表$$X,Y$$為完全（線性）正相關。
+  * $$\rho=0$$表$$X,Y$$\(線性\)不相關。
+* $$\mathrm{V} (X \pm Y) = \mathrm{V}(X) + \mathrm{V}(Y)\pm 2\mathrm{Cov}(X,Y)$$
+  * 若$$X \perp Y$$，即$$\mathrm{Cov}(X,Y)=0$$，則$$\mathrm{V}(X \pm Y) = \mathrm{X} + \mathrm{Y}$$
+* \[Cauchy-Schwarz不等式\] $$\mathrm{E}(X^2) \mathrm{E} (Y^2) \geq  (\mathrm{E}(XY))^2$$
 

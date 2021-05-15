@@ -27,6 +27,7 @@
 * [中央極限定理\(CLT\)](probability-and-statistics/central-limit-theorem.md)
 * [統計量\(statistics\)](probability-and-statistics/statistics/README.md)
   * [輔助統計量\(ancillary statistics\)](probability-and-statistics/statistics/ancillary-statistics.md)
+* [點估計（point estimation）](probability-and-statistics/point-estimation.md)
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)

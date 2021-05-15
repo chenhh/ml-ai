@@ -141,6 +141,8 @@ Proof: Casella and Berger \(1990\), pp 255-256.
 
 ## 指數族（exponential family）
 
+指數分布族是一系列分布的統稱，包含連續和離散的相關分布。例如，常態分布\(Gaussian\)、泊松分布（Poisson）、二項分布\(Bernoulli\)、指數分布\(exponential\)、Gamma分布、多項式分布\(multivariate\)等。
+
 指數族的分佈可很容易找到充分統計量。
 
 > $$k$$個參數的指數族

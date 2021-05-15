@@ -47,54 +47,54 @@ $$r$$個相同球，分成$$n$$相異箱，不可有空箱。因此每個箱子�
 考慮$$x_1+x_2+x_3=10, 0 \leq x_1 \leq 10,\ 2 \leq  x_2 \leq 10,\ 5 \leq x_3 \leq 10$$。
 
 * 即10個相同球，分為3相異箱，第1箱可為空，第2箱至少有2球，第3箱至少有5球。
-* 因此為10-2-5=3個相同球，分為3相異箱，有$$\begin{pmatrix}3+ 3 -1 \\ 3 \end{pmatrix} = \begin{pmatrix} 5 \\ 3 \end{pmatrix} $$種。
+* 因此為10-2-5=3個相同球，分為3相異箱，有$$\binom{3+ 3 -1} {3} = \binom{ 5}{ 3} $$種。
 
 ## 組合公式的遞迴關係式
 
-> $$\begin{pmatrix} n \\ r \end{pmatrix} = \begin{pmatrix} n-1 \\ r-1 \end{pmatrix} + \begin{pmatrix} n-1 \\ r \end{pmatrix},  0 \leq r \leq n$$
+> $$\binom {n}{r} = \binom {n-1}{r-1} + \binom{ n-1 }{ r} ,  \ 0 \leq r \leq n$$
 
 ### 
 
 #### 排列組合的意義
 
-* $$\begin{pmatrix} n \\ r \end{pmatrix}$$表示從$$n$$件相異物不允許重複取$$r$$件的組合方法數。
+* $$\binom{ n}{r}$$表示從$$n$$件相異物不允許重複取$$r$$件的組合方法數。
 * 考慮其中某一物件$$x$$，組合方法中，可分為取中該物件與沒有取中該物件兩種情形。
 
-  * 取中該物件時，相當於從剩餘的$$(n-1)$$件相異物取$$(r-1)$$件，有$$\begin{pmatrix} n -1 \\ r-1 \end{pmatrix}$$種組合。
-  * 沒有取中該物件時，表示取中其它物件，相當於從剩餘的$$(n-1)$$件相異物取$$r$$件，有$$\begin{pmatrix} n -1 \\ r \end{pmatrix}$$種組合。
+  * 取中該物件時，相當於從剩餘的$$(n-1)$$件相異物取$$(r-1)$$件，有$$\binom{n -1}{r-1}$$種組合。
+  * 沒有取中該物件時，表示取中其它物件，相當於從剩餘的$$(n-1)$$件相異物取$$r$$件，有$$\binom{ n -1}{r}$$種組合。
 
 #### 代數證明
 
-$$\begin{pmatrix} n -1 \\ r-1 \end{pmatrix} + \begin{pmatrix} n -1 \\ r \end{pmatrix} = \frac{(n-1)!}{(r-1)!(n-r)!}+\frac{(n-1)!}{r!(n-r-1)!} = \frac{r(n-1)!}{r!(n-r)!} + \frac{((n-r)(n-1)!}{r!(n-r)!} = \frac{n!}{r!(n-r)!} = \begin{pmatrix} n \\ r \end{pmatrix}$$
+$$\binom{n -1}{r-1}+ \binom{ n -1}{r} = \frac{(n-1)!}{(r-1)!(n-r)!}+\frac{(n-1)!}{r!(n-r-1)!} = \frac{r(n-1)!}{r!(n-r)!} + \frac{((n-r)(n-1)!}{r!(n-r)!} = \frac{n!}{r!(n-r)!} = \binom{ n }{ r}$$
 
 ## 二項式定理\(binomial theorem\)
 
-> $$x,y$$為變數，$$n \in \mathbb{N}$$，則 $$(x+y)^n = \sum_{k=0}^n \begin{pmatrix} n \\ k \end{pmatrix} x^k y^{n-k}$$
+> $$x,y$$為變數，$$n \in \mathbb{N}$$，則 $$(x+y)^n = \sum_{k=0}^n \binom{ n}{ k}x^k y^{n-k}$$
 >
-> * $$x=1, y=1$$代入後可得 $$2^n= \begin{pmatrix} n \\ 0 \end{pmatrix}  \begin{pmatrix} n \\ 1 \end{pmatrix} + \ldots + \begin{pmatrix} n \\  n \end{pmatrix}$$
-> * $$x=1, y=-1$$代入後可得 $$0 = \begin{pmatrix} n \\ 0 \end{pmatrix} - \begin{pmatrix} n \\ 1 \end{pmatrix} + \begin{pmatrix} n \\ 2 \end{pmatrix} + \ldots + (-1)^n \begin{pmatrix} n \\  n \end{pmatrix}$$
+> * $$x=1, y=1$$代入後可得 $$2^n= \binom{n} {0}+ \binom{n} {1}+ \ldots + \binom{n} {n}$$
+> * $$x=1, y=-1$$代入後可得 $$0 = \binom{n} {0} - \binom{n} {1}+ \binom{n} {2} + \ldots + (-1)^n \binom{n} {n}$$
 
 * $$(x+y)^n = (x+y)(x+y) \ldots (x+y)$$
-* 而$$x^k y^{n-k}$$的係數為上式$$n$$個乘項中選$$k$$個$$x$$，$$n-k$$個$$y$$，因此為 $$\frac{n!}{k!(n-k)!} = \begin{pmatrix} n \\ k \end{pmatrix} , k=0,1,2\ldots, n$$\(QED\)。
+* 而$$x^k y^{n-k}$$的係數為上式$$n$$個乘項中選$$k$$個$$x$$，$$n-k$$個$$y$$，因此為 $$\frac{n!}{k!(n-k)!} = \binom{n} {k} ,\ k=0,1,2\ldots, n$$\(QED\)。
 
 ## 多項方程式
 
-$$(x_1 +x_2+ \ldots +x_k)^n = \sum_{0 \leq n_i \leq n, n_1+n_2+\ldots + n_k=n} \begin{pmatrix} n \\ n_1, n_2,\ldots, n_k \end{pmatrix}x_1^{n_1} x_2^{n_2}\ldots x_k^{n_k}$$
+$$(x_1 +x_2+ \ldots +x_k)^n = \sum_{0 \leq n_i \leq n, n_1+n_2+\ldots + n_k=n} \binom{ n}{ n_1, n_2,\ldots, n_k }x_1^{n_1} x_2^{n_2}\ldots x_k^{n_k}$$
 
-$$\begin{pmatrix} n \\ \ n_1, n_2,\ldots, n_k \end{pmatrix}$$
+$$\binom{ n}{ n_1, n_2,\ldots, n_k }$$
 
 * $$x_1^{n_1} x_2^{n_2}\ldots x_k^{n_k}$$的係數，等同於$$n$$個不全相異物，共有$$k$$類的排列方法。
 * 因為$$n$$項乘積中先選$$n_1$$ 個$$x_1$$，再由剩下的$$n−n_1$$ 個乘積中選$$n_2$$ 個$$x_2$$，以此類推到$$n−n_1−\ldots−n_{k−1}$$個乘積中選$$n_k$$ 個$$x_k$$。
-* 有 $$\begin{pmatrix} n \\ n_1 \end{pmatrix} \begin{pmatrix} n  - n_1\\ n_2 \end{pmatrix} \begin{pmatrix} n -n_1 - n_2 \\ n_3 \end{pmatrix} \ldots \begin{pmatrix} n - n_1 \ldots - n_{k-1} \\ n_k \end{pmatrix} = \frac{n!}{n_1! n_2! \ldots n_k!}$$ \(QED\)
+* 有 $$\binom{ n }{n_1 } \binom{ n  - n_1}{ n_2 } \binom{ n -n_1 - n_2 }{ n_3 } \ldots \binom{ n - n_1 \ldots - n_{k-1} }{ n_k } = \frac{n!}{n_1! n_2! \ldots n_k!}$$ \(QED\)
 
 ## Vandermonde's convolution
 
-> $$\sum_{k=0}^n \begin{pmatrix} r \\ k \end{pmatrix}  \begin{pmatrix} s \\ n-k \end{pmatrix} = \begin{pmatrix} r+s \\ n \end{pmatrix}$$
+> $$\sum_{k=0}^n \binom{ r}{ k}  \binom{ s}{ n-k}  = \binom{ r+s}{ n}$$
 
-* $$\begin{pmatrix} r+s \\ n \end{pmatrix}$$為$$r+s$$相異物品中，取$$n$$個的組合個數。
+* $$\binom{ r+s}{ n }$$為$$r+s$$相異物品中，取$$n$$個的組合個數。
 * 而$$r+s$$個相異物品，可分為兩堆：一堆有$$r$$個，另一堆有$$s$$個相異物品。
-* 因此選$$n$$件的方法，可從第一堆取$$k$$個，有$$\begin{pmatrix} r \\ k \end{pmatrix}$$種方法；第二堆取$$n-k$$個，有$$\begin{pmatrix} s \\ n-  k \end{pmatrix}$$種方法，$$k=0,1,2,\ldots, n$$。
-* 因此總選取方法有$$\sum_{k=0}^n \begin{pmatrix} r \\ k \end{pmatrix} \begin{pmatrix} s \\ n-k \end{pmatrix}$$ \(QED\)。
+* 因此選$$n$$件的方法，可從第一堆取$$k$$個，有$$\binom{ r}{ k}$$種方法；第二堆取$$n-k$$個，有$$\binom{ s}{n-  k}$$種方法，$$k=0,1,2,\ldots, n$$。
+* 因此總選取方法有$$\sum_{k=0}^n \binom{ r}{ k} \binom{ s}{ n-k }$$ \(QED\)。
 
 ## 史特靈近似\(Stirling approximation\)
 

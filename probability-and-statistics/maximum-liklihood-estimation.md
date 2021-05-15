@@ -9,6 +9,7 @@
 * 令似然函數 $$\displaystyle L(\theta|X) = \prod_{i=1}^N f(X_i | \theta)$$，求$$\displaystyle \theta^{*} = \mathop{\arg\min}_{\theta} L(\theta |X)$$
 * 通常會將似然函數取對數簡化求極值的步驟，稱為log-likelihood function $$l(\theta|X) = \log L(\theta |X) = \sum_{i=1}^N \log{f(X_i|\theta})$$。
 * 因為對數函數是單調函數，極值的參數不變，即$$\displaystyle \theta^{*} = \mathop{\arg\min}_{\theta} L(\theta |X) = \mathop{\arg\min}_{\theta} l(\theta |X)$$。
+* 因為$$l(\theta | X)$$為凸函數，最大值唯一，可以用梯度法快速求值。
 
 
 

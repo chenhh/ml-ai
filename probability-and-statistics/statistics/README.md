@@ -116,6 +116,14 @@
 
 因為$$g(-2)=g(2)$$，但是$$f(-2)\neq f(2)$$，所以$$f$$不是$$g$$的函數。但$$g$$為$$f$$的函數，$$g(x)=(f(x))^{\frac{2}{3}}$$。
 
+### theorem
+
+> $$X=(X_1,  X_2\ldots, X_N)$$的聯合機率分佈為$$f(X|\theta)$$，若存在一函數$$T(X)$$使得對任意兩個樣本點$$x,y$$，$$\frac{f(x|\theta)}{f(y|\theta)}$$與$$\theta$$無關 $$\Leftrightarrow$$$$T(x)=T(y)$$
+>
+> 則$$T(X)$$為$$\theta$$的最小充分統計量。
+
+Proof: Casella and Berger \(1990\), pp 255-256.
+
 ## Fisher-Neyman 分解定理\(factorization theorem\)
 
 由充分統計量原始定義知，要證明一統計量是否為充分，必須先猜出某一充分統計量，且再證明兩統計量等價，過程麻煩，因此使用分解定理可簡化過程。
@@ -130,6 +138,51 @@
 > 若樣本隨機變數的聯合機率密度函數$$f$$可分解成某統計量的（密度）函數$$g$$與某一完全不含參數的函數$$h$$之乘積，那麼該統計量必是該參數的充分統計量，反之亦然。
 >
 > 可解釋為因為$$T(X)$$為充分統計量，因此$$T$$包含了所有關於參數$$\theta$$的資料，所以可寫成$$g(T(x)|\theta)$$的形式；因為函數有縮減資料的功能，且$$g(T(X)|\theta)$$已把包含所有關於參數$$\theta$$的資訊納入，所以剩下與參數無關的部份$$h(x)$$。
+
+## 指數族（exponential family）
+
+指數族的分佈可很容易找到充分統計量。
+
+> $$k$$個參數的指數族
+>
+> * 令隨機變數$$X_1, X_2, \ldots, X_N$$來自於於指數分佈族，其機率密度函數為$$\displaystyle f(X|\theta)=h(X)c(\theta)\exp\big\{  \sum_{j=1}^k w_j(\theta) t_j(x)\big\} \mathrm{I}_A(X)$$
+> * $$h(X) \geq 0$$, $$c(\theta) \geq 0$$, $$\mathrm{I}_A$$與\#$$\theta$$無關，$$k$$為充分統計量的個數，則$$\displaystyle T(X)=(\sum_{i=1}^N t_1(X_i), \ldots, \sum_{i=1}^N t_k(X_i))$$為$$\theta$$的充分統計量。
+
+## 充分統計量的必要條件
+
+如果可使用指數族或是分解定理時，可容易找出充分統計量；除此之外只能用以下三個必要條件判定是否為充分統計量。 Proposed by Sampson and Spencer \(1976\)。
+
+### 支撐集\(support set\)
+
+> 給定隨機向量$$X=(X_1, X_2,\ldots, X_N)$$與其機率密度函數$$f(X|\theta)$$，則支撐集 $$SP(f)=\{ x| f(x|\theta) > 0, \text{ for some } \theta\}$$
+
+例如：
+
+* $$X\sim N(\mu, \sigma^2)$$, $$\theta=(\mu, \sigma^2)$$, $$SP(f)=\mathbb{R}$$
+* $$X \sim U(0, \theta)$$, $$\theta > 0$$, $$SP(f)= (0, \theta)$$
+
+### theorem: 充分統計量必要條件1
+
+> 給定一統計量$$T(X)$$，若存在$$\theta_1,  \theta_2$$以及$$x,y \in SP(f)$$使得
+>
+> * $$T(x)=T(y)$$
+> * $$f(x|\theta_1)f(y|\theta_2) \neq f(x|\theta_2) f(y| \theta_1)$$
+>
+> 則$$T(X)$$不為$$\theta$$的充分統計量。
+
+### theorem: 充分統計量的必要條件2
+
+> $$S(X)$$為最小充分統計量，$$T(X)$$為一統計量。若存在$$x,y \in SP(f)$$使得 $$T(x)=T(y)$$且$$S(x) \neq S(y)$$，則$$T(X)$$不為充分統計量。
+
+### theorem: 最小充分統計量的必要條件
+
+> $$S(X), T(X)$$為兩個充分統計量。若存在$$x,y \in SP(f)$$使得$$S(x)=S(y)$$且$$T(x) \neq T(y)$$。則$$T(X)$$不為最小充分統計量。
+
+
+
+
+
+
 
 
 

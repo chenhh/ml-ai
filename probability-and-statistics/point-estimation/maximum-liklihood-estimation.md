@@ -53,7 +53,13 @@
 * $$\displaystyle\frac{\partial l}{\partial \theta} \sum_{i=1}^N \frac{x_i- \theta}{1+(x_i - \theta)^2} = 0$$
 * 可得$$\theta$$的$$2N-1$$個方程式，有$$2N-1$$個解。
 
-### MLE的不變性（invariance principle）
+### 例：MLE不存在
+
+* $$X_1, X_2, \ldots, X_N \sim f(X| \theta) = e^{-(x-\theta)}, \ x > \theta,  \ \theta  \in \mathbb{R}$$
+* $$L(\theta|X)=e^{N (\theta - \overline{x}_N)} \mathrm{I}(x_{(1)} > \theta)$$
+* 當$$\theta$$越大，$$N(\theta - \overline{x}_N)$$之值越大，$$L(\theta|x)$$也越大。而$$\hat{\theta }_{MLE} = X_{(1)}$$，但$$\theta$$依定義必須小於$$X_{(1)}$$，因此$$\hat{\theta }_{MLE}$$ 不存在。
+
+## MLE的不變性（invariance principle）
 
 > 對機率密度函數的參數$$\theta$$的任一函數$$f(\theta)$$，如果$$\theta^{*}$$ 為$$\theta$$之MLE，則$$f(\theta^{*})$$為$$f(\theta)$$之MLE。
 >

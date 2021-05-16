@@ -85,6 +85,10 @@ $$X \sim B(N_X, p), Y \sim B(N_Y, p)$$且兩隨機變數獨立，則 $$X+Y \sim 
 
 ## 泊松分佈（Poisson distribution）
 
+Poisson分佈適合於描述單位時間內隨機事件發生的次數（頻率）的機率分佈。
+
+
+
 ## 
 
 

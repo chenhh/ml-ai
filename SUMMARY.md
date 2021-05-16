@@ -29,6 +29,7 @@
   * [輔助統計量\(ancillary statistics\)](probability-and-statistics/statistics/ancillary-statistics.md)
 * [點估計（point estimation）](probability-and-statistics/point-estimation/README.md)
   * [最大似然估計\(MLE\)](probability-and-statistics/point-estimation/maximum-liklihood-estimation.md)
+* [區間估計\(interval estimation\)](probability-and-statistics/interval-estimation.md)
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)

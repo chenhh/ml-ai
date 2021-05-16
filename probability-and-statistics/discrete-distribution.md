@@ -97,6 +97,21 @@ Poission分佈的假設：
 
 假設單位時間之內事件平均發生次數為$$\lambda$$，那麼在這區域中事件發生的次數$$X$$就符合Poisson分配，記為$$X \sim P(\lambda)$$。
 
+### 獨立的Poission分佈隨機變數總和
+
+> $$X\sim P(\lambda_1 )$$, $$Y \sim P(\lambda_2 )$$，且$$X,Y$$為獨立的隨機變數，則$$X+Y \sim P(\lambda_1+ \lambda_2 ) $$
+
+由動差生成函數證明。
+
+###  Poisson分佈可由二項分佈逼近
+
+* 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty $$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!} $$
+* 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於Poisson分佈。
+
+
+
+
+
 
 
 

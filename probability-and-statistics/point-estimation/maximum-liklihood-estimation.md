@@ -24,9 +24,9 @@
 * pdf $$f(X=x|\lambda) =  \frac{e^{-\lambda} \lambda^x}{x!}$$
 * $$\displaystyle L(\lambda|X)= \prod_{i=1}^N \frac{1}{x_i !} e^{n \lambda } \lambda^{\sum_{i=1}^N x_i}$$
 * $$\displaystyle l(\lambda|X) = -\log(\prod_{i=1}^N x_i !) - N \lambda + \sum_{i=1}^N x_i \log \lambda$$
-* $$\frac{\partial l(\lambda |X)}{\partial \lambda} = -N + N \frac{\overline{x}_N}{\lambda} =0 \Rightarrow \lambda = \overline{x}_N$$
+* $$\frac{\partial l(\lambda |X)}{\partial \lambda} = -N + N \frac{\overline{x}_N}{\lambda} =0 \Rightarrow \hat{\lambda}_{MLE} = \overline{x}_N$$
 * $$\frac{\partial^2 l(\lambda |X)}{\partial \lambda ^2} = -N \frac{\overline{X}_N}{\lambda^2} < 0 , \ \forall \lambda >0$$
-* 所以$$\lambda = \overline{x}_N$$為極大值。
+* 所以$$\hat{\lambda}_{MLE} = \overline{x}_N$$為極大值。
 
 本例中，使用動差法一樣會得到$$\lambda = \overline{x}_N$$ 的結果，即動差法與MLE得到的估計式可能相同。
 
@@ -36,10 +36,22 @@
 * pdf $$\displaystyle f(X|\theta)= \frac{1}{\sqrt{2\pi} \sigma} \exp \bigg( - \frac{(X-\mu)^2}{2 \sigma^2} \bigg)$$
 * $$\displaystyle L(\theta|X)= \big( \frac{1}{\sqrt{2\pi}  \sigma}\big)^N \exp \bigg( - \frac{1}{2 \sigma^2} \sum_{i=1}^N (x_i - \mu)^2\bigg)$$
 * $$\displaystyle l(\theta|X) =-\frac{N}{2}\log 2\pi - \frac{N}{2} \log \sigma^2 - \frac{1}{2\sigma^2} \sum_{i=1}^N (x_i - \mu)^2$$
-* $$\frac{\partial l}{\partial \mu} = \frac{N}{\sigma^2}(\overline{x}_N - \mu) = 0 \Rightarrow \mu = \overline{x}_N$$
-* $$\frac{\partial l}{\partial \sigma^2}= - \frac{N}{ 2 \sigma^2} + \frac{1}{2 \sigma^4} \sum_{i=1}^N (x_i - \mu)^2 =0 \Rightarrow \sigma^2=\sum_{i=1}^N \frac{(x_i - \mu)^2}{N}$$
+* $$\frac{\partial l}{\partial \mu} = \frac{N}{\sigma^2}(\overline{x}_N - \mu) = 0 \Rightarrow \hat{mu}_{MLE} = \overline{x}_N$$
+* $$\frac{\partial l}{\partial \sigma^2}= - \frac{N}{ 2 \sigma^2} + \frac{1}{2 \sigma^4} \sum_{i=1}^N (x_i - \mu)^2 =0 \Rightarrow \hat{\sigma}^2_{MLE}=\sum_{i=1}^N \frac{(x_i - \mu)^2}{N}$$
 
+### 例：均勻分佈
 
+* $$X_1,  X_2, \ldots, X_N \sim U(-\theta, \theta), \ \theta > 0$$
+* $$L(\theta|X) = \big(\frac{1}{2 \theta} \big)^N \mathrm{I}(|x_i| \leq \theta) = \big(\frac{1}{2 \theta} \big)^N \mathrm{I}(\theta \geq \max|x|)$$
+* 由於$$\theta>0$$，因此$$\big(\frac{1}{2 \theta} \big)^N$$ 為$$\theta$$之遞減函數，因此$$\theta$$越小其值越大，但不可小於$$\max⁡|x|  $$。
+* $$\hat{\theta}_{MLE} = \max|X| = X_{(N)}$$。
+
+### 例：Cauchy分佈的MLE不唯一
+
+* $$X_1,  X_2, \ldots, X_N \sim C(\theta, 1), \ \theta  \in \mathbb{R}$$
+* $$\displaystyle L(\theta|X) = \prod_{i=1}^N \frac{1}{\pi(1+(x_i - \theta)^2)}$$
+* $$\displaystyle\frac{\partial l}{\partial \theta} \sum_{i=1}^N \frac{x_i- \theta}{1+(x_i - \theta)^2} = 0$$
+* 可得$$\theta$$的$$2N-1$$個方程式，有$$2N-1$$個解。
 
 ### MLE的不變性（invariance principle）
 
@@ -49,6 +61,7 @@
 >
 > * 一般的想法是將似然函數 $$L(\theta|X)$$中的$$\theta$$換成$$f(\theta)$$得$$L(f(\theta)|X)$$後再求MLE得$$f(\theta^{*} )$$，但可能轉換後的函數相當複雜，因此不變性提供了一個相當好的性質。
 > * 動差法也有不變性，但不保證轉換後的參數有極大似然率值。
+> *
 
 ## MLE與充分統計量的關係
 

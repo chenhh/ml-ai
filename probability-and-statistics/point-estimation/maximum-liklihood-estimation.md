@@ -59,6 +59,24 @@
 * $$L(\theta|X)=e^{N (\theta - \overline{x}_N)} \mathrm{I}(x_{(1)} > \theta)$$
 * 當$$\theta$$越大，$$N(\theta - \overline{x}_N)$$之值越大，$$L(\theta|x)$$也越大。而$$\hat{\theta }_{MLE} = X_{(1)}$$，但$$\theta$$依定義必須小於$$X_{(1)}$$，因此$$\hat{\theta }_{MLE}$$ 不存在。
 
+### 例：MLE無解析解\(Gamma distribution\)
+
+* $$X_1, X_2, \ldots, X_N \sim \Gamma(a,b), ~a,b >0, ~ \theta=(a,b)$$
+* $$\displaystyle l(\theta|X)=  -N \log \Gamma(a)  -Na \log b +(a-1) \sum_{i=1}^N \log x_i - \frac{1}{b} \sum_{i=1}^N x_i$$
+* $$\frac{\partial l}{\partial a} = -N \frac{(\Gamma(a))^{'}}{\Gamma(a)}-N \log b+\sum_{i=1}^N \log x_i = 0$$
+* $$\frac{\partial l }{\partial b} = - \frac{Na}{b} + \frac{1}{b^2} \sum_{i=1}^N x_i = 0$$
+
+ 由於上兩式中存在$$(\Gamma(a))^{′}$$，無解析解，但可由數值方法求解。
+
+### 例：MLE無解析解\(Weibull distribution\)
+
+* $$X_1, X_2, \ldots, X_N \sim W(a,b), ~a,b >0, ~ \theta=(a,b)$$
+* $$\displaystyle l(\theta|X)=N \log(ab)+(b-1)\sum_{i=1}^N \log x_i -a \sum_{i=1}^N x_i^b$$
+* $$\displaystyle \frac{\partial l}{\partial a} = \frac{N}{a} - \sum_{i=1}^N x_i^b = 0 $$
+* $$\displaystyle \frac{\partial l}{\partial b} = \frac{N}{b} + \sum_{i=1}^N \log x_i - a\sum_{i=1}^N x_i^b  \log x_i= 0 $$
+
+上兩式顯示無解析解，但可由數值方法求解。
+
 ## MLE的不變性（invariance principle）
 
 > 對機率密度函數的參數$$\theta$$的任一函數$$f(\theta)$$，如果$$\theta^{*}$$ 為$$\theta$$之MLE，則$$f(\theta^{*})$$為$$f(\theta)$$之MLE。
@@ -72,9 +90,20 @@
 ## MLE與充分統計量的關係
 
 * 動差估計量不一定是充分統計量的函數。
-* 而MLE估計量必須存在且唯一，才會是充分統計量的函數  。
+* 而**MLE估計量必須存在且唯一，才會是充分統計量的函數**  。
+
   *  若$$T$$為$$\theta$$一充分統計量，且存在唯一的$$\theta$$之MLE $$\theta^{*}$$，則$$\theta^{*}$$必為T的函數。
   * 若$$\theta$$之MLE不唯一，則必有為$$T$$函數之MLE $$\theta^{*}$$  ，但仍然不唯一。
+
+### 例：MLE為充分統計量的函數但非充分統計量
+
+* $$X_1,X_2, \ldots ,X_N \sim U(\theta ,2\theta), ~ \theta >0$$
+* 順序統計量 $$(X_{(1)}, X_{(n)} )$$  為$$\theta$$之最小充分統計量  。
+* 但$$\theta$$之MLE為$$X_{(n)}/2$$為最小充分統計量的函數，但非充分統計量。
+
+
+
+
 
 
 

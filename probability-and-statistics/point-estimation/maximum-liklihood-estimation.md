@@ -30,6 +30,15 @@
 
 本例中，使用動差法一樣會得到$$\lambda = \overline{x}_N$$ 的結果，即動差法與MLE得到的估計式可能相同。
 
+### 例：常態分佈
+
+* $$X_1, X_2, \ldots, X_N \sim N(\mu, \sigma^2),  \ \theta=(\mu, \sigma^2)$$
+* pdf $$\displaystyle f(X|\theta)= \frac{1}{\sqrt{2\pi} \sigma} \exp \bigg( - \frac{(X-\mu)^2}{2 \sigma^2} \bigg)$$
+* $$\displaystyle L(\theta|X)= \big( \frac{1}{\sqrt{2\pi}  \sigma}\big)^N \exp \bigg( - \frac{1}{2 \sigma^2} \sum_{i=1}^N (x_i - \mu)^2\bigg)$$
+* $$\displaystyle l(\theta|X) =-\frac{N}{2}\log 2\pi - \frac{N}{2} \log \sigma^2 - \frac{1}{2\sigma^2} \sum_{i=1}^N (x_i - \mu)^2$$
+* $$\frac{\partial l}{\partial \mu} = \frac{N}{\sigma^2}(\overline{x}_N - \mu) = 0 \Rightarrow \mu = \overline{x}_N$$
+* $$\frac{\partial l}{\partial \sigma^2}= - \frac{N}{ 2 \sigma^2} + \frac{1}{2 \sigma^4} \sum_{i=1}^N (x_i - \mu)^2 =0 \Rightarrow \sigma^2=\sum_{i=1}^N \frac{(x_i - \mu)^2}{N}$$
+
 
 
 ### MLE的不變性（invariance principle）

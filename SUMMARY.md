@@ -35,7 +35,7 @@
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
 * [隨機過程](probability-and-statistics/random-process.md)
 * [貝式機率](probability-and-statistics/bayes-probability.md)
-* [關聯結構, copula](probability-and-statistics/copula.md)
+* [關聯結構\(copula\)](probability-and-statistics/copula.md)
 
 ## 線性代數 <a id="linear-algebra"></a>
 

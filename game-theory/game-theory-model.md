@@ -57,6 +57,8 @@ John Nash提出「Nash equilibrium」的概念並在1994年得到諾貝爾經濟
 
 可分為標準型（表格結構）與擴展型（樹狀結構）。
 
+## 單純與混合策略（pure and mixed strategy）
+
 
 
 

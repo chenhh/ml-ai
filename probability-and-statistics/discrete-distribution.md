@@ -83,13 +83,13 @@ $$X \sim B(N_X, p), Y \sim B(N_Y, p)$$且兩隨機變數獨立，則 $$X+Y \sim 
 * 期望值 $$\mathrm{E}(X) = \frac{nK}{N}$$
 * 變異數 $$\mathrm{Var}(X) = \frac{nK(N-n)(N-K)}{N^2 (N-1)}$$
 
-## 泊松分佈（Poisson distribution）
+## 卜瓦松（泊松）分佈（Poisson distribution）
 
-Poisson分佈適合於描述單位時間內隨機事件發生的次數（頻率）的機率分佈。
+卜瓦松分佈適合於描述單位時間內隨機事件發生的次數（頻率）的機率分佈。
 
 如某一服務設施在一定時間內受到的服務請求的次數、 電話交換機接到呼叫的次數、汽車站台的候客人數、機器出現的故障數、自然災害發生的次數、DNA序列的變異數、放射性原子核的衰變數、 雷射的光子數分佈等等。
 
-Poission分佈的假設：
+卜瓦松分佈的假設：
 
 * 事件發生次數在任兩個不重疊的時段是相互獨立的。
 * 在某一極小時段內，事件只發生一次的機率與該時段的長度呈某一比例關係。
@@ -97,28 +97,24 @@ Poission分佈的假設：
 
 假設單位時間之內事件平均發生次數為$$\lambda$$，那麼在這區域中事件發生的次數$$X$$就符合Poisson分配，記為$$X \sim P(\lambda)$$。
 
-### 獨立的Poission分佈隨機變數總和
+### 獨立的卜瓦松分佈隨機變數總和
 
 > $$X\sim P(\lambda_1 )$$, $$Y \sim P(\lambda_2 )$$，且$$X,Y$$為獨立的隨機變數，則$$X+Y \sim P(\lambda_1+ \lambda_2 ) $$
 
 由動差生成函數證明。
 
-###  Poisson分佈可由二項分佈逼近
+###  卜瓦松分佈可由二項分佈逼近
 
 * 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty $$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!} $$
-* 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於Poisson分佈。
+* 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於卜瓦松分佈。
 
+### MLE參數估計
 
+給定獨立同卜瓦松分佈的$$N$$個隨機樣本值，希望得到從中推測出總體的卜瓦松分佈參數$$\lambda$$的估計。
 
-
-
-
-
-
-
-## 
-
-
+* log-likelihood function $$\begin{aligned} \displaystyle l(\lambda|X) & =\log \bigg({\prod_{i=1}^N f(x_i | \lambda)} \bigg) \\ &=\sum_{i=1}^N \log \bigg(\frac{e^{- \lambda \lambda ^{x_i}}}{x_i !} \bigg) \\ &= -N \lambda + \bigg(\sum_{i=1}^N x_i\bigg) \log \lambda - \sum_{i=1}^N \log(x_i!) \end{aligned}$$
+* 令$$\frac{\partial l}{\partial \lambda} = 0 $$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$
+* 所以 $$\hat{\lambda}_{MLE}= \frac{1}{N} \sum_{i=1}^N x_i$$。
 
 
 

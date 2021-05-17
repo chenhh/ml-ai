@@ -16,6 +16,7 @@
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space.md)
+* [微分、導數\(derivative\)](math-analysis/derivative.md)
 
 ## 機率與統計 <a id="probability-and-statistics"></a>
 

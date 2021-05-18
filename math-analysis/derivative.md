@@ -137,5 +137,7 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 > * 函數$$f$$在點$$a$$有局部極小值\(local minimum\) 若 $$\exists \text{ ball } B(a) \ni f(x) \geq f(a), ~ \forall x \in B(a) \cap S$$
 > * 函數$$f$$在點$$a$$的局部極大\(小\)值，是相對於點$$x \in B(a)\cap S$$，如果$$B(a)=S$$時，則為全局極大\(小\)值。
 
+![&#x5C40;&#x90E8;&#x8207;&#x5168;&#x5C40;&#x6975;&#x5927;&#xFF08;&#x5C0F;&#xFF09;&#x503C;](../.gitbook/assets/global_local_extreme-min.png)
+
 
 

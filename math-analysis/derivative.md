@@ -139,5 +139,9 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 
 ![&#x5C40;&#x90E8;&#x8207;&#x5168;&#x5C40;&#x6975;&#x5927;&#xFF08;&#x5C0F;&#xFF09;&#x503C;](../.gitbook/assets/global_local_extreme-min.png)
 
+![&#x5BE6;&#x503C;&#x51FD;&#x6578;&#x5C40;&#x90E8;&#x6975;&#x5C0F;&#xFF08;&#x5927;&#xFF09;&#x5224;&#x5225;&#x6CD5;](../.gitbook/assets/local_min_max_prop-min.png)
+
+![&#x5BE6;&#x503C;&#x51FD;&#x6578;&#x5C40;&#x90E8;&#x6975;&#x5C0F;&#xFF08;&#x5927;&#xFF09;&#x6027;&#x8CEA;](../.gitbook/assets/local_min_max_table-min.png)
+
 
 

@@ -100,3 +100,20 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 
 也可直接由定義得證$$\begin{aligned} \displaystyle &(f⋅g)^′ (c) \\&=\lim_{h \rightarrow 0}⁡\frac{f(c+h)g(c+h)−f(c)g(c)}{h}\\& =\lim_{h \rightarrow 0}⁡\frac{f(c+h)g(c+h)−f(c)g(c+h)+f(c)g(c+h)−f(c)g(c)}{h}\\&=\lim_{h \rightarrow 0}⁡\frac{f(c+h)−f(c)}{h}g(c+h)+\lim_{h \rightarrow 0}f(c)\frac{  (g(c+h)−g(c)}{h} \\&=f^′ (c)g(c)+f(c) g^′ (c) \end{aligned}$$\(QED\)
 
+## 多項式的導數
+
+> $$\forall c \in \mathbb{R}, \ n \in \mathbb{N} $$
+>
+> * $$\frac{dc}{dx}=0$$,
+> * $$\frac{dx^n}{dx}=nx^{n−1} $$
+> * $$\frac{d}{dx} (a_0+a_1 x+a_2 x^2+⋯+a_n x^n )=a_1+2a_2 x+ + 3a_3 x^2+ \ldots +na_n x^{n−1} $$
+
+* $$\frac{dc}{dx} = \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h} =  \lim_{h \rightarrow 0} \frac{0-0}{h} = 0$$\(QED\)
+* $$\begin{aligned} \frac{dx^n}{dx} &= \lim_{h \rightarrow 0} \frac{(x+h)^n - x^n}{h} \\&= \lim_{h \rightarrow 0} \frac{\sum_{i=0}^n \binom{n}{i}h^i x^{n-i}-x^n }{h} \\&= nx^{n-1} \end{aligned}$$\(QED\)
+
+## 導數鏈法則（chain rule）
+
+> 函數$$f$$定義在開區間S，且函數$$g$$定義在區間$$f(S)$$，則組合函數$$(g \circ f)(x) \equiv g(f(x))  $$。
+
+
+

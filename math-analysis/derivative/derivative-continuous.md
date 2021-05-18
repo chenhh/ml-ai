@@ -1,4 +1,4 @@
-# 導數連續
+# 導數連續性質
 
 ## 導數點態連續\(derivative pointwise continuous\)
 

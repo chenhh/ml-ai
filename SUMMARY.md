@@ -18,7 +18,8 @@
 * [度量空間 \(metric space\)](math-analysis/metric-space.md)
 * [微分、導數\(derivative\)](math-analysis/derivative/README.md)
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)
-  * [導數連續](math-analysis/derivative/derivative-continuous.md)
+  * [導數連續性質](math-analysis/derivative/derivative-continuous.md)
+  * [微分均值定理（mean-value theorem）](math-analysis/derivative/diff-mean-value-theorem.md)
 
 ## 機率與統計 <a id="probability-and-statistics"></a>
 

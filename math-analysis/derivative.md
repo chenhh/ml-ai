@@ -30,12 +30,6 @@
 *  函數$$f$$在點$$b$$左導數$$f_−^′ (b)$$存在，稱$$f$$在點$$b$$可微分。
 * 而稱$$f^′ (a,b) \rightarrow \mathbb{R}$$ 為函數$$f$$的導函數  。
 
-## 連續可微函數的集合
-
-若函數$$f:(a,b) \rightarrow \mathbb{R}$$之導函數$$f^′:(a,b) \rightarrow \mathbb{R}$$ 存在且為一連續函數時，稱$$f$$為$$C^1$$ 函數。記為$$f \in C^1 (a,b)$$。
-
-同理可得若$$f \in C^n (a,b)$$ ，即f為$$n$$階可微分且微分函數連續的函數。
-
 ## 單邊微分\(one-side derivative\)
 
 前述函數在點$$c$$可微分的定義，是建立在$$c$$為函數$$f$$定義域的內點，現在考慮函數$$f$$定義域的邊界點之微分。
@@ -55,9 +49,34 @@
 
 令函數 $$f:(a,b) \rightarrow \mathbb{R}$$ 為可微函數，若導函數$$f^′$$ 在點$$c \in (a,b)$$的極限$$\displaystyle  \lim_{h \rightarrow 0}⁡\frac{f^′ (c+h)−f^′ (c)}{h} $$ 存在，則稱函數$$f$$在點$$c$$二階可微分，記為 $$\displaystyle f^{′′} (c)\equiv f^{(2)}(c) \equiv \frac{d^2 f}{dx^2 }(c) \equiv \lim_{h \rightarrow 0}\frac{f^′ (c+h)−f^′ (c)}{h}$$。
 
-### 二階可微函數與導函數\(2nd differentiable function and 2nd derivative\)
+## 二階可微函數與導函數\(2nd differentiable function and 2nd derivative\)
 
 函數 $$f:(a,b) \rightarrow \mathbb{R}$$在每一點$$c \in (a,b)$$ 均為二階可微，則稱$$f$$為二階可微函數，$$f^′′:(a,b) \rightarrow \mathbb{R}$$ 為二階導函數。
+
+## 函數在一點n階可微函數\(n-th differentiable at one point\)
+
+令函數$$ f:(a,b) \rightarrow \mathbb{R}$$ 為可微函數，若導函數$$f^{(n−1)}$$  在點$$c \in (a,b)$$的極限 $$ lim_{h \rightarrow 0}⁡\frac{f^{(n−1)} (c+h)−f^{(n−1)} (c)}{h} $$ 存在，則稱$$f$$在點$$c$$ $$n$$階可微，記為$$\displaystyle  f^{(n)} (c) \equiv \frac{d^n f}{dx^n}(c) \equiv \lim_{h \rightarrow 0}⁡\frac{f^{(n−1)} (c+h)−f^{(n−1)} (c)}{h}  $$。
+
+## 連續可微函數的集合
+
+若函數$$f:(a,b) \rightarrow \mathbb{R}$$之導函數$$f^′:(a,b) \rightarrow \mathbb{R}$$ 存在且為一連續函數時，稱$$f$$為$$C^1$$ 函數。記為$$f \in C^1 (a,b)$$。
+
+同理可得若$$f \in C^n (a,b)$$ ，即f為$$n$$階可微分且微分函數連續的函數。
+
+若$$\forall n \in \mathbb{N}$$，其$$n$$階導函數$$f^{(n)}:(a,b) \rightarrow \mathbb{R}$$ 均存在且為一連續函數，則稱f為$$C^{\infty}$$ 函數，記為$$f \in C^{\infty} (a,b)$$。例如：
+
+* $$f(x) = \sin x \in C^{\infty} ( -\pi , \pi)$$
+* $$f(x) = \cos x \in C^{\infty} ( -\pi , \pi)$$
+* $$f(x)=e^x \in C^{\infty}(\mathbb{R})$$
+
+## 一階微分近似函數\(Taylor series\)
+
+函數$$f:(a,b) \rightarrow \mathbb{R}$$，且在點$$c \in (a,b)$$可微分（即$$f^′ (c)$$存在）， 則存在函數$$f^∗$$（依賴於函數$$f$$與點$$c$$）在點$$c$$連續$$\displaystyle \lim_{x \rightarrow c}f^∗ (x)=f(c))$$ 使得$$f(x)−f(c)=(x−c) f^∗ (x)$$, $$x∈(a,b)$$  with $$f^∗ (c)=f^′ (c)$$。
+
+反之若存在函數$$f^∗$$ 在點$$c$$連續且滿足上式，則$$f$$ 在點$$c$$可微分且$$f^′ (c)=f^∗ (c)$$。
+
+* 幾何解釋為當$$x$$相當靠近$$c$$時，則函數$$f$$在點$$c$$附近近似線性。
+* 在最佳化與機器學習領域中，經常使用此性質。
 
 
 

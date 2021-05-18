@@ -96,21 +96,7 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
   * $$f(x)=f(c)+(x−c) f^{′} (x) $$
   * $$g(x)=g(c)+(x−c) g^{′} (x) $$
   * $$f(x)g(x)−f(c)g(c)=(x−c)[f(c) g^′ (x)+f^′ (x)g(c)]+(x−c)^2 f^′ (x) g^′ (x)$$
-*  同除$$x−c$$後，令$$x \rightarrow c$$可得$$\begin{aligned} (fg)^{′} (c) & =\displaystyle  \lim_{x \rightarrow c}\frac{(f(x)g(x)−f(c)g(c)}{(x−c)}  \\&=\lim_{x \rightarrow c}⁡(f(c) g^{′}(x)+f^{′}(x)g(c)+(x−c) f^{′} (x) g^{′} (x)) \\&=f(c) g^{′} (c)+f^{′} (c)g(c) \end{aligned}$$
+*  同除$$x−c$$後，令$$x \rightarrow c$$可得$$\begin{aligned} (fg)^{′} (c) & =\displaystyle  \lim_{x \rightarrow c}\frac{(f(x)g(x)−f(c)g(c)}{(x−c)}  \\&=\lim_{x \rightarrow c}⁡(f(c) g^{′}(x)+f^{′}(x)g(c)+(x−c) f^{′} (x) g^{′} (x)) \\&=f(c) g^{′} (c)+f^{′} (c)g(c) \end{aligned}$$\(QED\)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+也可直接由定義得證$$\begin{aligned} \displaystyle &(f⋅g)^′ (c) \\&=\lim_{h \rightarrow 0}⁡\frac{f(c+h)g(c+h)−f(c)g(c)}{h}\\& =\lim_{h \rightarrow 0}⁡\frac{f(c+h)g(c+h)−f(c)g(c+h)+f(c)g(c+h)−f(c)g(c)}{h}\\&=\lim_{h \rightarrow 0}⁡\frac{f(c+h)−f(c)}{h}g(c+h)+\lim_{h \rightarrow 0}f(c)\frac{  (g(c+h)−g(c)}{h} \\&=f^′ (c)g(c)+f(c) g^′ (c) \end{aligned}$$\(QED\)
 

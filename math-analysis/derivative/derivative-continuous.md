@@ -14,6 +14,8 @@
 
 > $$f(x)=|x|$$在$$x=0$$連續，但微分不存在。
 
+![&#x7D55;&#x5C0D;&#x503C;&#x51FD;&#x6578;](../../.gitbook/assets/abs_func.png)
+
  $$\lim_{x \rightarrow 0^{-}} |x| = \lim_{x \rightarrow 0^{+}} |x|=0$$，所以在$$x=0$$連續。
 
 $$\lim_{x \rightarrow 0^{-}} \frac{|x| - 0}{x} = -1$$，$$\lim_{x \rightarrow 0^{+}} \frac{|x| - 0}{x} = 1$$，左導數不等於右導數，所以在$$x=0$$不可微分。

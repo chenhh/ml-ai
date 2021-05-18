@@ -40,21 +40,20 @@
 
 前述函數在點$$c$$可微分的定義，是建立在$$c$$為函數$$f$$定義域的內點，現在考慮函數$$f$$定義域的邊界點之微分。
 
-函數$$f$$定義在閉區間$$S$$，$$c \in S$$且函數$$f$$在點$$c$$連續，則函數$$f$$在點$$c$$右側微分（righthand derivative）存在 $$\Leftrightarrow$$$$\displaystyle  f_+^′ (c) \equiv  \lim_{x \rightarrow c^+}⁡\frac{f(x)−f(c)}{x−c} \equiv \lim_{h \rightarrow 0^+}⁡\frac{f(x+h−f(x)}{h}$$ 存在（可為$$\pm \infty$$）。
+函數$$f$$定義在閉區間$$S$$，$$c \in S$$且函數$$f$$在點$$c$$連續，則
 
-• 則函數f在點c左側微分\(lefthand derivative\)存在⇔
+* 函數$$f$$在點$$c$$右側微分（righthand derivative）存在 $$\Leftrightarrow$$  $$\displaystyle  f_+^′ (c) \equiv  \lim_{x \rightarrow c^+}⁡\frac{f(x)−f(c)}{x−c} \equiv \lim_{h \rightarrow 0^+}⁡\frac{f(x+h−f(x)}{h}$$ 存在（可為$$\pm \infty$$）。
+* 函數$$f$$在點$$c$$左側微分（lefthand derivative）存在 $$\Leftrightarrow$$$$\displaystyle f_−^′ (c) \equiv \lim_{x \rightarrow c^− }⁡\frac{f(x)−f(c)}{x−c} \equiv \lim_{h -\rightarrow 0^− }\frac{f(x＋h)−f(x)}{h }$$存在（可為$$\pm \infty$$）。
 
-	• f\_−^′ \(c\)≡lim\_\(x→c^− \)⁡〖\(f\(x\)−f\(c\)\)/\(x−c\)〗≡lim\_\(h0^− \)⁡〖\(f\(x＋h−f\(x\)\)/h 存在\(可為±∞\).
+**微分值為正負無窮大的概念與微分不存在不同**；**微分值為正負無窮大表示函數在該點的切線為垂直線；而微分值不存在是無法確定函數在該點的切線斜率（例如**不連續點或是尖點）。
 
-• 微分值為正負無窮大的概念與微分不存在不同；微分值為正負無窮大表示函數在該點的切線為垂直線；而微分值不存在是無法確定函數在該點的切線斜率\(e.g. 不連續點或是尖點\).
+**由定義可得若**$$c \in S$$**為內點，函數**$$f$$**在點**$$c$$**可微分若且唯若**$$f$$**在點**$$c$$**的左側微分等於點**$$c$$**的右側微分，即** $$f^′ (c)=f_−^′ (c)=f_+^′ (c)$$**。**
 
+![&#x51FD;&#x6578;&#x9023;&#x7E8C;&#x8207;&#x5FAE;&#x5206;&#x5B58;&#x5728;&#x7684;&#x5716;&#x793A;](../.gitbook/assets/left_right_derivative-min.png)
 
+## **函數在一點二階可微\(2nd differentiable at one point\)**
 
-
-
-
-
-
+令函數 $$f:(a,b) \rightarrow \mathbb{R}$$ 為可微函數，若導函數$$f^′$$ 在點$$c \in (a,b)$$的極限$$\displaystyle  \lim_{h \rightarrow 0}⁡\frac{f^′ (c+h)−f^′ (c)}{h} $$ 存在，則稱函數$$f$$在點$$c$$二階可微分，記為 $$\displaystyle f^{′′} (c)\equiv f^{(2)}(c) \equiv \frac{d^2 f}{dx^2 }(c) \equiv \lim_{h \rightarrow 0}\frac{f^′ (c+h)−f^′ (c)}{h}$$。
 
 
 

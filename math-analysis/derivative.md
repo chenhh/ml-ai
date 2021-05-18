@@ -131,10 +131,11 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 
 ## 局部極值\(local extreme value\)
 
-$$(M,d)$$為度量空間，令$$a \in S \subseteq M$$, 函數$$f:S \rightarrow \mathbb{R}$$, 則
-
-* 函數$$f$$在點$$a$$有局部極大值\(local maximum\) 若 $$\exists  \text{ ball } B(a) \ni f(x) \leq f(a),   ~ \forall x \in B(a) \cap S$$
-* 函數$$f$$在點$$a$$有局部極小值\(local minimum\) 若 $$\exists \text{ ball } B(a) \ni f(x) \geq f(a), ~ \forall x \in B(a) \cap S$$
+> $$(M,d)$$為度量空間，令$$a \in S \subseteq M$$, 函數$$f:S \rightarrow \mathbb{R}$$, 則
+>
+> * 函數$$f$$在點$$a$$有局部極大值\(local maximum\) 若 $$\exists  \text{ ball } B(a) \ni f(x) \leq f(a),   ~ \forall x \in B(a) \cap S$$
+> * 函數$$f$$在點$$a$$有局部極小值\(local minimum\) 若 $$\exists \text{ ball } B(a) \ni f(x) \geq f(a), ~ \forall x \in B(a) \cap S$$
+> * 函數$$f$$在點$$a$$的局部極大\(小\)值，是相對於點$$x \in B(a)\cap S$$，如果$$B(a)=S$$時，則為全局極大\(小\)值。
 
 
 

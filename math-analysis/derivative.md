@@ -71,12 +71,46 @@
 
 ## 一階微分近似函數\(Taylor series\)
 
-函數$$f:(a,b) \rightarrow \mathbb{R}$$，且在點$$c \in (a,b)$$可微分（即$$f^′ (c)$$存在）， 則存在函數$$f^∗$$（依賴於函數$$f$$與點$$c$$）在點$$c$$連續$$\displaystyle \lim_{x \rightarrow c}f^∗ (x)=f(c))$$ 使得$$f(x)−f(c)=(x−c) f^∗ (x)$$, $$x∈(a,b)$$  with $$f^∗ (c)=f^′ (c)$$。
+函數$$f:(a,b) \rightarrow \mathbb{R}$$，且在點$$c \in (a,b)$$可微分（即$$f^′ (c)$$存在）， 則存在函數$$f^∗$$（依賴於函數$$f$$與點$$c$$）在點$$c$$連續$$\displaystyle \lim_{x \rightarrow c}f^∗ (x)=f(c)$$ 使得$$f(x)−f(c)=(x−c) f^∗ (x)$$, $$x∈(a,b)$$  with $$f^∗ (c)=f^′ (c)$$。
+
+note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c}$$
 
 反之若存在函數$$f^∗$$ 在點$$c$$連續且滿足上式，則$$f$$ 在點$$c$$可微分且$$f^′ (c)=f^∗ (c)$$。
 
-* 幾何解釋為當$$x$$相當靠近$$c$$時，則函數$$f$$在點$$c$$附近近似線性。
-* 在最佳化與機器學習領域中，經常使用此性質。
+* **幾何解釋為當**$$x$$**相當靠近**$$c$$**時，則函數**$$f$$**在點**$$c$$**附近近似線性**。
+* 在最佳化與機器學習領域中，經常使用此線性性質。
+
+![&#x51FD;&#x6578;&#x7684;&#x4E00;&#x968E;&#x7DDA;&#x6027;&#x8FD1;&#x4F3C;](../.gitbook/assets/linear_approximation2.png)
+
+## 導數（微分）運算為線性線子
+
+> 函數$$f,g:(a,b) \rightarrow \mathbb{R}$$且在點$$c \in (a,b)$$可微分，則
+>
+> * $$(sf \pm tg)^{'}(c) = sf^{'}(c) + tg^{'}(c), \ s,t \in \mathbb{R}$$
+> * $$(fg)^{'}(c) = f^{'}(c)g(c) + f(c)g^{'}(c)$$
+> * $$\big(\frac{f}{g} \big)^{'}(c) = (fg^{-1})(c) = \frac{f^{'}(c)g(c) - f(c)g^{'}(c)}{g^2(c)}, \ g(c) \neq 0$$
+
+加減法用微分的定義可簡單得出，而除法為乘法的特例，因此只證明乘法。
+
+* 使用微分均值定理得
+  * $$f(x)=f(c)+(x−c) f^{′} (x) $$
+  * $$g(x)=g(c)+(x−c) g^{′} (x) $$
+  * $$f(x)g(x)−f(c)g(c)=(x−c)[f(c) g^′ (x)+f^′ (x)g(c)]+(x−c)^2 f^′ (x) g^′ (x)$$
+*  同除$$x−c$$後，令$$x \rightarrow c$$可得$$\begin{aligned} (fg)^{′} (c) & =\displaystyle  \lim_{x \rightarrow c}\frac{(f(x)g(x)−f(c)g(c)}{(x−c)}  \\&=\lim_{x \rightarrow c}⁡(f(c) g^{′}(x)+f^{′}(x)g(c)+(x−c) f^{′} (x) g^{′} (x)) \\&=f(c) g^{′} (c)+f^{′} (c)g(c) \end{aligned}$$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -114,6 +114,27 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 ## 導數鏈法則（chain rule）
 
 > 函數$$f$$定義在開區間S，且函數$$g$$定義在區間$$f(S)$$，則組合函數$$(g \circ f)(x) \equiv g(f(x))  $$。
+>
+> • 假設點$$c \in S$$ 且$$f(c)$$為$$f(S)$$的內點（interior point）。若函數$$f$$在點$$c$$可微分且函數$$g$$在點$$f(c)$$可微分，則
+>
+> $$ (g∘f)^′ (c)=g^′ (f(c)) f^′ (c)$$
+>
+> 可使用符號方便記憶 
+>
+> * $$z(y)=g(y)=(g \circ f)(x), ~ y(x)=f(x) $$
+> * $$\frac{dz}{dx}=\frac{dz}{dy}\frac{dy}{dz} $$
+
+* 因為$$f$$在點$$c$$可微分，所以一階線性近似$$f(x)−f(c)=(x−c) f^{∗}(x)  $$,$$\forall x \in S$$
+* 同理可得一階線性近似$$ g(y)−g(f(c))=(y−f(c)) g^∗ (y)$$, $$\forall y \in T \subseteq f(S), f(c) \in T$$
+* 選$$x \in S$$且滿足$$y=f(x) \in T$$，則  		$$g(f(x))−g(f(c))=(f(x)−f(c)) g^∗ (f(x))=(x−c) f^∗ (x) g^∗ (f(x))  $$	
+* $$\displaystyle \lim_{x \rightarrow c}⁡\frac{g(f(x))−g(f(c))}{(x−c)}=\lim_{x \rightarrow c}⁡ f^∗ (x) g^∗ (f(x))=f^′ (c) g^′ (f(c))$$  \(QED\)
+
+## 局部極值\(local extreme value\)
+
+$$(M,d)$$為度量空間，令$$a \in S \subseteq M$$, 函數$$f:S \rightarrow \mathbb{R}$$, 則
+
+* 函數$$f$$在點$$a$$有局部極大值\(local maximum\) 若 $$\exists  \text{ ball } B(a) \ni f(x) \leq f(a),   ~ \forall x \in B(a) \cap S$$
+* 函數$$f$$在點$$a$$有局部極小值\(local minimum\) 若 $$\exists \text{ ball } B(a) \ni f(x) \geq f(a), ~ \forall x \in B(a) \cap S$$
 
 
 

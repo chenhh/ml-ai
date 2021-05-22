@@ -29,6 +29,7 @@
 > 由定義可知 sigma-field 必為 field。
 
 * \[closed under countable intersection \]如果$$F$$為sigma-field，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
+* 空集合$$\emptyset$$與宇集合$$G$$也都是$$F$$的元素。
 
 ### 範例
 

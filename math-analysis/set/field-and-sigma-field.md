@@ -1,0 +1,26 @@
+# field與sigma-field
+
+## 簡介
+
+定域sigma域（代數）的主要用途，是在定義實值可測函數（實值隨機變數）的前像，必須為sigma域內的元素才符合定義，而不是定義域中的任意集合均可定義。因為可測函數（隨機變數）的定義域，依公理可以建構出不可測的集合族（set family，元素為集合的集合），為了排除這類性質不佳的集合族，因此才定義sigma域，而日常所使用的集合，幾乎都滿足sigma域的條件，所以可放心使用。
+
+## 域（field）或代數（algebra）
+
+令$$G$$為宇集合（universal set or space），令集合$$F \subseteq G$$為包含宇集合的某此子集，若滿足以下三個條件時，稱$$F$$為域（代數）：
+
+1. $$F\neq  \emptyset$$，不為空集合。
+2. \[F is closed under complementation\] 若 $$A \in F$$，則其補集合也為$$F$$內的元素，即$$A^c \in F$$。
+3. \[F is closed under union\]若$$A_1 \in F$$且$$A_2 \in F$$，則$$A_1 \cup A_2 \in F$$。
+
+**條件3可得有限聯集也是F內的元素**，即$$A_1, A_2, \ldots, A_n \in F$$，則$$ \cup_{i=1}^n A_i \in F$$。但不保證無限聯集時成立。
+
+### 範例
+
+* $$A_1 = \{ 1, 3\}$$, $$A_2 = \{ 2,4,5,6\}$$. $$F=\{A_1, A_2\}=\{(1,3), \{2,4,5,6\}\}$$，則$$F$$為field。
+* $$F=\{ \emptyset, G\}$$，則$$F$$為field。
+* $$F=\{$$包含所有$$G$$的子集合$$\}$$, 則$$F$$為field。
+
+## sigma-field（sigma-algebra）與可測空間
+
+
+

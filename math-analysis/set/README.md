@@ -44,7 +44,7 @@ the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y
 * 聯集\(union\): 屬於任一個集合的元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
   * $$X\cup X = X \cup \emptyset = \emptyset \cup X = X$$
   * $$X \cup U = U$$
-* 交集\(intersection\): 同時屬於所有集合的元素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
+* 交集\(intersection\): 同時屬於所有集合的元素，或者為所有集合共同所有元素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
   * $$X \cap \emptyset = \emptyset$$
   * $$X\cap X  = X \cap U= X$$
 * 多集合的聯集: 元素只須存在於某一個集合。$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$

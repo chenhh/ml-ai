@@ -39,9 +39,9 @@
 
 ## Borel sigma-field
 
-令宇集合$$G=\mathbb{R}$$為實數集（直線）。定義Borel sigma-field \(Borel set\) $$\mathcal{B} $$為直線上的所有開（閉）區間，即$$\mathcal{B}=\{ (x,y)| x < y \text{ and } x,y \in \mathbb{R}\}$$。
+> 令宇集合$$G=\mathbb{R}$$為實數集（直線）。定義Borel sigma-field \(Borel set\) $$\mathcal{B} $$為直線上的所有開（閉）區間，即$$\mathcal{B}=\{ (x,y)| x < y \text{ and } x,y \in \mathbb{R}\}$$。
 
-此處$$\mathcal{B}$$集合椗義中的區間可為開區間，閉區間，或是半開區間都可以，因為根據sigma-field的定義，開區間的補集是閉區間，仍為sigma-field的元素，反之亦然。而半開區間可寫為開區間與閉區間的聯集，依定義也是sigma-field內的元素。
+此處$$\mathcal{B}$$集合定義中的區間可為開區間，閉區間，或是半開區間都可以，因為根據sigma-field的定義，開區間的補集是閉區間，仍為sigma-field的元素，反之亦然。而半開區間可寫為開區間與閉區間的聯集，依定義也是sigma-field內的元素。
 
 ### 範例
 

@@ -18,9 +18,35 @@
 
 * $$A_1 = \{ 1, 3\}$$, $$A_2 = \{ 2,4,5,6\}$$. $$F=\{A_1, A_2\}=\{(1,3), \{2,4,5,6\}\}$$，則$$F$$為field。
 * $$F=\{ \emptyset, G\}$$，則$$F$$為field。
-* $$F=\{$$包含所有$$G$$的子集合$$\}$$, 則$$F$$為field。
+* $$F=\{$$包含所有$$G$$的子集合, 即$$G$$的冪集合$$\}$$, 則$$F$$為field。
 
 ## sigma-field（sigma-algebra）與可測空間
+
+> $$F$$為sigma-field若$$F$$為field且滿足 $$A_i \in F, i \in \mathbb{N} \Rightarrow \cup_{i=1}^\infty A_i \in F$$，即無限可數的集合也是屬於$$F$$。
+>
+> 稱集合對$$(G, F)$$為可測空間（measurable space）。
+>
+> 由定義可知 sigma-field 必為 field。
+
+* \[closed under countable intersection \]如果$$F$$為sigma-field，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
+
+### 範例
+
+* $$F=\{ \emptyset, G\}$$，則$$F$$為sigma-field。
+* $$F=\{$$包含所有$$G$$的子集合, 即$$G$$的冪集合$$\}$$, 則$$F$$為sigma-field。
+* $$F=\{A, A^C, G, \emptyset\}$$為sigma-field。
+
+## Borel sigma-field
+
+令宇集合$$G=\mathbb{R}$$為實數集（直線）。定義Borel sigma-field \(Borel set\) $$\mathcal{B} $$為直線上的所有開（閉）區間，即$$\mathcal{B}=\{ (x,y)| x < y \text{ and } x,y \in \mathbb{R}\}$$。
+
+此處$$\mathcal{B}$$集合椗義中的區間可為開區間，閉區間，或是半開區間都可以，因為根據sigma-field的定義，開區間的補集是閉區間，仍為sigma-field的元素，反之亦然。而半開區間可寫為開區間與閉區間的聯集，依定義也是sigma-field內的元素。
+
+### 範例
+
+* $$\mathcal{B}=\{(x,y), [x,y], (x,y], [x,y), (-\infty, x], (-\infty, x), [x, \infty), (x, \infty) \}$$為Borel sigma-field。
+* $$\mathcal{B} =\{ (x,y] | x<y \text{ and } x, y \in \mathbb{R} \}$$包含所有實數上的半開區間為Borel sigma-field。
+* $$\mathcal{B} =\{ [x,y] | x<y \text{ and } x, y \in \mathbb{R} \}$$包含所有實數上的閉區間為Borel sigma-field。
 
 
 

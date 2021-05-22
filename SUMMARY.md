@@ -82,12 +82,12 @@
 * [賽局數學模型](game-theory/game-theory-model.md)
 * [Nash均衡](game-theory/nash-equilibrium.md)
 
-## 凸優化 <a id="convex-optimization"></a>
+## 凸最佳化 <a id="convex-optimization"></a>
 
 * [凸集合 \(convex set\)](convex-optimization/convex-set.md)
 * [凸函數 \(convex function\)](convex-optimization/convex-function.md)
 * [凸最佳化\(convex optimization\)](convex-optimization/convex-optimization.md)
-* [在線凸最佳化](convex-optimization/online-convex-optimization.md)
+* [線上凸最佳化](convex-optimization/online-convex-optimization.md)
 
 ## 離散數學 <a id="discrete_math"></a>
 

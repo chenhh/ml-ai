@@ -9,4 +9,15 @@
 > 若$$\lim_{x \rightarrow a} f(x) = 0 \text{ or } \infty$$及 $$\lim_{x \rightarrow a} g(x) = 0 \text{ or } \infty$$，則 $$\displaystyle \lim_{x \rightarrow a} \frac{f(x)}{g(x)}=\lim_{x \rightarrow a} \frac{f^{'}(x)}{g^{'}(x)}=\frac{A}{B}$$
 >
 > 此處 $$\lim_{x \rightarrow a} f^{'}(x)=A$$存在， $$\lim_{x \rightarrow a} g^{'}(x)=B$$存在。
+>
+> 註：$$\frac{0}{\infty} =0 $$，但是$$0 \times \infty$$無法判定。
+
+
+
+### 範例
+
+* $$f(x)=x^2 - 1$$, $$g(x)=x^3 -1$$
+  * $$\displaystyle \lim_{x \rightarrow 1} \frac{x^2-1}{x^3-1} = \lim_{x \rightarrow 1} \frac{2x}{3x^2}=\lim_{x \rightarrow 1}\frac{2}{3x}=\frac{2}{3}$$
+* $$f(x)=\ln x$$, $$g(x)=e^x$$
+  * $$\displaystyle \lim_{x \rightarrow \infty} \frac{\ln x}{e^x} = \lim_{x \rightarrow \infty} \frac{1/x}{e^x}=\frac{0}{\infty}=0$$
 

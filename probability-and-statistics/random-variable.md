@@ -55,7 +55,8 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 ### 期望值為線性算子
 
-> $$\mathrm{E}(a_1X_1 + a_2 X_2 +\ldots +a_n X_n)=a_1 \mathrm{E}(X_1) + a_2 \mathrm{E}(X_2) + \ldots + a_n \mathrm{E}(X_n)$$
+> * $$\mathrm{E}(a_1X_1 + a_2 X_2 )=a_1 \mathrm{E}(X_1) + a_2 \mathrm{E}(X_2) $$
+> * $$\displaystyle \mathrm{E}(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n a_i \mathrm{E}(X_i)$$
 
 ## Theorem
 
@@ -96,10 +97,10 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 > 隨機變數$$X,Y$$的
 >
-> * 共變異數（covariance） $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mu_X)(Y-\mu_Y)]$$
-> * 相關係數（correlation coefficient） $$\rho \equiv \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y}$$
+> * 共變異數（covariance） $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mathrm{E}(X))(Y-\mathrm{E}(Y))]$$
+> * 相關係數（correlation coefficient） $$\rho_{XY} \equiv \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y}$$
 
-* $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mu_X)(Y-\mu_Y)] = E(XY) - \mu_X \mu_Y$$
+* $$\begin{aligned} \mathrm{Cov}(X,Y) &\equiv \mathrm{E}[(X-\mathrm{E}(X))(Y-\mathrm{E}(Y))]  \\& = \mathrm{E}[XY - X\mathrm{E}(Y) - Y\mathrm{E}(X)+ \mathrm{E}(X)\mathrm{E}(Y) ] \\ &= \mathrm{E}(XY)-\mathrm{E}(X) \mathrm{E}(Y) - \mathrm{E}(X) \mathrm{E}(Y) + \mathrm{E}(X) \mathrm{E}(Y) \\ &= \mathrm{E}(XY) - \mathrm{E}(X) \mathrm{E}(Y) \end{aligned}$$
 * $$-1\leq \rho \leq 1$$
   * $$\rho = -1$$表$$X,Y$$為完全（線性）負相關。
   * $$\rho=1$$表$$X,Y$$為完全（線性）正相關。

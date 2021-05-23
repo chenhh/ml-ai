@@ -36,7 +36,7 @@ $$
 regret_T(\mathcal{A})= \sup_{ \{f_1, f_2, \ldots, F_T\} \subseteq \mathcal{F}} \bigg\{  \sum_{t=1}^Tf_t(\mathbf{x}_t) - \min_{x \in \mathcal{K}} \sum_{t=1}^T f_t(\mathbf{x})  \bigg\}
 $$
 
-事後最佳固定決策指的是假設玩家已經事先看到對手所有的資料與結果，每一期都採取固定行動後，有最小成本的某個固定行動。在賽局理論中，稱為外部遺憾（external regret）。
+事後最佳固定決策指的是假設玩家已經事先看到對手所有的資料與結果$$f_1, f_2, \ldots, f_T$$，每一期都採取固定行動後，有最小成本的某個固定行動$$\mathbf{x}$$，而演算法$$\mathcal{A}$$在每一期採用的是混合策略$$\mathbf{x}_t$$，每期動態調整。在賽局理論中，兩者行動總成本的差值稱為外部遺憾（external regret）。
 
 如果演算法的遺憾相對於時間$$T$$為次線性（sublinear），即$$regret_T(\mathcal{A}) = o(T)$$\( $$\lim_{T\rightarrow \infty} \frac{regret_T(\mathcal{A})}{T} = 0$$\)，表示演算法的遺憾增長速度比時間$$T$$慢，因此只要$$T$$夠大，演算法的遺憾相對於$$T$$最後會收斂至0，即演算法的表現最後會和事先看到最佳固定行動一樣好。
 

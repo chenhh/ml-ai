@@ -34,11 +34,11 @@ description: moment：動差(tw)，矩(cn)
 
 ## 動差生成函數\(MGF\)
 
-> 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x)$$，可視為隨機變數的（反）Laplace轉換。
+> 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x) \text{ or} \sum_{i=1}^n e^{t x_i}\mathrm{P}(x_i)$$，可視為隨機變數的（反）Laplace轉換。
 >
 > 隨機變數的MGF$$M(t)$$不一定存在，但存在時與機率分佈$$F(x)$$有一對一的關係。若$$M_X(t), M_Y(t)$$存在，則$$F_X=F_Y \Leftrightarrow M_X(t)=M_Y(t)$$。
 
-> 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x)$$，可視為隨機變數的（反）Fourier轉換。
+> 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x) \text{ or} \sum_{i=1}^n e^{i t x_i} \mathrm{P}(x_i)$$，可視為隨機變數的（反）Fourier轉換。
 >
 > 隨機變數的CHF 一定存在，且與機率分佈$$F(x)$$有一對一的關係。即$$F_X = F_Y \Leftrightarrow\phi_X(t)=\phi_Y(t)$$。
 
@@ -48,6 +48,14 @@ description: moment：動差(tw)，矩(cn)
 
 * $$\operatorname{E}(X^k) = \frac{d^k}{dt^k}M_X(t)|_{t=0}$$
 * $$\operatorname{E}(X^k) = i^{-k} \frac{d^k}{dt^k}\phi_X(t)|_{t=0}$$
+
+### 特徵函數的應用1
+
+> 如果隨機變數$$X$$的機率分佈無法直接求出，可先求出其特徵函數$$\phi_X(t)$$後，再以Fourier轉換求出其機率分佈。
+>
+> $$\displaystyle f(x) = \frac{1}{2} \pi \int_{-\infty}^{\infty} e^{-itx} \phi_X(t)dt$$
+
+有時無法根據上式求出$$f(x)$$的公式解，而必須依賴數值方法求$$f(x)$$。
 
 
 

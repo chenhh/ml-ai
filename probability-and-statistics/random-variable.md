@@ -69,7 +69,7 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 ## 變異數（variance）
 
-> $$\operatorname{V}(X)=\operatorname{E}(X- \operatorname{E}(X))^2= E(X^2) - (E(X))^2$$
+> $$\mathrm{Var}(X)=\mathrm{E}(X- \mathrm{E}(X))^2= \mathrm{E}(X^2) - (\mathrm{E}(X))^2$$
 
 常用$$\mu, \sigma^2$$表示隨機變數$$X$$的期望值與變異數。
 
@@ -104,6 +104,7 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 * $$\begin{aligned} \mathrm{Cov}(X,Y) &\equiv \mathrm{E}[(X-\mathrm{E}(X))(Y-\mathrm{E}(Y))]  \\& = \mathrm{E}[XY - X\mathrm{E}(Y) - Y\mathrm{E}(X)+ \mathrm{E}(X)\mathrm{E}(Y) ] \\ &= \mathrm{E}(XY)-\mathrm{E}(X) \mathrm{E}(Y) - \mathrm{E}(X) \mathrm{E}(Y) + \mathrm{E}(X) \mathrm{E}(Y) \\ &= \mathrm{E}(XY) - \mathrm{E}(X) \mathrm{E}(Y) \end{aligned}$$
 * 共變異數的不偏估計式為 $$\displaystyle \hat{\mathrm{Cov}}(X,Y)=\frac{1}{n-1} \sum_{i=1}^n ((x_i - \overline{x}) (y_i - \overline{y}))$$
+* $$\mathrm{Var}(X) = \mathrm{Cov}(X,X)=\mathrm{E}(X^2)-(\mathrm{E}(X))^2$$
 * $$-1\leq \rho \leq 1$$
   * $$\rho = -1$$表$$X,Y$$為完全（線性）負相關。
   * $$\rho=1$$表$$X,Y$$為完全（線性）正相關。

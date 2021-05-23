@@ -33,6 +33,8 @@
 
 計算機率有三個元素，宇集合$$\Omega$$，宇集合中的子集合（事件）形成的simga-field $$\mathcal{F}$$，與機率測度$$\mathrm{P}$$，三者$$(\Omega, \mathcal{F}, \mathrm{P})$$合稱機率空間。
 
+整體金融市場以機率空間表示時，$$\Omega$$為金融市場，$$\mathcal{F}$$為金融市場的訊息及相關資料，$$\mathrm{P}$$為對金融事件發生的機率測度。
+
 ### 性質 
 
 給定機率空間為$$(\Omega, \mathcal{F}, P)$$
@@ -79,13 +81,13 @@
 
 ### 條件機率（conditional probability）
 
-$$E,F$$為樣本空間$$\Omega$$下的二個事件，給定$$F$$發生後的條件下，$$E$$發生的條件機率為$$P(E|F) = \frac{P(E \cap F)}{P(F)},\ P(F) \neq 0$$。
+$$E,F$$為樣本空間$$\Omega$$下的二個事件，給定$$F$$發生後的條件下，$$E$$發生的條件機率為$$\mathrm{P}(E|F) = \frac{\mathrm{P}(E \cap F)}{\mathrm{P}(F)},\ \mathrm{P}(F) \neq 0$$。
 
 ### 全機率定理（total probability theorem）
 
 $$E, F_1, F_2,\ldots, F_N$$為定義於樣本空間$$\Omega$$的事件（集合），且$$F_1, F_2,\ldots, F_N$$兩兩互斥則$$P(E) = \sum_{i=1}^N P(A|F_i) P(F_i), \ P(F_i) \neq 0 \ \forall i$$
 
-### 機率獨立（independent）
+### 機率獨立（statistically independent）
 
 $$E,F$$為樣本空間$$\Omega$$下的二個事件，若且惟若$$P(E \cap F) = P(E)P(F)$$，則稱$$E,F$$為二獨立事件。
 

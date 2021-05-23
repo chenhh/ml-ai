@@ -64,11 +64,13 @@ $$
 * 決策集合$$\mathcal{K}$$為過濾器$$\mathbf{x}$$事件訂定的Euclidean norm範圍，通常為Eucildean ball。
 * 令郵件與其真實的類別為$$(\mathbf{a}, y)$$，而過濾器的成本為$$f(\mathbf{x})=l(\hat{y}, y)$$, $$l(\cdot, \cdot)$$是凸函數，常用$$l(\hat{y}, y)=(\hat{y} - y)^2$$。
 
-
-
 ### 線上最短路徑（online shortest path）
 
+給定有向圖$$G=(V,E)$$以及起點、終點$$u, v \in V$$。
 
+* 在每一期$$t$$決策時，決策者都必須選擇一條圖中由$$u$$至$$v$$的路徑$$p_t \in \mathcal{P}_{u,v}$$，其中 $$\mathcal{P}_{u,v} \subseteq E^{|V|}$$為圖中所有由$$u$$至$$v$$路徑的集合，長度可能為$$1,2,\ldots, |V|$$。
+* 而對手可獨立的選擇圖中任意邊的權重向量$$\mathbf{w}_t : E \rightarrow \mathbb{R}, ~ \mathbf{w}_t \in \mathbb{R}^{|E|}$$
+* 因此玩家每次決定路徑後的損失為該路徑所有權重的總和，即 $$\sum_{e \in p_t} \mathbf{w}_t(e)$$。
 
 ### 投資組合選取（portfolio selection）
 

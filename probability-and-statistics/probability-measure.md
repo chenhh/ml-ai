@@ -37,14 +37,34 @@
 
 給定機率空間為$$(\Omega, \mathcal{F}, P)$$
 
-* $$\forall E \in \mathcal{F}, 0 \leq \mathrm{P}(E) \leq 1$$
-* $$\forall E \in \mathcal{F}, \mathrm{P}(E^c)=1 - \mathrm{P}(E)$$。$$E^c$$為$$E$$的餘事件（complementary event）
-* $$\mathrm{P}(\emptyset)=0$$。$$\emptyset$$為零事件（null event），又稱空事件，指該事件永不發生。
-* $$\mathrm{P}(F \cap E^c)=\mathrm{P}(F) - \mathrm{P}(E \cap F)$$
-* $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
-* If $$E \subseteq F$$ then $$\mathrm{P}(F \setminus E) = \mathrm{P}(F) - \mathrm{P}(E)$$ and $$\mathrm{P}(E) \leq \mathrm{P}(F)$$
-* \[Bonferroni inequality\] $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
-* 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割\(partition\)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$\mathrm{P}(F) = \sum_{i \in \mathbb{N}} \mathrm{P}(F \cap E_i), \forall F \in \mathcal{F}$$。
+> $$\forall E \in \mathcal{F}, 0 \leq \mathrm{P}(E) \leq 1$$
+
+* $$\mathrm{P}(\Omega) = \mathrm{P}(E \cup E^c) = \mathrm{P}(E) +\mathrm{P}(E^c) = 1$$
+* $$\because \mathrm{P}(E) \geq 0$$ 且 $$\mathrm{P}(E^c) \geq 0$$, $$\therefore  0 \leq \mathrm{P}(E) \leq 1$$\(QED\)
+
+> $$\forall E \in \mathcal{F}, \mathrm{P}(E^c)=1 - \mathrm{P}(E)$$。$$E^c$$為$$E$$的餘事件（complementary event）
+
+* $$\because \mathrm{P}(\Omega)=\mathrm{P}(E \cup E^c)= \mathrm{P}(E) + \mathrm{P}(E^c)=1$$$$\therefore \mathrm{P}(E^c) = 1 - \mathrm{P}(E)$$ \(QED\)
+
+> $$\mathrm{P}(\emptyset)=0$$。$$\emptyset$$為零事件（null event），又稱空事件，指該事件永不發生。
+
+* $$\because \Omega \cup \emptyset = \Omega $$且$$\mathrm{P}(\Omega ) = \mathrm{P}(\Omega \cup \emptyset) =  \mathrm{P}(\Omega) + \mathrm{P}(\emptyset)=1 + \mathrm{P}(\emptyset) =1$$。
+
+> $$\mathrm{P}(F \cap E^c)=\mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+
+* $$\mathrm{P}(F) = \mathrm{P}((F \cap E^c) \cup (E \cap F)) = \mathrm{P}((F \cap E^c) + \mathrm{P}(E \cap F)$$ \(QED\)
+
+> $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+
+* $$\begin{aligned} \mathrm{P}(E \cup F) &= \mathrm{P}((E \cap F^c) \cup (E \cap F) \cup (E^c \cap F)) \\ &= \mathrm{P}(E) - \mathrm{P}(E \cap F) + \mathrm{P}(E \cap F) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \\& = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)  \end{aligned}$$\(QED\)
+
+> If $$E \subseteq F$$ then $$\mathrm{P}(F \setminus E) = \mathrm{P}(F) - \mathrm{P}(E)$$ and $$\mathrm{P}(E) \leq \mathrm{P}(F)$$
+
+* $$\because \mathrm{P}(F) = \mathrm{P}(E \cup (F \setminus E)) = \mathrm{P}(E) + \mathrm{P}(F \setminus E)$$且 $$\mathrm{P}(F \setminus E) \geq 0$$, $$\therefore \mathrm{P}(F) \geq \mathrm{P}(E)$$
+
+> \[Bonferroni inequality\] $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
+
+> 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割\(partition\)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$\mathrm{P}(F) = \sum_{i \in \mathbb{N}} \mathrm{P}(F \cap E_i), \forall F \in \mathcal{F}$$。
 
 ### 多事件聯集的機率
 

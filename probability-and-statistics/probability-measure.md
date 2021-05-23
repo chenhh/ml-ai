@@ -21,26 +21,30 @@
 
 機率測度是用來衡量或計算某一個隨機實驗結果發生的可能性，加以量化。
 
-> 對於樣本空間$$\Omega$$每一個\(子集合\)事件$$E$$而言\[（或者對於$$\Omega$$的sigma-field $$\mathcal{F}$$中的元素$$E$$），實數$$P(E)$$若滿足以下三個條件時，稱$$P(E)$$為事件$$E$$的機率（測度）。
+> 對於樣本空間$$\Omega$$每一個\(子集合\)可測的事件$$E$$而言\[（或者對於$$\Omega$$的sigma-field $$\mathcal{F}$$中的元素$$E$$）機率測度$$\mathrm{P}: \mathcal{F} \rightarrow \mathbb{R}$$\[直接考慮可測集合\]，實數$$\mathrm{P}(E)$$若滿足以下三個條件時，稱$$\mathrm{P}(E)$$為事件$$E$$的機率（測度）。
 >
-> 1. $$ P(E) \geq 0$$
-> 2. $$P(\Omega) = 1$$
-> 3. $$P(\cup_{i \in \mathbb{N}} E_i )= \sum_{i \in \mathbb{N}} E_i$$,$$E_i \cap E_j = \emptyset, \ \forall i \neq j$$為兩兩互斥的事件集合
+> 1. $$\mathrm{P}(E) \geq 0, ~ E \in \mathcal{F}$$。機率為正實數。
+> 2. $$\mathrm{P}(\Omega) = 1$$。宇集合的機率為1。
+> 3. \[sigma-additive\]$$\mathrm{P}(\cup_{i \in \mathbb{N}} E_i )= \sum_{i \in \mathbb{N}} \mathrm{P}(E_i)$$,$$E_i \cap E_j = \emptyset, \ \forall i \neq j$$為兩兩互斥的事件集合。不相交的事件，其聯集機率為個別事件機率之和。
 >
-> 註：機率只有定義事件的條件，可為任意的分佈。
+> 註：機率測度只有定義事件的條件，可為任意的分佈。
+
+### 機率空間（probability space）
+
+計算機率有三個元素，宇集合$$\Omega$$，宇集合中的子集合（事件）形成的simga-field $$\mathcal{F}$$，與機率測度$$\mathrm{P}$$，三者$$(\Omega, \mathcal{F}, \mathrm{P})$$合稱機率空間。
 
 ### 性質 
 
 給定機率空間為$$(\Omega, \mathcal{F}, P)$$
 
-* $$\forall E \in \mathcal{F}, 0 \leq P(E) \leq 1$$
-* $$\forall E \in \mathcal{F}, P(E^c)=1 - P(E)$$。$$E^c$$為$$E$$的餘事件（complementary event）
-* $$P(\emptyset)=0$$。$$\emptyset$$為零事件（null event），又稱空事件，指該事件永不發生。
-* $$P(F \cap E^c)=P(F) - P(E \cap F)$$
-* $$P(E \cup F) = P(E) + P(F) - P(E \cap F)$$
-* If $$E \subseteq F$$ then $$P(F \setminus E) = P(F) - P(E)$$ and $$P(E) \leq P(F)$$
-* \[Bonferroni inequality\] $$P(E \cap F) \geq P(E) + P(F) -1$$
-* 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割\(partition\)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$P(F) = \sum_{i \in \mathbb{N}} P(F \cap E_i), \forall F \in \mathcal{F}$$。
+* $$\forall E \in \mathcal{F}, 0 \leq \mathrm{P}(E) \leq 1$$
+* $$\forall E \in \mathcal{F}, \mathrm{P}(E^c)=1 - \mathrm{P}(E)$$。$$E^c$$為$$E$$的餘事件（complementary event）
+* $$\mathrm{P}(\emptyset)=0$$。$$\emptyset$$為零事件（null event），又稱空事件，指該事件永不發生。
+* $$\mathrm{P}(F \cap E^c)=\mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+* $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+* If $$E \subseteq F$$ then $$\mathrm{P}(F \setminus E) = \mathrm{P}(F) - \mathrm{P}(E)$$ and $$\mathrm{P}(E) \leq \mathrm{P}(F)$$
+* \[Bonferroni inequality\] $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
+* 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割\(partition\)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$\mathrm{P}(F) = \sum_{i \in \mathbb{N}} \mathrm{P}(F \cap E_i), \forall F \in \mathcal{F}$$。
 
 ### 多事件聯集的機率
 

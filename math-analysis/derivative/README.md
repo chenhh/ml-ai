@@ -121,6 +121,17 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 > * $$\frac{d e^x}{dx}=e^x$$
 > * $$\frac{d \ln x}{dx} = \frac{1}{x}$$
 
+
+
+## 對x的函數微分
+
+> $$\frac{d}{dx} (u(x)^n)=n\cdot u(x)^{n-1} \frac{d}{dx} u(x)$$
+
+#### 範例
+
+* $$\frac{d}{dx}(2x^2+1)^3 = 3 (2x^2+1)^2 \cdot 4x$$
+* $$\frac{d}{dx} (4x^3 - 2.5 \ln x)=12x^2 - \frac{2.5}{x}$$
+
 ## 導數鏈法則（chain rule）
 
 > 函數$$f$$定義在開區間S，且函數$$g$$定義在區間$$f(S)$$，則組合函數$$(g \circ f)(x) \equiv g(f(x))  $$。
@@ -152,6 +163,11 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 ![&#x5BE6;&#x503C;&#x51FD;&#x6578;&#x5C40;&#x90E8;&#x6975;&#x5C0F;&#xFF08;&#x5927;&#xFF09;&#x5224;&#x5225;&#x6CD5;](../../.gitbook/assets/local_min_max_prop-min.png)
 
 ![&#x5BE6;&#x503C;&#x51FD;&#x6578;&#x5C40;&#x90E8;&#x6975;&#x5C0F;&#xFF08;&#x5927;&#xFF09;&#x6027;&#x8CEA;](../../.gitbook/assets/local_min_max_table-min.png)
+
+## 對積分微分
+
+> * $$ \frac{d}{dx} \int_c^x f(u)du = f(x), c \in \mathbb{R}$$
+> * $$\frac{d}{dx} \int_a^b f(x,u)du = \int_a^b\frac{d}{dx}f(x,u)du$$
 
 
 

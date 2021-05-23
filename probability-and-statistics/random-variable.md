@@ -47,6 +47,7 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 * 離散隨機變數$$X$$的pmf為 $$P(X=x_i) =p_i, \ i \in \mathbb{N}$$。若$$\displaystyle  \sum_{i=1}^{\infty} |x_i| p_i < \infty$$\(有限值時\)，則$$X$$的期望值為$$\displaystyle  \mathrm{E}(X) \equiv \sum_{i=1}^{\infty} x_i p_i$$
 * 連續隨機變數的pdf為$$f(x), \forall x \in \mathbb{R}$$，若$$\displaystyle  \int_{-\infty}^{\infty}|x|f(x) < \infty$$，則期望值為$$\displaystyle  \mathrm{E}(X) \equiv  \int_{-\infty}^{\infty} x f(x)dx$$
 * 而pdf期望值的Stieltjes積分形式為 $$\displaystyle  \mathrm{E}(X) \equiv\int_{-\infty}^{\infty} xdF(x)$$
+* 期望值的不偏估計式為 $$\displaystyle \hat{\mu_X} = \frac{1}{n} \sum_{i=1}^n x_i$$
 
 ### 函數的期望值
 
@@ -113,4 +114,16 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 * $$\mathrm{V} (X \pm Y) = \mathrm{V}(X) + \mathrm{V}(Y)\pm 2\mathrm{Cov}(X,Y)$$
   * 若$$X \perp Y$$，即$$\mathrm{Cov}(X,Y)=0$$，則$$\mathrm{V}(X \pm Y) = \mathrm{X} + \mathrm{Y}$$
 * \[Cauchy-Schwarz不等式\] $$\mathrm{E}(X^2) \mathrm{E} (Y^2) \geq  (\mathrm{E}(XY))^2$$
+
+### 共變異數的性質
+
+> $$\mathrm{Cov}(aX+c, bY+d)=ab \mathrm{Cov}(X,Y)$$
+>
+> 常數加於隨機變數，不會改變原本的共變異數
+
+
+
+> $$\begin{aligned} \mathrm{Cov}(a_1 x_1 + a_2 x_2, b_1y_1+b_2 y_2) = \\ \mathrm{Cov}(a_1 x_1, b_1y_1)+  \mathrm{Cov}(a_1 x_2, b_2 y_2) + \\  \mathrm{Cov}(a_2 x_2, b_1 y_1) + \mathrm{Cov}(a_2 x_2, b_2 y_2) \\=a_1 b_1 \mathrm{Cov}(x_1, y_1) + a_1 b_2 \mathrm{Cov}(x_1, y_2) \\+ a_2 b_1 \mathrm{Cov}(x_2, y_1) + a_2 b_2 \mathrm{Cov}(x_2, y_2) \end{aligned}$$
+
+
 

@@ -111,6 +111,16 @@ note: 給定點$$c$$，直線$$L(x)$$的斜率 $$f^{*}(x) = \frac{f(x)-f(c)}{x-c
 * $$\frac{dc}{dx} = \lim_{h \rightarrow 0} \frac{f(x+h) - f(x)}{h} =  \lim_{h \rightarrow 0} \frac{0-0}{h} = 0$$\(QED\)
 * $$\begin{aligned} \frac{dx^n}{dx} &= \lim_{h \rightarrow 0} \frac{(x+h)^n - x^n}{h} \\&= \lim_{h \rightarrow 0} \frac{\sum_{i=0}^n \binom{n}{i}h^i x^{n-i}-x^n }{h} \\&= nx^{n-1} \end{aligned}$$\(QED\)
 
+#### 範例
+
+* $$f(x)=x^5$$, $$f^{'}(x)=5x^4$$
+* $$f(x)=x^{-\frac{3}{2}}$$, $$f^{'}(x)=-\frac{3}{2}x^{-\frac{5}{2}}$$
+
+## 指數的導數
+
+> * $$\frac{d e^x}{dx}=e^x$$
+> * $$\frac{d \ln x}{dx} = \frac{1}{x}$$
+
 ## 導數鏈法則（chain rule）
 
 > 函數$$f$$定義在開區間S，且函數$$g$$定義在區間$$f(S)$$，則組合函數$$(g \circ f)(x) \equiv g(f(x))  $$。

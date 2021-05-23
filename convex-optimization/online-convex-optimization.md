@@ -59,7 +59,7 @@ $$
 
 首先確定字典檔有$$d$$個單字，因此得輸入向量$$\mathbf{x} \in \mathbb{R}^d$$，$$\mathbf{x}$$每一個元素預設值均為0。電子郵件中出現的單字若有出現在字典中，則在$$\mathbf{x}$$對應的索引值改為1。
 
-使用感知機（perceptron）的方法來學習如何過濾郵件。
+使用感知機（perceptron）的方法來學習如何過濾郵件。假設目前有過濾器$$\mathbf{x} \in \mathbb{R}^d$$，給定郵件$$\mathbf{a} \in \mathbb{R}^d$$，計算兩者的內積得 $$\hat{y} = \mathrm{sign} \langle x, a\rangle \in \{-1,1\}$$，$$\hat{y}=1$$表示有效郵件，$$\hat{y}=-1$$表示垃圾郵件。
 
 
 

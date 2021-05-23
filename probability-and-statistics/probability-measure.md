@@ -63,6 +63,10 @@
 * $$\because \mathrm{P}(F) = \mathrm{P}(E \cup (F \setminus E)) = \mathrm{P}(E) + \mathrm{P}(F \setminus E)$$且 $$\mathrm{P}(F \setminus E) \geq 0$$, $$\therefore \mathrm{P}(F) \geq \mathrm{P}(E)$$
 
 > \[Bonferroni inequality\] $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
+>
+> * $$\mathrm{P}( (E \cap F)^c) = \mathrm{P}(\Omega \setminus (E \cap F)) = 1- \mathrm{P}(E \cap F)$$--\(1\)
+> * $$\mathrm{P}((E \cap F)^c)=\mathrm{P}(E^c \cup F^c) \leq \mathrm{P}(E^c)+\mathrm{P}(F^c)$$且$$\mathrm{P}(E^c)= 1-\mathrm{P}(E), \mathrm{P}(F^c)=1-\mathrm{P}(F)$$--\(2\)
+> * \(1\)\(2\)得 $$1-\mathrm{P}(E \cap F) \leq  2 - \mathrm{P}(E) - \mathrm{P}(F)$$移項得 $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$\(QED\)
 
 > 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割\(partition\)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$\mathrm{P}(F) = \sum_{i \in \mathbb{N}} \mathrm{P}(F \cap E_i), \forall F \in \mathcal{F}$$。
 

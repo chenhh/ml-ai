@@ -27,12 +27,35 @@ online convex optimization與game theory中的external regret, internal regret�
 
 **OCO可視為結構化的（雙人）重複賽局（structured repeated game）**，結構如下：
 
-* 在第$$t$$期（決策）時，線上玩家從決策集合選取當期的行動$$x_t \in \mathcal{K}$$，假設總共有$$T$$期。
-* 執行行動後，當期的成本函數 $$f_t \in \mathcal{F}: \mathcal{K} \rightarrow \mathbb{R}$$才會揭露。此處的$$\mathcal{F}$$是對手有界成本凸函數集合。而線上玩家本次決策的成本為$$f_t(x_t)$$。
+* 在第$$t$$期（決策）時，線上玩家從決策集合選取當期的行動$$\mathbf{x}_t \in \mathcal{K}$$，假設總共有$$T$$期。
+* 執行行動後，當期的成本函數 $$f_t \in \mathcal{F}: \mathcal{K} \rightarrow \mathbb{R}$$才會揭露。此處的$$\mathcal{F}$$是對手有界成本凸函數集合。而線上玩家本次決策的成本為$$f_t(\mathbf{x}_t)$$。
 
-由於OCO使用了賽局理論的方法，因此演算法的評量也是使用賽局理論中的**遺憾（regret）**做為度量。**將決策者的遺憾定義為她所承擔的總成本與事後\(in hindsight\)的最佳固定決策的成本之間的差異**。
+由於OCO使用了賽局理論的方法，因此演算法$$\mathcal{A}$$的評量也是使用賽局理論中的**遺憾（regret）**做為度量。**將決策者的遺憾定義為她所承擔的總成本與事後\(in hindsight\)的最佳固定決策的成本之間的差異**。
 
-（事後最佳固定決策指的是假設玩家已經事先看到所有的資料與結果，每一期都採取固定行動後，有最小成本的某個固定行動。在賽局理論中，此為外部遺憾（external regret）。）
+$$
+regret_T(\mathcal{A})= \sup_{ \{f_1, f_2, \ldots, F_T\} \subseteq \mathcal{F}} \bigg\{  \sum_{t=1}^Tf_t(\mathbf{x}_t) - \min_{x \in \mathcal{K}} \sum_{t=1}^T f_t(\mathbf{x})  \bigg\}
+$$
+
+事後最佳固定決策指的是假設玩家已經事先看到對手所有的資料與結果，每一期都採取固定行動後，有最小成本的某個固定行動。在賽局理論中，稱為外部遺憾（external regret）。
+
+如果演算法的遺憾相對於時間$$T$$為次線性（sublinear），即$$regret_T(\mathcal{A}) = o(T)$$\( $$\lim_{T\rightarrow \infty} \frac{regret_T(\mathcal{A})}{T} = 0$$\)，表示演算法的遺憾增長速度比時間$$T$$慢，因此只要$$T$$夠大，演算法的遺憾相對於$$T$$最後會收斂至0，即演算法的表現最後會和事先看到最佳固定行動一樣好。
+
+演算法$$\mathcal{A}$$在第$$t$$期產生行動$$\mathbf{x}_t$$的時間複雜度，與$$t \in T$$有關（可能要使用到$$1,2,\ldots, t$$期的歷史資料），與$$\mathbf{x}_t$$的維度$$n$$有關，與總決策期數$$T$$有關，以及成本函數$$f_t$$的維度有關。
+
+## 線上凸最佳化（OCO）的範例
+
+### 從專家建議中預測（experts problem）
+
+決策者每期要從$$n$$個專家中的建議，選一個做為行動，而在行動之後，會得到損失0或1。每一期行動後，每個專家建議的行動獲得的損失均不相同（專家的建議甚至可能是故意說錯的，以誤導決策者），**決策者的目標是要和（事後來看）最佳的決策者表現的一樣好**。
+
+* 決策集合$$\mathcal{K}$$有$$n$$個元素（專家），因此決策集合為$$n$$維的單體\(simplex\)，$$\mathcal{K}=\Delta_n=\{ \mathbf{x} \in \mathbb{R}^n,~ \sum_{i=1}^n x_i = 1, ~ x_i \geq 0 \}$$，是$$n$$個元素的任意線性組合集合。
+* 令第$$i$$個專家在第$$t$$的損失（成本）為$$g_t(i)$$，$$\mathbf{g}_t \equiv[g_t(1), g_t(2), \ldots, g_t(n)]$$為第$$t$$時，$$n$$個專家的損失（成本）向量。則第$$t$$期的成本函數為$$f_t(\mathbf{x})=\mathbf{g}_t^{\top} \mathbf{x}$$。
+
+註：在賽局理論中，行動為$$n$$個行動的線性組合指的是混合策略（mixed strategy），即第$$i$$個行動被選中的機率為$$x_i$$。行動被選中的機率符從[Dirichlet分佈](https://en.wikipedia.org/wiki/Dirichlet_distribution)。
+
+### 線上垃圾郵件過濾
+
+
 
 
 

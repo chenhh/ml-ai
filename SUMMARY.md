@@ -17,12 +17,12 @@
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space.md)
-* [Riemann-Stieltjes積分](math-analysis/rs-integral.md)
 * [微分、導數\(derivative\)](math-analysis/derivative/README.md)
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)
   * [導數連續性質](math-analysis/derivative/derivative-continuous.md)
   * [微分均值定理（mean-value theorem）](math-analysis/derivative/diff-mean-value-theorem.md)
   * [L'Hopital法則](math-analysis/derivative/lhopital-rule.md)
+* [Riemann-Stieltjes積分](math-analysis/rs-integral.md)
 
 ## 機率與統計 <a id="probability-and-statistics"></a>
 

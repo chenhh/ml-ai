@@ -21,6 +21,7 @@
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)
   * [導數連續性質](math-analysis/derivative/derivative-continuous.md)
   * [微分均值定理（mean-value theorem）](math-analysis/derivative/diff-mean-value-theorem.md)
+  * [L'Hopital法則](math-analysis/derivative/lhopital-rule.md)
 
 ## 機率與統計 <a id="probability-and-statistics"></a>
 

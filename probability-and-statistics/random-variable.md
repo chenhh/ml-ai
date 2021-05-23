@@ -48,6 +48,15 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 * 連續隨機變數的pdf為$$f(x), \forall x \in \mathbb{R}$$，若$$\displaystyle  \int_{-\infty}^{\infty}|x|f(x) < \infty$$，則期望值為$$\displaystyle  \mathrm{E}(X) \equiv  \int_{-\infty}^{\infty} x f(x)dx$$
 * 而pdf期望值的Stieltjes積分形式為 $$\displaystyle  \mathrm{E}(X) \equiv\int_{-\infty}^{\infty} xdF(x)$$
 
+### 函數的期望值
+
+> * $$\displaystyle \mathrm{E}(u(X))=\sum_{i=1}^\infty u(x_i) p_i$$
+> * $$\displaystyle \mathrm{E}(u(X))=\int_{-\infty}^{\infty} u(x)f(x)dx$$
+
+### 期望值為線性算子
+
+> $$\mathrm{E}(a_1X_1 + a_2 X_2 +\ldots +a_n X_n)=a_1 \mathrm{E}(X_1) + a_2 \mathrm{E}(X_2) + \ldots + a_n \mathrm{E}(X_n)$$
+
 ## Theorem
 
 > 若$$\displaystyle \int_{-\infty}^{\infty} |g(x)|dF(x) < \infty$$，則$$\mathrm{E}(g(X))$$存在且$$\displaystyle\mathrm{E}(g(X))= \int_{-\infty}^{\infty}g(x)dF(x)$$

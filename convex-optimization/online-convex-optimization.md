@@ -53,7 +53,19 @@ $$
 
 註：在賽局理論中，行動為$$n$$個行動的線性組合指的是混合策略（mixed strategy），即第$$i$$個行動被選中的機率為$$x_i$$。行動被選中的機率符從[Dirichlet分佈](https://en.wikipedia.org/wiki/Dirichlet_distribution)。
 
-### 線上垃圾郵件過濾
+### 線上垃圾郵件過濾（online spam filtering）
+
+a
+
+### 線上最短路徑（online shortest path）
+
+
+
+### 投資組合選取（portfolio selection）
+
+
+
+### 矩陣完成和推薦系統（matrix completion and recommandation systems）
 
 
 

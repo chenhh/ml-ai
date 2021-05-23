@@ -72,8 +72,8 @@
 
 ### 多事件聯集的機率
 
-* $$P(E_1 \cup E_2 \cup E_3) =  P(E_1)+P(E_2)+P(E_3) - P(E_1 \cap E_2) - P(E_1 \ cap E_3) - P(E_2 \cap E_3) + P(E_1 \cap E_2 \cap E_3)$$
-* $$P(\cup_{i=1}^n E_i) = \sum_{i=1}^n P(E_i) - \sum_{i \leq i < j \leq n} P(A_i \cap A_j)+ \sum_{1 \leq i < j < k \leq n} P(A_i \cap A_j \cap A_k) +\ldots +(-1)^{n+1} P(A_1 \cap A_2 \cap \ldots \cap A_n)$$
+* $$\begin{aligned} \mathrm{P}(E_1 \cup E_2 \cup E_3) & =  \mathrm{P}(E_1)+\mathrm{P}(E_2)+\mathrm{P}(E_3) \\& - \mathrm{P}(E_1 \cap E_2) - \mathrm{P}(E_1 \cap E_3) - \mathrm{P}(E_2 \cap E_3) \\ & + \mathrm{P}(E_1 \cap E_2 \cap E_3) \end{aligned}$$
+* $$\begin{aligned} \mathrm{P}(\cup_{i=1}^n E_i) & = \sum_{i=1}^n \mathrm{P}(E_i) \\& - \sum_{i \leq i < j \leq n} \mathrm{P}(E_i \cap E_j) \\ &+ \sum_{1 \leq i < j < k \leq n} \mathrm{P}(E_i \cap E_j \cap E_k) +\ldots \\ &+(-1)^{n+1} \mathrm{P}(E_1 \cap E_2 \cap \ldots \cap E_n) \end{aligned}$$
 
 
 

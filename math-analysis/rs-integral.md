@@ -120,6 +120,12 @@ proof:
 ## 變數變換（change of variable）
 
 > * $$f \in R(\alpha)$$為閉區間$$[a,b]$$的可積函數
+> * $$g$$為定義在閉區間$$S=[c,d]$$的嚴格單調連續函數\(之後會證套單調為非必要條件，只要是連續函數即可\)
+> * $$a=g(c), b=g(d)$$,$$h(x)=f(g(x))$$, $$\beta(x)=\alpha(g(x))$$
+> * 若$$x \in S$$，則$$h \in R(\beta)$$且$$\int_a^b fd\alpha = \int_c^d h d\beta$$，即
+> * $$\displaystyle \int_{g(c)}^{g(d)}f(t)d\alpha(t)=\int_c^d f(g(x))d(\alpha(g(x)))$$
+>
+> 註：當$$\alpha(x)=x$$時，退化成黎曼積分
 
 ### 常用微分積分符號
 

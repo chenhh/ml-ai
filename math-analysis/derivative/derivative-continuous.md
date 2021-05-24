@@ -41,3 +41,13 @@ $$\lim_{x \rightarrow 0^{-}} \frac{|x| - 0}{x} = -1$$，$$\lim_{x \rightarrow 0^
 * $$\displaystyle \lim_{x \rightarrow c^− }⁡(f(x)−f(c))= \lim_{x \rightarrow c^+ }⁡ \frac{f(x)−f(c)}{(x−c)} (x−c)=\lim_{x \rightarrow c^+}\frac{f(x)−f(c)}{(x−c)} \cdot \lim_{x \rightarrow c^+} ⁡(x−c)=f_+^′ (c)⋅0=0 $$
 * 則$$\lim_{x \rightarrow c}⁡f(x)=f(c)$$ \(QED\)
 
+## 利普希茨（Lipschitz）條件
+
+> 稱函數$$f$$在點$$c$$滿足Lipschitiz condition of order $$\alpha$$若 存在$$M>0$$\(可能會依賴於$$c$$而不同\)使得 $$|f(x)-f(c)| < M |x-c|^{\alpha}$$, $$x\neq c$$且$$x \in Ball(c)$$
+>
+> 一般應用時是考慮$$α=1$$的條件，即函數$$f$$點c的斜率為有限值。
+
+![Lipschitz&#x689D;&#x4EF6;](../../.gitbook/assets/lipschitz_condition.png)
+
+
+

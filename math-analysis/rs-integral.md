@@ -96,6 +96,8 @@ proof:
 
 ## 分部積分（integration by parts）
 
+> 令$$f\in R(\alpha)$$為在區間$$[a,b]$$d的可積函數。
+
 > $$\int u(x) dv(x) = u(x)v(x) - \int v(x)du(x)$$
 
 因為$$\frac{d}{dx}uv = u^{'}v+uv^{'}$$

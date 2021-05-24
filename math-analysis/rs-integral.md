@@ -66,7 +66,7 @@ proof:
 * $$\forall \epsilon >0 ~ \exists \text{ partition } P_{\epsilon}[a,b] \ni |S(P, f, c_1 \alpha+c_2 \beta)- A|< \epsilon, ~ \forall P_{\epsilon} \subseteq P$$
 * 即 $$\displaystyle t_k \in [x_{k-1}, x_k], |\sum_{k=1}^nf(t_k)\Delta(c_1\alpha+c_2\beta)_k -A| < \epsilon$$
 
-### 積分區間的和
+## 積分區間的和
 
 > $$c\in(a,b) $$，若以下三個積分中有兩個存在時，則第三個積分必定存在
 
@@ -94,6 +94,16 @@ proof:
 
 因此[積分區間的和](rs-integral.md#ji-fen-ou-jian-de-he)可改寫為$$\displaystyle \int_a^b f d\alpha + \int_b^c f d \alpha + \int_c^a f d\alpha=0$$。
 
+## 分部積分（integration by parts）
+
+> $$\int u(x) dv(x) = u(x)v(x) - \int v(x)du(x)$$
+
+因為$$\frac{d}{dx}uv = u^{'}v+uv^{'}$$
+
+兩邊積分得 $$uv=\int vdu + \int u dv$$ \(QED\)
+
+
+
 ### 常用微分積分符號
 
 令$$ \frac{d}{dx}F(x) = f(x)$$，移項得 $$dF(x)=f(x)dx$$。
@@ -107,14 +117,6 @@ proof:
 
 
 
-
-## 分部積分（integration by parts）
-
-> $$\int u(x) dv(x) = u(x)v(x) - \int v(x)du(x)$$
-
-因為$$\frac{d}{dx}uv = u^{'}v+uv^{'}$$
-
-兩邊積分得 $$uv=\int vdu + \int u dv$$ \(QED\)
 
 
 

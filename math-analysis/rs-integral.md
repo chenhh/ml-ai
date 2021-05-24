@@ -105,8 +105,11 @@ proof:
 proof:
 
 * $$f \in R (\alpha) \Leftrightarrow$$$$\forall \epsilon > 0 ~ \exists \text{ partition } P_{\epsilon} [a,b] \ni |S(P_1, f, \alpha) - \int_a^b f d\alpha|<\epsilon, ~ \forall P_{\epsilon}[a,b] \subseteq P$$
-
-
+* 考慮$$\alpha \in R(f)$$且 $$P_{\epsilon}\subseteq P$$得 $$\displaystyle S(P,f,\alpha)=\sum_{k=1}^n\alpha(t_k)\Delta f_k=\sum_{k=1}^n \alpha(t_k)f(x_k) - \sum_{k=1}^n \alpha(t_k) f(x_{k-1})$$
+* 可寫為 $$A=f(b)\alpha(b)-f(a)\alpha(a)$$且得
+* $$A=\sum_{k=1}^n f(x_k)\alpha(x_k) - \sum_{k=1}^n f(x_{k-1})\alpha(x_{k-1})$$
+* $$\therefore A=S(P,f,\alpha)=\sum_{k=1}^n f(x_k)[\alpha(x_k) - \alpha(t_k)]+\sum_{k=1}^n f(x_{k-1})[\alpha(t_k) - \alpha(x_{k-1}]=S(P_1, f, \alpha)$$
+* $$\therefore |A-S(P, f, \alpha ) - \int_a^b f d \alpha|<\epsilon$$ \(QED\)
 
 
 

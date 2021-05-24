@@ -1,5 +1,15 @@
 # 導數連續性質
 
+## 連續函數的條件
+
+對於函數$$f: [a,b] \rightarrow \mathbb{R}$$
+
+* 連續可微分$$\subseteq$$Lipschitz連續$$\subseteq$$均勻連續（uniform continuous）
+  * $$\subseteq$$點態連續（pointwise continuous）
+* Lipschitz連續$$\subseteq$$絕對連續$$\subseteq$$有界變分$$\subseteq$$幾乎處處可微分
+
+![&#x9023;&#x7E8C;&#x53EF;&#x5FAE;&#x5206;&#x51FD;&#x6578;&#x689D;&#x4EF6;&#x6700;&#x56B4;&#x683C;](../../.gitbook/assets/continuous_func-min.png)
+
 ## 導數點態連續\(derivative pointwise continuous\)
 
 > * 函數$$f:(a,b) \rightarrow \mathbb{R}$$ 在點$$c  \in (a,b)$$均可以微分，則$$f$$在點$$c$$連續。

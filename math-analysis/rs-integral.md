@@ -96,13 +96,13 @@ proof:
 
 ## 分部積分（integration by parts）
 
-> 令$$f\in R(\alpha)$$為在區間$$[a,b]$$d的可積函數。
+> 令$$f\in R(\alpha)$$為在區間$$[a,b]$$的可積函數。
+>
+> 則 $$\alpha \in R(f)$$為在區間$$[a,b]$$的可積函數，則$$\displaystyle \int_a^b f(x) d\alpha(x) + \int_a^b \alpha(x)d f(x) = f(b) \alpha(b) - f(a)\alpha(a)=f(x)\alpha(x)|_{x=a}^{b}$$
 
-> $$\int u(x) dv(x) = u(x)v(x) - \int v(x)du(x)$$
+> 以微分分析，則得 $$\frac{d f\alpha}{dx}  = \frac{df}{dx}\alpha+f \frac{d\alpha}{dx}$$
 
-因為$$\frac{d}{dx}uv = u^{'}v+uv^{'}$$
 
-兩邊積分得 $$uv=\int vdu + \int u dv$$ \(QED\)
 
 
 

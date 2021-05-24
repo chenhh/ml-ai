@@ -7,21 +7,21 @@
 * 函數$$f$$在點$$c$$連續$$\lim_{x \rightarrow c}⁡ f(x)=f(c) \Leftrightarrow \forall \epsilon> 0 ~ \exists \delta >0 \ni |f(x)−f(c)|<\epsilon ~  \forall |x−c|<\delta $$
 * 同樣黎曼積分$$S(P,f,\alpha)=a \Leftrightarrow \forall \epsilon >0~ \exists \delta >0 \ni |S(P,f,\alpha)−a|<\epsilon ~\forall  \text{ partition }P[a,b], ~ \| P\| < \delta  $$
 
-  即給定積分值$$S(P,f,\alpha)$$與$$a$$的任意差值的精確度$$\epsilon$$, 必定可以找到某個定義域的分割方式$$P$$，其切割最大區間小於$$\delta$$滿足此條件。
+  即要求積分值$$S(P,f,\alpha)$$與$$a$$的差值小於$$\epsilon$$， 必定可以找到某個定義域的分割方式$$P$$，其分割最大區間小於$$\delta$$時可滿足此條件。
 
 ## 更細的分割（finer partition）
 
 > 給定實數閉區間$$[a,b]$$，區間的分割（partition）$$P=\{ x_0, x_1, \ldots, x_n\},~ a=x_0<x_1< \ldots <x_n=b$$
 >
-> 若$$P^{'}$$為比$$P$$更細的分割，則$$P^{'} \subseteq P$$，即更細的分割必須包含原始的分割所有的點且有更多的點。
+> 若$$P^{'}$$為比$$P$$更細的分割，則$$P \subseteq P^{'}$$，即更細的分割必須包含原始的分割所有的點且有更多的點。
 >
 > 令區間$$[a,b]$$所有的分割形成的集合記為$$\mathcal{P}[a,b]$$
 
 * 令$$\|P\|$$為分割$$P$$中，長度最大的區間。
-* 可得$$P^{'} \subseteq P \Rightarrow \| P^{'}\| \leq \| P \|$$，反之不成立。
+* 可得$$P \subseteq P^{'} \Rightarrow \| P^{'}\| \leq \| P \|$$，反之不成立。
   * $$P=\{0,1,2\}$$ , $$\|P\|=1$$
   * $$ P^′=\{0, 0.5, 1,5, 2\}$$, $$\|P^{′} \|=1$$
-  * $$\|P^{′} \| \leq \|P\|$$  but $$P^{′} \nsubseteq P$$ 
+  * $$\|P^{′} \| \leq \|P\|$$  but $$P \nsubseteq P^{'}$$ 
 
 ## Riemann-Stieltjes積分
 
@@ -36,9 +36,9 @@
 ## 黎曼可積分函數\(Riemann-integrable function\)
 
 > * $$f \in R(\alpha)$$  in $$[a,b]$$代表Riemann-integrable w.r.t. $$\alpha$$ if
->   * 定義1: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\supseteq P_{\epsilon} [a,b] $$
+>   * 定義1: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\subseteq P_{\epsilon} [a,b] $$
 >   * 定義2: $$∀\epsilon>0 ~\exists \delta>0 \ni  |S(P,f,\alpha)−A|< \epsilon, \forall \text{ partition } P, ~ \|P\|< \delta $$
-> *  當$$S(P,f,\alpha)$$與$$A$$的值差距小於$$\epsilon$$時，必定存在更細的分割$$P$$, 其最大的區間長度小於$$\delta$$。
+> *  當要求$$S(P,f,\alpha)$$與$$A$$的差值小於$$\epsilon$$時，只要選定更細的分割$$P$$,，其最大的區間長度小於$$\delta$$即可達成。
 
 當積分存在時，記為$$\displaystyle \int_a^b f d\alpha =A$$或 $$\displaystyle \int_a^b f(x)d\alpha(x)=A$$
 
@@ -60,6 +60,11 @@ proof:
 ## 不同積分函數的線性性質
 
 > $$f\in R(\alpha)$$且$$f \in R(\beta)$$在閉區間$$[a,b]$$上均可積，則$$\forall c_1, c_2 \in \mathbb{R}$$, $$f\in R(c_1 \alpha + c_2 \beta)$$在閉區間$$[a,b]$$可積，且 $$\displaystyle \int_a^b f d(c_1 \alpha + c_2\beta)=c_1 \int_a^b fd\alpha + c_2 \int_a^b f d\beta$$
+
+同上，只要證明
+
+* $$\forall \epsilon >0 ~ \exists \text{ partition } P_{\epsilon}[a,b] \ni |S(P, f, c_1 \alpha+c_2 \beta)- A|< \epsilon, ~ \forall P_{\epsilon} \subseteq P$$
+* 即 $$\displaystyle t_k \in [x_{k-1}, x_k], |\sum_{k=1}^nf(t_k)\Delta(c_1\alpha+c_2\beta)_k -A| < \epsilon$$
 
 ### 常用微分積分符號
 

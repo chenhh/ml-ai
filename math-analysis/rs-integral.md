@@ -117,7 +117,9 @@ proof:
 
 ![&#x5206;&#x90E8;&#x7A4D;&#x5206;](../.gitbook/assets/integral_by_part.gif)
 
-### 
+## 變數變換（change of variable）
+
+> * $$f \in R(\alpha)$$為閉區間$$[a,b]$$的可積函數
 
 ### 常用微分積分符號
 

@@ -66,6 +66,23 @@ proof:
 * $$\forall \epsilon >0 ~ \exists \text{ partition } P_{\epsilon}[a,b] \ni |S(P, f, c_1 \alpha+c_2 \beta)- A|< \epsilon, ~ \forall P_{\epsilon} \subseteq P$$
 * 即 $$\displaystyle t_k \in [x_{k-1}, x_k], |\sum_{k=1}^nf(t_k)\Delta(c_1\alpha+c_2\beta)_k -A| < \epsilon$$
 
+### 積分區間的和
+
+> $$c\in(a,b) $$，若以下三個積分中有兩個存在時，則第三個積分必定存在
+>
+> $$\displaystyle \int_a^b fd\alpha=\int_a^c f d\alpha + \int_c^b f d\alpha$$
+
+proof:
+
+* 令$$P$$為閉區間$$[a,b]$$的分割，且$$c \in P$$。
+* 令$$P_1=P \cap [a,c]$$，$$P_2 = P \cap[c,b]$$
+* 則$$S(P, f, \alpha)= S(P_1, f, \alpha) +S(P_2, f, \alpha)$$
+* 不失一般性，令$$\int_a^c f d \alpha$$與$$\int_c^b f d \alpha$$存在，則
+* $$\forall \epsilon > 0 ~ \exists \text{ partition } P_{1,\epsilon}[a,c] \ni |S(P_1, f, \alpha)-\int_a^c f d\alpha|< \frac{\epsilon}{2}, ~ \forall P_{1,\epsilon} \subseteq P_1$$
+* $$\forall \epsilon > 0 ~ \exists \text{ partition } P_{2,\epsilon}[a,c] \ni |S(P_2, f, \alpha)-\int_c^b f d\alpha|< \frac{\epsilon}{2}, ~ \forall P_{2,\epsilon} \subseteq P_2$$
+* 取更細的分割 $$P_{\epsilon} = P_{1,\epsilon} \cup P_{2,\epsilon}$$, 當$$P_{\epsilon} \subseteq P$$可得 $$P_{1,\epsilon} \subseteq P_1$$且$$P_{2,\epsilon} \subseteq P_2$$
+* 因此 $$|S(P, f, \alpha) - \int_a^c f d\alpha - \int_c^b f d \alpha|< \epsilon$$ \(QED\)
+
 ### 常用微分積分符號
 
 令$$ \frac{d}{dx}F(x) = f(x)$$，移項得 $$dF(x)=f(x)dx$$。

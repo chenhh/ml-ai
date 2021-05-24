@@ -85,6 +85,13 @@ proof:
 * 取更細的分割 $$P_{\epsilon} = P_{1,\epsilon} \cup P_{2,\epsilon}$$, 當$$P_{\epsilon} \subseteq P$$可得 $$P_{1,\epsilon} \subseteq P_1$$且$$P_{2,\epsilon} \subseteq P_2$$
 * 因此 $$|S(P, f, \alpha) - \int_a^c f d\alpha - \int_c^b f d \alpha|< \epsilon$$ \(QED\)
 
+## 單點積分為0與反向區間積分
+
+> 若$$a,b \in \mathbb{R}, a<b$$且$$\int_a^b fd\alpha$$存在，
+>
+> * 定義$$\int_a^bf d\alpha = - \int_b^a d \alpha$$
+> * 定義$$\int_a^a f d\alpha=0$$
+
 ### 常用微分積分符號
 
 令$$ \frac{d}{dx}F(x) = f(x)$$，移項得 $$dF(x)=f(x)dx$$。

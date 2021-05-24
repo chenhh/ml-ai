@@ -102,6 +102,12 @@ proof:
 
 > 以微分分析，則得 $$\frac{d f\alpha}{dx}  = \frac{df}{dx}\alpha+f \frac{d\alpha}{dx}$$
 
+proof:
+
+
+
+* $$f \in R \alpha \Leftrightarrow$$$$\forall \epsilon > 0 ~ \exists \text{ partition } P_{\epsilon} [a,b] \ni |S(P_1, f, \alpha) - \int_a^b f d\alpha|<\epsilon, ~ \forall P_{\epsilon}[a,b] \subseteq P$$
+
 
 
 

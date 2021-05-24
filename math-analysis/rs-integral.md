@@ -92,6 +92,8 @@ proof:
 > * 定義$$\int_a^bf d\alpha = - \int_b^a d \alpha$$
 > * 定義$$\int_a^a f d\alpha=0$$
 
+因此[積分區間的和](rs-integral.md#ji-fen-ou-jian-de-he)可改寫為$$\displaystyle \int_a^b f d\alpha + \int_b^c f d \alpha + \int_c^a f d\alpha=0$$。
+
 ### 常用微分積分符號
 
 令$$ \frac{d}{dx}F(x) = f(x)$$，移項得 $$dF(x)=f(x)dx$$。

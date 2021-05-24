@@ -111,7 +111,13 @@ proof:
 * $$\therefore A=S(P,f,\alpha)=\sum_{k=1}^n f(x_k)[\alpha(x_k) - \alpha(t_k)]+\sum_{k=1}^n f(x_{k-1})[\alpha(t_k) - \alpha(x_{k-1}]=S(P_1, f, \alpha)$$
 * $$\therefore |A-S(P, f, \alpha ) - \int_a^b f d \alpha|<\epsilon$$ \(QED\)
 
+### 圖例
 
+> $$u(x)v(x)|_{x=a}^b=u(b)v(b)-u(a)v(a)=\int_a^b u(x)dv(x)+\int_a^b v(x)du(x)$$
+
+![&#x5206;&#x90E8;&#x7A4D;&#x5206;](../.gitbook/assets/integral_by_part.gif)
+
+### 
 
 ### 常用微分積分符號
 

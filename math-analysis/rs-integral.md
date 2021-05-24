@@ -69,8 +69,10 @@ proof:
 ### 積分區間的和
 
 > $$c\in(a,b) $$，若以下三個積分中有兩個存在時，則第三個積分必定存在
->
+
 > $$\displaystyle \int_a^b fd\alpha=\int_a^c f d\alpha + \int_c^b f d\alpha$$
+>
+> 使用數學歸納法，可將$$[a,b]$$拆解成有限區間均可得相同結論。
 
 proof:
 

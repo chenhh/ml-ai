@@ -43,11 +43,18 @@ $$\lim_{x \rightarrow 0^{-}} \frac{|x| - 0}{x} = -1$$，$$\lim_{x \rightarrow 0^
 
 ## 利普希茨（Lipschitz）條件
 
-> 稱函數$$f$$在點$$c$$滿足Lipschitiz condition of order $$\alpha$$若 存在$$M>0$$\(可能會依賴於$$c$$而不同\)使得 $$|f(x)-f(c)| < M |x-c|^{\alpha}$$, $$x\neq c$$且$$x \in Ball(c)$$
+> 稱函數$$f$$在點$$c$$滿足$$\alpha$$階的利普希茨條件，若存在常數$$M>0$$\(可能會依賴於$$c$$而不同\)使得 $$|f(x)-f(c)| < M |x-c|^{\alpha}$$, $$x\neq c$$且$$x \in Ball(c)$$
 >
-> 一般應用時是考慮$$α=1$$的條件，即函數$$f$$點c的斜率為有限值。
+> 若對於$$f: S \rightarrow \mathbb{R}$$定義域$$S$$中任意兩點$$a,b$$，若存在常數$$M>0$$滿足$$|f(a)-f(b)|< M|a-b|^{\alpha}~ \forall a,b\in S$$時，稱$$f$$在$$S$$為利普希茨連續。
 
-![Lipschitz&#x689D;&#x4EF6;](../../.gitbook/assets/lipschitz_condition.png)
+* 一般應用時是考慮$$α=1$$的條件，即函數$$f$$的斜率為有限值。
+* **利普希茨連續，要求函數圖像的曲線上，任意兩點連線的斜率均有界且都小於同一個常數，這個常數就是利普希茨常數**。
+* 對於利普希茨連續函數$$f$$，滿足條件的最小常數$$M$$稱為其**利普希茨常數，即函數斜率的最大值（最陡的部份）**。
+* 若$$M<1$$時，稱$$f$$為收縮映射。
+
+![Lipschitz&#x689D;&#x4EF6;&#xFF0C;&#x5B58;&#x5728;&#x6709;&#x4E00;&#x500B;&#x767D;&#x8272;&#x6C99;&#x6F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x51FD;&#x6578;&#x4E00;&#x5B9A;&#x80FD;&#x901A;&#x904E;&#x6C99;&#x6F0F;&#x7684;&#x6B63;&#x4E2D;&#x9593;](../../.gitbook/assets/lipschitz_condition.png)
+
+
 
 
 

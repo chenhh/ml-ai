@@ -28,7 +28,8 @@
 > * 令$$P$$ 為區間 $$[a,b]$$的分割，且$$t_k \in [x_{k−1}, x_k ]  $$
 > * 定義 $$\begin{aligned} \displaystyle S(P, f, \alpha) & =\sum_{k=1}^nf(t_k)(\alpha(x_k) - \alpha(x_{k-1})) \\ &= \sum_{k=1}^n f(t_k)\Delta\alpha_k  \end{aligned}$$
 > * 稱為 Riemann-Stieltjes sum of function $$f$$ \(integrand, 被積分函數\) with respect to $$\alpha$$ \(integrator, 積分函數\).
-> * 當積分函數$$\alpha(x)=x$$時，為一般的Riemann積分。
+>
+> 當積分函數$$\alpha(x)=x$$時，為一般的Riemann積分，如下圖。
 
 ![&#x9ECE;&#x66FC;&#x7A4D;&#x5206;](../.gitbook/assets/riemann-integral-min.png)
 
@@ -45,7 +46,16 @@
 
 ![&#x53EF;&#x7A4D;&#x5206;&#x51FD;&#x6578;](../.gitbook/assets/riemann-integrable.gif)
 
+##  同一積分函數\(integrator\)之線性性質
 
+> $$f,g \in R(\alpha)$$ 為黎曼可積的函數，則$$\forall c_1, c_2 \in \mathbb{R}, ~ c_1f+c2g \in R(\alpha)$$也是黎曼可積的函數，且 $$\displaystyle \int_a^b (c_1 f+ c2g)d\alpha=c_1 \int_a^b f d\alpha + c_2 \int_a^bg d\alpha $$
+
+proof:
+
+* 令 $$h=c_1f+c_2g$$，且$$P$$為閉區間$$[a,b]$$的分割，則積分 $$\begin{aligned} \displaystyle S(P,h, \alpha) &=\sum_{k=1}^n h(t_k)\Delta\alpha_k \\ &=c_1 \sum_{k=1}^n f(tk) \Delta \alpha_k+c_2 \sum_{k=1}^n g(t_k)\Delta \alpha_k \\ &= c_1 S(P, f, \alpha) + c_2 S(P, g, \alpha) \end{aligned}$$
+* $$\int_a^b f d\alpha \Leftrightarrow \forall \epsilon >0 ~ \exists \text{ partition } P_{\epsilon_1}[a,b] \ni |S(P, f, \alpha ) - \int_a^b f d \alpha| < \epsilon, ~ \forall P_{\epsilon_1} \subseteq P$$
+* $$\int_a^b g d\alpha \Leftrightarrow \forall \epsilon >0 ~ \exists \text{ partition } P_{\epsilon_2}[a,b] \ni |S(P, g, \alpha ) - \int_a^b g d \alpha| < \epsilon, ~ \forall P_{\epsilon_2} \subseteq P$$
+* 取更細的分割 $$P_{\epsilon}=P_{\epsilon_1} \cup P_{\epsilon_2}$$，可得 $$P_{\epsilon} \subseteq P$$，因此 $$|S(P,h,\alpha) - c_1 \int_a^b fd\alpha-c_2\int_a^b gd\alpha|\leq |c_1|\epsilon + |c_2| \epsilon$$\(QED\)
 
 ### 常用微分積分符號
 

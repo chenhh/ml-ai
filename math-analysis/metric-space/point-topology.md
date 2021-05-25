@@ -27,5 +27,19 @@
 
 * 若$$A$$為閉集合，且$$x\notin A \Rightarrow d(x,A) >0$$
 
+## 集合的直徑（diameter）
+
+> $$S\subseteq X$$, $$d(S)=\sup\{ d(x,y), ~\forall x, y \in S \}$$
+>
+> $$S$$可為任意形狀的集合，集合$$S$$的直徑為集合中距離最遠兩點的長度。
+
+* 集合的直徑可能為無窮大。例如$$ S=(a,\infty) \text{ or }  (−\infty,b) $$
+
+## 有界集合（bounded set）
+
+> 稱集合$$S$$為有界集合若滿足
+
+
+
 
 

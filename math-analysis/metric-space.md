@@ -42,10 +42,6 @@
 * \[對稱性\] $$\|a\| = |-1|\|a\|=\|-a\|$$。所以$$\| x-y\| = \|y-x\|$$
 * \[三角不等式\] $$\|a\| + \|b\| \geq \|a+b\| \Leftrightarrow \| x-y \| + \|y-z\| \geq \|x-z\|$$\(QED\)
 
-
-
-## 
-
 ## 常見度量空間
 
 ### Euclidean space
@@ -98,17 +94,5 @@ $$X=(x_1, x_2, \ldots, x_n, \ldots)$$be sequence of real numbers and $$\sum_{i=1
 
 $$X=(x_1, x_2, \ldots, x_n, \ldots)$$be sequence of real numbers and $$x_i< \infty \forall i$$, $$d(x,y)= \sup{ |x_i -y_i|} \ \forall i$$
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 完備度量空間（complete metric space）
 

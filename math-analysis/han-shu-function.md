@@ -14,6 +14,10 @@
 
 ## 點態連續（pointwise continuous）
 
+> 函數$$f$$在點$$c$$連續，則 $$\forall \epsilon >0, ~ \exists\ \delta > 0 \ni |x-c|<\delta \Rightarrow |f(x)-f(c)|<\epsilon$$
+>
+> 記為 $$\displaystyle \lim_{x \rightarrow c} f(x)=f(c)$$
+
 * 一般的連續定義，嚴格說來叫 「點態連續」也就是說你要先在定義域內固定一個點，然後討論函數在這個點的連續性，所以這是函數一種區域性性質。
 * 連續是要求在一個點從兩邊取極限得到的數值相同，從圖像上看就是不能有斷點或跳躍點。
 

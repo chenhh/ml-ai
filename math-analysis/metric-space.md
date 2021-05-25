@@ -36,7 +36,16 @@ $$X = \mathbb{C}$$, $$d(z_1, z_2) = |z_1 - z_2|$$
 
 ### discrete space
 
-$$X$$為任意非空集合, $$d(x,y) =   \{ \begin{align}  0, & \ \text { if } x = y \\ 1, &   \text{ if } x \neq y \\ \end{align}$$
+$$X$$為任意非空集合，定義離散度量 $$d(x,y) =   \{ \begin{align}  0, & \ \text { if } x = y \\ 1, &   \text{ if } x \neq y \\ \end{align}$$
+
+ **此度量空間證明了所有的集合都至少有一個度量函數**$$d$$****。
+
+* \[非負性\] $$d(x,x)=0$$, $$d(x,y)=1, \forall x \neq y$$
+* \[對稱性\] $$d(y,x)=d(x,y)=1, \forall x \neq y$$
+* \[三角不等式\] 
+  * $$x=y=z$$, $$d(x,y)+d(y,z)=0+0=d(x,z)$$
+  * $$x\neq y\neq z$$, $$d(x,y)+d(y,z)=1+1\geq d(x,z)=1$$
+  * $$x=y\neq z$$, $$d(x,y)+d(y,z)=0+1\geq d(x,z)=1$$
 
 ### sub-metric space
 

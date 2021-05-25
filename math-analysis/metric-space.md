@@ -96,3 +96,9 @@ $$X=(x_1, x_2, \ldots, x_n, \ldots)$$be sequence of real numbers and $$x_i< \inf
 
 ## 完備度量空間（complete metric space）
 
+> 度量空間$$(X,d)$$中的數列 $$\{x_n\}$$稱為柯西數列（Cauchy sequence）若$$d(x_n, x_m) \rightarrow 0$$as $$n, m \rightarrow \infty$$
+>
+> 完備度量空間若且唯若空間中的任意柯西數列均收斂到空間中的某個元素。
+
+收斂數列必定是柯西數列，反之柯西數序必須為完備度量空間中的數列，才是收斂數列，否則可能無法在度量空間中收斂。
+

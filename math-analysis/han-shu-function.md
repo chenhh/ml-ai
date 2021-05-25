@@ -16,23 +16,40 @@
 
 一般的連續定義，嚴格說來叫 「點態連續」也就是說你要先在定義域內固定一個點，然後討論函數在這個點的連續性，所以這是函數一種區域性性質。
 
-## 均勻連續、一致連續（uniform continuous）
+![&#x9EDE;&#x614B;&#x9023;&#x7E8C;](../.gitbook/assets/pointwise_continuous-min.png)
 
-> 定義1：對於函數$$f(x),  x \in (a,b)$$為均勻連續 $$\forall \epsilon > 0 ~ \exists \ \delta(\epsilon) > 0 ~ \ni |f(x_1) - f(x_2)|< \epsilon, ~ \forall |x_1 - x_2| < \delta$$
+![&#x9EDE;&#x614B;&#x9023;&#x7E8C;epsilon-delta&#x5B9A;&#x7FA9;](../.gitbook/assets/pointwise_continuous2-min.png)
+
+## 均勻連續、一致連續（uniformly continuous）
+
+> 定義1：對於函數$$f(x),  x \in (a,b)$$為均勻連續 $$\forall \epsilon > 0 ~ \exists \ \delta(\epsilon) > 0 ~ \ni \forall x_1, x_2 \in (a,b)~ |x_1 - x_2|<\delta \Rightarrow |f(x_1) - f(x_2)|< \epsilon$$
 >
 > 此處定義域兩點的距離$$\delta(\epsilon)$$需依值域的距離$$\epsilon$$調整，而與$$x$$所在的位置無關，因此不是局部的性質。
 
 均勻連續是定義在一個集合上。也就是說，只要這個集合上任意兩點的距離足夠小，它們對應的函數值的距離也要足夠小。所以這是函數的一種全局性質。
 
+* 點態連續：$$\displaystyle \lim_{x \rightarrow c} (f(x)-f(c))=0$$，$$x$$只與$$c$$所在點有關。
+* 均勻連續：$$\displaystyle \lim_{x_1 \rightarrow x_2} (f(x_1) - f(x_2)) = 0$$，與定義域上任意兩點$$x_1, x_2$$均有關。
+
 一致連續函數能把柯西序列對映到柯西序列。而逐點連續函數則不一定，譬如反函數的例子。且在嚴格定義黎曼積分時，需要一致連續函數。
+
+如下圖所示，如果能夠找到某一個$$\delta$$，且在整個定義域區間，對應的函數差值都不會超過$$\epsilon$$，就是一致連續。
+
+![&#x5747;&#x52FB;&#x9023;&#x7E8C;](../.gitbook/assets/uniform_continuous-min.png)
+
+
+
+### 均勻連續也是點態連續
 
 ### 點態連續但非均勻連續的函數
 
 $$f(x)=\frac{1}{x},~ x \in (0,1)$$
 
-明顯看出該函數在$$x \rightarrow + \infty$$ 時，函數值趨於$$\infty$$且函數下凸，趨於無窮速度越來越快，因此，直觀的感覺就是該函數是非一致連續的，**換句話說如果某函數的收斂速度能夠得到控制，我們就稱該函數是均勻連續的**。
+明顯看出該函數在$$x \rightarrow 0+$$ 時，函數值趨於$$\infty$$且函數下凸，趨於無窮速度越來越快，因此，直觀的感覺就是該函數是非一致連續的，**換句話說如果某函數的收斂速度能夠得到控制，我們就稱該函數是均勻連續的**。
 
-![&#x51FD;&#x6578;&#x8DA8;&#x8FD1;&#x65BC;0&#x6642;&#xFF0C;&#x659C;&#x7387;&#x8DA8;&#x8FD1;&#x7121;&#x7AAE;&#x5927;](../.gitbook/assets/1_over_x-min.png)
+下圖中，當$$x \rightarrow 0+$$時，不論$$\delta$$取多小，$$\epsilon$$的變化會越來越大，因此不是均勻連續。
+
+![&#x9EDE;&#x614B;&#x4F46;&#x975E;&#x5747;&#x52FB;&#x9023;&#x7E8C;&#x7684;&#x51FD;&#x6578;](../.gitbook/assets/not-uniform-conti-min.png)
 
 ## 利普希茨（Lipschitz）條件
 

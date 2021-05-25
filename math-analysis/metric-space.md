@@ -20,6 +20,32 @@
 
 ![](../.gitbook/assets/abstract+space+topological+space+metric+space+normed+space-min.png)
 
+## 度量（metric）、內積（inner product）與賦範（norm）比較
+
+| metric | inner product | norm |
+| :--- | :--- | :--- |
+| $$d:X\times X \rightarrow \mathbb{R}^+$$ | $$\langle \cdot, \cdot\rangle: X \times X \rightarrow \mathbb{R}^+$$ | $$\|\cdot\|:X\rightarrow \mathbb{R}^+$$ |
+| 距離函數抽象化 | 角度的抽象化 | 長度的抽象化 |
+| $$d(x,y)=0\Leftrightarrow x=y$$ | $$\langle x, x \rangle\geq 0, \langle x,x\rangle =0 \Leftrightarrow x=0$$ | $$\|x\|=0 \Leftrightarrow =0$$ |
+| $$d(x,y)=d(y,x)$$ | $$\langle x, y \rangle = \overline{\langle y, x \rangle}$$ | $$\| cx \|=|c| \|x\|$$ |
+| $$d(x,y)+d(y,z) \geq d(x,z)$$ | $$\langle ax+by,z \rangle=a \langle x, z\rangle + b \langle y, z\rangle$$ | $$\|x\| + \|y\| \geq \|x+y\|$$ |
+
+* 度量不需要滿足分配律，而內積不需要滿足三角不等式。
+* 度量空間使用$$d(x,y)$$ 定義$$x,y$$兩點之間的距離，而賦範空間使用$$\|x−y|$$定義$$x,y$$兩點之間的距離。
+
+### 範數為距離函數
+
+> $$\forall x, y \in X$$, $$\| x-y\|=d(x,y)$$
+
+* 令$$x,y,z \in X$$, $$a=x-y, b=y-z, c=x-z$$
+* \[非負性\]$$\|a\|=0 \Leftrightarrow a=0 \Leftrightarrow x=y$$
+* \[對稱性\] $$\|a\| = |-1|\|a\|=\|-a\|$$。所以$$\| x-y\| = \|y-x\|$$
+* \[三角不等式\] $$\|a\| + \|b\| \geq \|a+b\| \Leftrightarrow \| x-y \| + \|y-z\| \geq \|x-z\|$$\(QED\)
+
+
+
+## 
+
 ## 常見度量空間
 
 ### Euclidean space
@@ -55,7 +81,10 @@ e.g. rational number set $$\mathbb{Q}$$ and $$d(x,y) = |x -y|$$
 
 ### continuous function
 
-$$X=C[a,b]$$為定義在實數區間$$[a,b]$$所有的連續實數值函數, $$d(f,g)=\sup\{ |g(t) - f(t)\ \vert | a \leq t \leq b\}$$，兩函數的距離為兩函數值在區間$$[a,b]$$的最大差值。
+$$X=C[a,b]$$為定義在實數區間$$[a,b]$$所有的連續實數值函數，
+
+* $$\displaystyle d_1(f,g)= \int_a^b |f(x)-g(x)|dx$$
+* $$d_{\infty}(f,g)=\sup\{ |g(t) - f(t)\ \vert | a \leq t \leq b\}$$，兩函數的距離為兩函數值在區間$$[a,b]$$的最大差值。
 
 ### continuous function with quadratic metric
 

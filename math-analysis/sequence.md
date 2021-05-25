@@ -9,15 +9,13 @@
 > 如果$${a_n}$$不是收斂數列\(convergent sequence\)，則為發散數列\(divergent sequence\)。
 
 * 數列收斂的直觀意義，是不論我們要使$$a_n$$ 與$$a$$接近到任何程度，只要$$n$$值夠大時一定能夠辦到。
-* 由於實數的完備性，若$$\lim_{n \rightarrow \infty}⁡a_n$$ 收斂，收斂值必為實數且唯一。
-
-
+* 由於實數的完備性，若$$\displaystyle \lim_{n \rightarrow \infty}⁡a_n$$ 收斂，收斂值必為實數且唯一。
 
 ![&#x6536;&#x6582;&#x6578;&#x5217;&#x6703;&#x5728;&#x6536;&#x6582;&#x503C;&#x9644;&#x8FD1;&#x8D8A;&#x7E2E;&#x8D8A;&#x8FD1;](../.gitbook/assets/limit_sequence-min.png)
 
 ### 收斂數列的唯一性
 
-> 度量空間$$(X,d)$$中，$$\{ a_n\} \subseteq X$$為收斂數列，若 $$\displaystyle \lim_{n \rightarrow \infty} a_n = p$$且 $$\displaystyle \lim_{n \rightarrow \infty} x_n=q$$，則$$p=q$$
+> 度量空間$$(X,d)$$中，$$\{ a_n\} \subseteq X$$為收斂數列，若 $$\displaystyle \lim_{n \rightarrow \infty} a_n = p$$且 $$\displaystyle \lim_{n \rightarrow \infty} a_n=q$$，則$$p=q$$
 
 * $$\because a_n \rightarrow p \Leftrightarrow d(a_n, p) \rightarrow 0 $$as $$n \rightarrow \infty$$
 * $$\because a_n \rightarrow q \Leftrightarrow d(a_n, q) \rightarrow 0 $$as $$n \rightarrow \infty$$

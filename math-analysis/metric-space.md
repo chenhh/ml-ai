@@ -2,9 +2,7 @@
 
 ## 距離函數與度量空間
 
-> definition: distance function
->
-> $$X$$為一集合，如果存在一實值函數 $$d(\cdot, \cdot): X \times X \rightarrow \mathbb{R}$$滿足 $$\forall x, y, z \in X$$
+> $$X$$為一集合，如果存在一實值函數 $$d(\cdot, \cdot): X \times X \rightarrow \mathbb{R}$$滿足 $$\forall x, y, z \in X$$則稱$$d$$為距離函數（distance function）
 >
 > 1. \[兩點間距離為正值\]$$d(x,y) \geq 0$$ and $$ d(x,y) = 0 \Leftrightarrow  x = y$$
 > 2. \[對稱性\] $$d(x,y) = d(y,x)$$
@@ -12,11 +10,13 @@
 
 **距離函數擴展了距離的定義**。
 
-> definition: metric space
->
-> $$(X, d)$$稱為度量空間，也稱賦距空間，函數$$d$$為X上的一個度量\(距離\)函數。
+> $$(X, d)$$稱為度量空間（metric space），也稱賦距空間，函數$$d$$為$$X$$上的一個度量（距離）函數。
 
 **度量空間主要討論集合加上距離函數後的性質**。
+
+## 抽象空間
+
+![](../.gitbook/assets/abstract+space+topological+space+metric+space+normed+space-min.png)
 
 ## 常見度量空間
 

@@ -12,7 +12,9 @@
 
 > $$(X, d)$$稱為度量空間（metric space），也稱賦距空間，函數$$d$$為$$X$$上的一個度量（距離）函數。
 
-**度量空間主要討論集合加上距離函數後的性質**。
+* **度量空間主要討論集合加上距離函數後的性質**。
+* 所有的集合至少存在離散度量函數。
+* 有了度量，就可定義集合中收斂的性質。
 
 ## 抽象空間
 
@@ -22,11 +24,11 @@
 
 ### Euclidean space
 
-$$X=\mathbb{R}^n$$, $$d(x,y) = \| x - y\|_2$$
+* \[歐式度量或$$l^2$$度量\]$$X=\mathbb{R}^n$$, $$d(x,y) = \| x - y\|_2$$
+* \[$$l^1$$度量\]$$ X = \mathbb{R}^n$$, $$d(x,y)=\| x - y\|_1 = |x_1 -y_1 | + |x_2 -y_2| + \ldots +|x_n -y_n|$$
+* \[$$l^{\infty}$$度量\]$$X = \mathbb{R}^n$$, $$d(x,y)=\| x- y\|_{\infty} =\max \{ |x_1-y_1|, |x_2 - y_2| , \ldots, |x_n - y_n| \}$$
 
-$$ X = \mathbb{R}^n$$, $$d(x,y)=\| x - y\|_1 = |x_1 -y_1 | + |x_2 -y_2| + \ldots +|x_n -y_n|$$
-
-$$X = \mathbb{R}^n$$, $$d(x,y)=\| x- y\|_{\infty} =\max \{ |x_1-y_1|, |x_2 - y_2| , \ldots, |x_n - y_n| \}$$
+![](../.gitbook/assets/l-norm-shape-min.png)
 
 ### complex space
 

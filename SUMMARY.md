@@ -8,7 +8,7 @@
   * [基數](math-analysis/set/cardinal-number.md)
   * [有限集與無限集](math-analysis/set/infinite_set.md)
   * [偏序集或全序集](math-analysis/set/partial-total-order-set.md)
-  * [函數\(function\)](math-analysis/set/function.md)
+  * [函數中的集合](math-analysis/set/function.md)
   * [自然數](math-analysis/set/natural_number.md)
   * [有理數](math-analysis/set/rational-number.md)
   * [實數中的集合](math-analysis/set/real-number.md)

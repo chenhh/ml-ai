@@ -1,15 +1,5 @@
 # 導數連續性質
 
-## 連續函數的條件
-
-對於函數$$f: [a,b] \rightarrow \mathbb{R}$$
-
-* 連續可微分$$\subseteq$$Lipschitz連續$$\subseteq$$均勻連續（uniform continuous）
-  * $$\subseteq$$點態連續（pointwise continuous）
-* Lipschitz連續$$\subseteq$$絕對連續$$\subseteq$$有界變分$$\subseteq$$幾乎處處可微分
-
-![&#x9023;&#x7E8C;&#x53EF;&#x5FAE;&#x5206;&#x51FD;&#x6578;&#x689D;&#x4EF6;&#x6700;&#x56B4;&#x683C;](../../.gitbook/assets/continuous_func-min.png)
-
 ## 導數點態連續\(derivative pointwise continuous\)
 
 > * 函數$$f:(a,b) \rightarrow \mathbb{R}$$ 在點$$c  \in (a,b)$$均可以微分，則$$f$$在點$$c$$連續。
@@ -40,31 +30,6 @@ $$\lim_{x \rightarrow 0^{-}} \frac{|x| - 0}{x} = -1$$，$$\lim_{x \rightarrow 0^
 * $$\displaystyle \lim_{x \rightarrow c^− }⁡(f(x)−f(c))= \lim_{x \rightarrow c^− }⁡ \frac{f(x)−f(c)}{(x−c)} (x−c)=\lim_{x \rightarrow c^−}\frac{f(x)−f(c)}{(x−c)} \cdot \lim_{x \rightarrow c^−} ⁡(x−c)=f_−^′ (c)⋅0=0 $$
 * $$\displaystyle \lim_{x \rightarrow c^− }⁡(f(x)−f(c))= \lim_{x \rightarrow c^+ }⁡ \frac{f(x)−f(c)}{(x−c)} (x−c)=\lim_{x \rightarrow c^+}\frac{f(x)−f(c)}{(x−c)} \cdot \lim_{x \rightarrow c^+} ⁡(x−c)=f_+^′ (c)⋅0=0 $$
 * 則$$\lim_{x \rightarrow c}⁡f(x)=f(c)$$ \(QED\)
-
-## 利普希茨（Lipschitz）條件
-
-> 稱函數$$f$$在點$$c$$滿足$$\alpha$$階的利普希茨條件，若存在常數$$M>0$$\(可能會依賴於$$c$$而不同\)使得 $$|f(x)-f(c)| < M |x-c|^{\alpha}$$, $$x\neq c$$且$$x \in Ball(c)$$
->
-> 若對於$$f: S \rightarrow \mathbb{R}$$定義域$$S$$中任意兩點$$a,b$$，若存在常數$$M>0$$滿足$$|f(a)-f(b)|< M|a-b|^{\alpha}~ \forall a,b\in S$$時，稱$$f$$在$$S$$為利普希茨連續。
->
-> \[充要條件\] 函數$$f$$可微分且利普希茨連續 $$\Leftrightarrow$$$$f^{'}$$在定義域均為有界。
-
-* 一般應用時是考慮$$α=1$$的條件，即函數$$f$$的斜率為有限值。
-* **利普希茨連續，要求函數圖像的曲線上，任意兩點連線的斜率均有界且都小於同一個常數（存在且不可為無窮大），這個常數就是利普希茨常數**。
-* 對於利普希茨連續函數$$f$$，滿足條件的最小常數$$M$$稱為其**利普希茨常數，即函數斜率的最大值（最陡的部份）**。
-* 若$$M<1$$時，稱$$f$$為收縮映射。
-
-![Lipschitz&#x689D;&#x4EF6;&#xFF0C;&#x5B58;&#x5728;&#x6709;&#x4E00;&#x500B;&#x767D;&#x8272;&#x6C99;&#x6F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x51FD;&#x6578;&#x4E00;&#x5B9A;&#x80FD;&#x901A;&#x904E;&#x6C99;&#x6F0F;&#x7684;&#x6B63;&#x4E2D;&#x9593;](../../.gitbook/assets/lipschitz_condition.png)
-
-Lipschitz連續對分析復雜函數非常有用，因為它可以近似將最佳化復雜函數的問題，轉化為二次規劃問題。
-
-如果我們有 $$\nabla f$$是Lipschitz連續的，則對於任意的 $$x,y$$ 可得 $$f(y) \leq f(x)+\nabla f(x)^{\top}(y-x)+ \frac{M}{2}\| y-x \|_2^2$$。其中 $$M$$ 為Lipschitz常數。即，可以將最佳化復雜的函數$$f(y)$$ 等價地最佳化它的上界。
-
-### 連續可微分但非利普希茨連續的函數
-
-$$f(x)=\sqrt{x}$$，此函數在$$[0, \infty)$$間連續可微分，$$f^{'}(x)=\frac{1}{2\sqrt{x}}$$，但是任意兩點間的斜率可以無限大（$$x\rightarrow 0$$時斜率往無窮大發散），因此不是利普希茨連續。
-
-
 
 
 

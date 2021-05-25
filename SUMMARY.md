@@ -16,6 +16,7 @@
 * [實數\(real number\)](math-analysis/real-number.md)
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series.md)
+* [函數\(function\)](math-analysis/han-shu-function.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space.md)
 * [微分、導數\(derivative\)](math-analysis/derivative/README.md)
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)

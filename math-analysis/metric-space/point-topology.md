@@ -202,8 +202,8 @@ proof 1:
 > $$d(S)=\{x \in X | \forall r >0, N_r(x) \cap S \setminus \{ x\}\neq \emptyset \}$$
 
 * 導集合為閉集合。
-* 
+* $$S=\{ \frac{1}{n}, \ n \in \mathbb{N}\}$$，則$$0$$為$$S$$的極限點。
+* $$x_n=(-1)^n \frac{n}{n+1}$$極限不存在，但有兩個極限點-1與1。
 
-
-
+![&#x6975;&#x9650;&#x9EDE;&#x70BA;&#x5E8F;&#x5217;&#x805A;&#x96C6;&#x4E4B;&#x8655;](../../.gitbook/assets/800px-rational_sequence_with_2_accumulation_points_svg.png)
 

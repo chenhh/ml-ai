@@ -211,7 +211,13 @@ proof:
 * 假設集合 $$(N_r (x)\cap S)\setminus \{x\}$$  只有有限個元素，記為$$p_1, p_2, \ldots, p_n$$。
 * 令$$r_0=\min⁡(d(x,p_1 ), d(x,p_2 ),\ldots ,d(x,p_n ))$$
 * 則$$N_{r_0} (x) \cap S\setminus \{x\}=\emptyset$$ 與極限點的定義矛盾  。
-* 因此$$(N_r (x) \cap S) \setminus \{x\}$$  有無窮多個元素 \(QED\).
+* 因此$$(N_r (x) \cap S) \setminus \{x\}$$  有無窮多個元素 \(QED\)
+
+### 有限個數的集合不存在極限點
+
+> 由上述的性質可得出。
+
+### 集合內若存在極限點若且唯若存在相異無窮數列其收斂至此點
 
 ## 導集合（derived set）
 

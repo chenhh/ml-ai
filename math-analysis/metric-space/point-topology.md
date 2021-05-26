@@ -135,8 +135,25 @@ proof 1:
 
 > 令集合$$S \subseteq X$$為不可數集合，且$$T$$為$$S$$的凝集點集合，則
 >
-> 1. $$S-T$$為可數集合。
+> 1. $$S \setminus T$$為可數集合。
 > 2. $$S \cap T$$為不可數集合。
 > 3. $$T$$為閉集合。
 > 4. $$T$$不包含孤立點。
+
+* proof\(1\): $$S \setminus T$$中不包含凝集點，因此為可數集合。\(QED\)。
+* proof\(2\): 因為$$S$$為不可數集合，因此$$S$$中必包含凝集點，可得$$S\cap T \neq \emptyset$$為部份凝集點的集合，因此為不可數集合。\(QED\)
+* proof\(3\): 令$$x\in T$$為凝集點，由定義得$$\forall r > 0~ \exists N_r(x) \cap S$$為不可數集合，因此 $$\forall r > 0, N_r(x) \cap S \setminus \{ x\} \neq \emptyset$$，即$$x$$為$$S$$的極限點，可得$$T$$為所有$$S$$極限點的集合，因此$$T$$為閉集合\(QED\)。
+* proof\(4\): 令$$x\in T$$為凝集點，由定義得$$\forall r > 0~ \exists N_r(x) \cap S$$為不可數集合，因此$$N_r(x) \cap S \neq \{x\}$$不包含孤立點。\(QED\)。
+
+## 附著點（adherent point）
+
+> 給定度量空間$$(X,d)$$，子集合$$S \subseteq X$$，點$$x\in X$$。若$$\forall r >0, N_r(x) \cap S \neq \emptyset$$ 則稱點$$x$$為集合$$S$$的附著點。
+>
+> 若$$x$$為$$S$$的附著點，可得$$\forall \epsilon > 0 \ \exists y \in S \ni d(x,y) < \epsilon $$。
+
+* $$x$$為附著點，但$$x$$不必為集合$$S$$的元素。
+* 附著點直觀的解釋是$$x$$的任意鄰域必定包含至少一個$$S$$集合中的元素。
+*  附著點與極限點的定義，唯一差異是極限點與$$S$$的交集不可為點$$x$$自身。
+* 因為$$x$$的任意鄰域$$N_r (x)$$均包含集合$$S$$至少一個元素，因此$$x$$為$$S$$中的元素或在$$S$$的邊界點上。
+* 若$$x$$在集合$$S$$的邊界點外（外點），則$$\exists r>0 \ni N_r (x) \cap S=\emptyset $$。
 

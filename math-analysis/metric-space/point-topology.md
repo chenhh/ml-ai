@@ -195,6 +195,10 @@ proof 1:
 
 ![&#x6975;&#x9650;&#x9EDE;](../../.gitbook/assets/topological_space_accum-min.png)
 
+### 沒有極限點的集合
+
+* 自然數集合$$\mathbb{N}$$不存在極限點。
+
 ## 導集合（derived set）
 
 > 導集合$$d(S)$$為集合$$S$$所有極限點形成的集合。

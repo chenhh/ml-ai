@@ -223,6 +223,23 @@ proof:
 >
 > 註： $$\{x_n\}$$內的點必須為相異點才有此性質，如$$\{0,1,1,\ldots,1,\ldots\}$$, $$x_1=0$$, $$x_n=1$$,$$\displaystyle \lim_{n \rightarrow \infty}⁡ x_n =1$$, 但1不是集合$$\{0,1\}$$的極限點。
 
+proof =&gt;:
+
+* 若$$x$$為集合$$S$$的極限點，則
+* $$r_1=1$$，取$$x_1 \in N_{r_1} (x)\cap S, x_1\neq x $$
+* $$r_2=\frac{1}{2} \|x_1−x|<\frac{1}{2}$$，取$$x_2 \in N_{r_2} (x)\cap S,\ x_2 \neq x, x_2 \neq x_1 $$
+*  $$r_3=\frac{1}{2} \|x_2−x\|<\frac{1}{2^2}$$ ，取$$x_3 \in N_{r_3} (x)\cap S, x_3\neq x,x_1,x_2$$
+* 以此類推可建構出無窮序列$$\{x_1,x_2,x_3, \ldots \} \subseteq S$$
+* 且可得$$\lim_{n \rightarrow \infty}⁡ x_n=x $$\(QED\)
+
+Proof &lt;=
+
+* $$\displaystyle \{x_n\} \subseteq S,\ x_i \neq x_j, \ \forall i \neq j,\ \ lim_{n \rightarrow \infty}⁡x_n =x $$
+
+  • 即$$\forall \epsilon >0 ~ \exists n_0 \in \mathbb{N} \ni   \forall n \geq n_0 \Rightarrow \|x−x_n \|< \epsilon $$
+
+  • 因此$$\forall r>0, N_r (x) \cap S \setminus \{x\} \neq \emptyset$$, 得$$x$$為極限點 \(QED\)
+
 ## 導集合（derived set）
 
 > 導集合$$d(S)$$為集合$$S$$所有極限點形成的集合。

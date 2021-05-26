@@ -219,6 +219,10 @@ proof:
 
 ### 集合內若存在極限點若且唯若存在相異無窮數列其收斂至此點
 
+> $$x \in S$$為極限點 $$\Leftrightarrow$$$$\displaystyle \exists \{ x_n\} \subseteq S, x_i \neq x_j ~ \forall i \neq j, ~ \lim_{ n \rightarrow \infty} x_n =x$$
+>
+> 註： $$\{x_n\}$$內的點必須為相異點才有此性質，如$$\{0,1,1,\ldots,1,\ldots\}$$, $$x_1=0$$, $$x_n=1$$,$$\displaystyle \lim_{n \rightarrow \infty}⁡ x_n =1$$, 但1不是集合$$\{0,1\}$$的極限點。
+
 ## 導集合（derived set）
 
 > 導集合$$d(S)$$為集合$$S$$所有極限點形成的集合。

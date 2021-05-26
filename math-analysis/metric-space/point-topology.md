@@ -211,3 +211,14 @@ proof 1:
 
 ![&#x6975;&#x9650;&#x9EDE;&#x70BA;&#x5E8F;&#x5217;&#x805A;&#x96C6;&#x4E4B;&#x8655;](../../.gitbook/assets/800px-rational_sequence_with_2_accumulation_points_svg.png)
 
+## 完美集合（perfect set）
+
+> $$S \subseteq X$$稱為完全集合，若此集合等於其導集合，即$$S=d(S)$$。
+
+### 完美集合若且唯若集合不含孤立點且為閉集合
+
+* 由 $$S=d(S)$$  得$$S$$包含其所有極限點，因此完美集合$$S$$為閉集合。
+* 若$$x \in S$$為孤立點，則 $$\exists r >0 \ni N_r(x) \cap S \setminus \{ x\} =\emptyset$$
+* 但因為$$S=d(S)$$，因此$$\forall x \in S, N_r(x) \cap S \setminus \{x\} \neq \emptyset$$
+* 所以$$S$$中不含孤立點。\(QED\)
+

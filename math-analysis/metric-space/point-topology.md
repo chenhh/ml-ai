@@ -181,9 +181,14 @@ proof 1:
 
 
 
+## 極限點（limit point） 
 
+或稱accumulation point, cluster point
 
+> * 給定集合$$S \subset X$$，點$$ x \in X$$，若$$\forall r>0  \exists\ y \in S, y \neq x \ni y \in N_r (x)$$ 或 $$\forall r >0 (N_r (x)\cap S)\setminus \{x\} \neq \emptyset$$，則稱$$x$$為$$S$$的極限點。
+> * $$x \in X$$為$$S$$的極限點，則$$\forall \epsilon >0, ~ \exists y \in S \setminus \{x\}  \ni d(x,y)<\epsilon$$。
 
+* **由定義知極限點必為附著點**。
 
 
 

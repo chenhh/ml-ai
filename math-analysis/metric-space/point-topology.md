@@ -189,7 +189,20 @@ proof 1:
 > * $$x \in X$$為$$S$$的極限點，則$$\forall \epsilon >0, ~ \exists y \in S \setminus \{x\}  \ni d(x,y)<\epsilon$$。
 
 * **由定義知極限點必為附著點**。
+*  極限點就是由序列收斂點的觀點來定義極限的性質。
+* 極限點直觀的解釋是$$x$$的任意鄰域必定包含至少一個S集合中除了自已外的元素。
+* 可得實數中閉區間中所有元素都是極限點，而開區間除了端點外均為極限點。
 
+![&#x6975;&#x9650;&#x9EDE;](../../.gitbook/assets/topological_space_accum-min.png)
+
+## 導集合（derived set）
+
+> 導集合$$d(S)$$為集合$$S$$所有極限點形成的集合。
+>
+> $$d(S)=\{x \in X | \forall r >0, N_r(x) \cap S \setminus \{ x\}\neq \emptyset \}$$
+
+* 導集合為閉集合。
+* 
 
 
 

@@ -118,3 +118,11 @@ proof 1:
 >
 > 因此點$$x \in int(S),~ x \in ext(S), ~ x \in \partial(S)$$只能有一個成立。
 
+## 凝集點（condensation point）
+
+> 集合$$S\subseteq X$$，若$$x\in X$$滿足 $$\forall r > 0, N_r(x)\cap S$$均為不可數集合時，稱$$x$$為$$S$$的凝集點。
+
+### 不可數集合必存在凝聚點
+
+> 若$$S$$為八
+

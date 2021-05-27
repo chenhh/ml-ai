@@ -57,5 +57,14 @@ proof &lt;=
 * $$A\setminus B = A \cap B^c $$，因為[有限個開集合的任意交集仍為開集合](open-set.md#you-xian-ge-kai-ji-he-de-jiao-ji-reng-shi-kai-ji-he)，因此為開集合。
 * $$B\setminus A = B \cap A^c$$，因為可數無限個閉集合的交集仍為閉集合，因此為閉集合。
 
+## 閉包（closure）
+
+> $$S\subseteq X$$，$$d(S)$$為集合$$S$$的導集合（所有極限點的集合），定義閉包$$\overline{S} = S \cup d(S)$$。
+>
+> * $$d(S) = \{ x \in X | \forall r > 0, \ N_r(x) \cap S \setminus \{ x \} = \emptyset \}$$
+> * 極限點$$x \in X$$不一定是$$S$$的元素。
+>
+> 定義2：$$\overline{S}=\cap\{ F \subseteq X | S \subset F \text{ and } F \text{ is closed set}  \}$$，即閉包為包含$$S$$的最小閉集合。
+
 ### 
 

@@ -91,3 +91,13 @@ proof &lt;=
 > 4. $$d(\overline{S})=d(S)$$
 > 5. $$\overline{S}$$為包含$$S$$的最小閉集合。
 
+Proof \(1\):
+
+* $$d(S)=\{x \in X| \forall r>0, N_r (x) \cap S \setminus \{x\}\neq \emptyset\}$$
+* $$d(d(S))= \{ x \in S | \forall r>0, N_r (x)\cap d(S) \setminus\{x\} \neq \emptyset\} $$
+* 令$$x \in d(d(S)) \Rightarrow \{x \in S,  \forall r>0, N_r (x)∩d(S) \setminus \{x\}\} \neq \emptyset $$
+* $$\therefore \forall r>0, N_r (x)\cap S \setminus \{x\} \neq \emptyset $$
+* $$\therefore x \in d(d(S) ) \Rightarrow x \in d(S)$$  \(QED\)
+
+
+

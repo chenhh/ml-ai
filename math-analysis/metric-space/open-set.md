@@ -96,5 +96,19 @@
 * 例如$$S=(1,2)$$，則$$I=(1,2)$$
 * 例如$$S=(1,2) \cup (2,3) \cup (3,4)$$，則$$I=(1,2)$$或$$(2,3)$$或$$(3,4)$$。
 
+### 分量區間的唯一性
+
+> $$S \subseteq \mathbb{R}$$為非空開集合，則$$\forall x \in S$$，$$x$$只會是唯一的分量區間之元素。
+>
+> * $$I, J \subseteq S$$為分量區間，$$x \in I \Rightarrow x \notin J$$
+> * 此分量區間必為$$I_x=(a(x), b(x))$$
+>   * $$a(x)= \inf \{ a \in \overline{\mathbb{R}}\| \text{ open interval } (a,x) \subseteq S\}$$
+>   * $$b(x) = \sup \{ b \in \overline{\mathbb{R}}\| \text{ open interval } (x, b) \subseteq S\}$$
+>   * $$\overline{\mathbb{R}}$$為擴充實數，因此$$a(x)$$可為$$-\infty$$，$$b(x)$$可為$$\infty$$。
+
+* 由分量區間定義得不存在開區間$$J \ni I_x \subseteq J \subseteq S $$。因此$$I_x$$ 為包含$$x$$的分量區間。
+* 令$$J_x$$ 為包含$$x$$的另一個分量區間，則$$I_x∪J_x$$ 為$$S$$的開區間且$$I_x \subseteq I_x \cup J_x,~ J_x\subseteq I_x \cup J_x$$  。
+* 由分量區間的定義得$$I_x \cup J_x=I_x$$  且 $$I_x \cup J_x=J_x \Rightarrow I_x=J_x  $$\(QED\).
+
 
 

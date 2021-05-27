@@ -106,6 +106,18 @@ Proof \(2\):
 * $$ \therefore x \in d(T)$$
 * $$\therefore x \in d(S) \Rightarrow x \in d(T) $$ \(QED\)
 
+Proof \(3\)
+
+* $$x \in d(S \cup T) \Rightarrow x \in X, \forall r>0, N_r (x) \cap (S \cup T) \setminus \{x\} \neq \emptyset $$
+* 由De Morgan定理得 $$N_r (x)\cap (S \cup T)=(N_r (x)\cap S) \cup (N_r (x)\cap T) $$
+* 而$$(N_r (x)\cap S)\cup (N_r (x) \cap T)\setminus \{x\}=(N_r (x)\cap S\setminus \{x\})\cup (N_r (x)\cap T\setminus \{x\}) $$
+* $$\therefore x \in X, \forall r>0, (N_r (x)\cap S \setminus \{x\})\cup (N_r (x)\cap T \setminus \{x\})\neq \emptyset $$
+* 即$$x \in d(S) \cup d(T) $$
+* 同理可得$$x \in d(S) \cup d(T) \Rightarrow x \in d(S\cup T) $$
+* 所以$$d(S \cup T)=d(S) \cup d(T)$$  \(QED\)
+
+
+
 
 
 

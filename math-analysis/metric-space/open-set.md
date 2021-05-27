@@ -56,7 +56,22 @@
 * 因為$$S_k$$為開集合，所以$$\exists r > 0 \ni N_r(x) \subseteq S_k$$。
 * 因為$$x \in S$$，可得 $$N_r(x) \subseteq S$$。
 * 對於$$\forall x \in S$$，均可以得到相同的結論，因此$$S$$為開集合 \(QED\)
-* 
+
+### 有限個開集合的交集仍是開集合
+
+> $$S_n \subseteq X, ~ n=1,2,\ldots, N$$為開集合，則$$\displaystyle \cap_{n=1}^N S_n$$為開集合。
+>
+> 註：有限個開集合的交集才能保證為開集合，否則可能收斂到一點變成閉集合。
+
+* 令集合$$S = \cap_{n=1}^N S_n$$，且$$x \in S$$。
+* 依定義得 $$x$$為所有開集合$$S_n$$都有的元素，因此$$\exists r_n > 0 ~\ni N_{r_n}(x) \subseteq S_n, n=1,2,\ldots, N$$。
+* 取$$r = \min \{r_1, r_2, \ldots, r_n \}$$，得 $$N_r(x) \subseteq S$$。
+* 而$$\forall x \in S$$，均可使用相同的方法得到$$N_r(x) \subseteq S$$，所以$$S$$為開集合 \(QED\)
+
+
+
+### 
+
 
 
 

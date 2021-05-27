@@ -71,8 +71,12 @@
 ### 任意（無限）個開集合的交集不一定是開集合
 
 > 可能收斂至一點。
->
-> 例如$$S_n = (- \frac{1}{n}, \frac{1}{n}), ~ \cap_{n=1}^\infty S_n = 0$$收斂至單點，不是開集合。
+
+例如$$S_n = (- \frac{1}{n}, \frac{1}{n}), ~ \cap_{n=1}^\infty S_n = 0$$收斂至單點，不是開集合。
+
+### 實數上的任意閉區間為可數開區間的交集
+
+> 不失一般性令$$[a,b] \subseteq \mathbb{R}$$，則$$\displaystyle [a,b]= \cap_{n=1}^{\infty} \bigg(a- \frac{1}{n}, b + \frac{1}{n} \bigg)$$
 
 
 

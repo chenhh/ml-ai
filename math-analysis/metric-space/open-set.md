@@ -1,3 +1,7 @@
+---
+description: open set
+---
+
 # 開集合
 
 ## 開集合\(open set\)

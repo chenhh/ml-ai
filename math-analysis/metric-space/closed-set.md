@@ -36,5 +36,7 @@ description: closed set
 
 ### 開集合與閉集合的差集的性質
 
+> $$A,B \subseteq X$$，若$$A$$為開集合，$$B$$為閉集合，則$$A\setminus B$$為開集合，$$B \setminus A$$為閉集合。
+
 
 

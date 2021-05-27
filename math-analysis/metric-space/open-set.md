@@ -18,8 +18,6 @@
 
 ![](../../.gitbook/assets/open-internal-set-min.png)
 
-
-
 ### 邊界點非開集合中的元素
 
 * 若$$a$$為集合$$S$$的邊界點（$$a \in \partial(S)$$），則$$\forall r > 0 ~ N_r(a) \cap S \neq \emptyset ~\land ~N_r(a) \cap S^c \neq \emptyset$$。
@@ -33,6 +31,15 @@
 * 令$$h=r-d(x,y) > 0 $$，取$$p\in X, d(y,p)<h$$
 * 可得 $$d(x,p) \leq d(x,y)+d(y,p) < d(x,y)+r -d(x,y) <r$$
 * 因此$$p \in X$$為內點，所以$$N_r(x)$$為開集合 \(QED\)
+
+### 空集合與歐式空間均為開集合且為閉集合
+
+> $$\emptyset$$與$$\mathbb{R}^n$$同時為開集合與閉集合。
+
+* 因為所有的點（沒有任何點）均為空集合的內點，因此空集合為開集合。
+* 因為在$$\mathbb{R}^n$$ 空間中，$$\emptyset^c=\mathbb{R}^n$$, 所以$$\mathbb{R}^n$$為閉集合。
+* 因為$$\forall x∈R^n ~ \exists r > 0 \ni N_r(x) \ni \mathbb{R}^n$$，所以$$\mathbb{R}^n$$為開集合。
+  * 因為$$(\mathbb{R}^n)^c=\emptyset$$，所以$$\emptyset$$為閉集合。\(QED\).
 
 
 

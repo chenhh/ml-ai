@@ -26,3 +26,11 @@ description: closed set
 * 同理可得 $$\cup_{n=1}^N A_n=A_1 \cup A_2 \cup \ldots \cup A_N = (A_1^c \cap A_2^c \cap \ldots \cap A_N^c)^c$$
 * 因為[有限多個開集合的交集仍為開集合](open-set.md#you-xian-ge-kai-ji-he-de-jiao-ji-reng-shi-kai-ji-he)，而開集合的補集為閉集合，可得$$\cup_{n=1}^N A_n$$為閉集合。\(QED\)
 
+### 可數無限個閉集合的交集仍為閉集合
+
+> $$A_n \subseteq X, ~ \ n \in \mathbb{N}$$為閉集合，則 $$\cap_{n =1}^\infty A_n$$為閉集合。
+
+* $$A_n$$為閉集合，則依定義$$A_n^c$$為開集合。
+* 由DeMorgan定理知 $$\cap_{n=1}^\infty A_n=(A_1 \cap A_2 \cap \ldots )=(A_1^c \cup A_2^c \cup \ldots )^c$$
+* 因為[可數無限個開集點的聯集仍是開集合](open-set.md#ren-yi-ke-shu-wu-xian-ge-kai-ji-he-de-lian-ji-reng-shi-kai-ji-he)，而開集合的補集為閉集合，因此$$\cap_{n=1}^\infty A_n$$ 為閉集合。\(QED\)
+

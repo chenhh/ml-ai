@@ -9,6 +9,17 @@
 
 如果$$S$$不為開集合，則 $$\exists a \in S \ni \forall r > 0, N_r(a) \not \subset S$$
 
+### 開集合等價於內點集合
+
+> $$ (X,d)$$為度量空間, $$S \subseteq X$$ 為開集合 $$\Leftrightarrow S= int(S)$$
+
+* 給定點$$p \in S,$$半徑$$r>0$$與點$$q \in N_r(p)$$
+* 令長度$$h=d(p,q)$$，得長度$$r_1=r-h > 0$$使得 $$N_{r_1}(q) \subseteq N_r(p)$$\(QED\)
+
+![](../../.gitbook/assets/open-internal-set-min.png)
+
+
+
 ### 邊界點非開集合中的元素
 
 * 若$$a$$為集合$$S$$的邊界點（$$a \in \partial(S)$$），則$$\forall r > 0 ~ N_r(a) \cap S \neq \emptyset ~\land ~N_r(a) \cap S^c \neq \emptyset$$。

@@ -66,6 +66,21 @@ proof &lt;=
 >
 > 定義2：$$\overline{S}=\cap\{ F \subseteq X | S \subset F \text{ and } F \text{ is closed set}  \}$$，即閉包為包含$$S$$的最小閉集合。
 
+### 閉集合等於其閉包
+
+> $$S \subseteq X$$為閉集合 $$\Leftrightarrow$$$$S= \overline{S}=S \cup d(S)$$
+
+proof =&gt; 
+
+* 因為 [閉集合包含其所有極限點](closed-set.md#bi-ji-he-bao-han-qi-suo-you-ji-xian-dian)，可得$$d(S) \subseteq S$$，所以$$\overline(S) = S \cup d(S) = S$$ \(QED\)
+
+proof &lt;=
+
+* 令$$x \in \overline{S}$$為極限點，則$$x$$為$$S$$或$$d(S)$$的極限點。
+* 若$$x \in S$$，因為$$d(S)$$為所有$$S$$極限點的集合，因此$$x \in d(S)$$，所以$$x \in \overline{S}$$。
+* 若$$x \in d(S)$$，因為$$d(S)$$為閉集合，所以$$d(S) \subseteq \overline{S}$$，可得$$x \in \overline{S}$$
+* 所以$$S=\overline{S}$$包含所有極限點，因此$$S$$為閉集合。\(QED\)
+
 ### 導集合的性質
 
 > $$d(S)$$為$$S$$的導集合，$$d(T)$$為$$T$$的導集合，閉包$$\overline{S}=S \cup d(S)$$，則

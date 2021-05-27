@@ -253,6 +253,8 @@ Proof &lt;=
 
 ![&#x6975;&#x9650;&#x9EDE;&#x70BA;&#x5E8F;&#x5217;&#x805A;&#x96C6;&#x4E4B;&#x8655;](../../.gitbook/assets/800px-rational_sequence_with_2_accumulation_points_svg.png)
 
+### 
+
 ## 完美集合（perfect set）
 
 > $$S \subseteq X$$稱為完全集合，若此集合等於其導集合，即$$S=d(S)$$。

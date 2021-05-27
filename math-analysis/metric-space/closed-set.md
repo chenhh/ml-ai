@@ -66,5 +66,7 @@ proof &lt;=
 >
 > 定義2：$$\overline{S}=\cap\{ F \subseteq X | S \subset F \text{ and } F \text{ is closed set}  \}$$，即閉包為包含$$S$$的最小閉集合。
 
-### 
+### 導集合的性質
+
+> $$d(S)$$為$$S$$的導集合，$$d(T)$$為$$T$$的導集合，閉包$$\overline{S}=
 

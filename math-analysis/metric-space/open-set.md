@@ -78,19 +78,9 @@
 
 > 不失一般性令$$[a,b] \subseteq \mathbb{R}$$，則$$\displaystyle [a,b]= \cap_{n=1}^{\infty} \bigg(a- \frac{1}{n}, b + \frac{1}{n} \bigg)$$
 
+### 集合的加法
 
-
-### 
-
-
-
-
-
-
-
-
-
-
-
-
+> * 給定集合$$S_1, S_2 \subseteq \mathbb{R}$$
+> * 若$$S_1, S_2$$均為開集合，則$$S_1 + S_2 = \{ x+y | x \in S_1,~y \in S_2\}$$為開集合。
+> * 若$$S_1, S_2$$均為閉集合，則$$S_1+S_2$$為閉集合。
 

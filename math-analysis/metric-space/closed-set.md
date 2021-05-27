@@ -21,9 +21,8 @@ description: closed set
 >
 > 註：無限多個閉集合的聯集可能會變成無上、下限的集合而變成開集合。
 
-
-
-
-
-
+* $$A_n$$為閉集合，則依定義$$A_n^c$$為開集合。
+* 由DeMorgan定理知 $$(A_1 \cup A_2)^c = A_1^c \cap A_2^c$$，因此$$A_1 \cup A_2 = (A_1^c \cap A_2^c )^c$$
+* 同理可得 $$\cup_{n=1}^N A_n=A_1 \cup A_2 \cup \ldots \cup A_N = (A_1^c \cap A_2^c \cap \ldots \cap A_N^c)^c$$
+* 因為[有限多個開集合的交集仍為開集合](open-set.md#you-xian-ge-kai-ji-he-de-jiao-ji-reng-shi-kai-ji-he)，而開集合的補集為閉集合，可得$$\cup_{n=1}^N A_n$$為閉集合。\(QED\)
 

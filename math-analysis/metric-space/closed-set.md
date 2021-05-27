@@ -31,8 +31,6 @@ proof &lt;=
 * 令$$x \in S^c$$，因為$$x \notin S$$，可得$$\exists r > 0 \ni N_r(x) \cap S = \emptyset$$，因此$$x$$不是$$S$$的附著點。
 * 可得 $$\exists r >0 \ni N_r(x) \subseteq S^c$$，即$$S^c$$為開集合，則$$S$$為閉集合\(QED\)。
 
-
-
 ### 有限多個閉集合的聯集仍為閉集合
 
 > $$A_n \subseteq X，~ n =1,2,\ldots, N$$為閉集合，則$$\cup_{n=1}^N A_n$$為閉集合。

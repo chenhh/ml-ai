@@ -35,11 +35,31 @@
 ### 空集合與歐式空間均為開集合且為閉集合
 
 > $$\emptyset$$與$$\mathbb{R}^n$$同時為開集合與閉集合。
+>
+> 若以邊界點角度分析，若集合$$S$$沒有邊界點時，因為$$S$$不包含任意邊界點，所以S為開集合；同時因為不存在邊界點（即邊界點為空集合），因此$$S$$包含了其所有邊界點，因此$$S$$為閉集合。
 
 * 因為所有的點（沒有任何點）均為空集合的內點，因此空集合為開集合。
 * 因為在$$\mathbb{R}^n$$ 空間中，$$\emptyset^c=\mathbb{R}^n$$, 所以$$\mathbb{R}^n$$為閉集合。
 * 因為$$\forall x∈R^n ~ \exists r > 0 \ni N_r(x) \ni \mathbb{R}^n$$，所以$$\mathbb{R}^n$$為開集合。
-  * 因為$$(\mathbb{R}^n)^c=\emptyset$$，所以$$\emptyset$$為閉集合。\(QED\).
+  * 因為$$(\mathbb{R}^n)^c=\emptyset$$，所以$$\emptyset$$為閉集合。\(QED\)
+
+## 開集合的聯集與交集
+
+給定度量空間$$(X,d)$$
+
+### 任意（可數無限）個開集合的聯集仍是開集合
+
+> $$S_n \subseteq X, ~ n\in \mathbb{N}$$為開集合，則$$\displaystyle \cup_{n \in \mathbb{N}} S_n$$為開集合。
+
+* 令集合$$S = \cup_{n \in \mathbb{N}} S_n$$，且點$$x \in S$$。
+* 因此$$x$$存在於某些開集合中，令$$x \in S_k$$。
+* 因為$$S_k$$為開集合，所以$$\exists r > 0 \ni N_r(x) \subseteq S_k$$。
+* 因為$$x \in S$$，可得 $$N_r(x) \subseteq S$$。
+* 對於$$\forall x \in S$$，均可以得到相同的結論，因此$$S$$為開集合 \(QED\)
+* 
+
+
+
 
 
 

@@ -68,5 +68,11 @@ proof &lt;=
 
 ### 導集合的性質
 
-> $$d(S)$$為$$S$$的導集合，$$d(T)$$為$$T$$的導集合，閉包$$\overline{S}=S \cup d(S)$$
+> $$d(S)$$為$$S$$的導集合，$$d(T)$$為$$T$$的導集合，閉包$$\overline{S}=S \cup d(S)$$，則
+>
+> 1. $$d(S)$$為閉集合，且$$d(d(S)) \subseteq d(S)$$
+> 2. $$S \subseteq T \Rightarrow d(S) \subseteq d(T)$$
+> 3. $$d(S \cup T)= d(S) \cup d(T)$$
+> 4. $$d(\overline{S})=d(S)$$
+> 5. $$\overline{S}$$為包含$$S$$的最小閉集合。
 

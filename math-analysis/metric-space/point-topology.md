@@ -246,7 +246,7 @@ Proof &lt;=
 >
 > $$d(S)=\{x \in X | \forall r >0, N_r(x) \cap S \setminus \{ x\}\neq \emptyset \}$$
 
-* 導集合$$d(S)$$和[閉包](closed-set.md#bi-bao-closure)$$\overline{S} = S \cup d(S)$$有重要的關聯性。
+* 導集合$$d(S)$$和[閉包](closed-set.md#bi-bao-closure)$$\overline{S} = S \cup d(S)$$有重要的關聯性，參考導集合的性質。
 * 導集合為閉集合。
 * $$S=\{ \frac{1}{n}, \ n \in \mathbb{N}\}$$，則$$0$$為$$S$$的極限點。
 * $$x_n=(-1)^n \frac{n}{n+1}$$極限不存在，但有兩個極限點-1與1。

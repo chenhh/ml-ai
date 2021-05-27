@@ -116,6 +116,16 @@ Proof \(3\)
 * 同理可得$$x \in d(S) \cup d(T) \Rightarrow x \in d(S\cup T) $$
 * 所以$$d(S \cup T)=d(S) \cup d(T)$$  \(QED\)
 
+Proof \(4\)
+
+* $$ \overline{S}=S \cup d(S) $$
+* $$\therefore d(S \cup d(S) )=d(S) \cup d(d(S)) $$
+* $$\because d(d(S) \subseteq d(S) $$
+* $$\therefore  d(S) \cup d(d(S))= d(S)$$
+* $$\therefore d(S \cup d(S))=d(S)$$  \(QED\).
+
+
+
 
 
 

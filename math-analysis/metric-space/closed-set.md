@@ -21,7 +21,15 @@ description: closed set
 > * $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$$$\forall r > 0~ \exists y \in S \setminus \{x\} \ni y \in N_r(x)$$
 > * 而$$S$$所有極限點形成為集合為導集合$$d(S)$$
 
-proof =&gt;
+proof &gt;= \(閉集合的補集不包含集合的極限點\)
+
+* 令$$x \in S^c$$，因為$$S$$為閉集合，所以$$S^c$$為開集合。
+* 依開集合定義可得 $$\exists r >0 \ni N_r(x) \subseteq S^c$$，因此$$ \exists r >0 \ni N_r(x) \cap S = \phi$$，即$$x$$不是$$S$$的附著點，因此$$x$$不是$$S$$的極限點 \(QED\)。
+
+proof &lt;=
+
+* 令$$x \in S^c$$，因為$$x \notin S$$，可得$$\exists r > 0 \ni N_r(x) \cap S = \emptyset$$，因此$$x$$不是$$S$$的附著點。
+* 可得 $$\exists r >0 \ni N_r(x) \subseteq S^c$$，即$$S^c$$為開集合，則$$S$$為閉集合\(QED\)。
 
 
 

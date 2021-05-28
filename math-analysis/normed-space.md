@@ -10,3 +10,13 @@ description: normed space
 
 ![&#x8CE6;&#x7BC4;&#x7A7A;&#x9593;&#x70BA;&#x5EA6;&#x91CF;&#x7A7A;&#x9593;&#x7684;&#x7279;&#x4F8B;](../.gitbook/assets/250px-mathematical_spaces-min.png)
 
+## Lp空間
+
+> * $$C[a,b]$$是定義域為實數區間$$[a,b]$$上連續函數全體所成的集合。
+> * 定義範數 $$\displaystyle \| f\|_p = \bigg( \int (f)^pdx \bigg)^{\frac{1}{p}}, ~ 1 \leq p \leq \infty$$
+> * 距離為$$d(f,g)=\| f -g \|_p$$
+>
+> 成為一個賦範空間。但該賦範空間是不完備，即連續函數可能收斂為不連續函數。
+
+
+

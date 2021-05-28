@@ -37,6 +37,12 @@
 
 ![&#x6709;&#x7406;&#x51FD;&#x6578;](../.gitbook/assets/rational_function-min.png)
 
+### 代數函數\(algebraic function\)
+
+![&#x4EE3;&#x6578;&#x51FD;&#x6578;](../.gitbook/assets/algebraic_function-min.png)
+
+
+
 ## 連續函數的條件
 
 對於函數$$f: [a,b] \rightarrow \mathbb{R}$$

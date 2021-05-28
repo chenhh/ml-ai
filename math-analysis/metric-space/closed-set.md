@@ -139,15 +139,19 @@ Proof \(4\)
 *  因為$$S$$為開集合，所以$$S^c$$為閉集合，所以存在極限點$$x \in S^c$$, 且$$x \notin S$$。
 * 而閉包$$\overline{S} = S \cup d(S)$$，依定義$$x \in d(S)$$且$$x \notin S$$，則$$ S \subset \overline{S}$$。\(QED\)
 
+### 閉包交集的性質
 
+> $$S,T \subseteq X$$，且$$\overline{S}, \overline{T}$$為對應的閉包，則：
+>
+> 1. $$\overline{S \cap T} \subseteq \overline{S} \cap \overline{T}$$
+> 2. 若$$S$$為開集合，則$$S \cap \overline{T} \subseteq \overline{S \cap T}$$
 
+proof \(1\):
 
-
-
-
-
-
-
+* $$\overline{(S\cap T)}=(S \cap T)\cup d(S\cap T)$$  
+* $$\overline{S} \cap \overline{T}=(S \cup d(S) )\cap (T \cup d(T) )=(S\cap T) \cup (d(S) \cap T) \cup (S\cap d(T) ) \cup (d(S) \cap d(T) ) $$
+* 檢驗$$d(S\cap T)  \subseteq (d(S) \cap T) \cup (S \cap d(T) ) \cup (d(S) \cap d(T) ) $$
+* $$x \in d(S \cap T)$$，即$$x$$為$$S \cap T$$的極限點，因此$$x$$為$$S$$的極限點且$$x$$為$$T$$的極限點，可得$$x \in d(S) \cap d(T)$$  \(QED\).
 
 
 

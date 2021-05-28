@@ -151,7 +151,15 @@ proof \(1\):
 * $$\overline{(S\cap T)}=(S \cap T)\cup d(S\cap T)$$  
 * $$\overline{S} \cap \overline{T}=(S \cup d(S) )\cap (T \cup d(T) )=(S\cap T) \cup (d(S) \cap T) \cup (S\cap d(T) ) \cup (d(S) \cap d(T) ) $$
 * 檢驗$$d(S\cap T)  \subseteq (d(S) \cap T) \cup (S \cap d(T) ) \cup (d(S) \cap d(T) ) $$
-* $$x \in d(S \cap T)$$，即$$x$$為$$S \cap T$$的極限點，因此$$x$$為$$S$$的極限點且$$x$$為$$T$$的極限點，可得$$x \in d(S) \cap d(T)$$  \(QED\).
+* $$x \in d(S \cap T)$$，即$$x$$為$$S \cap T$$的極限點，因此$$x$$為$$S$$的極限點且$$x$$為$$T$$的極限點，可得$$x \in d(S) \cap d(T)$$  \(QED\)
 
+proof \(2\):
 
+* 若$$S$$為開集合，則$$S \cap \overline{T}=S \cap (T \cup d(T) )=(S \cap T) \cup (S \cap d(T) ) $$
+* $$ \overline{(S \cap T)}=(S \cap T)\cup d(S \cap T) $$
+* 檢驗 $$(S\cap d(T) ) \subseteq d(S\cap T) $$
+* $$x \in d(S\cap T)$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$的極限點且$$x$$為$$T$$的極限點  。
+* 因為$$S$$為開集合，因此$$S$$不包含所有$$S$$的極限點，即$$\exists x \in S$$, $$x$$不是$$S$$的極限點。
+* 因為$$x \in S \cap d(T)$$，表示$$x \in S$$且$$x$$為$$T$$的極限點。
+* 因此$$S\cap \overline{T} \subseteq \overline{(S\cap T)}$$  \(QED\)
 

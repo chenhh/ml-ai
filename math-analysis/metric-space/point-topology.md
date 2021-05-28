@@ -94,7 +94,7 @@ proof 1:
 >
 > 稱點$$p \in X$$為集合$$S$$的邊界點若$$\forall r >0 . N_r(a) \cap S \neq \emptyset$$且$$N_r(a) \cap S^c \neq \emptyset$$
 >
-> 邊界點$$p$$形成的集合稱為邊界集，記為$$\partial(S)$$
+> * $$x$$的每個鄰域中至少有一個點在 $$S$$ 中，且至少有一個點不在$$ S$$ 中。
 
 ![x&#x70BA;&#x5167;&#x9EDE;&#xFF0C;y&#x70BA;&#x908A;&#x754C;&#x9EDE;](../../.gitbook/assets/510px-interior_illustration-min.png)
 
@@ -182,12 +182,15 @@ proof 1:
 > 集合$$S \subset X$$，如果點$$x\in S$$滿足 $$\exists r > 0 \ni N_r(x) \cap S = \{x\}$$，則稱$$x$$為孤立點。
 >
 > 若不是孤立點，則$$N_r(x) \cap S$$為不可數集合。
->
-> 由定義知孤立點不是極限點。
 
+* 存在$$ x$$的某一個鄰域即可，不需要保證$$ x$$ 的每個鄰域都成立。
+* $$x$$ 是$$ S$$ 的孤立點，意味著 $$x$$ 必在 $$S$$ 中，但是它相當於在一個球隊中被孤立、靠邊站了，但還沒有離隊。
+* 由定義知孤立點不是極限點。
 * 由定義知孤立點不是內點, 因為若$$\exists r>0 \ni N_r (x) \subset S$$，可得$$N_r (x)\cap S=N_r (x) \neq \{x\}$$。
 * 因為$$N_r (x) \cap S$$集合中元素應為無窮多個，若只有一個點時，表示$$x$$附近沒有任何元素，即為孤立點。
 * 例如 $$S=\{1/n, \forall n \in \mathbb{N}\}$$，則$$S$$內的每一點都是孤立點。
+* 例如$$S=\{0\} \cup [1,2]$$，則0為孤立點。
+* 但$$S=\{0\} \cup \{ ,1, 1/2, 1/3,\ldots\}$$中，0不是孤立點，因為可以找到任意接近0的元素，但每一個1/k都是孤立點。
 
 ### 孤立點集合為可數集合
 
@@ -199,7 +202,15 @@ proof 1:
 * 從$$F\setminus \{x_1\}$$的集合中，可得$$r_2=\min \{  r>0  | \forall x \in F \setminus \{x_1\}, N_r (x) \cap S=\{x\}  \}$$ 且令滿足此最小半徑的點為$$x_2$$。
 * 以此類推，可得$$F$$中的點與自然數集合$$\mathbb{N}$$有一對一的關係，因此$$F$$為可數集合。 \(QED\)
 
+### 歐式空間中，孤立點就是邊界點
 
+> 給定集合$$S \subseteq \mathbb{R}^n$$，點$$x \in S$$為孤立點（$$\exists r >0 \ni N_r(x) \cap S = \{x\}$$），則$$x$$為邊界點（$$\forall r>0 , N_r(x) \cap S \neq \emptyset ~\land~ \ N_r(x) \cap S^c \neq \emptyset$$）
+
+* 例如$$S=\{0\} \cup [1,2]$$。$$x=0$$為孤立點，因存在$$r=0.5$$使得$$N_r(x)=(-0.5, 0.5) , N_r(x) \cap (S\setminus \{x\}) = \emptyset$$。
+  * 由於$$x=0$$與$$[1,2]$$間存在空隙，因此$$x$$的任意鄰域均包含了不屬於$$S$$的元素，即$$\forall h > 0, N_h(x) \cap S^c \neq \emptyset$$。
+  * 因此$$x$$為邊界點。
+
+#### 反之邊界點不一定是孤立點
 
 ## 極限點（limit point） 
 

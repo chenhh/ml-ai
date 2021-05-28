@@ -124,6 +124,15 @@ Proof \(4\)
 * $$\therefore  d(S) \cup d(d(S))= d(S)$$
 * $$\therefore d(S \cup d(S))=d(S)$$  \(QED\).
 
+### 開集合為其閉包的真子集合
+
+> $$ S \subseteq X$$為開集合，則$$S \subset \overline{S}$$。
+
+*  因為$$S$$為開集合，所以$$S^c$$為閉集合，所以存在極限點$$x \in S^c$$, 且$$x \notin S$$。
+* 而閉包$$\overline{S} = S \cup d(S)$$，依定義$$x \in d(S)$$且$$x \notin S$$，則$$ S \subset \overline{S}$$。\(QED\)
+
+
+
 
 
 

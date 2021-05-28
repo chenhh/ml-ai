@@ -4,6 +4,31 @@
 
 詳見 [函數中的集合](set/function.md)。
 
+## 奇函數與偶函數（odd and even function）
+
+> 實值函數$$f: X \rightarrow \mathbb{R}$$稱為
+>
+> * 奇函數，若$$f(x)=-f(x)$$，對稱於原點。
+> * 偶函數，若$$f(x) = f(-x)$$，對稱於$$y$$軸。
+>
+> 註：• 奇、偶函數的名稱是來自於$$x$$的冪次方函數，$$y=x^n$$，當$$n$$為奇數與偶數時有此性質。
+
+![&#x5947;&#x51FD;&#x6578;&#x8207;&#x5076;&#x51FD;&#x6578;](../.gitbook/assets/odd_even_functions-min.png)
+
+## 常見的函數
+
+### 線性函數（linear function）
+
+![&#x7DDA;&#x6027;&#x51FD;&#x6578;](../.gitbook/assets/linear_function-min.png)
+
+### 冪函數（power function）
+
+![&#x6B63;&#x503C;&#x51AA;&#x51FD;&#x6578;](../.gitbook/assets/power-function-min.png)
+
+![&#x8CA0;&#x503C;&#x51AA;&#x51FD;&#x6578;](../.gitbook/assets/power-function2-min.png)
+
+![&#x5206;&#x6578;&#x503C;&#x51AA;&#x51FD;&#x6578;](../.gitbook/assets/power-function3-min.png)
+
 ## 連續函數的條件
 
 對於函數$$f: [a,b] \rightarrow \mathbb{R}$$

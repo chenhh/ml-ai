@@ -180,6 +180,7 @@ proof \(2\):
 * $$S$$在集合$$T$$中稠密，即$$S\subseteq T\subseteq \overline{S}=S \cup d(S) $$
 * 可得$$A⊆S⊆T  $$
 * 檢驗$$T\subseteq \overline{A}$$
+
   * 若$$S=A \cup d(A)$$，則$$S$$為閉集合，即$$S=\overline{S}=T$$, 可得$$T=\overline{A} $$。
   * 若$$S \subset A \cup d(A)$$，即$$S$$包含了$$A$$中所有元素與$$A$$的部分極限點。
   * $$ \overline{S}=S \cup d(S) \subset (A\cup d(A) ) \cup d(A \cup d(A))=(A \cup d(A) ) \cup (d(A) \cup d(d(A)) )=A \cup d(A) \cup d(d(A) )) $$
@@ -187,6 +188,11 @@ proof \(2\):
   * 所以$$A \cup d(A) \cup d(d(A)) = A \cup d(A)$$
   * 因此$$\overline{S} \subset (A∪d(A))=\overline{A} \Rightarrow T \subset \overline{A} $$
   * 由$$A\subseteq T \subseteq \overline{A} $$ 得證 \(QED\)
+
+### 稠密集合的性質
+
+> 1. • 若$$A$$在集合$$S$$中稠密\($$A \subseteq S \subseteq \overline{A}$$\)，且$$B$$為$$S$$中的開集合，則$$B \subseteq \overline(A \cap B) $$。
+> 2. 若$$A, B$$在集合$$S$$中稠密，且$$B$$為$$S$$中的開集合，則$$A \cap B$$在$$S$$中稠密。
 
 
 

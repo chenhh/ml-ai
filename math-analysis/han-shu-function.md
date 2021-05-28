@@ -33,6 +33,10 @@
 
 ![&#x591A;&#x9805;&#x5F0F;&#x51FD;&#x6578;](../.gitbook/assets/polynomial_function-min.png)
 
+### 有理函數\(rational function\)
+
+![&#x6709;&#x7406;&#x51FD;&#x6578;](../.gitbook/assets/rational_function-min.png)
+
 ## 連續函數的條件
 
 對於函數$$f: [a,b] \rightarrow \mathbb{R}$$

@@ -163,3 +163,30 @@ proof \(2\):
 * 因為$$x \in S \cap d(T)$$，表示$$x \in S$$且$$x$$為$$T$$的極限點。
 * 因此$$S\cap \overline{T} \subseteq \overline{(S\cap T)}$$  \(QED\)
 
+## 稠密集合（dense set）
+
+> 令$$A \subseteq X$$，且存在$$S \subseteq X$$使得$$A \subseteq S \subseteq \overline{A}$$，則稱集合$$A$$在集合$$S$$中稠密。\(A dense in S\)。
+>
+> * $$A$$的閉包$$\overline{A}$$是包含$$A$$的最小閉集合，其包含了$$A$$的所有極限點。因此$$S$$包含了$$A$$的所有元素，以及集合$$A$$外的部分或全部極限點。
+
+* 例$$A=(0,1) \subseteq \mathbb{R}$$，$$S=[0,1)$$或$$(0,1)$$或$$(0,1]$$或$$[0,1]$$，則$$A$$在$$S$$稠密。
+* 有理數在實數稠密，因為$$\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{\overline{Q}} = \mathbb{R}$$。
+
+### 稠密集合滿足遞移性
+
+> •$$A$$在集合$$S$$中稠密，且$$S$$在集合$$T$$中稠密，則$$A$$在集合$$T$$中稠密。
+
+* $$A$$在集合$$S$$中稠密 ，即$$A \subseteq S \subseteq \overline{A}=A\cup d(A) $$
+* $$S$$在集合$$T$$中稠密，即$$S\subseteq T\subseteq \overline{S}=S \cup d(S) $$
+* 可得$$A⊆S⊆T  $$
+* 檢驗$$T\subseteq \overline{A}$$
+  * 若$$S=A \cup d(A)$$，則$$S$$為閉集合，即$$S=\overline{S}=T$$, 可得$$T=\overline{A} $$。
+  * 若$$S \subset A \cup d(A)$$，即$$S$$包含了$$A$$中所有元素與$$A$$的部分極限點。
+  * $$ \overline{S}=S \cup d(S) \subset (A\cup d(A) ) \cup d(A \cup d(A))=(A \cup d(A) ) \cup (d(A) \cup d(d(A)) )=A \cup d(A) \cup d(d(A) )) $$
+  * 因為$$d(d(A)) \subseteq d(A)$$
+  * 所以$$A \cup d(A) \cup d(d(A)) = A \cup d(A)$$
+  * 因此$$\overline{S} \subset (A∪d(A))=\overline{A} \Rightarrow T \subset \overline{A} $$
+  * 由$$A\subseteq T \subseteq \overline{A} $$ 得證 \(QED\)
+
+
+

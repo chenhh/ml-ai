@@ -57,6 +57,14 @@ proof &lt;=
 * $$A\setminus B = A \cap B^c $$，因為[有限個開集合的任意交集仍為開集合](open-set.md#you-xian-ge-kai-ji-he-de-jiao-ji-reng-shi-kai-ji-he)，因此為開集合。
 * $$B\setminus A = B \cap A^c$$，因為可數無限個閉集合的交集仍為閉集合，因此為閉集合。
 
+### 實數中空集合與實數同時為開集合與閉集合
+
+* 可得$$ \forall x \in \mathbb{R}, \exists r>0 \ni N_r (x) \subseteq \mathbb{R}$$, 因此$$\mathbb{R}$$為開集合。
+* 因為$$\emptyset = \mathbb{R}^c$$, 所以$$\emptyset$$為閉集合。
+* 因為空集合$$\emptyset$$不存在任何元素，因此其為開集合。
+* 而$$\mathbb{R}=\emptyset^c$$, 所以$$\mathbb{R}$$為閉集合。
+* **此範例說明了閉集合不一定有界**。
+
 ## 閉包（closure）
 
 > $$S\subseteq X$$，$$d(S)$$為集合$$S$$的導集合（所有極限點的集合），定義閉包$$\overline{S} = S \cup d(S)$$。
@@ -124,12 +132,14 @@ Proof \(4\)
 * $$\therefore  d(S) \cup d(d(S))= d(S)$$
 * $$\therefore d(S \cup d(S))=d(S)$$  \(QED\).
 
-### 開集合為其閉包的真子集合
+### 開集合為其閉包的真子集
 
 > $$ S \subseteq X$$為開集合，則$$S \subset \overline{S}$$。
 
 *  因為$$S$$為開集合，所以$$S^c$$為閉集合，所以存在極限點$$x \in S^c$$, 且$$x \notin S$$。
 * 而閉包$$\overline{S} = S \cup d(S)$$，依定義$$x \in d(S)$$且$$x \notin S$$，則$$ S \subset \overline{S}$$。\(QED\)
+
+
 
 
 

@@ -98,6 +98,10 @@ proof 1:
 
 ![x&#x70BA;&#x5167;&#x9EDE;&#xFF0C;y&#x70BA;&#x908A;&#x754C;&#x9EDE;](../../.gitbook/assets/510px-interior_illustration-min.png)
 
+## 邊界集合（boundary set）
+
+> $$S \subseteq X$$，點$$p$$為集合$$S$$的邊界點，邊界集合記為$$\partial (S) = \{ p \in X | \forall r > 0 , N_r(p) \cap S \neq \emptyset \land N_r(p) \cap S^c \neq \emptyset \}$$
+
 ## 外點（exterior point）
 
 > 點$$p \in S^c$$，若滿足$$\exists r > 0 \ni N_r(p) \subset S^c$$，則稱$$p$$為集合$$S$$的外點（或$$p$$為集合$$S^c$$的內點 ）

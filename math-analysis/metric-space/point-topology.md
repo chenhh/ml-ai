@@ -107,7 +107,17 @@ proof 1:
 > 1. $$A \subset B$$不一定可得$$\partial(A) \subset \partial(B)$$。
 > 2. $$\partial(A) \cup \partial(B)$$不一定可得 $$\partial(A \cup B)$$。
 > 3. $$\partial(A) \cap \partial(B)$$不一定可得 $$\partial(A \cap B)$$。
+> 4. $$\partial(\emptyset)=\emptyset$$
+> 5. $$\partial(\mathbb{Q})=\mathbb{R}$$
 
+例如：
+
+* $$A=[1,2]$$的閉區間，$$\partial(A)=\{1,2\}$$
+* $$B=[0,3]$$的閉區間，$$\partial(B)=\{0,3\}$$
+* $$A \subseteq B$$但$$ \partial(A) \not \subset \partial(B) $$
+* $$\partial(A \cup B) = \{0,3\}$$, $$\partial(A) \cup \partial(B)=\{0,1,2,3\}$$
+* $$\partial (A \cap B) = \{1,2\}$$, $$\partial(A) \cap \partial(B) = \emptyset$$
+* 
 ## 外點（exterior point）
 
 > 點$$p \in S^c$$，若滿足$$\exists r > 0 \ni N_r(p) \subset S^c$$，則稱$$p$$為集合$$S$$的外點（或$$p$$為集合$$S^c$$的內點 ）

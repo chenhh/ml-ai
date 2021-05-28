@@ -191,8 +191,33 @@ proof \(2\):
 
 ### 稠密集合的性質
 
-> 1. • 若$$A$$在集合$$S$$中稠密\($$A \subseteq S \subseteq \overline{A}$$\)，且$$B$$為$$S$$中的開集合，則$$B \subseteq \overline(A \cap B) $$。
+> 1. • 若$$A$$在集合$$S$$中稠密（$$A \subseteq S \subseteq \overline{A}$$），且$$B$$為$$S$$中的開集合，則$$B \subseteq \overline(A \cap B) $$。
 > 2. 若$$A, B$$在集合$$S$$中稠密，且$$B$$為$$S$$中的開集合，則$$A \cap B$$在$$S$$中稠密。
+
+proof \(1\):
+
+* $$A$$在集合$$S$$中稠密，則$$S \subseteq A \subseteq \overline{S}$$
+* $$B$$為$$S$$中的開集合，由[閉包交集的性質](closed-set.md#bi-bao-jiao-ji-de-xing-zhi)得 $$B \cap \overline{A} \subseteq \overline{(A \cap B) }$$
+* 因為 $$B \subseteq S,\ S\subseteq A \Rightarrow B\subseteq A$$，所以
+* 所以 $$B=B \cap \overline{A} \subseteq \overline{(A\cap B)}$$  \(QED\)
+
+proof \(2\):
+
+* • $$A,B$$在集合$$S$$中稠密，則$$S \subseteq A \subseteq \overline{S}$$,  $$S \subseteq B \subseteq \overline{S}$$,  可得$$A \cap B \subseteq \overline{S}$$。
+
+  • 檢驗 $$S \subseteq A \cap B $$
+
+  	• 若$$A=S, B=S$$， 可得$$A \cap B=S$$
+
+  	• 若$$A \supset S, B=S$$，則 $$A \cap B=S$$
+
+  	• 若$$A=S, B \supset S$$，則 $$A \cap B=S$$
+
+  	• 若$$A \supset S, B \supset S$$，則 $$A \cap B \supseteq S $$
+
+  • 因此$$S \subseteq A \cap B \subseteq  \overline{S}$$  \(QED\).
+
+
 
 
 

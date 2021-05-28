@@ -215,9 +215,20 @@ proof \(2\):
 
   	• 若$$A \supset S, B \supset S$$，則 $$A \cap B \supseteq S $$
 
-  • 因此$$S \subseteq A \cap B \subseteq  \overline{S}$$  \(QED\).
+  • 因此$$S \subseteq A \cap B \subseteq  \overline{S}$$  \(QED\)
 
+## 可分離集合（separable set）
 
+> 給定度量空間$$(X,d)$$，$$X$$稱為可分離集合若存在可數子集合$$A \subseteq X$$, 且$$A$$在$$X$$中稠密\[（$$A \subseteq X \subseteq \overline{A}$$）。
 
+* 例如實數$$\mathbb{R}$$為可分離集合，因為存在有理數$$\mathbb{Q}$$在$$\mathbb{R}$$上稠密，且$$\mathbb{Q}$$為可數集合。
+* 歐式空間$$\mathbb{R}^n$$均為可分離集合。
+* **Lindelof覆蓋定理在可分離度量空間均成立**。
 
+## 連通集合與分離集合（connected and separated set）
+
+> * 給定度量空間$$(X,d)$$，$$A,B \subseteq X$$稱為分離集合若$$A \cap B^c=A^c \cap B=\emptyset$$。
+> * $$S \subseteq X$$稱為連通集合，若$$S$$不為兩個非空的分離集合的聯集， 即$$A \neq \emptyset$$, $$B \neq \emptyset$$,$$A \cap B \neq \emptyset$$。
+
+![&#x9023;&#x901A;&#x8207;&#x5206;&#x96E2;&#x96C6;&#x5408;](../../.gitbook/assets/220px-union_et_intersection_densembles-min.png)
 

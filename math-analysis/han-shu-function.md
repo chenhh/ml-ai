@@ -1,5 +1,9 @@
 # 函數\(function\)
 
+## 函數的定義與集合的性質
+
+詳見 [函數中的集合](set/function.md)。
+
 ## 連續函數的條件
 
 對於函數$$f: [a,b] \rightarrow \mathbb{R}$$

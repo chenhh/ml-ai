@@ -102,6 +102,12 @@ proof 1:
 
 > $$S \subseteq X$$，點$$p$$為集合$$S$$的邊界點，邊界集合記為$$\partial (S) = \{ p \in X | \forall r > 0 , N_r(p) \cap S \neq \emptyset \land N_r(p) \cap S^c \neq \emptyset \}$$
 
+### 邊界集合的性質
+
+> 1. $$A \subset B$$不一定可得$$\partial(A) \subset \partial(B)$$。
+> 2. $$\partial(A) \cup \partial(B)$$不一定可得 $$\partial(A \cup B)$$。
+> 3. $$\partial(A) \cap \partial(B)$$不一定可得 $$\partial(A \cap B)$$。
+
 ## 外點（exterior point）
 
 > 點$$p \in S^c$$，若滿足$$\exists r > 0 \ni N_r(p) \subset S^c$$，則稱$$p$$為集合$$S$$的外點（或$$p$$為集合$$S^c$$的內點 ）

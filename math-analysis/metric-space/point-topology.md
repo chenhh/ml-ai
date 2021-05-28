@@ -6,7 +6,7 @@
 
 ## 兩集合的距離
 
-> $$A,B \subseteq X$$, $$d(A,B)=\inf \{ d(x,y)| \forall x \in A, ~ y \in B\}$$
+> $$A,B \subseteq X$$, $$d(A,B)=\inf \{ d(x,y)| \forall x \in A, ~ \forall y \in B\}$$
 >
 > • 集合的距離為兩集合間最短的兩點間的距離。
 

@@ -116,3 +116,26 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 * $$\begin{aligned} \sin(2x) & = \sin(x+x) \\ &= \sin(x)\cos(x)+\cos(x)\sin(x)\\ &=2\sin(x)\cos(x) \end{aligned}$$\(QED\)
 * $$\cos(2x) = \cos(x+x) = \cos^2(x) - \sin^2(x)$$ \(QED\)
 
+## 半角公式
+
+> * $$\sin^2(x) = \frac{1 - \cos(2x)}{2}$$
+> * $$\cos^2(x)=\frac{1+ \cos(2x)}{2}$$
+
+* $$\cos(2x) = \cos^2(x) - \sin^2(x) = 1 - \sin^2(x) - \sin^2(x)$$
+* 移項可得  $$2 \sin^2(x) = 1 - \cos(2x)$$ \(QED\)
+* 同理
+* $$\cos(2x)=\cos^2(x)-\sin^2(x) = \cos^2(x) - (1 - \cos^2(x))$$
+* 移項可得 $$2 \cos^2(x) = 1 + \cos(2x)$$ \(QED\)
+
+## 餘弦定理（the law of cosine）
+
+> 給定任意三角形三邊長$$a,b,c$$，對應的角度分別為$$\alpha, \beta, \gamma$$，則可得關係式：
+>
+> * $$c^2 = a^2 + b^2 - 2ab \cos \gamma $$
+> * $$b^2 = a^2 + c^2 - 2ac \cos \beta$$
+> * $$a^2 = b^2 +c ^2 - 2bc \cos \alpha$$
+>
+> 當知道三角形的兩邊和一角時，餘弦定理可被用來計算第三邊的長，或是當知道三邊的長度時，可用來求出任何一個角。
+
+![&#x9918;&#x5F26;&#x5B9A;&#x7406;](../../.gitbook/assets/law-of-cosine-min.png)
+

@@ -40,6 +40,8 @@ description: Trigonometric Function
 
 ![&#x7279;&#x6B8A;&#x89D2;&#x5EA6;&#xFF08;30&#x3001;45&#x3001;60&#x5EA6;&#xFF09;&#x7684;&#x4E09;&#x89D2;&#x51FD;&#x6578;](../.gitbook/assets/spec_tri-func-min.png)
 
+![&#x7279;&#x6B8A;&#x89D2;&#x5EA6;&#x7684;&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x503C;](../.gitbook/assets/tri-func-spec-value-min.png)
+
 ## ASTC規則
 
 ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負值。
@@ -52,6 +54,28 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 
 
 ![ASTC&#x898F;&#x5247;](../.gitbook/assets/astc-rule-in-trigonometry-min.png)
+
+## 週期函數（periodic function）
+
+> $$f(x)$$稱為週期函數若存在$$p>0$$滿足$$f(x+p)=f(x), ~ \forall x$$，則滿足此最條件的最小$$p$$值稱為函數$$f$$的週期（period）。
+
+### 三角函數的週期
+
+* 週期為$$\pi$$：
+  * $$\tan (x + \pi) = \tan(x)$$
+  * $$\cot(x + \pi ) =\cot (x)$$
+* 週期為$$2\pi$$：
+  * $$\sin(x+2\pi) = \sin(x)$$
+  * $$\cos(x + 2\pi) = \cos(x)$$
+  * $$\sec(x+2\pi) = \sec(x)$$
+  * $$\csc(x + 2\pi) = \csc(x)$$
+* 奇函數：\($$f(x)=-f(x)$$，對稱於原點）
+  * $$\sin(-x) = - \sin(x)$$
+  * $$\tan\(-x\) = 
+
+
+
+
 
 
 

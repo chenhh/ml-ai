@@ -72,6 +72,32 @@ $$f,g:[a,b] \rightarrow \mathbb{R}$$為兩（任意）函數，則$$\forall x \i
 
 ![&#x5408;&#x6210;&#x51FD;&#x6578;](../.gitbook/assets/composite_function-min.png)
 
+## 函數的位移（shift of functions）
+
+> * 垂直移動：$$y=f(x)+k$$
+>   * $$k>0$$時，向上移動$$k$$單位。
+>   * $$k<0$$時，向下移動$$|k|$$單位。
+> * 水平移動：$$y=f(x+h)$$
+>   * $$h>0$$時，向左移動$$h$$單位。
+>   * $$h <0$$時，向右移動$$h$$單位。
+
+![&#x51FD;&#x6578;&#x5782;&#x76F4;&#x79FB;&#x52D5;](../.gitbook/assets/vertical_shift-min.png)
+
+![&#x51FD;&#x6578;&#x6C34;&#x5E73;&#x79FB;&#x52D5;](../.gitbook/assets/horizontal_shift-min.png)
+
+## 函數水平與垂直的縮放與映射（scaling and reflecting）
+
+> * 縮放 $$\forall c > 1$$
+>   * $$y=cf(x)$$，以係數$$c$$垂直拉伸函數圖形。
+>   * $$y=\frac{1}{c}f(x)$$，以係數$$c$$垂直壓縮函數圖形。
+>   * $$y=f(cx)$$，以係數$$c$$水平壓縮函數圖形。
+>   * $$y = f(\frac{x}{c})$$，以係數$$c$$水平拉伸函數圖形。
+> * 映射，$$c=-1$$
+>   * $$y=-f(x)$$，對稱於$$x$$軸的映射函數。
+>   * $$y=f(-x)$$，對旁於$$y$$軸的映射函數。
+
+![&#x51FD;&#x6578;&#x6C34;&#x5E73;&#x7E2E;&#x653E;&#x8207;&#x6620;&#x5C04;](../.gitbook/assets/strength_compress-min.png)
+
 ## 連續函數的條件
 
 對於函數$$f: [a,b] \rightarrow \mathbb{R}$$

@@ -81,3 +81,9 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 
 ![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x7684;&#x9031;&#x671F;](../.gitbook/assets/tri-period-plot-min.png)
 
+## 三角函數的等式
+
+* $$\sin^2(x)+\cos^2(x)=1$$
+
+![&#x659C;&#x908A;&#x70BA;1&#xFF0C;&#x9130;&#x908A;&#x70BA;&#x9918;&#x5F26;&#xFF0C;&#x5C0D;&#x908A;&#x70BA;&#x6B63;&#x5F26;](../.gitbook/assets/sin2x-cos2x-eq1-plot-min.png)
+

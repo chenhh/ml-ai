@@ -36,6 +36,8 @@ description: Trigonometric Function
 
 ![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x8D85;&#x904E;90&#x5EA6;&#x6642;&#x7684;&#x5B9A;&#x7FA9;](../.gitbook/assets/tri-func_over-angle-min.png)
 
+![&#x7279;&#x6B8A;&#x89D2;&#x5EA6;&#xFF08;30&#x3001;45&#x3001;60&#x5EA6;&#xFF09;&#x7684;&#x4E09;&#x89D2;&#x51FD;&#x6578;](../.gitbook/assets/spec_tri-func-min.png)
+
 
 
 

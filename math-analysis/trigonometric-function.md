@@ -69,13 +69,12 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
   * $$\cos(x + 2\pi) = \cos(x)$$
   * $$\sec(x+2\pi) = \sec(x)$$
   * $$\csc(x + 2\pi) = \csc(x)$$
-* 奇函數：\($$f(x)=-f(x)$$，對稱於原點）
+* 奇函數：\($$f(-x)=-f(x)$$，對稱於原點）
   * $$\sin(-x) = - \sin(x)$$
-  * $$\tan\(-x\) = 
-
-
-
-
-
-
+  * $$\tan(-x) = -\tan(x)$$
+  * $$\csc(-x) = - \csc(x)$$
+  * $$\cot(-x) =  -\cot(x)$$
+* 偶函數：（$$f(-x) = f(x)$$，對稱於$$y$$軸）
+  * $$\cos(-x) = \cos(x)$$
+  * $$\sec(-x) = \sec(x)$$
 

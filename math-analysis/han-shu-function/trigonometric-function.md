@@ -149,3 +149,10 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 
 證明詳見[wiki](https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%BC%A6%E5%AE%9A%E7%90%86)。
 
+## 特殊的三角不等式
+
+> * $$-|x| \leq \sin(x) \leq |x|$$
+> * $$-|x| \leq 1 - \cos(x) \leq |x|$$
+
+![&#x7279;&#x6B8A;&#x7684;&#x4E09;&#x89D2;&#x4E0D;&#x7B49;&#x5F0F;](../../.gitbook/assets/special_tri_ineq-min.png)
+

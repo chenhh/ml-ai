@@ -75,6 +75,9 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
   * $$\csc(-x) = - \csc(x)$$
   * $$\cot(-x) =  -\cot(x)$$
 * 偶函數：（$$f(-x) = f(x)$$，對稱於$$y$$軸）
+
   * $$\cos(-x) = \cos(x)$$
   * $$\sec(-x) = \sec(x)$$
+
+![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x7684;&#x9031;&#x671F;](../.gitbook/assets/tri-period-plot-min.png)
 

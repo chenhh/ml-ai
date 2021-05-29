@@ -17,3 +17,7 @@ description: Trigonometric Function
 
 ![&#x6B63;&#x503C;&#x8207;&#x8CA0;&#x503C;&#x7684;&#x5F91;&#x5EA6;](../.gitbook/assets/angle-min.png)
 
+![&#x8D85;&#x904E;360&#x5EA6;&#x7684;&#x89D2;&#x5EA6;&#xFF08;&#x5F91;&#x5EA6;&#xFF09;](../.gitbook/assets/angle_rad_-min.png)
+
+
+

@@ -74,9 +74,13 @@ proof &lt;=
 >
 > 定義2：$$\overline{S}=\cap\{ F \subseteq X | S \subset F \text{ and } F \text{ is closed set}  \}$$，即閉包為包含$$S$$的最小閉集合。
 
+例如在度量空間$$(\mathbb{R}, d(x,y)=|x-y|)$$，$$E=(1,3) \cup \{6\}$$，則$$\overline{E}=[1,3] \cup \{6\}$$，極限點為$$d(E)=\{ 1,3\}$$，孤立點為$$\{6\}$$，內點為$$(1,3)$$，邊界點$$\partial (E)=\{1,3,6\}$$。
+
 ### 閉集合等於其閉包
 
 > $$S \subseteq X$$為閉集合 $$\Leftrightarrow$$$$S= \overline{S}=S \cup d(S)$$
+>
+> 因此閉包$$\overline{S}$$包含了$$S$$的所有極限點（所有附著點）。
 
 proof =&gt; 
 

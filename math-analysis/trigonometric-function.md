@@ -83,7 +83,12 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 
 ## 三角函數的等式
 
-* $$\sin^2(x)+\cos^2(x)=1$$
+> $$\sin^2(x)+\cos^2(x)=1$$
 
 ![&#x659C;&#x908A;&#x70BA;1&#xFF0C;&#x9130;&#x908A;&#x70BA;&#x9918;&#x5F26;&#xFF0C;&#x5C0D;&#x908A;&#x70BA;&#x6B63;&#x5F26;](../.gitbook/assets/sin2x-cos2x-eq1-plot-min.png)
+
+> $$1+ \tan^2(x)=\sec^2(x)$$
+
+* $$\tan(x)=\frac{\sin(x)}{\cos(x)}$$，$$\sec(x)=\frac{1}{\cos(x)}$$
+* $$\begin{aligned} 1+\tan^2(x) & = 1+ \frac{\sin^2(x)}{\cos^2(x)} \\ & = \frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)} \\ &= \frac{1}{\cos^2(x)}\\ &=\sec^2(x) \end{aligned}$$
 

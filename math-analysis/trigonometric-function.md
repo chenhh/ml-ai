@@ -36,9 +36,22 @@ description: Trigonometric Function
 
 ![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x8D85;&#x904E;90&#x5EA6;&#x6642;&#x7684;&#x5B9A;&#x7FA9;](../.gitbook/assets/tri-func_over-angle-min.png)
 
+
+
 ![&#x7279;&#x6B8A;&#x89D2;&#x5EA6;&#xFF08;30&#x3001;45&#x3001;60&#x5EA6;&#xFF09;&#x7684;&#x4E09;&#x89D2;&#x51FD;&#x6578;](../.gitbook/assets/spec_tri-func-min.png)
 
+## ASTC規則
 
+ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負值。
+
+* 第一象限內任何一個角的四種三角函數值\(all\)都是「+」；
+* 第二象限內只有正弦\(sine\)是「+」，其餘全部是「-」；
+* 第三象限內只有正切\(tan\)是「+」，其餘全部是「-」；
+* 第四象限內只有餘弦\(cos\)是「+」，其餘全部是「-」。
+
+
+
+![ASTC&#x898F;&#x5247;](../.gitbook/assets/astc-rule-in-trigonometry-min.png)
 
 
 

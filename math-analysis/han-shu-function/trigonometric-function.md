@@ -137,5 +137,15 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 >
 > 當知道三角形的兩邊和一角時，餘弦定理可被用來計算第三邊的長，或是當知道三邊的長度時，可用來求出任何一個角。
 
+證明詳見[Wiki](https://zh.wikipedia.org/wiki/%E9%A4%98%E5%BC%A6%E5%AE%9A%E7%90%86)。
+
 ![&#x9918;&#x5F26;&#x5B9A;&#x7406;](../../.gitbook/assets/law-of-cosine-min.png)
+
+## 正弦定理（the law of sine）
+
+> 對於任意三角形$$ABC$$，令$$r$$為外接圓的半徑，三邊$$a,b,c$$對應的角度分別為$$\alpha , \beta , \gamma$$，則有：
+>
+> $$\frac{a}{\sin \alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma}= 2r$$
+
+證明詳見[wiki](https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%BC%A6%E5%AE%9A%E7%90%86)。
 

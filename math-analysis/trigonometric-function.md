@@ -19,5 +19,22 @@ description: Trigonometric Function
 
 ![&#x8D85;&#x904E;360&#x5EA6;&#x7684;&#x89D2;&#x5EA6;&#xFF08;&#x5F91;&#x5EA6;&#xFF09;](../.gitbook/assets/angle_rad_-min.png)
 
+## 三角函數
+
+* hypotenuse: 斜邊，opposite: 對邊，adjacent: 鄰邊。
+
+![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x7684;&#x5B9A;&#x7FA9;](../.gitbook/assets/tri-func-min.png)
+
+* $$\sin \theta = \frac{y}{r}$$, $$\cos \theta = \frac{x}{r}$$
+* $$\tan \theta = \frac{y}{x}$$, $$\cot \theta = \frac{x}{y}$$
+* $$\sec \theta = \frac{r}{x}$$, $$csc \theta = \frac{r}{y}$$
+
+可得關係：
+
+* $$\tan \theta =  \frac{\sin \theta} {\cos \theta}$$, $$\cot \theta = \frac{1}{\tan \theta} = \frac{\cos \theta} {\sin \theta}$$
+* $$\sec \theta = \frac{1}{\cos \theta}$$, $$\csc \theta = \frac{1}{\sin \theta}$$
+
+![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x8D85;&#x904E;90&#x5EA6;&#x6642;&#x7684;&#x5B9A;&#x7FA9;](../.gitbook/assets/tri-func_over-angle-min.png)
+
 
 

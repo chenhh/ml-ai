@@ -17,6 +17,7 @@
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series.md)
 * [函數\(function\)](math-analysis/han-shu-function.md)
+* [三角函數](math-analysis/trigonometric-function.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space/README.md)
   * [點拓樸集](math-analysis/metric-space/point-topology.md)
   * [開集合](math-analysis/metric-space/open-set.md)

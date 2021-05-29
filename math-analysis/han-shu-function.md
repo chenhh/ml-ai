@@ -41,7 +41,17 @@
 
 ![&#x4EE3;&#x6578;&#x51FD;&#x6578;](../.gitbook/assets/algebraic_function-min.png)
 
+### 三角函數\(trigonometric function\)
 
+![&#x4E09;&#x89D2;&#x51FD;&#x6578;](../.gitbook/assets/trigonometric-function-min.png)
+
+### 指數函數\(exponential function\)
+
+![&#x6307;&#x6578;&#x51FD;&#x6578;](../.gitbook/assets/exp-function-min.png)
+
+### 對數函數\(logarithmic function\)
+
+![&#x5C0D;&#x6578;&#x51FD;&#x6578;](../.gitbook/assets/log_function-min.png)
 
 ## 連續函數的條件
 

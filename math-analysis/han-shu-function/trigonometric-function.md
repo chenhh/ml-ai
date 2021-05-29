@@ -97,3 +97,16 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 * $$\cot(x) = \frac{\cos(x)}{\sin(x)}$$, $$\csc(x)=\frac{1}{\sin(x)}$$
 * $$\begin{aligned} 1+ \cot^2(x) & = 1+ \frac{\cos^2(x)}{\sin^2(x)} \\&= \frac{\sin^2(x)+\cos^2(x)}{\sin^2(x)} \\ &=\frac{1}{\sin^2(x)} \\ &=\csc^2(x) \end{aligned}$$\(QED\)
 
+## 和角公式
+
+> * $$\sin(x+y)=\sin(x)\cos(y)+\cos(x)\sin(y)$$
+> * $$\cos(x+y)=\cos(x)\cos(y) - \sin(x)\sin(y)$$
+
+可用複數乘法等於兩複數角度和得出
+
+* 由棣美弗定理得 $$e^{ix} = \cos(x)+i \sin(x)$$
+* $$\begin{aligned} e^{i(x+y)}& =e^{ix} e^{iy} \\&=(\cos(x) + i \sin(x))(\cos(y) + i \sin(y)) \\ & =(\cos(x)\cos(y)-\sin(x)\sin(y))+\\ &i(\sin(x)\cos(y) + \cos(x)\sin(y)) \end{aligned}$$
+* \(QED\)
+
+
+

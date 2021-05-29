@@ -42,6 +42,10 @@ description: Trigonometric Function
 
 ![&#x7279;&#x6B8A;&#x89D2;&#x5EA6;&#x7684;&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x503C;](../../.gitbook/assets/tri-func-spec-value-min.png)
 
+## 三角函數的圖形
+
+![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x7684;&#x5716;&#x5F62;](../../.gitbook/assets/tri_func_plot-min.png)
+
 ## ASTC規則
 
 ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負值。

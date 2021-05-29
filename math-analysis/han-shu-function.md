@@ -53,6 +53,25 @@
 
 ![&#x5C0D;&#x6578;&#x51FD;&#x6578;](../.gitbook/assets/log_function-min.png)
 
+## 函數的四則運算
+
+$$f,g:[a,b] \rightarrow \mathbb{R}$$為兩（任意）函數，則$$\forall x \in [a,b], s,t \in \mathbb{R} $$
+
+* 函數和法則：$$(f+g)(x)=f(x)+g(x)$$，函數$$f+g$$為函數$$f$$與函數$$g$$的和。
+* 函數差法則： $$(f−g)(x)=f(x)−g(x)$$，函數$$f−g$$為函數$$f$$與函數$$g$$的差。
+* 函數齊法則：$$(tf)(x)=tf(x)$$， 函數$$tf$$為函數$$f$$與實數$$t$$的係數積（scalar multiplication）。
+* 函數積法則：$$(fg)(x)=f(x)g(x)$$，函數$$fg$$為函數$$f$$與函數$$g$$的點態積（pointwise multiplication）。
+* 函數商法則：若$$g(x) \neq 0$$, 則$$(f/g)(x)=f(x)/(g(x))$$，函數$$f/g$$為函數$$f$$與函數$$g$$的商。
+* 函數線性法則：$$(sf+tg)(x)=sf(x)+tg(x)$$，函數$$sf+tg$$為函數$$f$$與函數$$g$$的線性組合（linear combination）。
+
+## 合成函數（composite function）
+
+> $$f:A \rightarrow B, g:B \rightarrow C$$為兩函數，則合成函數$$g \circ f: A \rightarrow C$$定義為$$ \forall x \in A, (g \circ f)(x)=g(f(x)) $$
+>
+> 註：合成函數無交換性，即 $$ g \circ f \neq f \circ g$$
+
+![&#x5408;&#x6210;&#x51FD;&#x6578;](../.gitbook/assets/composite_function-min.png)
+
 ## 連續函數的條件
 
 對於函數$$f: [a,b] \rightarrow \mathbb{R}$$

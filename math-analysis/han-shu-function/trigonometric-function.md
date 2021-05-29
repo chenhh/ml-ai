@@ -108,5 +108,11 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 * $$\begin{aligned} e^{i(x+y)}& =e^{ix} e^{iy} \\&=(\cos(x) + i \sin(x))(\cos(y) + i \sin(y)) \\ & =(\cos(x)\cos(y)-\sin(x)\sin(y))+\\ &i(\sin(x)\cos(y) + \cos(x)\sin(y)) \end{aligned}$$
 * \(QED\)
 
+## 倍角公式
 
+> * $$\sin(2x)=2\sin(x)\cos(x)$$
+> * $$\cos(2x)=\cos^2(x)-\sin^2(x)$$
+
+* $$\begin{aligned} \sin(2x) & = \sin(x+x) \\ &= \sin(x)\cos(x)+\cos(x)\sin(x)\\ &=2\sin(x)\cos(x) \end{aligned}$$\(QED\)
+* $$\cos(2x) = \cos(x+x) = \cos^2(x) - \sin^2(x)$$ \(QED\)
 

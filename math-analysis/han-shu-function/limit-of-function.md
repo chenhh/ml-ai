@@ -20,7 +20,7 @@
 > * 極限存在時，則$$x$$從任意方向逼近$$c$$時，其函數值也都會趨近於$$L$$。
 > * 極限存在不代表連續，只有在$$f(c)=L$$時才為連續。
 >
-> • 更一般化的函數定義為給定度量空間$$(S, d_s ), (T,d_T )$$，函數$$f:S \rightarrow T$$，$$A \subseteq S$$，$$c \in A$$為極限點，$$L \in T$$，則$$\lim_{ x \rightarrow c} f(x) = L$$ 若且唯若 $$\forall \epsilon > 0 ~ \exists \delta > 0 \ni d_T(f(x), L) < \epsilon $$ whenever $$pc\neq x, x\in A, d_S(x,c) <\delta$$。
+> 更一般化的函數定義為給定度量空間$$(S, d_s ), (T,d_T )$$，函數$$f:S \rightarrow T$$，$$A \subseteq S$$，$$c \in A$$為極限點，$$L \in T$$，則$$\lim_{ x \rightarrow c} f(x) = L$$ 若且唯若 $$\forall \epsilon > 0 ~ \exists \delta > 0 \ni d_T(f(x), L) < \epsilon $$ whenever $$pc\neq x, x\in A, d_S(x,c) <\delta$$。
 >
 > 也可以用球來定義，$$f(x)\in B_{T}(L, \epsilon)$$ whenever $$x \in B_S(c, \delta) \cap A, ~ x \neq p$$
 
@@ -40,7 +40,32 @@
 
 > $$\exists \epsilon > 0 ~ \forall \delta > 0 \ni |f(x) - L| \geq \epsilon , \forall d(x, c) < \delta$$時，稱函數$$f$$在點$$c$$的極限不存在。
 >
-> •即$$x$$從任意方向逼近於$$c$$時，其函數值不一定趨近於$$L$$。
+> 即$$x$$從任意方向逼近於$$c$$時，其函數值不一定趨近於$$L$$。
+>
+> 更一般化的函數定義$$f: S \rightarrow T$$, $$ p \in A \subseteq S$$的極限不存在，即 $$\exists \epsilon > 0~ \forall \delta > 0 \ni d_T(f(c), L) \geq \epsilon, \forall d_S(x, c) < \delta$$。
+
+### 函數極限存在的狀態
+
+討論函數極限是否存在，是討論$$x\neq c$$時但$$d(x,c) \rightarrow 0$$的收斂情形，因此可分為$$\displaystyle \lim_{x \rightarrow c}f(x) $$與$$f(c)$$的存在性討論。
+
+| 編號 | 函數 | 極限 | 備註 |
+| :--- | :--- | :--- | :--- |
+|  | $$f(c)$$ | $$\displaystyle \lim_{x \rightarrow c} f(x)$$ |  |
+| 1 | 存在 | 存在，$$\displaystyle \lim_{x \rightarrow c} f(x) =f(c)$$ | 連續函數 |
+| 2 | 存在 | 存在，但 $$\displaystyle \lim_{x \rightarrow c} f(x) \neq  f(c)$$ | $$f(c)$$為單獨的跳躍點 |
+| 3 | 存在 | 不存在 | $$f(c)$$為跳躍點 |
+| 4 | 不存在 | 存在 | $$f(c)$$為斷點 |
+| 5 | 不存在 | 不存在 | 函數在$$c$$未定義或發散 |
+
+![f\(x0\)&#x8207;&#x6975;&#x9650;&#x5747;&#x5B58;&#x5728;&#xFF0C;&#x4F46;&#x4E0D;&#x76F8;&#x7B49;](../../.gitbook/assets/case2-min.png)
+
+![&#x55AE;&#x9EDE;&#x4E0D;&#x9023;&#x7E8C;&#x4E14;&#x6975;&#x9650;&#x4E0D;&#x5B58;&#x5728;](../../.gitbook/assets/case3-min.png)
+
+![f&#x5728;a&#x9EDE;&#x6C92;&#x6709;&#x5B9A;&#x7FA9;&#x6642;&#x5247;&#x4E0D;&#x5B58;&#x5728;&#xFF1B; &#x4F46;&#x5DE6;&#x6975;&#x9650;&#x7B49;&#x65BC;&#x53F3;&#x6975;&#x9650;&#xFF0C;&#x56E0;&#x6B64;&#x6975;&#x9650;&#x5B58;&#x5728;&#x3002;](../../.gitbook/assets/case4-min.png)
+
+![&#x51FD;&#x6578;&#x5728;&#x9EDE;a&#x8207;b&#x5747;&#x70BA;&#x767C;&#x6563; &#x4E14;&#x6975;&#x9650;&#x4E5F;&#x767C;&#x6563;](../../.gitbook/assets/case5.gif)
+
+
 
 
 

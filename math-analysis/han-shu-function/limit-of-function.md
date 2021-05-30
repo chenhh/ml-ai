@@ -69,23 +69,23 @@
 
 > $$(X,d)$$為度量空間，$$f: X \rightarrow \mathbb{R}$$為函數，$$c \in X$$，則
 >
-> $$ \displaystyle \lim_{x \rightarrow c} f(x) = a$$$$\Leftrightarrow$$對任意數列 $$\{x_n\} \subseteq X$$，若滿足 $$\displaystyle \lim_{ n \rightarrow \infty }x_n = c$$，則$$ \displaystyle \lim_{ n \rightarrow \infty} f(x_n) = a$$
+> $$ \displaystyle \lim_{x \rightarrow c} f(x) = L$$$$\Leftrightarrow$$對任意數列 $$\{x_n\} \subseteq X$$，若滿足 $$\displaystyle \lim_{ n \rightarrow \infty }x_n = c$$，則$$ \displaystyle \lim_{ n \rightarrow \infty} f(x_n) = L$$
 >
 > 給定度量空間 $$(S, d_S), (T, d_T)$$，$$c \in A \subseteq S$$為極限點，$$a \in T$$，更一般化的函數$$f: S \rightarrow T$$，
 >
-> $$\displaystyle \lim_{x \rightarrow c}f(x) = a$$$$\Leftrightarrow$$$$\displaystyle \lim_{n \rightarrow \infty} f(x_n) = a$$或 $$\displaystyle \lim_{n \rightarrow \infty} f(x_n)=f(\lim_{n \rightarrow \infty} x_n)$$
+> $$\displaystyle \lim_{x \rightarrow c}f(x) = L$$$$\Leftrightarrow$$$$\displaystyle \lim_{n \rightarrow \infty} f(x_n) = L$$或 $$\displaystyle \lim_{n \rightarrow \infty} f(x_n)=f(\lim_{n \rightarrow \infty} x_n)$$
 
 proof =&gt;
 
-* $$\displaystyle  \lim_{x \rightarrow c}⁡f(x)=a \Leftrightarrow  \forall \epsilon >0~  \exists \delta >0 \ni |f(x)−a|< \epsilon ~ \forall d(x,c)<\delta $$
+* $$\displaystyle  \lim_{x \rightarrow c}⁡f(x)=L\Leftrightarrow  \forall \epsilon >0~  \exists \delta >0 \ni |f(x)−L|< \epsilon ~ \forall d(x,c)<\delta $$
 * 若$$\lim_{n \rightarrow \infty}⁡x_n =c $$，則$$ \exists n_0 \in \mathbb{N} \ni d(x_n,c)< \delta, \forall n \geq n_0 $$
-* 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)<\delta$$，可得$$|f(x_n )−a|<\epsilon$$，即$$\lim_{n \rightarrow \infty}⁡f(x_n)=a$$ \(QED\)
+* 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)<\delta$$，可得$$|f(x_n )−L|<\epsilon$$，即$$\lim_{n \rightarrow \infty}⁡f(x_n)=L$$ \(QED\)
 
 proof &lt;=
 
-* 若$$ \lim_{x \rightarrow c} ⁡f(x) \neq a$$ 則 $$\exists \epsilon>0 ~\forall \delta>0 \ni |f(x)−a| \geq \epsilon,~ d(x,c)< \delta $$
+* 若$$ \lim_{x \rightarrow c} ⁡f(x) \neq L$$ 則 $$\exists \epsilon>0 ~\forall \delta>0 \ni |f(x)−L| \geq \epsilon,~ d(x,c)< \delta $$
 * 若 $$\lim_{n \rightarrow \infty} x_n=c $$，則$$ \exists n_0 \in \mathbb{N} \ni d(x_n,c)<\delta, ~ \forall n \geq n_0 $$
-* 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)< \delta$$，存在$$\epsilon >0 \ni |f(x_n )−a| \geq \epsilon$$, 即$$\lim_{n \rightarrow \infty}⁡f(x_n)  \neq a$$ \(QED\)
+* 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)< \delta$$，存在$$\epsilon >0 \ni |f(x_n )−L| \geq \epsilon$$, 即$$\lim_{n \rightarrow \infty}⁡f(x_n)  \neq L$$ \(QED\)
 
 
 

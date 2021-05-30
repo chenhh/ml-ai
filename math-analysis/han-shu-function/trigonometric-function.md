@@ -143,7 +143,7 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 
 ![&#x9918;&#x5F26;&#x5B9A;&#x7406;](../../.gitbook/assets/law-of-cosine-min.png)
 
-proof method 1：三角函數
+**proof：**
 
 * 在邊$$c$$上投影可得 $$c = a \cos\beta + b \cos \alpha$$，所以$$c^2 = ac \cos \beta + bc \cos \alpha$$
 * 同理可得
@@ -160,7 +160,44 @@ proof method 1：三角函數
 >
 > $$\frac{a}{\sin \alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma}= 2r$$
 
-證明詳見[wiki](https://zh.wikipedia.org/wiki/%E6%AD%A3%E5%BC%A6%E5%AE%9A%E7%90%86)。
+proof part 1：
+
+* 做一個邊長為$$a,b,c$$的三角形，對應角分別是$$A,B,C$$。從角$$C$$向$$c$$邊做垂線，得到一個長度為$$h$$的垂線和兩個直角三角形。
+* 可得 $$\sin A = \frac{h}{b}$$, $$\sin B = \frac{h}{a}$$，所以$$h = b \sin A = a \sin B$$，整理後得 $$\frac{\sin A}{a} = \frac{\sin B}{b}$$。
+* 同理可得 $$\frac{\sin B}{b} = \frac{\sin C}{c}$$，所以$$\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$$。\(QED\)
+
+![&#x6B63;&#x5F26;&#x5B9A;&#x7406;&#x8B49;&#x6CD5;](../../.gitbook/assets/law_of_sines_proof-min.png)
+
+proof part 2：
+
+作$$\triangle ABC$$的外接圓，設半徑為$$R$$。
+
+角$$A$$為銳角時：
+
+* 取點$$D$$使得$$BD$$為通過外接圓心的直徑。
+* 角$$A$$與$$D$$對應到的弧均為$$BC$$，因此$$\angle A = \angle D$$。
+* 由於直線$$BD= 2R$$，角$$\angle BCD = \frac{\pi}{2}$$，得
+  * $$\sin \angle D = \frac{a}{2R}$$, $$\sin \angle A = \frac{a}{2R}$$
+  * $$\therefore  \frac{a}{\sin \angle A} = 2R$$ \(QED\)
+
+![&#x89D2;A&#x70BA;&#x92B3;&#x89D2;](../../.gitbook/assets/law-of-sine-1-min.png)
+
+角$$A$$為直角：
+
+* 可得直線$$BC=2R$$為直徑，因此 $$\sin \angle A = \sin \frac{\pi}{2} = 1$$。
+* 可得$$\sin \angle A = \frac{a}{2R}=1$$，即$$\frac{a}{\sin \angle A}=2R$$ \(QED\)
+
+![&#x89D2;A&#x70BA;&#x76F4;&#x89D2;](../../.gitbook/assets/law-of-sine-2-min.png)
+
+角$$A$$為鈍角：
+
+* 線段$$BD=2R$$為外接圓的直徑，因為根據圓內接四邊形對角互補的性質，可得$$\angle D = \pi - \angle BAC$$，所以$$\sin \angle D = \sin \angle BAC$$。
+* 因為$$\sin \angle D = \frac{a}{2R}$$，所以$$\sin  \angle BAC = \frac{a}{2R}$$
+* 整理可得$$\frac{a}{\sin \angle BAC} = 2R$$ \(QED\)
+
+![&#x89D2;A&#x70BA;&#x920D;&#x89D2;](../../.gitbook/assets/law-of-siine-3-min.png)
+
+
 
 ## 特殊的三角不等式
 

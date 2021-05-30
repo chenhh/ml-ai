@@ -135,6 +135,27 @@ proof 極限的加、減法：
 * $$|f(x)+g(x)−L−M| \leq |f(x)−L|+|g(x)−M|<\epsilon /2+ \epsilon /2=\epsilon \text{ if } d(x,c)<\delta $$
 * $$\displaystyle \therefore \lim_{x \rightarrow c}⁡(f(x)+g(x))=\lim_{x \rightarrow c}⁡ f(x)+\lim_{x \rightarrow c}⁡ g(x)=L+M$$ \(QED\)
 
+Proof 極限與常數的乘積:
+
+* $$\lim_{x \rightarrow c}f(x)=L \Leftrightarrow \forall \epsilon>0~ \exists \delta>0 \ni |f(x)−L|<\epsilon ~ \forall d(x,c)<\delta $$
+* 可得 $$\forall \epsilon>0,|kf(x)−kL|=|k||f(x)−L|<\epsilon/|k| , d(x,c)<\delta $$
+* $$\therefore \forall k \in \mathbb{R}, \lim_{x \rightarrow c}(kf(x))=k \lim_{x \rightarrow c}⁡f(x)=kL $$\(QED\)
+
+Proof 極限乘法:
+
+* $$|f(x)g(x)−LM|=|f(x)g(x)−Lg(x)+Lg(x)−LM| \leq |f(x)−L||g(x)|+|L||g(x)−M|$$
+* $$\because \lim_{x \rightarrow c}⁡g(x)=M \Leftrightarrow \text{ given } \epsilon=1 ~ \exists \delta_1>0 \ni |g(x)−M|<1, ~\forall d(x,c)<\delta_1 $$ 
+* $$\therefore |g(x)|−|M|≤|(|g(x)|−|M|)|≤|g(x)−M|<1 $$
+*  即$$|g(x)|≤|M|+1 $$
+* $$ \lim_{x\rightarrow c} g(x)=M \Leftrightarrow \forall \epsilon >0 ~ \exists \delta_2>0 \ni |g(x)−M|<\epsilon/(2|L|+1) ~ \forall d(x,c)<\delta_2 $$
+* $$ \lim_{x \rightarrow c}⁡ f(x)=L \Leftrightarrow \forall \epsilon >0 ~\exists \delta_3>0 \ni |f(x)−L|<\epsilon/(2|M|+1)  ∀d(x,c)<\delta_3 $$
+* 取$$\delta=\min \{ \delta_1, \delta_2, \delta_3\}$$，若$$ d(x,c)<\delta$$則
+* $$\begin{aligned} |f(x)g(x)−LM| &=|f(x)g(x)−Lg(x)+Lg(x)−LM| \\& \leq |f(x)−|L||g(x)|+|L||g(x)−M|  \\ & \leq \epsilon(|M|+1)/2(|M|+1) +|L|\epsilon/2(|L|+1) \\&=\epsilon \end{aligned}$$ \(QED\).
+
+
+
+
+
 
 
 ### 多項式的極限（limits of polynomials ）

@@ -87,6 +87,32 @@ proof &lt;=
 * 若 $$\lim_{n \rightarrow \infty} x_n=c $$，則$$ \exists n_0 \in \mathbb{N} \ni d(x_n,c)<\delta, ~ \forall n \geq n_0 $$
 * 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)< \delta$$，存在$$\epsilon >0 \ni |f(x_n )−L| \geq \epsilon$$, 即$$\lim_{n \rightarrow \infty}⁡f(x_n)  \neq L$$ \(QED\)
 
+## 函數極限非零效應（nonzero effect for limits）
+
+> 當函數極限存在，且$$x$$逐漸逼近$$c$$時，則函數值絕對值必定大於收斂點絕對值一半以上。
+>
+> $$(X,d)$$為度量空間，$$f:X \rightarrow \mathbb{R}$$為一函數，$$c \in X$$滿足$$\displaystyle \lim_{x \rightarrow c}⁡ f(x)=L $$
+>
+> 1. 若$$L>0$$，則$$ \exists \delta >0,~ 0<d(x,c)<\delta \Rightarrow f(x) \geq \frac{L}{2} $$
+> 2. 若$$ L<0$$，則$$ \exists \delta>0, ~ 0<d(x,c)< \delta \Rightarrow f(x) \leq \frac{L}{2} $$
+> 3. 若$$ L \neq 0$$，則$$\exists \delta>0,~ 0<d(x,c)<\delta \Rightarrow|f(x)|\geq \frac{|L|}{2} $$
+
+proof:
+
+* $$\displaystyle \lim_{x \rightarrow c}f(x)=L \Leftrightarrow \forall \epsilon>0 ~\exists \delta >0 \ni |f(x)−L|<\epsilon ~\forall d(x,c)<\delta $$
+
+1. 給定$$\epsilon=L/2$$, 
+
+* 則存在 $$\delta>0 \ni |f(x)−L|<L/2,~ 0<d(x,c)<\delta $$
+* $$f(x)−L|<L/2 \Leftrightarrow −L/2<f(x)−L<L/2  \text{ and } L>0  $$
+* $$\therefore f(x) \geq L/2$$  \(QED\)
+
+同理可證明2,3。
+
+
+
+![&#x51FD;&#x6578;&#x6975;&#x9650;&#x975E;&#x96F6;&#x6548;&#x61C9;](../../.gitbook/assets/nonzero-effect-for-limit-min.png)
+
 
 
 

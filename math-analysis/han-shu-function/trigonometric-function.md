@@ -199,6 +199,22 @@ proof part 2：
 
 
 
+## 海龍公式（Heron's formula）
+
+> 給一個三角形的三邊長，可以用海龍公式計算出這個三角形的面積。
+>
+> 給定$$\triangle ABC$$的三邊長$$a,b,c$$，令$$s=\frac{a+b+c}{2}$$，則面積$$A=\sqrt{s(s-a)(s-b)(s-c)}$$。
+>
+> 中國古代數學家秦九韶的公式為：$$A = \sqrt{\frac{1}{4}[a^2 c^2  - (\frac{a^2+c^2-b^2}{2})^2]}, ~ a \geq b \geq c$$
+
+proof（餘弦定理）：
+
+* $$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$
+* 由$$\sin^2 x+ \cos^2 x = 1$$得 $$\sin C = \sqrt{1 - \cos^2 C}$$
+* 整理後可得 $$\sin C = \frac{2}{ab}\sqrt{s(s-a)(s-b)(s-c)}$$, $$s=\frac{a+b+c}{2}$$。
+* 三角形的面積
+* $$\begin{aligned} A &= \frac{1}{2} ab \sin C \\&= \frac{ab}{2} \frac{2}{ab} \sqrt{s(s-a)(s-b)(s-c}\\&=\sqrt{s(s-a)(s-b)(s-c} \end{aligned}$$\(QED\)
+
 ## 特殊的三角不等式
 
 > * $$-|x| \leq \sin(x) \leq |x|$$

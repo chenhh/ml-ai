@@ -28,6 +28,14 @@
 
 ![&#x5169;&#x500B;&#x5EA6;&#x91CF;&#x7A7A;&#x9593;&#x51FD;&#x6578;&#x6975;&#x9650;&#x7684;epsilon-delta&#x5B9A;&#x7FA9;](../../.gitbook/assets/metric-limit-epsilon-delta-min.png)
 
+### epsilon-delta逼進的過程
+
+![epsilon&#x8F03;&#x5927;&#x6642;&#xFF0C;delta&#x4E5F;&#x8F03;&#x5BEC;&#x9B06;](../../.gitbook/assets/epsilon-delta-1-min.png)
+
+![epsilon&#x7E2E;&#x5C0F;&#x6642;&#xFF0C;delta&#x4E5F;&#x8981;&#x7E2E;&#x5C0F;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x7B49;&#x6BD4;&#x4F8B;](../../.gitbook/assets/epsilon-delta-2-min.png)
+
+![epsilon&#x975E;&#x5E38;&#x5C0F;&#xFF0C;&#x8B93;f\(x\)&#x63A5;&#x8FD1;L&#x6642;&#xFF0C;delta&#x5340;&#x9593;&#x4E5F;&#x5F88;&#x5C0F;&#xFF0C;&#x6703;&#x8B93;x&#x63A5;&#x8FD1;c](../../.gitbook/assets/epsilon-delta-3-min.png)
+
 
 
 

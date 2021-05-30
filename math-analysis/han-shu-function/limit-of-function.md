@@ -6,6 +6,8 @@
 
 ![&#x5E73;&#x5747;&#x8B8A;&#x5316;&#x7387;](../../.gitbook/assets/average-change-of-rate-min.png)
 
+![&#x7531;&#x5272;&#x7DDA;&#x6F38;&#x8FD1;&#x5230;&#x5207;&#x7DDA;&#x7684;&#x904E;&#x7A0B;](../../.gitbook/assets/secant-to-tangent-min.png)
+
 
 
 

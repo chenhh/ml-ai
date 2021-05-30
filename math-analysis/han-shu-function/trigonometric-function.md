@@ -139,11 +139,20 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 > * $$b^2 = a^2 + c^2 - 2ac \cos \beta$$
 > * $$a^2 = b^2 +c ^2 - 2bc \cos \alpha$$
 >
-> 當知道三角形的兩邊和一角時，餘弦定理可被用來計算第三邊的長，或是當知道三邊的長度時，可用來求出任何一個角。
-
-證明詳見[Wiki](https://zh.wikipedia.org/wiki/%E9%A4%98%E5%BC%A6%E5%AE%9A%E7%90%86)。
+> 當知道三角形的兩邊和一角時，餘弦定理可被用來計算第三邊的長，或是當知道三邊的長度時，可用來求出任何一個角
 
 ![&#x9918;&#x5F26;&#x5B9A;&#x7406;](../../.gitbook/assets/law-of-cosine-min.png)
+
+proof method 1：三角函數
+
+* 在邊$$c$$上投影可得 $$c = a \cos\beta + b \cos \alpha$$，所以$$c^2 = ac \cos \beta + bc \cos \alpha$$
+* 同理可得
+  * $$a^2 = ac \cos \beta + ab \cos \gamma$$
+  * $$b^2 = bc \cos \alpha + ab \cos \gamma$$
+* $$\begin{aligned} \therefore a^2 +b ^2 & =  ac \cos \beta + ab \cos \gamma +  bc \cos \alpha + ab \cos \gamma \\& = (ac \cos \beta + bc \cos \alpha)+ (ab \cos \gamma + ab \cos \gamma) \\ &=c^2  + 2 ab  \cos \gamma \end{aligned}$$
+* 移項後可得 $$c^2 = a^2 + b^2 - 2ab \cos \gamma$$ \(QED\)
+
+![&#x4E09;&#x89D2;&#x51FD;&#x6578;&#x8B49;&#x660E;&#x6CD5;](../../.gitbook/assets/547px-triangle-with-cosines-min.png)
 
 ## 正弦定理（the law of sine）
 

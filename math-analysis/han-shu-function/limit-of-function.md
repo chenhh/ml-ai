@@ -113,3 +113,14 @@ proof:
 
 ![&#x51FD;&#x6578;&#x6975;&#x9650;&#x975E;&#x96F6;&#x6548;&#x61C9;](../../.gitbook/assets/nonzero-effect-for-limit-min.png)
 
+## 函數極限的四則運算
+
+> 令函數$$\displaystyle \lim_{x \rightarrow c} f(x)=L$$, $$\displaystyle  \lim_{x \rightarrow c }f(x)=M$$, $$k \in \mathbb{R}$$，則
+>
+> * $$\displaystyle \lim_{x \rightarrow c} f(x) \pm g(x)=L \pm M$$
+> * $$\displaystyle \lim_{x \rightarrow c} k f(x)=kL$$
+> * $$\displaystyle \lim_{x \rightarrow c} f(x) g(x)=LM$$
+> * $$\displaystyle \lim_{x \rightarrow c} \frac{f(x)}{g(x)}=\frac{L}{M}, ~ M \neq 0$$
+> * $$\displaystyle \lim_{x \rightarrow c} (f(x))^n=L^n, ~ n \in \mathbb{N}$$
+> * $$\displaystyle \lim_{x \rightarrow c} (f(x))^{\frac{1}{n}}=L^{\frac{1}{n}}, ~ n \in \mathbb{N}$$
+

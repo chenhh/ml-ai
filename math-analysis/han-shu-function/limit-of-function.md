@@ -131,12 +131,9 @@ proof 極限的加、減法：
 * $$ |f(x)+g(x)−L−M| \leq |f(x)−L|+|g(x)−M| $$
 * $$ \lim_{x \rightarrow c}f(x)=L\Leftrightarrow \forall \epsilon>0 ~ \exists \delta_1>0 \ni |f(x)−L|<\epsilon ~\forall d(x,c)<\delta_1 $$
 * $$\lim_{x \rightarrow c}g(x)=M \Leftrightarrow \forall \epsilon >0 ~ \exists \delta_2>0 \ni |g(x)−b|<\epsilon ~ \forall d(x,c)<\delta_2 $$
-
-	• 取δ=min⁡{δ\_1, δ\_2 }, 當d\(x,c\)&lt;δ時，得\|f\(x\)−a\|&lt;ϵ/2 且\|g\(x\)−b\|&lt;ϵ/2
-
-	• \|f\(x\)+g\(x\)−a−b\|≤\|f\(x\)−a\|+\|g\(x\)−b\|&lt;ϵ/2+ϵ/2=ϵ if d\(x,c\)&lt;δ
-
-	• ∴lim\_\(x→c\)⁡\(f\(x\)+g\(x\)\)=lim\_\(x→c\)⁡〖f\(x\)〗+lim\_\(x→c\)⁡〖g\(x\)〗=a+b \(QED\)
+* 取$$\delta =\min⁡\{\delta_1, \delta_2 \}$$，當$$d(x,c)< \delta$$時，得$$|f(x)−L|<\epsilon/2$$ 且$$|g(x)−M|< \epsilon/2 $$。
+* $$|f(x)+g(x)−L−M| \leq |f(x)−L|+|g(x)−M|<\epsilon /2+ \epsilon /2=\epsilon \text{ if } d(x,c)<\delta $$
+* $$\displaystyle \therefore \lim_{x \rightarrow c}⁡(f(x)+g(x))=\lim_{x \rightarrow c}⁡ f(x)+\lim_{x \rightarrow c}⁡ g(x)=L+M$$ \(QED\)
 
 
 

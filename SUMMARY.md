@@ -17,6 +17,7 @@
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series.md)
 * [函數\(function\)](math-analysis/han-shu-function/README.md)
+  * [函數的極限](math-analysis/han-shu-function/limit-of-function.md)
   * [連續函數](math-analysis/han-shu-function/continuous-function.md)
   * [三角函數](math-analysis/han-shu-function/trigonometric-function.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space/README.md)

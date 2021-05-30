@@ -75,6 +75,22 @@
 >
 > $$\displaystyle \lim_{x \rightarrow c}f(x) = a$$$$\Leftrightarrow$$$$\displaystyle \lim_{n \rightarrow \infty} f(x_n) = a$$或 $$\displaystyle \lim_{n \rightarrow \infty} f(x_n)=f(\lim_{n \rightarrow \infty} x_n)$$
 
+proof =&gt;
+
+* $$\displaystyle  \lim_{x \rightarrow c}⁡f(x)=a \Leftrightarrow  \forall \epsilon >0~  \exists \delta >0 \ni |f(x)−a|< \epsilon ~ \forall d(x,c)<\delta $$
+* 若$$\lim_{n \rightarrow \infty}⁡x_n =c $$，則$$ \exists n_0 \in \mathbb{N} \ni d(x_n,c)< \delta, \forall n \geq n_0 $$
+* 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)<\delta$$，可得$$|f(x_n )−a|<\epsilon$$，即$$\lim_{n \rightarrow \infty}⁡f(x_n)=a$$ \(QED\)
+
+proof &lt;=
+
+* 若$$ \lim_{x \rightarrow c} ⁡f(x) \neq a$$ 則 $$\exists \epsilon>0 ~\forall \delta>0 \ni |f(x)−a| \geq \epsilon,~ d(x,c)< \delta $$
+* 若 $$\lim_{n \rightarrow \infty} x_n=c $$，則$$ \exists n_0 \in \mathbb{N} \ni d(x_n,c)<\delta, ~ \forall n \geq n_0 $$
+* 因此在$$n \geq n_0$$ 時，由於$$d(x_n,c)< \delta$$，存在$$\epsilon >0 \ni |f(x_n )−a| \geq \epsilon$$, 即$$\lim_{n \rightarrow \infty}⁡f(x_n)  \neq a$$ \(QED\)
+
+
+
+
+
 
 
 

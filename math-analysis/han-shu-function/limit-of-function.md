@@ -124,3 +124,27 @@ proof:
 > * $$\displaystyle \lim_{x \rightarrow c} (f(x))^n=L^n, ~ n \in \mathbb{N}$$
 > * $$\displaystyle \lim_{x \rightarrow c} (f(x))^{\frac{1}{n}}=L^{\frac{1}{n}}, ~ n \in \mathbb{N}$$
 
+* 使用極限的$$\epsilon-\delta$$定義可證明。
+
+proof 極限的加、減法：
+
+* $$ |f(x)+g(x)−L−M| \leq |f(x)−L|+|g(x)−M| $$
+* $$ \lim_{x \rightarrow c}f(x)=L\Leftrightarrow \forall \epsilon>0 ~ \exists \delta_1>0 \ni |f(x)−L|<\epsilon ~\forall d(x,c)<\delta_1 $$
+* $$\lim_{x \rightarrow c}g(x)=M \Leftrightarrow \forall \epsilon >0 ~ \exists \delta_2>0 \ni |g(x)−b|<\epsilon ~ \forall d(x,c)<\delta_2 $$
+
+	• 取δ=min⁡{δ\_1, δ\_2 }, 當d\(x,c\)&lt;δ時，得\|f\(x\)−a\|&lt;ϵ/2 且\|g\(x\)−b\|&lt;ϵ/2
+
+	• \|f\(x\)+g\(x\)−a−b\|≤\|f\(x\)−a\|+\|g\(x\)−b\|&lt;ϵ/2+ϵ/2=ϵ if d\(x,c\)&lt;δ
+
+	• ∴lim\_\(x→c\)⁡\(f\(x\)+g\(x\)\)=lim\_\(x→c\)⁡〖f\(x\)〗+lim\_\(x→c\)⁡〖g\(x\)〗=a+b \(QED\)
+
+
+
+### 多項式的極限（limits of polynomials ）
+
+> 給定多項式$$P(x)=a_n x^n + a_{n-1}x^{n-1}+\ldots + a_1 x + a_0$$，則$$\displaystyle \lim_{x \rightarrow c} P(x)=P(c)=a_nc^n+a_{n-1}c^{n-1}+\ldots + a_1 c+ a_0$$
+
+### 有理函數的極限（limits of rational functions）
+
+> 給定$$P(x)$$與$$Q(x)$$均為多項式函數，則$$Q(x)\neq 0$$，則$$\displaystyle \lim_{x \rightarrow c} \frac{P(x)}{Q(x)}=\frac{P(c)}{Q(c)}$$
+

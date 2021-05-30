@@ -36,7 +36,11 @@
 
 ![epsilon&#x975E;&#x5E38;&#x5C0F;&#xFF0C;&#x8B93;f\(x\)&#x63A5;&#x8FD1;L&#x6642;&#xFF0C;delta&#x5340;&#x9593;&#x4E5F;&#x5F88;&#x5C0F;&#xFF0C;&#x6703;&#x8B93;x&#x63A5;&#x8FD1;c](../../.gitbook/assets/epsilon-delta-3-min.png)
 
+### 函數極限不存在
 
+> $$\exists \epsilon > 0 ~ \forall \delta > 0 \ni |f(x) - L| \geq \epsilon , \forall d(x, c) < \delta$$時，稱函數$$f$$在點$$c$$的極限不存在。
+>
+> •即$$x$$從任意方向逼近於$$c$$時，其函數值不一定趨近於$$L$$。
 
 
 

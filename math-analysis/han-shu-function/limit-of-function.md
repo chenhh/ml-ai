@@ -113,11 +113,3 @@ proof:
 
 ![&#x51FD;&#x6578;&#x6975;&#x9650;&#x975E;&#x96F6;&#x6548;&#x61C9;](../../.gitbook/assets/nonzero-effect-for-limit-min.png)
 
-
-
-
-
-
-
-
-

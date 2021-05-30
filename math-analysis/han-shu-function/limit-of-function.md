@@ -65,6 +65,16 @@
 
 ![&#x51FD;&#x6578;&#x5728;&#x9EDE;a&#x8207;b&#x5747;&#x70BA;&#x767C;&#x6563; &#x4E14;&#x6975;&#x9650;&#x4E5F;&#x767C;&#x6563;](../../.gitbook/assets/case5.gif)
 
+## 函數與數列極限的充要關係
+
+> $$(X,d)$$為度量空間，$$f: X \rightarrow \mathbb{R}$$為函數，$$c \in X$$，則
+>
+> $$ \displaystyle \lim_{x \rightarrow c} f(x) = a$$$$\Leftrightarrow$$對任意數列 $$\{x_n\} \subseteq X$$，若滿足 $$\displaystyle \lim_{ n \rightarrow \infty }x_n = c$$，則$$ \displaystyle \lim_{ n \rightarrow \infty} f(x_n) = a$$
+>
+> 給定度量空間 $$(S, d_S), (T, d_T)$$，$$c \in A \subseteq S$$為極限點，$$a \in T$$，更一般化的函數$$f: S \rightarrow T$$，
+>
+> $$\displaystyle \lim_{x \rightarrow c}f(x) = a$$$$\Leftrightarrow$$$$\displaystyle \lim_{n \rightarrow \infty} f(x_n) = a$$或 $$\displaystyle \lim_{n \rightarrow \infty} f(x_n)=f(\lim_{n \rightarrow \infty} x_n)$$
+
 
 
 

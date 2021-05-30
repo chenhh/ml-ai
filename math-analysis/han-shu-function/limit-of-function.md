@@ -20,9 +20,13 @@
 > * 極限存在時，則$$x$$從任意方向逼近$$c$$時，其函數值也都會趨近於$$L$$。
 > * 極限存在不代表連續，只有在$$f(c)=L$$時才為連續。
 >
-> • 更一般化的函數定義為給定度量空間$$(S, d_s ), (T,d_T )$$，函數$$f:S \rightarrow T$$，$$A \subseteq S$$，$$c \in A$$為極限點，$$L \in T$$，則$$\lim_{ x \rightarrow c} f(x) = L$$ 若且唯若 $$\forall \epsilon > 0 ~ \exists \delta > 0 \ni d_T(f(x), L) < \epsilon $$ whenever $$p \neq x, x\in A, d_S(x,p) <\delta$$。
+> • 更一般化的函數定義為給定度量空間$$(S, d_s ), (T,d_T )$$，函數$$f:S \rightarrow T$$，$$A \subseteq S$$，$$c \in A$$為極限點，$$L \in T$$，則$$\lim_{ x \rightarrow c} f(x) = L$$ 若且唯若 $$\forall \epsilon > 0 ~ \exists \delta > 0 \ni d_T(f(x), L) < \epsilon $$ whenever $$pc\neq x, x\in A, d_S(x,c) <\delta$$。
+>
+> 也可以用球來定義，$$f(x)\in B_{T}(L, \epsilon)$$ whenever $$x \in B_S(c, \delta) \cap A, ~ x \neq p$$
 
+![&#x51FD;&#x6578;&#x6975;&#x9650;&#x7684;epsilon-delta&#x5B9A;&#x7FA9;](../../.gitbook/assets/epsilon-delta_definition-min.png)
 
+![&#x5169;&#x500B;&#x5EA6;&#x91CF;&#x7A7A;&#x9593;&#x51FD;&#x6578;&#x6975;&#x9650;&#x7684;epsilon-delta&#x5B9A;&#x7FA9;](../../.gitbook/assets/metric-limit-epsilon-delta-min.png)
 
 
 

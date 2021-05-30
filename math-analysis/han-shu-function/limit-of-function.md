@@ -8,6 +8,8 @@
 
 ![&#x7531;&#x5272;&#x7DDA;&#x6F38;&#x8FD1;&#x5230;&#x5207;&#x7DDA;&#x7684;&#x904E;&#x7A0B;](../../.gitbook/assets/secant-to-tangent-min.png)
 
+![&#x5272;&#x7DDA;&#x903C;&#x8FD1;&#x5230;&#x5207;&#x7DDA;&#x7684;&#x7BC4;&#x4F8B;](../../.gitbook/assets/example-of-secant-min.png)
+
 
 
 

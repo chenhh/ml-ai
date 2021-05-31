@@ -172,3 +172,13 @@ Proof 極限除法:
 
 > 給定$$P(x)$$與$$Q(x)$$均為多項式函數，則$$Q(x)\neq 0$$，則$$\displaystyle \lim_{x \rightarrow c} \frac{P(x)}{Q(x)}=\frac{P(c)}{Q(c)}$$
 
+## 絕對值的極限
+
+> $$(X,d)$$為度量空間，$$f,g:X \rightarrow \mathbb{R}$$為兩函數，$$c \in X$$滿足$$\lim_{x \rightarrow c} f(x)=L$$，則$$\lim_{x \rightarrow c} |f(x)|=|L|$$。
+>
+> 即$$ \displaystyle \lim_{x \rightarrow c} |f(x)| = | \lim_{x \rightarrow c} f(x)|$$
+
+
+
+
+

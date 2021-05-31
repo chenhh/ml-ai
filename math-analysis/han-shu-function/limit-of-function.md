@@ -182,6 +182,20 @@ proof:
 
 * $$\displaystyle  \lim_{x \rightarrow c} f(x)=L  \Leftrightarrow \forall \epsilon>0~ \exists \delta >0 \ni |f(x)−L|<\epsilon ~ \forall d(x,c)<\delta$$
 * $$|(|f(x)|−|L|)| \leq |f(x)−L|<\epsilon ~ \forall d(x,c)<\delta \Rightarrow \lim_{x \rightarrow c}⁡|f(x)|=|L|$$ \(QED\)
+* 
+## 零值的極限
+
+> $$(X,d)$$為度量空間，$$f: X \rightarrow \mathbb{R}$$為一函數，$$c \in X$$，則$$\displaystyle \lim_{ x \rightarrow c} f(x)=0 \Leftrightarrow  \lim_{ x \rightarrow c} |f(x)| = 0$$
+
+Proof =&gt;
+
+* 由絕對值的極限得$$\displaystyle \lim_{x \rightarrow c}⁡|f(x)|=|\lim_{x \rightarrow c} f(x) |=|0|=0 $$ \(QED\)
+
+Proof &lt;=
+
+* $$\displaystyle \lim_{x \rightarrow c}⁡|f(x)|=0 \Leftrightarrow \forall \epsilon>0~ \exists \delta>0 \ni |(|f(x)|−0)|< \epsilon ~\forall d(x,c)<\delta$$
+* $$\because |(|f(x)|−0)|=|f(x)−0|< \epsilon$$
+* $$\therefore \forall \epsilon>0~ \exists \delta>0 \ni |f(x)−0|<\epsilon ~ ∀d(x,c)<\delta \Leftrightarrow \lim_{x \rightarrow c} f(x)=0$$ \(QED\).
 
 
 

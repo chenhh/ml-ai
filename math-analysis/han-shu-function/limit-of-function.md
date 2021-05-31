@@ -152,11 +152,17 @@ Proof 極限乘法:
 * 取$$\delta=\min \{ \delta_1, \delta_2, \delta_3\}$$，若$$ d(x,c)<\delta$$則
 * $$\begin{aligned} |f(x)g(x)−LM| &=|f(x)g(x)−Lg(x)+Lg(x)−LM| \\& \leq |f(x)−|L||g(x)|+|L||g(x)−M|  \\ & \leq \epsilon(|M|+1)/2(|M|+1) +|L|\epsilon/2(|L|+1) \\&=\epsilon \end{aligned}$$ \(QED\).
 
+Proof 極限除法:
 
-
-
-
-
+* $$|\frac{f(x)}{g(x)} −\frac{a}{b}|=\frac{|bf(x)−ag(x)|}{|b||g(x)|} =\frac{|bf(x)−ab+ab−ag(x)|}{|b||g(x)|} \leq \frac{(|b||f(x)−a|+|a||b−g(x)|)}{|b||g(x)| }$$
+* $$\lim_{x \rightarrow c}⁡ g(x)=b \neq 0 \Leftrightarrow \forall \epsilon>0 ~\exists \delta_1>0 \ni |g(x)−b|< \epsilon, ~\forall d(x,c)<\delta_1$$
+* 取$$\epsilon=b \Rightarrow |g(x)| \geq \frac{|b|}{2}  , ~\forall d(x,c)<\delta_1 $$
+* 則在$$d(x,c)<\delta_1$$ 時，得 $$|\frac{f(x)}{g(x)} −\frac{a}{b}| \leq \frac{2|f(x)−a|}{|b|} +\frac{2|a||g(x)−b|}{|b|^2 }$$
+* $$\lim_{x \rightarrow c} f(x)=a\Leftrightarrow \forall \epsilon>0 ~\exists \delta_2>0 \ni |f(x)−a|<\epsilon ~ \forall d(x,c)<\delta_2$$
+* 所以可得$$|f(x)−a|< \frac{|b|\epsilon}{4}, ~\forall d(x,c)<\delta_2$$
+* $$\lim_{x \rightarrow c} g(x)=b \Leftrightarrow \forall \epsilon >0 ~\exists \delta_3>0 \ni |g(x)−b|<\epsilon~ \forall d(x,c)<\delta_3$$
+* 所以可得$$|g(x)−b|<\frac{(|b|^2 \epsilon )}{((4|a|+1) )}, \forall d(x,c)<\delta_3$$
+* 取$$\delta =\min⁡\{\delta_1,\delta_2, \delta_3 \}$$, 則當$$d(x,c)<\delta$$時，得$$ | \frac{f(x)}{g(x)} −\frac{a}{b}|<\epsilon$$ \(QED\)
 
 ### 多項式的極限（limits of polynomials ）
 

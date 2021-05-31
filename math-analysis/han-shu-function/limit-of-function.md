@@ -217,7 +217,18 @@ proof:
 
 ## 極限三明治定理、夾擠定理\(sandwitch theorem for limits, squeeze theorem\)
 
-## 
+> 給定$$ (X,d)$$為度量空間,  $$f,g,h:X \rightarrow \mathbb{R}$$為三函數，$$c \in X$$。
+>
+> 若$$\forall x \in X, f(x) \leq g(x) \leq h(x)$$，且$$\displaystyle \lim_{x \rightarrow c}f(x) =\lim_{x \rightarrow c} h(x)=L$$，則$$\displaystyle \lim_{x \rightarrow c} g(x)=L$$
 
+proof:
 
+* $$\lim_{x \rightarrow c} f(x)=L \Leftrightarrow \forall \epsilon >0 ~ \exists \delta_1>0 \ni |f(x)−L|<\epsilon ~ \forall d(x,c)<\delta_1$$
+* $$\therefore −\epsilon <f(x)−L< \epsilon \Rightarrow −\epsilon < g(x)−L$$
+* $$\lim_{x \rightarrow c} h(x)=L \Leftrightarrow \forall \epsilon >0 ~ \exists \delta_2>0 \ni |hx)−L|<\epsilon ~ ∀d(x,c)<\delta_2$$
+* $$\therefore −\epsilon <h(x)−L<\epsilon \Rightarrow g(x)+L < \epsilon $$
+* 取$$\delta=\min\{ \delta_1, \delta_2 \}$$ 得$$\forall \epsilon >0 ~ \exists \delta >0 \ni |g(x)−L|<\epsilon ~ \forall d(x,c)<\delta$$
+* 即$$\lim_{x \rightarrow c}⁡ g(x)=L$$ \(QED\)
+
+![&#x593E;&#x64E0;&#x5B9A;&#x7406;](../../.gitbook/assets/squeeze-thm-min.png)
 

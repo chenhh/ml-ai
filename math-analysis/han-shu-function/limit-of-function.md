@@ -178,6 +178,11 @@ Proof 極限除法:
 >
 > 即$$ \displaystyle \lim_{x \rightarrow c} |f(x)| = | \lim_{x \rightarrow c} f(x)|$$
 
+proof:
+
+* $$\displaystyle  \lim_{x \rightarrow c} f(x)=L  \Leftrightarrow \forall \epsilon>0~ \exists \delta >0 \ni |f(x)−L|<\epsilon ~ \forall d(x,c)<\delta$$
+* $$|(|f(x)|−|L|)| \leq |f(x)−L|<\epsilon ~ \forall d(x,c)<\delta \Rightarrow \lim_{x \rightarrow c}⁡|f(x)|=|L|$$ \(QED\)
+
 
 
 

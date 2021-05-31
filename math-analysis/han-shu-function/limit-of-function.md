@@ -195,9 +195,23 @@ Proof &lt;=
 
 * $$\displaystyle \lim_{x \rightarrow c}⁡|f(x)|=0 \Leftrightarrow \forall \epsilon>0~ \exists \delta>0 \ni |(|f(x)|−0)|< \epsilon ~\forall d(x,c)<\delta$$
 * $$\because |(|f(x)|−0)|=|f(x)−0|< \epsilon$$
-* $$\therefore \forall \epsilon>0~ \exists \delta>0 \ni |f(x)−0|<\epsilon ~ ∀d(x,c)<\delta \Leftrightarrow \lim_{x \rightarrow c} f(x)=0$$ \(QED\).
+* $$\therefore \forall \epsilon>0~ \exists \delta>0 \ni |f(x)−0|<\epsilon ~ ∀d(x,c)<\delta \Leftrightarrow \lim_{x \rightarrow c} f(x)=0$$ \(QED\)
 
+## 極限的比較
 
+> $$ (X,d)$$為度量空間,  $$f,g:X \rightarrow \mathbb{R}$$為二函數，$$c \in X$$滿足$$\displaystyle \lim_{x \rightarrow c} f(x)=L,~ \lim_{x \rightarrow c}⁡ g(x)=M$$
+>
+> *  若$$\forall x \in X, f(x) \leq g(x)$$，則$$\displaystyle \lim_{x \rightarrow c}⁡f(x) \leq \lim_{x \rightarrow c}g(x)$$，即$$L \leq M$$
+> * 同理當$$\forall x \in X, f(x) \geq g(x)$$, 則$$\displaystyle \lim_{x \rightarrow c} f(x)  \geq \lim_{x \rightarrow c}⁡ g(x)$$
+> * 因此可得極限唯一 當$$\displaystyle \lim_{x \rightarrow c}⁡ f(x)=L$$且$$\displaystyle \lim_{x \rightarrow c} f(x)=M$$ 則$$L = M$$
 
+proof:
 
+* 假設$$a>b$$，則
+* $$\lim_{x \rightarrow c} f(x)=L \Leftrightarrow \forall \epsilon =(L−M)/2>0 ~\exists \delta_1>0 \ni |f(x)-L|<\epsilon~ \forall d(x,c)<\delta_1$$
+* $$\therefore \frac{(−L+M)}{2}<f(x)−L<\frac{(L−M)}{2} \Rightarrow f(x)>\frac{(a+b)}{2} ~ \forall d(x,c)<\delta_1$$
+* $$\lim_{x \rightarrow c} g(x) =M \Leftrightarrow \forall \epsilon =\frac{(L−M)}{2}>0 ~ \exists \delta_2>0 \ni |g(x)−M|<\epsilon ~ \forall d(x,c)<\delta_2$$
+* $$\therefore \frac{(−L+M)}{2} <g(x)−M<\frac{(L−M)}{2} \Rightarrow g(x)<\frac{(L+M)}{2},~ \forall d(x,c)<\delta_2$$
+* 取$$\delta=\min\{ \delta_1, \delta_2\}$$，則$$\forall d(x,c)<\delta_2,  ~ g(x)<\frac{(L+M)}{2}<f(x)$$與$$f(x) \leq g(x)$$矛盾
+* 因此$$L \leq M$$ \(QED\)
 

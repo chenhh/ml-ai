@@ -215,3 +215,9 @@ proof:
 * 取$$\delta=\min\{ \delta_1, \delta_2\}$$，則$$\forall d(x,c)<\delta_2,  ~ g(x)<\frac{(L+M)}{2}<f(x)$$與$$f(x) \leq g(x)$$矛盾
 * 因此$$L \leq M$$ \(QED\)
 
+## 極限三明治定理、夾擠定理\(sandwitch theorem for limits, squeeze theorem\)
+
+## 
+
+
+

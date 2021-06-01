@@ -232,3 +232,5 @@ proof:
 
 ![&#x593E;&#x64E0;&#x5B9A;&#x7406;](../../.gitbook/assets/squeeze-thm-min.png)
 
+### 極限為0的函數與極限值有限的函數乘法
+

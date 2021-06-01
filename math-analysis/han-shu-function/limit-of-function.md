@@ -234,3 +234,20 @@ proof:
 
 ### 極限為0的函數與極限值有限的函數乘法
 
+> $$(X,d)$$為度量空間，$$f,g:X \rightarrow \mathbb{R}$$為二函數，$$c \in X, M>0$$滿足
+>
+> * $$\lim_{x \rightarrow c}⁡f(x)=0$$ \(保證與任意實數相乘時為0\)
+> * $$\forall x \in X, |g(x)| \leq M$$ \(函數絕對值有限以避免發散至無窮大\)
+> * 則$$\lim_{x \rightarrow c}⁡ f(x)g(x)=0 $$
+
+Proof:
+
+* $$\forall x \in X, 0 \leq |f(x)g(x)| \leq M|f(x)| $$
+* $$\because  \lim_{x \rightarrow c}⁡|Mf(x)|=|M|  \lim_{x \rightarrow c}⁡|f(x)|=M \lim_{x \rightarrow c}⁡|f(x)|=0 $$
+* $$\therefore 0 \leq \lim_{x \rightarrow c}⁡|f(x)g(x)|\leq   \lim_{x \rightarrow c}⁡|Mf(x)|=0 $$
+*  由夾擠定理得$$\lim_{x \rightarrow c} f(x)g(x)=0$$ \(QED\)
+
+
+
+
+

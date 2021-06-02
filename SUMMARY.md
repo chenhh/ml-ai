@@ -61,6 +61,7 @@
 ## 線性代數 <a id="linear-algebra"></a>
 
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
+* [反矩陣](linear-algebra/fan-ju-zhen.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

@@ -84,6 +84,7 @@
 * [醜小鴨定理\(Ugly duckling theorem\)](learning-theory/ugly-duckling-theorem.md)
 * [損失函數\(loss function\)](learning-theory/loss-function.md)
 * [在線學習\(online learning\)](learning-theory/online-learning.md)
+* [卡爾曼濾波器\(Kalman filter\)](learning-theory/kalman-filter.md)
 
 ## 強化學習與決策理論 <a id="reinforcement-learning"></a>
 

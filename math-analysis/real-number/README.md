@@ -17,7 +17,7 @@
 
 因此分割$$(S,T)$$可唯一表示一個實數，而分割形成的集合為實數集，即所有分割的集合。因為只要確定集合$$S$$，集合$$T$$唯一，因此有時只用集合$$S$$代表$$r$$的分割。
 
-而分割的集合同[有理數系](set/rational-number.md#you-li-shu-xi-rational-number-system)，也滿足加法與乘法的體\(field\)性質，以及為全序集，因此可得實數系\(real number system\)的性質。
+而分割的集合同[有理數系](../set/rational-number.md#you-li-shu-xi-rational-number-system)，也滿足加法與乘法的體\(field\)性質，以及為全序集，因此可得實數系\(real number system\)的性質。
 
 ## 切割\(cut\)
 
@@ -78,7 +78,7 @@ eg.
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
 * 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$  。
 
-![&#x963F;&#x57FA;&#x7C73;&#x5FB7;&#x6027;&#x8CEA;](../.gitbook/assets/archimedean_property.png)
+![&#x963F;&#x57FA;&#x7C73;&#x5FB7;&#x6027;&#x8CEA;](../../.gitbook/assets/archimedean_property.png)
 
 ##  實數集的稠密性
 

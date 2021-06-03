@@ -55,6 +55,7 @@
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
 * [隨機過程](probability-and-statistics/random-process/README.md)
+  * [計數過程\(counting process\)](probability-and-statistics/random-process/counting-process.md)
   * [布朗運動\(Brownian motion\)](probability-and-statistics/random-process/brownian-motion.md)
 * [貝式機率](probability-and-statistics/bayes-probability.md)
 * [關聯結構\(copula\)](probability-and-statistics/copula.md)

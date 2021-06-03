@@ -28,6 +28,12 @@
 > 3. $$\forall t>0, B(t) \sim N(0, \sigma^2 t)$$
 > 4. $$B(t)$$為時間的連續的函數
 
+* $$\{B(t)\}$$在變異數$$\sigma^2=1$$時為標準布朗運動$$\{W(t)\}$$
+
+
+
+![&#x9ED1;&#x7DDA;&#x70BA;&#x5E03;&#x6717;&#x904B;&#x52D5;&#x7684;&#x5BE6;&#x73FE;&#x503C;&#xFF0C;&#x4E5F;&#x7A31;&#x6A23;&#x672C;&#x8DEF;&#x5F91;\(sample path\)](../../.gitbook/assets/diffusion-min.png)
+
 
 
 ### 布朗運動的定數轉換

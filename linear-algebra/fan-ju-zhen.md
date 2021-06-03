@@ -23,5 +23,20 @@ description: inverse matrix
 
 * $$B$$為$$A$$的反矩陣$$\Leftrightarrow$$$$B$$為$$A$$的左反矩陣且為A的右反矩陣。
 
+### 反矩陣的唯一性
+
+> • 矩陣$$ A \in F^{N \times N}$$  可逆，則$$A$$的反矩陣存在且唯一，記作$$A^{−1}$$。
+
+proof:
+
+* 令$$B,C$$均為$$A$$的反矩陣，可得  $$AB=BA=I_N$$, $$AC=CA=I_N$$。
+* $$∴B=BI_N=B(AC)=(BA)C=I_NC=C$$ \(QED\).
+
+
+
+
+
+
+
 
 

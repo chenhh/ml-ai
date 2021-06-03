@@ -98,6 +98,7 @@
 ## 強化學習與決策理論 <a id="reinforcement-learning"></a>
 
 * [Markov decision process \(MDP\)](reinforcement-learning/mdp.md)
+* [秘書聘選問題\(secretary problem\)](reinforcement-learning/secretary-problem.md)
 
 ## 賽局理論 <a id="game-theory"></a>
 

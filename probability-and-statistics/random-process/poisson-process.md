@@ -13,9 +13,14 @@
 
 *  \[Taylor series\] $$\displaystyle e^x = \sum_{k=0}^\infty \frac{x^k}{k!}=1+x+\frac{x^2}{2!}+\ldots = \sum_{k=1}^\infty \frac{x^{k-1}}{(k-1)!}$$
 * $$\begin{aligned} \displaystyle \mathrm{E}(N(t)-N(s)) & =\sum_{k=0}^{\infty} k\cdot\mathrm{P}((N(t)-N(s))=k) \\ & = \sum_{k=0}^{\infty} k \frac{(\lambda(t-s))^ke^{-\lambda(t-s) }}{k!} \\ & =\lambda (t-s)e^{-\lambda (t-s)} \sum_{k=1}^\infty  \frac{\lambda ^{k-1}(t-1)^{k-1}}{(k-1)!} \\ & =\lambda (t-s)e^{-\lambda(t-s)}e^{\lambda(t-s)}\\ &= \lambda(t-s) \end{aligned}$$
-*  \(QED\)
 
+ \(QED\)
 
+> * $$\mathrm{E}((N(t)- N(s)^2)=\lambda^2(t-s)^2+\lambda (t-s)$$
+> * $$\mathrm{Var}(N(t) - N(s))=\lambda (t-s)$$
+
+* $$\mathrm{Var}(X)  = \mathrm{E}(X^2) - (\mathrm{E}(X))^2$$
+* $$\begin{aligned} \mathrm{Var}(N(t)-N(s)) & =\mathrm{E}((N(t)-N(s))^2) - (\mathrm{E}(N(t)-N(s)))^2 \\ &= \lambda^2 (t-s)^2 + \lambda (t-s) - \lambda^2 (t-s)^2\\ &=\lambda (t-s) \end{aligned}$$\(QED\)
 
 
 

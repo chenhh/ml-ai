@@ -1,8 +1,4 @@
----
-description: inverse matrix
----
-
-# 反矩陣
+# 反矩陣\(inverse matrix\)
 
 ## 左反矩陣、右反矩陣（left, right inverse matrix）
 

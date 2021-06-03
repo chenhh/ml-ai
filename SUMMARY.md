@@ -61,7 +61,8 @@
 ## 線性代數 <a id="linear-algebra"></a>
 
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
-* [反矩陣](linear-algebra/fan-ju-zhen.md)
+* [反矩陣\(inverse matrix\)](linear-algebra/fan-ju-zhen.md)
+* [行列式\(determinant\)](linear-algebra/determinant.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

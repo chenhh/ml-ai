@@ -133,4 +133,5 @@
 ## 微分方程 <a id="differential-equation"></a>
 
 * [微分方程簡介](differential-equation/diff-eq-intro.md)
+* [分離變數法](differential-equation/separation-of-variables.md)
 

@@ -130,3 +130,7 @@
   * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)
   * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
 
+## 微分方程 <a id="differential-equation"></a>
+
+* [微分方程簡介](differential-equation/diff-eq-intro.md)
+

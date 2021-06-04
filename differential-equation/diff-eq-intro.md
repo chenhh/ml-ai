@@ -7,16 +7,22 @@
 > 函數方程式$$F(x,y, y^{'},\ldots, y^{(n)})=0$$ 與自變量$$x$$，自變量的未知函數$$y=y(x)$$，以及其$$n$$階的導數$$y^{(n)}$$有關，稱為常微分方程。
 >
 > 因為未知變數只有$$x$$，其它變數均為$$x$$的函數，因此稱為**常微分方程 \(ODE\)**。如果有多個變數，且未知函數也是多變數的函數，則稱為**偏微分方程\(PDE\)**。
+>
+> 線性-要滿足3個條件1.函數$$y$$與其所有導函數的次數為一次 2.變數間無互乘項\(沒有y\*y'這種的\) 3.沒有非線性函數
 
 ### ODE的解
 
-> 若函數$$y=\psi(x)$$在區間$$J$$連續，且$$n$$階導數均存在。若將$$y=\psi(x)$$代入$$F(x,y,y^{'}, \ldots, y^{(n)})$$後可得$$F(x,\psi(x), \psi^{'}(x),\ldots, \psi^{(n)}(x))=0$$，則$$y=\psi(x)$$為此ODE的解（solution）。
+> 若函數$$y=\psi(x)$$在區間$$J$$連續，且$$n$$階導數均存在。若將$$y=\psi(x)$$代入$$F(x,y,y^{'}, \ldots, y^{(n)})$$後可得$$F(x,\psi(x), \psi^{'}(x),\ldots, \psi^{(n)}(x))=0$$，則$$y=\psi(x)$$為此ODE的特解（particular solution）。
+>
+> 而解$$y=\psi(x, c_1, c_2,\ldots, c_n)$$包含了$$n$$個獨立的任意常數$$c_1, c_2,\ldots, c_n$$稱為通解（general solution）。
+>
+> 由解方程式的觀點，從通解得到特解必須有$$n$$個額外的方程式求常數值。
 
 例如：
 
-* \[線性一階ODE\] $$\frac{dy}{dx}+ \frac{y}{x} =x^3, ~ x \neq 0$$
-* \[非線性一階ODE\]$$\frac{dy}{dx} = 1+y^2$$
-* \[非線性二階ODE\] $$y^{''}+yy^{''}=x$$
+* \[線性一階ODE\] $$\frac{dy}{dx}+ \frac{y}{x} =x^3, ~ x \neq 0$$。通解為$$y=\frac{c}{x}+\frac{x^4}{5}, ~ x \in (-\infty, 0) \lor (0, \infty)$$
+* \[非線性一階ODE\]$$\frac{dy}{dx} = 1+y^2$$。因為$$y^2$$所以為非線性。
+* \[非線性二階ODE\] $$y^{''}+yy^{''}=x$$。因為$$yy^{''}$$所以為非線性。
 * \[線性一階 PDE\] $$x \frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y}+z \frac{\partial f}{\partial z}+f=0$$
 
 

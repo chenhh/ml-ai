@@ -35,7 +35,6 @@
 
 ### 
 
-* 
 | 名稱 | 意義 | 符號 |
 | :--- | :--- | :--- |
 | modulus of $$z$$ | length $$r$$ of $$z$$ | $$|z|$$ |
@@ -46,6 +45,28 @@
 | complex conjugate of $$z$$ | reflection of $$z$$ in the real axis | $$\overline{z}$$ |
 
 ![&#x8907;&#x6578;&#x7B26;&#x865F;](../.gitbook/assets/complex-number-min.png)
+
+### 虛數的意義
+
+虛數$$i$$是-1 的平方根，可是它真正的意義是什麼呢？
+
+
+
+![&#x8CA0;&#x865F;&#x8868;&#x793A;&#x8B8A;&#x63DB;&#x65B9;&#x5411;\(180&#x5EA6;\)](../.gitbook/assets/real_number_direction-min.jpg)
+
+這裡有一條數線，在數線上有一個紅色的線段，它的長度是1。當它乘以3 的時候，它的長度發生了變化，變成了藍色的線段，而當它乘以-1 的時候，就變成了綠色的線段，或者說線段在數軸上圍繞原點旋轉了180 度。
+
+我們知道乘-1 其實就是乘了兩次$$i$$ 使線段旋轉了180 度，那麼乘一次$$i$$ 呢？答案很簡單：旋轉了90 度。
+
+同時，我們獲得了一個垂直的虛數軸。實數軸與虛數軸共同構成了一個複數的平面，也稱複平面。這樣我們就了解到，**乘虛數**$$i$$**的一個功能: 旋轉**。
+
+
+
+
+
+
+
+
 
 ### 複數的四則運算
 
@@ -66,6 +87,10 @@
 
 
 ![&#x8907;&#x6578;&#x52A0;&#x6CD5;&#x7B49;&#x50F9;&#x65BC;&#x5411;&#x91CF;&#x52A0;&#x6CD5;](../.gitbook/assets/complex-num_add-min.png)
+
+![&#x8907;&#x6578;&#x4E58;&#x6CD5;&#x70BA;&#x9577;&#x5EA6;&#x76F8;&#x4E58;&#x8207;&#x89D2;&#x5EA6;&#x76F8;&#x52A0;](../.gitbook/assets/complex_mul-min.png)
+
+![&#x8907;&#x6578;&#x9664;&#x6CD5;&#x70BA;&#x9577;&#x5EA6;&#x76F8;&#x9664;&#x8207;&#x89D2;&#x5EA6;&#x76F8;&#x6E1B;](../.gitbook/assets/complex-div-min.jpg)
 
 ![&#x4E58;&#x4EE5;&#x8907;&#x6578;&#x70BA;&#x65CB;&#x8F49;arg\(z\)&#x5EA6;&#x5F8C;&#xFF0C;&#x518D;&#x653E;&#x5927;\|z\|&#x500D;\(&#x6216;&#x5148;&#x653E;&#x5927;&#x518D;&#x65CB;&#x8F49;\)](../.gitbook/assets/1195px-complex_multi-min.png)
 
@@ -155,8 +180,17 @@
 >
 >  這個公式表示$$e^{i\theta}$$  為單位圓上，幅角為$$\theta$$的一點，因此可將複數寫為 $$z=|z| e^{i\theta}$$
 
+proof \(Taylor series\)：
+
 * 由Taylor  series 得$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +\ldots$$
-* 因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$
+* 因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$\(QED\)
+
+proof \(函數微分\)：
+
+* 令$$f(x) = \frac{\cos x + i \sin x}{e^{ix}}$$，因為$$e^{ix} e^{-ix}=e^0=1$$，分母必不為0，定義成立。
+* $$f^{'}(x)=\frac{(-\sin x + i \cos x)e^{ix} - (\cos x + i \sin x)ie^{ix} }{(e^{ix})^2}= \frac{-\sin xe^{ix} + \sin x e^{ix}}{(e^{ix})^2} =0 $$
+* 由微分結果知$$f$$為常數函數，因此 $$f(0)=\frac{\cos 0 + i \sin 0}{e^{i0}}=1$$
+* 可得 $$e^{ix} = \cos x + i \sin x$$ \(QED\)
 
 ![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5716;](../.gitbook/assets/euler_formula-min.png)
 
@@ -177,4 +211,14 @@
 * $$z=|z|(\cos⁡\theta+i \sin \theta )=|z| e^{i\theta}=|z| e^{i( \theta +2n \pi)}, ~ \forall n \in \mathbb{Z}$$
 * $$\ln(z)=\ln⁡(|z|)+i(\theta+2n\pi),~ \forall n \in \mathbb{Z}$$
 * \[complex root\] $$x^n=1 \Rightarrow x= e^{\frac{2k \pi}{n}}, ~ \forall k \in \mathbb{Z}$$
+
+
+
+**歐拉公式所描繪的，是一個隨著時間變化，在複平面上做圓周運動的點，隨著時間的改變，在時間軸上就成了一條螺旋線**。如果只看它的實數部分，也就是螺旋線在左側的投影，就是一個最基礎的餘弦函數。而右側的投影則是一個正弦函數。
+
+![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5716;&#x5F62;](../.gitbook/assets/euler-form-meaning-min.jpg)
+
+
+
+
 

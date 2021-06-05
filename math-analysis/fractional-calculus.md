@@ -31,9 +31,14 @@
 >
 > * $$D_t^n \cdot D_t^m [f(t)]=D_t^{n+m} [f(t)]$$ （$$\frac{d^n}{dt^n} \cdot \frac{d^m}{dt^m }f(t)=\frac{d^{n+m}}{dt^{n+m}} f(t)$$）
 > * 
->   \[常數與微分算子獨立\] $$D_t^n [cf(t)]=cD_t^n [f(t)]$$ \($$\frac{d^n (cf(t))}{dt^n}=c\frac{d^n f(t)}{dt^n}$$\), $$c \in \mathbb{R}$$
+>   \[常數與微分算子獨立\] $$D_t^n [cf(t)]=cD_t^n [f(t)]$$ \($$\frac{d^n [cf(t)]}{dt^n}=c\frac{d^n f(t)}{dt^n}$$\), $$c \in \mathbb{R}$$
 >
-> * \[分配律\]  $$D_t^n [f(t) \pm g(t)]=D_t^n [f(t)] \pm D_t^n [g(t)]$$  \($$\frac{d^n (f(t) \pm g(t)))}{dt^n}=\frac{d^n f(t)}{dt^n } \pm \frac{d^n g(t)}{dt^n }$$\)
+> * \[分配律\]  $$D_t^n [f(t) \pm g(t)]=D_t^n [f(t)] \pm D_t^n [g(t)]$$  \($$\frac{d^n [f(t) \pm g(t)]}{dt^n}=\frac{d^n f(t)}{dt^n } \pm \frac{d^n g(t)}{dt^n }$$\)
+> * \[Leibniz rule\]  $$\begin{aligned} \displaystyle D_t^n [f(t)g(t)] & = \sum_{k=0}^n  \binom{n}{k}D_t^{n-k}[f(t)]D_t^k[g(t)]\\ &= \sum_{k=0}^n  \binom{n}{k}D_t^{n-k}[g(t)]D_t^k[f(t)] \end{aligned}$$
+>   * $$(fg)^{'} = f^{'}g + fg^{'}$$
+>   * $$(f^{'}g + fg^{'})^{'}=f^{(2)}g+2f^{(1)}g^{(1)} +fg^{(2)}$$
+>   * $$(f^{(2)}g+2f^{(1)}g^{(1)} +fg^{(2)})^{'} = f^{(3)}g + 3 f^{(2)}g^{(1)}+3f^{(1)}g^{(2)}+fg^{(3)}$$
+> *  $$\begin{aligned} D_t^n [t^m ] & =m(m−1)(m−2)\cdots (m−n+1) t^{m−n} \\ &=\frac{m!}{(m−n)!} t^{m−n} \\ &=\frac{\Gamma(m+1)}{\Gamma(m−n+1)  }t^{m−n}, ~ \forall m>n \end{aligned}$$
 
 
 

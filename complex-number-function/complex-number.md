@@ -33,11 +33,9 @@
 * $$x=\mathrm{Re}(z), y=\mathrm{Im}(z)$$
 * $$\mathrm{Re}(z)=\frac{z + \overline{z}}{2}, ~ \mathrm{Im}(z)=\frac{z− \overline{z}}{2i}$$
 
-### 模\(modulus\)
+### 
 
-* $$|z| = \sqrt{x^2 + y^2} =\sqrt{\mathrm{Re}(z)^2 + \mathrm{Im}(z)^2}$$
-* 複數之間無法比較大小，因此不能比較$$i$$與$$2i$$的大小, 但可以比較兩者的模$$|i|<|2i|$$
-
+* 
 | 名稱 | 意義 | 符號 |
 | :--- | :--- | :--- |
 | modulus of $$z$$ | length $$r$$ of $$z$$ | $$|z|$$ |
@@ -80,11 +78,16 @@
   *  If $$\theta \ in [−\pi, \pi]$$, $$c \equiv |z|^{\frac{1}{n}} \left( \cos(\frac{\theta}{n}),~sin(\frac{\theta}{n}) \right)$$  is called principal value of $$z^{\frac{1}{n}}$$
 * $$z^{−\frac{1}{n}}=(z^{−1})^{\frac{1}{n}}$$
 
-## 共軛複數\(conjugate complex\)
+## 共軛複數與模\(conjugate complex and modulus\)
 
 令$$z = x +iy$$，則其共軛複數$$\overline{z}= x -iy$$對稱於實數軸。
 
 * \[Complex Conjugate Root Theorem\] 如果$$z=x+iy$$為一方程式的解，則$$\overline{z}=x−iy$$也為方程式的解。
+
+### 模\(modulus\)
+
+* $$|z| = \sqrt{x^2 + y^2} =\sqrt{\mathrm{Re}(z)^2 + \mathrm{Im}(z)^2}$$
+* 複數之間無法比較大小，因此不能比較$$i$$與$$2i$$的大小, 但可以比較兩者的模$$|i|<|2i|$$
 
 
 
@@ -118,7 +121,60 @@
 
 > \[distance\] $$d(z_1, z_2) = |z_1 - z_2|$$
 
+## 極座標\(polar form\)
+
+複數$$z=x+iy = r(\cos \theta, \sin \theta)= |z|(\cos \theta, \sin \theta), ~ \theta  = \mathrm{tan}^{-1}{(\frac{y}{x})}$$
+
+共軛複數 $$\overline{z} = x - iy = r(\cos \theta, -\sin \theta) = |\overline{z}| (\cos (-\theta),  \sin(- \theta))$$
+
+令$$z_1 = |z_1|(\cos \theta_1, \sin \theta_1), ~ z_2 = |z_2|(\cos \theta_2, \sin \theta_2)$$，可得
+
+*  \[相差$$2n\pi$$倍角度會回到相同的角度\] $$z_1=z_2 \Leftrightarrow |z_1 |=|z_2 | $$且$$ \exists n \in \mathbb{Z} \ni  \theta_1 = \theta_2 + 2n \pi$$
+*  **\[複數相乘等於極坐標角度相加\(旋轉\)**\] $$z_1 z_2=|z_1 ||z_2 |(\cos⁡(\theta_1+\theta_2 ),~ \sin⁡(\theta_1+\theta_2 ) )$$
+
+  * $$ z_1 z_2=|z_1 ||z_2 |(\cos⁡\theta_1  \cos⁡\theta_2 −\sin⁡\theta_1  \sin⁡\theta_2, \cos \theta_1  \sin⁡\theta_2 +\sin⁡\theta_1  \cos⁡\theta_2 )=|z_1 ||z_2 |(\cos⁡(\theta_1+\theta_2 ),~\sin⁡(\theta_1+\theta_2 ) )$$
 
 
 
+
+
+
+
+  * 註: $$1\cdot (−1+i0)=−1 $$\(旋轉$$\pi$$\)， $$1\cdot (0+i)=i $$\(旋轉$$\frac{\pi}{2}$$\)
+
+* \[**複數相除等於極坐標角度相減\(旋轉\)**\] $$\frac{z_1}{z_2} =\frac{|z_1 |}{|z_2 | } (\cos⁡(\theta_1−\theta_2 ),~ \sin⁡(\theta_1−\theta_2 ) )$$
+* $$\mathrm{arg}(z_1 z_2) = \mathrm{arg}(z_1) + \mathrm{arg}(z_2)$$
+* $$\mathrm{arg}(\frac{z_1}{z_2}) = \mathrm{arg}(z_1) - \mathrm{arg}(z_2)$$
+* \[**棣美弗定理 de Moivre's formula**\], $$z=|z|(\cos⁡\theta,~\sin\theta )\in \mathbb{C}\setminus\{0\} \Rightarrow z^n=|z|^n (\cos (n\theta),~ \sin (n \theta)), ~\forall n \in \mathbb{Z}$$
+
+## 歐拉公式\(Euler formula\)
+
+> 歐拉公式提出，$$\forall x \in \mathbb{R}$$，均存在 $$e^{ix} = \cos x + i \sin x$$。
+>
+> 當$$x =\pi$$時，可得 $$e^{i\pi} + 1 =0 $$。
+>
+>  這個公式表示$$e^{i\theta}$$  為單位圓上，幅角為$$\theta$$的一點，因此可將複數寫為 $$z=|z| e^{i\theta}$$
+
+* 由Taylor  series 得$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +\ldots$$
+* 因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$
+
+![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5716;](../.gitbook/assets/euler_formula-min.png)
+
+### 幾何意義
+
+假想一點在複平面$$\mathbb{C}$$上移動，且在時間$$t$$時的位置為$$z(t)$$，則 $$\displaystyle \frac{dz}{dt}=\lim_{h \rightarrow 0}⁡\frac{z(t+h)−z(t))}{h}=\lim_{h \rightarrow 0}⁡\frac{M}{h}=v(t)$$ 為在複平面上的瞬時速度。
+
+假設 $$z(t)=e^{it}$$，瞬時速度$$v=iz$$ 此位置逆時鐘轉一直角；因為初始位置為$$z(0)=1$$，所以初速度為$$i$$，即垂直向上運動。而每一個時間點的速度均和位置成直角，會形成旋轉軌跡。
+
+因為整個運動過程中$$|z(t)|=1$$，因此每一點的速度均為 $$|v(t)|=1$$，於是在$$t=\theta$$ 後，會在單位圓上旋轉角度$$\theta$$, 此為歐拉公式的幾何意義。
+
+
+
+![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5E7E;&#x4F55;&#x610F;&#x7FA9;](../.gitbook/assets/euler_geo-min.png)
+
+*  \[Euler identity\] $$e^{i \pi}+1=0$$
+* \[De Moivre's Theorem\] $$z^n=(re^{i \theta} )^n=r^n e^{in\theta+2k\pi}=r^n (\cos⁡(n \theta+2k \pi)+i \sin⁡(n \theta+2k\pi) )  $$, $$\forall k \in \mathbb{Z}$$
+* $$z=|z|(\cos⁡\theta+i \sin \theta )=|z| e^{i\theta}=|z| e^{i( \theta +2n \pi)}, ~ \forall n \in \mathbb{Z}$$
+* $$\ln(z)=\ln⁡(|z|)+i(\theta+2n\pi),~ \forall n \in \mathbb{Z}$$
+* \[complex root\] $$x^n=1 \Rightarrow x= e^{\frac{2k \pi}{n}}, ~ \forall k \in \mathbb{Z}$$
 

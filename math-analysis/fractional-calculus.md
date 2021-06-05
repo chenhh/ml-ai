@@ -49,7 +49,14 @@
 
 ## 迦瑪函數\(gamma function\)
 
+> $$\displaystyle \Gamma(x) =\int_0^\infty \frac{t^{x-1}}{e^t} dt, ~x>0$$或$$(\mathrm{Re}(x) >0, x \in \mathbb{C}$$\)
+>
+> * $$\Gamma(z+1)=z\Gamma(z) ~ \forall z >0$$
+> * 可得 $$\Gamma(n+1)=n!, ~\forall n \in \mathbb{N}$$
+>
+>  因此迦瑪函數為階乘的一般化版本。
 
+![&#x8FE6;&#x746A;&#x51FD;&#x6578;&#x5716;](../.gitbook/assets/1280px-gamma_plot-min.png)
 
 ## 參考資料
 

@@ -20,5 +20,7 @@
 
 
 
+## 參考資料
 
+* Kenneth S. Miller and Bertram Ross, " An introduction to the fractional calculus and fractional differential equations, "  Wiley, 1993.
 

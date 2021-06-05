@@ -135,3 +135,7 @@
 * [微分方程簡介](differential-equation/diff-eq-intro.md)
 * [分離變數法](differential-equation/separation-of-variables.md)
 
+## 複變函數 <a id="complex-number-function"></a>
+
+* [複數\(complex number\)](complex-number-function/complex-number.md)
+

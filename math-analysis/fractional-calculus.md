@@ -32,6 +32,8 @@
 > * $$D_t^n \cdot D_t^m [f(t)]=D_t^{n+m} [f(t)]$$ （$$\frac{d^n}{dt^n} \cdot \frac{d^m}{dt^m }f(t)=\frac{d^{n+m}}{dt^{n+m}} f(t)$$）
 > * 
 >   \[常數與微分算子獨立\] $$D_t^n [cf(t)]=cD_t^n [f(t)]$$ \($$\frac{d^n (cf(t))}{dt^n}=c\frac{d^n f(t)}{dt^n}$$\), $$c \in \mathbb{R}$$
+>
+> * \[分配律\]  $$D_t^n [f(t) \pm g(t)]=D_t^n [f(t)] \pm D_t^n [g(t)]$$  \($$\frac{d^n (f(t) \pm g(t)))}{dt^n}=\frac{d^n f(t)}{dt^n } \pm \frac{d^n g(t)}{dt^n }$$\)
 
 
 

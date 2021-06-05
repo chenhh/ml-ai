@@ -27,7 +27,7 @@
 
 ## \(整數\)微分算子
 
-> 考慮一般微分算子 $$D_t^n, n \in \mathbb{N}$$ （或$$\frac{d^n f(t)}{dt^n}$$），此算子定義如下：
+> 考慮一般微分算子 $$D_t^n, n \in \mathbb{N}$$ （或$$\frac{d^n f(t)}{dt^n}$$），對於可微分函數$$f,g$$此算子定義如下：
 >
 > * $$D_t^n \cdot D_t^m [f(t)]=D_t^{n+m} [f(t)]$$ （$$\frac{d^n}{dt^n} \cdot \frac{d^m}{dt^m }f(t)=\frac{d^{n+m}}{dt^{n+m}} f(t)$$）
 > * 
@@ -46,6 +46,10 @@
 
 * 
   對於常數$$c$$的分數階微分不一定為0。
+
+## 迦瑪函數\(gamma function\)
+
+
 
 ## 參考資料
 

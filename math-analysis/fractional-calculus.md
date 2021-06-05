@@ -40,7 +40,12 @@
 >   * $$(f^{(2)}g+2f^{(1)}g^{(1)} +fg^{(2)})^{'} = f^{(3)}g + 3 f^{(2)}g^{(1)}+3f^{(1)}g^{(2)}+fg^{(3)}$$
 > *  $$\begin{aligned} D_t^n [t^m ] & =m(m−1)(m−2)\cdots (m−n+1) t^{m−n} \\ &=\frac{m!}{(m−n)!} t^{m−n} \\ &=\frac{\Gamma(m+1)}{\Gamma(m−n+1)  }t^{m−n}, ~ \forall m>n \end{aligned}$$
 
+* $$n!=n \times (n−1)!$$ 在$$n \in \mathbb{N} \setminus \{1\}$$時很容易定義；而擴充到$$n \in \mathbb{R}$$時，需使用gamma function定義。
+* 
+  $$D_t^{1/2} D_t^{−1/2} [f(t)]=D_t^0 [f(t)]=f(t)$$ **\[負數的微分為積分**\]
 
+* 
+  對於常數$$c$$的分數階微分不一定為0。
 
 ## 參考資料
 

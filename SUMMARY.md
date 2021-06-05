@@ -139,3 +139,7 @@
 
 * [複數\(complex number\)](complex-number-function/complex-number.md)
 
+## 複雜系統 <a id="complex-system"></a>
+
+* [模型思維\(the model thinker\)](complex-system/mo-xing-si-wei-the-model-thinker.md)
+

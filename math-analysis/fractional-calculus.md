@@ -83,7 +83,16 @@ Proof:
 * $$\displaystyle \Gamma(0.5)=\int_0^\infty \frac{t^{−0.5}}{e^t}  dt=1.77245$$
 * $$\Gamma(1.5)=\int_0^\infty \frac{t^{0.5}}{e^t } dt=0.886227=0.5 \times \Gamma(0.5)$$
 * $$\Gamma(2.5)=\int_0^\infty \frac{t^{1.5}}{e^t } dt=1.32934=1.5 \times \Gamma(1.5)$$
-* 
+
+## 使用迦瑪函數定義分數微分
+
+> 定義微分算子$$D_t^\alpha,  ~ \alpha \in \mathbb{R}$$如下：
+>
+> * $$D_t^\alpha [t^\beta ] \equiv \frac{d^\alpha}{dt^\alpha} [t^\beta ]=\frac{\Gamma(\beta+1)  }{\Gamma(\beta+1−\alpha)}  t^{\beta−\alpha}$$
+> * $$\beta+1 \neq0,−1,−2,\ldots,−n$$
+
+>
+
 
 
 

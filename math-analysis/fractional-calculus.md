@@ -58,6 +58,11 @@
 
 ![&#x8FE6;&#x746A;&#x51FD;&#x6578;&#x5716;](../.gitbook/assets/1280px-gamma_plot-min.png)
 
+* $$\displaystyle \Gamma(1)=\int_0^\infty \frac{1}{e^t}  dt=-\frac{​ 1}{e^t }\bigg|_0^\infty=1$$
+* $$\displaystyle \Gamma(2)=\int_0^\infty \frac{t}{e^t}  dt= \frac{-t-1}{e^t } \bigg|_0^\infty=1=1\times \Gamma(1)$$
+* $$\displaystyle \Gamma(3)=\int_0^\infty \frac{t^2}{e^t}  dt=​ \frac{−t^2−2t−2}{e^t} \bigg|_0^\infty=2=2 \times \Gamma(2)$$
+* $$\Gamma(4)=\int_0^\infty \frac{t^3}{e^t}  dt=\frac{ ​ −t^3−3t^2−6t−6}{e^t}  \bigg|_0^\infty=6=3 \times \Gamma(3)$$
+
 ## 參考資料
 
 * Kenneth S. Miller and Bertram Ross, " An introduction to the fractional calculus and fractional differential equations, "  Wiley, 1993.

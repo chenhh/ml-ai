@@ -58,10 +58,14 @@
 
 ![&#x8FE6;&#x746A;&#x51FD;&#x6578;&#x5716;](../.gitbook/assets/1280px-gamma_plot-min.png)
 
+* $$\displaystyle \Gamma(0)=\int_0^\infty \frac{t^{−1}}{e^t}  dt$$ 不收斂
 * $$\displaystyle \Gamma(1)=\int_0^\infty \frac{1}{e^t}  dt=-\frac{​ 1}{e^t }\bigg|_0^\infty=1$$
 * $$\displaystyle \Gamma(2)=\int_0^\infty \frac{t}{e^t}  dt= \frac{-t-1}{e^t } \bigg|_0^\infty=1=1\times \Gamma(1)$$
 * $$\displaystyle \Gamma(3)=\int_0^\infty \frac{t^2}{e^t}  dt=​ \frac{−t^2−2t−2}{e^t} \bigg|_0^\infty=2=2 \times \Gamma(2)$$
 * $$\Gamma(4)=\int_0^\infty \frac{t^3}{e^t}  dt=\frac{ ​ −t^3−3t^2−6t−6}{e^t}  \bigg|_0^\infty=6=3 \times \Gamma(3)$$
+* $$\displaystyle \Gamma(0.01)=\int_0^\infty \frac{t^{−0.99}}{e^t } dt=99.4326 $$
+* 
+  $$\displaystyle \Gamma(1.01)=\int_0^\infty\frac{t^{0.01}}{e^t}  dt=0.994326=0.01\times \Gamma(0.01)$$
 
 ## 參考資料
 

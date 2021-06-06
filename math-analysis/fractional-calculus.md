@@ -137,11 +137,45 @@ Proof:
 >
 > 即$$D$$為$$J_\alpha$$的左反算子，且通常不具有交換性。
 
-## 
+* $$\forall n \in \mathbb{N}, D^n J_\alpha^nf(t)=f(t)$$，因此$$D^n$$為$$J_\alpha^n$$的左反算子。
+* 對連續函數$$f$$做分部積分法可得 
+* $$\begin{aligned} \displaystyle D^n J_\alpha^n f(t) & =f(t) \\ & \Leftrightarrow D^{-n}f(t) = J_\alpha^n f(t) \\ & = \int_\alpha^t \int_\alpha^{x_1} \cdots \int_\alpha^{x_{n-1}} f(x_n) dx_n \cdots dx_2 dx_1 \\ & = \frac{1}{(n-1)!} \int_\alpha^t \frac{f(s)}{(t-s)^{1-n}} ds \\ & = \frac{1}{\Gamma(n)} \int_\alpha^t f(s) (t-s)^{n-1} ds \end{aligned}$$
+* 因此對任意正實數$$n>0$$，可定義分數階積分$$\displaystyle D_\alpha^{−n}f(t)=\frac{1}{\Gamma(n)}  ∫_\alpha^t f(s) (t−s)^{n−1} ds$$
+
+### RL\(左\)積分
+
+> 給定函數$$f$$在區間$$(0, \infty)$$點態連續\(pointwise continuous\)且在區間$$[0, \infty)$$可積分，則$$\forall t >0, \mathrm{Re}(n) >0$$, RL積分為
+>
+> * $$\begin{aligned} \displaystyle D_0^{-n} f(t) &= \frac{1}{\Gamma(n)} \int_0^t f(s)(t-s)^{n-1} ds \\ &= \int_0^t \cdots \int_0^t f(t) dt \cdots dt \end{aligned}$$
+> * $$\displaystyle \Gamma(n)=\int_0^\infty \frac{t^{n-1}}{e^t}dt, ~n >0$$
+>
+> 所以RL積分為整數階積分的一般化。
+
+令$$f(x)=e^{2x}$$, $$g(x)=f^{(3)} (x)=2^3 e^{2x}$$
+
+* $$\begin{aligned} \displaystyle J_0^3 g(x) & = \int_0^x \int_0^a \int_0^b g(c) dc db da \\ & = \int_0^x \int_0^a \int_0^b 8e^{2c} dc db da \\ &= \int_0^x \int_0^a (4e^{2b} - 4) db da \\ &= \int_0^x (2e^{2a} - 4a - 2) da = e^{2x} - 2x^2 -2x \end{aligned}$$
+
+### RL分數階微分
+
+> 令函數$$f$$在區間$$(0, \infty)$$點態連續，$$D_0^{-n}$$在區間$$(0, \infty)$$$$m$$次可楚，$$n >0, ~ m = floor(n)+1$$，
+>
+> 則RL微分為$$D_0^n f(t) = D^m [D_0^{-(m-n)} f(t)] =D^m \frac{1}{\Gamma(m-n)} \int_0^t f(s) (t-s)^{(m-n)-1}ds$$
+>
+> 先積分再微分。
+
+令微分階數$$n>0$$, 取$$m=floor(n)+1$$，則$$D^n=D^m D^{−(m−n) }$$
+
+例如 $$n=3.25, m=3+1=4 ~D^{3.25}=D^4 D^{−0.75}$$，即微分4次後，再積分0.75次。
+
+### Caputo 分數階微分
+
+### 
 
 
 
 
+
+### 
 
 
 

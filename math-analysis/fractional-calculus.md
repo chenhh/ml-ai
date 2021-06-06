@@ -56,6 +56,19 @@
 >
 >  因此迦瑪函數為階乘的一般化版本。
 
+### 迦瑪函數的遞迴性質
+
+> $$\Gamma(z+1)=z \times \Gamma(z), ~\forall z>0$$
+
+Proof:
+
+* 分部積分 $$\int u(t)v^{′}(t) dt=u(t)v(t)−∫u^{′} (t)v(t)dt$$
+* $$\Gamma (x+1)=\int_0^{\infty} \frac{t^x}{e^t} dt$$
+* 令$$u=t^x, v^′=\frac{1}{e^t} \Rightarrow u^′=xt^{x−1}, v=\frac{−1}{e^t }$$
+*  $$\displaystyle \therefore \int_0^\infty \frac{t^x}{e^t}  dt=\frac{​−t^x}{e^t } \bigg|_0^\infty +\int_0^\infty  \frac{xt^{x−1}}{e^t}  dt=0+\int_0^\infty \frac{(xt^(x−1)}{e^t}  dt$$
+* 根據L'Hospital rule, $$\displaystyle \lim_{t \rightarrow \infty}⁡\frac{−t^x}{e^t} = \lim_{t \rightarrow \infty}⁡ \frac{xt^{x−1}}{e^t} =\ldots =\lim_{t \rightarrow \infty}  \frac{(x−1)\cdot 0}{e^t} =0$$
+* $$\displaystyle \therefore \int_0^\infty  \frac{t^x}{e^t}  dt=x \int_0^\infty \frac{t^{x−1}}{e^t}  dt \Leftrightarrow \Gamma(x+1)=x \Gamma(x), ~ x>0$$ \(QED\)
+
 ![&#x8FE6;&#x746A;&#x51FD;&#x6578;&#x5716;](../.gitbook/assets/1280px-gamma_plot-min.png)
 
 * $$\displaystyle \Gamma(0)=\int_0^\infty \frac{t^{−1}}{e^t}  dt$$ 不收斂
@@ -66,6 +79,18 @@
 * $$\displaystyle \Gamma(0.01)=\int_0^\infty \frac{t^{−0.99}}{e^t } dt=99.4326 $$
 * 
   $$\displaystyle \Gamma(1.01)=\int_0^\infty\frac{t^{0.01}}{e^t}  dt=0.994326=0.01\times \Gamma(0.01)$$
+
+* $$\displaystyle \Gamma(0.5)=\int_0^\infty \frac{t^{−0.5}}{e^t}  dt=1.77245$$
+* $$\Gamma(1.5)=\int_0^\infty \frac{t^{0.5}}{e^t } dt=0.886227=0.5 \times \Gamma(0.5)$$
+* $$\Gamma(2.5)=\int_0^\infty \frac{t^{1.5}}{e^t } dt=1.32934=1.5 \times \Gamma(1.5)$$
+* 
+
+
+
+
+
+
+
 
 ## 參考資料
 

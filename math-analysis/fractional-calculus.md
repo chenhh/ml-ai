@@ -104,6 +104,14 @@ Proof:
 >
 > 若$$f(t)$$或$$g(t)$$為常數時，令$$g(t)=c$$，則 $$\displaystyle  D_t^\alpha [cf(t)]=\sum_{k=0}^\infty \binom{\alpha}{k} D_t^{\alpha−k} [f(t)] D_t^k [c]=cD_t^\alpha [f(t)]$$
 
+## 微積分基本定理\(Fundamental theorem of calculus\)
+
+### 第一定理
+
+> 函數$$
+
+
+
 
 
 ## 參考資料

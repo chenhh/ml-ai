@@ -91,6 +91,12 @@ Proof:
 > * $$D_t^\alpha [t^\beta ] \equiv \frac{d^\alpha}{dt^\alpha} [t^\beta ]=\frac{\Gamma(\beta+1)  }{\Gamma(\beta+1−\alpha)}  t^{\beta−\alpha}$$
 > * $$\beta+1 \neq0,−1,−2,\ldots,−n$$
 
+### 分數階微分為整數階微分的一般化
+
+* $$D_t^3 [t^5 ]=\frac{\Gamma(5+1)}{\Gamma(5+3−1) } t^{5−3}=\frac{5!}{2!} t^2=(5\times 4\times 3) \times t^2$$
+
+### 
+
 >
 
 

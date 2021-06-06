@@ -169,17 +169,13 @@ Proof:
 
 ### Caputo 分數階微分
 
-### 
+> 令函數$$f$$在區間$$(0, \infty)$$點態連續，$$D_0^{-n}$$在區間$$(0, \infty)$$$$m$$次可楚，$$n >0, ~ m = floor(n)+1$$，
+>
+> 則Caputo微分是$$D_0^n f(t) = D_0^{-(m-n)}[D^m f(t)]= \frac{1}{\Gamma(m-n)} \int_0^t f^{(m)}(s)(t-s)^{(m-n)-1}ds$$
 
-
-
-
-
-### 
-
-
-
-
+* RL微分是先積分$$(m−n)$$次再微分$$m$$次，而Caputo是先微分$$m$$次再積分$$(m−n)$$次，$$m \in \mathbb{N}, n \in \mathbb{R}$$。
+* 微分階數$$n>0$$, 取$$m=floor(n)+1$$，則$$D^n=D^m D^{−(m−n) }=D^{−(m−n) } D^m$$
+* RL微分便於分數階微分的計算，而Caputo方式便於Laplace transform的計算。
 
 
 

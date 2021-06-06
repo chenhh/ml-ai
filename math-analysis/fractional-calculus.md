@@ -95,15 +95,14 @@ Proof:
 
 * $$D_t^3 [t^5 ]=\frac{\Gamma(5+1)}{\Gamma(5+3−1) } t^{5−3}=\frac{5!}{2!} t^2=(5\times 4\times 3) \times t^2$$
 
-### 
+### 分數階微分的Leibniz rule
 
+> * $$\begin{aligned} \displaystyle D_t^\alpha [f(t)g(t)] & = \sum_{k=0}^\infty  \binom{\alpha}{k}D_t^{\alpha-k}[f(t)]D_t^k[g(t)]\\ &= \sum_{k=0}^\infty  \binom{\alpha}{k}D_t^{\alpha-k}[g(t)]D_t^k[f(t)] \end{aligned}$$
+> * $$\displaystyle \binom{\alpha}{k} = \frac{\Gamma(\alpha+1)}{\Gamma(k+1)\Gamma(\alpha +1 -k)}$$
 >
-
-
-
-
-
-
+> 因為$$\alpha$$非整數，所以為無窮項之和
+>
+> 若$$f(t)$$或$$g(t)$$為常數時，令$$g(t)=c$$，則 $$\displaystyle  D_t^\alpha [cf(t)]=\sum_{k=0}^\infty \binom{\alpha}{k} D_t^{\alpha−k} [f(t)] D_t^k [c]=cD_t^\alpha [f(t)]$$
 
 
 

@@ -134,7 +134,12 @@
 ## 微分方程 <a id="differential-equation"></a>
 
 * [微分方程簡介](differential-equation/diff-eq-intro.md)
-* [分離變數法](differential-equation/separation-of-variables.md)
+* [一階微分方程式](differential-equation/first-order-diff-eq.md)
+* [高階線性微分方程式](differential-equation/high-order-linear-diff-eq.md)
+* [拉普拉斯轉換](differential-equation/laplace-transform.md)
+* [級數解](differential-equation/series-solution.md)
+* [線性微分方程組](differential-equation/linear-diff-eqs.md)
+* [偏微分方程式](differential-equation/partial-diff-eq.md)
 
 ## 複變函數 <a id="complex-number-function"></a>
 

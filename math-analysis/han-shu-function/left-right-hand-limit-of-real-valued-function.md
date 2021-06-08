@@ -42,6 +42,24 @@ $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
   * $$\displaystyle \lim_{x \rightarrow 4^{+}}f(x)$$不存在
   * $$\displaystyle \lim_{x \rightarrow 4}f(x)=1$$
 
+## 左、右極限非零效應
+
+> 左極限
+>
+> * $$f:[a,b] \rightarrow \mathbb{R}$$為一函數, $$B \in \mathbb{R}$$滿足$$\displaystyle \lim_{x \rightarrow b^{−} }f(x)=B $$
+> * $$B>0 \Rightarrow \exists \delta>0 \ni f(x)\geq \frac{B}{2}, ~b−\delta<x<b $$
+> * $$B<0 \Rightarrow \exists \delta>0 \ni f(x) \leq \frac{B}{2}, ~ b−\delta<x<b $$
+> * $$B\neq 0 \Rightarrow \exists  \delta>0 \ni |f(x)|\geq \frac{|B|}{2}, b−\delta<x<b $$
+>
+> 右極限
+>
+> * $$f:[a,b] \rightarrow \mathbb{R}$$為一函數, $$A \in \mathbb{R}$$滿足$$\displaystyle \lim_{x \rightarrow a^{+}}⁡ f(x)=A $$
+> * $$A>0 \Rightarrow \exists \delta>0 \ni f(x)\geq \frac{A}{2}, ~ a<x<a+\delta $$
+> * $$A<0 \Rightarrow \exists \delta>0 \ni f(x) \leq \frac{A}{2}, ~ a<x<a+\delta $$
+> * $$A \neq 0 \Rightarrow \exists \delta>0 \ni |f(x)|\geq \frac{|A|}{2}, ~ a<x<a+\delta $$
+
+
+
 ## 左、右極限不存在
 
 > * 若左極限不存在，則$$ \exists \epsilon >0, \forall \delta >0 \ni |f(x)-L|\geq \epsilon , c-\delta < x < c$$

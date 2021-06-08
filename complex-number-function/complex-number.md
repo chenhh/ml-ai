@@ -29,9 +29,10 @@
 * $$z=x+iy $$
 * $$z=(x,y)$$
 *  \[極坐標, polar form\] $$z=(r \cos \theta,r \sin\theta),~ r=\sqrt{x^2 + y^2}> 0,~ \theta\equiv \mathrm{arg}(z)=\tan^{−1}⁡\frac{y}{x} \in [−\pi, \pi]$$
-* $$z=re^{i\theta}$$
+  * $$z=re^{i\theta}$$
 * $$x=\mathrm{Re}(z), y=\mathrm{Im}(z)$$
-* $$\mathrm{Re}(z)=\frac{z + \overline{z}}{2}, ~ \mathrm{Im}(z)=\frac{z− \overline{z}}{2i}$$
+  * $$z = \mathrm{Re}(z) + i \mathrm{Im}(z)$$
+  * $$\mathrm{Re}(z)=\frac{z + \overline{z}}{2}, ~ \mathrm{Im}(z)=\frac{z− \overline{z}}{2i}$$
 
 ### 
 
@@ -65,6 +66,12 @@
 因為複數是實數的擴充，所以運算方式和實數相同 。
 
 令$$z_1=x_1+iy_1,~ z_2=x_2+iy_2$$
+
+* $$z_1 \pm z_2 = (x_1 \pm x_2)  + i (y_1 \pm y_2)$$
+* $$z_1 z_2 = (x_1+iy_1)(x_2 + iy_2)=(x_1 x_2 - y_1 y_2) + i (x_1y_2+ x_2y_1)$$
+* $$\frac{z_1}{z_2}=\frac{x_1+iy_1}{x_2+iy_2}= \frac{(x_1 + iy_1)(x_2-iy_2)}{(x_2+iy_2)(x_2-iy_2)}=\frac{x_1x_2 + y1y_2}{x_2^2+y_2^2} + i \frac{x_2 y_1 - x_1 y_2}{x_2^2+y_2^2}$$
+
+### 複數的性質
 
 * $$z_1=z_2 \Leftrightarrow x_1=x_2  \land y_1=y_2$$
 *  \[加法交換性\] $$ z_1 \pm z_2=z_2 \pm z_1=(x_1 \pm x_2 )+i(y_1 \pm y_2 )  $$
@@ -105,6 +112,7 @@
 
 * $$|z| = \sqrt{x^2 + y^2} =\sqrt{\mathrm{Re}(z)^2 + \mathrm{Im}(z)^2}$$
 * 複數之間無法比較大小，因此不能比較$$i$$與$$2i$$的大小, 但可以比較兩者的模$$|i|<|2i|$$
+* $$|z| = |\overline{z}|$$
 
 
 

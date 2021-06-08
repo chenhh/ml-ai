@@ -66,6 +66,33 @@ proof:
 * $$\displaystyle lim_{x \rightarrow c} f(x)= L \Leftrightarrow \forall \epsilon >0 ~ \exists \delta >0 \ni |f(x)-L| < \epsilon～\forall  c-\delta < x < c +\delta$$
 * 由定義可得 $$\displaystyle \lim_{x \rightarrow c^{-}} f(x) = L$$且 $$\displaystyle \lim_{x \rightarrow c^{+}} f(x) = L$$\(QED\)
 
+## 遞增（減）函數與單調函數
+
+> $$(X,d)$$為度量空間,  $$f:X \rightarrow \mathbb{R}$$為一函數
+>
+> * $$\forall x,y\in X, ~(f(x)−f(y))(x−y) \geq 0$$時，（即$$x−y \geq 0$$可得$$(f(x)−f(y)) \geq 0 $$）則稱函數$$f$$在$$X$$為遞增函數\(increasing function\)。
+> * $$\forall x,y \in X,~ x \neq y, ~ (f(x)−f(y))(x−y)>0$$時，稱函數$$f$$在$$X$$為嚴格遞增函數\(strictly increasing function\)。
+> * $$\forall x,y \in X, (f(x)−f(y))(x−y) \leq 0$$時，則稱函數$$f$$在$$X$$為遞減函數\(decreasing function\)。
+> * $$\forall x,y \in X, ~ x \neq y,~ (f(x)−f(y))(x−y)<0$$時，稱函數$$f$$在$$X$$為嚴格遞減函數\(strictly decreasing function\)。
+> *  若函數$$f$$為一遞增函數或是遞減函數時，稱$$f$$為單調函數\(monotone function\)。
+> * 若函數$$f$$為一嚴格遞增函數或是嚴格遞減函數時，稱$$f$$為嚴格單調函數\(strictly monotone function\)。
+
+>
+
+![&#x905E;&#x589E;&#xFF08;&#x6E1B;&#xFF09;&#x51FD;&#x6578;](../../.gitbook/assets/function-increasing-lines-min.png)
+
+### 有上（下）界遞增函數收斂於上（下）確界
+
+> * $$f:[a,b] \rightarrow \mathbb{R}$$為一遞增函數，若$$f$$有上界$$M \in \mathbb{R}$$，即$$\forall x \in [a,b],~ f(x) \leq M $$，則$$\displaystyle \lim_{x \rightarrow b^{−} }⁡f(x)=h $$, 此處$$\displaystyle h=\sup_{x \in [a,b]} f(x)$$
+> *  $$f:[a,b] \rightarrow \mathbb{R}$$為一遞減函數，若$$f$$有下界$$m \in \mathbb{R}$$，即$$\forall x \in [a,b], m \leq f(x) $$，• 則$$\displaystyle \lim_{x→a^{+} }f(x)=l $$, 此處 $$\displaystyle l=\inf_{x \in [a,b]} f(x)$$
+
+proof:
+
+* 因為$$\forall x \in [a,b], f(x) \leq M$$，由實數的最小上界性質令$$\sup_{x \in [a,b]}f(x)=h$$存在。
+* $$\sup_{x \in [a,b]}f(x)=h \Leftrightarrow \forall \epsilon >0 ~ \exists y < b \ni h - \epsilon < f(y)$$，即$$h$$只要降低一點點就不再是$$f$$的上界。
+* 因為$$f$$為遞增函數，若$$y < x < b$$，則可得$$f(y)\leq f(x) < h + \epsilon $$。
+* 可得$$h - \epsilon \leq f(x) \leq h+\epsilon \Leftrightarrow |f(x) -h| < \epsilon$$，因此$$\lim_{x \rightarrow b^{-}}f(x)=h$$ \(QED\)
+
 
 
 

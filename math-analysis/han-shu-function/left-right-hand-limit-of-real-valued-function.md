@@ -51,6 +51,16 @@ $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
 
 ![&#x5DE6;&#x3001;&#x53F3;&#x6975;&#x9650;&#x5728;x=1&#x5206;&#x5225;&#x767C;&#x6563;&#x81F3;&#x8CA0;&#x3001;&#x6B63;&#x7121;&#x7AAE;&#x5927;](../../.gitbook/assets/mixedverticalasymptote.gif)
 
+## 極限存在的充要條件為左極限等於右極限
+
+> 區間$$I \subset \mathbb{R}$$，點$$c \in I$$，實值函數$$f: I \rightarrow \mathbb{R}$$，則$$\displaystyle \lim_{x \rightarrow c} f(x)=L \Leftrightarrow$$$$\displaystyle \lim_{x \rightarrow c^{-}} f(x)=\displaystyle \lim_{x \rightarrow c^{+}} f(x) =L$$
+>
+> 若以下條件之一成立時，函數$$f$$在點$$c$$極限不存在，：
+>
+> * $$f(c+)$$或$$f(c-)$$不存在。
+> * $$f(c+)$$且$$f(c-)$$存在，但兩者之間不相同。
+> * $$f(c+)$$與$$f(c-)$$成立且相等，但$$f(c+)=f(c-)\neq f(c)$$
+
 
 
 

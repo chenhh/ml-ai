@@ -24,7 +24,17 @@ $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
   * $$\displaystyle \lim_{x \rightarrow 1^{-}}f(x)=0$$
   * $$\displaystyle \lim_{x \rightarrow 1^{+}}f(x)=1$$
   * $$\displaystyle \lim_{x \rightarrow 1}f(x)$$不存在，因為左極限不等於右極限
-* 
+* 在點$$x=2$$
+  * $$\displaystyle \lim_{x \rightarrow 2^{-}}f(x)=1$$
+  * $$\displaystyle \lim_{x \rightarrow 2^{+}}f(x)=1$$
+  * $$\displaystyle \lim_{x \rightarrow 2}f(x)=1$$\(此極限值與$$f(2)=2$$不同\)
+* 在點$$x=3$$
+  * $$\displaystyle \lim_{x \rightarrow 3^{-}}f(x)=\displaystyle \lim_{x \rightarrow 3^{+}}f(x)=\displaystyle \lim_{x \rightarrow 3}f(x)=f(3)=2$$
+* 在點$$x=4$$
+  * $$\displaystyle \lim_{x \rightarrow 4^{-}}f(x)=1$$
+  * $$\displaystyle \lim_{x \rightarrow 4^{+}}f(x)$$不存在
+  * $$\displaystyle \lim_{x \rightarrow 4}f(x)=1$$
+
 
 
 

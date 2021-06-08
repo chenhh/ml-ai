@@ -4,13 +4,18 @@
 
 $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
 
-* 給定$$a \in \mathbb{R}$$，函數的左極限（lefthand limit）是指函數的定義域從$$x<a$$這一側逼近，記為$$x→a^{−}$$。
-* 給定$$a \in \mathbb{R}$$，函數的右極限（righthand limit）指函數的定義域從$$x>a$$這一側逼近，記為$$x→a^{+}$$。
-* 若$$\displaystyle \lim_{x \rightarrow a^{-}}f(x) = \lim_{x \rightarrow a^{+}} f(x)$$，則$$\displaystyle \lim_{x \rightarrow a}f(x)$$，即左極限等於右極限時，函數$$f(x)$$在點$$a$$連續。
+* 給定$$c \in \mathbb{R}$$，函數的左極限（lefthand limit）是指函數的定義域從$$x<c$$這一側逼近，記為$$x→c^{−}$$。
+  * $$\displaystyle \lim_{x \rightarrow c^{-}} f(x)=L \Leftrightarrow$$$$\forall \espilon > 0 ~ \exists \delta > 0 \ni |f(x) - L|< \epsilon \forall c - \delta < x < c$$$$\forall \epsilon >0 ~ \exists \delta >0 \ni |f(x)-L| < \epsilon, ~\forall\ c - \delta < x < c$$
+* 給定$$c \in \mathbb{R}$$，函數的右極限（righthand limit）指函數的定義域從$$x>c$$這一側逼近，記為$$x→c^{+}$$。
+  * $$\displaystyle \lim_{x \rightarrow c^{+}} f(x)=L \Leftrightarrow$$$$\forall \epsilon >0 ~ \exists \delta >0 \ni |f(x)-L| < \epsilon, ~\forall c  < x < c + \delta$$
+* 若$$\displaystyle \lim_{x \rightarrow c^{-}}f(x) = \lim_{x \rightarrow c^{+}} f(x)$$，則$$\displaystyle \lim_{x \rightarrow c}f(x)$$，即左極限等於右極限時，函數$$f(x)$$在點$$c$$連續。
 
 
 
 ![&#x5DE6;&#x6975;&#x9650;&#x8207;&#x53F3;&#x6975;&#x9650;](../../.gitbook/assets/left-righthand-limit-min.png)
+
+* 若左極限不存在，則$$ \exists \epsilon >0, \forall \delta >0 \ni |f(x)-L|\geq \epsilon , c-\delta < x < c$$
+* 若右極限不存在，則$$\exists \epsilon >0, \forall \delta >0 \ni |f(x)-L|\geq \epsilon , c < x < c+\delta$$
 
 範例
 

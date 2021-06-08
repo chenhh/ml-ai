@@ -61,6 +61,11 @@ $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
 > * $$f(c+)$$且$$f(c-)$$存在，但兩者之間不相同。
 > * $$f(c+)$$與$$f(c-)$$成立且相等，但$$f(c+)=f(c-)\neq f(c)$$
 
+proof:
+
+* $$\displaystyle lim_{x \rightarrow c} f(x)= L \Leftrightarrow \forall \epsilon >0 ~ \exists \delta >0 \ni |f(x)-L| < \epsilon～\forall  c-\delta < x < c +\delta$$
+* 由定義可得 $$\displaystyle \lim_{x \rightarrow c^{-}} f(x) = L$$且 $$\displaystyle \lim_{x \rightarrow c^{+}} f(x) = L$$\(QED\)
+
 
 
 

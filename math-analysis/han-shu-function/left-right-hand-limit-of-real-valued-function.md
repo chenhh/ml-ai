@@ -58,7 +58,24 @@ $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
 > * $$A<0 \Rightarrow \exists \delta>0 \ni f(x) \leq \frac{A}{2}, ~ a<x<a+\delta $$
 > * $$A \neq 0 \Rightarrow \exists \delta>0 \ni |f(x)|\geq \frac{|A|}{2}, ~ a<x<a+\delta $$
 
+## 左、右極限的四則運算
 
+> 左極限
+>
+> * $$f,g:[a,b] \rightarrow \mathbb{R}$$為兩函數，$$s,t \in \mathbb{R}$$滿足$$\displaystyle \lim_{x \rightarrow b^{−} }⁡ f(x)=B_1,~ \lim_{x \rightarrow b^{−} }⁡ g(x)=B_2 $$
+> * $$\displaystyle \lim_{x \rightarrow b^{−} }⁡(f(x) \pm g(x))= \lim_{x \rightarrow b^{−} } f(x) \pm \lim_{x \rightarrow b^{−} } g(x)=B_1 \pm B_2 $$
+> * $$\displaystyle \lim_{x \rightarrow b^{−} }(tf(x))=t \cdot \lim_{x \rightarrow b^{−} } f(x)=t\cdot B_1 $$
+> * $$\displaystyle  \lim_{x \rightarrow b^{−} }(f(x)g(x))=\lim_{x \rightarrow b^{−} } f(x)  \lim_{x \rightarrow b^{−} } g(x)=B_1 B_2 $$
+> * $$\displaystyle  \text{If } \lim_{x \rightarrow b^{−} } g(x) \neq 0 \text{ then }\lim_{x \rightarrow b^{−} }  \frac{f(x)}{g(x)} =\frac{\lim_{x \rightarrow b^{−} } f(x)}{\lim_{x \rightarrow b^{−} } g(x)}=\frac{B_1}{B_2}  $$
+
+> 右極限
+
+> * $$f,g:[a,b] \rightarrow \mathbb{R}$$為兩函數，$$s,t \in \mathbb{R}$$滿足$$\displaystyle \lim_{x \rightarrow a^{+} }⁡ f(x)=A_1,~ \lim_{x \rightarrow a^{+} }⁡ g(x)=A_2 $$
+> * $$\displaystyle \lim_{x \rightarrow a^{+} }⁡(f(x) \pm g(x))= \lim_{x \rightarrow a^{+} } f(x) \pm \lim_{x \rightarrow a^{+} } g(x)=A_1 \pm A_2 $$
+> * $$\displaystyle \lim_{x \rightarrow a^{+} }(tf(x))=t \cdot \lim_{x \rightarrow a^{+} } f(x)=t\cdot A_1 $$
+> * $$\displaystyle  \lim_{x \rightarrow a^{+} }(f(x)g(x))=\lim_{x \rightarrow a^{+} } f(x)  \lim_{x \rightarrow a^{+} } g(x)=A_1 A_2 $$
+
+> > * $$\displaystyle  \text{If } \lim_{x \rightarrow a^{+} } g(x) \neq 0 \text{ then }\lim_{x \rightarrow a^{+} }  \frac{f(x)}{g(x)} =\frac{\lim_{x \rightarrow a^{+} } f(x)}{\lim_{x \rightarrow a^{+} } g(x)}=\frac{A_1}{A_2}  $$
 
 ## 左、右極限不存在
 

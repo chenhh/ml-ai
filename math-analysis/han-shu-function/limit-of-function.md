@@ -247,6 +247,13 @@ Proof:
 * $$\therefore 0 \leq \lim_{x \rightarrow c}⁡|f(x)g(x)|\leq   \lim_{x \rightarrow c}⁡|Mf(x)|=0 $$
 *  由夾擠定理得$$\lim_{x \rightarrow c} f(x)g(x)=0$$ \(QED\)
 
+#### 範例
+
+> $$\displaystyle \lim_{x \rightarrow 0}x \sin \frac{1}{x} =0$$
+
+* $$\because \lim_{x \rightarrow 0} x = 0$$且 $$\forall x \in \mathbb{R}, ~ |\sin \frac{1}{x}| <1$$
+* $$\therefore \lim_{x \rightarrow 0} x \sin \frac{1}{x} =0$$ \(QED\)
+
 
 
 

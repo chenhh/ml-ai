@@ -45,3 +45,8 @@ $$
 * $$\displaystyle \mathrm{H}(Q)=- \sum_{j=1}^n \mathrm{P_Q}(q_j)\log_2(q_j)$$
 * 其中$$\mathrm{P_S}(s_i), \mathrm{P_Q}(q_j$$分別是$$S$$和$$Q$$中事件$$s_i$$和$$q_j$$的機率。
 
+可得互資訊$$\mathrm{I}(S,Q)$$（兩個系統共有的資料量）為：
+
+* $$\mathrm{I}(S,Q)=\mathrm{H}(S)+\mathrm{H}(Q)-\mathrm{H}(S,Q)$$
+* $$\displaystyle \mathrm{H}(S,Q)=- \sum_{i=1}^m \sum_{j=1}^n \mathrm{P_{S,Q}}(s_i, q_j)\log_2 \mathrm{P_{S,Q}}(s_i, q_j)$$為聯合熵。
+

@@ -50,3 +50,5 @@ $$
 * $$\mathrm{I}(S,Q)=\mathrm{H}(S)+\mathrm{H}(Q)-\mathrm{H}(S,Q)$$
 * $$\displaystyle \mathrm{H}(S,Q)=- \sum_{i=1}^m \sum_{j=1}^n \mathrm{P_{S,Q}}(s_i, q_j)\log_2 \mathrm{P_{S,Q}}(s_i, q_j)$$為聯合熵。
 
+現在可以通過資訊論的方法來計算延遲時間$$\tau$$。
+

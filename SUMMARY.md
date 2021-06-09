@@ -148,5 +148,6 @@
 ## 複雜系統 <a id="complex-system"></a>
 
 * [模型思維\(the model thinker\)](complex-system/mo-xing-si-wei-the-model-thinker.md)
-* [碎形\(分形\) Fractal](complex-system/fractal.md)
+* [碎形\(分形\) \(fractal\)](complex-system/fractal.md)
+* [相空間重構](complex-system/phase-space-reconstruction.md)
 

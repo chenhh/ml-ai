@@ -52,3 +52,8 @@ $$
 
 現在可以通過資訊論的方法來計算延遲時間$$\tau$$。
 
+## 參考資料
+
+* Floris Takens, "Detecting strange attractors in turbulence." Dynamical systems and turbulence, pp 366-381, 1981.
+* Lyle Noakes, "The Takens embedding theorem." International Journal of Bifurcation and Chaos, Vol. 01, No. 04, pp. 867-872, 1991.
+

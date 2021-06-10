@@ -6,6 +6,10 @@
 
 ## 分佈收斂\(convergence in distribution\)
 
+> $$\displaystyle \lim_{ n \rightarrow \infty}F_n(x) = F(x)$$
+
+依分佈收斂是個完全不同的概念。依分佈收斂是一個分佈函數收斂的概念。所以$$X_n$$與$$X$$甚至都可以不被定義在同一個機率空間之內。
+
 ## 機率收斂\(convergence in probability\)
 
 > $$\displaystyle \lim_{n \rightarrow \infty}\mathrm{P}(\| X_n -X\|>\epsilon) = 0$$
@@ -15,6 +19,10 @@
 ## L-P收斂\(L-p convergence\)
 
 ## 依均值收斂\(convergence in mean\)
+
+> $$\displaystyle \lim_{n \rightarrow \infty} \mathrm{E}(| X_n -X|^2)=0$$
+
+可以理解為兩個隨機變量的距離隨著$$n$$趨向於無窮而變為0。均方收斂可以推出依機率收斂，但是相反不成立。當然，如果加上一定的可積條件的話，依機率收斂可以推出均方收斂。
 
 ## 幾乎確定收斂\(機率1收斂\)\(almost sure convergence\)
 

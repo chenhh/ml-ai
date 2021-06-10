@@ -52,6 +52,8 @@ $$
 
 現在可以通過資訊論的方法來計算延遲時間$$\tau$$。
 
+定義$$(S,Q)=(x(i), x(i+\tau), ~ 1 \leq i \leq n-r$$，也就是系統$$S$$代表時間$$x(i)$$，系統$$Q$$代表時間$$x(i+\tau)$$，則$$\mathrm{I}(S,Q)$$則是關於延遲時間$$\tau$$的函數，可寫成$$\mathrm{I}(\tau)$$，其值表示在已知系統$$S$$（即$$x(i)$$）的情況下，系統$$Q$$（即$$x(i+\tau)$$）的確定性大小。$$\mathrm{I}(\tau)=0$$表示$$x(i)$$與$$x(i+\tau)$$完全不相關，因此完全無法預測。而$$\mathrm{I}(\tau)$$的第一個極小值，則表示了$$x(i)$$與$$x(i+\tau)$$是最大可能的不相關，重構時使用$$I(\tau)$$的第一個極小值為最優的延遲時間$$\tau$$。
+
 ## 參考資料
 
 * Floris Takens, "Detecting strange attractors in turbulence." Dynamical systems and turbulence, pp 366-381, 1981.

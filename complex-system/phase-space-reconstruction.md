@@ -54,6 +54,26 @@ $$
 
 定義$$(S,Q)=(x(i), x(i+\tau), ~ 1 \leq i \leq n-r$$，也就是系統$$S$$代表時間$$x(i)$$，系統$$Q$$代表時間$$x(i+\tau)$$，則$$\mathrm{I}(S,Q)$$則是關於延遲時間$$\tau$$的函數，可寫成$$\mathrm{I}(\tau)$$，其值表示在已知系統$$S$$（即$$x(i)$$）的情況下，系統$$Q$$（即$$x(i+\tau)$$）的確定性大小。$$\mathrm{I}(\tau)=0$$表示$$x(i)$$與$$x(i+\tau)$$完全不相關，因此完全無法預測。而$$\mathrm{I}(\tau)$$的第一個極小值，則表示了$$x(i)$$與$$x(i+\tau)$$是最大可能的不相關，重構時使用$$I(\tau)$$的第一個極小值為最優的延遲時間$$\tau$$。
 
+互動資訊法的關鍵在於怎麼計算聯合機率分佈$$\mathrm{P}_{S,Q}(s_i, q_j)$$以及$$S$$ 和$$Q$$系統的機率分佈$$\mathrm{P}_S(s_i)$$和 $$\mathrm{P}_Q(q_j)$$這裡採取的方法是**等間距格子法**，其方法簡要概述如下。
+
+令$$(S,Q)=(x(i), x(i+\tau)，~ 1 \leq i \leq n-r$$在$$(S,Q)$$平面用一個矩形包含上面所有的點。將矩形 $$S$$方向上等分成$$M_1$$份， $$Q$$方向等分成$$M_2$$份（註： $$M_1, M_2$$取值100~200之間即可）。那麼在$$S$$方向上格子的長度就是$$\epsilon_1$$， $$Q$$方向上格子的長度就是$$\epsilon_2$$，假設$$(a,b)$$是$$(S,Q)$$ 平面矩形左下角的頂點坐標。
+
+* 如果$$(i-1)\epsilon_1 \leq s-a < i \epsilon_1$$，則$$s$$在第$$i$$個格子中，對$$Row[i]$$做一次紀錄；
+* 如果$$(j-1)\epsilon_2 \leq q-b < j \epsilon_2$$，則$$q$$在第$$j$$個格子中，對$$Col[j]$$做一次紀錄。
+
+$$x(i)$$與$$x(i+\tau)$$序列的總數都是$$n-\tau$$，因此機率：
+
+* $$\mathrm{P}_S(i) = \frac{Row[i]}{n-\tau}, ~ 1 \leq i \leq M_1$$
+* $$P_Q(j) = \frac{Col[j]}{n-\tau}, ~ 1 \leq j\leq M_2$$
+
+如果$$(i-1)\epsilon_1 \leq s-a < i \epsilon_1$$且$$(j-1)\epsilon_2 \leq q-b \leq j \epsilon_2$$，則$$(s,q)$$落在標號為$$(i,j)$$的格子中，對$$Together[i,j]$$做一次紀錄，可得：
+
+* $$\mathrm{P}_{S,Q}(i,j) = \frac{Together[i,j]}{(n-\tau)^2}, ~ 1 \leq i \leq M_1, ~ 1 \leq j \leq M_2$$
+
+計算出機率後，可以算出資訊熵$$\mathrm{H}(S), \mathrm{H}(Q), \mathrm{H}(S,Q),$$與互資訊$$\mathrm{I}(S,Q)$$以及經標準化的互資訊$$\hat{\mathrm{I}}(S,Q) = \mathrm{I}(S,Q)/ \sqrt{\mathrm{H}(S) \mathrm{H}(Q)}$$。
+
+互資訊區線$$\mathrm{I}(\tau) = \hat{\mathrm{I}}(S,Q)$$第一次下降到（局部）極小值所對應的延遲時間$$\tau$$即為最佳延時時間。
+
 ## 參考資料
 
 * Floris Takens, "Detecting strange attractors in turbulence." Dynamical systems and turbulence, pp 366-381, 1981.

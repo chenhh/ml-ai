@@ -88,6 +88,8 @@ $$x(i)$$與$$x(i+\tau)$$序列的總數都是$$n-\tau$$，因此機率：
 
 重構相空間，實際上就是從混沌時間序列中恢復混沌運動的軌跡，隨著嵌入維數的增大，混沌運動的軌道就會被打開，虛假鄰點就會被逐漸剔除，從而整個混沌運動的軌跡得到恢復，這個思想就是虛假最臨近點法的關鍵。
 
+在$$d$$維相空間中，每一個向量： $$y_i(d)=[x(i), \ldots, x(i+(d-1)\tau)], ~ 1 \leq i \leq n-(d-1)\tau$$，都是有一個歐式距離的最鄰近點 $$y\_{n\(i,}
+
 ## 參考資料
 
 * Floris Takens, "Detecting strange attractors in turbulence." Dynamical systems and turbulence, pp 366-381, 1981.

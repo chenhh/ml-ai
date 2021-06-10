@@ -62,6 +62,7 @@
   * [計數過程\(counting process\)](probability-and-statistics/random-process/counting-process.md)
   * [卜瓦松過程\(Poisson process\)](probability-and-statistics/random-process/poisson-process.md)
   * [布朗運動\(Brownian motion\)](probability-and-statistics/random-process/brownian-motion.md)
+  * [平賭\(鞅\)過程\(Martingale process\)](probability-and-statistics/random-process/martingale-process.md)
 * [貝式機率](probability-and-statistics/bayes-probability.md)
 * [關聯結構\(copula\)](probability-and-statistics/copula.md)
 

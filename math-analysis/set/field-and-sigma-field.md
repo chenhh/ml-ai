@@ -49,5 +49,9 @@
 * $$\mathcal{B} =\{ (x,y] | x<y \text{ and } x, y \in \mathbb{R} \}$$包含所有實數上的半開區間為Borel sigma-field。
 * $$\mathcal{B} =\{ [x,y] | x<y \text{ and } x, y \in \mathbb{R} \}$$包含所有實數上的閉區間為Borel sigma-field。
 
+## filtration
+
+> Filtration $$\mathcal{F}_t$$為隨機過程中，隨時間擴大的資訊集合；
+
 
 

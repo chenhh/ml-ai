@@ -138,6 +138,15 @@ $$x(i)$$與$$x(i+\tau)$$序列的總數都是$$n-\tau$$，因此機率：
 
 ###  區域性平均預測法\(k-nearest-neighborhood\)
 
+考慮向量 $$\vec{y}_N$$的$$k$$個最臨近向量 $$\vec{y}_{t1},\ldots, \vec{y}_{tk}$$ ，也就是從其他的$$N-1$$個向量中選取前$$k$$個與$$\vec{y}_N$$最臨近的向量，此處用歐式範數$$\|\cdot\|_2$$或者最大模範數 $$\| \cdot \|_{\infty}$$根據區域性預測法的觀點，可以得到$$x(n+1)$$的近似值為平均值：$$\displaystyle x(n+1) \approx  \frac{1}{k} \sum_{j=1}^k x(t_j+1+(d-1)\tau)$$。
+
+也可以引入權重的概念來計算近似值：
+
+* $$\displaystyle x(n+1) \approx \sum_{j=1}^k x(t_j+1+(d-1)\tau) w(\vec{y}_{tj}, \vec{y}_N)$$
+* $$\displaystyle w(\vec{y}_{tj}, \vec{y}_N) = \frac{K_h(\| \vec{y}_{tj}-\vec{y}_N\|)}{\sum_{j=1}^k K_h(\| \vec{y}_{tj} - \vec{y}_N \|)}, ~ 1 \leq j \leq k$$
+* $$K(x)=\exp \left(-\frac{x^2}{2} \right)$$
+* $$K_h(x) = \frac{1}{h}K(\frac{h}{x})= \frac{1}{h} \exp \left( \frac{-x^2}{2h^2} \right)$$
+
 
 
 

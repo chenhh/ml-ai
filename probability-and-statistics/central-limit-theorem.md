@@ -4,14 +4,16 @@
 
 ## 大數法則\(\(law of large numbers\)
 
-> $$(\Omega, \mathcal{F}, \mathrm{P})$$為一機率空間，$$X, X_1, X_2, \ldots$$為定義在$$\Omega$$的實值隨機函數。
+> $$(\Omega, \mathcal{F}, \mathrm{P})$$為一機率空間，$$X, X_1, X_2, \ldots$$為定義在$$\Omega$$的實值隨機函數，且$$\mathrm{E}(X)=\mu$$存在。
 >
-> 令$$S_n=\sum_{i=1}^n X_i, ~~A_n = \frac{S_n}{n}$$
+> 令$$\overline{X}_n=\frac{1}{n}\sum_{i=1}^n X_i$$，
 >
-> *  則$$X_1,X_2, \ldots$$滿足強大數法則 $$\Leftrightarrow$$$$\displaystyle\mathrm{P} (\lim_{n \rightarrow \infty} X_n =X)=1$$，即$$X_n$$幾乎確定收斂至$$X$$。
-> *  則$$X_1,X_2, \ldots$$滿足弱大數法則 $$\Leftrightarrow$$$$\displaystyle \forall \epsilon >0 , ~ \lim_{n \rightarrow \infty} \mathrm{P} ( |X_n -X| > \epsilon)=0$$，即$$X_n$$機率收斂至$$X$$。
+> *  則$$X_1,X_2, \ldots$$滿足強大數法則 $$\Leftrightarrow$$$$\displaystyle\mathrm{P} (\lim_{n \rightarrow \infty} \overline{X}_n =\mu)=1$$，即樣本均值$$\overline{X}_n$$幾乎確定收斂至母體均值$$\mu$$。樣本均值會收斂至母體均值。
+> *  則$$X_1,X_2, \ldots$$滿足弱大數法則 $$\Leftrightarrow$$$$\displaystyle \forall \epsilon >0 , ~ \lim_{n \rightarrow \infty} \mathrm{P} ( |\overline{X}_n -\mu| > \epsilon)=0$$，即樣本均值$$\overline{X}_n$$機率收斂至母體均值$$\mu$$。樣本均值收斂至母體均值的機率很大，即有時樣本均值會偏離母體均值，但次數（機率）非常小。
 
 * 大數法則是說當（任意分佈）的樣本數夠多，樣本平均會收斂至母體期望值。長期下來，平均的表現， 與真正該有之表現（指期望值）差異便不大。
+
+弱大數定理 proof：弱大數法則中，只要變異數存在，證明便很簡單，因為$$\mathrm{Var}(\overline{X}_n) = \frac{1}{n} \mathrm{Var}(X)  \xrightarrow[n \rightarrow \infty]{} 0$$
 
 ## 中央極限定理 \(central limit theorem\) 
 

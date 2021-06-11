@@ -30,6 +30,10 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 * $$\displaystyle  \lim_{x \rightarrow \infty} F(x)=1$$且 $$\displaystyle  \lim_{x \rightarrow 0} F(x) = 0 $$
 * $$P(a < X \leq b) = F_X(b) - F_X(a)$$ 
 
+### 經驗分佈函數\(empirical distribution\)
+
+> 令$$X_1, X_2, \ldots$$為一組隨機樣本, 以$$F$$為共同分佈函數。令 $$F_n(x)=\frac{X_i \leq x}{n}, ~ \forall x \in \mathbb{R}$$，則$$F_n$$稱為此組樣本之經驗分佈函數，為一階梯函數。
+
 ## 機率密度（質量）函數（probability density \(mass\) function）
 
 如果離散隨機變數$$X$$，定義機率質量函數\(pmf\)$$P(x_i)\equiv P(X=x_i) \equiv P(\{ \omega \in \Omega | X(\omega \in x_i\})$$且滿足

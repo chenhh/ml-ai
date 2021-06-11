@@ -11,6 +11,8 @@
 > *  則$$X_1,X_2, \ldots$$滿足強大數法則 $$\Leftrightarrow$$$$\displaystyle\mathrm{P} (\lim_{n \rightarrow \infty} X_n =X)=1$$，即$$X_n$$幾乎確定收斂至$$X$$。
 > *  則$$X_1,X_2, \ldots$$滿足弱大數法則 $$\Leftrightarrow$$$$\displaystyle \forall \epsilon >0 , ~ \lim_{n \rightarrow \infty} \mathrm{P} ( |X_n -X| > \epsilon)=0$$，即$$X_n$$機率收斂至$$X$$。
 
+* 大數法則是說當（任意分佈）的樣本數夠多，樣本平均會收斂至母體期望值。長期下來，平均的表現， 與真正該有之表現（指期望值）差異便不大。
+
 ## 中央極限定理 \(central limit theorem\) 
 
 不論隨機樣本原來的分佈為何，在樣本數$$N$$足夠大時，將**樣本平均數標準化**後所得新統計量的分佈會非常接近於標準常態分佈。\(但隨機樣本必須具有有限變異數\)。

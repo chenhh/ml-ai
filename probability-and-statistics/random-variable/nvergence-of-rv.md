@@ -4,6 +4,8 @@
 
 隨機變數的收斂\(convergence of random variable\)被稱為隨機收斂，表示一系列本質上隨機不可預測的事件所發生的模式可以在樣本數量足夠大的時候得到合理可靠的預測。各種不同的收斂定義實際上是表示預測時不同的刻畫方式。
 
+當樣本數無止盡的增大， 一些關於樣本的量會有什麼極限的結果？ 雖然無限的樣本數只是一理論上的假設，但極限之下的結果，常可做為有限樣本數之下很好的近似值。
+
 ## 分佈收斂\(convergence in distribution\)
 
 > $$\displaystyle \lim_{ n \rightarrow \infty}F_n(x) = F(x)$$
@@ -39,6 +41,8 @@
 ## 幾乎確定收斂\(almost sure convergence\)
 
 > $$\displaystyle \mathrm{P}(\lim_{n \rightarrow \infty}X_n = X)=1$$
+
+設$$ E$$ 為一事件，如果 $$P (E) = 1$$，則稱 E "happen almost surely" \(a.s.\)。
 
 而幾乎確定\(almost sure\)的意思是，當$$n$$趨向於無窮，$$X_n$$不收斂到$$X$$的機率為0。a.s.收斂可以推出依機率收斂。
 

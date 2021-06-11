@@ -18,7 +18,13 @@
 
 ## 機率收斂\(convergence in probability\)
 
-> $$\displaystyle \lim_{n \rightarrow \infty}\mathrm{P}(\| X_n -X\|>\epsilon) = 0$$
+> 設 $$X_1,X_2, \cdots$$為一數列之隨機變數（不必為i.i.d.），若存在一隨機變數 $$X$$，使得
+>
+> $$\displaystyle \forall \epsilon >0, ~\lim_{n \rightarrow \infty}\mathrm{P}(\| X_n -X\|>\epsilon) = 0$$  等價於
+>
+> * $$\displaystyle \forall \epsilon >0, ~ \lim_{n \rightarrow \infty} \mathrm{P}(|X_n -X| \geq \epsilon) = 0$$
+> * $$\displaystyle \forall \epsilon >0, ~ \lim_{n \rightarrow \infty} \mathrm{P}(\|X_n -X\| < \epsilon) = 1$$
+> * $$\displaystyle \forall \epsilon >0, ~ \lim_{n \rightarrow \infty} \mathrm{P}(|X_n -X| \leq \epsilon) = 1$$
 
 機率收斂的意思是，當$$n$$趨向無窮，$$X_n$$與$$X$$之間不相等的部分機率趨向於0（對任意的結果$$\omega$$，$$|(X_n -X)(\omega) |$$很小\)。即在序列夠長時，$$X_n$$會逐漸收斂至$$X$$，偶爾$$X_n$$會偏離$$X$$，但次數很少在機率上可忽略不計。
 

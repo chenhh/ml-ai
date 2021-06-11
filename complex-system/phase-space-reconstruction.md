@@ -147,6 +147,10 @@ $$x(i)$$與$$x(i+\tau)$$序列的總數都是$$n-\tau$$，因此機率：
 * $$K(x)=\exp \left(-\frac{x^2}{2} \right)$$
 * $$K_h(x) = \frac{1}{h}K(\frac{h}{x})= \frac{1}{h} \exp \left( \frac{-x^2}{2h^2} \right)$$
 
+### 區域性線性預測法
+
+假設$$N=n-(d-1)\tau$$，則有$$y_N(d)=[X(N),\ \ldots, x(n)]$$。區域性線性預測模型為$$\hat{x}(n+1) = c_0x(N)+c_1x(N+\tau)+\cdots + c_{d-1}x(N+(d-1)\tau)+c_d$$，其中$$c_i, ~ 0 \leq i \leq d$$為待定係數。
+
 
 
 

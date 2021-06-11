@@ -51,7 +51,25 @@
 
 ## filtration
 
-> Filtration $$\mathcal{F}_t$$為隨機過程中，隨時間擴大的資訊集合；
+> 令 $$\Omega$$為一個樣本空間，$$\mathcal{F}$$為事件 \(可測集\) 組成的 sigma-代數，$$\mathrm{P}: \mathcal{F} \rightarrow [0,1]$$為一個測度且$$\mathrm{P}(\Omega)=1$$ 。把$$(\Omega, \mathcal{F}, \mathrm{P})$$稱為機率空間。
+>
+> 將滿足以下性質的一族sigma-代數$$\{ \mathcal{F}_t\}$$稱為filitration：
+>
+> * 若$$s<t$$，則$$\mathcal{F}_s \subseteq \mathcal{F}_t$$
+> * 對於 $$\displaystyle \sigma(\cup_t \mathcal{F}_t)\equiv \mathcal{F}_\infty \subseteq \mathcal{F}$$
+>
+> 稱$$(\Omega, \mathcal{F}, \{\mathcal{F}\}, \mathrm{P})$$為filtrated 機率空間。
+
+* Filtration $$\mathcal{F}_t$$為隨機過程中，隨時間擴大的資訊集合；
+* 機率的核心在於可測性。**簡單來說，我們是想通過現在能夠觀測到的資訊來對未來可能發生的事件做出預測**。其中$$\mathcal{F}$$是所有能夠觀察到的事件，而filtration則體現了隨時間變化的可測性：隨著時間過去，能觀測到的事件越多。
+
+
+
+### 參考資料
+
+* [\[知乎\]以測度為基礎的概率基本概念與結論](https://zhuanlan.zhihu.com/p/32334499)
+
+
 
 
 

@@ -149,13 +149,25 @@ $$x(i)$$與$$x(i+\tau)$$序列的總數都是$$n-\tau$$，因此機率：
 
 ### 區域性線性預測法
 
-假設$$N=n-(d-1)\tau$$，則有$$y_N(d)=[X(N),\ \ldots, x(n)]$$。區域性線性預測模型為$$\hat{x}(n+1) = c_0x(N)+c_1x(N+\tau)+\cdots + c_{d-1}x(N+(d-1)\tau)+c_d$$，其中$$c_i, ~ 0 \leq i \leq d$$為待定係數。
+假設$$N=n-(d-1)\tau$$，則有$$y_N(d)=[X(N),\ \ldots, x(n)]$$。
 
+區域性線性預測模型為$$\hat{x}(n+1) = c_0x(N)+c_1x(N+\tau)+\cdots + c_{d-1}x(N+(d-1)\tau)+c_d$$，其中$$c_i, ~ 0 \leq i \leq d$$為待定係數。
 
+假設向量$$\vec{y}_N$$的$$k$$個最臨近向量是$$\vec{y}_{t1}, \ldots , \vec{y}_{tk}$$ 此處可以用歐幾裡德範數$$\| \cdot \|_2$$或者最大模範數$$\| \cdot \|_\infty$$這裡使用最小二乘法來求出$$c_i, ~ 0 \leq i \leq d$$的值。也就是求$$c_i$$使得：
 
+$$
+\begin{aligned}
+\| Ab - Y\|_2^2 &= \sum_{j=1}^k (\hat{x}(t_j+1+(d-1)\tau)- x(t_j+1+(d-1)\tau))^2 \\ &= \sum_{j=1}^k(c_0 x(t_j)+c_1x(t_j+\tau) + \cdots +c_{d-1} x(t_j+(d-1)\tau) +c_d- x(t_j+1+(d-1)\tau) )^2
+\end{aligned}
+$$
 
+取得最小值，其中
 
+* $$Y= [x(t_1+1+(d-1)\tau), x(t_2+1+(d-1)\tau), \cdots, x(t_k+1+(d-1)\tau)]^\top$$
+* $$b=[c_0, c_1, \ldots, c_d]^\top$$
+* 矩陣$$A$$的第$$j$$列為$$[x(t_j), \cdots, x(t_j+(d-1)\tau), 1],  ~1\leq j \leq k$$
 
+依最小二乘法可得$$b=(A^{\top}A)^{-1}A^{\top}Y$$為最佳解。
 
 
 
@@ -163,4 +175,5 @@ $$x(i)$$與$$x(i+\tau)$$序列的總數都是$$n-\tau$$，因此機率：
 
 * Floris Takens, "Detecting strange attractors in turbulence." Dynamical systems and turbulence, pp 366-381, 1981.
 * Lyle Noakes, "The Takens embedding theorem." International Journal of Bifurcation and Chaos, Vol. 01, No. 04, pp. 867-872, 1991.
+* [\[知乎\] 時間序列模型之相空間重構模型](https://zhuanlan.zhihu.com/p/32910931)
 

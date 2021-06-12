@@ -69,6 +69,18 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 * 閉區間$$S=[0,1]$$上界與最大元素同為1；下界與最小元素同為0。
 * 半開區間$$S=[0,1)$$上界為1，但無最大元素；下界與最小元素均為0。
 
+### 最小上界（最大下界）
+
+> 給定實數的非空子集合$$S$$且$$S$$有上界。$$b\in \mathbb{R}$$若滿足以下性質時稱為集合的最小上界（least upper bound）：
+>
+> * $$b$$為集合$$S$$的上界（$$\forall x \in S, x \leq b$$）
+> * 集合$$S$$不存在比$$b$$小的上界 \($$c < b \Rightarrow \exists x \in S, x \geq c$$\)
+>
+> 若實數的非空子集合$$S$$有下界，$$a\in \mathbb{R}$$若滿足以下性質時稱為集合的最大下界（greatest lower bound）：
+>
+> * $$a$$為集合$$S$$的下界（$$\forall x \in S, a \leq x$$）
+> * 集合$$S$$不存在比$$a$$大的下界 （$$c>a \Rightarrow \exists x \in S, x \leq c$$）
+
 ### complete axioms
 
 1. $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。

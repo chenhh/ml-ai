@@ -98,6 +98,10 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$，則$$\forall a <b, \exists x \in S \ni a < x \leq b$$。
 
+### 實數集合中必存在嚴格遞增數列收斂至最小上界
+
+
+
 
 
 

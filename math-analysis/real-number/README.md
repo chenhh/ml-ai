@@ -85,9 +85,10 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ### complete axioms
 
-1. $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
+> * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
+> * 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
-* 可得實數中非空子集合（區間）若有下界則有最大下界。
+* 因為實數是完備集合（complete set），所以才有此性質；有理數集合無此性質，例如$$S=\{x \in \mathbb{Q} | x^2 < \sqrt{2}\}$$有上界$$\sqrt{2}$$為無理數，但沒有最小上界。
 
 ## 切割\(cut\)
 
@@ -117,7 +118,6 @@ eg.
 > 1. $$\forall p \in S$$, if $$q \in \mathbb{Q}$$ and $$ q \notin S$$ then $$ q > p$$。\[因為集合$$S$$會包含所有小於$$p$$的有理數，因此$$q$$不為$$S$$的元素時，則$$q$$
 > 2. $$\forall p, q \in \mathbb{Q}$$, $$p \notin S$$ and $$ p < q$$ then $$q \notin S$$。
 
-1. 
 
 
 ## 實數集完備性的七個等價定理

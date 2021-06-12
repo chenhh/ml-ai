@@ -121,13 +121,7 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 * 所以 $$\displaystyle \lim_{n \rightarrow \infty} b - \frac{1}{n} < \lim_{n \rightarrow \infty} x_n<b$$
 * 由夾擠定理得 $$\displaystyle \lim_{n \rightarrow \infty} x_n=b $$\(QED\)
 
-
-
-
-
-
-
-
+![&#x5F80;&#x5E8F;&#x5217;&#x73FE;&#x503C;&#x8207;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x4E2D;&#x4E0D;&#x65B7;&#x53D6;&#x503C;&#x76F4;&#x5230;&#x6536;&#x6582;](../../.gitbook/assets/sup-conv-sequence-min.png)
 
 ## 切割\(cut\)
 

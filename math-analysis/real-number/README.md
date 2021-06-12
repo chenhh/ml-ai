@@ -55,7 +55,11 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 若$$ b < a$$，令$$\epsilon = \frac{b-a}{2}$$，則 $$b+\epsilon = b+ \frac{a-b}{2} = \frac{a+b}{2} < \frac{a+a}{2}=a$$\(QED\)。
 
-### complete
+### complete axioms
+
+1. $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
+
+* 可得實數中非空子集合若有下界則有最大下界。
 
 ## 切割\(cut\)
 

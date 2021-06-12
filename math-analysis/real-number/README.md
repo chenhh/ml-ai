@@ -19,6 +19,35 @@
 
 而分割的集合同[有理數系](../set/rational-number.md#you-li-shu-xi-rational-number-system)，也滿足加法與乘法的體\(field\)性質，以及為全序集，因此可得實數系\(real number system\)的性質。
 
+## 實數集合
+
+> 定義非空實數集合$$\mathbb{R}$$滿足十個公理（axioms），且可分為三類：field axioms, order axioms, completeness axioms。
+
+### field axioms
+
+$$\forall x,y,z \in \mathbb{R}$$，定義加法與乘法兩個二元算子性質如下：
+
+1. \[交換律\] $$x+y=y+x$$, $$xy=yx$$
+2. \[結合律\] $$x+(y+z)=(x+y)+z$$, $$(xy)z=x(yz)$$
+3. \[分配律\] $$x(y+z)=xy+xz$$
+4. \[加法反元素\] $$\forall x, y \in \mathbb{R}$$, $$\exists z \in \mathbb{R} \ni x+z=y$$, 記為$$z=y-x$$。$$x-x$$記為0。當$$y=0$$時，$$z$$為$$x$$的加法反元素。
+5. \[乘法反元素\] 若 $$x,y \in \mathbb{R}$$且$$x \neq 0$$, 則存在$$z \in \mathbb{R}$$使得$$xz=y$$，記為$$z=\frac{y}{x}$$。當$$y=1$$時，$$z=x^{-1}$$為其乘法反元素。
+
+### order axioms
+
+$$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
+
+1. \[三一律\] $$x=y, x > y, x<y$$三者同時只有一個性質為真。
+2. 若 $$x <y$$，則$$\forall z\in \mathbb{R}, ~ x+z < y+z$$。
+3. 若$$x >0 $$且 $$y >0 $$則$$xy >0 $$。
+4. 若$$x>y$$且 $$y >z$$，則$$x > z$$。
+
+* 當$$x>0$$時稱為正數（positive number）；$$x<0$$時稱為負數（negative number）。
+
+
+
+
+
 ## 切割\(cut\)
 
 > \(左\)切割為一有理數子集合$$S \subset \mathbb{Q}$$，且滿足三個條件：

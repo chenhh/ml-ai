@@ -123,6 +123,19 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ![&#x5F80;&#x5E8F;&#x5217;&#x73FE;&#x503C;&#x8207;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x4E2D;&#x4E0D;&#x65B7;&#x53D6;&#x503C;&#x76F4;&#x5230;&#x6536;&#x6582;](../../.gitbook/assets/sup-conv-sequence-min.png)
 
+### 最小上界與最大下界的四則運算
+
+> 集合$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R} $$
+>
+> * 令$$A+B=\{a+b|a \in A, b \in B\}$$，則
+>   * 當$$A,B$$有上界時，$$A+B$$也有上界且$$\sup⁡(A+B)=\sup(⁡A)+\sup(⁡B) $$。
+>   * 當$$A,B$$有下界時，$$A+B$$也有下界且$$\inf⁡(A+B)=\inf(⁡A)+\inf(⁡B)$$。
+> * 令$$AB=\{xy|x \in A, y \in B \}, $$，若$$A \subset \mathbb{R}^+, B \subset \mathbb{R}^+$$則
+>   * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup⁡(AB)=\sup(⁡A) \sup(⁡B) $$。
+>   * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf⁡(AB)=\inf(⁡A )\inf(⁡B ) $$。
+
+
+
 ## 切割\(cut\)
 
 > \(左\)切割為一有理數子集合$$S \subset \mathbb{Q}$$，且滿足三個條件：

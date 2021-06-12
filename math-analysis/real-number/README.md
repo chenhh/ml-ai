@@ -55,11 +55,17 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 若$$ b < a$$，令$$\epsilon = \frac{b-a}{2}$$，則 $$b+\epsilon = b+ \frac{a-b}{2} = \frac{a+b}{2} < \frac{a+a}{2}=a$$\(QED\)。
 
+### 有界集合
+
+> 集合$$ S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的上界。註：$$b$$不必為集合$$S$$內的元素。
+>
+> 若$$b \in S \ni x \leq b \forall x \in S$$，則$$b$$為集合$$S$$的最大元素\(maximum element\)，記為 $$b = \max(S)$$。
+
 ### complete axioms
 
 1. $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
 
-* 可得實數中非空子集合若有下界則有最大下界。
+* 可得實數中非空子集合（區間）若有下界則有最大下界。
 
 ## 切割\(cut\)
 

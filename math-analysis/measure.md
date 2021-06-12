@@ -27,7 +27,21 @@
 * 函數空間的情形較為複雜，因此並非所有函數都存在測度函數可量測其值，因此必須先定義出可測函數後，才可定義測度。
 * Dirac measure: 令$$x_0 \in X$$, $$\delta(x_0, E)=\left\{  \begin{align} &1, \text{ if } x_0 \in E \\ &0, \text{ otherwise} \end{align} \right.$$
 
+### 測度的性質
 
+> * \[additive\] $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( \cup ∪F)=\mu(E)+\mu(F)$$
+> * \[finitely additive\] $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j $$ $$\Rightarrow \mu(\cup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
+> * \[sub-additive\] $$\forall E,F \in \Sigma, \mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> * \[finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
+> * \[countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
+>
+>
+>
+> * \[finite measure\] $$\mu(X)<\infty$$
+> * \[sigma-finite measure\] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\cup_n E_n  \ni \mu(E_n )< \infty, ~ \forall n$$
+
+* $$\mu(\mathbb{R})=\infty$$, 因此實數的長度不是finite measure。
+* 但實數的長度是sigma−finite measure，因為可將實數拆解為多個有限長度的線段的聯集 $$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 
 

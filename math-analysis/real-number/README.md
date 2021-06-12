@@ -87,6 +87,15 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ![&#x4E0B;&#x754C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6700;&#x5927;&#x4E0B;&#x754C;&#x552F;&#x4E00;](../../.gitbook/assets/set_inf-min.png)
 
+### 空集合的最小上界與最大下界
+
+> $$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty $$
+
+* 若$$\emptyset \neq A \subset \mathbb{R}$$沒有上界時，因此$$\sup(⁡A)$$ 不等於任意值，因此為了方便則記為$$\sup(⁡A)=\infty$$\(注意$$\infty$$不是一個值，而僅是一個符號\)  。
+* 同理若$$\emptyset \neq A \subset \mathbb{R}$$沒有下界時，因此$$\inf(⁡A)$$ 不等於任意值，因此為了方便則記為$$\inf(⁡A)=−\infty$$。
+* 對於任意實數$$r$$，空集合$$\emptyset$$沒有任何實數大於$$r$$，也沒有任何實數小於$$r$$，因此可以將$$r$$視為$$\emptyset$$的上界與下界。
+* 因為任意實數都是$$\emptyset$$的上界與下界，因此對於$$\sup(\emptyset)$$ 與$$\inf(\emptyset)$$ 的合理定義為$$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$。
+
 ### complete axioms
 
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。

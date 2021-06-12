@@ -92,7 +92,13 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 * 因為實數是完備集合（complete set），所以才有此性質；有理數集合無此性質，例如$$S=\{x \in \mathbb{Q} | x^2 < \sqrt{2}\}$$有上界$$\sqrt{2}$$為無理數，但沒有最小上界。
 
-### 最小上界\(最大下界\)的性質
+## 最小上界\(最大下界\)的性質
+
+### 逼近性質
+
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$，則$$\forall a <b, \exists x \in S \ni a < x \leq b$$。
+
+
 
 
 

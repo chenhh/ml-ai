@@ -85,6 +85,8 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ![&#x4E0A;&#x754C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x552F;&#x4E00;](../../.gitbook/assets/illustration_of_supremum-min.png)
 
+![&#x4E0B;&#x754C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6700;&#x5927;&#x4E0B;&#x754C;&#x552F;&#x4E00;](../../.gitbook/assets/set_inf-min.png)
+
 ### complete axioms
 
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
@@ -94,11 +96,32 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ## 最小上界\(最大下界\)的性質
 
-### 逼近性質
+### 比最小上界小的的任意元素均不為上界
 
-> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$，則$$\forall a <b, \exists x \in S \ni a < x \leq b$$。
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$，則$$\forall c <b, \exists x \in S \ni c < x \leq b$$。
+>
+> 同理 $$S$$有最大下界 $$a = \inf(S)$$，則$$\forall c > a~ \exists x \in S \ni a \leq x < c$$ 。
+
+* 因為$$b=\sup(S)$$，由定義得$$\forall x \in S, x \leq b$$。
+* 因為$$c < b$$，所以$$c$$不是最小上界，因此$$\exists x \in S \ni c <x$$。
+* 因此可得 $$c< x \leq b$$ \(QED\)
 
 ### 實數集合中必存在嚴格遞增數列收斂至最小上界
+
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$若且唯若存在嚴格遞增序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i < x_j \} \subset S \ni \lim_{n \rightarrow \infty}x_n=b$$
+>
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S)$$若且唯若存在嚴格遞減序列$$\displaystyle  \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subset S \ni \lim_{n \rightarrow \infty}x_n=a$$
+>
+> 可以用建構法建出滿足條件的單調序列。
+
+* $$∵b=\sup{⁡}S$$, 給定$$\epsilon=1$$，可得$$x_1 \in S \ni b−1<x_1<b$$
+* 取$$\epsilon_2 = \min\{\frac{1}{2}, b-x_1\}$$，可得 $$x_2 \in S \ni b−\epsilon_2<x_2<b$$
+* 整理可得 $$x_1≤b−\epsilon_2<x_2,  ~ b−\frac{1}{2} \leq b−\epsilon_2<x_2<b$$
+* 同理可得 $$x_1, x_2,\ldots, x_n \in S \ni x_{n-1} < x_n$$且 $$b-\frac{1}{n} <x_n < b$$。
+* 所以 $$\displaystyle \lim_{n \rightarrow \infty} b - \frac{1}{n} < \lim_{n \rightarrow \infty} x_n<b$$
+* 由夾擠定理得 $$\displaystyle \lim_{n \rightarrow \infty} x_n=b $$\(QED\)
+
+
 
 
 

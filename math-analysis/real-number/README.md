@@ -43,10 +43,19 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 4. 若$$x>y$$且 $$y >z$$，則$$x > z$$。
 
 * 當$$x>0$$時稱為正數（positive number）；$$x<0$$時稱為負數（negative number）。
+* $$x \leq y \Leftrightarrow x<y \lor x = y$$。
 
+### 有序性質
 
+> $$\forall a,b \in \mathbb{R}$$，若 $$ a \leq b + \epsilon, ~ \forall \epsilon >0$$，則$$a \leq b$$。
+>
+> 反之若 $$ a > b$$時，則$$\exists \epsilon > 0 \ni a > b+ \epsilon$$。
+>
+> 在證明時經常會使用此性質。
 
+若$$ b < a$$，令$$\epsilon = \frac{b-a}{2}$$，則 $$b+\epsilon = b+ \frac{a-b}{2} = \frac{a+b}{2} < \frac{a+a}{2}=a$$\(QED\)。
 
+### complete
 
 ## 切割\(cut\)
 

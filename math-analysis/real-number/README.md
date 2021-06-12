@@ -83,6 +83,8 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 * 由定義很容易得出集合$$S$$的最小上界與最大下界的唯一性。
 
+![&#x4E0A;&#x754C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x552F;&#x4E00;](../../.gitbook/assets/illustration_of_supremum-min.png)
+
 ### complete axioms
 
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
@@ -91,6 +93,8 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 * 因為實數是完備集合（complete set），所以才有此性質；有理數集合無此性質，例如$$S=\{x \in \mathbb{Q} | x^2 < \sqrt{2}\}$$有上界$$\sqrt{2}$$為無理數，但沒有最小上界。
 
 ### 最小上界\(最大下界\)的性質
+
+
 
 ## 切割\(cut\)
 

@@ -134,7 +134,12 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 >   * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup⁡(AB)=\sup(⁡A) \sup(⁡B) $$。
 >   * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf⁡(AB)=\inf(⁡A )\inf(⁡B ) $$。
 
-
+* 由最小上界得當$$ \emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(⁡A)=x, ~ \sup⁡(B)=y$$存在  。
+* 因為$$\forall a \in A, a \leq x$$ ，$$\forall b \in B, b \leq y$$，所以$$x+y$$是$$A+B$$的上界。
+  * $$\sup(⁡A)=x \Leftrightarrow \forall \epsilon >0 ~ \exists a \in A \ni x−\epsilon<a $$
+  * $$\sup⁡(B)=y \Leftrightarrow \forall \epsilon >0 ~\exists b \in B \ni y− \epsilon <b $$
+  * $$\therefore \forall \epsilon>0 ~\exists a \in A, b \in B \ni  x+y−2\epsilon<a+b $$
+  * $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup⁡(A+B)=x+y=\sup⁡(A)+\sup(B)$$  \(QED\).
 
 ## 切割\(cut\)
 

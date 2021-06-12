@@ -57,9 +57,17 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ### 有界集合
 
-> 集合$$ S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的上界。註：$$b$$不必為集合$$S$$內的元素。
+> 集合$$ S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的上界\(upper bound\)。註：$$b$$不必為集合$$S$$內的元素。
 >
 > 若$$b \in S \ni x \leq b \forall x \in S$$，則$$b$$為集合$$S$$的最大元素\(maximum element\)，記為 $$b = \max(S)$$。
+>
+> 若集合不存在上界時，則稱無上界（unbounded above）。
+>
+> 下界與最小元素為以相同的方式定義。
+
+* $$\mathbb{R}^+=\{0, \infty\}$$無上界與最大元素，下界為0，但沒有最小元素。
+* 閉區間$$S=[0,1]$$上界與最大元素同為1；下界與最小元素同為0。
+* 半開區間$$S=[0,1)$$上界為1，但無最大元素；下界與最小元素均為0。
 
 ### complete axioms
 

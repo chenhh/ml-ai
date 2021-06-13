@@ -14,6 +14,7 @@
   * [實數中的集合](math-analysis/set/real-number.md)
   * [field與sigma-field](math-analysis/set/field-and-sigma-field.md)
 * [實數\(real number\)](math-analysis/real-number/README.md)
+  * [擴充實數](math-analysis/real-number/extended-real-number.md)
   * [Bolzano-Weierstrass定理](math-analysis/real-number/bolzano-weierstrass-theorem.md)
   * [覆蓋\(covering\)](math-analysis/real-number/covering.md)
   * [緊緻集合\(compact set\)](math-analysis/real-number/compact-set.md)

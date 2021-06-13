@@ -150,6 +150,35 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
   * $$\therefore \forall \epsilon>0 ~\exists a \in A, b \in B \ni  x+y−2\epsilon<a+b $$
   * $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup⁡(A+B)=x+y=\sup⁡(A)+\sup(B)$$  \(QED\).
 
+### 最小上界與最大下界的次序
+
+> 集合$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}, $$
+>
+> * 若$$A\subset B$$（e.g. $$(1,2) \subset [0,2]$$）
+>   * 當$$B$$有上界時，$$A$$也有上界，且$$\sup⁡(A) \leq \sup⁡(B) $$
+>   * 當$$B$$有下界時，$$A$$也有下界，且$$\inf(⁡A) \geq \inf(⁡B) $$
+> * $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(⁡A)  \leq \inf⁡(B)$$  （e.g. $$A=(1,2), B=(3,4)$$）
+> * $$\forall x\in A ~\exists y \in B \ni x\leq y$$，且$$B$$有上界，則$$A$$也有上界，且$$\sup(⁡A) \leq \sup(⁡B)$$  （e.g. $$A=(1,3), B=(2, 4)$$）
+> * $$\forall x\in A ~\exists y \in B \ni x\geq z$$，且$$B$$有下界，則$$A$$也有下界，且$$\inf(⁡A) \geq \inf(⁡B)$$（e.g. $$A=(1,3), B=(2,4)$$）
+
+Proof: $$A\subset B $$
+
+* 因為$$B$$有上界，且$$B$$為實數中非空子集合，所以$$B$$有最小上界，令$$r=\sup(⁡B) $$。
+* $$\because A\subset B,  \therefore \forall a \in A , a\in B \Rightarrow a \leq r$$，因此$$A$$有上界$$r$$
+* 因為$$A$$有上界，且$$A$$非實數中的非空子集合，所以$$A$$有最小上界，令$$s=\sup(⁡A)  $$。
+* $$.\because s=\sup(⁡A)\Leftrightarrow \forall \epsilon>0 ~\exists a \in A \subset B \ni s−\epsilon <a $$
+* $$\because r=\sup(⁡B) \Leftrightarrow \forall b \in B, b \leq r $$
+* $$\therefore \forall \epsilon >0 ~ \exists a \in A\subset B \ni s−\epsilon <a \leq r $$
+* $$\therefore \sup(⁡A) \leq \sup(⁡B)$$  \(QED\)
+
+Proof:
+
+* $$\forall x \in A, ~ \forall y \in B, x\leq y $$
+* 因為$$A$$為實數的非空集合，且A有上界，則由最小上界性質得$$\sup(⁡A)$$存在，同理得$$\inf(⁡B)$$ 存在。
+* 因為集合$$B$$中每一點都是$$A$$的上界，得$$\forall b \in B,  b \geq \sup(⁡A) $$
+* $$B$$的最大下界定義得$$\forall \epsilon>0 ~ \exists b \in B \ni \inf⁡(B)+\epsilon > b$$，且$$\forall b \in B,~ b \geq \sup(⁡A) $$
+* 因此$$\sup(⁡A)\leq \inf(⁡B)$$  \(QED\)
+
 ## 切割\(cut\)
 
 > \(左\)切割為一有理數子集合$$S \subset \mathbb{Q}$$，且滿足三個條件：

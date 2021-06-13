@@ -385,6 +385,29 @@ proof:
 * 而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
 * 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$\(QED\)
 
+### 任意兩個差值大於1的實數間必存在整數
+
+> • $$a,b  \in \mathbb{R}, b−a>1 \Rightarrow \exists m \in \mathbb{Z} \ni a<m<b $$
+
+proof:
+
+* 不失一般性令$$a \geq 0  $$
+* 若$$ b−a>1$$，令$$ A=\{p \in \mathbb{N}, p>a\}$$為$$a$$的正整數上界集合。
+* 由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數\]，由於$$A$$為$$\mathbb{N}$$的子集合  ， 由正整數的良序性\(正整數的非空子集必有最小元素\)知$$A$$有最小元素$$m=\min(⁡A)$$。
+* 若 $$m=1, b>a+1 \geq 1>a$$
+* 若$$ m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a $$
+* 因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$\(QED\)
+
+### 任意兩個實數間存在有理數
+
+> $$a,b \in \mathbb{R}, a<b \Rightarrow \exists r \in \mathbb{Q} \ni a<r<b $$
+
+Proof:
+
+* $$\because b−a>0$$, 由阿基米德性質得$$\exists n \in \mathbb{N} \ni n(b−a)>1 $$
+* $$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差值大於1的實數間必存在整數\]
+* $$\therefore a<m/n<b$$ \(QED\)
+
 ##  實數集的稠密性
 
 > $$\forall a,b \in \mathbb{R}, \ a <b$$ $$ \exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$ a < v < b$$。

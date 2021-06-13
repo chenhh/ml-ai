@@ -406,7 +406,23 @@ Proof:
 * $$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差值大於1的實數間必存在整數\]
 * $$\therefore a<m/n<b$$ \(QED\)
 
-##  實數集的稠密性
+## 絕對值\(absolute value\)
+
+> * $$|x| = \left\{  \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
+> * $$a \geq 0$$且$$|x| \leq a$$ $$\Leftrightarrow -a \leq x \leq a$$。
+
+### 三角不等式
+
+> * $$\forall x,y \in \mathbb{R}$$, $$|x+y| \leq |x|+|y|$$
+> * $$|x_1 + x_2 + \cdots +x_n | \leq |x_1| + |x_2| +\cdots +|x_n|$$
+> * $$|x_1 +x_2 + \cdots + x_n| \geq |x_1| - |x_2| - \cdots - |x_n|$$
+
+proof:
+
+* $$-|x| \leq x \leq |x|, ~ -|y| \leq y \leq |y|$$。
+* $$-(|x| + |y) \leq x + y \leq |x|+ |y|$$，可得 $$|x+y| \leq |x| +|y|$$。\(QED\)
+
+## 實數集的稠密性
 
 > $$\forall a,b \in \mathbb{R}, \ a <b$$ $$ \exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$ a < v < b$$。
 >

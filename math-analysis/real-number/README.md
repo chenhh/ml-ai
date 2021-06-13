@@ -201,29 +201,16 @@ Proof: $$c>0$$
 * 因為$$cx \in cA$$，上式表示$$cr−\epsilon$$不是集合$$cA$$的上界--\(2\)
 * 由\(1,2\)得$$cr$$是$$cA$$的最小上界\(QED\).
 
+Proof: $$c<0$$
 
-
-Proof: c&lt;0時的性質
-
-	• 令sup⁡A=r
-
-	• 由定義知當 y∈cA 則 y/c∈A∴y/c≤sup⁡A=r
-
-	• 因為c&lt;0, y/c≤r, 所以y≥cr，因此可得cr是集合cA的下界--\(1\)
-
-	• r=sup⁡A⇔∀ϵ&gt;0 ∃x∈A∋r−ϵ&lt;x  
-
-	• ∵c&lt;0 上式可改為成∀ϵ&gt;0 ∃x∈A∋r+ϵ/c&lt;x
-
-	• ∴∀ϵ&gt;0∋cx&lt;cr+ϵ
-
-	• 因為cx∈cA，上式表示∀ϵ&gt;cr+ϵ不是cA的下界--\(2\)
-
-	• 由\(1,2\)得cr是cA的最大下界 \(QED\).
-
-
-
-
+* 令$$\sup(⁡A)=r  $$
+* 由定義知當 $$y \in cA$$ 則 $$\frac{y}{c}\in A ~\therefore \frac{y}{c} \leq \sup(⁡A)=r $$
+*  因為$$c<0, \frac{y}{c}\leq r$$, 所以$$y\geq cr$$，因此可得$$cr$$是集合$$cA$$的下界--\(1\)
+* $$r=\sup(⁡A) \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x   $$
+* $$\because c<0$$ 上式可改為成$$\forall \epsilon >0 \exists x \in A \ni r+\frac{\epsilon}{c}<x $$
+* $$\therefore \forall \epsilon >0 \ni cx<cr+\epsilon$$
+* 因為$$cx \in cA$$，上式表示$$\forall \epsilon>cr+\epsilon$$不是$$cA$$的下界--\(2\)
+* 由\(1,2\)得$$cr$$是$$cA$$的最大下界 \(QED\)
 
 ## 切割\(cut\)
 

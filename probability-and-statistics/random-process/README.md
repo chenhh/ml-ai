@@ -22,7 +22,7 @@
 
 舉例來說，一個隨機過程的natural filitration包含了該過程的所有過去歷史資訊。一個隨機過程是與它的natural filtration adapted的。
 
-在一個adapted的世界中，過去和現在的事件和實現值是已知且不可改變的，但未來是隨機的和未知的。這就是它的全部內容。數學建模必須尊重這一現實世界的事實。
+在一個adapted的世界中，過去和現在的事件和實現值是已知且不可改變的，但未來是隨機的和未知的。這就是它的全部內容。數學建模必須尊重這一現實世界的事實。Filtration 可以被想成是資訊的揭露。如$$\mathcal{F}_0 \subseteq \mathcal{F}_1 \subseteq \mathcal{F}_2\subseteq \cdots$$，亦即表示在時間$$  t=1 $$的時候，我們亦可知道時間 $$ t=0$$  的情況，亦即 $$ t=1$$  的時候包含了  $$t=0$$  的資訊，但 不包含 $$ t=2$$  \(未來\)的資訊。
 
 ## Gaussian process
 

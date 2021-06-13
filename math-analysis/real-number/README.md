@@ -132,6 +132,31 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ![&#x5F80;&#x5E8F;&#x5217;&#x73FE;&#x503C;&#x8207;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x4E2D;&#x4E0D;&#x65B7;&#x53D6;&#x503C;&#x76F4;&#x5230;&#x6536;&#x6582;](../../.gitbook/assets/sup-conv-sequence-min.png)
 
+### 集合最小上界與最大下界互為對偶
+
+> $$\forall \emptyset\neq S \subset \mathbb{R}$$，$$S$$為有界集合， $$−S \equiv \{−s|s \in S\}$$，則
+>
+> * $$\sup(⁡S) =−\inf⁡(−S)$$
+> * $$\inf(⁡S)=−\sup⁡(−S)$$
+
+#### 範例
+
+$$S=(a,b), ~ −S=(−b, −a) $$
+
+* $$\sup(⁡S)=b, ~\inf(⁡S)=a  $$
+* $$\sup⁡(−S)=−a, ~ \inf⁡(−S)=−b $$
+
+Proof:
+
+* 令$$\sup(⁡S)=b  $$
+* $$\sup(⁡S) \Leftrightarrow \forall \epsilon>0~ \exists x \in S \ni b−\epsilon<x$$
+* $$\forall \epsilon>0 ~ \exists−x\in −S \ni −b+\epsilon>−x  $$
+* $$\therefore−b$$是集合$$−S$$的最大下界，即$$ −b=\inf⁡(−S)\Leftrightarrow \sup(⁡S)=−\inf⁡(−S) $$
+* 令$$\inf⁡S=a  $$
+* $$\inf(⁡S) \Leftrightarrow \forall \epsilon>0 ~\exists x \in S \ni x<a+\epsilon$$
+* $$\forall \epsilon>0 ~\exists −x \in −S \ni −x>−a−\epsilon$$
+* $$\therefore −a$$是集合$$−S$$的最小上界，即$$ −a=\sup⁡(−S) \Leftrightarrow \inf(⁡S)=−\sup⁡(−S)$$  \(QED\)
+
 ### 最小上界與最大下界的四則運算
 
 > 集合$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R} $$

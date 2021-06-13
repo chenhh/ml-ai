@@ -6,6 +6,19 @@
 >
 > * 指標$$t$$通常視為時間。而$$X_t$$稱為在時間$$t$$的狀態（state）。
 > * 當$$T$$為可數集合時，稱為離散隨機過程；當$$T$$為實數任一區間時，稱為連續隨機過程。
+>
+> 給定filtered機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$
+>
+> * 令$$X: [0, \infty) \times \Omega \rightarrow \mathbb{R}^d$$, $$(t, \omega) \mapsto X_t(\omega)$$。如果$$X$$是$$\mathcal{B}([0, \infty)) \otimes \mathcal{F}$$-可測函數（$$\mathcal{B}$$是Borel set），則稱$$X$$為隨機過程。
+> * 給定$$\omega \in \Omega$$，$$X(\omega): [0, \infty) \rightarrow \mathbb{R}^d$$, $$t \mapsto X_t(\omega)$$稱為樣本路徑（sample path）。
+> * 如果對於$$t \in [0, \infty)$$. $$X_t$$為$$\mathcal{F}_t$$-可測，則稱$$X$$為$$\{\mathcal{F}_t\}$$-adapted。
+
+一個隨機過程 $$X$$有兩種理解方式。
+
+1. . 對於每個時間點$$t$$，$$X_t$$是一個隨機變數。
+2. 對於每個樣本$$\omega$$，$$X(\omega)$$是$$\mathbb{R}^d$$中的一條路徑。
+
+而adapted則體現了$$X$$隨時間的可測性變化，也就是說，如果現在的時間是$$t$$ ，就能夠觀測到$$X_t$$的值。
 
 ## Gaussian process
 

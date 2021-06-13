@@ -12,6 +12,7 @@
 > * 令$$X: [0, \infty) \times \Omega \rightarrow \mathbb{R}^d$$, $$(t, \omega) \mapsto X_t(\omega)$$。如果$$X$$是$$\mathcal{B}([0, \infty)) \otimes \mathcal{F}$$-可測函數（$$\mathcal{B}$$是Borel set），則稱$$X$$為隨機過程。
 > * 給定$$\omega \in \Omega$$，$$X(\omega): [0, \infty) \rightarrow \mathbb{R}^d$$, $$t \mapsto X_t(\omega)$$稱為樣本路徑（sample path）。
 > * 如果對於$$t \in [0, \infty)$$. $$X_t$$為$$\mathcal{F}_t$$-可測，則稱$$X$$為$$\{\mathcal{F}_t\}$$-adapted。
+> * 假設全部的資訊$$\mathcal{F}$$已知，則$$X$$為$$\mathcal{F}$$可測，但隨機過程只能知道現在和過去已經發生的值，未來發發生的事件仍為隨機，因此為$$\mathcal{F}_t$$可測。
 
 一個隨機過程 $$X$$有兩種理解方式。
 

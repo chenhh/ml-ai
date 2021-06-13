@@ -367,7 +367,23 @@ proof \(反證法\)
   * 由實數的完備性得知因為自然數集合為實數的非空子集合，因此若$$\mathbb{N}$$存在上界時，則必存在上確界。
   * 因此令$$m=\sup⁡(\mathbb{N})$$，得$$\epsilon=1,~\exists x \in \mathbb{N}∋m−1<x$$
   * $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$的最小上界矛盾。
-* 因此Archimedean property成立\(QED\).
+* 因此Archimedean property成立\(QED\)
+
+### 必定存在大於給定正實數的正整數
+
+> $$\forall r \in \mathbb{R}^+ ~ \exists n \in \mathbb{N} \ni n>r$$
+
+* 取$$a=1, b= r$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n > r$$ \(QED\)
+
+### 無窮小的極限值為0
+
+> $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0$$
+
+proof:
+
+* $$\forall \epsilon >0 $$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni  n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
+* 而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
+* 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$\(QED\)
 
 ##  實數集的稠密性
 

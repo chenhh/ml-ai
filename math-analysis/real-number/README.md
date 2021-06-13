@@ -267,6 +267,24 @@ Proof: $$c>0$$
 * 因為$$cx \in cA$$，上式表示$$\forall \epsilon>cr+\epsilon$$不是$$cA$$的下界--\(2\)
 * 由\(1,2\)得$$cr$$是$$cA$$的最大下界 \(QED\)
 
+### 由最小上界可得實數中包含無理數
+
+> 存在正實數$$a \in \mathbb{R}^{+} \ni a^2=2$$
+
+Proof:
+
+* 令集合$$A=\{x \in \mathbb{R}^+ |x^2<2\} $$
+* 因為$$1 \in A$$且 2為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(⁡A)$$  。
+* 若$$a^2<2$$
+  * 令 $$h=\frac{(2−a^2)}{2(2a+1)} \Rightarrow a+h \in A$$ 且 $$a+h>2 $$
+  *  此與$$a=\sup(A)$$矛盾    。
+* 若$$a^2>2$$
+  * 令$$h=\frac{a^2−2}{4a} \Rightarrow 0<a−h<a$$ 且 $$(a−h)^2>2 $$
+  * $$ \therefore (a−h)^2>2>x^2, ~ \forall x \in A $$
+  * 因為$$a−h>0, x>0$$ 所以$$a−h>x \forall x \in A$$
+  * 得$$a−h$$為$$A$$的上界，此與$$a=\sup(⁡A)$$ 矛盾
+* 根據實數的有序性得$$a^2=2$$ \(QED\).
+
 ## 切割\(cut\)
 
 > \(左\)切割為一有理數子集合$$S \subset \mathbb{Q}$$，且滿足三個條件：

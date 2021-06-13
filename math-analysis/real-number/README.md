@@ -360,6 +360,15 @@ eg.
 
 ![&#x963F;&#x57FA;&#x7C73;&#x5FB7;&#x6027;&#x8CEA;](../../.gitbook/assets/archimedean_property.png)
 
+proof \(反證法\)
+
+* 假設性質不成立，即$$\exists a>0, b>0 ~\forall n \in \mathbb{N} \ni na \leq b$$
+  * 因此對每一個自然數$$n \in \mathbb{N}$$, 可得$$n \leq b/a$$，即$$b/a$$ 為$$n$$的上界。 
+  * 由實數的完備性得知因為自然數集合為實數的非空子集合，因此若$$\mathbb{N}$$存在上界時，則必存在上確界。
+  * 因此令$$m=\sup⁡(\mathbb{N})$$，得$$\epsilon=1,~\exists x \in \mathbb{N}∋m−1<x$$
+  * $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$的最小上界矛盾。
+* 因此Archimedean property成立\(QED\).
+
 ##  實數集的稠密性
 
 > $$\forall a,b \in \mathbb{R}, \ a <b$$ $$ \exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$ a < v < b$$。

@@ -7,6 +7,8 @@
 > * $$\mathbb{R} = (-\infty, \infty)$$
 > * $$\mathbb{R}^{*} = [ -\infty, \infty]$$
 
+擴充實數集合中，可保證每個集合都有上界$$\infty$$，對於無上界的集合$$S$$可得$$\sup(S) = \infty$$。
+
 ### 四則運算
 
 > $$x \in \mathbb{R}$$, 

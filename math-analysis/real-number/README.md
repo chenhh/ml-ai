@@ -190,6 +190,15 @@ Proof: $$A\subset B $$
 >   * 當$$A$$有上界時，$$cA$$也有下界且$$\inf⁡(cA)=c\cdot\inf(⁡A )$$
 >   * 當$$A$$有下界時，$$cA$$也有上界且$$\sup⁡(cA)=c\cdot \sup(A)$$
 
+#### 範例
+
+* $$A=(a,b)$$或$$[a,b)$$或$$(a,b]$$或$$[a,b]$$
+* $$\inf⁡(A)=a, ~ \sup⁡(A)= b$$
+* $$c>0, cA=(ca, cb)$$或$$ [ca, cb)$$或$$(ca, cb]$$或$$[ca, cb]  $$
+  * $$\inf(c⁡A)=ca, ~ \sup(c⁡A)=cb    $$
+* $$c<0,  cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$ [cb,  ca]  $$
+  * $$\inf(c⁡A)=cb, ~\sup(c⁡A)=ca    $$
+
 Proof: $$c>0$$
 
 * 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup⁡(A)=r$$  。

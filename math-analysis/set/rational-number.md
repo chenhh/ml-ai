@@ -1,8 +1,19 @@
 # 有理數
 
-## 有理數集合
+## 有理數與無理數
 
-> $$\mathbb{Q} = \big\{ \frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, \operatorname{gcd}(p,q)=1 \big\}$$
+> * $$\mathbb{Q} = \big\{ \frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, \operatorname{gcd}(m,n)=1 \big\}$$為有理數集合。
+> * 實數中不為有理數之數為無理數（irrational number）。
+
+### 根號2為無理數
+
+proof\(反證法\)
+
+* 假設$$\sqrt{2} = \frac{m}{n}, m, n \in \mathbb{N}$$，$$gcd(m,n)=1$$為有理數。
+* 取平方可得  $$ 2 = \frac{m^2}{n^2} \Rightarrow m^2 = 2n^2$$，因此$$m$$為偶數。
+* 令$$ m = 2a, a \in \mathbb{N}$$
+* 所以$$m^2 = 4a^2 = 2n^2 \Rightarrow n^2 = 2a^2$$，因此$$n$$為偶數。
+* 由於$$m,n$$均為偶數，可得$$gcd(m,n)=2$$，和假設不符，因此$$\sqrt{2}$$為無理數\(QED\)。
 
 
 

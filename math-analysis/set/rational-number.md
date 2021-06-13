@@ -4,6 +4,8 @@
 
 > $$\mathbb{Q} = \big\{ \frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, \operatorname{gcd}(p,q)=1 \big\}$$
 
+
+
 ## 有理數體\(field\)
 
 有理數集合可定義加法與乘法運算，形成有理數體$$(\mathbb{Q}, +, \cdot)$$。

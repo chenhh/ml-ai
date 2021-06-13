@@ -28,9 +28,7 @@
 
 ## 正整數的良序性\(well-ordering principle\)
 
-非空的正整數集必有最小元素。
-
-$$\emptyset \neq S \subseteq \mathbb{N} \Rightarrow \exists a \in S  \ni f\forall x \in S, a \leq x$$
+> 非空的正整數集必有最小元素。$$\emptyset \neq S \subseteq \mathbb{N} \Rightarrow \exists a \in S  \ni f\forall x \in S, a \leq x$$
 
 proof:
 

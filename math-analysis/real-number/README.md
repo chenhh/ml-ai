@@ -102,12 +102,27 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 * 對於任意實數$$r$$，空集合$$\emptyset$$沒有任何實數大於$$r$$，也沒有任何實數小於$$r$$，因此可以將$$r$$視為$$\emptyset$$的上界與下界。
 * 因為任意實數都是$$\emptyset$$的上界與下界，因此對於$$\sup(\emptyset)$$ 與$$\inf(\emptyset)$$ 的合理定義為$$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$。
 
-### complete axioms
+### 完備性公理\(complete axioms\)
 
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
 > * 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
-* 因為實數是完備集合（complete set），所以才有此性質；
+* 因為實數是完備集合（complete set），所以才有此性質；	 可由Dedekind分劃中實數的完備性證明  。
+
+Proof:
+
+* $$\emptyset \neq S\subset \mathbb{R}$$，且$$S$$有上界
+* 定義$$A=\{a \in \mathbb{R} | S\text{ 中至少有一元素 }x \ni x>a\}$$
+* 定義 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$  \($$S$$所有上界形成的集合\)  。
+*  \(將實數線依集合$$S$$中某個點$$x$$切成兩分割$$A,B$$\)
+* $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
+* 因為$$S\neq \emptyset$$,所以$$A \neq \emptyset, B \neq \emptyset $$
+* 依實數的完備性可知必存在$$r \in \mathbb{R} \ni \forall a \in A, a \leq r$$且$$ \forall b \in B, r \leq b $$。
+* 要證明$$r \in B$$
+* 若$$r \in B$$，則依定義得$$r \in A$$。
+* 依$$A$$的定義$$\exists x \in S \ni r<x$$
+* 因為$$x \in S$$ 且$$\frac{(x+r)}{2}<x$$，所以$$\frac{(x+r)}{2} \in A$$且$$\frac{(x+r)}{2}>r$$，此與完備性中$$\forall a \in A, a \leq r$$的性質不合
+* 因此$$r \in B$$，因為$$B$$是$$S$$所有上界形成的集合，則$$r$$為$$S$$的最小上界。\(QED\)
 
 ## 最小上界\(最大下界\)的性質
 

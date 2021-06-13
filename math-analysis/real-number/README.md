@@ -349,8 +349,6 @@ eg.
 
 
 
-
-
 ## 阿基米德性質\(Archimedean property\)
 
 > $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。

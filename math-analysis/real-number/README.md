@@ -68,6 +68,12 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 * $$\mathbb{R}^+=\{0, \infty\}$$無上界與最大元素，（最大）下界為0，但沒有最小元素。
 * 閉區間$$S=[0,1]$$上界與最大元素同為1；（最大）下界與最小元素同為0。
 * 半開區間$$S=[0,1)$$上界為1，但無最大元素；（最大）下界與最小元素均為0。
+* $$[a,b], (a,b), (a,b], [a,b)$$四個集合的最小上界均為$$b$$，最大下界均為$$a$$。
+* $$\{r \in \mathbb{Q}| r\geq 0 \cap r^2 \leq 2\}$$的最小上界為$$\sqrt{2}$$，但無最大元素，最大下界為0。
+* $$\inf(\mathbb{N})=1,~ \sup(\mathbb{⁡N})=\infty $$
+* $$\inf(\mathbb{Z})=−\infty, ~ \sup(\mathbb{Z})=\infty$$
+* $$\inf⁡\{(−1)^n+\frac{1}{n}, ~n=1,2,\ldots\})=−1 $$
+* $$\sup(\{(−1)^n−\frac{1}{n}, ~ n=1,2,\ldots\})=1 $$
 
 ### 最小上界（最大下界）
 
@@ -81,7 +87,7 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 > * $$a$$為集合$$S$$的下界（$$\forall x \in S, a \leq x$$）
 > * 集合$$S$$不存在比$$a$$大的下界 （$$c>a \Rightarrow \exists x \in S, x \leq c$$）
 
-* 由定義很容易得出集合$$S$$的最小上界與最大下界的唯一性。
+* **由定義很容易得出集合**$$S$$**的最小上界與最大下界的唯一性**。
 
 ![&#x4E0A;&#x754C;&#x4E0D;&#x552F;&#x4E00;&#xFF0C;&#x6700;&#x5C0F;&#x4E0A;&#x754C;&#x552F;&#x4E00;](../../.gitbook/assets/illustration_of_supremum-min.png)
 
@@ -101,9 +107,24 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
 > * 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
-* 因為實數是完備集合（complete set），所以才有此性質；有理數集合無此性質，例如$$S=\{x \in \mathbb{Q} | x^2 < \sqrt{2}\}$$有上界$$\sqrt{2}$$為無理數，但沒有最小上界。
+* 因為實數是完備集合（complete set），所以才有此性質；
 
 ## 最小上界\(最大下界\)的性質
+
+### 最小上界存在時，若集合有下界則有最大下界，反之亦然
+
+> 集合$$\emptyset \neq S \subset \mathbb{R}$$，則以下兩敘述等價：
+>
+> 1. 若$$S$$有上界，則$$S$$有最小上界。
+> 2. 若$$S$$有下界，則$$S$$有最大下界。
+
+Proof 1-&gt;2:
+
+* 若$$S$$有下界$$a$$，則$$\forall x \in S,~ x \geq a$$。
+* 因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$，因為$$−S$$有上確界，令$$b=\sup⁡(−S)$$。
+* 可得 $$−b=\inf(⁡S)$$  \(QED\).
+
+Proof 2-&gt;1: 同理可證。
 
 ### 比最小上界小的的任意元素均不為上界
 

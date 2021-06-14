@@ -20,7 +20,7 @@
 
 ![](../../.gitbook/assets/abstract+space+topological+space+metric+space+normed+space-min.png)
 
-## 度量（metric）、內積（inner product）與賦範（norm）比較
+## 度量（metric）、內積（inner product）與範數（norm）比較
 
 | metric | inner product | norm |
 | :--- | :--- | :--- |
@@ -33,7 +33,7 @@
 * 度量不需要滿足分配律，而內積不需要滿足三角不等式。
 * 度量空間使用$$d(x,y)$$ 定義$$x,y$$兩點之間的距離，而賦範空間使用$$\|x−y|$$定義$$x,y$$兩點之間的距離。
 
-### 範數為距離函數
+### 範數為距離函數的一般化
 
 > $$\forall x, y \in X$$, $$\| x-y\|=d(x,y)$$
 

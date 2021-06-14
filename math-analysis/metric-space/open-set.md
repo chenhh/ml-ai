@@ -13,6 +13,7 @@ description: open set
 
 * 如果$$S$$不為開集合，則 $$\exists a \in S \ni \forall r > 0, N_r(a) \not \subset S$$。
 * 因為開集合$$S$$的補集$$S^c$$為閉集合，且閉集合包含所有的極限點，因此開集合$$S$$不包含所有的極限點；即存在$$S$$的極限點$$x$$，且$$x \notin S$$。
+* 實數的常見開集合為開區間$$(a,b)$$，在$$n$$維空間則為開球$$(a_1,b_1) \times(a_2,b_2)\times\cdots \times (a_n, b_n)$$。
 
 ### 開集合等價於內點集合
 

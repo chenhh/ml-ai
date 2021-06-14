@@ -6,18 +6,18 @@
 
 > 集合$$S \subseteq \mathbb{R}^n$$稱為有界集合，若存在點$$x \in \mathbb{R}^n ~ \exists r > 0 \ni S \subseteq N_r(x) $$。
 
-* $$\{ a_n\} \subseteq \mathbb{R}$$為**有界實數數列\(bounded sequence\)**，若存在$$M >0 $$使得$$\forall n \in \mathbb{N}, |a_n| \leq M$$。
+* $$\{ a_n\} \subseteq \mathbb{R}$$為**有界實數數列\(bounded sequence\)**，若存在$$M >0 $$使得$$ |a_n| \leq M, ~ \forall n$$。
 
 ## 歐式空間的Bolzano-Weierstrass定理
 
 > 序列
 >
-> * 序列：每個在$$\mathbb{R}^n$$的有界（有限或無限）數列都存在收斂的子數列（收斂在極限點）。
+> * 序列：每個在$$\mathbb{R}^n$$的有界無限（元素）數列都存在收斂的子數列（收斂在極限點）。
 > * 集合：$$\mathbb{R}^n$$中的任意有界集合至少有一個極限點（in $$\mathbb{R}^n$$）。
 
 proof: 實數數列
 
-* 令$$\{a_{n}\}$$是有界的實數數列
+* 令$$\{a_{n}\}$$是有界的無限實數數列。
 * 假設$$\{a_{n}\}$$均落在某個有界區間$$[a,b]$$內，即$$\{a_n \} \subseteq [a,b]$$。
 * 將區間$$[a,b]$$切一半得到$$[a,(a+b)/2]$$與$$[(a+b)/2,b]$$兩個子區間。
 * 那麼某一個區間必定包含無窮個元素$$a_{n}$$。選取那個包含無窮多個$$a_{n}$$的區間。且此區間記為$$I_{1}$$並任取其上的一點記為$$a_{n_{1}}$$。

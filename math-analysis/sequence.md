@@ -1,5 +1,19 @@
 # 數列\(sequence\)
 
+## 有限數列與無限數列
+
+> 給定有限集合$$\{1,2,\ldots, n\}$$，與定義在此集合的函數$$f$$，則$$\{f(1), f(2),\ldots, f(n)\}$$為有限數列（finite sequence）。
+
+> 給定自然數集合$$\{1,2,\ldots \}$$與定義在此集合的函數$$f$$，則$$\{f(1), f(2), \ldots\}$$為無限數列（infinite sequence）。
+
+## 子數列\(subsequence\)
+
+> 令$$s=\{s_n\}$$為無限數列，令函數$$k: \mathbb{N} \rightarrow T, ~ T \subseteq \mathbb{N}$$且為嚴格遞增函數（若$$m <n$$，則$$k(m) < k(n)$$）。
+>
+> 則對所有大於1的整數$$n$$，合成函數$$(s \circ k)(n) = s_{k(n)} \equiv s_{kn}$$形成的序列$$\{s_{k(n)}\} \equiv \{s_{kn}\}$$稱為$$s$$的子數列。
+
+* 子數列就是原本的數列，依原始數列的順序，任意取出的子集合形成的數列。
+
 ## 收斂與發散數列
 
 > $$ \{a_n\} \subseteq \mathbb{R}$$ 稱為收斂數列若$$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon\ \forall n \geq n_0$$

@@ -66,7 +66,7 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 由上述條件可知當$$f$$為一對一且映成函數\(bijection, bijective mapping\)時，定義域與對應域等勢，即$$|X|  = |Y|$$。
 
-### 可逆函數\(invertible function\)
+## 可逆函數\(invertible function\)
 
 > $$f: X \rightarrow Y$$be a function, if there is a function $$g: Y \rightarrow X$$ such that $$ g \circ f = I_X$$ and $$ f \circ g = I_Y$$, then $$f$$ is invertible.
 
@@ -74,7 +74,15 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 * 反函數存在時，$$(f^{-1})^{-1} = f$$
 * 反函數與前像\(preimage\)為不同的概念，反函數$$f^{-1}$$為函數，而前像$$f^{-1}(Y)$$為集合。
 
+### 一對一函數的反向關係為函數
+
+> 函數$$f: X \rightarrow Y$$為一對一函數，即$$f(x_1)=f(x_2) \Rightarrow x_1 = x_2, ~ \forall x_1, x_2 \in X $$，則反向關係$$f^{-1}: f(Y) \rightarrow  X$$為函數，即$$x_1 = x_2 \Rightarrow f(x_1) = f(x_2), \forall f(x_1), f(x_2) \in Y$$。
+
+註：反向關係的定義域是$$f(X)$$而不是$$X$$。
+
 ### 可逆函數等價於一對一且映成函數
+
+> 此處的映成是指整個對應域$$Y$$
 
 proof: 
 

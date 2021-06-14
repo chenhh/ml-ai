@@ -38,6 +38,12 @@ proof: 實數數列
 
 
 
+## 應用： Cantor intersection theorem
+
+>
+
+
+
 
 
 

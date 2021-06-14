@@ -30,6 +30,13 @@ e.g. $$ n \in \mathbb{N},\ X \in \mathbb{Z}, \mathbf{R} = \{ (x-y) \ \vert \ n(x
 
 ![&#x51FD;&#x6578;&#x503C;&#x5FC5;&#x552F;&#x4E00;&#xFF0C;&#x53EF;&#x70BA;&#x4E00;&#x5C0D;&#x4E00;&#x6216;&#x591A;&#x5C0D;&#x4E00;&#xFF0C;&#x4F46;&#x4E0D;&#x53EF;&#x70BA;&#x4E00;&#x5C0D;&#x591A;&#x95DC;&#x4FC2;](../../.gitbook/assets/function-min%20%281%29.png)
 
+### 函數相等
+
+兩函數$$f,g: X \rightarrow Y$$相等若且唯若
+
+1. 兩函數的定義域相等
+2. $$f(x)=g(x), \forall x \in X$$
+
 ### 函數的圖形 
 
 以$$x$$軸做垂直線，如果一個映射$$f$$對映的$$f(x)$$有兩點以上，則$$f$$不滿足函數的定義。

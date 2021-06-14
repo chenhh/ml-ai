@@ -32,10 +32,10 @@
 
 ## 卡式積\(Cartesian product\)
 
-the Cartesian product $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y \in Y\}$$
+卡式積 $$X \times Y=\{ (x,y) \ \vert \ \forall x \in X, \forall y \in Y\}$$
 
 * 若 $$|X| =M < \infty, |Y|=N < \infty \Rightarrow |X \times Y| =MN$$
-* 集合$$X$$或$$Y$$的元素可為無窮多個，如$$X=\mathbb{R}，Y=\mathbb{R} \Rightarrow X \times Y = \mathbb{R}^2$$
+* 集合$$X$$或$$Y$$的元素可為無窮多個，如$$X=\mathbb{R}，Y=\mathbb{R} \Rightarrow X \times Y = \mathbb{R}^2$$或$$\mathbb{C}$$
 
 ## 聯集與交集運算\(intersection and union\)
 

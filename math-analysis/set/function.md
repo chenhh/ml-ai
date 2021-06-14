@@ -108,7 +108,7 @@ $$\Rightarrow$$
 
 ### 函數前像與映像的性質
 
-令$$A, B \subseteq X$$，$$C,D \subseteq Y$$
+令$$A, B \subseteq X$$，$$C,D \subseteq Y$$，$$f$$為函數，$$f^{-1}$$為前像但不一定是函數。
 
 > $$A \subseteq B \Rightarrow f(A) \subseteq f(B)$$
 
@@ -124,7 +124,8 @@ todo: 反向
 * $$\because C \subseteq D \therefore f(x) \in C \Rightarrow f(x) \in D$$
 * $$\therefore f^{-1}(C) \subseteq f^{-1}(D)$$
 
-> $$f(A \cup B) = f(A) \cup f(B)$$
+> * $$f(A \cup B) = f(A) \cup f(B)$$
+> * 可擴展至 $$\displaystyle f\left(\bigcup_{i =1}^{\infty} A_i \right) = \bigcup_{i=1}^\infty f(A_i)$$
 
 * 證明 $$f(A \cup B) \subseteq f(A) \cup f(B)$$且 $$f(A) \cup f(B) \subseteq f(A \cup B)$$
 
@@ -132,11 +133,8 @@ todo: 反向
 
 * 證明 $$f^{-1}(C \cup D) \subseteq f^{-1}(C) \cup f^{-1}(D)$$且 $$f^{-1}(C) \cup f^{-1}(D) \subseteq f^{-1}(C \cup D)$$
 
-> $$f(A \cap B) \subseteq f(A) \cap f(B)$$
-
-
-
-> 若$$f$$為一對一函數，則$$f(A\cap B) = f(A) \cap f(B)$$
+> * $$f(A \cap B) \subseteq f(A) \cap f(B)$$
+> * 可擴展至 $$\displaystyle f\left(\bigcap_{i =1}^{\infty} A_i \right) = \bigcap_{i=1}^\infty f(A_i)$$
 
 
 
@@ -153,8 +151,6 @@ todo: 反向
 
 
 > $$A \subseteq f^{-1}(f(A))$$
->
-> 若$$f$$為一對一函數，則$$A=f^{-1}(f(A))$$
 
 
 
@@ -168,7 +164,16 @@ todo: 反向
 
 
 
-> $$f^{-1}(f(f^{-1}(C)))=f^{-1}(C)$$
+$$f^{-1}(f(f^{-1}(C)))=f^{-1}(C)$$
+
+
+
+> 若$$f$$為一對一函數，則以下敘述等價：
+>
+> * $$A=f^{-1}(f(A))$$
+> * $$f(A\cap B) = f(A) \cap f(B)$$
+> * $$A \cap B= \emptyset \Rightarrow $$$$f(A) \cap f(B) = \emptyset$$
+> * $$B \subseteq A \Rightarrow f(A-B) = f(A) - f(B)$$
 
 
 

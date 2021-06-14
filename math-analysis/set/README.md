@@ -41,10 +41,10 @@
 
 令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合\(index set\)\(有限或無窮多個\)，$$U$$為包含$$X,Y$$的宇集合。
 
-* 聯集\(union\): 屬於任一個集合的元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
+* 聯集\(union\): 屬於任一個集合的元素或至少一集合存在該元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
   * $$X\cup X = X \cup \emptyset = \emptyset \cup X = X$$
   * $$X \cup U = U$$
-* 交集\(intersection\): 同時屬於所有集合的元素，或者為所有集合共同所有元素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
+* 交集\(intersection\): 同時屬於所有集合的元素，或者為所有集合都存在的素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
   * $$X \cap \emptyset = \emptyset$$
   * $$X\cap X  = X \cap U= X$$
 * 多集合的聯集: 元素只須存在於某一個集合。$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
@@ -78,10 +78,15 @@
   * $$X \cup X^c = U$$
   * $$X \cap X^c = \emptyset$$
 * 差集\(difference\)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
-  * $$X\setminus Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
+  * $$X\setminus Y \equiv X-Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
 * De Morgan law:
   * $$U \setminus  (X \cup Y) = (U \setminus X) \cap (U \setminus Y)$$
   * $$U \setminus (X \cap Y) = (U \setminus X) \cup (U \setminus Y)$$
+
+
+
+* 若$$X \subseteq Y$$，則$$Y \setminus (Y \setminus X)=Y$$
+* 若$$X \cap Y = \emptyset$$，則$$X \setminus Y= X, ~ Y \setminus X=Y$$
 
 ## 子集合\(subset\)
 

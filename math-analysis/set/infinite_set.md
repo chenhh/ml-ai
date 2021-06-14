@@ -115,7 +115,26 @@ proof:
 > * $$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則$$S_n \sim \mathbb{Z}$$，因此$$S_n$$為可數集。
 > * $$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
 
-### 實數集為不可數集
 
 
+### 實數集合為不可數集合
+
+因為$$[0,1]$$與$$\mathbb{R}$$兩集合等勢，因此只要證明$$[0,1]$$為不可數集合。
+
+proof：\(反證法\)
+
+* 假設$$[0,1]$$間的實數為可數集合，則可用數列$$\{s_n\}$$表示此集合，令$$s_n = 0.u_{n,1} u_{n,2} u_{n,3} \ldots$$，$$u_{n,i} \in \{ 0,1,\ldots, 9\}$$為無窮位數的小數。
+* 令實數$$y=0.v_1 v_2 v_3 \ldots$$, $$v_n = \left\{  \begin{align} &1, \text{ if } u_{n,n} \neq 1, \\ &2, \text{ if } u_{n,n} = 1 \end{align} \right.$$ 
+* 則$$y$$不與$$\{s_n\}$$中的任意值相同，如$$s_n=0.1999 \ldots \Rightarrow y=0.2000 \ldots$$
+* 因此$$y \in [0,1]$$但$$y \notin \{s_n\}$$，即$$[0,1]$$是不可數集合 \(QED\)
+
+### 二維整數的集合為可數集合
+
+> $$\mathbb{Z}^+ =\{1,2,\ldots \}$$為正整數的集合，則$$\mathbb{Z}^{+} \times \mathbb{Z}^{+}$$為可數集合。
+
+proof:
+
+* 令函數$$f: \mathbb{Z}^{+} \times  \mathbb{Z}^{+} \rightarrow \mathbb{Z}^{+}$$為$$f(m,n)=2^m 3^n$$，要證明$$f$$為一對一函數，即$$f(m_1, n_1)=f(m_2, n_2) \Rightarrow (m_1, n_1)=(m_2,n_2)$$。
+* 若$$2^{m_1} 3^{n_1}=2^{m_2} 3^{n_2}$$，則$$2^{m_1 - m_2} 3^{n_1 - n_2}=1$$
+* 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ \(QED\)
 

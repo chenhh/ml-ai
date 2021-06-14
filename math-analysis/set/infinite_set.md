@@ -89,6 +89,11 @@
 
 ![&#x81EA;&#x7136;&#x6578;&#x8207;&#x6574;&#x6578;&#x70BA;&#x7B49;&#x50F9;&#x7684;&#x96C6;&#x5408;](../../.gitbook/assets/natural_integer_mapping.png)
 
+### 可數無限集合為無限集合的子集合
+
+* 無限集合$$S$$可能為可數集合時滿足敘述，
+* 令$$S$$為不可數集合。因此存在一對一函數$$f: \mathbb{N} \rightarrow S$$，可得數列$$\{f(n)\}_{ n \in \mathbb{N}} \ \subseteq S$$ \(QED\)
+
 ## 可數集合的子集合仍為可數集
 
 proof:

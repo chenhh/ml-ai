@@ -53,8 +53,8 @@ Proof:
 
 ## Heine-Borel 覆蓋定理
 
-> 有界閉集合$$A \subseteq \mathbb{R}^n$$，且集合族$$F$$為$$A$$的開覆蓋，則存在$$F$$的有限子集合族為$$A$$的開覆蓋。
->
+> 有界閉集合$$A \subseteq \mathbb{R}^n$$，且集合族$$F$$為$$A$$的開覆蓋，則存在$$F$$的有限子集合族為$$A$$的開覆蓋。也稱為有限開覆蓋定理。
+
 > * 註：必定存在開集合$$\mathbb{R}^n \ni A \in \mathbb{R}^n$$。
 > * 註：由Lindelof 覆蓋定理得$$F$$為$$A$$的可數子覆蓋，因此將$$F$$中的所有集合聯集成單一集合S（可數個開集合的聯集仍然開集合），仍然可得$$A \subseteq S$$。
 
@@ -71,5 +71,10 @@ Proof:
 * 由$$Q_1\supseteq Q_2 \supseteq \ldots \supseteq Q_m \ldots$$得集合序列$$\{Q_1,Q_2,\ldots,Q_m , \ldots\}$$為遞減序列。
 * 因為$$Q_1$$ 為有界集合且$$Q_m ,~ \forall m$$為閉集合，由[Cantor intersection theorem](bolzano-weierstrass-theorem.md#ying-yong-cantor-intersection-theorem) 得 $$\bigcap_{m=1}^\infty Q_m$$  為非空閉集合。
 * 由$$\bigcap_{m=1}^\infty Q_m $$ 為非空閉集合可得存在$$x \in A$$ 且$$x \in Q_m, \forall m \in \mathbb{N}$$，即$$A$$中存在點$$x$$落在所有的集合$$S_m$$之外，$$\forall m \in \mathbb{N}$$  。
-* 但此結論與假設$$A \subseteq S_m$$ 矛盾，因此必定存在$$Q_m=\emptyset$$ \(\(QED\)
+* 但此結論與假設$$A \subseteq \bigcup_{m=1}^{\infty}S_m$$ 矛盾，因此必定存在$$Q_m=\emptyset$$ \(\(QED\)
+
+### 範例
+
+* 被覆蓋的區間必須是閉區間，開區間或半開半閉區間不成立。例如對開區間$$(0,1)$$來說，$$F=\{ (\frac{1}{n}, 2), n \in \mathbb{N}\}$$ 是其一個無限開覆蓋。但顯然，無論$$n$$取值為多少，區間$$(0, \frac{1}{n}]$$上依然有$$(0,1)$$的無窮多個數，因此不能從$$H$$中選擇有限個區間來覆蓋 。
+* 用來覆蓋閉區間的必須是開區間，閉區間或半開半閉區間不成立。例如對閉區間$$[0,1]$$來說，$$F=[-1,0]\cup(\frac{1}{n},2), n \in \mathbb{N}$$ 是其一個無限覆蓋，顯然也找不出有限個子區間來覆蓋 。
 

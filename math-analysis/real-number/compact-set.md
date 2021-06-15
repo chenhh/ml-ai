@@ -34,22 +34,20 @@ Proof 1-&gt;2:
 * 因此可得$$S$$為有界集合 -- \(1\)。
 *  \(反證法\) 假設$$S$$不為閉集合
 * 由[閉集合包含其所有極限點的或質 ](../metric-space/closed-set.md#bi-ji-he-bao-han-qi-suo-you-ji-xian-dian)知存在$$S$$的極限點$$y$$且$$y \notin S$$。
+* 若$$x\in S$$, 因為$$y \notin S$$, 可得$$r_x=\|x−y\|/2>0, ~ \forall x$$, 且$$\{N_{r_x } (x), ~ x∈S\}$$為$$S$$的開覆蓋。
+* 由為$$S$$為緊緻集，由定義得存在有限個開球集合覆蓋$$S$$, 即 $$S\subseteq \bigcup_{k=1}^m N_{r_k} (x_k)$$。
+* 令$$r=\min \{r_1,r_2,\ldots,r_m \}$$, 可得$$N_r (y) \cap N_{r_k} (x_k )= \emptyset$$。
 
-	• 若x∈S, 因為y∉S, 可得r\_x=‖x−y‖/2&gt;0,∀x, 且{N\_\(r\_x \) \(x\), x∈S}為S的開覆蓋.
+  * $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
+  * 由三角不等式得 $$\| y−x_k \| \leq \|y−x\|+\|x−x_k\|$$
+  * 所以 $$\| x−x_k \| \geq \|y−x_k \|−\|x−y\|=2r_k−\|x−y\|>k$$
 
-	• 由為S為緊緻集，所以存在有限個開球集合覆蓋S, 即 S⊆∪\_\(k=1\)^m N\_\(r\_k \) \(x\_k\).
 
-	• 令r=min⁡{r\_1,r\_2,⋯,r\_m }, 可得N\_r \(y\)∩N\_\(r\_k \) \(x\_k \)=ϕ.
 
-		○  ∵x∈N\_r \(y\)⇒‖x−y‖&lt;r≤r\_k
+  * 因此 $$x \notin N_{r_k} (x_k)$$
+  * 即$$N_r (y) \cap S=\emptyset$$，此與$$y$$為$$S$$的極限點矛盾，因此$$S$$為閉集合--\(2\)
 
-		○ 由三角不等式得 ‖ y−x\_k ‖≤‖y−x‖+‖x−x\_k ‖
-
-		○ ∴‖x−x\_k ‖≥‖y−x\_k ‖−‖x−y‖=2r\_k−‖x−y‖&gt;k
-
-		○ ∴x∉N\_\(r\_k \) \(x\_k\).
-
-	• ∴N\_r \(y\)∩S=ϕ, 此與y為S的極限點矛盾, 因此S為閉合 \(QED\)
+* 由\(1\)\(2\)得2成立 \(QED\)
 
 
 

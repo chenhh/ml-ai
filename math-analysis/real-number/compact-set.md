@@ -15,6 +15,20 @@
 * 空集合$$\emptyset$$ 為緊致集。
 * $$A=\{\frac{1}{k}, ~k \in \mathbb{N}\}$$不是緊緻集。因為 $$I_k=(\frac{1}{k}−\frac{1}{2^k} ,\frac{1}{k}+\frac{1}{2^k} ), F=\{I_k, ~k\in \mathbb{N}\}$$為$$A$$的可數開覆蓋，但不是有限開覆蓋。
 
+##  緊緻集合的充要條件
+
+> $$S \subseteq \mathbb{R}^n$$, 則以下三個性質等價：
+>
+> 1. $$S$$為緊致集合。
+> 2. $$S$$為有界閉集合\(closed and bounded set\)\($$\exists M >0, \exists x\in S \ni S \subseteq N_r (x) $$且 $$S$$為閉集合\)。
+> 3. $$S$$的任意無窮子集合均存在極限點$$x$$，且$$x∈S$$.  \(Bolzano-Weierstrass定理，任意有界無窮集合均存在極限點\(in $$\mathbb{R}^n$$\)   。$$\forall r>0 (N_r (x)\cap S)\setminus \{x\} \neq \emptyset$$，則$$x$$為$$S$$的極限點。
+
+* 而在任意度量空間中，只能保證1-&gt;2, 3 與3-&gt;1,無法保證2-&gt;1 \(但在$$\mathbb{R}^n$$ 成立\)
+* 有界集合不一定是閉集合，如$$S=(1,2) \subseteq \mathbb{R}$$為有界開集合。
+*  Heine-Borel覆蓋定理證明任意有界閉集合均存在有限個數的子開覆蓋；因此2-&gt;1成立。
+
+>
+
 
 
 

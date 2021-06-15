@@ -194,6 +194,19 @@ proof:
 * 因為 $$\forall x \in S, x \notin X−S \Rightarrow S \subseteq \{A_1 \cup A_2 \cup \cdots \cup A_p\}$$
 * 因此$$S$$為緊緻集合 \(QED\)
 
+### 緊緻集合與閉集合的交集為緊緻集合
+
+> $$(X,d)$$為度量空間，$$S,T \subseteq X$$。若$$S$$為閉集合且$$T$$為緊緻集合, 則$$S \cap T$$為緊緻集合。
+
+Proof:
+
+* $$S$$為閉集合 $$\Leftrightarrow  X−S$$為開集合。
+* $$T$$在$$(X,d)$$為緊緻集合，由定義得即存在$$\{I_1,I_2,\ldots,I_n \}$$為開集合族， $$I_i \subseteq X$$且$$T \subseteq \bigcup_{i=1}^n I_i  $$。
+* 可得$$T \subseteq \{I_1 \cup I_2 \cup \ldots \cup I_n \cup \{X−S\} \} $$
+* $$S\cap T \subseteq T \subseteq \{I_1 \cup I_2 \cup \ldots \cup I_n \cup \{X−S\}\} $$
+* 因為$$\forall x \in S \cap T$$，可得 $$x \notin X−S  $$。
+* 因此$$S \cap T \subseteq \{I_1 \cup I_2 \cup \ldots \cup I_n\}$$  \(QED\)
+
 ## 稠密集合（dense set）
 
 > 令$$A \subseteq X$$，且存在$$S \subseteq X$$使得$$A \subseteq S \subseteq \overline{A}$$，則稱集合$$A$$在集合$$S$$中稠密。\(A dense in S\)。

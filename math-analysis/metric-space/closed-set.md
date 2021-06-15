@@ -207,6 +207,34 @@ Proof:
 * 因為$$\forall x \in S \cap T$$，可得 $$x \notin X−S  $$。
 * 因此$$S \cap T \subseteq \{I_1 \cup I_2 \cup \ldots \cup I_n\}$$  \(QED\)
 
+### 緊致集合的遞移性
+
+> $$(X,d)$$為度量空間，且$$S,T \subseteq X$$。
+>
+> 若$$S \subseteq T$$，則$$S$$在$$(X,d)$$中為緊緻集合若且唯若$$S$$在$$(T,d)$$中為緊緻集合。
+
+Proof =&gt;
+
+* $$S$$在$$(X,d)$$為緊緻集合，即存在$$\{I_1,I_2, \ldots ,I_n \}$$為開集合族， $$I_i \subseteq X$$且$$S \subseteq \bigcup_{i=1}^n I_i$$。
+* 不失一般性，假設$$S \cap I_i \neq \emptyset, ~ i=1,2,\ldots,n$$。 
+* 因為$$S \subseteq T \Rightarrow T \cap I_i \neq \emptyset, i=1,2, \ldots ,n $$。
+* 令$$J_i=T \cap I_i$$, 可得 $$S \subseteq \bigcup_{i=1}^n J_i,  ~\forall J_i \subseteq T $$
+* 所以$$S$$在$$(T,d)$$為緊緻集合 \(QED\)
+
+• Proof &lt;=: 使用相同的方式可得證 \(QED\)
+
+### 有限個緊緻集合的聯集仍為緊緻集合
+
+> $$(X,d)$$為度量空間，$$S_1,S_2, \ldots ,S_n \subseteq X$$為緊緻集合，則$$\bigcup_{i=1}^n S_n$$ 為緊緻集合。
+
+由緊緻集合的定義可證明。
+
+### 任意數量的緊緻集合的交集仍為緊緻集合
+
+> $$(X,d)$$為度量空間，$$S_1,S_2, \ldots \subseteq X$$為緊緻集合，則$$\bigcap_{i=1}^\infty S_n$$ 為緊緻集合。
+
+由緊緻集合的定義可證明。
+
 ## 稠密集合（dense set）
 
 > 令$$A \subseteq X$$，且存在$$S \subseteq X$$使得$$A \subseteq S \subseteq \overline{A}$$，則稱集合$$A$$在集合$$S$$中稠密。\(A dense in S\)。

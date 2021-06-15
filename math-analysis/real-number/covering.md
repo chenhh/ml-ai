@@ -53,8 +53,6 @@ Proof:
 
 ## Heine-Borel 覆蓋定理
 
-
-
 > 有界閉集合$$A \subseteq \mathbb{R}^n$$，且集合族$$F$$為$$A$$的開覆蓋，則存在$$F$$的有限子集合族為$$A$$的開覆蓋。
 >
 > * 註：必定存在開集合$$\mathbb{R}^n \ni A \in \mathbb{R}^n$$。
@@ -66,19 +64,12 @@ Proof:
 * 令$$S_m=\bigcup_{k=1}^m I_k$$，因為有限個開集合的聯集仍是開集合，因此$$S_m$$ 為開集合。
 * 檢驗: $$\exists m \in \mathbb{N} \ni A \subseteq S_m$$
 * 因為$$S_m$$ 為開集合，由定義得$$\mathbb{R}^n−S_m$$  為閉集合。
-* 令$$Q_1=A$$, $$Q_2=A \cap (\mathbb{R}^n−S_1 )$$,$$\ldots ~Q_m=A \cap (\mathbb{R}^n−S_m )$$。
+* 令$$Q_1=A$$, $$Q_2=A \cap (\mathbb{R}^n−S_1 ) = A-S_1$$,$$\ldots ~Q_m=A \cap (\mathbb{R}^n−S_m ) = A-S_m$$。
+* 因為[閉集合與閉集合的可數交集仍為閉集合](../metric-space/closed-set.md#ke-shu-wu-xian-ge-bi-ji-he-de-jiao-ji-reng-wei-bi-ji-he)，因此$$Q_i, ~i=1,2,\ldots,m$$為閉集合。
 * 所以$$x \in Q_m \Rightarrow x \in A $$且$$ x \notin S_m$$, 即$$A$$中有些點不在$$S_m$$ 之中。
 * 因此檢驗$$A\subseteq S_m$$ 等價於$$\exists m \in \mathbb{N} \ni Q_m=\emptyset$$。
-* 由$$Q_1\supseteq Q_2 \supseteq \ldots \supseteq Q_m \ldots$$得集合序列$$\{Q_1,Q_2,\ldots,Q_m \}$$為遞減序列。
+* 由$$Q_1\supseteq Q_2 \supseteq \ldots \supseteq Q_m \ldots$$得集合序列$$\{Q_1,Q_2,\ldots,Q_m , \ldots\}$$為遞減序列。
 * 因為$$Q_1$$ 為有界集合且$$Q_m ,~ \forall m$$為閉集合，由[Cantor intersection theorem](bolzano-weierstrass-theorem.md#ying-yong-cantor-intersection-theorem) 得 $$\bigcap_{m=1}^\infty Q_m$$  為非空閉集合。
-* 由$$\bigcap_{m=1}^\infty Q_m $$ 為非空閉集合可得存在$$x \in A$$ 且$$x \in Q_m, \forall m \in \mathbb{N}$$，即$$A$$中存在點$$x$$落在所有的集合$$S_m$$之外，$$\forall m \in \mathbb{N}$$
-* 但此結論與假設$$A \subseteq \bigcup_{m=1}^\infty S_m=\bigcup_{m=1}^\infty I_m$$ 不符, 因此必定存在$$Q_m=\emptyset$$ \(\(QED\).
-
-
-
-
-
-
-
-
+* 由$$\bigcap_{m=1}^\infty Q_m $$ 為非空閉集合可得存在$$x \in A$$ 且$$x \in Q_m, \forall m \in \mathbb{N}$$，即$$A$$中存在點$$x$$落在所有的集合$$S_m$$之外，$$\forall m \in \mathbb{N}$$  。
+* 但此結論與假設$$A \subseteq S_m$$ 矛盾，因此必定存在$$Q_m=\emptyset$$ \(\(QED\)
 

@@ -38,7 +38,7 @@ proof: 實數數列
 
 
 
-## 應用： Cantor intersection theorem
+##  Cantor intersection theorem
 
 > 令$$\{Q_1,Q_2,\ldots\}$$為$$\mathbb{R}^n$$ 上可數的非空集合序列，且
 >

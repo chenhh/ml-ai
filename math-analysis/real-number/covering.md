@@ -34,6 +34,25 @@ Proof:
 * 則$$x \in N_q (y)$$ 且 $$N_q (y) \subseteq N_r (x) \subseteq S$$
 * 因為$$N_q (y) \in G$$， 得證 \(QED\)
 
+## Lindelof 覆蓋定理
+
+> 令（開或閉\]）集合$$A \subseteq \mathbb{R}^n$$， 且集合族$$F$$為$$A$$的開覆蓋，則存在$$F$$的可數子集合族為$$A$$的開覆蓋。
+>
+> * 註：集合$$A$$若可被集合族$$F$$開覆蓋，則可從$$F$$中取出有理數球（可數）集合族開覆蓋$$A$$。
+> * 註：閉覆蓋集合族無此性質，因只要$$A$$中有任一維度之值為正負無窮大時無法覆蓋，所以必須為開覆蓋。
+>   * 例如：實數存在可數開覆蓋$$ (n,n+2), ~\forall n \in \mathbb{N}$$
+
+Proof:
+
+* 令可數有理數集合族$$G=\{A_1,A_2,\ldots\}$$，$$A_i$$ 為有理數為中心且半徑為正有理數的球（鄰域）。
+* Idea: 由$$G$$中取出集合形成子集合族$$F$$, 且$$A\subseteq \bigcup_{I∈F} I$$。
+* 令$$x∈A$$，由條件知存在開集合$$S \in F \ni x \in S$$。
+* 由[開集合中的任一點為有理數球集合內的點且有理數球為開集合的子集](covering.md#kai-ji-heszhong-de-ren-yi-dian-wei-you-li-shu-qiuaji-he-nei-de-dian-qieaweisde-zi-ji)得 $$\exists A_k∈G \ni x \in A_k \subseteq S$$
+* 由有數數的稠密性可知滿足上述條件的$$A_k$$ 有無窮多個，取$$G$$中具有最小索引值的$$A_k$$, 且令索引值為$$m(x)$$, 因此可得$$x \in A_{m(x)}  \subseteq S$$。
+* $$\forall x∈A$$，均可得到對應的$$A_{m(x)}$$，且$$m(x)$$的個數為可數，因此$$\{A_(m(x)) \}$$形成$$A$$的可數開覆蓋集合族 \(QED\)
+
+
+
 
 
 

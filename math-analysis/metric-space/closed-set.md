@@ -19,7 +19,7 @@ description: closed set
 ### 閉集合包含其所有極限點
 
 > * $$S \subseteq X$$為閉集合$$\Leftrightarrow$$$$S$$包含其所有極限點。
-> * $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$$$\forall r > 0~ \exists y \in S \setminus \{x\} \ni y \in N_r(x)$$
+> * $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$$$\forall r > 0~ \exists y \in S -\{x\} \ni y \in N_r(x)$$
 > * 而$$S$$所有極限點形成為集合為導集合$$d(S)$$
 
 proof &gt;= \(閉集合的補集不包含集合的極限點\)
@@ -65,6 +65,13 @@ proof &lt;=
 * 因為空集合$$\emptyset$$不存在任何元素，因此其為開集合。
 * 而$$\mathbb{R}=\emptyset^c$$, 所以$$\mathbb{R}$$為閉集合。
 * **此範例說明了閉集合不一定有界**。
+
+### 實數中整數集合與自然數集合為（無界）閉集合
+
+* $$\mathbb{Z}, \mathbb{N}$$為閉集合。因為$$\mathbb{R} - \mathbb{Z},～\mathbb{R} - \mathbb{N}$$為開集合。
+* $$\mathbb{R} - \mathbb{Z} = \bigcup_{a \in \mathbb{Z}}(a,a+1)$$，$$(a,a+1)$$為開區間（開集合），而[可數個開集合的聯集仍為開集合](open-set.md#ren-yi-wu-xian-ge-kai-ji-he-de-jiao-ji-bu-yi-ding-shi-kai-ji-he)，因此$$\mathbb{R} - \mathbb{Z}$$為開集合。
+* 由極限點的定義可知$$\mathbb{Z}$$不存在極限點，因此導集合$$d(\mathbb{Z})=\emptyset$$為空集合。
+* 因為空集合為任意集合的子集合，所以$$d(\mathbb{Z}) \subseteq \mathbb{Z}$$，即整數集合包含了所有的極限點。
 
 ## 閉包（closure）
 

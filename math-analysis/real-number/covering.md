@@ -3,7 +3,7 @@
 ## 簡介
 
 * Lindelof 覆蓋定理證明了$$\mathbb{R}^n$$ 中**（開或閉）集合的任意開覆蓋，必定存在可數的子開覆蓋**。
-* Heine-Borel 覆蓋定理證明了$$\mathbb{R}^n$$ 中**有界閉集合必定存在有限個的開覆蓋**。
+* Heine-Borel 覆蓋定理證明了$$\mathbb{R}^n$$ 中**有界閉集合必定存在有限個的開覆蓋（將可數的開覆蓋聯集成一個開集合即可）**。
 * Bolzano-Weierstrass定理，Cantor交集定理，Lindelof，Heine-Borel均使用了$$\mathbb{R}^n$$上的性質，因此在一般化的度量空間$$(M,d)$$不一定會成立。
 
 ## 覆蓋\(covering\)

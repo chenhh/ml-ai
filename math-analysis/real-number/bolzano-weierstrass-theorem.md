@@ -56,7 +56,7 @@ proof：
 * 若$$Q_k$$ 集合中為有限多個點時，可簡單證明必定存在$$x \in S$$。
 * 假設$$Q_k$$ 集合中有無限多個點，建造集合$$A=\{x_1,x_2, \ldots\}, ~ x_k \in Q_k$$。
 * 因為$$A$$有無窮多個元素且$$A \subseteq Q_1$$ 為有界集合，由Bolzano-Weierstrass定理得集合$$A$$有極限點$$x$$。
-* 由極限點的鄰域與集合交集的元素為無窮多個的性質得$$\forall r>0 N_r (x)$$與$$A$$交集的元素個數為無窮多個。
+* 由[極限點的鄰域與集合交集的元素為無窮多個](../metric-space/point-topology.md#ji-xian-dian-de-lin-yu-yu-ji-he-jiao-ji-de-yuan-su-wei-wu-qiong-duo-ge)的性質得$$\forall r>0 N_r (x)$$與$$A$$交集的元素個數為無窮多個。
 * 因此$$\cap_{k=1}^\infty Q_k \neq \emptyset$$ \(QED\).
 
 

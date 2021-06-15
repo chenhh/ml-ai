@@ -175,6 +175,25 @@ proof \(2\):
 * 因為$$x \in S \cap d(T)$$，表示$$x \in S$$且$$x$$為$$T$$的極限點。
 * 因此$$S\cap \overline{T} \subseteq \overline{(S\cap T)}$$  \(QED\)
 
+## 緊緻集合（compact set）
+
+> $$S\subseteq X$$ 稱為緊致集合若且唯若集合$$S$$的任意開覆蓋均存在有限個數的子開覆蓋。
+
+> 即$$S\subseteq X$$為緊緻集合 $$\Leftrightarrow \exists \{I_1, I_2,\ldots, I_m\}$$為開集合族且 $$S\subseteq \bigcup_{k=1}^m I_k$$。
+
+### 緊緻度量空間的閉集合為緊緻集合
+
+> $$(X,d)$$為緊緻度量空間，$$S \subseteq X$$為閉集合，則$$S$$為緊緻集合。
+
+proof:
+
+* 令開集合族$$F$$為$$S$$的開覆蓋，即$$S \subseteq \bigcup_{A \in F} A$$。
+* 因為$$S$$為閉集合，所以$$X−S$$為開集合，所以$$F \cup \{X−S\}$$為$$X$$的開覆蓋。
+* 因為$$X$$為緊緻集合，所以$$F\cup\{X−S\}$$為有限個元素的開集合族。
+* $$S \subseteq X \subseteq \{A_1 \cup A_2 \cup \cdots \cup A_p \cup \{X−S\}\}$$
+* 因為 $$\forall x \in S, x \notin X−S \Rightarrow S \subseteq \{A_1 \cup A_2 \cup \cdots \cup A_p\}$$
+* 因此$$S$$為緊緻集合 \(QED\)
+
 ## 稠密集合（dense set）
 
 > 令$$A \subseteq X$$，且存在$$S \subseteq X$$使得$$A \subseteq S \subseteq \overline{A}$$，則稱集合$$A$$在集合$$S$$中稠密。\(A dense in S\)。

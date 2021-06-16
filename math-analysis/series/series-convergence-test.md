@@ -59,6 +59,8 @@ Proof:
 * 因為 $$S_n=\displaystyle\sum_{k=1}^n x_k $$
 * 所以$$\{S_n \}$$是Cauchy數列$$\Leftrightarrow $$$$\forall \epsilon>0 ~ \exists n_0 \in \mathbb{N} \ni \forall n>m \geq n_0, ~|S_n - S_m| =  |x_{m+1}+x_{m+2}+ \ldots +x_n |<\epsilon$$ \(QED\)
 
+
+
 ## 絕對收斂與條件收斂
 
 * 若級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$收斂，則稱級數  $$\displaystyle \sum_{k=1}^\infty x_k$$為絕對收斂（absolute convergence）。
@@ -107,6 +109,16 @@ Proof:
 
 * 級數 $$\displaystyle \sum_{k=1}^\infty \left|\frac{−2k}{k^2−4k+7} \right| =\infty$$
 * 因為$$\displaystyle \lim_{n \rightarrow \infty}⁡ \frac{1/n}{|(−2n)/(n^2−4n+7)|}=\frac{1}{2}$$且$$\displaystyle \sum_{k=1}^\infty \frac{1}{k}=\infty$$。
+
+## 比值審斂法\(ratio test\)
+
+> $$\displaystyle \forall n \in \mathbb{N}, x_n \neq 0, \lim_{n \rightarrow \infty}⁡|\frac{x_{n+1}}{x_n} | =p$$，則
+>
+> * 若 $$0 \leq p<1$$，則級數$$\displaystyle \sum_{k=1}^\infty x_k $$  絕對收斂。
+> * 若$$p>1$$或$$p=\infty$$，則級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 發散。
+> * 若$$p=1$$，則級數$$\displaystyle \sum_{k=1}^\infty x_k$$可能發散或收斂（須用其它審斂法判定）。
+
+>
 
 
 

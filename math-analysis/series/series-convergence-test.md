@@ -103,6 +103,11 @@ Proof:
 * 因此絕對收斂級數 $$\displaystyle \sum_{k=1}^\infty My_k$$優於級數$$\displaystyle \sum_{k=1}^\infty x_k$$ ，由絕對收斂比較審斂法得級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 絕對收斂。
 * 若$$L \neq 0$$，因$$\displaystyle \lim_{n \rightarrow \infty} \left|\frac{x_n}{y_n} \right|=L$$ 可得 $$\displaystyle \lim_{n \rightarrow \infty} \left|\frac{y_n}{x_n} \right|=\frac{1}{L}$$, 因此級數$$\displaystyle \sum_{k=1}^\infty y_k$$ 為絕對收斂若且唯若級數$$\displaystyle \sum_{k=1}^\infty x_k$$絕對收斂 \(QED\)
 
+#### 範例
+
+* 級數 $$\displaystyle \sum_{k=1}^\infty \left|\frac{−2k}{k^2−4k+7} \right| =\infty$$
+* 因為$$\displaystyle \lim_{n \rightarrow \infty}⁡ \frac{1/n}{|(−2n)/(n^2−4n+7)|}=\frac{1}{2}$$且$$\displaystyle \sum_{k=1}^\infty \frac{1}{k}=\infty$$。
+
 
 
 ### 

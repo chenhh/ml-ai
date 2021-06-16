@@ -22,7 +22,7 @@ $$\displaystyle \sum_{k=1}^\infty \frac{1}{\sqrt{k}}$$發散，但是$$\displays
 * $$S_n=\sum_{k=}^n \frac{1}{\sqrt{k}}=1+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{3}} + \cdots+ \frac{1}{\sqrt{n}} > \frac{1}{\sqrt{n}}+\frac{1}{\sqrt{n}}+\frac{1}{\sqrt{n}}+\cdots +\frac{1}{\sqrt{n}}=\frac{n}{\sqrt{n}}=\sqrt{n} $$
 * 因此 $$\displaystyle \lim_{n \rightarrow \infty}S_n \geq \lim_{n \rightarrow \infty}\sqrt{n} = \infty$$發散。
 
-## 正實數的遞減數列篩審斂法
+### 正實數的遞減數列篩審斂法
 
 > $$\{x_n \}$$為遞減數列且$$\forall n \in \mathbb{N}, ~x_n>0$$。
 >
@@ -64,7 +64,7 @@ Proof:
 * 若級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$收斂，則稱級數  $$\displaystyle \sum_{k=1}^\infty x_k$$為絕對收斂（absolute convergence）。
 * 若級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$發散，但級數$$\displaystyle \sum_{k=1}^\infty x_k$$收斂，則稱級數$$ \displaystyle \sum_{k=1}^\infty x_k$$條件收斂（conditional convergence）。
 
-## 絕對值審斂法\(absolutely convergence test\)
+### 絕對值審斂法\(absolutely convergence test\)
 
 > 若絕對值級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$ 收斂，則級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 收斂。
 
@@ -76,7 +76,7 @@ Proof:
 *  因此 $$|S_n−S_m |=|x_{m+1}+x_{m+2}+\ldots+x_n |\leq |x_{m+1} |+|x_{m+2} |+\ldots+|x_n |<\epsilon$$
 * 即$$\{S_n\}$$也為Cauchy序列，由Cauchy審斂法得知$$\displaystyle \sum_{k=1}^\infty x_k$$收斂 \(QED\)
 
-## 絕對收斂比較審斂法\(comparison test for absolute convergence\)
+### 絕對收斂比較審斂法\(comparison test for absolute convergence\)
 
 > 若存在$$n_0 \in \mathbb{N}$$ 使得$$\forall n \geq n_0, |x_n |≤|y_n |$$，則稱級數 $$\displaystyle \sum_{k=1}^\infty y_k$$ 優於\(superior to\)級數$$\displaystyle \sum_{k=1}^\infty x_n $$。
 >
@@ -90,7 +90,20 @@ Proof:
 * $$\forall n \geq n_0, S_n=|x_1 |+|x_2 |+\ldots+|x_{n_0−1} |+|x_{n_0} |+\ldots+|x_n | \leq |x_1 |+|x_2 |+\ldots+|x_{n_0−1} |+|y_{n_0} |+\ldots+|y_n | \leq |x_1 |+|x_2 |+\ldots+|x_{n_0−1} |+Y$$
 * 因此$$\{S_n\}$$為遞增序列且有上界，因此$$\{S_n\}$$收斂，可得級數$$\sum_{k=1}^\infty x_k$$ 收斂 \(QED\)
 
+### 絕對收斂極限比較審斂法\(limit comparison test for absolute convergence\)
+
+> 令級數$$\displaystyle \sum_{k=1}^\infty x_k$$與$$\displaystyle \sum_{k=1}^\infty y_k$$滿足$$\displaystyle \lim_{n \rightarrow \infty} \left|\frac{x_n}{y_n} \right|=L \in \mathbb{R}$$
+>
+> * 若級數$$\displaystyle \sum_{k=1}^\infty y_k$$為絕對收斂 ，則級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 絕對收斂。
+> * 若$$L \neq 0$$，則級數$$\displaystyle \sum_{k=1}^\infty y_k$$為絕對收斂若且唯若級數$$\displaystyle \sum_{k=1}^\infty x_k$$絕對收斂。
+
+Proof:
+
+* 因為$$\displaystyle \lim_{n \rightarrow \infty} \left|\frac{x_n}{y_n} \right|=L$$，因此序列$$\left|\frac{x_n}{y_n} \right|$$ 有界, 即$$\exists M>0\ \ni \forall n \in \mathbb{N}, |x_n | \leq M|y_n |$$。
+* 因此絕對收斂級數 $$\displaystyle \sum_{k=1}^\infty My_k$$優於級數$$\displaystyle \sum_{k=1}^\infty x_k$$ ，由絕對收斂比較審斂法得級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 絕對收斂。
+* 若$$L \neq 0$$，因$$\displaystyle \lim_{n \rightarrow \infty} \left|\frac{x_n}{y_n} \right|=L$$ 可得 $$\displaystyle \lim_{n \rightarrow \infty} \left|\frac{y_n}{x_n} \right|=\frac{1}{L}$$, 因此級數$$\displaystyle \sum_{k=1}^\infty y_k$$ 為絕對收斂若且唯若級數$$\displaystyle \sum_{k=1}^\infty x_k$$絕對收斂 \(QED\)
 
 
 
+### 
 

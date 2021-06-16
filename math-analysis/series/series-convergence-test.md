@@ -57,9 +57,22 @@ Proof:
 * 而數列$$\{S_n \}$$收斂的充要條件是$$\{S_n\}$$  是Cauchy數列。
 * 因此級數$$\displaystyle\sum_{k=1}^\infty x_k$$ 收斂的充要條件是$$\{S_n\}$$是Cauchy數列。
 * 因為 $$S_n=\displaystyle\sum_{k=1}^n x_k $$
-* 所以$$\{S_n \}$$是Cauchy數列\Leftrightarrow $$\forall \epsilon>0 ~ \exists n_0 \in \mathbb{N} \ni \forall n>m \geq n_0, ~|S_n - S_m| =  |x_{m+1}+x_{m+2}+ \ldots +x_n |<\epsilon$$ \(QED\).
+* 所以$$\{S_n \}$$是Cauchy數列$$\Leftrightarrow $$$$\forall \epsilon>0 ~ \exists n_0 \in \mathbb{N} \ni \forall n>m \geq n_0, ~|S_n - S_m| =  |x_{m+1}+x_{m+2}+ \ldots +x_n |<\epsilon$$ \(QED\)
 
+## 絕對收斂與條件收斂
 
+* 若級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$收斂，則稱級數  $$\displaystyle \sum_{k=1}^\infty x_k$$為絕對收斂（absolute convergence）。
+* 若級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$發散，但級數$$\displaystyle \sum_{k=1}^\infty x_k$$收斂，則稱級數$$ \displaystyle \sum_{k=1}^\infty x_k$$條件收斂（conditional convergence）。
 
+## 絕對值審斂法\(absolutely convergence test\)
 
+> 若絕對值級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$ 收斂，則級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 收斂。
+
+Proof:
+
+* $$\forall n \in \mathbb{N}$$，令部份和 $$S_n=\displaystyle \sum_{k=1}^n x_n , ~ T_n=\displaystyle \sum_{k=1}^n |x_n | $$。
+* 因為 $$\displaystyle \sum_{k=1}^\infty |x_k |收斂$$，所以數列$$\{T_n\}$$為Cauchy序列。
+* 可得$$\forall \epsilon>0, ~ \exists n_0 \in \mathbb{N} \ni \forall n >m \geq n_0, ~ |T_n−T_m |=|x_{m+1} |+|x_{m+2} |+\ldots +|x_n |<\epsilon$$
+*  因此 $$|S_n−S_m |=|x_{m+1}+x_{m+2}+\ldots+x_n |\leq |x_{m+1} |+|x_{m+2} |+\ldots+|x_n |<\epsilon$$
+* 即$$\{S_n\}$$也為Cauchy序列，由Cauchy審斂法得知$$\displaystyle \sum_{k=1}^\infty x_k$$收斂 \(QED\)
 

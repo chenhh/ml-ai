@@ -76,3 +76,17 @@ Proof:
 *  因此 $$|S_n−S_m |=|x_{m+1}+x_{m+2}+\ldots+x_n |\leq |x_{m+1} |+|x_{m+2} |+\ldots+|x_n |<\epsilon$$
 * 即$$\{S_n\}$$也為Cauchy序列，由Cauchy審斂法得知$$\displaystyle \sum_{k=1}^\infty x_k$$收斂 \(QED\)
 
+## 絕對收斂比較審斂法\(comparison test for absolute convergence\)
+
+> 若存在$$n_0 \in \mathbb{N}$$ 使得$$\forall n \geq n_0, |x_n |≤|y_n |$$，則稱級數 $$\displaystyle \sum_{k=1}^\infty y_k$$ 優於\(superior to\)級數$$\displaystyle \sum_{k=1}^\infty x_n $$。
+>
+> * 令級數$$\displaystyle \sum_{k=1}^\infty y_k$$ 優於級數$$\displaystyle \sum_{k=1}^\infty x_k$$
+> * 若級數$$ \displaystyle \sum_{k=1}^\infty ||y_k |$$ 收斂，則級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$收斂。
+> * 若級數$$\displaystyle \sum_{k=1}^\infty |x_k |$$發散，則級數$$ \displaystyle \sum_{k=1}^\infty |y_k |$$ 發散。
+
+## 
+
+
+
+
+

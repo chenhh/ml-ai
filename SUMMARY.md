@@ -22,6 +22,7 @@
 * [數列\(sequence\)](math-analysis/sequence.md)
 * [級數\(series\)](math-analysis/series/README.md)
   * [級數審斂法](math-analysis/series/series-convergence-test.md)
+  * [Taylor級數](math-analysis/series/taylor-series.md)
 * [函數\(function\)](math-analysis/han-shu-function/README.md)
   * [函數的極限](math-analysis/han-shu-function/limit-of-function.md)
   * [實值函數的左、右極限](math-analysis/han-shu-function/left-right-hand-limit-of-real-valued-function.md)

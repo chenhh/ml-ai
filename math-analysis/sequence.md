@@ -59,7 +59,8 @@ $$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$  and $$\displaystyle \lim
 
 > $$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$收斂 $$\Rightarrow$$$$\displaystyle \lim_{i \rightarrow \infty} a_{n_i}=a$$收斂
 >
-> 反向不成立，因為子數列可能是從發散數列中得出。
+> * 反向不一定成立，因為子數列可能是從發散數列中得出。
+> * 反向成立的條件是同一序列的所有的子序列均收斂至同一點。
 
 proof:
 

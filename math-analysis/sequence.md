@@ -16,13 +16,13 @@
 
 ## 收斂與發散數列
 
-> 實數版本
+> 收斂數列：實數
 >
 > * $$ \{a_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$ 稱為收斂數列若$$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon\ \forall n \geq n_0$$
 > * 常寫為 $$a_n \rightarrow a$$ as $$n \rightarrow \infty$$
 > * 如果$${a_n}$$不是收斂數列\(convergent sequence\)，則為發散數列\(divergent sequence\)。
 >
-> 度量空間
+> 收斂數列：度量空間
 >
 > * $$(X,d)$$為度量空間, $$\{a_n\}_{n \in \mathbb{N}} \subset X$$為一數列
 > * $$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni  d(a_n,a) < \epsilon\ \forall n \geq n_0$$

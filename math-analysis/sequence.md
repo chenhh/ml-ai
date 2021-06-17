@@ -83,6 +83,18 @@ Proof:
 * 而$$\forall \epsilon>0$$，均可得出此結果，因此值域集合$$T$$有界 \(QED\).
 * 由收斂定義得 $$\forall \epsilon>0,  ~N_\epsilon (a) \cap T \neq \emptyset$$, 因此$$a$$為附著點. \(QED\)
 
+### 度量空間必存在序列收斂至極限點
+
+> 給定度量空間$$(X,d)$$，且集合$$S \subseteq X$$。若$$a \in X$$為$$S$$中的附著點，則存在序列$$\{a_n\} \subseteq S$$且$$\displaystyle \lim_{n \rightarrow \infty} a_n=a$$
+
+> 註：與[收斂序列的值域有界且收斂至極限點](sequence.md#shou-lian-xu-lie-de-zhi-yu-you-jie-qie-shou-lian-zhi-ji-xian-dian)整合後得$$a$$為附著點 $$\displaystyle \Leftrightarrow  \exists \{a_n\} \subseteq X \ni \lim_{n \rightarrow \infty}⁡ a_n =a $$
+
+Proof:
+
+* 附著點的定義$$\forall r>0, N_r (a) \cap S \neq \emptyset $$。
+* $$therefore \forall n \geq 1, \exists a_n \in S \ni d(a,a_n ) \leq \frac{1}{n} $$
+* $$\therefore a_n→a$$ as $$n \rightarrow \infty$$ \(QED\).
+
 ### 數列奇數項與偶數項收斂至同一值，則數列數斂
 
 > $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n} = a$$且 $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n+1} = a$$ $$\Rightarrow $$$$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$

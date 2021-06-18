@@ -18,7 +18,7 @@
 
 * 子數列就是原本的數列，依原始數列的順序，任意取出的子集合形成的數列。
 
-## 收斂與發散數列
+## 收斂數列
 
 > 收斂數列：實數
 >
@@ -33,8 +33,17 @@
 
 * 數列收斂的直觀意義，是不論我們要使$$a_n$$ 與$$a$$接近到任何程度，只要$$n$$值夠大時一定能夠辦到。給定接近的距離$$\epsilon$$後，只要過了第$$a_0,a_1,\ldots,a_{n_{0}−1 }$$ \(有限項\)之後，$$a_{n_0},a_{n_0+1},\ldots$$\(無窮項\)與$$a$$的距離均小於$$\epsilon$$。
 * 由於實數的完備性，若$$\displaystyle \lim_{n \rightarrow \infty}⁡a_n$$ 收斂，收斂值必為實數且唯一。
+* 如果$$\{a_n, ~ n \geq 1\}$$有子序列收斂，將這些收斂子序列收集起來得集合$$B$$，將$$\sup (B)$$ 記為$$\displaystyle \limsup_{n \rightarrow \infty} a_n$$，$$\inf(⁡B)$$ 記為$$\displaystyle \liminf_{n \rightarrow \infty} a_n$$。
+
+
 
 ![&#x6536;&#x6582;&#x6578;&#x5217;&#x6703;&#x5728;&#x6536;&#x6582;&#x503C;&#x9644;&#x8FD1;&#x8D8A;&#x7E2E;&#x8D8A;&#x8FD1;](../.gitbook/assets/limit_sequence-min.png)
+
+### 發散數列\(\(divergent sequence\)
+
+> $$ \displaystyle \lim_{n \rightarrow \infty}⁡ a_n=\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N}  \ni a_n \geq M ~\forall n \geq n_0$$
+>
+> $$ \displaystyle \lim_{n \rightarrow \infty}⁡ a_n=-\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N}  \ni a_n \leq M ~\forall n \geq n_0$$
 
 ### 收斂數列的唯一性
 

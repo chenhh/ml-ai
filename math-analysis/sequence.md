@@ -12,11 +12,25 @@
 
 ## 子數列\(subsequence\)
 
+> 嚴格遞增函數：
+>
 > 令$$s=\{s_n\}$$為無限數列，令函數$$k: \mathbb{N} \rightarrow T, ~ T \subseteq \mathbb{N}$$且為嚴格遞增函數（若$$m <n$$，則$$k(m) < k(n)$$）。
 >
 > 則對所有大於1的整數$$n$$，合成函數$$(s \circ k)(n) = s_{k(n)} \equiv s_{kn}$$形成的序列$$\{s_{k(n)}\} \equiv \{s_{kn}\}$$稱為$$s$$的子數列。
+>
+> 度量空間：
+>
+> $$(X,d)$$為度量空間，$$\{a_n\}_{n \in \mathbb{N}} \subseteq X$$，令$$\{n_r\}_{r \in \mathbb{N}} \subseteq \mathbb{N}$$為自然數中嚴格遞增的序列（做為指標序列），則$$\{a_{n_r} \}_{r \in \mathbb{N}}$$ 為$$\{a_n\}_{n \in \mathbb{N}}$$ 的子序列。
+>
+> 子序列是從$$\{a_n\}$$中取出部份的元素，$$n_1$$代表取出的第一個元素在$$\{a_n\}$$的位置，依此類推，依其順序組合而成的新序列$$\{a_{n_r})\}$$為$$\{a_n\}$$的子集合，且順序仍保持相同。
 
 * 子數列就是原本的數列，依原始數列的順序，任意取出的子集合形成的數列。
+* 例如 $$\{a_n\}=\{9,8,4,5,1,3,4,5\}, \{n_r\}=\{1,4, 6\} \Rightarrow \{a_{n_r} \}=\{a_1,a_4,a_6\}=\{9,5,3\}$$。
+* 下圖中，把紅色圓圈內的點取出形成子數列，則可形成收斂子數列。
+
+
+
+![&#x7D05;&#x8272;&#x5713;&#x5708;&#x5167;&#x70BA;&#x6536;&#x6582;&#x5B50;&#x6578;&#x5217;](../.gitbook/assets/subsequence-min.png)
 
 ## 收斂數列
 
@@ -68,14 +82,17 @@ $$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$  and $$\displaystyle \lim
 
 > $$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$收斂 $$\Rightarrow$$$$\displaystyle \lim_{i \rightarrow \infty} a_{n_i}=a$$收斂
 >
-> * 反向不一定成立，因為子數列可能是從發散數列中得出。
+> * 因為原始序列只要$$n$$夠大（大於$$n_0$$）時必定會收斂；而不論子數列如何取出，只要取出的數列索引值夠大（大於$$n_0$$）時仍會收斂。
+> * 反向不一定成立，因為子數列可能是從發散數列中得出，即子數列是捨去了原數列中不收斂的點後才會收斂。
 > * 反向成立的條件是同一序列的所有的子序列均收斂至同一點。
 
 proof:
 
-$$\lim_{n \rightarrow \infty} a_n = a$$ converge $$ \Leftrightarrow $$$$\forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n - a| < \epsilon, \ \forall n \geq n_0$$
+$$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$ \Leftrightarrow $$$$\forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n - a| < \epsilon, \ \forall n \geq n_0$$
 
-take $$i \geq n_0$$then $$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon$$ \(QED\)
+取$$i \geq n_0$$則$$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon$$ \(QED\)
+
+
 
 ### 收斂序列的值域有界且收斂至極限點
 

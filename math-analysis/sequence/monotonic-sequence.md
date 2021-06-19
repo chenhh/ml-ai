@@ -43,6 +43,14 @@ Proof:
 
 * 註: 由以下兩圖可知遞增（減）數列，因為有界數列，因此到了$$n \geq n_0$$的時候，可以上升（下降）的量就已經到達到了一個很小的範圍，此時就如同函數極限的定義一般，值域在一個很小的範圍$$\epsilon$$內變動，因此收斂。
 
+Proof:
+
+* 因為$$\{a_n\}$$有上界，由實數的最小上界性質\(非空有上界的集合必有最小上界\)得存在上確界 $$M=\sup\{a_n | n \in \mathbb{N}\} $$。
+* 因為$$M$$為$$\{a_n\}$$的最小上界，由定義得$$\forall \epsilon>0~\exists n_0 \in \mathbb{N}   \ni M−\epsilon<a_{n_0}$$
+* 取$$n \geq n_0$$ 時，$$M−\epsilon <a_{n_0} \leq a_n<M+\epsilon$$ \(QED\)
+
+
+
 ![&#x6709;&#x4E0A;&#x754C;&#x905E;&#x589E;&#x6578;&#x5217;&#x5FC5;&#x6536;&#x6582;](../../.gitbook/assets/increase-bounded-sequence-min.png)
 
 ![&#x6709;&#x4E0B;&#x754C;&#x905E;&#x6E1B;&#x6578;&#x5217;&#x5FC5;&#x6536;&#x6582;](../../.gitbook/assets/decrease-bounded-sequence-min.png)

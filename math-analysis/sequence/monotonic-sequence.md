@@ -19,3 +19,16 @@
 >
 > 註：實數中的有界序列必落在一有界區間中。
 
+### 收斂數列必為有界數列
+
+> $$\{a_n\}$$為一序列且$$\displaystyle \lim_{n \rightarrow \infty}⁡ a_n =a \Leftrightarrow \{a_n\}$$有界 \(上界或下界\)
+>
+> 反之有界數列不一定成立，如$$\{a_n = \sin(n\pi)\}$$為有界數列$$|a_n| \leq 1$$，但不收斂。
+
+Proof:
+
+* $$\displaystyle \lim_{n \rightarrow \infty} a_n=a \Leftrightarrow \forall \epsilon>0 ~ \exists n_0 \in \mathbb{N}  \ni |a_n−a|<\epsilon ~ \forall n \geq n_0$$
+* 所以 $$|a_n | \leq |a_n−a|+|a|<|a|+ϵ$$
+* 令$$m=|a_1 |+|a_2 |+\cdots +|a_{n−1} |+|a|+\epsilon$$
+* 可得 $$\forall n \in \mathbb{N},  ~|a_n |≤m$$ \(QED\)
+

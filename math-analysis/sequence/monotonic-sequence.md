@@ -59,7 +59,7 @@ Proof:
 
 > $$\{a_n\}$$為有上（下）界收斂數列，且令$$\displaystyle \lim_{n \rightarrow \infty} a_n =a$$，則存在子數列$$\{a_{n_r} \}$$收斂至$$a$$，即$$\displaystyle \lim_{r \rightarrow \infty}⁡ a_{n_r}  =a$$。
 >
-> 註：只要為收斂收列，就存在收斂至同一點的子數列。
+> 註：收斂數列必為有界數例，且收斂收列必存在收斂至同一點的子數列。
 
 proof:
 

@@ -78,22 +78,6 @@ $$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$  and $$\displaystyle \lim
 
 可由收斂數列的定義簡單得出。
 
-### 收斂數列的子數列必為收斂數列且收斂至同一點
-
-> $$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$收斂 $$\Rightarrow$$$$\displaystyle \lim_{i \rightarrow \infty} a_{n_i}=a$$收斂
->
-> * 因為原始序列只要$$n$$夠大（大於$$n_0$$）時必定會收斂；而不論子數列如何取出，只要取出的數列索引值夠大（大於$$n_0$$）時仍會收斂。
-> * 反向不一定成立，因為子數列可能是從發散數列中得出，即子數列是捨去了原數列中不收斂的點後才會收斂。
-> * 反向成立的條件是同一序列的所有的子序列均收斂至同一點。
-
-proof:
-
-$$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$ \Leftrightarrow $$$$\forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n - a| < \epsilon, \ \forall n \geq n_0$$
-
-取$$i \geq n_0$$則$$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon$$ \(QED\)
-
-
-
 ### 收斂序列的值域有界且收斂至極限點
 
 > 度量空間$$(X,d)$$中，$$\{ a_n\} \subseteq X$$為收斂數列，令 $$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$，且令$$T=\{a_1, a_2, \ldots\}$$為序列之值的集合，則
@@ -121,6 +105,29 @@ Proof:
 * 附著點的定義$$\forall r>0, N_r (a) \cap S \neq \emptyset $$。
 * $$therefore \forall n \geq 1, \exists a_n \in S \ni d(a,a_n ) \leq \frac{1}{n} $$
 * $$\therefore a_n→a$$ as $$n \rightarrow \infty$$ \(QED\).
+
+### 收斂數列的子數列必為收斂數列且收斂至同一點
+
+> $$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$收斂 $$\Rightarrow$$$$\displaystyle \lim_{i \rightarrow \infty} a_{n_i}=a$$收斂
+>
+> * 因為原始序列只要$$n$$夠大（大於$$n_0$$）時必定會收斂；而不論子數列如何取出，只要取出的數列索引值夠大（大於$$n_0$$）時仍會收斂。
+> * 反向不一定成立，因為子數列可能是從發散數列中得出，即子數列是捨去了原數列中不收斂的點後才會收斂。
+> * 反向成立的條件是同一序列的所有的子序列均收斂至同一點。
+
+proof:
+
+$$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$ \Leftrightarrow $$$$\forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n - a| < \epsilon, \ \forall n \geq n_0$$
+
+取$$i \geq n_0$$則$$n_i \geq i \geq n_0 \Rightarrow |a_{n_i} - a|<\epsilon$$ \(QED\)
+
+### 子序列收斂至原序列的極限點
+
+> $$\{a_n\}_{n \in \mathbb{N}}$$ 為一實數序列，則以下為等價性質：
+>
+> * $$L \in \mathbb{R}$$為$$\{a_n\}_{n \in \mathbb{N}}$$的極限點。
+> * 存在子序列$$\{a_{n_k}\}$$收斂至$$L$$。
+
+
 
 ### 數列奇數項與偶數項收斂至同一值，則數列數斂
 

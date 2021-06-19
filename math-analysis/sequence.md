@@ -147,8 +147,6 @@ $$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$ \Leftrightarrow $
 > * $$L \in \mathbb{R}$$為$$\{a_n\}_{n \in \mathbb{N}}$$的極限點。
 > * 存在子序列$$\{a_{n_k}\}$$收斂至$$L$$。
 
-
-
 ### 數列奇數項與偶數項收斂至同一值，則數列數斂
 
 > $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n} = a$$且 $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n+1} = a$$ $$\Rightarrow $$$$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$

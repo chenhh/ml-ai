@@ -55,5 +55,13 @@ Proof:
 
 ![&#x6709;&#x4E0B;&#x754C;&#x905E;&#x6E1B;&#x6578;&#x5217;&#x5FC5;&#x6536;&#x6582;](../../.gitbook/assets/decrease-bounded-sequence-min.png)
 
+### 有上\(下\)界收斂序列必存在收斂子序列
+
+> $$\{a_n\}$$為有上（下）界收斂序列，且令$$\displaystyle \lim_{n \rightarrow \infty} a_n =a$$，則存在子序列$$\{a_{n_r} \}$$收斂至$$a$$，即$$\displaystyle \lim_{r \rightarrow \infty}⁡ a_{n_r}  =a$$。
+
+proof:
+
+由[收斂數列的子數列必為收斂數列且收斂至同一點](./#shou-lian-shu-lie-de-zi-shu-lie-bi-wei-shou-lian-shu-lie-qie-shou-lian-zhi-tong-yi-dian)得證。\(QED\)
+
 ## 
 

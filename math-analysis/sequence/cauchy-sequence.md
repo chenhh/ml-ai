@@ -101,9 +101,10 @@ proof：證明數列收斂於同一點
 ### 完備空間中的任意緊緻子集合仍為完備空間
 
 > * $$(X,d)$$為完備度量空間，$$S \subseteq X$$為緊緻集合\(compact  set\)（即$$S$$的任意開覆蓋均存在有限個數的子開覆蓋），則$$(S,d)$$為完備度量空間。
-> *  若$$(X,d)$$為度量空間（不必完備），$$S \subseteq X$$為完備度量空間，則$$S$$為閉集合（$$X-S$$為開集合）。
 
-Proof 1:
+例如：實數上的閉區間$$[a,b]$$為完備度量空間。
+
+Proof :
 
 * $$\{x_n\}\subseteq S$$為Cauchy數列，且$$A=\{x_1,x_2,\ldots\}$$為數列的值域。
 * 若$$A$$為有限集合，則$$\{x_n\}$$必定收斂至$$S$$中的某一點，因此$$\{x_n\}$$收斂在$$S$$中。
@@ -113,7 +114,13 @@ Proof 1:
 * 若$$n \geq N$$，由三角不等式得 $$d(x_n,p) \leq d(x_n,p)+d(x_m,p)<\epsilon/2+\epsilon/2=\epsilon $$
 * 所以$$\displaystyle \lim_{n \rightarrow \infty} x_n = p$$且$$p \in S$$，所以$$S$$為完備度量空間 \(QED\)
 
-proof 2:
+### 完備度量空間為閉集合
+
+> 若$$(X,d)$$為度量空間（不必完備），$$S \subseteq X$$為完備度量空間，則$$S$$為閉集合（$$X-S$$為開集合）。
+
+例如：實數上的閉區間$$[a,b]$$為完備度量空間，且為閉集合。
+
+proof :
 
 * 令$$\{ x_n \} \subseteq  S$$為Cauchy數列，且令$$\lim_{n \rightarrow \infty} x_n = p$$，因為$$(S,d)$$為完備度量空間，可得$$p \in S$$。
 * 因為所有Cacuhy數列的極限點均為$$S$$的元素，由[閉集合](../metric-space/closed-set.md#bi-ji-he-closed-set)的定義得$$S$$為閉集合\(QED\)。

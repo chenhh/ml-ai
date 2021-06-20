@@ -11,5 +11,21 @@
 
 ![&#x6578;&#x5217;&#x4E0A;&#x3001;&#x4E0B;&#x6975;&#x9650;&#x7684;&#x5B9A;&#x7FA9;](../../.gitbook/assets/lim_sup_inf_detail-min.png)
 
+## 實數序列上極限\(limit superior of a sequence\)
+
+> 令$$\{x_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$為一數列，
+>
+> * $$\displaystyle \overline{\lim_{n \rightarrow \infty}}x_n\equiv \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\sup_{ k \geq n} x_k = \inf_{n \geq 0}\{\sup_{k \geq n} x_k\}$$或
+> * $$\displaystyle \limsup_{n \rightarrow \infty} x_n =\lim_{ n \rightarrow \infty} (\sup_{k \geq n} x_k)$$
+> * 上極限是所有收斂子序列的最大值。
+> * 上極限是由第$$n$$個元素開始的最小上界形成集合的最大下界。
+
+* 令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
+* 令$$\forall n \in \mathbb{N}, M_n=\sup\{x_n,x_{n+1}, x_{n+2},\ldots\}  $$
+  * $$M_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最小上界。
+  * $$M_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最小上界。
+  * 以此類推得$$ M_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最小上界。
+  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}M_n  \in [-\infty, \infty]$$，即數列的上極限等於數列第$$n$$個至無窮多個元素的最小上界    。
+
 
 

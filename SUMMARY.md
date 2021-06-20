@@ -22,6 +22,7 @@
 * [數列\(sequence\)](math-analysis/sequence/README.md)
   * [單調數列\(monotonic sequence\)](math-analysis/sequence/monotonic-sequence.md)
   * [柯西數列\(Cauchy sequence\)](math-analysis/sequence/cauchy-sequence.md)
+  * [數列的上、下極限](math-analysis/sequence/limit-sup-inf-of-sequence.md)
 * [級數\(series\)](math-analysis/series/README.md)
   * [級數審斂法](math-analysis/series/series-convergence-test.md)
   * [Taylor級數](math-analysis/series/taylor-series.md)

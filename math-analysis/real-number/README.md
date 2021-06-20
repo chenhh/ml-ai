@@ -51,7 +51,7 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 >
 > 反之若 $$ a > b$$時，則$$\exists \epsilon > 0 \ni a > b+ \epsilon$$。
 >
-> 在證明時經常會使用此性質。
+> 在證明時經常會使用此性質，比如$$\forall \epsilon >0, a -\epsilon \leq a_n \leq a +\epsilon$$，可得$$a_n \leq a$$且 $$ a \leq a_n$$，由三一律得$$a_n =a$$。
 
 若$$ b < a$$，令$$\epsilon = \frac{b-a}{2}$$，則 $$b+\epsilon = b+ \frac{a-b}{2} = \frac{a+b}{2} < \frac{a+a}{2}=a$$\(QED\)。
 
@@ -382,6 +382,15 @@ proof:
 * $$\forall \epsilon >0 $$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni  n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
 * 而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
 * 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$\(QED\)
+
+### 實數中以開區間逼近閉區間
+
+> $$\forall c \in \mathbb{R}$$，閉區間$$[0,c]= \displaystyle \lim_{n \rightarrow \infty} \left(0 + \frac{1}{n}, c+\frac{1}{n} \right)$$可由外側逼近，或是$$[0,c]= \displaystyle \lim_{n \rightarrow \infty} \left(0 -\frac{1}{n}, c-\frac{1}{n} \right)$$由內側逼近。
+
+proof:
+
+* $$\displaystyle \lim_{n \rightarrow \infty} 0 + \frac{1}{n} = \lim_{n \rightarrow \infty} 0 - \frac{1}{n}=0$$
+* 同理 $$\displaystyle \lim_{n \rightarrow \infty} c + \frac{1}{n} = \lim_{n \rightarrow \infty} c - \frac{1}{n}=c$$ \(QED\)
 
 ### 任意兩個差值大於1的實數間必存在整數
 

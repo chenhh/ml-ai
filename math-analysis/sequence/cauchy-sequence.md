@@ -53,7 +53,40 @@ proof:
 * 可得$$\forall n \in \mathbb{N}, ~ |a_n | \leq r$$
 * 因此$$\{a_n\}$$為有界數列 \(QED\).
 
+## 實數中的任意Cauchy數列都會收斂
 
+> 因為實數為完備空間，所以定理成立。一般度量空間必須為完備空間才有此性質。
+>
+> 非完備空間之Cauchy數列的收斂點可能不在該空間中。例如有理數中的Cauchy數列可能收斂至無理數。
 
+Proof：存在性
 
+* 令$$\{a_n \}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$為Cauchy數列，因為[實數中的所有Cauchy數列都是有界數列](cauchy-sequence.md#shi-shu-zhong-de-suo-you-cauchy-shu-lie-du-shi-you-jie-shu-lie)，所以$$\{a_n\}$$為有界集合。
+* $$\forall n \in \mathbb{N}$$, 令$$S_n=\{a_m |m \in \mathbb{N},  m \geq n\}$$是由數列$$\{a_n,a_{n+1},a_{n+2}, \ldots\}$$所形成的集合。
+* 則得遞減集合序列 $$S_1 \supseteq S_2\supseteq \ldots  \supseteq S_n \supseteq \ldots $$，且$$\forall n, ~S_n$$ 均為有界集合。
+* 依實數的非空有界子集合必有上確界性質，令$$b_n=\sup⁡(S_n), c_n=\inf⁡(S_n ) \Rightarrow c_n \leq a_n \leq b_n$$
+* 因為$$S_{n+1} \subseteq S_n \Rightarrow b_n \geq b_{n+1} \geq c_{n+1}  \geq c_n $$
+* 根據數學歸納法，$$\forall m,n \in \mathbb{N}, b_n \geq b_{n+m} \geq c_{n+m} \geq c_n $$
+* 因此集合$$\{b_n\}_{n \in \mathbb{N}}$$的元素均大於等於$$\{c_n\}_{n \in \mathbb{N}}$$ 的元素。
+* 所以集合$$\{b_n\}$$ 有下界且$$\{c_n\}$$ 有上界。
+* 令$$b=\inf⁡(\{b_n\}), c=\sup⁡{\{c_n\} } \Rightarrow b \geq c$$−−\(1\)
+
+proof： 證明收斂於一點
+
+* $$\{a_n \}\subseteq \mathbb{R}$$為Cauchy數列，由定義得$$\forall \epsilon>0 ~\exists n_0 \in \mathbb{N} \ni |a_n−a_m |<\epsilon ~\forall n,m \geq n_0 $$
+* 移項後可得$$\forall ϵ>0,  ~\exists n_0 \in \mathbb{N} \ni a_n−\epsilon<a_m<a_n+\epsilon ~ \forall n,m \geq n_0 $$
+* 令集合$$S_n=\{a_m |m \in \mathbb{N}, ~ m \geq n_0 \}$$，則$$S_n$$的所有元素均小於集合$$\{a_n+ \epsilon |n \in \mathbb{N},~ n \geq n_0 \}$$的所有元素  。
+* 因此集合$$S_n$$內的最小上界小於或等於後一個集合內的最大下界。
+* 即$$b_{n_0} \leq c_{n_0}+\epsilon \Rightarrow 0 \leq b−c \leq b_{n_0}−c_{n_0} \leq \epsilon $$
+* 因此 $$\forall \epsilon>0, ~0 \leq b−c \leq \epsilon⇒b=c$$−−\(2\)
+
+proof：證明數列收斂於同一點
+
+* $$\forall \epsilon>0, b+\epsilon$$不是$$\{b_n\}$$的下界，因此$$\exists n_1 \in \mathbb{N}  \ni b_{n_1}<b+ \epsilon $$。
+* 同理$$\forall \epsilon>0, b−\epsilon =c−\epsilon$$不是$$\{c_n\}$$的上界，因此$$\exists n_2 \in \mathbb{N}  \ni c_{n_2} >b−\epsilon $$。
+* 取$$n_0=\max\{n_1,n_2\}$$，則當$$n \geq n_0$$ 時，可得$$b_{n_1} \leq b_{n_0} <b+\epsilon, ~ c_{n_0} \geq c_{n_2} >b−\epsilon $$
+* $$b-\epsilon<c_n \leq a_n \leq b_n<b+\epsilon  \Rightarrow |a_n−b|<\epsilon,  \forall n \geq n_0 $$
+* 所以 $$\displaystyle \lim_{n \rightarrow \infty} a_n =b$$−−\(3\)
+
+由\(1,2,3\)可得Cauchy數列$$\{a_n \} \subseteq \mathbb{R}$$收斂至一實數  \(QED\)
 

@@ -12,7 +12,7 @@
 * 任意度量空間中，由定或可得出收斂數列必為Cauchy數列。
 * 實數空間中，因為實數的完備性，因此Cauchy數列必為收斂數列。反之一般的度量空間，必須是完備空間，才能夠保證Cauchy數列是收斂數列。
 
-## 收斂數列必為Cauchy數列
+### 收斂數列必為Cauchy數列
 
 > $$(X,d)$$為度量空間，且$$\{a_n\}_{n \in \mathbb{N}} \subseteq X$$為一數列。若$$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$，則$$\{a_n\}$$為Cauchy數列。
 
@@ -25,7 +25,7 @@ Proof:
 * 由收斂定義得$$\forall \epsilon>0  ~ \exists n_1 \in \mathbb{N} \ni d(a_n,a)<\epsilon/2  ~ \forall n \geq n_0 $$
 * 由三角不等式得$$d(a_n,a_m )<d(a_m,a)+d(a_n,a)<\epsilon ~\forall n,m≥n_0$$  \(QED\)
 
-## Cauchy數列的子數列若收斂，則數列收斂至同一點
+### Cauchy數列的子數列若收斂，則原數列收斂至同一點
 
 > $$\{a_n\}$$為度量空間$$(X,d)$$中的Cauchy數列，若子數列$$\{a_{n_r} \}$$收斂，$$\displaystyle \lim_{r \rightarrow \infty} a_{n_r}  =a$$，則$$\displaystyle \lim_{n \rightarrow \infty} a_n =a$$。
 
@@ -39,7 +39,7 @@ Proof:
 * 取$$n_0=n_1+n_2  $$
 * 由三角不等式可得 $$d(a_n,a) \leq d(a_n,a_{n_0})+d(a_{n_0},a)<\epsilon$$ \(QED\)
 
-## 實數中的所有Cauchy數列都是有界數列
+### 實數中的所有Cauchy數列都是有界數列
 
 > $$\{a_n\} \subseteq \mathbb{R}$$為Cauchy數列，則$$\exists r > 0 \ni  |a_n| \leq r ~ ,\forall n$$
 >
@@ -53,7 +53,7 @@ proof:
 * 可得$$\forall n \in \mathbb{N}, ~ |a_n | \leq r$$
 * 因此$$\{a_n\}$$為有界數列 \(QED\).
 
-## 實數中的任意Cauchy數列都會收斂
+### 實數中的任意Cauchy數列都會收斂
 
 > 因為實數為完備空間，所以定理成立。一般度量空間必須為完備空間才有此性質。
 >
@@ -89,4 +89,21 @@ proof：證明數列收斂於同一點
 * 所以 $$\displaystyle \lim_{n \rightarrow \infty} a_n =b$$−−\(3\)
 
 由\(1,2,3\)可得Cauchy數列$$\{a_n \} \subseteq \mathbb{R}$$收斂至一實數  \(QED\)
+
+## 完備度量空間\(complete metric space\)
+
+> 度量空間$$(X,d)$$  稱為完備度量空間若集合$$X$$中的任意Cauchy數列均收斂至$$X$$中的一點。
+
+### 範例：有理數不是完備空間
+
+* $$x_0=1$$, $$x_{n+1}=\frac{x_n+\frac{2}{x_n}}{2}  \in \mathbb{Q}$$, $$\displaystyle \lim_{n \rightarrow \infty} x_n =\sqrt{2} \notin \mathbb{Q} $$
+
+### 完備空間中的任意緊緻子集合仍為完備空間
+
+> * $$(X,d)$$為完備度量空間，$$S \subseteq X$$為緊緻集合\(compact  set\)（即$$S$$的任意開覆蓋均存在有限個數的子開覆蓋），則$$(S,d)$$為完備度量空間。
+> *  若$$(X,d)$$為度量空間（不必完備）, $$S \subseteq X$$為完備度量空間, 則$$S$$為閉集合（$$X-S$$為開集合）。
+
+>
+
+
 

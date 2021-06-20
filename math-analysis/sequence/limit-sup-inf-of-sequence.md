@@ -63,6 +63,41 @@
 * 若序列$$\{x_n\}$$無下界，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n=-\infty$$。
 * 因為任意序列的下極限最大值為$$\infty$$，所以$$\displaystyle \liminf_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
 
+### 數列收斂若且唯若數列上極限等於下極限
+
+> * 令$$\{x_n\} \subseteq \mathbb{R}$$為實數序列，則$$\displaystyle \lim_{n \rightarrow \infty}⁡x_n =x< \infty$$收斂若且唯若$$\displaystyle \liminf_{n \rightarrow \infty} x_n= \limsup_{n \rightarrow \infty} x_n =x$$
+> * 若$$\displaystyle \liminf_{n \rightarrow \infty} x_n =\limsup_{n \rightarrow \infty} x_n =\infty$$，則$$\displaystyle \lim_{n \rightarrow \infty} x_n=\infty$$。
+
+
+
+### 任意實數數列的下極限小於等於上極限
+
+> 令$$\{x_n\}\subseteq \mathbb{R}$$為實數序列，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n \leq \limsup_{n \rightarrow \infty} x_n$$
+
+### 實數數列上下極限的單調性
+
+> 令$$\{a_n\},~ \{b_n\} \subseteq \mathbb{R}$$為二數列（有界或無界均可\)，且$$\forall n \in \mathbb{N}, a_n \leq b_n$$， 則：
+>
+> * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ a_n \leq \limsup_{n \rightarrow \infty} b_n $$
+> * $$\displaystyle \liminf_{n \rightarrow \infty} a_n \leq \liminf_{n \rightarrow \infty} b_n$$
+
+### 實數數列上下極限的次可加性
+
+> 令$$\{a_n\},~ \{b_n\} \subseteq \mathbb{R}$$為二數列，則
+>
+> * $$\displaystyle \limsup_{n \rightarrow \infty} (a_n+b_n ) \leq \limsup_{n \rightarrow \infty} a_n +\limsup_{n \rightarrow \infty} b_n $$
+> * $$\displaystyle  \liminf_{n \rightarrow \infty} ⁡(a_n+b_n ) \geq  \liminf_{n \rightarrow \infty} a_n+ \liminf_{n \rightarrow \infty}⁡b_n $$
+
+### 有界數列存在子數列收斂至上、下極限
+
+> 令$$\{x_n\} \subseteq \mathbb{R}$$為有界序列，且$$\displaystyle \limsup_{n \rightarrow \infty}⁡ x_n  =M,  ~\limsup_{n \rightarrow \infty}x_n=m$$， 則存在子序列$$\{x_{n_i}\}, \{x_{n_j}\}$$滿足 $$\displaystyle \lim_{i \rightarrow \infty} x_{n_i}=M, ~ \lim_{j \rightarrow \infty}⁡x_{n_j } =m$$
+
+### 數列比值上下界與根式上下界關係
+
+> 令$$\{x_n \in \mathbb{R}^{+}\}$$為正值數列，則$$\displaystyle  \liminf_{n \rightarrow \infty}⁡\frac{x_{n+1}}{x_n} \leq \liminf_{n \rightarrow \infty}⁡(x_n )^{1/n} \leq \limsup_{n \rightarrow \infty}⁡(x_n )^{1/n} \leq \limsup_{n \rightarrow \infty}⁡\frac{x_{n+1}}{x_n}$$
+
+
+
 >
 
 

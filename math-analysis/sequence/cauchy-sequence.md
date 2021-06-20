@@ -101,9 +101,19 @@ proof：證明數列收斂於同一點
 ### 完備空間中的任意緊緻子集合仍為完備空間
 
 > * $$(X,d)$$為完備度量空間，$$S \subseteq X$$為緊緻集合\(compact  set\)（即$$S$$的任意開覆蓋均存在有限個數的子開覆蓋），則$$(S,d)$$為完備度量空間。
-> *  若$$(X,d)$$為度量空間（不必完備）, $$S \subseteq X$$為完備度量空間, 則$$S$$為閉集合（$$X-S$$為開集合）。
+> *  若$$(X,d)$$為度量空間（不必完備），$$S \subseteq X$$為完備度量空間，則$$S$$為閉集合（$$X-S$$為開集合）。
 
->
+Proof:
+
+* $$\{x_n\}\subseteq S$$為Cauchy數列，且$$A=\{x_1,x_2,\ldots\}$$為數列的值域。
+* 若$$A$$為有限集合，則$$\{x_n\}$$必定收斂至$$S$$中的某一點, 因此$$\{x_n\}$$收斂在$$S$$中。
+* 若$$A$$為無限集合，因為$$(X,d)$$為完備度量空間，因此可得 $$p \in A$$為極限點，$$S$$為緊緻集合，由度量空間[緊緻集合的充要條件](../real-number/compact-set.md#ou-shi-kong-jian-zhong-jin-zhi-ji-he-de-chong-yao-tiao-jian)（緊致集合$$S$$的任意無窮子集合均存在極限點$$x$$，且$$x \in S$$）可得$$p \in S$$。
+* $$\forall \epsilon>0, \text{ take }N \in \mathbb{N} \ni d(x_n,x_m )<\frac{\epsilon}{2}, ~\forall n,m \geq N $$
+* 則$$N_{\frac{\epsilon}{2}} (p)$$至少包含了點$$x_m, ~ \forall m \geq N$$
+* 若$$n \geq N$$，由三角不等式得 $$d(x_n,p) \leq d(x_n,p)+d(x_m,p)<\epsilon/2+\epsilon/2=\epsilon $$
+* 所以$$\displaystyle \lim_{n \rightarrow \infty} x_n = p$$且$$p \in S$$，所以$$S$$為完備度量空間 \(QED\).
+
+
 
 
 

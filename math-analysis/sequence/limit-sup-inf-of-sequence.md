@@ -30,9 +30,18 @@
   * $$M_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最小上界。
   * $$M_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最小上界。
   * 以此類推得$$ M_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最小上界。
-  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}M_n  \in [-\infty, \infty]$$，即數列的上極限等於數列第$$n$$個至無窮多個元素的最小上界    。
+  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}M_n  \in (-\infty, \infty)$$，即數列的上極限等於數列第$$n$$個至無窮多個元素的最小上界    。
+
+* 
+  若序列$$\{x_n\}$$無上界，則$$\displaystyle  \limsup_{n \rightarrow \infty} x_n=\infty$$。
+
+* 因為任意序列的上極限最小值為$$−\infty$$，所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
 
 * 數列的上極限與下極限的定義在任意的偏序集都適用，只需要上確界和下確界存在。  在完全格裡，上確界和下確界總是存在，所以其中的數列一定有上極限和下極限。
+
+
+
+
 
 ## 實數數列下極限\(limit inferior of a sequence\)
 
@@ -50,7 +59,9 @@
   * $$m_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最大下界。
   * $$m_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最大下界。
   * 以此類推得$$ m_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最大下界。
-  * 可得$$\displaystyle \liminf_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}m_n  \in [-\infty, \infty]$$，即數列的下極限等於數列第$$n$$個至無窮多個元素的最大下界    。
+  * 可得$$\displaystyle \liminf_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}m_n  \in (-\infty, \infty)$$，即數列的下極限等於數列第$$n$$個至無窮多個元素的最大下界    。
+* 若序列$$\{x_n\}$$無下界，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n=-\infty$$。
+* 因為任意序列的下極限最大值為$$\infty$$，所以$$\displaystyle \liminf_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
 
 >
 

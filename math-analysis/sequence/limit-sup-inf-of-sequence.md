@@ -11,7 +11,7 @@
 
 ![&#x6578;&#x5217;&#x4E0A;&#x3001;&#x4E0B;&#x6975;&#x9650;&#x7684;&#x5B9A;&#x7FA9;](../../.gitbook/assets/lim_sup_inf_detail-min.png)
 
-## 實數序列上極限\(limit superior of a sequence\)
+## 實數數列上極限\(limit superior of a sequence\)
 
 > 令$$\{x_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$為一數列，
 >
@@ -22,10 +22,29 @@
 
 * 令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
 * 令$$\forall n \in \mathbb{N}, M_n=\sup\{x_n,x_{n+1}, x_{n+2},\ldots\}  $$
+
   * $$M_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最小上界。
   * $$M_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最小上界。
   * 以此類推得$$ M_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最小上界。
   * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}M_n  \in [-\infty, \infty]$$，即數列的上極限等於數列第$$n$$個至無窮多個元素的最小上界    。
+
+## 實數數列下極限\(limit inferior of a sequence\)
+
+> * $$\displaystyle \underline{\lim_{n \rightarrow \infty}}x_n\equiv \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$或
+> * $$\displaystyle \liminf_{n \rightarrow \infty} x_n =\lim_{ n \rightarrow \infty} (\inf_{k \geq n} x_k)$$
+> * 下極限是所有收斂子序列的最小值。
+> * 下極限是由第$$n$$個元素開始的最大下界形成集合的最小上界。
+
+* 令$$\{x_n\}$$有下界，則$$\exists m \in \mathbb{R} \ni x_n \geq m,~ \forall n \in \mathbb{N}$$。
+* 令$$\forall n \in \mathbb{N}, m_n=\inf\{x_n,x_{n+1}, x_{n+2},\ldots\}  $$
+  * $$m_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最大下界。
+  * $$m_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最大下界。
+  * 以此類推得$$ m_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最大下界。
+  * 可得$$\displaystyle \liminf_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}m_n  \in [-\infty, \infty]$$，即數列的下極限等於數列第$$n$$個至無窮多個元素的最大下界    。
+
+>
+
+
 
 
 

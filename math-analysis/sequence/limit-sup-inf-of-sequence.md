@@ -39,10 +39,6 @@
 
 * 數列的上極限與下極限的定義在任意的偏序集都適用，只需要上確界和下確界存在。  在完全格裡，上確界和下確界總是存在，所以其中的數列一定有上極限和下極限。
 
-
-
-
-
 ## 實數數列下極限\(limit inferior of a sequence\)
 
 > * $$\displaystyle \underline{\lim_{n \rightarrow \infty}}x_n\equiv \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$或
@@ -62,6 +58,23 @@
   * 可得$$\displaystyle \liminf_{n \rightarrow \infty}⁡x_n =\lim_{n \rightarrow \infty}m_n  \in (-\infty, \infty)$$，即數列的下極限等於數列第$$n$$個至無窮多個元素的最大下界    。
 * 若序列$$\{x_n\}$$無下界，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n=-\infty$$。
 * 因為任意序列的下極限最大值為$$\infty$$，所以$$\displaystyle \liminf_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
+
+#### 範例
+
+* $$\{x_n=\frac{1}{n}, ~ n \in \mathbb{N}\}=\{1, \frac{1}{2}, \frac{1}{3},\ldots, \frac{1}{n}, \ldots\}$$，數列之值在$$(0,1]$$之間
+  * 有上界, $$M_1=1, M_2=\frac{1}{2}, \ldots,M_n=\frac{1}{n}$$, $$\displaystyle \lim_{n \rightarrow \infty} \{1, \frac{1}{2},\ldots,\frac{1}{n},\ldots\}=0$$
+  * 有下界 $$\displaystyle m_1=0, m_2=0,\ldots ,m_n=0, ~\lim_{n \rightarrow \infty} \{0,0,\ldots,0,\ldots\}=0$$
+  * 因為上極限等於下極限，因此$$\displaystyle \lim_{n \rightarrow \infty} x_n = 0$$
+* $$\{x_n=(−1)^n \}$$  
+  * 有上界, $$\forall n \in \mathbb{N},  ~x_n \leq 1$$, 所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\left\{ ⁡\sup⁡\{1,1,1,\ldots\} \right\} =1$$
+
+		○ 有下界, ∀n∈N, x\_n≥−1, 所以lim inf\_\(n→∞\)⁡〖x\_n 〗=lim inf⁡{−1,−1,−1,⋯}=−1
+
+	• 所有大於1的實數值均為數列的上界，但1是所有上界中最小值，即sup⁡〖x\_n 〗=1
+
+	• 所有小於0的實數值均為數列的下界，但0是所有下界中最大值，即inf⁡〖x\_n 〗=0
+
+liminf\_\(n→∞\) n=∞, liminf\_\(n→∞\) \(−n\)=−∞
 
 ### 數列收斂若且唯若數列上極限等於下極限
 

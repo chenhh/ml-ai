@@ -47,12 +47,14 @@ proof:
 * 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
 * 因此$$\mu(E) \leq \mu(F)$$ \(QED\)
 
-> \[sub-additive\] $$\forall E,F \in \Sigma, \mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> \[sub-additive\] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
 
 proof:
 
 * $$E \cup F = E \cup (F - E)$$
 * 由測度定義得 $$\mu(E \cup F) = \mu(E) + \mu(F-E)$$
+* 因為$$F-E \subseteq F$$可得$$\mu(F-E) \leq \mu(F)$$
+* 因此 $$\mu(E \cup F) \leq \mu (E) +\mu(F)$$ \(QED\)
 
 > * \[finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
 > * \[countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$

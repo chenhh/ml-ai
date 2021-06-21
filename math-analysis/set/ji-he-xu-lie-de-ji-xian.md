@@ -6,7 +6,7 @@
 * 函數數列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的類似物，這與找出集合論中與大小關係類似的運算，即集合的包含關係。
 * 按照集合的包含關係，所謂集合數列的「最小上界\(sup\)」是包含所有$$A_n$$的集合中最小的那個集合，顯而易見，這個集合就是所有$$A_n$$的聯集$$\bigcup_n A_n$$。	 類似的概念可找出找出集合數列的「最大下界\(inf\)」，為所有$$A_n$$ 的交集$$\bigcap_n A_n$$。
 
-##  單調\(monotone\)集合數列
+##  單調集合數列\(monotonic sequence of set\)
 
 > * $$\{E_n \}_{n \in \mathbb{N}}$$ 為單調遞增\(monotone increasing\)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N} $$。
 > * $$\{E_n\}_{n \in \mathbb{N}}$$ 為單調遞減\(monotone decreasing\)若$$ E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。

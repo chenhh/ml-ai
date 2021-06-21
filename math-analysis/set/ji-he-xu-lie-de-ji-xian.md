@@ -35,7 +35,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bi
   * $$M_1 = (E_1 \cup E_2 \cup E_3 \cup \ldots)$$
   * $$M_2 = (E_2 \cup E_3 \cup \ldots)$$
   * 可得 $$M_1 \supseteq M_2 \supseteq\ldots$$為遞減集合序列。
-  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k  = \bigcap_{n=1}^\infty M_n$$，為遞減集合序列的交集。
+  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k =  \lim_{n \rightarrow \infty}⁡ M_n    = \bigcap_{n=1}^\infty M_n$$，為遞減集合序列的交集。
   * 若$$x\in \bigcap_{n=1}^\infty M_n$$，依交集的性質可得$$x$$存在於全部的$$M_n$$ 中，但因為$$\{M_n\}$$ 為遞減集合序列，因此較前面的$$M_1,M_2, \ldots$$可能不包含$$x$$，因此$$x$$不必存在於全部的集合中，只需存在於可數個集合中即可。
 
 proof：定義等價性 =&gt;

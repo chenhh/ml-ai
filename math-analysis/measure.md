@@ -69,6 +69,12 @@ proof:
 * 因為$$F-E \subseteq F$$可得$$\mu(F-E) \leq \mu(F)$$
 * 因此 $$\mu(E \cup F) \leq \mu (E) +\mu(F)$$ \(QED\)
 
+Proof:
+
+* 令$$F_1=E_1, ~F_2=E_2−E_1, ~F_3=E_3−(E_1 \cup E_2 ), \ldots , F_n=E_n−(E_1 \cup \ldots \cup E_{n−1} ) $$
+* 可得$$F_n$$ 為$$E_n$$ 的子集合 \($$F_n \subseteq E_n$$ \)，且$$\{F_n\} \subseteq \Sigma$$為互斥的集合序列 $$F_i \cap F_j=\emptyset, ~ \forall i \neq j$$  。
+* $$\displaystyle \mu(\bigcup_{i=1}^\infty E_i )=\mu(\bigcup_{i=1}^\infty F_i )=\sum_{i=1}^\infty \mu(F_i )  \leq \sum_{i=1}^\infty \mu(E_i )$$   \(QED\).
+
 ### 有限測度與sigma有限測度
 
 > 如果對宇集合可得$$\mu(X)<\infty$$，則稱$$\mu$$為有限測度（finite measure）。
@@ -79,6 +85,31 @@ proof:
 > \[sigma-finite measure\] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n  \ni \mu(E_n )< \infty, ~ \forall n$$
 
 * 實數的長度不是有限測度，但實數的長度是sigma有限測度，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+
+### 非互斥集合聯集與交集測度之和等於各別集合測度之和\(排容原理\)
+
+> $$\forall E,F \in \Sigma \Rightarrow \mu(E \cup F)+\mu(E \cap F)=\mu(E)+\mu(F)$$
+
+Proof:
+
+* $$ E \cup F=E \cup (F−E)  $$
+* 所以 $$\mu(E \cup F)=\mu(E)+\mu(F−E)  $$
+* 若$$\mu(E \cap F)=\infty$$，因為$$E \cap F \subseteq E \cup F$$，所以$$\mu(E \cup F)=\infty $$
+* 若$$\mu(E \cap F)< \infty$$, $$\mu(F−E)=\mu(F−(E\cap F))=\mu(F)−\mu(E\cap F) $$
+* $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ \(QED\)
+
+### 遞增集合極限的測度\(可穿過lim符號\)
+
+> * $$\displaystyle \forall E_1,E_2, \ldots  \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
+> * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
+
+proof:
+
+* $$\displaystyle  \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 \cup (E_2−E_1 )\cup (E_3−E_2 )\cup \ldots $$
+* 所以$$\begin{align} \displaystyle \mu(\lim_{n \rightarrow \infty}⁡ E_n )   & =\mu(\bigcup_{n=1}^\infty E_n) \\ &=\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\ldots \\ & =\lim_{n \rightarrow \infty}⁡\{\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\\ &\ldots+\mu(E_n−E_{n−1} )\} -- (1)\end{align} $$
+* 因為$$E_1, E_2-E_1, \ldots, E_n - E_{n-1}$$為兩兩互斥的集合，且$$E_1 \cup(E_2-E_1) \cup \ldots \cup (E_n - E_{n-1})= E_n$$
+* 因此$$\mu(E_1) + \mu(E_2 - E_1) + \ldots \mu(E_n - E_{n-1}) = \mu(E_n) -- (2)$$
+* 由\(1,2\)得 $$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$ \(QED\)
 
 
 

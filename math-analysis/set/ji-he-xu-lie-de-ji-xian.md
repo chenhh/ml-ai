@@ -67,5 +67,19 @@ proof：定義等價性 &lt;=
 
 * 若$$x \in \displaystyle \liminf_{n \rightarrow \infty}⁡ E_n  =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，則存在自然數$$n$$使得$$\displaystyle x \in  \bigcap_{k=n}^\infty E_k$$，因此$$x$$不存在於$$E_1, \ldots E_{n-1}$$有限個集合中，但屬於$$E_n, E_{n+1},\dots$$所有集合中 \(QED\)。
 
+### 範例
+
+* $$E_1=\{2,4\}, E_2=\{1,3\}, E_3=\{2,3\}, E_4=\{1,3\}, E_5=\{2,3\}, \cdots$$
+* $$M_n = \bigcup_{k=n}^\infty E_k$$
+  * $$n=1$$, $$M_1=\{1,2,3,4\}$$
+  * $$n=2$$, $$M_2=\{1,2,3\}$$
+  * $$n=3$$, $$M_3=\{1,2,3\}$$，假設$$M_{n \geq 3}=\{1,2,3\}$$
+* 上極限 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty M_n =\{1,2,3\}$$
+* $$m_n = \bigcap_{k=n}^\infty E_k$$
+  * $$n=1$$, $$m_1=\emptyset$$
+  * $$n=2$$, $$m_2=\{3\}$$
+  * $$n=3$$, $$m_3=\{3\}$$，假設$$m_{ n\geq 3}=\{3\}$$
+* 下極限$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n  =\bigcup_{n=1}^\infty m_n =\{3\}$$
+
 
 

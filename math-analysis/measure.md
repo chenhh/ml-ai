@@ -10,8 +10,11 @@
 > 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
 >
 > * 定義函數$$μ: \Sigma \rightarrow [0, \infty]$$ \(可為無窮大\)滿足以下兩個條件：
+>
 >   *  \[空集合的測度為0\] $$\mu(\emptyset)=0$$
 >   *  \[countable additive, 互斥集合聯集的測度等於各別集合測度的加總\] $$\displaystyle \mu(\cup_{n=1}^{\infty}E_n) =\sum_{n=1}^{\infty}\mu (E_n), ~ E_n \in \Sigma $$且$$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$
+>
+>   測度是測量給定集合內元素個數的方法。
 
 * 測度的定義域是在$$\Sigma$$上，而不是在原始的集合$$X$$，因為如果從$$X$$取出任意的結果$$\omega$$，可依公理建構出不可測的集合$$E$$，但是不可測的集合在實際應用上幾乎不存在，為了理論的嚴謹性，所以要求測度的定義域是在可測的集合，即$$\Sigma$$中的任意集合。
 * 同理函數$$f: X\rightarrow \mathbb{R}$$雖然定義域是在一般集合$$X$$中，但是如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數，否則為不可測函數。
@@ -22,7 +25,7 @@
 
 * 在實數$$\mathbb{R}$$上常數的測度有Lebesgue measure 
   * $$\mu([a,b])=\mu([a,b))=\mu((a,b])=\mu((a,b))=|b−a|$$。
-  *  $$\mu([a,\infty))=\mu((a,\infty))=\mu((−\infty,b])=\mu((−\infty,b))=\infty$$。
+  *  $$\mu([a,\infty))=\mu((a,\infty))=\mu((−\infty,b])=\mu((−\infty,b))=\infty$$
 * 自然數或整數上的測度有counting measure $$\mu([1,2,3,4,5])=\#([1,2,3,4,5])=5$$。
 * 平面空間$$\mathbb{R}^2$$ 上的測度為面積。
 * 立體空間$$\mathbb{R}^3$$ 的測度為體積。
@@ -31,9 +34,26 @@
 
 ### 測度的性質
 
-> * \[additive\] $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( \cup ∪F)=\mu(E)+\mu(F)$$
-> * \[finitely additive\] $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j $$ $$\Rightarrow \mu(\cup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
-> * \[sub-additive\] $$\forall E,F \in \Sigma, \mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> * \[additive\] $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
+> * \[finitely additive\] $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j $$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
+
+* 由測度的定義可直接得出。
+
+> \[subset\] $$ \forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$
+
+proof:
+
+* 因為$$E \subseteq F$$，可得 $$F = E \cup (F -E)$$。
+* 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
+* 因此$$\mu(E) \leq \mu(F)$$ \(QED\)
+
+> \[sub-additive\] $$\forall E,F \in \Sigma, \mu(E \cup F) \leq \mu(E)+\mu(F)$$
+
+proof:
+
+* $$E \cup F = E \cup (F - E)$$
+* 由測度定義得 $$\mu(E \cup F) = \mu(E) + \mu(F-E)$$
+
 > * \[finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
 > * \[countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
 >

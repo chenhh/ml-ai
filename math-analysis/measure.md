@@ -9,7 +9,7 @@
 
 > 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
 >
-> * 定義函數$$μ: \Sigma \rightarrow [0, \infty]$$ \(可為無窮大\)滿足以下兩個條件：
+> * 定義函數$$μ: \Sigma \rightarrow [0, \infty]$$（可為無窮大）滿足以下兩個條件：
 >
 >   *  \[空集合的測度為0\] $$\mu(\emptyset)=0$$
 >   *  \[countable additive, 互斥集合聯集的測度等於各別集合測度的加總\] $$\displaystyle \mu(\cup_{n=1}^{\infty}E_n) =\sum_{n=1}^{\infty}\mu (E_n), ~ E_n \in \Sigma $$且$$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$
@@ -47,7 +47,9 @@ proof:
 * 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
 * 因此$$\mu(E) \leq \mu(F)$$ \(QED\)
 
-> \[sub-additive\] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> * \[sub-additive\] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> * \[finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
+> * \[countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
 
 proof:
 
@@ -56,16 +58,14 @@ proof:
 * 因為$$F-E \subseteq F$$可得$$\mu(F-E) \leq \mu(F)$$
 * 因此 $$\mu(E \cup F) \leq \mu (E) +\mu(F)$$ \(QED\)
 
-> * \[finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
-> * \[countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
->
->
->
-> * \[finite measure\] $$\mu(X)<\infty$$
+> 如果對宇集合可得$$\mu(X)<\infty$$，則稱$$\mu$$為有限測度（finite measure）。
+
+* $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
+* 所有的機率測度都是有限測度，因為$$\mu(\Omega) =1$$。
+
 > * \[sigma-finite measure\] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\cup_n E_n  \ni \mu(E_n )< \infty, ~ \forall n$$
 
-* $$\mu(\mathbb{R})=\infty$$, 因此實數的長度不是finite measure。
-* 但實數的長度是sigma−finite measure，因為可將實數拆解為多個有限長度的線段的聯集 $$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+* * 但實數的長度是sigma−finite measure，因為可將實數拆解為多個有限長度的線段的聯集 $$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 
 

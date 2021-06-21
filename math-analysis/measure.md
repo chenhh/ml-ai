@@ -112,7 +112,7 @@ proof:
 * 因此$$\mu(E_1) + \mu(E_2 - E_1) + \ldots \mu(E_n - E_{n-1}) = \mu(E_n) -- (2)$$
 * 由\(1,2\)得 $$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$ \(QED\)
 
-###  遞減集合的測度\(可穿過lim符號\)
+###  遞減集合極限的測度\(可穿過lim符號\)
 
 > $$\displaystyle \forall E_1,E_2, \ldots  \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j $$且$$\exists n_0 \in \mathbb{N}, \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
 >
@@ -130,7 +130,17 @@ Proof
 * $$\displaystyle A−\lim_{n \rightarrow \infty}E_n =(A−E_1 ) \cup (A−E_2 ) \cup \ldots =(A \cap E_1^c )\cup (A \cap E_2)^c )\cup \ldots =A−(\cap_n E_n ) $$
 * 所以$$ \displaystyle \mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n ) )=\mu(E_{n_0 }−(\bigcap_n E_n ))=\mu(E_{n_0} )− \mu(\cap_n E_n ) $$
 * $$\displaystyle \mu(E_{n_0} )−\lim_{n \rightarrow \infty}  \mu(E_n )= \mu(E_{n_0} )−\mu(\bigcap_n E_n ) $$
-* $$\displaystyle  \lim_{n \rightarrow \infty}\mu(E_n )=\mu(\bigcap_n E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) $$ \(QED\).
+* $$\displaystyle  \lim_{n \rightarrow \infty}\mu(E_n )=\mu(\bigcap_n E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) $$ \(QED\)
+
+#### 範例
+
+* $$ E_n=[0, 1+\frac{1}{n}] \subseteq \mathbb{R}$$為遞減的集合
+* $$\mu(E_n )=1+\frac{1}{n  }$$
+* $$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1] $$
+* 所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1 $$
+* 而$$\displaystyle  \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1 $$
+
+
 
 
 

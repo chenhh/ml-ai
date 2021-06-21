@@ -8,8 +8,12 @@
 
 ##  單調集合數列\(monotonic sequence of set\)
 
-> * $$\{E_n \}_{n \in \mathbb{N}}$$ 為單調遞增\(monotone increasing\)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N} $$。
-> * $$\{E_n\}_{n \in \mathbb{N}}$$ 為單調遞減\(monotone decreasing\)若$$ E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
+> * $$\{E_n \}_{n \in \mathbb{N}}$$ 為
+>   * 遞增\(increasing\)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N} $$。
+>   * 遞減\(decreasing\)若$$ E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$
+
+* 對於遞減集合數列，$$\bigcap_{j \geq n} E_j  = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。
+* 對於遞增集合數列，$$\bigcap_{j \geq n}E_j=E_n$$且$$\bigcup_{j \geq n} E_j=\bigcup_{j\geq 1}E_j$$
 
 ## 集合數列的上極限\(superior limit of  sequence of set\)
 

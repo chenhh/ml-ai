@@ -102,6 +102,7 @@ Proof:
 
 > * $$\displaystyle \forall E_1,E_2, \ldots  \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
+> * 如果$$\mu(E_1)=\infty$$，此性質仍然成立。
 
 proof:
 
@@ -117,6 +118,21 @@ proof:
 >
 > * $$\exists n_0 \in \mathbb{N}  \mu(E_{n_0} )<\infty $$  意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
 > * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
+
+Proof
+
+* $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )$$  在$$n_0$$之前的集合不會影響此值  。同樣$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n )$$在$$n_0$$ 之前的集合也不會影響此值，因此只要考慮$$n_0$$ 之後的集合即可。
+* $$E_{n_0}−E_n \in \Sigma$$ 且$$ E_{n_0}−E_{n_0 + 1} \subseteq E_{n_0}−E_{n_0+2}  $$為遞增的集合序列   。
+*  所以$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_{n_0 }−E_n )=\mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n  ))$$
+* 因為 $$\mu(E_{n_0} −E_n )=\mu(E_{n_0} )−\mu(E_n)$$ \(兩者均為有限值\)
+* 所以 $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_{n_0}−E_n )=\lim_{n \rightarrow \infty}⁡\mu(E_{n_0})−\lim_{n \rightarrow \infty} \mu(E_n )=\mu(E_{n_0})−\lim_{n \rightarrow \infty}\mu(E_n) $$
+*  因為$$\{E_n\}$$為遞減集合序列，所以$$\displaystyle \lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n )=\bigcup_n (E_{n_0}−E_n )=E_{n_0}−\left(\bigcap_n E_n \right) $$
+* $$\displaystyle A−\lim_{n \rightarrow \infty}E_n =(A−E_1 ) \cup (A−E_2 ) \cup \ldots =(A \cap E_1^c )\cup (A \cap E_2)^c )\cup \ldots =A−(\cap_n E_n ) $$
+* 所以$$ \displaystyle \mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n ) )=\mu(E_{n_0 }−(\bigcap_n E_n ))=\mu(E_{n_0} )− \mu(\cap_n E_n ) $$
+* $$\displaystyle \mu(E_{n_0} )−\lim_{n \rightarrow \infty}  \mu(E_n )= \mu(E_{n_0} )−\mu(\bigcap_n E_n ) $$
+* $$\displaystyle  \lim_{n \rightarrow \infty}\mu(E_n )=\mu(\bigcap_n E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) $$ \(QED\).
+
+
 
 
 

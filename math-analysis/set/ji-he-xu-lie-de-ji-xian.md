@@ -15,8 +15,10 @@
 >   * 遞增\(increasing\)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N} $$。
 >   * 遞減\(decreasing\)若$$ E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$
 
-* 對於遞減集合序列，$$\bigcap_{j \geq n} E_j  = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。
-* 對於遞增集合序列，$$\bigcap_{j \geq n}E_j=E_n$$且$$\bigcup_{j \geq n} E_j=\bigcup_{j\geq 1}E_j$$
+* 對於遞增集合序列，$$\bigcap_{j \geq n} E_j  = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。
+  * 可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty E_n$$
+* 對於遞減集合序列，$$\bigcap_{j \geq n}E_j=E_n$$且$$\bigcup_{j \geq n} E_j=\bigcup_{j\geq 1}E_j$$。
+  * 可得 $$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcap_{n=1}^\infty E_n$$
 
 ## 集合序列的上極限\(superior limit of  sequence of set\)
 
@@ -24,6 +26,7 @@
 >
 > * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\{x \in X |\forall n \in \mathbb{N} ~\exists k>n∋x∈E_k \}$$稱為上極限集，屬於集合序列$$\{E_n\}$$中**無限多個集合的元素**的全體組成的集合就是集合序列的上限集。
 > * 等價於$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，集合序列的上限集中的元素屬於集合列的無窮多個集合，同時也不屬於無窮多個集合。
+> * 對於上極限集中的元素$$x$$，在任意給定一個索引值$$n$$之後，我們總能在$$n$$後（即$$k  > n$$）找到一個集合$$E_k$$包含$$x$$，這就保證了$$x$$屬於無限個集合。
 
 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k =(E_1 \cup E_2\cup \ldots) \cap (E_2 \cup E_3 \cup \ldots )\cap \ldots$$
 
@@ -53,6 +56,7 @@ proof: 定義等價性 &lt;=
 >
 > * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n  =\{x \in X |\exists n \in \mathbb{N} \ni \forall k > n, x \in E_k\}$$稱為下極限集，除去集合序列$$\{E_n\}$$ 中的有限多個集合外，被其餘集合均包含的元素的全體組成的集合就是集合序列的下限集。
 > * 等價於$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n  =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，集合列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合。
+> * 而對於下極限集中的元素$$x$$，我們總能找到一個數$$n$$，當$$k > n$$時，都有$$x$$屬於$$E_k$$，即$$x$$屬於$$E_k$$後的所有集合，這就保證了$$x$$只不屬於有限個集合。
 
 proof：定義等價性 =&gt;
 

@@ -22,7 +22,7 @@
 >
 > 令數列的上極限為$$b \in \mathbb{R}$$，則$$\displaystyle \limsup_{n \rightarrow \infty} x_n = \inf_{n \geq 0}\{ \sup_{k \geq n} x_n\}=b $$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni x_n < b+ \epsilon, \forall n \geq n_0$$。
 >
-> * 由於在實數中，$$x_n < b \Leftrightarrow \forall \epsilon >0, x_n < b+ \epsilon$$，因此上極限為$$b$$的意義為當數列的索引值$$n$$大於等於$$n_0$$之後，所有數列之值必定小於$$b$$。但是在$$n_0$$之前，$$x_n$$之值可能會大於等於$$b$$。即只有有限個元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會大於等於$$b$$。
+> * 在實數中，固定索引值$$n$$後，$$x_n < b \Leftrightarrow \forall \epsilon >0, x_n < b+ \epsilon$$。因此上極限為$$b$$的意義為當數列的索引值$$n$$大於等於$$n_0$$之後，所有數列之值必定小於$$b$$。但是在$$n_0$$之前，$$x_n$$之值可能會大於等於$$b$$。即只有有限個元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會大於等於$$b$$。
 
 * 令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
 * 令$$\forall n \in \mathbb{N}, M_n=\sup\{x_n,x_{n+1}, x_{n+2},\ldots\}  $$

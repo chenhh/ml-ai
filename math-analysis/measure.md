@@ -63,9 +63,9 @@ proof:
 * $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 * 所有的機率測度都是有限測度，因為$$\mu(\Omega) =1$$。
 
-> * \[sigma-finite measure\] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\cup_n E_n  \ni \mu(E_n )< \infty, ~ \forall n$$
+> \[sigma-finite measure\] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n  \ni \mu(E_n )< \infty, ~ \forall n$$
 
-* * 但實數的長度是sigma−finite measure，因為可將實數拆解為多個有限長度的線段的聯集 $$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+* 實數的長度不是有限測度，但實數的長度是sigma有限測度，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 
 

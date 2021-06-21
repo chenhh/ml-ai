@@ -14,7 +14,8 @@
 >   *  \[空集合的測度為0\] $$\mu(\emptyset)=0$$
 >   *  \[countable additive, 互斥集合聯集的測度等於各別集合測度的加總\] $$\displaystyle \mu(\cup_{n=1}^{\infty}E_n) =\sum_{n=1}^{\infty}\mu (E_n), ~ E_n \in \Sigma $$且$$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$
 >
->   測度是測量給定集合內元素個數的方法。
+> * 測度是測量給定集合內元素個數的方法。
+> * 由於測度的值域可為無窮大，因此在證明性質時也要考慮無窮大時是否滿足條件。
 
 * 測度的定義域是在$$\Sigma$$上，而不是在原始的集合$$X$$，因為如果從$$X$$取出任意的結果$$\omega$$，可依公理建構出不可測的集合$$E$$，但是不可測的集合在實際應用上幾乎不存在，為了理論的嚴謹性，所以要求測度的定義域是在可測的集合，即$$\Sigma$$中的任意集合。
 * 同理函數$$f: X\rightarrow \mathbb{R}$$雖然定義域是在一般集合$$X$$中，但是如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數，否則為不可測函數。
@@ -32,20 +33,30 @@
 * 函數空間的情形較為複雜，因此並非所有函數都存在測度函數可量測其值，因此必須先定義出可測函數後，才可定義測度。
 * Dirac measure: 令$$x_0 \in X$$, $$\delta(x_0, E)=\left\{  \begin{align} &1, \text{ if } x_0 \in E \\ &0, \text{ otherwise} \end{align} \right.$$
 
-### 測度的性質
+### 測度的可加性
 
 > * \[可加性 ,additive\] $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
 > * \[有限可加性 finitely additive\] $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j $$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
 
 * 由測度的定義可直接得出。
 
-> \[子集合的測度\] $$ \forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$
+### 子集合與補集的測度
+
+> * \[子集合的測度\] $$ \forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$
+> * 可得集合的大小與測度值有單調的關係。
 
 proof:
 
 * 因為$$E \subseteq F$$，可得 $$F = E \cup (F -E)$$。
 * 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
 * 因此$$\mu(E) \leq \mu(F)$$ \(QED\)
+
+> * \[補集的測度\] $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
+> * $$\mu(F)$$必須是有限值才有意義。
+
+### 測度的次可加性
+
+證明同上。
 
 > * \[次可加性 ,sub-additive\] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
 > * \[有限次可加性, finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$

@@ -106,7 +106,7 @@ Proof:
 proof:
 
 * $$\displaystyle  \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 \cup (E_2−E_1 )\cup (E_3−E_2 )\cup \ldots $$
-* 所以$$\begin{align} \displaystyle \mu(\lim_{n \rightarrow \infty}⁡ E_n )   & =\mu(\bigcup_{n=1}^\infty E_n) \\ &=\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\ldots \\ & =\lim_{n \rightarrow \infty}⁡\{\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\\ &\ldots+\mu(E_n−E_{n−1} )\} -- (1)\end{align} $$
+* 所以$$\begin{align} \displaystyle \mu(\lim_{n \rightarrow \infty}⁡ E_n )   & =\mu(\bigcup_{n=1}^\infty E_n) \\ &=\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\ldots \\ & =\lim_{n \rightarrow \infty}⁡\{\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\\ &\ldots+\mu(E_n−E_{n−1} )\} -- (1)\end{align} $$$$\begin{align} \displaystyle \mu(\lim_{n \rightarrow \infty} E_n) & = \mu(\bigcup_{n =1}^\infty E_n) \\& = \mu(E_1) + \mu(E_2 - E_1) +\mu(E_3 - E_2) + \ldots \\ & = \lim_{n \rightarrow \infty} \{ \mu(E_1) + \mu(E_2 - E_1)\\& +\ldots + \mu(E_n - E_{n-1}) \} -- (1) \end{align}$$
 * 因為$$E_1, E_2-E_1, \ldots, E_n - E_{n-1}$$為兩兩互斥的集合，且$$E_1 \cup(E_2-E_1) \cup \ldots \cup (E_n - E_{n-1})= E_n$$
 * 因此$$\mu(E_1) + \mu(E_2 - E_1) + \ldots \mu(E_n - E_{n-1}) = \mu(E_n) -- (2)$$
 * 由\(1,2\)得 $$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$ \(QED\)

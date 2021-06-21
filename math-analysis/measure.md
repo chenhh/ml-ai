@@ -111,6 +111,15 @@ proof:
 * 因此$$\mu(E_1) + \mu(E_2 - E_1) + \ldots \mu(E_n - E_{n-1}) = \mu(E_n) -- (2)$$
 * 由\(1,2\)得 $$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$ \(QED\)
 
+###  遞減集合的測度\(可穿過lim符號\)
+
+> $$\displaystyle \forall E_1,E_2, \ldots  \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j $$且$$\exists n_0 \in \mathbb{N}, \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
+>
+> * $$\exists n_0 \in \mathbb{N}  \mu(E_{n_0} )<\infty $$  意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
+> * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
+
+
+
 
 
 

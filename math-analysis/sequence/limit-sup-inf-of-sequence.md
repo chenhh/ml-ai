@@ -66,20 +66,25 @@
   * 有下界 $$\displaystyle m_1=0, m_2=0,\ldots ,m_n=0, ~\lim_{n \rightarrow \infty} \{0,0,\ldots,0,\ldots\}=0$$
   * 因為上極限等於下極限，因此$$\displaystyle \lim_{n \rightarrow \infty} x_n = 0$$
 * $$\{x_n=(−1)^n \}$$  
-  * 有上界, $$\forall n \in \mathbb{N},  ~x_n \leq 1$$, 所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\left\{ ⁡\sup⁡\{1,1,1,\ldots\} \right\} =1$$
-
-		○ 有下界, ∀n∈N, x\_n≥−1, 所以lim inf\_\(n→∞\)⁡〖x\_n 〗=lim inf⁡{−1,−1,−1,⋯}=−1
-
-	• 所有大於1的實數值均為數列的上界，但1是所有上界中最小值，即sup⁡〖x\_n 〗=1
-
-	• 所有小於0的實數值均為數列的下界，但0是所有下界中最大值，即inf⁡〖x\_n 〗=0
-
-liminf\_\(n→∞\) n=∞, liminf\_\(n→∞\) \(−n\)=−∞
+  * 有上界， $$\forall n \in \mathbb{N},  ~x_n \leq 1$$，所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\left\{ ⁡\sup⁡\{1,1,1,\ldots\} \right\} =1$$
+  *  有下界，$$\forall n \in \mathbb{N}, ~x_n \geq −1$$，所以$$\displaystyle \liminf_{n \rightarrow \infty} x_n =\sup_{n \geq 0}\left\{ \inf\{−1,−1,−1,\ldots\} \right\}=−1$$
+* 所有大於1的實數值均為數列的上界，但1是所有上界中最小值，即$$\sup x_n=1$$
+* 所有小於0的實數值均為數列的下界，但0是所有下界中最大值，即$$\inf x_n=0$$
+* $$\displaystyle \liminf_{n \rightarrow \infty} n=\infty, ~ \liminf_{n \rightarrow \infty} (−n)=−\infty$$
 
 ### 數列收斂若且唯若數列上極限等於下極限
 
 > * 令$$\{x_n\} \subseteq \mathbb{R}$$為實數序列，則$$\displaystyle \lim_{n \rightarrow \infty}⁡x_n =x< \infty$$收斂若且唯若$$\displaystyle \liminf_{n \rightarrow \infty} x_n= \limsup_{n \rightarrow \infty} x_n =x$$
 > * 若$$\displaystyle \liminf_{n \rightarrow \infty} x_n =\limsup_{n \rightarrow \infty} x_n =\infty$$，則$$\displaystyle \lim_{n \rightarrow \infty} x_n=\infty$$。
+
+Proof =&gt; 顯然成立
+
+Proof &lt;=
+
+* $$\displaystyle \limsup_{n \rightarrow \infty}⁡ x_n =x_n \Leftrightarrow \forall \epsilon>0, \exists n_1 \in \mathbb{N} \ni x_n<x+\epsilon , \forall n\geq n_1 $$ 
+* $$\displaystyle \liminf_{n \rightarrow \infty} x_n=x \Leftrightarrow \forall \epsilon>0 ~\exists n_2 \in \mathbb{N} \ni x_n>x−\epsilon, ~\forall n \geq n_2  $$
+* 取$$n_0=\max\{n_1,n_2 \}$$, 則$$\forall \epsilon>0, x−\epsilon<x_n<x+\epsilon, \forall n \geq n_0$$
+* 由極限定義得 $$\displaystyle \lim_{n \rightarrow \infty} x_n=x$$ \(QED\)
 
 
 

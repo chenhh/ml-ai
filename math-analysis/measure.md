@@ -34,12 +34,12 @@
 
 ### 測度的性質
 
-> * \[additive\] $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
-> * \[finitely additive\] $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j $$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
+> * \[可加性 ,additive\] $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
+> * \[有限可加性 finitely additive\] $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j $$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
 
 * 由測度的定義可直接得出。
 
-> \[subset\] $$ \forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$
+> \[子集合的測度\] $$ \forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$
 
 proof:
 
@@ -47,9 +47,9 @@ proof:
 * 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
 * 因此$$\mu(E) \leq \mu(F)$$ \(QED\)
 
-> * \[sub-additive\] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
-> * \[finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
-> * \[countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
+> * \[次可加性 ,sub-additive\] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> * \[有限次可加性, finitely sub-additive\] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i ) $$
+> * \[可數次可加性, countable sub-additive\] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
 
 proof:
 
@@ -57,6 +57,8 @@ proof:
 * 由測度定義得 $$\mu(E \cup F) = \mu(E) + \mu(F-E)$$
 * 因為$$F-E \subseteq F$$可得$$\mu(F-E) \leq \mu(F)$$
 * 因此 $$\mu(E \cup F) \leq \mu (E) +\mu(F)$$ \(QED\)
+
+### 有限測度與sigma有限測度
 
 > 如果對宇集合可得$$\mu(X)<\infty$$，則稱$$\mu$$為有限測度（finite measure）。
 

@@ -20,9 +20,9 @@
 > * 上極限是所有收斂子序列的最大值。
 > * 上極限是由第$$n$$個元素開始的最小上界形成集合的最大下界。
 >
-> 令數列的上極限為$$b \in \mathbb{R}$$，則$$\displaystyle \limsup_{n \rightarrow \infty} a_n = \inf_{n \geq 0}\{ \sup_{k \geq n} a_n\}=b $$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni a_n < b+ \epsilon, \forall n \geq n_0$$。
+> 令數列的上極限為$$b \in \mathbb{R}$$，則$$\displaystyle \limsup_{n \rightarrow \infty} x_n = \inf_{n \geq 0}\{ \sup_{k \geq n} x_n\}=b $$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni x_n < b+ \epsilon, \forall n \geq n_0$$。
 >
-> * 由於在實數中，$$a_n < b \Leftrightarrow \forall \epsilon >0, a_n < b+ \epsilon$$，因此上極限為$$b$$的意義為當數列的索引值$$n$$大於等於$$n_0$$之後，所有數列之值必定小於$$b$$。但是在$$n_0$$之前，$$a_n$$之值可能會大於等於$$b$$。即只有有限個元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會大於等於$$b$$。
+> * 由於在實數中，$$x_n < b \Leftrightarrow \forall \epsilon >0, x_n < b+ \epsilon$$，因此上極限為$$b$$的意義為當數列的索引值$$n$$大於等於$$n_0$$之後，所有數列之值必定小於$$b$$。但是在$$n_0$$之前，$$x_n$$之值可能會大於等於$$b$$。即只有有限個元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會大於等於$$b$$。
 
 * 令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
 * 令$$\forall n \in \mathbb{N}, M_n=\sup\{x_n,x_{n+1}, x_{n+2},\ldots\}  $$
@@ -46,9 +46,9 @@
 > * 下極限是所有收斂子序列的最小值。
 > * 下極限是由第$$n$$個元素開始的最大下界形成集合的最小上界。
 
-> 令數列的下極限為$$a \in \mathbb{R}$$，則$$\displaystyle \liminf_{n \rightarrow \infty} a_n = \sup_{n \geq 0}\{ \inf_{k \geq n} a_n\}=a$$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni a - \epsilon < a_n , \forall n \geq n_0$$。
+> 令數列的下極限為$$a \in \mathbb{R}$$，則$$\displaystyle \liminf_{n \rightarrow \infty} x_n = \sup_{n \geq 0}\{ \inf_{k \geq n} a_n\}=a$$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni a - \epsilon < x_n , \forall n \geq n_0$$。
 >
-> * 由於在實數中，$$a < a_n  \Leftrightarrow \forall \epsilon >0, a -\epsilon < a_n$$，因此下極限為$$a$$的意義為當數列的索引值$$n$$大於等於$$n_0$$之後，所有數列之值必定大於$$a$$。但是在$$n_0$$之前，$$a_n$$之值可能會小於等於$$a$$。即只有有限個元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會小於等於$$a$$。
+> * 由於在實數中，$$a < x_n  \Leftrightarrow \forall \epsilon >0, a -\epsilon < x_n$$，因此下極限為$$a$$的意義為當數列的索引值$$n$$大於等於$$n_0$$之後，所有數列之值必定大於$$a$$。但是在$$n_0$$之前，$$x_n$$之值可能會小於等於$$a$$。即只有有限個元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會小於等於$$a$$。
 
 * 令$$\{x_n\}$$有下界，則$$\exists m \in \mathbb{R} \ni x_n \geq m,~ \forall n \in \mathbb{N}$$。
 * 令$$\forall n \in \mathbb{N}, m_n=\inf\{x_n,x_{n+1}, x_{n+2},\ldots\}  $$
@@ -77,7 +77,7 @@
 > * 令$$\{x_n\} \subseteq \mathbb{R}$$為實數序列，則$$\displaystyle \lim_{n \rightarrow \infty}⁡x_n =x< \infty$$收斂若且唯若$$\displaystyle \liminf_{n \rightarrow \infty} x_n= \limsup_{n \rightarrow \infty} x_n =x$$
 > * 若$$\displaystyle \liminf_{n \rightarrow \infty} x_n =\limsup_{n \rightarrow \infty} x_n =\infty$$，則$$\displaystyle \lim_{n \rightarrow \infty} x_n=\infty$$。
 
-Proof =&gt; 顯然成立
+Proof =&gt; 依極限定義必成立。
 
 Proof &lt;=
 
@@ -92,12 +92,30 @@ Proof &lt;=
 
 > 令$$\{x_n\}\subseteq \mathbb{R}$$為實數序列，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n \leq \limsup_{n \rightarrow \infty} x_n$$
 
+Proof:
+
+* 若$$\{x_n\}$$有界，即$$\exists M \in \mathbb{R} \ni |x_n |≤M, ~\forall n \in \mathbb{N}$$，則：
+  * $$m_n=\inf\{x_n,x_{n+1},x_{n+2},\ldots\}\leq \sup⁡\{x_n,x_{n+1},x_{n+2},\ldots\} = M_n$$（因為$$m_n, M_n$$必存在，所以不等式成立）
+  * 所以$$\displaystyle \lim_{n \rightarrow \infty} m_n =\liminf_{n \rightarrow \infty}⁡ x_n \leq \lim_{n \rightarrow \infty}⁡ M_n =\limsup_{n \rightarrow \infty} x_n $$。
+* 若$$\{x_n \}$$無界，則$$\displaystyle \liminf_{n \rightarrow \infty} x_n  =−\infty$$ 或$$\limsup_{n \rightarrow \infty} x_n = \infty$$
+* 所以$$\displaystyle \liminf_{n \rightarrow \infty}⁡ x_n \leq \limsup_{n \rightarrow \infty} x_n$$  \(QED\)
+
+
+
 ### 實數數列上下極限的單調性
 
 > 令$$\{a_n\},~ \{b_n\} \subseteq \mathbb{R}$$為二數列（有界或無界均可\)，且$$\forall n \in \mathbb{N}, a_n \leq b_n$$， 則：
 >
 > * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ a_n \leq \limsup_{n \rightarrow \infty} b_n $$
 > * $$\displaystyle \liminf_{n \rightarrow \infty} a_n \leq \liminf_{n \rightarrow \infty} b_n$$
+
+Proof:
+
+* 令$$L_n=\sup\{ a_n, a_{n+1},\ldots\}, ~ M_n=\sup\{b_n, b_{n+1}, \ldots \}$$
+* 令$$l_n=\inf\{a_n,a_{n+1},\ldots\},  ~m_n=\inf\{b_n,b_{n+1},\ldots\}$$
+* 則 $$a_n \leq b_n\Rightarrow L_n \leq M_n$$ 且$$l_n \leq m_n ~ \forall n \in \mathbb{N}$$
+* 所以$$\displaystyle \lim_{n \rightarrow \infty}⁡ L_n \leq \lim_{n \rightarrow \infty}⁡ M_n $$ 且 $$\displaystyle \lim_{n \rightarrow \infty} l_n \leq \lim_{n \rightarrow \infty} m_n $$
+* 可得 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ a_n \leq \limsup_{n \rightarrow \infty} b_n$$ 且$$\displaystyle \liminf_{n \rightarrow \infty} a_n \leq \liminf_{n \rightarrow \infty} b_n$$  \(QED\)
 
 ### 實數數列上下極限的次可加性
 
@@ -106,9 +124,24 @@ Proof &lt;=
 > * $$\displaystyle \limsup_{n \rightarrow \infty} (a_n+b_n ) \leq \limsup_{n \rightarrow \infty} a_n +\limsup_{n \rightarrow \infty} b_n $$
 > * $$\displaystyle  \liminf_{n \rightarrow \infty} ⁡(a_n+b_n ) \geq  \liminf_{n \rightarrow \infty} a_n+ \liminf_{n \rightarrow \infty}⁡b_n $$
 
+Proof:
+
+* 令 $$L_n=\sup⁡\{a_n+b_n, a_{n+1}+b_{n+1}, \ldots \}$$  ，$$M_n=\sup\{a_n, a_{n+1}, \ldots\}$$  , $$P_n=\sup⁡\{b_n,b_{n+1},\ldots\}$$。
+* $$\forall k \geq n, a_k \leq M_n $$ 且 $$b_k \leq P_n \Rightarrow a_k + b_k \leq M_n +P_n \Rightarrow L_n \leq M_n + P_n$$
+* 可得 $$\displaystyle \lim_{n \rightarrow \infty}⁡ L_n \leq \lim_{n \rightarrow \infty}⁡ ⁡(M_n+P_n )=\lim_{n \rightarrow \infty⁡} M_n +\lim_{n \rightarrow \infty}⁡⁡P_n$$
+* 因此 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ (a_n+b_n ) \leq \limsup_{n \rightarrow \infty}⁡⁡ a_n +\limsup_{n \rightarrow \infty}⁡⁡ b_n$$ \(QED\)
+
 ### 有界數列存在子數列收斂至上、下極限
 
-> 令$$\{x_n\} \subseteq \mathbb{R}$$為有界序列，且$$\displaystyle \limsup_{n \rightarrow \infty}⁡ x_n  =M,  ~\limsup_{n \rightarrow \infty}x_n=m$$， 則存在子序列$$\{x_{n_i}\}, \{x_{n_j}\}$$滿足 $$\displaystyle \lim_{i \rightarrow \infty} x_{n_i}=M, ~ \lim_{j \rightarrow \infty}⁡x_{n_j } =m$$
+> 令$$\{x_n\} \subseteq \mathbb{R}$$為有界序列，且$$\displaystyle \limsup_{n \rightarrow \infty}⁡ x_n  =M,  ~\liminf_{n \rightarrow \infty}x_n=m$$， 則存在子序列$$\{x_{n_i}\}, \{x_{n_j}\}$$滿足 $$\displaystyle \lim_{i \rightarrow \infty} x_{n_i}=M, ~ \lim_{j \rightarrow \infty}⁡x_{n_j } =m$$
+
+Proof:
+
+* 因為$$\{x_n\}$$為有界數列，所以$$\exists c \in \mathbb{R} \ni |x_n |<c, ~\forall n \in \mathbb{N}$$
+* 由定義得 $$\displaystyle \limsup_{n \rightarrow \infty} x_n=M \Leftrightarrow \forall \forall \epsilon>0 ~\exists n_0 \in \mathbb{N}  \ni x_n<M+\epsilon, ~\forall n \geq n_0 $$  
+* 因此只要序列數量夠大\($$n \geq n_0$$\)，數列之值$$x_n$$ 必定會小於$$M$$。
+* 即在$$n \geq n_0$$時，所有數列的值均小於$$M + \epsilon$$，且部份序列值大於$$M−\epsilon$$，令此部份序列值為子數列$$\{x_{n_i} \}$$，則可得 $$\displaystyle \lim_{i \rightarrow \infty}⁡ x_{n_i}=M$$
+* 同理也可得到 $$\displaystyle \lim_{j \rightarrow \infty}⁡x_{n_j } =m$$ \(QED\)
 
 ### 數列比值上下界與根式上下界關係
 

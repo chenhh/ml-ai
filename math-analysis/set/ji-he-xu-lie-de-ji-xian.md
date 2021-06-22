@@ -89,11 +89,18 @@ proof：定義等價性 &lt;=
 
 * 上極限與下限集均為集合，因此$$ \limsup_{n \rightarrow \infty} ⁡E_n  = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$ \limsup_{n \rightarrow \infty} ⁡E_n  \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$ \limsup_{n \rightarrow \infty} ⁡E_n  \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
 
-### 範例
+#### 範例1
 
 * 集合$$E_n=(\frac{−1}{n},1−\frac{1}{n}]$$
 * $$\displaystyle \limsup_{n \rightarrow \infty} E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty (\frac{−1}{k},1−\frac{1}{k}]=\bigcap_{n=1}^\infty (\frac{−1}{n},1)=[0,1)$$
 * $$\displaystyle \liminf_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty  \bigcap_{k=n}^\infty (\frac{−1}{k},1−\frac{1}{n}]=\bigcup_{k=1}^\infty [0,1−\frac{1}{k}]=[0,1)$$
+
+#### 範例2
+
+* 給定兩集合$$A,B$$，令$$E_n=A$$若$$n$$為偶數，否則$$E_n=B$$。可得$$\{E_n\}=\{ B,A,B,A,\cdots\}$$
+* $$\displaystyle \limsup_{n \rightarrow \infty} E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty =(E_1 \cup E_2 \cup \ldots)\cap (E_2 \cup E_3 \cup \ldots) \cap \ldots =(A \cup B)$$
+* $$\displaystyle \liminf_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty =(E_1 \cap E_2 \cap \ldots)\cup (E_2 \cap E_3 \cap \ldots) \cup \ldots =(A \cap B)$$
+* 如果$$\displaystyle \lim_{n \rightarrow \infty} E_n$$存在時，可得$$A=B$$。
 
 ## 集合序列上、下極限的補集
 

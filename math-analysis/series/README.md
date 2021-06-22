@@ -35,7 +35,7 @@ proof:=&gt;
 
 proof: &lt;= 使用相同的方法可得證。\(QED\)
 
-## 級數為線性算子
+### 級數為線性算子
 
 > 若 $$\displaystyle \sum_{k=1}^\infty x_k =a$$ 且 $$\displaystyle \sum_{k=1}^\infty y_k =b,  \forall s,t \in \mathbb{R}$$, 則：$$\displaystyle \sum_{k=1}^\infty (s\cdot x_k + t \cdot y_k) =s\cdot a + t \cdot b$$
 
@@ -43,4 +43,20 @@ proof:
 
 * 因為$$\displaystyle \sum_{k=1}^n (sx_k + ty_k) =  s\cdot\sum_{k=1}^n x_k + t\cdot  \sum_{k=1}^n y_k$$
 * 所以$$\begin{align} \displaystyle \lim_{ n \rightarrow \infty}  \sum_{k=1}^n (sx_k + ty_k) &= s\cdot \lim_{ n \rightarrow \infty}  \sum_{k=1}^n x_k + t\cdot \lim_{ n \rightarrow \infty}  \sum_{k=1}^n y_k \\&=  s a + tb \end{align}$$\(QED\)
+
+## 外顯級數和內隱級數\(apparent series and concealed series\)
+
+> 令收斂級數 $$\displaystyle \sum_{k=1}^\infty x_k =x $$
+>
+> * 若有方法可得到$$x$$之值，則稱級數$$\displaystyle \sum_{k=1}^\infty x_k$$為一外顯級數  。
+> * 若無法得到$$x$$之值，則稱級數$$\displaystyle \sum_{k=1}^\infty x_k$$為內隱級數  。
+
+### 望遠鏡級數\(telescoping series\)為外顯級數
+
+> $$\displaystyle \sum_{k=1}^\infty \frac{1}{k(k+1)} =1$$
+
+* 令$$s_n = \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3}+ \ldots + \frac{1}{n\cdot (n+1)} = (1 - \frac{1}{2}) + (\frac{1}{2} - \frac{1}{3})+ \ldots + (\frac{1}{n} - \frac{1}{n+1}) = 1 - \frac{1}{n+1}$$
+* 可得 $$\displaystyle  \lim_{n \rightarrow \infty} s_n =  \lim_{n \rightarrow \infty}(1 - \frac{1}{n+1})=1$$
+
+
 

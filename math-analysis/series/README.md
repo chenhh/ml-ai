@@ -58,5 +58,40 @@ proof:
 * 令$$s_n = \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3}+ \ldots + \frac{1}{n\cdot (n+1)} = (1 - \frac{1}{2}) + (\frac{1}{2} - \frac{1}{3})+ \ldots + (\frac{1}{n} - \frac{1}{n+1}) = 1 - \frac{1}{n+1}$$
 * 可得 $$\displaystyle  \lim_{n \rightarrow \infty} s_n =  \lim_{n \rightarrow \infty}(1 - \frac{1}{n+1})=1$$
 
+## 幾何級數、等比級數\(geometric, common ratio series\)
+
+> $$a \neq 0$$, 則形式為$$\displaystyle  \sum_{k=0}^\infty a\cdot x^k=a+ax+ax^2+\ldots+ax^n+ \ldots$$稱為幾何級數。
+
+###  幾何級數必為外顯級數
+
+> $$\displaystyle  \sum_{k=0}^\infty a\cdot x^k=a+ax+ax^2+\ldots+ax^n+ \ldots, ~ a \neq 0$$
+>
+> * 若$$|x|<1$$，則$$\displaystyle  \sum_{k=0}^\infty a\cdot x^k = \frac{a}{1-x}$$
+> * 若$$|x| \geq 1$$ ，則$$\displaystyle  \sum_{k=0}^\infty a\cdot x^k$$ 發散
+
+proof:
+
+* 部份和 $$s_n = \displaystyle  \sum_{k=0}^n a\cdot x^k = a+ ax + ax^2 +\cdots + ax^n = \frac{a(1-x)^n}{1-x}$$
+* 若$$|x| <1$$，則$$\displaystyle \lim_{n \rightarrow \infty} s_n = \frac{a}{1-x}$$。
+* 若$$|x| \geq 1$$，則$$|a| \leq |ax| \leq |ax^2| \leq \cdots$$
+* 因此若 $$\displaystyle \lim_{n \rightarrow \infty} |ax^k|$$存在，則可得$$\displaystyle \lim_{n \rightarrow \infty} |ax^k|  \geq \lim_{n \rightarrow \infty}|a| = |a| \neq0$$
+* 而由[篩審斂法](series-convergence-test.md)得$$\displaystyle \lim_{n \rightarrow \infty} |ax^k| \neq 0$$，則級數$$\displaystyle  \sum_{k=0}^\infty a\cdot x^k$$發散 \(QED\)
+
+## 交錯級數\(alternative series\)
+
+> 令$$\{x_n\}_{n \in \mathbb{N}}$$為一數列，
+>
+> * 若$$\forall n \in \mathbb{N}, ~ x_n>0$$ 則稱級數$$\displaystyle  \sum_{k=1}^\infty x_k $$為正項級數\(positive terms series\)。
+> * 若$$\forall n \in \mathbb{N}, ~ x_n\geq 0$$ 則稱級數$$\displaystyle  \sum_{k=1}^\infty x_k $$為非負項項級數\(non-negative terms series\)。
+> * 若$$\forall n \in \mathbb{N}, ~ x_n<0$$ 則稱級數$$\displaystyle  \sum_{k=1}^\infty x_k $$為負項級數\(negative terms series\)。
+> * 若$$\forall n \in \mathbb{N}, ~ x_n>0$$ 則稱級數$$\displaystyle  \sum_{k=1}^\infty (-1)^{k+1} x_k $$為交錯級數\(alternative series\)。
+> * 若$$\forall n \in \mathbb{N},  ~x_n \neq 0$$ 且滿足$$\forall n_0 \in \mathbb{N}, \exists m,l \neq n_0 \ni x_m>0, x_l<0$$ 則稱$$x_1+x_2+ \cdots+x_n+ \cdots$$為廣義交錯級數\(generalized alternative series\)。
+
+###  非負項級數\(正項級數\)收斂的充要條件
+
+
+
+### 
+
 
 

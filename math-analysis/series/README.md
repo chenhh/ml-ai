@@ -35,5 +35,12 @@ proof:=&gt;
 
 proof: &lt;= 使用相同的方法可得證。\(QED\)
 
+## 級數為線性算子
 
+> 若 $$\displaystyle \sum_{k=1}^\infty x_k =a$$ 且 $$\displaystyle \sum_{k=1}^\infty y_k =b,  \forall s,t \in \mathbb{R}$$, 則：$$\displaystyle \sum_{k=1}^\infty (s\cdot x_k + t \cdot y_k) =s\cdot a + t \cdot b$$
+
+proof:
+
+* 因為$$\displaystyle \sum_{k=1}^n (sx_k + ty_k) =  s\cdot\sum_{k=1}^n x_k + t\cdot  \sum_{k=1}^n y_k$$
+* 所以$$\begin{align} \displaystyle \lim_{ n \rightarrow \infty}  \sum_{k=1}^n (sx_k + ty_k) &= s\cdot \lim_{ n \rightarrow \infty}  \sum_{k=1}^n x_k + t\cdot \lim_{ n \rightarrow \infty}  \sum_{k=1}^n y_k \\&=  s a + tb \end{align}$$\(QED\)
 

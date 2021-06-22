@@ -143,11 +143,15 @@ Proof:
 * $$\displaystyle \limsup_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k=(E_1 \cup E_2 \cup \ldots)\cap (E_2 \cup E_3 \cup \ldots) \cap (E_3\cup E_4\cup \ldots) \cap \ldots$$
 * 由DeMorgan's property得 $$\displaystyle( \limsup_{n \rightarrow \infty} E_n )^c=(E_1^c \cap E_2^c \cap \ldots)\cup (E_2^c \cap E_3^c \cap \ldots)\cup\ldots=\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k^c=\liminf_{n \rightarrow \infty} E_n^c$$  \(QED\)
 
-## 集合的特徵函數\(characteristic function\)
+## 集合的特徵函數\(指示函數\)\(characteristic function, indicator function\)
 
 > 給定集合$$E \subseteq X$$。定義特徵函數 $$\chi_E:X \rightarrow \mathbb{R}$$為$$\chi_E (x)=\left \{  \begin{align} &1, \text { if } x \in E, \\ &0, \text{ if } x \notin E   \end{align} \right.$$
 >
-> 因為ξ\_E 為函數，因此也可以考慮函數的極限.
+> * 因為$$\chi_E$$為函數，因此也可以考慮函數的極限。在分析中也常用$$1_E$$的符號表示。
+> * 特徵函數最重要的功能是可以用函數的方式自訂集合的範圍。
+
+* 特徵函數是可測函數（隨機變數）。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合$$E$$當中。
+* 特徵函數另一個常用的用途是定義Riemann積分: $$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{R_k}$$\(step function\)，其中每一個$$R_k$$都是矩形。定義Lebesgue積分$$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{E_k}$$\(simple function\), $$E_k$$為$$\alpha_k$$的前像集合。
 
 
 

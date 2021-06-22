@@ -153,6 +153,17 @@ Proof:
 * 特徵函數是可測函數（隨機變數）。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合$$E$$當中。
 * 特徵函數另一個常用的用途是定義Riemann積分: $$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{R_k}$$\(step function\)，其中每一個$$R_k$$都是矩形。定義Lebesgue積分$$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{E_k}$$\(simple function\), $$E_k$$為$$\alpha_k$$的前像集合。
 
+### 聯集與交集的特徵函數
+
+> $$A,B \subseteq X$$，則
+>
+> * $$\chi_{A \cap B}= \min\{ \chi_A, \chi_B\}=\chi_A\chi_B$$
+> * $$\chi_{A\cup B}=\max\{ \chi_A, \chi_B\}=\chi_A +\chi_B-\chi_A \chi_B$$
+
+* $$\chi_{A\cap B}= \left\{\begin{aligned}1, &\text{ if } x \in A \cap B\\ 0, &\text{ if } x \notin A \cap B \end{aligned} \right.$$
+
+
+
 ### 特徵函數在集合序列的極限\(點態收斂\)
 
 > * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}$$\(特徵函數可穿過$$\limsup$$\)

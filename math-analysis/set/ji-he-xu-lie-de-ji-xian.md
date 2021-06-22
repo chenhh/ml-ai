@@ -171,8 +171,19 @@ Proof:
 
 > * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}$$\(特徵函數可穿過$$\limsup$$，函數序列極限等於集合序列極限\)
 > * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{\liminf_{n \rightarrow \infty}⁡⁡ E_n}$$\(特徵函數可穿過$$\liminf$$，函數序列極限等於集合序列極限\)
+>
+>   註：$$\displaystyle \limsup_{n \rightarrow \infty}\chi_{E_n }$$  為函數序列的上極限而$$\displaystyle \chi_{\limsup_{n \rightarrow \infty}⁡ E_n}$$   為集合序列的上極限。
 
-> 註：$$\displaystyle \limsup_{n \rightarrow \infty}\chi_{E_n }$$  為函數序列的上極限而$$\displaystyle \chi_{\limsup_{n \rightarrow \infty}⁡ E_n}$$   為集合序列的上極限。
+proof:
+
+* 令上極限集$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E $$
+* 可得 $$\displaystyle \chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}(x)=\chi_E(x)$$ ，即點$$x$$為上極限集合的元素時為1，否則為0。
+* 而$$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} $$  為函數序列$$\{\chi_{E_1}, \chi_{E_2},  \chi_{E_3}, \ldots\}$$的上極限  。
+* 給定集合$$E_n$$，因為$$\chi_{E_n} (x) = \left\{  \begin{align} 1,& \text{ if } x \in E_n,\\ 0,& \text{ if } x \notin E_n \end{align} \right.$$
+* 因此$$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} (x) =   \left\{  \begin{align} 1,& \text{ if } x \in \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E,\\ 0,& \text{ if } x \notin\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E \end{align} \right. =\chi_E(x)$$
+* 所以$$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n}  = \chi_E(x)=\chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}$$\(QED\)
+
+
 
 ### 
 

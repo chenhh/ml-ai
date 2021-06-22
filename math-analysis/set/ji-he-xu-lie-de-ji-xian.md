@@ -150,7 +150,7 @@ Proof:
 > * 因為$$\chi_E$$為函數，因此也可以考慮函數的極限。在分析中也常用$$I_E$$的符號表示。
 > * 特徵函數最重要的功能是可以用函數的方式自訂集合的範圍。
 
-* 特徵函數是可測函數（隨機變數）。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合$$E$$當中。
+* 特徵函數是可測函數（隨機變數）。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合中。例如$$\mathrm{E}(I_A(\omega))=\mathrm{P}(A)$$。
 * 特徵函數另一個常用的用途是定義Riemann積分: $$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{R_k}$$\(step function\)，其中每一個$$R_k$$都是矩形。定義Lebesgue積分$$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{E_k}$$\(simple function\), $$E_k$$為$$\alpha_k$$的前像集合。
 
 ### 聯集與交集的特徵函數
@@ -161,22 +161,18 @@ Proof:
 > * $$\chi_{A\cup B}=\max\{ \chi_A, \chi_B\}=\chi_A +\chi_B-\chi_A \chi_B$$
 
 * $$\chi_{A\cap B}= \left\{\begin{aligned}1, &\text{ if } x \in A \cap B\\ 0, &\text{ if } x \notin A \cap B \end{aligned} \right.$$
+
   * if $$x \in A \land x \in B$$, $$\min\{ \chi_A, \chi_B\}=1, \chi_A, \chi_B=1$$
   * if $$x \in A \land x \notin B$$,  $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
   * if $$x \notin A \land x \in B$$,  $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
   * if $$x \notin A \land x \notin B$$,  $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
 
-
-
-
-
 ### 特徵函數在集合序列的極限\(點態收斂\)
 
-> * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}$$\(特徵函數可穿過$$\limsup$$\)
->
-> • lim\_\(n→∞\)⁡inf⁡〖χ\_\(E\_n \) 〗 =χ\_lim\_\(n→∞\)⁡inf⁡〖E\_n 〗  
->
-> Note: lim\_\(n→∞\)⁡sup⁡〖χ\_\(E\_n \) 〗  為函數序列的極限；χ\_lim\_\(n→∞\)⁡sup⁡〖E\_n 〗   為集合序列的極限
+> * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}$$\(特徵函數可穿過$$\limsup$$，函數序列極限等於集合序列極限\)
+> * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{\liminf_{n \rightarrow \infty}⁡⁡ E_n}$$\(特徵函數可穿過$$\liminf$$，函數序列極限等於集合序列極限\)
+
+> 註：$$\displaystyle \limsup_{n \rightarrow \infty}\chi_{E_n }$$  為函數序列的上極限而$$\displaystyle \chi_{\limsup_{n \rightarrow \infty}⁡ E_n}$$   為集合序列的上極限。
 
 ### 
 

@@ -8,22 +8,32 @@
 
 ## 級數與部份和
 
-> 令 $$\{ a_n \} \subset \mathbb{R}$$為數列\(sequence\)，定義級數\(series\)為 $$\sum_{i=1}^{\infty} a_i = a_1 + a_2 + \ldots$$。定義部份和\(partial sum \) $$s_n  = \sum_{i=1}^n a_i = a_1 +a _2 + \ldots + a_n $$。
+> 令 $$\{ x_n \} \subset \mathbb{R}$$為數列\(sequence\)，定義級數\(series\)為 $$\sum_{i=1}^{\infty} x_i = x_1 + x_2 + \ldots$$。定義部份和\(partial sum \) $$\displaystyle s_n  = \sum_{i=1}^n x_i = x_1 +x _2 + \ldots + x_n $$。
 
-可定義部份和數列$$\{s_n \} \equiv \{ s_1, s_2, \ldots, s_n \ldots \}$$。則級數可用部份和分析是否收斂，即 $$\displaystyle \lim_{n \rightarrow \infty} s_n =  \lim_{n \rightarrow \infty} \sum_{i=1}^n a_i$$。
+可定義部份和數列$$\{s_n \} \equiv \{ s_1, s_2, \ldots, s_n \ldots \}$$。則級數可用部份和分析是否收斂，即 $$\displaystyle \lim_{n \rightarrow \infty} s_n =  \lim_{n \rightarrow \infty} \sum_{i=1}^n x_i$$。
 
 * 如果 $$\{ s_n \} $$收斂 \(convergence\)，則 $$\displaystyle \exists s \in \mathbb{R} \ni \lim_{n \rightarrow \infty} s_n = s$$
 * 如果$$\{ s_n\}$$不收斂，則為發散\(divergence\)。
+* 級數的極限值等於部份和的極限值.
 
-### 收斂級數即使去除掉有限項仍為收斂級數
+  級數收斂等價於部份和序列收斂
 
-> $$\displaystyle \sum_{i=1}^{\infty} a_i$$ 收斂 $$ \Leftrightarrow$$$$\displaystyle \sum_{i=k}^\infty a_i$$收斂
+### 收斂\(發散\)級數即使去除掉有限項仍為收斂\(發散\)級數
 
-### 放散級數即使去除掉有限項仍為放散級數
+> * $$\displaystyle \sum_{i=1}^{\infty} x_i$$ 收斂 $$ \Leftrightarrow$$$$\displaystyle \sum_{i=k}^\infty x_i$$收斂
+> * $$\displaystyle \sum_{i=1}^{\infty} x_i$$ 發散 $$ \Leftrightarrow$$$$\displaystyle \sum_{i=k}^\infty x_i$$發散
+>
+> 級數是否收斂\(發散\)不是依據前面有限項的部份和，而是無窮多項的元素和有關。
 
-> $$ \sum_{i=1}^{\infty} a_i$$ 發散 $$ \Leftrightarrow$$$$\sum_{i=k}^\infty a_i$$發散
+proof:=&gt;
 
+* 令部份和  $$\displaystyle s_n = \sum_{i=1}^n x_i$$
+* 因為$$\displaystyle \sum_{i=1}^{\infty} x_i$$收斂，令$$\displaystyle \lim_{ n \rightarrow \infty} s_n  = \lim_{ n \rightarrow \infty} \sum_{i=1}^n x_i=s$$收斂。
+* 因為$$\displaystyle\lim_{ n \rightarrow \infty} \sum_{i=1}^n x_i = \lim_{ n \rightarrow \infty}  \left(\sum_{i=1}^{k-1} x_i + \sum_{i=k}^n x_i \right) = \sum_{i=1}^{k-1} x_i +  \lim_{ n \rightarrow \infty}  \left(\sum_{i=k}^n x_i \right)  = s$$
+* 因此$$\displaystyle\lim_{ n \rightarrow \infty} \sum_{i=1}^n x_i =  \lim_{ n \rightarrow \infty}  \left(\sum_{i=k}^n x_i \right)  = s -  \sum_{i=1}^{k-1} x_i$$收斂
+* \(QED\)
 
+proof: &lt;= 使用相同的方法可得證。\(QED\)
 
 
 

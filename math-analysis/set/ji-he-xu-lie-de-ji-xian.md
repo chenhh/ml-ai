@@ -143,7 +143,11 @@ Proof:
 * $$\displaystyle \limsup_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k=(E_1 \cup E_2 \cup \ldots)\cap (E_2 \cup E_3 \cup \ldots) \cap (E_3\cup E_4\cup \ldots) \cap \ldots$$
 * 由DeMorgan's property得 $$\displaystyle( \limsup_{n \rightarrow \infty} E_n )^c=(E_1^c \cap E_2^c \cap \ldots)\cup (E_2^c \cap E_3^c \cap \ldots)\cup\ldots=\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k^c=\liminf_{n \rightarrow \infty} E_n^c$$  \(QED\)
 
-## 
+## 集合的特徵函數\(characteristic function\)
+
+> 給定集合$$E \subseteq X$$。定義特徵函數 $$\chi_E:X \rightarrow \mathbb{R}$$為$$\chi_E (x)=\left \{  \begin{align} &1, \text { if } x \in E, \\ &0, \text{ if } x \notin E   \end{align} \right.$$
+>
+> 因為ξ\_E 為函數，因此也可以考慮函數的極限.
 
 
 

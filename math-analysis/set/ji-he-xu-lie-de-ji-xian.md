@@ -81,7 +81,19 @@ proof：定義等價性 &lt;=
   * $$n=3$$, $$m_3=\{3\}$$，假設$$m_{ n\geq 3}=\{3\}$$
 * 下極限$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n  =\bigcup_{n=1}^\infty m_n =\{3\}$$
 
-### 集合序列上、下極限的補集
+## 集合序列的極限
+
+> $$\{E_n\}_{n \in \mathbb{N}}$$ 的極限存在若序列上極限等於下極限 $$ \limsup_{n \rightarrow \infty} ⁡E_n  = \liminf_{n \rightarrow \infty} ⁡E_n$$，記為$$\displaystyle \lim_{n \rightarrow \infty} E_n $$
+
+* 上極限與下限集均為集合，因此$$ \limsup_{n \rightarrow \infty} ⁡E_n  = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$ \limsup_{n \rightarrow \infty} ⁡E_n  \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$ \limsup_{n \rightarrow \infty} ⁡E_n  \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
+
+### 範例
+
+* 集合$$E_n=(\frac{−1}{n},1−\frac{1}{n}]$$
+* $$\displaystyle \limsup_{n \rightarrow \infty} E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty (\frac{−1}{k},1−\frac{1}{k}]=\bigcap_{n=1}^\infty (\frac{−1}{n},1)=[0,1)$$
+* $$\displaystyle \liminf_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty  \bigcap_{k=n}^\infty (\frac{−1}{k},1−\frac{1}{n}]=\bigcup_{k=1}^\infty [0,1−\frac{1}{k}]=[0,1)$$
+
+## 集合序列上、下極限的補集
 
 > * $$\displaystyle \left( \limsup_{n \rightarrow \infty}⁡ E_n \right)^c  = \liminf_{n \rightarrow \infty}⁡ E_n^c $$
 > * $$\displaystyle \left( \liminf_{n \rightarrow \infty}⁡ E_n \right)^c  = \limsup_{n \rightarrow \infty}⁡ E_n^c $$

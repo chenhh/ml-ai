@@ -161,6 +161,12 @@ Proof:
 > * $$\chi_{A\cup B}=\max\{ \chi_A, \chi_B\}=\chi_A +\chi_B-\chi_A \chi_B$$
 
 * $$\chi_{A\cap B}= \left\{\begin{aligned}1, &\text{ if } x \in A \cap B\\ 0, &\text{ if } x \notin A \cap B \end{aligned} \right.$$
+  * if $$x \in A \land x \in B$$, $$\min\{ \chi_A, \chi_B\}=1, \chi_A, \chi_B=1$$
+  * if $$x \in A \land x \notin B$$,  $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
+  * if $$x \notin A \land x \in B$$,  $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
+  * if $$x \notin A \land x \notin B$$,  $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
+
+
 
 
 

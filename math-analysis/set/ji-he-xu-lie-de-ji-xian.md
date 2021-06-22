@@ -15,10 +15,18 @@
 >   * 遞增\(increasing\)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N} $$。
 >   * 遞減\(decreasing\)若$$ E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$
 
+### 單調有界集合序列極限必定存在
+
+> * 遞增集合序列$$E_n \subseteq E_{n+1}, ~ \forall n$$（因為$$E_n$$ 為宇集合$$X$$的子集合，因此$$X$$為所有集合的上界） 則 $$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$
+
+> * 遞減集合序列$$E_n \supseteq  E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（空集合為任意集合的子集合，因此為所有集合的下界）
+
 * 對於遞增集合序列，$$\bigcap_{j \geq n} E_j  = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。
   * 可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty E_n$$
 * 對於遞減集合序列，$$\bigcap_{j \geq n}E_j=E_n$$且$$\bigcup_{j \geq n} E_j=\bigcup_{j\geq 1}E_j$$。
   * 可得 $$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcap_{n=1}^\infty E_n$$
+
+
 
 ## 集合序列的上極限\(superior limit of  sequence of set\)
 
@@ -119,6 +127,12 @@ proof：定義等價性 &lt;=
 * 但是$$[−1,1]$$僅僅是$$E_1 \cup E_2$$ 的結果，與之後一般化的結果完全不同，而上極限考慮的是聯集在無限多個集合$$E_n$$ 中的"essential part"，因此上極限集合中的點只會出現在$$k \geq n$$之後的至少一個\(可數多個\)集合當中，而不一定在（但有可能）所有的集合中。
 * $$\displaystyle \limsup_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k=\{−3,3\}$$，$$-3$$只出現在$$k \geq n$$後, $$k$$為奇數的集合；$$3$$只出現在$$k \geq n$$後, $$k$$為偶數的集合。
 
+#### 範例5
+
+* $$E_{2n−1}=(−1+1/n,1+1/n), E_{2n}=(−n, n), ~\forall n \in \mathbb{N}$$
+* 則 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n= \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = (−\infty, \infty)$$\(因為$$E_{2n}$$不斷聯集到無窮大\)
+* $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n= \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k  = (-1,1]$$
+
 ## 集合序列上、下極限的補集
 
 > * $$\displaystyle \left( \limsup_{n \rightarrow \infty}⁡ E_n \right)^c  = \liminf_{n \rightarrow \infty}⁡ E_n^c $$
@@ -128,6 +142,8 @@ Proof:
 
 * $$\displaystyle \limsup_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k=(E_1 \cup E_2 \cup \ldots)\cap (E_2 \cup E_3 \cup \ldots) \cap (E_3\cup E_4\cup \ldots) \cap \ldots$$
 * 由DeMorgan's property得 $$\displaystyle( \limsup_{n \rightarrow \infty} E_n )^c=(E_1^c \cap E_2^c \cap \ldots)\cup (E_2^c \cap E_3^c \cap \ldots)\cup\ldots=\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k^c=\liminf_{n \rightarrow \infty} E_n^c$$  \(QED\)
+
+## 
 
 
 

@@ -109,6 +109,16 @@ proof：定義等價性 &lt;=
 * 下極限\(liminf\)的概念就是要排除如上因為有限個集合造成下界變動的情形。
 * 因此我們考慮的不是存在於所有集合$$E_n$$ 中的元素，而是從某一點$$k$$開始之後集合的交集\($$n \in \mathbb{N}, \bigcap_{k \geq n} E_n$$\), ，因此下極限中的點只會出現在$$k\geq n$$之後的\(可數多個\)所有集合當中，而非全部的集合中。
 
+
+
+#### 範例4
+
+* $$E_1=[0,1], E_2=[−1,0], E_n=\{3(−1)^n\}, \forall n \geq 3$$
+* $$E_3=E_5=E_7=\cdots=\{−3\}$$, $$E_4=E_6=E_8=\cdots=\{3\}$$
+* $$\bigcup_{n \in \mathbb{N}} E_n=[−1,1]∪\{−3,3\}$$
+* 但是$$[−1,1]$$僅僅是$$E_1 \cup E_2$$ 的結果，與之後一般化的結果完全不同，而上極限考慮的是聯集在無限多個集合$$E_n$$ 中的"essential part"，因此上極限集合中的點只會出現在$$k \geq n$$之後的至少一個\(可數多個\)集合當中，而不一定在（但有可能）所有的集合中。
+* $$\displaystyle \limsup_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k=\{−3,3\}$$，$$-3$$只出現在$$k \geq n$$後, $$k$$為奇數的集合；$$3$$只出現在$$k \geq n$$後, $$k$$為偶數的集合。
+
 ## 集合序列上、下極限的補集
 
 > * $$\displaystyle \left( \limsup_{n \rightarrow \infty}⁡ E_n \right)^c  = \liminf_{n \rightarrow \infty}⁡ E_n^c $$

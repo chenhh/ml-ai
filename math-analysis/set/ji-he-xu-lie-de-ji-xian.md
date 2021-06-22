@@ -183,6 +183,12 @@ proof:
 * 因此$$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} (x) =   \left\{  \begin{align} 1,& \text{ if } x \in \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E,\\ 0,& \text{ if } x \notin\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E \end{align} \right. =\chi_E(x)$$
 * 所以$$\displaystyle \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n}  = \chi_E(x)=\chi_{\limsup_{n \rightarrow \infty}⁡⁡ E_n}$$\(QED\)
 
+### 集合序列極限存在的充要條件
+
+> $$\{E_n\} \subseteq X$$，則$$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n$$  存在若且唯若$$\displaystyle \lim_{n \rightarrow \infty} \chi_{E_n}$$  存在
+
+
+
 
 
 ### 

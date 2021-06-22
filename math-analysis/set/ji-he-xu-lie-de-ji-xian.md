@@ -187,6 +187,17 @@ proof:
 
 > $$\{E_n\} \subseteq X$$，則$$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n$$  存在若且唯若$$\displaystyle \lim_{n \rightarrow \infty} \chi_{E_n}$$  存在
 
+proof=&gt;
+
+* 若$$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n = E$$存在，則$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =  \displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =E$$
+* 因為$$\displaystyle \chi_{\limsup_{n \rightarrow \infty}⁡ E_n} = \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{E}$$且$$ \displaystyle \chi_{\liminf_{n \rightarrow \infty}⁡ E_n } =\displaystyle \liminf_{n \rightarrow \infty}⁡ \chi_{E_n}  = \chi_{E}$$
+* 所以$$ \limsup_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} =\chi_{E} =  \liminf_{n \rightarrow \infty}⁡ ⁡\chi_{E_n} $$
+* 因此可得 $$\displaystyle \lim_{n \rightarrow \infty} \chi_{E_n}$$存在\(QED\)
+
+proof &lt;=
+
+* 使用相同的方法可得證\(QED\)
+
 
 
 

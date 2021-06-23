@@ -120,3 +120,13 @@ Proof:
 * proof &lt;=，由於$$x_n > 0$$，可得$$\{S_n\}$$為嚴格遞增序列，而[嚴格遞增數列收斂的充分條件](../sequence/monotonic-sequence.md#shi-shu-zhong-de-you-jie-chan-diao-shu-lie-bi-shou-lian)是序列$$\{S_n\}$$有上界。
 * 因此正項級數$$\displaystyle  \sum_{k=1}^\infty x_k $$  收斂的充要條件是其部份和序列$$\{S_n \}$$有上界。 \(QED\)
 
+## p-級數
+
+> 令$$p>0$$，則形式如$$\displaystyle \sum_{k=1}^\infty \frac{1}{k^p}$$  的級數稱為$$p$$級數。
+
+###  p級數收斂的充要條件
+
+> $$p>0$$，則級數 $$\displaystyle \sum_{k=1}^\infty \frac{1}{k^p}$$收斂若且唯若 $$p>1$$。
+
+
+

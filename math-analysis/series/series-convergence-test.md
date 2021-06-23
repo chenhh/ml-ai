@@ -169,6 +169,19 @@ Proof:
 * 若$$A \neq 0$$，因為$$\displaystyle \lim_{n \rightarrow \infty}⁡ \frac{x_n}{y_n}=A \Rightarrow \lim_{n \rightarrow \infty}⁡ \frac{x_n}{x_n}= \frac{1}{A} $$
 * 因此正項級數 $$\displaystyle \sum_{k=1}^\infty x_k$$收斂若且唯若正項級數$$\displaystyle \sum_{k=1}^\infty y_k$$收斂 \(QED\)
 
+#### 範例
+
+* 級數$$\displaystyle \sum_{k=1}^\infty \frac{1}{4k^2−3k+7}$$ 收斂
+  * 因為 $$4k^2−3k+7=O(k^2 )$$
+  * 所以$$\displaystyle \lim_{n \rightarrow \infty}\frac{⁡(1/(4n^2−3n+7))}{1/n^2} =1/4$$
+  * 因為$$\displaystyle \sum_{k=1}^\infty \frac{1}{k^2}$$   收斂，由極限值比較審斂法得$$\displaystyle \sum_{k=1}^\infty \frac{1}{4k^2−3k+7}$$收斂。
+
+
+
+## 交錯級數審斂法\(alternating series test\)
+
+
+
 ## 比值審斂法\(ratio test\)
 
 > $$\displaystyle \forall n \in \mathbb{N}, x_n \neq 0, \lim_{n \rightarrow \infty}⁡|\frac{x_{n+1}}{x_n} | =p$$，則

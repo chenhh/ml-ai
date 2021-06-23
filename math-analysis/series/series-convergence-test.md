@@ -134,6 +134,20 @@ Proof:
 * 若正項級數 $$\sum_{k=1}^\infty x_k$$收斂，則由正項級數審斂法得得部份和$$\{S_n\}$$有上界，  即$$∃M>0∋∀n∈N, S_n≤M$$。
 * 因此$$\forall n \in \mathbb{N}, \displaystyle \int_1^{n} f(x)dx \leq M$$，因為$$\left\{\displaystyle \int_1^{\infty} f(x)dx\right\}_{n \in \mathbb{N}}$$為遞增數列且有上界，所以 $$\displaystyle \int_1^{\infty} f(x)dx$$  收斂 \(QED\)
 
+## 比較審斂法\(comparison test\)
+
+> $$\forall n \in \mathbb{N}, ~0<x_n \leq y_n$$
+>
+> * 若正項級數$$\displaystyle \sum_{k=1}^\infty y_k$$  收斂，則正項級數 $$\displaystyle \sum_{k=1}^\infty x_k$$  收斂。
+> * 若正項級數$$\displaystyle \sum_{k=1}^\infty x_k$$   發散，則正項級數$$\displaystyle \sum_{k=1}^\infty y_k$$  發散。
+
+Proof:
+
+* 令部份和 $$S_n=\sum_{k=1}^n x_n , ~ H_n=\sum_{k=1}^n y_n $$
+* 因為$$\forall n \in \mathbb{N},  ~0<x_n \leq y_n \Rightarrow S_n \leq H_n$$
+* 若級數$$\sum_{k=1}^\infty y_k$$收斂，則 $$\exists M>0 \ni \forall n \in \mathbb{N}, H_n \leq M \Rightarrow S_n \leq M$$
+* 即正項級數$$\sum_{k=1}^\infty x_k$$的部份和有上界，由正項級數審斂法得$$\sum_{k=1}^\infty x_k$$  收斂 \(QED\)
+
 ## 比值審斂法\(ratio test\)
 
 > $$\displaystyle \forall n \in \mathbb{N}, x_n \neq 0, \lim_{n \rightarrow \infty}⁡|\frac{x_{n+1}}{x_n} | =p$$，則
@@ -165,5 +179,5 @@ Proof： \($$0≤p<1$$\)
 
 
 
-### 
+### 。
 

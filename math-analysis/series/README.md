@@ -107,6 +107,20 @@ proof:
 * 由於數列$$\{X_n\}$$包含了許多$$\{Y_n\}$$的重複項，因此 $$\exists m_0 \in \mathbb{N} \ni X_{m_0}=Y_{n_0}$$  且$$\forall n \geq m_0 ~ |X_n−Y|<\epsilon$$
 * 因此$$\displaystyle \lim_{ n \rightarrow \infty} X_n=Y$$ \(QED\)
 
+### 正項級數審斂法
+
+> 正項級數$$\displaystyle  \sum_{k=1}^\infty x_k $$收斂的充要條件是其部份和數列$$\{S_n\}$$有上界。
+>
+> 註：由實數的完備性若非空集合有上界時有最小上界。
+
+Proof:
+
+* 令$$\displaystyle  \sum_{k=1}^\infty x_k $$  為正項級數，則其部份和序列 $$S_n=x_1+x_2+\ldots+x_n=S_{n−1}+x_n$$。
+* 由於$$x_n > 0$$，可得$$\{S_n\}$$為嚴格遞增序列，而嚴格遞增數列收斂的充分條件是序列$$\{S_n\}$$有上界。
+* 因此正項級數$$\displaystyle  \sum_{k=1}^\infty x_k $$  收斂的充要條件是其部份和序列$$\{S_n \}$$有上界。 \(QED\)
+
+
+
 
 
 ### 

@@ -109,6 +109,31 @@ Proof:
 * 級數 $$\displaystyle \sum_{k=1}^\infty \left|\frac{−2k}{k^2−4k+7} \right| =\infty$$
 * 因為$$\displaystyle \lim_{n \rightarrow \infty}⁡ \frac{1/n}{|(−2n)/(n^2−4n+7)|}=\frac{1}{2}$$且$$\displaystyle \sum_{k=1}^\infty \frac{1}{k}=\infty$$。
 
+## 積分審斂法\(integral test\)
+
+> 函數$$f:[1, \infty) \rightarrow \mathbb{R}$$為遞減函數，且滿足$$\forall x \in [1,\infty), f(x)>0$$。
+>
+> $$\forall n \in \mathbb{N}$$，令$$x_n=f(n)$$ \(即$$x_n$$為函數$$f$$在正整數的樣本點\)，則正項級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 收斂的充要條件為瑕積分 $$\displaystyle \int_1^{\infty} f(x)dx$$  收斂。
+>
+> * 註：正項級數$$\displaystyle \sum_{k=1}^\infty x_k$$審斂法中收斂的充要條件是部份和$$S_n$$有界。
+
+![&#x6B63;&#x9805;&#x7D1A;&#x6578;&#x548C;&#x5C0F;&#x65BC;&#x7B49;&#x65BC;&#x7A4D;&#x5206;&#x503C;](../../.gitbook/assets/integraltestbelow-min.png)
+
+![&#x6B63;&#x9805;&#x7D1A;&#x6578;&#x548C;&#x5927;&#x65BC;&#x7B49;&#x65BC;&#x7A4D;&#x5206;&#x503C;](../../.gitbook/assets/integraltestabove-min.png)
+
+
+
+* 小矩型面積和為$$x_2+\ldots+x_n=S_n−x_1$$
+* 大矩型面積和和 $$x_1+x_2+\ldots+x_(n−1)=S_{n−1}$$
+* 可得$$\displaystyle \forall n \in \mathbb{N}, ~S_n−x_1 \leq \int_1^n f(x)dx \leq S_{n−1}$$
+* proof &lt;=
+* 若瑕積分$$\displaystyle \int_1^{\infty} f(x)dx$$ 收斂，即$$\displaystyle \exists A \in \mathbb{R} \ni \lim_{n \rightarrow \infty} \int_1^n f(x)dx=A$$。
+* 即數列$$\left\{\displaystyle \int_1^{\infty} f(x)dx\right\}_{n \in \mathbb{N}}$$ 有界，依定義得$$\exists M>0 \ni \forall n \in \mathbb{N}, \displaystyle \int_1^{n} f(x)dx \leq M$$
+* 因此$$\forall n \in \mathbb{N}, S_n−x_1 \leq M$$，則數列$$\{S_n\}$$有上界，由[正項級數審斂法](./#zheng-xiang-ji-shu-shen-lian-fa)得$$\sum_{k=1}^\infty x_k$$ 收斂。
+* proof =&gt;
+* 若正項級數 $$\sum_{k=1}^\infty x_k$$收斂，則由正項級數審斂法得得部份和$$\{S_n\}$$有上界，  即$$∃M>0∋∀n∈N, S_n≤M$$。
+* 因此$$\forall n \in \mathbb{N}, \displaystyle \int_1^{n} f(x)dx \leq M$$，因為$$\left\{\displaystyle \int_1^{\infty} f(x)dx\right\}_{n \in \mathbb{N}}$$為遞增數列且有上界，所以 $$\displaystyle \int_1^{\infty} f(x)dx$$  收斂 \(QED\)
+
 ## 比值審斂法\(ratio test\)
 
 > $$\displaystyle \forall n \in \mathbb{N}, x_n \neq 0, \lim_{n \rightarrow \infty}⁡|\frac{x_{n+1}}{x_n} | =p$$，則

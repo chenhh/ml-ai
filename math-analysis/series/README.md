@@ -128,5 +128,12 @@ Proof:
 
 > $$p>0$$，則級數 $$\displaystyle \sum_{k=1}^\infty \frac{1}{k^p}$$收斂若且唯若 $$p>1$$。
 
+Proof \(積分審斂法\)
 
+* 給定函數$$f:[1, \infty) \rightarrow \mathbb{R}$$，且$$\forall x \in [1, \infty), f(x)=\frac{1}{x^p}$$, 則$$\forall x \in [1,\infty), f(x)>0$$ 且$$f(x)$$為嚴格遞減函數。
+* $$ \displaystyle \int_1^n \frac{1}{x^p}dx=\left\{    \begin{align}  &\frac{n^{1-p}-1}{1-p} &\text{ if } p \neq 1 \\ & \ln n &\text{ if } p=1  \end{align}  \right.$$
+* 因此當
+  * $$ p>1, \displaystyle \lim_{n \rightarrow \infty}\int_1^n\frac{1}{x^p}  dx=\frac{1}{p−1}$$
+  * $$p=1, \displaystyle \lim_{n \rightarrow \infty}\int_1^n\frac{1}{x^p}  dx=\infty$$
+  * $$0<p<1, \displaystyle \lim_{n \rightarrow \infty}\int_1^n\frac{1}{x^p}  dx= \infty$$\(QED\)
 

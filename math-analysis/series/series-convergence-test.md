@@ -148,6 +148,27 @@ Proof:
 * 若級數$$\sum_{k=1}^\infty y_k$$收斂，則 $$\exists M>0 \ni \forall n \in \mathbb{N}, H_n \leq M \Rightarrow S_n \leq M$$
 * 即正項級數$$\sum_{k=1}^\infty x_k$$的部份和有上界，由正項級數審斂法得$$\sum_{k=1}^\infty x_k$$  收斂 \(QED\)
 
+#### 範例
+
+* 正項級數收$$\displaystyle \sum_{k=1}^\infty \frac{1}{k!}$$ 收斂。
+* $$\forall n \in \mathbb{N}, \frac{1}{n!}=\frac{1}{1 \times 2 \times \cdots \times n}<\frac{1}{1 \times 2\times 2\times  \cdots \times  2}=\frac{1}{2^{n−1} }$$
+* 因為幾何級數$$\sum_{k=1}^\infty \frac{1}{2^{k−1}}$$收斂，因此 $$\sum_{k=1}^\infty \frac{1}{k!}$$  收斂 。
+
+## 極限值比較審斂法\(limit comparison test\)
+
+> 令$$\displaystyle \sum_{k=1}^\infty x_k$$  與$$\displaystyle \sum_{k=1}^\infty y_k$$為二正項級數且滿足$$\displaystyle  \lim_{n\rightarrow \infty}⁡ \frac{x_n}{y_n} =A \in \mathbb{R}$$
+>
+> * 若正項級數 $$\displaystyle \sum_{k=1}^\infty y_k$$ 收斂，則正項級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 收斂（但$$A$$可能等於0）。
+> * 若$$A \neq 0$$，則正項級數$$\displaystyle \sum_{k=1}^\infty y_k$$收斂 若且唯若 正項級數$$\displaystyle \sum_{k=1}^\infty y_k$$ 收斂。
+
+Proof:
+
+* 因為$$\displaystyle  \lim_{n\rightarrow \infty}⁡ \frac{x_n}{y_n} =A$$，即序列 $$\{\frac{x_n}{y_n}\}$$有界。
+* 所以$$\exists M>0 \ni \forall n \in \mathbb{N}, ~\frac{x_n}{y_n}  \leq M \Rightarrow x_n \leq My_n$$
+* 若正項級數$$\displaystyle \sum_{k=1}^\infty My_k$$收斂，由比較審斂法得$$\displaystyle \sum_{k=1}^\infty x_k$$收斂。
+* 若$$A \neq 0$$，因為$$\displaystyle \lim_{n \rightarrow \infty}⁡ \frac{x_n}{y_n}=A \Rightarrow \lim_{n \rightarrow \infty}⁡ \frac{x_n}{x_n}= \frac{1}{A} $$
+* 因此正項級數 $$\displaystyle \sum_{k=1}^\infty x_k$$收斂若且唯若正項級數$$\displaystyle \sum_{k=1}^\infty y_k$$收斂 \(QED\)
+
 ## 比值審斂法\(ratio test\)
 
 > $$\displaystyle \forall n \in \mathbb{N}, x_n \neq 0, \lim_{n \rightarrow \infty}⁡|\frac{x_{n+1}}{x_n} | =p$$，則

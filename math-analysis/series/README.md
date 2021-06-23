@@ -156,5 +156,13 @@ $$=\left \{  \begin{align} &\frac{ (\ln n)^{1-\alpha} - (\ln 3)^{1-\alpha}}{1-\a
 * 若$$\alpha=1, \displaystyle \lim_{n \rightarrow \infty} \int_3^n  \frac{1}{(x(\ln ⁡x )^\alpha} dx=\infty$$
 * 若$$0<\alpha<1,  \displaystyle \lim_{n \rightarrow \infty} \int_3^n  \frac{1}{(x(\ln ⁡x )^\alpha} dx=\infty$$ \(QED\)
 
+### 範例
+
+* 級數 $$\displaystyle  \sum_{k=1}^\infty \frac{1}{k^2} $$   與級數 $$\displaystyle  \sum_{k=3}^\infty \frac{1}{ k (\ln k)^{1.5}} $$  收斂
+* 級數$$\displaystyle  \sum_{k=1}^\infty \frac{1}{k} $$ 與級數 $$\displaystyle  \sum_{k=3}^\infty \frac{1}{ k (\ln k)} $$   發散
+* 級數$$\displaystyle  \sum_{k=1}^\infty \frac{1}{k^{0.1}} $$   與級數$$\displaystyle  \sum_{k=3}^\infty \frac{1}{ k (\ln k)^{0.99}} $$  發散。
+
+
+
 
 

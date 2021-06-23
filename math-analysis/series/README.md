@@ -87,7 +87,25 @@ proof:
 > * 若$$\forall n \in \mathbb{N}, ~ x_n>0$$ 則稱級數$$\displaystyle  \sum_{k=1}^\infty (-1)^{k+1} x_k $$為交錯級數\(alternative series\)。
 > * 若$$\forall n \in \mathbb{N},  ~x_n \neq 0$$ 且滿足$$\forall n_0 \in \mathbb{N}, \exists m,l \neq n_0 \ni x_m>0, x_l<0$$ 則稱$$x_1+x_2+ \cdots+x_n+ \cdots$$為廣義交錯級數\(generalized alternative series\)。
 
-###  非負項級數\(正項級數\)收斂的充要條件
+### 正項級數收斂的充要條件
+
+> 令級數 $$\displaystyle  \sum_{k=1}^\infty x_k $$  為非負項級數，若去除數列$$\{x_n\}$$中$$x_n=0$$的元素，得到數列$$\{y_n\}$$，則級數$$\displaystyle  \sum_{k=1}^\infty x_k $$   收斂若且唯若$$\displaystyle  \sum_{k=1}^\infty y_k $$   收斂，而且$$\displaystyle  \sum_{k=1}^\infty x_k  = \displaystyle  \sum_{k=1}^\infty y_k$$。
+
+> * 此定理說明了級數收斂不必考慮非負項級數，只需考慮正項級數即可。
+> * 可將序列內所有元素取負號得正項級數$$\displaystyle  \sum_{k=1}^\infty x_k $$  收斂的充要條件為負項級數 $$\displaystyle  \sum_{k=1}^\infty (-x_k )$$  收斂，因此也不用考慮負項級數，只須考慮正項級數即可。
+
+proof:
+
+* 令部份和$$\displaystyle  X_n=\sum_{k=1}^n x_n ,~ Y_n=\sum_{k=1}^n y_n$$ ，則依條件得$$\{Y_n\}$$為$$\{X_n\}$$的子數列。
+  * 例如 $$\sum_{k=1}^\infty x_k =1+0+2+0+3+0+4+0+5+\ldots$$
+  * $$\{X_n\}=\{1,1,3,3,6,6,10,10,15,\ldots\}$$
+  * $$\{Y_n\}=\{1,3,6,10,15,\ldots\}$$
+* proof =&gt;
+* 令$$\displaystyle \lim_{ n \rightarrow \infty} X_n=X$$，因為$$\{Y_n\}$$為$$\{X_n\}$$的子數列，可得 $$\displaystyle \lim_{ n \rightarrow \infty} Y_n=X$$ \(QED\)
+* proof &lt;=
+* 反之令$$\displaystyle \lim_{ n \rightarrow \infty} Y_n=Y$$，依極限定義得$$\forall \epsilon > 0, ~ \exists n_0 \in \mathbb{N}   \ni  |Y_n−Y|<\epsilon, ~ \forall n \geq n_0$$
+* 由於數列$$\{X_n\}$$包含了許多$$\{Y_n\}$$的重複項，因此 $$\exists m_0 \in \mathbb{N} \ni X_{m_0}=Y_{n_0}$$  且$$\forall n \geq m_0 ~ |X_n−Y|<\epsilon$$
+* 因此$$\displaystyle \lim_{ n \rightarrow \infty} X_n=Y$$ \(QED\)
 
 
 

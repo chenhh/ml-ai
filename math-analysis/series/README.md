@@ -116,14 +116,7 @@ proof:
 Proof:
 
 * 令$$\displaystyle  \sum_{k=1}^\infty x_k $$  為正項級數，則其部份和序列 $$S_n=x_1+x_2+\ldots+x_n=S_{n−1}+x_n$$。
-* 由於$$x_n > 0$$，可得$$\{S_n\}$$為嚴格遞增序列，而嚴格遞增數列收斂的充分條件是序列$$\{S_n\}$$有上界。
+* proof =&gt;，若$$\displaystyle  \sum_{k=1}^\infty x_k =x$$收斂，則$$\displaystyle \lim_{ n \rightarrow \infty} S_n=x$$，因此$$\{S_n\}$$有最小上界。
+* proof &lt;=，由於$$x_n > 0$$，可得$$\{S_n\}$$為嚴格遞增序列，而[嚴格遞增數列收斂的充分條件](../sequence/monotonic-sequence.md#shi-shu-zhong-de-you-jie-chan-diao-shu-lie-bi-shou-lian)是序列$$\{S_n\}$$有上界。
 * 因此正項級數$$\displaystyle  \sum_{k=1}^\infty x_k $$  收斂的充要條件是其部份和序列$$\{S_n \}$$有上界。 \(QED\)
-
-
-
-
-
-### 
-
-
 

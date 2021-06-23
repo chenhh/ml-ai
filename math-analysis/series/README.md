@@ -137,3 +137,24 @@ Proof \(積分審斂法\)
   * $$p=1, \displaystyle \lim_{n \rightarrow \infty}\int_1^n\frac{1}{x^p}  dx=\infty$$
   * $$0<p<1, \displaystyle \lim_{n \rightarrow \infty}\int_1^n\frac{1}{x^p}  dx= \infty$$\(QED\)
 
+## α-級數
+
+> 令$$\alpha>0$$，則形式如$$\displaystyle \sum_{k=3}^\infty \frac{1}{k (\ln k)^\alpha}$$  的級數稱為$$\alpha$$級數。
+
+###  α-級數收斂的充要條件
+
+> 令$$\alpha>0$$，則級數$$\displaystyle \sum_{k=3}^\infty \frac{1}{k (\ln k)^\alpha}$$  收斂若且唯若$$\alpha > 1$$。
+
+Proof \(積分審斂法\)
+
+* 給定函數$$f:[1, \infty) \rightarrow \mathbb{R}$$，且$$\forall x \in [3, \infty), f(x)=\frac{1}{x (\ln ⁡x)^\alpha}$$, 則  $$\forall x \in [3, \infty), f(x)>0$$ 且$$f(x)$$為嚴格遞減函數。
+* $$ n > 3, \displaystyle \int_3^n \frac{1}{x(\ln x)^\alpha} dx = \int_3^n \frac{1}{(\ln x)^\alpha} d(\ln x) $$
+
+$$=\left \{  \begin{align} &\frac{ (\ln n)^{1-\alpha} - (\ln 3)^{1-\alpha}}{1-\alpha} &\text{ if } \alpha \neq 1, \\ &\ln (\ln x)|_3^n = \ln (\ln n) - \ln(\ln 3)& \text{ if } \alpha \neq 1 \end{align} \right.$$ 
+
+* 若$$\alpha>1, \displaystyle \lim_{n \rightarrow \infty} \int_3^n  \frac{1}{(x(\ln ⁡x )^\alpha} dx= \frac{(\ln ⁡3 )^{1−α}}{α−1}$$
+* 若$$\alpha=1, \displaystyle \lim_{n \rightarrow \infty} \int_3^n  \frac{1}{(x(\ln ⁡x )^\alpha} dx=\infty$$
+* 若$$0<\alpha<1,  \displaystyle \lim_{n \rightarrow \infty} \int_3^n  \frac{1}{(x(\ln ⁡x )^\alpha} dx=\infty$$ \(QED\)
+
+
+

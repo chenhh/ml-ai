@@ -44,7 +44,7 @@ $$\displaystyle \sum_{k=2}^\infty \sin⁡\frac{\pi}{k}$$   發散。
 * 因為$$\forall n=2,3,\ldots , ~ \sin⁡\frac{\pi}{n}>0$$ 且 $$\sin⁡ \frac{\pi}{n} > \sin⁡ \frac{π}{(n+1)}$$, 因此$$\{\sin⁡\frac{\pi}{n} \}$$為遞減數列。
 * 由 $$\displaystyle \lim_{n \rightarrow \infty}⁡ n \sin⁡\frac{\pi}{n}=\pi \neq 0$$ 得 $$\displaystyle \sum_{k=2}^\infty \sin \frac{\pi}{k}$$   發散。
 
-## Cauchy 審斂法
+## 柯西審斂法\(Cauchy test\)
 
 > 級數$$\displaystyle \sum_{k=1}^\infty x_k$$ 收斂的充要條件為 $$\forall \epsilon>0 ~ \exists n_0 \in \mathbb{N} \ni \forall n>m \geq n_0, ~ |x_{m+1}+x_{m+2}+ \ldots +x_n |<\epsilon$$
 
@@ -200,6 +200,29 @@ Proof:
 * 令$$S=A=B$$，得$$\displaystyle  \lim_{n \rightarrow \infty} S_{2n} =S=\lim_{n \rightarrow \infty} S_{2n+1} $$
 * 由[數列奇數項與偶數項收斂至同一值，則數列收斂](../sequence/#shu-lie-qi-shu-xiang-yu-ou-shu-xiang-shou-lian-zhi-tong-yi-zhi-ze-shu-lie-shu-lian)得$$\displaystyle \lim_{n \rightarrow \infty} S_n=S$$。
 * 且$$\forall n\in \mathbb{N}, ~|S−S_n | \leq |S_{n+1}−S_n |=x_{n+1} $$ \(QED\)
+
+### alternating harmonic series
+
+$$\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}=\frac{1}{1} - \frac{1}{2} + \frac{1}{3} - \frac{1}{4}+\frac{1}{5} - \cdots$$
+
+![alternating harmonic series](../../.gitbook/assets/altseriesexamplegraph.png)
+
+## 狄利克雷審斂法\(Dirichlet test\)
+
+> $$\{x_n\}, \{y_n \}$$為二序列，且滿足$$ \forall n \in \mathbb{N}, x_n>0$$, $$x_1 \geq x_2 \geq \cdots \geq x_n \geq \cdots ,\lim_{n \rightarrow \infty} x_n =0 $$。
+>
+> 且部份和數列 $$Y_n=\sum_{k=1}^n y_k$$有界，則級數$$\sum_{k=1}^\infty x_k y_k $$ 收斂。
+
+Proof:
+
+* 因為部份和數列$$Y_n$$有界且$$\displaystyle \lim_{n \rightarrow \infty} x_n=0$$, 所以$$\displaystyle \lim_{n \rightarrow \infty}⁡ x_n Y_n=0$$
+* 令$$Y_0=0$$，則$$\forall n \in \mathbb{N},  ~ y_k=Y_k−Y_{k−1} $$
+* 部份和$$\displaystyle  \begin{align} S_n &= \sum_{k=1}^n x_k y_k \\ &=\sum_{k=1}^n x_k (Y_k - Y_{k=1}) \\ &=\sum_{k=1}^n x_k Y_k - \sum_{k=1}^{n-1} x_{k+1} Y_k \\ &= \sum_{k=1}^n x_k Y_k - \sum_{k=1}^{n} x_{k+1} Y_k + x_{n+1}Y_n \\ &= \sum_{k=1}^n (x_k - x_{k+1})Y_k +x_{n+1}Y_n  \end{align}$$
+* 令$$\displaystyle T_n=\sum_{k=1}^n |(x_k−x_{k+1} ) Y_k |$$ ，則$$ \forall n \in \mathbb{N}, ~ T_n \leq T_{n+1} $$
+* 可得 $$\displaystyle T_n \leq M \sum_{k=1}^n (x_k−x_{k+1} ) \leq Mx_1 $$
+* 所以$$\{T_n\}$$為遞增數列且有上界，則依遞增數列的性質可知存在$$T$$ 滿足$$\displaystyle \lim_{n \rightarrow \infty} T_n =T$$，即  $$\displaystyle \sum_{k=1}^\infty |(x_k−x_{k+1} ) Y_k | =T $$
+* 由絕對值審斂法得 $$\displaystyle \sum_{k=1}^\infty (x_k−x_{k+1} ) Y_k =S $$，因此  $$\displaystyle \lim_{n \rightarrow \infty}S_n=\lim_{n \rightarrow \infty}\sum_{k=1}^\infty (x_k−x_{k+1} ) Y_k+\lim_{n \rightarrow \infty}x_{n+1} Y_n=S $$
+* 所以級數$$\displaystyle \sum_{k=1}^\infty x_k y_k $$  收斂 \(QED\)
 
 ## 比值審斂法\(ratio test\)
 

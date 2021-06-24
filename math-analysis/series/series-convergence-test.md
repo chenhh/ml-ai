@@ -278,11 +278,14 @@ Proof: \($$p>1$$\)
 * 取$$r \ni p>r>1$$，收斂定義得存在$$n_0 \in \mathbb{N} \ ni \forall n \geq n_0, r<|x_n |^{1/n} \Rightarrow 1<r^n<|x_n | $$
 * 取$$n \rightarrow \infty$$得$$\liminf_{n \rightarrow \infty} ⁡|x_n |\geq 1$$，由篩審斂法得級數 $$\sum_{k=1}^\infty x_k $$  發散 \(QED\)
 
+Proof: $$p=1$$
 
+* $$\displaystyle \lim_{n \rightarrow \infty}(1/n)^{1/n}=\lim_{n \rightarrow \infty}⁡ \frac{1}{n^{1/n}}=1$$
+* $$\displaystyle \lim_{n \rightarrow \infty}⁡( \frac{1}{n^2})^{1/n}=\lim_{n \rightarrow \infty} \frac{1}{(n^2 )^{1/n} }=1$$
+* 但級數$$\sum_{k=1}^\infty 1/k$$發散，而級數$$\sum_{k=1}^\infty 1/k^2$$ 收斂。
 
+#### 範例
 
-
-
-
-### 。
+* $$ (1−1/2)^4+(1−1/3)^9+\dots+(1−1/n)^{n^2}+\dots$$收斂。
+* 因為$$p=\lim_{n \rightarrow \infty}⁡ (x_n )^{1/n}=\lim_{n \rightarrow \infty} (1−1/n)^n =1/e<1$$ 所以級數收斂。。
 

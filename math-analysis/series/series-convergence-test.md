@@ -224,6 +224,15 @@ Proof:
 * 由絕對值審斂法得 $$\displaystyle \sum_{k=1}^\infty (x_k−x_{k+1} ) Y_k =S $$，因此  $$\displaystyle \lim_{n \rightarrow \infty}S_n=\lim_{n \rightarrow \infty}\sum_{k=1}^\infty (x_k−x_{k+1} ) Y_k+\lim_{n \rightarrow \infty}x_{n+1} Y_n=S $$
 * 所以級數$$\displaystyle \sum_{k=1}^\infty x_k y_k $$  收斂 \(QED\)
 
+###  Dirichlet審斂法可得交錯級數審斂法
+
+Proof:
+
+* 令序列$$\{x_n\}$$ 滿足$$\forall n \in \mathbb{N}, x_n>0$$, $$x_1 \geq x_2 \geq \ldots,~\lim_{n \rightarrow \infty}⁡ x_n=0 $$
+* 令交錯級數$$ x_1−x_2+x_3−x_4+\dots+(−1)^{n+1} x_n+\dots$$ 與 $$b_1=1, b_2=−1, \dots,b_n=(−1)^{n+1} $$。
+* 則$$\forall n \in \mathbb{N}, ~|B_n |=|b_1+b_2+\dots+b_n |=|1−1+1−1+\dots+(−1)^{n+1} |\leq 1 $$
+* 由Dirichlet審斂法得交錯級數 $$x_1−x_2+x_3−x_4+\dots+(−1)^{n+1} x_n+\dots$$ 收斂 \(QED\)
+
 ## 比值審斂法\(ratio test\)
 
 > $$\displaystyle \forall n \in \mathbb{N}, x_n \neq 0, \lim_{n \rightarrow \infty}⁡|\frac{x_{n+1}}{x_n} | =p$$，則

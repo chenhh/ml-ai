@@ -180,7 +180,26 @@ Proof:
 
 ## 交錯級數審斂法\(alternating series test\)
 
+> 令$$\{x_n \}$$為一非遞增序列，且滿足 $$\forall n, x_n>0, ~ x_1 \geq x_2 \geq \cdots \geq x_n \geq \cdots , \lim_{n \rightarrow \infty}⁡x_n  =0 $$
+>
+> 則交錯級數 $$\displaystyle \sum_{k=1}^\infty (−1)^{k+1} x_k =x_1−x_2+x_3−x_4+\cdots+(−1)^{n+1} x_n+\cdots= S$$收斂。且$$|S−S_n | \leq x_{n+1}  ~\forall n \in \mathbb{N} $$
 
+![&#x4EA4;&#x932F;&#x7D1A;&#x6578;&#x6536;&#x6582;](../../.gitbook/assets/alternatingseriesnumberline-min.png)
+
+Proof:
+
+* 部份和 $$S_{2n}=x_1−x_2+x_3−\cdots−x_{2n−2}+(x_{2n−1}−x_{2n} )=S_{2n−2}+(x_{2n−1}−x_{2n} ) \geq S_{2n−2} $$
+* 因為$$x_n \geq x_{n+1}$$，$$S_{2n}=x_1−(x_2−x_3 )−\cdots−(x_{2n−2}−x_{2n−1} )−x_{2n} \leq x_1 $$
+* 可得數列$$\{S_{2n} \}$$為遞增數列且有上界，則序列$$\{S_{2n}\}$$收斂，令$$\displaystyle \lim_{n \rightarrow \infty} S_{2n}=A \in \mathbb{R} $$。
+* $$S_{2n+1}=x_1−x_2+x_3−\cdots +x_{2n−1}−(x_{2n}−x_{2n+1} )=S_{2n−1}−(x_{2n}−x_{2n+1} ) \leq S_{2n−1} $$
+* $$S_{2n+1}=(x_1−x_2 )+(x_3−x_4 )+\cdots=(x_{2n−1}−x_{2n} )+x_{2n+1}\geq (x_1−x_2 ) $$
+* 所以數列$$\{S_{2n+1} \}$$為遞減數列且有下界，則序列$$\{S_{2n+1} \}$$收斂，令$$\displaystyle \lim_{n \rightarrow \infty}⁡S_{2n+1}=B \in \mathbb{R} $$
+* 因為 $$S_{2n+1}=S_{2n}+x_{2n+1} $$，且$$x_{2n+1} > 0$$
+* 所以 $$S_{2n} \leq S_{2n+1} \Rightarrow A \leq B $$
+* 因為$$0 \leq B−A \leq S_{2n+1}−S_{2n}=x_{2n+1}$$，且由給定條件得$$  \displaystyle \lim_{n \rightarrow \infty} x_n=0 \Rightarrow A=B $$。
+* 令$$S=A=B$$，得$$\displaystyle  \lim_{n \rightarrow \infty} S_{2n} =S=\lim_{n \rightarrow \infty} S_{2n+1} $$
+* 由[數列奇數項與偶數項收斂至同一值，則數列收斂](../sequence/#shu-lie-qi-shu-xiang-yu-ou-shu-xiang-shou-lian-zhi-tong-yi-zhi-ze-shu-lie-shu-lian)得$$\displaystyle \lim_{n \rightarrow \infty} S_n=S$$。
+* 且$$\forall n\in \mathbb{N}, ~|S−S_n | \leq |S_{n+1}−S_n |=x_{n+1} $$ \(QED\)
 
 ## 比值審斂法\(ratio test\)
 

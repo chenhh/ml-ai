@@ -16,7 +16,9 @@
 * 若$$\exists n_0 \in \mathbb{N} \ni |x_n| \leq |y_n|, \forall n \geq n_0$$，則$$\sum_{k=1}^\infty |y_k|$$收斂$$\Rightarrow \sum_{k=1}^\infty |x_k|$$收斂。
 * 若$$\displaystyle \lim_{n \rightarrow \infty} \left|  \frac{x_n}{y_n}\right| = L \in \mathbb{R}, L \neq0$$，則$$\sum_{k=1}^\infty |y_k|$$收斂$$\Leftrightarrow \sum_{k=1}^\infty |x_k|$$收斂。
 * $$f:[1,\infty) \rightarrow \mathbb{R}^{+}$$為遞減函數，$$x_n = f(n)$$，則$$\sum_{k=1}^\infty x_k$$收斂$$\Leftrightarrow$$$$\int_1^\infty f(x)dx$$收斂。
-* $$\forall 0 < x_n \leq y_n$$，若$$\sum_{k=1}^\infty y_k$$收斂$$\Rightarrow \sum_{k=1}^\infty x_k$$收斂。
+* $$\forall n,~ 0 < x_n \leq y_n$$，若$$\sum_{k=1}^\infty y_k$$收斂$$\Rightarrow \sum_{k=1}^\infty x_k$$收斂。
+* $$\forall n,~ 0 < x_n \leq y_n$$, $$\displaystyle \lim_{n \rightarrow \infty}   \frac{x_n}{y_n} = L \in \mathbb{R}, L \neq0$$，則$$\sum_{k=1}^\infty y_k$$收斂$$\Leftrightarrow \sum_{k=1}^\infty x_k$$收斂。
+* $$\forall n, x_n \neq 0, ~ \displaystyle \lim_{n \rightarrow \infty } |\frac{x_{n+1}}{x_n}|=p$$，則$$0 \leq p < 1 \Rightarrow \sum_{k=1}^\infty |x_k|$$收斂。
 
 ## 級數與部份和
 
@@ -89,7 +91,7 @@ proof:
 * 因此若 $$\displaystyle \lim_{n \rightarrow \infty} |ax^k|$$存在，則可得$$\displaystyle \lim_{n \rightarrow \infty} |ax^k|  \geq \lim_{n \rightarrow \infty}|a| = |a| \neq0$$
 * 而由[篩審斂法](series-convergence-test.md)得$$\displaystyle \lim_{n \rightarrow \infty} |ax^k| \neq 0$$，則級數$$\displaystyle  \sum_{k=0}^\infty a\cdot x^k$$發散 \(QED\)
 
-## 交錯級數\(alternative series\)
+## 正項與交錯級數\(positive terms and alternative series\)
 
 > 令$$\{x_n\}_{n \in \mathbb{N}}$$為一數列，
 >

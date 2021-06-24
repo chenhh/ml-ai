@@ -260,6 +260,19 @@ Proof： \($$0≤p<1$$\)
 * 例如 $$\displaystyle \lim_{n \rightarrow \infty}⁡\frac{1/(n+1)}{1/n}=1,~ \lim_{n \rightarrow \infty}⁡\frac{1/(n+1)^2 }{1/n^2}=1$$
 * 級數 $$\sum_{k=1}^\infty 1/k$$  發散，但級數$$\sum_{k=1}^\infty 1/k^2$$ 收斂。
 
+## 根式審斂法\(root test\)
+
+> 令$$\displaystyle \lim_{n \rightarrow \infty}⁡|x_n |^{\frac{1}{n}}  =p$$，則：
+>
+> * 若$$0 \leq p<1$$，則級數$$\sum_{k=1}^\infty x_k$$ 絕對收斂  。
+> * 若$$p>1$$或$$p=\infty$$，則級數$$\sum_{k=1}^\infty x_k$$  發散  。
+> * 若$$p=1$$，則級數$$\sum_{k=1}^\infty x_k$$ 可能發散或收斂\(須用其它審斂法判定\)  。
+
+Proof \($$0≤p<1$$\)
+
+* 若$$0 \leq p<1$$，取$$r \ni p<r<1$$，則依收斂定義存在$$n_0 \in \mathbb{N}  \ni \forall n \geq n_0, |x_n |^{1/n}<r \Rightarrow |x_n |<r^n $$。
+* 因為$$r<1$$，所以幾何級數 $$\sum_{k=n_0}^\infty r^k $$  收斂, 由$$|x_n |<r^n$$ 得級數 $$\sum_{k=n_0}^\infty |x_k | $$收斂，因為有限個元素不影響收斂性，可得$$\sum_{k=1}^\infty |x_k |$$ 收斂 \(QED\)
+
 
 
 

@@ -287,5 +287,18 @@ Proof: $$p=1$$
 #### 範例
 
 * $$ (1−1/2)^4+(1−1/3)^9+\dots+(1−1/n)^{n^2}+\dots$$收斂。
-* 因為$$p=\lim_{n \rightarrow \infty}⁡ (x_n )^{1/n}=\lim_{n \rightarrow \infty} (1−1/n)^n =1/e<1$$ 所以級數收斂。。
+* 因為$$\displaystyle p=\lim_{n \rightarrow \infty}⁡ (x_n )^{1/n}=\lim_{n \rightarrow \infty} (1−1/n)^n =1/e<1$$ 所以級數收斂。
+
+###  比值審斂法可得根式審斂法
+
+> 若$$\{x_n\}$$為正項序列，且 $$\displaystyle \lim_{n \rightarrow \infty}⁡ ⁡\frac{x_{n+1}}{x_n}=A$$，則$$\displaystyle \lim_{n \rightarrow \infty}⁡  {x_n }^{1/n}=A$$
+
+Proof:
+
+* 由數列比值上下界與根式上下界關係得
+* $$\displaystyle \liminf_{n \rightarrow \infty}⁡ ⁡\frac{x_{n+1}}{x_n} \leq \liminf_{n \rightarrow \infty}⁡ {x_n}^{1/n} \leq \limsup_{n \rightarrow \infty}⁡ ⁡{x_n }^{1/n} \leq \limsup_{n \rightarrow \infty}⁡ ⁡\frac{x_{n+1}}{x_n }$$
+* 因此$$\displaystyle \lim_{n \rightarrow \infty}⁡ ⁡\frac{x_{n+1}}{x_n}=A$$，若且唯若$$\displaystyle \liminf_{n \rightarrow \infty}⁡ ⁡\frac{x_{n+1}}{x_n} =\limsup_{n \rightarrow \infty}⁡ ⁡\frac{x_{n+1}}{x_n}=A $$
+* 由三明治定理可得$$\displaystyle \liminf_{n \rightarrow \infty}⁡ (x_n )^{1/n} =\limsup_{n \rightarrow \infty}⁡(x_n )^{1/n} =A$$ 若且唯若 $$\displaystyle \lim_{n \rightarrow \infty}⁡  {x_n }^{1/n}=A$$ \(QED\)
+
+
 

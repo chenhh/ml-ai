@@ -273,6 +273,13 @@ Proof： \($$0≤p<1$$\)
 * 若$$0 \leq p<1$$，取$$r \ni p<r<1$$，則依收斂定義存在$$n_0 \in \mathbb{N}  \ni \forall n \geq n_0, |x_n |^{1/n}<r \Rightarrow |x_n |<r^n $$。
 * 因為$$r<1$$，所以幾何級數 $$\sum_{k=n_0}^\infty r^k $$  收斂, 由$$|x_n |<r^n$$ 得級數 $$\sum_{k=n_0}^\infty |x_k | $$收斂，因為有限個元素不影響收斂性，可得$$\sum_{k=1}^\infty |x_k |$$ 收斂 \(QED\)
 
+Proof: \($$p>1$$\)
+
+* 取$$r \ni p>r>1$$，收斂定義得存在$$n_0 \in \mathbb{N} \ ni \forall n \geq n_0, r<|x_n |^{1/n} \Rightarrow 1<r^n<|x_n | $$
+* 取$$n \rightarrow \infty$$得$$\liminf_{n \rightarrow \infty} ⁡|x_n |\geq 1$$，由篩審斂法得級數 $$\sum_{k=1}^\infty x_k $$  發散 \(QED\)
+
+
+
 
 
 

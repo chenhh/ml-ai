@@ -22,3 +22,11 @@
 >
 > $$\displaystyle  f(x)=f(c)+f^{′}(c)(x−c)+\frac{f^{(2)}  (c)}{2!} (x−c)^2+\dots+ \frac{f^{(n)} (c)}{n!} (x−c)^n+\frac{f^{(n+1)} (\xi)}{n!} (x−\xi)^n (x−c)$$
 
+## Taylor定理Lagrange餘式
+
+> 函數$$f:(a,b) \rightarrow \mathbb{R}$$ 為$$(n+1)$$階可微分的連續函數，記為$$f \in C^{n+1} (a,b) $$。給定 $$c \in (a,b)$$ ，則對於$$ x\in (a,b)$$，存在$$\xi \in (c,x)$$得
+
+> $$\displaystyle  f(x)=f(c)+f^{′}(c)(x−c)+\frac{f^{(2)}  (c)}{2!} (x−c)^2+\dots+ \frac{f^{(n)} (c)}{n!} (x−c)^n+\frac{f^{(n+1)} (\xi)}{(n+1)!}  (x−c)$$
+
+
+

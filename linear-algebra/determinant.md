@@ -63,10 +63,27 @@ proof:
   * $$\det⁡(A)=\det⁡(E_1 )\ldots \det⁡(E_K )$$
   * $$\because \det⁡(E_i ) \neq 0, ~\therefore \det⁡(A) \neq 0$$ \(QED\)
 * 若$$A$$為不可逆矩陣，假設$$A$$經$$K$$次列運算後可得矩陣$$R$$
+
   * $$E_1 E_2 \ldots E_K A=R,  ~ rank(A)<N$$
   * $$R$$至少包含一個零列，即$$\det⁡(R)=0$$
   * $$ \therefore 0=\det⁡(R)=\det⁡(E_1 )  \det⁡(E_2 ) \ldots \det⁡(E_K )  \det⁡(A)$$
   * $$\because \det⁡(E_i ) \neq 0~ \therefore \det⁡(A)=0$$ \(QED\)
 
 
+
+
+
+## 矩陣元素的行列式
+
+> 矩陣$$A,B,C \in F^{M \times N}$$，則
+>
+> * $$\det \begin{bmatrix} A  &B \\ C & D\end{bmatrix}$$不一定等於$$\det(AD - BC)$$或$$\det(A)\det(D) - \det(C)\det(B)$$。
+> * $$\det \begin{bmatrix} A  &B \\ 0 & D\end{bmatrix} = \det(A)\det(B)$$
+> * $$\det \begin{bmatrix} A  &B \\ B & A\end{bmatrix} = \det(A+B)\det(A-B)$$
+
+## Vandermonde矩陣
+
+$$\displaystyle \det \begin{bmatrix}   1 & 1 &\dots & 1 \\ x_1 & x_2 & \dots &x_n \\  x_1^2 & x_2^2 & \dots  & x_n^2 \\    \vdots & \vdots & \vdots & \vdots \\  x_1^{n-1} & x_2^{n-1} & \dots & x_n^{n-1}   \end{bmatrix} = \prod_{1 \leq  i < j \leq n} (x_j - x_i)$$
+
+例如：$$\begin{bmatrix} 1 & 1 & 1\\  a & b& c \\ a^2 & b^2 & c^2  \end{bmatrix} = (b-a) (c-a)(c-b)$$
 

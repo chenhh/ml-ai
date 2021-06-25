@@ -52,9 +52,14 @@
 
 ### 多項式空間\(polynomial space\)
 
-* $$V=F[x] $$為定義在$$F$$上的多項式，degree可為$$n < \infty$$或$$\infty$$。
+* $$V=F[x] $$為定義在$$F$$上的多項式函數，degree可為$$n < \infty$$或$$\infty$$。
 * 向量加法：函數 $$(f+g)(x) = f(x) + g(x)$$。
 * 純量積：$$(c\cdot f)(x) = c \cdot f(x)$$。
+
+### 函數空間\(function space\)
+
+* $$V= F(X,Y)$$為定義域在集合$$X$$，值域在集合$$Y$$的函數集合。
+* 向量加法與純量積同多項式空間。
 
 
 

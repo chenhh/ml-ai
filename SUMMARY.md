@@ -79,10 +79,11 @@
 
 ## 線性代數 <a id="linear-algebra"></a>
 
-* [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
-* [反矩陣\(inverse matrix\)](linear-algebra/fan-ju-zhen.md)
-* [行列式\(determinant\)](linear-algebra/determinant.md)
-* [古典伴隨矩陣\(classical adjoint matrix\)](linear-algebra/classical-adjoint-matrix.md)
+* [向量空間](linear-algebra/vector-space.md)
+* [矩陣基本計算](linear-algebra/basic-matrix-computation/README.md)
+  * [反矩陣\(inverse matrix\)](linear-algebra/basic-matrix-computation/fan-ju-zhen.md)
+  * [行列式\(determinant\)](linear-algebra/basic-matrix-computation/determinant.md)
+  * [古典伴隨矩陣\(classical adjoint matrix\)](linear-algebra/basic-matrix-computation/classical-adjoint-matrix.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

@@ -54,3 +54,7 @@ $$f(x)=\left\{  \begin{align}& 1,& x < 1 \\ &2 ,& x=1\\& -\frac{1}{2},& x >1\end
 
 
 
+$$f(x) = \left \{ \begin{align} &\sin (\frac{1}{x}),& x \neq 0\\ &1, &x = 0  \end{align}  \right.$$
+
+
+

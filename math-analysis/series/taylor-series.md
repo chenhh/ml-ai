@@ -12,6 +12,14 @@
 
 ## Taylor級數
 
+> 函數$$f:(a,b) \rightarrow \mathbb{R}$$ 為$$(n+1)$$階可微分的連續函數，給定$$c \in (a,b)$$，若Taylor定理中的餘式$$\displaystyle \lim_{ n \rightarrow \infty} R_n(x)=0$$時，得Taylor級數：
+>
+> $$\displaystyle f(x)=\sum_{k=0}^\infty \frac{f^{(k)}(c)}{k!}(x-c)^k=f(c)+f^{'}(c)(x-c)+\frac{f^{(2)}(c)}{2!}(x-c)^2 + \dots + \frac{f^{(n)}(c)}{n!}(x-c)^n+\dots$$
+
+## Maclaurin級數
+
+> 當Taylor級數c=0時，稱為Maclaurin級數 。$$\displaystyle f(x)=\sum_{k=0}^\infty \frac{f^{(k)}(c)}{k!}(x-c)^k=f(c)+f^{'}(c)(x-c)+\frac{f^{(2)}(c)}{2!}(x-c)^2 + \dots + \frac{f^{(n)}(c)}{n!}(x-c)^n+\dots$$
+
 
 
 ## Taylor定理積分餘式\(Taylor's theorem with integral remainder\)

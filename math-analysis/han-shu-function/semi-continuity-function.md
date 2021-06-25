@@ -31,3 +31,12 @@
 
 ![&#x51FD;&#x6578;&#x4E0A;&#x9023;&#x7E8C;](../../.gitbook/assets/upper-semi-conti-min.png)
 
+### 左、右、上半、下半均不連續的函數
+
+$$f(x)=\left\{  \begin{align}& x^2 -4,& x < 1 \\ &-1 ,& x=1\\& -\frac{1}{2}x+1,& x >1\end{align} \right.$$
+
+* 取$$\epsilon = 0.4$$，不存在$$\delta >0 \ni \forall x \in (1 -\delta, 1+\delta), f(x)\leq f(1)+0.4=0.6$$
+* 取$$\epsilon = 0.4$$，不存在$$\delta >0 \ni \forall x \in (1 -\delta, 1+\delta), f(x)\geq f(1)-0.4=-1.6$$
+
+![&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x5747;&#x4E0D;&#x9023;&#x7E8C;&#x7684;&#x51FD;&#x6578;](../../.gitbook/assets/all-not-conti.png)
+

@@ -232,6 +232,22 @@ proof:
 
 ![&#x593E;&#x64E0;&#x5B9A;&#x7406;](../../.gitbook/assets/squeeze-thm-min.png)
 
+### 正弦函數與角度趨近於0的比值為1
+
+> $$\displaystyle \lim_{\theta \rightarrow 0} \frac{\sin \theta}{\theta}= 1$$
+>
+> 註：因為為0/0的不定型，可用L'Hospital法則得$$\displaystyle \lim_{\theta \rightarrow 0} \frac{\sin \theta}{\theta} =\lim_{\theta \rightarrow 0} \frac{\cos \theta}{1}= 1$$
+
+proof:
+
+* 面積三角形OAP &lt; 扇形OAP &lt; 三角形OAT
+* 可得$$\frac{\sin \theta}{2} < \pi \frac{\theta}{2\pi}  < \frac{\tan \theta}{2}$$
+* 同除$$\frac{\sin \theta}{2}$$得 $$1 < \frac{\theta}{\sin \theta}< \frac{1}{\cos \theta}$$
+* 取倒數得 $$ 1 > \frac{\sin \theta}{\theta} > \cos \theta$$
+* 取極限得 $$1 > \lim \frac{\sin \theta}{\theta} >  \lim \cos\theta=1$$ \(QED\)
+
+![&#x6B63;&#x5F26;&#x51FD;&#x6578;&#x8207;&#x89D2;&#x5EA6;&#x7684;&#x6BD4;&#x503C;](../../.gitbook/assets/sin_arc_ratio-min.png)
+
 ### 極限為0的函數與極限值有限的函數乘法
 
 > $$(X,d)$$為度量空間，$$f,g:X \rightarrow \mathbb{R}$$為二函數，$$c \in X, M>0$$滿足

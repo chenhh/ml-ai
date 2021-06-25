@@ -79,7 +79,8 @@
 
 ## 線性代數 <a id="linear-algebra"></a>
 
-* [向量空間](linear-algebra/vector-space.md)
+* [向量空間](linear-algebra/vector-space/README.md)
+  * [子空間\(subspace\)](linear-algebra/vector-space/zi-kong-jian-subspace.md)
 * [矩陣基本計算](linear-algebra/basic-matrix-computation/README.md)
   * [反矩陣\(inverse matrix\)](linear-algebra/basic-matrix-computation/fan-ju-zhen.md)
   * [行列式\(determinant\)](linear-algebra/basic-matrix-computation/determinant.md)

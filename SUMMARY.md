@@ -82,6 +82,7 @@
 * [矩陣基本計算](linear-algebra/basic-matrix-computation.md)
 * [反矩陣\(inverse matrix\)](linear-algebra/fan-ju-zhen.md)
 * [行列式\(determinant\)](linear-algebra/determinant.md)
+* [古典伴隨矩陣\(classical adjoint matrix\)](linear-algebra/classical-adjoint-matrix.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

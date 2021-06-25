@@ -18,7 +18,7 @@
 
 ## Maclaurin級數
 
-> 當Taylor級數c=0時，稱為Maclaurin級數 。$$\displaystyle f(x)=\sum_{k=0}^\infty \frac{f^{(k)}(c)}{k!}(x-c)^k=f(c)+f^{'}(c)(x-c)+\frac{f^{(2)}(c)}{2!}(x-c)^2 + \dots + \frac{f^{(n)}(c)}{n!}(x-c)^n+\dots$$
+> 當Taylor級數c=0時，稱為Maclaurin級數 。$$\displaystyle f(x)=\sum_{k=0}^\infty \frac{f^{(k)}(0)}{k!}x^k=f(0)+f^{'}(0)x+\frac{f^{(2)}(0)}{2!}x^2 + \dots + \frac{f^{(n)}(0)}{n!}x^n+\dots$$
 
 
 

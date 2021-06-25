@@ -31,6 +31,7 @@
   * [函數的極限](math-analysis/han-shu-function/limit-of-function.md)
   * [實值函數的左、右極限](math-analysis/han-shu-function/left-right-hand-limit-of-real-valued-function.md)
   * [連續函數](math-analysis/han-shu-function/continuous-function.md)
+  * [半連續函數\(semi-continuity function\)](math-analysis/han-shu-function/semi-continuity-function.md)
   * [三角函數](math-analysis/han-shu-function/trigonometric-function.md)
 * [度量空間 \(metric space\)](math-analysis/metric-space/README.md)
   * [點拓樸集](math-analysis/metric-space/point-topology.md)

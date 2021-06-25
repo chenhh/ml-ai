@@ -50,11 +50,15 @@ $$f(x)=\left\{  \begin{align}& x^2 -4,& x < 1 \\ &-1 ,& x=1\\& -\frac{1}{2}x+1,&
 
 $$f(x)=\left\{  \begin{align}& 1,& x < 1 \\ &2 ,& x=1\\& -\frac{1}{2},& x >1\end{align} \right.$$
 
-則$$f$$在$$x=1$$上半連續，因為$$\forall  x \in N(1)$$，所有的函數值都小於2。$$\forall \epsilon >0 $$，$$\exists x \in N(1) \ni f(x) \leq f(1) + \epsilon$$。
+則$$f$$在$$x=1$$上半連續（但左、右不連續），因為$$\forall  x \in N(1)$$，所有的函數值都小於2。$$\forall \epsilon >0 $$，$$\exists x \in N(1) \ni f(x) \leq f(1) + \epsilon$$。
 
 
 
 $$f(x) = \left \{ \begin{align} &\sin (\frac{1}{x}),& x \neq 0\\ &1, &x = 0  \end{align}  \right.$$
+
+在$$f$$在$$x=0$$上半連續（左、右極限不存在）。因為$$\sin(\frac{1}{x}) \leq 1, \forall x \in \mathbb{R}$$，所以在$$x=0$$的鄰域均小於1。
+
+![&#x51FD;&#x6578;&#x5728;x=0&#x632F;&#x76EA;&#xFF0C;&#x6975;&#x9650;&#x4E0D;&#x5B58;&#x5728;](../../.gitbook/assets/sin-inv-min.png)
 
 
 

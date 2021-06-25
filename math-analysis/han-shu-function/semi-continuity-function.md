@@ -16,18 +16,24 @@
 
 > 由定義域單側左（右）側逼近時，可從值域上、下方同時逼近值域。
 >
-> * 函數$$f$$在點$$c$$下半連續：$$\forall \epsilon>0~ \exists \delta>0 \ni \forall x \in (c−\delta,c+\delta),f(c)−\epsilon \leq  f(x) $$
-> * 函數$$f$$在點$$c$$上半連續： $$\forall \epsilon>0 ~\exists \delta>0 \ni \forall x \in (c−\delta,c+\delta), f(x)\leq f(c)+\epsilon $$
+> * 函數$$f$$在點$$c$$下半連續\(lower semi-continuous\)：$$\forall \epsilon>0~ \exists \delta>0 \ni \forall x \in (c−\delta,c+\delta),f(c)−\epsilon \leq  f(x) $$
+> * 函數$$f$$在點$$c$$上半連續\(upper semi-continuous\)： $$\forall \epsilon>0 ~\exists \delta>0 \ni \forall x \in (c−\delta,c+\delta), f(x)\leq f(c)+\epsilon $$
 >
 > 由定義域左（右）側同時逼近時，可從值域單側上（下）方逼近值域。
+>
+> 度量空間的定義：
+>
+> 給定函數$$f: X \rightarrow \mathbb{R} \cup \{-\infty, \infty\}$$，則
+>
+> * 在點$$x_0$$上半連續，若$$f(x_0) > -\infty$$，則$$\forall \epsilon > 0, \exists \text{ neightborhood } N(x_0)\ni f(x) \leq f(x_0)+ \epsilon, \forall x \in N(x_0)$$
 
 ![&#x51FD;&#x6578;&#x5728;&#x9EDE;2&#x9023;&#x7E8C;\(&#x5DE6;&#x3001;&#x53F3;&#x9023;&#x7E8C;&#xFF0C;&#x4E14;&#x4E0A;&#x3001;&#x4E0B;&#x534A;&#x9023;&#x7E8C;\)](../../.gitbook/assets/conti-func-min.png)
 
-![&#x51FD;&#x6578;&#x5DE6;&#x9023;&#x7E8C;](../../.gitbook/assets/left-conti-min.png)
+![&#x51FD;&#x6578;&#x5DE6;&#x9023;&#x7E8C;\(&#x540C;&#x6642;&#x4E0B;&#x534A;&#x9023;&#x7E8C;\)](../../.gitbook/assets/left-conti-min.png)
 
-![&#x51FD;&#x6578;&#x53F3;&#x9023;&#x7E8C;](../../.gitbook/assets/right-conti-min.png)
+![&#x51FD;&#x6578;&#x53F3;&#x9023;&#x7E8C;\(&#x540C;&#x6642;&#x4E0A;&#x534A;&#x9023;&#x7E8C;\)](../../.gitbook/assets/right-conti-min.png)
 
-![&#x51FD;&#x6578;&#x4E0B;&#x9023;&#x7E8C;](../../.gitbook/assets/lower-semi-conti-min.png)
+![&#x51FD;&#x6578;&#x4E0B;&#x9023;&#x7E8C;\(&#x540C;&#x6642;&#x5DE6;&#x9023;&#x7E8C;\)](../../.gitbook/assets/lower-semi-conti-min.png)
 
 ![&#x51FD;&#x6578;&#x4E0A;&#x9023;&#x7E8C;](../../.gitbook/assets/upper-semi-conti-min.png)
 

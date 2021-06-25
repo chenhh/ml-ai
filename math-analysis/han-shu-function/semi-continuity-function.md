@@ -46,3 +46,11 @@ $$f(x)=\left\{  \begin{align}& x^2 -4,& x < 1 \\ &-1 ,& x=1\\& -\frac{1}{2}x+1,&
 
 ![&#x4E0A;&#x4E0B;&#x5DE6;&#x53F3;&#x5747;&#x4E0D;&#x9023;&#x7E8C;&#x7684;&#x51FD;&#x6578;](../../.gitbook/assets/all-not-conti.png)
 
+### 上半連續、但左、右不連續的函數
+
+$$f(x)=\left\{  \begin{align}& 1,& x < 1 \\ &2 ,& x=1\\& -\frac{1}{2},& x >1\end{align} \right.$$
+
+則$$f$$在$$x=1$$上半連續，因為$$\forall  x \in N(1)$$，所有的函數值都小於2。$$\forall \epsilon >0 $$，$$\exists x \in N(1) \ni f(x) \leq f(1) + \epsilon$$。
+
+
+

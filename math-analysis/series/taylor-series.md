@@ -10,6 +10,10 @@
 * Taylor定理Cauchy餘式推廣均值定理  。
 * Taylor定理Lagrange餘式推廣均值定理。
 
+## Taylor級數
+
+
+
 ## Taylor定理積分餘式\(Taylor's theorem with integral remainder\)
 
 > 函數$$f:(a,b) \rightarrow \mathbb{R}$$ 為$$(n+1)$$階可微分的連續函數，記為$$f \in C^{n+1} (a,b) $$。給定 $$c \in (a,b)$$ 可得Taylor定理積分餘式：

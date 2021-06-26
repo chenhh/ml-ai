@@ -68,15 +68,3 @@ Proof:
 * $$\forall x \in ker⁡(B) \Rightarrow 0=Bx=PAx \Rightarrow Ax=P^{−1} \cdot 0=0 \Rightarrow x\in ker⁡(A) \therefore ker⁡(B)\subseteq ker⁡(A)$$\)
 * 可得$$ker(A)  =ker(B)$$ \(QED\)
 
-
-
-
-
-
-
-
-
-
-
-
-

@@ -81,6 +81,7 @@
 
 * [向量空間](linear-algebra/vector-space/README.md)
   * [子空間\(subspace\)](linear-algebra/vector-space/zi-kong-jian-subspace.md)
+  * [和空間\(sum space\)](linear-algebra/vector-space/sum-space.md)
 * [矩陣基本計算](linear-algebra/basic-matrix-computation/README.md)
   * [反矩陣\(inverse matrix\)](linear-algebra/basic-matrix-computation/fan-ju-zhen.md)
   * [行列式\(determinant\)](linear-algebra/basic-matrix-computation/determinant.md)

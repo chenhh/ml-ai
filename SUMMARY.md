@@ -84,6 +84,8 @@
   * [和空間\(sum space\)](linear-algebra/vector-space/sum-space.md)
   * [基本子空間\(fundamental subspace\)](linear-algebra/vector-space/fundamental-subspace.md)
   * [生成空間\(sapping space\)](linear-algebra/vector-space/sapping-space.md)
+  * [基底與維度\(basis and dimension\)](linear-algebra/vector-space/basis-and-dimension.md)
+  * [獨立子空間\(independent subspace\)](linear-algebra/vector-space/independent-subspace.md)
 * [矩陣基本計算](linear-algebra/basic-matrix-computation/README.md)
   * [反矩陣\(inverse matrix\)](linear-algebra/basic-matrix-computation/fan-ju-zhen.md)
   * [行列式\(determinant\)](linear-algebra/basic-matrix-computation/determinant.md)

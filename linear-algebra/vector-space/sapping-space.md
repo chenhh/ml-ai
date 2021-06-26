@@ -70,6 +70,22 @@
 * 若$$0 \in S$$，則$$S$$為線性相依集合，因為$$1\cdot 0=0$$。
 * 若$$S$$為線性獨立集合，則$$0 \notin S$$。
 
+## Wronskian matrix
+
+> 令$$C^{(n−1) } (a,b)$$為所有定義在開區間$$(a,b)$$上的$$n-1$$次可微分函數形成的集合。且$$C^{(n−1) } (a,b)$$為向量空間。
+>
+> 令函數$$f_1 , f_2, \dots , f_n \in C^{(n-1)}(a,b)$$，定義矩陣$$W$$如下：
+>
+> $$W(x) = \det \begin{bmatrix} f_1(x) & \dots & f_n(x) \\  f_1^{(1)}(x) & \dots & f_n^{(1)}(x) \\   \vdots & \vdots & \vdots \\   f_1^{(n-1)}(x) & \dots & f_n^{(n-1)}(x) \end{bmatrix}$$
+>
+> 若存在$$x_0 \in (a,b) \ni W(x) \neq 0$$時，則$$f_1, f_2, \dots, f_n$$線性獨立。
+>
+> 註：仍存在$$W(x)=0$$，但$$f_1, f_2, \dots, f_n$$為線性獨立的點。
+
+
+
+
+
 
 
 

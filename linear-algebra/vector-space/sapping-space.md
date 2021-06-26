@@ -11,5 +11,14 @@
 > * 註：$$span(\emptyset)=\{0\}$$。
 > * $$span(S)$$為使用集合內元素任意線性組合可得到所有結果的集合。
 
+#### 範例
+
+* $$span((1,0))=\{x(1,0)|x \in \mathbb{R}\} $$ \(x-axis\)
+* $$span((0,1))=\{y(0,1)|y \in \mathbb{R} \} $$ \(y-axis\)
+* $$span((1,0),(0,1))=\{x(0,1)+y(1,0)|x,y \in \mathbb{R}= \mathbb{R}^2\} $$
+* $$span((2,0),(0,2))=\{x(0,2)+y(2,0)|x,y \in \mathbb{R}=\mathbb{R}^2\} $$
+
+
+
 
 

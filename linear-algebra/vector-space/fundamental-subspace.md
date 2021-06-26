@@ -49,6 +49,11 @@ proof :
 > * $$ker⁡(A)=ker⁡(B)  $$
 
 > 因為$$RS(A)$$為$$A$$中列向量任意線性組合形成的空間，而$$B$$可由$$A$$經過基本列運算後得出，即$$B$$可由$$A$$的列向量之線性組合得到，因此$$RS(B)$$與$$RS(A)$$可生成相同空間，即$$RS(A)=RS(B)$$。
+>
+> 矩陣$$A,B \in F^{M\times N}$$ 兩者行等價（即A的行\(column\)經過基本行運算後可得到B，存在可逆矩陣$$Q \in F^{N \times N} \ni B=AQ$$\)，則
+>
+> * $$CS(A)=CS(B)  $$
+> * $$Lker⁡(A)=Lker⁡(B)  $$
 
 Proof:
 
@@ -62,6 +67,8 @@ Proof:
 * $$x \in ker⁡(A)\Rightarrow Ax=0 \Rightarrow Bx=PAx=P \cdot 0=0 \Rightarrow x \in ker⁡(B), \therefore ker⁡(A)\subseteq ker⁡(B) $$
 * $$\forall x \in ker⁡(B) \Rightarrow 0=Bx=PAx \Rightarrow Ax=P^{−1} \cdot 0=0 \Rightarrow x\in ker⁡(A) \therefore ker⁡(B)\subseteq ker⁡(A)$$\)
 * 可得$$ker(A)  =ker(B)$$ \(QED\)
+
+
 
 
 

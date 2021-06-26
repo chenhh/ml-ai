@@ -18,6 +18,12 @@
 * $$span((1,0),(0,1))=\{x(0,1)+y(1,0)|x,y \in \mathbb{R}= \mathbb{R}^2\} $$
 * $$span((2,0),(0,2))=\{x(0,2)+y(2,0)|x,y \in \mathbb{R}=\mathbb{R}^2\} $$
 
+### 生成空間為子空間
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的線性組合，$$S \subseteq V$$，則$$span(S)$$為$$V$$的子空間。
+>
+> 若$$W$$為$$V$$的子空間，且$$S \subseteq W$$，則$$span(S) \subseteq W$$。
+
 
 
 

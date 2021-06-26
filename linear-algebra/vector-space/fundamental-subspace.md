@@ -28,6 +28,23 @@ $$Lker(A) =\{ x \in F^{1 \times M} | xA=0\} \subseteq F^{1 \times M}$$
 
 由定義與上圖可知$$ker(A), Lker(A)$$是定義在線性轉換$$A$$的定義域$$V$$。$$RS(A), CS(A)$$是定義在線性轉換$$A$$的值域$$W$$。
 
+### 列、行、核、左核空間為子空間
+
+> * $$RS(A)$$為$$F^{1 \times N}$$的子空間。 （矩陣$$A$$中列的任意線性組合必定為$$RS(A)$$的元素）
+> * $$CS(A)$$為$$F^{1\times M}$$的子空間。（矩陣$$A$$中行的任意線性組合必定為$$CS(A)$$的元素）
+> * $$ker(A)$$為$$F^{N \times 1}$$的子空間。（$$\{x \in F^{N \times 1}|Ax=0\}$$的任意線性組合為$$ker(A)$$的元素）
+> * $$Lker(A)$$為$$F^{1 \times M}$$的子空間。
+
+proof :
+
+* $$RS(A)$$與$$CS(A)$$因為其中任意向量的線性組合必定仍在同空間中，所以為子空間。
+* 因為 $$ker⁡(A) \subseteq F^{N×1}$$且$$ker⁡(A) \neq \emptyset$$ \(至少存在$$x=0$$\)
+* 所以$$\forall x_1,x_2 \in ker⁡(A), a,b \in F, Ax_1=0 and Ax_2=0  $$可得 $$A(a x_1+bx_2 )=aAx_1+bAx_2=a⋅0+b⋅0=0 \in ker⁡(A)$$ \(QED\).
+
+
+
+
+
 
 
 

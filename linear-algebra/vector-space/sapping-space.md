@@ -43,12 +43,40 @@
 >
 > 即$$span(S_1) + span(S_2) = span(S_1 \cup S_2)$$
 
+### 行空間與列空間分別由矩陣的行與列生成
+
 給定矩陣$$A \in F^{M \times N}$$，則：
 
 * $$\begin{align} CS(A)  & = \{ Ax | x \in F^{N \times 1}\} \\ & = \begin{bmatrix} A_{:1} & \dots & A_{:N}\end{bmatrix} \begin{bmatrix}x_1 \\ \vdots \\ x_N \end{bmatrix} \\ & = \{x_1 A_{:1} + \dots + x_N A_{:N}\} \\ & = span(\{ A_{:1}, \dots ,A_{:N}\}) \end{align}$$
 * 所以矩陣$$A$$的column　space　$$CS(A)$$為矩陣$$A$$的行向量所生成的空間。
 * $$\begin{align} RS(A)  & = \{ xA | x \in F^{1 \times M}\} \\ & = \begin{bmatrix} x_1 & \dots & x_M\end{bmatrix} \begin{bmatrix} A_{1:} \\  \vdots \\ A_{M:} \end{bmatrix} \\ &= \{ x_1 A_{1:} + \dots + x_M A_{M:}\} \\ & = span(\{A_{1:}, \dots, A_{M:}\}) \end{align}$$
 * 所以矩陣$$A$$的row　space　$$RS(A)$$為矩陣$$A$$的列向量所生成的空間。
+
+## 線性獨立集\(linear independent set\)
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$S \subseteq V$$。
+>
+> 令$$x_1, x_2, \dots , x_k \in S, ~~c_1, c_2, \dots, c_k \in F$$，若存在不全部為0的$$c_1,c_2, \dots, c_k$$使得$$c_1 x_1 + \dots + c_kx_k=0$$，則稱$$S$$為線性相依集。
+>
+> 若$$S$$不為線性相依性，則$$S$$為線性獨立集，可得$$c_1 x_1 + c_2 x_2 + \dots +c_k x_k = 0 \Leftrightarrow c_1 = c_2  = \dots = c_k = 0$$。
+
+* 線性相依的直觀意義即$$x_1,x_2,\dots,x_k$$ 中的某些向量為其它向量的線性組合。
+* 因此線性獨立指集合中的任一向量皆非其它向量的線性組合。
+
+### 線性獨立集的性質
+
+* $$S_1 \subseteq S_2$$，若$$S_2$$ 為線性獨立集合，則$$S_1$$也為線性獨立集合。
+* $$S_1 \subseteq S_2$$，若$$S_1$$為線性相依集合，則$$S_2$$ 也為線性相依集合。
+* 若$$0 \in S$$，則$$S$$為線性相依集合，因為$$1\cdot 0=0$$。
+* 若$$S$$為線性獨立集合，則$$0 \notin S$$。
+
+
+
+
+
+
+
+
 
 
 

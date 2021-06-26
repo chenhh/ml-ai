@@ -24,5 +24,11 @@ $$ker(A) = \{x \in F^{N \times 1} | Ax =0 \} \subseteq F^{N \times 1}$$
 
 $$Lker(A) =\{ x \in F^{1 \times M} | xA=0\} \subseteq F^{1 \times M}$$
 
+![&#x57FA;&#x672C;&#x5B50;&#x7A7A;&#x9593;&#x7684;&#x95DC;&#x4FC2;](../../.gitbook/assets/fundamental_space_mapping-min.png)
+
+由定義與上圖可知$$ker(A), Lker(A)$$是定義在線性轉換$$A$$的定義域$$V$$。$$RS(A), CS(A)$$是定義在線性轉換$$A$$的值域$$W$$。
+
+
+
 
 

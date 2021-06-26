@@ -43,6 +43,17 @@
 >
 > 即$$span(S_1) + span(S_2) = span(S_1 \cup S_2)$$
 
+給定矩陣$$A \in F^{M \times N}$$，則：
+
+* $$\begin{align} CS(A)  & = \{ Ax | x \in F^{N \times 1}\} \\ & = \begin{bmatrix} A_{:1} & \dots & A_{:N}\end{bmatrix} \begin{bmatrix}x_1 \\ \vdots \\ x_N \end{bmatrix} \\ & = \{x_1 A_{:1} + \dots + x_N A_{:N}\} \\ & = span(\{ A_{:1}, \dots ,A_{:N}\}) \end{align}$$
+* 所以矩陣$$A$$的column　space　$$CS(A)$$為矩陣$$A$$的行向量所生成的空間。
+* $$\begin{align} RS(A)  & = \{ xA | x \in F^{1 \times M}\} \\ & = \begin{bmatrix} x_1 & \dots & x_M\end{bmatrix} \begin{bmatrix} A_{1:} \\  \vdots \\ A_{M:} \end{bmatrix} \\ &= \{ x_1 A_{1:} + \dots + x_M A_{M:}\} \\ & = span(\{A_{1:}, \dots, A_{M:}\}) \end{align}$$
+* 所以矩陣$$A$$的row　space　$$RS(A)$$為矩陣$$A$$的列向量所生成的空間。
+
+
+
+
+
 
 
 

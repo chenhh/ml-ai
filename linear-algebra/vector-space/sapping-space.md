@@ -6,7 +6,7 @@
 
 ## 生成空間\(spanning space\)
 
-> $$(V, +, \cdot)$$為定義在體$$F$$的線性組合，$$S \subseteq V$$，定義生成空間$$span(S)=\{ v| v \text{ is linear combination of S}\}$$。
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，$$S \subseteq V$$，定義生成空間$$span(S)=\{ v| v \text{ is linear combination of S}\}$$。
 >
 > * 註：$$span(\emptyset)=\{0\}$$。
 > * $$span(S)$$為使用集合內元素任意線性組合可得到所有結果的集合。
@@ -20,9 +20,32 @@
 
 ### 生成空間為子空間
 
-> $$(V, +, \cdot)$$為定義在體$$F$$的線性組合，$$S \subseteq V$$，則$$span(S)$$為$$V$$的子空間。
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，$$S \subseteq V$$，則$$span(S)$$為$$V$$的子空間。
 >
 > 若$$W$$為$$V$$的子空間，且$$S \subseteq W$$，則$$span(S) \subseteq W$$。
+
+直觀的解釋為$$span(S)$$為由集合$$S$$生成的任意線性組合向量仍是$$span(S)$$的元素，因此$$span(S)$$為$$V$$的子空間。
+
+## 生成集\(spanning set\)
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，$$S \subseteq V$$，若$$span(S)=V$$，則稱集合$$S$$生成$$V$$，稱$$S$$為$$V$$的生成集合。
+
+* 若$$S_1 \subseteq S_2$$，則$$span(S_1) \subseteq span(S_2)$$。
+* $$S \subseteq span(S)$$。
+* $$span(S_1 \cap S_2 ) \subseteq span(S_1) \cap span(S_2)$$。
+* $$span(S_1 \cup S_2) \supseteq span(S_1) \cup span(S_2)$$。
+
+### 和空間與生成集
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，$$S_1, S_2 \subseteq V$$。
+>
+> 若$$W_1 = span(S_1), W_2 = span(S_2)$$，則和空間$$W_1 + W_2 = span(S_1 \cup S_2)$$。
+>
+> 即$$span(S_1) + span(S_2) = span(S_1 \cup S_2)$$
+
+
+
+
 
 
 

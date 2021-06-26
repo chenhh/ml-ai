@@ -92,7 +92,8 @@ proof（反證法）：
 * $$c1f_1^{(n-1)} + \dots + c_nf_n^{(n-1)}=0$$
 * 整理得矩陣如下：
 * $$\begin{bmatrix} f_1(x) & \dots & f_n(x) \\  f_1^{(1)}(x) & \dots & f_n^{(1)}(x) \\   \vdots & \vdots & \vdots \\   f_1^{(n-1)}(x) & \dots & f_n^{(n-1)}(x) \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix} = \begin{bmatrix} 0 \\0 \\ \vdots \\ 0 \end{bmatrix} \Rightarrow A(x)y = 0$$
-* 
+* 則$$A(x)y=0$$在線性相依時有非0解，$$\forall x \in (a,b)$$
+
 
 
 

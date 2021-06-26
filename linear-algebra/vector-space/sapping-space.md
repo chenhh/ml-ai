@@ -82,6 +82,19 @@
 >
 > 註：仍存在$$W(x)=0$$，但$$f_1, f_2, \dots, f_n$$為線性獨立的點。
 
+proof（反證法）：
+
+* 若$$f_1, f_2, \dots, f_n$$線性相依，則存在$$c_1, c_2, \dots, c_n$$不全部為0使得$$c1f_1 + \dots + c_nf_n=0$$。
+* 將上式微分$$n-1$$次可得下列式子：
+* $$c1f_1^{(1)} + \dots + c_nf_n^{(1)}=0$$
+* $$c1f_1^{(2)} + \dots + c_nf_n^{(2)}=0$$
+* $$\vdots$$
+* $$c1f_1^{(n-1)} + \dots + c_nf_n^{(n-1)}=0$$
+* 整理得矩陣如下：
+* $$\begin{bmatrix} f_1(x) & \dots & f_n(x) \\  f_1^{(1)}(x) & \dots & f_n^{(1)}(x) \\   \vdots & \vdots & \vdots \\   f_1^{(n-1)}(x) & \dots & f_n^{(n-1)}(x) \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix} = \begin{bmatrix} 0 \\0 \\ \vdots \\ 0 \end{bmatrix} \Rightarrow A(x)y = 0$$
+* 
+
+
 
 
 

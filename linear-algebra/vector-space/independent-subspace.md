@@ -52,6 +52,22 @@ $$V=\mathbb{R}^3$$
 * $$W_3\cap (W_1+W_2 )=\{0\}$$
 * 所以$$V=W_1 \oplus W_2 \oplus W_3$$
 
+### 任何一個方陣必可表示成一個對稱矩陣與斜對稱矩陣之和
+
+* $$V \in F^{N \times N}$$
+* $$W_1=\{A \in V|A^{\top}=A\}$$
+* $$W_2=\{A \in V|A^{\top}=−A\}$$
+* 則$$W_1,W_2$$ 為$$V$$的子空間，且$$V=W_1 \oplus W_2$$
+  * $$V=W_1+W_2    $$
+  * $$\forall A \in V, A=\frac{A+A^{\top}}{2}+\frac{A−A^{\top}}{2}$$
+  * 因為$$\left( \frac{(A+A^\top}{2}\right)^{\top}=\frac{A^\top+A}{2} \in W_1$$，$$\left( \frac{(A-A^\top}{2}\right)^{\top}=\frac{A^\top-A}{2} \in W_2$$
+  * 所以$$A \in W_1+W_2    $$
+  * 而$$\forall A \in W_1 \cap W_2$$，可得$$A \in W_1$$且$$ A \in W_2    $$
+  * 即同時滿足$$A^\top=A$$且$$A^\top=−A$$，可得$$A=−A \Rightarrow 2A=0 \Rightarrow A=0 $$
+  * 所以$$W_1 \cap W_2=\{0\}$$
+
+
+
 
 
 ### 

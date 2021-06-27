@@ -33,9 +33,32 @@ $$K \geq 3$$時，兩兩獨立未必保證獨立子空間。
 > 2. 令$$w_i \in W_i, \forall i$$，若$$w_1+w_2+\dots + w_k=0$$，則$$w_1=w_2=\dots =w_k=0$$
 > 3. $$\dim(W_1+W_2+\dots+W_k) =\dim(W_1)+\dim(W_2)+\dots + \dim(W_k)$$
 
-註：非獨立子空間的和空間維度為$$\dim(W_1 +W_2) = \dim(W_1) + \dim(W_2) - \dim(W_1 \cap W_2)$$。而獨立子空間$$W_1 \cap W_2 = \{0\}$$，因此$$\dim(W_1 \cap W_2) = 0$$。
+註：非獨立子空間的[和空間維度](sum-space.md#he-kong-jian-de-wei-du)為$$\dim(W_1 +W_2) = \dim(W_1) + \dim(W_2) - \dim(W_1 \cap W_2)$$。而獨立子空間$$W_1 \cap W_2 = \{0\}$$，因此$$\dim(W_1 \cap W_2) = 0$$。
 
 ## 直和\(direct sum\)
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，令$$W_1, W_2, \dots, W_k$$為$$V$$的獨立子空間。若$$V=W_1 +W_2 + \dots + W_k$$為和空間，則稱$$W_1, W_2, \dots, W_k$$形成$$V$$的直和，記為$$V = W_1 \oplus W_2 \oplus \dots \oplus W_k$$。
+
+### 立體空間為x、y、z軸的直和
+
+$$V=\mathbb{R}^3$$
+
+* $$W_1=\{(x,0,0)|x \in \mathbb{R}\}=span\{(1,0,0)\} $$
+* $$W_2=\{(0,y,0|y \in \mathbb{R}\}=span\{(0,1,0)\} $$
+* $$W_3=\{(0,0,z)|z \in \mathbb{R}\}=span\{(0,0,1)\} $$
+* $$W_1+W_2+W_3=span\{(1,0,0), (0,1,0), (0,0,1)\}=\mathbb{R}^3=V $$
+* $$W_1\cap(W_2+W_3 )=\{0\}$$
+* $$W_2 \cap (W_1+W_3 )=\{0\}$$
+* $$W_3\cap (W_1+W_2 )=\{0\}$$
+* 所以$$V=W_1 \oplus W_2 \oplus W_3$$
+
+
+
+### 
+
+
+
+
 
 
 

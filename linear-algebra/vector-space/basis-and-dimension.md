@@ -139,7 +139,16 @@ Proof:
 * 由Steinitz replacement theorem知存在$$S_1 \subseteq S \ni span(S_1 \cup T_1 )=V$$  ，其中$$|S_1 |=N−N=0, 即S_1= \emptyset$$。
 * 因此$$span(S_1 \cup T_1 )=span(T_1 )=V$$
 * 因為$$u_{M+1} \in V=span(T_1 )$$
-* 所以$$u_{M+1} \in span\{u_1,u_2,⋯,u_M \}$$，此與$$T$$為線性獨立集矛盾，所以$$M \leq N$$ \(QED\).
+* 所以$$u_{M+1} \in span\{u_1,u_2,⋯,u_M \}$$，此與$$T$$為線性獨立集矛盾，所以$$M \leq N$$ \(QED\)
+
+## 最小生成集\(minimal spanning set\)，最大獨立集\(maximal independent set\)
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$S \subseteq V$$。
+>
+> * 若$$span(S)=V$$是所有生成集合中元素個數最少者，稱$$S$$為向量空間$$V$$的最小生成集。
+> * 若$$S$$為線性獨立集，且$$S$$為所有線性獨立集合中元素個數最多者，稱$$S$$為向量空間$$V$$的最大獨立集。
+
+## 
 
 
 

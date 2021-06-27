@@ -92,31 +92,15 @@ proof（反證法）：
 * $$c1f_1^{(n-1)} + \dots + c_nf_n^{(n-1)}=0$$
 * 整理得矩陣如下：
 * $$\begin{bmatrix} f_1(x) & \dots & f_n(x) \\  f_1^{(1)}(x) & \dots & f_n^{(1)}(x) \\   \vdots & \vdots & \vdots \\   f_1^{(n-1)}(x) & \dots & f_n^{(n-1)}(x) \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix} = \begin{bmatrix} 0 \\0 \\ \vdots \\ 0 \end{bmatrix} \Rightarrow A(x)y = 0$$
-* 則$$A(x)y=0$$在線性相依時有非0解，$$\forall x \in (a,b)$$
+* 則$$A(x)y=0$$在線性相依時有非0解，$$\forall x \in (a,b)$$，因此$$A(x)$$不可逆，所以$$\det(A(x))=0$$。
+* 因此得$$f_1, f_2, \dots, f_n$$線性相依=&gt; $$W(x)=0, ~ \forall (x) \in (a,b)$$
+* 所以存在$$x\in(a,b) \ni W(x) \neq 0$$時，$$f_1, f_2, \dots, f_n$$線性獨立\(QED\)
 
+### 範例：Wronskian matrix之值等於0不保證線性相依
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* $$f_1(x)=x^2, ~ f_2(x)=x|x| \in C(-1,1)$$
+* $$W(x)=\det \begin{pmatrix} x^2 & x|x| \\ 2x & 2|x|\end{pmatrix} =0$$，但兩函數線性獨立。
+* 因為$$c_1x^2+c_2 x|x|=0$$，取$$x=1, -1$$代入得$$c_1=c_2=0$$\(end\)
+* 同樣可得$$e^{x}, e^{-x}$$在$$C(-\infty, \infty)$$線性獨立。因為$$W(x)=\det \begin{pmatrix} e^x & e^{-x} \\ e^x & -e^{-x}\end{pmatrix} =-2\neq 0$$\(end\)
+* $$\sin x, \cos x$$線性獨立，因為$$W(x)=\det \begin{pmatrix} \sin x & \cos x \\ cos x & -\sin x \end{pmatrix} =-\sin^2 x - \cos ^2 x = -1 \neq 0$$\(end\)
 

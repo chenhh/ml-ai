@@ -109,5 +109,28 @@ Proof：
 * 因此$$a_1=a_2=\dots=a_k=0$$
 * 所以$$span(S) \cup \{u\}$$為線性獨立集\(QED\)
 
+## Steinitz replacement theorem
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$span(S) = V, S=\{v_1, v_2, \dots, v_N\}$$。 令集合$$T=\{u_1, u_2, \dots, u_M\}, ~M \leq N$$為線性獨立集，則存在$$U \subseteq S, |U| = N-M \ni span(U \cup T) =V$$。
+>
+> 可將生成集$$S$$中部份（線性依相）元素，替換成其它線性獨立元素後，仍可生成向量空間$$V$$。
+
+Proof \(數學歸納法\):
+
+* $$M=0$$時，  $$T=\emptyset$$，取$$U=S$$，則$$|U |=N$$，且$$U \cup T=S$$生成$$V$$。 
+* 假設$$M=K$$成立。
+* 考慮$$M=K+1$$  ，$$T=\{u_1,u_2, \dots ,u_{K+1} \}$$為線性獨立集，因此$$\{u_1,u_2,\dots,u_k \}$$也為線性獨立集。
+* 由$$M=K$$的假設知存在$$\{v_{i_1},v_{i_2}, \dots ,v_{i_{n−k} } \} \subseteq S \ni  span(\{u_1,u_2, \dots ,u_k \} \cup \{v_{i_1} ,v_{i_2 }, \dots ,v_{i_{n−k}} \})=V$$
+* 因為$$u_{k+1} \in V$$，所以存在$$a_1, \dots ,a_k,b_1,⋯,b_{n−k} \in F$$使得：
+  * $$u_(k+1)=a_1 u_1+\dots+a_k u_k+b_1 v_{i_1}+ \dots b_{n−k} v_{i_{n−k}}$$
+  * 其中$$b_1, \dots ,b_{n−k}$$不全為0，否則$$\{u_1,u_2, \dots ,u_{k+1} \}$$不為線性獨立集。
+* 不失一般性令$$b_1 \neq 0$$，則$$v_{i_1}=\frac{−1}{b_1} (\sum_{i=1}^k a_i u_i−u_{k+1}+\sum_{j=2}^{n−k}b_j v_{i_j })$$，因此$$v_{i_1}  \in span(\{u_1, \dots ,u_{k+1} \} \cup \{v_{i_2}, \dots ,v_{i_{n−k}} \})$$。
+* 取$$U=\{v_{i_2}, \dots ,v_{i_{n−k}} \}$$，則$$|U |=n−k−1=n−(k+1)$$。
+* 因為$$span(\{u_1,u_2, \dots ,u_k \} \cup \{v_{i_1} ,v_{i_2} ),\dots ,v_{i_{n−k}} \})=V$$，所以$$span(U \cup T )=V$$，即$$M=K+1$$成立 \(QED\)
+
+
+
+
+
 
 

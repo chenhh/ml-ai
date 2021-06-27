@@ -109,7 +109,7 @@ Proof：
 * 因此$$a_1=a_2=\dots=a_k=0$$
 * 所以$$span(S) \cup \{u\}$$為線性獨立集\(QED\)
 
-## Steinitz replacement theorem
+### Steinitz replacement theorem
 
 > $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$span(S) = V, S=\{v_1, v_2, \dots, v_N\}$$。 令集合$$T=\{u_1, u_2, \dots, u_M\}, ~M \leq N$$為線性獨立集，則存在$$U \subseteq S, |U| = N-M \ni span(U \cup T) =V$$。
 >
@@ -127,6 +127,23 @@ Proof \(數學歸納法\):
 * 不失一般性令$$b_1 \neq 0$$，則$$v_{i_1}=\frac{−1}{b_1} (\sum_{i=1}^k a_i u_i−u_{k+1}+\sum_{j=2}^{n−k}b_j v_{i_j })$$，因此$$v_{i_1}  \in span(\{u_1, \dots ,u_{k+1} \} \cup \{v_{i_2}, \dots ,v_{i_{n−k}} \})$$。
 * 取$$U=\{v_{i_2}, \dots ,v_{i_{n−k}} \}$$，則$$|U |=n−k−1=n−(k+1)$$。
 * 因為$$span(\{u_1,u_2, \dots ,u_k \} \cup \{v_{i_1} ,v_{i_2} ),\dots ,v_{i_{n−k}} \})=V$$，所以$$span(U \cup T )=V$$，即$$M=K+1$$成立 \(QED\)
+
+### 線性獨立集元素個數必小於等於生成集元素個數
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$span(S) = V$$，令$$T$$為$$V$$中線性獨立集合，則$$|T| \leq |S|$$。
+
+Proof:
+
+* 令$$ |S|=N, |T |=M, T=\{u_1, \dots ,u_M \}$$
+* 若$$M>N$$，取$$T_1=\{u_1,u_2,\dots,u_N \}$$為線性獨立集。
+* 由Steinitz replacement theorem知存在$$S_1 \subseteq S \ni span(S_1 \cup T_1 )=V$$  ，其中$$|S_1 |=N−N=0, 即S_1= \emptyset$$。
+* 因此$$span(S_1 \cup T_1 )=span(T_1 )=V$$
+* 因為$$u_{M+1} \in V=span(T_1 )$$
+* 所以$$u_{M+1} \in span\{u_1,u_2,⋯,u_M \}$$，此與$$T$$為線性獨立集矛盾，所以$$M \leq N$$ \(QED\).
+
+
+
+### 
 
 
 

@@ -58,3 +58,20 @@ Proof =&gt;
 >
 > 線性相依元素可由線性獨立集生成，反過來線性相依集去除掉線性相依的元素後，可變成線性獨立集。
 
+Proof =&gt;
+
+* 因為$$S \cup \{u\}$$為線性相依集，
+* 所以存在$$v_1,v_2, \dots ,v_k \in S \cup \{u\}$$，$$ a_1,a_2, \dots ,a_k \in F$$不全為$$0$$使得$$a_1 v_1+a_2 v_2+\dots +a_k v_k=0$$。
+* 因為$$S$$為線性獨立集，令$$v_1,v_2, \dots ,v_k$$ 中至少一個元素為$$u$$，不失一般性令$$v_1=u$$
+* 所以$$a_1 \neq 0$$可得 $$u=\frac{−1}{a_1}  (a_2 v_2+ \dots+a_k v_k ) \in span(S)$$ \(QED\)
+
+Proof &lt;=
+
+* 因為$$u \in span(S)$$，
+* 所以存在$$v_1,v_2, \dots ,v_k\in S$$，$$a_1,a_2, \dots ,a_k \in F$$使得$$u=a_1 v_1+a_2 v_2+\dots+a_k v_k$$
+* 移項後得$$a_1 v_1+\dots+a_k v_k−u=0$$
+* 因為$$u \notin S$$，因此$$u \neq v_i, ~i=1,2,\dots,k$$
+* 所以$$S \cup \{u\}$$為線性相依集 \(QED\)
+
+
+

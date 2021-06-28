@@ -185,6 +185,14 @@ Proof:
 >
 > 當$$V=W$$時，$$[v]_R = [I_V]_B^R [v]_B$$，即取$$T=I_V$$。
 
+## 左乘映射\(left-multiplication transform\)
+
+> 矩陣$$A \in F^{M \times N}$$，定義函數$$L_A: F^{N \times 1} \rightarrow F^{M \times 1}$$為$$L_A(x)=Ax, ~ x \in F^{N \times 1}$$。
+>
+> 則此函數的值域為$$CS(A) $$，因為$$Ax=\begin{bmatrix} A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_N \end{bmatrix} = x_1A_{:1} + x_2 A_{:2}+ \dots + x_N A_{:N}$$
+
+
+
 
 
 

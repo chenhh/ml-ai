@@ -127,23 +127,32 @@ Proof:
 * 由泰勒展開式得$$\begin{align} f(x) & =f(-1)+f^{(1)}(x+1)+\frac{f^{(2)}(-1)}{2}(x+1)^2 \\ &=12- 10(x+1) + 3(x+1)^2 \end{align}$$
 * 所以$$[f]_B=\begin{bmatrix} 12 \\ -10 \\ 3 \end{bmatrix}$$
 * $$[1]_R = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}$$, $$[x+1]_R=\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}$$, $$[(x+1)^2]_R=\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}$$
-* 可得$$\begin{bmatrix} 5 \ -4 \ 3 \end{bmatrix}= \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 12 \\ -10 \\ 3 \end{bmatrix}$$
+* 可得$$\begin{bmatrix} 5 \\ -4 \\ 3 \end{bmatrix}= \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 12 \\ -10 \\ 3 \end{bmatrix}$$
 
+### 轉移矩陣必可逆\(在同一向量空間中\)
 
+> $$[I_V]_B^R$$必為可逆矩陣且$$([I_V]_B^R)^{-1} = [I_V]_R^B$$
+>
+> * $$[I_V]_B^R = \begin{bmatrix} [b_1]_R & [b_2]_R & \dots [b_N]_R \end{bmatrix}$$
+> * $$[I_V]_R^B = \begin{bmatrix} [r_1]_B & [r_2]_B & \dots [r_N]_B \end{bmatrix}$$
+>
+> 直觀的想法是同一空間中的元素，雖然使用不同基底時有各自的坐標向量，但是一定能換過去再換回來。
+>
+> * $$[v]_R = [I_V]_B^R [v]_B, ~[v]_B= [I_V]_R^B [v]_R$$
+> * $$[v]_B=[I_V]_R^B[I_V]_B^R[v]_B$$
+> * 可得$$[I_V]_R^B[I_V]_B^R=I_N$$
 
+Proof:
 
+* 因為$$B$$為$$V$$的基底，所以$$b_1,b_2,\dots,b_N$$ 線性獨立。
+* 因為線性獨立集經同樣函數轉換後仍為線性獨立集，因此$$c_R (b_1 ),\dots,c_R (b_N )$$也為線性獨立。
+* 因此$$[I_V]_B^R = \begin{bmatrix} [b_1]_R & [b_2]_R & \dots [b_N]_R \end{bmatrix}$$行獨立，所以\[$$I_V ]_B^R$$ 可逆。 \(QED\)
 
+#### 範例
 
-
-
-
-
-
-
-
-
-
-
-
-
+* $$V=\mathbb{R}^2, ~B=\{(1,0), (0,1)\}, R=\{(1,1), (1,−1)\}$$
+* $$v=(2,4)  [v]_B=\begin{bmatrix} 2 \\ 4\end{bmatrix}, ~ [v]_R=\begin{bmatrix} 3 \\ -1\end{bmatrix}$$
+* $$(1,0)_R = \begin{bmatrix} 0.5 \\ 0.5\end{bmatrix}, (0,1)_R= \begin{bmatrix} 0.5 \\  -0.5\end{bmatrix}$$
+* $$(1,1)_B =\begin{bmatrix} 1 \\ 1\end{bmatrix}, ~ (1,-1)_B=\begin{bmatrix} 1 \\ -1\end{bmatrix}$$
+* $$[I_V]_B^R [I_V]_R^B=\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & -0.5\end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1\end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$$
 

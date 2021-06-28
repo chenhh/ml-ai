@@ -64,7 +64,7 @@ Proof:
 > * $$T$$為線性映射。
 > * $$\forall a,b \in F，~ u,v \in V $$，可得$$T(au+bv)=aT(u)+bT(v)$$。
 
-### 給定基底之線性映射的唯一性
+### 給定定義域基底之線性映射的唯一性
 
 > 令$$T,U \in L(V,W)$$為兩線性映射，且$$B=\{ b_1, b_2, \dots, b_N\}$$為向量空間$$V$$的基底，則$$T=U$$若且唯若$$T(b_i) = U(b_i), ~ i=1,2,\dots, N$$
 >
@@ -77,7 +77,36 @@ Proof &lt;=
 * $$\forall v \in V, v=\sum_{i=1}^N a_i b_i , \forall a_i \in F$$
 * 所以$$T(v)=T(\sum_{i=1}^N a_i b_i )=\sum_{i=1}^N a_i T(b_i)=\sum_{i=1}^N a_i U(b_i ) =U(\sum_(i=1)^N a_i b_i=U(v)$$ \(QED\)
 
-### 當線性映射對的某一組基底決定後，則整個線性映射唯一決定
+### 當線性映射的定義域基底決定後，則整個線性映射唯一決定
+
+### 
+
+> 令$$V,W$$為定義在體$$F$$的向量空間，$$B=\{b_1, b_2,\dots, b_N\}$$為向量空間$$V$$的基底。對於$$W$$中的任意向量$$w_1, w_2, \dots, w_N$$，均存在唯一的線性轉換$$T \in L(V,W)$$使得$$T(b_i) = w_i, ~i=1,2,\dots, N$$。
+
+proof: 
+
+* 定義函數$$ T:V \rightarrow W$$
+* 因為$$B$$為$$V$$的基底，所以$$\forall v \in V,  ~v=a_1 b_1+a_2 b_2+ \dots +a_N b_N, ~ \forall a_i \in F$$
+* 定義 $$T(v)=a_1 w_1+a_2 w_2+\dots+a_N w_N$$
+* 因為基底集合內元素線性獨立
+* 所以$$\forall i=1,2,\dots ,N$$ ，可得$$b_i=0b_1+0b_2+\dots+0b_{i−1}+b_i+0b_{i+1}+\dots+0b_N$$
+* 因此$$T(b_i)=0w_1+0w_2+\dots+0w_{i−1}+w_i+0w_{i+1}+\dots +0w_N=w_i$$
+
+要證明$$T$$為線性函數
+
+* $$\forall a ,c \in F,~ u,v \in V$$令$$ u=\sum_{i=1}^N a_i b_i, ~ v=\sum_{i=1}^N c_i b_i $$
+* 所以$$T(u)=\sum_{i=1}^N a_i w_i, ~ T(v)=\sum_{i=1}^N c_i w_i $$ 
+* 因為$$au+cv=a(\sum_{i=1}^N a_i b_i)+c(\sum_{i=1}^N  c_i b_i)=\sum_{i=1}^N (aa_i+cc_i )  b_i$$
+* 所以$$T(au+cv)=\sum_{i=1}^N (aa_i+cc_i )  w_i=aT(u)+bT(v)$$
+
+證明$$T$$的唯一性
+
+* 若存在$$T, U \in L(V,W)$$使得$$T(b_i)=w_i$$且$$U(b_i)=w_i$$
+* 由給定基底之線性映射的唯一性得$$T=U$$。\(QED\)
+
+
+
+
 
 
 

@@ -64,6 +64,23 @@ Proof:
 > * $$T$$為線性映射。
 > * $$\forall a,b \in F，~ u,v \in V $$，可得$$T(au+bv)=aT(u)+bT(v)$$。
 
+### 給定基底之線性映射的唯一性
+
+> 令$$T,U \in L(V,W)$$為兩線性映射，且$$B=\{ b_1, b_2, \dots, b_N\}$$為向量空間$$V$$的基底，則$$T=U$$若且唯若$$T(b_i) = U(b_i), ~ i=1,2,\dots, N$$
+>
+> 註：如果要證明$$T=U$$，應該要滿足$$\forall v \in V, T(v)=U(v)$$，但因為$$V$$的所有元素均可用$$B$$生成，因此只要證明$$T(b_i) = U(b_i)$$即可。
+
+Proof =&gt; 顯然成立
+
+Proof &lt;= 
+
+* $$\forall v \in V, v=\sum_{i=1}^N a_i b_i , \forall a_i \in F$$
+* 所以$$T(v)=T(\sum_{i=1}^N a_i b_i )=\sum_{i=1}^N a_i T(b_i)=\sum_{i=1}^N a_i U(b_i ) =U(\sum_(i=1)^N a_i b_i=U(v)$$ \(QED\)
+
+### 當線性映射對的某一組基底決定後，則整個線性映射唯一決定
+
+
+
 ### 
 
 

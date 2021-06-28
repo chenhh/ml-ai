@@ -162,7 +162,7 @@ Proof:
 * 因此方型矩陣可視為在同一空間中，使用不同基底的線性轉換表示法；而非方型矩陣可視為不同空間中，線性轉換的表示法。
 * 使用矩陣表示法的好處在於可以處理不同的向量空間\(如歐式空間-&gt;連續函數空間\)的轉換，因為向量空間上的任意元素均可座標化處理為向量，因此只要用矩陣即可完成轉換。
 
-## 線性轉換矩陣表示法\(matrix representation\)
+### 線性轉換矩陣表示法\(matrix representation\)
 
 > 令線性轉換$$T \in L(V,W)$$，$$\dim(V)=N$$，其基底為$$B=\{b_1, b_2, \dots, b_N\}$$，$$\dim(W)=M$$，其基底為$$R=\{r_1, r_2, \dots, r_M\}$$。
 >
@@ -176,6 +176,14 @@ Proof:
 * 如果$$\mathbb{R}^2,\mathbb{R}^3$$ 均使用標準基底時，$$[T]=\begin{bmatrix} 0 & 1 \\-5 & 13 \\-7 & 16 \end{bmatrix} $$
   * 取$$v=(1,1)$$, $$[v]_{\mathbb{R}^2} = \begin{bmatrix} 1 \\ 1\end{bmatrix}$$, $$[T(v)]_{\mathbb{R}^3} = \begin{bmatrix} 1 \\ 8 \\ 9\end{bmatrix}$$
   * $$\begin{bmatrix} 1 \\ 8 \\ 9\end{bmatrix} = \begin{bmatrix} 0 & 1 \\-5 & 13 \\-7 & 16\end{bmatrix} \begin{bmatrix} 1 \\ 1\end{bmatrix}$$
+
+### 一般化的座標變換公式
+
+> 令線性轉換$$T \in L(V,W)$$，$$\dim(V)=N$$，其基底為$$B=\{b_1, b_2, \dots, b_N\}$$，$$\dim(W)=M$$，其基底為$$R=\{r_1, r_2, \dots, r_M\}$$。
+>
+> 則$$\forall v \in V, [T(v)]_R = [T]_B^R[v]_B$$
+>
+> 當$$V=W$$時，$$[v]_R = [I_V]_B^R [v]_B$$，即取$$T=I_V$$。
 
 
 

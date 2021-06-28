@@ -170,3 +170,16 @@ Proof:
 >
 > 當$$W=V$$時，且$$B=R$$，$$[T]_B^B$$簡記為$$[T]_B$$。
 
+#### 範例
+
+* $$T \left(\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \right)=\begin{bmatrix}x_2 \\ -5x_1 +13x_2 \\-7x_1 +16 x_2 \end{bmatrix}: \mathbb{R}^2 \rightarrow \mathbb{R}^3$$
+* 如果$$\mathbb{R}^2,\mathbb{R}^3$$ 均使用標準基底時，$$[T]=\begin{bmatrix} 0 & 1 \\-5 & 13 \\-7 & 16 \end{bmatrix} $$
+  * 取$$v=(1,1)$$, $$[v]_{\mathbb{R}^2} = \begin{bmatrix} 1 \\ 1\end{bmatrix}$$, $$[T(v)]_{\mathbb{R}^3} = \begin{bmatrix} 1 \\ 8 \\ 9\end{bmatrix}$$
+  * $$\begin{bmatrix} 1 \\ 8 \\ 9\end{bmatrix} = \begin{bmatrix} 0 & 1 \\-5 & 13 \\-7 & 16\end{bmatrix} \begin{bmatrix} 1 \\ 1\end{bmatrix}$$
+
+
+
+
+
+
+

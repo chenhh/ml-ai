@@ -156,3 +156,17 @@ Proof:
 * $$(1,1)_B =\begin{bmatrix} 1 \\ 1\end{bmatrix}, ~ (1,-1)_B=\begin{bmatrix} 1 \\ -1\end{bmatrix}$$
 * $$[I_V]_B^R [I_V]_R^B=\begin{bmatrix} 0.5 & 0.5 \\ 0.5 & -0.5\end{bmatrix} \begin{bmatrix} 1 & 1 \\ 1 & -1\end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}$$
 
+## 線性轉換矩陣表示法簡介
+
+* 因為線性轉換通常發生在兩個維度不同的向量空間中，只要給定一個向量空間的基底，則線性轉換的矩陣表示法唯一決定。
+* 因此方型矩陣可視為在同一空間中，使用不同基底的線性轉換表示法；而非方型矩陣可視為不同空間中，線性轉換的表示法。
+* 使用矩陣表示法的好處在於可以處理不同的向量空間\(如歐式空間-&gt;連續函數空間\)的轉換，因為向量空間上的任意元素均可座標化處理為向量，因此只要用矩陣即可完成轉換。
+
+## 線性轉換矩陣表示法\(matrix representation\)
+
+> 令線性轉換$$T \in L(V,W)$$，$$\dim(V)=N$$，其基底為$$B=\{b_1, b_2, \dots, b_N\}$$，$$\dim(W)=M$$，其基底為$$R=\{r_1, r_2, \dots, r_M\}$$。
+>
+> 定義轉換矩陣$$[T]_B^R=\begin{bmatrix} [T(b_1)]_R & T(b_2)]_R  & \dots & T(b_N)]_R\end{bmatrix} \in F^{M \times N}$$為線性轉換$$T$$相對於基底$$B$$與$$R$$的矩陣表示法。
+>
+> 當$$W=V$$時，且$$B=R$$，$$[T]_B^B$$簡記為$$[T]_B$$。
+

@@ -47,6 +47,18 @@ Proof:
 * 若存在$$u \in  V \ni [u]_B=x$$，則 $$u=\sum_{i=1}^N x_i b_i=v$$
 * 所以$$u=v$$，即座標向量的唯一性。\(QED\)
 
+## 同構\(isomorphism\)
+
+
+
+> $$V,W$$為定義在體$$F$$上的向量空間，若存在函數$$T:V \rightarrow W$$滿足以下三個條件時，則$$V,W$$同構，記為$$V \cong W$$。
+>
+> * $$T$$為線性映射：$$\forall a,b \in F, ~ u, v \in V$$, $$T(au+bv)=aT(u)+bT(v)$$。
+> * $$T$$為一對一函數：$$\forall u,v \in V$$, $$T(u) = T(v) \Rightarrow u=v$$。
+> * $$T$$為映成函數：$$\forall w \in W ~ \exists v \in V \ni T(v)=w$$。
+>
+> 註：如果$$T$$為一對一且映成的函數，則兩集合等勢$$|V|=|W|$$，因此$$T^{-1}$$存在且為函數。此處還加上了$$T$$為線性映射的限制。
+
 
 
 

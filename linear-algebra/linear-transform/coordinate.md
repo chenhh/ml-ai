@@ -191,11 +191,7 @@ Proof:
 >
 > 則此函數的值域為$$CS(A) $$，因為$$Ax=\begin{bmatrix} A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_N \end{bmatrix} = x_1A_{:1} + x_2 A_{:2}+ \dots + x_N A_{:N}$$
 
-
-
-
-
-
-
-
+* 此定義將矩陣$$A$$視為一個線性函數，$$Ax$$為映射後的結果。
+* $$L_A$$ 的值域是由矩陣$$A$$的行向量生成的集合。
+* 右乘映射是列向量生成的集合，但實務上較少用。
 

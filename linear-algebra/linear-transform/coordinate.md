@@ -94,6 +94,43 @@ Proof &lt;=
 * 因為$$\{c_B (v_1 ),c_B (v_2 ),\dots ,c_B (v_K )\}$$為線性獨立集 ，所以$$a_1=\dots=a_K=0$$
 * 可得$$\{v_1,v_2,\dots,v_K \}$$為線性獨立集\(QED\)
 
+## 轉移矩陣\(transition matrix from basis B to basis R in the same vector space\) 
+
+> $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$B=\{b_1, b_2,\dots, b_N\}$$為$$V$$的基底，而$$R=\{r_1, r_2, \dots, r_N\}$$為$$V$$的另一組基底，則$$\forall v \in V, ~ [v]_R=[I_V]_B^R[v]_B$$。
+>
+> * $$[I_V]_B^R = [[b_1]_R, [b_2]_R, \dots, [b_N]_R] \in F^{N \times N}$$稱為由基底$$B$$至$$R$$的轉移矩陣（座標轉換矩陣）。
+> * $$[b_i]_R \in F^{N \times 1}$$為基底向量$$b_i$$以基底$$R$$表示的座標向量。
+
+Proof:
+
+* $$\forall v \in V$$，令$$v=\sum_{j=1}^N x_j b_j$$，得$$[v]_B=\begin{bmatrix} x_1 \\ \vdots \\ x_N \end{bmatrix}$$
+*  令$$ b_j=\sum_{i=1}^N p_{ij} r_i$$，因此$$[b_j]_R=\begin{bmatrix}  p_{1j} \\ \vdots \\ p_{Nj}\end{bmatrix}$$
+* 因為$$\displaystyle v = \sum_{j=1}^N x_j b_j = \sum_{j=1}^N x_j \left(   \sum_{i=1}^N p_{ij} r_i\right) = \sum_{i=1}^N \left( \sum_{j=1}^N p_{ij} x_j\right) r_i$$
+* 可得$$[v]_R = \begin{bmatrix} \sum_{j=1}^N p_{1j}x_j \\ \vdots \\ \sum_{j=1}^N p_{Nj}x_j\end{bmatrix} = \begin{bmatrix}  p_{11} & p_{12} & \dots & p_{1N}\\ \vdots & \vdots  & \ddots & \vdots \\ p_{N1} & p_{N2} & \dots & p_{NN} \end{bmatrix} \begin{bmatrix} x_1 \\ \vdots \\ x_N \end{bmatrix} =\begin{bmatrix} [b_1]_R & [b_2]_R& \dots & [b_N]_R \end{bmatrix} [v]_B$$
+
+\(QED\)
+
+#### 範例1
+
+* $$V=\mathbb{R}^2, B=\{(1,0), (0,1)\}, R=\{(1,1), (1,−1)\}$$
+* $$v=(2,4)  [v]_B=\begin{bmatrix} 2\\ 4\end{bmatrix}, [v]_R=\begin{bmatrix}3 \\ -1 \end{bmatrix}$$
+* $$ [(1,0)]_R=\begin{bmatrix} 0.5 \\ 0.5 \end{bmatrix}, ~[(0,1)]_R= \begin{bmatrix} 0.5 \\ -0.5 \end{bmatrix}$$
+* 可得$$\begin{bmatrix} 3 \\-1 \end{bmatrix} = \begin{bmatrix} 0.5 & 0.5 \\ 0.5 & -0.5\end{bmatrix} \begin{bmatrix} 2 \\ 4\end{bmatrix}$$
+
+#### 範例2
+
+
+
+* $$V=R_2[x], ~ f(x)=3x^2 -4x+5$$
+* $$B=\{ 1, x+1, (x+1)^2\}$$. $$R=\{1, x, x^2\}$$
+* $$[f]_R=\begin{bmatrix} 5 \\ -4 \\ 3\end{bmatrix}$$
+* 由泰勒展開式得$$\begin{align} f(x) & =f(-1)+f^{(1)}(x+1)+\frac{f^{(2)}(-1)}{2}(x+1)^2 \\ &=12- 10(x+1) + 3(x+1)^2 \end{align}$$
+* 所以$$[f]_B=\begin{bmatrix} 12 \\ -10 \\ 3 \end{bmatrix}$$
+* $$[1]_R = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}$$, $$[x+1]_R=\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}$$, $$[(x+1)^2]_R=\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}$$
+* 可得$$\begin{bmatrix} 5 \ -4 \ 3 \end{bmatrix}= \begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 2 \\ 0 & 1 & 1 \end{bmatrix} \begin{bmatrix} 12 \\ -10 \\ 3 \end{bmatrix}$$
+
+
+
 
 
 

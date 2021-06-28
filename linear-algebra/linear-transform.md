@@ -41,9 +41,42 @@
 * 對$$x$$軸投影，$$T \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix}  1 & 0 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} x \\ y\end{bmatrix}$$
 * 對$$y$$軸投影，$$T \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix}  0 & 0 \\ 0 & 1 \end{bmatrix} \begin{bmatrix} x \\ y\end{bmatrix}$$
 
+## 線性映射的必要條件
+
+> 若$$T \in L(V,W)$$為線性映射，則以下條件必須全部成立：
+>
+> 1. $$T(0)= 0$$
+> 2. $$\forall v \in V, T(-v)=-T(v)$$
+> 3. $$\forall v_1, v_2 \in V, T(v_1-v_2)= T(v_1)- T(v_2)$$
+>
+> 註：以上條件只要一個不成立時，$$T$$不是線性映射；但是條件均成立時，不保證$$T$$為線性映射。
+
+Proof:
+
+*  $$0+T(0)=T(0)=T(0+0)=T(0)+T(0) \Rightarrow T(0)=0$$。
+* 因為$$T(cv)=cT(v)$$，令$$c=−1$$，則$$T(−v)=−T(v)$$。
+* $$T(v_1−v_2 )=T(v_1+(−v_2 ))=T(v_1 )+T(−v_2 )=T(v_1 )−T(v_2 )$$
+
+### 線性映射的充要條件
+
+> 若$$T$$為由向量空間$$V$$至$$W$$的映射（函數），則以下條件等價：
+>
+> * $$T$$為線性映射。
+> * $$\forall a,b \in F，~ u,v \in V $$，可得$$T(au+bv)=aT(u)+bT(v)$$。
+
+### 
 
 
 
 
 
+>
+
+
+
+
+
+
+
+。
 

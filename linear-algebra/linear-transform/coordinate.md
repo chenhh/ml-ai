@@ -145,7 +145,7 @@ Proof:
 Proof:
 
 * 因為$$B$$為$$V$$的基底，所以$$b_1,b_2,\dots,b_N$$ 線性獨立。
-* 因為線性獨立集經同樣函數轉換後仍為線性獨立集，因此$$c_R (b_1 ),\dots,c_R (b_N )$$也為線性獨立。
+* 因為[線性獨立集經同構函數轉換後仍為線性獨立集](coordinate.md#xian-xing-du-li-ji-jing-tong-gou-han-shu-zhuan-huan-reng-wei-xian-xing-du-li-ji)，因此$$c_R (b_1 ),\dots,c_R (b_N )$$也為線性獨立。
 * 因此$$[I_V]_B^R = \begin{bmatrix} [b_1]_R & [b_2]_R & \dots [b_N]_R \end{bmatrix}$$行獨立，所以\[$$I_V ]_B^R$$ 可逆。 \(QED\)
 
 #### 範例
@@ -194,4 +194,50 @@ Proof:
 * 此定義將矩陣$$A$$視為一個線性函數，$$Ax$$為映射後的結果。
 * $$L_A$$ 的值域是由矩陣$$A$$的行向量生成的集合。
 * 右乘映射是列向量生成的集合，但實務上較少用。
+
+### 左乘映射的性質
+
+> 矩陣$$A \in F^{M \times N}$$，$$B,R$$分別是$$F^{N \times 1}, F^{M \times 1}$$的標準基底，則：
+>
+> * $$L_A(x)=Ax$$線性映射。
+> * $$[L_A]_B^R=A$$
+> * 若$$T: F^{N \times 1} \rightarrow F^{M \times 1}$$為線性映射，則存在唯一矩陣$$C=[T]_B^R \in F^{M \times N} \ni T=L_c$$。
+
+### 矩陣相等的充要條件
+
+> 矩陣$$A, B \in F^{M \times N}$$，則 $$A = B$$若且唯若 $$Ax = Bx,  ~\forall 0 \neq x \in F^{N \times 1}$$
+
+proof =&gt;：由矩陣乘法得證 \(QED\)
+
+proof &lt;=:
+
+* $$Ax = Bx $$，移項可得$$Ax - Bx=0$$，整理得$$(A-B)x=0$$。
+* 因為$$x \neq 0$$，所以$$A=B$$\(QED\)
+
+## 相同向量空間換底公式
+
+> 線性轉換$$T \in L(V, V)$$，且維度$$\dim(V)= N$$，$$B,R$$為向量空間$$V$$的兩組有序基底，則：
+>
+> * $$[T]_B[I_V]_R^B = [I_V]_R^B[T]_R$$
+>   * $$[T]_B^B \equiv [T]_B = \begin{bmatrix}  [T(b_1)]_B & [T(b_2)]_B & \dots & [T(b_N)]_B \end{bmatrix}$$
+>   * $$[T]_R^R \equiv [T]_R = \begin{bmatrix}  [T(r_1)]_R & [T(r_2)]_R & \dots & [T(r_N)]_R \end{bmatrix}$$
+>   * $$[I_V]_R^B=\begin{bmatrix} [r_1]_B & [r_2]_B & \dots & [r_N]_B \end{bmatrix}$$
+> * 也可寫成$$AP=PB$$。
+>
+> proof:
+>
+> * 因為$$R$$為向量空間$$V$$的基底，所以$$\forall x \in  F^{N \times 1}, ~ \exists v \in V \ni [v]_R = x$$。
+> * $$[T]_B[I_V]_R^Bx=[T]_B[I_V]_R^B [v]_R=[T]_B[v]_B=[T(v)]_B$$
+> * $$[I_V]_R^B[T]_R x = [I_V]_R^B[T]_R [v]_R=[I_V]_R^B[T(v)]_R=[T(v)]_B$$
+> * 所以$$[T]_B[I_V]_R^B = [I_V]_R^B[T]_R$$\(QED\)
+
+#### 範例
+
+* $$V = \mathbb{R}^2$$, $$B=\left\{ \begin{bmatrix} 1 \\ 0\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \end{bmatrix}\right\}, R=\left\{ \begin{bmatrix} 1 \\ 1\end{bmatrix},  \begin{bmatrix} 1 \\ -1\end{bmatrix} \right\}$$
+* $$[I_V]_B^R=\begin{bmatrix}  0.5 & 0.5 \\ 0.5 & -0.5 \\ \end{bmatrix}$$, $$[I_V]_R^B=\begin{bmatrix}  1 & 1 \\ 1 & -1 \\ \end{bmatrix}$$
+* $$T\left( \begin{bmatrix}  x_1 \\ x_2 \\ \end{bmatrix}\right)=\begin{bmatrix}  -5x_1+13x_2 \\ -7x_1 + 16x_2 \\ \end{bmatrix}$$
+* $$[T]_B = \begin{bmatrix}  \left[T\left(\begin{bmatrix} 1 \\ 0\end{bmatrix}\right)\right]_B & \left[T\left(\begin{bmatrix} 0 \\ 1\end{bmatrix}\right)\right]_B \end{bmatrix} = \begin{bmatrix}  -5 & 13 \\  -7 & 16 \end{bmatrix}$$
+* $$[T]_R = \begin{bmatrix}  \left[T\left(\begin{bmatrix} 1 \\ 1\end{bmatrix}\right)\right]_R & \left[T\left(\begin{bmatrix} 1 \\ -1\end{bmatrix}\right)\right]_R \end{bmatrix} = \begin{bmatrix}  8.5 & -20.5 \\  -0.5 & 2.5\end{bmatrix}$$
+
+
 

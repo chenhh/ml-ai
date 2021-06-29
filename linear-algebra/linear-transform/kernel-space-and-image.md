@@ -45,6 +45,15 @@ proof:
 
 ![&#x6838;&#x7A7A;&#x9593;&#x8207;&#x76F4;&#x50CF;](../../.gitbook/assets/dimension_theorem-min.png)
 
+## 核數、秩\(nullity, rank\)
+
+> 線性轉換$$T \in L(V,W)$$，定義：
+>
+> * $$nullity(T)=\dim(ker(T))$$：核空間的最大線性獨立生成集合元素個數。
+> * $$rank(T)= \dim(R(T))$$：值域的最大線性獨立生成集合元素個數。
+
+
+
 
 
 

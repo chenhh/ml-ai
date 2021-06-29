@@ -29,7 +29,23 @@ proof:
 * 因為$$V_s$$為$$V$$的子空間，所以$$\forall a,b \in F$$，$$ax+by \in V_s$$可得$$T(ax+by) \in T(V_s)$$。
 * 依線性轉換定義可得 $$aT(x)+bT(y) \in T(V_s)$$，即$$au+bv \in T(V_s)$$。
 * 所以$$T(V_s)$$為$$W$$的子空間。
-* 同理可得$$T^{-1}(W_s)$$為$$V$$的子空間 \(QED\). 
+* 同理可得$$T^{-1}(W_s)$$為$$V$$的子空間 \(QED\)
+
+## 核空間與像\(kernel space and image\)
+
+> 線性轉換$$T \in L(V,W)$$，定義：
+>
+> * $$ker(T)=\{v \in V | T(v)=0\} = T^{-1}(\{0\})$$稱為核空間\(kernel space, null space\)，有時記為$$N(T)$$。
+> * $$Im(T)=T(V)=\{T(v) | \forall v \in V\}$$稱為像或值域\(image, range\)，有時記為$$R(T)$$或$$range(T)$$。
+
+* 因為線性轉換為函數，依函數定義得所有在$$V$$的元素都有函數值，即$$\forall v \in V, T(v) \subseteq W$$。
+* 由於維度為0的向量空間只有$$\{0\}$$，至少包含一個元素，因此$$ker(T) \neq \emptyset$$。
+* 因為值域必定包含所有函數值，且$$ker(T) \neq \emptyset$$，所以$$ 0 \subseteq Im(T)$$。
+* **由子空間經線性轉換後仍為子空間得**$$ker(T)$$**為**$$V$$**的子空間，且**$$Im(T)$$**為**$$W$$**的子空間**。
+
+![&#x6838;&#x7A7A;&#x9593;&#x8207;&#x76F4;&#x50CF;](../../.gitbook/assets/dimension_theorem-min.png)
+
+
 
 
 

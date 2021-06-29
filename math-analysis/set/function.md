@@ -1,5 +1,9 @@
 # 函數中的集合
 
+## 簡介
+
+此處討論是一般函數的集合，如果是線性函數的討論在線性代數中的[核空間及像集](../../linear-algebra/linear-transform/kernel-space-and-image.md)有深入討論。
+
 ## 關係\(relation\)
 
 > $$X$$為一集合，若$$\mathbf{R}\subseteq X \times X$$，稱$$\mathbf{R}$$為集合$$X$$的一個關係。

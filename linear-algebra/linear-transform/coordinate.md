@@ -239,5 +239,9 @@ proof &lt;=:
 * $$[T]_B = \begin{bmatrix}  \left[T\left(\begin{bmatrix} 1 \\ 0\end{bmatrix}\right)\right]_B & \left[T\left(\begin{bmatrix} 0 \\ 1\end{bmatrix}\right)\right]_B \end{bmatrix} = \begin{bmatrix}  -5 & 13 \\  -7 & 16 \end{bmatrix}$$
 * $$[T]_R = \begin{bmatrix}  \left[T\left(\begin{bmatrix} 1 \\ 1\end{bmatrix}\right)\right]_R & \left[T\left(\begin{bmatrix} 1 \\ -1\end{bmatrix}\right)\right]_R \end{bmatrix} = \begin{bmatrix}  8.5 & -20.5 \\  -0.5 & 2.5\end{bmatrix}$$
 
+##  不同向量空間換底公式
 
+> 線性轉換$$T \in L(V, W)$$，且維度$$\dim(V)= N, \dim(W)=M$$，$$B_v,R_v$$為向量空間$$V$$的兩組有序基底，$$B_w, R_w$$為向量空間$$W$$的兩組有序基底，則：
+>
+> $$[T]_{B_v}^{B_w}[I_V]_{R_v}^{B_v}=[I_W]_{R_w}^{B_w}[T]_{R_v}^{R_w}$$
 

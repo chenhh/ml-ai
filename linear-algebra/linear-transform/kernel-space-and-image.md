@@ -14,7 +14,22 @@
 
 
 
-![&#x76F4;&#x50CF;&#x8207;&#x524D;&#x50CF;&#x3002;](../../.gitbook/assets/image-preimage-min.png)
+![&#x76F4;&#x50CF;&#x8207;&#x524D;&#x50CF;](../../.gitbook/assets/image-preimage-min.png)
+
+### 子空間經線性轉換後仍為子空間
+
+> 線性轉換$$T \in L(V,W)$$，且$$V_s$$為$$V$$的子空間，$$W_s$$為$$W$$的子空間，則$$T(V_s)$$為$$W$$的子空間，$$T^{-1}(W_s)$$為$$V$$的子空間。
+>
+> 子空間的充要條件是空間內元素的任意線性組合仍在空間中（且包含0 向量）。而線性轉換可保持此性質。
+
+proof:
+
+* 因為$$0 = T(0) \in T(V_s)$$，所以$$T(V_s) \neq \emptyset$$。
+* 因為$$T \in L(V,W)$$且$$V_s \subseteq V$$，所以$$\forall u, v \in T(V_s)$$存在$$x, y\in V \ni T(x)=u,  ~ T(y) = v$$。
+* 因為$$V_s$$為$$V$$的子空間，所以$$\forall a,b \in F$$，$$ax+by \in V_s$$可得$$T(ax+by) \in T(V_s)$$。
+* 依線性轉換定義可得 $$aT(x)+bT(y) \in T(V_s)$$，即$$au+bv \in T(V_s)$$。
+* 所以$$T(V_s)$$為$$W$$的子空間。
+* 同理可得$$T^{-1}(W_s)$$為$$V$$的子空間 \(QED\). 
 
 
 

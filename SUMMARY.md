@@ -92,6 +92,7 @@
   * [古典伴隨矩陣\(classical adjoint matrix\)](linear-algebra/basic-matrix-computation/classical-adjoint-matrix.md)
 * [線性轉換](linear-algebra/linear-transform/README.md)
   * [座標化\(coordinate\)](linear-algebra/linear-transform/coordinate.md)
+  * [核空間及像集\(kernel space and image\)](linear-algebra/linear-transform/kernel-space-and-image.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

@@ -85,7 +85,5 @@ Proof:
 >
 > 若$$T\in F^{M \times N}$$為矩陣，則$$\dim(V)=N, ~ \dim(W)=M$$。
 
-## 
-
-
+![&#x7DAD;&#x5EA6;&#x5B9A;&#x7406;](../../.gitbook/assets/rank-nullity-min.png)
 

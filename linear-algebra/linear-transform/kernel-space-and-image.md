@@ -85,7 +85,10 @@ Proof:
 >
 > 若$$T\in F^{M \times N}$$為矩陣，則$$\dim(V)=N, ~ \dim(W)=M$$。
 >
-> 令$$\{ u_1, u_2, \dots, u_k\}$$為$$ker(T)$$的基底，$$\{w_1, w_2, \dots, w_r\}$$為$$R(T)$$的基底，證明$$\{u_1, \dots,u_k, w_1, \dots, w_r\}$$為$$V$$的基底。即$$\forall v \in V, \exists !b_i, a_j \in F \ni v=\sum_{i=1}^kb_i u_i + \sum_{j=1}^r a_j w_j $$
+> 令$$\{ u_1, u_2, \dots, u_k\}$$為$$ker(T)$$的基底，$$\{w_1, w_2, \dots, w_r\}$$為$$R(T)$$的基底，證明$$\{u_1, \dots,u_k, w_1, \dots, w_r\}$$為$$V$$的基底。
+>
+> * 即$$\forall v \in V, \exists !b_i, a_j \in F \ni v=\sum_{i=1}^kb_i u_i + \sum_{j=1}^r a_j w_j $$且
+> * $$\{u_1, \dots,u_k, w_1, \dots, w_r\}$$為線性獨立集，$$\sum_{i=1}^kb_i u_i + \sum_{j=1}^r a_j w_j =0 \Rightarrow b_i =a_j = 0 \forall, i, j$$。
 
 ![&#x7DAD;&#x5EA6;&#x5B9A;&#x7406;](../../.gitbook/assets/rank-nullity-min.png)
 
@@ -111,7 +114,27 @@ proof：
 * 代回\(1\)可得 $$\sum_{i=1}^k b_i u_i=0$$
 * 因為$$\{u_1,u_2,\dots,u_k \}$$為線性獨立集合，所以$$b_1=b_2=\dots=b_k=0$$
 * 所以$$\sum_{i=1}^k b_i u_i +\sum_{j=1}^r a_j v_j =0\Leftrightarrow a_1=a_2=\dots=a_r=b_1=b_2=\dots=b_k=0$$
-* 得$$\{u_1,u_2,\dots,u_k w_1,w_2,\dots,w_r \}$$為線性獨立集合 \(QED\).
+* 得$$\{u_1,u_2,\dots,u_k w_1,w_2,\dots,w_r \}$$為線性獨立集合 \(QED\)
+
+### 一對一函數為滿秩
+
+> 線性轉換$$T \in L(V,W)$$且$$\dim(V) < \infty$$，則$$T$$為一對一函數若且唯若$$ker(T)= \{0\} \subseteq V$$。
+
+![&#x4EFB;&#x610F;&#x51FD;&#x6578;&#x4E2D;&#xFF0C;&#x6838;&#x7A7A;&#x9593;&#x503C;&#x57DF;&#x5747;&#x70BA;&#x4E00;&#x9EDE;](../../.gitbook/assets/1-1-mapping-funciton-min.jpg)
+
+Proof =&gt;
+
+* $$\forall v \in ker⁡(T), T(v)=0=T(0)$$
+* 因為$$T$$為一對一函數，所以$$v=0$$ \(QED\)
+
+Proof &lt;=
+
+* 若$$T(u)=T(v)\Rightarrow 0=T(u)−T(v)=T(u−v)\Rightarrow u−v \in ker⁡(T)$$
+* 因為$$ker⁡(T)=\{0\}$$，所以$$u−v=0$$，得$$u=v$$ ，因此$$T$$為一對一函數\(QED\).
+
+
+
+
 
 
 

@@ -294,5 +294,12 @@ Proof:
 > * $$RS(AB) \subseteq R(A)$$
 > * $$rank(AB) \leq \min\{rank(A), rank(B)\}$$
 
+### 線性代數基本定理\(fundamental theorem of linear algebra\)
 
+> 給定矩陣$$A\in F^{M \times N}, ~rank(A)=r$$，則：
+>
+> * $$\dim⁡(R(A))=\dim⁡(CS(A))=r$$
+> * $$\dim⁡(N(A))=\dim⁡(ker⁡(A) )=N−r$$
+> * $$\dim⁡(R(A^\top ))=\dim⁡(RS(A))=r$$
+> * $$\dim⁡(N(A^\top ))=\dim(Lker(A))=M−r$$
 

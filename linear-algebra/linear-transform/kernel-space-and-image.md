@@ -85,7 +85,33 @@ Proof:
 >
 > 若$$T\in F^{M \times N}$$為矩陣，則$$\dim(V)=N, ~ \dim(W)=M$$。
 >
-> 令$$\{ u_1, u_2, \dots, u_k\}$$為$$ker(T)$$的基底，$$\{w_1, w_2, \dots, w_r\}$$為$$R(T)$$的基底，證明$$\{u_1, \dots,u_k, w_1, \dots, w_r\}$$為$$V$$的基底。
+> 令$$\{ u_1, u_2, \dots, u_k\}$$為$$ker(T)$$的基底，$$\{w_1, w_2, \dots, w_r\}$$為$$R(T)$$的基底，證明$$\{u_1, \dots,u_k, w_1, \dots, w_r\}$$為$$V$$的基底。即$$\forall v \in V, \exists !b_i, a_j \in F \ni v=\sum_{i=1}^kb_i u_i + \sum_{j=1}^r a_j w_j $$
 
 ![&#x7DAD;&#x5EA6;&#x5B9A;&#x7406;](../../.gitbook/assets/rank-nullity-min.png)
+
+proof：
+
+ 先證明$$span(\{u_1,u_2,\dots,u_k w_1,w_2,\dots,w_r \})=V$$
+
+* $$\forall v \in V$$，因為$$T(v) \in R(T)$$，所以$$T(v)$$可用$$R(T)$$的基底唯一生成。
+* $$∃a_1,a_2,\dots,a_r \in F \ni T(v)=\sum_{j=1}^r a_j w_j = \sum_{j=1}^r  a_j T(v_j ) =T(\sum_{j=1}^r a_j v_j )$$
+* 移項得$$T(v)−T(\sum_{j=1}^r a_j v_j)=0 \Rightarrow T(v−\sum_{j=1}^r a_j v_j )=0$$
+* 所以$$v−\sum_{j=1}^r a_j v_j \in ker⁡(T)$$，即$$v−\sum_{j=1}^r a_j v_j$$ 可用$$ker⁡(T)$$的基底唯一生成。
+* $$\exists b_1,b_2,\dots ,b_k \in F \ni v−\sum_{j=1}^ra_j v_j =\sum_{i=1}^k b_i u_i$$
+* 可得$$v=\sum_{i=1}^k b_i u_i +\sum_{j=1}^r a_j v_j   \in span(\{u_1,u_2,\dots,u_k w_1,w_2,\dots,w_r \}), \forall v \in V$$ \(QED\)
+
+ 證明$$\{u_1,u_2,\dots,u_k w_1,w_2,\dots,w_r \}$$為線性獨立集合。
+
+* 若$$\sum_{i=1}^k b_i u_i+\sum_{j=1}^r a_j v_j=0$$-- \(1\)
+* 則$$T(\sum_{i=1}^k b_i u_i +\sum_{j=1}^r a_j v_j )=T(0)=0$$
+* 因此$$\sum_{i=1}^k b_i T(u_i ) +\sum_{j=1}^r a_j T(v_j )=0$$
+* 因為$$\{u_1,u_2,\dots,u_k \} \in ker⁡(T)$$，所以$$T(u_i )=0, ~i=1,2,\dots,k$$
+* 所以$$\sum_{j=1}^r a_j T(v_j )=0 \Rightarrow \sum_{j=1}^r a_j w_j =0$$
+* 因為$$\{w_1,w_2,\dots,w_r \}$$為線性獨立集合，所以$$a_1=a_2=\dots=a_r=0$$
+* 代回\(1\)可得 $$\sum_{i=1}^k b_i u_i=0$$
+* 因為$$\{u_1,u_2,\dots,u_k \}$$為線性獨立集合，所以$$b_1=b_2=\dots=b_k=0$$
+* 所以$$\sum_{i=1}^k b_i u_i +\sum_{j=1}^r a_j v_j =0\Leftrightarrow a_1=a_2=\dots=a_r=b_1=b_2=\dots=b_k=0$$
+* 得$$\{u_1,u_2,\dots,u_k w_1,w_2,\dots,w_r \}$$為線性獨立集合 \(QED\).
+
+
 

@@ -257,6 +257,15 @@ proof &lt;=, 證明$$R(T)=W$$
 ### 矩陣秩的最大值為列秩與行秩的最小值
 
 > 給定矩陣$$A \in F^{M \times N}$$，則$$rank(A) = rr(A) = cr(A) = \min\{rr(A), cr(A)\}$$。
+>
+> * 矩陣的秩與之前定義經列梯陣計算後，非零列個數的定義等價。
+> * 矩陣的秩也可解釋為矩陣中列\(行\)線性獨立的個數。
+
+> * 因為$$CS(A)$$為$$F^{M \times 1}$$ 的子空間，所以$$\dim⁡(CS(A)) \leq \dim⁡(F^{M \times 1} ) \Rightarrow rank(A)\leq M$$。
+> * 因為$$RS(A)$$為$$F^{N \times 1}$$ 的子空間，所以$$\dim⁡(RS(A)) \leq \dim⁡(F^{N \times 1} ) \Rightarrow rank(A) \leq N$$。
+> * 所以$$rank(A) \leq min⁡\{M,N\}$$
+> * 若$$A$$列等價於$$B$$，則$$RS(A)=RS(B)\Rightarrow rank(A)=rank(B)$$。
+> * 若$$A$$行等價於$$B$$，則$$CS(A)=CS(B) \Rightarrow rank(A)=rank(B)$$。
 
 Proof:
 
@@ -267,7 +276,23 @@ Proof:
 * 解線性系統$$Ax=0$$時，將矩陣$$A$$列運算到矩陣$$U$$有$$r$$個非零列，即$$x \in F^{N \times 1}$$ 有$$N-r$$個自由變數。
 * 所以$$ker⁡(A)$$的基底包含了$$N-r$$個元素，即$$\dim⁡(ker⁡(A))=N−r$$。
 * 由維度定理知$$\dim⁡(F^{N×1} )=\dim⁡(ker⁡(A))+\dim⁡(CS(A))$$
-* 所以$$cr(A)=N−(N−r)=r=rr(A)$$  \(QED\).
+* 所以$$cr(A)=N−(N−r)=r=rr(A)$$  \(QED\)
+
+### 矩陣加法的子空間與秩
+
+> 給定矩陣$$A,B \in F^{M \times N}$$，則：
+>
+> * $$CS(A+B) \subseteq CS(A) + CS(B)$$
+> * $$RS(A+B) \subseteq RS(A) + RS(B)$$
+> * $$rank(A+B) \leq rank(A) + rank(B)$$
+
+### 矩陣乘法的子空間與秩
+
+> 給定矩陣$$A \in F^{M \times N},~B \in F^{N \times P}$$，則：
+>
+> * $$CS(AB) \subseteq CS(A)$$
+> * $$RS(AB) \subseteq R(A)$$
+> * $$rank(AB) \leq \min\{rank(A), rank(B)\}$$
 
 
 

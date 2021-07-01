@@ -130,7 +130,36 @@ Proof =&gt;
 Proof &lt;=
 
 * 若$$T(u)=T(v)\Rightarrow 0=T(u)−T(v)=T(u−v)\Rightarrow u−v \in ker⁡(T)$$
-* 因為$$ker⁡(T)=\{0\}$$，所以$$u−v=0$$，得$$u=v$$ ，因此$$T$$為一對一函數\(QED\).
+* 因為$$ker⁡(T)=\{0\}$$，所以$$u−v=0$$，得$$u=v$$ ，因此$$T$$為一對一函數\(QED\)
+
+### 以維度判斷線性轉換為一對一或映成函數
+
+> 線性轉換$$T \in L(V,W)$$且$$\dim(V) < \infty$$。
+>
+> T為一對一線性函數$$\Leftrightarrow \dim⁡(V) \leq \dim⁡(W)$$
+>
+> 想法：由函數的定義可知一對一函數中，定義域的元素只能唯一對應到值域中的元素，而值域為$$W$$的子集合，因此定義域的空間小於等於值域的空間。
+
+* $$\dim⁡(V)=\dim⁡(ker⁡(T))+\dim⁡(R(T))$$
+* $$\dim⁡(ker⁡(T) )=0 \Rightarrow \dim⁡(V)=\dim⁡(R(T))\leq dim⁡(W) (\because R(T)\subseteq W)$$
+
+> $$T$$為映成線性函數$$\Leftrightarrow \dim⁡(V) \geq \dim⁡(W)$$
+>
+>  想法：由函數的定義可知，若為映成函數，則對應域$$W$$的空間等於函數值域，因為函數關係可為一對一或是多對一，因此可知定義域$$V$$的空間大於等於$$W$$的空間。
+
+* $$\dim⁡(V)=\dim⁡(ker⁡(T))+\dim⁡(R(T))$$
+* 映成函數即$$R(T)=W \Rightarrow \dim⁡(R(T))=\dim⁡(W)$$
+* 因為$$dim⁡(ker⁡(T))\geq 0$$，所以$$\dim⁡(V) \geq \dim⁡(W)$$
+
+
+
+> $$T$$為一對一且映成函數$$\Leftrightarrow \dim⁡(V)=\dim⁡(W)$$
+>
+> 此結論與集合的基數一致，可用一對一且映成函數表示兩集合中有相同的元素個數（有限或無限元素均可）。但此處$$T$$為線性函數，討論是向量空間的維度。
+
+
+
+### 
 
 
 

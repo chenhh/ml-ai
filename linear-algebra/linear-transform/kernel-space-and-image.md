@@ -247,5 +247,27 @@ proof &lt;=, 證明$$R(T)=W$$
 
 ## 矩陣的秩\(rank\)
 
+### 列秩\(row rank\)、行秩\(column rank\)
+
+> 給定矩陣$$A \in F^{M \times N}$$，定義
+>
+> * 列秩$$rr(A) = \dim(RS(A))$$。
+> * 行秩$$cr(A) = \dim(CS(A))$$。
+
+### 矩陣秩的最大值為列秩與行秩的最小值
+
+> 給定矩陣$$A \in F^{M \times N}$$，則$$rank(A) = rr(A) = cr(A) = \min\{rr(A), cr(A)\}$$。
+
+Proof:
+
+* 令$$A$$經列梯陣運算後，得到梯形矩陣$$U$$，且有$$v_1,v_2,\dots,v_r$$ 個非零列\(row\)。
+* 因此矩陣$$A$$與$$U$$同構\(isomorphism\)，所以$$\dim⁡(RS(A))=\dim⁡(RS(U))$$。
+* 因為$$v_1,\dots,v_r$$ 線性獨立（因為由列梯陣計算得出），且$$RS(U)=span(\{v_1,\dots,v_r \})$$，所以$$v_1,\dots,v_r$$ 為$$RS(U)$$的基底。
+* 因此$$\dim⁡(RS(A))=\dim⁡(RS(U))=r$$。
+* 解線性系統$$Ax=0$$時，將矩陣$$A$$列運算到矩陣$$U$$有$$r$$個非零列，即$$x \in F^{N \times 1}$$ 有$$N-r$$個自由變數。
+* 所以$$ker⁡(A)$$的基底包含了$$N-r$$個元素，即$$\dim⁡(ker⁡(A))=N−r$$。
+* 由維度定理知$$\dim⁡(F^{N×1} )=\dim⁡(ker⁡(A))+\dim⁡(CS(A))$$
+* 所以$$cr(A)=N−(N−r)=r=rr(A)$$  \(QED\).
+
 
 

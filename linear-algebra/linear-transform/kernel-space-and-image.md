@@ -172,6 +172,13 @@ Proof =&gt;
 * $$R(L_A )=\{ Ax|F^{N \times 1} \}=CS(A)$$
 * $$N=ker⁡(A)+CS(A)$$
 
+### 矩陣行獨立與行生成對應一對一與映成函數
+
+> 矩陣$$A \in F^{M \times N}$$，則：
+>
+> * $$Ax=0$$只有$$x =0 \in F^{N \times 1}$$的解 $$\Leftrightarrow A$$為行獨立 $$\Leftrightarrow ker(A) = \{0\} \Leftrightarrow Ax$$ 為一對一函數。
+> * 矩陣$$A$$行生成$$F^{M \times 1} \Leftrightarrow CS(A)=F^{M \times 1} \Leftrightarrow R(A) = F^{M \times 1} \Leftrightarrow Ax$$為映成函數。
+
 
 
 ### 

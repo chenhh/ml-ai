@@ -153,7 +153,7 @@ Proof =&gt;
 
 * $$\dim⁡(V)=\dim⁡(ker⁡(T))+\dim⁡(R(T))$$
 * 映成函數即$$R(T)=W \Rightarrow \dim⁡(R(T))=\dim⁡(W)$$
-* 因為$$dim⁡(ker⁡(T))\geq 0$$，所以$$\dim⁡(V) \geq \dim⁡(W)$$
+* 因為$$\dim⁡(ker⁡(T))\geq 0$$，所以$$\dim⁡(V) \geq \dim⁡(W)$$
 
 
 

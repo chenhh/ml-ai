@@ -184,3 +184,13 @@ Proof \(1\)
 * $$Ax=0\Leftrightarrow \begin{bmatrix}  A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_M \end{bmatrix} = x_1 A_{:1} + x_2 A_{:2} + \dots +X_N A_{:N} =0$$
 * 如果$$x_1 A_{:1} + x_2 A_{:2} + \dots +X_N A_{:N} =0$$只有$$x_1=x_2=\dots=x_N=0$$唯一解時，則$$\begin{bmatrix}  A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} $$為線性獨立集，即矩陣$$A$$為行獨立，此時$$ker⁡(A)=\{0\}$$，因此$$Ax$$為一對一函數。\(QED\)
 
+## 保相依、保獨立、保生成
+
+> 線性轉換$$T \in L(V,W)$$且$$\dim(V) < \infty$$，集合$$S \subseteq V$$：
+>
+> * 若$$S$$為線性相依集，且$$T(S)$$為線性相依集，則稱線性轉換$$T$$保相依。
+> * 若$$S$$為線性獨立集，且$$T(S)$$為線性獨立集，則稱線性轉換$$T$$保獨立。
+> * 若$$S$$為$$V$$的生成集，且$$T(S)$$為$$W$$的生成集，則稱$$T$$保生成。
+
+
+

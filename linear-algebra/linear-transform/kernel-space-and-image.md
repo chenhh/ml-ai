@@ -179,13 +179,8 @@ Proof =&gt;
 > * $$Ax=0$$只有$$x =0 \in F^{N \times 1}$$的解 $$\Leftrightarrow A$$為行獨立 $$\Leftrightarrow ker(A) = \{0\} \Leftrightarrow Ax$$ 為一對一函數。
 > * 矩陣$$A$$行生成$$F^{M \times 1} \Leftrightarrow CS(A)=F^{M \times 1} \Leftrightarrow R(A) = F^{M \times 1} \Leftrightarrow Ax$$為映成函數。
 
+Proof \(1\)
 
-
-### 
-
-
-
-
-
-
+* $$Ax=0\Leftrightarrow \begin{bmatrix}  A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_M \end{bmatrix} = x_1 A_{:1} + x_2 A_{:2} + \dots +X_N A_{:N} =0$$
+* 如果$$x_1 A_{:1} + x_2 A_{:2} + \dots +X_N A_{:N} =0$$只有$$x_1=x_2=\dots=x_N=0$$唯一解時，則$$\begin{bmatrix}  A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} $$為線性獨立集，即矩陣$$A$$為行獨立，此時$$ker⁡(A)=\{0\}$$，因此$$Ax$$為一對一函數。\(QED\)
 

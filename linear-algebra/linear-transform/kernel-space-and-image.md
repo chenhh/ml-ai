@@ -192,7 +192,7 @@ Proof \(1\)
 > * * 若$$S$$為線性獨立集，且$$T(S)$$為線性獨立集，則稱線性轉換$$T$$保獨立。
 > * 若$$S$$為$$V$$的生成集，且$$T(S)$$為$$W$$的生成集，則稱$$T$$保生成。
 
-### 任意線性轉換必定保相依
+### 任意線性函數必定保相依
 
 > 線性轉換$$T \in L(V,W)$$，若$$S \subseteq V$$為線性相依集，則$$T(S) \subseteq W$$也為線性相依集。
 
@@ -204,11 +204,44 @@ proof：
 * 可得$$T(v_1 ),\dots,T(v_k ) \in T(S)$$且$$a_1, \dots,a_k\in F$$不全為0
 * 所以$$T(S)$$為線性相依集。\(QED\)
 
+### 一對一線線性函數保獨立
 
+> 一對一線性轉換$$T \in L(V,W)$$若且唯若$$S \subseteq V$$為線性獨立集，則$$T(S) \subseteq W$$也為線性獨立集。
+>
+> 一對一函數：$$\forall v_1, v_2 \in V T(v_1)=T(v_2) \Rightarrow  v_1 =v_2$$。
 
+proof: &lt;=, 只須證明$$\ker⁡(T)=\{0\}$$即可。
 
+* 令$$ ker⁡(T)\neq \{0\}$$  ，則 $$∃v \neq 0 \ni v \in ker⁡(T)$$
+* 因為$$v$$線性獨立，且$$T$$保獨立
+* 所以$$T(v)$$為線性獨立集可得$$T(v)\neq 0 \Rightarrow v \notin ker⁡(T)$$ \(矛盾\)
+* 所以$$ker⁡(T)=\{0\}$$ \(QED\)
 
+proof =&gt;
 
+* 令$$S \subseteq V$$為線性獨立集。
+* 令$$v_1, \dots ,v_k \in S$$， $$T(v_1 ),\dots ,T(v_k ) \in T(S)$$
+* 若$$a_1 T(v_1 )+a_2 T(v_2 )+\dots+a_k T(v_k )=0$$
+* 所以$$T(a_1 v_1+\dots+a_k v_k )=0=T(0)$$
+* 因為$$T$$為一對一函數，所以$$a_1 v_1+\dots+a_k v_k=0$$
+* 因為$$S$$為線性獨立集，所以$$a_1=\dots=a_k=0$$
+* 所以$$T(S)$$為線性獨立集。\(QED\)
 
+### 映成線性函數保生成
 
+> 映成線性函數$$T \in L(V,W)$$若且唯若 $$S\subseteq V, span(S)=V$$，則$$span(T(S))=W$$。
+
+proof &lt;=, 證明$$R(T)=W$$
+
+* 取$$B$$為$$V$$的基底，所以$$span(B)=V$$
+* 因為$$T$$保生成，所以$$span(T(B))=W$$
+* 因為$$span(T(B))=R(T)$$
+* 所以$$W=R(T)$$\(QED\)
+
+proof =&gt;
+
+* 令$$S\subseteq V$$, $$span(S)=V$$
+* 所以$$span(T(S))=R(T)$$
+* 因為$$T$$為映成函數，所以$$R(T)=W$$
+* 可得$$span(T(S))=W$$ \(QED\)
 

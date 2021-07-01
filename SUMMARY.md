@@ -93,6 +93,7 @@
 * [線性轉換](linear-algebra/linear-transform/README.md)
   * [座標化\(coordinate\)](linear-algebra/linear-transform/coordinate.md)
   * [核空間及像集\(kernel space and image\)](linear-algebra/linear-transform/kernel-space-and-image.md)
+  * [相似矩陣\(similar matrix\)](linear-algebra/linear-transform/similar-matrix.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

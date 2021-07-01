@@ -46,11 +46,3 @@ Proof:
 * $$rank(B)=rank(P^{−1} AP)=rank(AP)=rank(A)$$
 * $$nullity(B)=N−rank(B)=N−rank(A)=nullity(A)$$
 
-
-
-### 
-
-
-
-
-

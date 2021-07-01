@@ -168,6 +168,12 @@ Proof =&gt;
 > * $$\dim(ker(A)) + \dim(CS(A)) = N$$
 > * $$\dim(Lker(A))+\dim(RS(A))=M$$
 
+* $$ker⁡(L_A )=\{x\in F^{N \times 1} |Ax=0\}=ker⁡(A)$$
+* $$R(L_A )=\{ Ax|F^{N \times 1} \}=CS(A)$$
+* $$N=ker⁡(A)+CS(A)$$
+
+
+
 ### 
 
 

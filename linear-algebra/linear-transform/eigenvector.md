@@ -50,9 +50,20 @@ Proof:
 
 ## 特徵多項式\(characteristic polynomial\)
 
-> 線性轉換$$T \in L(V,V),  \lambda \in F$$ ，定義$$f(x)=\det(T - \lambda I)$$為$$T$$的特徵多項式，記為$$char_T(x)$$。
+> 線性轉換$$T \in L(V,V),  \lambda \in F$$ 為特徵根，定義$$f(x)=\det(T - \lambda I)$$為$$T$$的特徵多項式，記為$$char_T(x)$$。
 >
 > 因此$$\lambda$$為$$T$$的特徵根若且唯若$$\lambda$$為$$char_T(x)$$的根。
+
+## 特徵空間\(eigenspace\)
+
+> 線性轉換$$T \in L(V,V),  \lambda \in F$$ 為特徵根。
+>
+> * 定義$$\begin{align} V(\lambda) & =\{v \in V|T(v)=\lambda v\} \\ & =\{v \in V|(T− \lambda I)(v)=0\} \\ &=ker⁡(T−\lambda I) \end{align}$$為$$T$$相對於$$\lambda$$的特徵空間。
+> * 前面已證明過相對$$\lambda$$的特徵向量之線性組合，在不為零向量時 ，仍為相對$$\lambda$$的特徵向量，因此$$V(\lambda)$$可視為由相對於$$\lambda$$之特徵向量線性組合生成的空間。
+
+>
+
+
 
 
 

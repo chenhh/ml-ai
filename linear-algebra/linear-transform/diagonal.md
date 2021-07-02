@@ -88,6 +88,38 @@ proof:
 * 所以$$gm(\lambda_i )=1=m(\lambda_i ), ~\forall i$$
 * 因此$$A$$可對角化。\(QED\)
 
+### 對角化範例
+
+#### 矩陣
+
+* $$A=\begin{bmatrix}  8 & 0 & 3\\ 2 & 2 & 1 \\ 2 & 0 & 3 \end{bmatrix}$$, $$char_A(x)=\det(A-xI)=-(x-2)^2(x-9)$$
+* $$V(2) = ker(A-2I) = ker \begin{bmatrix}  6 & 0 & 3\\ 2 & 0 & 1 \\ 2 & 0 & 1 \end{bmatrix} = span \left\{  \begin{bmatrix} -1 \\ 0 \\ 2\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix} \right\}$$
+* $$V(9) = ker(A-9I) = ker \begin{bmatrix}  -1 & 0 & 3\\ 2 & -7 & 1 \\ 2 & 0 & -6 \end{bmatrix} = span \left\{  \begin{bmatrix} 3 \\ 1 \\ 1\end{bmatrix}  \right\}$$
+* 取$$P=\begin{bmatrix}  -1 & 0 & 3\\ 0 & 1 & 1 \\ 2 & 0 & 1 \end{bmatrix}$$，則$$P^{-1}AP=D= diag\{ 2, 2, 9\}$$。
+
+#### 線性轉換
+
+* $$T:F_2 [x]→F_2 [x]$$
+* $$T(a_0+a_1 x+a_2 x^2 )=a_2+a_1+a_0 x^2$$
+* 取基底$$B=\{1,x,x^2 \}$$，$$T(1)=x^2,T(x)=x, T(x^2 )=1$$
+* $$A=[T]_B=[[T(b_1 )]_B,[T(b_2 )]_B,[T(b_3 )]_B ]=\begin{bmatrix}  0 & 0 & 1 \\ 0 & 1 & 0 \\1 & 0 & 0\end{bmatrix}$$
+* $$char_A(x)=\det(A-xI)=-(x+1)(x-1)^2$$
+* $$V(-1)=ker(A+I)=ker \begin{bmatrix}  1 & 0 & 1 \\ 0 & 2 & 0 \\1 & 0 & 1\end{bmatrix} = span\left\{ \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix} \right\}$$
+* 因為$$\begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix}  = [1-x^2]_B$$，所以$$1-x^2$$為$$T$$相對於$$-1$$的特徵向量。
+* $$V(1)=ker(A-I)=ker \begin{bmatrix}  -1 & 0 & 1 \\ 0 & 0 & 0 \\1 & 0 & -1\end{bmatrix} = span\left\{ \begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}  \right\}$$
+* $$\begin{bmatrix} 1 \\ 0 \\ 1\end{bmatrix} = [1+x^2]_B$$，$$\begin{bmatrix} 0 \\ 1 \\ 0\end{bmatrix}=[x]_B$$
+* 所以$$1+x^2, x$$為$$T$$相對於$$1$$的兩個特徵向量。
+* 即$$1-x^2, 1+x^2, x$$為$$T$$的三個線性獨立特徵向量。
+* 取$$R=\{ 1-x^2, 1+x^2, x \}$$，則$$[T]_R = diag\{-1, 1, 1\}$$為對角矩陣。
+
+
+
+
+
+### 
+
+
+
 
 
 

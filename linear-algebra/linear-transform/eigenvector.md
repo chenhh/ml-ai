@@ -131,3 +131,31 @@ Proof:
 * 若$$Bx=0$$則$$A0=\lambda x$$，即$$\lambda x=0$$，與$$\lambda neq 0, x neq 0$$的假設矛盾，所以$$Bx \neq 0$$
 * $$\exists Bx\neq 0 \ni BA(Bx)=\lambda (Bx)$$，因此$$\lambda$$為$$BA$$的特徵根 \(QED\)
 
+## 代數重數、幾何重數\(algebraic multiplicity, geometric multiplicity\)
+
+> 線性轉換$$T\in L(V,V), \lambda \in F$$為$$T$$的特徵根。
+>
+> * 定義$$\lambda$$在特徵方程式$$char_T (x)$$中的重根數為$$\lambda$$的代數重數，或簡稱為重數，記為$$m(\lambda)  $$。
+> * 定義$$\dim⁡(V(\lambda))$$為$$\lambda$$的幾何重數，即$$V(\lambda)$$的基底元素個數，記為$$gm(\lambda)$$  。
+
+* $$A \in F^{N \times N}$$，$$\lambda$$為$$A$$的一個特徵根，則  ：
+  * $$gm(\lambda)=\dim⁡(V(\lambda))=\dim⁡(ker⁡(A− \lambda I) )=N−rank(A−\lambda I)$$
+* $$gm(\lambda)$$為$$V(\lambda)$$中，最大獨立集的個數，即相對於$$\lambda$$的最大線性獨立特徵向量個數。
+
+### 特徵空間的維度必小於代數重根數
+
+> 線性轉換$$T\in L(V,V), \lambda \in F$$為$$T$$的特徵根，$$\dim(V)=N$$，則$$gm(\lambda) \leq m(\lambda)$$。
+
+Proof:
+
+* 令$$gm(\lambda)=\dim⁡(V(\lambda))=k$$。
+* 因為$$V(\lambda)$$為$$T$$不變子空間，所以存在$$V$$的一組基底$$B\ni [T]_B = \begin{bmatrix}A_1 & C \\ 0 & A_2 \end{bmatrix}$$，$$A_1=[T_{V(\lambda)}  ]_{B_1}$$ 且$$B_1$$ 為$$V(\lambda)$$的基底。
+* 因為$$B_1\subseteq V(\lambda)$$且$$V(\lambda)$$中除了0向量外均為$$T$$相對於$$\lambda$$的特徵向量。  所以$$B_1$$ 中的元素均為$$T$$的特徵向量。
+* 因為$$A_1=[T_{V(\lambda)}  ]_{B_1}=diag\{\lambda, \dots, \lambda\}_{k \times k}=\lambda I_k$$
+* 所以$$\begin{align} char_T (x) & =\det⁡([T]_B−xI) \\ &=\det\begin{bmatrix}A_1 - xI_k & C \\ 0 & A_2 -xI_{N-k}\end{bmatrix} \\ & =\det(A_1 - xI_k)\det(A_2 - xI_{N-k}) \\ & = \det(\lambda I_k - xI_k)\det(A_2 - xI_{N-k}) \\ &= (\lambda -x)^k\det(A_2 - xI_{N-k}) \end{align}$$
+* 所以$$\lambda$$在$$char_T (x)$$中的重根數至少為$$k$$，即$$m(\lambda) \geq k$$ \(QED\).
+
+
+
+
+

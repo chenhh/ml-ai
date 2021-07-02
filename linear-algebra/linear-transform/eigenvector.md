@@ -59,9 +59,28 @@ Proof:
 > 線性轉換$$T \in L(V,V),  \lambda \in F$$ 為特徵根。
 >
 > * 定義$$\begin{align} V(\lambda) & =\{v \in V|T(v)=\lambda v\} \\ & =\{v \in V|(T− \lambda I)(v)=0\} \\ &=ker⁡(T−\lambda I) \end{align}$$為$$T$$相對於$$\lambda$$的特徵空間。
-> * 前面已證明過相對$$\lambda$$的特徵向量之線性組合，在不為零向量時 ，仍為相對$$\lambda$$的特徵向量，因此$$V(\lambda)$$可視為由相對於$$\lambda$$之特徵向量線性組合生成的空間。
+> * 前面已證明過相對$$\lambda$$的特徵向量之線性組合，在不為零向量時 ，仍為相對$$\lambda$$的特徵向量，**因此**$$V(\lambda)$$**可視為由相對於**$$\lambda$$**之特徵向量線性組合生成的空間**。
+
+* $$\lambda$$為$$T$$的特徵根若且唯若$$V(\lambda) \neq \{0\}$$。
+* $$\begin{align} V(\lambda) & =\{x \in F^{N \times1} |T(x)=\lambda x\} \\ & =\{x \in F^{N \times 1} |(T−\lambda I)x=0\} \\ &=ker⁡(T−\lambda I) \end{align}$$
+* 所以$$x$$為$$T$$的特徵向量若且唯若$$x \in V(\lambda)−\{0\}$$。
+
+#### 範例
+
+* $$A=\begin{bmatrix} 2 & 1 & 0 \\ 0 & 1 & -1 \\ 0 & 2 & 4\end{bmatrix}$$
+* $$\det⁡(A−\lambda I)=0$$得$$\lambda=2,3$$
+* $$V(2)=ker⁡(A−2I)=ker \left(\begin{bmatrix} 0 & 1 & 0 \\ 0 & -1 & -1 \\ 0 & 2 & 2\end{bmatrix}\right)=span\left\{ \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right\}$$
+* $$V(3)=ker⁡(A−3I)=ker \left(\begin{bmatrix} -1 & 1 & 0 \\ 0 & -2 & -1 \\ 0 & 2 & 1\end{bmatrix}\right)=span\left\{ \begin{bmatrix} -1 \\ -1 \\ 2 \end{bmatrix}\right\}$$
+
+### 特徵空間為不變子空間
+
+> 線性轉換$$T\in L(V,V), \lambda \in F$$為$$T$$的特徵根。
+>
+> 則特徵空間$$V(\lambda)$$為$$T$$-不變子空間\(即$$T(V(\lambda))\subseteq V(\lambda))$$。
 
 >
+
+
 
 
 

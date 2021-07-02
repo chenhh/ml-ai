@@ -145,6 +145,10 @@ Proof:
 ### 特徵空間的維度必小於代數重根數
 
 > 線性轉換$$T\in L(V,V), \lambda \in F$$為$$T$$的特徵根，$$\dim(V)=N$$，則$$gm(\lambda) \leq m(\lambda)$$。
+>
+> * 若$$\lambda$$為特徵根，則$$V(\lambda) \neq \{0\}$$，可得$$gm(\lambda)=\dim⁡(V(\lambda)) \geq 1$$。
+> * 因為$$char_T (x)$$最多為$$N$$次多項式，因此最多$$N$$個相異根，所以$$m(\lambda) \leq N  $$。
+> * 整理可得$$1 \leq gm(\lambda) \leq m(\lambda) \leq N$$。
 
 Proof:
 

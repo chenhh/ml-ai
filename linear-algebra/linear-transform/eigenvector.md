@@ -58,6 +58,12 @@ Proof:
 
 > 多項式$$f(x) \in F(x)$$，若$$f(x)$$可完全分解成佈於$$F$$的一次因式乘積，稱$$f(x)$$在$$F$$中可分解\(split over F\)。
 
+例如：
+
+* $$f(x)=x^2+3x+2=(x+1)(x+2)$$在$$\mathbb{R}$$中可分解  。
+* $$f(x)=x^2+1=(x+i)(x−i)$$在$$\mathbb{C}$$中可分解  。
+* $$f(x)=x^2+1$$在$$\mathbb{R}$$中不可分解  。
+
 ## 特徵空間\(eigenspace\)
 
 > 線性轉換$$T \in L(V,V),  \lambda \in F$$ 為特徵根。
@@ -143,6 +149,7 @@ Proof:
 > * 定義$$\dim⁡(V(\lambda))$$為$$\lambda$$的幾何重數，即$$V(\lambda)$$的基底元素個數，記為$$gm(\lambda)$$  。
 
 * $$A \in F^{N \times N}$$，$$\lambda$$為$$A$$的一個特徵根，則  ：
+  * 相異特徵根最多$$N$$個，此時所有特徵根的代數重數均為1。
   * $$gm(\lambda)=\dim⁡(V(\lambda))=\dim⁡(ker⁡(A− \lambda I) )=N−rank(A−\lambda I)$$
 * $$gm(\lambda)$$為$$V(\lambda)$$中，最大獨立集的個數，即相對於$$\lambda$$的最大線性獨立特徵向量個數。
 
@@ -162,4 +169,20 @@ Proof:
 * 因為$$A_1=[T_{V(\lambda)}  ]_{B_1}=diag\{\lambda, \dots, \lambda\}_{k \times k}=\lambda I_k$$
 * 所以$$\begin{align} char_T (x) & =\det⁡([T]_B−xI) \\ &=\det\begin{bmatrix}A_1 - xI_k & C \\ 0 & A_2 -xI_{N-k}\end{bmatrix} \\ & =\det(A_1 - xI_k)\det(A_2 - xI_{N-k}) \\ & = \det(\lambda I_k - xI_k)\det(A_2 - xI_{N-k}) \\ &= (\lambda -x)^k\det(A_2 - xI_{N-k}) \end{align}$$
 * 所以$$\lambda$$在$$char_T (x)$$中的重根數至少為$$k$$，即$$m(\lambda) \geq k$$ \(QED\)
+
+### 特徵根與行列式、軌跡的關係
+
+> 假設$$char_A (x)$$在$$F$$可分解，其中$$\lambda_1, \dots, \lambda_N$$ 為矩陣$$A$$的$$N$$個特徵根，其未必全相異，則$$char_A (x)=(−1)^N (x−\lambda_1 )(x−\lambda_2 )\dots(x−\lambda_N )=(\lambda_1−x)\dots(\lambda_N−x) $$
+>
+> 可得
+>
+> * $$\det⁡(A)=\lambda_1 \lambda_2 \dots \lambda_N=\prod_{i=1}^N \lambda_i  $$
+> * $$tr(A)=\lambda_1+\lambda_2+⋯+\lambda_N=\sum_{i=1}^N \lambda_i$$
+
+Proof:
+
+* $$\det⁡(A)=char_A (0)=\lambda_1 \lambda_2 \dots \lambda_N$$。
+* $$char_A (x)$$中，$$(−x)^{N−1}$$ 的係數為$$tr(A)$$ \(QED\)
+
+
 

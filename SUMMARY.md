@@ -96,6 +96,7 @@
   * [相似矩陣\(similar matrix\)](linear-algebra/linear-transform/similar-matrix.md)
   * [不變子空間\(invariant subspace\)](linear-algebra/linear-transform/invariant-subspace.md)
   * [特徵向量\(eigenvector\)](linear-algebra/linear-transform/eigenvector.md)
+  * [對角化 \(diagonal\)](linear-algebra/linear-transform/diagonal.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

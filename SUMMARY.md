@@ -95,6 +95,7 @@
   * [核空間及像集\(kernel space and image\)](linear-algebra/linear-transform/kernel-space-and-image.md)
   * [相似矩陣\(similar matrix\)](linear-algebra/linear-transform/similar-matrix.md)
   * [不變子空間\(invariant subspace\)](linear-algebra/linear-transform/invariant-subspace.md)
+  * [特徵向量\(eigenvector\)](linear-algebra/linear-transform/eigenvector.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

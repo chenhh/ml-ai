@@ -90,7 +90,7 @@ Proof:
 
 > 線性轉換$$T \in L(V,V)$$且$$\lambda_1, \lambda _2, \dots ,\lambda _K \in F$$為$$T$$的$$K$$個相異特徵根，則：
 >
-> * $$V(\lambda_1 ) ,V(\lambda_2 ),\dots,V(\lambda_K )$$為[獨立子空間](../vector-space/independent-subspace-direct-sum.md#du-li-zi-kong-jian-independent-subspace) （指$$V(\lambda_i )$$無法由其它子空間生成，$$V(\lambda _i) \cap \sum_{j \neq i}V(\lambda _j) = \{0\}$$，獨立子空間保證空間兩兩獨立（正交））。
+> * $$V(\lambda_1 ) ,V(\lambda_2 ),\dots,V(\lambda_K )$$為[獨立子空間](../vector-space/independent-subspace-direct-sum.md#du-li-zi-kong-jian-independent-subspace) （指$$V(\lambda_i )$$無法由其它子空間生成，$$V(\lambda _i) \cap \sum_{j \neq i}V(\lambda _j) = \{0\}$$，獨立子空間保證空間兩兩獨立）。
 > * $$v_i$$ 為$$T$$相對於$$\lambda_i $$的特徵向量，$$i=1,2,\dots,K$$，則$$v_1,v_2,\dots,v_k$$ 為線性獨立。
 
 Proof: \(數學歸納法\)
@@ -99,18 +99,35 @@ Proof: \(數學歸納法\)
 * 令$$K=r-1$$時，$$V(\lambda_1 ),\dots,V(\lambda_{r−1} )$$為獨立子空間成立。即$$ V(\lambda_i )\bigcap \sum_{j \neq i} V(\lambda_j ) =\{0\}, ~ \forall i=1,2 \dots,K $$。
 * 考慮$$K=r$$時，取$$v_i \in V(\lambda_i ),~ i=1,2,\dots,r  $$。
 * 若$$v_1+v_2+\dots+v_r=0$$，則$$0=T(0)=T(v_1+v_2+\dots+v_r )=T(v_1 )+T(v_2 )+\dots+T(v_r )=\lambda_1 v_1+\lambda_2 v_2+\dots+\lambda_r v_r $$ --\(1\)
-* 因為$$v_1+v_2+\dots+v_r=0 \Rightarrow \lambda_r v_1+\lambda_r v_2+\dots+\lambda_r v_r=0$$ --\(2\)
+* 同乘$$\lambda_r$$得：$$v_1+v_2+\dots+v_r=0 \Rightarrow \lambda_r v_1+\lambda_r v_2+\dots+\lambda_r v_r=0$$ --\(2\)
 * \(1\)−\(2\)得 $$(\lambda_1−\lambda_r ) v_1+(\lambda_2−\lambda_r ) v_2+\dots+(\lambda_{r−1}−\lambda_r ) v_{r−1}=0 $$
 * 因為$$V(\lambda_1 ),\dots,V(\lambda_{r−1} )$$為獨立子空間，且$$(\lambda_i−\lambda_r ) v_i \in V(\lambda_i ),~i=1,2,\dots,r−1  $$
 * 所以$$(\lambda_i−\lambda_r ) v_i=0, ~i=1,2,\dots,r−1$$
 * 因為$$\lambda_i \neq \lambda_r, ~i=1,2,\dots,r−1  $$
-* 所以$$v_i=0, ~i=1,2,\dots,r−1$$代回\(1\)得$$v_r=0$$ \(QED\).
+* 所以$$v_i=0, ~i=1,2,\dots,r−1$$代回\(1\)得$$v_r=0$$ \(QED\)
 
+### 相似矩陣有相同的特徵根\(特徵方程式\)
 
+> 矩陣$$A,B \in F^{N \times N}$$，若$$A,B$$相似\($$∃P \in F^{N \times N}  \text{ invertible } \ni AP=PB$$\)，則：$$char_A (x)=char_B (x)$$，$$A,B$$有相同特徵根。
+>
+> 但反之不成立，如$$A=I, B=\begin{bmatrix} 1 & 0 \\ 1 & 1\end{bmatrix}$$有相同特徵根，但不是相似矩陣。
 
+Proof:
 
+$$char_B (x)=\det⁡(B−xI)=\det⁡(P^{−1} AP−xI)=\det⁡(P^{−1} AP−P^{−1} xIP)=\det⁡(P^{−1} (A−xI)P)=\det⁡(P^{−1} )  \det⁡(A−xI)  \det⁡(P)=\det⁡(A−xI)=char_A (x)$$ \(QED\)
 
+### 矩陣左乘或右乘有相同特徵根
 
+> 矩陣$$A,B \in F^{N \times N}$$，則$$AB, BA$$有相同特徵根。
 
+Proof:
 
+令$$\lambda$$為$$AB$$的特徵根
+
+* Case1:$$\lambda=0$$
+* $$0=\det⁡(AB−0I)=\det⁡(AB)=\det⁡(A)  \det⁡(B)=\det⁡(BA)=\det⁡(BA−0I) $$
+* Case 2: $$ \lambda \neq 0 $$
+* $$\exists x \neq 0 \ni ABx=\lambda x \Rightarrow BABx=\lambda Bx\Leftrightarrow BA(Bx)=λ(Bx) $$
+* 若$$Bx=0$$則$$A0=\lambda x$$，即$$\lambda x=0$$，與$$\lambda neq 0, x neq 0$$的假設矛盾，所以$$Bx \neq 0$$
+* $$\exists Bx\neq 0 \ni BA(Bx)=\lambda (Bx)$$，因此$$\lambda$$為$$BA$$的特徵根 \(QED\)
 

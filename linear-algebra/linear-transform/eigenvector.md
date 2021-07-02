@@ -54,6 +54,10 @@ Proof:
 >
 > 因此$$\lambda$$為$$T$$的特徵根若且唯若$$\lambda$$為$$char_T(x)$$的根。
 
+### 可分解\(split over F\)
+
+> 多項式$$f(x) \in F(x)$$，若$$f(x)$$可完全分解成佈於$$F$$的一次因式乘積，稱$$f(x)$$在$$F$$中可分解\(split over F\)。
+
 ## 特徵空間\(eigenspace\)
 
 > 線性轉換$$T \in L(V,V),  \lambda \in F$$ 為特徵根。

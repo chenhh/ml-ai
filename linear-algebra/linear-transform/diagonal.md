@@ -49,3 +49,46 @@ Proof \(1\)-&gt;\(2\)
 * 因為$$B$$為線性獨立集，所以$$B_i$$ 為線性獨立集
 * 因為$$B_i \subseteq V(\lambda_i )$$且基底為最大線性獨立集，所以$$m(\lambda_i )=m_i=|B_i |\leq \dim⁡(V(\lambda_i ))=gm(\lambda_i ), i=1,2,\dots, r$$ \(QED\)
 
+Proof \(2\)-&gt;\(3\)
+
+* 因為$$V(\lambda_1 ),\dots,V(\lambda_r )$$為獨立子空間，所以只須證明$$V=V(\lambda_1 )+\dots+V(\lambda_r )$$。
+* 因為$$V(\lambda_i )$$為$$V$$的子空間，所以$$V(\lambda_1 )+\dots+V(\lambda_r$$ \)為$$V$$的子空間，即$$V(\lambda_1 )+\dots+V(\lambda_r ) \subseteq V$$。
+* 因此只要證明$$\dim(V)=\dim⁡(V(\lambda_1 )+\dots+V(\lambda_r ))$$  \($$W$$為$$V$$子空間且$$\dim⁡(W)=\dim(V)\Leftrightarrow W=V$$\)
+* 因為$$V(\lambda_1 ),\dots,V(\lambda_r )$$為獨立子空間
+* $$\begin{align} \dim⁡(V(\lambda_1 )+\dots+V(\lambda_r )) &=\dim⁡(V(\lambda_1 ))+\dots+\dim⁡(V(\lambda_r ))\\ &=gm(\lambda_1 )+\dots+gm(\lambda_r )\\ &=m(\lambda_1 )+\dots+m(\lambda_r )\\&=\dim⁡(V) \end{align}$$ \(QED\)
+
+Proof \(3\)-&gt;\(1\)
+
+* 因為$$V=V(\lambda_1 ) \oplus V(\lambda_2 )\oplus \dots \oplus V(\lambda_r )$$，且$$V(\lambda_i )$$為$$T$$不變子空間。
+* 令$$B_i$$ 為$$V(\lambda_i )$$的一組基底，所以$$B=B_1 \cup \dots\cup B_r$$ 為$$V$$的一組基底，且根據不變子空間的特性，可得
+* $$[T]_B = diag\{A_1, \dots, A_k\}$$
+  * $$A_i = [T_{V(\lambda_i)}]_{B_i}=diag\{\lambda_i, \dots, \lambda_i\}_{m_i \times m_i} = \lambda_i I_{m_i}$$
+  * $$\dim(V(\lambda_i)) \equiv gm(\lambda_i)=m(\lambda_i), ~i=1,2,\dots, k$$
+* 所以$$[T]_B=diag\{ \lambda_1 I_{m_1}, \dots \lambda_r I_{m_r}\}$$為對角矩陣 \(QED\)
+
+#### 範例
+
+* $$A=\begin{bmatrix}  0 & 0 & -2 \\ 1 & 2 & 1 \\ 1 & 0 & 3 \end{bmatrix}$$, $$char_A(x)=-(x-1)(x-2)^2$$
+* 檢查$$\lambda=2$$
+* $$rank(A-2I) = rank\begin{bmatrix}  -2 & 0 & -2 \\ 1 & 20& 1 \\ 1 & 0 & 1 \end{bmatrix} = 1$$
+* 所以$$gm(2)=\dim(ker(A-2I))=3-1=2$$
+* 且$$m(2)=2$$
+* 所以$$A$$可對角化。
+
+### 全相異特徵根矩陣必可對角化
+
+> 矩陣$$A \in F^{N \times N}$$，若$$A$$有$$N$$個相異的特徵根，則$$A$$可對角化。
+>
+> 註：可對角化矩陣不一定有相異特徵根，只要相同的特徵根符合$$gm(\lambda_i )=m(\lambda_i )$$的條件即可。
+
+proof:
+
+* 因為$$1 \leq gm(\lambda_i ) \leq m(\lambda_i ) \leq N,  ~i=1,2,\dots,N$$
+* 且$$m(\lambda_1 )+m(\lambda_2 )+\dots+m(\lambda_N )=N$$
+* 所以$$gm(\lambda_i )=1=m(\lambda_i ), ~\forall i$$
+* 因此$$A$$可對角化。\(QED\)
+
+
+
+
+

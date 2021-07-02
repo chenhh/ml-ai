@@ -9,6 +9,8 @@
 > * $$\lambda$$為相對於$$T$$的特徵根\(eigenvalue or characteristic value\)，
 > * 且$$v$$為相對於$$T$$的特徵向量\(eigenvector or characteristic vector\)
 > * $$T$$可能有多個特徵根，不同的特徵根對應不同的特徵向量。
+>
+> 在[可對角化的充要條件](diagonal.md#ke-dui-jiao-hua-de-chong-yao-tiao-jian)中，可得線性轉換（矩陣）的特徵向量可視為線性空間的（正交）基底。
 
 ![&#x7279;&#x5FB5;&#x6839;&#x8207;&#x7279;&#x5FB5;&#x503C;](../../.gitbook/assets/eigenvector-min.png)
 

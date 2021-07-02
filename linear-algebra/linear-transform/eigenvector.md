@@ -157,9 +157,5 @@ Proof:
 * 因為$$B_1\subseteq V(\lambda)$$且$$V(\lambda)$$中除了0向量外均為$$T$$相對於$$\lambda$$的特徵向量。  所以$$B_1$$ 中的元素均為$$T$$的特徵向量。
 * 因為$$A_1=[T_{V(\lambda)}  ]_{B_1}=diag\{\lambda, \dots, \lambda\}_{k \times k}=\lambda I_k$$
 * 所以$$\begin{align} char_T (x) & =\det⁡([T]_B−xI) \\ &=\det\begin{bmatrix}A_1 - xI_k & C \\ 0 & A_2 -xI_{N-k}\end{bmatrix} \\ & =\det(A_1 - xI_k)\det(A_2 - xI_{N-k}) \\ & = \det(\lambda I_k - xI_k)\det(A_2 - xI_{N-k}) \\ &= (\lambda -x)^k\det(A_2 - xI_{N-k}) \end{align}$$
-* 所以$$\lambda$$在$$char_T (x)$$中的重根數至少為$$k$$，即$$m(\lambda) \geq k$$ \(QED\).
-
-
-
-
+* 所以$$\lambda$$在$$char_T (x)$$中的重根數至少為$$k$$，即$$m(\lambda) \geq k$$ \(QED\)
 

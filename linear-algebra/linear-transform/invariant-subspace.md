@@ -1,5 +1,7 @@
 # 不變子空間\(invariant subspace\)
 
+## 
+
 ## 不變子空間
 
 > 線性轉換$$T \in L(V,V)$$，$$ W$$為$$V$$的子空間且滿足$$T(W) \subseteq W$$，則稱$$W$$為$$T$$-不變子空間\($$T$$-invariant subspace\)。
@@ -47,11 +49,29 @@ Proof:
 * $$T(v_N )=a_{1,N} v_1+a_{2,N} v_2+\dots+a_{k,N} v_k+a_{k+1,N} v_{k+1}+\dots+a_{N,N} v_N$$
 * 可得$$[T]_B=\begin{bmatrix}  a_{1,1} & a_{1,2} & \dots & a_{1,k} & a_{1, k+1} & \dots & a_{1,N}\\ \vdots & \vdots &  \ddots & \vdots & \vdots & \ddots & \vdots \\ a_{k,1} & a_{k,2} & \dots & a_{k,k} & a_{k, k+1} & \dots & a_{k,N}\\ 0 & 0 &  \ddots & 0 & a_{k+1, k+1} & \ddots & a_{k+1, N} \\    \vdots & \vdots &  \ddots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 &  \ddots & 0 & a_{N, k+1} & \ddots & a_{N, N} \\    \end{bmatrix}  = \begin{bmatrix} A_1 & C \\ 0 & A_2\end{bmatrix}$$
 
+\(QED\)
 
+### 直和空間與不變子空間的性質
 
-### 
+> 線性轉換$$T \in L(V,V)$$且$$W_1, W_2$$為$$T$$不變子空間且為獨立子空間，$$V=W_1 \oplus W_2$$，$$B_1,B_2$$分別為$$W_1,W_2$$的基底，則$$B=B_1 \cup B_2$$為$$V$$的基底，且$$[T]_B = \begin{bmatrix} A_1 & 0 \\ 0 & A_2\end{bmatrix}$$，$$A_1 = [T_{W_1}]_{B_1}$$，$$A_2 = [T_{W_2}]_{B_2}$$
+>
+> 可擴充到$$K$$個$$T$$不變子空間且為獨立子空間：$$V=W_1 \oplus W_2 \oplus \cdots \oplus W_K$$，$$B_i$$為$$W_i$$的基底，則$$B=\bigcup_{i=1}^K B_i$$為$$V$$的基底，且$$[T]_B = diag\{A_1, A_2, \dots, A_k\}$$，$$A_i = [T_{W_i}]_{B_i}, i=1,2,\dots,K$$
 
+Proof:
 
+* 因為$$W_1, W_2$$為獨立子空間，所以$$W_1\cap W_2=\{0\}$$。
+* 令$$B_1=\{v_1,\dots,v_k \}, ~B_2=\{v_{k+1}, \dots,v_N \}$$，則$$B=\{v_1,\dots,v_k,v_{k+1},\dots,v_N \}$$。
+* 因為$$W_1$$ 為$$T$$不變子空間，所以$$T(v_1 ),\dots,T(v_k ) \in W_1$$ 可由$$B_1$$ 生成。
+  * $$T(v_1 )=a_{11} v_1+a_{21} v_2+\dots+a_{k1} v_k$$
+  * $$T(v_2 )=a_{12} v_1+a_{22} v_2+\dots+a_{k2} v_k$$
+  * $$\vdots$$
+  * $$T(v_k )=a_{1K} v_1+a_{2K} v_2+\dots+a_{KK} v_k$$
+* 因為$$W_2$$ 為$$T$$不變子空間，所以$$T(v_{k+1} ),\dots,T(v_n ) \in W_2$$ 可由$$B_2$$ 生成。
+  * $$T(v_{K+1} )=a_{k+1,k+1} v_{k+1}+\dots+a_{N,K+1} v_N$$
+  * $$T(v_{K+2} )=a_{k+1,k+2} v_{k+1}+\dots+a_{N,K+2} v_N$$
+  * $$\vdots$$
+  * $$T(v_N )=a_{k+1,N} v_{k+1}+\dots+a_{N,N} v_N$$
+* $$[T]_B=\begin{bmatrix}  a_{1,1} & a_{1,2} & \dots & a_{1,k} & 0 & \dots & 0\\ \vdots & \vdots &  \ddots & \vdots & \vdots & \ddots & \vdots \\ a_{k,1} & a_{k,2} & \dots & a_{k,k} & 0 & \dots & 0\\ 0 & 0 &  \ddots & 0 & a_{k+1, k+1} & \ddots & a_{k+1, N} \\    \vdots & \vdots &  \ddots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 &  \ddots & 0 & a_{N, k+1} & \ddots & a_{N, N} \\    \end{bmatrix}  = \begin{bmatrix} A_1 & 0 \\ 0 & A_2\end{bmatrix}$$
 
-
+  \(QED\)
 

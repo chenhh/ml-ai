@@ -77,8 +77,36 @@ Proof:
 > 線性轉換$$T\in L(V,V), \lambda \in F$$為$$T$$的特徵根。
 >
 > 則特徵空間$$V(\lambda)$$為$$T$$-不變子空間\(即$$T(V(\lambda))\subseteq V(\lambda))$$。
-
 >
+> 註：主成分分析\(PCA\)利用此性質，做到資料降維的功能。
+
+Proof:
+
+* 因為$$V(\lambda)=ker⁡(T−\lambda I)$$, 所以$$V(\lambda)$$為$$V$$的子空間  。
+* 由特徵向量定義得$$\forall u \in V(\lambda), T(u)=\lambda u$$，可得$$T(T(u))=T(\lambda u)=\lambda T(u)$$。
+* 因此$$ T(u) \in V(\lambda)$$  ，即$$T(V(\lambda)) \subseteq V(\lambda)$$\(QED\).
+
+### 相異特徵空間為獨立子空間
+
+> 線性轉換$$T \in L(V,V)$$且$$\lambda_1, \lambda _2, \dots ,\lambda _K \in F$$為$$T$$的$$K$$個相異特徵根，則：
+>
+> * $$V(\lambda_1 ) ,V(\lambda_2 ),\dots,V(\lambda_K )$$為[獨立子空間](../vector-space/independent-subspace-direct-sum.md#du-li-zi-kong-jian-independent-subspace) （指$$V(\lambda_i )$$無法由其它子空間生成，$$V(\lambda _i) \cap \sum_{j \neq i}V(\lambda _j) = \{0\}$$，獨立子空間保證空間兩兩獨立（正交））。
+> * $$v_i$$ 為$$T$$相對於$$\lambda_i $$的特徵向量，$$i=1,2,\dots,K$$，則$$v_1,v_2,\dots,v_k$$ 為線性獨立。
+
+Proof: \(數學歸納法\)
+
+* $$K=1$$時，$$V(\lambda_1 $$\)為獨立子空間成立。
+* 令$$K=r-1$$時，$$V(\lambda_1 ),\dots,V(\lambda_{r−1} )$$為獨立子空間成立。即$$ V(\lambda_i )\bigcap \sum_{j \neq i} V(\lambda_j ) =\{0\}, ~ \forall i=1,2 \dots,K $$。
+* 考慮$$K=r$$時，取$$v_i \in V(\lambda_i ),~ i=1,2,\dots,r  $$。
+* 若$$v_1+v_2+\dots+v_r=0$$，則$$0=T(0)=T(v_1+v_2+\dots+v_r )=T(v_1 )+T(v_2 )+\dots+T(v_r )=\lambda_1 v_1+\lambda_2 v_2+\dots+\lambda_r v_r $$ --\(1\)
+* 因為$$v_1+v_2+\dots+v_r=0 \Rightarrow \lambda_r v_1+\lambda_r v_2+\dots+\lambda_r v_r=0$$ --\(2\)
+* \(1\)−\(2\)得 $$(\lambda_1−\lambda_r ) v_1+(\lambda_2−\lambda_r ) v_2+\dots+(\lambda_{r−1}−\lambda_r ) v_{r−1}=0 $$
+* 因為$$V(\lambda_1 ),\dots,V(\lambda_{r−1} )$$為獨立子空間，且$$(\lambda_i−\lambda_r ) v_i \in V(\lambda_i ),~i=1,2,\dots,r−1  $$
+* 所以$$(\lambda_i−\lambda_r ) v_i=0, ~i=1,2,\dots,r−1$$
+* 因為$$\lambda_i \neq \lambda_r, ~i=1,2,\dots,r−1  $$
+* 所以$$v_i=0, ~i=1,2,\dots,r−1$$代回\(1\)得$$v_r=0$$ \(QED\).
+
+
 
 
 

@@ -27,6 +27,28 @@
 
 ### 不變子空間之矩陣表示法
 
+> 線性轉換$$T \in L(V,V)$$且$$W$$為$$T$$不變子空間，$$\dim(V)=N, \dim(W)=K \leq N$$，則$$V$$中存在一組基底$$B\ni [T]_B= \begin{bmatrix} A_1 & C \\ 0 & A_2 \end{bmatrix}$$，其中$$A_1=[T_W]_{B_1} \in F^{K \times K}$$且$$B_1$$為$$W$$的一組基底。
+
+Proof:
+
+
+
+* 令$$B_1=\{v_1,v_2,\dots,v_K \}$$為$$W$$的基底，則$$B_1$$ 為$$V$$中的線性獨立集。
+* $$∃v_{K+1},\dots,v_N \in V \ni B=\{v_1,\dots,v_K, v_{K+1},\dots,v_N \}$$為$$V$$的基底。
+* 因為$$W$$為$$T$$不變子空間，所以$$T(v_1 ),\dots,T(v_K ) \in W$$，所以可由$$W$$的基底生成。
+* 令$$T(v_1 )=a_{11} v_1+a_{21} v_2+\dots+a_{k1} v_k$$
+* $$T(v_2 )=a_{12} v_1+a_{22} v_2+\dots+a_{k2} v_k$$
+* $$\vdots$$
+* $$T(v_k )=a_{1K} v_1+a_{2K} v_2+\dots+a_{KK} v_k$$ 
+* 因為$$T(v_{K+1} ),\dots,T(v_N ) \in V$$，所以可由$$V$$的基底生成。
+* 令$$T(v_{K+1} )=a_{1,k+1} v_1+a_{2,k+1} v_2+\dots+a_{k,k+1} v_k+a_{k+1,k+1} v_{k+1}+\dots+a_{N,K+1} v_N$$
+* $$T(v_{K+2} )=a_{1,k+2} v_1+a_{2,k+2} v_2+\dots+a_{k,k+2} v_k+a_{k+1,k+2} v_{k+1}+\dots+a_{N,K+2} v_N$$
+* $$\vdots$$
+* $$T(v_N )=a_{1,N} v_1+a_{2,N} v_2+\dots+a_{k,N} v_k+a_{k+1,N} v_{k+1}+\dots+a_{N,N} v_N$$
+* 可得$$[T]_B=\begin{bmatrix}  a_{1,1} & a_{1,2} & \dots & a_{1,k} & a_{1, k+1} & \dots & a_{1,N}\\ \vdots & \vdots &  \ddots & \vdots & \vdots & \ddots & \vdots \\ a_{k,1} & a_{k,2} & \dots & a_{k,k} & a_{k, k+1} & \dots & a_{k,N}\\ 0 & 0 &  \ddots & 0 & a_{k+1, k+1} & \ddots & a_{k+1, N} \\    \vdots & \vdots &  \ddots & \vdots & \vdots & \ddots & \vdots \\ 0 & 0 &  \ddots & 0 & a_{N, k+1} & \ddots & a_{N, N} \\    \end{bmatrix}  = \begin{bmatrix} A_1 & C \\ 0 & A_2\end{bmatrix}$$
+
+
+
 ### 
 
 

@@ -76,9 +76,3 @@ Proof \(2\) 等價\(3\)
 > * 特徵空間$$V(0)=ker⁡(T)$$，$$ V(1)=R(T)  $$
 > * $$T$$可對角化，且存在$$V$$的一組基底$$B \ni [T]_B=\begin{bmatrix} I_r & 0 \\ 0 & 0_{N-r}\end{bmatrix}$$$$r=rank(T)=tr(T)  $$
 
->
-
-
-
-
-

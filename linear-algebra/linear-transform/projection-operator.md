@@ -68,7 +68,15 @@ Proof \(2\) 等價\(3\)
   * $$\dim⁡(V)=rank(T^2 )+nullity(T^2 )    $$
 * 所以$$rank(T^2 )=rank(T)\Leftrightarrow nullity(T^2 )=nullity(T) $$\(QED\)
 
-##  
+### 投影算子的必要條件
+
+> 線性轉換$$T \in L(V,V)$$為向量空間$$V$$上的投影算子\($$T^2=T$$\)，且$$\dim⁡(V)=N$$則：
+>
+> * $$T$$的特徵根必有0或1
+> * 特徵空間$$V(0)=ker⁡(T)$$，$$ V(1)=R(T)  $$
+> * $$T$$可對角化，且存在$$V$$的一組基底$$B \ni [T]_B=\begin{bmatrix} I_r & 0 \\ 0 & 0_{N-r}\end{bmatrix}$$$$r=rank(T)=tr(T)  $$
+
+>
 
 
 

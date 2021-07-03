@@ -114,6 +114,10 @@ proof:
 
 ## 函數以矩陣為參數
 
+* 給定對角矩陣$$D=diag\{\lambda_1, \dots, \lambda_N\} = \begin{bmatrix}  \lambda_1 & 0 & \cdots & 0  \\ 0 & \lambda_2 & \cdots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_N \end{bmatrix}$$，可得$$D^k = diag\{\lambda_1^k, \dots, \lambda_N^k\}, ~\forall k \in \mathbb{N}$$。
+* 對角矩陣線性性質$$\forall c,d \in F, ~cD+dI=diag\{c\lambda_1 + d, \dots, c\lambda_N +d\}$$。
+* 則函數參數為矩陣時，$$f(D)=diag\{f(\lambda_1), \dots, f(\lambda_N)\}, ~\forall f \in F[x]$$，即把$$\lambda_1, \dots , \lambda_N$$代入多項式函數後，得到的值形成的對角矩陣。
+
 
 
 

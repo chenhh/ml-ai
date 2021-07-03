@@ -118,6 +118,10 @@ proof:
 * 對角矩陣線性性質$$\forall c,d \in F, ~cD+dI=diag\{c\lambda_1 + d, \dots, c\lambda_N +d\}$$。
 * 則函數參數為矩陣時，$$f(D)=diag\{f(\lambda_1), \dots, f(\lambda_N)\}, ~\forall f \in F[x]$$，即把$$\lambda_1, \dots , \lambda_N$$代入多項式函數後，得到的值形成的對角矩陣。
 
+### 對角矩陣函數可對角化
+
+
+
 
 
 

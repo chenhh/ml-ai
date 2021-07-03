@@ -97,6 +97,7 @@
   * [不變子空間\(invariant subspace\)](linear-algebra/linear-transform/invariant-subspace.md)
   * [特徵向量\(eigenvector\)](linear-algebra/linear-transform/eigenvector.md)
   * [對角化 \(diagonal\)](linear-algebra/linear-transform/diagonal.md)
+  * [投影算子\(projection operator\)](linear-algebra/linear-transform/projection-operator.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

@@ -10,6 +10,27 @@ description: normed space
 
 ![&#x8CE6;&#x7BC4;&#x7A7A;&#x9593;&#x70BA;&#x5EA6;&#x91CF;&#x7A7A;&#x9593;&#x7684;&#x7279;&#x4F8B;](../.gitbook/assets/250px-mathematical_spaces-min.png)
 
+## 賦範線性空間
+
+> 令$$X$$義定義在體$$F$$上的向量空間（線性空間），如果函數$$\| \cdot\|: X \rightarrow \mathbb{R}$$滿足$$\forall u,v \in X, c\in F$$：
+>
+> * $$\| v\| \geq 0$$且$$\| v \| = 0 \Leftrightarrow v=0$$
+> * $$\| cv\| = |c| \|v\|$$
+> * $$\|u+v\| \leq \|u\| + \|v\|$$
+>
+> 則稱$$X$$為賦範線性空間，$$\| \cdot\|$$為範數。
+>
+> 常用的賦範線性空間是歐式空間$$\mathbb{R}^n, ~n < \infty$$與$$\|x\|=(x_1^2+x_2^2+\dots +x_n^2)^{\frac{1}{2}}$$。
+
+### 有界線性變數
+
+> 賦範線性空間$$(X, \|\cdot\|), (Y, \|\cdot\|)$$，映射$$T: X\rightarrow Y$$稱為有界線性變換（算子）若滿足：
+>
+> 1. $$\forall u,v \in X, a,b \in F$$，$$T(ax+by)=aT(x)+bT(y)$$
+> 2. $$\forall c \geq 0, \forall x \in X$$，$$\|Tx\| \leq c\|x\|$$
+>
+> 所有滿足條件2的常數$$c$$之最小值稱為$$T$$的範數，記為$$\|T\|$$，可得 $$\displaystyle \|T\|=\sup_{\|x\|=1}\|Tx\|=\sup_{\|x\|\leq 1} \|Tx\|=\sup_{x \neq 0} \frac{\|Tx\|}{\|x\|}$$。
+
 ## Lp空間
 
 > * $$C[a,b]$$是定義域為實數區間$$[a,b]$$上連續函數全體所成的集合。

@@ -30,14 +30,34 @@ description: normed space
   * $$\displaystyle \|f\|_\infty = \sup_{x \in [0,1]} |f(x)|$$，範數為函數在$$x\in[0,1]$$的最小上界值。
   * $$\displaystyle \|f\|_1 = \int_0^1 |f(x)|dx$$，範數為函數在$$x\in[0,1]$$的積分值。
 
-### 有界線性變數
+### 線性轉換
 
-> 賦範線性空間$$(X, \|\cdot\|), (Y, \|\cdot\|)$$，映射$$T: X\rightarrow Y$$稱為有界線性變換（算子）若滿足：
+> 賦範線性空間$$(X, \|\cdot\|), (Y, \|\cdot\|)$$，映射$$T: X\rightarrow Y$$稱為線性轉換（算子）若滿足：
 >
 > 1. $$\forall u,v \in X, a,b \in F$$，$$T(ax+by)=aT(x)+bT(y)$$
 > 2. $$\forall c \geq 0, \forall x \in X$$，$$\|Tx\| \leq c\|x\|$$
 >
 > 所有滿足條件2的常數$$c$$之最小值稱為$$T$$的範數，記為$$\|T\|$$，可得 $$\displaystyle \|T\|=\sup_{\|x\|=1}\|Tx\|=\sup_{\|x\|\leq 1} \|Tx\|=\sup_{x \neq 0} \frac{\|Tx\|}{\|x\|}$$。
+
+### 線性轉換的性質
+
+> 賦範線性空間$$(X, \|\cdot\|), (Y, \|\cdot\|)$$，映射$$T: X\rightarrow Y$$稱為有界線性變換（算子），則以下條件等價：
+>
+> * $$T$$在某一點連續；
+> * $$T$$在所有點連續；
+> * $$T$$有界；
+> * $$S \subseteq  X$$為有界集，則$$T(S) \subseteq Y$$為有界集。
+
+## 完備賦範空間\(Banach空間間
+
+> 若賦範空間$$(X, \| \cdot\|)$$中，範數$$\| \cdot\|$$誘導的距離函數$$d(x,y)$$是完備的度量空間$$(X,d)$$時，則稱$$(X,\|\cdot\|)$$為完備賦範空間。
+>
+> 完備賦範空間稱為Banach空間。
+
+例如：
+
+* 歐式空間$$(\mathbb{R}^n, \|x\|_2)$$為完備賦範空間。
+* 連續函數空間$$(C[a,b], d_1(f,g)), ~ d_1(f,g)=\sup_{a \leq x \leq b}|f(x)-g(x)|$$為完備賦範空間。
 
 ## Lp空間
 

@@ -120,6 +120,27 @@ proof:
 
 ### 對角矩陣函數可對角化
 
+> 若矩陣$$A \in F^{N \times N}$$ 可對角化（$$P^{-1}AP=D$$），$$f(x)\in F[x]$$為多項式，則$$f(A)$$可對角化。
+
+> 此定理提供了計算$$f(A)$$的方法：
+>
+> * 首先將矩陣$$A$$對角化，得$$A=PDP^{−1}$$
+> * 則$$f(A)=Pf(D) P^{−1}$$
+>
+> 如果$$A$$可對角化，則$$A^k=(PDP^{-1})^k=PD^kP^{-1}$$。
+>
+> 可推廣至Tayler series：
+>
+> * $$f(x)=e^x=\sum_{i=0}^\infty \frac{x^i}{i!}$$
+> * $$e^A=Pe^DP^{-1} = P diag\{ e^{\lambda_1}, \dots, e^{\lambda_N} \}P^{-1}$$
+
+Proof:
+
+* 令$$f(x)=\sum_{i=0}^K a_i x^i$$
+* 因為矩陣$$A$$可對角化，，所以存在可逆矩陣$$P \ni P^{−1} AP=D=diag\{\lambda_1, \dots, \lambda_N\}$$。
+* 移項得$$A=PDP^{-1}$$
+* $$\begin{align} f(A) & =\sum_{i=0}^K a_i A^i \\& =\sum_{i=0}^K a_i (PDP^{−1} )^i \\ &=\sum_{i=0}^K a_i PD^i P^{−1} \\ & =P(\sum_{i=0}^K a_i D^i) P^{−1} \\ &=Pf(D) P^{−1}  \end{align}$$ \(QED\).
+
 
 
 

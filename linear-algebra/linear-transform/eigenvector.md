@@ -186,5 +186,29 @@ Proof:
 * $$\det⁡(A)=char_A (0)=\lambda_1 \lambda_2 \dots \lambda_N$$。
 * $$char_A (x)$$中，$$(−x)^{N−1}$$ 的係數為$$tr(A)$$ \(QED\)
 
+## 可逆矩陣之特徵根均不為0
 
+> 矩陣$$A \in F^{N \times N}$$，若$$char_A (x)$$在$$F$$中可分解，則：
+>
+> $$A$$為可逆矩陣$$\Leftrightarrow A$$的所有特徵根均不為0。
+
+Proof:
+
+* 令$$\lambda_1,\dots,\lambda_N$$ 為$$A$$的特徵根（部份相同或全相異均可。）
+* 由[特徵根與行列式、軌跡的關係](eigenvector.md#te-zheng-gen-yu-hang-lie-shi-gui-ji-de-guan-xi)得$$\det⁡(A)=\lambda_1 \lambda_2 \dots \lambda_N $$
+* 所以$$A$$為可逆矩陣$$\Leftrightarrow \det(A) \neq 0$$，即$$ \det⁡(A)=\prod_{i=1}^N \lambda_i \neq 0$$ \(QED\)
+
+## 反矩陣的特徵根
+
+> 矩陣$$A \in F^{N \times N}$$為可逆矩陣，則$$\lambda$$為$$A$$相對於向量$$x$$的特徵根$$\Leftrightarrow  $$$$\frac{1}{\lambda}$$為$$A^{-1}$$相對於向量$$x$$的特徵根。
+>
+> 註：$$A^{−1},A$$的特徵根未必相同，但有相同的特徵向量。
+
+Proof =&gt;:
+
+* 因為$$A$$為可逆矩陣，所以所有特徵根$$\lambda \neq 0$$。
+* $$Ax=\lambda x, x \neq 0$$，可得$$x=Ix=A^{−1} Ax=A^{−1} (\lambda x)= \lambda A^{−1} x$$
+* 所以$$A^{−1} x = \frac{1}{\lambda}x$$ \(QED\)
+
+Proof &lt;=:同上。
 

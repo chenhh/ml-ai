@@ -194,6 +194,7 @@ Proof &lt;=
 2. $$Lker(A) = \{0\}$$，$$\dim(LKer(A))=0$$。
 3. $$A$$的行向量均為線性獨立，且為$$F^{N \times 1}$$的基底，可得$$CS(A) = F^{N \times 1}$$，$$\dim(CS(A))=N$$。
 4. $$A$$的列向量均為線性獨立，且為$$F^{ 1\times N}$$的基底，可得$$RS(A) = F^{1 \times N}$$，$$\dim(RS(A))=N$$。
+5. $$A$$[的所有特徵根均不為0](../linear-transform/eigenvector.md#ke-ni-ju-zhen-zhi-te-zheng-gen-jun-bu-wei-0)
 
 * proof 1: 因為$$A$$可逆，可得$$Ax=0$$只有唯一解$$x=0$$，因此$$ker(A) = \{0\}$$\(QED\)
 * proof 2: 因為$$A$$可逆，可得$$xA=0$$只有唯一解$$x=0$$，因此$$Lker(A) = \{0\}$$ \(QED\)

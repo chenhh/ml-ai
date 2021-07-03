@@ -168,13 +168,18 @@ Proof:
 * 所以$$[TU]_B=[T]_B [U]_B=D_1 D_2=D_2 D_1=[U]_B [T_B ]=[UT]_B  $$
 * 所以$$UT=UT $$\(QED\).
 
+### 可同步對角化的充要條件
 
+> * 線性轉換$$T,U \in L(V,V)$$，$$T,U$$皆可對角化  ，則：
+>   * $$T,U$$可同步對角化$$\Leftrightarrow TU=UT    $$
+> * 矩陣$$A,B \in F^{N \times N}$$，$$A,B$$皆可對角化  ，則：
+>   * $$A,B$$可同步對角化$$\Leftrightarrow AB=BA    $$
 
+Proof &lt;=
 
-
-
-
-
-
-
+* 為$$T$$可對角化，所以$$V=V(\lambda_1 )\oplus \dots \oplus V(\lambda_r )$$， $$\lambda_1, \dots, \lambda_r$$ 為$$T$$的相異特徵根  。
+* 由特徵根定義得$$\forall v \in V(\lambda_i )\Rightarrow T(v)=\lambda_i v$$。
+* 所以$$T(U(v))=U(T(v))=U(\lambda_i v)=\lambda_i U(v)\Rightarrow U(v) \in V(\lambda_i )$$
+* 可得$$U(V(\lambda_i )) \subseteq V(\lambda_i )$$，即$$V(\lambda_i )$$為$$U$$不變子空間。
+* 因為$$U$$可對角化，所以$$U_{V(\lambda_i )}$$  可對角化，即$$U$$可用$$T$$的特徵向量對做對角化，因此$$T,U$$可同步對角化\(QED\)。
 

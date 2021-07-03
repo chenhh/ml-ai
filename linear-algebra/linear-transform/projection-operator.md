@@ -41,12 +41,15 @@ Proof \(2\)
 
 ### 投影算子的性質
 
-> 線性轉換$$T \in L(V,V)$$，則以下性質等價：
+> 線性轉換$$T \in L(V,V)$$或$$A\in F^{N \times N}$$，若$$T^2=T$$，則以下性質等價：
 >
-> 1. $$R(T^2 )=R(T)   $$
+> 1. $$R(T^2 )=R(T)   $$（$$CS(A^2) = CS(A)$$）
 > 2. $$rank(T^2 )=rank(T)   $$
 > 3. $$nullity(T^2 )=nullity(T)   $$
 > 4. $$ker⁡(T^2 )=ker⁡(T)   $$
+> 5. $$V= ker(T) \oplus R(T)$$\([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)
+> 6. $$V= ker(T) + R(T)$$\([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)
+> 7. $$ker(T) \cap R(T) = \{0\}$$\([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)
 
 Proof \(1\)-&gt;\(2\):
 

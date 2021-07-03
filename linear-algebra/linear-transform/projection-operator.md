@@ -63,9 +63,9 @@ Proof \(2\) 等價\(3\)
 * 由rank-nullity theorem  得
 * * $$\dim⁡(V)=rank(T)+nullity(T)$$
   * $$\dim⁡(V)=rank(T^2 )+nullity(T^2 )    $$
-* 所以$$rank(T^2 )=rank(T)\Leftrightarrow nullity(T^2 )=nullity(T) $$\(QED\).
+* 所以$$rank(T^2 )=rank(T)\Leftrightarrow nullity(T^2 )=nullity(T) $$\(QED\)
 
-
+##  
 
 
 

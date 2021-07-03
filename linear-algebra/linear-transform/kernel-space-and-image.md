@@ -184,6 +184,34 @@ Proof \(1\)
 * $$Ax=0\Leftrightarrow \begin{bmatrix}  A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \\ \vdots \\ x_M \end{bmatrix} = x_1 A_{:1} + x_2 A_{:2} + \dots +X_N A_{:N} =0$$
 * 如果$$x_1 A_{:1} + x_2 A_{:2} + \dots +X_N A_{:N} =0$$只有$$x_1=x_2=\dots=x_N=0$$唯一解時，則$$\begin{bmatrix}  A_{:1} & A_{:2} & \dots & A_{:N} \end{bmatrix} $$為線性獨立集，即矩陣$$A$$為行獨立，此時$$ker⁡(A)=\{0\}$$，因此$$Ax$$為一對一函數。\(QED\)
 
+## Sylvester's 2nd law\(向量空間V為線性轉換T的核空間與值域的直和\)
+
+> 線性轉換$$T \in L(V,V)$$，則下列敘述等價：
+>
+> 1. $$V=ker⁡(T) \oplus R(T)$$  \(直和空間\)
+> 2. $$V=ker⁡(T)+R(T)$$  \(和空間\)
+> 3. $$ker⁡(T) \cap R(T)=\{0\}$$  \(獨立子空間\)
+
+Proof \(1\)-&gt;\(2\): 由定義成立 \(QED\)
+
+Proof \(2\)-&gt;\(3\): 證明$$\dim⁡(ker⁡(T)\cap R(T))=0$$
+
+* $$\dim⁡(ker⁡(T)\cap R(T))=\dim⁡(ker⁡(T))+\dim⁡(R(T))−\dim⁡(ker⁡(T)+R(T))=\dim⁡(V)− \dim⁡(ker⁡(T)+R(T)) $$
+* 因為$$V=ker⁡(T)+R(T)$$
+* 所以$$\dim⁡(ker⁡(T)+R(T))=\dim⁡(V)  $$
+* 所以$$\dim⁡(ker⁡(T)\cap R(T))=\dim⁡(V)− \dim⁡(V)=0$$ \(QED\)
+
+Proof \(3\)-&gt;\(1\): 證明$$V=ker⁡(T)+R(T)$$
+
+* 因為$$ker⁡(T), R(T)$$均為$$V$$的子空間，只要證明$$\dim⁡(V)=\dim⁡(ker⁡(T)+R(T))$$即可。
+* $$\dim⁡(ker⁡(T)+R(T))=\dim⁡(ker⁡(T) )+\dim⁡(R(T))−\dim⁡(ker⁡(T)\cap R(T))=\dim⁡(V)−\dim⁡(ker⁡(T)+R(T)) $$
+* 因為$$\ker⁡(T)\cap R(T)=0$$，所以$$\dim⁡(ker⁡(T)\cap R(T))=0  $$
+* 所以$$\dim⁡(ker⁡(T)+R(T))=\dim⁡(V)−0=\dim⁡(V)$$ \(QED\).
+
+
+
+
+
 ## 保相依、保獨立、保生成
 
 > 線性轉換$$T \in L(V,W)$$且$$\dim(V) < \infty$$，集合$$S \subseteq V$$：

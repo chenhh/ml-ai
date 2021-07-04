@@ -194,6 +194,17 @@ Proof:
 * $$T^k (v)=0$$且$$\exists v \in V \ni v=T^k (u)  $$。
 * $$0=T^k (v)=T^k (T^k (u))=T^2k (u) \Rightarrow u \in ker⁡(T^{2k} )=ker⁡(T^k )  $$所以$$v=T^k (u)=0$$可得$$ker⁡(T^k )\cap R(T^k )=\{0\}$$\(QED\)
 
+### Fitting引理性質
+
+> $$V=ker⁡(T^k ) \oplus R(T^k )$$，因為$$ker⁡(T^k)$$與$$R(T^k)$$均為$$T$$不變子空間，取$$B_1$$ 與$$B_2$$ 為個別的基底。
+
+> 可得$$B=B_1 \cup B_2$$ 為$$V$$的基底，且根據不變子空間的性質得$$[T]_B= \begin{bmatrix}  [T_{ker(T^k)}]_{B_1} & 0 \\ 0 & [T_{R(T^k)}]_{B_2} \end{bmatrix}$$
+>
+> * 因為$$ [T_{ker(T^k)}]_{B_1}$$ 為最大冪零區，所$$T_{ker⁡(T^k )}$$  為冪零算子，即$$[T_{ker⁡(T^k )} ]_{B_1} $$ 為冪零矩陣  。
+> * 因為$$[T_{R(T^k )}  ]_{B_2}$$ 為最大可逆區，所以$$T_{R(T^k )}$$為可逆算子，即$$[T_{R(T^k )}  ]_{B_2}$$ 為可逆矩陣  。
+
+>
+
 
 
 

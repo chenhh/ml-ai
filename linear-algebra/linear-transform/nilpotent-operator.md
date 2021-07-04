@@ -205,6 +205,11 @@ Proof:
 
 #### 範例
 
+* $$T: \mathbb{R}^3 \rightarrow \mathbb{R}^3$$，$$T(x,y,z)=(0,2x, 3z)$$
+* 取標準基底$$R=\{e1_, e_2, e_3\}$$，得$$[T]_R=A=\begin{bmatrix} 0 & 0 & 0 \\ 2 & 0 & 0 \\ 0 & 0 & 3  \end{bmatrix}$$，$$rank(A)=2$$。
+* $$A^2=\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9  \end{bmatrix}$$，$$A^3=A^2=\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 27  \end{bmatrix}$$
+* 因為$$ker(A^2)=ker(A^3)$$，且$$R(A^2)=R(A^3)$$，所以$$\mathbb{R^3}=ker(A^2) \oplus R(A^2)$$。 
+
 
 
 

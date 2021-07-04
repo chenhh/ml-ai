@@ -148,6 +148,52 @@ Proof \(3\):
 * 因為$$ker⁡(T)\subseteq  ker⁡(T^2 ) \subseteq \ dots \subseteq ker⁡(T^k )=ker⁡(T^{k+1} )=\dots$$
 * 所以$$\bigcup_{i=1}^\infty  ker⁡(T^i )=ker⁡(T^k)$$ \(QED\)
 
+## 像集鏈定理\(image chain theorem\)
+
+> 線性轉換$$T \in L(V,V), ~\dim⁡(V)<\infty$$，則以下敘述等價：
+>
+> 1. $$V \supseteq R(T) \supseteq R(T^2 ) \supseteq \dots \supseteq R(T^i ) \supseteq R(T^{i+1} )\supseteq \dots \supseteq \{0\}$$
+> 2. 存在最小正整數$$k$$使得$$R(T^k )=R(T^{k+1} )=R(T^{k+2} )=\dots$$
+> 3. $$\bigcap_{i=1}^\infty R(T^i )=R(T^k)$$
+> 4. $$W=\bigcap_{i=1}^\infty R(T^i )$$為最大可逆集。
+
+> 此定理說明$$T$$的次方越大，則其像集（值域）越小，但到了某一定的次方後就不會再減少。
+>
+> 矩陣$$A\in F^{N \times N}$$
+>
+> * $$F^{N \times 1} \supseteq CS(A) \supseteq CS(A^2 ) \supseteq \dots \supseteq CS(A^i ) \supseteq CS(A^{i+1} )\supseteq \dots \supseteq \{0\}$$
+> * $$\exists k \in \mathbb{N} \ ni CS(T^k )=CS(T^{k+1} )=CS(T^{k+2} )=\dots$$
+> * $$\bigcap_{i=1}^\infty CS(A^i )=CS(A^k)  $$
+
+Proof \(1\):  由Theorem: 一般線性轉換核空間會越來越大，值域會越來越小得證。\(QED\)
+
+Proof \(2\):
+
+* 由\(1\)知$$\dim⁡(V) \geq \dim⁡(R(T)) \geq \dim⁡(R(T^2 ))\geq \dots \geq 0$$。
+* 因為$$\dim⁡(R(T)),\dim⁡(R(T^2)),\dots$$有無限多次線性轉換，但$$\dim⁡(V)$$為有限值，所以$$\exists k \in \mathbb{N} \ ni \dim⁡(R(T^k ))=\dim⁡(R(T^{k+1} ))    $$。
+* 因為$$R(T^{k+1})$$為$$R(T^k)$$的子空間，且兩空間維度相等，所以$$R(T^k )=R(T^{k+1} )$$
+* 因為值域經線性轉換不再縮小時，則不會再縮小  ，可得$$R(T^k )=R(T^{k+1} )=\dots$$ \(QED\)
+
+Proof\(3\):
+
+* 因為$$R(T) \supseteq R(T^2 ) \supseteq \dots \supseteq R(T^k )=R(T^{k+1} )= \dots $$
+* 所以$$\bigcap_{i=1}^\infty R(T^i )=R(T^k)$$ \(QED\)
+
+## Fitting引理: 當核空間經線性轉換不再變大且值域不再變小時，則向量空間等於核空間與值域的直和
+
+> 線性轉換$$T \in L(V,V), ~\dim⁡(V)<\infty$$，則存在最小正整數$$k$$使得$$V=ker⁡(T^k ) \oplus R(T^k )$$。
+>
+> 當$$T^2=T ,~ker⁡(T^2 )=ker⁡(T)$$，即$$V=ker⁡(T)⊕R(T)$$
+
+Proof:
+
+* 因為核空間經線性轉換後不再增大時，值域經線性轉換也不會縮小
+* 所以$$\exists k \in \mathbb{N} \ni ker⁡(T^k )=ker⁡(T^{k+1} )=\dots=ker⁡(T^{2k} )$$， $$R(T^k )=R(T^{k+1} )=\dots=R(T^{2k} )$$。
+* 根據[Sylvester's 2nd law\(向量空間V為線性轉換T的核空間與值域的直和](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)  ， 只需證明$$ker⁡(T^k ) \cap R(T^k )=\{0\}$$。
+* $$\forall  v  \in ker⁡(T^k ) \cap R(T^k )  $$
+* $$T^k (v)=0$$且$$\exists v \in V \ni v=T^k (u)  $$。
+* $$0=T^k (v)=T^k (T^k (u))=T^2k (u) \Rightarrow u \in ker⁡(T^{2k} )=ker⁡(T^k )  $$所以$$v=T^k (u)=0$$可得$$ker⁡(T^k )\cap R(T^k )=\{0\}$$\(QED\)
+
 
 
 

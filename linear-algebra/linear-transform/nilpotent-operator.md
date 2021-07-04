@@ -54,8 +54,17 @@ Proof:
 > * 若$$T_W$$ 為可逆算子，則稱$$T$$在$$W$$上局部可逆\(locally invertible on W\)  。
 
 * 取$$W=ker⁡(T)$$為$$T$$不變子空間。因為$$\forall v \in W, T(v)=0  $$，所以$$T_W=0$$為冪零，因此$$T$$在$$ker⁡(T)$$上必為局部冪零。
-* 若$$T$$為冪零算子，則$$V$$為最大冪零區。
+* 若$$T$$為冪零算子，則$$V$$為最大冪零區。  （$$\exists k \in \mathbb{N}, \forall v \in V, T^k(v)=0$$）
 * 若$$T$$為可逆算子，則$$V$$為最大可逆區。
+
+### 一般線性轉換核空間會越來越大，值域會越來越小
+
+> 線性轉換$$T \in L(V,V)$$，則：
+>
+> * $$ker⁡(T^i ) \subseteq ker(T^{i+1}),\  \forall i \in \mathbb{N}$$
+> * $$R(T^i ) \supseteq R(T^{i+1} ),\  \forall i \in \mathbb{N}$$
+
+>
 
 
 

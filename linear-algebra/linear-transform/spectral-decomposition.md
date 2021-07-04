@@ -101,4 +101,6 @@ Proof:
 * $$char_A(x)=\det(A-xI)=-(x-1)^2(x-5)$$
 * $$V(1)=ker(A-I) = span\left\{ \begin{bmatrix} 2 \\ -1 \\ 0\end{bmatrix}, \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix}  \right\}$$
 * $$V(5)=ker(A-5I) = span\left\{ \begin{bmatrix} 1 \\ 1 \\ 1\end{bmatrix}  \right\}$$
+* $$P=\begin{bmatrix} 2 & 1 & 1 \\ -1 & 0 & 1\\ 0 & -1 & 1 \end{bmatrix}$$，$$P^{-1}AP=D=\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 5 \end{bmatrix}$$
+* $$A=PDP^{-1} = P\left\{  1\cdot\begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 0 \end{bmatrix} +  5 \cdot  \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\\ 0 & 0 & 1\end{bmatrix} \right\} P^{-1} = 1\left\{  P \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0\\ 0 & 0 & 0 \end{bmatrix} P^{-1} \right\} + 5 \cdot \left\{  P  \begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0\\ 0 & 0 & 1\end{bmatrix} P^{-1} \right\} =  1 \begin{bmatrix} \frac{3}{4} & -\frac{1}{2} & -\frac{1}{4} \\ -\frac{1}{4} & \frac{1}{2} & -\frac{1}{4}\\ -\frac{1}{4} & -\frac{1}{2} & \frac{3}{4}\end{bmatrix} + 5 \begin{bmatrix} \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\ \frac{1}{4} & \frac{1}{2} & \frac{1}{4} \\ \frac{1}{4} & \frac{1}{2} & \frac{1}{4}\end{bmatrix}$$
 

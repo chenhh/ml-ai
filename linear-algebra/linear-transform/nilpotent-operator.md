@@ -41,8 +41,21 @@ Proof:
 >
 > 定義$$S_k$$ 的轉置矩陣$$S_k^\top=\begin{bmatrix} 0 & 1 & 0&\dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\    0 & 0& 0 & \ddots & 1 \\  0 & 0 &0 & \dots & 0 \\\end{bmatrix}_{k \times k}$$ 為$$k$$階上移矩陣。
 
+### 下移矩陣為冪零矩陣
+
 * $$S_4 = \begin{bmatrix}    0 & 0 & 0 & 0 \\   1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}$$，$$S_4^2=\begin{bmatrix}    0 & 0 & 0 & 0 \\   0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{bmatrix}$$，$$S_4^3=\begin{bmatrix}    0 & 0 & 0 & 0 \\   0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix}$$，$$S_4^4=\begin{bmatrix}    0 & 0 & 0 & 0 \\   0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
 * 可得到$$S_k$$ 下移矩陣為具有指標$$k$$的冪零矩陣。  同理可得$$S_k^\top$$ 上移矩陣為具有指標$$k$$的冪零矩陣。
+
+## 局部冪零、局部可逆
+
+> 線性轉換$$T \in L(V,V)$$，$$W$$為$$T$$-不變子空間 \($$W$$為子空間且$$T(W) \subseteq W$$\)
+>
+> * 若$$T_W$$ 為冪零算子，則稱$$T$$在$$W$$上局部冪零\(locally nilpotent on W\)  。
+> * 若$$T_W$$ 為可逆算子，則稱$$T$$在$$W$$上局部可逆\(locally invertible on W\)  。
+
+>
+
+
 
 
 

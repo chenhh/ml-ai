@@ -33,13 +33,18 @@ Proof:
 * 因為$$A$$為冪零矩陣，所以$$\exists k \in \mathbb{N}\ni A^k=0$$
 * 所以$$(I−A)(I+A+A^2+\dots+A^{k−1})=I−A^k=I$$ \(QED\)
 
-##  下\(上\)移矩陣
+##  下移矩陣
 
-> • 定義$$S_k=\begin{bmatrix} 0 & 0 & 0&\dots & 0 \\ 1 & 0 & 0 & \dots & 0 \\    0 & 1& 0 & \ddots & 0 \\  0 & 0 &1 & \dots & 0 \\\end{bmatrix}_{k \times k}$$，為$$k$$階下移矩陣，$$[S_k]_{ij}=1, ~\forall i=j+1$$且$$ [S_k]_{ij}=0, ~\forall i\neq j+1$$。
+> 定義$$S_k=\begin{bmatrix} 0 & 0 & 0&\dots & 0 \\ 1 & 0 & 0 & \dots & 0 \\    0 & 1& 0 & \ddots & 0 \\  0 & 0 &1 & \dots & 0 \\\end{bmatrix}_{k \times k}$$，為$$k$$階下移矩陣，$$[S_k]_{ij}=1, ~\forall i=j+1$$且$$ [S_k]_{ij}=0, ~\forall i\neq j+1$$。
 >
-> 	• 即S\_k 為只有主對角線左斜下方第一排為1，其餘為0的k×k方陣。
+> 即$$S_k$$ 為只有主對角線左斜下方第一排為1，其餘為0的$$k\times k$$方陣。
 >
-> • 定義S\_k 的轉置矩陣S\_k^T==\[■8\(0&1&0&0@0&0&1&0@0&⋰&0&1@0&0&0&0\)\]\_\(k×k\) 為k階上移矩陣
+> 定義$$S_k$$ 的轉置矩陣$$S_k^\top=\begin{bmatrix} 0 & 1 & 0&\dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\    0 & 0& 0 & \ddots & 1 \\  0 & 0 &0 & \dots & 0 \\\end{bmatrix}_{k \times k}$$ 為$$k$$階上移矩陣。
+
+* $$S_4 = \begin{bmatrix}    0 & 0 & 0 & 0 \\   1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}$$，$$S_4^2=\begin{bmatrix}    0 & 0 & 0 & 0 \\   0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \end{bmatrix}$$，$$S_4^3=\begin{bmatrix}    0 & 0 & 0 & 0 \\   0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix}$$，$$S_4^4=\begin{bmatrix}    0 & 0 & 0 & 0 \\   0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 0 \end{bmatrix}$$
+* 可得到$$S_k$$ 下移矩陣為具有指標$$k$$的冪零矩陣。  同理可得$$S_k^\top$$ 上移矩陣為具有指標$$k$$的冪零矩陣。
+
+
 
 
 

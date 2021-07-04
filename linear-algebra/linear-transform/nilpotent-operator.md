@@ -64,17 +64,27 @@ Proof:
 > * $$ker⁡(T^i ) \subseteq ker(T^{i+1}),\  \forall i \in \mathbb{N}$$
 > * $$R(T^i ) \supseteq R(T^{i+1} ),\  \forall i \in \mathbb{N}$$
 
+Proof:
+
+* $$\forall v \in ker⁡(T^i ),~ T^i (v)=0$$
+* $$T^{i+1} (v)=T(T^i (v))=T(0)=0$$
+* 所以$$v \in ker⁡(T^{i+1} )$$  \(QED\)
+* $$\forall v \in R(T^{i+1} )~\exists u \in V \ni v=T^{i+1} (u)$$
+* $$v=T^i (T(u)), ~T(u) \in V$$
+* 所以$$v \in R(T^i )$$  \(QED\)
+
+### 核空間經線性轉換後不再增大時，值域經線性轉換也不會縮小
+
+> 線性轉換$$T \in L(V,V), k \in \mathbb{N}$$，則：
 >
+> $$ ker⁡(T^k )=ker⁡(T^{k+1} )$$若且唯若$$R(T^k )=R(T^{k+1} )$$
 
+Proof:
 
-
-
-
-
-
-
-
-
+* By [rank-nullity theorem](kernel-space-and-image.md#wei-du-ding-li-sylvester-1st-law-or-dimension-theorem-ranknullity-theorem),
+* 因為$$T^k \in L(V,V)$$，所以$$\dim⁡(V)=nullity(T^k )+rank(T^k ) $$。
+* 因為$$T^{k+1} \in L(V,V)$$，所以$$\dim⁡(V)=nullity(T^{k+1} )+rank(T^{k+1} )  $$。
+* 若$$ker⁡(T^k )=ker⁡(T^{k+1} ) \Leftrightarrow nullity(T^k )=nullity(T^{k+1})$$\[因為$$ker⁡(T^k )$$為$$ker⁡(T^{k+1} )$$的子空間\] $$\Leftrightarrow rank(T^k )=rank(T^{k+1} )\Leftrightarrow R(T^k )=R(T^{k+1} )$$\[因為$$R(T^{k+1} )$$為$$R(T^k )$$的子空間\] \(QED\)
 
 
 

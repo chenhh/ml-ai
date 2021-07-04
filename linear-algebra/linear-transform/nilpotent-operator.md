@@ -240,9 +240,25 @@ Proof 3:
 * 因為$$\lambda$$ 為$$T$$的特徵根，所以$$\exists v \neq 0 \ni T(v)=\lambda v$$。
 * 因為$$0=0(v)=T^k (v)=\lambda^k v$$
 * 所以$$\lambda^k v=0, ~v \neq 0$$
-* 因此$$\lambda=0$$ \(QED\).
+* 因此$$\lambda=0$$ \(QED\)
 
+###  指標k的冪零算子必存在k-1次線性轉換形成的線性獨立集
 
+> 線性轉換$$T \in L(V,V)$$（或 $$A \in F^{N\times N}$$）為指標為$$k$$的冪零算子，
+>
+> 1. 存在$$v \in V,v \neq 0 \ni \{v,T(v), \dots ,T^{k−1} (v)\}$$為線性獨立集。
+> 2. 若存在$$v \neq 0 \ni v \in ker⁡(T^k )−ker⁡(T^{k−1} )$$，則$$\{v,T(v),\dots,T^{k−1} (v)\}$$為線性獨立集。
 
+ proof \(1\)
 
+* $$T^k=0$$且$$ T^{k−1} \neq 0$$
+* 所以$$ker⁡(T^k )=V$$且$$ker⁡(T^{k−1} ) \neq V$$
+* 因此$$\exists 0\neq v \in ker⁡(T^k )−ker⁡(T^{k−1} ) \ni T^k (v)=0$$且 $$T^{k−1} (v) \neq 0$$。
+* 同理$$v,T(v),T^2 (v),\dots,T^{k−1} (v) \neq 0$$且$$ T^k (v)=T^{k+1} (v)=\dots=0$$。
+* 若$$ a_0 v+a_1 T(v)+\dots+a_{k−1} T^{k−1} (v)=0$$
+* 可得$$T^{k−1} (a_0 v+a_1 T(v)+\dots+a_{k−1} T^{k−1} (v))=T^{k−1} (0)=0$$
+* 所以$$a_0 T^{k−1} (v)+a_1 T^k (v)+\dots+a_{k−1} T^{2k−2} (v)=0$$
+* 即$$a_0 T^{k−1} (v)=0 \Rightarrow a_0=0$$
+* 同理可得$$a_0=a_1=a_2=\dots=a_{k−1}=0$$
+* 因此$$\{v,T(v), \dots,T^{k−1} (v)\}$$為線性獨立集\(QED\)
 

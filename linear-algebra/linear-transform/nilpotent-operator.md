@@ -11,4 +11,6 @@
 
 * 依定義得零矩陣為具指標1的冪零矩陣。
 * 單位矩陣$$I^k \neq 0, ~\forall k \in \mathbb{N}$$，所以非冪零矩陣。
+* 若$$A$$為$$N \times N$$嚴格上三角（下三角）矩陣，則$$A^N=0$$。
+  * $$A=\begin{bmatrix} 0 & 1 & 2\\    0 & 0 & 3\\ 0 & 0 & 0  \end{bmatrix} $$    ，$$A^2=\begin{bmatrix} 0 & 0 & 3\\    0 & 0 & 0\\ 0 & 0 & 0  \end{bmatrix} $$，$$A^3=\begin{bmatrix} 0 & 0 & 0\\    0 & 0 & 0\\ 0 & 0 & 0  \end{bmatrix} $$
 

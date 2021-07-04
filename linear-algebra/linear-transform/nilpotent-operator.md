@@ -133,3 +133,22 @@ Proof:
 > * $$\exists k \in \mathbb{N} \ni ker⁡(A^k )=ker⁡(A^{k+1} )=ker⁡(A^{k+2} )=\dots$$
 > * $$\bigcup_{i=1}^\infty  ker⁡(A^i )=ker⁡(A^k)  $$
 
+Proof \(1\):  由: 一般線性轉換核空間會越來越大，值域會越來越小得證。\(QED\)
+
+Proof \(2\):
+
+* 由\(1\)知$$0 \leq \dim⁡(ker⁡(T) ) \leq \dim⁡(ker⁡(T^2 ) ) \leq \dots \leq \dim⁡(V)  $$。
+* 因為$$\dim⁡(ker⁡(T) ),\dim⁡(ker⁡(T^2 ) ),\dots$$可能有無限次線性轉換，但$$\dim⁡(V)$$為有限維度。
+* 所以$$\exists k \in \mathbb{N} \ni \dim⁡(ker⁡(T^k))=\dim⁡(ker⁡(T^{k+1} ) )  $$。
+* 因為$$ker⁡(T^k)$$為$$ker⁡(T^{k+1})$$的子空間，且兩空間維度相同，因此$$ker⁡(T^k )$$=$$ker⁡(T^{k+1})  $$
+* 由核空間經線性轉換後不再增大時，則不會再增大  得$$ker⁡(T^k )=ker⁡(T^{k+1} )=ker⁡(T^{k+2} )=\dots$$ \(QED\)
+
+Proof \(3\):
+
+* 因為$$ker⁡(T)\subseteq  ker⁡(T^2 ) \subseteq \ dots \subseteq ker⁡(T^k )=ker⁡(T^{k+1} )=\dots$$
+* 所以$$\bigcup_{i=1}^\infty  ker⁡(T^i )=ker⁡(T^k)$$ \(QED\)
+
+
+
+
+

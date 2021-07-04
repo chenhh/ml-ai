@@ -114,11 +114,22 @@ Proof:
 * $$ \forall v \in W=ker⁡(T^k ), T^k (v)=0$$
 * 所以$$T^k (T(v))=T^{k+1} (v)=T(T^k (v))=T(0)=0$$
 * 可得$$T(v) \in W$$ \(QED\)
-* $$T(W)=T(R(T^k ))=R(T^{k+1} ) \subseteq R(T^K )=W$$ \(QED\).
+* $$T(W)=T(R(T^k ))=R(T^{k+1} ) \subseteq R(T^K )=W$$ \(QED\)
 
+## 核集鏈定理\(kernel chain theorem\)
 
+> 線性轉換$$ T \in L(V,V),~\dim⁡(V)<\infty$$，則以下敘述等價：
+>
+> 1. $$\{0\} \subseteq ker⁡(T)\subseteq ker⁡(T^2 )\subseteq \dots \subseteq ker⁡(T^i) \subseteq ker(T^{i+1} )\subseteq \dots \subseteq V$$
+> 2. 存在最小正整數$$k$$使得$$ker⁡(T^k )=ker⁡(T^{k+1} )=ker⁡(T^{k+2} )=\dots$$（因為核集的上限為向量空間$$V$$）
+> 3. $$\exists k \in \mathbb{N} \ni \bigcup_{i=1}^\infty  ker⁡(T^i )=ker⁡(T^k) $$
+> 4. $$W=\bigcup_{i=1}^\infty  ker⁡(T^i )=ker⁡(T^k)$$為最大冪零區，且$$T_w$$ 的指標是$$k$$。
 
-
-
-
+> 此定理說明$$T$$的次方越大，則其核集越大，但到某一定的次方$$k$$後就不會增加。
+>
+> 矩陣$$A \in F^{ N \times N}$$
+>
+> * $$\{0\} \subseteq ker⁡(A) \subseteq ker⁡(A^2 ) \subseteq \dots \subseteq ker⁡(A^i ) \subseteq ker⁡(A^{i+1} )\subseteq \dots \subseteq F^{N \times 1}$$
+> * $$\exists k \in \mathbb{N} \ni ker⁡(A^k )=ker⁡(A^{k+1} )=ker⁡(A^{k+2} )=\dots$$
+> * $$\bigcup_{i=1}^\infty  ker⁡(A^i )=ker⁡(A^k)  $$
 

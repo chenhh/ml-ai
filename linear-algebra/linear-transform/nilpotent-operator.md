@@ -9,3 +9,6 @@
 >
 > 矩陣$$A \in F^{N \times N}$$，若存在$$k \in \mathbb{N} \ni A^k=0$$，則稱$$A$$為冪零矩陣\(nilpotent matrix\)，且稱$$ k^{*} =\arg\min_k \{A^k=0,  k \in\mathbb{N}\}$$為$$A$$的指標\(index\)。
 
+* 依定義得零矩陣為具指標1的冪零矩陣。
+* 單位矩陣$$I^k \neq 0, ~\forall k \in \mathbb{N}$$，所以非冪零矩陣。
+

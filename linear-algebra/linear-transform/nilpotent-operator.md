@@ -208,7 +208,9 @@ Proof:
 * $$T: \mathbb{R}^3 \rightarrow \mathbb{R}^3$$，$$T(x,y,z)=(0,2x, 3z)$$
 * 取標準基底$$R=\{e1_, e_2, e_3\}$$，得$$[T]_R=A=\begin{bmatrix} 0 & 0 & 0 \\ 2 & 0 & 0 \\ 0 & 0 & 3  \end{bmatrix}$$，$$rank(A)=2$$。
 * $$A^2=\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 9  \end{bmatrix}$$，$$A^3=A^2=\begin{bmatrix} 0 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & 27  \end{bmatrix}$$
-* 因為$$ker(A^2)=ker(A^3)$$，且$$R(A^2)=R(A^3)$$，所以$$\mathbb{R^3}=ker(A^2) \oplus R(A^2)$$。 
+* 因為$$ker(A^2)=ker(A^3)$$，且$$R(A^2)=R(A^3)$$，所以$$\mathbb{R^3}=ker(A^2) \oplus R(A^2)$$。
+* $$ker(A^2)=span\left\{  \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},  \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right\}$$，$$CS(A^2)=span\left\{ \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix} \right\}$$
+* 取基底$$B=R$$，則$$\begin{bmatrix} 0 & 0 \\ 0 & 2 \end{bmatrix}$$為冪零矩陣，$$\begin{bmatrix} 3 \end{bmatrix}$$為可逆矩陣。
 
 
 

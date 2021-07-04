@@ -100,6 +100,10 @@
   * [投影算子\(projection operator\)](linear-algebra/linear-transform/projection-operator.md)
   * [光譜分解\(spectral decomposition\)](linear-algebra/linear-transform/spectral-decomposition.md)
   * [冪零算子\(nilpotent operator\)](linear-algebra/linear-transform/nilpotent-operator.md)
+  * [循環子空間\(cyclic subspace\)](linear-algebra/linear-transform/cyclic-subspace.md)
+  * [Jordan form](linear-algebra/linear-transform/jordan-form.md)
+  * [Cayley-Hamilton定理](linear-algebra/linear-transform/cayley-hamilton-theorem.md)
+  * [極小多項式\(minimal polynomial\)](linear-algebra/linear-transform/minimal-polynomial.md)
 
 ## 時間序列與訊號處理 <a id="time-series"></a>
 

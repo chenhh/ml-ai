@@ -90,6 +90,13 @@ Proof:
 * $$T(v)=T(v_1+\dots +v_k )=T(v_1 )+\dots+T(v_k )=\lambda_1 v_1+ \dots +\lambda_k v_k=\lambda_1 T_1 (v)+\dots + \lambda_k T_k (v)=(\lambda_1 T_1+\dots+\lambda_k T_k )(v)$$
 * 所以$$T=\lambda_1 T_1+\dots+\lambda_k T_k$$  \(QED\)
 
+### 範例1
+
+* 矩陣$$A$$可對角化，且$$\lambda_1, \dots \lambda_K$$為$$A$$的相異特徵根，則存在可逆矩陣$$P \ni P^{-1}AP=D = diag\{\lambda_1 I_{m_1}, \dots, \lambda I_{m_K}\}$$
+* 所以$$A=PDP^{-1} = P\left\{  \lambda_1 \begin{bmatrix}  I_{m_1} & \dots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \dots & 0 \end{bmatrix} + \dots + \lambda_K \begin{bmatrix}  0 & \dots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \dots & I_{m_K} \end{bmatrix} \right\} P^{-1}= \lambda_1 P\begin{bmatrix}  I_{m_1} & \dots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \dots & 0 \end{bmatrix} P^{-1}+ \dots +  \lambda_K P\begin{bmatrix}  0 & \dots & 0 \\ \vdots & \ddots & \vdots \\ 0 & \dots & I_{m_K} \end{bmatrix} P^{-1} = \lambda_1 A_1 + \dots + \lambda_K A_K$$
+
+### 
+
 
 
 

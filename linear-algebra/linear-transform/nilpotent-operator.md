@@ -214,6 +214,34 @@ Proof:
 
 
 
+## 冪零算子\(矩陣\)的必要條件
+
+> 線性轉換$$T \in L(V,V)$$（或$$ A \in F^{N \times N}$$）為冪零算子）$$\dim⁡(V)=N<\infty$$，則：
+>
+> * $$\det⁡(T)=0$$ （$$\det⁡(A^k )=(\det⁡(A) )^k =0$$）
+> * $$T^N=O, ~k\leq N$$ （$$A^N=0$$）  
+> * $$\lambda$$為$$T$$（或$$A$$）的特徵根，則〕$$\lambda=0$$ \(特徵根全為0, $$char_T (x)=(−1)^N x^N$$；若特徵根全為0時，可由Caylay-Hamilton定理得出$$T$$為冪零算子\)
+> * 因$$A$$為可逆矩陣若且唯若$$A$$的特徵根皆不為0；因此冪零矩陣不為可逆矩陣。
+
+Proof \(1\):
+
+* 取$$B$$為$$V$$的基底，所以$$\exists k \in \mathbb{N} \ni [T^k ]_B=([T]_B )^k=0$$。
+* 因此$$\det⁡(([T]_B )^k )=\det⁡(0)=0$$
+* 得$$\det⁡([T]_B )=0$$ \(QED\)
+
+Proof 2:
+
+* 由核集鏈定理可得$$\exists k \in \mathbb{N}\ni \bigcup_{i=1}^\infty  ker⁡(T^i )=ker⁡(T^k )$$為最大冪零區。
+* 因為$$T$$的指標為$$k$$，且$$T^k=)，~k\leq N$$。
+* 所以$$T^N=T^k \cdot T^{N−k}=0 \cdot T^{N−k}=0$$ \(QED\)
+
+Proof 3:
+
+* 因為$$\lambda$$ 為$$T$$的特徵根，所以$$\exists v \neq 0 \ni T(v)=\lambda v$$。
+* 因為$$0=0(v)=T^k (v)=\lambda^k v$$
+* 所以$$\lambda^k v=0, ~v \neq 0$$
+* 因此$$\lambda=0$$ \(QED\).
+
 
 
 

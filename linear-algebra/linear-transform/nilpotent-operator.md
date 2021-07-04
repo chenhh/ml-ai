@@ -101,9 +101,24 @@ Proof:
 * 因為$$R(T^k )=R(T^{k+1} )$$
 * 所以$$ker⁡(T^k )=ker⁡(T^{k+1} )\Rightarrow ker⁡(T^{k+1} )=ker⁡(T^{k+2} )⇒R(T^{k+1} )=R(T^{k+2} )$$  \(QED\).
 
+### 核空間與值域均為T的冪次不變子空間
 
-
+> 線性轉換$$T \in L(V,V),~ k \in \mathbb{N}$$，則：
 >
+> * $$W=ker⁡(T^k )$$，$$W$$為$$T$$-不變子空間  \($$\forall w \in W, T(w) \in W$$\)
+> * $$W=R(T^k )$$，$$W$$為$$T$$-不變子空間
+
+Proof:
+
+* 因為$$W$$為$$V$$的子空間，只需證明$$T(W) \subseteq W$$。
+* $$ \forall v \in W=ker⁡(T^k ), T^k (v)=0$$
+* 所以$$T^k (T(v))=T^{k+1} (v)=T(T^k (v))=T(0)=0$$
+* 可得$$T(v) \in W$$ \(QED\)
+* $$T(W)=T(R(T^k ))=R(T^{k+1} ) \subseteq R(T^K )=W$$ \(QED\).
+
+
+
+
 
 
 

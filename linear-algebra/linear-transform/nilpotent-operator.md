@@ -86,5 +86,24 @@ Proof:
 * 因為$$T^{k+1} \in L(V,V)$$，所以$$\dim⁡(V)=nullity(T^{k+1} )+rank(T^{k+1} )  $$。
 * 若$$ker⁡(T^k )=ker⁡(T^{k+1} ) \Leftrightarrow nullity(T^k )=nullity(T^{k+1})$$\[因為$$ker⁡(T^k )$$為$$ker⁡(T^{k+1} )$$的子空間\] $$\Leftrightarrow rank(T^k )=rank(T^{k+1} )\Leftrightarrow R(T^k )=R(T^{k+1} )$$\[因為$$R(T^{k+1} )$$為$$R(T^k )$$的子空間\] \(QED\)
 
+### 核空間經線性轉換後不再增大時，則不會再增大；值域經線性轉換不再縮小時，則不會再縮小
+
+> 線性轉換$$T \in L(V,V), ~ k \in \mathbb{N}$$，則：
+>
+> * $$ker⁡(T^k )=ker⁡(T^{k+1} ) \Rightarrow ker⁡(T^{k+1} )=ker⁡(T^{k+2} )$$
+> * $$R(T^k )=R(T^{k+1} )\Rightarrow R(T^{k+1} )=R(T^{k+2} )$$
+
+Proof:
+
+* 因為$$ker⁡(T^{k+1} ) \subseteq ker⁡(T^{k+2} )$$. 所以只需證明$$ker⁡(T^{k+1} )\supseteq ker⁡(T^{k+2} )$$
+* $$\forall v \in ker⁡(T^{k+2} ), T^{k+2} (v)=T^{k+1} (T(v))=0\Rightarrow  T(v) \in ker⁡(T^{k+1} )$$
+* 因為$$ker⁡(T^k )=ker⁡(T^{k+1} )\Rightarrow T(v) \in ker⁡(T^k ) \Rightarrow T^{k+1} (v)=T^k (T(v))=0\Rightarrow v \in ker⁡(T^{k+1} )$$  \(QED\).
+* 因為$$R(T^k )=R(T^{k+1} )$$
+* 所以$$ker⁡(T^k )=ker⁡(T^{k+1} )\Rightarrow ker⁡(T^{k+1} )=ker⁡(T^{k+2} )⇒R(T^{k+1} )=R(T^{k+2} )$$  \(QED\).
+
+
+
+>
+
 
 

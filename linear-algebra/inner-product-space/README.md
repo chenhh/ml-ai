@@ -9,7 +9,7 @@
 > 3. $$\forall u,v \in V$$，$$\langle u, v\rangle = \overline{\langle u, v \rangle}$$ （共軛交換性）
 > 4. $$\forall v \in V, v \neq 0$$，$$\langle v, v \rangle > 0$$。
 >
-> 註：內積算子為向量間角度的擴充，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，其中$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（長度）。
+> 註：內積算子為向量間角度的擴充，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，其中$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
 
 * $$\forall v \in V, ~\langle v, \rangle =0 \Leftrightarrow v=0$$。
   * 由於$$\langle v, v \rangle = \| v\| \| v\| \cos \theta =0$$，且向量$$v$$與$$v$$之間的夾角為0，所以$$\cos \theta=1$$，因此$$v=0$$。

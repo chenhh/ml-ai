@@ -117,7 +117,16 @@ Proof:
 * 所以$$C_V (T)=X$$
 * 因此$$R=\{v,T(v),\dots,T^{j−1} (v), T^j(v)\}$$為$$C_V (T)$$的一組基底
 * 因為$$\dim⁡(C_V (T))=k$$，所以$$j=k$$。
-* 得$$B=\{v,T(v),\dots,T^{k−2} (v),T^{k-1} (v)\}$$為$$C_V (T)$$的一組基底 \(QED\).
+* 得$$B=\{v,T(v),\dots,T^{k−2} (v),T^{k-1} (v)\}$$為$$C_V (T)$$的一組基底 \(QED\)
+
+### 線性轉換$$T$$在此定理中未必為冪零算子
+
+> 只要保證$$\dim⁡(C_v (T))=k$$，即可保證$$B$$為$$C_v (T)$$的基底，此時$$T^k (v)$$未必為0。
+
+* 令$$T^k(v)=-a_0v+(-a_1)T(v)+\dots + (-a_{k-1})T^{k-1}(v)$$
+* 所以$$A=[T_{C_V(T)}]_B=\begin{bmatrix}  0 & 0 & \dots & 0 & -a_0 \\ 1 & 0 & \dots & 0 & -a_1 \\ 0 & 1 & \dots & 0 & -a_2 \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ 0 & 0 & \dots & 1 & -a_{k-1} \end{bmatrix}$$
+* $$char_A(x)=(-1)^k(a_0+a_1x+a_2x^2 + \dots +a_{k-1}x^{k-1} + x^k)$$
+* 當$$T^k(v)=0$$時，此時$$a_0=a_1=\dots =a_{k-1}=0 \Rightarrow A=S_k$$為下移矩陣。
 
 
 

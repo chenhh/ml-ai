@@ -21,3 +21,24 @@
   * 所以$$v=0\Leftrightarrow C_v (T)=\{0\} \Leftrightarrow \dim⁡(C_V (T))=0$$
 * $$C_v (T)$$為$$V$$的子空間。
 
+#### 範例
+
+* $$T(x,y,z)=(-y+z, x+z, 3z)$$，由$$e_1=(1,0,0)$$生成的循環子空間為：
+  * $$T(e_1)=(0,1,0)=e_2$$
+  * $$T^2(e_1)=T(e_2)=(-1,0,0)=-e_1$$
+  * 可得$$Cv(T)=span\{e_1, T(e_1), T^2(e_1), \dots\}=span\{e_1, e_2\}$$
+
+### 循環子空間是T不變子空間
+
+> 線性轉換$$T \in L(V,V), ~ v \in V$$，則$$C_v (T)$$為$$T$$不變子空間 （即 $$T(C_v (T))\subseteq C_v (T)$$）。
+
+Proof:
+
+* 因為$$C_v (T)$$為$$V$$的子空間，因此只要證明$$T(C_v (T)) \subseteq C_v (T)$$，即證明使用$$C_v (T)$$的生成集可生成$$T(C_v (T))$$。
+* $$\forall  u \in C_v (T)$$
+* $$u=a_{i1} T^{i1} (v)+a_{i2} T^{i2} (v)+\dots+a_{ik} T^{ik} (v), ~a_{i1},a_{i2},\dots,a_{ik} \in F$$
+* 所以$$T(u)=T(a_{i1} T^{i1} (v)+a_{i2} T^{i2} (v)+\dots+a_{ik} T^{ik} (v))=a_{i1} T^{i1+1} (v)+a_{i2} T^{i2+1} (v)+\dots+a_{ik} T^{ik+1} (v) \in span\{v, T(v),T^2 (v),\dots\}$$
+* 所以$$T(u) \in C_v (T) \Rightarrow T(C_v (T)) \subseteq C_v (T)$$  \(QED\).
+
+
+

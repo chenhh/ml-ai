@@ -82,5 +82,46 @@ Proof:
 * $$T_{C_v (T)} (T^{k−1} (v))=T(T^{k−1} (v))=T^k (v)=0$$
 * 所以$$[T_{C_v (T) } ]_B=S_k$$  \(QED\)
 
+### 由維度求循環子空間的基底，T可為任意非零的線性算子
+
+> 線性轉換$$ T \in L(V,V)$$，$$ 0 \neq v \in V, ~ W=C_v (T)$$。
+>
+> 若$$\dim⁡(C_v (T))=k$$，則$$B=\{v,T(v),\dots, T^{k−1} (v)\}$$為$$C_v (T)$$的一組基底。
+>
+> 此定理由$$\dim⁡(C_v (T))=k$$限制循環子空間生成集元素的個數為$$k$$個，此時$$T^k (v)$$未必為0，可能是由$$v,T(v), \dots,T^{k−1} (v)$$線性組合即可產生的空間。
+
+Proof:
+
+* 令$$j \in \mathbb{N}$$為$$R=\{v,T(v),T^2 (v),\dots,T^{j−1} (v)\}$$為線性獨立集的最大正整數。
+* 因為$$v \neq 0$$，所以$$j$$至少為$$1$$，即$$\{v\}$$為線性獨立集。
+* 令$$X=span\{R\}$$，則$$R$$為$$X$$的一組基底。
+* 因為$$j$$為集合$$R$$線性獨立的最大正整數，所以$$\{v,T(v),\dots,T^{j−1} (v),T^j (v)\}$$為線性相依集。
+* $$T^j (v) \in span\{R\}=X$$。
+
+
+
+* 要證明$$T(X) \subseteq X$$，即證明$$X$$為$$T$$不變子空間。
+* $$\forall x∈X, ~\exists a_0,a_1,\dots ,a_{j−1} \in F \ni x=a_0 v+a_1 T(v)+\dots+a_{j−1} T^{k−1} (v)$$
+* 所以$$T(x)=T(a_0 v+a_1 T(v)+\dots+a_{j−1} T^{k−1} (v))=a_0 T(v)+a_1 T^2 (v)+\dots a_{j−1} T^j (v) \in X$$
+* 可得$$T(X) \subseteq X$$
+
+
+
+* 要證明$$C_v (T) \subseteq X$$
+* 因為$$v \in X$$且$$X$$為$$T$$不變子空間，所以$$T(v) \in X$$。
+* 所以$$T(T(v))=T^2 (v) \in X$$，以此類推得$$T(T^2 (v))=T^3 (v) \in X$$
+* 同理可得$$T^i (v) \in X, ~i=0,1,2,\dots$$
+* 所以$$\{v,T(v),T^2 (v),\dots\} \subseteq X$$
+* 因為$$C_v (T)=span\{v,T(v),T^2 (v),\dots\}$$為包含$$\{v,T(v),T^2 (v),\dots\}$$的最小子空間，  所以$$C_V (T) \subseteq X$$
+* 因為$$X=span\{R\} \subseteq span\{v,T(v),T^2 (v),\dots\}=C_V (T)$$
+* 所以$$C_V (T)=X$$
+* 因此$$R=\{v,T(v),\dots,T^{j−1} (v), T^j(v)\}$$為$$C_V (T)$$的一組基底
+* 因為$$\dim⁡(C_V (T))=k$$，所以$$j=k$$。
+* 得$$B=\{v,T(v),\dots,T^{k−2} (v),T^{k-1} (v)\}$$為$$C_V (T)$$的一組基底 \(QED\).
+
+
+
+
+
 
 

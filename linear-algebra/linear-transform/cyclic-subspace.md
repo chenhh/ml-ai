@@ -130,6 +130,39 @@ Proof:
 
 
 
+## 循環分解定理\(cyclic decomposition theorem\)
+
+> 線性轉換$$T \in L(V,V)$$為具指標$$k$$的冪零算子，即$$\forall v \in V, ~ T^k (v)=T^{k+1} (v)=\dots=0$$。
+>
+> 則唯一存在$$v_1,v_2,\dots,v_r \in V \ni V=C_{v_1} (T) \oplus C_{v_2} (T) \oplus \dots \oplus C_{v_r} (T)$$，即相同的冪零算子$$T$$，對於不同的向量$$v_i$$ 均可產生獨立的循環子空間$$C_{v_i} (T)$$，其直和為$$V$$。
+
+> * 其中$$\dim⁡(C_{v_i} (T))=n_i,~ i=1,2,\dots,r, ~ n_1 \geq n_2 \geq \dots \geq n_r$$
+> * 且$$v_i \in ker⁡(T^{n_i} )−ker⁡(T^{n_i−1} ), ~ i=1,2,\dots,r$$
+> * $$\dim⁡(ker⁡(T))=r$$ \(循環子空間的個數\), $$k=n_1$$ \(冪零算子$$T$$的指標\)。
+
+* 因為$$V$$是由獨立子空間$$C_{v_i} (T), ~i=1,2,\dots,r$$直和所組成，所以$$V$$的基底是由$$C_{v_i} (T)$$的基底聯集組成 。
+* $$B_i=\{v_i, T(v_i ),T^2 (v_i ),\dots\}$$為$$C_{v_i} (T)$$的基底，則$$B=B_1 \cup B_2 \cup \dots \cup B_r$$ 為$$B$$的一組基底。
+* $$因為C_{v_i} (T)$$為$$T$$不變子空間且$$V$$為$$C_{v_i} (T)$$的直和空間，所以根據定理可得：
+* $$[T]_B =\begin{bmatrix}  [T_{C_{v_1}}]_{B_1}& 0& \dots & 0 \\ 0 &  [T_{C_{v_2}}]_{B_2} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & [T_{C_{v_r}}]_{B_r} \end{bmatrix}  =\begin{bmatrix}  S_{n_1}& 0& \dots & 0 \\ 0 &  S_{n_2} & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & S_{n_r} \end{bmatrix}  $$
+* 其中$$S_{n_i} \in F^{n_i \times n_i}$$為下移矩陣。
+* 因為通常無法直接得出循環子空間的維度$$n_1,n_2, \dots ,n_r$$，所以先算出$$\dim⁡(ker⁡(T) ),\dim⁡(ker⁡(T^2 ) ), \dots$$後，再用點圖反推出$$n_1,n_2,\dots,n_r $$。
+
+#### 將循環子空間的基底排列如下，稱為點圖\(dot diagram\)
+
+$$\begin{vmatrix} B_1 \\ B_2 \\ \vdots \\ B_r \end{vmatrix} \Rightarrow \begin{vmatrix} v_1 & T(v_1) & T^2(v_1) & T^3(v_1) & T^4(v_1) & \dots &T^{n_1-1}(v_1) \\ & v_2 & T(v_2) & T^2(v_2) & T^3(v_2) & \dots & T^{n_2-1}(v_2) \\ & & \vdots & \vdots& \vdots & \ddots  & \vdots \\ && v_r & T(v_r) & T^2(v_r) & \dots & T^{n_r-1}(v_r) \end{vmatrix}$$
+
+
+
+* 將所有循環子空間的基底$$B_i$$ 靠右對齊，因為只有最右邊那一行的$$r$$個元素$$\{T^{n_1−1} (v_1 ),T^{n_2−1} (v_2 ),\dots,T^{n_r−1} (v_r)\}$$經過一次$$T$$的轉換後會變成0向量。
+* 即$$T(T^{n_1−1} (v_1 ))=T(T^{n_2−1} (v_2 ))=\dots=T(T^{n_r−1} (v_r ))=0$$
+* 因此這$$r$$個向量為$$ker⁡(T)$$的基底，即$$ker⁡(T)=span\{T^{n_1−1} (v_1 ),T^{n_2−1} (v_2 ),\dots,T^{n_r−1} (v_r)\}$$, 且$$\dim⁡(ker⁡(T))=r$$
+* 同理，點圖中最右邊第二行為$$ker⁡(T^2)$$的基底，最右邊第三行為$$ker⁡(T^3)$$的基底。
+* 如果要把點圖中的所有元素均變為0向量，因為$$B_1$$的元素最多，因此至少須要$$n_1$$的轉換，即$$T^{n_1}=0$$，因此$$T$$為指標為$$n_1$$的冪零算子。
+
+
+
+
+
 
 
 

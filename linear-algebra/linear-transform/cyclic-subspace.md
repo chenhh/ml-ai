@@ -40,5 +40,47 @@ Proof:
 * 所以$$T(u)=T(a_{i1} T^{i1} (v)+a_{i2} T^{i2} (v)+\dots+a_{ik} T^{ik} (v))=a_{i1} T^{i1+1} (v)+a_{i2} T^{i2+1} (v)+\dots+a_{ik} T^{ik+1} (v) \in span\{v, T(v),T^2 (v),\dots\}$$
 * 所以$$T(u) \in C_v (T) \Rightarrow T(C_v (T)) \subseteq C_v (T)$$  \(QED\).
 
+### 特徵向量生成的循環子空間維為1
+
+> 線性轉換$$T \in L(V,V)$$
+>
+> 則$$\dim⁡(C_v (T))=1\Leftrightarrow  v \in V$$為$$T$$的特徵向量。
+
+Proof: =&gt;
+
+* $$\dim⁡(C_v (T))=\dim⁡(span\{v,T(v),T^2 (v),\dots\})=1$$
+* 所以$$v \neq 0$$ 且$$C_v (T)=span\{v\}$$
+* 依循環子空間的定義得$$T(v) \in C_v (T)$$，即$$\exists \lambda  \in F \ni T(v)=\lambda v$$
+* 所以$$v$$為$$T$$的特徵向量 \(QED\)
+
+Proof &lt;=
+
+* 因為$$v$$為$$T$$的特徵向量，所以$$v \neq 0$$且$$\exists \lambda \in F \ni T(v)=\lambda v$$。
+* 可得$$C_v (T)=span\{v,T(v),T^2 (v),\dots \}=span\{v,\lambda v,\lambda^2 v,\dots\}=span\{v\}$$
+* 所以$$\dim⁡(C_v (T))=1$$ \(QED\)
+
+###  循環子空間的基底與線性變換矩陣表示法
+
+> 線性轉換$$T \in L(V,V)$$，
+>
+> * 若$$v \neq 0$$且$$v \in ker⁡(T^k )−ker⁡(T^{k−1})$$（即$$T^k (v)=0$$，但$$T^(k−1) (v) \neq 0$$）
+> * 則$$B=\{v,T(v),\dots, T^{k−1} (v)\}$$為$$W=C_v (T)$$的一組基底$$\dim⁡(C_V (T))=k$$，且
+> * $$[T_{C_v(T)}]_B=S_k=\begin{bmatrix} 0 & 0 & 0  & 0 \\ 1 & 0 & \ddots & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0  \end{bmatrix}_{k \times k}$$為$$k$$階下移矩陣，  稱$$B$$為$$W$$的循環基底\(cyclic basis\)。
+> * 若基底$$B=\{T^{k−1} (v),T^{k−2} (v), \dots,T(v),v\}$$，則$$[T_{C_V (T)} ]=S_k^\top$$ 為上移矩陣。
+
+Proof:
+
+* $$v \in ker⁡(T^k )−ker⁡(T^{k−1} )$$，即$$T^k (v)=0$$且$$T^{k−1} (v) \neq 0$$。
+* 所以$$T^k (v)=T^{k+1} (v)=\dots=0$$。
+* $$W=C_V (T)=span\{v,T(v),T^2 (v),\dots,T^{k−1} (v),0,0,\dots\}=span(B)$$
+* 根據[指標k的冪零算子必存在k-1次線性轉換形成的線性獨立集](nilpotent-operator.md#zhi-biaokde-mi-ling-suan-zi-bi-cun-zaik1-ci-xian-xing-zhuan-huan-xing-cheng-de-xian-xing-du-li-ji)，	可知$$B$$為線性獨立集，因此$$B$$為基底。\(QED\)
+* 因為$$C_v (T)$$為$$T$$不變子空間，所以$$T_{C_v (T)}$$有定義。
+* $$T_{C_v (T) } (v)=T(v)=0v+1T(v)+0T^2 (v)+\dots+0T^{k−1} (v)$$
+* $$T_{C_v (T)} (T(v))=T(T(v))=T^2 (v)=0v+0T(v)+1T^2 (v)+\dots+0T^{k−1} (v)$$
+* $$\vdots$$
+* $$T_{C_v (T) } (T^{k−2} (v))=T(T^{k−2} (v))=T^{k−1} (v)=0v+0T(v)+1T^2 (v)+\dots+1T^{k−1} (v)$$
+* $$T_{C_v (T)} (T^{k−1} (v))=T(T^{k−1} (v))=T^k (v)=0$$
+* 所以$$[T_{C_v (T) } ]_B=S_k$$  \(QED\)
+
 
 

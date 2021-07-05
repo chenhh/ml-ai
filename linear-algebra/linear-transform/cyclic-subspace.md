@@ -159,11 +159,20 @@ $$\begin{vmatrix} B_1 \\ B_2 \\ \vdots \\ B_r \end{vmatrix} \Rightarrow \begin{v
 * 同理，點圖中最右邊第二行為$$ker⁡(T^2)$$的基底，最右邊第三行為$$ker⁡(T^3)$$的基底。
 * 如果要把點圖中的所有元素均變為0向量，因為$$B_1$$的元素最多，因此至少須要$$n_1$$的轉換，即$$T^{n_1}=0$$，因此$$T$$為指標為$$n_1$$的冪零算子。
 
+## 不變集\(invariant set\)
 
+> 線性轉換$$T \in L(V,V)$$為具指標$$k$$的冪零算子\($$T^k=0$$\)，則循環分解定理\(cyclic decomposition theorem\)中每個循環子空間維度形成的有序集合$$\{n_1,n_2,\dots,n_r ~|~n_1 \geq n_2 \geq \dots \geq n_r \}$$稱為不變集。
 
+#### 範例
 
-
-
-
-
+* $$T\in L(V,V)$$為冪零算子，dim⁡\(V\)=20，且T的不變集為$$\{6,4,4,3,2,1\}$$，可得點圖如下：
+* $$\begin{vmatrix} 6\rightarrow & v_1 & T(v_1) & T^2(v_1) & T^3(v_1) & T^4(v_1) & T^5(v_1)  \\ 4 \rightarrow & & & v_2 & T(v_2) & T^2 (v_2) & T^3(v_2) \\ 4 \rightarrow & & & v_3 & T(v_3) & T^2 (v_3) & T^3(v_3) \\ 3 \rightarrow & & & & &  v_5  &T(v_5) \\ 1 \rightarrow &&&&&&v_6\end{vmatrix}$$
+* 所以$$\dim(ker(T))=6$$
+* $$\dim(ker(T^2))=6+5=11$$
+* $$\dim(ker(T^3))=6+5+4=15$$
+* $$\dim(ker(T^4))=6+5+4+3=18$$
+* $$\dim(ker(T^5))=6+5+4+3+1=19$$
+* $$\dim(ker(T^6))=20=\dim(V)$$
+* 所以$$T^6=0$$且$$T^5 \neq 0$$。
+* 即$$T$$的指標為6，且$$T$$的循環分解為$$[T]_B=\begin{bmatrix}  S_6 &  & & & & 0 \\ & S_4 & & & & \\ & & S_4 & && \\ & & & S_3 & & \\ & & && S_2 & \\0 & & && & S_1  \end{bmatrix}$$
 

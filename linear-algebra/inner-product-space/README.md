@@ -95,6 +95,7 @@ Proof \(7\):
 > * $$\| cv\| = |c| \|v\|$$
 
 * $$\|v\|=\sqrt{\langle v, v \rangle}=0 \Rightarrow \langle v, v \rangle=0 \Leftrightarrow v=0$$
+* $$\| cv\| =\langle cv, cv \rangle=c\overline{c} \langle v, v \rangle =|c|^2\|v\|^2=(|c| \|v\|)^2$$
 
 
 

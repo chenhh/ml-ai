@@ -25,9 +25,51 @@
 ## 內積空間\(inner product space\)
 
 > 向量空間$$V$$定義在體$$F$$，若向量空間$$V$$上定義內積算子，則稱$$V$$為內積空間。
+>
+> 註：向量空間只有定義0向量、向量的合成與縮放。其維度是由基底（同時為最小生成集與最大獨立集）決定。向量間的角度是由內積決定（但內積之值為純量），向量的長度由範數決定。
+>
+> 度量空間的距離函數是定義在集合上，不必為向量空間，但也可以用在向量空間上。
 
 * 只有三維空間中，才有外積\(cross product\)的定義，且外積的值為向量而非純量。
 *  兩個向量的內積，並不是個向量，而是個純量\(scalar\)。
+
+### 內積算子的性質
+
+> $$V$$為定義在體$$F$$的內積空間，$$B=\{b_1, \dots, b_N\}$$為$$V$$的基底。
+>
+> 1.  $$\forall v \in V, \langle v,0 \rangle=\langle 0,v \rangle=0$$ （零向量的內積必為0）
+> 2. $$\forall u,v \in V, \langle u,v \rangle=0 \Leftrightarrow \langle v, u \rangle=0   $$
+> 3. $$\displaystyle \forall u_i,v \in V, c_i \in F, ~ \left \langle \sum_{i=1}^K c_i u_i,v \right\rangle =\sum_{i=1}^K c_i  \langle u_i, v\rangle $$
+> 4. $$\forall u,v \in V, c \in F, ~ \langle u, cv\rangle = \overline{\langle cv, u\rangle} = \overline{c} \langle u, v\rangle$$
+> 5. $$\displaystyle ∀u,v_i \in V, c_i \in F, ~  \left\langle u, \sum_{i=1}^K c_iv_i \right\rangle  =\sum_{i=1}^K \overline{c_i} \langle u, v_i \rangle$$
+> 6. $$\langle u,v\rangle=0, \forall v \in V\Leftrightarrow u=0$$ （只有零向量與所有向量內積為0）
+> 7. $$\langle u,v \rangle = \langle w,v\rangle, \forall v \in V \Leftrightarrow u=w   $$
+> 8. $$u=0 \Leftrightarrow  \langle u,b_i \rangle=0, ~\forall i=1,2,\dots,N$$
+
+Proof \(1\)
+
+* $$\langle u,0 \rangle= \langle u,0+0 \rangle= \langle u,0 \rangle+ \langle u,0 \rangle \Rightarrow \langle u,0\rangle=0 $$
+* 同理$$\langle 0,u \rangle=0$$ \(QED\)
+
+Proof \(6\):
+
+* 若$$f \langle u,v \rangle =0,~\forall v \in V$$
+* 則$$\langle u,u \rangle=0 \Rightarrow u=0$$ 
+* 反之若$$u=0 \Rightarrow \langle u,v \rangle =0, ~\forall v \in V$$  \(QED\)
+
+Proof \(7\):
+
+* 若$$ u=w$$，則$$\langle u,v \rangle=\langle w,v \rangle$$
+* 若$$ \langle u,v \rangle= \langle w,v \rangle, ~ \forall v \in V$$
+* 可得$$\langle u,v \rangle− \langle w,v \rangle=0, ~\forall v \in V$$
+* 整理得 $$\langle u−w,v \rangle =0, ~\forall v \in V$$
+* 由\(6\)知$$u−w=0 \Rightarrow u=w$$ \(QED\)
+
+
+
+
+
+
 
 
 

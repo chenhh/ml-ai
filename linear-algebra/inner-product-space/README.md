@@ -65,6 +65,22 @@ Proof \(7\):
 * 整理得 $$\langle u−w,v \rangle =0, ~\forall v \in V$$
 * 由\(6\)知$$u−w=0 \Rightarrow u=w$$ \(QED\)
 
+### 範數\(norm\)
+
+> $$V$$為定義在體$$F$$的內積空間，定義$$\|v\|_2 = \sqrt{\langle v, v \rangle}, ~ \forall v \in V$$為向量$$v$$的長度（範數）。
+>
+> 兩個向量間的距離為$$\| u -v \| = \| v - u\|$$
+>
+> • 也可以不使用內積定義向量空間元素的長度，只要定義函數$$\|\cdot\|: V\rightarrow F$$滿足範數的條件即可：
+>
+> * \(faithfulness\) $$\|x\|=0\Leftrightarrow x=0$$（只有0向量長度為0）
+> *  \(homogeneity\) $$\forall c \in F, ~\|cx\|=|c|\|x\|$$
+> *  \(subadditivity\) $$\|x+y\| \leq |x\|+\|y\|$$
+>
+> 因此可定義p-norm為$$\displaystyle \|x\|_p = \left(\sum_{i=1}^N  \right)$$
+
+
+
 
 
 

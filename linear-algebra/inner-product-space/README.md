@@ -97,6 +97,36 @@ Proof \(7\):
 * $$\|v\|=\sqrt{\langle v, v \rangle}=0 \Rightarrow \langle v, v \rangle=0 \Leftrightarrow v=0$$
 * $$\| cv\| =\langle cv, cv \rangle=c\overline{c} \langle v, v \rangle =|c|^2\|v\|^2=(|c| \|v\|)^2$$
 
+### 內積為向量投影後長度有方向性的乘積
+
+> * Cauchy-Schwartz不等式: $$|  \langle u,v \rangle  | \leq \| u \| \|v\|$$
+>   * 所以$$-1 \leq \frac{\langle u ,v \rangle}{\|u\| \|v\|} \leq 1$$
+>   * 即$$\exists \theta \in [0, \pi ] \ni \frac{\langle u ,v \rangle}{\|u\| \|v\|}  = \cos \theta$$
+>   * $$\theta = \cos^{-1}\left(  \frac{\langle u ,v \rangle}{\|u\| \|v\|} \right)$$為兩向量間的夾角。
+> * 三角不等式：$$\| u+v\| \leq \|u\| + \|v\|$$
+
+![&#x5167;&#x7A4D;&#x70BA;&#x5411;&#x91CF;&#x6295;&#x5F71;&#x5F8C;&#x9577;&#x5EA6;&#x7684;&#x4E58;&#x7A4D;](../../.gitbook/assets/inner-product-angle-min.png)
+
+Proof Cauchy-Schwarz inequality:
+
+* $$v=0$$時顯然成立。
+* $$v \neq 0$$時，取$$c=\frac{\langle u,v\rangle}{ \langle v,v \rangle}  \in F$$
+* $$0\leq \|u−cv\|^2= \langle u−cv,u−cv \rangle$$
+* 展開得 $$\langle u,u−cv \rangle−c \langle v,u−cv \rangle=\langle u,u \rangle−\overline{c} \langle u,v \rangle −c \langle v,u \rangle + c \overline{c}\langle v,v\rangle$$
+* 將$$c$$代換得
+* $$\langle u,u \rangle − \overline{\frac{\langle u,v \rangle}{ \langle v,v \rangle }} \langle u,v \rangle−\frac{\langle u,v \rangle}{ \langle v,v \rangle }   \langle u,v \rangle +\frac{\langle u,v \rangle}{ \langle v,v \rangle } \overline{\frac{\langle u,v \rangle}{ \langle v,v \rangle }} \langle v,v \rangle=\|u\|^2−\frac{|\langle u,v\rangle|^2}{\|v\|^2} −\frac{|\langle u,v\rangle|^2}{\|v\|^2} +\frac{|\langle u,v\rangle|^2}{\|v\|^2} =\|u\|^2−\frac{|\langle u,v\rangle|^2}{\|v\|^2}$$
+* 整理可得 $$\frac{|\langle u,v\rangle |^2}{\|v\|^2}  \leq \|u\|^2 \Rightarrow |\langle u,v\rangle |^2 \leq \|u\|^2 \|v\|^2 \Rightarrow | \langle u,v \rangle | \leq \|u\|\|v\|$$  \(QED\)
+
+Proof triangle inequality：
+
+* $$\|u+v\|^2= \langle u+v,u+v \rangle=\langle u,u \rangle+\langle u,v\rangle+\langle v,u \rangle+\langle v,v \rangle$$
+* 可得$$\|u\|^2+\|v\|^2+\langle u,v\rangle + \overline{\langle u,v\rangle}=\|u\|^2+\|v\|^2+2\mathrm{Re}( \langle u,v \rangle)\leq \|u\|^2+\|v\|^2+2| \langle u,v \rangle|\leq \|u\|^2+\|v\|^2+2\|u\|\|v\| = (\|u\|+\|v\|)^2$$
+* 所以$$\|u+v\| \leq \|u\|+\|v\|$$  \(QED\).
+
+
+
+
+
 
 
 

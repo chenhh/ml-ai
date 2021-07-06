@@ -43,8 +43,8 @@
 > 4. $$\forall u,v \in V, c \in F, ~ \langle u, cv\rangle = \overline{\langle cv, u\rangle} = \overline{c} \langle u, v\rangle$$
 > 5. $$\displaystyle ∀u,v_i \in V, c_i \in F, ~  \left\langle u, \sum_{i=1}^K c_iv_i \right\rangle  =\sum_{i=1}^K \overline{c_i} \langle u, v_i \rangle$$
 > 6. $$\langle u,v\rangle=0, \forall v \in V\Leftrightarrow u=0$$ （只有零向量與所有向量內積為0）
-> 7. $$\langle u,v \rangle = \langle w,v\rangle, \forall v \in V \Leftrightarrow u=w   $$
-> 8. $$u=0 \Leftrightarrow  \langle u,b_i \rangle=0, ~\forall i=1,2,\dots,N$$
+> 7. $$\langle u,v \rangle = \langle w,v\rangle, \forall v \in V \Leftrightarrow u=w   $$（$$\forall v \in V$$是必須的條件，否則有可能是剛好選到讓$$u,w$$內積相同的$$v$$）
+> 8. $$u=0 \Leftrightarrow  \langle u,b_i \rangle=0, ~\forall i=1,2,\dots,N$$    （因為向量空間間所有的向量均可由基底生成，而只有0向量與所有向量內積為0）
 
 Proof \(1\)
 

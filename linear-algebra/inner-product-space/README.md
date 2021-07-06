@@ -94,7 +94,7 @@ Proof \(7\):
 > * $$\|v\| \geq 0$$且$$\|v\|=0 \Rightarrow v=0$$
 > * $$\| cv\| = |c| \|v\|$$
 
-* $$
+* $$\|v\|=\sqrt{\langle v, v \rangle}=0 \Rightarrow \langle v, v \rangle=0 \Leftrightarrow v=0$$
 
 
 

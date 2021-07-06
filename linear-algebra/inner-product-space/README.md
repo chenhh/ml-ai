@@ -124,6 +124,17 @@ Proof triangle inequality：
 * 由Cauchy-Schwarz不等式得$$\|u\|^2+\|v\|^2+2| \langle u,v \rangle|\leq \|u\|^2+\|v\|^2+2\|u\|\|v\|  = (\|u\|+\|v\|)^2$$
 * 所以$$\|u+v\| \leq \|u\|+\|v\|$$  \(QED\).
 
+#### 範例：複數空間的標準內積
+
+* $$\displaystyle \left|\sum_{i=1}^N u_i \overline{v_i} \right| \leq \left(\sum_{i=1}^N |u_i |^2 \right)^{\frac{1}{2}} \left(\sum_{i=1}^N |v_i |^2 \right)^{\frac{1}{2}} $$
+
+* $$\displaystyle \left(\sum_{i=1}^N |u_i+v_i |^2 \right)^{\frac{1}{2}} \leq \left(\sum_{i=1}^N |u_i |^2 \right)^\frac{1}{2}+\left(\sum_{i=1}^N |v_i |^2 \right)^{\frac{1}{2}}$$
+
+#### 範例：連續函數的內積
+
+* $$\displaystyle  \left|\int_0^1 f(x)g(x)dx \right| \leq \left(\int_0^1f^2 (x)dx\right)^{1/2} \left(\int_0^1 g^2 (x)dx\right)^{1/2} $$
+* $$\displaystyle \left(\int_0^1 (f(x)+g(x))^2 dx\right) \leq \left(\int_0^1 f^2 (x)dx\right)^{1/2}+\left(\int_0^1 g^2 (x)dx\right)^{1/2} $$
+
 
 
 

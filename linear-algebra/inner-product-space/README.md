@@ -77,7 +77,7 @@ Proof \(7\):
 > *  \(homogeneity\) $$\forall c \in F, ~\|cx\|=|c|\|x\|$$
 > *  \(subadditivity\) $$\|x+y\| \leq |x\|+\|y\|$$
 >
-> 因此可定義p-norm為$$\displaystyle \|x\|_p = \left(\sum_{i=1}^N  \right)$$
+> 因此可定義p-norm為$$\displaystyle \|x\|_p = \left(\sum_{i=1}^N  |x_i|^p \right)^{\frac{1}{p}}$$，此處$$\|x_i|$$的絕對值不可省略，因為$$x_i \$$可為複數。
 
 
 

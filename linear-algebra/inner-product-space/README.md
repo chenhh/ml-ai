@@ -75,9 +75,15 @@ Proof \(7\):
 >
 > * \(faithfulness\) $$\|x\|=0\Leftrightarrow x=0$$（只有0向量長度為0）
 > *  \(homogeneity\) $$\forall c \in F, ~\|cx\|=|c|\|x\|$$
-> *  \(subadditivity\) $$\|x+y\| \leq |x\|+\|y\|$$
+> *  \(subadditivity\) $$\|x+y\| \leq |x\|+\|y\|$$（三角不等式）
 >
-> 因此可定義p-norm為$$\displaystyle \|x\|_p = \left(\sum_{i=1}^N  |x_i|^p \right)^{\frac{1}{p}}$$，此處$$\|x_i|$$的絕對值不可省略，因為$$x_i \$$可為複數。
+> 因此可定義p-norm為$$\displaystyle \|x\|_p = \left(\sum_{i=1}^N  |x_i|^p \right)^{\frac{1}{p}}$$，此處$$\|x_i|$$的絕對值不可省略，因為$$x_i \$$為複數時，必須使用絕對值求長度。
+>
+> * 1-norm：$$\|x\|_1=|x_1|+|x_2|+\dots+|x_N|$$。
+> * 2-norm：$$\|x\|_2 =(|x_1|^2+|x_2|^2+\dots+|x_N|^2)^{\frac{1}{2}}$$。
+> * $$\infty$$-norm：$$\|x\|_\infty=\max\{|x_1|, |x_2|, \dots, |x_N|\}$$。
+
+![p-norm](../../.gitbook/assets/norm-min.png)
 
 
 

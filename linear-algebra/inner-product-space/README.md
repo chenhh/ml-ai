@@ -120,7 +120,8 @@ Proof Cauchy-Schwarz inequality:
 Proof triangle inequality：
 
 * $$\|u+v\|^2= \langle u+v,u+v \rangle=\langle u,u \rangle+\langle u,v\rangle+\langle v,u \rangle+\langle v,v \rangle$$
-* 可得$$\|u\|^2+\|v\|^2+\langle u,v\rangle + \overline{\langle u,v\rangle}=\|u\|^2+\|v\|^2+2\mathrm{Re}( \langle u,v \rangle)\leq \|u\|^2+\|v\|^2+2| \langle u,v \rangle|\leq \|u\|^2+\|v\|^2+2\|u\|\|v\| = (\|u\|+\|v\|)^2$$
+* 可得$$\|u\|^2+\|v\|^2+\langle u,v\rangle + \overline{\langle u,v\rangle}=\|u\|^2+\|v\|^2+2\mathrm{Re}( \langle u,v \rangle)\leq \|u\|^2+\|v\|^2+2| \langle u,v \rangle|$$
+* 由Cauchy-Schwarz不等式得$$\|u\|^2+\|v\|^2+2| \langle u,v \rangle|\leq \|u\|^2+\|v\|^2+2\|u\|\|v\|  = (\|u\|+\|v\|)^2$$
 * 所以$$\|u+v\| \leq \|u\|+\|v\|$$  \(QED\).
 
 

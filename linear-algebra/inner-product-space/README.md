@@ -46,6 +46,8 @@
 > 7. $$\langle u,v \rangle = \langle w,v\rangle, \forall v \in V \Leftrightarrow u=w   $$（$$\forall v \in V$$是必須的條件，否則有可能是剛好選到讓$$u,w$$內積相同的$$v$$）
 > 8. $$u=0 \Leftrightarrow  \langle u,b_i \rangle=0, ~\forall i=1,2,\dots,N$$    （因為向量空間間所有的向量均可由基底生成，而只有0向量與所有向量內積為0）
 
+
+
 Proof \(1\)
 
 * $$\langle u,0 \rangle= \langle u,0+0 \rangle= \langle u,0 \rangle+ \langle u,0 \rangle \Rightarrow \langle u,0\rangle=0 $$
@@ -84,6 +86,17 @@ Proof \(7\):
 > * $$\infty$$-norm：$$\|x\|_\infty=\max\{|x_1|, |x_2|, \dots, |x_N|\}$$。
 
 ![p-norm](../../.gitbook/assets/norm-min.png)
+
+### 範數的性質
+
+> $$V$$為定義在體$$F$$的內積空間，則$$\forall v \in V, c \in F$$，$$\|v\|=\sqrt{\langle v, v\rangle}$$
+>
+> * $$\|v\| \geq 0$$且$$\|v\|=0 \Rightarrow v=0$$
+> * $$\| cv\| = |c| \|v\|$$
+
+* $$
+
+
 
 
 

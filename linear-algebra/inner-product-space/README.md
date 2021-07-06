@@ -135,17 +135,13 @@ Proof triangle inequality：
 * $$\displaystyle  \left|\int_0^1 f(x)g(x)dx \right| \leq \left(\int_0^1f^2 (x)dx\right)^{1/2} \left(\int_0^1 g^2 (x)dx\right)^{1/2} $$
 * $$\displaystyle \left(\int_0^1 (f(x)+g(x))^2 dx\right) \leq \left(\int_0^1 f^2 (x)dx\right)^{1/2}+\left(\int_0^1 g^2 (x)dx\right)^{1/2} $$
 
+## 正交\(orthogonal\)
 
-
-
-
-
-
-
-
-
-
-
+> $$V$$為定義在體$$F$$的內積空間，若$$u,v \in V$$滿足$$\langle u, v\rangle=0$$，稱兩向量正交，記為$$u \bot v$$。
+>
+> 集合$$S \subseteq V$$，若$$\forall u,v \in V, u \neq v$$且$$\langle u, v \rangle=0$$，稱$$S$$為正交集（orthogonal set）。
+>
+> 若$$S$$中所有元素的長度均為1（$$\|v\|=1, \forall v \in V$$），稱$$S$$為單範正交集（orthnormal set）。
 
 
 

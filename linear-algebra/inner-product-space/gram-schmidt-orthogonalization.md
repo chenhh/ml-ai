@@ -113,5 +113,10 @@ Proof:
 
 $$A=\begin{bmatrix}  1& 3 & 5\\ 1 & 1 & 0 \\1 & 1& 2 \\ 1 & 3 & 3\end{bmatrix} = \begin{bmatrix} v_1 & v_2 & v_3 \end{bmatrix}$$
 
-
+* $$u_1=v_1 =\begin{bmatrix}  1\\1 \\1\\ 1 \end{bmatrix}$$，$$\langle u_1, u_1\rangle=4$$
+* $$u_2 = v_2 - \frac{\langle v_2, u_1\rangle}{\langle u_1, u_1\rangle} u_1=\begin{bmatrix}  1\\-1 \\-1\\ 1 \end{bmatrix}$$，$$\langle u_2, u_2\rangle=4$$
+* $$u_3=v_3 -\frac{\langle v_3, u_1\rangle}{\langle u_1, u_1\rangle} u_1 - \frac{\langle v_3, u_2\rangle}{\langle u_2, u_2\rangle} u_2 =\begin{bmatrix}  1\\-1 \\1\\ -1 \end{bmatrix}$$，$$\langle u_3, u_3\rangle=4$$
+* $$\left\{ \begin{align} u_1 &= v_1 \\ u_2 & =v_2 - 2u_1 \\ u_3 & = v_3 - \frac{5}{2} u_1 -\frac{3}{2}u_2 \end{align}   \right.$$
+* 移項得$$\left\{ \begin{align} v_1 &= u_1 \\ v_2 & =2u_1 + u_2\\ v_3 & =  \frac{5}{2} u_1 +\frac{3}{2}u_2  +u_3\end{align}   \right.$$
+* 所以$$A=\begin{bmatrix} v_1 & v_2 & v_3 \end{bmatrix} = \begin{bmatrix} u_1 & u_2 & u_3 \end{bmatrix}\begin{bmatrix} 1 & 2 & \frac{5}{2} \\ 0 & 1 &  \frac{3}{2} \\0 & 0 & 1\end{bmatrix} = \begin{bmatrix} \frac{u_1}{\|u_1\|} & \frac{u_2}{\|u_2\|} & \frac{u_3}{\| u_3\|} \end{bmatrix}\begin{bmatrix} \|u_1\| & 2 \|u_1\| & \frac{5}{2} \|u_1\| \\ 0 & \|u_2\| &  \frac{3}{2} \|u_2\|\\0 & 0 & \|u_3\|\end{bmatrix} = \begin{bmatrix} \frac{1}{2} & \frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & -\frac{1}{2} &  -\frac{1}{2} \\\frac{1}{2} & -\frac{1}{2} & \frac{1}{2} \\ \frac{1}{2} & \frac{1}{2} & -\frac{1}{2} \end{bmatrix}  \begin{bmatrix} 2 & 4 & 5 \\ 0 & 2 & 3\\ 0 & 0 & 2 \end{bmatrix} =QR$$
 

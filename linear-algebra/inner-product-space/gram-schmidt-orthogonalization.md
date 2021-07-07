@@ -17,3 +17,16 @@ proof:
 * $$\langle v, v_j\rangle=\langle \sum_{i=1}^K c_i v_i, v_j\rangle = \sum_{i=1}^K c_i \langle v_i, v_j \rangle=c_j \langle v_j, v_j  \rangle$$
 * 所以$$c_j=\frac{\langle v, v_j \rangle}{\langle v_j, v_j\rangle}=\frac{\langle v, v_j \rangle}{\|v_j\|^2}$$ \(QED\)
 
+#### 範例
+
+$$V=\mathbb{R}^3$$，$$S=\left\{x_1=\begin{bmatrix} 1\\1\\0\end{bmatrix} ,x_2=\begin{bmatrix} -1\\1\\2\end{bmatrix},  x_3=\begin{bmatrix} -1\\1\\2\end{bmatrix}  \right\}, ~x=\begin{bmatrix} 2\\3\\4\end{bmatrix} $$
+
+* $$\langle x_1, x_2\rangle=0$$
+* $$\langle x_1, x_3\rangle=0$$
+* $$\langle x_2, x_3\rangle=0$$
+* $$\|x_1\|^2=2$$，$$\langle x, x_1\rangle=5$$
+* $$\|x_2\|^2=2$$，$$\langle x, x_2\rangle=3$$
+* $$\|x_3\|^2=6$$，$$\langle x, x_1\rangle=9$$
+* 所以$$S$$為正交集
+* $$x=\frac{\langle x,x_1 \rangle }{\|x_1 \|^2}  x_1+\frac{\langle x,x_2 \rangle}{\|x_2 \|^2}  x_2+\frac{\langle x,x_3 \rangle}{\|x_3 \|^2}  x_3=\frac{5}{2} x_1+\frac{3}{3} x_2+\frac{9}{6} x_3$$
+

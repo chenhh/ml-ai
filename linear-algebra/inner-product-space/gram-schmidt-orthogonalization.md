@@ -49,7 +49,7 @@ proof:
 > 內積空間$$V$$定義在體$$F$$，$$S=\{v_1, \dots, v_K\} \subseteq V$$為線性獨立集。
 >
 > * 令$$u_1 = v_1$$
-> * $$u_j = v_j - \sum_{j=1}^K \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j, ~ 2 \leq j \leq K$$
+> * $$u_j = v_j - \sum_{j=1}^K \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j, ~ 2 \leq j \leq K$$ （新的正交向量是由原始向量減去投影在其它正交向量的成份後得出）
 >
 > 則$$\{u_1, u_2, \dots, u_K\}$$為不含0的正交集，且$$span\{u_1, u_2, \dots, u_K\}=span\{v_1, v_2, \dots, v_K\}$$。
 >

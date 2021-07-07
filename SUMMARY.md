@@ -106,7 +106,6 @@
   * [極小多項式\(minimal polynomial\)](linear-algebra/linear-transform/minimal-polynomial.md)
 * [內積空間\(inner product space\)](linear-algebra/inner-product-space/README.md)
   * [Gram-schmidt正交化](linear-algebra/inner-product-space/gram-schmidt-orthogonalization.md)
-  * [QR分解\(QR-decomposition\)](linear-algebra/inner-product-space/qr-qrdecomposition.md)
   * [正交投影\(orthogonal projection\)](linear-algebra/inner-product-space/orthogonal-projection.md)
   * [最小平方解\(least square solution\)](linear-algebra/inner-product-space/least-square-solution.md)
   * [正交補空間\(orthogonal complement space\)](linear-algebra/inner-product-space/orthogonal-complement-space.md)

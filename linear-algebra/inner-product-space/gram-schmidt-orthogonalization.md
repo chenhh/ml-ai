@@ -2,6 +2,8 @@
 
 Gram-schmidt正交化的功能是將一個任意集合轉換成正交集合（所有元素彼此正交）。
 
+$$QR$$分解可將矩陣$$A$$的行向量經Gram-Schmidt正交化過程變為正交行向量形成的矩陣$$Q$$，以及相對應的參數矩陣$$R$$。
+
 ## 正交基底的係數\(Fourier coefficient\)
 
 > 內積空間$$V$$定義在體$$F$$，$$S=\{v_1, \dots, v_K\} \subseteq V$$為不含$$0$$向量的正交集（線性獨立集）。
@@ -76,4 +78,18 @@ $$V=C[0,1]$$，$$F=\mathbb{R}$$，$$\langle f,g \rangle= \int_0^1f(x)g(x)dx$$
   * $$\langle u_3, u_3 \rangle=\int_0^1 (x^2- x+ \frac{1}{6})^2dx=\frac{1}{180}$$
 
   可得$$\{1, \sqrt{12}(x-\frac{1}{2}), \sqrt{180}(x_2 -x + \frac{1}{6}\}$$為單範正交基底。
+
+## QR分解
+
+> 矩陣$$A \in F^{M \times N}$$且$$rank(A)=k$$，
+>
+> 則$$A$$可分解為$$A=Q_0R_0$$\(unnormalized\)。
+>
+> * $$Q_0 \in F^{M \times N}$$ 行\(column\)向量形成正交集，具$$k$$個非零行，$$N-k$$個零行。
+> * $$R_0 \in F^{N \times N}$$ 為上三角矩陣，且對角線元素均為1。
+>
+> $$A$$可分解為$$A=QR$$\(normalized\)
+>
+> * $$Q \in F^{M\times K}$$ 為行向量形成單範正交集（因為$$rank(A)=k$$，即只有$$k$$行為線性獨立集。）
+> * $$R \in F^{K \times N}$$ 為上三角矩陣。
 

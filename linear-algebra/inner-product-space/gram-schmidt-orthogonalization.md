@@ -97,8 +97,19 @@ Proof:
 
 * 令$$A=\begin{bmatrix} v_1  & v_2 & v_N \end{bmatrix}\in F^{M \times N}$$
 * 因為$$rank(A)=k$$，不失一般性令$$\{v_1,v_2,\dots,v_k \}$$為線性獨立集且  $$v_j \in span\{v_1,\dots,v_k \},~ j=k+1,\dots,N$$\(即前k行為線性獨立集，第k+1至N行為線性相依集\)
+* 利用Gram-Schmidt正交化過程對所有行向量$$v_1,\dots,v_N$$ 正交化得$$u_1,\dots,u_N$$  。
+* $$u_j=v_j−a_{1j} u_1−a_{2j} u_2−\dots−a_{(j−1)j }u_{(j−1)}, ~j=1,2,⋯,k $$ 
+* $$u_j=v_j−a_{1j} u_1−a_{2j} u_2−\dots−a_{kj} u_k, ~ j=k+1,\dots,N $$
+* $$a_{ij}=\frac{\langle v_j,u_i \rangle}{ \langle u_i,u_i \rangle} ,~i=1,2,\dots,j−1,~ j=1,2,\dots,k $$。
+* $$a_{ij}=0,~ i=1,2,\dots,j−1,~ j=k+1,\dots,N $$
+* 注意$$u_{k+1}=u_{k+2}=\dots=u_N=0$$
+* 所以$$v_j=a_{1j} u_1+a_{2j} u_2+\dots+a_{j−1}j u_{j−1}+u_j, ~j=1,2,\dots,k  $$
+* $$v_j=a_{1j} u_1+a_{2j} u_2+\dots+a_{kj} u_k+u_j, ~j=k+1,\dots,N$$
+* $$A=\begin{bmatrix} u_1 & u_2  & \dots &u_N\end{bmatrix} \begin{bmatrix} 1& a_{12}  & a_{13} & \dots &a_{1N} \\ 0& 1& a_{23}  &  \dots &a_{2N} \\ 0 & 0 & 1 & \dots & a_{3N} \\ \vdots & \vdots &\vdots &\ddots &\vdots \\   0 & 0 & 0 &\dots & 1 \end{bmatrix}  =Q_0R_0$$
+* 因為$$u_{k+1}=u_{k+2}=\dots=u_N=0$$
+* $$A=\begin{bmatrix} u_1 & u_2  & \dots &u_k\end{bmatrix} \begin{bmatrix} 1& a_{12}  & a_{13} & \dots & a_{1_k} & \dots  &a_{1N} \\ 0& 1& a_{23}  &  \dots & a_{2_k} & \dots &a_{2N} \\ 0 & 0 & 1 & \dots& a_{3_k} & \dots & a_{3N} \\ \vdots & \vdots &\vdots &\ddots &\vdots&\ddots &\vdots \\   0 & 0 & 0 & \dots & 1 &\dots & a_{k_N} \end{bmatrix} \\ = \begin{bmatrix} \frac{u_1}{\|u_1\|} & \frac{u_2}{\|u_2\|}  & \dots &   \frac{u_K}{\|u_K\|} \end{bmatrix} \\ \begin{bmatrix} \|u_1\|& a_{12}\|u_1\|  & a_{13}\|u_1\| & \dots & a_{1_k}\|u_1\| & \dots  &a_{1N}\|u_1\| \\ 0 & \| u_2\|& a_{23}\|u_2\|  &  \dots & a_{2_k} \| u_2\| & \dots &a_{2N}\| u_2\| \\ 0 & 0 & \|u_3\| & \dots& a_{3_k}\|u_3\| & \dots & a_{3N}\|u_3\| \\ \vdots & \vdots &\vdots &\ddots &\vdots&\ddots &\vdots \\   0 & 0 & 0 & \dots & \|u_K\| &\dots & a_{KN}\| u_K\| \end{bmatrix}  $$
 
-	• 利用Gram-Schmidt正交化過程對所有行向量v\_1,⋯,v\_N 正交化得u\_1,⋯,u\_N
+
 
 
 

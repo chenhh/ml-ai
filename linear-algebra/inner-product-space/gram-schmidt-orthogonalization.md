@@ -96,10 +96,7 @@ $$V=C[0,1]$$，$$F=\mathbb{R}$$，$$\langle f,g \rangle= \int_0^1f(x)g(x)dx$$
 Proof:
 
 * 令$$A=\begin{bmatrix} v_1  & v_2 & v_N \end{bmatrix}\in F^{M \times N}$$
-
-	• 因為rank\(A\)=k，不失一般性令{v\_1,v\_2,⋯,v\_k }為線性獨立集且
-
-	• v\_j∈span{v\_1,⋯,v\_k }, j=k+1,⋯,N\(即前k行為線性獨立集，第k+1至N行為線性相依集\)
+* 因為$$rank(A)=k$$，不失一般性令$$\{v_1,v_2,\dots,v_k \}$$為線性獨立集且  $$v_j \in span\{v_1,\dots,v_k \},~ j=k+1,\dots,N$$\(即前k行為線性獨立集，第k+1至N行為線性相依集\)
 
 	• 利用Gram-Schmidt正交化過程對所有行向量v\_1,⋯,v\_N 正交化得u\_1,⋯,u\_N
 

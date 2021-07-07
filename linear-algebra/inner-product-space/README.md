@@ -9,9 +9,13 @@
 > 3. $$\forall u,v \in V$$，$$\langle u, v\rangle = \overline{\langle u, v \rangle}$$ （共軛交換性）
 > 4. $$\forall v \in V, v \neq 0$$，$$\langle v, v \rangle > 0$$。
 >
-> 註：內積算子為向量間角度的擴充，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，其中$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
+> 註：內積算子為向量間角度，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，為向量$$u$$投影在向量$$v$$時，$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
+>
+> 因此條件1$$\langle u+v, w\rangle$$為合成向量$$u+v$$投影在$$w$$的長度，等於向量$$u,v$$分別投影在$$w$$上長度的總和。條件2也可以用投影的方式解釋。
+>
+> 條件3中，$$\langle u, v\rangle $$是向量$$u$$以夾角$$\theta$$投影至$$v$$的長度；而$$\langle v,u \rangle$$是向量$$v$$以角度$$-\theta$$投影至$$u$$的長度，在複數時，等於共軛向量的投影。
 
-* $$\forall v \in V, ~\langle v, \rangle =0 \Leftrightarrow v=0$$。
+* $$\forall v \in V, ~\langle v, v\rangle =0 \Leftrightarrow v=0$$。
   * 由於$$\langle v, v \rangle = \| v\| \| v\| \cos \theta =0$$，且向量$$v$$與$$v$$之間的夾角為0，所以$$\cos \theta=1$$，因此$$v=0$$。
 * $$\forall u, v, w \in V, a,b \in F, \langle u, av+bw\rangle= \overline{a}\langle u ,v\rangle+\overline{b}\langle u,w\rangle$$
   * $$\langle u, av+bw\rangle = \overline{\langle av + bw, u\rangle} = \overline{a\langle v, u\rangle + b \langle w, u\rangle} = \overline{a\langle v,u\rangle}+\overline{b\langle w, u\rangle}=\overline{a} \langle u,v \rangle+ \overline{b} \langle u, w\rangle$$

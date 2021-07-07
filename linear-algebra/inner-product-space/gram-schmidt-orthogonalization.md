@@ -93,3 +93,15 @@ $$V=C[0,1]$$，$$F=\mathbb{R}$$，$$\langle f,g \rangle= \int_0^1f(x)g(x)dx$$
 > * $$Q \in F^{M\times K}$$ 為行向量形成單範正交集（因為$$rank(A)=k$$，即只有$$k$$行為線性獨立集。）
 > * $$R \in F^{K \times N}$$ 為上三角矩陣。
 
+Proof:
+
+* 令$$A=\begin{bmatrix} v_1  & v_2 & v_N \end{bmatrix}\in F^{M \times N}$$
+
+	• 因為rank\(A\)=k，不失一般性令{v\_1,v\_2,⋯,v\_k }為線性獨立集且
+
+	• v\_j∈span{v\_1,⋯,v\_k }, j=k+1,⋯,N\(即前k行為線性獨立集，第k+1至N行為線性相依集\)
+
+	• 利用Gram-Schmidt正交化過程對所有行向量v\_1,⋯,v\_N 正交化得u\_1,⋯,u\_N
+
+
+

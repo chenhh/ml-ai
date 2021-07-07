@@ -169,16 +169,6 @@ Proof triangle inequality：
 proof:
 
 * $$\displaystyle \left\|  \sum_{i=1}^K c_i v_i\right\|^2=\left\langle  \sum_{i=1}^K c_i v_i, \sum_{i=1}^K c_i v_i\right\rangle = \sum_{i=1}^K\sum_{j=1}^K c_i \overline{c_j} \langle v_i, v_j \rangle$$
-
-
-
-
-
-
-
-
-
-
-
-
+* 因為$$\langle v_i, v_j \rangle= 0, \forall i \neq j$$，
+* 所以$$\sum_{i=1}^K\sum_{j=1}^K c_i \overline{c_j} \langle v_i, v_j \rangle = \sum_{i=1}^K c_i \overline{c_i} \langle v_i, v_i \rangle= \sum_{i=1}^K |c_i|^2 \|v_i\|^2$$\(QED\)
 

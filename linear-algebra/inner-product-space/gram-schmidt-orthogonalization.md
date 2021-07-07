@@ -107,9 +107,11 @@ Proof:
 * $$v_j=a_{1j} u_1+a_{2j} u_2+\dots+a_{kj} u_k+u_j, ~j=k+1,\dots,N$$
 * $$A=\begin{bmatrix} u_1 & u_2  & \dots &u_N\end{bmatrix} \begin{bmatrix} 1& a_{12}  & a_{13} & \dots &a_{1N} \\ 0& 1& a_{23}  &  \dots &a_{2N} \\ 0 & 0 & 1 & \dots & a_{3N} \\ \vdots & \vdots &\vdots &\ddots &\vdots \\   0 & 0 & 0 &\dots & 1 \end{bmatrix}  =Q_0R_0$$
 * 因為$$u_{k+1}=u_{k+2}=\dots=u_N=0$$
-* $$A=\begin{bmatrix} u_1 & u_2  & \dots &u_k\end{bmatrix} \begin{bmatrix} 1& a_{12}  & a_{13} & \dots & a_{1_k} & \dots  &a_{1N} \\ 0& 1& a_{23}  &  \dots & a_{2_k} & \dots &a_{2N} \\ 0 & 0 & 1 & \dots& a_{3_k} & \dots & a_{3N} \\ \vdots & \vdots &\vdots &\ddots &\vdots&\ddots &\vdots \\   0 & 0 & 0 & \dots & 1 &\dots & a_{k_N} \end{bmatrix} \\ = \begin{bmatrix} \frac{u_1}{\|u_1\|} & \frac{u_2}{\|u_2\|}  & \dots &   \frac{u_K}{\|u_K\|} \end{bmatrix} \\ \begin{bmatrix} \|u_1\|& a_{12}\|u_1\|  & a_{13}\|u_1\| & \dots & a_{1_k}\|u_1\| & \dots  &a_{1N}\|u_1\| \\ 0 & \| u_2\|& a_{23}\|u_2\|  &  \dots & a_{2_k} \| u_2\| & \dots &a_{2N}\| u_2\| \\ 0 & 0 & \|u_3\| & \dots& a_{3_k}\|u_3\| & \dots & a_{3N}\|u_3\| \\ \vdots & \vdots &\vdots &\ddots &\vdots&\ddots &\vdots \\   0 & 0 & 0 & \dots & \|u_K\| &\dots & a_{KN}\| u_K\| \end{bmatrix}  $$
+* $$A=\begin{bmatrix} u_1 & u_2  & \dots &u_k\end{bmatrix} \begin{bmatrix} 1& a_{12}  & a_{13} & \dots & a_{1_k} & \dots  &a_{1N} \\ 0& 1& a_{23}  &  \dots & a_{2_k} & \dots &a_{2N} \\ 0 & 0 & 1 & \dots& a_{3_k} & \dots & a_{3N} \\ \vdots & \vdots &\vdots &\ddots &\vdots&\ddots &\vdots \\   0 & 0 & 0 & \dots & 1 &\dots & a_{k_N} \end{bmatrix} \\ = \begin{bmatrix} \frac{u_1}{\|u_1\|} & \frac{u_2}{\|u_2\|}  & \dots &   \frac{u_K}{\|u_K\|} \end{bmatrix} \\ \begin{bmatrix} \|u_1\|& a_{12}\|u_1\|  & a_{13}\|u_1\| & \dots & a_{1_k}\|u_1\| & \dots  &a_{1N}\|u_1\| \\ 0 & \| u_2\|& a_{23}\|u_2\|  &  \dots & a_{2_k} \| u_2\| & \dots &a_{2N}\| u_2\| \\ 0 & 0 & \|u_3\| & \dots& a_{3_k}\|u_3\| & \dots & a_{3N}\|u_3\| \\ \vdots & \vdots &\vdots &\ddots &\vdots&\ddots &\vdots \\   0 & 0 & 0 & \dots & \|u_K\| &\dots & a_{KN}\| u_K\| \end{bmatrix}  $$\(QED\)
 
+#### 範例
 
+$$A=\begin{bmatrix}  1& 3 & 5\\ 1 & 1 & 0 \\1 & 1& 2 \\ 1 & 3 & 3\end{bmatrix} = \begin{bmatrix} v_1 & v_2 & v_3 \end{bmatrix}$$
 
 
 

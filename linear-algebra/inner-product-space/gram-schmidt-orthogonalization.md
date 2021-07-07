@@ -1,6 +1,6 @@
 # Gram-schmidt正交化
 
-Gram-schmidt正交化的功能是將一個線性獨立集合轉換成正交集合（所有元素彼此正交）。
+Gram-schmidt正交化的功能是將一個任意集合轉換成正交集合（所有元素彼此正交）。
 
 ## 正交基底的係數\(Fourier coefficient\)
 
@@ -52,4 +52,28 @@ proof:
 > 則$$\{u_1, u_2, \dots, u_K\}$$為不含0的正交集，且$$span\{u_1, u_2, \dots, u_K\}=span\{v_1, v_2, \dots, v_K\}$$。
 >
 > $$\{\frac{u_1}{\|u_1\|}, \frac{u_2}{\|u_2\|}, \dots, \frac{u_K}{\|u_K\|}\}$$為單範正交集。
+
+如果$$S$$是線性相依集，則可前處理將$$S$$中線性相依的元素刪除至只剩線性獨立的元素。
+
+### 範例：歐式空間
+
+* $$H=span \left\{    x_1 = \begin{bmatrix} 1 \\ 0 \\1 \\ 0\end{bmatrix} , x_2 = \begin{bmatrix} 2 \\ 1 \\2 \\ 1\end{bmatrix}, x_3 = \begin{bmatrix} -1 \\ 2 \\-3 \\ 4\end{bmatrix}  \right\}$$
+* $$u_1 = x_1= \begin{bmatrix} 1 \\ 0 \\1 \\ 0\end{bmatrix}$$
+* $$u_2=x_2 - \frac{\langle x_2, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1=\begin{bmatrix} 0 \\ 1 \\0 \\ 1\end{bmatrix}$$
+* $$u_3 = x_3 -   \frac{\langle x_3, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 - \frac{\langle x_2, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 = \begin{bmatrix} 1 \\ -1 \\-1 \\ 1\end{bmatrix}$$
+* $$\langle u_1, u_2 \rangle =\langle u_1, u_3 \rangle = \langle u_2, u_3 \rangle = 0$$
+
+### 範例：連續函數空間
+
+$$V=C[0,1]$$，$$F=\mathbb{R}$$，$$\langle f,g \rangle= \int_0^1f(x)g(x)dx$$
+
+* $$S=span\{1,x^2, x^3\}$$
+* $$u_1(x)=1$$，$$\langle u_1, u_1\rangle=1$$
+* $$u_2(x)=x -\frac{\langle x_2, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 = x - \int_0^1 x dx=x - \frac{1}{2}$$
+  * $$\langle u_2, u_2 \rangle=\int_0^1 (x- \frac{1}{2})^2dx=\frac{1}{12}$$
+* $$u_3 = x_3 - \frac{\langle x_3, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 - \frac{\langle x_2, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 =x^2 - \int_0^1 x^2 dx -12\int_0^1x^2(x-\frac{1}{2})dx (x-\frac{1}{2})=x^2 -x +\frac{1}{6}$$
+
+  * $$\langle u_3, u_3 \rangle=\int_0^1 (x^2- x+ \frac{1}{6})^2dx=\frac{1}{180}$$
+
+  可得$$\{1, \sqrt{12}(x-\frac{1}{2}), \sqrt{180}(x_2 -x + \frac{1}{6}\}$$為單範正交基底。
 

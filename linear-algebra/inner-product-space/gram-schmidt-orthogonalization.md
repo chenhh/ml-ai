@@ -1,6 +1,6 @@
 # Gram-schmidt正交化
 
-Gram-schmidt正交化的功能是將一個任意集合轉換成正交集合（所有元素彼此正交）。
+Gram-schmidt正交化的功能是將一個線性獨立集合轉換成正交集合（所有元素彼此正交）。
 
 ## 正交基底的係數\(Fourier coefficient\)
 
@@ -42,5 +42,14 @@ proof:
 * 因為$$S$$為正交集，所以$$c_j=\frac{\langle0, v_j \rangle}{\langle v_j, v_j\rangle}=0~j=1,2,\dots, K$$
 * 因此$$S$$為線性獨立集 \(QED\)
 
+## Gram-Schmidt正交化過程
 
+> 內積空間$$V$$定義在體$$F$$，$$S=\{v_1, \dots, v_K\} \subseteq V$$為線性獨立集。
+>
+> * 令$$u_1 = v_1$$
+> * $$u_j = v_j - \sum_{j=1}^K \frac{\langle v_k, u_j \rangle}{\langle u_j, u_j \rangle} u_j, ~ 2 \leq j \leq K$$
+>
+> 則$$\{u_1, u_2, \dots, u_K\}$$為不含0的正交集，且$$span\{u_1, u_2, \dots, u_K\}=span\{v_1, v_2, \dots, v_K\}$$。
+>
+> $$\{\frac{u_1}{\|u_1\|}, \frac{u_2}{\|u_2\|}, \dots, \frac{u_K}{\|u_K\|}\}$$為單範正交集。
 

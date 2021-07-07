@@ -9,7 +9,7 @@
 > 3. $$\forall u,v \in V$$，$$\langle u, v\rangle = \overline{\langle u, v \rangle}$$ （共軛交換性）
 > 4. $$\forall v \in V, v \neq 0$$，$$\langle v, v \rangle > 0$$。
 >
-> 註：內積算子為向量間角度，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，為向量$$u$$投影在向量$$v$$時，$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
+> 註：內積算子為向量間角度，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，為向量$$u$$投影在向量$$v$$時長度的乘積，$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
 >
 > 因此條件1$$\langle u+v, w\rangle$$為合成向量$$u+v$$投影在$$w$$的長度，等於向量$$u,v$$分別投影在$$w$$上長度的總和。條件2也可以用投影的方式解釋。
 >
@@ -146,6 +146,37 @@ Proof triangle inequality：
 > 集合$$S \subseteq V$$，若$$\forall u,v \in V, u \neq v$$且$$\langle u, v \rangle=0$$，稱$$S$$為正交集（orthogonal set）。
 >
 > 若$$S$$中所有元素的長度均為1（$$\|v\|=1, \forall v \in V$$），稱$$S$$為單範正交集（orthnormal set）。
+
+* 非單位向量$$u$$可用$$v=\frac{u}{\|u\|}$$  正規化為單位向量。
+* $$\forall v \in V, \langle v,0 \rangle=0$$，所以**零向量與任意向量均正交**。
+* 正交集合中可以包含零向量  。但因為零向量不為單位向量，所以單範正交集中不含零向量。
+* $$S=\{v_1,\dots,v_K\}$$為單範正交集的充要條件為$$\langle v_i,v_j \rangle=\delta_{ij}=\left\{  \begin{align}  0, \text{ if } i \neq j \\ 1, \text{ if } i=j \end{align} \right.$$。
+* 若$$S$$為正交集且為$$V$$的基底，則稱$$S$$為$$V$$的正交基底\(orthogonal basis\)  。
+* 若$$S$$為單範正交集且為$$V$$的基底，則稱$$S$$為$$V$$的單範正交基底\(orthonormal basis\)。
+
+#### 範例：Fourier級數
+
+* $$V=C[0,2 \pi], F=\mathbb{C},  \langle f,g \rangle=\int_0^{2\pi} f(x) \overline{(g(x)} dx $$
+* 則$$S=\{1,\cos ⁡x,\sin ⁡x,\cos⁡ 2x,\sin ⁡2x,\dots\}$$為正交集\(Fourier 轉換的基底\)  。
+* 而$$S=\{\frac{1}{\sqrt{2\pi}} ,\frac{\cos ⁡x}{\sqrt{x}}, \frac{\sin x}{\sqrt{\pi}}, \frac{\cos⁡ 2x}{\sqrt{\pi}}, \frac{\sin ⁡2x}{\sqrt{\pi}},\dots\}$$為單範正交集  。
+
+### 畢氏定理\(Pythagorean theorem\)
+
+> $$V$$為定義在體$$F$$的內積空間，$$u,v \in V$$且$$u \bot v$$，則$$\|u+v\|^2 = \|u\|^2 + \|v\|^2$$。
+>
+> 若$$S=\{v_1, \dots, v_K\}$$為正交集，則$$\|\sum_{i=1}^K c_iv_i \|^2=\sum_{i=1}^K |c_i|^2 \|v_i\|^2$$。
+
+proof:
+
+* $$\displaystyle \left\|  \sum_{i=1}^K c_i v_i\right\|^2=\left\langle  \sum_{i=1}^K c_i v_i, \sum_{i=1}^K c_i v_i\right\rangle = \sum_{i=1}^K\sum_{j=1}^K c_i \overline{c_j} \langle v_i, v_j \rangle$$
+
+
+
+
+
+
+
+
 
 
 

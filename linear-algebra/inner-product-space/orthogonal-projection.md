@@ -129,6 +129,14 @@ Proof \(4\)
 * $$\forall v \in V, ~P(v) \in W$$
 * 由\(2\)知$$P(P(v))=P(v) \Rightarrow P^2 (v)=P(v)$$ \(QED\).
 
+Proof \(5\)
+
+* $$\begin{aligned} \|P(v)\|^2 &= \left\| \sum_{i=1}^K \frac{\langle v, b_i \rangle}{\langle b_i ,b_i \rangle} b_i\right\|^2 \\&=\left\langle  \sum_{i=1}^K \frac{\langle v, b_i \rangle}{\langle b_i ,b_i \rangle}   b_i, \sum_{j=1}^K \frac{\langle v, b_j \rangle}{\langle b_j ,b_j \rangle} b_j \right\rangle \\&= \sum_{i=1}^K \sum_{j=1}^K \frac{\langle v, b_i \rangle \overline{\langle v, b_j \rangle}}{\|b_i\|^2 \|b_j\|^2} \langle b_i, b_j \rangle \\&=\sum_{i=1}^K \frac{\langle v, b_i \rangle \overline{\langle v, b_i \rangle}}{\|b_i\|^2 \|b_i\|^2} \langle b_i, b_i \rangle \\&= \sum_{i=1}^K \frac{\|\langle v, b_i \rangle \|^2}{\|b_i\|^4 } \|b_i\|^2 \\&=  \sum_{i=1}^K \frac{\|\langle v, b_i \rangle \|^2}{\|b_i\|^2 }  \end{aligned}$$  \(QED\)
+
+	
+
+
+
 
 
 

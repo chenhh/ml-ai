@@ -67,6 +67,11 @@ Proof:
 
 * $$A=\begin{bmatrix} 1 & 1 \\2 & -1 \\-2 & 0 \\ 1 & 1\end{bmatrix}$$，$$b=\begin{bmatrix}1 \\ 2 \\3 \\4 \end{bmatrix}$$，因為矩陣$$A$$的行向量獨立，因此$$\mathrm{proj}_{CS(A)}(b)=A(A^\top A)^{-1} A^\top b=\begin{bmatrix}\frac{13}{10} \\ -\frac{2}{5} \\ - \frac{3}{5} \\ \frac{13}{10} \end{bmatrix}$$
 
+使用Gram-Schmidt正交化
+
+* $$\langle v_1, v_2 \rangle =1 -2 +0 +1=0$$，所以兩行向量正交。
+* $$\mathrm{proj}_{CS(A)}(b)  = \frac{\langle b, v_1\rangle}{\|v_1\|^2}v_1 + \frac{\langle b, v_2\rangle}{\|v_2\|^2}v_2 = \frac{3}{10}\begin{bmatrix} 1  \\2  \\-2  \\ 1 \end{bmatrix} + \frac{3}{3}\begin{bmatrix}1 \\ -1 \\0 \\1 \end{bmatrix} = \begin{bmatrix}\frac{13}{10} \\ -\frac{2}{5} \\ - \frac{3}{5} \\ \frac{13}{10} \end{bmatrix}$$
+
 #### 範例：歐式空間
 
 * $$S=\{(x,y,z)| x+y+z=0\}$$為$$\mathbb{R}^3$$的子空間。

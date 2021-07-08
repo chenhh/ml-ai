@@ -50,7 +50,7 @@ proof\(4\):
 
 > * 矩陣$$A \in \mathbb{C}^{M \times N}$$，且$$A$$行向量線性獨立（但不一定正交），考慮由$$A$$的行向量生成的向量空間$$W=CS(A) $$。
 > * 給定向量$$b \in \mathbb{C}^{M \times 1}$$，則在歐式空間標準內積下，向量$$b$$投影至向量空間$$W$$之值為  $$\mathrm{proj}_W (b)=A(A^{\mathrm{H}} A)^{−1} A^\mathrm{H} b$$。
-> * 因為矩陣$$A$$為的行向量線性獨立，所以$$A^\mathrm{H} A$$可逆，因此 $$(A^\mathrm{H} A)^{−1}$$ 必定存在，，即$$A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$必定可求值  。
+> * 因為矩陣$$A$$為的行向量線性獨立，所以$$A^\mathrm{H} A$$可逆，因此 $$(A^\mathrm{H} A)^{−1}$$ 必定存在，即$$A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$必定可求值  。
 
 Proof:
 

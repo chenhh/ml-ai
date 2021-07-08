@@ -38,3 +38,10 @@ Proof \(2\)
 * 因為$$ker⁡(A^\mathrm{H} A)=ker⁡(A) \Rightarrow nullity(A^\mathrm{H} A)=nullity(A)$$
 * 可得 $$rank(A^\mathrm{H} A)=rank(A)$$ \(QED\)
 
+proof\(4\):
+
+* 因為矩陣$$A$$的行向量獨立$$\Leftrightarrow Ax=0$$只有$$x=0$$的解$$\Leftrightarrow ker⁡(A)=\{0\}$$
+* 因此$$ker⁡(A^\mathrm{H} A)=\{0\}$$，可得$$A^\mathrm{H} A$$為可逆矩陣 \(QED\)
+
+
+

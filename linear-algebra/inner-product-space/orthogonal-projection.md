@@ -142,15 +142,19 @@ Proof \(6\)
 
 ### 投影後正交向量的長度為原向量至投影空間的最短距離
 
-### 
+> $$V$$為定義在體$$F$$上的內積空間，$$W$$為$$V$$的子空間，$$P(v) \equiv \mathrm{proj}_W(v)$$為$$V$$在$$W$$上的正交投影算子，則：
+>
+> * $$\| v - P(v)\| \leq \|v - w\|, ~ \forall w \in W$$
+> * $$v-P(v)$$為投影後，$$v$$與$$W$$的正交向量。
+>
+> 可得$$P(v)$$為向量$$v$$在向量空間$$W$$的最佳逼近\(best approximation\)。
 
+![v-P\(v\)&#x7684;&#x8DDD;&#x96E2;&#x6700;&#x77ED;](../../.gitbook/assets/best-approximation-min.png)
 
+proof:
 
-	
-
-
-
-
-
-
+* $$P(v) \in W$$且$$\langle v−P(v),x \rangle=0 ~ \forall x \in W$$。
+* $$\forall w \in W$$，因為$$P(v)−w \in W$$，所以$$\langle v−P(v),P(v)−w \rangle=0$$
+* 由畢式定理得 $$\|(v−P(v))+(P(v)−w)\|^2=\|v−P(v)\|^2+\|P(v)−w\|^2$$
+* 所以$$\|v−w\|^2=\|v−P(v)\|^2+\|P(v)−w\|^2 \geq \|v−P(v)\|^2 $$ \(QED\)
 

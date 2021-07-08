@@ -10,6 +10,10 @@
 >
 > 註：線性轉換中，$$\forall v \in V, ~T^2(v) = T(v)$$稱為[投影算子](../linear-transform/projection-operator.md#tou-ying-suan-zi-projection-operator)。
 
+### 正交投影算子
+
+> 定義函數$$P: V \rightarrow W ~ P(v)=\mathrm{proj}_W(v)$$為$$V$$在$$W$$上的正交投影算子。
+
 ![&#x6B63;&#x4EA4;&#x6295;&#x5F71;](../../.gitbook/assets/orthogonal_projection-min.png)
 
 * 此性質告訴我們向量$$v$$相對於向量空間$$W \subseteq V$$可拆解成投影向量$$\mathrm{proj}_W (v)$$與正交向量$$v−\mathrm{proj}_W (v)$$兩部份。
@@ -71,7 +75,7 @@ $$W=span\{1, x \}, f(x)=x^2$$，求$$\mathrm{proj}_W(f)$$
 
 $$\mathrm{proj}_W(f)=\frac{\langle f, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 + \frac{\langle f, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 = \frac{\int_0^1 x^2dx}{\int_0^1 1dx} 1 + \frac{\int_0^1 (x-\frac{1}{2}) dx}{\int_0^1 (x-\frac{1}{2})^2dx} 1 (x-\frac{1}{2})=x-\frac{1}{6}$$
 
-### 正交投影算子的性質
+### 正交投影的性質
 
 > $$V$$為定義在體$$F$$上的內積空間，$$W$$為$$V$$的子空間，則：
 >
@@ -92,19 +96,35 @@ Proof \(3\)
 
 * $$0 \in W$$且$$ \langle v−0,w \rangle= \langle v,w \rangle=0, ~\forall w \in W$$，所以$$\mathrm{proj}_W (v)=0$$。\(QED\)
 
+### 正交投影算子的性質
 
+> $$V$$為定義在體$$F$$上的內積空間，$$W$$為$$V$$的子空間，$$P(v) \equiv \mathrm{proj}_W(v)$$為$$V$$在$$W$$上的正交投影算子，則：
+>
+> 1. $$P$$為線性轉換，$$\forall u,v \in V, ~a\in F, P(au+v)=aP(u)+P(v)$$
+> 2. $$\forall w \in W, P(w) = w$$（若向量$$w$$為$$W$$中的元素，則投影值等於原向量）
+> 3. $$R(P)=W$$（正交投影算子值域為整個投影空間）
+> 4. $$P^2=P$$（投影後的向量已在$$W$$上，因此再投影時仍在$$W$$上）
 
-	
+Proof \(1\):
 
+* 令 $$P(u)=u_0 \in W, ~P(v)=v_0 \in W$$
+* 所以$$\langle u−u_0,w\rangle=\langle v−v_0,w \rangle=0, \forall w \in W$$
+* 因為$$W$$為$$V$$的子空間，所以$$cu_0+v_0 \in W$$
+* $$ \langle (cu+v)−(cu_0+v_0 ),w \rangle=\langle c(u−u_0 )+(v−v_0 ),w \rangle =c\langle u−u_0,w \rangle+  \langle v−v_0,w \rangle=c\cdot0+0=0, ~\forall w \in W $$
+* 可得$$\mathrm{proj}_W (cu+v)=cu_0+v_0=c \mathrm{proj}_W (u)+\mathrm{proj}_W (v)$$ \(QED\)
 
+Proof \(2\): 同前述定理證明
 
+Proof \(3\):
 
+* $$\forall v \in W, ~P(v)=\mathrm{proj}_W (v) \in W \Rightarrow R(P) \subseteq W$$ 
+* $$\forall v \in W, ~v=P(v) \in R(P) \Rightarrow W \subseteq R(P)$$
+* 所以$$R(P)=W$$ \(QED\)
 
+Proof \(4\)
 
-
-
-
-
+* $$\forall v \in V, ~P(v) \in W$$
+* 由\(2\)知$$P(P(v))=P(v) \Rightarrow P^2 (v)=P(v)$$ \(QED\).
 
 
 

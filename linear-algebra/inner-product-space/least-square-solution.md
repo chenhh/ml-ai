@@ -7,7 +7,7 @@
 * 例如：$$A=\begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32}\end{bmatrix}$$，$$A^{\mathrm{H}}=\begin{bmatrix} \overline{a_{11}} & \overline{a_{21}} & \overline{a_{31}} \\ \overline{a_{12}} & \overline{a_{22}} & \overline{a_{32}} \end{bmatrix}$$，$$A^{\mathrm{H}}A=\begin{bmatrix}  A_{:1}^{\mathrm{H}}A_{:1} & A_{:1}^{\mathrm{H}}A_{:2} \\ A_{:2}^{\mathrm{H}}A_{:1} & A_{:2}^{\mathrm{H}}A_{:2}  \end{bmatrix}$$
 * 而$$x^{*} \in \mathbb{C}^{N \times 1}$$為$$x^{*}=\arg\min_x{\|Ax-b\|}$$的最佳解$$\Leftrightarrow A^{\mathrm{H}}Ax=A^{\mathrm{H}}b$$之解。
 
-## 正規矩陣的基本子空間
+## 正規矩陣的基本子空間與性質
 
 > 令矩陣$$A \in F^{M \times N}$$，則：
 >
@@ -16,10 +16,13 @@
 > 3. $$Lker(A^{\mathrm{H}}A) = Lker(A)$$
 > 4. 矩陣$$A$$行向量線性獨立$$\Leftrightarrow A^{\mathrm{H}} A$$為可逆矩陣。
 > 5. 矩陣$$A$$列向量線性獨立$$\Leftrightarrow A^{\mathrm{H}} A$$為可逆矩陣。
+>
+> 註：
+>
+> * 矩陣$$A \in F^{M \times N}$$ 的行向量獨立$$\Leftrightarrow rank(A)=\dim⁡(CS(A))=\dim⁡(RS(A))=N=\dim⁡(F^{1 \times N}) )\Leftrightarrow A$$的列向量生成$$F^{1 \times N}$$。
+> * 矩陣$$A \in F^{M \times N}$$ 的列向量獨立$$\Leftrightarrow rank(A)=\dim⁡(RS(A))=\dim⁡(CS(A))=M=\dim⁡(F^{M\times 1} )\Leftrightarrow A$$的行生成$$F^{M \times 1}$$。
 
-Proof \(1\)
-
- =&gt;
+Proof \(1\)=&gt;
 
 * $$\forall x \in ker⁡(A^\mathrm{H} A)$$，可得$$(A^\mathrm{H} A)x=0$$，因此$$x^\mathrm{H} A^\mathrm{H} Ax=0=x^\mathrm{H} 0=0$$
 * 由標準內積得$$(Ax)^{\mathrm{H}} (Ax)=0\Rightarrow\langle Ax,Ax \rangle = \|Ax\|^2=0 $$

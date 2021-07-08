@@ -24,7 +24,7 @@ proof &lt;=:
 * $$\forall w \in W, w=\sum_{i=1}^K c_i b_i$$
 * 所以$$\langle v,w \rangle = \langle v, \sum_{i=1}^Kc_i b_i \rangle = \sum_{i=1}^K \overline{c_i}\langle v, b_i \rangle=\sum_{i=1}^K \overline{c_i} \cdot 0 = 0$$\(QED\)
 
-### 正交投影公式
+## 正交投影公式
 
 > $$V$$為定義在體$$F$$上的內積空間，$$W$$為$$V$$的子空間。令$$B=\{b_1, b_2, \dots, b_K\}$$為$$W$$的一組正交基底（即$$\langle b_i, b_j \rangle =0, ~\forall i \neq j$$），$$v \in V$$，則：
 >
@@ -47,7 +47,19 @@ Proof \(1\)
   * 因此$$u_0$$為基底的線性組合，即$$\exists c_1,\dots,a_k \in F \ni u_0=\sum_{i=1}^K c_i b_i $$
   * $$0= \langle v−u_0,b_j  \rangle= \langle v−\sum_{i=1}^K  c_i b_i  ,b_j \rangle= \langle v,b_j \rangle  −\langle \sum_{i=1}^K a_i b_i,b_j  \rangle= \langle v,b_j \rangle=\sum_{i=1}^K a_i  \langle b_i,b_j \rangle= \langle v,b_j \rangle−a_j  \langle b_j,b_j \rangle $$
   * 所以$$a_j \langle b_j,b_j \rangle= \langle v,b_j \rangle \Rightarrow a_j=\frac{\langle v,b_j \rangle}{ \langle b_j,b_j \rangle } $$
-  * 可得$$u_0=\sum_{i=})^K \frac{\langle v,b_j \rangle}{ \langle b_j,b_j \rangle}  b_i=v_0$$ \(QED\)
+  * 可得$$u_0=\sum_{i=1}^K \frac{\langle v,b_j \rangle}{ \langle b_j,b_j \rangle}  b_i=v_0$$ \(QED\)
+
+#### 範例：歐式空間
+
+$$W=span\left\{  \begin{bmatrix} 1 \\ 0 \\ 1 \\0\end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 1 \\0\end{bmatrix}. \begin{bmatrix} 1 \\ -1 \\ 0 \\1\end{bmatrix}  \right\}$$, $$v=\begin{bmatrix} 1 \\ 1 \\ 1 \\1\end{bmatrix}$$，求$$\mathrm{proj}_w (v)$$
+
+因為$$W$$的生成集非正交，先做Gram-Schmidt正交化得正交集：
+
+* $$u_1=\begin{bmatrix} 1 \\ 0 \\ 1 \\0 \end{bmatrix}$$，$$u_2=v_2 - \frac{\langle v_2, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 = \begin{bmatrix} 0 \\ 1 \\ 0 \\0\end{bmatrix}$$，$$u_3 =  v_3 - \frac{\langle v_3, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 - \frac{\langle v_3, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 = \begin{bmatrix} \frac{1}{2} \\ 0 \\ -\frac{1}{2} \\1\end{bmatrix}$$
+
+$$\mathrm{proj}_W(v) =\frac{\langle v, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 + \frac{\langle v, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 + \frac{\langle v, u_3 \rangle}{\langle u_3, u_3 \rangle}u_3 = u_1 +u_2+\frac{2}{3}u_3= \begin{bmatrix} \frac{4}{3} \\ 1 \\ \frac{1}{2} \\   \frac{2}{3} \end{bmatrix}$$
+
+
 
 
 

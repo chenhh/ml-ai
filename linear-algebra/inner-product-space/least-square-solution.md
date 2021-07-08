@@ -12,7 +12,7 @@
 > 令矩陣$$A \in F^{M \times N}$$，則：
 >
 > * $$ker(A^{\mathrm{H}}A) =ker(A)=\{x \in F^{N \times 1} | Ax=0\}$$
-> * $$rank(A^{\mathrm{H}}A) = rank(A)$$
+> * $$rank(A^{\mathrm{H}}A) = rank(A)$$\(只有rank相同，但值域不相同\)
 > * $$Lker(A^{\mathrm{H}}A) = Lker(A)$$
 
 Proof \(1\)

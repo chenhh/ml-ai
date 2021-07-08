@@ -58,8 +58,8 @@ Proof:
 * 因為向量空間$$W$$由$$CS(A)$$生成，因此$$\forall w \in W, \exists x\in \mathbb{C}^{N \times1} \ni w=Ax$$，即空間$$W$$的元素可由$$A$$的行向量線性組合而成。
 * 由於正交向量$$b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$應與$$W$$內的任意向量$$w$$內積值為0  。
 * 因此$$\begin{aligned} &\langle b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b,~w\rangle  \\&=w^{\mathrm{H}} (b-A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b) \\ &=(Ax)^{\mathrm{H}} (b-A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b) \\ &=x^\mathrm{H} A^\mathrm{H} b−x^\mathrm{H} A^\mathrm{H} A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b \\ &=x^\mathrm{H} A^\mathrm{H} b−x^\mathrm{H} A^\mathrm{H} b\\ &=0  \end{aligned}$$
-
-	• ∴w與b−A\(A^H A\)^\(−1\) A^H b正交⇒proj\_W \(b\)=A\(A^H A\)^\(−1\) A^H b \(QED\)
+* 所以$$w$$與$$ b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$正交
+* 因此$$\mathrm{proj}_W (b)= b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$ \(QED\)
 
 
 

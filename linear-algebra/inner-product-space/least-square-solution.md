@@ -6,6 +6,7 @@
 * $$A^{\mathrm{H}}A =  \begin{bmatrix}  A_{:1}^{\mathrm{H}}A_{:1} &  \dots &A_{:1}^{\mathrm{H}}A_{:N} \\  \vdots & \ddots & v\dots \\ A_{:N}^{\mathrm{H}}A_{:1} & \dots & A_{:N}^{\mathrm{H}}A_{:N}  \end{bmatrix} \in F^{N \times N}$$稱為正規矩陣（normal matrix）。
 * 例如：$$A=\begin{bmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \\ a_{31} & a_{32}\end{bmatrix}$$，$$A^{\mathrm{H}}=\begin{bmatrix} \overline{a_{11}} & \overline{a_{21}} & \overline{a_{31}} \\ \overline{a_{12}} & \overline{a_{22}} & \overline{a_{32}} \end{bmatrix}$$，$$A^{\mathrm{H}}A=\begin{bmatrix}  A_{:1}^{\mathrm{H}}A_{:1} & A_{:1}^{\mathrm{H}}A_{:2} \\ A_{:2}^{\mathrm{H}}A_{:1} & A_{:2}^{\mathrm{H}}A_{:2}  \end{bmatrix}$$
 * 給定矩陣$$A \in F^{M \times N}$$行向量獨立，但不必正交，則向量$$b \in F^{M \times 1}$$投影到$$CS(A) =\{Ax| x\in F^{N \times 1}\}$$的投影向量為$$\mathrm{proj}_{CS(A)} (b)=A(A^{\mathrm{H}} A)^{−1} A^\mathrm{H} b$$。
+* 如果將$$A$$的獨立行向量先做Gram-Schmidt正交化得正交基底後，再將$$b$$投影到各基底得到合成向量可得到與$$\mathrm{proj}_{CS(A)} (b)$$相同之值。
 * 而$$x^{*} \in \mathbb{C}^{N \times 1}$$為$$x^{*}=\arg\min_x{\|Ax-b\|}$$的最佳解$$\Leftrightarrow A^{\mathrm{H}}Ax=A^{\mathrm{H}}b$$之解。
 
 ## 正規矩陣的基本子空間與性質

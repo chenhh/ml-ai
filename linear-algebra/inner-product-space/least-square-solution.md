@@ -61,6 +61,16 @@ Proof:
 * 所以$$w$$與$$ b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$正交
 * 因此$$\mathrm{proj}_W (b)= b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$ \(QED\)
 
+#### 範例：矩陣
+
+* $$A=\begin{bmatrix} 1 & 1 \\2 & -1 \\-2 & 0 \\ 1 & 1\end{bmatrix}$$，$$b=\begin{bmatrix}1 \\ 2 \\3 \\4 \end{bmatrix}$$，因為矩陣$$A$$的行向量獨立，因此$$\mathrm{proj}_{CS(A)}(b)=A(A^\top A)^{-1} A^\top b=\begin{bmatrix}\frac{13}{10} \\ -\frac{2}{5} \\ - \frac{3}{5} \\ \frac{13}{10} \end{bmatrix}$$
+
+#### 範例：歐式空間
+
+* $$S=\{(x,y,z)| x+y+z=0\}$$為$$\mathbb{R}^3$$的子空間。
+* 取標準基底，則$$S=span\left\{ \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ -1\end{bmatrix}\right\}$$
+* 取$$A=\begin{bmatrix} 1 & 0 \\ 0  & 1\\ -1 &-1\end{bmatrix}$$，所以$$\mathrm{proj}_A\left(\begin{bmatrix} x \\y\\ z \end{bmatrix}\right) =  A(A^\top A)^{-1}A^\top \begin{bmatrix} x \\y\\ z \end{bmatrix} = \begin{bmatrix} \frac{2x-y-z}{3} \\ \frac{-x+2y-z}{3} \\ \frac{-x-y+2z}{3} \end{bmatrix}$$
+
 
 
 

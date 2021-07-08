@@ -82,7 +82,21 @@ $$\mathrm{proj}_W(f)=\frac{\langle f, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 
 proof \(1\):
 
 * =&gt; 若$$v \in W$$，則$$\langle v−v,w \rangle= \langle 0,w \rangle=0, ~\forall w \in W$$， 所以$$\mathrm{proj}_W (v)=v$$。
-* &lt;= 若$$\mathrm{ proj}_W (v)=v$$，則$$ v \in W$$。
+* &lt;= 若$$\mathrm{ proj}_W (v)=v$$，則$$ v \in W$$。  \(QED\)
+
+Proof \(2\)
+
+* 因為$$W$$為向量空間，所以$$0 \in W \Rightarrow  \langle 0−0,w \rangle = \langle 0,w \rangle=0, \forall w \in W$$，所以$$\mathrm{proj}_W (0)=0  $$。\(QED\)
+
+Proof \(3\) 
+
+* $$0 \in W$$且$$ \langle v−0,w \rangle= \langle v,w \rangle=0, ~\forall w \in W$$，所以$$\mathrm{proj}_W (v)=0$$。\(QED\)
+
+
+
+	
+
+
 
 
 

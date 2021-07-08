@@ -11,9 +11,11 @@
 
 > 令矩陣$$A \in F^{M \times N}$$，則：
 >
-> * $$ker(A^{\mathrm{H}}A) =ker(A)=\{x \in F^{N \times 1} | Ax=0\}$$
-> * $$rank(A^{\mathrm{H}}A) = rank(A)$$\(只有rank相同，但值域不相同\)
-> * $$Lker(A^{\mathrm{H}}A) = Lker(A)$$
+> 1. $$ker(A^{\mathrm{H}}A) =ker(A)=\{x \in F^{N \times 1} | Ax=0\}$$
+> 2. $$rank(A^{\mathrm{H}}A) = rank(A)$$\(只有rank相同，但值域不相同\)
+> 3. $$Lker(A^{\mathrm{H}}A) = Lker(A)$$
+> 4. 矩陣$$A$$行向量線性獨立$$\Leftrightarrow A^{\mathrm{H}} A$$為可逆矩陣。
+> 5. 矩陣$$A$$列向量線性獨立$$\Leftrightarrow A^{\mathrm{H}} A$$為可逆矩陣。
 
 Proof \(1\)
 

@@ -71,6 +71,23 @@ $$W=span\{1, x \}, f(x)=x^2$$，求$$\mathrm{proj}_W(f)$$
 
 $$\mathrm{proj}_W(f)=\frac{\langle f, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 + \frac{\langle f, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 = \frac{\int_0^1 x^2dx}{\int_0^1 1dx} 1 + \frac{\int_0^1 (x-\frac{1}{2}) dx}{\int_0^1 (x-\frac{1}{2})^2dx} 1 (x-\frac{1}{2})=x-\frac{1}{6}$$
 
+### 正交投影算子的性質
+
+> $$V$$為定義在體$$F$$上的內積空間，$$W$$為$$V$$的子空間，則：
+>
+> 1. $$v \in W \Leftrightarrow \mathrm{proj}_W(v)=v$$（若向量$$v$$為$$W$$中的元素，則投影值等於向量$$v$$之值）
+> 2. $$\mathrm{proj}_W(0)=0$$  （零向量的投影值仍為零向量）
+> 3. 若$$v \bot W$$，則$$\mathrm{proj}_W(v)=0$$（正交向量的投影值為零向量）
+
+proof \(1\):
+
+* =&gt; 若$$v \in W$$，則$$\langle v−v,w \rangle= \langle 0,w \rangle=0, ~\forall w \in W$$， 所以$$\mathrm{proj}_W (v)=v$$。
+* &lt;= 若$$\mathrm{ proj}_W (v)=v$$，則$$ v \in W$$。
+
+
+
+
+
 
 
 

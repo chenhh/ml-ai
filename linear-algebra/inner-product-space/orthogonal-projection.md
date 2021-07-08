@@ -59,7 +59,15 @@ $$W=span\left\{  \begin{bmatrix} 1 \\ 0 \\ 1 \\0\end{bmatrix}, \begin{bmatrix} 1
 
 $$\mathrm{proj}_W(v) =\frac{\langle v, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 + \frac{\langle v, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 + \frac{\langle v, u_3 \rangle}{\langle u_3, u_3 \rangle}u_3 = u_1 +u_2+\frac{2}{3}u_3= \begin{bmatrix} \frac{4}{3} \\ 1 \\ \frac{1}{2} \\   \frac{2}{3} \end{bmatrix}$$
 
+#### 範例：連續函數空間
 
+$$V=C[0,1], F=\mathbb{R}$$，定義函數內積$$\langle f, g \rangle = \int_0^1 f(x)g(x)dx$$
+
+$$W=span\{1, x \}, f(x)=x^2$$，求$$\mathrm{proj}_W(f)$$
+
+先做Gram-Schmidt正交化得$$W$$正交生成集$$u_1(x)=1, u_2(x)=x-\frac{1}{2}$$
+
+$$\mathrm{proj}_W(f)=\frac{\langle f, u_1 \rangle}{\langle u_1, u_1 \rangle}u_1 + \frac{\langle f, u_2 \rangle}{\langle u_2, u_2 \rangle}u_2 = \frac{\int_0^1 x^2dx}{\int_0^1 1dx} 1 + \frac{\int_0^1 (x-\frac{1}{2}) dx}{\int_0^1 (x-\frac{1}{2})^2dx} 1 (x-\frac{1}{2})=x-\frac{1}{6}$$
 
 
 

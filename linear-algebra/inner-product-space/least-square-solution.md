@@ -48,11 +48,20 @@ proof\(4\):
 
 ## 歐式空間標準內積正交投影至矩陣的行向量公式
 
-> * 矩陣$$A \in \mathbb{C}^{M \times N}$$，且$$A$$行向量線性獨立，考慮由$$A$$的行向量生成的向量空間$$W=CS(A) $$。
+> * 矩陣$$A \in \mathbb{C}^{M \times N}$$，且$$A$$行向量線性獨立（但不一定正交），考慮由$$A$$的行向量生成的向量空間$$W=CS(A) $$。
 > * 給定向量$$b \in \mathbb{C}^{M \times 1}$$，則在歐式空間標準內積下，向量$$b$$投影至向量空間$$W$$之值為  $$\mathrm{proj}_W (b)=A(A^{\mathrm{H}} A)^{−1} A^\mathrm{H} b$$。
 > * 因為矩陣$$A$$為的行向量線性獨立，所以$$A^\mathrm{H} A$$可逆，因此 $$(A^\mathrm{H} A)^{−1}$$ 必定存在，，即$$A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$必定可求值  。
 
->
+Proof:
+
+* $$A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b=A[(A^\mathrm{H} A)^{−1} A^\mathrm{H} b]   \in CS(A)=W$$，所以向量$$b$$投影後的向量在空間$$W$$。
+* 因為向量空間$$W$$由$$CS(A)$$生成，因此$$\forall w \in W, \exists x\in \mathbb{C}^{N \times1} \ni w=Ax$$，即空間$$W$$的元素可由$$A$$的行向量線性組合而成。
+* 由於正交向量$$b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$應與$$W$$內的任意向量$$w$$內積值為0  。
+* 因此$$\begin{aligned} &\langle b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b,~w\rangle  \\&=w^{\mathrm{H}} (b-A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b) \\ &=(Ax)^{\mathrm{H}} (b-A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b) \\ &=x^\mathrm{H} A^\mathrm{H} b−x^\mathrm{H} A^\mathrm{H} A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b \\ &=x^\mathrm{H} A^\mathrm{H} b−x^\mathrm{H} A^\mathrm{H} b\\ &=0  \end{aligned}$$
+
+	• ∴w與b−A\(A^H A\)^\(−1\) A^H b正交⇒proj\_W \(b\)=A\(A^H A\)^\(−1\) A^H b \(QED\)
+
+
 
 
 

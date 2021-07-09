@@ -190,5 +190,19 @@ $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} \frac{50}{7}\\ \frac{1}{2}\\ \frac{
 > * $$A=QR$$為矩陣$$A$$的$$QR$$分解，必定存在，$$Q$$為$$A$$的單範正交行向量形成，$$R$$為相對應的上三角係數矩陣，由Gram-Schmidt正交化過程得出，則：
 > * $$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小$$\Leftrightarrow Rx=Q^{\mathrm{H}} b$$
 
+Proof:
+
+* 若$$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小，則$$A^\mathrm{H} Ax=A^\mathrm{H} b$$。
+* 將$$A=QR$$代入正規方程式得$$(QR)^{\mathrm{H}} (QR)x=(QR)^\mathrm{H} b \Leftrightarrow R^\mathrm{H} Q^\mathrm{H} QRx=R^\mathrm{H} Q^\mathrm{H} b$$
+* 令$$Q=\begin{bmatrix}q_1 & q_2 & \dots &q_k \end{bmatrix}$$
+* 則$$Q^{\mathrm{H}} Q=\begin{bmatrix}  q_1^\mathrm{H}q_1 & q_1^\mathrm{H}q_2 & \dots & q_1^\mathrm{H}q_k \\ q_2^\mathrm{H}q_1   & q_2^\mathrm{H}q_2  & \dots & q_2^\mathrm{H}q_k \\ \vdots & \vdots & \ddots & \vdots \\ q_k^\mathrm{H}q_1 & q_k^\mathrm{H}q_2 & \dots & q_k^\mathrm{H}q_k  \end{bmatrix}$$
+* 因為$$Q$$的行向量$$\begin{bmatrix}q_1 & q_2 & \dots &q_k \end{bmatrix}$$為單範正交集，即$$\langle q_i,q_j \rangle=q_j^\mathrm{H} q_i=\delta_{ij}$$，所以$$Q^\mathrm{H} Q=I_k$$。
+* 可得$$R^\mathrm{H} Q^\mathrm{H} QRx=R^\mathrm{H} Q^\mathrm{H} b \Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$
+* 因此$$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$最小$$\Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$
+* 由於$$Rx=Q^\mathrm{H} b \Rightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$ 成立 \(a\)
+* 因為$$R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b \Rightarrow RR^\mathrm{H} Rx=RR^\mathrm{H} Q^\mathrm{H} b$$
+* 因為$$R$$為列獨立$$\Leftrightarrow RR^\mathrm{H}$$ 為可逆矩陣，所以$$RR^\mathrm{H} Rx=RR^\mathrm{H} Q^\mathrm{H} b \Rightarrow Rx=Q^\mathrm{H} b$$成立\(b\)
+* 由\(a\)\(b\)得 $$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小$$\Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b \Leftrightarrow Rx=Q^\mathrm{H} B$$ \(QED\).
+
 
 

@@ -133,7 +133,37 @@ Proof:
 * $$a_k = \langle f, \cos kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\cos kxdx$$。
 * $$b_k = \langle f, \sin kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\sin kxdx$$。
 
-## 範例：最小平方直線\(least square line\)\(線性迴歸，linear regression\)
+## 應用：最小平方直線\(least square line\)\(線性迴歸，linear regression\)
 
-* 給定平面上不全相同的$$n$$個點$$\{(x_1, y_1), \dots, (x_n, y_n)\}$$，可使用最小平方逼近求一直線$$a+bx$$使得該直線的誤差平方總和最小，$$E=\sum_{i=1}^n(\hat{y}_i-y_i)^2 =\sum_{i=1}^n(a+bx_i - y)^2$$
+* 給定平面上不全相同的$$n$$個點$$D=\{(x_1, y_1), \dots, (x_n, y_n)\}$$，可使用最小平方逼近求一直線$$a+bx$$使得該直線的誤差平方總和最小，$$E=\sum_{i=1}^n(\hat{y}_i-y_i)^2 =\sum_{i=1}^n(a+bx_i - y)^2$$
+* $$A=\begin{bmatrix}  1 & x_1 \\ 1 & x_2 \\ \vdots & \vdots \\ 1 & x_n \end{bmatrix}, x= \begin{bmatrix}  a \\ b \end{bmatrix}, y=\begin{bmatrix}  y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix}, E=\|Ax-y\|^2$$
+* 求$$a,b$$使得誤差$$E$$值最小，等價於求$$x$$使得$$\| Ax−y\|^2$$ 最小，即求$$x^{*}=\arg\min_{x} \|Ax-y\|^2$$。
+* 即將向量$$y$$投影至一階多項式$$a+bx$$的空間上，而$$A$$的行項量為多項式的生成集。
+* 求解$$A^\top A x = A^\top y \Rightarrow x=(A^\top A)^{-1}A^\top y$$
+* $$A^\top A=\begin{bmatrix}  n & \sum_{i=1}^n x_i \\ \sum_{i=1}^n x_i & \sum_{i=1}^n x_i^2 \end{bmatrix}$$
+* $$A^\top y=\begin{bmatrix}  \sum_{i=1}^n y_i \\  \sum_{i=1}^n x_i y_i \end{bmatrix}$$
+* 所以$$x=\begin{bmatrix}  n & \sum_{i=1}^n x_i \\ \sum_{i=1}^n x_i & \sum_{i=1}^n x_i^2 \end{bmatrix}^{-1} \begin{bmatrix}  \sum_{i=1}^n y_i \\  \sum_{i=1}^n x_i y_i \end{bmatrix}$$
+
+### 一階多項式逼近
+
+#### 二維平面
+
+$$D=\{(-1,0), (1,1), (2,3)\}$$，逼近式$$y=ax+b$$
+
+$$A=\begin{bmatrix} 1 & -1 \\ 1 & 1 \\ 1 & 2\end{bmatrix}, x=\begin{bmatrix} a\\ b\end{bmatrix}, y=\begin{bmatrix} 0 \\ 1 \\ 3\end{bmatrix}$$
+
+$$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} \frac{5}{7}\\ \frac{13}{14}\end{bmatrix}$$，因此得$$y=\frac{13}{14}x+\frac{5}{7}$$。
+
+#### 三維空間
+
+* $$D=\{x_1, x_2, y\}=\{(−3,5,10), (−2,0,7), (−1,−3,4), (0,−4,2), \\(1,−3,5),(2,0,9), (3,5,13)\}$$
+* 逼近式$$y=a+bx_1+cx_2$$
+
+$$A=\begin{bmatrix} 1 & -3 & 5 \\ 1 & -2 & 0 \\ 1 & -1 & -3 \\ 1 & 0 & -4 \\ 1 & 1& -3 \\ 1 & 2 & 0 \\ 1 & 3 & 5\end{bmatrix}, x=\begin{bmatrix} a\\b\\ c\end{bmatrix}, b=\begin{bmatrix} 10 \\ 7 \\4\\ 2\\ 5 \\9\\13\end{bmatrix}$$
+
+$$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} \frac{50}{7}\\ \frac{1}{2}\\ \frac{20}{21}\end{bmatrix}$$
+
+得$$y=\frac{50}{7}+ \frac{1}{2}x_1 + \frac{20}{21}x_2$$
+
+
 

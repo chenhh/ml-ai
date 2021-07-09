@@ -165,5 +165,23 @@ $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} \frac{50}{7}\\ \frac{1}{2}\\ \frac{
 
 得$$y=\frac{50}{7}+ \frac{1}{2}x_1 + \frac{20}{21}x_2$$
 
+### 二階多項式逼近
+
+* $$D＝\{(2,0), (3,−10), (5,−48), (6, −76)\}$$
+* 逼近式$$y=c_0 + c_1 x + c_2x^2$$
+* $$A=\begin{bmatrix}  1 & 2 & 2^2\\ 1 & 3 & 3^2 \\ 1 & 5 & 5^2 \\ 1 & 6 & 6^2 \end{bmatrix} , x=\begin{bmatrix} c_0\\ c_1 \\ c_2\end{bmatrix}, y=\begin{bmatrix} 0 \\ -10 \\ -48 \\ -76 \end{bmatrix}$$
+* $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} 2 \\ 5 \\ -3\end{bmatrix}$$
+* 得$$y=2 + 5x-3x^2$$
+
+### 圓形逼近
+
+* $$D=\{(1,0),(2,2), (3,0), (2,−2)\}$$
+* 逼近式$$(x-c_1)^2 + y(-c_2)^2=r$$
+* 整理得$$x^2+y^2=2xc_1 + 2yc_2+(r^2 -c_1^2 - c_2^2)$$
+* $$A=\begin{bmatrix} 2x_1 & 2y_1  & 1 \\ 2 x_2 & y_2 & 1 \\ 2x_3 & 2 y_3 & 1\\ 2 x_4 & 2y_4& 1  \end{bmatrix}=\begin{bmatrix}  2 & 0 & 1\\ 4 & 4 & 1\\ 6 & 0 & 1\\ 4 & -4 & 1 \end{bmatrix}$$
+* $$x=\begin{bmatrix} c_1 \\c_2 \\ r^2 -c_1^2 -c_2^2\end{bmatrix}, b=\begin{bmatrix}  x_1^2 + y_1^2 \\ x_2^2 + y_2^2 \\ x_3^2 + y_3^2 \\ x_4^2 + y_4^2 \end{bmatrix} = \begin{bmatrix}1\\8\\9\\8 \end{bmatrix}$$
+* $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} 2 \\ 0 \\ -\frac{3}{2}\end{bmatrix}$$
+* 得$$(x-2)^2=\frac{5}{2}$$
+
 
 

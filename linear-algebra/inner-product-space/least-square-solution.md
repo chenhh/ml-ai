@@ -67,7 +67,7 @@ Proof:
 
 * $$A=\begin{bmatrix} 1 & 1 \\2 & -1 \\-2 & 0 \\ 1 & 1\end{bmatrix}$$，$$b=\begin{bmatrix}1 \\ 2 \\3 \\4 \end{bmatrix}$$，因為矩陣$$A$$的行向量獨立，因此$$\mathrm{proj}_{CS(A)}(b)=A(A^\top A)^{-1} A^\top b=\begin{bmatrix}\frac{13}{10} \\ -\frac{2}{5} \\ - \frac{3}{5} \\ \frac{13}{10} \end{bmatrix}$$
 
-使用Gram-Schmidt正交化
+#### 使用Gram-Schmidt正交化
 
 * $$\langle v_1, v_2 \rangle =1 -2 +0 +1=0$$，所以兩行向量正交。
 * $$\mathrm{proj}_{CS(A)}(b)  = \frac{\langle b, v_1\rangle}{\|v_1\|^2}v_1 + \frac{\langle b, v_2\rangle}{\|v_2\|^2}v_2 = \frac{3}{10}\begin{bmatrix} 1  \\2  \\-2  \\ 1 \end{bmatrix} + \frac{3}{3}\begin{bmatrix}1 \\ -1 \\0 \\1 \end{bmatrix} = \begin{bmatrix}\frac{13}{10} \\ -\frac{2}{5} \\ - \frac{3}{5} \\ \frac{13}{10} \end{bmatrix}$$
@@ -78,7 +78,35 @@ Proof:
 * 取標準基底，則$$S=span\left\{ \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ -1\end{bmatrix}\right\}$$
 * 取$$A=\begin{bmatrix} 1 & 0 \\ 0  & 1\\ -1 &-1\end{bmatrix}$$，所以$$\mathrm{proj}_A\left(\begin{bmatrix} x \\y\\ z \end{bmatrix}\right) =  A(A^\top A)^{-1}A^\top \begin{bmatrix} x \\y\\ z \end{bmatrix} = \begin{bmatrix} \frac{2x-y-z}{3} \\ \frac{-x+2y-z}{3} \\ \frac{-x-y+2z}{3} \end{bmatrix}$$
 
+##  歐式空間標準內積正規方程式\(normal equation\)
 
+> $$A \in \mathbb{C}^{M \times N},~ W=CS(A), ~b \in \mathbb{C}^{M \times 1}$$，則：
+>
+> * $$\displaystyle x =\arg\min_x\|Ax−b| \Leftrightarrow A^{\mathrm{H}}Ax^{*}=A^{\mathrm{H}}b$$
+> * 此時$$x^{*}$$為$$Ax=b$$的最小平方解\(least square solution\)。
+>
+> 註： 
+>
+> * 矩陣$$A$$的行向量不必獨立，此時$$rank(A^\mathrm{H} A)=rank(A)<N$$
+>   * $$A^\mathrm{H} Ax=A^\mathrm{H} b$$有無限多解，但$$\mathrm{proj}_W (b)=Ax$$唯一解。
+> * 矩陣$$A$$的行向量獨立時，$$A^\mathrm{H}A$$可逆，因此$$Ax=\mathrm{proj}_W (b)=A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$。
+>   * $$ x=(A^\mathrm{H} A)^{−1} A^\mathrm{H} b\Leftrightarrow A^\mathrm{H} Ax=A^\mathrm{H} b$$。
+>   * 正規方程式$$A^\mathrm{H} Ax=A^\mathrm{H} b$$，$$x$$必定有解。
+> * 當矩陣$$P$$將向量$$b$$對應至他的正交投影向量$$\mathrm{proj}_W (b)$$時，稱$$P$$為一投影在$$W$$上的正交投影矩陣\(orthogonal projection matrix\)。如$$A$$的行向量獨立時，$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}  $$。
 
+![&#x6B63;&#x898F;&#x65B9;&#x7A0B;&#x5F0F;&#x6295;&#x5F71;](../../.gitbook/assets/normal-equation-min.png)
 
+Proof:
+
+* $$\|Ax−b\|$$為最小等價於$$\|b−Ax\|$$為最小。
+* 因為$$Ax \in CS(A)=W$$
+* 根據正交投影可知$$\|b−Ax\|$$之值最小$$\Leftrightarrow Ax=\mathrm{proj}_W (b)$$，
+* 所以$$\|Ax−b\|$$之值最小時$$\Leftrightarrow \langle b−Ax,w \rangle=0, ~\forall w\in W$$
+* $$\Leftrightarrow  \langle b−Ax,Ay \rangle=0, \forall y \in \mathbb{C}^{N \times 1}$$
+* $$\Leftrightarrow  \langle b,Ay\rangle- \langle Ax,Ay \rangle=0, \forall y \in \mathbb{C}^{N \times 1}$$
+* $$\Leftrightarrow  \langle b,Ay\rangle= \langle Ax,Ay \rangle, ~ \forall y \in \mathbb{C}^{N \times 1}$$
+* 使用標準內積得$$\Leftrightarrow (Ay)^{\mathrm{H}}b=(Ay)^{\mathrm{H}}(Ax),~ \forall y \in \mathbb{C}^{N \times 1}$$
+* $$\Leftrightarrow y^{\mathrm{H}} A^{\mathrm{H}} b = y^{\mathrm{H}} A^{\mathrm{H}} A x, ~ \forall y \in \mathbb{C}^{N \times 1}$$
+* 使用標準內積得$$\Leftrightarrow \langle A^{\mathrm{H}}b, y \rangle = \langle A^{\mathrm{H}}Ax, y\rangle, ~\forall y \in \mathbb{C}^{N \times 1}$$
+* 因此$$A^{\mathrm{H}}b = A^{\mathrm{H}}Ax$$ \(QED\)
 

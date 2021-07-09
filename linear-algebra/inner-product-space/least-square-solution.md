@@ -114,5 +114,22 @@ Proof:
 
 * $$A=\begin{bmatrix}2 & 1\\ 1 & 2\\1 & 1 \end{bmatrix},  x= \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}, b=\begin{bmatrix}1\\ 1 \\1  \end{bmatrix}$$, 因為$$A$$的行向量獨立，所以最小平方解$$x^{*}=\arg\min_x \|Ax-b\|=(A^\top A)^{-1}A^\top b=\begin{bmatrix} \frac{4}{11} \\ \frac{4}{11} \end{bmatrix}$$。
 
+### 範例：多項式最小平方解
 
+連續函數向量空間$$V=C[0,1]$$，內積$$\langle f,g \rangle =\int_0^1 f(x)g(x)dx$$，求$$e^x$$的最小平方逼近。
+
+* 令線性函數向量空間$$W=\{a+bx |a,b \in \mathbb{R}\}=span\{1,x\}$$。
+* 由Gram-Schmidt正交化得$$W$$的正交基底$$\{u_1, u_2\}=\{1, x-\frac{1}{2}\}$$。
+* 則$$e^x$$在$$W$$的最小平方逼近，即求投影向量$$\mathrm{proj}_W(e^x)$$。
+* $$\mathrm{proj}_W(e^x) = \frac{\langle e^x, u_1 \rangle}{\langle u_1, u_1\rangle}u_1 +  \frac{\langle e^x, u_2 \rangle}{\langle u_2, u_2\rangle}u_2 = \frac{\int_0^1 e^xdx}{\int_0^1 1dx}1 + \frac{\int_0^1 e^x (x-\frac{1}{2})dx}{\int_0^1(x-\frac{1}{2})^2dx}(x-\frac{1}{2}) = (18-6e)x+(4e-10)$$
+
+### 範例： 三角多項式的逼近\(Fourier series\)
+
+* 一個三角多項式為$$t_n(x)=\frac{a_0}{2}+\sum_{k=1}^n (a_k \cos kx + b_k \sin kx)$$
+* 向量空間$$V=C[-\pi, \pi]$$，$$\langle f, g \rangle=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)g(x)dx$$，則$$\{\frac{1}{\sqrt{2}}, \cos x, \sin x, \dots, \cos nx, \sin nx\}$$為單範正交集。
+* 考慮$$f(x) \in V$$為具有週期$$2\pi$$的函數，則其三角多式項的最小平方逼近為$$\mathrm{proj}_V(f)$$。
+* 因為$$V$$的基底為單範正交集，因此$$\langle u_1,u_1 \rangle=\dots=\langle u_n,u_n \rangle=1$$。
+* 所以三角多式項的係數 $$\frac{a_0}{2} = \langle f, \frac{1}{\sqrt{2}} \rangle =\frac{1}{2\pi} \int_{-\pi}^{\pi}f(x)dx$$，得$$a_0  =\frac{1}{\pi} \int_{-\pi}^{\pi}f(x)dx$$
+* $$a_k = \langle f, \cos kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\cos kxdx$$。
+* $$b_k = \langle f, \sin kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\sin kxdx$$。
 

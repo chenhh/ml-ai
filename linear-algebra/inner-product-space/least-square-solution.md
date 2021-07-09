@@ -204,5 +204,15 @@ Proof:
 * 因為$$R$$為列獨立$$\Leftrightarrow RR^\mathrm{H}$$ 為可逆矩陣，所以$$RR^\mathrm{H} Rx=RR^\mathrm{H} Q^\mathrm{H} b \Rightarrow Rx=Q^\mathrm{H} b$$成立\(b\)
 * 由\(a\)\(b\)得 $$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小$$\Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b \Leftrightarrow Rx=Q^\mathrm{H} B$$ \(QED\).
 
+#### 範例
+
+* $$A=\begin{bmatrix}  1 & -1 \\ 1 & 1 \\ 1 & 2 \end{bmatrix}, x=\begin{bmatrix} a, b\end{bmatrix}, y=\begin{bmatrix} 0 \\ 1 \\ 3\end{bmatrix}$$
+* Gram-Schmidt正交化, $$u1=\begin{bmatrix} 1 \\ 1 \\1 \end{bmatrix}$$，$$\langle u_1, u_1\rangle=3$$
+* $$u_2 = v_2 - \frac{\langle v_2, u_1\rangle}{\langle u_1, u_1\rangle}u_1 = \begin{bmatrix} -\frac{5}{3} \\ \frac{1}{3} \\ \frac{4}{3}\end{bmatrix}$$，$$\langle u_2 , u_2\rangle=\frac{14}{3}$$
+* $$A=\begin{bmatrix} \frac{u_1}{\|u_1\|} & \frac{u_2}{\|u_2\|}\end{bmatrix} \begin{bmatrix}  \|u_1\| & \frac{2}{3}\|u_1\| \\ 0 & \|u_2\| \end{bmatrix} = \begin{bmatrix}  \frac{1}{\sqrt{3}} & -\frac{5}{\sqrt{42}} \\ \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{42}} \\ \frac{1}{\sqrt{3}} & \frac{4}{\sqrt{42}}  \end{bmatrix} \begin{bmatrix}  \sqrt{3} & \frac{2\sqrt{3}}{3} \\ 0 & \sqrt{\frac{14}{3}}  \end{bmatrix} = QR$$
+* $$Rx=Q^{\mathrm{H}}b$$
+* 得  $$ \begin{bmatrix}  \sqrt{3} & \frac{2\sqrt{3}}{3} \\ 0 & \sqrt{\frac{14}{3}}  \end{bmatrix}x=\begin{bmatrix} \frac{4}{\sqrt{3}} \\ \frac{13}{\sqrt{42}}  \end{bmatrix}$$
+* 得$$a=\frac{5}{7}, b=\frac{3}{14}$$。
+
 
 

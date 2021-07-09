@@ -183,5 +183,7 @@ $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} \frac{50}{7}\\ \frac{1}{2}\\ \frac{
 * $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} 2 \\ 0 \\ -\frac{3}{2}\end{bmatrix}$$
 * 得$$(x-2)^2=\frac{5}{2}$$
 
+## 將矩陣作QR分解求最小平方值之解
+
 
 

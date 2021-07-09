@@ -185,5 +185,10 @@ $$x=(A^\top A)^{-1} A^\top y=\begin{bmatrix} \frac{50}{7}\\ \frac{1}{2}\\ \frac{
 
 ## 將矩陣作QR分解求最小平方值之解
 
+> 矩陣$$A \in \mathbb{C}^{M \times N} ~,b \in \mathbb{C}^{M \times 1}$$
+>
+> * $$A=QR$$為矩陣$$A$$的$$QR$$分解，必定存在，$$Q$$為$$A$$的單範正交行向量形成，$$R$$為相對應的上三角係數矩陣\)，則：
+> * $$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小$$\Leftrightarrow Rx=Q^{\mathrm{H}} b$$
+
 
 

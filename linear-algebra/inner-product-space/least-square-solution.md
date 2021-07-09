@@ -110,3 +110,9 @@ Proof:
 * 使用標準內積得$$\Leftrightarrow \langle A^{\mathrm{H}}b, y \rangle = \langle A^{\mathrm{H}}Ax, y\rangle, ~\forall y \in \mathbb{C}^{N \times 1}$$
 * 因此$$A^{\mathrm{H}}b = A^{\mathrm{H}}Ax$$ \(QED\)
 
+### 範例：矩陣最小平方解
+
+* $$A=\begin{bmatrix}2 & 1\\ 1 & 2\\1 & 1 \end{bmatrix},  x= \begin{bmatrix} x_1 \\ x_2 \end{bmatrix}, b=\begin{bmatrix}1\\ 1 \\1  \end{bmatrix}$$, 因為$$A$$的行向量獨立，所以最小平方解$$x^{*}=\arg\min_x \|Ax-b\|=(A^\top A)^{-1}A^\top b=\begin{bmatrix} \frac{4}{11} \\ \frac{4}{11} \end{bmatrix}$$。
+
+
+

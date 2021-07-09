@@ -133,3 +133,7 @@ Proof:
 * $$a_k = \langle f, \cos kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\cos kxdx$$。
 * $$b_k = \langle f, \sin kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\sin kxdx$$。
 
+## 範例：最小平方直線\(least square line\)\(線性迴歸，linear regression\)
+
+* 給定平面上不全相同的$$n$$個點$$\{(x_1, y_1), \dots, (x_n, y_n)\}$$，可使用最小平方逼近求一直線$$a+bx$$使得該直線的誤差平方總和最小，$$E=\sum_{i=1}^n(\hat{y}_i-y_i)^2 =\sum_{i=1}^n(a+bx_i - y)^2$$
+

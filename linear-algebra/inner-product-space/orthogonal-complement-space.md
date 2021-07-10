@@ -23,3 +23,28 @@
 > 4. $$S \cap S^\bot =\left\{  \begin{align} &\{0\}, & \text{ if } 0 \in S, \\& \emptyset, & \text{ if } 0 \notin S \end{align} \right.$$
 > 5. 若$$W$$為$$V$$的子空間，且$$B=\{b_1, \dots, b_K\}$$為$$W$$的一組基底，則 $$v \in W^\bot \Leftrightarrow \langle v, b_i \rangle =0, ~i=1,2,\dots, K$$。
 
+proof \(1\):
+
+* $$\forall v \in V, \langle 0, v \rangle=0$$，所以$$\{0\}^\bot=V$$，同理$$V^\bot =\{0\}$$\(QED\)
+
+proof\(2\)：
+
+* 由定義得$$S^\bot \subseteq V$$且$$\langle 0, s\rangle =0, ~\forall s \in S$$，所以$$0 \in S^\bot$$。
+* $$\forall c \in F, u, v \in S^\bot$$，$$\langle u,s \rangle = \langle v,s\rangle=0$$
+* 所以$$\langle cu+ v, s\rangle=c\langle u, s\rangle+ \langle v,s \rangle=0$$
+* 因此$$cu+v \in S^\bot$$ \(QED\)
+
+proof \(3\)：
+
+* $$\forall v \in S^\bot, \langle v,s \rangle =0, ~\forall s \in S$$
+* 所以$$\forall s \in S, \langle v, s \rangle =0 \Rightarrow \langle s, v \rangle = 0, s \in S^{\bot\bot}$$ \(QED\)
+
+Proof \(4\)
+
+* 只需證明$$S \cap S^{\bot} \subseteq \{0\}$$
+* $$\forall s \in S\cap S^{\bot}$$，$$\langle s,v \rangle=0, ~\forall v \in S^{\bot} $$$$\Rightarrow \langle s,s \rangle=0 \Rightarrow s=0$$ \(QED\).
+
+
+
+
+

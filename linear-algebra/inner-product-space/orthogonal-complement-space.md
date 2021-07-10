@@ -84,7 +84,28 @@ Proof \(4\)
 * 可得$$\dim⁡(V)=\dim⁡(W^\bot )+\dim⁡(W^{\bot \bot} )$$
 * 因為$$\dim⁡(V)=\dim⁡(W)+\dim⁡(W^\bot )$$
 * 所以$$\dim⁡(W)=\dim⁡(W^{\bot \bot} )$$
-* 因為$$W \subseteq W^{\bot \bot}$$，因此$$W=W^{\bot \bot}$$  \(QED\).
+* 因為$$W \subseteq W^{\bot \bot}$$，因此$$W=W^{\bot \bot}$$  \(QED\)
+
+Proof \(5\)
+
+* $$\forall v \in V$$，令$$ w=P(v), u=v−P(v)$$，所以$$v=u+w$$
+* 因為$$w \in W$$且$$u \in W^\bot$$，而$$ V=W \oplus W^\bot$$
+* 由獨立子空間的性質知$$v=u+w$$的表示法具唯一性。\(QED\)
+
+Proof \(6\)
+
+* 因為$$\langle v−P(v),w \rangle=0, ~\forall w \in W \Rightarrow v−P(v) \in W^\bot$$
+* $$\forall w\in W^\bot, \langle v−(v−P(v)), w\rangle=\langle P(v),w\rangle=0$$ \(QED\)
+
+
+
+Proof \(7\)
+
+* $$\mathrm{proj}_{W^\bot} (v)=v−P(v)=(I−P)(v), ~\forall v \in V$$ \(QED\)
+
+
+
+
 
 
 

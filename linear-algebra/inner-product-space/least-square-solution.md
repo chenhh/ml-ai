@@ -214,5 +214,10 @@ Proof:
 * 得  $$ \begin{bmatrix}  \sqrt{3} & \frac{2\sqrt{3}}{3} \\ 0 & \sqrt{\frac{14}{3}}  \end{bmatrix}x=\begin{bmatrix} \frac{4}{\sqrt{3}} \\ \frac{13}{\sqrt{42}}  \end{bmatrix}$$
 * 得$$a=\frac{5}{7}, b=\frac{3}{14}$$。
 
+### 投影矩陣的性質
+
+> 1. 矩陣$$A \in F^{M \times N }$$ 為行獨立所以（$$A^{\mathrm{H}} A$$可逆），$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}$$ 為正交投影矩陣，則$$P^2=P$$且$$P^\mathrm{H}=P$$ \(Hermitian matrix\)，同投影算子的性質。 
+> 2. 若$$P \in F^{N \times N} \ni P^2=P$$且$$P^\mathrm{H}=P$$，則$$P$$為一投影在$$W=CS(P)$$上的正交投影矩陣。
+
 
 

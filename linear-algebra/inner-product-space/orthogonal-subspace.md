@@ -19,7 +19,14 @@
 Proof:
 
 * $$\forall w_i \in W_i$$，若$$ w_1+w_2+\dots+w_k=0$$
-* 則 $$\forall i=1,2, \dots ,k$$，$$0=\langle w_i,0 \rangle= \langle w_i, w_1+w_2+\dots+w_K  \rangle =\langle w_i,w_1 \rangle+\langle w_i,w_2 \rangle+\dots+\langle w_i,w_K \rangle=\langle w_i,w_i \rangle \Rightarrow w_i=0$$ \(QED\).
+* 則 $$\forall i=1,2, \dots ,k$$，$$0=\langle w_i,0 \rangle= \langle w_i, w_1+w_2+\dots+w_K  \rangle =\langle w_i,w_1 \rangle+\langle w_i,w_2 \rangle+\dots+\langle w_i,w_K \rangle=\langle w_i,w_i \rangle \Rightarrow w_i=0$$ \(QED\)
 
+### 矩陣基本子空間的正交子空間
 
+> 矩陣$$A \in F^{M \times N}$$，$$ker(A)=\{x \in F^{N \times 1} | Ax=0\}$$，$$R(A) =\{Ax \in F^{M \times 1}| \forall x \in F^{N \times 1}\}$$則：
+>
+> 1. $$R(A^\mathrm{H})^\bot = ker(A)$$
+> 2. $$R(A)^\bot = ker(A^\mathrm{H})$$
+> 3. $$ker(A)^\bot = R(A^\mathrm{H})$$
+> 4. $$ker(A^\mathrm{H})^\bot = R(A)$$
 

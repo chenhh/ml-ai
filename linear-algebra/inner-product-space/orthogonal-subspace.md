@@ -10,3 +10,16 @@
 
 * $$V=\mathbb{R}^3$$，$$W_1 =\{ (x,0,0) | x \in \mathbb{R}\}$$，$$W_2=\{ (0,y,0) | y \in \mathbb{R}\}$$，$$W_3=\{(0,0,z)| z \in \mathbb{R}\}$$，則$$W_1, W_2, W_3$$為正交子空間。
 
+### 正交子空間必為獨立子空間
+
+> 內積空間$$V$$定義在體$$F$$上，若$$W_1, \dots, W_K$$為$$V$$的正交子空間，則$$W_1, \dots, W_K$$為獨立子空間。
+>
+> 因此正交子空間為獨立子空間的子集合。
+
+Proof:
+
+* $$\forall w_i \in W_i$$，若$$ w_1+w_2+\dots+w_k=0$$
+* 則 $$\forall i=1,2, \dots ,k$$，$$0=\langle w_i,0 \rangle= \langle w_i, w_1+w_2+\dots+w_K  \rangle =\langle w_i,w_1 \rangle+\langle w_i,w_2 \rangle+\dots+\langle w_i,w_K \rangle=\langle w_i,w_i \rangle \Rightarrow w_i=0$$ \(QED\).
+
+
+

@@ -30,3 +30,33 @@ Proof:
 > 3. $$ker(A)^\bot = R(A^\mathrm{H})$$
 > 4. $$ker(A^\mathrm{H})^\bot = R(A)$$
 
+Proof \(1\)
+
+* $$\forall x \in ker⁡(A), Ax=0$$
+* $$\forall y \in R(A^\mathrm{H} ), y=A^H z$$ for some $$z \in F^{M \times 1}$$
+* $$\langle x,y\rangle =\langle x,A^\mathrm{H} z\rangle=(A^\mathrm{H} z)^\mathrm{H} x=z^\mathrm{H} Ax=z^\mathrm{H} 0=0$$
+* 所以$$ker⁡(A) \bot R(A^\mathrm{H} )$$，得$$ker⁡(A) \subseteq R(A^\mathrm{H} )^\bot$$
+* 因為$$\dim⁡(ker⁡(A) )=N−\dim⁡(R(A))=N−rank(A)=N−rank(A^\mathrm{H} )=N−\dim⁡(R(A^\mathrm{H} ))$$
+* 因為$$R(A^\mathrm{H} )$$與$$R(A^\mathrm{H} )^\bot$$ 為$$F^{N \times 1}$$ 的子空間，所以$$\dim⁡(R(A^\mathrm{H} ))＋\dim⁡(R(A^\mathrm{H} )^\bot )=N$$
+* 得$$\dim⁡ (R(A^\mathrm{H} )^\bot )=N−\dim⁡(R(A^\mathrm{H} ))=\dim⁡(ker⁡(A))$$
+* 所以$$ker⁡(A)=R(A^\mathrm{H} )^\bot$$  \(QED\).
+
+Proof \(2\)
+
+* 因為$$R((A^\mathrm{H} )^\mathrm{H} )^\bot=ker⁡(A^\mathrm{H} )$$
+* 所以$$R(A)^\bot=ker(A^\mathrm{H} )$$  \(QED\)
+
+Proof \(3\)
+
+* 因為$$R(A^\mathrm{H} )^\bot=ker(A)$$
+* 所以$$R(A^\mathrm{H} )^{\bot \bot}=(ker⁡(A) )^\bot$$
+* 因此$$R(A^\mathrm{H} )=ker⁡(A)^\bot$$  \(QED\)
+
+Proof \(4\)
+
+* 因為$$R(A)^\bot=ker(A^\mathrm{H} )$$
+* 所以$$R(A)^{\bot \bot}=ker⁡(A^\mathrm{H} )^\bot$$
+* 得$$R(A)=ker⁡(A^\mathrm{H} )^\bot$$  \(QED\)〗
+
+
+

@@ -121,11 +121,25 @@ Proof \(1\):=&gt;
 * 因為$$W_1 \subseteq W_2$$，所以$$\langle w,v \rangle=0, ~\forall w\in W_1$$，可得$$v \in W_1^\bot$$，因此$$W_2^\bot \subseteq W_1^\bot$$。
 * &lt;= ，若$$ W_2^\bot \subseteq W_1^\bot$$，則$$(W_1^\bot )^\bot \subseteq (W_2^\bot )^\bot$$，因此$$W_1 \subseteq W_2$$  \(QED\)
 
+Proof \(2\):
+
+* 因為$$W_1 \subseteq W_1+W_2$$，所以$$(W_1+W_2 )^\bot \subseteq W_1^\bot$$
+* 同理 $$W_2 \subseteq W_1+W_2$$，所以$$(W_1+W_2 )^\bot \subseteq W_2^\bot$$
+* 因此$$(W_1+W_2 )^\bot \subseteq W_1^\bot \cap W_2^\bot$$-- \(a\)
 
 
-#### 
+
+* $$\forall v \in W_1^\bot  \cap W_2^\bot$$，$$\langle v,w_1 \rangle=\langle v,w_2\rangle=0, ~\forall w_1 \in W_1, w_2 \in W_2$$
+* $$\forall w \in W_1+W_2, ~\exists w_1 \in W_1, w_2 \in W_2 \ni w=w_1+w_2$$
+* 所以$$\langle v,w \rangle=\langle v,w_1+w_2 \rangle=\langle v,w_1 \rangle+\langle v,w_2 \rangle =0+0=0$$，所以$$v \in (W_1+W_2 )^\bot$$
+* 可得$$W_1\bot \cap W_2^\bot \subseteq (W_1+W_2 )^\bot$$--\(b\)
+* 由\(a,b\)得$$(W_1+W_2 )^\bot=W_1^\bot \cap W_2^\bot$$  \(QED\)
 
 
 
+Proof \(3\)
 
+* $$(W_1^\bot+W_2^\bot )^\bot=(W_1^\bot )^\bot \cap (W_2^\bot )^\bot =W_1\cap W_2$$
+* 所以$$(W_1^\bot+W_2^\bot )^{\bot \bot}=(W_1\cap W_2 )^\bot$$
+* 因此$$(W_1 \cap W_2 )^\bot=W_1^\bot+W_2^\bot$$  \(QED\).
 

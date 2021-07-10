@@ -44,6 +44,14 @@ Proof \(4\)
 * 只需證明$$S \cap S^{\bot} \subseteq \{0\}$$
 * $$\forall s \in S\cap S^{\bot}$$，$$\langle s,v \rangle=0, ~\forall v \in S^{\bot} $$$$\Rightarrow \langle s,s \rangle=0 \Rightarrow s=0$$ \(QED\).
 
+#### 範例
+
+* $$S=span\left \{ v_1=\begin{bmatrix} 1 \\0 \\ 1 \\0\end{bmatrix}, v_2=\begin{bmatrix} 1 \\ 1 \\1\\ 0\end{bmatrix}\right\}$$
+* $$\forall x=\begin{bmatrix} a\\b\\c\\d\end{bmatrix} \in S^\bot$$，$$\langle x, v_1 \rangle = \langle x, v_2 \rangle=0$$
+* $$a+c=0, a+b+c=0$$，所以$$x=\begin{bmatrix} -c \\0 \\c \\d\end{bmatrix}$$，取$$S^\bot=span\left\{   \begin{bmatrix} -1 \\0 \\1 \\0\end{bmatrix},  \begin{bmatrix} 0 \\0 \\0 \\1\end{bmatrix}   \right\}$$
+
+#### 
+
 
 
 

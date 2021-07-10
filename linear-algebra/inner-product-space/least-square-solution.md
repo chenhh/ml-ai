@@ -219,5 +219,33 @@ Proof:
 > 1. 矩陣$$A \in F^{M \times N }$$ 為行獨立所以（$$A^{\mathrm{H}} A$$可逆），$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}$$ 為正交投影矩陣，則$$P^2=P$$且$$P^\mathrm{H}=P$$ \(Hermitian matrix\)，同投影算子的性質。 
 > 2. 若$$P \in F^{N \times N} \ni P^2=P$$且$$P^\mathrm{H}=P$$，則$$P$$為一投影在$$W=CS(P)$$上的正交投影矩陣。
 
+Proof \(1\):
+
+*  $$\begin{aligned} P^2 & =(A(A^\mathrm{H} A)^{−1} A^\mathrm{H} )（A(A^\mathrm{H} A)^{−1} A^\mathrm{H} ）\\&＝A(A^\mathrm{H} A)^{−1} A^\mathrm{H} A(A^\mathrm{H} A)^{−1} A^\mathrm{H} \\ &=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}\\&=P \end{aligned}$$
+* $$\begin{aligned} P^\mathrm{H} & =(A(A^\mathrm{H} A)^{−1} A^\mathrm{H} )^\mathrm{H}\\ &=A((A^\mathrm{H} A)^{−1} )^\mathrm{H} A^\mathrm{H}\\ &=A((A^\mathrm{H} A)^\mathrm{H} )^{−1} A^\mathrm{H} \\ &=A(A^\mathrm{H} A)^{−1} A^\mathrm{H} \\ &=P \end{aligned}$$\(QED\)
+
+Proof \(2\):
+
+* 因為$$W=CS(P)$$，所以$$\forall y \in W ~ \exists x \in F^{N \times 1} \ni y=Px$$。
+* 令$$b \in F^{N \times 1}$$，則投影在$$W$$的向量為$$Pb$$，因此：
+* $$\langle b−Pb,y \rangle=\langle b−Pb, Px \rangle=(Px)^\mathrm{H} (b−Pb)=x^\mathrm{H} P^\mathrm{H} (b−Pb)=x^\mathrm{H} P(I−P)b=x^\mathrm{H} (P−P^2 )b=0, ~\forall b \in F^{N \times 1}$$  \(QED\)
+
+### 單範正交集的投影矩陣
+
+> $$Q \in F^{M \times N}$$ 且$$Q$$的行向量形成單範正交集\($$Q^\mathrm{H} Q=I$$\)。
+>
+> 若$$W=CS(Q)$$，則$$\mathrm{proj}_W (b)=QQ^\mathrm{H} b$$。
+
+Proof:
+
+* 因為$$Q$$的行向量形成單範正交集，所以$$Q$$的行向量獨立，因此\($$Q^\mathrm{H} Q$$\)可逆。
+* 所以$$\mathrm{proj}_W (b)=Q(Q^\mathrm{H} Q)^{−1} Qb$$
+* 因為$$Q^\mathrm{H} Q=I$$
+* 所以$$\mathrm{proj}_W (b)=QQ^\mathrm{H} B$$ \(QED\).
+
+
+
+### 
+
 
 

@@ -78,6 +78,16 @@ proof\(2\)：
 * 因為$$W \cap W^\bot=\{0\}$$
 * 所以$$V=W \oplus W^\bot$$  \(QED\)
 
+Proof \(4\)
+
+* 因為$$W^\bot$$ 為$$V$$的子空間，所以$$V=W^\bot \oplus W^{\bot \bot}$$
+* 可得$$\dim⁡(V)=\dim⁡(W^\bot )+\dim⁡(W^{\bot \bot} )$$
+* 因為$$\dim⁡(V)=\dim⁡(W)+\dim⁡(W^\bot )$$
+* 所以$$\dim⁡(W)=\dim⁡(W^{\bot \bot} )$$
+* 因為$$W \subseteq W^{\bot \bot}$$，因此$$W=W^{\bot \bot}$$  \(QED\).
+
+
+
 
 
 #### 

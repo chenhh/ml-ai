@@ -50,6 +50,25 @@ Proof \(4\)
 * $$\forall x=\begin{bmatrix} a\\b\\c\\d\end{bmatrix} \in S^\bot$$，$$\langle x, v_1 \rangle = \langle x, v_2 \rangle=0$$
 * $$a+c=0, a+b+c=0$$，所以$$x=\begin{bmatrix} -c \\0 \\c \\d\end{bmatrix}$$，取$$S^\bot=span\left\{   \begin{bmatrix} -1 \\0 \\1 \\0\end{bmatrix},  \begin{bmatrix} 0 \\0 \\0 \\1\end{bmatrix}   \right\}$$
 
+### 正交投影算子的性質
+
+> $$V$$為定義在體$$F$$的內積空間，$$W$$為$$V$$的子空間，$$P\equiv \mathrm{proj}_W(v)$$為$$V$$在$$W$$上的正交投影算子，則：
+>
+> 1. $$ker(P)=W^\bot$$（$$ker(P)$$為投影到正交空間的集合）
+> 2. $$V = W \oplus W^\bot$$（向量空間必可分解成投影空間與其正交補空間）
+> 3. $$\dim(V) = \dim(W) + \dim(W^\bot)$$
+> 4. $$W^{\bot\bot}=W$$
+> 5. $$\forall v \in W ~ \exists !w \in W, u\in W^\bot \ni v=u+w$$\(正交投影分解唯一性\)
+> 6. $$v-P(v)$$為$$v$$在$$W^\bot$$上的正交投影向量
+> 7. $$I-P$$為$$v$$在$$W^\bot$$的正交投影算子\($$\forall v \in V, I(v)=v$$\)
+
+proof \(1\)：
+
+* $$v \in ker(P)$$，由定義得$$P(v)\equiv \mathrm{proj}_W(v)=0$$
+* 即$$v \bot W$$，因此$$v \in W^\bot$$，所以$$ker(P) \subseteq W^\bot$$
+* 反之可得$$W^\bot \subseteq ker(P)$$
+* 因此$$ker(P) = W^\bot $$ \(QED\)
+
 #### 
 
 

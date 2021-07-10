@@ -69,6 +69,17 @@ proof \(1\)：
 * 反之可得$$W^\bot \subseteq ker(P)$$
 * 因此$$ker(P) = W^\bot $$ \(QED\)
 
+proof\(2\)：
+
+* $$\forall v \in V, v=P(v)+(v−P(v)), ~P(v) \in W$$
+* 因為$$P^2=P$$，所以$$P(v−P(v))=P(v)−P(v)=0 \Rightarrow v−P(v) \in ker⁡(P)$$
+* 因為$$ker⁡(P)=W^\bot$$，所以$$v−P(v) \in W^\bot$$
+* 所以$$ v=P(v)+(v−P(v))=W+W^\bot$$
+* 因為$$W \cap W^\bot=\{0\}$$
+* 所以$$V=W \oplus W^\bot$$  \(QED\)
+
+
+
 #### 
 
 

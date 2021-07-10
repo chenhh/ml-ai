@@ -115,6 +115,14 @@ Proof \(7\)
 > 2. $$(W_1+W_2)^\bot=W_1^\bot \cap W_2^\bot$$
 > 3. $$(W_1 \cap W_2)^\bot = W_1^\bot+W_2^\bot$$
 
+Proof \(1\):=&gt;
+
+* $$\forall v \in W_2^\bot$$，$$\langle w,v \rangle=0,~\forall w \in W_2$$
+* 因為$$W_1 \subseteq W_2$$，所以$$\langle w,v \rangle=0, ~\forall w\in W_1$$，可得$$v \in W_1^\bot$$，因此$$W_2^\bot \subseteq W_1^\bot$$。
+* &lt;= ，若$$ W_2^\bot \subseteq W_1^\bot$$，則$$(W_1^\bot )^\bot \subseteq (W_2^\bot )^\bot$$，因此$$W_1 \subseteq W_2$$  \(QED\)
+
+
+
 #### 
 
 

@@ -56,7 +56,24 @@ Proof \(1\)
 
 * 因為$$R(A)^\bot=ker(A^\mathrm{H} )$$
 * 所以$$R(A)^{\bot \bot}=ker⁡(A^\mathrm{H} )^\bot$$
-* 得$$R(A)=ker⁡(A^\mathrm{H} )^\bot$$  \(QED\)〗
+* 得$$R(A)=ker⁡(A^\mathrm{H} )^\bot$$  \(QED\)
+
+### 聯立方程式之解存在的充要條件
+
+> 矩陣$$A \in \mathbb{R}^{M \times N}$$，向量$$b  \in \mathbb{R}^{M \times 1}$$，則：
+>
+> $$Ax=b$$有解 $$\Leftrightarrow \forall y \in \mathbb{R}^{M \times 1}, ~ A^\top y=0 \ni b^\top y=0$$
+
+Proof =&gt;:
+
+* 因為$$Ax=b$$有解，所以$$b \in R(A)$$
+* 若$$y$$滿足$$A^\top y=0$$，則$$y \in ker⁡(A^\top )=R(A)^\bot$$
+* 因此$$\langle y,b\rangle=0$$，即$$b^\top y=0$$ \(QED\)
+
+Proof &lt;=:
+
+* $$\forall y \in ker⁡(A^\top ), b^\top y=\langle y,b \rangle=0$$，得$$\langle b,y\rangle=0, ~\forall y \in ker⁡(A^\top )$$
+* 所以$$b \in ker⁡(A^\top)^\bot =R(A)$$，即$$Ax=b$$有解 \(QED\)
 
 
 

@@ -107,9 +107,13 @@ Proof \(7\)
 
 
 
+### 正交補空間的集合運算性質
 
-
-
+> $$V$$為定義在體$$F$$的內積空間，$$W_1, W_2$$為$$V$$的子空間，則：
+>
+> 1. $$W_1 \subseteq W_2 \Rightarrow W_2^\bot \subseteq W_1^\bot$$
+> 2. $$(W_1+W_2)^\bot=W_1^\bot \cap W_2^\bot$$
+> 3. $$(W_1 \cap W_2)^\bot = W_1^\bot+W_2^\bot$$
 
 #### 
 

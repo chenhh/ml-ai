@@ -24,6 +24,7 @@
 
 * $$V=\mathbb{C}^{N \times N}$$，$$\forall A,B \in V$$，定義方陣的內積為$$\langle A, B\rangle=tr(AB^{\mathrm {H}})$$。
 * $$V=C[a,b]$$為定義在閉區間$$[a,b]$$的所有連續函數，$$F=\mathbb{C}$$，則$$\forall f,g \in V$$，定義函數內積$$\langle f, g \rangle=\int_a^b f(x)\overline{g(x)}dx$$。
+* 歐式空間 $$V=\mathbb{R}^N$$, $$F=\mathbb{R}$$，$$\langle x, y\rangle = x^\top y=y^\top x=\sum_{i=1} ^N x_i y_i$$
 * $$V=F^{N \times 1}, F = \mathbb{C}$$，標準（行向量）內積$$\langle x,  y\rangle =y^{\mathrm{H}}x=x_1\overline{y_1} + \dots + x_N\overline{y_N}$$。
 
 ## 內積空間\(inner product space\)

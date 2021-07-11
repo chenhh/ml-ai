@@ -38,5 +38,7 @@ Proof \(2\):
 
 #### 範例
 
-
+* $$A=\begin{bmatrix}  1 & 2 & 1\\ 1 & -1 & 2 \\ 1 & 5 & 0 \end{bmatrix}$$，$$b=\begin{bmatrix} 4 \\ -11 \\ 19  \end{bmatrix}$$
+* 解$$A A^\top x=b$$得 $$x=\begin{bmatrix}  1-2x_3 \\ -2 + x_3 \\ x_3 \end{bmatrix}$$
+* 取$$u=\begin{bmatrix} 1 \\ -2 \\ 0\end{bmatrix}$$為上式其中一解，則$$A^\top u=\begin{bmatrix} -1 \\ 4 \\ -3\end{bmatrix}$$為極小解。
 

@@ -37,7 +37,7 @@
 >
 > $$\|A\|_2 \equiv \max_{\|x\|=1}\|Ax\|=\sigma_{\max}$$ 為A的最大奇異值。
 >
-> 註：若$$A$$為方陣時，$$\|A\|_2=\lambda_{\max}$$為其特徵根最大值。
+> 註：$$\|A\|_2=\sqrt{\lambda_{\max}(A^\mathrm{H}A)}$$為其特徵根最大值的平方根。
 
 Proof:
 

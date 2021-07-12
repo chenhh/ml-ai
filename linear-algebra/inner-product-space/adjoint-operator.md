@@ -31,5 +31,11 @@ Proof:
 * 所以$$\langle v,u \rangle=\langle v^′,u\rangle ,~\forall u \in V$$
 * 因此$$v=v^′$$，證明了唯一性 \(QED\)
 
+###  伴隨算子存在唯一性
+
+> 內積空間$$V$$定義在體$$F$$上，線性轉換$$T \in L(V,V)$$，則$$T$$的伴隨算子$$T^{*}$$存在且唯一。
+
+
+
 
 

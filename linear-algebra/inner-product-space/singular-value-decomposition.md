@@ -10,3 +10,7 @@
 >
 > 註：任何矩陣都可以做奇異值分解。
 
+![SVD](../../.gitbook/assets/svd-min.png)
+
+![SVD&#x7DDA;&#x6027;&#x8F49;&#x63DB;&#x7684;&#x610F;&#x7FA9;](../../.gitbook/assets/svd_step-min.png)
+

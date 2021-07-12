@@ -35,7 +35,7 @@
 
 > 矩陣$$A \in F^{M \times N}$$，則：
 >
-> * $$\|a\|_1= \max_{1 \leq i \leq N} \sum_{i=1}^M |a_{ij}|$$（將每一行取絕對值相加後，取數值最大的那一行）
+> * $$\|A\|_1= \max_{1 \leq i \leq N} \sum_{i=1}^M |a_{ij}|$$（將每一行取絕對值相加後，取數值最大的那一行）
 > * $$\|A\|_\infty=\max_{1 \leq i \leq M} \sum_{j=1}^M |a_{ij}|$$（將每一列取絕對值相加後，取數值最大的那一列）
 > * $$\|A\|_2 = \sqrt{\lambda_{\max}(A^\mathrm{H}A)} = \sigma_{\max} \geq0$$（矩陣$$A$$長度等於$$A^{\mathrm{H}}A$$最大特徵值的平方值且等於$$A$$的最大奇異值）
 

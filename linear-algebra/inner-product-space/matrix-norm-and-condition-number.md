@@ -39,3 +39,16 @@
 > * $$\|A\|_\infty=\max_{1 \leq i \leq M} \sum_{j=1}^M |a_{ij}|$$（將每一列取絕對值相加後，取數值最大的那一列）
 > * $$\|A\|_2 = \sqrt{\lambda_{\max}(A^\mathrm{H}A)} = \sigma_{\max} \geq0$$（矩陣$$A$$長度等於$$A^{\mathrm{H}}A$$最大特徵值的平方值且等於$$A$$的最大奇異值）
 
+### 對稱矩陣長度為矩陣的最大特徵根
+
+> 矩陣$$A \in \mathbb{R}^{ N \times N}$$為對稱矩陣\($$A^\top =A$$\)，$$\lambda_1, \lambda_2, \dots, \lambda_N$$為$$A$$的特徵根，則$$\|A\|_2=\max\{|\lambda_1|, \lambda_2|, \dots, |\lambda_N|\}$$。
+
+Proof:
+
+* $$\|A\|_2= \sqrt{λ_{\max} (A^\mathrm{H} A)}$$且$$A^\top=A$$
+* 所以$$\|A\|_2=\sqrt{\lambda_{\max} (A^2 )}=\max⁡\{|\lambda_1 |,|\lambda_2 |,\dots,|\lambda_N |\}$$  \(QED\)
+
+
+
+
+

@@ -37,5 +37,16 @@
 >
 > $$\|A\|_2 \equiv \max_{\|x\|=1}\|Ax\|=\sigma_{max}$$ 為A的最大奇異值。
 
+Proof:
+
+* $$A^\mathrm{H} A=(U\Sigma V^\mathrm{H} )^\mathrm{H} (U\Sigma V^\mathrm{H} )=V\Sigma^\mathrm{H} U^\mathrm{H} U\Sigma V^\mathrm{H}=V\Sigma^\mathrm{H} \Sigma V^\mathrm{H}$$
+* 因為$$\|A\|_2=\sqrt{\lambda_{max} (A^\mathrm{H} A)}=\sqrt{\lambda_{max} (V\Sigma^\mathrm{H} \Sigma V^\mathrm{H})}$$
+* 因為$$V\Sigma^\mathrm{H} \Sigma V^\mathrm{H}$$ 與$$\Sigma^\mathrm{H}\Sigma$$么正相似，所以$$\lambda_{max} (V\Sigma^\mathrm{H} \Sigma V^\mathrm{H} )=\lambda_{max} (\Sigma^\mathrm{H}\Sigma)$$
+* 所以$$\|A\|_2=\sqrt{\lambda_{max}(\Sigma^{\mathrm{H}}\Sigma) }= \sqrt{\sigma_{max}^2}= \sigma_{max}$$ \(QED\)
+
+
+
+
+
 ### 
 

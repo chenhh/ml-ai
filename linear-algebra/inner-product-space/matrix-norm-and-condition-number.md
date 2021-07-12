@@ -3,6 +3,8 @@
 ## 矩陣的長度
 
 > 矩陣$$A \in F^{M \times N}$$，定義$$A$$的範數$$\|A\|=\max_{x \neq 0}\left\{  \frac{\|Ax\|}{\|x\|} \right\} = \max_{\|x\|=1} \|Ax\| 。$$
+>
+> 註：矩陣$$A$$的長度\(2-norm\)等於其[奇異值分解\(SVD\)的最大奇異值](singular-value-decomposition.md#ju-zhen-de-chang-du-wei-zui-da-de-qi-yi-zhi)$$\sigma_{max}$$。
 
 由於向量的長度可為$$p$$-norm，$$p=1,2,\dots,\infty$$, 所以矩陣的長度也有相同的定義：
 

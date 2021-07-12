@@ -24,9 +24,18 @@
 * $$V$$的行向量為$$A^\mathrm{H} A$$的特徵向量，且為單範正交集（$$V^\mathrm{H}V=I_N$$）
 * $$AA^\mathrm{H}=(U\Sigma V^\mathrm{H} ) (U\Sigma V^\mathrm{H} )^\mathrm{H}=U\Sigma V^\mathrm{H} V\Sigma^\mathrm{H} U^H=U\Sigma \Sigma^\mathrm{H} U^\mathrm{H}\Rightarrow U^\mathrm{H} AA^\mathrm{H} U=\Sigma \Sigma^\mathrm{H}$$ 為對角矩陣。所以$$U$$的行向量為$$AA^\mathrm{H}$$ 的特徵向量且為單範正交集（$$U^\mathrm{H}U=I_M$$）。
 * 若$$rank(A)=r$$，則  ：
+
   * $$v_1,\dots,v_r$$ 形成$$R(A^\mathrm{H})$$的單範正交基底。
   * $$v_{r+1},\dots,v_N$$ 形成$$ker⁡(A)$$的單範正交基底。
   * $$u_1,\dots,u_r$$ 形成$$R(A)$$的單範正交基底。
   * $$u_{r+1},\dots,u_M$$ 形成$$ker⁡(A^\mathrm{H})$$的單範正交基底。
   * $$rank(A)$$等於$$A$$的非零奇異值個數。
+
+### 矩陣的長度為最大的奇異值
+
+> 矩陣$$A \in F^{M \times N}$$ 具有SVD分解$$A=U\Sigma V^\mathrm{H}$$，則：
+>
+> $$\|A\|_2 \equiv \max_{\|x\|=1}\|Ax\|=\sigma_{max}$$ 為A的最大奇異值。
+
+### 
 

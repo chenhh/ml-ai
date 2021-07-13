@@ -53,12 +53,16 @@ proof:
 
 ### 伴隨算子的另一種計算方式
 
-> 線性轉換$$T \in L(V,V)$$，則$$\langle u, T(v) \rangle= \langle T^∗ (u),v \rangle,~ \forall u,v \in V$$。
+> * 線性轉換$$T \in L(V,V)$$，則$$\langle u, T(v) \rangle= \langle T^∗ (u),v \rangle,~ \forall u,v \in V$$。
+> * 矩陣$$A \in F^{N \times N}$$，$$\langle Ax, y \rangle = \langle x, A^\mathrm{H}y \rangle$$且$$\langle x, Ay \rangle = \langle A^\mathrm{H}y, x \rangle ~ \forall x \in F^{N \times 1}$$。
 
 Proof:
 
 * $$\langle u,T(v)\rangle=\overline{\langle⟨T(v),u⟩\rangle}=\overline{\langle v,T^∗ (u) \rangle}=\langle T^∗ (u),v \rangle$$  \(QED\)
 
+proof:
+
+* 
 ### 伴隨算子的矩陣表示法為Hermetian matrix
 
 > 線性轉換$$T \in L(V,V)$$，$$B=\{b_1, b_2, \dots, b_N\}$$為$$V$$的一組單範正交基底，則：$$[T^*]_B=[T]_B^\mathrm{H}$$。
@@ -68,14 +72,23 @@ Proof:
 Proof:
 
 * 令矩陣$$A=[T]_B, P=[T^∗ ]_B$$
-* 根據正交基底的係數得$$T(b_j )=\sum_{i=1}^N \langle T(b_j ),b_i \rangle  b_i$$
+* 根據單範正交基底的係數得$$T(b_j )=\sum_{i=1}^N \langle T(b_j ),b_i \rangle  b_i$$
 * 所以$$[T(b_j )]_B = \begin{bmatrix}  \langle T(b_j), b_1 \rangle \\ \langle T(b_j), b_2 \rangle \\ \vdots \\ \langle T(b_j), b_N \rangle \end{bmatrix}$$
 * 因此$$[A]_{ij}=\langle T(b_j ),b_i \rangle, ~\forall i,j=1,2, \dots,N$$
 * 同理可得$$[P]_{ij}= \langle T^∗ (b_j ),b_i  \rangle, ~\forall i,j=1,2,\dots,N$$
 * 所以$$[P]_{ij}=\langle T^∗ (b_j ),b_i \rangle=\overline{\langle b_i,T^∗ (b_j) \rangle}=\overline{\langle T(b_i), b_j \rangle} = \overline{A_{ji}} = (A^\mathrm{H})_{ij}$$
 * 可得$$P=A^\mathrm{H}$$  \(QED\)
 
+#### 範例
 
+* 線性轉換$$T:\mathbb{C}^2 \rightarrow \mathbb{C}^2$$，$$T(x,y)=(2ix+3y, ~ x-y)$$
+* 取$$\mathbb{C}^2$$的標準基底：$$B=\{e_1, e_2\}$$。
+* $$T(e_1)=(2i, 1) = 2i \begin{bmatrix} 1 \\ 0  \end{bmatrix} + 1 \begin{bmatrix} 0 \\ 1\end{bmatrix}$$
+* $$T(e_2) = (3, -1) = 3 \begin{bmatrix} 1 \\ 0 \end{bmatrix} + (-1) \begin{bmatrix} 0 \\ 1\end{bmatrix}$$
+* 所以 $$[T]_B=\begin{bmatrix} 2i & 3 \\ 1 & -1 \end{bmatrix}$$
+* $$[T^*]_B=[T]_B^\mathrm{H}=\begin{bmatrix} -2i & 1 \\ 3 & -1 \end{bmatrix}$$
+* $$T^*(e_1)=(-2i, 3), ~T^*(e_2)=(1, -1)$$
+* $$T^*(x,y)=xT^*(e_1)+yT^*(e_2)=(-2ix+y, 3x-y)$$
 
 
 

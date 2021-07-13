@@ -49,9 +49,15 @@ proof:
 * 假設存在$$U:V \rightarrow V \ni  \langle T(u),v\rangle = \langle u, U(v)\rangle ,~ \forall u,v \in V$$。
 * 所以$$\langle u,U(v) \rangle=\langle u, T^∗ (v)\rangle,~ \forall u,v \in V$$。
 * $$\langle U(v),v \rangle=\langle T^∗ (v),u \rangle, ~\forall u,v \in V$$。
-* 根據內積算子性質得所以$$U=T^∗$$，即$$T^∗$$ 唯一 \(QED\).
+* 根據內積算子性質得所以$$U=T^∗$$，即$$T^∗$$ 唯一 \(QED\)
 
+### 伴隨算子的另一種計算方式
 
+> 線性轉換$$T \in L(V,V)$$，則$$\langle u, T(v) \rangle= \langle T^∗ (u),v \rangle,~ \forall u,v \in V$$。
+
+Proof:
+
+* $$\langle u,T(v)\rangle=\overline{\langle⟨T(v),u⟩\rangle}=\overline{\langle v,T^∗ (u) \rangle}=\langle T^∗ (u),v \rangle$$  \(QED\)
 
 
 

@@ -60,5 +60,30 @@ Proof \(4\)
 > 4. $$T$$的特徵多項式在$$\mathbb{R}$$可分解。
 > 5. $$\det⁡(T) \in \mathbb{R}$$。
 
+### Hermitian\(symmetric\)矩陣的特性
+
+> 矩陣$$A \in \mathbb{C}^{N \times N }$$ Is Hermitian matrix \($$A^\mathrm{H}=A$$\)，\(若$$A \in \mathbb{R}^{N\times N}$$，則$$A^\top＝A$$\)則：
+>
+> 1. $$A$$為正規矩陣 \(∵$$A^\mathrm{H} A=AA=AA^\mathrm{H}，A^\top A=AA=AA^\top$$ \)。
+> 2. $$A$$的相異特徵根對應之特徵向量必正交\(∵Hermitian \(symmetric\) matrix為正規矩陣\)。
+> 3. $$A$$的特徵根均為實數。
+> 4. $$A$$的特徵多項式在$$\mathbb{R}$$可分解 \(由\(3\)成立\)。
+> 5. $$A$$的主對角項元素皆為實數 \(因為$$[A^\mathrm{H} ]_{ii}=[A]_{ii} \Leftrightarrow (\overline{A^\top}) ]_{ii}=[A]_{ii}\Leftrightarrow [\overline{A} ]_{ii}=[A]_{ii},~ i=1,2,\dots,N$$\)
+> 6. $$\det⁡(A) \in \mathbb{R}$$ \($$\det⁡(A)=\det⁡(A^\mathrm{H} )=\overline{\det⁡(A^\top)} = \overline{\det(A)}$$\)
+
+註：$$A \in \mathbb{C}^{N \times N}$$ 為對稱矩陣不保證$$A$$為正規矩陣。
+
+* $$A=\begin{bmatrix} i & i \\ i & 1\end{bmatrix} = A^\top$$，$$A^\mathrm{H}A=\begin{bmatrix}  2 & 1-i \\ 1+i & 2 \end{bmatrix} \neq \begin{bmatrix}  2 & 1+i \\ 1-i  & 2 \end{bmatrix} = AA^\mathrm{H}$$
+
+Proof \(3\):
+
+* 令$$\lambda$$為$$A$$的特徵根，則$$\exists x \neq 0 \ni Ax=\lambda x$$
+* 可得$$x^\mathrm{H} Ax=x^\mathrm{H}  \lambda x=\lambda x^\mathrm{H} x=\lambda \|x\|^2$$
+* 而$$x^\mathrm{H} Ax=x^\mathrm{H} A^\mathrm{H} x=(Ax)^\mathrm{H} x=(\lambda x)^\mathrm{H} x=\overline{\lambda }x^\mathrm{H} x=\overline{\lambda }\|x\|^2$$
+* 所以$$\lambda \|x\|^2= \overline{\lambda }\|x\|^2$$
+* 因為$$\|x\|^2>0$$，因此$$\lambda = \overline{\lambda}$$，所以特徵根$$\lambda $$為實數 \(QED\)
+
+
+
 
 

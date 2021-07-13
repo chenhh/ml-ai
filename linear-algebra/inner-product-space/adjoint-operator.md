@@ -112,6 +112,29 @@ Proof \(2\)
 * $$\forall x,y \in V$$
 * $$\langle x,(aT)^∗ y⟩=\langle (aT)(x),y \rangle =a \langle T(x),y \rangle =a\langle  x,T^∗ (y) \rangle=\langle x, \overline{a}T^∗ (y) \rangle=\langle x,(\overline{a} T^∗ )(y) \rangle$$  \(QED\)
 
+Proof \(3\)：由\(1\)、\(2\)的線性組合得證。
+
+Proof \(4\):
+
+* $$\forall x,y \in V$$
+* $$\langle x,T(y) \rangle=\langle T^∗ (x),y \rangle =\langle x,(T^∗ )^∗ (y) \rangle \Rightarrow (T^∗ )^∗ (y)=T(y)⇒(T^∗ )^∗=T$$ \(QED\)
+
+Proof \(5\):
+
+* $$\forall x,y \in V$$
+* $$\langle x,(TU)^∗ (y) \rangle= \langle (TU)(x),y \rangle = \langle T(U(x)), y \rangle=\langle U(x),T^∗ (y) \rangle=\langle x,U^∗ (T^∗ (y)) \rangle=\langle x,(U^∗ T^∗ )(y) \rangle$$
+* 所以$$(TU)^∗ (y)=(U^∗ T^∗ )(y)⇒(TU)^∗=U^∗ T^∗$$  \(QED\)
+
+Proof \(6\):
+
+* $$\forall x,y  \in V$$
+* $$\langle x,I^∗ (y) \rangle=\langle I(x),y \rangle=\langle x,y \rangle=\langle x,I(y) \rangle$$
+* 所以$$I^∗ (y)=I(y) \Rightarrow I^∗=I$$ \(QED\)
+
+
+
+
+
 
 
 

@@ -35,6 +35,24 @@ Proof:
 
 > 內積空間$$V$$定義在體$$F$$上，線性轉換$$T \in L(V,V)$$，則$$T$$的伴隨算子$$T^{*}$$存在且唯一。
 
+proof:
+
+* $$\forall v \in V$$，定義$$f:V \rightarrow F, f(u)=\langle T(u),v\rangle$$，則$$f$$為線性，證明如下。
+* $$\forall a,b \in F, u_1,u_2 \in V$$
+* $$f(au_1+bu_2 )=⟨T(au_1+bu_2 ),v⟩=\langle aT(u_1 )+bT(u_2 ),v \rangle =a\langle T(u_1 ),v\rangle +b \langle T(u_2 ),v \rangle=af(u_1 )+bf(u_2 )$$，所以$$f$$為線性。
+* 根據前述定理，唯一存在$$v^′ \in V \ni f(u)=\langle u,v^′ \rangle, ~\forall v \in V$$。
+* 因此$$\langle T(u),v \rangle= \langle u,v^′ \rangle, \forall u \in V$$。
+* 定義$$T^∗:V \rightarrow V, T^∗ (v)=v^′$$，證明$$T^∗$$ 為線性如下。
+* $$\forall a,b \in F, v_1,v_2 \in V$$
+* $$\langle u, T^∗ (av_1+bv_2 ) \rangle= \langle T(u), av_1+bv_2 \rangle= \overline{a} \langle T(u),v_1 \rangle +\overline{b} \langle T(u),v_2 \rangle=\overline{a} \langle u,T^∗ (v_1) \rangle +\overline{b} \langle u,T^∗ (v_2)\rangle =\langle u, aT^∗ (v_1 )+bT^∗ (v_2 )\rangle,~ \forall u \in V$$，所以$$T^∗$$ 為線性。
+* 證明$$T^∗$$ 唯一性
+* 假設存在$$U:V \rightarrow V \ni  \langle T(u),v\rangle = \langle u, U(v)\rangle ,~ \forall u,v \in V$$。
+* 所以$$\langle u,U(v) \rangle=\langle u, T^∗ (v)\rangle,~ \forall u,v \in V$$。
+* $$\langle U(v),v \rangle=\langle T^∗ (v),u \rangle, ~\forall u,v \in V$$。
+* 根據內積算子性質得所以$$U=T^∗$$，即$$T^∗$$ 唯一 \(QED\).
+
+
+
 
 
 

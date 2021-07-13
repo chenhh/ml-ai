@@ -31,3 +31,12 @@ Proof \(3\):
 * 且$$x^\mathrm{H} A^\mathrm{H} Ax=(Ax)^\mathrm{H} (Ax)=\|Ax\|^2=\| \lambda x\|^2=|\lambda |^2 \|x\|^2$$
 * 所以$$\|x\|^2=|\lambda|^2 \|x\|^2$$且$$\|x\|^2\geq 0$$，得$$|\lambda|^2=1$$，所以$$|\lambda|=1$$ \(QED\)
 
+### 零算子對所有向量的內積為零
+
+> 向量空間$$V$$定義在$$\mathbb{C}$$上，線性轉換$$T \in L(V,V)$$，則：
+>
+> * 若$$\langle T(x),y\rangle=0, ~\forall x,y \in V$$，則$$T=0$$（即$$\forall x \in V, T(x)=0$$）
+> * 若$$\langle T(x),x \rangle=0, ~x \in V$$，則$$T=0$$。
+>
+> 註：若$$\langle x, y \rangle =0, ~ \forall y \in V$$，則$$x=0$$，或者$$\forall x \in V$$，則$$y=0$$，即只有0向量與所有向量的內積為0。
+

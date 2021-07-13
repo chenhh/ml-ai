@@ -65,6 +65,18 @@ Proof:
 >
 > 註：若$$B$$為非單範正交基底時，可經Gram-Schmidt正交化過程處理即可。
 
+Proof:
+
+* 令矩陣$$A=[T]_B, P=[T^∗ ]_B$$
+* 根據正交基底的係數得$$T(b_j )=\sum_{i=1}^N \langle T(b_j ),b_i \rangle  b_i$$
+* 所以$$[T(b_j )]_B = \begin{bmatrix}  \langle T(b_j), b_1 \rangle \\ \langle T(b_j), b_2 \rangle \\ \vdots \\ \langle T(b_j), b_N \rangle \end{bmatrix}$$
+* 因此$$[A]_{ij}=\langle T(b_j ),b_i \rangle, ~\forall i,j=1,2, \dots,N$$
+* 同理可得$$[P]_{ij}= \langle T^∗ (b_j ),b_i  \rangle, ~\forall i,j=1,2,\dots,N$$
+* 所以$$[P]_{ij}=\langle T^∗ (b_j ),b_i \rangle=\overline{\langle b_i,T^∗ (b_j) \rangle}=\overline{\langle T(b_i), b_j \rangle} = \overline{A_{ji}} = (A^\mathrm{H})_{ij}$$
+* 可得$$P=A^\mathrm{H}$$  \(QED\)
+
+
+
 
 
 

@@ -137,15 +137,16 @@ Proof \(7\):
 * $$(T^{−1} )^∗ T^∗=(TT^{−1} )^∗=I^∗=I \text{ and }T^∗ (T^{−1} )^∗=(T^{-1} T)^∗=I^∗=I$$
 * 所以$$(T^∗ )^{−1}=(T^{−1} )^∗$$  \(QED\)
 
+### 伴隨算子的特徵根
 
+> 線性轉換$$T \in L(V,V)$$，若$$\lambda$$為$$T$$的特徵根，則$$\overline{\lambda}$$為$$T^∗$$ 特徵根。
 
+> 註：$$T$$與$$T^∗$$ 通常為相異的特徵向量，因$$T$$與$$T^∗$$ 為不同算子；正規算子才可保證有相同的特徵向量。
 
+Proof:
 
-
-
-
-
-
-
-
+* 令$$B$$為$$V$$的單範正交基底且$$A=[T]_B$$
+* 若$$\lambda$$為$$T$$的特徵根，則$$\lambda$$為$$A$$的特徵根。
+* $$\det⁡(A−\lambda I)=0 \Rightarrow \det⁡((A− \lambda I)^\mathrm{H} )=0 \Rightarrow \det⁡(A^\mathrm{H}−\overline{\lambda}I)=0$$
+* 所以$$\overline{\lambda}$$為$$A^\mathrm{H}=[T^∗ ]_B$$ 的特徵根 \(QED\)
 

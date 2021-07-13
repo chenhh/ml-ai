@@ -131,6 +131,14 @@ Proof \(6\):
 * $$\langle x,I^∗ (y) \rangle=\langle I(x),y \rangle=\langle x,y \rangle=\langle x,I(y) \rangle$$
 * 所以$$I^∗ (y)=I(y) \Rightarrow I^∗=I$$ \(QED\)
 
+Proof \(7\):
+
+* 因為$$T$$為可逆函數，因此$$T^{−1}$$ 存在，根據伴隨算子存在唯一性得$$(T^{−1} )^∗$$ 存在唯一。
+* $$(T^{−1} )^∗ T^∗=(TT^{−1} )^∗=I^∗=I \text{ and }T^∗ (T^{−1} )^∗=(T^{-1} T)^∗=I^∗=I$$
+* 所以$$(T^∗ )^{−1}=(T^{−1} )^∗$$  \(QED\)
+
+
+
 
 
 

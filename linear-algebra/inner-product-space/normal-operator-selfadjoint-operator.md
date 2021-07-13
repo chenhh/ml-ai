@@ -43,13 +43,22 @@ Proof \(4\)
 * $$T(v_1 )=\lambda_1 v_1, ~T(v_2 )=\lambda_2 v_2, ~v_1,v_2 \neq 0$$
 * $$\lambda_1 \langle v_1,v_2 \rangle= \langle \lambda_1 v_1,v_2 \rangle=\langle T(v_1 ),v_2 \rangle =\langle v_1,T^∗ (v_2) \rangle=\langle v_1, \overline{\lambda_2}v_2 \rangle=λ_2 \langle v_1,v_2 \rangle$$
 * $$\Rightarrow (\lambda_1−\lambda_2 )\langle v_1,v_2 \rangle=0$$
-* 因為$$\lambda_1 \neq \lambda_2 \Rightarrow \langle v_1,v_2 \rangle=0$$，即$$v_1 \bot v_2$$  \(QED\).
+* 因為$$\lambda_1 \neq \lambda_2 \Rightarrow \langle v_1,v_2 \rangle=0$$，即$$v_1 \bot v_2$$  \(QED\)
 
+## 自伴算子、斜自伴算子\(self-adjoint operator, skew self-adjoint operator\)
 
+> * 線性轉換$$T \in L(V,V)$$，若$$T^∗=T$$，則稱$$T$$為自伴算子\(self-adjoint operator\)。
+> * 線性轉換$$T\in L(V,V)$$，若$$T^∗=−T$$，則稱$$T$$為斜自伴算子\(skew self-adjoint operator\)。
 
+### 自伴算子的特性
 
-
-
+> 線性轉換$$T\in L(V,V)$$為自伴算子，則：
+>
+> 1. $$T$$為正規算子（自伴算子為正規算子的子集合）。
+> 2. $$T$$的相異特徵根對應之特徵向量必正交。
+> 3. $$T$$的特徵根皆為實數。
+> 4. $$T$$的特徵多項式在$$\mathbb{R}$$可分解。
+> 5. $$\det⁡(T) \in \mathbb{R}$$。
 
 
 

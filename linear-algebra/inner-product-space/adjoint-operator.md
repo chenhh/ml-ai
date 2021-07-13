@@ -90,6 +90,30 @@ Proof:
 * $$T^*(e_1)=(-2i, 3), ~T^*(e_2)=(1, -1)$$
 * $$T^*(x,y)=xT^*(e_1)+yT^*(e_2)=(-2ix+y, 3x-y)$$
 
+### 伴隨算子的性質
+
+> 線性轉換$$T,U \in L(V,V), ~a,b \in F$$
+>
+> 1. $$(T+U)^∗=T^∗+U^∗$$（$$(A+B)^\mathrm{H}=A^\mathrm{H} + B^\mathrm{H}$$）
+> 2. $$(aT)^∗=\overline{a}T^∗$$（$$(aA)^\mathrm{H}=\overline{a}A^\mathrm{H}$$）
+> 3. $$(aT+bU)^∗=\overline{a}T^∗+\overline{b}U^∗$$
+> 4. $$(T^∗ )^∗=T$$
+> 5. $$(TU)^∗=U^∗ T^∗$$
+> 6. $$I^∗=I$$
+> 7. 若$$T$$為可逆函數，則$$T^∗$$ 也為可逆函數，且$$(T^∗ )^{−1}=(T^{−1} )^∗$$。
+
+Proof \(1\):
+
+* $$\forall x,y \in V$$
+* $$\langle x, (T+U)^∗ (y) \rangle=\langle (T+U)(x),y \rangle=\langle T(u)+U(x),y \rangle= \langle T(x),y \rangle+ \langle U(x),y \rangle= \langle x,T^∗ (y) \rangle +\langle x,U^∗ (y) \rangle= \langle x,T^∗ (y)+U^∗ (y) \rangle= \langle x, (T^∗+U^∗ )(y) \rangle $$ \(QED\)
+
+Proof \(2\)
+
+* $$\forall x,y \in V$$
+* $$\langle x,(aT)^∗ y⟩=\langle (aT)(x),y \rangle =a \langle T(x),y \rangle =a\langle  x,T^∗ (y) \rangle=\langle x, \overline{a}T^∗ (y) \rangle=\langle x,(\overline{a} T^∗ )(y) \rangle$$  \(QED\)
+
+
+
 
 
 

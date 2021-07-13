@@ -83,7 +83,35 @@ Proof \(3\):
 * 所以$$\lambda \|x\|^2= \overline{\lambda }\|x\|^2$$
 * 因為$$\|x\|^2>0$$，因此$$\lambda = \overline{\lambda}$$，所以特徵根$$\lambda $$為實數 \(QED\)
 
+### 斜自伴算子的特性
 
+> 線性轉換$$T \in L(V,V)$$為斜自伴算子\($$T^∗=−T$$\)，則：
+>
+> 1. $$T$$為正規算子\(斜自伴算子為正規算子的子集合\)。
+> 2. $$T$$的相異特徵根對應之特徵向量必正交。
+> 3. $$T$$的特徵根皆為0或純虛數。
 
+### skew Hermitian\(symmetric\)矩陣的性質
 
+> 矩陣$$A \in \mathbb{C}^{N \times N}$$ Is skew Hermitian matrix \($$A^\mathrm{H}=−A$$\)，\(若$$A \in \mathbb{R}^{N \times N}$$，且$$A^\top＝−A$$\)則：
+>
+> 1. $$A$$為正規矩陣 $$(A^mathrm{H} A=−AA=A(−A)=AA^\mathrm{H}$$\)。
+> 2. $$A$$的相異特徵根對應之特徵向量必正交 \(因為skew Hermitian \(symmetric\)矩陣為正規矩陣\)。
+> 3. $$A$$的特徵根均為0或虛數。
+> 4. $$A$$的主對角項元素均為0或純虛數。   \(因為$$[A^\mathrm{H} ]_{ii}=[−A]_{ii} \Leftrightarrow [\overline{A^\top}]_{ii}=[−A]_{ii} \Leftrightarrow [\overline{A} ]_{ii}=[−A]_{ii},~ i=1,2,\dots,N$$\)
+> 5. 當$$N$$為偶數時，$$\det⁡(A) \in \mathbb{R}$$；當$$N$$為奇數時，$$\det⁡(A)=0$$或純虛數。
+
+Proof \(3\):
+
+* 令$$\lambda$$為$$A$$的特徵根，則$$\exists x \neq 0 \ni Ax=\lambda x$$。
+* 得$$x^\mathrm{H} Ax=x^\mathrm{H} \lambda x=\lambda x^\mathrm{H} x=\lambda \|x\|^2$$。
+* 而$$x^\mathrm{H} Ax=−x^\mathrm{H} A^\mathrm{H} x=−(Ax)^\mathrm{H} x=−(\lambda x)^\mathrm{H} x=-\overline{\lambda}x^\mathrm{H} x=−\overline{\lambda }\|x\|^2$$
+* 所以$$\lambda \|x\|^2=−\overline{\lambda }\|x\|^2$$
+* 因為$$\|x\|^2>0$$，可得$$\lambda = - \overline{\lambda}$$，因此特徵根$$\lambda$$為純虛數 \(QED\)
+
+Proof\(5\):
+
+* $$\det⁡(A)=\det⁡(−A^\mathrm{H} )=(−1)^N  \det⁡((\overline{A^\top}) )=(−1)^N  \overline{\det(A^\top)} = (-1)^N \overline{\det(A)}$$
+* 當$$N$$為偶數時，$$\det⁡(A)=\overline{\det(A)}$$，因此$$\det(A) \in \mathbb{R}$$。
+* 當$$N$$為奇數時，$$\det⁡(A)=-\overline{\det(A)}$$，因此$$\det(A)=0$$或純虛數 \(QED\)
 

@@ -59,6 +59,12 @@ Proof:
 
 * $$\langle u,T(v)\rangle=\overline{\langle⟨T(v),u⟩\rangle}=\overline{\langle v,T^∗ (u) \rangle}=\langle T^∗ (u),v \rangle$$  \(QED\)
 
+### 伴隨算子的矩陣表示法為Hermetian matrix
+
+> 線性轉換$$T \in L(V,V)$$，$$B=\{b_1, b_2, \dots, b_N\}$$為$$V$$的一組單範正交基底，則：$$[T^*]_B=[T]_B^\mathrm{H}$$。
+>
+> 註：若$$B$$為非單範正交基底時，可經Gram-Schmidt正交化過程處理即可。
+
 
 
 

@@ -53,5 +53,24 @@ Proof \(2\):
 * 因為$$\forall u,v\in V$$，$$\langle T(u),v\rangle=0$$，得$$0=\langle T(iu),v \rangle+\langle T(v),iu \rangle=\langle iT(u),v \rangle+\langle T(v),iu \rangle=i\langle T(u),v \rangle−i \langle T(v),u\rangle \Rightarrow  \langle T(u),v \rangle−\langle T(v),u \rangle=0$$−−\(b\)
 * \(a\)\(b\)相加得$$2 \langle T(u),v \rangle =0 \Rightarrow T=0$$ \(QED\)
 
+###  么正算子的性質
+
+> 向量空間$$V$$定義在$$\mathbb{C}$$上，線性轉換$$T \in L(V,V)$$，則以下敘述等價：
+>
+> 1. $$T$$為么正算子（$$T^*T=I$$）
+> 2. $$T$$保內積，即$$\langle T(x), T(y) \rangle = \langle x, y \rangle, ~\forall x, y \in V$$）
+> 3. $$T$$保長度，即$$\| T(x)\| = \|x\|, ~ \forall x \in V$$。
+> 4. 若$$B$$為$$V$$的單範正交基底，則$$T(B)$$也是$$V$$的單範正交基底。
+>
+> 註：么正算子可以視為空間上基底變換某個視角看資料，資料間的距離、長度均不變，只有資料的座標變了。
+
+Proof \(1\)=&gt;\(2\)
+
+* $$\forall x ,y \in V,  \langle T(x),T(y) \rangle=\langle T^∗ T(x),y \rangle=\langle I(x),y⟩= \langle x,y \rangle$$   \(QED\)
+
+
+
+### 
+
 
 

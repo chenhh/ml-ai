@@ -11,5 +11,16 @@
 >
 > 此為雙變數函數$$f(x,y)$$的線性算子形式。
 
-* 例如$$A\in F^{N \times N}, V=F^{N \times 1}$$，定義$$f(x,y)=y^{\top}Ax$$或$$f(x,y)=x^{\top}Ax \in B(V)$$
+* 例如$$A\in F^{N \times N}, V=F^{N \times 1}$$，定義$$f(x,y)=y^{\top}Ax$$或$$f(x,y)=x^{\top}Ax \in B(V), \forall x, y \in V$$
+
+### 雙線性函數形成向量空間
+
+> 雙線性函數$$f \in B(V)$$，則$$f(x, 0)=(0,x)=0, \forall x \in V$$。
+>
+> 定義$$B(V)$$上的加法與純量積為：
+>
+> * $$\forall f_1, f_2 \in B(V), (f_1+f_2)(x,y)=f_1(x,y)+f_2(x,y)$$
+> * $$\forall f \in B(V), c \in F, ~(cf)(x,y) = cf(x,y)$$
+>
+> 則$$B(V)$$滿足向量空間的定義。
 

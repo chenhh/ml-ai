@@ -144,8 +144,7 @@ Proof \(1\):
 Proof \(2\):
 
 * $$  \begin{align} & \frac{1}{4} (i^4 \|x+y\|^2+i^2 \|x+i^2 y\|^2 ) \\ &=\frac{1}{4} (\|x+y\|^2−\|x−y\|^2 ) \\ &=\frac{1}{4} (\langle x+y,x+y \rangle− \langle x−y,x−y \rangle ) \\ &=\frac{1}{2} (\langle x,y \rangle +\langle x,y   \rangle ) \\ &=\frac{1}{2} (\langle x,y  \rangle+\overline{\langle x,y \rangle} ) \\ &=\mathrm{Re}( \langle x,y \rangle)  \end{align}$$
-
-	• 1/4 \(i‖u+iv‖^2+i^3 ‖u+i^3 v‖^2 \)=1/4 \(i‖u+iv‖^2−i‖u−iv‖^2 \)=i/4 \(⟨u+iv, u+iv⟩−⟨u−iv,u−iv⟩\)=i/4 \(⟨u,u⟩−i⟨u,v⟩+i⟨v,u⟩−⟨v,v⟩−⟨u,u⟩−i⟨u,v⟩+i⟨v,u⟩+⟨v,v⟩\)=i/4 \(−2i⟨u,v⟩+2i⟨v,u⟩\)=i/4 \(−2i⟨u,v⟩+2i \(⟨u,v⟩ \) ̅ \)=1/2 \(⟨u,v⟩−\(⟨u,v⟩ \) ̅ \)=1/2 \(2i Im\(⟨u,v⟩\)\)=i Im\(⟨u,v⟩\)
+* $$\begin{align} & \frac{1}{4} (i \|x+iy\|^2+i^3 \|x+i^3 y\|^2 ) \\ &=\frac{1}{4} (i\|x+iy\|^2−i\|x−iy\|^2 ) \\&=\frac{i}{4} (\langle x+iy, x+iy \rangle −\langle  x−iy,x−iy \rangle  ) \\ &=\frac{i}{4} (\langle  x,x \rangle −i\langle  x,y \rangle  +i\langle  y,x \rangle −\langle  y,y \rangle \\&−\langle  x,x \rangle −i \langle  x,y \rangle  +i\langle  y,x \rangle +\langle  y,y \rangle ) \\ &=\frac{i}{4} (−2i\langle  x,y \rangle  +2i \langle   y,x \rangle  ) \\ &=\frac{i}{4} (−2i \langle  x,y \rangle   +2i (\overline{\langle x,y \rangle })) \\ &=\frac{1}{2} (\langle  x,y \rangle −(\overline{\langle x, y\rangle }) ) \\&=\frac{1}{2} (2i \mathrm{Im}(\langle  x,y \rangle )) \\&=i \mathrm{Im}( \langle  x,y \rangle )  \end{align}$$
 
 	• ∴1/4 ∑\_\(k=1\)^4▒〖i^k ‖u+i^k v‖^2=〗 Re\(⟨u,v⟩\)+i Im\(⟨u,v⟩\)=⟨u,v⟩  \(QED\)
 

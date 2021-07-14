@@ -128,6 +128,21 @@ Proof \(3\)=&gt;1:
 
 Proof \(5\) \(6\): 由$$A^\mathrm{H} A=I$$可知第$$i$$列\(行\)與第$$j$$列\(行\)在$$i \neq j$$時內積均為0，而在$$i=j$$時內積為1，因此為單範正交集 \(QED\).
 
+## polar identity
+
+> $$V$$為定義於體$$F$$的向量空間，則$$\forall x, y \in V$$：
+>
+> 1. 若$$F = \mathbb{R}$$，則$$\langle x,y\rangle = \frac{1}{4}\| x+y\|^2-\frac{1}{4} \|x-y\|^2$$
+> 2. 若$$F = \mathbb{C}$$，則$$\langle x, y \rangle = \frac{1}{4}\sum_{k=1}^4 i^k\|x+i^ky\|^2$$
+>
+> [wiki: polarization identity](https://en.wikipedia.org/wiki/Polarization_identity).
+
+Proof \(1\):
+
+* $$\begin{align} &\frac{1}{4} \|x+y\|^2 −\frac{1}{4}\|x−y\|^2  \\&=\frac{1}{4} \langle x+y,x+y \rangle −\frac{1}{4} \langle x−y,x−y \rangle \\ &=\frac{1}{4} (\langle x,x \rangle+ \langle x,y \rangle+ \langle y,x \rangle+\langle y,y \rangle) \\ &−\frac{1}{4} (\langle x,x \rangle− \langle x,y \rangle− \langle y,x \rangle+ \langle y, y \rangle) \\ &=\frac{1}{2} \langle x,y \rangle+ \frac{1}{2} \langle y, x \rangle \\ &=\frac{1}{2} \langle x,y \rangle+ \frac{1}{2} \langle x,y \rangle \\ &= \langle x,y \rangle \end{align}$$  \(QED\)
+
+
+
 
 
 

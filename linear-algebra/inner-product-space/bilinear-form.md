@@ -37,9 +37,20 @@
 
 * 當$$F=\mathbb{R}$$時，雙線性型式等於Sesqui型式。
 * 當$$F = \mathbb{C}$$時，$$B(V) \cap F(V) = \{0\}$$
+
   * 若$$ f \in B(V) \cap F(V)$$
   * 則$$f(x,y)=f(x, i(−i)y)=i(x,(−i)y)$$\[因為$$f \in β(V)]=i^2 f(x,y)$$\[因為$$f \in F(V)]=−f(x,y)    $$
   * 可得$$f(x,y)=−f(x,y)$$，所以$$f(x,y)=0,  \forall x,y \in V$$。
+
+#### 範例
+
+*  $$A \in \mathbb{C}^{N \times N}, V=\mathbb{C}^{N \times 1}$$，定義$$ f:V \times V \rightarrow F$$，$$ f(x,y)=y^\mathrm{H} Ax,~ \forall x,y \in V$$，則$$f(x,y) \in F(V)$$。
+  * $$\forall a,b \in F, x,y \in V$$
+  * $$f(ax+by,z)=z^\mathrm{H} A(ax+by)=az^\mathrm{H} Ax+bz^\mathrm{H} Ay=af(x,z)+bf(y,z)    $$
+  * $$ f(x,ay+bz)=(ay+bz)^\mathrm{H} Ax＝（\overline{a}y^\mathrm{H}+\overline{b}z^\mathrm{H} ）Ax=\overline{a}y^\mathrm{H} Ax+\overline{b}z^\mathrm{H} Ax=\overline{a} f(x,y)+ \overline{b} f(x,z)    $$
+  * 所以$$f \in F(V)    $$
+
+
 
 
 

@@ -55,3 +55,23 @@
 
 > $$V$$為定義在體$$F$$的內積空間，$$f \in F(V)$$為Sesqui型式，則唯一存在線性轉換$$T \in L(V,V)$$使得$$f(x,y)=\langle T(x), y \rangle~ \forall x,y \in V$$
 
+Proof:
+
+* $$\forall v \in V$$，定義$$g(u)=f(u,v), ~\forall u \in V$$，則$$g$$為線性函數。
+* 因此得唯一存在$$v^′ \in V \ni g(u)=\langle u,v^′\rangle, ~\forall u \in V$$
+*  定義 $$U:V \rightarrow V, ~U(v)=v^{′}$$
+* 所以$$f(u, av_1+bv_2 )=\langle u, U(av_1+bv_2 ) \rangle, ~\forall a,b \in F, u,v_1,v_2 \in V$$
+* 而且 $$f(u, av_1+bv_2 )=\overline{a} f(u,v_1 )+\overline{b} f(u,v_2 )=\overline{a} \langle u, U(v_1) \rangle +\overline{b} \langle u,U(v_2) \rangle= \langle u, aU(v_1 )+bU(v_2 ) \rangle$$
+* 所以$$\langle u, U(av_1+bv_2 )\rangle=\langle u, aU(v_1 )+bU(v_2 )\rangle$$
+* 可得$$U(av_1+bv_2 )=aU(v_1 )+bU(v_2 )$$，因此$$U$$為線性。
+* 取$$T=U^{*}$$ \($$U$$的伴隨算子\)，則$$f(u,v)=\langle u, U(v) \rangle=\langle U^{*} (u),v \rangle=\langle T(u),v \rangle, \forall u,v \in V$$，因此$$T$$存在。
+*  唯一性
+* 若存在$$T^{′} \in L(V,V)\ni f(u,v)=\langle T^{'} (u),v\rangle, \forall u,v \in V$$
+* 可得$$\langle T(u),v \rangle= \langle T^{′}(u),v \rangle, ~\forall u,v \in V$$
+* 所以$$\langle T(u)−T^{′} (u),v \rangle=0$$
+* 因此$$T(u)−T^{′} (u)=0$$
+* 所以$$T(u)=T^{′} (u), ~\forall u\in V$$
+* 即$$T=T^{′}$$，所以$$T$$唯一。 \(QED\)
+
+
+

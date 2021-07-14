@@ -102,9 +102,33 @@ Proof \(2\)=&gt;\(1\):
 * 同理$$y^\mathrm{H} Bx=(B)_{ij},~ \forall i,j=1,2, \dots,N$$
 * 所以$$(A)_{ij}=(B)_{ij}, ~\forall i,j=1,2,\dots,N$$，可得$$A=B$$ \(QED\)
 
+### 么正\(正交\)矩陣的性質
+
+> 矩陣$$A \in \mathbb{C}^{N \times N}$$ （或$$A \in \mathbb{R}^{N\times N}$$），則下列敘述等價：
+>
+> 1. $$A$$為么正矩陣\($$A^\mathrm{H} A=I_N$$\)，\($$A$$為正交矩陣$$A^\top A=I_N$$\)  。
+> 2. $$A$$保內積，即$$\langle Ax,Ay \rangle=\langle x,y \rangle, ~\forall x,y \in \mathbb{C}^{N \times 1}$$。
+> 3. $$A$$保長度，即$$\|Ax\|=\|x\|, ~\forall x \in C^{N \times 1}$$。
+> 4. 若$$B=\{b_1,\dots,b_N \}$$為$$V$$的單範正交基底，則$$\{Ab_1, \dots,Ab_N \}$$也為$$V$$的單範正交基底。
+> 5. $$A$$的行向量為單範正交集。
+> 6. $$A$$的列向量為單範正交集。
+
+Proof \(1\)=&gt;\(2\):
+
+$$\forall x,y \in \mathbb{C}^{N \times 1},  \langle Ax,Ay \rangle= \langle x,A^\mathrm{H} Ay \rangle= \langle x,Iy \rangle= \langle x,y \rangle$$  \(QED\)
+
+Proof \(2\)=&gt;\(3\)
+
+$$\forall x \in \mathbb{C}^{N \times 1} , \|Ax\|^2=\langle Ax,Ax \rangle= \langle x,x \rangle=\|x\|^2 \Rightarrow \|Ax\|=\|x\|$$ \(QED\)
+
+Proof \(3\)=&gt;1:
+
+* $$\forall x, y \in \mathbb{C}^{N \times 1}$$，$$y^\mathrm{H}A^\mathrm{H} Ax = (Ay)^\mathrm{H} (Ax) = \langle Ax, Ay \rangle = \frac{1}{4} \sum_{k=1}^4 i^k \| Ax+ i^k Ay\|^2 = \frac{1}{4} \sum_{k=1}^4 i^k \| x + i^k y\|^2 = \langle x, y \rangle = y^\mathrm{H} x = y^\mathrm{H} I x$$
+* 由矩陣相等時，矩陣的二次式也相等得$$A^\mathrm{H} A=I$$ \(QED\)
+
+Proof \(5\) \(6\): 由$$A^\mathrm{H} A=I$$可知第$$i$$列\(行\)與第$$j$$列\(行\)在$$i \neq j$$時內積均為0，而在$$i=j$$時內積為1，因此為單範正交集 \(QED\).
 
 
-### 
 
 
 

@@ -68,6 +68,50 @@ Proof \(1\)=&gt;\(2\)
 
 * $$\forall x ,y \in V,  \langle T(x),T(y) \rangle=\langle T^∗ T(x),y \rangle=\langle I(x),y⟩= \langle x,y \rangle$$   \(QED\)
 
+Proof \(2\)=&gt;\(3\)
+
+* $$\forall x \in V,  \|T(x)\|^2=\langle T(x),T(x) \rangle=\langle x,x \rangle=\|x \|^2$$
+* 因為$$\|T(x)\|^2=\|x\|^2  \text{ and } \|\cdot \| \geq 0 \Rightarrow \|T(x)\|=\|x\|$$ \(QED\)
+
+Proof \(3\)-\(1\):
+
+* $$\forall x  \in V,  \langle x ,x   \rangle= \|x \|^2=\|T(x)\|^2= \langle T(x),T(x) \rangle=\langle T^∗ T(x),x \rangle$$
+* 所以$$\langle x,x \rangle−\langle T^∗ T(x),x \rangle=\langle x−T^∗ T(x),x \rangle=\langle (I−T^∗ T)(x),x \rangle=0$$
+* 根據前述定理得$$I−T^∗ T=0$$，所以$$T^∗ T=I$$ \(QED\)
+
+Proof \(2\),\(3\)&lt;=&gt;\(4\)
+
+* 令$$B=\{b_1,\dots, b_N \},~b_i =1,~\forall i$$ 且$$\langle b_i,b_j \rangle=0, ~\forall i \neq j$$
+* 因為$$T$$保長度，所以$$\|T(b_i )\|=1, ~\forall i$$
+* 因為$$T$$保內積，所以$$\langle T(b_i ),T(b_j ) \rangle=\langle b_i, b_j  \rangle=0, ~\forall i \neq j$$
+* 因此$$T(B)$$也為$$V$$的單範正交基底 \(QED\)
+
+### 矩陣相等時，矩陣的二次式也相等
+
+> 矩陣$$A,B \in F^{N \times N}$$，則以下條件等價：
+>
+> 1. $$A=B$$
+> 2. $$y^\mathrm{H}Ax = y^\mathrm{H}Bx, ~\forall x, y\in F^{N \times 1}$$
+
+Proof \(1\)=&gt;\(2\) 必定成立。
+
+Proof \(2\)=&gt;\(1\):
+
+* 令$$x=e_j,~y=e_i$$
+* $$y^\mathrm{H} Ax=e_i^\mathrm{H} Ae_j=e_i^\mathrm{H} A_{:j}=(A)_{ij}, ~\forall i,j=,1,2\dots,N$$
+* 同理$$y^\mathrm{H} Bx=(B)_{ij},~ \forall i,j=1,2, \dots,N$$
+* 所以$$(A)_{ij}=(B)_{ij}, ~\forall i,j=1,2,\dots,N$$，可得$$A=B$$ \(QED\)
+
+
+
+### 
+
+
+
+
+
+
+
 
 
 ### 

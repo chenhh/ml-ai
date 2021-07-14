@@ -128,7 +128,7 @@ Proof \(3\)=&gt;1:
 
 Proof \(5\) \(6\): 由$$A^\mathrm{H} A=I$$可知第$$i$$列\(行\)與第$$j$$列\(行\)在$$i \neq j$$時內積均為0，而在$$i=j$$時內積為1，因此為單範正交集 \(QED\).
 
-## polar identity
+### polar identity
 
 > $$V$$為定義於體$$F$$的向量空間，則$$\forall x, y \in V$$：
 >

@@ -45,14 +45,13 @@
 #### 範例
 
 *  $$A \in \mathbb{C}^{N \times N}, V=\mathbb{C}^{N \times 1}$$，定義$$ f:V \times V \rightarrow F$$，$$ f(x,y)=y^\mathrm{H} Ax,~ \forall x,y \in V$$，則$$f(x,y) \in F(V)$$。
+
   * $$\forall a,b \in F, x,y \in V$$
   * $$f(ax+by,z)=z^\mathrm{H} A(ax+by)=az^\mathrm{H} Ax+bz^\mathrm{H} Ay=af(x,z)+bf(y,z)    $$
   * $$ f(x,ay+bz)=(ay+bz)^\mathrm{H} Ax＝（\overline{a}y^\mathrm{H}+\overline{b}z^\mathrm{H} ）Ax=\overline{a}y^\mathrm{H} Ax+\overline{b}z^\mathrm{H} Ax=\overline{a} f(x,y)+ \overline{b} f(x,z)    $$
   * 所以$$f \in F(V)    $$
 
+### Sesqui型式函數與線性轉換的對應關係
 
-
-
-
-
+> $$V$$為定義在體$$F$$的內積空間，$$f \in F(V)$$為Sesqui型式，則唯一存在線性轉換$$T \in L(V,V)$$使得$$f(x,y)=\langle T(x), y \rangle~ \forall x,y \in V$$
 

@@ -40,3 +40,18 @@ Proof \(3\):
 >
 > 註：若$$\langle x, y \rangle =0, ~ \forall y \in V$$，則$$x=0$$，或者$$\forall x \in V$$，則$$y=0$$，即只有0向量與所有向量的內積為0。
 
+Proof \(1\)
+
+* 因為$$\langle T(u),v \rangle=0,~ \forall u,v \in V$$
+* 令$$v=T(u)$$，得$$\langle T(u), T(u)\rangle=0,~\forall u \in V$$
+* 所以$$T(u)=0, \forall u \in V$$，即$$T=0$$ \(QED\)
+
+Proof \(2\):
+
+* $$\forall u,v \in V,  \langle T(u),u\rangle=\langle T(v),v \rangle=\langle T(u+v), u+v\rangle=0$$
+* 所以$$0=\langle T(u+v),u+v \rangle= \langle T(u)+T(v),u+v \rangle=\langle T(u),u\rangle+\langle T(u),v\rangle+\langle T(v),u \rangle+\langle T(v),v \rangle=\langle T(u),v\rangle+\langle T(v),u \rangle$$−−\(a\)
+* 因為$$\forall u,v\in V$$，$$\langle T(u),v\rangle=0$$，得$$0=\langle T(iu),v \rangle+\langle T(v),iu \rangle=\langle iT(u),v \rangle+\langle T(v),iu \rangle=i\langle T(u),v \rangle−i \langle T(v),u\rangle \Rightarrow  \langle T(u),v \rangle−\langle T(v),u \rangle=0$$−−\(b\)
+* \(a\)\(b\)相加得$$2 \langle T(u),v \rangle =0 \Rightarrow T=0$$ \(QED\)
+
+
+

@@ -91,3 +91,46 @@ Proof:
 * 若取標準基底$$R=\{e_1, e_2\}$$
 * $$B=\psi_R(f)=\begin{bmatrix}  f(e_1, e_1) & f(e_2, e_1) \\ f(e_1, e_2) & f(e_2, e_2)  \end{bmatrix} = \begin{bmatrix}  2 & 4 \\ 3 & -1 \end{bmatrix}$$
 
+### 雙線性函數與矩陣空間同構
+
+> $$V$$為定義在體$$F$$上的向量空間，$$\dim(V)=N$$，則雙線性函數$$B(V)$$與矩陣$$F^{N \times N}$$同構，且$$\dim(B(V))=N^2$$。
+>
+> 同理可得Sesqui型式$$F(V)$$與$$F^{N \times N}$$同構。
+
+與Proof:
+
+* 令$$B=\{b_1, \dots, b_N\}$$為$$V$$的一組基底
+* 定義函數$$\phi:B(V) \rightarrow F^{N \times N}, ~ \phi(f)=\psi_B (f), \forall f\in B(V)$$
+* 欲證明$$\phi$$為線性同構函數\(線性、一對一、映成\)
+* \(1\) 線性
+* $$\forall f,g \in B(V),~ a,b \in F$$
+* $$(af+bg)(b_j,b_i )=af(b_j,b_i )+bg(b_j,b_i ), ~\forall i,j=1,2,\dots,N$$
+* 可得$$ (\psi_β (af+bg))_{ij}=a(\psi_B (f))_{ij}+b(\psi_B (g))_{ij}, ~\forall i,j=1,2,\dots,N$$
+* $$\psi_B (af+bg)=a(\psi_B (f))+b(\psi_B (g))$$
+* $$\phi(af+bg)=\psi_B (af+bg)=a(\psi_B (f))+b(\psi_B (g))=a\phi(f)+b\phi(g)$$
+* 所以$$\phi$$為線性函數
+* \(2\) 一對一函數 \(只需證明$$ker⁡(\phi)=\{0\}$$\)
+* $$\forall f \in ker⁡(\phi) \Rightarrow \phi(f)=\psi_B (f)=0$$
+* 固定$$b_i \in B$$,定義$$ l_(b_i ):V→F$$, $$l_{b_i} (y)=f(b_i,y), ~\forall y \in V$$
+* 所以$$l_{b_i} (b_j )=f(b_i,b_j )=0, \forall b_j \in B$$
+* 可得 $$l_{b_i} (y)=0, ~\forall y \in V$$
+* $$f(b_i,y)=l_{b_i} (y)=0, ~\forall y \in V, b_i \in B$$ 
+* $$\forall y \in V$$，定義$$ r_y:V \rightarrow F, r_y (x)=f(x,y), ~\forall x \in V$$
+* 因為$$r_y (b_i )=f(b_i,y)=0,  \forall b_i \in B$$
+* 得$$r_y (x)=0, ~\forall x \in V$$
+* 所以$$f(x,y)=r_y (x)=0, ~\forall x,y \in V$$
+* 即$$f=0$$  ，所以$$ker⁡(\phi)=\{0\}$$
+* \(3\)映成函數
+* $$\forall A \in F^{N \times N}$$
+* 考慮座標同構函數$$c_B:V \rightarrow F^{N \times 1}$$, $$c_B (x)=[x]_B$$
+* 定義$$f: V \times V \rightarrow F$$, $$f(x,y)=[c_B (y)]^\top A[c_B (x)]$$
+* 因為$$f \in B(v)$$
+* 欲證$$\phi(f)=\psi_B(f)=A$$
+* 因為$$c_B (b_i )=e_i$$，$$c_B (b_j )=e_j$$
+* 所以$$f(b_j,b_i )=[c_B (b_i )]^\top A[c_B (b_j )]=e_i^\top Ae_j=e_i^\top A_{:j}=[A]_{ij}, \forall i,j=1,2,\dots,N$$
+* 得$$\phi(f)=\psi_B (f)=A$$為映成函數 \(QED\).
+
+
+
+
+

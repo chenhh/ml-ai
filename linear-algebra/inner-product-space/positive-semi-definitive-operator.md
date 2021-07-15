@@ -111,7 +111,39 @@ Proof \(5\):
 Proof \(6\):
 
 * 取$$x=e_i \neq 0$$。
-* 所以$$0<x^\mathrm{H} Ax=e_i^\mathrm{H} Ae_i=e_i^\mathrm{H} A_(:i)=(A)_{ii}, ~i=1,2,\dots,N$$ \(QED\)
+* 所以$$0<x^\mathrm{H} Ax=e_i^\mathrm{H} Ae_i=e_i^\mathrm{H} A_{:i}=(A)_{ii}, ~i=1,2,\dots,N$$ \(QED\)
+
+### 正半定矩陣的性質\(必要條件\)
+
+> $$A \in \mathbb{C}^{N \times N}$$ 為正半定矩陣，則：
+>
+> 1. $$A$$為正規矩陣\($$AA^\mathrm{H}=A^\mathrm{H} A$$\)   。
+> 2. $$A$$的相異特徵根對應之特徵向量必定正交   。
+> 3. $$A$$的所有特徵根均為非負值\($$\lambda_i \geq 0, ~\forall i$$\)   。
+> 4. $$A$$的主對角項元素均為非負值   。
+
+Proof \(1\)
+
+* 因為$$A$$為Hermitian矩陣，所以$$A$$為正規矩陣\(QED\)
+
+Proof \(2\):
+
+* 同\(1\)，因為$$A$$為正規矩陣，所以相異特徵根對應之特徵向量必正交 \(QED\)
+
+Proof \(3\):
+
+* 令$$\lambda$$為$$A$$的特徵根，所以$$\exists x \neq 0 \ni Ax=\lambda x$$。
+* 由正定矩陣的定義可得$$0 \leq x^\mathrm{H} Ax=x^\mathrm{H} \lambda x=\lambda x^\mathrm{H} x=\lambda \|x\|^2$$。
+* 因為$$x \neq 0$$，所以$$\|x\|^2>0$$，得$$\lambda \geq 0$$ \(QED\)
+
+Proof \(4\):
+
+* 取$$x=e_i \neq 0$$。
+* $$0<x^\mathrm{H} Ax=e_i^\mathrm{H} Ae_i=e_i^\mathrm{H} A_{:i}=[A]_ii,~ i=1,2,\dots,N$$ \(QED\)
+
+
+
+
 
 	
 

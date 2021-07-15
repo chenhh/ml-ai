@@ -105,15 +105,13 @@ Proof \(4\):
 
 Proof \(5\):
 
-	• 若A不為可逆矩陣，則ker⁡\(A\)≠{0}⇒∃x≠0∋Ax=0⇒x^H Ax=x^H 0=0\(與正定矩陣定義矛盾\)
-
-	• 因此A為可逆矩陣 \(QED\)
+* 若$$A$$不為可逆矩陣，則$$ker⁡(A)\neq \{0\}$$，即$$\exists x \neq 0 \ni Ax=0$$，得$$x^\mathrm{H} Ax=x^\mathrm{H} 0=0$$\(與正定矩陣定義矛盾\)  。
+*  因此$$A$$為可逆矩陣 \(QED\)
 
 Proof \(6\):
 
-	• Take x=e\_i≠0
-
-	• 0&lt;x^H Ax=e\_i^H Ae\_i=e\_i^H A\_\(⋅i\)=\(A\)\_ii, i=1,2,⋯,N \(QED\)
+* 取$$x=e_i \neq 0$$。
+* 所以$$0<x^\mathrm{H} Ax=e_i^\mathrm{H} Ae_i=e_i^\mathrm{H} A_(:i)=(A)_{ii}, ~i=1,2,\dots,N$$ \(QED\)
 
 	
 

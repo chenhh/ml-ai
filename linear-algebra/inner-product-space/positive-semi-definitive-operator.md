@@ -173,5 +173,26 @@ Proof \(4\):
 * $$A= \begin{bmatrix} 4 &2 & -2 \\ 2 & 10 & 2 \\ -2 & 2 & 5  \end{bmatrix}$$，LU分解得$$A=\begin{bmatrix} 1 & 0 & 0 \\\frac{1}{2} & 1 & 0 \\-\frac{1}{2} & \frac{1}{3} & 1\end{bmatrix}\begin{bmatrix}4 & 2 & -2 \\ 0 & 9 & 3 \\ 0 & 0 & 3 \end{bmatrix}$$
 * 則$$A=LDL^\top=\begin{bmatrix} 1 & 0 & 0 \\\frac{1}{2} & 1 & 0 \\-\frac{1}{2} & \frac{1}{3} & 1\end{bmatrix}\begin{bmatrix} 4 & 0 & 0 \\0 & 9 & 0 \\ 0 & 0& 3\end{bmatrix}\begin{bmatrix} 1 & 0 & 0 \\\frac{1}{2} & 1 & 0 \\-\frac{1}{2} & \frac{1}{3} & 1\end{bmatrix}^\top$$
 
+### 對稱正半定矩陣的特性
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)，則下列敘述等價：
+>
+> 1. $$A$$為正半定矩陣\($$\forall 0 \neq x \in \mathbb{R}^{N \times 1},~ x^\top Ax \geq 0$$\)   。
+> 2. $$A$$的所有特徵根均為非負值   。
+> 3. $$\Delta_k (A) \geq 0, ~\forall k=1,2,\dots,N$$。
+
+### Hermitian矩陣與正定、正半定矩陣的關係
+
+> $$A \in \mathbb{C}^{N \times N}$$ 為Hermitian矩陣\($$A^\mathrm{H}=A$$\)，則：
+>
+> * $$A$$為正定矩陣\($$\forall 0 \neq x \in \mathbb{R}^{N \times 1}$$, $$x^\top Ax>0$$\) $$\Leftrightarrow A$$的所有特徵根為正值  。
+> * $$A$$為正半定矩陣\($$\forall 0 \neq x \in \mathbb{R}^{N \times 1}, ~x^\top Ax\geq 0$$\)$$\Leftrightarrow A$$的所有特徵根為非負值  。
+
+## Cholesky分解
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)，若$$A$$為正定矩陣，則$$A$$可分解成$$A=LL^\top$$。其中$$L$$為下三角矩陣且對角項元素皆為正值。
+
+
+
 
 

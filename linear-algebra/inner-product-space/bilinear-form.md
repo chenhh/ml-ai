@@ -130,6 +130,18 @@ Proof:
 * 所以$$f(b_j,b_i )=[c_B (b_i )]^\top A[c_B (b_j )]=e_i^\top Ae_j=e_i^\top A_{:j}=[A]_{ij}, \forall i,j=1,2,\dots,N$$
 * 得$$\phi(f)=\psi_B (f)=A$$為映成函數 \(QED\).
 
+## 對稱雙線性形式、Hermitian型式
+
+> 雙線性形式$$f \in B(V)$$，若$$f(x,y)= f(y,x) ~\forall x,y \in V$$，則稱$$f$$為對稱雙線性形式（symmetric bilinear form）。
+>
+> Sesqui形式$$f \in F(V)$$，若$$f(x,y)=\overline{f(y,x)}, ~ \forall x, y \in V$$，則稱$$f$$為Hermitian形式。
+
+* 令$$B=\{b_1,b_2,\dots,b_N \}$$為$$V$$的一組基底，$$A=\psi_B (f)$$
+* 若$$f$$為對稱雙線性形式，則$$f(b_j,b_i )=f(b_i,b_j )$$，即$$[A]_{ij}=[A]_{ji}, ~\forall i,j$$，因此$$A$$為對稱矩陣。
+* 若$$f$$為Hermitian形式，則$$f(b_j,b_i )=\overline{f(b_i,b_j)}$$，即$$[A]_{ij}=\overline{[A]_{ji}}, ~ \forall i,j$$，因此$$A$$為Hermitian形式。
+
+
+
 
 
 

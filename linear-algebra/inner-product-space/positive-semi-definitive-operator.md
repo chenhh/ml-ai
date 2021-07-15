@@ -141,17 +141,3 @@ Proof \(4\):
 * 取$$x=e_i \neq 0$$。
 * $$0<x^\mathrm{H} Ax=e_i^\mathrm{H} Ae_i=e_i^\mathrm{H} A_{:i}=[A]_ii,~ i=1,2,\dots,N$$ \(QED\)
 
-
-
-
-
-	
-
-
-
-
-
-
-
-
-

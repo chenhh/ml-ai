@@ -83,3 +83,11 @@ Proof:
 >
 > 也可定義$$[A]_{ij}=f(b_i,b_j )$$，此時矩陣與上述定義互為轉置。
 
+#### 範例
+
+* 函數$$f: \mathbb{R}^2 \times \mathbb{R}^2 \rightarrow \mathbb{R}$$，$$f \in B(V)$$為雙線性，$$f\left(  \begin{bmatrix} x_1 \\ y_1 \end{bmatrix}, \begin{bmatrix} x_2 \\ y_2 \end{bmatrix}   \right)=2x_1 y_1 + 3 x_1 y_2 + 4 x_2 y_1 - x_2 y_2$$。
+* 取基底$$B=\left\{ b_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, b_2 = \begin{bmatrix} 1 \\ -1 \end{bmatrix} \right\}$$
+* $$A=\psi_B(f) = \begin{bmatrix}  f(b_1, b_1) & f(b_2, b_1) \\ f(b_1, b_2) & f(b_2, b_2) \end{bmatrix} = \begin{bmatrix}  8 & 2 \\ 4 & -6 \end{bmatrix}$$
+* 若取標準基底$$R=\{e_1, e_2\}$$
+* $$B=\psi_R(f)=\begin{bmatrix}  f(e_1, e_1) & f(e_2, e_1) \\ f(e_1, e_2) & f(e_2, e_2)  \end{bmatrix} = \begin{bmatrix}  2 & 4 \\ 3 & -1 \end{bmatrix}$$
+

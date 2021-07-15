@@ -52,7 +52,7 @@ Proof &lt;=
 * $$\Rightarrow T(y)=T^∗ (y), \forall y \in V$$
 * 所以$$T=T^∗$$ \(QED\)
 
-
+## 矩陣的二次式\(quadratic form\)
 
 
 

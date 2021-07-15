@@ -140,9 +140,20 @@ Proof:
 * 若$$f$$為對稱雙線性形式，則$$f(b_j,b_i )=f(b_i,b_j )$$，即$$[A]_{ij}=[A]_{ji}, ~\forall i,j$$，因此$$A$$為對稱矩陣。
 * 若$$f$$為Hermitian形式，則$$f(b_j,b_i )=\overline{f(b_i,b_j)}$$，即$$[A]_{ij}=\overline{[A]_{ji}}, ~ \forall i,j$$，因此$$A$$為Hermitian形式。
 
+## 二次型式
 
+> 雙線性函數$$f\in B(V)$$或Sesqui型式函數$$f \in F(V)$$。
+>
+> 定義函數$$Q: V \rightarrow F$$，$$Q(x) = f(x,x)$$，稱$$Q$$為$$f$$的二次式\(quadratic form associated with f\)。
 
+#### 範例
 
+* $$f \in B(V)$$，$$f(x,y)=\frac{1}{4} (Q(x+y)−Q(x−y)), ~\forall x,y \in V$$
+* $$\begin{align} &Q(x+y)−Q(x−y)  \\ &=f(x+y,x+y)−f(x−y,x−y) \\ &=[f(x,x)+f(x,y)+f(y,x)+f(y,y)]−[f(x,x)−f(x,y)−f(y,x)+f(y,y)] \\ &=2f(x,y)+2f(y,x) \\ &=2f(x,y)+2f(x,y) \\ &=4f(x,y) \end{align}$$
 
+## 正定型式
 
+> 雙線性函數$$f\in B(V)$$或Sesqui型式函數$$f \in F(V)$$。
+>
+> 定義函數$$Q: V \rightarrow F$$，$$Q(x) = f(x,x) > 0, \forall x \neq 0$$，稱$$f$$為正定形式（positive definite form）。
 

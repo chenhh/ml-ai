@@ -192,7 +192,28 @@ Proof \(4\):
 
 > $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)，若$$A$$為正定矩陣，則$$A$$可分解成$$A=LL^\top$$。其中$$L$$為下三角矩陣且對角項元素皆為正值。
 
+### 正定矩陣的分解性質
 
+> $$A \in \mathbb{c}^{N \times N}  $$，則：
+>
+> * $$A$$為正定矩陣$$\Leftrightarrow$$存在$$B \in \mathbb{C}^{N \times N}$$ 為可逆矩陣 $$∋A=B^\mathrm{H} B$$。
+> * A為正定矩陣$$\Leftrightarrow$$存在$$B \in \mathbb{C}^{M \times N}$$, $$rank(B)=N \ni A=B^\mathrm{H} B$$。
+> * $$A$$為正定矩陣$$\Leftrightarrow$$存在$$B$$為正定矩陣$$ \ni A=B^2$$。
 
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣，則：
+>
+> * $$A$$為正定矩陣$$\Leftrightarrow$$存在$$B \in \mathbb{R}^{M \times N}$$, $$rank(B)=N \ni A=B^\top B$$。
+> * $$A$$為正定矩陣$$\Leftrightarrow$$存在$$B$$為正定矩陣使得$$A=B^2$$。
 
+### 正半定矩陣的分解性質
+
+> $$A \in \mathbb{C}^{N \times N}$$  ，則：
+>
+> * $$A$$為正半定矩陣$$\Leftrightarrow$$存在$$B \in \mathbb{C}^{M \times N}\ni A=B^\mathrm{H} B$$。
+> * $$A$$為正半定矩陣$$\Leftrightarrow$$存在$$B$$為正半定矩陣$$\ni A=B^2$$。
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣，則：
+>
+> * $$A$$為正半定矩陣$$\Leftrightarrow$$存在$$B \in \mathbb{R}^{M \times N} \ni A=B^\top B$$。
+> * $$A$$為正半定矩陣$$\Leftrightarrow$$存在$$B$$為正半定矩陣$$\ni A=B^2$$。
 

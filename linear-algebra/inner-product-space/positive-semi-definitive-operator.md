@@ -141,3 +141,9 @@ Proof \(4\):
 * 取$$x=e_i \neq 0$$。
 * $$0<x^\mathrm{H} Ax=e_i^\mathrm{H} Ae_i=e_i^\mathrm{H} A_{:i}=[A]_ii,~ i=1,2,\dots,N$$ \(QED\)
 
+## 主子行列式\(principal  minors\)
+
+> 矩陣$$A=[a_{ij} ] \in F^{N\times N}$$，定義$$A$$的主子行列式為：
+>
+> $$\Delta_k(A) = \det\begin{vmatrix} a_{11} & a_{12} & \dots & a_{1k} \\   \vdots & \vdots & \ddots & \vdots \\    a_{k1} & a_{k2} & \dots & a_{kk}   \end{vmatrix} ~ 1 \leq k \leq N$$
+

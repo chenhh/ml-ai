@@ -22,6 +22,14 @@ Proof &lt;= \(to prove $$A^\mathrm{H}=A$$等於證明$$y^\mathrm{H} A^\mathrm{H}
 * \(a\)+\(b\)得$$2y^\mathrm{H} A^\mathrm{H} x=2y^\mathrm{H} Ax$$
 * 所以$$A^\mathrm{H}=A $$\(QED\)
 
+###  自伴算子的雙變數線性算子必為實數值
+
+> $$V$$為定義在$$\mathbb{C}$$的內積空間，線性轉換$$T \in L(V,V)$$，則：
+>
+> $$T$$為自伴算子（$$T^{*}=T$$）$$\Leftrightarrow$$$$\langle T(x), x \rangle \in \mathbb{R}, ~\forall x \in V$$。
+
+### 
+
 
 
 

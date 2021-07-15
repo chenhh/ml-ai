@@ -54,6 +54,73 @@ Proof &lt;=
 
 ## 矩陣的二次式\(quadratic form\)
 
+> * 矩陣$$A \in \mathbb{C}^{N \times N}$$，定義$$A$$的二次式\(quadratic form\)為$$Q(x)=x^\mathrm{H} Ax, ~\forall x \in \mathbb{C}^{N \times 1}$$。
+> * 矩陣$$A \in \mathbb{R}^{N \times N}$$，定義$$A$$的二次式\(quadratic form\)為$$Q(x)=x^\top Ax, ~\forall x \in \mathbb{R}^{N \times 1}$$。
+
+#### 範例
+
+* $$A=\begin{bmatrix}    1 & 2 & 3 \\  2 & 3 & 4 \\  3 & 4 & 5\end{bmatrix}$$，$$x=\begin{bmatrix} x \\y \\z \end{bmatrix}$$
+* $$Q(x)=x^\top A x = \begin{bmatrix} x & y &z \end{bmatrix} \begin{bmatrix}    1 & 2 & 3 \\  2 & 3 & 4 \\  3 & 4 & 5\end{bmatrix} \begin{bmatrix} x \\ y \\z \end{bmatrix} = x^2 +3y^2+5z^2+4xy+6xz $$
+*  對照二次式展開的形式與矩陣$$A$$的參數可發現，主對角線$$[A]_{ii},~ i=1,2,3$$分別為$$x^2,y^2,z^2$$ 的係數，而$$[A]_{ij}$$ 分別是$$x$$中第$$i$$個元素與第$$j$$個元素相乘的係數。
+
+## 正\(半\)定算子
+
+> * 線性轉換$$T \in L(V,V)$$，若$$T$$為自伴算子（$$T^∗=T$$）且（$$\langle T(v) ,v \rangle >0,~\forall v \neq 0$$），則稱$$T$$為正定算子\(positive definite operator\)  。
+> * 矩陣$$A \in \mathbb{C}^{N \times N}$$，若$$A$$為Hermitian matrix \($$A^\mathbb{H}=A$$\)且$$Q(x)=x^\mathrm{H} Ax>0, ~\forall x \neq 0$$，則稱$$A$$為正定矩陣  。
+> * 線性轉換$$T \in L(V,V)$$，若$$T$$為自伴算子\($$T^∗=T$$\)且$$\langle T(v),v \rangle \geq 0, ~\forall v \in V$$，則稱$$T$$為正半定算子\(positive semi-definite operator\)  。
+> * 矩陣$$A \in \mathbb{C}^{N \times N}$$，若$$A$$為Hermitian matrix \($$A^\mathrm{H}=A$$\)且$$Q(x)=x^\mathrm{H} Ax \geq 0, ~\forall x \in \mathbb{C}^{N \times 1}$$，則稱$$A$$為正半定矩陣  。
+
+此原始定義因為需考慮所有的向量v計算後是否大於（等於）零，因此不容易判斷是否為正（半）定算子（正（半）定矩陣）。
+
+$$T$$為自伴算子（$$A$$為Hermitian matrix）\)是正定算子的充分條件，否則二次式無法保證為實數。
+
+### 正定矩陣的性質\(必要條件\)
+
+> $$A \in \mathbb{C}^{N \times N}$$ 為正定矩陣，則：
+>
+> 1. $$A$$為正規矩陣\($$AA^\mathrm{H}=A^\mathrm{H} A$$\)   。
+> 2. $$A$$的相異特徵根對應之特徵向量必定正交   。
+> 3. $$A$$為正半定矩陣   。
+> 4. $$A$$的所有特徵根均為正值\($$\lambda_i>0, ~i=1,2,\dots, N$$\)   。
+> 5. $$A$$為可逆矩陣\($$A^{−1}$$ 存在\)   。
+> 6. $$A$$的主對角項元素均為正值   。
+
+Proof \(1\):
+
+* 因為$$A$$為Hermitian矩陣，所以$$A$$為正規矩陣\(QED\)
+
+Proof \(2\):
+
+*  同\(1\)，因為$$A$$為正規矩陣，所以相異特徵根對應之特徵向量必正交 \(QED\)
+
+Proof \(3\):
+
+* 由定義可得$$\forall x\in V, x^\mathrm{H} Ax>0$$且$$ 0A^\mathrm{H} 0=0$$ \(QED\)
+
+Proof \(4\):
+
+* 令$$\lambda$$為$$A$$的特徵根，依定義得$$\exists x \neq 0 \ni Ax=\lambda x$$。
+* 由正定矩陣的定義可得$$0<x^\mathrm{H} Ax=x^\mathrm{H} \lambda x= \lambda x^\mathrm{H} x=\lambda \|x\|^2  $$
+* 因為$$x \neq 0$$，得$$\|x\|^2>0$$，所以$$\lambda>0$$ \(QED\)
+
+Proof \(5\):
+
+	• 若A不為可逆矩陣，則ker⁡\(A\)≠{0}⇒∃x≠0∋Ax=0⇒x^H Ax=x^H 0=0\(與正定矩陣定義矛盾\)
+
+	• 因此A為可逆矩陣 \(QED\)
+
+Proof \(6\):
+
+	• Take x=e\_i≠0
+
+	• 0&lt;x^H Ax=e\_i^H Ae\_i=e\_i^H A\_\(⋅i\)=\(A\)\_ii, i=1,2,⋯,N \(QED\)
+
+	
+
+
+
+
+
 
 
 

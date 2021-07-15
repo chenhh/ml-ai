@@ -147,3 +147,21 @@ Proof \(4\):
 >
 > $$\Delta_k(A) = \det\begin{vmatrix} a_{11} & a_{12} & \dots & a_{1k} \\   \vdots & \vdots & \ddots & \vdots \\    a_{k1} & a_{k2} & \dots & a_{kk}   \end{vmatrix} ~ 1 \leq k \leq N$$
 
+## 對稱可逆矩陣的LDU分解
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)且為可逆矩陣\($$A^{−1}$$ 存在\)。
+>
+> 若$$A$$可作LDU分解，則存在一下三角矩陣$$L$$以及一對角矩陣$$D \ni A=LDL^\top$$。 其中$$L$$的對角素元素均為1。
+
+### 對稱正定矩陣的特性
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)，則下列敘述等價：
+>
+> 1. $$A$$為正定矩陣\($$\forall 0 \neq x\in \mathbb{R}^{N \times 1}, ~x^\top Ax>0$$\)   。
+> 2. $$A$$的所有特徵根均為正值   。
+> 3. $$\Delta_k (A)>0, ~\forall k=1,2,\dots,N   $$。
+
+>
+
+
+

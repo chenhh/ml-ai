@@ -141,6 +141,11 @@ Proof:
 * 因此$$b_K$$ 為$$T$$的特徵向量
 * 所以$$T$$可么正對角化 \(QED\)
 
+## Schur's theorem: 存在么正矩陣可將矩陣轉換為上三角矩陣
+
+> * 矩陣$$A \in \mathbb{C}^{N \times N}$$, 則存在一么正矩陣$$P \in \mathbb{C}^{N \times N}, P^\mathrm{H} P=I_N \ni P^\mathrm{H} AP$$為上三角矩陣。
+> * 矩陣$$A \in \mathbb{R}^{N \times N}$$ 且$$char_A (x)$$在$$\mathbb{R}$$中可分解，則存在一個正交矩陣$$P \in \mathbb{R}^{N\times N}, ~P^\top P=I_N \ni P^\top AP$$為上三角矩陣。
+
 
 
 

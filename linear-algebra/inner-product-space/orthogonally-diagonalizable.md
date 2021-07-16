@@ -116,7 +116,13 @@ Proof:
 * 由數學歸納法假設知存在$$W^\bot$$ 的一組單範正交基底$$R\ni [W^\bot ]_R=U$$為上三角矩陣
 * 因為$$V=W \oplus W^\bot$$
 * 令 $$B=R \cup \{z\}$$
-* 則$$B$$為$$V$$的一組單範正交基底且$$[T]_B=\begin{bmatrix} R & 0 \\ 0 & \lambda \end{bmatrix}$$為上三角矩陣 \(QED\).
+* 則$$B$$為$$V$$的一組單範正交基底且$$[T]_B=\begin{bmatrix} R & 0 \\ 0 & \lambda \end{bmatrix}$$為上三角矩陣 \(QED\)
+
+## Schur's theorem: 存在單範正交基底使得正規算子可么正對角化
+
+> 線性轉換$$T \in L(V,V)$$為正規算子\($$T^∗ T=TT^∗$$\)。
+>
+> 若存在$$V$$的一組單範正交基底$$b$$使得$$[T]_B$$ 為對角矩陣，則$$T$$可么正對角化\($$∃PP^\mathrm{H}=I \ni P^\mathrm{H} [T]_B P=D$$\)。
 
 
 

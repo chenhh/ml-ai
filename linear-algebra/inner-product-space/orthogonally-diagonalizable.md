@@ -38,7 +38,40 @@ Proof:
 > 5. $$A$$為正半定矩陣\($$\forall 0\neq x \in \mathbb{C}^{N \times 1}, ~x^\mathrm{H} Ax\geq 0$$\)$$\Leftrightarrow B$$為正半定矩陣。
 > 6. $$A$$為么正矩陣\($$A^\mathrm{H} A=AA^\mathrm{H}=I_N$$\)$$\Leftrightarrow B$$為么正矩陣。
 
->
+由於&lt;=的證明只要把=&gt;的證明中的$$P$$改成$$P^\mathrm{H}$$,$$ P^\mathrm{H}$$ 改成$$P$$，因此只證明⇒
+
+Proof \(1\) =&gt;
+
+* $$A^\mathrm{H} A=AA^\mathrm{H}   B^\mathrm{H} B=(P^\mathrm{H} AP)^\mathrm{H} (P^\mathrm{H} AP)=P^\mathrm{H} A^\mathrm{H} PP^\mathrm{H} AP=P^\mathrm{H} A^\mathrm{H} AP=P^\mathrm{H}AA^\mathrm{H} P=P^\mathrm{H} APP^\mathrm{H}A^\mathrm{H} P=BB^\mathrm{H}$$\(QED\)
+
+Proof \(2\):
+
+* $$A^\mathrm{H}=A$$
+* $$B^\mathrm{H}=(P^\mathrm{H} AP)^\mathrm{H}=P^\mathrm{H} A^\mathrm{H} P=P^\mathrm{H} AP=B$$ \(QED\)
+
+Proof \(3\):
+
+* $$A^\mathrm{H}=−A$$
+* $$B^\mathrm{H}=(P^\mathrm{H} AP)^\mathrm{H}=P^\mathrm{H} A^\mathrm{H} P=−P^\mathrm{H}AP=−B$$ \(QED\)
+
+Proof \(4\):
+
+* $$\forall x \neq 0,~ x^\mathrm{H} Bx=x^\mathrm{H} P^\mathrm{H} APx=(Px)^\mathrm{H} A(Px)$$
+* 因為$$P$$為可逆矩陣，所以$$Px \neq 0$$, 且$$A$$為正定矩陣
+* 因此 $$x^\mathrm{H} Bx=(Px)^\mathrm{H} A(Px)>0$$ \(QED\)
+
+Proof \(5\):
+
+* $$\forall x\neq 0, x^\mathrm{H} Bx=x^\mathrm{H} P^\mathrm{H} APx=(Px)^\mathrm{H} A(Px)$$
+* 因為$$A$$為正半定矩陣
+* 所以 $$x^\mathrm{H} Bx=(Px)^\mathrm{H} A(Px) \geq 0$$ \(QED\)
+
+Proof \(6\):
+
+* $$A^\mathrm{H} A=I_N$$
+* $$B^\mathrm{H} B=(P^\mathrm{H} AP)^\mathrm{H} (P^\mathrm{H} AP)=P^\mathrm{H} A^\mathrm{H} PP^\mathrm{H} AP=P^\mathrm{H} A^\mathrm{H} AP=P^\mathrm{H} IP=P^\mathrm{H} P=I_N$$ \(QED\)
+
+
 
 ### 
 

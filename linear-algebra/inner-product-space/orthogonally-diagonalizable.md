@@ -179,6 +179,36 @@ Proof　\(2\):
 * $$P = W \begin{bmatrix} 1 & 0 & \dots & 0 \\  0 & & W^{'} \\ 0\end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{2}} & \frac{2}{3} & \frac{\sqrt{2}}{6} \\ -\frac{1}{\sqrt{2}} & \frac{2}{3} & \frac{\sqrt{2}}{6} \\0 & \frac{1}{3} & -\frac{2 \sqrt{2}}{3}\end{bmatrix}$$
 * 所以$$P^\top A P = \begin{bmatrix}   0.6 & \frac{\sqrt{2}}{30} & \frac{1}{6} \\ 0 & 1 & \frac{\sqrt{2}}{10} \\ 0 & 0 & 0.2  \end{bmatrix}$$
 
+## 正規矩陣且為上三角矩陣若且唯若為對角矩陣
+
+> * $$A \in \mathbb{C}^{N \times N}$$，則$$A$$為正規矩陣\($$A^\mathrm{H} A=AA^\mathrm{H}$$ \)且為上三角矩陣$$\Leftrightarrow A$$為對角矩陣。
+> * $$A \in \mathbb{R}^{N \times N}$$，則$$A$$為對稱矩陣\($$A^\top=A$$\)且為上三角矩陣$$\Leftrightarrow A$$為對角矩陣。
+
+Proof　\(1\)=&gt;
+
+* 因為$$A$$為上三角矩陣，所以$$[A]_{pq}=0, ~\forall p>q$$。
+* 因為$$A^\mathrm{H} A=AA^\mathrm{H}$$，所以$$\forall i=1,2,\dots,N$$ 
+* $$(A^\mathrm{H} A)_{ii}=(AA^\mathrm{H} )_{ii}$$
+* 得$$\sum_{k=1}^N(A^\mathrm{H})_{ik} A_{ki} = \sum_{k=1}^N(A)_{ik} (A^\mathrm{H})_{ki}$$
+* 因為是上三角矩陣，所以$$\sum_{k=1}^i(A^\mathrm{H})_{ik} A_{ki} = \sum_{k=i}^N(A)_{ik} (A^\mathrm{H})_{ki}$$
+* 整理得$$\sum_{k=1}^i \overline{(A)_{ki}} A_{ki} = \sum_{k=i}^N(A)_{ik} \overline{(A)_{ik}}$$
+* 所以$$\sum_{k=1}^i | A_{ki}|^2 = \sum_{k=i}^N |(A)_{ik} |^2$$
+* 所以
+
+  * $$ |(A)_{11} |^2=|(A)_{11} |^2+|(A)_{12} |^2+\dots+|(A)_{1N} |^2 $$
+  * $$\vdots$$
+  * $$|(A)_{1N} |^2+|(A)_{2N} |^2+\dots+|(A)_{NN} |^2=|(A)_{NN} |^2    $$
+  * 即$$|(A)_{pq} |^2=0, \forall p<q$$，且$$|(A)_{pq} |=0, ~p<q    $$
+  * 所以$$A$$為對角矩陣 \(QED\)
+
+  proof &lt;=
+
+* $$A$$為上三角矩陣顯然成立
+* 令$$A=diag(a_{11},a_{22},\dots,a_{NN} )  $$
+* 所以$$A^\mathrm{H} A=diag(|a_{11} |^2,|a_{22} |^2,\dots,|a_{NN} |^2 )=AA^\mathrm{H}$$，所以$$A$$為正規矩陣 \(QED\)
+
+
+
 
 
 

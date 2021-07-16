@@ -164,6 +164,18 @@ Proof　\(2\):
 
 因為$$char_A (x)$$在$$\mathbb{R}$$中可分解，所以$$A$$在$$\mathbb{R}$$有$$N$$個特徵根，剩餘證明同上\(QED\)。
 
+#### 範例
+
+* $$A=\begin{bmatrix} 0.8 & 0.2 & 0.1 \\ 0.1 & 0.7 & 0.3 \\0.1 & 0.1 & 0.6 \end{bmatrix}$$，$$char_A(x)=-(x-0.6)(x-1)(x-0.5)$$
+* $$\lambda_1=0.6$$
+* $$V(0.6)=ker(A-0.6I)=span\left\{ \begin{bmatrix} 1 \\ -1 \\ 0 \end{bmatrix}\right\}$$
+  * 令$$w_1=\begin{bmatrix}\frac{1}{\sqrt{2}} \\  -\frac{1}{\sqrt{2}} \\ 0\end{bmatrix}$$，由$$\mathbb{R}^3$$的標準基底經Gram-Schmidt正交化得$$w_2 = \begin{bmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \\ 0 \end{bmatrix}$$，$$w_3 = \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}$$為$$\mathbb{R}^3$$的單範正交基底。
+  * 矩陣$$W=\begin{bmatrix} w_1 & w_2  & w_3\end{bmatrix}$$，可得
+  * $$W^\top A W=\begin{bmatrix} 0.6 & 1& -0.1 \sqrt{2} \\ 0 & 0.9 & 0.2 \sqrt{2} \\0 & 0.1 \sqrt{2} & 0.6 \end{bmatrix}$$
+  * 取$$M = \begin{bmatrix} 0.9 & 0.2 \sqrt{2} \\ 0.1 \sqrt{2} & 0.6  \end{bmatrix}$$
+* $$\lambda_2 = 1$$
+* $$ker(M-I)=span\left\{ \begin{bmatrix} 2 \sqrt{2} \\ 1\end{bmatrix} \right\}$$
+
 
 
 

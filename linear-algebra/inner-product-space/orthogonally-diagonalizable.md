@@ -100,5 +100,25 @@ Proof \(3\):
 
 > 線性轉換$$T \in L(V,V)$$若$$char_T (x)$$在$$F$$中可分解，則存在$$V$$的一組單範正交基底$$B$$使得$$[T]_B$$ 為上三角矩陣。
 
+Proof:
+
+* 對$$\dim(V)$$作數學歸納法  ，$$\dim⁡(V)=1$$時成立  。
+* 假設$$\dim⁡(V)=N−1$$時命題成立  ，考慮$$\dim⁡(V)=N  $$
+* 因為$$char_T (x)$$在F中可分解，所以$$T$$必有特徵根，可得$$T^∗$$ 必有特徵根  。
+* 令$$\lambda$$為$$T^∗$$的一個特徵根  ，所以$$\exists z \neq 0 \ni T^∗ (z)=\lambda z$$, 不失一般性令$$\|z\|=1$$。
+* 令$$W=span\{z\}$$
+* 首先證明$$W^\bot$$ 為$$T$$不變子空間\(即$$\forall y \in W^\bot, T(y) \in W^\bot$$\)
+* $$\forall y \in W^\bot, x \in W \Rightarrow x=cz, ~c \in F$$
+* 所以$$\langle T(y),x \rangle= \langle y,T^∗ (x) \rangle= \langle y,T^∗ (cz) \rangle=\langle y, cT^∗ (z) \rangle=\langle y,c \lambda z \rangle=(c\overline{\lambda}) \langle y,z \rangle=0 \Rightarrow T(y) \in W^\bot$$
+* 所以$$W^\bot$$ 為$$T$$不變子空間
+* 因此$$char_{T_{W^\bot}} (x)|char_T (x) \Rightarrow char_{T_{W^\bot}} (x)$$在$$F$$中可分解
+* 因為$$\dim⁡(W^\bot )=N−1  $$
+* 由數學歸納法假設知存在$$W^\bot$$ 的一組單範正交基底$$R\ni [W^\bot ]_R=U$$為上三角矩陣
+* 因為$$V=W \oplus W^\bot$$
+* 令 $$B=R \cup \{z\}$$
+* 則$$B$$為$$V$$的一組單範正交基底且$$[T]_B=\begin{bmatrix} R & 0 \\ 0 & \lambda \end{bmatrix}$$為上三角矩陣 \(QED\).
+
+
+
 
 

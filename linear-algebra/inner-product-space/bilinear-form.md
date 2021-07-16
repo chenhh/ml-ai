@@ -140,6 +140,12 @@ Proof:
 * 若$$f$$為對稱雙線性形式，則$$f(b_j,b_i )=f(b_i,b_j )$$，即$$[A]_{ij}=[A]_{ji}, ~\forall i,j$$，因此$$A$$為對稱矩陣。
 * 若$$f$$為Hermitian形式，則$$f(b_j,b_i )=\overline{f(b_i,b_j)}$$，即$$[A]_{ij}=\overline{[A]_{ji}}, ~ \forall i,j$$，因此$$A$$為Hermitian形式。
 
+## 正定型式
+
+> 雙線性函數$$f\in B(V)$$或Sesqui型式函數$$f \in F(V)$$。
+>
+> 定義函數$$Q: V \rightarrow F$$，$$Q(x) = f(x,x) > 0, \forall x \neq 0$$，稱$$f$$為正定形式（positive definite form）。
+
 ## 二次型式
 
 > 雙線性函數$$f\in B(V)$$或Sesqui型式函數$$f \in F(V)$$。
@@ -151,9 +157,48 @@ Proof:
 * $$f \in B(V)$$，$$f(x,y)=\frac{1}{4} (Q(x+y)−Q(x−y)), ~\forall x,y \in V$$
 * $$\begin{align} &Q(x+y)−Q(x−y)  \\ &=f(x+y,x+y)−f(x−y,x−y) \\ &=[f(x,x)+f(x,y)+f(y,x)+f(y,y)]−[f(x,x)−f(x,y)−f(y,x)+f(y,y)] \\ &=2f(x,y)+2f(y,x) \\ &=2f(x,y)+2f(x,y) \\ &=4f(x,y) \end{align}$$
 
-## 正定型式
+## 二次式的應用
 
-> 雙線性函數$$f\in B(V)$$或Sesqui型式函數$$f \in F(V)$$。
+### 主軸定理\(principal axis theorem\)
+
+> * $$ A \in \mathbb{C}^{N \times N}$$ 為Hermitian matrix \($$A^\mathrm{H}=A$$\)
+>   * 則$$A$$的二次式$$Q(x)=x^\mathrm{H} Ax$$可化成$$Q(x)=\lambda_1 |y_1 |^2+\lambda_2 |y_2 |^2+\dots+\lambda_N |y_N |^2$$
+>   * $$\lambda_1,\dots,\lambda_N$$ 為$$A$$的特徵根，$$y_1,y_2\dots,y_N \in \mathbb{C}$$。
+
+> * $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣 \($$A^\top=A$$\)
+>   * 則$$A$$的二次式$$Q(x)=x^\top Ax$$可化成$$Q(x)=\lambda_1 |y_1 |^2+\lambda_2 |y_2 |^2+\dots+\lambda_N |y_N |^2$$
+>   * $$\lambda_1, \dots,\lambda_N$$ 為$$A$$的特徵根，$$y_1,y_2, \dots,y_N \in \mathbb{R}$$。
+
+### 正定矩陣的轉換
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣，$$x=\begin{bmatrix} x_1 \\ x_2 \\ \vdots \\x_N\end{bmatrix}$$，$$Q(x)=x^\top Ax$$為二次式，若$$A$$為正定矩陣（$$A^\top A = AA\top =I_N$$），則：$$\displaystyle \int_{-\infty}^{\infty} \dots \int_{-\infty}^{\infty} e^{-Q(x)}dx_1 \cdots dx_N =(\det(A))^{-\frac{1}{2}}\pi^{\frac{N}{2}}$$
+
+###  Rayleigh quotient
+
+> * $$A \in \mathbb{C}^{N \times N}$$ 為Hermitian矩陣\($$A^\mathrm{H}=A$$\)，$$x\neq 0$$, 定義$$\rho(x)=\frac{(Q(x))}{\|x\|^2}$$  稱為$$x$$之Rayleigh quotient, $$Q(x)=x^\mathrm{H} Ax$$為$$A$$的二次式。
+> * $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)，$$x \neq 0$$，定義$$\rho(x)=\frac{Q(x)}{\|x\|^2}$$  稱為$$x$$之Rayleigh quotient。
+
+* 若$$\|x\|=1$$，則$$\rho(x) = Q(x)$$
+* $$\rho(x) = \frac{Q(x)}{\|x\|^2} = \frac{x^\mathrm{H}Ax}{x^\mathrm{H}x} = \frac{\langle Ax, x \rangle}{\langle x, x \rangle}$$
+
+### Raleigh quotient與特徵向量
+
+> * $$A \in \mathbb{C}^{N \times N}$$ 為Hermitian矩陣\($$A^\mathrm{H}=A$$\)，$$\lambda$$為$$A$$的特徵根，$$x$$為$$A$$相對於$$\lambda$$的特徵向量，則$$\rho(x)=\lambda$$。
+> * $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)， $$\lambda$$為$$A$$的特徵根，則$$x$$為$$A$$相對於$$\lambda$$的特徵向量，則$$\rho(x)=\lambda$$。
+
+因為$$\rho(x) = \frac{\langle Ax, x\rangle}{\langle x,x \rangle} =  \frac{\langle \lambda x, x\rangle}{\langle x,x \rangle}  =  \frac{ \lambda \langle x, x\rangle}{\langle x,x \rangle}  = \lambda$$\(QED\)
+
+### Rayleigh principle \(特徵根與二次式的關係\)
+
+> $$A \in \mathbb{C}^{N \times N}$$ 為Hermitian矩陣\($$A^\mathrm{H}=A$$\)， $$\lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_N$$ 為$$A$$的特徵根，則：
 >
-> 定義函數$$Q: V \rightarrow F$$，$$Q(x) = f(x,x) > 0, \forall x \neq 0$$，稱$$f$$為正定形式（positive definite form）。
+> * $$\lambda_1 \leq \rho(x) \leq \lambda_N$$
+> * $$\max_{x \neq 0}⁡\rho(x)=\lambda_N$$
+> * $$\min_{x \neq 0}⁡ \rho(x)=\lambda_1$$
+
+> $$A \in \mathbb{R}^{N \times N}$$ 為對稱矩陣\($$A^\top=A$$\)，$$\lambda_1 \leq \lambda_2 \leq \dots \leq \lambda_N$$ 為$$A$$的特徵根，則：
+>
+> * $$\lambda_1 \leq \rho(x) \leq \lambda_N$$
+> * $$\max_{x \neq 0}⁡\rho(x)=\lambda_N$$
+> * $$\min_{x \neq 0}⁡ \rho(x)=\lambda_1$$
 

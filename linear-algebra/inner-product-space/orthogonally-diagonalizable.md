@@ -143,8 +143,26 @@ Proof:
 
 ## Schur's theorem: 存在么正矩陣可將矩陣轉換為上三角矩陣
 
-> * 矩陣$$A \in \mathbb{C}^{N \times N}$$, 則存在一么正矩陣$$P \in \mathbb{C}^{N \times N}, P^\mathrm{H} P=I_N \ni P^\mathrm{H} AP$$為上三角矩陣。
-> * 矩陣$$A \in \mathbb{R}^{N \times N}$$ 且$$char_A (x)$$在$$\mathbb{R}$$中可分解，則存在一個正交矩陣$$P \in \mathbb{R}^{N\times N}, ~P^\top P=I_N \ni P^\top AP$$為上三角矩陣。
+> 1. 矩陣$$A \in \mathbb{C}^{N \times N}$$, 則存在一么正矩陣$$P \in \mathbb{C}^{N \times N}, P^\mathrm{H} P=I_N \ni P^\mathrm{H} AP$$為上三角矩陣。
+> 2. 矩陣$$A \in \mathbb{R}^{N \times N}$$ 且$$char_A (x)$$在$$\mathbb{R}$$中可分解，則存在一個正交矩陣$$P \in \mathbb{R}^{N\times N}, ~P^\top P=I_N \ni P^\top AP$$為上三角矩陣。
+
+Proof:數學歸納法
+
+* $$N=1$$時顯然成立  ，假設$$N=K$$時命題成立  。
+* 考慮$$N=K+1$$
+* 因為$$A \in \mathbb{C}^{N \times N}$$, 所以$$A$$具有$$N$$個特徵根
+* 令$$\lambda_1$$ 為$$A$$的一個特徵根且$$w_1$$ 為$$A$$相對於$$\lambda_1$$ 的一個單位特徵向量  。
+* 因此存在$$v_2,\dots,v_{K+1} \in \mathbb{C}^{K+1}\ni \{w_1,v_2,\dots,v_{K+1} \}$$為$$\mathbb{C}^{K+1}$$ 的一組基底  。
+* 利用Gram-Schmidt正交化過程對$$w_1,v_2,\dots,v_{K+1}$$ 正交化得$$\{w_1,w_2,\dots,w_{K+1} \}$$為$$\mathbb{C}^{K+1}$$ 的單範正交基底  。
+* 令$$W=\begin{bmatrix} w_1 & w_2 & \dots & w_{K+1} \end{bmatrix}$$，因此$$W$$為么正矩陣
+* 因為$$W^\mathrm{H} AW$$的第一行為$$W^\mathrm{H} AWe_1=W^\mathrm{H} Aw_1=W^\mathrm{H} \lambda_1 w_1=\lambda_1 W^H w_1=\lambda_1 e_1 $$
+* 整理後可得$$W^\mathrm{H} AW=\begin{bmatrix} \lambda_1 & \dots \\ 0 & M \end{bmatrix} \in \mathbb{C}^{K \times K}$$
+* 由數學歸納假設知存在一個么正矩陣$$V_1 \in \mathbb{C}^{N \times N} \ni V_1^\mathrm{H} AV_1=R_1 $$為上三角矩陣，令$$V=\begin{bmatrix} 1 & 0 \\ 0 & V_1\end{bmatrix}$$,　則$$V$$為么正矩陣且   $$V^\mathrm{H} W^\mathrm{H} AWV=R$$為上三角矩陣
+* 取$$P=WV$$，則$$P^\mathrm{H} P=(WV)^\mathrm{H} WV=V^\mathrm{H} W^\mathrm{H} WV=I_N$$且$$PP^\mathrm{H}=I_N$$  所以$$N=K+1$$時成立　\(QED\)
+
+
+
+
 
 
 

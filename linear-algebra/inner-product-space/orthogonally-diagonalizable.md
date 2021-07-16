@@ -71,11 +71,34 @@ Proof \(6\):
 * $$A^\mathrm{H} A=I_N$$
 * $$B^\mathrm{H} B=(P^\mathrm{H} AP)^\mathrm{H} (P^\mathrm{H} AP)=P^\mathrm{H} A^\mathrm{H} PP^\mathrm{H} AP=P^\mathrm{H} A^\mathrm{H} AP=P^\mathrm{H} IP=P^\mathrm{H} P=I_N$$ \(QED\)
 
+###  正交相似的必要條件
 
+> 矩陣$$A,B \in \mathbb{R}^{N \times N}$$， 且$$A$$與$$B$$正交相似\($$P^\top AP=B$$， $$PP^\top=P^\top P=I_N$$\) ，則：
+>
+> 1. $$A$$為symmetric matrix \($$A^\top=A$$\) $$\Leftrightarrow B$$為symmetric matrix。
+> 2. $$A$$為skew symmetric matrix \($$A^\top=−A$$\) $$\Leftrightarrow B$$為skew symmetric matrix。
+> 3. $$A$$為正交矩陣\($$A^\top A=AA^\top=I_N$$\)$$\Leftrightarrow B$$為正交矩陣。
 
-### 
+由於&lt;=的證明只要把=&gt;的證明中的$$P$$改成$$P^\mathrm{H}$$，$$P^\mathrm{H}$$ 改成$$P$$，因此只證明⇒。
 
+Proof \(1\):
 
+* $$A^\top＝A$$
+* $$B^\top=(P^\top AP)^\top=P^\top A^\top P=P^\top AP=B$$ \(QED\)
+
+Proof \(2\):
+
+* $$A^\top=−A$$
+* $$B^\top=(P^\top AP)^\top=P^\top A^\top P=−P^\top AP=−B $$\(QED\)
+
+Proof \(3\):
+
+* $$A^\top A=I_N$$
+* $$B^\top B=(P^\top AP)^\top (P^\top AP)=P^\top A^\top PP^\top AP=P^\top A^\top AP=P^\top P=I_N$$ \(QED\)
+
+## Schur's theorem: 存在單範正交基底使得線性轉換為上三角矩陣
+
+> 線性轉換$$T \in L(V,V)$$若$$char_T (x)$$在$$F$$中可分解，則存在$$V$$的一組單範正交基底$$B$$使得$$[T]_B$$ 為上三角矩陣。
 
 
 

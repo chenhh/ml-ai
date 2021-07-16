@@ -124,6 +124,23 @@ Proof:
 >
 > 若存在$$V$$的一組單範正交基底$$b$$使得$$[T]_B$$ 為對角矩陣，則$$T$$可么正對角化\($$∃PP^\mathrm{H}=I \ni P^\mathrm{H} [T]_B P=D$$\)。
 
+Proof:
+
+* 根據前述定理，可知存在$$V$$的一組單範正交基底$$B=\{b_1,\dots,b_N \}\ni[T]_B=U$$為上三角矩陣  。
+* 欲證$$_1,v_2,\dots,b_N$$ 均為$$T$$的特徵向量，可對$$N$$做數學歸納法  。
+* $$N=1$$時，因為$$U$$為上三角矩陣， $$T(b_1 )=[U]_{11} b_1$$，因此$$b_1$$ 為$$T$$的特徵向量。
+* 假設$$N=k−1$$時, $$b_1,\dots,b_{k−1}$$ 均為$$T$$的特徵向量成立  。
+* 考慮$$N=K$$
+* 令$$U=\begin{bmatrix} X & Y \\ 0 & Z\end{bmatrix}$$, $$X \in F^{K−1 \times K−1} $$ 對角矩陣  。
+* 則$$U^\mathrm{H}=\begin{bmatrix} X^\mathrm{H} & 0 \\Y^\mathrm{H} & Z^\mathrm{H} \end{bmatrix}$$
+* 因為$$U$$為上三角矩陣，所以$$[U]_{jk}=0, ~\forall j>k$$
+* 由於$$[T^∗ ]_B=[T]_{B^\mathrm{H}}=U^\mathrm{H}$$ \[因為伴隨算子的矩陣表示法為Hermetian matrix\]
+*  且因為$$b_1,\dots,b_{K−1}$$ 為$$T$$的特徵向量，且$$T$$為正規算子，所以$$T^∗$$ 與$$T$$有相同的特徵向量  。
+* 即$$b_1,\dots,b_{K−1}$$ 為$$T^∗$$ 的特徵向量  。
+* 所以得$$Y^\mathrm{H}=0 \Rightarrow [U^\mathrm{H}]_{kj}=0, \forall j<k \Rightarrow [U]_{jk}=0, \forall j<k  $$
+* 因此$$b_K$$ 為$$T$$的特徵向量
+* 所以$$T$$可么正對角化 \(QED\)
+
 
 
 

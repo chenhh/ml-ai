@@ -175,6 +175,9 @@ Proof　\(2\):
   * 取$$M = \begin{bmatrix} 0.9 & 0.2 \sqrt{2} \\ 0.1 \sqrt{2} & 0.6  \end{bmatrix}$$
 * $$\lambda_2 = 1$$
 * $$ker(M-I)=span\left\{ \begin{bmatrix} 2 \sqrt{2} \\ 1\end{bmatrix} \right\}$$
+  * $$W^{'} = \begin{bmatrix} \frac{2 \sqrt{2}}{3} & \frac{1}{3} \\ \frac{1}{3} & -\frac{2 \sqrt{2}}{3}    \end{bmatrix}$$
+* $$P = W \begin{bmatrix} 1 & 0 & \dots & 0 \\  0 & & W^{'} \\ 0\end{bmatrix} = \begin{bmatrix} \frac{1}{\sqrt{2}} & \frac{2}{3} & \frac{\sqrt{2}}{6} \\ -\frac{1}{\sqrt{2}} & \frac{2}{3} & \frac{\sqrt{2}}{6} \\0 & \frac{1}{3} & -\frac{2 \sqrt{2}}{3}\end{bmatrix}$$
+* 所以$$P^\top A P = \begin{bmatrix}   0.6 & \frac{\sqrt{2}}{30} & \frac{1}{6} \\ 0 & 1 & \frac{\sqrt{2}}{10} \\ 0 & 0 & 0.2  \end{bmatrix}$$
 
 
 

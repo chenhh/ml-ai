@@ -160,6 +160,12 @@ Proof:數學歸納法
 * 由數學歸納假設知存在一個么正矩陣$$V_1 \in \mathbb{C}^{N \times N} \ni V_1^\mathrm{H} AV_1=R_1 $$為上三角矩陣，令$$V=\begin{bmatrix} 1 & 0 \\ 0 & V_1\end{bmatrix}$$,　則$$V$$為么正矩陣且   $$V^\mathrm{H} W^\mathrm{H} AWV=R$$為上三角矩陣
 * 取$$P=WV$$，則$$P^\mathrm{H} P=(WV)^\mathrm{H} WV=V^\mathrm{H} W^\mathrm{H} WV=I_N$$且$$PP^\mathrm{H}=I_N$$  所以$$N=K+1$$時成立　\(QED\)
 
+Proof　\(2\):
+
+因為$$char_A (x)$$在$$\mathbb{R}$$中可分解，所以$$A$$在$$\mathbb{R}$$有$$N$$個特徵根，剩餘證明同上\(QED\)。
+
+
+
 
 
 

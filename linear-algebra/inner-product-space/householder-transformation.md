@@ -21,3 +21,28 @@
 
 ![Householder&#x8F49;&#x63DB;](../../.gitbook/assets/householder_transform2-min.png)
 
+### Householder矩陣的必要條件
+
+> $$H=I−\frac{2}{v^\top v} vv^\top$$，則：
+>
+> 1. $$H$$為對稱矩陣\($$H^\top=H$$\)
+> 2. $$H$$為正交矩陣\($$H^\top H=HH^\top=I_N$$\)
+> 3. $$\det⁡(H)=−1$$
+
+### Houserholder矩陣的性質
+
+> * $$x,y\in \mathbb{R}^{N \times 1}$$，$$x \neq y$$，$$\|x\|_2=\|y\|_2$$  ，$$H$$是相對於x−y的Householder矩陣，則
+>   * $$\|x−y\|_2=2(x−y)^\top x$$
+>   * $$Hx=y$$
+> * $$\forall x \in \mathbb{R}^{N \times 1}$$，若$$y=ce_1$$，$$c=\|x\|_2$$，$$w=x−ce_1$$，則$$Hx=ce_1$$。
+> * 假設$$x=\begin{bmatrix}  x_1 \\ \vdots \\ x_k \\ x_{k+1} \vdots \\x_N \end{bmatrix} \in \mathbb{R}^N$$，則存在一個Householder matrix $$H \ni Hx=\begin{bmatrix}  b_1 \\ \vdots \\b_k \\ 0 \\ \vdots \\ 0 \end{bmatrix}$$，即$$Hx$$的後面$$n-k$$項均為0。
+
+###  Householder矩陣與QR分解
+
+> $$A \in \mathbb{R}^{M \times N}$$，則：
+>
+> * 存在最多$$N$$個Householder矩陣$$H_1,H_2,\dots,H_N$$ 使得$$H_N H_{N−1}\dots H_1 A=R, [R]_{ij}=0, \forall i>j$$\(上三角矩陣\)
+> * 令$$Q=H_1 H_2\dots H_N$$，則$$Q$$為正交矩陣，且$$A=QR$$為$$A$$的QR分解。
+
+> 註：QR分解是$$A$$的行向量，經Gram-Schmidt正交化過程後得到的單範正交矩陣$$Q$$，與其參數矩陣$$R$$。
+

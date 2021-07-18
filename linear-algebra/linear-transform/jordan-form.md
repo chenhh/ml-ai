@@ -80,6 +80,29 @@ Proof:
 > * 若$$0 \neq x \in K(\lambda)$$，則稱$$x$$為$$A$$相對於$$\lambda$$的廣義特徵向量。
 
 * 若$$0 \neq v \in V(\lambda)$$，即$$v$$為$$T$$相對於$$\lambda$$的特徵向量，因為$$V(\lambda) \subseteq K(\lambda) \Rightarrow v \in K(\lambda)$$，即$$v$$為$$T$$相對於$$\lambda$$的廣義特徵向量。
+* 假設$$\dim⁡(V)=N  $$
+
+  * 由kernel chain theorem知$$ker⁡(T−\lambda I) \subseteq ker⁡〖(T−\lambda I)^2 \subseteq \dots$$
+  * 且存在最小正整數$$k \ni ker⁡((T−\lambda I)^k )=ker⁡((T−\lambda I)^{k+1} )=\dots$$
+  * 所以$$K(\lambda)=\bigcup_{i=1}^\infty  ker⁡((T−\lambda I)^i )=ker⁡((T−\lambda I)^k )=ker⁡((T−\lambda I)^{k+1} )=\dots$$
+  * 因為$$k \leq N$$，所以$$K(\lambda)=ker⁡((T−\lambda)^N )$$
+
+### 廣義特徵空間為向量空間且為T不變子空間
+
+> 線性轉換$$T \in L(V,V)$$，$$\lambda$$為$$T$$的特徵根，則：
+>
+> * $$K(\lambda)$$為$$V$$的子空間 \($$\forall u,v \in K(\lambda), c \in F \Rightarrow cu+v \in K(\lambda)$$\)
+> * $$K(\lambda)$$為$$T$$不變子空間\($$T(K(\lambda)) \subseteq K(\lambda)$$\)
+
+>
+
+### 
+
+### 
+
+
+
+
 
 
 

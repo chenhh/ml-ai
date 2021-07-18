@@ -27,5 +27,17 @@
 * 因此$$T$$為可逆函數，即$$\det⁡(T) \neq 0$$，得$$char_T (0)=\det⁡(T−0I) \neq 0$$
 * 所以0不為$$T$$的特徵根 \(QED\)
 
+Proof \(2\)
+
+* 取$$B_1,B_2$$ 分別為$$W_1,W_2$$ 的基底，因為$$V=ker⁡(T^k ) \oplus R(T^k )$$，所以$$V$$的基底$$b=b_1 \cup B_2$$  \(直和空間的性質\)
+* 根據直和空間與$$T$$不變子空間的性質與fitting引理得$$[T]_B=\begin{bmatrix} A_1 & 0 \\ 0 & A_2 \end{bmatrix}$$，$$ A_1=[T_{w_1} ]_{B_1}$$ 為冪零矩陣，$$A_2=[T_{w_2} ]_{B_2}$$ 為可逆矩陣  。
+* $$char_(A_1 ) (x)=\det⁡(A_1−xI)=(−1)^M x^M$$
+* $$g(x)=char_(A_2 ) (x)=det⁡(A_2−xI) $$
+* 因為$$A_2$$為可逆矩陣，所以$$A_2$$ 不含0的特徵根，即$$g(0) \neq 0$$。
+* $$char_T (x)=\det⁡(T - xI)=\begin{vmatrix} A_1 - xI & 0 \\0 & A_2 - xI \end{vmatrix}=(−1)^M x^M g(x) $$
+* 因為$$g(0) \neq 0$$，所以0為$$char_T (x)=0$$的$$M$$重根 \(QED\).
+
+
+
 
 

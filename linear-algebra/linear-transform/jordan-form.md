@@ -112,5 +112,24 @@ Proof \(2\)
 >
 > 定義$$J_k (\lambda)≡S_k+\lambda I_k=\begin{bmatrix} \lambda & 0 & 0&\dots & 0 \\ 1 & \lambda & 0 & \dots & 0 \\    0 & 1& \lambda & \ddots & 0 \\  0 & 0 &1 & \dots & \lambda \\\end{bmatrix}_{k \times k}$$ 為$$k$$階Jordan基本矩陣或Jordan區塊\(block\)。
 
+### 廣義特徵向量的存在性與性質
+
+> 線性轉換$$T \in L(V,V)$$，$$\lambda$$為$$T$$的特徵根，則存在$$v_1,v_2,\dots,v_k \in K(\lambda) \ni $$
+>
+> 1. $$K(\lambda)=C_{v_1} (T−\lambda I) \oplus C_{v_2} (T−\lambda I) \oplus \dots  \oplus C_{v_k} (T−\lambda I)$$  \[參考循環分解定理\]
+> 2. 取$$B_i$$ 為$$C_{v_i} (T−\lambda I)$$循環子空間的基底，$$i=1,2,\dots ,k$$，則$$B=B_1 \cup B_2 \cup \dots \cup B_k$$ 為$$K(\lambda)$$的基底且 $$[T_{K(\lambda)}]_B = \begin{bmatrix}     J_{n_1}(\lambda) & 0 & \dots & 0 \\ 0 & J_{n_2}(\lambda) & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & J_{n_k}(\lambda)\end{bmatrix} $$，$$n_i = \dim(C{v_i}(T-\lambda I))$$，（由點圖可推出$$C_{v_i}$$ 的維度），$$i=1,2,\dots, k$$。
+> 3. Jordan基本矩陣區塊數 $$k=\dim⁡(ker⁡(T−\lambda I) )=gm(\lambda)$$為$$\lambda$$的特徵空間維度。
+> 4. $$(T−\lambda I)_{K(\lambda)}$$  為具有指標$$n_1$$的冪零算子。
+> 5. $$\dim⁡(K(\lambda))=m(\lambda)$$，即廣義特徵空間的維度等於代數重數。
+
+> 此定理可找出對於給定特徵值$$\lambda$$，可得對應的線性轉換矩陣形式$$[T_K(\lambda)  ]_B$$ 為$$gm(\lambda)$$個Jordan區塊於矩陣之對角線，且每個Jordan區塊的大小為循環子空間$$C_{v_i} (T−\lambda I)$$的維度。
+>
+> 矩陣$$[T_K(\lambda)  ]_B$$ 的大小為特徵根$$\lambda$$於特徵方程式$$char_T (x)$$的代數重根數$$m(\lambda)$$的平方值。
+
+Proof \(1\)
+
+* 因為$$(T−\lambda I)_K(\lambda) :K(\lambda) \rightarrow K(\lambda)$$為冪零算子  。
+* 根據循環分解定理存在唯一的$$v_1,v_2,\dots,v_r \in K(\lambda) \ni K(\lambda)=C_{v_1} (T−\lambda I) \oplus C_{v_2} (T− \lambda I) \oplus \dots  \oplus C_{v_k} (T−\lambda I)$$  \(QED\)
+
 
 

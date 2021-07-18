@@ -7,7 +7,7 @@
 * Jordan form矩陣$$J$$的形狀與原始矩陣$$A$$的大小相同。
 * 如果線性轉換$$T$$的所有特徵根的代數重數（特徵向量的重根數）均為1\($$m(\lambda_i )=1, \forall i$$\)，即此線性轉換可對角化，則此線性轉換的Jordan form為特徵根形成的對角矩陣$$D$$。因此可對角化矩陣為Jordan form的特例。
 
-### 0特徵根與核空間的關係
+## 0特徵根與核空間的關係
 
 > 線性轉換$$T \in L(V,V),~\dim⁡(V)=N<\infty$$。
 >
@@ -36,6 +36,37 @@ Proof \(2\)
 * 因為$$A_2$$為可逆矩陣，所以$$A_2$$ 不含0的特徵根，即$$g(0) \neq 0$$。
 * $$char_T (x)=\det⁡(T - xI)=\begin{vmatrix} A_1 - xI & 0 \\0 & A_2 - xI \end{vmatrix}=(−1)^M x^M g(x) $$
 * 因為$$g(0) \neq 0$$，所以0為$$char_T (x)=0$$的$$M$$重根 \(QED\).
+
+## 特徵方程式的重根性質
+
+> 線性轉換$$T \in L(V,V),~\dim⁡(V)=N<\infty$$，則：
+>
+> * $$\lambda$$不為$$char_T (x)$$的根$$\Leftrightarrow$$0不為$$char_{T− \lambda I} (x)$$的根。
+> * $$\lambda$$為$$char_T (x)$$的$$M$$重根$$\Leftrightarrow $$0為$$char_{T− \lambda I} (x)$$的$$M$$重根。
+
+Proof:
+
+* $$\lambda$$不為$$char_T (x)$$的根$$\Leftrightarrow char_T (\lambda)=\det⁡(T−\lambda I) \neq 0\Leftrightarrow char_(T−\lambda I) (0)=\det⁡(T−\lambda I−0I) \neq 0$$$$\Leftrightarrow 0$$不為$$char_(T−\lambda I) (x)$$的根 \(QED\)
+* $$\lambda$$為$$char_T (x)$$的$$M$$重根$$\Leftrightarrow \det⁡(T−xI)=(x−\lambda)^M g(x), g(λ) \neq 0\Leftrightarrow \det⁡(T−(y+\lambda)I)=y^M h(y), y=(x−\lambda), h(0) \neq 0\Leftrightarrow \det⁡((T−\lambda I)−yI)=y^M h(y)$$$$\Leftrightarrow 0$$為$$char_{T−\lambda I} (x)$$的$$M$$重根 \(QED\)
+
+##  廣義特徵空間的性質
+
+> 線性轉換$$T \in L(V,V), ~\dim⁡(V)=N<\infty$$。
+>
+> $$\lambda$$為$$T$$的特徵根，$$W=\bigcup_{i=1}^\infty  ker⁡((T−\lambda I)^i ),~\dim⁡(W)=M$$，則：
+>
+> * $$\lambda$$為$$char_T (x)$$的$$M$$重根，即$$m(\lambda)=M$$\(重根數$$m(\lambda)$$等於特徵向量空間$$K(\lambda)$$的維度\)  。
+> * $$(T−\lambda I)_W$$ 為冪零算子  。
+
+Proof:
+
+* 因為$$T−\lambda I \in L(V,V)$$，根據前述定理將$$T$$換成$$T−\lambda I$$得0為$$char_{T−λI} (x)=0$$的$$M$$重根。
+* 所以$$\lambda$$為$$char_T (x)=0$$的$$M$$重根，即$$m(\lambda)=M$$ \(QED\)
+* 由kernel chain theorem可知$$(T−\lambda I)_W$$ 為冪零算子 \(QED\)
+
+
+
+
 
 
 

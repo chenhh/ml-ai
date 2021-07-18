@@ -64,6 +64,23 @@ Proof:
 * 所以$$\lambda$$為$$char_T (x)=0$$的$$M$$重根，即$$m(\lambda)=M$$ \(QED\)
 * 由kernel chain theorem可知$$(T−\lambda I)_W$$ 為冪零算子 \(QED\)
 
+### 給定特徵根之廣義特徵空間及廣義特徵向量\(generalized eigenspace and eigenvector\)
+
+> 線性轉換$$T \in L(V,V)$$，$$\lambda$$為$$T$$的特徵根。
+>
+> * 定義$$K(\lambda)=\bigcup_{i=1}^\infty  ker⁡((T−\lambda I)^i )$$為$$T$$相對於$$\lambda$$的廣義特徵空間\(generalized eigenspace\)  。
+> * 一般的特徵空間是$$V(\lambda)=ker(T-\lambda I)$$，為$$K(\lambda)$$的特例。
+>   *  也可定義成 $$K(\lambda)=\{v \in V|(T−\lambda I)^p (v)=0 \}$$, for some $$p \in \mathbb{N}$$。
+> *  若$$0\neq v \in K(\lambda)$$，則稱$$v$$為$$T$$相對於$$λ$$的廣義特徵向量\(generalized eigenvector\)
+>   * 也可定義為$$(T−\lambda I)^p (v)=0$$，for some $$p \in \mathbb{N}$$。
+
+> $$A \in F^{N \times N}$$, $$\lambda$$為$$A$$的特徵根。
+>
+> * 定義$$K(\lambda )=\bigcup_{i=1}^\infty  ker⁡((A−\lambda I)^i )$$為$$A$$相對於$$\lambda$$的廣義特徵空間  。
+> * 若$$0 \neq x \in K(\lambda)$$，則稱$$x$$為$$A$$相對於$$\lambda$$的廣義特徵向量。
+
+>
+
 
 
 

@@ -106,5 +106,11 @@ Proof \(2\)
 * 所以$$(T−\lambda I)^p (T(v))=T(T−\lambda I)^p (v)=T(0)=0  $$
 * 得$$T(v) \in K(\lambda)$$，因此$$T(K(\lambda))\subseteq K(\lambda)$$  \(QED\)
 
+##  Jordan基本矩陣\(fundamental matrix\)
+
+> $$S_k=\begin{bmatrix} 0 & 0 & 0&\dots & 0 \\ 1 & 0 & 0 & \dots & 0 \\    0 & 1& 0 & \ddots & 0 \\  0 & 0 &1 & \dots & 0 \\\end{bmatrix}_{k \times k}$$為下移矩陣。
+>
+> 定義$$J_k (\lambda)≡S_k+\lambda I_k=\begin{bmatrix} \lambda & 0 & 0&\dots & 0 \\ 1 & \lambda & 0 & \dots & 0 \\    0 & 1& \lambda & \ddots & 0 \\  0 & 0 &1 & \dots & \lambda \\\end{bmatrix}_{k \times k}$$ 為$$k$$階Jordan基本矩陣或Jordan區塊\(block\)。
+
 
 

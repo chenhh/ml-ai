@@ -94,21 +94,17 @@ Proof:
 > * $$K(\lambda)$$為$$V$$的子空間 \($$\forall u,v \in K(\lambda), c \in F \Rightarrow cu+v \in K(\lambda)$$\)
 > * $$K(\lambda)$$為$$T$$不變子空間\($$T(K(\lambda)) \subseteq K(\lambda)$$\)
 
->
+Proof \(1\):
 
-### 
+* 因為$$K(\lambda)\subseteq V$$且$$0 \in K(\lambda)$$，所以$$K(\lambda) \neq \emptyset$$  。
+* $$\forall a,b \in F, u,v \in K(\lambda)$$$$\exists p,q∈\in \mathbb{N}$$\(kernel chain thm\)$$ \ni (T−\lambda I)^p (u)=(T−\lambda I)^q (v)=0 $$。
+* 所以$$(T−\lambda I)^{p+q} (au+bv)=a(T−\lambda I)^{p+q} (u)+b(T−\lambda I)^{p+q} (v)=a(T−\lambda I)^q (T−\lambda I)^p (u)+b(T−\lambda I)^p (T−\lambda I)^q (v)=a(T−\lambda I)^q (0)+b(T−\lambda I)^p (0)=0+0=0$$ \(QED\)
 
-### 
+Proof \(2\)
 
-
-
-
-
-
-
-
-
-
+* $$\forall v \in K(\lambda) \Rightarrow \exists p \in \mathbb{N} \ni (T−\lambda I)^p (v)=0  $$
+* 所以$$(T−\lambda I)^p (T(v))=T(T−\lambda I)^p (v)=T(0)=0  $$
+* 得$$T(v) \in K(\lambda)$$，因此$$T(K(\lambda))\subseteq K(\lambda)$$  \(QED\)
 
 
 

@@ -131,5 +131,27 @@ Proof \(1\)
 * 因為$$(T−\lambda I)_K(\lambda) :K(\lambda) \rightarrow K(\lambda)$$為冪零算子  。
 * 根據循環分解定理存在唯一的$$v_1,v_2,\dots,v_r \in K(\lambda) \ni K(\lambda)=C_{v_1} (T−\lambda I) \oplus C_{v_2} (T− \lambda I) \oplus \dots  \oplus C_{v_k} (T−\lambda I)$$  \(QED\)
 
+Proof \(2\)
+
+* 因為$$K(\lambda)$$為獨立子空間的直和  。
+* 所以$$B=B_1 \cup β_2 \cup \dots \cup B_k$$ 為$$K(\lambda)$$的基底  。
+* ∵根據定理，$$K(\lambda)$$為$$T$$不變子空間且$$K(\lambda)$$為獨立子空間的直和  。
+* 所以$$[(T−λI)_{K(\lambda)}  ]_B= \begin{bmatrix}    A_1 & \dots &0 \\  \vdots & \ddots & \vdots \\  0 & \dots & A_k\end{bmatrix}$$，$$A_i=[(T-\lambda I)_{W_i}]_{B_i}, ~ i = ,1,2,\dots, k$$
+* 根據循環子空間的基底與線性變換矩陣表示法可得$$A_i=S_{n_i}$$ 為$$n_i \times n_i$$ 的下移矩陣  。
+* 所以$$[(T−λI)_{K(\lambda)}  ]_B = \begin{bmatrix}    A_1 & \dots & 0 \\  \vdots & \ddots & \vdots \\  0 & \dots & A_k\end{bmatrix}+ \lambda I = \begin{bmatrix}    S_{n_1}+\lambda I_{n_1} & \dots  & 0 \\  \vdots & \ddots & \vdots \\  0 & \dots & S_{n_k}+\lambda I_{n_k}\end{bmatrix} = \begin{bmatrix}    J_{n_1}(\lambda) & \dots &0 \\  \vdots & \ddots & \vdots \\  0 & \dots & J_{n_k}(\lambda) \end{bmatrix}$$  \(QED\)
+
+Proof \(3\)
+
+* 根據循環分解定理，$$k=\dim⁡(ker⁡(T−\lambda I)_{K(\lambda)})$$
+* 因為$$ker⁡(T−\lambda I) \subseteq K(\lambda )$$，所以$$\dim⁡(ker⁡(T−\lambda I)_{K(\lambda) }=\dim⁡(ker⁡(T− \lambda I) )=gm(\lambda)$$  \(QED\)
+
+Proof \(4\)
+
+* 根據循環分解定理可得$$(T− \lambda I)_{K(\lambda)}$$  為具有指標$$n_1$$ 的冪零算子 \(QED\).
+
+
+
+
+
 
 

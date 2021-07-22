@@ -173,3 +173,10 @@ proof:
 * 因為$$\langle v_i, v_j \rangle= 0, \forall i \neq j$$，
 * 所以$$\sum_{i=1}^K\sum_{j=1}^K c_i \overline{c_j} \langle v_i, v_j \rangle = \sum_{i=1}^K c_i \overline{c_i} \langle v_i, v_i \rangle= \sum_{i=1}^K |c_i|^2 \|v_i\|^2$$\(QED\)
 
+## 三維空間的內積與外積
+
+兩向量$$x=(x_1, x_2, x_3), y=(y_1, y_2, y_3)$$，
+
+* 內積：$$\langle x, y\rangle = x_1 y_1 + x_2 y_2 +x_3 y_3 = \|x\| \|y\| \cos \theta$$為純量。
+* 外積：$$x \times y=\begin{pmatrix} \begin{vmatrix} x_2 & x_3 \\y_2 & y_3\end{vmatrix} & \begin{vmatrix} x_3 & x_1 \\y_3 & y_1\end{vmatrix} & \begin{vmatrix} x_1 & x_2 \\y_1 & y_2\end{vmatrix} \end{pmatrix} = (\|x\| \|y\| \sin \theta  )n$$，其中 $$n$$ 是垂直於 $$x$$ 和 $$y$$ 所在平面並滿足右手定則的單位向量。
+

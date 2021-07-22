@@ -91,6 +91,7 @@
   * [行列式\(determinant\)](linear-algebra/basic-matrix-computation/determinant.md)
   * [古典伴隨矩陣\(classical adjoint matrix\)](linear-algebra/basic-matrix-computation/classical-adjoint-matrix.md)
   * [克羅內克乘積\(Kronecker product\)](linear-algebra/basic-matrix-computation/ke-luo-nei-ke-cheng-ji-kronecker-product.md)
+  * [哈達瑪乘積\(Hadamard product\)](linear-algebra/basic-matrix-computation/ha-da-ma-cheng-ji-hadamard-product.md)
 * [線性轉換](linear-algebra/linear-transform/README.md)
   * [座標化\(coordinate\)](linear-algebra/linear-transform/coordinate.md)
   * [核空間及像集\(kernel space and image\)](linear-algebra/linear-transform/kernel-space-and-image.md)

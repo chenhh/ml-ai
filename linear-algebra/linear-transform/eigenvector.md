@@ -212,3 +212,20 @@ Proof =&gt;:
 
 Proof &lt;=:同上。
 
+## Paper: Eigenvectors from eigenvalues
+
+[陶哲軒blog](https://terrytao.wordpress.com/2019/08/13/eigenvectors-from-eigenvalues/)
+
+> 假設$$A$$為$$\mathbb{C}^{n \times n}$$ 的 Hermitian matrix（$$A^\mathrm{H}=A$$），矩陣的特徵值為$$\lambda_1, \lambda_2 ,\dots ,\lambda_n$$，對應到的單範特徵向量分別為$$v_i \in \mathbb{C}^{n \times 1}, ~\|v_i\|=1, ~i=1,2,\dots,n. $$
+>
+>  令$$v_{i,j}$$ 為第$$i$$個特徵向量中的第$$j$$個元素，則：
+>
+> * $$\displaystyle |v_{i,j}|^2 \prod_{k=1, k \neq i}^n(\lambda _i - \lambda _k) = \prod_{k=1}^{n-1}(\lambda_i - \lambda_k(M_j))$$
+> * $$M_j \in \mathbb{C}^{(n-1) \times (n-1)}$$為為矩陣$$A$$刪去第$$j$$列與第$$j$$行後剩下部分形成的Hermitian matrix。
+
+例如$$n=3$$，可得：$$|v_{1,2}|^2 (\lambda_1 - \lambda_2)(\lambda_1-\lambda_3)=(\lambda_1 - \lambda_1(M_2))(\lambda_1 - \lambda_2(M_2))$$
+
+
+
+
+

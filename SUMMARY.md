@@ -2,191 +2,191 @@
 
 * [數理機器學習](README.md)
 
-## 數學分析 <a id="math-analysis"></a>
+## 數學分析 <a href="math-analysis" id="math-analysis"></a>
 
 * [集合](math-analysis/set/README.md)
   * [基數](math-analysis/set/cardinal-number.md)
-  * [有限集與無限集](math-analysis/set/infinite_set.md)
+  * [有限集與無限集](math-analysis/set/infinite\_set.md)
   * [偏序集或全序集](math-analysis/set/partial-total-order-set.md)
   * [函數中的集合](math-analysis/set/function.md)
-  * [自然數](math-analysis/set/natural_number.md)
+  * [自然數](math-analysis/set/natural\_number.md)
   * [有理數](math-analysis/set/rational-number.md)
   * [實數中的集合](math-analysis/set/real-number.md)
   * [field與sigma-field](math-analysis/set/field-and-sigma-field.md)
   * [集合序列的極限](math-analysis/set/ji-he-xu-lie-de-ji-xian.md)
-* [實數\(real number\)](math-analysis/real-number/README.md)
+* [實數(real number)](math-analysis/real-number/README.md)
   * [擴充實數](math-analysis/real-number/extended-real-number.md)
   * [Bolzano-Weierstrass定理](math-analysis/real-number/bolzano-weierstrass-theorem.md)
-  * [區間套定理\(nested interval theorem\)](math-analysis/real-number/nested-interval-theorem.md)
-  * [覆蓋\(covering\)](math-analysis/real-number/covering.md)
-  * [緊緻集合\(compact set\)](math-analysis/real-number/compact-set.md)
-* [數列\(sequence\)](math-analysis/sequence/README.md)
-  * [單調數列\(monotonic sequence\)](math-analysis/sequence/monotonic-sequence.md)
-  * [柯西數列\(Cauchy sequence\)](math-analysis/sequence/cauchy-sequence.md)
+  * [區間套定理(nested interval theorem)](math-analysis/real-number/nested-interval-theorem.md)
+  * [覆蓋(covering)](math-analysis/real-number/covering.md)
+  * [緊緻集合(compact set)](math-analysis/real-number/compact-set.md)
+* [數列(sequence)](math-analysis/sequence/README.md)
+  * [單調數列(monotonic sequence)](math-analysis/sequence/monotonic-sequence.md)
+  * [柯西數列(Cauchy sequence)](math-analysis/sequence/cauchy-sequence.md)
   * [數列的上、下極限](math-analysis/sequence/limit-sup-inf-of-sequence.md)
-* [級數\(series\)](math-analysis/series/README.md)
+* [級數(series)](math-analysis/series/README.md)
   * [級數審斂法](math-analysis/series/series-convergence-test.md)
   * [Taylor級數](math-analysis/series/taylor-series.md)
-* [函數\(function\)](math-analysis/han-shu-function/README.md)
+* [函數(function)](math-analysis/han-shu-function/README.md)
   * [函數的極限](math-analysis/han-shu-function/limit-of-function.md)
   * [實值函數的左、右極限](math-analysis/han-shu-function/left-right-hand-limit-of-real-valued-function.md)
   * [連續函數](math-analysis/han-shu-function/continuous-function.md)
-  * [半連續函數\(semi-continuity function\)](math-analysis/han-shu-function/semi-continuity-function.md)
+  * [半連續函數(semi-continuity function)](math-analysis/han-shu-function/semi-continuity-function.md)
   * [三角函數](math-analysis/han-shu-function/trigonometric-function.md)
-* [度量空間 \(metric space\)](math-analysis/metric-space/README.md)
+* [度量空間 (metric space)](math-analysis/metric-space/README.md)
   * [點拓樸集](math-analysis/metric-space/point-topology.md)
   * [開集合](math-analysis/metric-space/open-set.md)
   * [閉集合](math-analysis/metric-space/closed-set.md)
-* [微分、導數\(derivative\)](math-analysis/derivative/README.md)
+* [微分、導數(derivative)](math-analysis/derivative/README.md)
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)
   * [導數連續性質](math-analysis/derivative/derivative-continuous.md)
   * [微分均值定理（mean-value theorem）](math-analysis/derivative/diff-mean-value-theorem.md)
   * [L'Hopital法則](math-analysis/derivative/lhopital-rule.md)
 * [Riemann-Stieltjes積分](math-analysis/rs-integral.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
-* [測度\(measure\)](math-analysis/measure.md)
+* [測度(measure)](math-analysis/measure.md)
 * [賦範空間](math-analysis/normed-space.md)
 * [多變數向量](math-analysis/multivariate-vector.md)
-* [傅立葉分析\(Fourier analysis\)](math-analysis/fourier-analysis.md)
-* [分數微積分\(fractional calculus\)](math-analysis/fractional-calculus.md)
+* [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)
+* [分數微積分(fractional calculus)](math-analysis/fractional-calculus.md)
 
-## 機率與統計 <a id="probability-and-statistics"></a>
+## 機率與統計 <a href="probability-and-statistics" id="probability-and-statistics"></a>
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
-* [機率測度\(probability measure\)](probability-and-statistics/probability-measure.md)
+* [機率測度(probability measure)](probability-and-statistics/probability-measure.md)
 * [隨機變數（random variable）](probability-and-statistics/random-variable/README.md)
   * [條件分佈與期望值](probability-and-statistics/random-variable/conditional-distribution.md)
   * [隨機變數的收斂](probability-and-statistics/random-variable/nvergence-of-rv.md)
   * [條件期望值](probability-and-statistics/random-variable/conditional-variable.md)
-* [動差生成函數\(moment generating function\)](probability-and-statistics/moment-generating-function.md)
+* [動差生成函數(moment generating function)](probability-and-statistics/moment-generating-function.md)
 * [機率不等式](probability-and-statistics/probability-inequality.md)
-* [中央極限定理\(CLT\)](probability-and-statistics/central-limit-theorem.md)
-* [統計量\(statistics\)](probability-and-statistics/statistics/README.md)
-  * [輔助統計量\(ancillary statistics\)](probability-and-statistics/statistics/ancillary-statistics.md)
+* [中央極限定理(CLT)](probability-and-statistics/central-limit-theorem.md)
+* [統計量(statistics)](probability-and-statistics/statistics/README.md)
+  * [輔助統計量(ancillary statistics)](probability-and-statistics/statistics/ancillary-statistics.md)
 * [點估計（point estimation）](probability-and-statistics/point-estimation/README.md)
-  * [最大似然估計\(MLE\)](probability-and-statistics/point-estimation/maximum-liklihood-estimation.md)
-* [區間估計\(interval estimation\)](probability-and-statistics/interval-estimation.md)
+  * [最大似然估計(MLE)](probability-and-statistics/point-estimation/maximum-liklihood-estimation.md)
+* [區間估計(interval estimation)](probability-and-statistics/interval-estimation.md)
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
 * [隨機過程](probability-and-statistics/random-process/README.md)
-  * [計數過程\(counting process\)](probability-and-statistics/random-process/counting-process.md)
-  * [卜瓦松過程\(Poisson process\)](probability-and-statistics/random-process/poisson-process.md)
-  * [布朗運動\(Brownian motion\)](probability-and-statistics/random-process/brownian-motion.md)
-  * [平賭\(鞅\)過程\(Martingale process\)](probability-and-statistics/random-process/martingale-process.md)
+  * [計數過程(counting process)](probability-and-statistics/random-process/counting-process.md)
+  * [卜瓦松過程(Poisson process)](probability-and-statistics/random-process/poisson-process.md)
+  * [布朗運動(Brownian motion)](probability-and-statistics/random-process/brownian-motion.md)
+  * [平賭(鞅)過程(Martingale process)](probability-and-statistics/random-process/martingale-process.md)
 * [貝式機率](probability-and-statistics/bayes-probability.md)
-* [關聯結構\(copula\)](probability-and-statistics/copula.md)
+* [關聯結構(copula)](probability-and-statistics/copula.md)
 
-## 線性代數 <a id="linear-algebra"></a>
+## 線性代數 <a href="linear-algebra" id="linear-algebra"></a>
 
 * [向量空間](linear-algebra/vector-space/README.md)
-  * [子空間\(subspace\)](linear-algebra/vector-space/zi-kong-jian-subspace.md)
-  * [和空間\(sum space\)](linear-algebra/vector-space/sum-space.md)
-  * [基本子空間\(fundamental subspace\)](linear-algebra/vector-space/fundamental-subspace.md)
-  * [生成空間\(sapping space\)](linear-algebra/vector-space/sapping-space.md)
-  * [基底與維度\(basis and dimension\)](linear-algebra/vector-space/basis-and-dimension.md)
+  * [子空間(subspace)](linear-algebra/vector-space/zi-kong-jian-subspace.md)
+  * [和空間(sum space)](linear-algebra/vector-space/sum-space.md)
+  * [基本子空間(fundamental subspace)](linear-algebra/vector-space/fundamental-subspace.md)
+  * [生成空間(sapping space)](linear-algebra/vector-space/sapping-space.md)
+  * [基底與維度(basis and dimension)](linear-algebra/vector-space/basis-and-dimension.md)
   * [獨立子空間與直和空間](linear-algebra/vector-space/independent-subspace-direct-sum.md)
 * [矩陣基本計算](linear-algebra/basic-matrix-computation/README.md)
-  * [反矩陣\(inverse matrix\)](linear-algebra/basic-matrix-computation/fan-ju-zhen.md)
-  * [行列式\(determinant\)](linear-algebra/basic-matrix-computation/determinant.md)
-  * [古典伴隨矩陣\(classical adjoint matrix\)](linear-algebra/basic-matrix-computation/classical-adjoint-matrix.md)
-  * [克羅內克乘積\(Kronecker product\)](linear-algebra/basic-matrix-computation/ke-luo-nei-ke-cheng-ji-kronecker-product.md)
-  * [哈達瑪乘積\(Hadamard product\)](linear-algebra/basic-matrix-computation/ha-da-ma-cheng-ji-hadamard-product.md)
+  * [反矩陣(inverse matrix)](linear-algebra/basic-matrix-computation/fan-ju-zhen.md)
+  * [行列式(determinant)](linear-algebra/basic-matrix-computation/determinant.md)
+  * [古典伴隨矩陣(classical adjoint matrix)](linear-algebra/basic-matrix-computation/classical-adjoint-matrix.md)
+  * [克羅內克乘積(Kronecker product)](linear-algebra/basic-matrix-computation/ke-luo-nei-ke-cheng-ji-kronecker-product.md)
+  * [哈達瑪乘積(Hadamard product)](linear-algebra/basic-matrix-computation/ha-da-ma-cheng-ji-hadamard-product.md)
 * [線性轉換](linear-algebra/linear-transform/README.md)
-  * [座標化\(coordinate\)](linear-algebra/linear-transform/coordinate.md)
-  * [核空間及像集\(kernel space and image\)](linear-algebra/linear-transform/kernel-space-and-image.md)
-  * [相似矩陣\(similar matrix\)](linear-algebra/linear-transform/similar-matrix.md)
-  * [不變子空間\(invariant subspace\)](linear-algebra/linear-transform/invariant-subspace.md)
-  * [特徵向量\(eigenvector\)](linear-algebra/linear-transform/eigenvector.md)
-  * [對角化 \(diagonal\)](linear-algebra/linear-transform/diagonal.md)
-  * [投影算子\(projection operator\)](linear-algebra/linear-transform/projection-operator.md)
-  * [光譜分解\(spectral decomposition\)](linear-algebra/linear-transform/spectral-decomposition.md)
-  * [冪零算子\(nilpotent operator\)](linear-algebra/linear-transform/nilpotent-operator.md)
-  * [循環子空間\(cyclic subspace\)](linear-algebra/linear-transform/cyclic-subspace.md)
+  * [座標化(coordinate)](linear-algebra/linear-transform/coordinate.md)
+  * [核空間及像集(kernel space and image)](linear-algebra/linear-transform/kernel-space-and-image.md)
+  * [相似矩陣(similar matrix)](linear-algebra/linear-transform/similar-matrix.md)
+  * [不變子空間(invariant subspace)](linear-algebra/linear-transform/invariant-subspace.md)
+  * [特徵向量(eigenvector)](linear-algebra/linear-transform/eigenvector.md)
+  * [對角化 (diagonal)](linear-algebra/linear-transform/diagonal.md)
+  * [投影算子(projection operator)](linear-algebra/linear-transform/projection-operator.md)
+  * [光譜分解(spectral decomposition)](linear-algebra/linear-transform/spectral-decomposition.md)
+  * [冪零算子(nilpotent operator)](linear-algebra/linear-transform/nilpotent-operator.md)
+  * [循環子空間(cyclic subspace)](linear-algebra/linear-transform/cyclic-subspace.md)
   * [Jordan form](linear-algebra/linear-transform/jordan-form.md)
   * [Cayley-Hamilton定理](linear-algebra/linear-transform/cayley-hamilton-theorem.md)
-  * [極小多項式\(minimal polynomial\)](linear-algebra/linear-transform/minimal-polynomial.md)
-* [內積空間\(inner product space\)](linear-algebra/inner-product-space/README.md)
+  * [極小多項式(minimal polynomial)](linear-algebra/linear-transform/minimal-polynomial.md)
+* [內積空間(inner product space)](linear-algebra/inner-product-space/README.md)
   * [Gram-schmidt正交化](linear-algebra/inner-product-space/gram-schmidt-orthogonalization.md)
-  * [正交投影\(orthogonal projection\)](linear-algebra/inner-product-space/orthogonal-projection.md)
-  * [最小平方解\(least square solution\)](linear-algebra/inner-product-space/least-square-solution.md)
-  * [正交補空間\(orthogonal complement space\)](linear-algebra/inner-product-space/orthogonal-complement-space.md)
-  * [正交子空間\(orthogonal subspace\)](linear-algebra/inner-product-space/orthogonal-subspace.md)
-  * [極小解\(minimal solution\)](linear-algebra/inner-product-space/minimal-solution.md)
-  * [伴隨算子\(adjoint operator\)](linear-algebra/inner-product-space/adjoint-operator.md)
-  * [正規算子、自伴算子\(normal operator, self-adjoint operator\)](linear-algebra/inner-product-space/normal-operator-selfadjoint-operator.md)
-  * [么正\(正交\)算子\(unitary \(orthogonal\) operator\)](linear-algebra/inner-product-space/unitary-orthogonal-operator.md)
-  * [雙線性型式\(bilinear form\)](linear-algebra/inner-product-space/bilinear-form.md)
-  * [正\(半\)定算子\(positive \(semi\) definitive operator\)](linear-algebra/inner-product-space/positive-semi-definitive-operator.md)
-  * [正交對角化 \(orthogonally diagonalizable\)](linear-algebra/inner-product-space/orthogonally-diagonalizable.md)
-  * [矩陣的長度與條件數\(matrix norm and condition number\)](linear-algebra/inner-product-space/matrix-norm-and-condition-number.md)
-  * [Householder轉換\(transformation\)](linear-algebra/inner-product-space/householder-transformation.md)
-  * [奇異值分解\(SVD, singular value decomposition\)](linear-algebra/inner-product-space/singular-value-decomposition.md)
-  * [Lagrange內插法\(interpolation formula\)](linear-algebra/inner-product-space/lagrange-interpolation.md)
+  * [正交投影(orthogonal projection)](linear-algebra/inner-product-space/orthogonal-projection.md)
+  * [最小平方解(least square solution)](linear-algebra/inner-product-space/least-square-solution.md)
+  * [正交補空間(orthogonal complement space)](linear-algebra/inner-product-space/orthogonal-complement-space.md)
+  * [正交子空間(orthogonal subspace)](linear-algebra/inner-product-space/orthogonal-subspace.md)
+  * [極小解(minimal solution)](linear-algebra/inner-product-space/minimal-solution.md)
+  * [伴隨算子(adjoint operator)](linear-algebra/inner-product-space/adjoint-operator.md)
+  * [正規算子、自伴算子(normal operator, self-adjoint operator)](linear-algebra/inner-product-space/normal-operator-selfadjoint-operator.md)
+  * [么正(正交)算子(unitary (orthogonal) operator)](linear-algebra/inner-product-space/unitary-orthogonal-operator.md)
+  * [雙線性型式(bilinear form)](linear-algebra/inner-product-space/bilinear-form.md)
+  * [正(半)定算子(positive (semi) definitive operator)](linear-algebra/inner-product-space/positive-semi-definitive-operator.md)
+  * [正交對角化 (orthogonally diagonalizable)](linear-algebra/inner-product-space/orthogonally-diagonalizable.md)
+  * [矩陣的長度與條件數(matrix norm and condition number)](linear-algebra/inner-product-space/matrix-norm-and-condition-number.md)
+  * [Householder轉換(transformation)](linear-algebra/inner-product-space/householder-transformation.md)
+  * [奇異值分解(SVD, singular value decomposition)](linear-algebra/inner-product-space/singular-value-decomposition.md)
+  * [Lagrange內插法(interpolation formula)](linear-algebra/inner-product-space/lagrange-interpolation.md)
 
-## 時間序列與訊號處理 <a id="time-series"></a>
+## 時間序列與訊號處理 <a href="time-series" id="time-series"></a>
 
 * [簡介](time-series/time-series-introduction.md)
 * [ARMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)
-* [共整合\(cointegrating\)](time-series/cointegrating.md)
-* [Hilbert-Huang transform \(HHT\)](time-series/hilbert-huang-transform.md)
+* [共整合(cointegrating)](time-series/cointegrating.md)
+* [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)
 
-## 資訊理論 <a id="information-theory"></a>
+## 資訊理論 <a href="information-theory" id="information-theory"></a>
 
 * [點對點模型與資訊熵](information-theory/p2p-model-entropy.md)
 * [資訊測度](information-theory/information-measure.md)
 
-## 學習理論 <a id="learning-theory"></a>
+## 學習理論 <a href="learning-theory" id="learning-theory"></a>
 
 * [學習問題](learning-theory/learning-problem.md)
 * [Bias-Variance Tradeoff](learning-theory/bias-variance-tradeoff.md)
-* [支持向量機 \(SVM, support vector machine\)](learning-theory/support-vector-machine.md)
-* [類神經網路\(neural network\)](learning-theory/ann.md)
+* [支持向量機 (SVM, support vector machine)](learning-theory/support-vector-machine.md)
+* [類神經網路(neural network)](learning-theory/ann.md)
 * [貝式方法](learning-theory/baye-method.md)
-* [PAC \(Probability Approximately Correct\)學習理論](learning-theory/pac-learning.md)
+* [PAC (Probability Approximately Correct)學習理論](learning-theory/pac-learning.md)
 * [奥卡姆剃刀（Occam's Razor）](learning-theory/occams-razor.md)
-* [無免費午餐定理\(No Free Lunch Theory\)](learning-theory/no-free-lunch-theory.md)
-* [醜小鴨定理\(Ugly duckling theorem\)](learning-theory/ugly-duckling-theorem.md)
-* [損失函數\(loss function\)](learning-theory/loss-function.md)
-* [在線學習\(online learning\)](learning-theory/online-learning.md)
-* [卡爾曼濾波器\(Kalman filter\)](learning-theory/kalman-filter.md)
+* [無免費午餐定理(No Free Lunch Theory)](learning-theory/no-free-lunch-theory.md)
+* [醜小鴨定理(Ugly duckling theorem)](learning-theory/ugly-duckling-theorem.md)
+* [損失函數(loss function)](learning-theory/loss-function.md)
+* [在線學習(online learning)](learning-theory/online-learning.md)
+* [卡爾曼濾波器(Kalman filter)](learning-theory/kalman-filter.md)
 
-## 強化學習與決策理論 <a id="reinforcement-learning"></a>
+## 強化學習與決策理論 <a href="reinforcement-learning" id="reinforcement-learning"></a>
 
-* [Markov decision process \(MDP\)](reinforcement-learning/mdp.md)
-* [秘書聘選問題\(secretary problem\)](reinforcement-learning/secretary-problem.md)
+* [Markov decision process (MDP)](reinforcement-learning/mdp.md)
+* [秘書聘選問題(secretary problem)](reinforcement-learning/secretary-problem.md)
 
-## 賽局理論 <a id="game-theory"></a>
+## 賽局理論 <a href="game-theory" id="game-theory"></a>
 
 * [賽局數學模型](game-theory/game-theory-model.md)
 * [Nash均衡](game-theory/nash-equilibrium.md)
 
-## 凸最佳化 <a id="convex-optimization"></a>
+## 凸最佳化 <a href="convex-optimization" id="convex-optimization"></a>
 
-* [凸集合 \(convex set\)](convex-optimization/convex-set.md)
-* [凸函數 \(convex function\)](convex-optimization/convex-function.md)
-* [凸最佳化\(convex optimization\)](convex-optimization/convex-optimization.md)
+* [凸集合 (convex set)](convex-optimization/convex-set.md)
+* [凸函數 (convex function)](convex-optimization/convex-function.md)
+* [凸最佳化(convex optimization)](convex-optimization/convex-optimization.md)
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
 
-## 離散數學 <a id="discrete_math"></a>
+## 離散數學 <a href="discrete_math" id="discrete_math"></a>
 
-* [排列\(permutation\)](discrete_math/permutation.md)
-* [組合\(combination\)](discrete_math/combination.md)
+* [排列(permutation)](discrete\_math/permutation.md)
+* [組合(combination)](discrete\_math/combination.md)
 
-## 計算理論 <a id="computation-theory"></a>
+## 計算理論 <a href="computation-theory" id="computation-theory"></a>
 
 * [計算理論簡介](computation-theory/computation-theory-introduction.md)
-* [自動機\(automata\)](computation-theory/automata.md)
+* [自動機(automata)](computation-theory/automata.md)
 
-## 因果推論 <a id="casualty-inference"></a>
+## 因果推論 <a href="casualty-inference" id="casualty-inference"></a>
 
 * [The book of why](casualty-inference/the-book-of-why/README.md)
   * [因果的三個層級](casualty-inference/the-book-of-why/ladder-of-causation.md)
   * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)
   * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
 
-## 微分方程 <a id="differential-equation"></a>
+## 微分方程 <a href="differential-equation" id="differential-equation"></a>
 
 * [微分方程簡介](differential-equation/diff-eq-intro.md)
 * [一階微分方程式](differential-equation/first-order-diff-eq.md)
@@ -196,13 +196,16 @@
 * [線性微分方程組](differential-equation/linear-diff-eqs.md)
 * [偏微分方程式](differential-equation/partial-diff-eq.md)
 
-## 複變函數 <a id="complex-number-function"></a>
+## 複變函數 <a href="complex-number-function" id="complex-number-function"></a>
 
-* [複數\(complex number\)](complex-number-function/complex-number.md)
+* [複數(complex number)](complex-number-function/complex-number.md)
 
-## 複雜系統 <a id="complex-system"></a>
+## 複雜系統 <a href="complex-system" id="complex-system"></a>
 
-* [模型思維\(the model thinker\)](complex-system/mo-xing-si-wei-the-model-thinker.md)
-* [碎形\(分形\) \(fractal\)](complex-system/fractal.md)
+* [模型思維(the model thinker)](complex-system/mo-xing-si-wei-the-model-thinker.md)
+* [碎形(分形) (fractal)](complex-system/fractal.md)
 * [相空間重構](complex-system/phase-space-reconstruction.md)
 
+## 情報學 <a href="intelligence-science" id="intelligence-science"></a>
+
+* [\[book\]情報學](intelligence-science/book-qing-bao-xue.md)

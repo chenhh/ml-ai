@@ -1,6 +1,6 @@
-# 傅立葉分析\(Fourier analysis\)
+# 傅立葉分析(Fourier analysis)
 
-## 什麼是頻率域\(frequency domain\)?
+## 什麼是頻率域(frequency domain)?
 
 觀察世界都以時間貫穿，如股票的走勢、人的身高、汽車的軌跡都會隨著時間發生改變。這種以時間作為參照來觀察動態世界的方法我們稱其為時域分析。
 
@@ -10,15 +10,13 @@
 
 
 
-![&#x97F3;&#x6A02;&#x7684;&#x6642;&#x9593;&#x5E8F;&#x5217;](../.gitbook/assets/music-time-series-min%20%281%29.png)
+![音樂的時間序列](../.gitbook/assets/music-time-series-min.png)
 
-![&#x97F3;&#x6A02;&#x7684;&#x983B;&#x8B5C;](../.gitbook/assets/music-frequency-min.png)
+![音樂的頻譜](../.gitbook/assets/music-frequency-min.png)
 
 傅立葉分析中，任何週期函數，都可以看作是不同振幅，不同相位正弦波的疊加。在第一個例子裡我們可以理解為，利用對不同琴鍵不同力度，不同時間點的敲擊，可以組合出任何一首樂曲。
 
 而貫穿時域與頻域的方法之一，就是傅立葉分析。傅立葉分析可分為傅立葉級數和傅立葉轉換。
-
-
 
 
 

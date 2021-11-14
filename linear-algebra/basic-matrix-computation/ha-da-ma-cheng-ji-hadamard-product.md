@@ -1,10 +1,10 @@
-# 哈達瑪乘積\(Hadamard product\)
+# 哈達瑪乘積(Hadamard product)
 
 ## Hadamard product
 
 Hadamard product即矩陣內元素element-wise的乘法，因此相乘的兩個矩陣大小必須相等。
 
-![Hadamard product](../../.gitbook/assets/hadamard_product_qtl1-min.png)
+![Hadamard product](../../.gitbook/assets/Hadamard\_product\_qtl1-min.png)
 
 $$A \odot B = [A]_{ij} [B]_{ij}$$
 
@@ -19,4 +19,3 @@ $$A \odot B = [A]_{ij} [B]_{ij}$$
 > * $$A \odot 0 = 0 \odot A = 0$$
 > * $$rank(A \odot B) \leq rank(A) rank(B)$$
 > * $$\det(A \odot B)  \geq \det(A) \det(B)$$
-

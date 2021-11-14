@@ -1,4 +1,4 @@
-# 投影算子\(projection operator\)
+# 投影算子(projection operator)
 
 ## 簡介
 
@@ -6,19 +6,19 @@ $$T^2=T$$稱為投影算子可理解為若將向量$$V$$投影到$$P$$後，再�
 
 $$T^2=T\Rightarrow T^3=T(T^2 )=T^2=T$$，由數學歸納法可得$$T^N=T, N \geq 2$$。
 
-![&#x5411;&#x91CF;V&#x6295;&#x5F71;&#x5F8C;&#x70BA;&#x5411;&#x91CF;P](../../.gitbook/assets/projection.gif)
+![向量V投影後為向量P](../../.gitbook/assets/projection.gif)
 
-## 投影算子\(projection operator\)
+## 投影算子(projection operator)
 
-> * 線性轉換$$T \in L(V,V)$$，若$$T^2=T$$，則稱$$T$$為$$V$$上的一個投影算子，或稱冪等算子\(idempotent operator\)。
-> * 矩陣$$A \in F^{N \times N}$$，若$$A^2=A$$，則稱$$A$$為投影矩陣\(projection matrix\)或稱冪等矩陣\(idempotent matrix\)。
+> * 線性轉換$$T \in L(V,V)$$，若$$T^2=T$$，則稱$$T$$為$$V$$上的一個投影算子，或稱冪等算子(idempotent operator)。
+> * 矩陣$$A \in F^{N \times N}$$，若$$A^2=A$$，則稱$$A$$為投影矩陣(projection matrix)或稱冪等矩陣(idempotent matrix)。>
 
 * 若$$T^2=T$$，則$$R(T^2 )=R(T)$$，即值域相等，但反之未必成立  。
-  * 取$$A=\begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$$，$$T=L_A    $$
+  * 取$$A=\begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix}$$，$$T=L_A$$
   * $$R(T)=R(L_A )=CS(A)=span \left\{ \begin{bmatrix}  2 \\ 0\end{bmatrix} \right\}$$
   * $$R(T^2)=R(L_A^2 )=CS(A^2)=span \left\{ \begin{bmatrix}  4 \\ 0\end{bmatrix} \right\}$$
   * 所以$$R(T^2 )=R(T)$$但$$T \neq T^2$$
-* $$T^2=T$$時，$$T$$為映成\(onto\)函數  。
+* $$T^2=T$$時，$$T$$為映成(onto)函數  。
 
 ### 一般線性轉換核空間會越來越大，值域會越來越小
 
@@ -27,52 +27,52 @@ $$T^2=T\Rightarrow T^3=T(T^2 )=T^2=T$$，由數學歸納法可得$$T^N=T, N \geq
 > * $$ker⁡(T) \subseteq ker⁡(T^2 )$$ （核空間會隨線性轉換次數逐漸增大）
 > * $$R(T^2 )\subseteq R(T)$$ （值域會隨線性轉換次數逐漸縮小）
 
-Proof: \(1\)
+Proof: (1)
 
-* $$\forall v \in ker⁡(T), ~ T(v)=0 $$
+* $$\forall v \in ker⁡(T), ~ T(v)=0$$
 * 若$$T(v) =0$$，則$$T^2 (v)=T(T(v))=T(0)=0$$
-* 所以$$v \in ker⁡(T^2 )$$，因此$$ker⁡(T) \subseteq ker⁡(T^2 )$$  \(QED\)
+* 所以$$v \in ker⁡(T^2 )$$，因此$$ker⁡(T) \subseteq ker⁡(T^2 )$$  (QED)
 
-Proof \(2\)
+Proof (2)
 
-* $$\forall v \in R(T^2 )~  \exists u \in V \ni T^2 (u)=v  $$
-* 所以$$v=T(w), ~ w=T(u) \in V  $$，得$$v \in R(T) $$
-* 所以$$R(T^2 ) \subseteq R(T)$$ \(QED\)
+* $$\forall v \in R(T^2 )~  \exists u \in V \ni T^2 (u)=v$$
+* 所以$$v=T(w), ~ w=T(u) \in V$$，得$$v \in R(T)$$
+* 所以$$R(T^2 ) \subseteq R(T)$$ (QED)
 
 ### 投影算子的性質
 
-> 線性轉換$$T \in L(V,V)$$或$$A\in F^{N \times N}$$，若$$T^2=T$$，則以下性質等價：
+> 線性轉換$$T \in L(V,V)$$或$$A\in F^{N \times N}$$，若$$T^2=T$$，則以下性質等價> ：
 >
-> 1. $$R(T^2 )=R(T)   $$（$$CS(A^2) = CS(A)$$）
-> 2. $$rank(T^2 )=rank(T)   $$
-> 3. $$nullity(T^2 )=nullity(T)   $$
-> 4. $$ker⁡(T^2 )=ker⁡(T)   $$
-> 5. $$V= ker(T) \oplus R(T)$$\([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)
-> 6. $$V= ker(T) + R(T)$$\([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)
-> 7. $$ker(T) \cap R(T) = \{0\}$$\([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he)\)
+> 1. $$R(T^2 )=R(T)$$（$$CS(A^2) = CS(A)$$）
+> 2. $$rank(T^2 )=rank(T)$$
+> 3. $$nullity(T^2 )=nullity(T)$$
+> 4. $$ker⁡(T^2 )=ker⁡(T)$$
+> 5. $$V= ker(T) \oplus R(T)$$([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he))
+> 6. $$V= ker(T) + R(T)$$([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he))
+> 7. $$ker(T) \cap R(T) = \{0\}$$([Sylvester's 2nd law](kernel-space-and-image.md#sylvesters-2nd-law-xiang-liang-kong-jianvwei-xian-xing-zhuan-huantde-he-kong-jian-yu-zhi-yu-de-zhi-he))
 
-Proof \(1\)-&gt;\(2\):
+Proof (1)->(2):
 
-因為$$R(T^2 )=R(T) \Rightarrow \dim⁡(R(T^2 ))=\dim⁡(R(T)) \Rightarrow rank(T^2 )=rank(T)$$ \(QED\)
+因為$$R(T^2 )=R(T) \Rightarrow \dim⁡(R(T^2 ))=\dim⁡(R(T)) \Rightarrow rank(T^2 )=rank(T)$$ (QED)
 
-Proof \(2\)-&gt;\(1\):
+Proof (2)->(1):
 
 * 因為$$R(T^2 ) \subseteq R(T) \Rightarrow R(T^2 )$$為$$R(T)$$的子空間
 * 因為$$dim⁡(R(T^2 ))=rank(T^2 )=rank(T)=\dim⁡(R(T))$$
-* 所以$$R(T^2 )=R(T)$$  \(QED\).
+* 所以$$R(T^2 )=R(T)$$  (QED).
 
-Proof \(2\) 等價\(3\)
+Proof (2) 等價(3)
 
 * 由rank-nullity theorem  得
-* * $$\dim⁡(V)=rank(T)+nullity(T)$$
-  * $$\dim⁡(V)=rank(T^2 )+nullity(T^2 )    $$
-* 所以$$rank(T^2 )=rank(T)\Leftrightarrow nullity(T^2 )=nullity(T) $$\(QED\)
+*
+  * $$\dim⁡(V)=rank(T)+nullity(T)$$
+  * $$\dim⁡(V)=rank(T^2 )+nullity(T^2 )$$
+* 所以$$rank(T^2 )=rank(T)\Leftrightarrow nullity(T^2 )=nullity(T)$$(QED)
 
 ### 投影算子的必要條件
 
-> 線性轉換$$T \in L(V,V)$$為向量空間$$V$$上的投影算子\($$T^2=T$$\)，且$$\dim⁡(V)=N$$則：
+> 線性轉換$$T \in L(V,V)$$為向量空間$$V$$上的投影算子($$T^2=T$$)，且$$\dim⁡(V)=N$$則：
 >
 > * $$T$$的特徵根必有0或1
-> * 特徵空間$$V(0)=ker⁡(T)$$，$$ V(1)=R(T)  $$
-> * $$T$$可對角化，且存在$$V$$的一組基底$$B \ni [T]_B=\begin{bmatrix} I_r & 0 \\ 0 & 0_{N-r}\end{bmatrix}$$$$r=rank(T)=tr(T)  $$
-
+> * 特徵空間$$V(0)=ker⁡(T)$$，$$V(1)=R(T)$$
+> * $$T$$可對角化，且存在$$V$$的一組基底$$B \ni [T]_B=\begin{bmatrix} I_r & 0 \\ 0 & 0_{N-r}\end{bmatrix}$$$$r=rank(T)=tr(T)$$

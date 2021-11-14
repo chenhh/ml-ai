@@ -29,11 +29,12 @@ $$X \sim B(N_X, p), Y \sim B(N_Y, p)$$且兩隨機變數獨立，則 $$X+Y \sim 
 
 ### 二項分布可逼近常態分佈
 
-若試驗的次數$$N$$足夠大時，且機率$$p$$固定不變時，二項式分佈近似於常態分佈。即$$B(N, p) \rightarrow N(Np, Np(1-p))$$as $$ N \rightarrow \infty$$。
+若試驗的次數$$N$$足夠大時，且機率$$p$$固定不變時，二項式分佈近似於常態分佈。即$$B(N, p) \rightarrow N(Np, Np(1-p))$$as $$N \rightarrow \infty$$。
 
-![&#x4E8C;&#x9805;&#x5206;&#x4F48;&#x5728;&#x8A66;&#x9A57;&#x6B21;&#x6578;&#x5920;&#x5927;&#x6642;\(&#x6A5F;&#x7387;&#x4E0D;&#x8B8A;\)&#xFF0C;&#x53EF;&#x903C;&#x8FD1;&#x5E38;&#x614B;&#x5206;&#x4F48;](../.gitbook/assets/binomial_distribution-min.png)
+![二項分佈在試驗次數夠大時(機率不變)，可逼近常態分佈](../.gitbook/assets/Binomial\_Distribution-min.png)
 
-## 負二項分佈\(Negative binomial distribution\)
+負二項分佈(Negative binomial distribution)
+
 
 「負二項式分佈」與「二項分佈」的區別在於：
 
@@ -78,16 +79,20 @@ $$X \sim B(N_X, p), Y \sim B(N_Y, p)$$且兩隨機變數獨立，則 $$X+Y \sim 
 
 * 隨機變數$$X \sim H(N,K,n)$$
 * 機率質量函數為 $$\mathrm{P}(X=x |N, K, n) =\frac{\binom{K}{x} \binom{N-K}{n-x}}{\binom{N}{n}}, ~ \max\{0, n-N+k\} \leq x \leq \min \{n, k\}$$
-  *  因為最多取$$n$$個球，且白球只有$$K$$個，所以x的上限為$$\min⁡\{n,K\} $$。
-  *  取中非白球的數量$$n−x$$不能超過全部非白球數量$$N−K$$，即$$n−x \leq N−K \Rightarrow x \geq n−N+K $$。
+  * &#x20;因為最多取$$n$$個球，且白球只有$$K$$個，所以x的上限為$$\min⁡\{n,K\}$$。
+  * &#x20;取中非白球的數量$$n−x$$不能超過全部非白球數量$$N−K$$，即$$n−x \leq N−K \Rightarrow x \geq n−N+K$$。
 * 期望值 $$\mathrm{E}(X) = \frac{nK}{N}$$
-* 變異數 $$\mathrm{Var}(X) = \frac{nK(N-n)(N-K)}{N^2 (N-1)}$$
+*   變異數 $$\mathrm{Var}(X) = \frac{nK(N-n)(N-K)}{N^2 (N-1)}$$
+
+
+
+
 
 ## 卜瓦松（泊松）分佈（Poisson distribution）
 
 卜瓦松分佈適合於描述單位時間內隨機事件發生的次數（頻率）的機率分佈。
 
-如某一服務設施在一定時間內受到的服務請求的次數、 電話交換機接到呼叫的次數、汽車站台的候客人數、機器出現的故障數、自然災害發生的次數、DNA序列的變異數、放射性原子核的衰變數、 雷射的光子數分佈等等。
+如某一服務設施在一定時間內受到的服務請求的次數、 電話交換機接到呼叫的次數、汽車站台的候客人數、機器出現的故障數、自然災害發生的次數、DNA序列的變異數、放射性原子核的衰變數、&#x20;雷射的光子數分佈等等。
 
 卜瓦松分佈的假設：
 
@@ -99,13 +104,13 @@ $$X \sim B(N_X, p), Y \sim B(N_Y, p)$$且兩隨機變數獨立，則 $$X+Y \sim 
 
 ### 獨立的卜瓦松分佈隨機變數總和
 
-> $$X\sim P(\lambda_1 )$$, $$Y \sim P(\lambda_2 )$$，且$$X,Y$$為獨立的隨機變數，則$$X+Y \sim P(\lambda_1+ \lambda_2 ) $$
+> $$X\sim P(\lambda_1 )$$, $$Y \sim P(\lambda_2 )$$，且$$X,Y$$為獨立的隨機變數，則$$X+Y \sim P(\lambda_1+ \lambda_2 )$$
 
 由動差生成函數證明。
 
-###  卜瓦松分佈可由二項分佈逼近
+### &#x20;卜瓦松分佈可由二項分佈逼近
 
-* 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty $$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!} $$
+* 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty$$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!}$$
 * 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於卜瓦松分佈。
 
 ### MLE參數估計
@@ -113,8 +118,6 @@ $$X \sim B(N_X, p), Y \sim B(N_Y, p)$$且兩隨機變數獨立，則 $$X+Y \sim 
 給定獨立同卜瓦松分佈的$$N$$個隨機樣本值，希望得到從中推測出總體的卜瓦松分佈參數$$\lambda$$的估計。
 
 * log-likelihood function $$\begin{aligned} \displaystyle l(\lambda|X) & =\log \bigg({\prod_{i=1}^N f(x_i | \lambda)} \bigg) \\ &=\sum_{i=1}^N \log \bigg(\frac{e^{- \lambda \lambda ^{x_i}}}{x_i !} \bigg) \\ &= -N \lambda + \bigg(\sum_{i=1}^N x_i\bigg) \log \lambda - \sum_{i=1}^N \log(x_i!) \end{aligned}$$
-* 令$$\frac{\partial l}{\partial \lambda} = 0 $$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$
+* 令$$\frac{\partial l}{\partial \lambda} = 0$$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$
 * 所以 $$\hat{\lambda}_{MLE}= \frac{1}{N} \sum_{i=1}^N x_i$$。
-
-
 

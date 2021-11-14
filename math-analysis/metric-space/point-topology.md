@@ -8,7 +8,7 @@
 
 > $$A,B \subseteq X$$, $$d(A,B)=\inf \{ d(x,y)| \forall x \in A, ~ \forall y \in B\}$$
 >
-> • 集合的距離為兩集合間最短的兩點間的距離。
+> • 集合的距離為兩集合間最短的兩點間的距離。>
 
 ### 兩集合間的距離不滿足三角不等式
 
@@ -17,13 +17,13 @@
 
 
 
-![](../../.gitbook/assets/set_distance.png)
+![](../../.gitbook/assets/set\_distance.png)
 
 ## 點到集合的距離
 
 > $$A \subseteq X$$, $$x \in X$$, $$d(x,A)=\inf d(x,y), ~\forall y \in A$$
 >
->  點到集合的距離為點到集合最短兩點間的距離。
+> &#x20;點到集合的距離為點到集合最短兩點間的距離。>
 
 * 若$$A$$為閉集合，且$$x\notin A \Rightarrow d(x,A) >0$$
 
@@ -33,9 +33,9 @@
 >
 > $$S$$可為任意形狀的集合，集合$$S$$的直徑為集合中距離最遠兩點的長度。
 
-* 集合的直徑可能為無窮大。例如$$ S=(a,\infty) \text{ or }  (−\infty,b) $$
+* 集合的直徑可能為無窮大。例如$$S=(a,\infty) \text{ or }  (−\infty,b)$$
 
-![&#x96C6;&#x5408;&#x7684;&#x76F4;&#x5F91;&#x70BA;&#x96C6;&#x5408;&#x4E2D;&#x5169;&#x9EDE;&#x7684;&#x6700;&#x9577;&#x8DDD;&#x96E2;](../../.gitbook/assets/set_diameter-min.png)
+![集合的直徑為集合中兩點的最長距離](../../.gitbook/assets/set\_diameter-min.png)
 
 ## 有界集合（bounded set）
 
@@ -45,7 +45,7 @@
 > * 或 $$\exists M \geq 0 \ni  \sup d(x,y) < M, \forall x, y \in S$$
 > * 或 $$\exists x \in S \exists r > 0 \ni S \subseteq N_r(S)$$
 
-*  有界集合即集合中任意兩點的距離必定小於某個有限實數$$M$$。
+* &#x20;有界集合即集合中任意兩點的距離必定小於某個有限實數$$M$$。
 * 無界集合即集合中存在兩點的距離為無窮大。因此必須是有界集合才可定義直徑。
 
 ## 鄰域、開球（neighborhood, open ball）
@@ -56,7 +56,7 @@
 * **鄰域的定義中使用**$$d(a,b)$$**，因此只要符合距離測度的函數即可**。所以鄰域不一定是以$$a$$為中心的圓形，可能是菱形。$$d(a,b)=|a−b|$$或是其它形狀。
 * 鄰域為開集合，因為所有的元素均為內點。
 
-![&#x9130;&#x57DF;&#x6216;&#x958B;&#x7403;](../../.gitbook/assets/neighborhood.jpg)
+![鄰域或開球](../../.gitbook/assets/neighborhood.jpg)
 
 ## 內點（interior point）
 
@@ -73,14 +73,14 @@
 >
 > 註：一般拓墣空間不一定成立。
 
-* 當$$a \in S$$為內點時，則\exists r &gt; 0 \ni $$N_r(a) \subseteq S$$包含了$$S$$的無窮多個元素，即使扣除掉點$$a$$，$$N_r(a)$$與$$S$$的交集也不是空集合，因此$$a$$為極限點。\(QED\)
+* 當$$a \in S$$為內點時，則\exists r > 0 \ni $$N_r(a) \subseteq S$$包含了$$S$$的無窮多個元素，即使扣除掉點$$a$$，$$N_r(a)$$與$$S$$的交集也不是空集合，因此$$a$$為極限點。(QED)
 
 ### 內點的性質
 
 > 給定度量空間$$(X,d)$$與子集合$$A,B \subseteq X$$，則
 >
 > 1. $$A\subset B \Rightarrow int(A) \subset int(B)$$
->    * 反之不成立，考慮孤立點不為內點的情形。$$A=\{0\} \cup [1,2]$$, $$B=[0.5, 2.5]$$, $$int(A)=(1,2),~ int(B)=(0.5, 2.5)$$可得 $$int(A) \subset int(B)$$但$$ A \nsubseteq B$$。
+>    * 反之不成立，考慮孤立點不為內點的情形。$$A=\{0\} \cup [1,2]$$, $$B=[0.5, 2.5]$$, $$int(A)=(1,2),~ int(B)=(0.5, 2.5)$$可得 $$int(A) \subset int(B)$$但$$A \nsubseteq B$$。
 > 2. $$int(A\cap B)=int(A) \cap int(B)$$
 > 3. $$int(A) \cup int(B) \subset int(A \cup B)$$
 > 4. $$int(A)=X-\overline{X-A}$$，$$\overline{X-A}$$為$$X-A$$的閉包（closure）。
@@ -95,7 +95,7 @@
 proof 1:
 
 * 令$$a \in int(A)$$，則$$\exists r > 0 \ni N_a(r) \subset A$$
-* 因為$$A\subset B$$，可得$$N_a(r) \subset B$$，所以$$int(A) \subset int(B)$$\(QED\)
+* 因為$$A\subset B$$，可得$$N_a(r) \subset B$$，所以$$int(A) \subset int(B)$$(QED)
 
 ## 邊界點（boundary point）
 
@@ -103,9 +103,9 @@ proof 1:
 >
 > 稱點$$p \in X$$為集合$$S$$的邊界點若$$\forall r >0 . N_r(a) \cap S \neq \emptyset$$且$$N_r(a) \cap S^c \neq \emptyset$$
 >
-> * $$x$$的每個鄰域中至少有一個點在 $$S$$ 中，且至少有一個點不在$$ S$$ 中。
+> * $$x$$的每個鄰域中至少有一個點在 $$S$$ 中，且至少有一個點不在$$S$$ 中。
 
-![x&#x70BA;&#x5167;&#x9EDE;&#xFF0C;y&#x70BA;&#x908A;&#x754C;&#x9EDE;](../../.gitbook/assets/510px-interior_illustration-min.png)
+![x為內點，y為邊界點](../../.gitbook/assets/510px-Interior\_illustration-min.png)
 
 ## 邊界集合（boundary set）
 
@@ -123,10 +123,11 @@ proof 1:
 
 * $$A=[1,2]$$的閉區間，$$\partial(A)=\{1,2\}$$
 * $$B=[0,3]$$的閉區間，$$\partial(B)=\{0,3\}$$
-* $$A \subseteq B$$但$$ \partial(A) \not \subset \partial(B) $$
+* $$A \subseteq B$$但$$\partial(A) \not \subset \partial(B)$$
 * $$\partial(A \cup B) = \{0,3\}$$, $$\partial(A) \cup \partial(B)=\{0,1,2,3\}$$
 * $$\partial (A \cap B) = \{1,2\}$$, $$\partial(A) \cap \partial(B) = \emptyset$$
-* 
+*
+
 ## 外點（exterior point）
 
 > 點$$p \in S^c$$，若滿足$$\exists r > 0 \ni N_r(p) \subset S^c$$，則稱$$p$$為集合$$S$$的外點（或$$p$$為集合$$S^c$$的內點 ）
@@ -169,24 +170,24 @@ proof 1:
 > 3. $$T$$為閉集合。
 > 4. $$T$$不包含孤立點。
 
-* proof\(1\): $$S \setminus T$$中不包含凝集點，因此為可數集合。\(QED\)。
-* proof\(2\): 因為$$S$$為不可數集合，因此$$S$$中必包含凝集點，可得$$S\cap T \neq \emptyset$$為部份凝集點的集合，因此為不可數集合。\(QED\)
-* proof\(3\): 令$$x\in T$$為凝集點，由定義得$$\forall r > 0~ \exists N_r(x) \cap S$$為不可數集合，因此 $$\forall r > 0, N_r(x) \cap S \setminus \{ x\} \neq \emptyset$$，即$$x$$為$$S$$的極限點，可得$$T$$為所有$$S$$極限點的集合，因此$$T$$為閉集合\(QED\)。
-* proof\(4\): 令$$x\in T$$為凝集點，由定義得$$\forall r > 0~ \exists N_r(x) \cap S$$為不可數集合，因此$$N_r(x) \cap S \neq \{x\}$$不包含孤立點。\(QED\)。
+* proof(1): $$S \setminus T$$中不包含凝集點，因此為可數集合。(QED)。
+* proof(2): 因為$$S$$為不可數集合，因此$$S$$中必包含凝集點，可得$$S\cap T \neq \emptyset$$為部份凝集點的集合，因此為不可數集合。(QED)
+* proof(3): 令$$x\in T$$為凝集點，由定義得$$\forall r > 0~ \exists N_r(x) \cap S$$為不可數集合，因此 $$\forall r > 0, N_r(x) \cap S \setminus \{ x\} \neq \emptyset$$，即$$x$$為$$S$$的極限點，可得$$T$$為所有$$S$$極限點的集合，因此$$T$$為閉集合(QED)。
+* proof(4): 令$$x\in T$$為凝集點，由定義得$$\forall r > 0~ \exists N_r(x) \cap S$$為不可數集合，因此$$N_r(x) \cap S \neq \{x\}$$不包含孤立點。(QED)。
 
 ## 附著點（adherent point）
 
 > 給定度量空間$$(X,d)$$，子集合$$S \subseteq X$$，點$$x\in X$$。若$$\forall r >0, N_r(x) \cap S \neq \emptyset$$ 則稱點$$x$$為集合$$S$$的附著點。
 >
-> 若$$x$$為$$S$$的附著點，可得$$\forall \epsilon > 0 \ \exists y \in S \ni d(x,y) < \epsilon $$。
+> 若$$x$$為$$S$$的附著點，可得$$\forall \epsilon > 0 \ \exists y \in S \ni d(x,y) < \epsilon$$。
 >
 > 註：有些書不區分附著點與極限點，因此要定義清楚。
 
 * $$x$$為附著點，但$$x$$不必為集合$$S$$的元素。
 * 附著點直觀的解釋是$$x$$的任意鄰域必定包含至少一個$$S$$集合中的元素。
-*  附著點\(鄰域\)與極限點\(去心鄰域\)的定義，唯一差異是極限點與$$S$$的交集不可為點$$x$$自身。
+* &#x20;附著點(鄰域)與極限點(去心鄰域)的定義，唯一差異是極限點與$$S$$的交集不可為點$$x$$自身。
 * 因為$$x$$的任意鄰域$$N_r (x)$$均包含集合$$S$$至少一個元素，因此$$x$$為$$S$$中的元素或在$$S$$的邊界點上。
-* 若$$x$$在集合$$S$$的邊界點外（外點），則$$\exists r>0 \ni N_r (x) \cap S=\emptyset $$。
+* 若$$x$$在集合$$S$$的邊界點外（外點），則$$\exists r>0 \ni N_r (x) \cap S=\emptyset$$。
 
 #### 範例
 
@@ -198,8 +199,8 @@ proof 1:
 >
 > 若不是孤立點，則$$N_r(x) \cap S$$為不可數集合。
 
-* 存在$$ x$$的某一個鄰域即可，不需要保證$$ x$$ 的每個鄰域都成立。
-* $$x$$ 是$$ S$$ 的孤立點，意味著 $$x$$ 必在 $$S$$ 中，但是它相當於在一個球隊中被孤立、靠邊站了，但還沒有離隊。
+* 存在$$x$$的某一個鄰域即可，不需要保證$$x$$ 的每個鄰域都成立。
+* $$x$$ 是$$S$$ 的孤立點，意味著 $$x$$ 必在 $$S$$ 中，但是它相當於在一個球隊中被孤立、靠邊站了，但還沒有離隊。
 * 由定義知孤立點不是極限點。
 * 由定義知孤立點不是內點, 因為若$$\exists r>0 \ni N_r (x) \subset S$$，可得$$N_r (x)\cap S=N_r (x) \neq \{x\}$$。
 * 因為$$N_r (x) \cap S$$集合中元素應為無窮多個，若只有一個點時，表示$$x$$附近沒有任何元素，即為孤立點。
@@ -209,13 +210,13 @@ proof 1:
 
 ### 孤立點集合為可數集合
 
-> • $$S \subseteq X$$, 令$$F$$為$$S$$中孤立點形成的集合，則$$F$$為可數\(有限或無限\)集合。
+> • $$S \subseteq X$$, 令$$F$$為$$S$$中孤立點形成的集合，則$$F$$為可數(有限或無限)集合。
 
 * 若$$S$$中的孤立點為有限個，則$$F$$為可數有限集合。
 * 令$$S$$中孤立點個數為無限多個，考慮$$x \in S$$為孤立點，即 $$\exists r  > 0 \ni N_r(x) \cap S =\{ x\}$$。
 * 因為$$F$$為孤立點的集合, 令$$r_1=\min⁡\{r >0~|~ \forall x \in F, N_r (x) \cap  S=\{x\}\}$$, 且令滿足此最小半徑的點為$$x_1$$， 則此點必定唯一，否則違反孤立點的定義。
 * 從$$F\setminus \{x_1\}$$的集合中，可得$$r_2=\min \{  r>0  | \forall x \in F \setminus \{x_1\}, N_r (x) \cap S=\{x\}  \}$$ 且令滿足此最小半徑的點為$$x_2$$。
-* 以此類推，可得$$F$$中的點與自然數集合$$\mathbb{N}$$有一對一的關係，因此$$F$$為可數集合。 \(QED\)
+* 以此類推，可得$$F$$中的點與自然數集合$$\mathbb{N}$$有一對一的關係，因此$$F$$為可數集合。 (QED)
 
 ### 歐式空間中，孤立點就是邊界點
 
@@ -231,30 +232,30 @@ proof 1:
 
 ### 一般拓撲空間中，孤立點就不一定是邊界點
 
-## 極限點（limit point） 
+## 極限點（limit point）&#x20;
 
 或稱accumulation point, cluster point
 
-> * 給定集合$$S \subset X$$，點$$ x \in X$$，若$$\forall r>0  \exists\ y \in S, y \neq x \ni y \in N_r (x)$$ 或 $$\forall r >0 (N_r (x)\cap S)\setminus \{x\} \neq \emptyset$$，則稱$$x$$為$$S$$的極限點。
+> * 給定集合$$S \subset X$$，點$$x \in X$$，若$$\forall r>0  \exists\ y \in S, y \neq x \ni y \in N_r (x)$$ 或 $$\forall r >0 (N_r (x)\cap S)\setminus \{x\} \neq \emptyset$$，則稱$$x$$為$$S$$的極限點。
 > * $$x \in X$$為$$S$$的極限點，則$$\forall \epsilon >0, ~ \exists y \in S \setminus \{x\}  \ni d(x,y)<\epsilon$$。
 
 * **由定義知極限點必為附著點**。
-*  極限點就是由序列收斂點的觀點來定義極限的性質。
+* &#x20;極限點就是由序列收斂點的觀點來定義極限的性質。
 * 極限點直觀的解釋是$$x$$的**去心鄰域**必定包含至少一個S集合中的元素。
 
 #### 範例
 
 * 可得實數中閉區間$$[a,b]$$中所有元素都是極限點，而開區間$$(a,b)$$除了端點外均為極限點。
-* $$\{\frac{1}{n}, n=1,2,\ldots\}$$的極限點只有0\($$\lim_{n \rightarrow \infty} \frac{1}{n} = 0$$\)。
+* $$\{\frac{1}{n}, n=1,2,\ldots\}$$的極限點只有0($$\lim_{n \rightarrow \infty} \frac{1}{n} = 0$$)。
 * 有理數集合$$\mathbb{Q}$$的極限點為實數集合$$\mathbb{R}$$。
 
-![&#x6975;&#x9650;&#x9EDE;](../../.gitbook/assets/topological_space_accum-min.png)
+![極限點](../../.gitbook/assets/topological\_space\_accum-min.png)
 
 ### 沒有極限點的集合
 
 * 自然數集合$$\mathbb{N}$$不存在極限點。
 
-###  極限點的鄰域與集合交集的元素為無窮多個
+### &#x20;極限點的鄰域與集合交集的元素為無窮多個
 
 > 若點$$x$$為集合$$S$$的極限點，則$$\forall r>0, N_r(x) \cap S \setminus \{x\}$$集合內的元素個數為無窮多個。
 
@@ -266,7 +267,7 @@ proof:
 * 假設集合 $$(N_r (x)\cap S)\setminus \{x\}$$  只有有限個元素，記為$$p_1, p_2, \ldots, p_n$$。
 * 令$$r_0=\min⁡(d(x,p_1 ), d(x,p_2 ),\ldots ,d(x,p_n ))$$
 * 則$$N_{r_0} (x) \cap S\setminus \{x\}=\emptyset$$ 與極限點的定義矛盾  。
-* 因此$$(N_r (x) \cap S) \setminus \{x\}$$  有無窮多個元素 \(QED\)
+* 因此$$(N_r (x) \cap S) \setminus \{x\}$$  有無窮多個元素 (QED)
 
 ### 有限個數的集合不存在極限點
 
@@ -278,22 +279,22 @@ proof:
 >
 > 註： $$\{x_n\}$$內的點必須為相異點才有此性質，如$$\{0,1,1,\ldots,1,\ldots\}$$, $$x_1=0$$, $$x_n=1$$,$$\displaystyle \lim_{n \rightarrow \infty}⁡ x_n =1$$, 但1不是集合$$\{0,1\}$$的極限點。
 
-proof =&gt;:
+proof =>:
 
 * 若$$x$$為集合$$S$$的極限點，則
-* $$r_1=1$$，取$$x_1 \in N_{r_1} (x)\cap S, x_1\neq x $$
-* $$r_2=\frac{1}{2} \|x_1−x|<\frac{1}{2}$$，取$$x_2 \in N_{r_2} (x)\cap S,\ x_2 \neq x, x_2 \neq x_1 $$
-*  $$r_3=\frac{1}{2} \|x_2−x\|<\frac{1}{2^2}$$ ，取$$x_3 \in N_{r_3} (x)\cap S, x_3\neq x,x_1,x_2$$
+* $$r_1=1$$，取$$x_1 \in N_{r_1} (x)\cap S, x_1\neq x$$
+* $$r_2=\frac{1}{2} \|x_1−x|<\frac{1}{2}$$，取$$x_2 \in N_{r_2} (x)\cap S,\ x_2 \neq x, x_2 \neq x_1$$
+* &#x20;$$r_3=\frac{1}{2} \|x_2−x\|<\frac{1}{2^2}$$ ，取$$x_3 \in N_{r_3} (x)\cap S, x_3\neq x,x_1,x_2$$
 * 以此類推可建構出無窮序列$$\{x_1,x_2,x_3, \ldots \} \subseteq S$$
-* 且可得$$\lim_{n \rightarrow \infty}⁡ x_n=x $$\(QED\)
+* 且可得$$\lim_{n \rightarrow \infty}⁡ x_n=x$$(QED)
 
-Proof &lt;=
+Proof <=
 
-* $$\displaystyle \{x_n\} \subseteq S,\ x_i \neq x_j, \ \forall i \neq j,\ \ lim_{n \rightarrow \infty}⁡x_n =x $$
+*   $$\displaystyle \{x_n\} \subseteq S,\ x_i \neq x_j, \ \forall i \neq j,\ \ lim_{n \rightarrow \infty}⁡x_n =x$$
 
-  • 即$$\forall \epsilon >0 ~ \exists n_0 \in \mathbb{N} \ni   \forall n \geq n_0 \Rightarrow \|x−x_n \|< \epsilon $$
+    • 即$$\forall \epsilon >0 ~ \exists n_0 \in \mathbb{N} \ni   \forall n \geq n_0 \Rightarrow \|x−x_n \|< \epsilon$$
 
-  • 因此$$\forall r>0, N_r (x) \cap S \setminus \{x\} \neq \emptyset$$, 得$$x$$為極限點 \(QED\)
+    • 因此$$\forall r>0, N_r (x) \cap S \setminus \{x\} \neq \emptyset$$, 得$$x$$為極限點 (QED)
 
 ## 導集合（derived set）
 
@@ -306,13 +307,13 @@ Proof &lt;=
 * $$S=\{ \frac{1}{n}, \ n \in \mathbb{N}\}$$，則$$0$$為$$S$$的極限點。
 * $$x_n=(-1)^n \frac{n}{n+1}$$極限不存在，但有兩個極限點-1與1。
 
-![&#x6975;&#x9650;&#x9EDE;&#x70BA;&#x5E8F;&#x5217;&#x805A;&#x96C6;&#x4E4B;&#x8655;](../../.gitbook/assets/800px-rational_sequence_with_2_accumulation_points_svg.png)
+![極限點為序列聚集之處](../../.gitbook/assets/800px-Rational\_sequence\_with\_2\_accumulation\_points\_svg.png)
 
-### 
+###
 
 ## 完美集合（perfect set）
 
-> $$S \subseteq X$$稱為完全集合，若此集合等於其導集合，即$$S=d(S)$$。
+> $$S \subseteq X$$稱為完全集合，若此集合等於其導集合，即$$S=d(S)$$。>
 
 由下面的性質可知**完全集合為不含孤立點的閉集合**。
 
@@ -321,7 +322,7 @@ Proof &lt;=
 * 由 $$S=d(S)$$  得$$S$$包含其所有極限點，因此完美集合$$S$$為閉集合。
 * 若$$x \in S$$為孤立點，則 $$\exists r >0 \ni N_r(x) \cap S \setminus \{ x\} =\emptyset$$
 * 但因為$$S=d(S)$$，因此$$\forall x \in S, N_r(x) \cap S \setminus \{x\} \neq \emptyset$$
-* 所以$$S$$中不含孤立點。\(QED\)
+* 所以$$S$$中不含孤立點。(QED)
 
 ### Cantor-Bendixon定理
 
@@ -330,8 +331,6 @@ Proof &lt;=
 > Note: 此定理說明**任意閉集合可分解為不含孤立點的閉集合與可數集合的聯集**。
 
 * 因為$$F$$為不可數集合, 因此存在$$x \in F$$為其凝聚點。令$$T$$為$$F$$所有凝聚點形成的集合。
-* 由凝聚點的性質，得$$T$$為閉集合且$$T$$不含孤立點，且$$ F \setminus T$$為可數集合。
-* 令$$A=T$$, $$B=F \setminus T$$ 得證 \(QED\)
-
-
+* 由凝聚點的性質，得$$T$$為閉集合且$$T$$不含孤立點，且$$F \setminus T$$為可數集合。
+* 令$$A=T$$, $$B=F \setminus T$$ 得證 (QED)
 

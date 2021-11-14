@@ -10,7 +10,7 @@ Markov不等式提供了$$f(x)$$超過某特定數值$$\epsilon$$ （圖中標�
 
 例如不超過1/5的人口會有超過5倍於人均收入的收入。
 
-![Markov&#x4E0D;&#x7B49;&#x5F0F;&#x7684;&#x610F;&#x7FA9;](../.gitbook/assets/markov_inequality.svg.png)
+![Markov不等式的意義](../.gitbook/assets/Markov\_Inequality.svg.png)
 
 $${\displaystyle {\begin{aligned}{ \textrm {E}}(X)&=\int _{-\infty }^{\infty }xdF(x)\\ &=\int _{0}^{\infty }x dF(x)\\ & = \int _{0}^{t }x dF(x)+ \int_t^{\infty} xdF(x) \\ &\geqslant \int _{t}^{\infty }xdF(x)\\  &\geqslant \int _{t}^{\infty }t dF(x)\\  &=t\int _{t}^{\infty } dF(x)\\ &=t{\textrm {P}}(X\geqslant t)\end{aligned}}}$$
 
@@ -33,11 +33,11 @@ $${\displaystyle {\begin{aligned}{ \textrm {E}}(X)&=\int _{-\infty }^{\infty }xd
 
 #### 使用Markov不等式得出
 
-$$\because (X - \mu)^2 \geq 0$$，由Markov不等式得 $$P((X-\mu)^2 \geq k^2) \leq \frac{\textrm{E}(X-\mu)^2}{k^2} = \frac{\sigma^2}{k^2}$$--\(1\)
+$$\because (X - \mu)^2 \geq 0$$，由Markov不等式得 $$P((X-\mu)^2 \geq k^2) \leq \frac{\textrm{E}(X-\mu)^2}{k^2} = \frac{\sigma^2}{k^2}$$--(1)
 
-$$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
+$$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--(2)
 
-\(1\)\(2\)得 $$P(|X-\mu| \geq k) \leq \frac{\sigma^2}{k^2}$$\(QED\)
+(1)(2)得 $$P(|X-\mu| \geq k) \leq \frac{\sigma^2}{k^2}$$(QED)
 
 ## Boole不等式（union bound）
 
@@ -50,14 +50,16 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 
 * 對於一個事件，$$P(E_1) \leq P(E_1)$$。
 * 假設對$$n$$個事件不等式成立，即假設 $$P(\cup_{i=1}^n E_i) \leq \sum_{i=1}^n P(E_i)$$。
-* 對於$$n+1$$個事件：
+*   對於$$n+1$$個事件：
 
-  * $$P(E \cup F) = P(E) + P(F) - P(E \cap F)$$
-  * $$P(\cup_{i=1}^{n+1}E_i) = P(\cup_{i=1}^{n}E_i) + P(E_{n+1}) - P(\cup_{i=1}^{n}E_i \cap E_{n+1})$$
-  * 因為機率大於等於0，所以 $$P(\cup_{i=1}^{n}E_i \cap E_{n+1}) \geq 0$$
-  * 可得$$P(\cup_{i=1}^{n+1}E_i) \leq P(\cup_{i=1}^{n}E_i) + P(E_{n+1})$$
-  * 再由歸納假設得 $$P(\cup_{i=1}^{n+1}E_i) \leq  \sum_{i=1}^n P(E_i) + P(E_{n+1}) =  \sum_{i=1}^{n+1} P(E_i)$$
-  * \(QED\)
+    * $$P(E \cup F) = P(E) + P(F) - P(E \cap F)$$
+    * $$P(\cup_{i=1}^{n+1}E_i) = P(\cup_{i=1}^{n}E_i) + P(E_{n+1}) - P(\cup_{i=1}^{n}E_i \cap E_{n+1})$$
+    * 因為機率大於等於0，所以 $$P(\cup_{i=1}^{n}E_i \cap E_{n+1}) \geq 0$$
+    * 可得$$P(\cup_{i=1}^{n+1}E_i) \leq P(\cup_{i=1}^{n}E_i) + P(E_{n+1})$$
+    * 再由歸納假設得 $$P(\cup_{i=1}^{n+1}E_i) \leq  \sum_{i=1}^n P(E_i) + P(E_{n+1}) =  \sum_{i=1}^{n+1} P(E_i)$$
+    * (QED)
+
+
 
 #### 也可由Markov不等式證明
 
@@ -69,7 +71,7 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 
 而$$P(X \geq 1) = P(\cup_{i=1}^n E_i)$$
 
-所以$$ P(\cup_{i=1}^n E_i)= \sum_{i=1}^n P(E_i)$$\(QED\)
+所以$$P(\cup_{i=1}^n E_i)= \sum_{i=1}^n P(E_i)$$(QED)
 
 ## Bonferroni不等式
 
@@ -79,16 +81,16 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--\(2\)
 * $$P((E \cap F)^c) = P(E^c \cup F^c) \leq P(E^c)+P(F^c)$$
 * $$\because P((E \cap F)^c) = 1- P(E\cap F)$$ and $$P(E^c)=1-P(E)$$, $$P(F^c) = 1- P(F)$$
 * $$1-P(E\cap F) \leq 1 - P(E) + 1- P(F)$$
-* $$\therefore  P(E \cap F) \leq P(E) + P(F) - 1$$ \(QED\)
+* $$\therefore  P(E \cap F) \leq P(E) + P(F) - 1$$ (QED)
 
 ## Hoeffding不等式
 
-> 設有兩兩獨立的一系列隨機變量$$X_{1},\dots ,X_{n}$$。假設對所有的$$ 1\leq i\leq n$$}$$X_{i}$$都是幾乎有界的變量，即滿足$$P(X_i \in [a_i, b_i])=1$$
+> 設有兩兩獨立的一系列隨機變量$$X_{1},\dots ,X_{n}$$。假設對所有的$$1\leq i\leq n$$}$$X_{i}$$都是幾乎有界的變量，即滿足$$P(X_i \in [a_i, b_i])=1$$
 >
 > 那麼這$$n$$個隨機變量的經驗期望值：$${\overline {X}}={\frac {X_{1}+\cdots +X_{n}}{n}}$$滿足以下的不等式：
 >
 > * $${\displaystyle {P} ({\overline {X}}-\mathrm {E} [{\overline {X}}]\geq t)\leq \exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
 > * $${\displaystyle {P} (|{\overline {X}}-\mathrm {E} [{\overline {X}}]|\geq t)\leq 2\exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
-
-
+>
+>
 

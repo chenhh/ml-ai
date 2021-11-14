@@ -1,10 +1,10 @@
-# 生成空間\(sapping space\)
+# 生成空間(sapping space)
 
-## 線性組合\(linear combination\)
+## 線性組合(linear combination)
 
 > $$(V, +, \cdot)$$為定義在體$$F$$的線性組合，$$v_1, \dots ,v_n \in V, c_1, \dots, c_n \in F$$，稱$$v=c_1v_1+\dots + c_n v_n =\sum_{i=1}^n c_i v_i$$為向量$$v_1,\dots, v_n$$之線性組合。
 
-## 生成空間\(spanning space\)
+## 生成空間(spanning space)
 
 > $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，$$S \subseteq V$$，定義生成空間$$span(S)=\{ v| v \text{ is linear combination of S}\}$$。
 >
@@ -13,10 +13,10 @@
 
 #### 範例
 
-* $$span((1,0))=\{x(1,0)|x \in \mathbb{R}\} $$ \(x-axis\)
-* $$span((0,1))=\{y(0,1)|y \in \mathbb{R} \} $$ \(y-axis\)
-* $$span((1,0),(0,1))=\{x(0,1)+y(1,0)|x,y \in \mathbb{R}= \mathbb{R}^2\} $$
-* $$span((2,0),(0,2))=\{x(0,2)+y(2,0)|x,y \in \mathbb{R}=\mathbb{R}^2\} $$
+* $$span((1,0))=\{x(1,0)|x \in \mathbb{R}\}$$ (x-axis)
+* $$span((0,1))=\{y(0,1)|y \in \mathbb{R} \}$$ (y-axis)
+* $$span((1,0),(0,1))=\{x(0,1)+y(1,0)|x,y \in \mathbb{R}= \mathbb{R}^2\}$$
+* $$span((2,0),(0,2))=\{x(0,2)+y(2,0)|x,y \in \mathbb{R}=\mathbb{R}^2\}$$
 
 ### 生成空間為子空間
 
@@ -26,7 +26,7 @@
 
 直觀的解釋為$$span(S)$$為由集合$$S$$生成的任意線性組合向量仍是$$span(S)$$的元素，因此$$span(S)$$為$$V$$的子空間。
 
-## 生成集\(spanning set\)
+## 生成集(spanning set)
 
 > $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，$$S \subseteq V$$，若$$span(S)=V$$，則稱集合$$S$$生成$$V$$，稱$$S$$為$$V$$的生成集合。
 
@@ -52,7 +52,8 @@
 * $$\begin{align} RS(A)  & = \{ xA | x \in F^{1 \times M}\} \\ & = \begin{bmatrix} x_1 & \dots & x_M\end{bmatrix} \begin{bmatrix} A_{1:} \\  \vdots \\ A_{M:} \end{bmatrix} \\ &= \{ x_1 A_{1:} + \dots + x_M A_{M:}\} \\ & = span(\{A_{1:}, \dots, A_{M:}\}) \end{align}$$
 * 所以矩陣$$A$$的row　space　$$RS(A)$$為矩陣$$A$$的列向量所生成的空間。
 
-## 線性獨立集\(linear independent set\)
+線性獨立集(linear independent set)
+
 
 > $$(V, +, \cdot)$$為定義在體$$F$$的向量空間，且$$S \subseteq V$$。
 >
@@ -70,9 +71,10 @@
 * 若$$0 \in S$$，則$$S$$為線性相依集合，因為$$1\cdot 0=0$$。
 * 若$$S$$為線性獨立集合，則$$0 \notin S$$。
 
-## Wronskian matrix
+Wronskian matrix
 
-> 令$$C^{(n−1) } (a,b)$$為所有定義在開區間$$(a,b)$$上的$$n-1$$次可微分函數形成的集合。且$$C^{(n−1) } (a,b)$$為向量空間。
+
+> 令$$C^{(n−1) } (a,b)$$為所有定義在開區間$$(a,b)$$上的$$n-1$$次可微分函數形成的集合。> 且$$C^{(n−1) } (a,b)$$為向量空間。
 >
 > 令函數$$f_1 , f_2, \dots , f_n \in C^{(n-1)}(a,b)$$，定義矩陣$$W$$如下：
 >
@@ -93,14 +95,13 @@ proof（反證法）：
 * 整理得矩陣如下：
 * $$\begin{bmatrix} f_1(x) & \dots & f_n(x) \\  f_1^{(1)}(x) & \dots & f_n^{(1)}(x) \\   \vdots & \vdots & \vdots \\   f_1^{(n-1)}(x) & \dots & f_n^{(n-1)}(x) \end{bmatrix} \begin{bmatrix} c_1 \\ c_2 \\ \vdots \\ c_n \end{bmatrix} = \begin{bmatrix} 0 \\0 \\ \vdots \\ 0 \end{bmatrix} \Rightarrow A(x)y = 0$$
 * 則$$A(x)y=0$$在線性相依時有非0解，$$\forall x \in (a,b)$$，因此$$A(x)$$不可逆，所以$$\det(A(x))=0$$。
-* 因此得$$f_1, f_2, \dots, f_n$$線性相依=&gt; $$W(x)=0, ~ \forall (x) \in (a,b)$$
-* 所以存在$$x\in(a,b) \ni W(x) \neq 0$$時，$$f_1, f_2, \dots, f_n$$線性獨立\(QED\)
+* 因此得$$f_1, f_2, \dots, f_n$$線性相依=> $$W(x)=0, ~ \forall (x) \in (a,b)$$
+* 所以存在$$x\in(a,b) \ni W(x) \neq 0$$時，$$f_1, f_2, \dots, f_n$$線性獨立(QED)
 
 ### 範例：Wronskian matrix之值等於0不保證線性相依
 
 * $$f_1(x)=x^2, ~ f_2(x)=x|x| \in C(-1,1)$$
 * $$W(x)=\det \begin{pmatrix} x^2 & x|x| \\ 2x & 2|x|\end{pmatrix} =0$$，但兩函數線性獨立。
-* 因為$$c_1x^2+c_2 x|x|=0$$，取$$x=1, -1$$代入得$$c_1=c_2=0$$\(end\)
-* 同樣可得$$e^{x}, e^{-x}$$在$$C(-\infty, \infty)$$線性獨立。因為$$W(x)=\det \begin{pmatrix} e^x & e^{-x} \\ e^x & -e^{-x}\end{pmatrix} =-2\neq 0$$\(end\)
-* $$\sin x, \cos x$$線性獨立，因為$$W(x)=\det \begin{pmatrix} \sin x & \cos x \\ cos x & -\sin x \end{pmatrix} =-\sin^2 x - \cos ^2 x = -1 \neq 0$$\(end\)
-
+* 因為$$c_1x^2+c_2 x|x|=0$$，取$$x=1, -1$$代入得$$c_1=c_2=0$$(end)
+* 同樣可得$$e^{x}, e^{-x}$$在$$C(-\infty, \infty)$$線性獨立。因為$$W(x)=\det \begin{pmatrix} e^x & e^{-x} \\ e^x & -e^{-x}\end{pmatrix} =-2\neq 0$$(end)
+* $$\sin x, \cos x$$線性獨立，因為$$W(x)=\det \begin{pmatrix} \sin x & \cos x \\ cos x & -\sin x \end{pmatrix} =-\sin^2 x - \cos ^2 x = -1 \neq 0$$(end)

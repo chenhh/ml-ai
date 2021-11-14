@@ -1,4 +1,4 @@
-# 最小平方解\(least square solution\)
+# 最小平方解(least square solution)
 
 ## 簡介
 
@@ -14,7 +14,7 @@
 > 令矩陣$$A \in F^{M \times N}$$，則：
 >
 > 1. $$ker(A^{\mathrm{H}}A) =ker(A)=\{x \in F^{N \times 1} | Ax=0\}$$
-> 2. $$rank(A^{\mathrm{H}}A) = rank(A)$$\(只有rank相同，但值域不相同\)
+> 2. $$rank(A^{\mathrm{H}}A) = rank(A)$$(只有rank相同，但值域不相同)
 > 3. $$Lker(A^{\mathrm{H}}A) = Lker(A)$$
 > 4. 矩陣$$A$$行向量線性獨立$$\Leftrightarrow A^{\mathrm{H}} A$$為可逆矩陣。
 > 5. 矩陣$$A$$列向量線性獨立$$\Leftrightarrow A^{\mathrm{H}} A$$為可逆矩陣。
@@ -24,35 +24,35 @@
 > * 矩陣$$A \in F^{M \times N}$$ 的行向量獨立$$\Leftrightarrow rank(A)=\dim⁡(CS(A))=\dim⁡(RS(A))=N=\dim⁡(F^{1 \times N}) )\Leftrightarrow A$$的列向量生成$$F^{1 \times N}$$。
 > * 矩陣$$A \in F^{M \times N}$$ 的列向量獨立$$\Leftrightarrow rank(A)=\dim⁡(RS(A))=\dim⁡(CS(A))=M=\dim⁡(F^{M\times 1} )\Leftrightarrow A$$的行生成$$F^{M \times 1}$$。
 
-Proof \(1\)=&gt;
+Proof (1)\=>
 
 * $$\forall x \in ker⁡(A^\mathrm{H} A)$$，可得$$(A^\mathrm{H} A)x=0$$，因此$$x^\mathrm{H} A^\mathrm{H} Ax=0=x^\mathrm{H} 0=0$$
-* 由標準內積得$$(Ax)^{\mathrm{H}} (Ax)=0\Rightarrow\langle Ax,Ax \rangle = \|Ax\|^2=0 $$
-* 因為$$ \|Ax\|^2=0 \Rightarrow Ax=0 \Rightarrow x \in ker⁡(A)$$\(QED\)
+* 由標準內積得$$(Ax)^{\mathrm{H}} (Ax)=0\Rightarrow\langle Ax,Ax \rangle = \|Ax\|^2=0$$
+* 因為$$\|Ax\|^2=0 \Rightarrow Ax=0 \Rightarrow x \in ker⁡(A)$$(QED)
 
- &lt;=
+&#x20;<=
 
 * $$\forall x \in ker⁡(A)$$，可得$$Ax=0 A^{\mathrm{H}} Ax=A^{\mathrm{H}} 0=0 \Rightarrow x \in ker⁡(A^{\mathrm{H}} A)$$
-* 因為$$ker⁡(A^{\mathrm{H}} A) \subseteq ker⁡(A)$$且$$ker⁡(A) \subseteq ker⁡(A^{\mathrm{H}} A)$$  ，所以$$ker(A^{\mathrm{H}} A)=ker⁡(A)$$  \(QED\)
+* 因為$$ker⁡(A^{\mathrm{H}} A) \subseteq ker⁡(A)$$且$$ker⁡(A) \subseteq ker⁡(A^{\mathrm{H}} A)$$  ，所以$$ker(A^{\mathrm{H}} A)=ker⁡(A)$$  (QED)
 
-Proof \(2\)
+Proof (2)
 
 * $$A \in ℂ^{M \times N}$$，by rank-nullity theorem
 * $$N=nullity(A)+rank(A)=\dim⁡(ker⁡(A) )+\dim⁡(CS(A))$$
 * 因為$$A^{\mathrm{H}} A \in \mathbb{C}^{N \times N}$$，所以$$N=nullity(A^\mathrm{H} A)+rank(A^\mathrm{H} A)$$
 * 因為$$ker⁡(A^\mathrm{H} A)=ker⁡(A) \Rightarrow nullity(A^\mathrm{H} A)=nullity(A)$$
-* 可得 $$rank(A^\mathrm{H} A)=rank(A)$$ \(QED\)
+* 可得 $$rank(A^\mathrm{H} A)=rank(A)$$ (QED)
 
-proof\(4\):
+proof(4):
 
 * 因為矩陣$$A$$的行向量獨立$$\Leftrightarrow Ax=0$$只有$$x=0$$的解$$\Leftrightarrow ker⁡(A)=\{0\}$$
-* 因此$$ker⁡(A^\mathrm{H} A)=\{0\}$$，可得$$A^\mathrm{H} A$$為可逆矩陣 \(QED\)
+* 因此$$ker⁡(A^\mathrm{H} A)=\{0\}$$，可得$$A^\mathrm{H} A$$為可逆矩陣 (QED)
 
 ## 歐式空間標準內積正交投影至矩陣的行向量公式
 
-> * 矩陣$$A \in \mathbb{C}^{M \times N}$$，且$$A$$行向量線性獨立（但不一定正交），考慮由$$A$$的行向量生成的向量空間$$W=CS(A) $$。
-> * 給定向量$$b \in \mathbb{C}^{M \times 1}$$，則在歐式空間標準內積下，向量$$b$$投影至向量空間$$W$$之值為  $$\mathrm{proj}_W (b)=A(A^{\mathrm{H}} A)^{−1} A^\mathrm{H} b$$。
-> * 因為矩陣$$A$$為的行向量線性獨立，所以$$A^\mathrm{H} A$$可逆，因此 $$(A^\mathrm{H} A)^{−1}$$ 必定存在，即$$A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$必定可求值  。
+> * 矩陣$$A \in \mathbb{C}^{M \times N}$$，且$$A$$行向量線性獨立（但不一定正交），考慮由$$A$$的行向量生成的向量空間$$W=CS(A)$$。
+> * 給定向量$$b \in \mathbb{C}^{M \times 1}$$，則在歐式空間標準內積下，向量$$b$$投影至向量空間$$W$$之值為>   $$\mathrm{proj}_W (b)=A(A^{\mathrm{H}} A)^{−1} A^\mathrm{H} b$$。
+> * 因為矩陣$$A$$為的行向量線性獨立，所以$$A^\mathrm{H} A$$可逆，因此 $$(A^\mathrm{H} A)^{−1}$$ 必定存在，即$$A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$必定可求值>   。
 
 Proof:
 
@@ -60,8 +60,8 @@ Proof:
 * 因為向量空間$$W$$由$$CS(A)$$生成，因此$$\forall w \in W, \exists x\in \mathbb{C}^{N \times1} \ni w=Ax$$，即空間$$W$$的元素可由$$A$$的行向量線性組合而成。
 * 由於正交向量$$b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$應與$$W$$內的任意向量$$w$$內積值為0  。
 * 因此$$\begin{aligned} &\langle b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b,~w\rangle  \\&=w^{\mathrm{H}} (b-A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b) \\ &=(Ax)^{\mathrm{H}} (b-A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b) \\ &=x^\mathrm{H} A^\mathrm{H} b−x^\mathrm{H} A^\mathrm{H} A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b \\ &=x^\mathrm{H} A^\mathrm{H} b−x^\mathrm{H} A^\mathrm{H} b\\ &=0  \end{aligned}$$
-* 所以$$w$$與$$ b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$正交
-* 因此$$\mathrm{proj}_W (b)= b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$ \(QED\)
+* 所以$$w$$與$$b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$正交
+* 因此$$\mathrm{proj}_W (b)= b−A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$ (QED)
 
 #### 範例：矩陣
 
@@ -78,23 +78,23 @@ Proof:
 * 取標準基底，則$$S=span\left\{ \begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ -1\end{bmatrix}\right\}$$
 * 取$$A=\begin{bmatrix} 1 & 0 \\ 0  & 1\\ -1 &-1\end{bmatrix}$$，所以$$\mathrm{proj}_A\left(\begin{bmatrix} x \\y\\ z \end{bmatrix}\right) =  A(A^\top A)^{-1}A^\top \begin{bmatrix} x \\y\\ z \end{bmatrix} = \begin{bmatrix} \frac{2x-y-z}{3} \\ \frac{-x+2y-z}{3} \\ \frac{-x-y+2z}{3} \end{bmatrix}$$
 
-##  歐式空間標準內積正規方程式\(normal equation\)
+## &#x20;歐式空間標準內積正規方程式(normal equation)
 
 > $$A \in \mathbb{C}^{M \times N},~ W=CS(A), ~b \in \mathbb{C}^{M \times 1}$$，則：
 >
 > * $$\displaystyle x =\arg\min_x\|Ax−b| \Leftrightarrow A^{\mathrm{H}}Ax^{*}=A^{\mathrm{H}}b$$
-> * 此時$$x^{*}$$為$$Ax=b$$的最小平方解\(least square solution\)。
+> * 此時$$x^{*}$$為$$Ax=b$$的最小平方解(least square solution)。
 >
-> 註： 
+> 註：&#x20;
 >
 > * 矩陣$$A$$的行向量不必獨立，此時$$rank(A^\mathrm{H} A)=rank(A)<N$$
 >   * $$A^\mathrm{H} Ax=A^\mathrm{H} b$$有無限多解，但$$\mathrm{proj}_W (b)=Ax$$唯一解。
 > * 矩陣$$A$$的行向量獨立時，$$A^\mathrm{H}A$$可逆，因此$$Ax=\mathrm{proj}_W (b)=A(A^\mathrm{H} A)^{−1} A^\mathrm{H} b$$。
->   * $$ x=(A^\mathrm{H} A)^{−1} A^\mathrm{H} b\Leftrightarrow A^\mathrm{H} Ax=A^\mathrm{H} b$$。
+>   * $$x=(A^\mathrm{H} A)^{−1} A^\mathrm{H} b\Leftrightarrow A^\mathrm{H} Ax=A^\mathrm{H} b$$。
 >   * 正規方程式$$A^\mathrm{H} Ax=A^\mathrm{H} b$$，$$x$$必定有解。
-> * 當矩陣$$P$$將向量$$b$$對應至他的正交投影向量$$\mathrm{proj}_W (b)$$時，稱$$P$$為一投影在$$W$$上的正交投影矩陣\(orthogonal projection matrix\)。如$$A$$的行向量獨立時，$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}  $$。
+> * 當矩陣$$P$$將向量$$b$$對應至他的正交投影向量$$\mathrm{proj}_W (b)$$時，稱$$P$$為一投影在$$W$$上的正交投影矩陣(orthogonal projection matrix)。如$$A$$的行向量獨立時，$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}$$。
 
-![&#x6B63;&#x898F;&#x65B9;&#x7A0B;&#x5F0F;&#x6295;&#x5F71;](../../.gitbook/assets/normal-equation-min.png)
+![正規方程式投影](../../.gitbook/assets/normal-equation-min.png)
 
 Proof:
 
@@ -108,7 +108,7 @@ Proof:
 * 使用標準內積得$$\Leftrightarrow (Ay)^{\mathrm{H}}b=(Ay)^{\mathrm{H}}(Ax),~ \forall y \in \mathbb{C}^{N \times 1}$$
 * $$\Leftrightarrow y^{\mathrm{H}} A^{\mathrm{H}} b = y^{\mathrm{H}} A^{\mathrm{H}} A x, ~ \forall y \in \mathbb{C}^{N \times 1}$$
 * 使用標準內積得$$\Leftrightarrow \langle A^{\mathrm{H}}b, y \rangle = \langle A^{\mathrm{H}}Ax, y\rangle, ~\forall y \in \mathbb{C}^{N \times 1}$$
-* 因此$$A^{\mathrm{H}}b = A^{\mathrm{H}}Ax$$ \(QED\)
+* 因此$$A^{\mathrm{H}}b = A^{\mathrm{H}}Ax$$ (QED)
 
 ### 範例：矩陣最小平方解
 
@@ -123,7 +123,7 @@ Proof:
 * 則$$e^x$$在$$W$$的最小平方逼近，即求投影向量$$\mathrm{proj}_W(e^x)$$。
 * $$\mathrm{proj}_W(e^x) = \frac{\langle e^x, u_1 \rangle}{\langle u_1, u_1\rangle}u_1 +  \frac{\langle e^x, u_2 \rangle}{\langle u_2, u_2\rangle}u_2 = \frac{\int_0^1 e^xdx}{\int_0^1 1dx}1 + \frac{\int_0^1 e^x (x-\frac{1}{2})dx}{\int_0^1(x-\frac{1}{2})^2dx}(x-\frac{1}{2}) = (18-6e)x+(4e-10)$$
 
-### 範例： 三角多項式的逼近\(Fourier series\)
+### 範例： 三角多項式的逼近(Fourier series)
 
 * 一個三角多項式為$$t_n(x)=\frac{a_0}{2}+\sum_{k=1}^n (a_k \cos kx + b_k \sin kx)$$
 * 向量空間$$V=C[-\pi, \pi]$$，$$\langle f, g \rangle=\frac{1}{\pi}\int_{-\pi}^{\pi}f(x)g(x)dx$$，則$$\{\frac{1}{\sqrt{2}}, \cos x, \sin x, \dots, \cos nx, \sin nx\}$$為單範正交集。
@@ -133,7 +133,7 @@ Proof:
 * $$a_k = \langle f, \cos kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\cos kxdx$$。
 * $$b_k = \langle f, \sin kx \rangle= \frac{1}{\pi} \int_{-\pi}^{\pi}f(x)\sin kxdx$$。
 
-## 應用：最小平方直線\(least square line\)\(線性迴歸，linear regression\)
+## 應用：最小平方直線(least square line)(線性迴歸，linear regression)
 
 * 給定平面上不全相同的$$n$$個點$$D=\{(x_1, y_1), \dots, (x_n, y_n)\}$$，可使用最小平方逼近求一直線$$a+bx$$使得該直線的誤差平方總和最小，$$E=\sum_{i=1}^n(\hat{y}_i-y_i)^2 =\sum_{i=1}^n(a+bx_i - y)^2$$
 * $$A=\begin{bmatrix}  1 & x_1 \\ 1 & x_2 \\ \vdots & \vdots \\ 1 & x_n \end{bmatrix}, x= \begin{bmatrix}  a \\ b \end{bmatrix}, y=\begin{bmatrix}  y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix}, E=\|Ax-y\|^2$$
@@ -199,10 +199,10 @@ Proof:
 * 因為$$Q$$的行向量$$\begin{bmatrix}q_1 & q_2 & \dots &q_k \end{bmatrix}$$為單範正交集，即$$\langle q_i,q_j \rangle=q_j^\mathrm{H} q_i=\delta_{ij}$$，所以$$Q^\mathrm{H} Q=I_k$$。
 * 可得$$R^\mathrm{H} Q^\mathrm{H} QRx=R^\mathrm{H} Q^\mathrm{H} b \Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$
 * 因此$$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$最小$$\Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$
-* 由於$$Rx=Q^\mathrm{H} b \Rightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$ 成立 \(a\)
+* 由於$$Rx=Q^\mathrm{H} b \Rightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b$$ 成立 (a)
 * 因為$$R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b \Rightarrow RR^\mathrm{H} Rx=RR^\mathrm{H} Q^\mathrm{H} b$$
-* 因為$$R$$為列獨立$$\Leftrightarrow RR^\mathrm{H}$$ 為可逆矩陣，所以$$RR^\mathrm{H} Rx=RR^\mathrm{H} Q^\mathrm{H} b \Rightarrow Rx=Q^\mathrm{H} b$$成立\(b\)
-* 由\(a\)\(b\)得 $$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小$$\Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b \Leftrightarrow Rx=Q^\mathrm{H} B$$ \(QED\).
+* 因為$$R$$為列獨立$$\Leftrightarrow RR^\mathrm{H}$$ 為可逆矩陣，所以$$RR^\mathrm{H} Rx=RR^\mathrm{H} Q^\mathrm{H} b \Rightarrow Rx=Q^\mathrm{H} b$$成立(b)
+* 由(a)(b)得 $$x \in \mathbb{C}^{N \times 1}\ni \|Ax−b\|$$為最小$$\Leftrightarrow R^\mathrm{H} Rx=R^\mathrm{H} Q^\mathrm{H} b \Leftrightarrow Rx=Q^\mathrm{H} B$$ (QED).
 
 #### 範例
 
@@ -211,41 +211,39 @@ Proof:
 * $$u_2 = v_2 - \frac{\langle v_2, u_1\rangle}{\langle u_1, u_1\rangle}u_1 = \begin{bmatrix} -\frac{5}{3} \\ \frac{1}{3} \\ \frac{4}{3}\end{bmatrix}$$，$$\langle u_2 , u_2\rangle=\frac{14}{3}$$
 * $$A=\begin{bmatrix} \frac{u_1}{\|u_1\|} & \frac{u_2}{\|u_2\|}\end{bmatrix} \begin{bmatrix}  \|u_1\| & \frac{2}{3}\|u_1\| \\ 0 & \|u_2\| \end{bmatrix} = \begin{bmatrix}  \frac{1}{\sqrt{3}} & -\frac{5}{\sqrt{42}} \\ \frac{1}{\sqrt{3}} & \frac{1}{\sqrt{42}} \\ \frac{1}{\sqrt{3}} & \frac{4}{\sqrt{42}}  \end{bmatrix} \begin{bmatrix}  \sqrt{3} & \frac{2\sqrt{3}}{3} \\ 0 & \sqrt{\frac{14}{3}}  \end{bmatrix} = QR$$
 * $$Rx=Q^{\mathrm{H}}b$$
-* 得  $$ \begin{bmatrix}  \sqrt{3} & \frac{2\sqrt{3}}{3} \\ 0 & \sqrt{\frac{14}{3}}  \end{bmatrix}x=\begin{bmatrix} \frac{4}{\sqrt{3}} \\ \frac{13}{\sqrt{42}}  \end{bmatrix}$$
+* 得  $$\begin{bmatrix}  \sqrt{3} & \frac{2\sqrt{3}}{3} \\ 0 & \sqrt{\frac{14}{3}}  \end{bmatrix}x=\begin{bmatrix} \frac{4}{\sqrt{3}} \\ \frac{13}{\sqrt{42}}  \end{bmatrix}$$
 * 得$$a=\frac{5}{7}, b=\frac{3}{14}$$。
 
 ### 投影矩陣的性質
 
-> 1. 矩陣$$A \in F^{M \times N }$$ 為行獨立所以（$$A^{\mathrm{H}} A$$可逆），$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}$$ 為正交投影矩陣，則$$P^2=P$$且$$P^\mathrm{H}=P$$ \(Hermitian matrix\)，同投影算子的性質。 
+> 1. 矩陣$$A \in F^{M \times N }$$ 為行獨立所以（$$A^{\mathrm{H}} A$$可逆），$$P=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}$$ 為正交投影矩陣，則$$P^2=P$$且$$P^\mathrm{H}=P$$ (Hermitian matrix)，同投影算子的性質。&#x20;
 > 2. 若$$P \in F^{N \times N} \ni P^2=P$$且$$P^\mathrm{H}=P$$，則$$P$$為一投影在$$W=CS(P)$$上的正交投影矩陣。
 
-Proof \(1\):
+Proof (1):
 
-*  $$\begin{aligned} P^2 & =(A(A^\mathrm{H} A)^{−1} A^\mathrm{H} )（A(A^\mathrm{H} A)^{−1} A^\mathrm{H} ）\\&＝A(A^\mathrm{H} A)^{−1} A^\mathrm{H} A(A^\mathrm{H} A)^{−1} A^\mathrm{H} \\ &=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}\\&=P \end{aligned}$$
-* $$\begin{aligned} P^\mathrm{H} & =(A(A^\mathrm{H} A)^{−1} A^\mathrm{H} )^\mathrm{H}\\ &=A((A^\mathrm{H} A)^{−1} )^\mathrm{H} A^\mathrm{H}\\ &=A((A^\mathrm{H} A)^\mathrm{H} )^{−1} A^\mathrm{H} \\ &=A(A^\mathrm{H} A)^{−1} A^\mathrm{H} \\ &=P \end{aligned}$$\(QED\)
+* &#x20;$$\begin{aligned} P^2 & =(A(A^\mathrm{H} A)^{−1} A^\mathrm{H} )（A(A^\mathrm{H} A)^{−1} A^\mathrm{H} ）\\&＝A(A^\mathrm{H} A)^{−1} A^\mathrm{H} A(A^\mathrm{H} A)^{−1} A^\mathrm{H} \\ &=A(A^\mathrm{H} A)^{−1} A^\mathrm{H}\\&=P \end{aligned}$$
+* $$\begin{aligned} P^\mathrm{H} & =(A(A^\mathrm{H} A)^{−1} A^\mathrm{H} )^\mathrm{H}\\ &=A((A^\mathrm{H} A)^{−1} )^\mathrm{H} A^\mathrm{H}\\ &=A((A^\mathrm{H} A)^\mathrm{H} )^{−1} A^\mathrm{H} \\ &=A(A^\mathrm{H} A)^{−1} A^\mathrm{H} \\ &=P \end{aligned}$$(QED)
 
-Proof \(2\):
+Proof (2):
 
 * 因為$$W=CS(P)$$，所以$$\forall y \in W ~ \exists x \in F^{N \times 1} \ni y=Px$$。
 * 令$$b \in F^{N \times 1}$$，則投影在$$W$$的向量為$$Pb$$，因此：
-* $$\langle b−Pb,y \rangle=\langle b−Pb, Px \rangle=(Px)^\mathrm{H} (b−Pb)=x^\mathrm{H} P^\mathrm{H} (b−Pb)=x^\mathrm{H} P(I−P)b=x^\mathrm{H} (P−P^2 )b=0, ~\forall b \in F^{N \times 1}$$  \(QED\)
+* $$\langle b−Pb,y \rangle=\langle b−Pb, Px \rangle=(Px)^\mathrm{H} (b−Pb)=x^\mathrm{H} P^\mathrm{H} (b−Pb)=x^\mathrm{H} P(I−P)b=x^\mathrm{H} (P−P^2 )b=0, ~\forall b \in F^{N \times 1}$$  (QED)
 
 ### 單範正交集的投影矩陣
 
-> $$Q \in F^{M \times N}$$ 且$$Q$$的行向量形成單範正交集\($$Q^\mathrm{H} Q=I$$\)。
+> $$Q \in F^{M \times N}$$ 且$$Q$$的行向量形成單範正交集($$Q^\mathrm{H} Q=I$$)。
 >
 > 若$$W=CS(Q)$$，則$$\mathrm{proj}_W (b)=QQ^\mathrm{H} b$$。
 
 Proof:
 
-* 因為$$Q$$的行向量形成單範正交集，所以$$Q$$的行向量獨立，因此\($$Q^\mathrm{H} Q$$\)可逆。
+* 因為$$Q$$的行向量形成單範正交集，所以$$Q$$的行向量獨立，因此($$Q^\mathrm{H} Q$$)可逆。
 * 所以$$\mathrm{proj}_W (b)=Q(Q^\mathrm{H} Q)^{−1} Qb$$
 * 因為$$Q^\mathrm{H} Q=I$$
-* 所以$$\mathrm{proj}_W (b)=QQ^\mathrm{H} B$$ \(QED\).
+* 所以$$\mathrm{proj}_W (b)=QQ^\mathrm{H} B$$ (QED).
 
 
 
-### 
-
-
+### &#xD;
 

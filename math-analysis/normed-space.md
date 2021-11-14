@@ -8,7 +8,7 @@ description: normed space
 
 從範數公理性的四個性質，不難得到其與距離空間的四個性質是等價的。也就是說，**範數滿足距離的定義**，賦範空間也是一類特殊的距離空間，該距離空間距離函數由範數誘導。
 
-![&#x8CE6;&#x7BC4;&#x7A7A;&#x9593;&#x70BA;&#x5EA6;&#x91CF;&#x7A7A;&#x9593;&#x7684;&#x7279;&#x4F8B;](../.gitbook/assets/250px-mathematical_spaces-min.png)
+![賦範空間為度量空間的特例](../.gitbook/assets/250px-Mathematical\_Spaces-min.png)
 
 ## 賦範線性空間
 
@@ -48,7 +48,7 @@ description: normed space
 > * $$T$$有界；
 > * $$S \subseteq  X$$為有界集，則$$T(S) \subseteq Y$$為有界集。
 
-## 完備賦範空間\(Banach空間間
+## 完備賦範空間(Banach空間間
 
 > 若賦範空間$$(X, \| \cdot\|)$$中，範數$$\| \cdot\|$$誘導的距離函數$$d(x,y)$$是完備的度量空間$$(X,d)$$時，則稱$$(X,\|\cdot\|)$$為完備賦範空間。
 >
@@ -58,7 +58,8 @@ description: normed space
 
 * 歐式空間$$(\mathbb{R}^n, \|x\|_2)$$為完備賦範空間。
 * 連續函數空間$$(C[a,b], d_1(f,g)), ~ d_1(f,g)=\sup_{a \leq x \leq b}|f(x)-g(x)|$$為完備賦範空間。
-* 
+*
+
 ## Lp空間
 
 > * $$C[a,b]$$是定義域為實數區間$$[a,b]$$上連續函數全體所成的集合。
@@ -66,6 +67,4 @@ description: normed space
 > * 距離為$$d(f,g)=\| f -g \|_p$$
 >
 > 成為一個賦範空間。但該賦範空間是不完備，即連續函數可能（點態）收斂為不連續函數。
-
-
 

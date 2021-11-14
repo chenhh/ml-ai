@@ -8,7 +8,7 @@
   * $$\subseteq$$點態連續（pointwise continuous）
 * Lipschitz連續$$\subseteq$$絕對連續$$\subseteq$$有界變分$$\subseteq$$幾乎處處可微分
 
-![&#x9023;&#x7E8C;&#x51FD;&#x6578;&#x7684;&#x96C6;&#x5408;](../../.gitbook/assets/continuous_func-min.png)
+![連續函數的集合](../../.gitbook/assets/continuous\_func-min.png)
 
 
 
@@ -23,9 +23,9 @@
 
 點態連續時，是對每一個在定義域的點$$c$$單獨討論$$\delta$$，因此$$\delta=(x,\epsilon)$$同時依賴於其它點$$x$$與選定的$$\epsilon$$。
 
-![&#x9EDE;&#x614B;&#x9023;&#x7E8C;](../../.gitbook/assets/pointwise_continuous-min.png)
+![點態連續](../../.gitbook/assets/pointwise\_continuous-min.png)
 
-![&#x9EDE;&#x614B;&#x9023;&#x7E8C;epsilon-delta&#x5B9A;&#x7FA9;](../../.gitbook/assets/pointwise_continuous2-min.png)
+![點態連續epsilon-delta定義](../../.gitbook/assets/pointwise\_continuous2-min.png)
 
 ## 均勻連續、一致連續（uniformly continuous）
 
@@ -48,7 +48,7 @@
 
 如下圖所示，如果能夠找到某一個$$\delta$$，且在整個定義域區間，對應的函數差值都不會超過$$\epsilon$$，就是一致連續。
 
-![&#x5747;&#x52FB;&#x9023;&#x7E8C;](../../.gitbook/assets/uniform_continuous-min.png)
+![均勻連續](../../.gitbook/assets/uniform\_continuous-min.png)
 
 
 
@@ -72,15 +72,15 @@ $$f(x)=\frac{1}{x},~ x \in (0,1)$$
 
 下圖中，當$$x \rightarrow 0+$$時，不論$$\delta$$取多小，$$\epsilon$$的變化會越來越大，因此不是均勻連續。
 
-![&#x9EDE;&#x614B;&#x4F46;&#x975E;&#x5747;&#x52FB;&#x9023;&#x7E8C;&#x7684;&#x51FD;&#x6578;](../../.gitbook/assets/not-uniform-conti-min.png)
+![點態但非均勻連續的函數](../../.gitbook/assets/not-uniform-conti-min.png)
 
 ## 利普希茨（Lipschitz）連續條件
 
-> 稱函數$$f$$在點$$c$$滿足$$\alpha$$階的利普希茨條件，若存在常數$$M>0$$\(可能會依賴於$$c$$而不同\)使得 $$|f(x)-f(c)| < M |x-c|^{\alpha}$$, $$x\neq c$$且$$x \in Ball(c)$$
+> 稱函數$$f$$在點$$c$$滿足$$\alpha$$階的利普希茨條件，若> 存在常數$$M>0$$(可能會依賴於$$c$$而不同)使得 $$|f(x)-f(c)| < M |x-c|^{\alpha}$$, $$x\neq c$$且$$x \in Ball(c)$$
 >
 > 若對於$$f: S \rightarrow \mathbb{R}$$定義域$$S$$中任意兩點$$a,b$$，若存在常數$$M>0$$滿足$$|f(a)-f(b)|< M|a-b|^{\alpha}~ \forall a,b\in S$$時，稱$$f$$在$$S$$為利普希茨連續。
 >
-> \[充要條件\] 函數$$f$$可微分且利普希茨連續 $$\Leftrightarrow$$$$f^{'}$$在定義域均為有界。
+> \[充要條件] 函數$$f$$可微分且利普希茨連續 $$\Leftrightarrow$$$$f^{'}$$在定義域均為有界。
 
 * 一般應用時是考慮$$α=1$$的條件，即函數$$f$$的斜率為有限值。
 * **利普希茨連續，要求函數圖像的曲線上，任意兩點連線的斜率均有界且都小於同一個常數（存在且不可為無窮大），這個常數就是利普希茨常數**。
@@ -88,7 +88,7 @@ $$f(x)=\frac{1}{x},~ x \in (0,1)$$
 * 若$$M<1$$時，稱$$f$$為收縮映射。
 * 直覺上，利普希茨連續函數限制了函數改變的速度，符合利普希茨條件的函數的斜率，必小於一個稱為利普希茨常數的實數（該常數依函數而定）。
 
-![Lipschitz&#x689D;&#x4EF6;&#xFF0C;&#x5B58;&#x5728;&#x6709;&#x4E00;&#x500B;&#x767D;&#x8272;&#x6C99;&#x6F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x51FD;&#x6578;&#x4E00;&#x5B9A;&#x80FD;&#x901A;&#x904E;&#x6C99;&#x6F0F;&#x7684;&#x6B63;&#x4E2D;&#x9593;](../../.gitbook/assets/lipschitz_condition.png)
+![Lipschitz條件，存在有一個白色沙漏，使得函數一定能通過沙漏的正中間](../../.gitbook/assets/Lipschitz\_condition.png)
 
 Lipschitz連續對分析復雜函數非常有用，因為它可以近似將最佳化復雜函數的問題，轉化為二次規劃問題。
 
@@ -105,15 +105,13 @@ Lipschitz連續對分析復雜函數非常有用，因為它可以近似將最�
 proof:
 
 * 因為$$f^{'}(x)$$有界，所以存在$$M>0 \ni |f^{'}(x)| < M,~ \forall x \in (a,b)$$
-* 由微分均值定理得 $$\exists c \in (a,b) \ni |f(x)-f(y)| = |f^{'}(c)(x-y)| \leq M|x-y|$$\(QED\)
+* 由微分均值定理得 $$\exists c \in (a,b) \ni |f(x)-f(y)| = |f^{'}(c)(x-y)| \leq M|x-y|$$(QED)
 
 ### 有界函數不一定是利普希茨函數
 
-![&#x6709;&#x754C;&#x4F46;&#x975E;&#x5229;&#x666E;&#x5E0C;&#x8328;&#x51FD;&#x6578;](../../.gitbook/assets/non-lipschitz-func.png)
+![有界但非利普希茨函數](../../.gitbook/assets/non-Lipschitz-func.png)
 
 ### 連續可微分但非利普希茨連續的函數
 
 $$f(x)=\sqrt{x}$$，此函數在$$[0, \infty)$$間連續可微分，$$f^{'}(x)=\frac{1}{2\sqrt{x}}$$，但是任意兩點間的斜率可以無限大（$$x\rightarrow 0$$時斜率往無窮大發散），因此不是利普希茨連續。
-
-
 

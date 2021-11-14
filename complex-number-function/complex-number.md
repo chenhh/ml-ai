@@ -1,12 +1,12 @@
-# 複數\(complex number\)
+# 複數(complex number)
 
 ## 複數空間
 
-複數空間$$\mathbb{C}^n$$ 為向量空間, 也稱為線性空間\(linear space\)
+複數空間$$\mathbb{C}^n$$ 為向量空間, 也稱為線性空間(linear space)
 
-* 令$$V$$為非空集合，$$F$$為域\(field\)，定義二個運算$$+$$與$$\cdot$$，其中
-  *  $$+:V \times V \rightarrow V$$為一函數，稱為向量加法\(vector addition\)。
-  * $$\cdot:F \times V  \rightarrow V$$為一函數，稱為純量積\(scalar multiplication\)。
+* 令$$V$$為非空集合，$$F$$為域(field)，定義二個運算$$+$$與$$\cdot$$，其中
+  * &#x20;$$+:V \times V \rightarrow V$$為一函數，稱為向量加法(vector addition)。
+  * $$\cdot:F \times V  \rightarrow V$$為一函數，稱為純量積(scalar multiplication)。
   * 即滿足 $$\forall u,v \in V$$ 唯一存在$$u+v \in V$$且$$\forall \alpha  \in F, ~ v \in V,$$唯一存在$$\alpha v \in V$$
 
 若上述二個運算滿足以下八個性質，稱V is a vector space over field F
@@ -22,30 +22,30 @@
 
 ## 複數
 
-\[虛數, imaginary number\] $$i=\sqrt{-1}, ~ i^2=−1, ~ i^3=−\sqrt{-1}, ~i^4=1$$
+\[虛數, imaginary number] $$i=\sqrt{-1}, ~ i^2=−1, ~ i^3=−\sqrt{-1}, ~i^4=1$$
 
 複數$$z \in \mathbb{C}$$有以下常用型式
 
-* $$z=x+iy $$
+* $$z=x+iy$$
 * $$z=(x,y)$$
-*  \[極坐標, polar form\] $$z=(r \cos \theta,r \sin\theta),~ r=\sqrt{x^2 + y^2}> 0,~ \theta\equiv \mathrm{arg}(z)=\tan^{−1}⁡\frac{y}{x} \in [−\pi, \pi]$$
+* &#x20;\[極坐標, polar form] $$z=(r \cos \theta,r \sin\theta),~ r=\sqrt{x^2 + y^2}> 0,~ \theta\equiv \mathrm{arg}(z)=\tan^{−1}⁡\frac{y}{x} \in [−\pi, \pi]$$
   * $$z=re^{i\theta}$$
 * $$x=\mathrm{Re}(z), y=\mathrm{Im}(z)$$
   * $$z = \mathrm{Re}(z) + i \mathrm{Im}(z)$$
   * $$\mathrm{Re}(z)=\frac{z + \overline{z}}{2}, ~ \mathrm{Im}(z)=\frac{z− \overline{z}}{2i}$$
 
-### 
+### &#xD;
 
-| 名稱 | 意義 | 符號 |
-| :--- | :--- | :--- |
-| modulus of $$z$$ | length $$r$$ of $$z$$ | $$|z|$$ |
-| argument of $$z$$ | angle $$\theta$$ of $$z$$ | $$\mathrm{arg}(z)$$ |
-| real part of $$z$$ | $$x$$ coordinate of $$z$$ | $$\mathrm{Re}(z)$$ |
-| imaginary part of $$z$$ | $$y$$ coordinate of $$z$$ | $$\mathrm{Im}(z)$$ |
-| imaginary number | real multiple of $$i$$ |  |
-| complex conjugate of $$z$$ | reflection of $$z$$ in the real axis | $$\overline{z}$$ |
+| 名稱                         | 意義                                   | 符號                  |
+| -------------------------- | ------------------------------------ | ------------------- |
+| modulus of $$z$$           | length $$r$$ of $$z$$                | $$|z|$$             |
+| argument of $$z$$          | angle $$\theta$$ of $$z$$            | $$\mathrm{arg}(z)$$ |
+| real part of $$z$$         | $$x$$ coordinate of $$z$$            | $$\mathrm{Re}(z)$$  |
+| imaginary part of $$z$$    | $$y$$ coordinate of $$z$$            | $$\mathrm{Im}(z)$$  |
+| imaginary number           | real multiple of $$i$$               |                     |
+| complex conjugate of $$z$$ | reflection of $$z$$ in the real axis | $$\overline{z}$$    |
 
-![&#x8907;&#x6578;&#x7B26;&#x865F;](../.gitbook/assets/complex-number-min.png)
+![複數符號](../.gitbook/assets/complex-number-min.png)
 
 ### 虛數的意義
 
@@ -53,7 +53,7 @@
 
 
 
-![&#x8CA0;&#x865F;&#x8868;&#x793A;&#x8B8A;&#x63DB;&#x65B9;&#x5411;\(180&#x5EA6;\)](../.gitbook/assets/real_number_direction-min.jpg)
+![負號表示變換方向(180度)](../.gitbook/assets/real\_number\_direction-min.jpg)
 
 這裡有一條數線，在數線上有一個紅色的線段，它的長度是1。當它乘以3 的時候，它的長度發生了變化，變成了藍色的線段，而當它乘以-1 的時候，就變成了綠色的線段，或者說線段在數軸上圍繞原點旋轉了180 度。
 
@@ -74,24 +74,24 @@
 ### 複數的性質
 
 * $$z_1=z_2 \Leftrightarrow x_1=x_2  \land y_1=y_2$$
-*  \[加法交換性\] $$ z_1 \pm z_2=z_2 \pm z_1=(x_1 \pm x_2 )+i(y_1 \pm y_2 )  $$
-*  \[加法單位元素\] $$z+(0+i0)=z$$
-* \[加法反元素\] $$z+(−z)=0+i0$$
-* \[乘法交換性\] $$z_1 z_2=z_2 z_1=(x_1 x_2−y_1 y_2 )+i(x_1 y_2+x_2 y_1 )$$
-* \[乘法單位元素\] $$z_1 z_2=1 \Rightarrow z^{−1}=\frac{1}{x+iy}=\frac{x}{x^2+y^2 }−i\frac{y}{x^2+y^2 }$$
+* &#x20;\[加法交換性] $$z_1 \pm z_2=z_2 \pm z_1=(x_1 \pm x_2 )+i(y_1 \pm y_2 )$$
+* &#x20;\[加法單位元素] $$z+(0+i0)=z$$
+* \[加法反元素] $$z+(−z)=0+i0$$
+* \[乘法交換性] $$z_1 z_2=z_2 z_1=(x_1 x_2−y_1 y_2 )+i(x_1 y_2+x_2 y_1 )$$
+*   \[乘法單位元素] $$z_1 z_2=1 \Rightarrow z^{−1}=\frac{1}{x+iy}=\frac{x}{x^2+y^2 }−i\frac{y}{x^2+y^2 }$$
 
-  * $$x_1 x_2−y_1 y_2=1$$ and $$(x_1 y_2+x_2 y_1 )=0$$
-  * $$x_2=\frac{x_1}{x_1^2+y_1^2 }, ~ y_2=\frac{−y_1}{x_1^2+y_1^2 }$$
+    * $$x_1 x_2−y_1 y_2=1$$ and $$(x_1 y_2+x_2 y_1 )=0$$
+    * $$x_2=\frac{x_1}{x_1^2+y_1^2 }, ~ y_2=\frac{−y_1}{x_1^2+y_1^2 }$$
 
 
 
-![&#x8907;&#x6578;&#x52A0;&#x6CD5;&#x7B49;&#x50F9;&#x65BC;&#x5411;&#x91CF;&#x52A0;&#x6CD5;](../.gitbook/assets/complex-num_add-min.png)
+![複數加法等價於向量加法](../.gitbook/assets/complex-num\_add-min.png)
 
-![&#x8907;&#x6578;&#x4E58;&#x6CD5;&#x70BA;&#x9577;&#x5EA6;&#x76F8;&#x4E58;&#x8207;&#x89D2;&#x5EA6;&#x76F8;&#x52A0;](../.gitbook/assets/complex_mul-min.png)
+![複數乘法為長度相乘與角度相加](../.gitbook/assets/complex\_mul-min.png)
 
-![&#x8907;&#x6578;&#x9664;&#x6CD5;&#x70BA;&#x9577;&#x5EA6;&#x76F8;&#x9664;&#x8207;&#x89D2;&#x5EA6;&#x76F8;&#x6E1B;](../.gitbook/assets/complex-div-min.jpg)
+![複數除法為長度相除與角度相減](../.gitbook/assets/complex-div-min.jpg)
 
-![&#x4E58;&#x4EE5;&#x8907;&#x6578;&#x70BA;&#x65CB;&#x8F49;arg\(z\)&#x5EA6;&#x5F8C;&#xFF0C;&#x518D;&#x653E;&#x5927;\|z\|&#x500D;\(&#x6216;&#x5148;&#x653E;&#x5927;&#x518D;&#x65CB;&#x8F49;\)](../.gitbook/assets/1195px-complex_multi-min.png)
+![乘以複數為旋轉arg(z)度後，再放大|z|倍(或先放大再旋轉)](../.gitbook/assets/1195px-Complex\_multi-min.png)
 
 * $$z_1 (z_2+z_3 )=z_1 z_2+z_1 z_3$$
 * $$z_1 z_2=0 \Leftrightarrow z_1=0 \lor z_2=0$$
@@ -99,16 +99,16 @@
 * $$z \neq 0, ~ z^0=1, ~(z^{−n} )=(z^n )^{−1}$$
 * $$\frac{z_1}{z_2} =z_1 z_2^{−1}$$
 * $$z^{\frac{1}{n}} \equiv |z|^{\frac{1}{n}}e^{\frac{\theta +2k \pi)}{n}}=|z|^{\frac{1}{n}} \left( \cos⁡ \left( \frac{\theta+2k\pi)}{n}\right),~\sin\left( \frac{\theta+2k\pi)}{n}\right) \right), ~\forall k \in \mathbb{Z}$$
-  *  If $$\theta \ in [−\pi, \pi]$$, $$c \equiv |z|^{\frac{1}{n}} \left( \cos(\frac{\theta}{n}),~sin(\frac{\theta}{n}) \right)$$  is called principal value of $$z^{\frac{1}{n}}$$
+  * &#x20;If $$\theta \ in [−\pi, \pi]$$, $$c \equiv |z|^{\frac{1}{n}} \left( \cos(\frac{\theta}{n}),~sin(\frac{\theta}{n}) \right)$$  is called principal value of $$z^{\frac{1}{n}}$$
 * $$z^{−\frac{1}{n}}=(z^{−1})^{\frac{1}{n}}$$
 
-## 共軛複數與模\(conjugate complex and modulus\)
+## 共軛複數與模(conjugate complex and modulus)
 
 令$$z = x +iy$$，則其共軛複數$$\overline{z}= x -iy$$對稱於實數軸。
 
-* \[Complex Conjugate Root Theorem\] 如果$$z=x+iy$$為一方程式的解，則$$\overline{z}=x−iy$$也為方程式的解。
+* \[Complex Conjugate Root Theorem] 如果$$z=x+iy$$為一方程式的解，則$$\overline{z}=x−iy$$也為方程式的解。
 
-### 模\(modulus\)
+### 模(modulus)
 
 * $$|z| = \sqrt{x^2 + y^2} =\sqrt{\mathrm{Re}(z)^2 + \mathrm{Im}(z)^2}$$
 * 複數之間無法比較大小，因此不能比較$$i$$與$$2i$$的大小, 但可以比較兩者的模$$|i|<|2i|$$
@@ -116,37 +116,37 @@
 
 
 
-![&#x5171;&#x8EDB;&#x8907;&#x6578;&#x5C0D;&#x7A31;&#x65BC;&#x5BE6;&#x6578;&#x8EF8;](../.gitbook/assets/800px-complex_conjugate_picture-min.png)
+![共軛複數對稱於實數軸](../.gitbook/assets/800px-Complex\_conjugate\_picture-min.png)
 
-> $$ \displaystyle \overline{\sum_{i=1}^n z_i} = \sum_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
+> $$\displaystyle \overline{\sum_{i=1}^n z_i} = \sum_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
 
 * $$\overline{z_1 + z_2}=\overline{(x_1 + x_2)+ i (y_1 +y_2)}=(x_1 + x_2) - i(y_1 + y_2) = \overline{z_1} + \overline{z_2}$$
-* 其它可用數學歸納法得出 \(QED\)
+* 其它可用數學歸納法得出 (QED)
 
-> $$ \displaystyle \overline{\prod_{i=1}^n z_i} = \prod_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
+> $$\displaystyle \overline{\prod_{i=1}^n z_i} = \prod_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
 
 * $$\overline{z_1 z_2}=\overline{(x_1 x_2 -y_1 y_2) + i(x_1 y_2 + x_2 y_1)}=(x_1 x_2 - y_1 y_2) - i(x_1 y_2 + x_2 y_1)=\overline{z_1} \overline{z_2}$$
-* 其它可用數學歸納法得出 \(QED\)
+* 其它可用數學歸納法得出 (QED)
 
-> $$ |z|^2 = z \overline{z}=| \overline{z}|^2  \geq 0, ~ \forall z \in \mathbb{C}$$
+> $$|z|^2 = z \overline{z}=| \overline{z}|^2  \geq 0, ~ \forall z \in \mathbb{C}$$
 
-* $$z \overline{z} = (x+iy)(x-iy)=(x^2+y^2)=|z|^2$$\(QED\)
+* $$z \overline{z} = (x+iy)(x-iy)=(x^2+y^2)=|z|^2$$(QED)
 
 > $$\max\{|\mathrm{Re}(z)|, |\mathrm{Im}(z)| \} \leq |z|  \leq | \mathrm{Re}(z)| + |\mathrm{Re}(z)| \leq \sqrt{2} |z|, ~ \forall z \in \mathbb{C}$$
 
 由複平面與三角不等式可得出。
 
-> \[三角不等式\] $$|z_1 + z_2| \leq |z_1| + |z_2|$$
+> \[三角不等式] $$|z_1 + z_2| \leq |z_1| + |z_2|$$
 
 > $$| |z_1| - |z_2|| \leq |z_1 - z_2|$$
 
-> \[Lagrange inequality\] $$\displaystyle  \left| \sum_{i=1}^n z_i \right| \leq \sum_{i=1}^n |z_i|, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
+> \[Lagrange inequality] $$\displaystyle  \left| \sum_{i=1}^n z_i \right| \leq \sum_{i=1}^n |z_i|, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
 
-> \[Cauchy inequality\] $$\displaystyle  \left| \sum_{i=1}^n  z_i w_i \right| \leq \left( \sum_{i=1}^n |z_i|^2 \right)\left( \sum_{i=1}^n |w_i|^2\right), ~ \forall z_i, w_i \in \mathbb{C}$$
+> \[Cauchy inequality] $$\displaystyle  \left| \sum_{i=1}^n  z_i w_i \right| \leq \left( \sum_{i=1}^n |z_i|^2 \right)\left( \sum_{i=1}^n |w_i|^2\right), ~ \forall z_i, w_i \in \mathbb{C}$$
 
-> \[distance\] $$d(z_1, z_2) = |z_1 - z_2|$$
+> \[distance] $$d(z_1, z_2) = |z_1 - z_2|$$
 
-## 極座標\(polar form\)
+## 極座標(polar form)
 
 複數$$z=x+iy = r(\cos \theta, \sin \theta)= |z|(\cos \theta, \sin \theta), ~ \theta  = \mathrm{tan}^{-1}{(\frac{y}{x})}$$
 
@@ -154,45 +154,44 @@
 
 令$$z_1 = |z_1|(\cos \theta_1, \sin \theta_1), ~ z_2 = |z_2|(\cos \theta_2, \sin \theta_2)$$，可得
 
-*  \[相差$$2n\pi$$倍角度會回到相同的角度\] $$z_1=z_2 \Leftrightarrow |z_1 |=|z_2 | $$且$$ \exists n \in \mathbb{Z} \ni  \theta_1 = \theta_2 + 2n \pi$$
-*  **\[複數相乘等於極坐標角度相加\(旋轉\)**\] $$z_1 z_2=|z_1 ||z_2 |(\cos⁡(\theta_1+\theta_2 ),~ \sin⁡(\theta_1+\theta_2 ) )$$
+* &#x20;\[相差$$2n\pi$$倍角度會回到相同的角度] $$z_1=z_2 \Leftrightarrow |z_1 |=|z_2 |$$且$$\exists n \in \mathbb{Z} \ni  \theta_1 = \theta_2 + 2n \pi$$
+*   &#x20;**\[複數相乘等於極坐標角度相加(旋轉)**] $$z_1 z_2=|z_1 ||z_2 |(\cos⁡(\theta_1+\theta_2 ),~ \sin⁡(\theta_1+\theta_2 ) )$$
 
-  * $$ z_1 z_2=|z_1 ||z_2 |(\cos⁡\theta_1  \cos⁡\theta_2 −\sin⁡\theta_1  \sin⁡\theta_2, \cos \theta_1  \sin⁡\theta_2 +\sin⁡\theta_1  \cos⁡\theta_2 )=|z_1 ||z_2 |(\cos⁡(\theta_1+\theta_2 ),~\sin⁡(\theta_1+\theta_2 ) )$$
-
-
+    *   $$z_1 z_2=|z_1 ||z_2 |(\cos⁡\theta_1  \cos⁡\theta_2 −\sin⁡\theta_1  \sin⁡\theta_2, \cos \theta_1  \sin⁡\theta_2 +\sin⁡\theta_1  \cos⁡\theta_2 )=|z_1 ||z_2 |(\cos⁡(\theta_1+\theta_2 ),~\sin⁡(\theta_1+\theta_2 ) )$$
 
 
 
 
 
-  * 註: $$1\cdot (−1+i0)=−1 $$\(旋轉$$\pi$$\)， $$1\cdot (0+i)=i $$\(旋轉$$\frac{\pi}{2}$$\)
 
-* \[**複數相除等於極坐標角度相減\(旋轉\)**\] $$\frac{z_1}{z_2} =\frac{|z_1 |}{|z_2 | } (\cos⁡(\theta_1−\theta_2 ),~ \sin⁡(\theta_1−\theta_2 ) )$$
+
+    * 註: $$1\cdot (−1+i0)=−1$$(旋轉$$\pi$$)， $$1\cdot (0+i)=i$$(旋轉$$\frac{\pi}{2}$$)
+* \[**複數相除等於極坐標角度相減(旋轉)**] $$\frac{z_1}{z_2} =\frac{|z_1 |}{|z_2 | } (\cos⁡(\theta_1−\theta_2 ),~ \sin⁡(\theta_1−\theta_2 ) )$$
 * $$\mathrm{arg}(z_1 z_2) = \mathrm{arg}(z_1) + \mathrm{arg}(z_2)$$
 * $$\mathrm{arg}(\frac{z_1}{z_2}) = \mathrm{arg}(z_1) - \mathrm{arg}(z_2)$$
-* \[**棣美弗定理 de Moivre's formula**\], $$z=|z|(\cos⁡\theta,~\sin\theta )\in \mathbb{C}\setminus\{0\} \Rightarrow z^n=|z|^n (\cos (n\theta),~ \sin (n \theta)), ~\forall n \in \mathbb{Z}$$
+* \[**棣美弗定理 de Moivre's formula**], $$z=|z|(\cos⁡\theta,~\sin\theta )\in \mathbb{C}\setminus\{0\} \Rightarrow z^n=|z|^n (\cos (n\theta),~ \sin (n \theta)), ~\forall n \in \mathbb{Z}$$
 
-## 歐拉公式\(Euler formula\)
+## 歐拉公式(Euler formula)
 
 > 歐拉公式提出，$$\forall x \in \mathbb{R}$$，均存在 $$e^{ix} = \cos x + i \sin x$$。
 >
-> 當$$x =\pi$$時，可得 $$e^{i\pi} + 1 =0 $$。
+> 當$$x =\pi$$時，可得 $$e^{i\pi} + 1 =0$$。
 >
->  這個公式表示$$e^{i\theta}$$  為單位圓上，幅角為$$\theta$$的一點，因此可將複數寫為 $$z=|z| e^{i\theta}$$
+> &#x20;這個公式表示$$e^{i\theta}$$  為單位圓上，幅角為$$\theta$$的一點，因此可將複數寫為 $$z=|z| e^{i\theta}$$>
 
-proof \(Taylor series\)：
+proof (Taylor series)：
 
 * 由Taylor  series 得$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +\ldots$$
-* 因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$\(QED\)
+* 因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$(QED)
 
-proof \(函數微分\)：
+proof (函數微分)：
 
 * 令$$f(x) = \frac{\cos x + i \sin x}{e^{ix}}$$，因為$$e^{ix} e^{-ix}=e^0=1$$，分母必不為0，定義成立。
-* $$f^{'}(x)=\frac{(-\sin x + i \cos x)e^{ix} - (\cos x + i \sin x)ie^{ix} }{(e^{ix})^2}= \frac{-\sin xe^{ix} + \sin x e^{ix}}{(e^{ix})^2} =0 $$
+* $$f^{'}(x)=\frac{(-\sin x + i \cos x)e^{ix} - (\cos x + i \sin x)ie^{ix} }{(e^{ix})^2}= \frac{-\sin xe^{ix} + \sin x e^{ix}}{(e^{ix})^2} =0$$
 * 由微分結果知$$f$$為常數函數，因此 $$f(0)=\frac{\cos 0 + i \sin 0}{e^{i0}}=1$$
-* 可得 $$e^{ix} = \cos x + i \sin x$$ \(QED\)
+* 可得 $$e^{ix} = \cos x + i \sin x$$ (QED)
 
-![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5716;](../.gitbook/assets/euler_formula-min.png)
+![歐拉公式的圖](../.gitbook/assets/Euler\_formula-min.png)
 
 ### 幾何意義
 
@@ -204,21 +203,20 @@ proof \(函數微分\)：
 
 
 
-![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5E7E;&#x4F55;&#x610F;&#x7FA9;](../.gitbook/assets/euler_geo-min.png)
+![歐拉公式的幾何意義](../.gitbook/assets/euler\_geo-min.png)
 
-*  \[Euler identity\] $$e^{i \pi}+1=0$$
-* \[De Moivre's Theorem\] $$z^n=(re^{i \theta} )^n=r^n e^{in\theta+2k\pi}=r^n (\cos⁡(n \theta+2k \pi)+i \sin⁡(n \theta+2k\pi) )  $$, $$\forall k \in \mathbb{Z}$$
+* &#x20;\[Euler identity] $$e^{i \pi}+1=0$$
+* \[De Moivre's Theorem] $$z^n=(re^{i \theta} )^n=r^n e^{in\theta+2k\pi}=r^n (\cos⁡(n \theta+2k \pi)+i \sin⁡(n \theta+2k\pi) )$$, $$\forall k \in \mathbb{Z}$$
 * $$z=|z|(\cos⁡\theta+i \sin \theta )=|z| e^{i\theta}=|z| e^{i( \theta +2n \pi)}, ~ \forall n \in \mathbb{Z}$$
 * $$\ln(z)=\ln⁡(|z|)+i(\theta+2n\pi),~ \forall n \in \mathbb{Z}$$
-* \[complex root\] $$x^n=1 \Rightarrow x= e^{\frac{2k \pi}{n}}, ~ \forall k \in \mathbb{Z}$$
+* \[complex root] $$x^n=1 \Rightarrow x= e^{\frac{2k \pi}{n}}, ~ \forall k \in \mathbb{Z}$$
 
 
 
 **歐拉公式所描繪的，是一個隨著時間變化，在複平面上做圓周運動的點，隨著時間的改變，在時間軸上就成了一條螺旋線**。如果只看它的實數部分，也就是螺旋線在左側的投影，就是一個最基礎的餘弦函數。而右側的投影則是一個正弦函數。
 
-![&#x6B50;&#x62C9;&#x516C;&#x5F0F;&#x7684;&#x5716;&#x5F62;](../.gitbook/assets/euler-form-meaning-min.jpg)
+![歐拉公式的圖形](../.gitbook/assets/euler-form-meaning-min.jpg)
 
 
 
-
-
+

@@ -208,4 +208,4 @@
 
 ## 情報學 <a href="intelligence-science" id="intelligence-science"></a>
 
-* [\[book\]情報學](intelligence-science/book-qing-bao-xue.md)
+* [\[書\]情報學](intelligence-science/shu-qing-bao-xue.md)

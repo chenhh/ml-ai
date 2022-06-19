@@ -25,31 +25,31 @@
 
 $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
-* $$ 0 \leq F(x) \leq 1$$
+* $$0 \leq F(x) \leq 1$$
 * $$F(x)$$為非遞減（non-decreasing）函數。
 * $$\displaystyle  \lim_{h \rightarrow 0} F(x+h) = F(x)$$, 則稱$$F(x)$$為右連續（right continuous）函數。
-* $$\displaystyle  \lim_{x \rightarrow \infty} F(x)=1$$且 $$\displaystyle  \lim_{x \rightarrow 0} F(x) = 0 $$
-* $$P(a < X \leq b) = F_X(b) - F_X(a)$$ 
+* $$\displaystyle  \lim_{x \rightarrow \infty} F(x)=1$$且 $$\displaystyle  \lim_{x \rightarrow 0} F(x) = 0$$
+* $$P(a < X \leq b) = F_X(b) - F_X(a)$$&#x20;
 
-### 經驗分佈函數\(empirical distribution\)
+### 經驗分佈函數(empirical distribution)
 
 > 令$$X_1, X_2, \ldots$$為一組隨機樣本, 以$$F$$為共同分佈函數。令 $$F_n(x)=\frac{X_i \leq x}{n}, ~ \forall x \in \mathbb{R}$$，則$$F_n$$稱為此組樣本之經驗分佈函數，為一階梯函數。
 
-## 機率密度（質量）函數（probability density \(mass\) function）
+## 機率密度（質量）函數（probability density (mass) function）
 
-如果離散隨機變數$$X$$，定義機率質量函數\(pmf\)$$P(x_i)\equiv P(X=x_i) \equiv P(\{ \omega \in \Omega | X(\omega \in x_i\})$$且滿足
+如果離散隨機變數$$X$$，定義機率質量函數(pmf)$$P(x_i)\equiv P(X=x_i) \equiv P(\{ \omega \in \Omega | X(\omega \in x_i\})$$且滿足
 
 * $$P(x_i ) \geq 0$$
 * $$\displaystyle \sum_{x_i}P(x_i) =1$$
 
-連續隨機變數的機率密度函數\(pdf\)$$f(x) = \frac{dF(x)}{dx}$$且滿足
+連續隨機變數的機率密度函數(pdf)$$f(x) = \frac{dF(x)}{dx}$$且滿足
 
 * $$f(x) \geq 0$$, $$x \in \mathbb{R}$$
 * $$\displaystyle  \int_{-\infty}^{\infty} f(x)dx=1$$
 
 ## 期望值
 
-* 離散隨機變數$$X$$的pmf為 $$P(X=x_i) =p_i, \ i \in \mathbb{N}$$。若$$\displaystyle  \sum_{i=1}^{\infty} |x_i| p_i < \infty$$\(有限值時\)，則$$X$$的期望值為$$\displaystyle  \mathrm{E}(X) \equiv \sum_{i=1}^{\infty} x_i p_i$$
+* 離散隨機變數$$X$$的pmf為 $$P(X=x_i) =p_i, \ i \in \mathbb{N}$$。若$$\displaystyle  \sum_{i=1}^{\infty} |x_i| p_i < \infty$$(有限值時)，則$$X$$的期望值為$$\displaystyle  \mathrm{E}(X) \equiv \sum_{i=1}^{\infty} x_i p_i$$
 * 連續隨機變數的pdf為$$f(x), \forall x \in \mathbb{R}$$，若$$\displaystyle  \int_{-\infty}^{\infty}|x|f(x) < \infty$$，則期望值為$$\displaystyle  \mathrm{E}(X) \equiv  \int_{-\infty}^{\infty} x f(x)dx$$
 * 而pdf期望值的Stieltjes積分形式為 $$\displaystyle  \mathrm{E}(X) \equiv\int_{-\infty}^{\infty} xdF(x)$$
 * 期望值的不偏估計式為 $$\displaystyle \hat{\mu_X} = \frac{1}{n} \sum_{i=1}^n x_i$$
@@ -61,12 +61,12 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 ### 期望值為線性算子
 
-> * $$\mathrm{E}(a_1X_1 + a_2 X_2 )=a_1 \mathrm{E}(X_1) + a_2 \mathrm{E}(X_2) $$
+> * $$\mathrm{E}(a_1X_1 + a_2 X_2 )=a_1 \mathrm{E}(X_1) + a_2 \mathrm{E}(X_2)$$
 > * $$\displaystyle \mathrm{E}(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n a_i \mathrm{E}(X_i)$$
 
 ## Theorem
 
-> 若$$\displaystyle \int_{-\infty}^{\infty} |g(x)|dF(x) < \infty$$，則$$\mathrm{E}(g(X))$$存在且$$\displaystyle\mathrm{E}(g(X))= \int_{-\infty}^{\infty}g(x)dF(x)$$
+> &#x20;若$$\displaystyle \int_{-\infty}^{\infty} |g(x)|dF(x) < \infty$$，則$$\mathrm{E}(g(X))$$存在且$$\displaystyle\mathrm{E}(g(X))= \int_{-\infty}^{\infty}g(x)dF(x)$$
 
 ## Theorem：加法算子與期望值算子的交換性
 
@@ -81,13 +81,37 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 變異數的不偏估計式為 $$\hat{\sigma_X}^2=\frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{x})^2$$。
 
+```python
+# -*- coding: UTF-8 -*-
+import numpy as np
+from typing import Iterable
+
+
+def variance(values: Iterable):
+    xs = np.asarray(values)
+
+    e_x = xs.mean()
+    e_x2 = (xs * xs).mean()
+    var_x1 = e_x2 - e_x * e_x
+    var_x2 = ((xs - e_x) * (xs - e_x)).mean()
+    var_np = xs.var(ddof=0)  # default bias estimator
+    np.testing.assert_almost_equal(var_x1, var_np, decimal=10)
+    np.testing.assert_almost_equal(var_x2, var_np, decimal=10)
+    print(f"{var_x1}, {var_x2}, {var_np}")
+
+
+if __name__ == '__main__':
+    values = np.random.rand(1000)
+    variance(values)
+```
+
 ## 雙變量隨機變數
 
 > 若$$X,Y$$為離散型隨機變數，則
 >
-> * 機率質量函數\(pmf\)定義為$$P_{XY}(x,y)\equiv P(X=x, Y=y)$$
+> * 機率質量函數(pmf)定義為$$P_{XY}(x,y)\equiv P(X=x, Y=y)$$
 > * 分佈函數$$\displaystyle F_{XY}(x,y) = \sum_{a \leq x} \sum_{b \leq y}P_{XY}(a,b)$$
-> * 邊際密度函數\(marginal density function\) 
+> * 邊際密度函數(marginal density function)&#x20;
 >   * $$\displaystyle P_X(x) = \sum_y P_{XY}(x,y)$$
 >   * $$\displaystyle P_Y(y) = \sum_x P_{XY}(x,y)$$
 > * 兩隨機變數獨立記為$$X \perp Y$$滿足 $$P_{XY}(x,y)=P_X(x) P_Y(y)$$
@@ -114,11 +138,11 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 * $$-1\leq \rho \leq 1$$
   * $$\rho = -1$$表$$X,Y$$為完全（線性）負相關。
   * $$\rho=1$$表$$X,Y$$為完全（線性）正相關。
-  * $$\rho=0$$表$$X,Y$$\(線性\)不相關。
+  * $$\rho=0$$表$$X,Y$$(線性)不相關。
 * 相關係數的不偏估計式為 $$\hat{\rho}_{XY}=\frac{\hat{\mathrm{Cov}(X,Y)}}{\hat{\sigma_X} \hat{\sigma_Y}}$$
 * $$\mathrm{V} (X \pm Y) = \mathrm{V}(X) + \mathrm{V}(Y)\pm 2\mathrm{Cov}(X,Y)$$
   * 若$$X \perp Y$$，即$$\mathrm{Cov}(X,Y)=0$$，則$$\mathrm{V}(X \pm Y) = \mathrm{X} + \mathrm{Y}$$
-* \[Cauchy-Schwarz不等式\] $$\mathrm{E}(X^2) \mathrm{E} (Y^2) \geq  (\mathrm{E}(XY))^2$$
+* \[Cauchy-Schwarz不等式] $$\mathrm{E}(X^2) \mathrm{E} (Y^2) \geq  (\mathrm{E}(XY))^2$$
 
 ### 共變異數的性質
 
@@ -129,6 +153,4 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 
 > $$\begin{aligned} \mathrm{Cov}(a_1 x_1 + a_2 x_2, b_1y_1+b_2 y_2) = \\ \mathrm{Cov}(a_1 x_1, b_1y_1)+  \mathrm{Cov}(a_1 x_2, b_2 y_2) + \\  \mathrm{Cov}(a_2 x_2, b_1 y_1) + \mathrm{Cov}(a_2 x_2, b_2 y_2) \\=a_1 b_1 \mathrm{Cov}(x_1, y_1) + a_1 b_2 \mathrm{Cov}(x_1, y_2) \\+ a_2 b_1 \mathrm{Cov}(x_2, y_1) + a_2 b_2 \mathrm{Cov}(x_2, y_2) \end{aligned}$$
-
-
 

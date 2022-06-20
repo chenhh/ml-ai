@@ -37,20 +37,27 @@ import numpy as np
 from typing import Iterable
 
 def kth_moment(values: Iterable):
-    ys = np.asarray(values)
+      ys = np.asarray(values)
+    mu = ys.mean()
     for k in range(1, 4+1):
-        e_xs = (ys**(k)).mean()
+        e_xs = (ys**k).mean()
+        e_center_xs = ((ys - mu)**k).mean()
         print(f"{k}th moment: {e_xs:.4f}")
+        print(f"{k}th center moment: {e_center_xs:.4f}")
         
 if __name__ == '__main__':
     values = np.random.randn(100000)
     kth_moment(values)
     
 """ 標準常態分佈均值為0, 二階中央動差為1, 三階中央動差為0, 四階中央動差為3
-1th moment: -0.0011    
-2th moment: 1.0014
-3th moment: -0.0104
-4th moment: 3.0325
+1th moment: 0.0034
+1th center moment: 0.0000
+2th moment: 1.0031
+2th center moment: 1.0031
+3th moment: 0.0014
+3th center moment: -0.0089
+4th moment: 3.0038
+4th center moment: 3.0039
 """
 ```
 

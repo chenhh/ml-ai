@@ -35,6 +35,26 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 > 令$$X_1, X_2, \ldots$$為一組隨機樣本, 以$$F$$為共同分佈函數。令 $$F_n(x)=\frac{X_i \leq x}{n}, ~ \forall x \in \mathbb{R}$$，則$$F_n$$稱為此組樣本之經驗分佈函數，為一階梯函數。
 
+![經驗分佈函數](../../.gitbook/assets/empirical\_dist-min.png)
+
+```python
+import numpy as np
+from typing import Iterable
+import matplotlib.pyplot as plt
+
+def empirical_distribution(values: Iterable):
+    ys = np.asarray(values)
+    fig, ax = plt.subplots()
+    n_bin = ys.size//10
+    n, bins, patches = ax.hist(ys, bins=n_bin, density=True, 
+        cumulative=True, label='empirical distribution')
+    ax.set_ylabel('Frequency')
+    ax.set_title('Probability')
+    ax.legend()
+    fig.tight_layout()
+    plt.show()
+```
+
 ## 機率密度（質量）函數（probability density (mass) function）
 
 如果離散隨機變數$$X$$，定義機率質量函數(pmf)$$P(x_i)\equiv P(X=x_i) \equiv P(\{ \omega \in \Omega | X(\omega \in x_i\})$$且滿足
@@ -46,6 +66,26 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 
 * $$f(x) \geq 0$$, $$x \in \mathbb{R}$$
 * $$\displaystyle  \int_{-\infty}^{\infty} f(x)dx=1$$
+
+![機率密度(質量)函數](../../.gitbook/assets/pmf-min.png)
+
+```python
+import numpy as np
+from typing import Iterable
+import matplotlib.pyplot as plt
+
+def probability_mass_function(values: Iterable):
+    ys = np.asarray(values)
+    fig, ax = plt.subplots()
+    n_bin = ys.size // 10
+    n, bins, patches = ax.hist(ys, bins=n_bin, density=True, 
+        cumulative=False, edgecolor='black', label='pmf')
+    ax.set_ylabel('Frequency')
+    ax.set_title('Probability')
+    ax.legend(fontsize=24)
+    fig.tight_layout()
+    plt.show()
+```
 
 ## 期望值
 

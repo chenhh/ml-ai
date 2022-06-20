@@ -2,7 +2,7 @@
 description: moment：動差(tw)，矩(cn)
 ---
 
-# 動差生成函數\(moment generating function\)
+# 動差生成函數(moment generating function)
 
 ## 簡介
 
@@ -10,29 +10,29 @@ description: moment：動差(tw)，矩(cn)
 
 動差生成函數本身並不是一個從某個定義域映射至某個值域的函數，取名「函數」僅是出於歷史原因。
 
-* 隨機變數的動差生成函數\(MGF\)具唯一性，因此若兩個隨機變數的MGF相等時，則這兩個隨機變數具有相同的機率分佈。
-* 但是並非所有隨機變數均存在動差生成函數\(如Cauchy distribution不存在動差生成函數\)，此時可改用特徵函數\(characteristic function, CHF\)證明。
+* 隨機變數的動差生成函數(MGF)具唯一性，因此若兩個隨機變數的MGF相等時，則這兩個隨機變數具有相同的機率分佈。
+* 但是並非所有隨機變數均存在動差生成函數(如Cauchy distribution不存在動差生成函數)，此時可改用特徵函數(characteristic function, CHF)證明。
 * 隨機變數的特徵函數具唯一性，且必定存在。CHF可完全取代MGF，但通常MGF計算較為簡單，因此除非MGF不存在時，才會使用CHF證明。
-* **隨機變數的動差生成函數可視為隨機變數做Laplace transform \(不一定存在\)，而特徵函數可視為隨機變數做Fourier transform \(一定存在\)**。
+* **隨機變數的動差生成函數可視為隨機變數做Laplace transform (不一定存在)，而特徵函數可視為隨機變數做Fourier transform (一定存在)**。
 
-## 隨機變數的k次動差\(k-th moment\)
+## 隨機變數的k次動差(k-th moment)
 
 
 
 > 令隨機變數$$X$$的機率密度函數為$$f$$，則（以0為中心）$$k$$次動差為：
 >
-> * $$X$$為離散隨機變數，$$\operatorname{E}(X^k) = \sum_{i=1}^{\infty} x_i^k f(x_i)$$, $$x_i$$為可能的實現值。
-> * $$X$$為連續隨機變數，$$\operatorname{E}(X^k) = \int_{-\infty}^{\infty} x^k f(x)dx = \int_{-\infty}^{\infty} x^k dF(x)$$
-> * 如果$$X$$的觀察值\(樣本\)為$$x_1, x_2,\ldots, x_N$$，則$$k$$次動差為$$\operatorname{E}(X^k) = \frac{1}{N} \sum_{i=1}^N x_i^k$$。
+> * $$X$$為離散隨機變數，$$\displaystyle \operatorname{E}(X^k) = \sum_{i=1}^{\infty} x_i^k f(x_i)$$, $$x_i$$為可能的實現值。
+> * $$X$$為連續隨機變數，$$\displaystyle \operatorname{E}(X^k) = \int_{-\infty}^{\infty} x^k f(x)dx = \int_{-\infty}^{\infty} x^k dF(x)$$
+> * 如果$$X$$的觀察值(樣本)為$$x_1, x_2,\ldots, x_N$$，則$$k$$次動差為$$\displaystyle \operatorname{E}(X^k) = \frac{1}{N} \sum_{i=1}^N x_i^k$$。
 >
-> 以期望值為中心的$$k$$次動差為 $$\operatorname{E}((X-\mu)^k)=\int_{-\infty}^{\infty}x^k dF(x)$$
+> 以期望值為中心的$$k$$次動差為 $$\displaystyle   \operatorname{E}((X-\mu)^k)=\int_{-\infty}^{\infty}x^k dF(x)$$
 
-*  一階動差為平均值\(mean\)，描述分佈的集中程度。
-* 二階中央動差為變異數\(variance\)，描述分佈的分散程度。
-* 三階中央動差為偏度\(skewness\)，描述分佈左、右偏移的程度。
-* 四階中央動差為峰度\(kurtosis\)，述述分佈尖聳的程度。
+* &#x20;一階動差為平均值(mean)，描述分佈的集中程度。
+* 二階中央動差為變異數(variance)，描述分佈的分散程度。
+* 三階中央動差為偏度(skewness)，描述分佈左、右偏移的程度。
+* 四階中央動差為峰度(kurtosis)，述述分佈尖聳的程度。
 
-## 動差生成函數\(MGF\)
+## 動差生成函數(MGF)
 
 > 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x) \text{ or} \sum_{i=1}^n e^{t x_i}\mathrm{P}(x_i)$$，可視為隨機變數的（反）Laplace轉換。
 >
@@ -56,6 +56,4 @@ description: moment：動差(tw)，矩(cn)
 > $$\displaystyle f(x) = \frac{1}{2} \pi \int_{-\infty}^{\infty} e^{-itx} \phi_X(t)dt$$
 
 有時無法根據上式求出$$f(x)$$的公式解，而必須依賴數值方法求$$f(x)$$，如亞洲式選擇權中，標的物的平均值機率分佈無法直接得到，必須先算平均股價的特徵函數後，再以上式反推平均價的機率分佈。
-
-
 

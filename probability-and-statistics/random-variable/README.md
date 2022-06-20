@@ -53,6 +53,10 @@ def empirical_distribution(values: Iterable):
     ax.legend()
     fig.tight_layout()
     plt.show()
+    
+if __name__ == '__main__':
+    values = np.random.randn(1000)
+    empirical_distribution(values)
 ```
 
 ## 機率密度（質量）函數（probability density (mass) function）
@@ -85,6 +89,10 @@ def probability_mass_function(values: Iterable):
     ax.legend(fontsize=24)
     fig.tight_layout()
     plt.show()
+    
+if __name__ == '__main__':
+    values = np.random.randn(1000)
+    probability_mass_function(values)
 ```
 
 ## 期望值

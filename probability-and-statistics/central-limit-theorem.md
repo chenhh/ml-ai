@@ -33,11 +33,12 @@ $$\forall c > 0$$, $$\displaystyle \lim_{N \rightarrow 0} \mathrm{P}\bigg( \frac
 
 ```python
 import numpy as np
+import scipy.stats as spstats
 
 def central_limit_theorem(n_sample=1000, n_point=10000):
 
-    for _ in range(10):
-        a, b= np.random.randint(1, 10), np.random.randint(1, 10)
+        for _ in range(20):
+        a, b= np.random.randint(1, 100), np.random.randint(1, 100)
         values = np.random.beta(a, b, (n_sample, n_point))
         mu = a / (a+b)
         std = np.sqrt((a*b)/((a+b)* (a+b) *(a+b+1)))
@@ -46,22 +47,24 @@ def central_limit_theorem(n_sample=1000, n_point=10000):
 
         zs = np.sqrt(n_point)*(mu_hat - mu)/std
         z_mean, z_std = zs.mean(), zs.std()
-        print(f"beta({a}, {b}): mu:{z_mean}, std:{z_std}")
+        z_skew, z_kurt = spstats.skew(zs), spstats.kurtosis(zs)
+        print(f"beta({a}, {b}): mu:{z_mean:.2f}, std:{z_std:.2f}, "
+              f"skew:{z_skew:.2f}, kurt:{z_kurt:.2f}")
 
 if __name__ == '__main__':
     central_limit_theorem()
     
 """
-beta(9, 1): mu:0.04, std:0.98
-beta(3, 2): mu:-0.01, std:0.98
-beta(8, 3): mu:-0.01, std:0.96
-beta(8, 6): mu:-0.04, std:1.04
-beta(4, 1): mu:-0.00, std:0.96
-beta(1, 1): mu:0.02, std:0.98
-beta(1, 9): mu:-0.00, std:0.96
-beta(7, 2): mu:0.02, std:1.00
-beta(2, 2): mu:0.02, std:1.01
-beta(7, 6): mu:-0.03, std:0.99
+beta(13, 6): mu:-0.05, std:1.01, skew:0.06, kurt:0.13
+beta(70, 90): mu:-0.05, std:1.01, skew:0.00, kurt:-0.01
+beta(73, 78): mu:0.01, std:1.00, skew:-0.01, kurt:0.05
+beta(39, 89): mu:0.00, std:1.00, skew:0.00, kurt:0.09
+beta(56, 35): mu:0.03, std:0.99, skew:-0.15, kurt:0.09
+beta(21, 36): mu:-0.03, std:0.98, skew:0.02, kurt:-0.02
+beta(46, 70): mu:0.01, std:1.00, skew:-0.06, kurt:0.02
+beta(66, 11): mu:0.05, std:1.00, skew:-0.08, kurt:-0.04
+beta(37, 75): mu:0.06, std:0.98, skew:0.14, kurt:0.11
+beta(18, 60): mu:0.01, std:1.00, skew:-0.03, kurt:0.06
 """
 ```
 

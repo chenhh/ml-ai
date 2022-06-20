@@ -6,17 +6,20 @@
 
 通常假設這些資料為獨立同分佈（i.i.d.），獨立的目的是要讓似然函數（ikelihood function）為觀測值函數值的乘積。但即使資料不為獨立，估計參數值乃會正比於獨立時的機率，而我們只是要求出有最大機率的參數即可。
 
-* 令似然函數 $$\displaystyle L(\theta|X) = \prod_{i=1}^N f(X_i | \theta)$$，求$$\displaystyle \theta^{*} = \mathop{\arg\min}_{\theta} L(\theta |X)$$
-* 通常會將似然函數取對數簡化求極值的步驟，稱為log-likelihood function $$l(\theta|X) = \log L(\theta |X) = \sum_{i=1}^N \log{f(X_i|\theta})$$。
-* 因為對數函數是單調函數，極值的參數不變，即$$\displaystyle \theta^{*} = \mathop{\arg\min}_{\theta} L(\theta |X) = \mathop{\arg\min}_{\theta} l(\theta |X)$$。
-* 因為$$l(\theta | X)$$為凸函數，解析方法是取偏微分為0處的參數，而數值方法可以用梯度法快速求值。
+* 令似然函數 $$\displaystyle \mathrm{L}(\theta|X) = \prod_{i=1}^N f(X_i | \theta)$$，求$$\displaystyle \theta^{*} = \mathop{\arg\min}_{\theta}  \mathrm{L}(\theta |X)$$
+* 通常會將似然函數取對數簡化求極值的步驟，稱為log-likelihood function $$l(\theta|X) = \log  \mathrm{L}(\theta |X) = \sum_{i=1}^N \log{f(X_i|\theta})$$。
+* 因為對數函數是單調函數，極值的參數不變，即$$\displaystyle \theta^{*} = \mathop{\arg\min}_{\theta}  \mathrm{L}(\theta |X) = \mathop{\arg\min}_{\theta} l(\theta |X)$$。
+* 因為$$l(\theta | X)$$為凸函數，解析方法是對$$\theta$$取偏微分為0處的參數，而數值方法可以用梯度法快速求值。
 
 ### 例：丟銅板
 
 * 假如我們觀察拋擲銅板的現象，得到觀察序列 $$X = \{0, 1, 0, 0, 1, 1, 0, 0, 0, 1 \}$$ 這個現象，其中的 1 代表正面 (人頭)，0 代表反面 (字)，因此正面共出現 4 次，反面共出現 6 次。  $$\mathrm{P}(X=1)=0.4,  \mathrm{P}(X=0)=0.6$$  。
 * 丟銅板的機率已知為二項分佈$$X \sim Ber(N,p)$$，其中$$\mathrm{P}(X=1)=p$$。
   * $$\begin{aligned} f(X|\theta) & = \binom{N}{k}\mathrm{P}(X=1)^{k}\mathrm{P}(X=0)^{n-k} \\&= \binom{N}{k}p^k(1-p)^{n-k} \end{aligned}$$
-* 根據最大似然法則，我們應該去找 $$p^{*} = \mathrm{argmax}_{p} \sum_{i=1}^N \log{f(x_i|p)}$$
+  * 根據最大似然法則，我們應該去找 $$\displaystyle p^{*} = \mathrm{argmax}_{p} \sum_{i=1}^N \log{f(p|x_i)}$$
+  * $$\log f(p |x_i) = \log{\binom{N}{k}}+ k \log{p} + (n-k) \log (1- p)$$
+  * $$\displaystyle \frac{\partial \log f(p|x_i)}{\partial p} = \frac{k}{p}+\frac{n-k}{1-p}$$
+  * 上例可得$$p^{*}=\frac{4}{10}$$
 
 ### 例：Poisson分佈
 

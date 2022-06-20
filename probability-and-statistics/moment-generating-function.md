@@ -32,6 +32,30 @@ description: moment：動差(tw)，矩(cn)
 * 三階中央動差為偏度(skewness)，描述分佈左、右偏移的程度。
 * 四階中央動差為峰度(kurtosis)，述述分佈尖聳的程度。
 
+```python
+import numpy as np
+from typing import Iterable
+
+def kth_moment(values: Iterable):
+    ys = np.asarray(values)
+    for k in range(1, 4+1):
+        e_xs = (ys**(k)).mean()
+        print(f"{k}th moment: {e_xs:.4f}")
+        
+if __name__ == '__main__':
+    values = np.random.randn(100000)
+    kth_moment(values)
+    
+""" 標準常態分佈均值為0, 二階中央動差為1, 三階中央動差為0, 四階中央動差為3
+1th moment: -0.0011    
+2th moment: 1.0014
+3th moment: -0.0104
+4th moment: 3.0325
+"""
+```
+
+*
+
 ## 動差生成函數(MGF)
 
 > 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x) \text{ or} \sum_{i=1}^n e^{t x_i}\mathrm{P}(x_i)$$，可視為隨機變數的（反）Laplace轉換。

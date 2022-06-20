@@ -41,22 +41,22 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--(2)
 
 ## Boole不等式（union bound）
 
-> $$P(\cup_{ i \in \mathbb{N}} E_i) \leq  \sum_{i \in \mathbb{N}} P(E_i)$$
+> $$\displaystyle \mathrm{P}(\bigcup_{ i \in \mathbb{N}} E_i) \leq  \sum_{i \in \mathbb{N}} \mathrm{P}(E_i)$$
 >
 > * 指對於至少一事件發生的機率不大於單個事件發生的機率總和。
 > * 在測度論中，不等式滿足$$\sigma$$次可加性。
 
 #### 使用數學歸納法可證明。
 
-* 對於一個事件，$$P(E_1) \leq P(E_1)$$。
-* 假設對$$n$$個事件不等式成立，即假設 $$P(\cup_{i=1}^n E_i) \leq \sum_{i=1}^n P(E_i)$$。
+* 對於一個事件，$$\mathrm{P}(E_1) \leq \mathrm{P}(E_1)$$。
+* 假設對$$n$$個事件不等式成立，即假設 $$\mathrm{P}(\cup_{i=1}^n E_i) \leq \sum_{i=1}^n \mathrm{P}(E_i)$$。
 *   對於$$n+1$$個事件：
 
-    * $$P(E \cup F) = P(E) + P(F) - P(E \cap F)$$
-    * $$P(\cup_{i=1}^{n+1}E_i) = P(\cup_{i=1}^{n}E_i) + P(E_{n+1}) - P(\cup_{i=1}^{n}E_i \cap E_{n+1})$$
-    * 因為機率大於等於0，所以 $$P(\cup_{i=1}^{n}E_i \cap E_{n+1}) \geq 0$$
-    * 可得$$P(\cup_{i=1}^{n+1}E_i) \leq P(\cup_{i=1}^{n}E_i) + P(E_{n+1})$$
-    * 再由歸納假設得 $$P(\cup_{i=1}^{n+1}E_i) \leq  \sum_{i=1}^n P(E_i) + P(E_{n+1}) =  \sum_{i=1}^{n+1} P(E_i)$$
+    * $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+    * $$\mathrm{P}(\cup_{i=1}^{n+1}E_i) = \mathrm{P}(\cup_{i=1}^{n}E_i) + \mathrm{P}(E_{n+1}) - \mathrm{P}(\cup_{i=1}^{n}E_i \cap E_{n+1})$$
+    * 因為機率大於等於0，所以 $$\mathrm{P}(\cup_{i=1}^{n}E_i \cap E_{n+1}) \geq 0$$
+    * 可得$$\mathrm{P}(\cup_{i=1}^{n+1}E_i) \leq \mathrm{P}(\cup_{i=1}^{n}E_i) + \mathrm{P}(E_{n+1})$$
+    * 再由歸納假設得 $$\mathrm{P}(\cup_{i=1}^{n+1}E_i) \leq  \sum_{i=1}^n \mathrm{P}(E_i) + \mathrm{P}(E_{n+1}) =  \sum_{i=1}^{n+1} \mathrm{P}(E_i)$$
     * (QED)
 
 
@@ -65,32 +65,32 @@ $$P((X-\mu)^2 \geq k^2) = P(|X-\mu| \geq k)$$--(2)
 
 令$$X$$是各種事件$$E_{i}$$的發生次數的隨機變量（為非負值）。
 
-可得 $$\textrm{E}(X) = P(E_1)+P(E_2)+\ldots +P(E_n) = \sum_{i=1}^n P(E_i)$$。
+可得 $$\textrm{E}(X) = \mathrm{P}(E_1)+\mathrm{P}(E_2)+\ldots +\mathrm{P}(E_n) = \sum_{i=1}^n \mathrm{P}(E_i)$$。
 
-由Markov不等式取$$t=1$$得$$P(X \geq 1) \leq \textrm{E}(X) = \sum_{i=1}^n P(E_i)$$。
+由Markov不等式取$$t=1$$得$$\mathrm{P}(X \geq 1) \leq \textrm{E}(X) = \sum_{i=1}^n \mathrm{P}(E_i)$$。
 
-而$$P(X \geq 1) = P(\cup_{i=1}^n E_i)$$
+而$$\mathrm{P}(X \geq 1) = \mathrm{P}(\cup_{i=1}^n E_i)$$
 
-所以$$P(\cup_{i=1}^n E_i)= \sum_{i=1}^n P(E_i)$$(QED)
+所以$$\mathrm{P}(\cup_{i=1}^n E_i)= \sum_{i=1}^n \mathrm{P}(E_i)$$(QED)
 
 ## Bonferroni不等式
 
-> * $$P(E \cap F) \geq P(E) + P(F) -1$$
-> * $$P(E_1 \cap E_2 \cap \ldots \cap E_n) \geq P(E_1) +P(E_2) +\ldots + P(E_n) - (n-1)$$
+> * $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
+> * $$\mathrm{P}(E_1 \cap E_2 \cap \ldots \cap E_n) \geq \mathrm{P}(E_1) +\mathrm{P}(E_2) +\ldots + \mathrm{P}(E_n) - (n-1)$$
 
-* $$P((E \cap F)^c) = P(E^c \cup F^c) \leq P(E^c)+P(F^c)$$
-* $$\because P((E \cap F)^c) = 1- P(E\cap F)$$ and $$P(E^c)=1-P(E)$$, $$P(F^c) = 1- P(F)$$
-* $$1-P(E\cap F) \leq 1 - P(E) + 1- P(F)$$
-* $$\therefore  P(E \cap F) \leq P(E) + P(F) - 1$$ (QED)
+* $$\mathrm{P}((E \cap F)^c) = \mathrm{P}(E^c \cup F^c) \leq \mathrm{P}(E^c)+\mathrm{P}(F^c)$$
+* $$\because \mathrm{P}((E \cap F)^c) = 1- \mathrm{P}(E\cap F)$$ and $$\mathrm{P}(E^c)=1-\mathrm{P}(E)$$, $$\mathrm{P}(F^c) = 1- \mathrm{P}(F)$$
+* $$1-\mathrm{P}(E\cap F) \leq 1 - \mathrm{P}(E) + 1- \mathrm{P}(F)$$
+* $$\therefore  \mathrm{P}(E \cap F) \leq \mathrm{P}(E) + \mathrm{P}(F) - 1$$ (QED)
 
 ## Hoeffding不等式
 
-> 設有兩兩獨立的一系列隨機變量$$X_{1},\dots ,X_{n}$$。假設對所有的$$1\leq i\leq n$$}$$X_{i}$$都是幾乎有界的變量，即滿足$$P(X_i \in [a_i, b_i])=1$$
+> 設有兩兩獨立的一系列隨機變量$$X_{1},\dots ,X_{n}$$。假設對所有的$$1\leq i\leq n$$}$$X_{i}$$都是幾乎有界的變量，即滿足$$\mathrm{P}(X_i \in [a_i, b_i])=1$$
 >
 > 那麼這$$n$$個隨機變量的經驗期望值：$${\overline {X}}={\frac {X_{1}+\cdots +X_{n}}{n}}$$滿足以下的不等式：
 >
-> * $${\displaystyle {P} ({\overline {X}}-\mathrm {E} [{\overline {X}}]\geq t)\leq \exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
-> * $${\displaystyle {P} (|{\overline {X}}-\mathrm {E} [{\overline {X}}]|\geq t)\leq 2\exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
+> * $${\displaystyle {\mathrm{P}} ({\overline {X}}-\mathrm {E} [{\overline {X}}]\geq t)\leq \exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
+> * $${\displaystyle {\mathrm{P}} (|{\overline {X}}-\mathrm {E} [{\overline {X}}]|\geq t)\leq 2\exp \left(-{\frac {2t^{2}n^{2}}{\sum _{i=1}^{n}(b_{i}-a_{i})^{2}}}\right),\!}$$
 >
 >
 

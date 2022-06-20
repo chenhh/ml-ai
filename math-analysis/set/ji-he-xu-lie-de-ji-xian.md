@@ -13,9 +13,7 @@
 
 > * $$\{E_n \}_{n \in \mathbb{N}}$$ 為
 >   * 遞增(increasing)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
->   * 遞減(decreasing)若$$E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
-
-E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$, $$}$$
+>   * 遞減(decreasing)若$$E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$
 
 ### 單調有界集合序列極限必定存在
 

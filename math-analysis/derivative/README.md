@@ -42,12 +42,12 @@
 
 **微分值為正負無窮大的概念與微分不存在不同**；**微分值為正負無窮大表示函數在該點的切線為垂直線；而微分值不存在是無法確定函數在該點的切線斜率（例如**不連續點或是尖點）。
 
-**由定義可得若**$$c \in S$$**為內點，函數**$$f$$**在點**$$c$$**可微分若且唯若**$$f$$**在點**$$c$$**的左側微分等於點**$$c$$**的右側微分，即** $$f^′ (c)=f_−^′ (c)=f_+^′ (c)$$**。**
+**由定義可得若**$$c \in S$$**為內點，函數**$$f$$**在點**$$c$$**可微分若且唯若**$$f$$**在點**$$c$$**的左側微分等於點**$$c$$**的右側微分，即 **$$f^′ (c)=f_−^′ (c)=f_+^′ (c)$$**。**
 
 ![函數連續與微分存在的圖示](../../.gitbook/assets/left\_right\_derivative-min.png)
 
-**函數在一點二階可微(2nd differentiable at one point)**
-
+**函數在一點二階可微(2nd differentiable at one point)**
+--
 
 令函數 $$f:(a,b) \rightarrow \mathbb{R}$$ 為可微函數，若導函數$$f^′$$ 在點$$c \in (a,b)$$的極限$$\displaystyle  \lim_{h \rightarrow 0}⁡\frac{f^′ (c+h)−f^′ (c)}{h}$$ 存在，則稱函數$$f$$在點$$c$$二階可微分，記為 $$\displaystyle f^{′′} (c)\equiv f^{(2)}(c) \equiv \frac{d^2 f}{dx^2 }(c) \equiv \lim_{h \rightarrow 0}\frac{f^′ (c+h)−f^′ (c)}{h}$$。
 

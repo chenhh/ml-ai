@@ -45,5 +45,5 @@ NFL於機器學習的解釋
 
 ## 參考資料
 
-* [https://www.no-free-lunch.org/](https://www.no-free-lunch.org)
+* [https://www.no-free-lunch.org/](https://www.no-free-lunch.org/)
 

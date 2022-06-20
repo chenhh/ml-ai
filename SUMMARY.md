@@ -2,7 +2,7 @@
 
 * [數理機器學習](README.md)
 
-## 數學分析 <a href="math-analysis" id="math-analysis"></a>
+## 數學分析 <a href="#math-analysis" id="math-analysis"></a>
 
 * [集合](math-analysis/set/README.md)
   * [基數](math-analysis/set/cardinal-number.md)
@@ -50,7 +50,7 @@
 * [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)
 * [分數微積分(fractional calculus)](math-analysis/fractional-calculus.md)
 
-## 機率與統計 <a href="probability-and-statistics" id="probability-and-statistics"></a>
+## 機率與統計 <a href="#probability-and-statistics" id="probability-and-statistics"></a>
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
 * [機率測度(probability measure)](probability-and-statistics/probability-measure.md)
@@ -77,7 +77,7 @@
 * [貝式機率](probability-and-statistics/bayes-probability.md)
 * [關聯結構(copula)](probability-and-statistics/copula.md)
 
-## 線性代數 <a href="linear-algebra" id="linear-algebra"></a>
+## 線性代數 <a href="#linear-algebra" id="linear-algebra"></a>
 
 * [向量空間](linear-algebra/vector-space/README.md)
   * [子空間(subspace)](linear-algebra/vector-space/zi-kong-jian-subspace.md)
@@ -124,7 +124,7 @@
   * [奇異值分解(SVD, singular value decomposition)](linear-algebra/inner-product-space/singular-value-decomposition.md)
   * [Lagrange內插法(interpolation formula)](linear-algebra/inner-product-space/lagrange-interpolation.md)
 
-## 時間序列與訊號處理 <a href="time-series" id="time-series"></a>
+## 時間序列與訊號處理 <a href="#time-series" id="time-series"></a>
 
 * [簡介](time-series/time-series-introduction.md)
 * [ARMA](time-series/arma.md)
@@ -132,12 +132,12 @@
 * [共整合(cointegrating)](time-series/cointegrating.md)
 * [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)
 
-## 資訊理論 <a href="information-theory" id="information-theory"></a>
+## 資訊理論 <a href="#information-theory" id="information-theory"></a>
 
 * [點對點模型與資訊熵](information-theory/p2p-model-entropy.md)
 * [資訊測度](information-theory/information-measure.md)
 
-## 學習理論 <a href="learning-theory" id="learning-theory"></a>
+## 學習理論 <a href="#learning-theory" id="learning-theory"></a>
 
 * [學習問題](learning-theory/learning-problem.md)
 * [Bias-Variance Tradeoff](learning-theory/bias-variance-tradeoff.md)
@@ -152,41 +152,41 @@
 * [在線學習(online learning)](learning-theory/online-learning.md)
 * [卡爾曼濾波器(Kalman filter)](learning-theory/kalman-filter.md)
 
-## 強化學習與決策理論 <a href="reinforcement-learning" id="reinforcement-learning"></a>
+## 強化學習與決策理論 <a href="#reinforcement-learning" id="reinforcement-learning"></a>
 
 * [Markov decision process (MDP)](reinforcement-learning/mdp.md)
 * [秘書聘選問題(secretary problem)](reinforcement-learning/secretary-problem.md)
 
-## 賽局理論 <a href="game-theory" id="game-theory"></a>
+## 賽局理論 <a href="#game-theory" id="game-theory"></a>
 
 * [賽局數學模型](game-theory/game-theory-model.md)
 * [Nash均衡](game-theory/nash-equilibrium.md)
 
-## 凸最佳化 <a href="convex-optimization" id="convex-optimization"></a>
+## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
 
 * [凸集合 (convex set)](convex-optimization/convex-set.md)
 * [凸函數 (convex function)](convex-optimization/convex-function.md)
 * [凸最佳化(convex optimization)](convex-optimization/convex-optimization.md)
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
 
-## 離散數學 <a href="discrete_math" id="discrete_math"></a>
+## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 
 * [排列(permutation)](discrete\_math/permutation.md)
 * [組合(combination)](discrete\_math/combination.md)
 
-## 計算理論 <a href="computation-theory" id="computation-theory"></a>
+## 計算理論 <a href="#computation-theory" id="computation-theory"></a>
 
 * [計算理論簡介](computation-theory/computation-theory-introduction.md)
 * [自動機(automata)](computation-theory/automata.md)
 
-## 因果推論 <a href="casualty-inference" id="casualty-inference"></a>
+## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 
 * [The book of why](casualty-inference/the-book-of-why/README.md)
   * [因果的三個層級](casualty-inference/the-book-of-why/ladder-of-causation.md)
   * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)
   * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
 
-## 微分方程 <a href="differential-equation" id="differential-equation"></a>
+## 微分方程 <a href="#differential-equation" id="differential-equation"></a>
 
 * [微分方程簡介](differential-equation/diff-eq-intro.md)
 * [一階微分方程式](differential-equation/first-order-diff-eq.md)
@@ -196,16 +196,16 @@
 * [線性微分方程組](differential-equation/linear-diff-eqs.md)
 * [偏微分方程式](differential-equation/partial-diff-eq.md)
 
-## 複變函數 <a href="complex-number-function" id="complex-number-function"></a>
+## 複變函數 <a href="#complex-number-function" id="complex-number-function"></a>
 
 * [複數(complex number)](complex-number-function/complex-number.md)
 
-## 複雜系統 <a href="complex-system" id="complex-system"></a>
+## 複雜系統 <a href="#complex-system" id="complex-system"></a>
 
 * [\[book\]模型思維(the model thinker)](complex-system/mo-xing-si-wei-the-model-thinker.md)
 * [碎形(分形) (fractal)](complex-system/fractal.md)
 * [相空間重構](complex-system/phase-space-reconstruction.md)
 
-## 情報學 <a href="intelligence-science" id="intelligence-science"></a>
+## 情報學 <a href="#intelligence-science" id="intelligence-science"></a>
 
-* [\[書\]情報學](intelligence-science/shu-qing-bao-xue.md)
+* [\[書\]情報學](intelligence-science/book-qing-bao-xue.md)

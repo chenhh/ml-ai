@@ -17,6 +17,35 @@
 * 統計量為一泛函(functional)，因為$$X$$在連續的狀況下為一函數，而上述定義只是取連續函數的觀測值而為離散數列。
 * **一統計量的機率分佈稱作此統計量的抽樣分佈（sample distribution）**。  從實務觀點，此分佈可作為經由重複取樣所得的統計量的可能觀察值之相對頻率圖得出。
 
+![幾何分佈(p=0.2)平均值與變異數的抽樣分佈](../../.gitbook/assets/sample\_dist-min.png)
+
+
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sample_distribution(n_sample=5000, n_point=10000):
+    mus = np.random.geometric(0.2, (n_sample, n_point)).mean(axis=1)   # size: n_sample
+    vars = np.random.geometric(0.2, (n_sample, n_point)).var(axis=1)
+    fig, ax = plt.subplots(2,1)
+    n_bin = n_sample // 10
+    ax[0].hist(mus, bins=n_bin, density=True, edgecolor='black', 
+        label='sample distribution of mean')
+    ax[1].hist(vars, bins=n_bin, density=True,edgecolor='black', 
+        color='green', label='sample distribution of var')
+    ax[0].set_ylabel('Frequency')
+    ax[1].set_ylabel('Frequency')
+    fig.suptitle('Sample distribution', fontsize=24)
+    ax[0].legend(fontsize=20)
+    ax[1].legend(fontsize=20)
+    fig.tight_layout()
+    plt.show()
+
+if __name__ == '__main__':
+    sample_distribution()
+```
+
 充分統計量(sufficient statistics)
 
 

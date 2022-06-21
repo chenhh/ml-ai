@@ -15,7 +15,7 @@
 
 > Definition: lag operator L
 >
-> $$L$$稱為落後運算元，若$$L^ky_t \equiv y_{t-k}$$
+> $$L$$(有時使用符號$$B$$)稱為落後運算元，若$$L^ky_t \equiv y_{t-k}$$
 >
 > 由定義可得$$L$$為[線性算子](../../linear-algebra/linear-transform/#xian-xing-ying-she-zhuan-huan-linear-mapping-or-linear-transform)。
 >
@@ -29,6 +29,8 @@
 * $$L^{-k}y_t=y_{t+k}$$
 * $$\forall |c|<1 ~, (1+cL+c^2L^2+c^3L^3+\cdots)y_t = \frac{1}{1-cL}y_t$$
 
-## 落後運算多項式
+## 落後運子表示差分
 
-使用落後運算元，$$y_t$$的一階差分可表示為$$\Delta y_t= y_t -y_{t-1}=y_t - Ly_t=(1-L)y_t$$。
+* $$y_t$$的<mark style="color:red;">一階差分</mark>可表示為$$\Delta y_t= y_t -y_{t-1}=y_t - Ly_t=(1-L)y_t$$。
+* <mark style="color:red;">二階差分</mark>可表示為$$\Delta^2 y_t =y_t-2y_{t-1}+y_{t-2}=(1-2B+B^2)y_t=(1-B)^2y_t$$。
+* 以此類推，<mark style="color:red;">d階差分</mark>可表示為$$(1-B)^dy_t$$。

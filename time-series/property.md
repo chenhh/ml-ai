@@ -18,6 +18,9 @@
 > $$L$$稱為落後運算元，若$$L^ky_t \equiv y_{t-k}$$
 >
 > 由定義可得$$L$$為[線性算子](../linear-algebra/linear-transform/#xian-xing-ying-she-zhuan-huan-linear-mapping-or-linear-transform)。
+>
+> * $$L^k(cy_t)=cL^k(y_t)=cy_{t-k}$$
+> * $$L^k(x_t+y_t)=L^k x_t+L^ky_t=x_{t-k}+y_{t-k}$$
 
 * $$\forall a,b \in \mathbb{R},~aL^ky_t+b=ay_{t-k}+b$$
 * $$\forall c \in \mathbb{R} ~, Lc=c$$

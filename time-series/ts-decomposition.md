@@ -37,7 +37,27 @@ $$y_t=S_t+T_t+R_t$$
 
 季節性調整的系列包含剩餘部分以及趨勢週期。因此，它們並不“平穩”，“低迷”或“好轉”可能會產生誤導。<mark style="color:red;">如果目的是尋找系列中的轉折點，並解釋方向的任何變化，那麼最好使用趨勢週期成分而不是季節性調整的數據</mark>。
 
+### 時間序列分解可用於衡量時間序列中趨勢和季節性的強度
+
+* &#x20;對於有強烈趨勢的數據，經季節性調整的數據$$y_t - S_t$$應該比剩餘部分$$R_t$$有更多的變化。即$$\mathrm{Var}(R_t)/\mathrm{Var}(R_t +T_t)$$之值應該很小。
+* 但對於微小或沒有趨勢的資料，$$\mathrm{Var}(R_t)/\mathrm{Var}(R_t +T_t)$$的值應趨近於1。
+
+因此可定義<mark style="color:red;">**趨勢的強度(strength of trend)**</mark>為
+
+* $$F_{Tend} = \max\left( 0,  1- \frac{\mathrm{Var}(R_t)}{\mathrm{Var}(R_t +T_t)} \right)$$
+* 這將給出 0 到 1 之間趨勢強度的度量。因為剩餘部份的變異數有時甚至可能大於季節性調整數據的變異數，所以我們將可能的最小值設為0。
+
+季節性強度的定義類似，但相對於去趨勢數據而不是季節性調整後的數據：
+
+* $$F_S = \max\left( 0,  1- \frac{\mathrm{Var}(R_t)}{\mathrm{Var}(R_t +S_t)} \right)$$
+* 沒有季節性趨勢的資料的$$F_S \rightarrow 0$$，反之有強烈季節性趨勢的資料$$F_S \rightarrow 1$$。
+
 ## 移動平均線(moving average)
 
-## 經典分解(classical decomposition)X
+## 經典分解(classical decomposition)
 
+## X11分解
+
+## SEATS分解
+
+## STL分解

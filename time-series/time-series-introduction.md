@@ -45,6 +45,7 @@
 
 
 
-參考資料
+## 參考資料
 
 * [Rob J Hyndman and George Athanasopoulos, Forecasting: Principles and Practice (2nd ed), Monash University, Australia](https://otexts.com/fpp2/).
+* 陳旭昇著，時間序列分析：總體經濟與財務金融之應用，民98.04，台灣東華，台北市。

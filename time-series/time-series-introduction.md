@@ -88,7 +88,7 @@
 
 $$\hat{y}_{T+h|T}=\overline{y}=\frac{1}{T} \sum_{t=1}^Ty_t$$
 
-符號$$\hat{y}_{T+h|T}$$
+符號$$\hat{y}_{T+h|T}$$表示使用$$y_1, y_2,\dots,y_T$$的資料，對於第$$T+h$$的資料做預測。
 
 ### 簡單法(naive method)&#x20;
 

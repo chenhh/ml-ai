@@ -42,3 +42,9 @@
 數位訊號是不連續的值，以一連串的二進位表示、0 為低電位，1 為高電位。例如 : 電腦處理資料、網路傳輸。優點 : 容易處理資料。如 儲存、傳輸、壓縮、解壓縮、加密、解密、偵錯、除錯。
 
 ![數位訊號](../.gitbook/assets/digital\_signal-min.png)
+
+
+
+參考資料
+
+* [Rob J Hyndman and George Athanasopoulos, Forecasting: Principles and Practice (2nd ed), Monash University, Australia](https://otexts.com/fpp2/).

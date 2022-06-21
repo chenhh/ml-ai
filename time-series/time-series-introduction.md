@@ -84,7 +84,7 @@
 
 ### 平均法(average method)
 
-所有未來值的預測都等於歷史數據的平均值。
+<mark style="color:red;">所有未來值的預測都等於歷史數據的平均值</mark>。
 
 $$\hat{y}_{T+h|T}=\overline{y}=\frac{1}{T} \sum_{t=1}^Ty_t$$
 
@@ -92,7 +92,7 @@ $$\hat{y}_{T+h|T}=\overline{y}=\frac{1}{T} \sum_{t=1}^Ty_t$$
 
 ### 簡單法(naive method)&#x20;
 
-將所有預測設置為最後一次觀察的值。這種方法非常適用於許多經濟和金融時間序列。<mark style="color:red;background-color:red;">因為當數據遵循隨機漫步(random walk)時，簡單法是最佳的預測，所以這些也稱為隨機遊走預測</mark>。
+<mark style="color:red;">將所有預測設置為最後一次觀察的值</mark>。這種方法非常適用於許多經濟和金融時間序列。<mark style="color:red;background-color:red;">因為當數據遵循隨機漫步(random walk)時，簡單法是最佳的預測，所以這些也稱為隨機遊走預測</mark>。
 
 $$\hat{y}_{T+h}=y_T$$
 
@@ -102,9 +102,11 @@ $$\hat{y}_{T+h}=y_T$$
 
 $$\hat{y}_{T+h|T}=y_{T+h-m(k+1)}$$
 
+例如要預測明年二月的資料，則等於今年二月的觀測值。同樣要預測明年第二季的資料，則等於今年第二季的資料。
+
 ### 漂移法(drift method)
 
-簡單法的一個變體是允許預測隨時間增加或減少，其中隨時間的變化量（稱為漂移）被設置為歷史數據中看到的平均變化。
+簡單法的一個變體是允許預測隨時間增加或減少，其中隨時間的變化量（稱為漂移）被設置為歷史數據中看到的平均變化。<mark style="color:red;">這相當於在第一次和最後一次觀察之間畫一條線，並將其外推到未來</mark>。
 
 $$\hat{y}_{T+h|T}=y_{T}+\frac{h}{T-1}\sum_{t=2}^T(y_t - y_{t-1})=y_T +h\frac{y_T-y_1}{T-1}$$
 

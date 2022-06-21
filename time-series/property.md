@@ -11,13 +11,13 @@
 
 當$$y_t$$變動不大時，$$\Delta \ln y_t$$是變動量的良好近似值，經常用於報酬率的計算。
 
-## 落後運算元(lag operator)
+## 落後算子(lag operator)
 
 > Definition: lag operator L
 >
 > $$L$$稱為落後運算元，若$$L^ky_t \equiv y_{t-k}$$
 >
-> 由定義可得$$L$$為線性運算元。
+> 由定義可得$$L$$為[線性算子](../linear-algebra/linear-transform/#xian-xing-ying-she-zhuan-huan-linear-mapping-or-linear-transform)。
 
 * $$\forall a,b \in \mathbb{R},~aL^ky_t+b=ay_{t-k}+b$$
 * $$\forall c \in \mathbb{R} ~, Lc=c$$

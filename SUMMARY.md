@@ -128,6 +128,7 @@
 
 * [簡介](time-series/time-series-introduction.md)
 * [時間序列性質](time-series/property.md)
+* [時間序列分解](time-series/ts-decomposition.md)
 * [線性模型](time-series/linear\_model.md)
 * [ARMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)

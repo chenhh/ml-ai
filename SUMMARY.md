@@ -127,6 +127,7 @@
 ## 時間序列與訊號處理 <a href="#time-series" id="time-series"></a>
 
 * [簡介](time-series/time-series-introduction.md)
+* [時間序列性質](time-series/property.md)
 * [ARMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)
 * [共整合(cointegrating)](time-series/cointegrating.md)

@@ -22,13 +22,57 @@
 
 由定義可知定態就是時間序列的結構，不會隨時間變化，而有穩定的結構，才是可預測的序列。
 
-穩定序列有以下的性病：
+穩定序列有以下的性質：
 
 * $$\gamma(0)\equiv \mathrm{Var}(y_t)=\mathrm{Var}(y_{t-k})$$
 * $$\rho(k)=\frac{\mathrm{Cov}(y_t,y_{t-k})}{\sigma_t \sigma_{t-k}}=\frac{\gamma(k)}{\gamma(0)}$$
 * $$\gamma(k)=\gamma(-k)$$，即$$\mathrm{Cov}(y_t, y_{t-k})=\mathrm{Cov}(y_t, y_{t+k})$$
 
 ### 強定態時間序列（strict stationary)
+
+> 給定序列$$\{ y_t\}_{t=-\infty}^\infty$$，若對於任意的時間跨度$$k$$，其聯合機率分佈$$F(\cdot)$$均與時間$$t$$無關，，則稱為嚴格定態序列。
+>
+> $$F(y_t, y_{t-1}, \dots, y_{t-k})=F(y_{\tau}, y_{\tau-1}, \dots, y_{\tau-k}), ~ \forall t, \tau, k$$
+
+若序列為嚴格定態，則其聯合機率陽佈不會因為時間點而改變(invariant under time shift)。
+
+例：
+
+* i.i.d.的抽樣樣本若依抽樣的時間排序後，為嚴格定態的時間序列。
+
+### 白噪音為嚴格定態時間序列
+
+> 定義白噪音$$e_t \sim \mathrm{WN}(0, \sigma^2)$$滿足以下條件：
+>
+> * \[均值為０] $$\mathrm{E}(e_t)=0, ~\forall t$$
+> * \[變異數為常數] $$\mathrm{E}(e_t^2)=\sigma^2, ~\forall t$$
+> * \[序列間元素不相關] $$\mathrm{E}(e_te_{t-k})=0,~\forall t,k$$
+>
+> 註：有些論文定義白噪音為i.i.d.的樣本序列，比不相關條件更強。
+
+![白噪音的ACF](../../.gitbook/assets/white\_noise-min.png)
+
+```python
+def white_noise(n_point=10000):
+    from statsmodels.tsa.stattools import (acovf, acf)
+    import matplotlib.pyplot as plt
+    from statsmodels.graphics.tsaplots import plot_acf
+    values = np.random.rand(n_point)  
+    gammas = acovf(values)
+    rhos = acf(values)
+    print(f"gamma:{gammas}, rho:{rhos}")
+    plot_acf(values)
+    plt.show()
+
+if __name__ == '__main__':
+    white_noise()
+```
+
+### 強定態時間序列為弱定態時間序列
+
+> 若時間序列$$\{y_t\}$$為強定態，且$$\mathrm{E}(y_t^2)<\infty$$，則$${y_t}$$為弱定態時間序列。
+
+
 
 ## 差分(difference)
 

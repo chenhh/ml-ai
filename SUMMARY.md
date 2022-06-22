@@ -129,6 +129,7 @@
 * [簡介](time-series/time-series-introduction.md)
 * [時間序列性質](time-series/property/README.md)
   * [平穩性、定態(stationary)](time-series/property/ping-wen-xing-ding-tai-stationary.md)
+  * [單根檢定(unit root test)](time-series/property/unit-root-test.md)
 * [時間序列分解](time-series/ts-decomposition.md)
 * [指數平滑](time-series/exponential-smoothing.md)
 * [線性模型](time-series/linear\_model.md)

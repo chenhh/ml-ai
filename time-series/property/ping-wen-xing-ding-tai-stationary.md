@@ -34,6 +34,10 @@ $$\gamma(k)$$的樣本估計式$$\hat{\gamma}(k)=\hat{\mathrm{Cov}}(y_t, y_{t-k}
 
 $$\hat{\rho}(k)=\frac{\hat{\mathrm{Cov}}(y_t, y_{t-k})}{\hat{\mathrm{Var}(y_t)}}$$
 
+### 範例弱定態時間序列
+
+> $$y_t=A\sin(\omega t+\theta)$$
+
 ### 強定態時間序列（strict stationary)
 
 > 給定序列$$\{ y_t\}_{t=-\infty}^\infty$$，若對於任意的時間跨度$$k$$，其聯合機率分佈$$F(\cdot)$$均與時間$$t$$無關，，則稱為嚴格定態序列。
@@ -86,8 +90,10 @@ if __name__ == '__main__':
 
 除了檢視數據的時間圖外，ACF 圖對於識別非平穩時間序列也很有用。<mark style="color:blue;">對於平穩的時間序列，ACF 會相對較快地下降到零，而非平穩數據的 ACF 下降緩慢</mark>。
 
-## 單位根檢驗(unit root test)
+## 單根檢驗(unit root test)
 
 更客觀地確定是否需要差分的一種方法是使用單位根檢驗。這些是平穩性的統計假設檢驗，旨在確定是否需要差分。
 
 有許多單位根檢驗可用，它們基於不同的假設，可能會導致相互矛盾的答案。
+
+<mark style="color:red;">Granger and Newbold發現發定態變數之間，可能會出現所謂「假性迴歸」(spurious regression)的問題，因此使用時間序列態，都必須使用單根檢定確定隨機變數是否為定態</mark>。

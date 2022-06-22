@@ -65,4 +65,6 @@
 ### k階自我相關係數
 
 > $$\rho(t,k)=\frac{\mathrm{Cov}(y_t, y_{t-k})}{\sigma_t \sigma_{t-k}}$$.
+>
+> 自我相關係數越高，則稱此序列的持續性越大(persistent)
 

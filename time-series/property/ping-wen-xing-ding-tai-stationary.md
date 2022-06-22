@@ -25,8 +25,14 @@
 穩定序列有以下的性質：
 
 * $$\gamma(0)\equiv \mathrm{Var}(y_t)=\mathrm{Var}(y_{t-k})$$
-* $$\rho(k)=\frac{\mathrm{Cov}(y_t,y_{t-k})}{\sigma_t \sigma_{t-k}}=\frac{\gamma(k)}{\gamma(0)}$$
 * $$\gamma(k)=\gamma(-k)$$，即$$\mathrm{Cov}(y_t, y_{t-k})=\mathrm{Cov}(y_t, y_{t+k})$$
+* $$\rho(k)=\frac{\mathrm{Cov}(y_t,y_{t-k})}{\sigma_t \sigma_{t-k}}=\frac{\gamma(k)}{\gamma(0)}$$
+
+$$\gamma(k)$$的樣本估計式$$\hat{\gamma}(k)=\hat{\mathrm{Cov}}(y_t, y_{t-k})=\frac{1}{T}\sum_{t=k+1}^T(y_t-\overline{y})(y_{t-k}-\overline{y})$$。
+
+可得$$\hat{\mathrm{Var}}(y_t)=\frac{1}{T}\sum_{t=1}^T(y_t-\overline{y})^2$$
+
+$$\hat{\rho}(k)=\frac{\hat{\mathrm{Cov}}(y_t, y_{t-k})}{\hat{\mathrm{Var}(y_t)}}$$
 
 ### 強定態時間序列（strict stationary)
 

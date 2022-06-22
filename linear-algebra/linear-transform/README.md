@@ -7,14 +7,14 @@
 > * $$\forall x,y \in V, ~ T(x+y)= T(x)+T(y)$$
 > * $$\forall c \in F, ~ T(cx)= cT(x)$$
 >
-> 則稱$$T$$為$$V$$至$$W$$的線性映射。
+> 則稱$$T$$為$$V$$至$$W$$的<mark style="color:red;">線性映射</mark>。
 >
 > 令$$V$$至$$W$$所有線性映射形成的集合為$$L(V,W)$$。
 >
-> * 當$$W=V$$時，稱$$T$$為$$V$$上的線性算子(linear operator)。
+> * 當$$W=V$$時，稱$$T$$為$$V$$上的<mark style="color:red;">線性算子(linear operator)</mark>。
 >   * 例如極限、微分等均為線性算子。
-> * 當$$W=F$$時，稱$$T$$為$$V$$上的線性泛函(linear functional)。
->   * 例和積分、熵為線性泛函。
+> * 當$$W=F$$時，稱$$T$$為$$V$$上的<mark style="color:red;">線性泛函(linear functional)</mark>。
+>   * 例如積分、熵為線性泛函。
 
 * $$T:F^{N \times N} \rightarrow F^{N \times N}$$  定義為$$T(A)=A^\top$$，則$$T$$為線性算子。
 * $$T_0:V \rightarrow W$$，$$T_0 (v)=0,  \forall v \in V$$為線性映射，稱為零映射函數(zero mapping function)。

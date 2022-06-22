@@ -34,3 +34,27 @@
 * $$y_t$$的<mark style="color:red;">一階差分</mark>可表示為$$\Delta y_t= y_t -y_{t-1}=y_t - Ly_t=(1-L)y_t$$。
 * <mark style="color:red;">二階差分</mark>可表示為$$\Delta^2 y_t =y_t-2y_{t-1}+y_{t-2}=(1-2B+B^2)y_t=(1-B)^2y_t$$。
 * 以此類推，<mark style="color:red;">d階差分</mark>可表示為$$(1-B)^dy_t$$。
+
+## 落後多項式(polynomial in the lag operator)
+
+> 有限期：$$\phi(L)=1-\phi_1L-\phi_2 L^2-\cdots - \phi_p L^p=\sum_{j=0}^p \phi_j L^j,~\phi_0=1$$
+>
+> 無限期：$$\phi(L)=1-\phi_1L-\phi_2L^2-\cdots-=\sum_{j=0}^\infty \phi_j L^j$$
+
+可得$$\phi(L)y_t=(1-\phi_1L-\phi_2 L^2-\cdots - \phi_p L^p)y_t=y_t-\phi_1y_{t-1}-\phi_2y_{t-2}-\cdots-\phi_p y_{t-p}$$
+
+
+
+## 動差(moment)
+
+隨機樣本的均數與變異數，<mark style="color:blue;">一般條件下會隨時間變化(時變）</mark>，即：
+
+* $$\mathrm{E}(y_t) = \mu_t$$
+* $$\mathrm{Var}(y_t)=\sigma_t^2$$
+
+因為時間序列中的資料，過去與未來的資料不一定為獨立同分佈，具有相關性，可用自我共變異函數(autocovariance function)與自我相關函數(autocorrelation function, ACF)來計算序列的相關。
+
+### k階自我共變異函數
+
+> 給定時間序列$$\{y_t\}_{t=-\infty}^{\infty}$$且具有有限的變異數$$\mathrm{Var}(y_t) < \infty$$, 則其$$k$$階自我共變異函數定義為\$$
+

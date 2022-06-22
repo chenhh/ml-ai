@@ -64,11 +64,5 @@
 
 ### k階自我相關係數
 
-> $$\rho(t,k)=\frac{\mathrm{Cov}(y_t, y_{t-k})}{\sigma_t \sigma_{t-k}}$$
-
-## 定態時間序列(stationary)
-
-> definition: 弱定態時間序列
->
-> 給定時間序列$$\{y_t\}_{t=-\infty}^\infty$$，若對於任意的時間長度$$k$$，滿足..
+> $$\rho(t,k)=\frac{\mathrm{Cov}(y_t, y_{t-k})}{\sigma_t \sigma_{t-k}}$$.
 

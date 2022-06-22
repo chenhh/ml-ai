@@ -136,6 +136,7 @@
 * [ARIMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)
 * [共整合(cointegration)](time-series/cointegrating.md)
+* [Granger 因果關係檢定](time-series/granger-yin-guo-guan-xi-jian-ding.md)
 * [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>

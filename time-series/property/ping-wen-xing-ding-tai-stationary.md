@@ -114,9 +114,3 @@ if __name__ == '__main__':
 有許多單位根檢驗可用，它們基於不同的假設，可能會導致相互矛盾的答案。
 
 <mark style="color:red;">Granger and Newbold發現發定態變數之間，可能會出現所謂「假性迴歸」(spurious regression)的問題，因此使用時間序列態，都必須使用單根檢定確定隨機變數是否為定態</mark>。
-
-
-
-## 參考資料
-
-* [\[知乎\]為什麼序列存在單位根是非平穩時間序列](https://www.zhihu.com/question/22385598)？

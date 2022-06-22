@@ -56,5 +56,19 @@
 
 ### k階自我共變異函數
 
-> 給定時間序列$$\{y_t\}_{t=-\infty}^{\infty}$$且具有有限的變異數$$\mathrm{Var}(y_t) < \infty$$, 則其$$k$$階自我共變異函數定義為\$$
+> 給定時間序列$$\{y_t\}_{t=-\infty}^{\infty}$$且具有有限的變異數$$\mathrm{Var}(y_t) < \infty$$, 則其$$k$$階自我共變異函數定義為：
+>
+> $$\gamma(t,k)=\mathrm{Cov}(y_t, y_{t-k})=\mathrm{E}(y_t-\mu_t)(y_{t-k} - \mu_{t-k})$$
+>
+> 由定義可得　$$\gamma(t,0)=\mathrm{Cov}(y_t,y_t)=\mathrm{Var}(y_t)\equiv \sigma_t^2$$
+
+### k階自我相關係數
+
+> $$\rho(t,k)=\frac{\mathrm{Cov}(y_t, y_{t-k})}{\sigma_t \sigma_{t-k}}$$
+
+## 定態時間序列(stationary)
+
+> definition: 弱定態時間序列
+>
+> 給定時間序列$$\{y_t\}_{t=-\infty}^\infty$$，若對於任意的時間長度$$k$$，滿足..
 

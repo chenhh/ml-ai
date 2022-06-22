@@ -135,7 +135,7 @@
 * [線性模型](time-series/linear\_model.md)
 * [ARIMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)
-* [共整合(cointegrating)](time-series/cointegrating.md)
+* [共整合(cointegration)](time-series/cointegrating.md)
 * [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>

@@ -58,6 +58,45 @@
 
 ### 範例：Fibonacci數列
 
+> * $$f_{n+2}= f_{n+1}+f_n, ~ n\geq 0$$
+> * $$f_0=f_1=1$$
+>
+> 是一個常係數非齊次二階線性遞迴關係式。
+
+### 範例：Catalan數列
+
+> $$c_n = \frac{1}{n+1}\binom{2n}{n}$$滿足遞迴關係式$$c_n-c_0c_{n-1}-c_1c_{n-2}-\dots - c_{n-1}c_0=0, ~n \geq 1$$
+
+### 一階線性遞迴關係(first-order linear recurrence relation)
+
+> $$c_na_n+c_{n-1}a_{n-1}=f(n)$$&#x20;
+
+最簡單的遞迴關係，它的一般項可以逐項代入求得一般通式。
+
+### 齊次一階線性遞迴關係
+
+> 齊次遞迴關係：$$c_na_n=c_{n-1}a_{n-1}$$
+>
+> * $$a_n= \frac{c_{n-1}}{c_n} a_{n-1}=g_n a_{n-1}, ~n\geq 1$$
+> * 可得 $$a_n =\left( \prod_{k=0}^{n-1}g_k \right) a_0$$
+
+* 一般情形$$g_k=\frac{c_{k-1}}{c_k}$$, 則$$a_n=\frac{c_0}{c_n}a_0$$
+* 常數係數 $$g_k=c$$, 則$$\frac{a_n}{a_{n-1}}=c$$, 因此$$a_n=c^na_0$$。
+
+### 非齊次一階線性遞迴關係
+
+> $$c_na_n = c_{n-1}a_{n-1} + f(n-1), ~ n \geq 0$$\
+> 可得$$\displaystyle a_n =\left( \prod_{k=0}^{n-1}g_k \right) a_0 + \sum_{k=0}^{n-1}(\prod_{m=k+1}^{n-1}g_m)f(k)$$(通解+特解)\
+> 其中$$\displaystyle \prod_{m=n}^{n-1}g_m=1$$
+
+$$\begin{aligned}   a_n & = g_{n-1}a_{n-1} + f(n-1), ~ n \geq 0  \\         & = (g_{n-1}g_{n-2})a_{n-2}  + g_{n-1}f(n-2) + f(n-1) \\         & = (g_{n-1}g_{n-2}g_{n-3})a_{n-3} + (g_{n-1}g_{n-2})f(n-3) + g_{n-1}f(n-2) + f(n-1) \\         & = \cdots \\         & = (\prod_{k=0}^{n-1}  g_k) a_0 + \sum_{k=0}^{n-1} (\prod_{m=k+1}^{n-1}g_m)f(k)  \end{aligned}$$(QED)
+
+#### 範例
+
+$$a_n=2 a_{n-1} + 3, ~ n \geq 2,  ~a_1 =3$$
+
+* $$\begin{aligned}  a_n & = 2 a_{n-1} + 3 \\     & = 2^2 a_{n-2} + (2+1) 3 \\     & = 2^3 a_{n-3} + (2^2 + 2 + 1)3 \\     & = \dots \\     & = 2^{n-1}a_1 + (2^{n-2}+2^{n-3}+\dots +1)3 \\     & =2^{n-1}3+(2^{n-1}-1)3 \\     & = 3(2^n-1), ~n \geq `1. \end{aligned}$$
+
 ### 齊次解
 
 > 當$$\sum_{i=0}^kc_{n-i}a_{n-i}=0$$ 解的型式為$$a_n=A\alpha^n, ~ A, \alpha \in \mathbb{R}$$

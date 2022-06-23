@@ -125,6 +125,8 @@ $$\begin{bmatrix} a_n \\ a_{n-1} \end{bmatrix}=\begin{bmatrix} 1 & 1 \\ 1 & 0 \e
 
 令$$\begin{bmatrix} h_1 \\ h_2 \end{bmatrix} = P^-1u_0$$, 整理後得$$\begin{aligned} \begin{bmatrix} a_{n+1} \\ a_n \end{bmatrix} & = u_{n} \\     & = A^n u_{0}, ~ n \geq 0 \\     & = P D^n P^{-1}u_0 \\     & = \begin{bmatrix} \lambda_1 & \lambda_2 \\ 1 & 1 \end{bmatrix}         \begin{bmatrix} \lambda_1^n & 0 \\ 0 & \lambda_2^n \end{bmatrix}         \begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \\     & = \begin{bmatrix} h_1 \lambda_1^{n+1} + h_2 \lambda_2^{n+1} \\                          h_1 \lambda_1^n + h_2 \lambda_2^n \end{bmatrix} \end{aligned}$$
 
+## k階常係數遞迴關係式通解
+
 整理以上步驗，可得$$k$$階常係數齊次遞迴關係式的求解分為兩個步驟：
 
 1. 求解特徵方程式$$t^k=d_1t^{k-1}+d_2t^{k-2}+\dots + d_k$$，並得到特徵根$$\lambda_1, \lambda_2,\dots, \lambda_k$$。
@@ -135,7 +137,10 @@ $$\begin{bmatrix} a_n \\ a_{n-1} \end{bmatrix}=\begin{bmatrix} 1 & 1 \\ 1 & 0 \e
   而$$a_n=u_1(n)+u_2(n)+\dots +u_t(n)$$
 * 如果有一組共軛複根(相異根的特例)$$\lambda_1=\delta+ i\omega$$, $$\lambda_2= \delta - i\omega, \omega \neq 0$$\
   令$$\rho=\sqrt{\delta^2+ \omega^2}$$, $$\theta=\tan^{-1}\frac{\omega}{\delta}$$\
-  則該組的解為$$c_1 \lambda_1^n + c_2 \lambda_2^n6$$
+  則該組的解為$$\begin{aligned} c_1 \lambda_1^n + c_2 \lambda_2^n & = c_1 (\delta+i\omega)n + c_2 (\delta- i \omega)n \\     & = c_1 (\rho e^{i\theta})^n +c_2 (\rho e^{-i\theta})^n \\     & = c_1 (\rho e^{in\theta}) + c_2 (\rho e^{-in\theta}) \\     & = c_1 \rho^n (\cos n \theta + i \sin n \theta) + c_2 \rho^n (\cos n \theta - i \sin n \theta) \\     & = (c_1 + c_2) \rho^n \cos n \theta + i(c_1 - c_2) \rho^n \sin n \theta \\     & = B_1 \rho^n \cos n \theta + iB_2 \rho^n \sin n \theta  \end{aligned}$$
+* 如果解出來的特徵根有相異根，重根與共軛根時，則通解為各類型的總和。
+  * 如特徵根為$$2,2,4,5, \frac{1 \pm \sqrt{3} i}{2}$$
+  * $$a_n=(c_1+c_2)2^n+d_14^n +d_2 5^n + B_1 \cos \frac{n}{3}\pi +B_2 \sin \frac{n}{3} \pi$$
 
 
 

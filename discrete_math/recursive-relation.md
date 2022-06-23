@@ -32,9 +32,37 @@
 >
 > 令$$a_n, n=0,1,2,\dots$$為一數列，則
 >
-> $$\sum_{i=0}^kc_{n-i}a_{n-i}=c_na_n+c_{n-1}a_{n-1}+\dots +c_{n-k}a_{n-k}=f(n)$$稱為一$$k$$​階常係數遞迴關係式(linear recurrence relation with constant coefficients of order k)。
+> $$\sum_{i=0}^kc_{n-i}a_{n-i}=c_na_n+c_{n-1}a_{n-1}+\dots +c_{n-k}a_{n-k}=f(n)$$稱為一$$k$$​階<mark style="color:red;">常係數遞迴關係式</mark>(linear recurrence relation with constant coefficients of order k)。
 >
-> 若$$f(n)=0, ~ \forall n \geq 0$$則稱為齊次(homogeneous)遞迴關係式。
+> 若$$f(n)=0, ~ \forall n \geq 0$$則稱為<mark style="color:red;">齊次(homogeneous)遞迴關係式</mark>。
 >
-> 否則稱為非齊次(non-homogeneous)遞迴關係式。
+> 否則稱為<mark style="color:red;">非齊次(non-homogeneous)遞迴關係式</mark>。
 
+### 範例：等比數列
+
+> 公比為$$r$$的等比數列$$\{a_n=a_0 r^n\}$$滿足遞迴關係 $$a_n=r a_{n}, ~ n \geq 1$$ 。
+>
+> 是一個常係數齊次一階線性遞迴關係式。
+
+### 範例：等差數列
+
+> 公差為$$d$$的等差數列$$\{a_n=a_0 + nd\}$$滿足遞迴關係$$a_n=a_{n-1}+d, ~ n \geq 1$$​。
+>
+> 是一個常係數非齊次一階線性遞迴關係式。
+
+### 範例：部分和數列
+
+> 數列$$\{a_n\}$$的部份和數列 $$\{s_n = \sum_{k=0}^n a_k \}$$滿足遞迴關係$$s_n = s_{n-1}+a_n, ~ n\geq 1$$
+>
+> 是一個常係數非齊次一階線性遞迴關係式。
+
+### 範例：Fibonacci數列
+
+### 齊次解
+
+> 當$$\sum_{i=0}^kc_{n-i}a_{n-i}=0$$ 解的型式為$$a_n=A\alpha^n, ~ A, \alpha \in \mathbb{R}$$
+
+* $$k=1$$時，$$c_na_n+c_{n-1}a_{n-1}=0$$
+* $$\therefore a_n= - \frac{c_{n-1}}{c_n} a_{n-1}$$
+* $$k=2$$時，$$c_na_n+c_{n-1}a_{n-1}+c_{n-2}a_{n-2}=0$$
+* $$\therefore a_n = -\frac{c_{n-1}}{c_n}a_{n-1} - \frac{c6_{n-2}}{c_n}a_{n-2}$$

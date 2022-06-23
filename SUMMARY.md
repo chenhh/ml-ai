@@ -180,7 +180,7 @@
 
 * [排列(permutation)](discrete\_math/permutation.md)
 * [組合(combination)](discrete\_math/combination.md)
-* [遞迴關係式](discrete\_math/recursive-relation.md)
+* [遞迴關係式](discrete\_math/recurrence-relation.md)
 
 ## 計算理論 <a href="#computation-theory" id="computation-theory"></a>
 

@@ -69,7 +69,7 @@
 
 ### 一階線性遞迴關係(first-order linear recurrence relation)
 
-> $$c_na_n+c_{n-1}a_{n-1}=f(n)$$&#x20;
+> $$c_na_n=c_{n-1}a_{n-1}+f(n)$$&#x20;
 
 最簡單的遞迴關係，它的一般項可以逐項代入求得一般通式。
 
@@ -77,7 +77,7 @@
 
 > 齊次遞迴關係：$$c_na_n=c_{n-1}a_{n-1}$$
 >
-> * $$a_n= \frac{c_{n-1}}{c_n} a_{n-1}=g_n a_{n-1}, ~n\geq 1$$
+> * $$a_n= \frac{c_{n-1}}{c_n} a_{n-1}=g_{n-1} a_{n-1}, ~n\geq 1$$
 > * 可得 $$a_n =\left( \prod_{k=0}^{n-1}g_k \right) a_0$$
 
 * 一般情形$$g_k=\frac{c_{k-1}}{c_k}$$, 則$$a_n=\frac{c_0}{c_n}a_0$$
@@ -97,11 +97,46 @@ $$a_n=2 a_{n-1} + 3, ~ n \geq 2,  ~a_1 =3$$
 
 * $$\begin{aligned}  a_n & = 2 a_{n-1} + 3 \\     & = 2^2 a_{n-2} + (2+1) 3 \\     & = 2^3 a_{n-3} + (2^2 + 2 + 1)3 \\     & = \dots \\     & = 2^{n-1}a_1 + (2^{n-2}+2^{n-3}+\dots +1)3 \\     & =2^{n-1}3+(2^{n-1}-1)3 \\     & = 3(2^n-1), ~n \geq `1. \end{aligned}$$
 
-### 齊次解
+## 二階線性遞迴關係(second-order linear recurrence relation)
 
-> 當$$\sum_{i=0}^kc_{n-i}a_{n-i}=0$$ 解的型式為$$a_n=A\alpha^n, ~ A, \alpha \in \mathbb{R}$$
+> 當$$c_na_n+=c_{n-1}a_{n-1}+c_{n-2}a_{n-2}+f(n)$$&#x20;
 
-* $$k=1$$時，$$c_na_n+c_{n-1}a_{n-1}=0$$
-* $$\therefore a_n= - \frac{c_{n-1}}{c_n} a_{n-1}$$
-* $$k=2$$時，$$c_na_n+c_{n-1}a_{n-1}+c_{n-2}a_{n-2}=0$$
-* $$\therefore a_n = -\frac{c_{n-1}}{c_n}a_{n-1} - \frac{c6_{n-2}}{c_n}a_{n-2}$$
+### 齊次二階線性遞迴關係
+
+> $$c_na_n=c_{n-1}a_{n-1}+c_{n-2}a_{n-2}=0$$ 可令$$c_n=1$$
+
+* 直接展開時，因此每次都會分成二支，展開到$$n=1$$時有$$2^n$$個系數，難以歸納。
+
+改寫線性方程式矩陣形式如下：
+
+$$\begin{aligned} a_n &= c_{n-1}a_{n-1} + c_{n-2} a_{n-2} \\ a_{n-1} &= a_{n-1} \end{aligned}$$
+
+所以
+
+$$\begin{bmatrix} a_n \\ a_{n-1} \end{bmatrix}=\begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix} a_{n-1} \\ a_{n-2} \end{bmatrix}, ~ n \geq 2$$
+
+令$$u_{n-1}=\begin{bmatrix} a_n \\ a_{n-1} \end{bmatrix}$$, $$A=\begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}$$，則可改寫為矩陣$$\begin{aligned}  \begin{bmatrix} a_{n+1} \\ a_n \end{bmatrix} & = u_{n} \\     & = A^nu_{0}, ~ n \geq 0 \\     & = PD^nP^{-1}u_0 \\     & = \begin{bmatrix} \lambda_1 & \lambda_2 \\ 1 & 1 \end{bmatrix}         \begin{bmatrix} \lambda_1^n & 0 \\ 0 & \lambda_2^n \end{bmatrix}         \begin{bmatrix} h_1 \\ h_2 \end{bmatrix}         =\begin{bmatrix} h_1\lambda_1^{n+1} + h_2 \lambda_2^{n+1} \\                          h_1 \lambda_1^n + h_2 \lambda_2^n \end{bmatrix}  \endn{aligned}$$
+
+初始條件為$$u_0=\begin{bmatrix} a_1 \\ a_{0} \end{bmatrix} =\begin{bmatrix} 1 \\ 0\end{bmatrix}$$
+
+可得$$u_n=A^nu_0$$因此解差分方程式等於計算冪矩陣$$A^n$$。
+
+而$$A^n$$可先將$$A$$正交對角化為$$A=PDP^{-1}$$後，得$$A^n=PD^nP^{-1}$$, 其中$$D=\mathrm{diag}(\lambda_1, \lambda_2)$$為矩陣$$A$$的特徵根。
+
+令$$\begin{bmatrix} h_1 \\ h_2 \end{bmatrix} = P^-1u_0$$, 整理後得$$\begin{aligned} \begin{bmatrix} a_{n+1} \\ a_n \end{bmatrix} & = u_{n} \\     & = A^n u_{0}, ~ n \geq 0 \\     & = P D^n P^{-1}u_0 \\     & = \begin{bmatrix} \lambda_1 & \lambda_2 \\ 1 & 1 \end{bmatrix}         \begin{bmatrix} \lambda_1^n & 0 \\ 0 & \lambda_2^n \end{bmatrix}         \begin{bmatrix} h_1 \\ h_2 \end{bmatrix} \\     & = \begin{bmatrix} h_1 \lambda_1^{n+1} + h_2 \lambda_2^{n+1} \\                          h_1 \lambda_1^n + h_2 \lambda_2^n \end{bmatrix} \end{aligned}$$
+
+整理以上步驗，可得$$k$$階常係數齊次遞迴關係式的求解分為兩個步驟：
+
+1. 求解特徵方程式$$t^k=d_1t^{k-1}+d_2t^{k-2}+\dots + d_k$$，並得到特徵根$$\lambda_1, \lambda_2,\dots, \lambda_k$$。
+2. 由特徵根求通解。
+
+* 如果$$k$$個根完全相異時，則齊次解為$$a_n=c_1\lambda_1^n+c_2\lambda_2^n+\dots + c_k \lambda_k^n, ~ n \geq 0$$ ，其中參參數$$c_1, c_2, \dots, c_k$$可由給定的初始條件求得。
+* 有$$t<k$$個相異根，令$$\lambda_i$$有重根數$$m_i$$個，$$i=1,2,\dots, t$$，則相對於第$$i$$個特徵根的解為$$u_i(n)=(c_{i0}+c_{i1}n+\dots +c_{i m_i-1}n^{m_i-1})\lambda_i^n$$。\
+  而$$a_n=u_1(n)+u_2(n)+\dots +u_t(n)$$
+* 如果有一組共軛複根(相異根的特例)$$\lambda_1=\delta+ i\omega$$, $$\lambda_2= \delta - i\omega, \omega \neq 0$$\
+  令$$\rho=\sqrt{\delta^2+ \omega^2}$$, $$\theta=\tan^{-1}\frac{\omega}{\delta}$$\
+  則該組的解為$$c_1 \lambda_1^n + c_2 \lambda_2^n6$$
+
+
+
+$$\begin{aligned} \begin{bmatrix} a_{n+1} \\ a_n \end{bmatrix} & = u_{n} \\     & = A^n u_{0}, ~ n \geq 0 \\     & = P D^n P^{-1}u_0  \endn{aligned}$$

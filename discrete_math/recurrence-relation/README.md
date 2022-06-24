@@ -63,6 +63,12 @@
 >
 > 是一個常係數非齊次二階線性遞迴關係式。
 
+特徵方程式為$$\lambda^2 - \lambda - 1 = 0$$, $$\lambda = \frac{1 \pm \sqrt{5}}{2}$$
+
+因為齊次方程式，所以$$f_n= c_1\left( \frac{1+\sqrt{5}}{2}\right)^n + c_2\left( \frac{1-\sqrt{5}}{2}\right)^n$$
+
+代入邊界條件得$$c_1=\frac{1}{\sqrt{5}}\left(  \frac{1+\sqrt{5}}{2} \right)$$, $$c_2=\frac{-1}{\sqrt{5}}\left(  \frac{1-\sqrt{5}}{2} \right)$$。
+
 ### 範例：Catalan數列
 
 > $$c_n = \frac{1}{n+1}\binom{2n}{n}$$滿足遞迴關係式$$c_n-c_0c_{n-1}-c_1c_{n-2}-\dots - c_{n-1}c_0=0, ~n \geq 1$$

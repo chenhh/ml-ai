@@ -181,8 +181,37 @@ $$\begin{bmatrix} a_n \\ a_{n-1} \end{bmatrix}=\begin{bmatrix} 1 & 1 \\ 1 & 0 \e
 
 所以一般解為$$a_n=a_n^{(h)}+a_n^{(p)}=-\frac{1}{3}2^n +\frac{1}{3}5^n+n+2$$ (ANS)
 
+#### 例2
 
+$$\left\{    \begin{aligned}  & a_n - 2 a_{n-1} +  a_{n-2} = 2 \\  & a_0 = 1, a_1 = 1 \end{aligned}   \right.$$
+
+特徵方程式$$\lambda^2-2\lambda+1=0$$, $$\lambda=1,1$$
+
+* $$a_n^{(h)}=(c_1+c_2n)1^n$$
+* $$a_n^{(p)}=(d_0+d_1n+d_2n^2)$$
 
 ### 函數f(n)為指數形式
 
+> $$f(n)=ha^n$$, 其中$$h,a$$為常數，則特解$$a_n^{(p)}=(d_0+d_1n+\dots+d_rn^n)a^n$$, 其中若$$a$$不是特徵方程式的根時，$$r=0$$；若$$a$$為特徵方程式的根時，則$$r$$為其重根數。
+
+例：
+
+$$\left\{    \begin{aligned}  & a_n - 4 a_{n-1} + 4 a_{n-2} = 2\cdot 3^n \\  & a_0 = 2, a_1 = 13   \end{aligned}   \right.$$
+
+特徵方程式$$\lambda^2-4\lambda+3=0$$, $$\lambda=1,3$$
+
+* $$a_n^{(h)}=c_11^n+c_23^n$$
+* $$a_n^{(p)}=(d_1+d_2 n) 3^n$$
+
 ### 函數f(n)為三角函數形式
+
+> $$f(n)=\rho^n \sin(n\theta)$$或$$f(n)=\rho^n \cos(n\theta)$$, 其中$$\theta$$已知，則$$a_n^{(p)}=\rho^n(d_1\cos(n\theta)+d_2\sin(n \theta))$$
+
+例：
+
+$$\left\{    \begin{aligned}  & a_{n+2} - a_{n}  = \sin \left(\frac{n\theta}{2}\right) ~ n \geq 0 \\  & a_0 = 1, a_1 = 1 \end{aligned}   \right.$$
+
+特徵方程式$$\lambda^2-1=0$$, $$\lambda=1,-1$$
+
+* $$a_n^{(h)}=c_01^n+c_1(-1)^n$$
+* $$a_n^{(p)}=d_0 \sin \left(\frac{n\theta}{2} \right) + d_1 \cos \left(\frac{n\theta}{2} \right)$$

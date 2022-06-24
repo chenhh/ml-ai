@@ -54,3 +54,13 @@ $$A(x)-f_0-f_1x=x(A(x)-f_0)+x^2A(x)$$
 
 * $$a_n=a_{n-1}+a_{n-2}, n\geq 3$$
 * 邊界條件$$a_1=2$$, $$a_2=3$$
+
+## 範例
+
+$$\left\{ \begin{aligned}   a_n &= 2 a_{n-1} + 7, ~ n \geq 1 \\  a_0 &= 0  \end{aligned} \right.$$
+
+* 令$$A(x)=\sum_{n=0}^\infty a_nx^n$$
+* 代入遞迴關係式得 $$\sum_{n=1}^\infty a_n x^n = 2 \sum_{n=1}^\infty a_{n-1}x^n + 7 \sum_{n=1}^\infty x^n$$
+* 得$$A(x) -a_0 = 2x A(x)+\frac{7x}{1-x}$$
+* 整理後得  $$\begin{aligned} A(x) & =\frac{7x}{(1-x)(1-2x)} \\     & = \frac{-7}{1-x} + \frac{7}{1-2x} \\     & =7\left( \sum_{n=0}^\infty (2x)^n - \sum_{n=0}^\infty x^n \right) \\     & = \sum_{n=0}^\infty 7(2^n-1)x^n  \end{aligned}$$
+* 所以$$a_n = 7(2^n-1), ~ n \geq 0$$ (ANS)

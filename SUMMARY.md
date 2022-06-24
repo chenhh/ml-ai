@@ -183,6 +183,7 @@
 * [遞迴關係式](discrete\_math/recursive-relation.md)
   * [轉換法求遞迴關係式](discrete\_math/recurrence-relation/zhuan-huan-fa-qiu-di-hui-guan-xi-shi.md)
   * [生成函數法](discrete\_math/recurrence-relation/generating-function.md)
+  * [特殊類型遞迴關係式](discrete\_math/recurrence-relation/te-shu-lei-xing-di-hui-guan-xi-shi.md)
 
 ## 計算理論 <a href="#computation-theory" id="computation-theory"></a>
 

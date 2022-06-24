@@ -81,4 +81,3 @@ $$\{r_t, s_t\}$$, $$a_t$$, $$\{ r_{t+1},  s_{t+1}\}$$, $$a_{t+1}$$$$\{ r_{t+2}, 
 
 * Martin L. Puterman,  "Markov decision processes: discrete stochastic dynamic programming." John Wiley & Sons, 2014.
 * 劉克，曹平，"馬爾可夫決策過程理論與應用"，科學出版社，2015。
-* [Richard Suttion and Andrew G. Barto, "Reinforcement Learning: An Introduction," 2nd, 2018](http://incompleteideas.net/sutton/book/the-book.html).

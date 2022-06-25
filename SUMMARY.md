@@ -141,6 +141,7 @@
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>
 
+* [資訊理論簡介](information-theory/zi-xun-li-lun-jian-jie.md)
 * [點對點模型與資訊熵](information-theory/p2p-model-entropy.md)
 * [資訊測度](information-theory/information-measure.md)
 

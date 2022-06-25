@@ -63,6 +63,12 @@
 >
 > 是一個常係數非齊次二階線性遞迴關係式。
 
+特徵方程式為$$\lambda^2 - \lambda - 1 = 0$$, $$\lambda = \frac{1 \pm \sqrt{5}}{2}$$
+
+因為齊次方程式，所以$$f_n= c_1\left( \frac{1+\sqrt{5}}{2}\right)^n + c_2\left( \frac{1-\sqrt{5}}{2}\right)^n$$
+
+代入邊界條件得$$c_1=\frac{1}{\sqrt{5}}\left(  \frac{1+\sqrt{5}}{2} \right)$$, $$c_2=\frac{-1}{\sqrt{5}}\left(  \frac{1-\sqrt{5}}{2} \right)$$。
+
 ### 範例：Catalan數列
 
 > $$c_n = \frac{1}{n+1}\binom{2n}{n}$$滿足遞迴關係式$$c_n-c_0c_{n-1}-c_1c_{n-2}-\dots - c_{n-1}c_0=0, ~n \geq 1$$
@@ -142,6 +148,76 @@ $$\begin{bmatrix} a_n \\ a_{n-1} \end{bmatrix}=\begin{bmatrix} 1 & 1 \\ 1 & 0 \e
   * 如特徵根為$$2,2,4,5, \frac{1 \pm \sqrt{3} i}{2}$$
   * $$a_n=(c_1+c_2)2^n+d_14^n +d_2 5^n + B_1 \cos \frac{n}{3}\pi +B_2 \sin \frac{n}{3} \pi$$
 
+## 非齊次解
 
+假設$$a_n^{(h)}$$與$$a_n^{(p)}$$為k階常係數遞迴關係式的齊次解與特解，則：
 
-$$\begin{aligned} \begin{bmatrix} a_{n+1} \\ a_n \end{bmatrix} & = u_{n} \\     & = A^n u_{0}, ~ n \geq 0 \\     & = P D^n P^{-1}u_0  \endn{aligned}$$
+* $$c_na_n^{(h)} + c_{n-1}a_{n-1}^{(h)}+\dots + c_{n-k}a_{n-k}^{(h)}=0$$且
+* $$c_na_n^{(p)} + c_{n-1}a_{n-1}^{(p)}+\dots + c_{n-k}a_{n-k}^{(p)}=f(n)$$
+* 因此$$c_n[a_n^{(h)}+a_n^{(p)}] + c_{n-1}[a_{n-1}^{(h)}+a_{n-1}^{(p)}]+\dots + c_{n-k}[a_{n-k}^{(h)}+a_{n-k}^{(p)}]=f(n)$$
+* 所以$$a_n=a_n^{(h)}+a_n^{(p)}$$為此遞迴關係式的解。
+
+求一般解步驟：
+
+1. 決定$$a_n^{(h)}$$的形式。
+2. 決定$$a_n^{(p)}$$的形式。
+3. 以$$a_n^{(p)}$$代入原遞迴關係式求$$a_n^{(p)}$$的未定係數(不一定能全部求出)。
+4. 以$$a_n=a_n^{(h)}+a_n^{(p)}$$代入邊界條件求出所有未定係數。
+5. 得到$$a_n$$解析解。
+
+### 函數f(n)為多項式
+
+> 若 $$f(n)=\sum_{i=1}^k d_i n^i$$，$$d_i$$均為常數，且$$d_k \neq 0$$，則特解$$a_n^{(p)}=c_0+c_1n+\dots+c_kn^k+c_{k+1}n^{k+1}+\dots +c_{k+r}n^{k+r}$$。
+>
+> 其中若1不為特徵方程式的根時， $$r=0$$；若1為特徵方程式的根，則$$r$$為1的重數。
+
+#### 例1
+
+* $$\left\{  \begin{aligned} & a_n - 7 a_{n-1} + 10 a_{n-2} = 4n -5 \\ & a_0 = 2, a_1 = 4  \end{aligned}  \right.$$
+
+特徵方程式$$\lambda^2 - 7 \lambda +10=0$$，得$$\lambda=2,5$$
+
+所以通解為$$a_n^{(h)}=c_12^n +c_25^n$$
+
+因為特徵根不為1，令$$a_n^{(p)}​=d_0+d_1n$$代回原關係式，整理後得$$4d_1n+(4d_0-13d_1)=4n-5$$, 得$$d_0=2, d_1=1$$。
+
+得特解$$a_n^{(p)}​=n+2$$
+
+解$$a_n=a_n^{(h)}+a_n^{(p)}=c_12^n +c_25^n+n+2$$代入邊界條件得 $$c_1=-\frac{1}{3}, c_2=\frac{1}{3}$$
+
+所以一般解為$$a_n=a_n^{(h)}+a_n^{(p)}=-\frac{1}{3}2^n +\frac{1}{3}5^n+n+2$$ (ANS)
+
+#### 例2
+
+$$\left\{    \begin{aligned}  & a_n - 2 a_{n-1} +  a_{n-2} = 2 \\  & a_0 = 1, a_1 = 1 \end{aligned}   \right.$$
+
+特徵方程式$$\lambda^2-2\lambda+1=0$$, $$\lambda=1,1$$
+
+* $$a_n^{(h)}=(c_1+c_2n)1^n$$
+* $$a_n^{(p)}=(d_0+d_1n+d_2n^2)$$
+
+### 函數f(n)為指數形式
+
+> $$f(n)=ha^n$$, 其中$$h,a$$為常數，則特解$$a_n^{(p)}=(d_0+d_1n+\dots+d_rn^n)a^n$$, 其中若$$a$$不是特徵方程式的根時，$$r=0$$；若$$a$$為特徵方程式的根時，則$$r$$為其重根數。
+
+例：
+
+$$\left\{    \begin{aligned}  & a_n - 4 a_{n-1} + 4 a_{n-2} = 2\cdot 3^n \\  & a_0 = 2, a_1 = 13   \end{aligned}   \right.$$
+
+特徵方程式$$\lambda^2-4\lambda+3=0$$, $$\lambda=1,3$$
+
+* $$a_n^{(h)}=c_11^n+c_23^n$$
+* $$a_n^{(p)}=(d_1+d_2 n) 3^n$$
+
+### 函數f(n)為三角函數形式
+
+> $$f(n)=\rho^n \sin(n\theta)$$或$$f(n)=\rho^n \cos(n\theta)$$, 其中$$\theta$$已知，則$$a_n^{(p)}=\rho^n(d_1\cos(n\theta)+d_2\sin(n \theta))$$
+
+例：
+
+$$\left\{    \begin{aligned}  & a_{n+2} - a_{n}  = \sin \left(\frac{n\theta}{2}\right) ~ n \geq 0 \\  & a_0 = 1, a_1 = 1 \end{aligned}   \right.$$
+
+特徵方程式$$\lambda^2-1=0$$, $$\lambda=1,-1$$
+
+* $$a_n^{(h)}=c_01^n+c_1(-1)^n$$
+* $$a_n^{(p)}=d_0 \sin \left(\frac{n\theta}{2} \right) + d_1 \cos \left(\frac{n\theta}{2} \right)$$

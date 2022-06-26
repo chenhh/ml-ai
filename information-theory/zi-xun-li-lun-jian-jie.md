@@ -50,21 +50,43 @@ Shannon在1948年發表的A Mathematical Theory of Communication是資訊理論�
 
 ### Kolmogorov 複雜性
 
-Kolmogorov、Chaitin 和 Solomonoff 提出了 這樣的想法，<mark style="color:red;">即資料字串的複雜性可以通過計算字串的最短二進制軟體程式的長度來定義</mark>。因此，複雜度是最小描述長度(minimum description length)。這種複雜性的定義是獨立於計算機，並且具有根本的重要性。因此Kolmogorov 複雜性為描述性複雜性理論奠定了基礎。&#x20;
+Kolmogorov、Chaitin 和 Solomonoff 提出了 這樣的想法，<mark style="color:red;">即資料字串的複雜性可以通過計算字串的最短二進制軟體程式(通常用圖靈機)的長度來定義</mark>。因此，複雜度是最小描述長度(minimum description length)。這種複雜性的定義是獨立於計算機，並且具有根本的重要性。因此Kolmogorov 複雜性為描述性複雜性理論奠定了基礎。&#x20;
 
 如果序列是從具有熵$$H$$ 的分佈中隨機抽取時，則Kolmogorov複雜度$$K$$大約等於Shannen熵$$H$$。因此，資訊理論和 Kolmogorov 複雜度之間的聯繫是完美的。Kolmogorov複雜性比Shannon熵更基本。
 
 可以將計算複雜度(時間複雜度) 和 Kolmogorov 複雜度(程式長度或描述複雜度) 視為座標上的兩個軸，對應於程式執行時間和程式長度。 Kolmogorov 複雜度側重於沿第二軸最小化，而計算複雜度側重於第一軸最小化。
 
+### 奥卡姆剃刀
 
+「最簡單的解釋是最好的」。 Solomonoff 和 Chaitin 令人信服地論證說，<mark style="color:red;">如果對所有解釋資料的程序進行加權組合，並觀察它們接下來印出的內容,那麼可得到一個普遍良好的預測程式</mark>。
 
+### 經濟學(投資)
 
+<mark style="color:red;">對固定股票市場的重複投資會導致財富呈指數級增長</mark>。財富的增長速度是股市熵率的對偶。股票市場最優投資理論與信息論之間的相似之處是驚人的。
 
+## 熵(entropy)
 
+$$\mathrm{H}(X)= - \sum_{x} \mathrm{P}(x) \log_2\mathrm{P}(x)$$
 
+我們使用以 2 為底的對數。<mark style="color:red;">熵以位元(bit)為單位進行測量</mark>。 <mark style="color:red;">熵是隨機變量中平均不確定性的度量</mark>。它是描述隨機數平均所需的位元數(的下限)。
 
+資訊理論中的熵概念與統計力學中的熵概念有關。如果我們畫出一個由$$n$$ 個獨立同分佈 (iid) 隨機變量組成的序列，我們將證明一個典型(typical)序列的機率約為$$2^{-n\mathrm{H}(X)}$$ ，並且大約有$$2^{n\mathrm{H}(X)}$$個這樣的典型序列。這個屬性稱為「<mark style="color:red;">漸近均分屬性(AEP, asymptotically equipartition property)</mark>」, 是資訊理論中許多證明的基礎。熵也是自然答案出現的其他問題的值，例如生成隨機變量所需的公平硬幣翻轉次數。如果字串確實是隨機的，則其 Kolmogorov 複雜度接近熵。
 
+## 互資訊(mutual information)
 
+熵是單個隨機變數的不確定性。我們可以定義條件熵$$\mathrm{H}(X|Y)$$，它給定隨機變數$$Y$$後，隨機變數$$X$$的知識量。
+
+<mark style="color:red;">由於另一個隨機變數而導致的不確定性減少稱為互資訊(mutual information)，也可解釋為兩個隨機變數共有的資訊量</mark>：
+
+$$\displaystyle \begin{aligned} \mathrm{I}(X;Y) & = H(X) - H(X|Y) \\     & = \sum_{x,y}\mathrm{P}(x,y) \log \frac{\mathrm{P}(x,y)}{\mathrm{P}(x) \mathrm{P}(y)} \\     & = H(Y) - H(Y|X) \\     & = \mathrm{I}(Y;X) \end{aligned}$$
+
+互信息$$\mathrm{I}(X;Y)$$ 是兩個隨機變量之間依賴關係的度量。它在$$X$$和$$Y$$上是對稱的並且總是非負的, 並且當$$X$$ 和$$Y$$獨立時才等於零。
+
+### 通訊頻道、信道(communication channel)
+
+通信頻道是一個系統，其輸出$$Y$$在機率(因為傳輸時會有噪音干擾造成失真)上取決於其輸入$$X$$。它的特徵是g 率轉移矩陣$$\mathrm{P}(y|x)$$，其確定給定輸入下的輸出的條件分佈。對於具有輸入$$X$$和輸出$$Y$$的通信頻道，可以通過以下方式定義頻道容量$$\displaystyle C=\max_{\mathrm{P}(x)}\mathrm{I}(X;Y)$$。
+
+<mark style="color:red;">可證明頻道容量是我們可以通過頻道發送訊息，並在輸出端恢復訊息的最大速率，並且錯誤概率極低</mark>。
 
 ## 參考資料
 

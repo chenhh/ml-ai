@@ -82,11 +82,29 @@ $$\displaystyle \begin{aligned} \mathrm{I}(X;Y) & = H(X) - H(X|Y) \\     & = \su
 
 互信息$$\mathrm{I}(X;Y)$$ 是兩個隨機變量之間依賴關係的度量。它在$$X$$和$$Y$$上是對稱的並且總是非負的, 並且當$$X$$ 和$$Y$$獨立時才等於零。
 
-### 通訊頻道、信道(communication channel)
+## 通訊頻道、信道(communication channel)
 
 通信頻道是一個系統，其輸出$$Y$$在機率(因為傳輸時會有噪音干擾造成失真)上取決於其輸入$$X$$。它的特徵是g 率轉移矩陣$$\mathrm{P}(y|x)$$，其確定給定輸入下的輸出的條件分佈。對於具有輸入$$X$$和輸出$$Y$$的通信頻道，可以通過以下方式定義頻道容量$$\displaystyle C=\max_{\mathrm{P}(x)}\mathrm{I}(X;Y)$$。
 
 <mark style="color:red;">可證明頻道容量是我們可以通過頻道發送訊息，並在輸出端恢復訊息的最大速率，並且錯誤概率極低</mark>。
+
+## 相對熵(relative entropy)
+
+互信息是一個更一般的計算量的特例，稱為相對熵$$\mathrm{D}(\mathrm{P} \parallel \mathrm{Q})$$,它是兩個機質量函數$$\mathrm{P}$$ 和$$\mathrm{Q}$$ 之間遠離程度(因不滿足交換性，所以不是距離)的度量(metric)。
+
+$$D(P \parallel Q)= \sum_x \mathrm{P}(x) \log \frac{\mathrm{P}(x)}{\mathrm{Q}(x)}$$
+
+儘管相對熵不是真正的度量，但它具有度量的一些屬性。特別是，其值必為非負值，且若且唯若$$\mathrm{P}=\mathrm{Q}$$ 時其值為0。相對熵是分佈$$\mathrm{P}$$ 和$$\mathrm{Q}$$ 之間假設檢驗中錯誤機率的指數。相對熵可用於定義機率分佈的幾何形狀，使我們能夠解釋大偏差理論的許多結果。
+
+## 財產增長率
+
+資訊理論和股票市場投資理論之間有許多相似之處。股票市場由一個相對價格的隨機向量$$X$$定義，其元素是非負數，等於一天結束時股票價格與一天開始時價格的比值($$\frac{c_t}{o_t}$$或$$\frac{c_t}{c_{t-1}}$$)。
+
+對於機率分佈為$$F(\mathbf{x})$$的股票市場，我們可以將增長率$$W$$定義為：
+
+$$\displaystyle W=\max_{\mathbf{b}: b_i \geq 0, \sum_{b_i}=1} \int \log (\mathbf{b}^\top \mathbf{x}) d F(\mathbf{x})$$
+
+增長率是財富增長的最大漸近指數。倍增率有許多與熵的性質相關的性質。
 
 ## 參考資料
 

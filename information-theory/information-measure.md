@@ -96,6 +96,15 @@ $$\therefore \displaystyle  \mathrm{H}(x) = -\sum_{x \in X} \mathrm{P}(x) \log \
 >
 > 以資訊總量的觀點解釋為當隨機變數兩兩獨立時，資訊總量為可直接加總
 
+### 聯合熵的鏈法則
+
+> 令隨機變數$$X_1, X_2,\dots, X_N$$的聯合分佈$$\mathrm{P}(x_1,x_2,\dots, x_n)$$，則 $$\mathrm{H}(X_1, X_2, \dots, X_n) = \sum_{i=1}^n H(X_i | X_{1}, X_2, \dots, X_{i-1})$$。
+
+* $$\mathrm{H}(X_1, X_2) =  \mathrm{H}(X_1) + \mathrm{H}(X_2|X_1)$$
+* $$\mathrm{H}(X_1, X_2, X_3) =  \mathrm{H}(X_1) + \mathrm{H}(X_2|X_1) +  \mathrm{H}(X_3|X_1, X_2)$$
+* 以此類推可得
+* $$\mathrm{H}(X_1, X_2, \dots, X_n) =  \mathrm{H}(X_1) + \mathrm{H}(X_2|X_1) +  \mathrm{H}(X_3|X_1, X_2) + \dots + \mathrm{H}(X_n|X_1, X_2, \dots, X_{n-1})$$(QED)
+
 ## 條件熵 (conditional entropy)
 
 > <mark style="color:red;">條件熵</mark>$$\mathrm{H}(X|Y)$$<mark style="color:red;">可解釋為給定隨機變數</mark>$$Y$$<mark style="color:red;">的資訊後，</mark>$$X$$<mark style="color:red;">殘餘的資訊量</mark>。

@@ -46,7 +46,7 @@ $$\therefore \displaystyle  \mathrm{H}(x) = -\sum_{x \in X} \mathrm{P}(x) \log \
 
 ### 熵可改寫為期望值型式
 
-> $$\begin{aligned} \mathrm{H}(X) &= - \sum_{x \in X}\mathrm{P}(x) \log \mathrm{P}(x) \\ &=\mathrm{E}\big(\log \frac{1}{\mathrm{P}(x)} \big) \\& = -\mathrm{E}(\log \mathrm{P}(x)) \end{aligned}$$
+> $$\begin{aligned} \mathrm{H}(X) &= - \sum_{x \in X}\mathrm{P}(x) \log \mathrm{P}(x) \\ &=\mathrm{E_P}\big(\log \frac{1}{\mathrm{P}(x)} \big) \\& = -\mathrm{E_P}(\log \mathrm{P}(x)) \end{aligned}$$
 
 ### 不同對數基底的熵的差異為常數倍
 
@@ -103,7 +103,7 @@ $$\therefore \displaystyle  \mathrm{H}(x) = -\sum_{x \in X} \mathrm{P}(x) \log \
 * $$\begin{align} \mathrm{H}(Y|X) &= -\sum_{x \in X} \mathrm{P}(x)\mathrm{H}(Y|X=x) \\  &= -\sum_{x \in X} \mathrm{P}(x) \sum_{y \in Y} \mathrm{P}(y|x)\log \mathrm{P}(y|x) \\ & = -\sum_{x \in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \mathrm{P}(y|x) \\ &= -\mathrm{E}(\log \mathrm{P}(Y|X)) \end{align}$$
 * $$\begin{align} \mathrm{H}(X|Y)      & = -\sum_{y \in Y} \sum_{x \in X} \mathrm{P}(x,y) \log \mathrm{P}(x|y) \\      &= -\mathrm{E}(\log \mathrm{P}(X|Y)) \end{align}$$
 
-### 聯合熵、條件熵、與互資訊的關係
+### 聯合熵、條件熵、與互資訊的關係(chain rule)
 
 > * $$\begin{aligned} \mathrm{H}(X,Y) & = \mathrm{H}(X) + \mathrm{H}(Y|X)  \\     & = \mathrm{H}(Y) + \mathrm{H}(X|Y) \end{aligned}$$
 > * $$\begin{aligned} \mathrm{I}(X,Y) & = \mathrm{H}(X) + \mathrm{H}(X|Y)  \\     & = \mathrm{H}(Y) + \mathrm{H}(Y|X) \end{aligned}$$
@@ -120,9 +120,10 @@ $$\displaystyle  \begin{aligned} \mathrm{H}(X,Y) &= - \sum_{x \in X} \sum_{y \in
 
 > $$\mathrm{H}(X|Y) \neq \mathrm{H}(Y|X)$$，因相異隨機變數的資訊量不相等。
 
-### 兩隨機變數的聯合熵等於單個隨機變數的熵加上條件熵&#xD;
+### 兩隨機變數的聯合熵等於單個隨機變數的熵加上條件熵(chain rule)&#xD;
 
-> $$\mathrm{H}(X,Y)=\mathrm{H}(X) +\mathrm{H}(Y|X) = \mathrm{H}(Y) +\mathrm{H}(X|Y)$$
+> * $$\mathrm{H}(X,Y)=\mathrm{H}(X) +\mathrm{H}(Y|X) = \mathrm{H}(Y) +\mathrm{H}(X|Y)$$
+> * 可寫成$$\log_{\mathrm{P}}(X,Y) = \log_{\mathrm{P}}(X) + \log_{\mathrm{P}}(Y|X)= \log_{\mathrm{P}}(Y) + \log_{\mathrm{P}}(X|Y)$$
 
 推廣可得 $$\mathrm{H}(X,Y|Z)=\mathrm{H}(X|Z) +\mathrm{H}(Y|X,Z)$$
 
@@ -157,6 +158,10 @@ $$\displaystyle  \begin{aligned} \mathrm{H}(X|Y) &= - \sum_{x \in X} \sum_{y \in
 > * $$\mathrm{H}(X,Y)= \mathrm{H}(X)+\mathrm{H}(Y|X)=\mathrm{H}(Y) + \mathrm{H}(X|Y)$$
 > * $$\mathrm{I}(X;Y)=\mathrm{H}(Y) - \mathrm{H}(X|Y)=\mathrm{H}(X) - \mathrm{H}(Y|X)=\mathrm{H}(X)+\mathrm{H}(Y)-\mathrm{H}(X,Y)$$
 
+$$\begin{align}  \mathrm{I}(X;Y)      &=\sum_{x \in X}  \sum_{y \in Y}\mathrm{P}(x,y) \log{\frac{\mathrm{P}(x,y)}{\mathrm{P}(x)\mathrm{P}(y)}} \\      &=\sum_{x \in X}  \sum_{y \in Y} \mathrm{P}(x,y) \log{\frac{\mathrm{P}(x|y)}{\mathrm{P}(x)}} \\      & = -\sum_{x \in X} \sum_{y \in Y} \mathrm{P}(x,y) \log{\mathrm{P}(x)} +\sum_{x \in X} \sum_{y \in Y} \mathrm{P}(x,y) \log{\mathrm{P}(x|y)} \\     & = -\sum_{x \in X} \mathrm{P}(x) \log{\mathrm{P}(x)} +\sum_{x \in X} \sum_{y \in Y} \mathrm{P}(x,y) \log{\mathrm{P}(x|y)} \\     & = \mathrm{H}(X) -  \mathrm{H}(X|Y) \end{align}$$
+
+(QED)
+
 ### 互資訊有對稱性
 
 > $$\mathrm{I}(X;Y) = \mathrm{I}(Y;X)$$
@@ -187,7 +192,25 @@ $$\mathrm{I}(X;X)$$為隨機變數$$X$$和隨機變數$$X$$共有的資訊量，
 
 ## 條件互資訊(conditional mutual information)
 
-> $$\begin{align} \mathrm{I}(X;Y|Z) & =\mathrm{H}(X|Z)-\mathrm{H}(X|Y,Z) \\& =\mathrm{H}(Y|Z) - \mathrm{H}(Y|X,Z) \\ &=\mathrm{H}(X|Z)+\mathrm{H}(Y|Z)-\mathrm{H}(X,Y|Z) \\& =\mathrm{E}_{\mathrm{P}(X,Y,Z)}\big( \log{\frac{\mathrm{P}(X,Y|Z)}{\mathrm{P}(X|Z) \mathrm{P}(Y|Z)}} \big) \end{align}$$
+$$\begin{align} \mathrm{I}(X;Y|Z) & =\mathrm{H}(X|Z)-\mathrm{H}(X|Y,Z) \\& =\mathrm{H}(Y|Z) - \mathrm{H}(Y|X,Z) \\ &=\mathrm{H}(X|Z)+\mathrm{H}(Y|Z)-\mathrm{H}(X,Y|Z) \\& =\mathrm{E}_{\mathrm{P}(X,Y,Z)}\big( \log{\frac{\mathrm{P}(X,Y|Z)}{\mathrm{P}(X|Z) \mathrm{P}(Y|Z)}} \big) \end{align}$$
+
+
+
+## 相對熵(relative entropy)、Kullback-Leibler距離
+
+> definition: KL-distance
+>
+> * $$\begin{aligned} \mathrm{D}(P \parallel Q) &= \sum_{x \in X} \mathrm{P}(x) \log \frac{\mathrm{P}(x)}{\mathrm{Q}(x)} \\ & = \mathrm{E}_{\mathrm{P}} \log \frac{\mathrm{P}(x)}{\mathrm{Q}(x)}  \end{aligned}$$
+> * 令$$0 \log \frac{0}{0} = 0$$、$$0 \log \frac{0}{\mathrm{Q}} = 0$$、$$\mathrm{P} \log \frac{\mathrm{P}}{0} = \infty$$。
+> * 因此若$$\mathrm{P}(x) > 0$$且 $$\mathrm{Q}(x)=0$$則 $$\mathrm{D}(P \parallel Q) =\infty$$
+
+* 相對熵是兩個分佈之間遠離程度的度量(和距離度量相似，但不滿足交換性)。
+* 由於$$\log \frac{\mathrm{P}(x)}{\mathrm{Q}(x)} \neq \log \frac{\mathrm{Q}(x)}{\mathrm{P}(x)}$$，因此$$\mathrm{D}(P \parallel Q) \neq \mathrm{D}(Q \parallel P)$$。
+* <mark style="color:red;">機器學習中，經常將</mark>$$Q$$<mark style="color:red;">視為資料的真實分佈</mark>，<mark style="color:red;">而</mark>$$P$$<mark style="color:red;">為學習模型的分佈，目標函數為最小化</mark>$$\mathrm{D}(P \parallel Q)$$，<mark style="color:red;">將</mark>$$P$$<mark style="color:red;">逐漸逼近</mark>$$Q$$。
+
+
+
+
 
 ## 參考資料
 

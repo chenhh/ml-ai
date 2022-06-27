@@ -105,6 +105,8 @@ $$\therefore \displaystyle  \mathrm{H}(x) = -\sum_{x \in X} \mathrm{P}(x) \log \
 * 以此類推可得
 * $$\mathrm{H}(X_1, X_2, \dots, X_n) =  \mathrm{H}(X_1) + \mathrm{H}(X_2|X_1) +  \mathrm{H}(X_3|X_1, X_2) + \dots + \mathrm{H}(X_n|X_1, X_2, \dots, X_{n-1})$$(QED)
 
+
+
 ## 條件熵 (conditional entropy)
 
 > <mark style="color:red;">條件熵</mark>$$\mathrm{H}(X|Y)$$<mark style="color:red;">可解釋為給定隨機變數</mark>$$Y$$<mark style="color:red;">的資訊後，</mark>$$X$$<mark style="color:red;">殘餘的資訊量</mark>。
@@ -201,7 +203,7 @@ $$\mathrm{I}(X;X)$$為隨機變數$$X$$和隨機變數$$X$$共有的資訊量，
 
 ## 條件互資訊(conditional mutual information)
 
-$$\begin{align} \mathrm{I}(X;Y|Z) & =\mathrm{H}(X|Z)-\mathrm{H}(X|Y,Z) \\& =\mathrm{H}(Y|Z) - \mathrm{H}(Y|X,Z) \\ &=\mathrm{H}(X|Z)+\mathrm{H}(Y|Z)-\mathrm{H}(X,Y|Z) \\& =\mathrm{E}_{\mathrm{P}(X,Y,Z)}\big( \log{\frac{\mathrm{P}(X,Y|Z)}{\mathrm{P}(X|Z) \mathrm{P}(Y|Z)}} \big) \end{align}$$
+> $$\begin{align} \mathrm{I}(X;Y|Z) & =\mathrm{H}(X|Z)-\mathrm{H}(X|Y,Z) \\& =\mathrm{H}(Y|Z) - \mathrm{H}(Y|X,Z) \\ &=\mathrm{H}(X|Z)+\mathrm{H}(Y|Z)-\mathrm{H}(X,Y|Z) \\& =\mathrm{E}_{\mathrm{P}(X,Y,Z)}\big( \log{\frac{\mathrm{P}(X,Y|Z)}{\mathrm{P}(X|Z) \mathrm{P}(Y|Z)}} \big) \end{align}$$隨機變數$$X$$與給定$$Z$$後，與隨機變數$$Y$$的互資訊。
 
 
 
@@ -217,10 +219,15 @@ $$\begin{align} \mathrm{I}(X;Y|Z) & =\mathrm{H}(X|Z)-\mathrm{H}(X|Y,Z) \\& =\mat
 * 由於$$\log \frac{\mathrm{P}(x)}{\mathrm{Q}(x)} \neq \log \frac{\mathrm{Q}(x)}{\mathrm{P}(x)}$$，因此$$\mathrm{D}(P \parallel Q) \neq \mathrm{D}(Q \parallel P)$$。
 * <mark style="color:red;">機器學習中，經常將</mark>$$Q$$<mark style="color:red;">視為資料的真實分佈</mark>，<mark style="color:red;">而</mark>$$P$$<mark style="color:red;">為學習模型的分佈，目標函數為最小化</mark>$$\mathrm{D}(P \parallel Q)$$，<mark style="color:red;">將</mark>$$P$$<mark style="color:red;">逐漸逼近</mark>$$Q$$。
 
+### 條件相對熵(conditional relative entropy)
 
+> $$\mathrm{D}(\mathrm{P}(x,y) \parallel \mathrm{Q}(x,y)) = \mathrm{D}(\mathrm{P}(x) \parallel \mathrm{Q}(x))  +  \mathrm{D}(\mathrm{P}(y|x) \parallel \mathrm{Q}(y|x))$$
 
+proof:
 
+$$\begin{aligned}  & \mathrm{D}(\mathrm{P}(x,y) \parallel \mathrm{Q}(x,y))  \\ & = \sum_{x\in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \frac{\mathrm{P}(x,y)}{\mathrm{Q}(x,y)} \\ & = \sum_{x\in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \frac{\mathrm{P}(x)\mathrm{P}(y|x)}{\mathrm{Q}(x)\mathrm{Q}(y|x)} \\ & = \sum_{x\in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \frac{\mathrm{P}(x)}{\mathrm{Q}(x)} + 	\sum_{x\in X} \sum_{y \in Y} \mathrm{P}(x,y) \log \frac{\mathrm{P}(y|x)}{\mathrm{Q}(y|x)} \\ & = \mathrm{D}(\mathrm{P}(x) \parallel \mathrm{Q}(x))  +  \mathrm{D}(\mathrm{P}(y|x) \parallel \mathrm{Q}(y|x))   \end{aligned}$$(QED)
 
 ## 參考資料
 
 * Hartley, Ralph VL. "Transmission of information 1." Bell System technical journal 7.3 (1928): 535-563.
+* \[香港中文大學] Prof. Yeung Wai-Ho, Raymond 楊偉豪教授. 。

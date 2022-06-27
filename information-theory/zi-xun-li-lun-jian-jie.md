@@ -17,7 +17,7 @@
 9. 訊息有有序性，可用於消除系統的不確定性。
 10. 訊息有共享性，同一訊息可被無限的人所獲得，不會使交流者失去原有的訊息。
 
-## 資訊理論與編碼的研究
+## 資訊理論的建立與發展
 
 Shannon在1948年發表的A Mathematical Theory of Communication是資訊理論的公認起源。
 
@@ -27,7 +27,11 @@ Shannon在1948年發表的A Mathematical Theory of Communication是資訊理論�
 
 在所有的資訊交流系統中，通有一個發出訊息的發送端(信源)，至少有一個接收端(信宿)，以及訊息流通的通道(信道)。在訊息傳送過程中，一定會有噪音源發出噪音干擾訊息。為了把訊息放入信道中傳輸，所以需要先將訊息編碼，在傳送到信宿後，進行解碼還原訊息。
 
+1948年到1970年之間，為資訊理論的確立期，主要是對Shannon理論的研究與說明，包括對通信系統的數學模型，資訊量，Shannon熵的意義與作用的說明與討論，信源與信道編碼問題的模型，本質問題與意義的討論，信源與信道編碼的編碼定理及其證明，信源與信道編碼的實現與應用問題等。
 
+這一階段的工作完成的是對以上問題實現了嚴格的數學描述與論證。當時的重要文獻有McMillan(1953)、Feinstein(1954)、Gallager(1968)等。
+
+在1970\~1990年，資訊理論位於理論發展期，由於Shannon理論的闡述與通信技術的發展，研究的範圍變大，此時期發展的主要內容是資訊率失真理論(information rate-distortion theory)與和多用戶資訊理論方面。
 
 ## 資訊理論
 
@@ -109,3 +113,7 @@ $$\displaystyle W=\max_{\mathbf{b}: b_i \geq 0, \sum_{b_i}=1} \int \log (\mathbf
 ## 參考資料
 
 * Cover, Thomas M. Elements of information theory, 2nd. John Wiley & Sons, 2012.
+* McMillan, Brockway. "The basic theorems of information theory." The Annals of mathematical statistics (1953): 196-219.
+* Feinstein, Amiel. "A new basic theorem of information theory." (1954).
+* Gallager, Robert G. Information theory and reliable communication. Vol. 588. New York: Wiley, 1968.
+* Wolfowitz, Jacob. Coding theorems of information theory. Vol. 31. Springer Science & Business Media, 2012.

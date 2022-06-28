@@ -1,15 +1,5 @@
 # 凸最佳化(convex optimization)
 
-## 標準型式(standard form)
-
-$$\displaystyle \begin{aligned} \min_{\mathbf{x}} ~& ~ f(\color{red}{\mathbf{x}}) &  \\ s.t. ~&~ g_i(\mathbf{x}) \leq 0, & i=1,2,\dots, m \\ 	 ~&~ h_i(\mathbf{x}) =0, & i=1,2,\dots, p \end{aligned}$$
-
-* $$\mathbb{x} \in \mathbf{R}^n$$為決策變數。
-* 目標函數$$f: D \in \mathbb{R}^n \rightarrow \mathbb{R}$$為凸函數，$$D$$為凸集合。
-* 不等式限制函數$$g_i: \mathbb{R}^n \rightarrow \mathbb{R}, ~i=1,2,\dots, m$$為凸函數。
-* 等式限制函數$$h_i : \mathbb{R}^n \rightarrow \mathbb{R}, ~i=1,2,\dots, p$$為仿射函數，即函數的型式為$$h_i(\mathbb{x})=\langle \mathbf{a}, \mathbf{x} \rangle - b_i$$。
-* 凸最佳化問題可能沒有解、唯一解，或是無限多解。
-
 為什麼凸最佳化重要?
 
 

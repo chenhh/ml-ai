@@ -21,15 +21,6 @@ Hartley(1928)提出了一個資訊的對數度量。他的度量標准基本上�
 
 
 
-| 名稱   | 符號                                     | 關係                                                                                                                                                                                                                                                                    |
-| ---- | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 無條件熵 | $$\mathrm{H}(X)$$                      | <ul><li><span class="math">\mathrm{H}(X) = \mathrm{H}(X|Y) + \mathrm{I}(X;Y) \geq \mathrm{H}(X|Y)</span></li><li><span class="math">\mathrm{H}(X) = \mathrm{H}(X,Y) - \mathrm{H}(Y|X)</span></li></ul>                                                                |
-| 無條件熵 | $$\mathrm{H}(Y)$$                      | <ul><li><span class="math">\mathrm{H}(Y) = \mathrm{H}(Y|X) + \mathrm{I}(X;Y) \geq \mathrm{H}(Y|X)</span></li><li><span class="math">\mathrm{H}(Y) = \mathrm{H}(X,Y) - \mathrm{H}(X|Y)</span></li></ul>                                                                |
-| 條件熵  | $$\mathrm{H}(X|Y)$$                    | $$\mathrm{H}(X|Y) = \mathrm{H}(X,Y) - \mathrm{H}(Y) = \mathrm{H}(X) - \mathrm{I}(X;Y)$$                                                                                                                                                                               |
-| 條件熵  | $$\mathrm{H}(Y|X)$$                    | $$\mathrm{H}(Y|X) = \mathrm{H}(X,Y) - \mathrm{H}(X) = \mathrm{H}(Y) - \mathrm{I}(X;Y)$$                                                                                                                                                                               |
-| 聯合熵  | $$\mathrm{H}(X,Y) =  \mathrm{H}(Y,X)$$ | $$\begin{aligned}  & \mathrm{H}(X,Y)  \\  &=  \mathrm{H}(X) + \mathrm{H}(Y|X) \\     & = \mathrm{H}(Y) + \mathrm{H}(X|Y) \\     & = \mathrm{H}(X)+ \mathrm{H}(Y) - \mathrm{I}(X;Y) \\     & = \mathrm{H}(X|Y) + \mathrm{H}(Y|X) + \mathrm{I}(X;Y)  \end{aligned}$$    |
-| 互資訊  | $$\mathrm{I}(X;Y) = \mathrm{I}(Y;X)$$  | $$\begin{aligned}  &  \mathrm{I}(X;Y)  \\  &=  \mathrm{H}(X) - \mathrm{H}(X|Y) \\     & = \mathrm{H}(Y) - \mathrm{H}(Y|X) \\     & = \mathrm{H}(X,Y )-  \mathrm{H}(Y|X) - \mathrm{H}(X|Y) \\     & = \mathrm{H}(X) + \mathrm{H}(Y) - \mathrm{I}(X;Y)  \end{aligned}$$ |
-
 ## 資訊熵
 
 > <mark style="color:red;">definition: information (Shannon) entropy</mark>

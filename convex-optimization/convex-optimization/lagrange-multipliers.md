@@ -1,5 +1,15 @@
 # Lagrange multipliers
 
+## 簡介
+
+Lagrange乘數法在數學中的最佳化問題中，是一種尋找多元函數在其變數受到一個或多個條件的限制時的區域性極值的方法。
+
+這種方法中引入了一個或一組新的未知數，即Langrange乘數，它們是在轉換後的方程式，即限制方程式中作為梯度（gradient）的線性組合中各個向量的係數。
+
+Lagrange乘數法所得的臨界點會包含原問題的所有臨界點，但並不保證每個拉格朗日乘數法所得的臨界點都是原問題的臨界點。
+
+## 數學型式
+
 給定凸最佳化問題標準型：
 
 $$\displaystyle \begin{aligned} \min_{\mathbf{x}} ~& ~ f(\color{red}{\mathbf{x}}) &  \\ s.t. ~&~ g_i(\mathbf{x}) \leq 0, & i=1,2,\dots, m \\ 	 ~&~ h_i(\mathbf{x}) =0, & i=1,2,\dots, p \end{aligned}$$

@@ -175,7 +175,7 @@
 
 * [凸集合 (convex set)](convex-optimization/convex-set.md)
 * [凸函數 (convex function)](convex-optimization/convex-function.md)
-* [凸最佳化(convex optimization)](convex-optimization/convex-optimization/README.md)
+* [凸最佳化(convex optimization)](convex-optimization/convex-optimization.md)
   * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
 

@@ -12,4 +12,6 @@ $$\displaystyle \begin{aligned} \min_{\mathbf{x}} ~& ~ f(\color{red}{\mathbf{x}}
 
 1. $$x^{*}$$最小化$${\displaystyle L(y,\lambda _{0},\lambda _{1},\ldots ,\lambda _{m}),~ \forall y \in X}$$。
 2. $$\lambda_0, \lambda_1, \dots, \lambda_m \geq 0$$且至少一個$$\lambda_k > 0$$。
-3. \$$\lambda\_1
+3. \[complementary slackness]$$\lambda_1 g_1(x) = \lambda_2 g_2(x) = \dots = \lambda_m g_m(x)$$
+
+因此如果存在$$x\in X$$滿足條件1\~3，即$$\lambda_0=1$$且$$\lambda_1,\dots, \lambda_m \geq 0$$，則$$x$$必為最佳解。

@@ -71,3 +71,7 @@ Lagrange function $$L(x,y, \lambda)=f(x,y)+\lambda g(x,y) = x+y + \lambda (x^2+y
 可得點$$(x,y,\lambda)=(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}, \frac{-1}{\sqrt{2}}) \text{ or } (\frac{-\sqrt{2}}{2}, \frac{-\sqrt{2}}{2}, \frac{1}{\sqrt{2}})$$
 
 因此函數$$f$$在限制式的極值為$$f(\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}) = \sqrt{2}$$或$$f(\frac{-\sqrt{2}}{2}, \frac{-\sqrt{2}}{2}) = -\sqrt{2}$$。
+
+參考資料
+
+* [\[線代啟示錄\]Karush-Kuhn-Tucker (KKT) 條件](https://ccjou.wordpress.com/2017/02/07/karush-kuhn-tucker-kkt-%E6%A2%9D%E4%BB%B6/)。

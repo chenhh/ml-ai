@@ -8,6 +8,8 @@ KKT條件是在滿足一些有規則的條件下，一個非線性規劃（Nonli
 
 $$\displaystyle \begin{aligned} \min_{\mathbf{x} \in \mathbb{R}^n} ~& ~ f(\color{red}{\mathbf{x}}) &  \\ s.t. ~&~ g_i(\mathbf{x}) \leq 0, & i=1,2,\dots, m \\ 	 ~&~ h_j(\mathbf{x}) =0, & j=1,2,\dots, p \end{aligned}$$
 
+對應的Lagrange functionb為$$L(\mathbf{x}, \mathbf{\mu}, \mathbf{\lambda}) = f(\mathbf{x})+\mathbf{\mu}^\top g(\mathbf{x}) + \mathbf{\lambda}^\top h(\mathbf{x})$$
+
 ## 必要條件
 
 假設$$f, g_i, h_j$$均在$$x^{*}$$連續可微。若$$x^{*}$$是局部極小值，則會存在一組Lagrange乘數$$\lambda \geq 0$$，$$\mu_i \geq 0, ~i=1,2\dots, m$$，$$\nu_j, ~j=1,\dots, p$$滿足以下條件：

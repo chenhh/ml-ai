@@ -177,6 +177,7 @@
 * [凸函數 (convex function)](convex-optimization/convex-function.md)
 * [凸最佳化(convex optimization)](convex-optimization/convex-optimization.md)
   * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
+  * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>

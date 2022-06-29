@@ -149,6 +149,29 @@ $$\begin{bmatrix} x-x_c & y-y_c  \end{bmatrix} \begin{bmatrix} \frac{1}{a^2} & 0
 
 $$\begin{aligned} \mathbb{R}^n_{+}  	&= \{ x \in \mathbb{R}^n ~|~ x_i \geq 0, ~ i=1,2,\dots, n \} \\ 	& = \{ x\in \mathbb{R}^n ~|~ x \succeq 0\}   \end{aligned}$$
 
+### 單純形(simplexes)
+
+> 令$$k+1$$個點$$x_0, x_1, \dots, x_k \in \mathbb{R}^n$$仿射獨立，即$$x_1 - x_0, x_2- x_0, \dots, x_k - x_0$$線性獨立，則這些點決定一單純形 $$\begin{aligned} C & = \mathrm{conv}\{x_0, x_1, \dots, x_k\}  \\ & = \{c_0 x_0 + c_1 x_1 + \dots + c_k x_k ~|~ c_i \geq 0~ \forall i,~  \sum_{i=0}^k c_i = 1  \}  \end{aligned}$$
+
+應用時，經常把$$c_i \geq 0 , \sum_{i=0}^k c_i=1$$這個限制式視為<mark style="color:red;">機率分佈，且假設為符從</mark>[<mark style="color:red;">Dirichlet分佈</mark>](https://en.wikipedia.org/wiki/Dirichlet\_distribution)。
+
+* 一維單純形為一條線段。
+* 二維單純形為三角形(含內部)。
+* 三維單純形為四面體。
+
+## 半正定錐(positive semidefinite cone)
+
+> * 定義$$n$$階對稱方陣符號為$$\mathbf{S}^n = \{  X \in \mathbb{R}^n ~| ~ X= X^{\top} \}$$。
+> * 對稱正半定矩陣$$\mathbf{S}^n_{+} = \{  X \in \mathbb{S}^n ~| ~ X \succeq 0 \}$$，$$\forall z \in \mathbb{R}^n ~ z^\top X z \geq 0$$。
+> * 對稱正定矩陣$$\mathbf{S}^n_{++} = \{  X \in \mathbb{S}^n ~| ~ X \succ 0 \}$$，$$\forall z \in \mathbb{R}^n ~ z^\top X z > 0$$。
+
+* 由定義可得$$\mathbf{S}^n_{+}$$為凸錐，因為$$\forall x,y\in \mathbf{S}^n_{+}, ~c_1, c_2 \geq 0, ~ c_1x + c_2 y \in \mathbf{S}^n_{+}$$。
+* 且$$\forall z \in \mathbb{R}^n$$, $$\forall x,y \succeq 0 , ~c_1, c_2 \geq 0$$，可得$$z^\top (c_1 x + c_2 y)z = c_1 z^\top x z + c_2 z^\top y z \geq 0$$。
+
+#### 範例：平面上的正半定維
+
+$$X=\begin{bmatrix} x & y \\ y & z \end{bmatrix} \in \mathbf{S}_{+}^2 \Leftrightarrow x \geq 0, ~ z \geq 0, ~xz \geq y^2$$
+
 ## 參考資料
 
 * Boyd, Stephen, Stephen P. Boyd, and Lieven Vandenberghe. Convex optimization. Cambridge university press, 2004. \[[website](https://web.stanford.edu/\~boyd/cvxbook/)]

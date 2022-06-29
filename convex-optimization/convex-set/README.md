@@ -8,11 +8,11 @@
 * 由定義可知向量空間必為凸集合，因為向量空間$$V$$必須滿足$$\forall a \in F$$, $$\forall u,v \in V \Rightarrow au+v \in V$$。
 * <mark style="color:red;">註：如果是在平面上的集合，任意兩點間畫一直線均落在集合內時，則為凸集合</mark>。
 
-![凸集合與非凸集合](../.gitbook/assets/convex\_set-min.png)
+![凸集合與非凸集合](../../.gitbook/assets/convex\_set-min.png)
 
 有些集合在相異參數時為凸集合或非凸集合。如 $$C_p = \{ (x,y)\ \vert \ (|x|^p + |y|^p)^{1/p} \leq 1 \}$$。在 $$p < 1$$時為不是凸集合。而在$$p \geq 1$$時為凸集合。
 
-![參數可調整為凸集合或非凸集合](../.gitbook/assets/param\_convex\_set-min.png)
+![參數可調整為凸集合或非凸集合](../../.gitbook/assets/param\_convex\_set-min.png)
 
 ## 凸組合與凸包(convex combination and convex hull)
 
@@ -28,7 +28,7 @@
 
 由凸組合得到的點$$x$$，必定落在$$x_1,x_2, \dots ,x_k$$形成的凸包集合中。
 
-![convex hull](../.gitbook/assets/convex\_hull.png)
+![convex hull](../../.gitbook/assets/convex\_hull.png)
 
 凸組合可擴展到無窮級數、積分、與大部份的機率分佈：
 
@@ -56,9 +56,9 @@
 
 因此$$C$$為<mark style="color:red;">凸錐</mark> $$\Leftrightarrow$$ $$\forall x_i, x_j \in C$$, $$c_i x_ i + c_j x_j \in C, ~ c_i, c_j \geq 0$$，即$$C$$中任意兩點形成的錐組合仍在$$C$$中。
 
-![conic combination](../.gitbook/assets/cone.png)
+![conic combination](../../.gitbook/assets/cone.png)
 
-![conic hull](../.gitbook/assets/conic\_hull.png)
+![conic hull](../../.gitbook/assets/conic\_hull.png)
 
 ## 仿射集合(affine set)
 
@@ -100,9 +100,9 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 >
 > 超平面為仿射集(所以為凸集)，而半空間為凸集合，但不是仿射集。
 
-![hyperplane](<../.gitbook/assets/hyperplane (1).png>)
+![hyperplane](<../../.gitbook/assets/hyperplane (1).png>)
 
-![halfspace](<../.gitbook/assets/halfspace (2).png>)
+![halfspace](<../../.gitbook/assets/halfspace (2).png>)
 
 ## 歐式球與橢圓(Euclidean balls and ellipsoids)
 

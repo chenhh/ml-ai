@@ -112,12 +112,42 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 >
 > 橢圓 $$\mathcal{E} =\{ x ~|~ (x-x_c)^{\top} P^{-1} (x-x_c) \leq 1\}=\{x_c + Au ~|~ \|u \|_2 \leq 1 \}$$。
 >
-> * 其中$$P = P^\top \succ 0$$為對稱正定矩陣。
+> * 其中$$P = P^\top \succ 0$$為對稱正定矩陣($$P \in \mathbf{S}^n_{++}$$)。
 > * $$A$$為非奇異的方陣，取$$A=P^{1/2}$$。
 
 中心點$$(x_c, y_c)$$與軸長度為$$a,b$$橢圓標準方程式為$$\frac{(x-x_c)^2}{a^2} + \frac{(y-y_c)^2}{b^2} = 1$$，矩陣形式為
 
 $$\begin{bmatrix} x-x_c & y-y_c  \end{bmatrix} \begin{bmatrix} \frac{1}{a^2} & 0\\ 0 & \frac{1}{b^2}  \end{bmatrix}   \begin{bmatrix} x-x_c \\  y-y_c  \end{bmatrix} =1$$
+
+## 範數球與範數錐(norm ball and norm cone)
+
+> 範數(norm)為距離(長度)的擴充函數，為滿足以下條件的一元函數：
+>
+> * \[距離非負值，且只有0向量長度為0]$$\| x \| \geq 0; ~ \|x \| = 0 \Leftrightarrow x = 0$$。
+> * \[距離等比例伸長]$$\|tx\|=|t| \|x\|~ t \in \mathbb{R}$$
+> * \[三角不等式]$$\| x+ y\| \leq \|x \| + \|y\|$$
+
+> 範數球即為長度函數為範數的球 $$B(x_c,r) = \{ x ~|~ \| x-x_c\| \leq r\} = \{x_c + ru ~|~ \|u\| \leq 1 \}$$
+>
+> 範數錐即為長度函數為範數的錐$$C=\{(x,t) ~|~ \|x\| \leq t \} \subseteq \mathbb{R}^{n+1}$$。
+
+常用的是二階錐(second-order cone)，也常稱為Lorentz錐或是冰淇淋錐：$$\begin{aligned} C & =\{ (x,t)\in \mathbb{R}^{n+1} ~|~ \|x\|_2 \leq t\}\\   & = \left\{  	\begin{bmatrix} x \\ t \end{bmatrix} ~\bigg|~  	\begin{bmatrix} x & t\end{bmatrix}     \begin{bmatrix} I & 0 \\ 0 & -1\end{bmatrix}   \begin{bmatrix} x \\ t\end{bmatrix}  \leq 0, ~ t \geq 0   \right\} \end{aligned}$$
+
+## 多面體(polyhedra)
+
+> 多面體被定義為有限個線性等式和不等式的解集合
+>
+> $$\begin{aligned} \mathcal{P} & = \left\{ x \in \mathbb{R}^n ~| ~ a_i^\top x \leq b_i, i =1,2,\dots, m, c_j^\top x = d_j, j=1,2,\dots, p  \right\} \\ & =\left\{ x \in \mathbb{R}^n ~| ~ Ax \succeq b, ~Cx = d, ~  A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{p \times n}  \right\}  \end{aligned}$$
+
+因此多面體是有限個半空間和超平面的交集，常見於線性規劃的限制式。
+
+仿射集合(子空間、超平面、直線)、射線，線段和半空間也是多面體。
+
+<mark style="color:blue;">有界的多面體有時也稱為多胞型(polytope)</mark>。
+
+#### 例如：<mark style="color:red;">非負象限(nonnegative orthant)</mark>是多面體也是錐，因此稱為多面體錐(polyhedral cone)。
+
+$$\begin{aligned} \mathbb{R}^n_{+}  	&= \{ x \in \mathbb{R}^n ~|~ x_i \geq 0, ~ i=1,2,\dots, n \} \\ 	& = \{ x\in \mathbb{R}^n ~|~ x \succeq 0\}   \end{aligned}$$
 
 ## 參考資料
 

@@ -104,6 +104,21 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 
 ![halfspace](<../.gitbook/assets/halfspace (2).png>)
 
+## 歐式球與橢圓(Euclidean balls and ellipsoids)
+
+> 令歐式球的中心點為$$x_c$$，半徑為$$r$$, 則$$B(x_c,r) = \{ x ~|~ \| x-x_c\|_2 \leq r\} = \{x_c + ru ~|~ \|u\|_2 \leq 1 \}$$
+>
+> * $$\| u \|_2 = {(u^\top u)}^{1/2}$$為Euclidean norm。
+>
+> 橢圓 $$\mathcal{E} =\{ x ~|~ (x-x_c)^{\top} P^{-1} (x-x_c) \leq 1\}=\{x_c + Au ~|~ \|u \|_2 \leq 1 \}$$。
+>
+> * 其中$$P = P^\top \succ 0$$為對稱正定矩陣。
+> * $$A$$為非奇異的方陣，取$$A=P^{1/2}$$。
+
+中心點$$(x_c, y_c)$$與軸長度為$$a,b$$橢圓標準方程式為$$\frac{(x-x_c)^2}{a^2} + \frac{(y-y_c)^2}{b^2} = 1$$，矩陣形式為
+
+$$\begin{bmatrix} x-x_c & y-y_c  \end{bmatrix} \begin{bmatrix} \frac{1}{a^2} & 0\\ 0 & \frac{1}{b^2}  \end{bmatrix}   \begin{bmatrix} x-x_c \\  y-y_c  \end{bmatrix} =1$$
+
 ## 參考資料
 
 * Boyd, Stephen, Stephen P. Boyd, and Lieven Vandenberghe. Convex optimization. Cambridge university press, 2004. \[[website](https://web.stanford.edu/\~boyd/cvxbook/)]

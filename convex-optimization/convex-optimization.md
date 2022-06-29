@@ -1,5 +1,37 @@
 # 凸最佳化(convex optimization)
 
+## 標準型式(standard form)
+
+$$\displaystyle \begin{aligned} \min_{\mathbf{x}} ~& ~ f(\color{red}{\mathbf{x}}) &  \\ s.t. ~&~ g_i(\mathbf{x}) \leq 0, & i=1,2,\dots, m \\ 	 ~&~ h_i(\mathbf{x}) =0, & i=1,2,\dots, p \end{aligned}$$
+
+* $$\mathbb{x} \in \mathbf{R}^n$$為決策變數。
+* 目標函數$$f: D \in \mathbb{R}^n \rightarrow \mathbb{R}$$為凸函數，$$D$$為凸集合。
+* 不等式限制函數$$g_i: \mathbb{R}^n \rightarrow \mathbb{R}, ~i=1,2,\dots, m$$為凸函數。
+* 等式限制函數$$h_i : \mathbb{R}^n \rightarrow \mathbb{R}, ~i=1,2,\dots, p$$為仿射函數，即函數的型式為$$h_i(\mathbb{x})=\langle \mathbf{a}, \mathbf{x} \rangle - b_i$$。
+* 凸最佳化問題可能沒有解、唯一解，或是無限多解。
+
+## 應用：ordinary least square
+
+此類問題沒有約束條件，且目標函數是若干項的平方和，每一項有$$a_i^\top x -b_i$$的形式：
+
+* $$\min f_o(\mathbf{x})=\| A \mathbf{x} - \mathbf{b} \|_2^2 = \sum_{i=1}^k (a_i^\top x - b_i)^2$$
+* $$A =\begin{bmatrix} a_1 \\ a_2 \\ \vdots \\ a_k \end{bmatrix}=\in \mathbb{R}^{k \times n}~ k \geq n$$
+
+在線性代數中討論過此問題，可得解析解 $$x^{*} = (A^\top A)^{-1} A^\top b$$。
+
+判斷是否為OLS問題問題很簡單，只要檢驗目標函數是為二次函數，然後檢驗此函數是否為半正定即可。
+
+### OLS變型：加權OLS
+
+* $$\min f_o(\mathbf{x})= \sum_{i=1}^k w_i (a_i^\top x - b_i)^2$$
+* $$w_1, w_2, \dots, w_k > 0$$，反應了各項的重要程度。
+
+### OLS變型：懲罰函數(正規項)
+
+* $$\min f_o(\mathbf{x})= \sum_{i=1}^k (a_i^\top x - b_i)^2 + \rho \sum_{i=1}^n x_i^2, ~\rho > 0$$
+
+使用懲罰項避免向量$$\mathbf{x}$$中，單一元素值過大。
+
 為什麼凸最佳化重要?
 
 

@@ -98,7 +98,7 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 >
 > $$a$$為超平面的法向量(normal vector)。
 >
-> 超平面為仿射集(凸集)，而半空間為凸集合。
+> 超平面為仿射集(所以為凸集)，而半空間為凸集合，但不是仿射集。
 
 ![hyperplane](<../.gitbook/assets/hyperplane (1).png>)
 

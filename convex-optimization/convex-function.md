@@ -74,6 +74,8 @@
 
 若函數$$f$$的定義域$$\mathrm{dom}f$$為開集合，且$$\forall x \in \mathrm{dom}f$$，梯度$$\nabla f(x) = \left(  \frac{\partial f(x)}{\partial x_1}, \frac{\partial f(x)}{\partial x_2}, \dots, \frac{\partial f(x)}{\partial x_n}  \right)$$存在，則稱<mark style="color:red;">函數</mark>$$f$$<mark style="color:red;">可微(differentiable)</mark>。
 
+<mark style="color:red;">註：在判斷函數的凸性或凹性時，不論是一階或二階條件，函數定義域必須是凸集合才能使用</mark>。
+
 ### 一階條件是凸函數的充份必要條件
 
 > 令 $$f$$可微分，則：
@@ -101,3 +103,16 @@ proof <=&#x20;
 * 兩不等式相加可得$$cf(x) + (1-c)f(y) \geq f(z)$$ (QED)
 
 ## 二階條件(second-order conditions)
+
+若函數$$f$$的定義域$$\mathrm{dom}f$$​為開集合，且Hessian矩陣$$\nabla^2 f(x) \in \mathbf{S}^n$$為對稱方陣, $$\nabla^2 f(x)_{ij} = \frac{\partial^2 f(x) }{\partial x_i \partial x_j}, ~ i,j=1,2,\dots,n$$ $$\forall x \in \mathrm{dom} f$$存在，則稱$$f$$<mark style="color:red;">二次可微</mark>。
+
+### 二階條件是凸函數的充份必要條件
+
+> 令函數$$f$$二次可微，則：
+>
+> $$f$$為凸函數 $$\Leftrightarrow$$ $$\nabla^2 f(x) \succeq 0, ~ \forall x \in \mathrm{dom}f$$為半正定矩陣。
+>
+> 若$$\nabla^2 f(x) \succ 0$$，則$$f$$為嚴格凸函數，反之不一定成立。
+
+例：$$f:\mathbb{R} \rightarrow \mathbb{R}$$, $$f(x)=x^4$$為嚴格凸函數，但在$$x=0$$時，$$f^{''}(0)=0$$。
+

@@ -83,7 +83,7 @@
 >
 > $$f$$為凸函數$$\Leftrightarrow$$ $$\mathrm{dom}f$$為凸集合，且$$\forall x, y \in \mathrm{dom}f$$，$$f(y) \geq f(x) + \nabla f(x)^\top (y-x)$$
 
-![一階條件](../../.gitbook/assets/first\_order\_condition-min.png)
+![一階條件](../.gitbook/assets/first\_order\_condition-min.png)
 
 * 如果$$\nabla f(x)=0$$，則$$\forall y \in \mathrm{dom}f$$，均可得$$f(y) \geq f(x)$$，即$$x$$為$$f$$的全局極小點(global minimum)。
 * 可以用<mark style="color:red;">點斜式</mark>表示過點$$x$$的切線，令$$y$$在切線$$g$$的定義域上，因此$$g^{'}(x) = \frac{g(y) - g(x)}{y-x}$$，所以在直線上的$$g(y) = g(x) +  g^{'}(x)(y-x)$$。

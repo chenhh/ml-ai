@@ -179,10 +179,14 @@
   * [上境圖(epigraph)](convex-optimization/convex-function/epigraph.md)
   * [不等式](convex-optimization/convex-function/inequality.md)
   * [保凸運算](convex-optimization/convex-function/operations-that-preserve-convexity.md)
+  * [次梯度](convex-optimization/convex-function/subgradient.md)
 * [凸最佳化(convex optimization)](convex-optimization/convex-optimization.md)
   * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
   * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)
+* [最佳化演算法](convex-optimization/optimization-algorithm.md)
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
+* [線性規劃](convex-optimization/linear-programming.md)
+* [整數規劃](convex-optimization/integer-programming.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

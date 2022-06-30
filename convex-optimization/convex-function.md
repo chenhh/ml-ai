@@ -41,9 +41,17 @@
 >
 > $$\forall x \in \mathrm{dom}f, ~ v \in \mathbb{R}^n$$
 
+簡單的說，如果$$f$$為凸函數，則給定$$x \in \mathrm{dom}f$$，不論往任何方向$$v$$移動，只要終點$$x+tv$$仍然在定義域內，則仍然滿足凸函數的條件，反之也成立。
+
 範例：
 
 * $$f: \mathbf{S}^n \rightarrow \mathbb{R}$$, $$f(X) = \log \det X$$, $$\mathrm{dom}f=\mathbf{S}_{++}^n$$
 * 令$$\begin{aligned} g(t) & =\log\det(X+tV) \\     & = \log\det X + \log\det(I+tX^{-1/2}VX^{-1/2}) \\     & = \log\det X + \sum_{i=1}^n \log(1+t \lambda_i) \end{aligned}$$
 * $$\lambda_i$$為$$X^{-1/2}VX^{-1/2}$$的特徵根。
 * 可得$$g$$為凹函數($$\forall X \succ 0, \forall V$$), 因此$$f$$為凹函數。
+
+## 擴展值延伸(extended-value extension)
+
+可定義凸(凹)函數在定義域外的值為$$\infty$$($$-\infty$$)，將凸函數延伸到整個空間$$\mathbb{R}^n$$，<mark style="color:blue;">可簡化定義域的描述</mark>。
+
+令$$\tilde{f}: \mathbb{R}^n \rightarrow \mathbb{R} \cup \{ \infty \}$$為凸函數$$f$$的擴展值延伸如下：$$\tilde{f} =  \left\{ \begin{aligned} f(x), ~& ~x \in \mathrm{dom} f \\ \infty, ~ & ~ x \not \in \mathrm{dom} f \end{aligned} \right.$$

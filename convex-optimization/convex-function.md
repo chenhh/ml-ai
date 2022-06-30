@@ -55,3 +55,12 @@
 可定義凸(凹)函數在定義域外的值為$$\infty$$($$-\infty$$)，將凸函數延伸到整個空間$$\mathbb{R}^n$$，<mark style="color:blue;">可簡化定義域的描述</mark>。
 
 令$$\tilde{f}: \mathbb{R}^n \rightarrow \mathbb{R} \cup \{ \infty \}$$為凸函數$$f$$的擴展值延伸如下：$$\tilde{f} =  \left\{ \begin{aligned} f(x), ~& ~x \in \mathrm{dom} f \\ \infty, ~ & ~ x \not \in \mathrm{dom} f \end{aligned} \right.$$
+
+因此$$\forall 0 \leq \lambda  \leq 1$$，$$\tilde{f}(\lambda x + (1-\lambda)y) \leq \lambda \tilde{f}(x) + (1-\lambda)\tilde{f}(y)$$，等同滿足了以下兩個條件：
+
+* $$\mathrm{dom}f$$為凸集合(因為$$\mathrm{dom}\tilde{f} = \mathbb{R}^n$$)
+* $${f}(\lambda x + (1-\lambda)y) \leq \lambda {f}(x) + (1-\lambda){f}(y)$$
+
+例：令$$f_1, f_2: \mathbb{R}^n \rightarrow \mathbb{R}$$為凸函數，則逐點和函數$$f=f_1 + f_2$$的定義域為$$\mathrm{dom}f = \mathrm{dom}f_1 \cap \mathrm{dom}f_2$$。可簡寫為 $$\forall x \in \mathrm{dom}f$$，$$\tilde{f}=\tilde{f}_1 + \tilde{f}_2$$。因為當$$x \notin \mathrm{dom} f_1$$或$$x \notin \mathrm{dom} f_2$$時，$$\tilde{f}(x)=\infty$$仍然成立。
+
+### 凸集合的示性函數(indicator function of a convex set)

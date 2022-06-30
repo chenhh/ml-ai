@@ -177,6 +177,8 @@
   * [保凸運算](convex-optimization/convex-set/operations-that-preserve-convexity.md)
 * [凸函數 (convex function)](convex-optimization/convex-function.md)
   * [上境圖(epigraph)](convex-optimization/convex-function/epigraph.md)
+  * [不等式](convex-optimization/convex-function/inequality.md)
+  * [保凸運算](convex-optimization/convex-function/operations-that-preserve-convexity.md)
 * [凸最佳化(convex optimization)](convex-optimization/convex-optimization.md)
   * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
   * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)

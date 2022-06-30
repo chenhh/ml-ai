@@ -179,3 +179,4 @@ $$X=\begin{bmatrix} x & y \\ y & z \end{bmatrix} \in \mathbf{S}_{+}^2 \Leftright
   * [\[Stanford\] EE364b - Convex Optimization II](https://web.stanford.edu/class/ee364b/)
 * [\[MIT\] Dimitri Bertsekas](https://www.mit.edu/\~dimitrib/home.html)
 * Nesterov, Yurii. Introductory lectures on convex optimization: A basic course. Vol. 87. Springer Science & Business Media, 2003.
+* [fmin.xyz](https://fmin.xyz/)

@@ -70,4 +70,34 @@
 
 可利用示性函數變換問題的定義域。比如函數$$f: \mathbb{R}^n \rightarrow \mathbb{R}$$，求函數$$f$$在集合$$C$$的極小值。等價於在$$\mathbb{R}^n$$上求$$f+\tilde{I}_C(x)$$的極小值。
 
+## <mark style="color:red;">一階條件(first-order condition)</mark>
+
+若函數$$f$$的定義域$$\mathrm{dom}f$$為開集合，且$$\forall x \in \mathrm{dom}f$$，梯度$$\nabla f(x) = \left(  \frac{\partial f(x)}{\partial x_1}, \frac{\partial f(x)}{\partial x_2}, \dots, \frac{\partial f(x)}{\partial x_n}  \right)$$存在，則稱<mark style="color:red;">函數</mark>$$f$$<mark style="color:red;">可微(differentiable)</mark>。
+
+### 一階條件是凸函數的充份必要條件
+
+> 令 $$f$$可微分，則：
 >
+> $$f$$為凸函數$$\Leftrightarrow$$ $$\mathrm{dom}f$$為凸集合，且$$\forall x, y \in \mathrm{dom}f$$，$$f(y) \geq f(x) + \nabla f(x)^\top (y-x)$$
+
+![一階條件](../.gitbook/assets/first\_order\_condition-min.png)
+
+* 如果$$\nabla f(x)=0$$，則$$\forall y \in \mathrm{dom}f$$，均可得$$f(y) \geq f(x)$$，即$$x$$為$$f$$的全局極小點(global minimum)。
+* 可以用<mark style="color:red;">點斜式</mark>表示過點$$x$$的切線，令$$y$$在切線的定義域上，因此$$f^{'}(x) = \frac{f(y) - f(x)}{y-x}$$，所以在直線上的$$f(y) = f(x) +  f^{'}(x)(y-x)$$。
+
+proof => (簡化為一維的條件)
+
+* 令$$f$$可微分且為凸函數，$$x, y \in \mathrm{dom}f$$。
+* 因為$$\mathrm{dom}f$$為凸集合，對於$$0<t \leq 1$$，可得$$x+t(y-x) \in \mathrm{dom}f$$。
+* 因為$$f$$為凸函數，可得 $$f(x+t(y-x)) \leq (1-t)f(x) + tf(y)$$。
+* 兩邊同除t可得$$f(y) \geq f(x) + \frac{1}{t} f(x+t(y-x)) - f(x)$$。
+* 當$$t \rightarrow 0$$時，可得$$f(y) \geq f(x) + \nabla f(x)^{'} (y-x)$$。(QED)
+
+proof <=&#x20;
+
+* 假設$$\forall x,y \in \mathrm{dom}f$$均滿足 $$f(y) \geq f(x) + \nabla f(x)^{'} (y-x)$$。
+* 選$$x \neq y, ~0 \leq c \leq 1,  ~ z = cx + (1-c)y \in \mathrm{dom} f$$
+* 由一階條件可得$$f(x) \geq f(z) + f^{'}(z)(x-z)$$且$$f(y) \geq f(z) + f^{'}(z)(y-z)$$。
+* 兩不等式相加可得$$cf(x) + (1-c)f(y) \geq f(z)$$ (QED)
+
+## 二階條件(second-order conditions)

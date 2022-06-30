@@ -64,3 +64,10 @@
 例：令$$f_1, f_2: \mathbb{R}^n \rightarrow \mathbb{R}$$為凸函數，則逐點和函數$$f=f_1 + f_2$$的定義域為$$\mathrm{dom}f = \mathrm{dom}f_1 \cap \mathrm{dom}f_2$$。可簡寫為 $$\forall x \in \mathrm{dom}f$$，$$\tilde{f}=\tilde{f}_1 + \tilde{f}_2$$。因為當$$x \notin \mathrm{dom} f_1$$或$$x \notin \mathrm{dom} f_2$$時，$$\tilde{f}(x)=\infty$$仍然成立。
 
 ### 凸集合的示性函數(indicator function of a convex set)
+
+* 令 $$C \subseteq \mathbb{R}^n$$為凸集合，定義函數$$I_C: C \rightarrow \mathbb{R}$$為$$I_c(x) = 0, ~\forall x \in C$$。
+* 其擴展值延伸為$$\tilde{I}_c(x) = \left \{  \begin{aligned} 0, ~ & ~ x \in C \\ \infty ~ & ~ x \notin C \end{aligned}  \right.$$。
+
+可利用示性函數變換問題的定義域。比如函數$$f: \mathbb{R}^n \rightarrow \mathbb{R}$$，求函數$$f$$在集合$$C$$的極小值。等價於在$$\mathbb{R}^n$$上求$$f+\tilde{I}_C(x)$$的極小值。
+
+>

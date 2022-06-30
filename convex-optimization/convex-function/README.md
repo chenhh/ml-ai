@@ -14,6 +14,7 @@
 #### 定義域在實數的凸函數
 
 * affine: $$f(x)=ax+b, ~\forall x,a, b\in \mathbb{R}$$
+  * $$\mathbb{R}$$為凸集合，可用一階條件判斷$$\forall y \in \mathbb{R}$$, $$f(y) = f(x) + f^{'}(y-x)$$。
 * exponential: $$f(x)=e^{ax}, \forall a \in \mathbb{R}$$
 * powers: $$f(x)=x^{\alpha}, x \in \mathbb{R}_{++}~\forall \alpha \geq 1 \text{ or } \alpha \leq 0$$
 * power of absolute value: $$f(x)=|x|^p, x \in \mathbb{R}, ~ p \geq 1$$
@@ -82,10 +83,10 @@
 >
 > $$f$$為凸函數$$\Leftrightarrow$$ $$\mathrm{dom}f$$為凸集合，且$$\forall x, y \in \mathrm{dom}f$$，$$f(y) \geq f(x) + \nabla f(x)^\top (y-x)$$
 
-![一階條件](../.gitbook/assets/first\_order\_condition-min.png)
+![一階條件](../../.gitbook/assets/first\_order\_condition-min.png)
 
 * 如果$$\nabla f(x)=0$$，則$$\forall y \in \mathrm{dom}f$$，均可得$$f(y) \geq f(x)$$，即$$x$$為$$f$$的全局極小點(global minimum)。
-* 可以用<mark style="color:red;">點斜式</mark>表示過點$$x$$的切線，令$$y$$在切線的定義域上，因此$$f^{'}(x) = \frac{f(y) - f(x)}{y-x}$$，所以在直線上的$$f(y) = f(x) +  f^{'}(x)(y-x)$$。
+* 可以用<mark style="color:red;">點斜式</mark>表示過點$$x$$的切線，令$$y$$在切線$$g$$的定義域上，因此$$g^{'}(x) = \frac{g(y) - g(x)}{y-x}$$，所以在直線上的$$g(y) = g(x) +  g^{'}(x)(y-x)$$。
 
 proof => (簡化為一維的條件)
 

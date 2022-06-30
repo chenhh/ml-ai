@@ -10,6 +10,13 @@ $$\displaystyle \begin{aligned} \min_{\mathbf{x}} ~& ~ f(\color{red}{\mathbf{x}}
 * 等式限制函數$$h_i : \mathbb{R}^n \rightarrow \mathbb{R}, ~i=1,2,\dots, p$$為仿射函數，即函數的型式為$$h_i(\mathbb{x})=\langle \mathbf{a}, \mathbf{x} \rangle - b_i$$。
 * 凸最佳化問題可能沒有解、唯一解，或是無限多解。
 
+### 最佳值(optimal value)
+
+$$p^{*} = \inf \{f_0(x) | g_i \leq 0, i=1,2,\dots,m, h_j(x) =0, j=1,2,\dots, p \}$$
+
+* 若<mark style="color:blue;">問題無解(infeasible)</mark>，即沒有$$x$$可滿足所有限制式，則$$p^{*} = \infty$$。
+* 若<mark style="color:blue;">問題沒有下界(unbounded below)</mark>，則$$p^{*} = -\infty$$。
+
 ## 應用：ordinary least square
 
 此類問題沒有約束條件，且目標函數是若干項的平方和，每一項有$$a_i^\top x -b_i$$的形式：

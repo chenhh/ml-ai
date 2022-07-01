@@ -23,14 +23,16 @@ online convex optimization(OCO)與game theory中的external regret, internal reg
 
 令人驚訝的是，有趣的結果和演算法可以在不超過這兩個限制的情況下得出。
 
-線上凸最佳化（online convex optimization, OCO）將<mark style="color:red;">決策(行動)集合建模為歐式空間</mark>$$\mathbb{R}^n$$<mark style="color:red;">中的凸集合</mark> $$\mathcal{K} \subseteq \mathbb{R}^n$$。<mark style="color:red;">而成本（cost）建模為以</mark>$$\mathcal{K}$$<mark style="color:red;">為定義域的有界凸函數</mark>。
+### OCO模型結構
+
+<mark style="color:red;">線上凸最佳化（online convex optimization, OCO）將決策(行動)集合建模為歐式空間</mark>$$\mathbb{R}^n$$<mark style="color:red;">中的凸集合</mark> $$\mathcal{K} \subseteq \mathbb{R}^n$$。<mark style="color:red;">而成本（cost）建模為以</mark>$$\mathcal{K}$$<mark style="color:red;">為定義域的有界凸函數</mark>。
 
 **OCO可視為結構化的（雙人）重複賽局（structured repeated game）**，結構如下：
 
-* 在第$$t$$期（決策）時，線上玩家從決策集合選取當期的行動$$\mathbf{x}_t \in \mathcal{K}$$，假設總共有$$T$$期。
+* 在第$$t$$期（決策）時，線上玩家從決策集合選取當期的行動$$\mathbf{x}_t \in \mathcal{K}$$，假設總共有$$T$$期($$T$$可趨近$$\infty$$)。
 * 執行行動後，當期的成本函數 $$f_t \in \mathcal{F}: \mathcal{K} \rightarrow \mathbb{R}$$才會揭露。此處的$$\mathcal{F}$$是對手有界成本凸函數集合。而線上玩家本次決策的成本為$$f_t(\mathbf{x}_t)$$。
 
-由於OCO使用了賽局理論的方法，因此演算法$$\mathcal{A}$$的評量也是使用賽局理論中的<mark style="color:red;">**遺憾（regret）**</mark>做為度量。<mark style="color:red;">**將決策者的遺憾定義為她所承擔的總成本與事後(in hindsight)的最佳固定決策的成本之間的差異**</mark>。
+由於OCO使用了賽局理論的方法，因此演算法$$\mathcal{A}$$的評量也是使用賽局理論中的<mark style="color:red;">**遺憾（regret）**</mark>做為度量。<mark style="color:red;">**將決策者的遺憾定義為她所承擔的總成本與事後(in hindsight)的最佳固定行動(決策)的成本之間的差異**</mark>。
 
 $$
 regret_T(\mathcal{A})= \sup_{ \{f_1, f_2, \ldots, F_T\} \subseteq \mathcal{F}} \bigg\{  \sum_{t=1}^Tf_t(\mathbf{x}_t^{\mathcal{A}}) - \min_{x \in \mathcal{K}} \sum_{t=1}^T f_t(\mathbf{x})  \bigg\}
@@ -38,7 +40,7 @@ $$
 
 事後最佳固定決策指的是假設玩家已經事先看到對手所有的資料與結果$$f_1, f_2, \ldots, f_T$$，每一期都採取固定行動後，有最小成本的某個固定行動$$\mathbf{x}$$。
 
-而演算法$$\mathcal{A}$$在每一期採用的是混合策略$$\mathbf{x}_t^{\mathcal{A}} = \mathcal{A}(f_1, \dots, f_{t-1}) \in \mathcal{K}$$或簡寫為$$\mathbf{x}_t$$，每期依照歷史成本動態調整行動。在賽局理論中，兩者行動總成本的差值稱為<mark style="color:red;">外部遺憾（external regret）</mark>。
+而演算法$$\mathcal{A}$$在每一期採用的是混合策略$$\mathbf{x}_t^{\mathcal{A}} = \mathcal{A}(f_1, \dots, f_{t-1}) \in \mathcal{K}$$或簡寫為$$\mathbf{x}_t$$，每期依照歷史(已實現)成本動態調整行動。在賽局理論中，兩者行動總成本的差值稱為<mark style="color:red;">外部遺憾（external regret）</mark>。
 
 如果演算法的遺憾相對於時間$$T$$為<mark style="color:blue;">次線性（sublinear）</mark>，即$$regret_T(\mathcal{A}) = o(T)$$( $$\lim_{T\rightarrow \infty} \frac{regret_T(\mathcal{A})}{T} = 0$$)，表示演算法的遺憾增長速度比時間$$T$$慢，因此只要$$T$$夠大，演算法的遺憾相對於$$T$$最後會收斂至0，<mark style="color:blue;">即演算法的表現最後會和事先看到最佳固定行動一樣好</mark>。
 
@@ -51,7 +53,7 @@ $$
 <mark style="color:red;">決策者每期要從</mark>$$n$$<mark style="color:red;">個專家中的建議，選一個做為行動，而在行動之後，會得到損失0或1</mark>。每一期行動後，每個專家建議的行動獲得的損失均不相同（專家的建議甚至可能是故意說錯的，以誤導決策者），**決策者的目標是要和（事後來看）最佳的決策者表現的一樣好**。
 
 * 決策集合$$\mathcal{K}$$有$$n$$個元素（專家），因此決策集合為$$n$$維的單純形(simplex)，$$\mathcal{K}=\Delta_n=\{ \mathbf{x} \in \mathbb{R}^n,~ \sum_{i=1}^n x_i = 1, ~ x_i \geq 0 \}$$，是$$n$$個元素的任意線性組合集合。
-* 令第$$i$$個專家在第$$t$$的損失（成本）為$$g_t(i)$$，$$\mathbf{g}_t \equiv[g_t(1), g_t(2), \ldots, g_t(n)]$$為第$$t$$時，$$n$$個專家的損失（成本）向量。則第$$t$$期的成本函數為$$f_t(\mathbf{x})=\mathbf{g}_t^{\top} \mathbf{x}$$。
+* 令第$$i$$個專家在第$$t$$的損失（成本）為$$g_t(i) \in \{ 0, 1\}$$，$$\mathbf{g}_t \equiv[g_t(1), g_t(2), \ldots, g_t(n)]$$為第$$t$$期時，$$n$$個專家的損失（成本）向量。則第$$t$$期的成本函數為$$f_t(\mathbf{x})=\mathbf{g}_t^{\top} \mathbf{x}$$。
 
 註：在賽局理論中，行動為$$n$$個行動的線性組合指的是<mark style="color:red;">混合策略（mixed strategy）</mark>，即第$$i$$個行動被選中的機率為$$x_i$$。行動被選中的機率符從[Dirichlet分佈](https://en.wikipedia.org/wiki/Dirichlet\_distribution)。
 

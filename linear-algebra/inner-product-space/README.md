@@ -2,14 +2,14 @@
 
 ## 內積算子(inner product operator)
 
-> 向量空間$$V$$定義在體$$F$$，定義內積函數$$\langle \cdot, \cdot \rangle:V \times V \rightarrow F$$滿足：
+> 向量空間$$V$$定義在體$$F$$，定義<mark style="color:red;">內積函數</mark>$$\langle \cdot, \cdot \rangle:V \times V \rightarrow F$$滿足：
 >
 > 1. $$\forall u,v, w \in V$$，$$\langle u+v, w\rangle = \langle u, w\rangle + \langle v, w\rangle$$。
 > 2. $$\forall u,v \in V, c \in F$$，$$\langle cu, v\rangle = c \langle u, v\rangle$$。
 > 3. $$\forall u,v \in V$$，$$\langle u, v\rangle = \overline{\langle u, v \rangle}$$ （共軛交換性）
 > 4. $$\forall v \in V, v \neq 0$$，$$\langle v, v \rangle > 0$$。
 >
-> 註：內積算子為向量間角度，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，為向量$$u$$投影在向量$$v$$時長度的乘積，$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
+> 註：<mark style="color:red;">內積算子為向量間角度</mark>，可得$$\langle u, v \rangle = \|u \| \|v\| \cos \theta$$，為向量$$u$$投影在向量$$v$$時長度的乘積，$$\theta$$為兩向量$$u, v$$間的夾角，$$\|v\|$$為向量的範數（norm, 長度的擴充）。
 >
 > 因此條件1$$\langle u+v, w\rangle$$為合成向量$$u+v$$投影在$$w$$的長度，等於向量$$u,v$$分別投影在$$w$$上長度的總和。條件2也可以用投影的方式解釋。
 >
@@ -22,10 +22,20 @@
 
 ### 常見內積
 
-* $$V=\mathbb{C}^{N \times N}$$，$$\forall A,B \in V$$，定義方陣的內積為$$\langle A, B\rangle=tr(AB^{\mathrm {H}})$$。
-* $$V=C[a,b]$$為定義在閉區間$$[a,b]$$的所有連續函數，$$F=\mathbb{C}$$，則$$\forall f,g \in V$$，定義函數內積$$\langle f, g \rangle=\int_a^b f(x)\overline{g(x)}dx$$。
-* 歐式空間 $$V=\mathbb{R}^N$$, $$F=\mathbb{R}$$，$$\langle x, y\rangle = x^\top y=y^\top x=\sum_{i=1} ^N x_i y_i$$
-* $$V=F^{N \times 1}, F = \mathbb{C}$$，標準（行向量）內積$$\langle x,  y\rangle =y^{\mathrm{H}}x=x_1\overline{y_1} + \dots + x_N\overline{y_N}$$。
+* $$V=\mathbb{C}^{N \times N}$$，$$\forall A,B \in V$$，定義<mark style="color:red;">方陣的內積</mark>為$$\langle A, B\rangle=tr(AB^{\mathrm {H}})$$。
+* $$V=C[a,b]$$為定義在閉區間$$[a,b]$$的所有連續函數，$$F=\mathbb{C}$$，則$$\forall f,g \in V$$，定義<mark style="color:red;">連續函數內積</mark>$$\langle f, g \rangle=\int_a^b f(x)\overline{g(x)}dx$$。
+* 歐式空間 $$V=\mathbb{R}^N$$, $$F=\mathbb{R}$$，<mark style="color:red;">標準內積</mark>$$\langle x, y\rangle = x^\top y=y^\top x=\sum_{i=1} ^N x_i y_i$$
+* $$V=F^{N \times 1}, F = \mathbb{C}$$，<mark style="color:red;">標準（行向量）內積</mark>$$\langle x,  y\rangle =y^{\mathrm{H}}x=x_1\overline{y_1} + \dots + x_N\overline{y_N}$$。
+
+### 內積值與角度
+
+![內積與角度](../../.gitbook/assets/EngMath\_Matrix\_InnerProduct\_02-min.png)
+
+給定兩單位向量$$u, v$$，如果兩向量的夾角：
+
+* 為銳角($$< 90^{\circ}$$或$$< \frac{\pi}{2}$$)，則$$u^\top v > 0$$。
+* 為直角($$=90^\circ$$或$$=\frac{\pi}{2}$$)，則$$u^\top v = 0$$。
+* 為鈍角($$> 90^\circ$$或$$> \frac{\pi}{2}$$)，則$$u^\top v < 0$$。
 
 ## 內積空間(inner product space)
 
@@ -74,7 +84,7 @@ Proof (7):
 
 ### 範數(norm)
 
-> $$V$$為定義在體$$F$$的內積空間，定義$$\|v\|_2 = \sqrt{\langle v, v \rangle}, ~ \forall v \in V$$為向量$$v$$的長度（範數）。
+> $$V$$為定義在體$$F$$的內積空間，定義$$\|v\|_2 = \sqrt{\langle v, v \rangle}, ~ \forall v \in V$$為<mark style="color:red;">向量</mark>$$v$$<mark style="color:red;">的長度（範數）</mark>。
 >
 > 兩個向量間的距離為$$\| u -v \| = \| v - u\|$$
 >

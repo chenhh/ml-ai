@@ -25,7 +25,7 @@ online convex optimization(OCO)與game theory中的external regret, internal reg
 
 ### OCO模型結構
 
-<mark style="color:red;">線上凸最佳化（online convex optimization, OCO）將決策(行動)集合建模為歐式空間</mark>$$\mathbb{R}^n$$<mark style="color:red;">中的凸集合</mark> $$\mathcal{K} \subseteq \mathbb{R}^n$$。<mark style="color:red;">而成本（cost）建模為以</mark>$$\mathcal{K}$$<mark style="color:red;">為定義域的有界凸函數</mark>。
+<mark style="color:red;">線上凸最佳化（online convex optimization, OCO）將決策(行動)集合建模為歐式空間</mark>$$\mathbb{R}^n$$<mark style="color:red;">中的凸集合</mark> $$\mathcal{K} \subseteq \mathbb{R}^n$$。<mark style="color:red;">而成本（cost）建模為以</mark>$$\mathcal{K}$$<mark style="color:red;">為定義域的有界凸函數集合</mark>$$\mathcal{F}$$。
 
 **OCO可視為結構化的（雙人）重複賽局（structured repeated game）**，結構如下：
 
@@ -76,9 +76,26 @@ $$
 * 而對手可獨立的選擇圖中任意邊的權重向量$$\mathbf{w}_t : E \rightarrow \mathbb{R}, ~ \mathbf{w}_t \in \mathbb{R}^{|E|}$$
 * 因此玩家每次決定路徑後的損失為該路徑所有權重的總和，即 $$\sum_{e \in p_t} \mathbf{w}_t(e)$$。
 
+將這個問題離散地描述為一個專家問題，即我們對每條路徑都有一個專家，這對效率是一個挑戰。就圖的大小而言，可能有許多路徑是指數級的。
+
+* \[flow的值為1]$$\displaystyle \sum_{e=(u,w), ~w \in V} x_e = 1 = \sum_{e=(w,v)~ w\in V} x_e$$
+* \[flow convervation] $$\displaystyle \forall w \in V - \{u, v\} ~ \sum_{e=(v,x) \in V} x_e = 1 = \sum_{e=(x,v) \in E} x_e$$
+* \[capacity constraints] $$\forall e \in E, ~ 0 \leq x_e \leq 1$$
+
 ### 投資組合選取（portfolio selection）
 
+Universal portfolio (UP)模型不對股票市場做任何統計假設（與標准的股票價格幾何布朗運動模型相反)。
 
+在每一回合$$t \in [T]$$，投資人對他的$$n$$個資產權重選定分佈(權重)$$x_t \in \Delta n$$(simplex)。而對手(大盤)會獨立的給出此$$n$$個資產當期的報酬$$r_t \in \mathbb{R}^n$$(嚴格的說是相對價格$$p_t = r_t+1$$)。
+
+而投資人的財產變化為$$r_t^\top x_t$$，因為多期的報酬是連乘，一般會取對數變成相加得$$\log(r_t^\top x_t)$$。
+
+註：即使投資人兩期的權重相等，如$$x_t=x_{t+1}$$，但是因此資產的價格會變動，因此在$$t+1$$時即使權重不變，還是要調整配置在資產上的金額才會滿足條件。
+
+* 目標函數為最小化遺憾 $$\displaystyle \min \left\{  \max_{x^{*} \in \Delta_n} \sum_{t=1}^T \log(r_t^\top x^{*}) - \sum_{t=1}^T \log(r_t^\top x_t)  \right\}$$
+* 第一項為使用已知最佳固定權重$$x^{*}$$投資$$T$$期的總資產，雖然每一期權重固定，但仍必須每期調整資產，因此稱為constant rebalanced portfolio (CRP)。
+* 第二項是決策者每期調整權重$$\{x_1, x_2, \dots, x_T\}$$投資$$T$$期後的總資產。
+* 而Cover提出的UP模型可得$$o(T)$$的演算法使得遺憾對時間為次線性，但UP的缺點是對於資產$$n$$較大時，取樣值為指數成長，因此有些論文針對此缺點改善。
 
 ### 矩陣完成和推薦系統（matrix completion and recommendation systems）
 

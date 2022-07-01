@@ -14,7 +14,7 @@
 
 ### 正交投影算子
 
-> 定義函數$$P: V \rightarrow W ~ P(v)=\mathrm{proj}_W(v)$$為$$V$$在$$W$$上的正交投影算子。
+> 定義函數$$P: V \rightarrow W, ~ P(v)=\mathrm{proj}_W(v)$$為$$V$$在$$W$$上的正交投影算子。
 
 ![正交投影](../../.gitbook/assets/orthogonal\_projection-min.png)
 

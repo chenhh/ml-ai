@@ -184,7 +184,7 @@
   * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
   * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)
 * [最佳化演算法](convex-optimization/optimization-algorithm.md)
-* [線上凸最佳化](convex-optimization/online-convex-optimization/README.md)
+* [線上凸最佳化](convex-optimization/online-convex-optimization.md)
   * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
 * [線性規劃](convex-optimization/linear-programming.md)
 * [整數規劃](convex-optimization/integer-programming.md)

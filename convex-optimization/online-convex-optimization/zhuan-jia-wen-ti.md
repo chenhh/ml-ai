@@ -35,7 +35,7 @@ description: the expert problem
 > * 則行動$$a_t= \left \{ \begin{aligned} A & \text{ if } W_t(A) \geq W_t(B) \\ B & \text{ otherwise} \end{aligned}  \right .$$
 > * 更新$$W_t(i)$$下一期權重，$$\epsilon$$為算法的參數: $$W_{t+1}(i) = \left \{ \begin{aligned} &W_t(i), & \text{ if expert } i \text{ was correct } \\ &W_t(i)(1-\epsilon), & \text{ if expert } i \text{ was wrong } \end{aligned}  \right .$$
 
-### Lemma
+### Lemma: 最好專家犯錯的錯誤上限與WM參數epsilon的關係式
 
 > 令$$M_t$$為演算法到時間$$t$$所算的錯誤總數，而$$M_t(i)$$為專家$$i$$到時間$$t$$所犯的錯誤總數。
 >
@@ -48,3 +48,23 @@ description: the expert problem
 考慮最佳的專家$$i^{*}$$，則$$M_T \leq 2 M_T(i^{*}) + O(\sqrt{M_T(i^{*}) \log N})$$。
 
 但我們無法在事先就知道最好的專家的錯誤總數，因此只能用目前已知的資訊逼近最佳的結果。
+
+proof:
+
+令$$\phi_t=\sum_{i=1}^N W_t(i), ~\forall  t \in [T]$$為時間$$t$$時的權重總合，$$\phi_1=N$$。
+
+因為$$W_{t+1}(i) = \left \{ \begin{aligned} &W_t(i), & \text{ if expert } i \text{ was correct } \\ &W_t(i)(1-\epsilon), & \text{ if expert } i \text{ was wrong } \end{aligned}  \right .$$
+
+所以$$\phi_{t+1} \leq \phi_t$$為遞減數列，等號成立於當期所有專家全部預測正確。
+
+而每一期加權多數決算法預測錯誤時，可得$$\phi_{t+1}  \leq   \frac{1}{2} \phi_t(1-\epsilon) + \frac{1}{2}\phi_t \leq \phi_t(1-\frac{\epsilon}{2})$$，因為至少有一半以上的專家權重給出錯誤的預測，因此必須降權重。
+
+因為$$\phi_t \leq \phi_1 (1-\frac{\epsilon}{2})^{M_t} = N(1-\frac{\epsilon}{2})^{M_t}$$。而對於任一專家$$i$$，由定義可得$$W_T(i) = (1 - \epsilon)^{M_T(i)}$$。
+
+因為$$W_T(i)$$必定小於權重總和$$\phi_T$$，可得$$(1-\epsilon)^{M_T(i)} = W_T(i) \leq phi_T \leq N(1-\frac{\epsilon}{2})^{M_T}$$。
+
+兩邊取對數得 $$M_T(i) \log (1-\epsilon) \leq \log N + M_T \log(1-\frac{\epsilon}{2})$$。
+
+使用對數的近似關係式 $$-x-x^2 \leq \log (1-x) \leq -x, ~ 0 < x < \frac{1}{2}$$。
+
+最後可得$$-M_T(i) (\epsilon + \epsilon^2) \leq \log N - M_T \frac{\epsilon}{2}$$ (QED)

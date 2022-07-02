@@ -33,4 +33,18 @@ description: the expert problem
 > * 令$$S_t(A), S_t(B) \subseteq [N] ~ \forall t \in [T]$$為時間$$t$$選擇行動$$A, B$$的專家形成的集合。
 > * 定義$$W_t(A)=\sum_{i \in S_t(A)}W_t(i), ~ W_t(B)=\sum_{i \in S_t(B)}W_t(i)$$為加權後的權重。
 > * 則行動$$a_t= \left \{ \begin{aligned} A & \text{ if } W_t(A) \geq W_t(B) \\ B & \text{ otherwise} \end{aligned}  \right .$$
-> * 更新$$W_t(i)$$下一期權重，$$\epsilon$$為算法的參數: $$W_{t+1}(i) = \left \{ \begin{aligned} W_t(i), & \text{ if expert } i \text{ was correct } \\ W_t(i)(1-\epsilon), & \text{ if expert } i \text{ was wrong } \end{aligned}  \right .$$
+> * 更新$$W_t(i)$$下一期權重，$$\epsilon$$為算法的參數: $$W_{t+1}(i) = \left \{ \begin{aligned} &W_t(i), & \text{ if expert } i \text{ was correct } \\ &W_t(i)(1-\epsilon), & \text{ if expert } i \text{ was wrong } \end{aligned}  \right .$$
+
+### Lemma
+
+> 令$$M_t$$為演算法到時間$$t$$所算的錯誤總數，而$$M_t(i)$$為專家$$i$$到時間$$t$$所犯的錯誤總數。
+>
+> 則$$\forall i \in [N]$$，可得$$M_T \leq 2(1+\epsilon) M_T(i) + \frac{2 \log N}{\epsilon}$$。
+>
+> 可調整參數$$\epsilon$$降低演算法的錯誤上界。
+
+在$$\epsilon^{*} = \sqrt{\frac{\log N}{M_T(i)}}$$時可得最小錯誤。
+
+考慮最佳的專家$$i^{*}$$，則$$M_T \leq 2 M_T(i^{*}) + O(\sqrt{M_T(i^{*}) \log N})$$。
+
+但我們無法在事先就知道最好的專家的錯誤總數，因此只能用目前已知的資訊逼近最佳的結果。

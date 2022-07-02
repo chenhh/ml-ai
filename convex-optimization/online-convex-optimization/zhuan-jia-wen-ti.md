@@ -29,8 +29,8 @@ description: the expert problem
 
 ## 加權多數決演算法(the weighted majority algorithm)
 
-* 個專家$$i$$在時間$$t$$的權重為$$W_t(i)$$，初始權重為$$W_1(i)=1, ~\forall i \in [N]$$。
-* 令$$S_t(A), S_t(B) \subseteq [N] ~ \forall t \in [T]$$為時間$$t$$選擇行動$$A, B$$的專家形成的集合。
-* 定義$$W_t(A)=\sum_{i \in S_t(A)}W_t(i), ~ W_t(B)=\sum_{i \in S_t(B)}W_t(i)$$為加權後的權重。
-* 則行動$$a_t= \left \{ \begin{aligned} A & \text{ if } W_t(A) \geq W_t(B) \\ B & \text{ otherwise} \end{aligned}  \right .$$
-* 更新$$W_t(i)$$下一期權重: $$W_{t+1}(i) = \left \{ \begin{aligned} W_t(i), & \text{ if expert } i \text{ was correct } \\ W_t(i)(1-\epsilon), & \text{ if expert } i \text{ was wrong } \end{aligned}  \right .$$
+> * 每個專家$$i$$在時間$$t$$的權重為$$W_t(i)$$，初始權重為$$W_1(i)=1, ~\forall i \in [N]$$。
+> * 令$$S_t(A), S_t(B) \subseteq [N] ~ \forall t \in [T]$$為時間$$t$$選擇行動$$A, B$$的專家形成的集合。
+> * 定義$$W_t(A)=\sum_{i \in S_t(A)}W_t(i), ~ W_t(B)=\sum_{i \in S_t(B)}W_t(i)$$為加權後的權重。
+> * 則行動$$a_t= \left \{ \begin{aligned} A & \text{ if } W_t(A) \geq W_t(B) \\ B & \text{ otherwise} \end{aligned}  \right .$$
+> * 更新$$W_t(i)$$下一期權重，$$\epsilon$$為算法的參數: $$W_{t+1}(i) = \left \{ \begin{aligned} W_t(i), & \text{ if expert } i \text{ was correct } \\ W_t(i)(1-\epsilon), & \text{ if expert } i \text{ was wrong } \end{aligned}  \right .$$

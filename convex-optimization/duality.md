@@ -1,5 +1,16 @@
 # 對偶性(duality)
 
+## 簡介
+
+在約束最最佳化問題中，常常利用拉格朗日對偶性(Lagrange duality)將原始問題轉為對偶問題，通過解決對偶問題而得到原始問題的解。
+
+對偶問題有非常良好的性質，以下列舉幾個：
+
+* 對偶問題的對偶是原問題；&#x20;
+* 無論原始問題是否是凸的，對偶問題都是凸最佳化問題；&#x20;
+* 對偶問題可以給出原始問題一個下界；&#x20;
+* 當滿足一定條件時，原始問題與對偶問題的解是完全等價的；
+
 ## 問題標準型式(standard form, 不必為凸最佳化問題)
 
 $$\displaystyle \begin{aligned} \min_{\mathbf{x} \in \mathbb{R}^n } ~& ~ f(\color{red}{\mathbf{x}}) &  \\ s.t. ~&~ g_i(\mathbf{x}) \leq 0, & i=1,2,\dots, m \\ 	 ~&~ h_i(\mathbf{x}) =0, & i=1,2,\dots, p \end{aligned}$$

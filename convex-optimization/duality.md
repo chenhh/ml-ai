@@ -39,7 +39,7 @@ $$\displaystyle L(x, \lambda, \nu) = f_o(x) + \sum_{i=1}^m \lambda_i g_i(x) + \s
 
 如果 $$L$$看成是關於$$\lambda$$或$$\nu$$的函數，則其餘部分可看成常數， $$L$$ 就可看作是一個關於$$\lambda$$或 $$\nu$$的仿射函數（即最高次冪為1的多項式函數）。
 
-#### 範例
+#### 範例: 線性方程式的最小二乘解
 
 > 原問題：$$\min x^\top x$$ s.t. $$Ax=b$$ $$x \in \mathbb{R}^n ~, b \in \mathbb{R}^p ~ A \in \mathbb{R}^{p \times n}$$
 
@@ -101,7 +101,27 @@ proof:
 
 若存在$$x \in \mathrm{relint} D$$使得$$g_i(x) < 0 ~～\forall i$$，則$$p^{*} = d^{*}$$
 
+## Lagrange對偶問題
 
+> $$\begin{aligned} & \max_{\lambda \in \mathbb{R}^m, \nu\in \mathbb{R}^p} & g(\lambda, \nu) \\ & s.t. & \lambda \succeq 0 \end{aligned}$$
+
+* 對偶問題最佳值$$d^{*}$$的上界為原問題的最佳值$$p^{*}$$。
+* 對偶問題的定義域$$\mathrm{dom }g = \{(\lambda, \nu) ~|~ g(\lambda, \nu) > -\infty \}$$。
+* 若$$\lambda \succeq 0~,  (\lambda, \nu) \in \mathrm{dom }g$$，稱$$(\lambda, \nu)$$為對偶可行解(dual feasible)。
+
+### 範例：線性規劃的對偶問題
+
+原問題：
+
+$$\begin{aligned} & \min_{x} &  c^\top x \\ & s.t.	& Ax = b \\ &	& x \succeq 0  \end{aligned}$$
+
+Lagrange函數 $$g(\lambda, \nu)=  \left \{ \begin{aligned} -b^\top \nu  & A^\top \nu -\lambda +c =0 \\ -\infty	& \text{ otherwise } \end{aligned} \right .$$
+
+而標準型式線性規劃的對偶問題是滿足約束$$\lambda \succeq 0$$條件下極大化對偶函數，即$$\begin{aligned} & \max & g(\lambda, \nu)=  \left \{ \begin{aligned} -b^\top \nu  & A^\top \nu -\lambda +c =0 \\ -\infty	& \text{ otherwise } \end{aligned} \right . \\  & s.t.	& \lambda \succeq 0 & \end{aligned}$$
+
+而在$$A^\top \nu -\lambda +c =0$$時對偶函數$$g$$有界。
+
+因此可得等價的問題 $$\begin{aligned}   \max~ & -b^\top \nu  \\  s.t.~ & A^\top \nu -\lambda +c =0 \\   ~	& \lambda \succeq 0  \end{aligned}$$或再簡化為$$\begin{aligned}   \max~ & -b^\top \nu  \\  s.t.~ & A^\top \nu  +c  \succeq 0  \end{aligned}$$
 
 ## 參考資料
 

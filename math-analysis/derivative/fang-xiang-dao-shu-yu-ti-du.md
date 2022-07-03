@@ -73,3 +73,7 @@ proof 2, 3:
 * 而當$$\cos \theta = -1$$h , $$D_u f(x,y)$$最小值發生，因此當$$\theta = \pi$$時, $$\nabla f(x,y)$$反方向是函數值減少最多的方向。(QED)
 
 ### 梯度為函數等高線的法向量
+
+> 令函數$$f$$在點$$(x_0, y_0)$$可微分，且$$\nabla f(x_0, y_0)\neq 0$$，則$$\nabla f(x_0, y_0)$$會與通過$$f(x_0, y_0)=c$$的等高線(level curve)垂直，
+
+![梯度為等高線的法向量](../../.gitbook/assets/level\_curve\_gradient-min.png)

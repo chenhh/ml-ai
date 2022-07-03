@@ -7,13 +7,17 @@
 對偶問題有非常良好的性質，以下列舉幾個：
 
 * 對偶問題的對偶是原問題；&#x20;
-* 無論原始問題是否是凸的，對偶問題都是凸最佳化問題；&#x20;
+* <mark style="color:red;">無論原始問題是否是凸的，對偶問題都是</mark><mark style="color:red;">**凸最佳化問題**</mark>；&#x20;
 * 對偶問題可以給出原始問題一個下界；&#x20;
 * 當滿足一定條件時，原始問題與對偶問題的解是完全等價的；
 
-實數域上的所有最佳化問題都有對偶問題，只不過當原問題為非凸問題時，由對偶問題得到的解只是原問題解的一個下界。KKT條件都可以用，當對偶間隙不為0時，所確定的是可行解，為0時是最優解。
+實數域上的所有最佳化問題都有對偶問題，只不過當原問題為非凸問題時，<mark style="color:blue;">由對偶問題得到的解只是原問題解的一個下界</mark>。KKT條件都可以用，當對偶間隙不為0時，所確定的是可行解，為0時是最優解。
 
 如果原問題不是凸最佳化問題，那麼KKT只是必要條件，不是充分條件，最優解一定滿足KKT，但滿足KKT的不一定是最優解，不能由KKT說明原問題和對偶問題一致。
+
+兩個等價的最佳化問題對應的對偶問題可能不相同，反之亦然。
+
+令主問題和對偶問題的最佳值分別為$$p^{*}, ~d^{*}$$，則弱對偶性(weak dual) $$p^{*} \geq ~d^{*}$$必定成立。$$p^{*} -d^{*} \geq 0$$稱為對偶間隙(dual gap)。
 
 ## 問題標準型式(standard form, 不必為凸最佳化問題)
 
@@ -43,7 +47,9 @@ Langrage函數 $$L(x, \nu)= x^\top x + \nu^\top (Ax - b)$$
 
 對偶函數$$\displaystyle  \begin{aligned} g(\nu) &= \inf_{x} \{  x^\top x + \nu^\top (Ax - b) \} \\ 	& = \inf_{x} \{x^\top x + \nu^\top A x - \nu^\top b \} \\ 	& = -\frac{1}{4} \nu^\top A A^\top \nu - b^\top \nu  \end{aligned}$$為凹函數。
 
-#### 範例
+因為$$g^{(2)}(\nu)=-\frac{1}{2} A A^\top < 0 ~\forall \nu$$為負定矩陣，所以為凹函數。
+
+#### 範例:線性規劃
 
 > 原問題： $$\min c^\top x$$ s.t. $$Ax=b, ~ x \succeq 0$$
 
@@ -72,6 +78,7 @@ $$\inf$$符號表示取下確界。求解析式可先將$$L$$看成是關於$$x$
 ### 對偶函數值必小於等於原問題最優解對應的目標函數值
 
 > * $$\forall \lambda \succeq 0, \forall \nu$$，若原問題的最佳值為$$p^{*}$$，則$$g(\lambda, \nu) \leq p^{*}$$。&#x20;
+> * 令$$d^{*} = \min g(\lambda, \nu)$$為對偶問題的最佳值，則可得$$d^{*} \leq p^{*}$$，稱為弱對偶性(weak dual)。其中$$p^{*} - d^{*} \geq 0$$稱為對偶間隙。
 > * 對偶函數沒有限制$$\lambda \succeq 0$$，<mark style="color:red;">而此處必須限制</mark>$$\lambda$$<mark style="color:red;">為非負值才有此性質</mark>。
 > * 對偶函式為原問題的最佳值定義了一個下界。。
 
@@ -85,6 +92,16 @@ proof:
 * 因此$$g(\lambda, \nu) \leq L(\tilde{x}, \lambda, \nu), ~ \forall x \in \mathcal{D}$$
 * 若$$x^{*} = \tilde{x}$$，$$L(\tilde{x}, \lambda, \nu) = p^{*}$$
 * 因此 $$g(\lambda, \nu) \leq p^{*}$$ (QED)
+
+## Slater條件
+
+> 當凸問題滿足Slater條件時，則強對偶性成立，反之不成立。
+
+令凸問題為：$$\displaystyle \begin{aligned} \min_{\mathbf{x} \in \mathbb{R}^n } ~& ~ f(\color{red}{\mathbf{x}}) &  \\ s.t. ~&~ g_i(\mathbf{x}) \leq 0, & i=1,2,\dots, m \\ 	 ~&~ h_i(\mathbf{x}) =0, & i=1,2,\dots, p \end{aligned}$$
+
+若存在$$x \in \mathrm{relint} D$$使得$$g_i(x) < 0 ~～\forall i$$，則$$p^{*} = d^{*}$$
+
+
 
 ## 參考資料
 

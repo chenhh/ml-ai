@@ -18,9 +18,11 @@
 
 ### 偏微分求方向導數
 
-> 令 $$f(x,y)$$為雙變數函數，則函數$$f$$沿著單位向量$$u=\cos \theta i + \sin \theta j$$的方向導數是：
+> 令 $$f(x,y)$$為雙變數函數，
 >
-> $$D_uf(x,y)= \frac{\partial f(x,y)}{\partial x} \cos \theta  + \frac{\partial f(x,y)}{\partial y} \sin \theta$$
+> * 則函數$$f$$沿著單位向量$$u=\cos \theta i + \sin \theta j$$的方向導數是：$$D_uf(x,y)= \frac{\partial f(x,y)}{\partial x} \cos \theta  + \frac{\partial f(x,y)}{\partial y} \sin \theta$$
+> * 函數$$f$$沿單位向量$$u=u_1i + u_2 j$$的方向導數是\
+>   $$D_uf(x,y)= \frac{\partial f(x,y)}{\partial x} u_1 + \frac{\partial f(x,y)}{\partial y} u_2$$
 
 #### 範例
 

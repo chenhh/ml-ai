@@ -77,3 +77,19 @@ proof 2, 3:
 > 令函數$$f$$在點$$(x_0, y_0)$$可微分，且$$\nabla f(x_0, y_0)\neq 0$$，則$$\nabla f(x_0, y_0)$$會與通過$$f(x_0, y_0)=c$$的等高線(level curve)垂直，
 
 ![梯度為等高線的法向量](../../.gitbook/assets/level\_curve\_gradient-min.png)
+
+#### 範例
+
+> $$f(x,y)=y-\sin x = c$$的法向量
+
+在$$c=0$$的等高線為$$y-\sin x = 0$$，$$y=\sin x$$
+
+$$\nabla f(x,y) = -\cos x i + j$$
+
+* $$\nabla f(-\frac{2 \pi}{3}, - \frac{\sqrt{3}}{2}) = \frac{1}{2}i+j$$
+* $$\nabla f(-\frac{ \pi}{2}, - 1) = j$$
+* $$\nabla f(-\pi, 0)=i+j$$
+* $$\nabla f (-\frac{\pi}{3}, -\frac{\sqrt{3}}{2})=-\frac{1}{2}i+j$$
+* $$\nabla f(0,0)=-i +j$$
+
+![等高線上的法向量為梯度方向](../../.gitbook/assets/gradient\_normal-min.png)

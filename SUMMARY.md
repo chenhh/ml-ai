@@ -189,6 +189,7 @@
 * [最佳化演算法](convex-optimization/optimization-algorithm.md)
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
   * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
+* [Blackwell's Approachability Theorem](convex-optimization/blackwells-approachability-theorem.md)
 * [線性規劃](convex-optimization/linear-programming.md)
 * [整數規劃](convex-optimization/integer-programming.md)
 

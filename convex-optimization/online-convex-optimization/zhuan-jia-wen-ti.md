@@ -68,3 +68,13 @@ proof:
 使用對數的近似關係式 $$-x-x^2 \leq \log (1-x) \leq -x, ~ 0 < x < \frac{1}{2}$$。
 
 最後可得$$-M_T(i) (\epsilon + \epsilon^2) \leq \log N - M_T \frac{\epsilon}{2}$$ (QED)
+
+## 隨機加權多數決演算法(randomized weighted majority algorithm)
+
+令在時間$$t$$選擇專家$$i$$的機率為$$p(i) = \frac{W_t(i)}{\sum_{j=1}^N W_t(j)}$$。
+
+### Lemma: 隨機加權多數決演算法犯錯總數的上限
+
+令$$M_t$$為隨機加權多數決演算法(RWM)到時間$$t$$犯錯的總數。
+
+則對於所有的專家$$i \in [N]$$​，可得$$\mathrm{E}(M_T) \leq (1+ \epsilon) M_T(i) + \frac{\log N}{\epsilon}$$

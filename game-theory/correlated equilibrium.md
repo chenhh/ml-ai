@@ -20,3 +20,4 @@
 ## 參考資料
 
 * <mark style="background-color:red;">Aumann, Robert J. "Subjectivity and correlation in randomized strategies." Journal of mathematical Economics 1.1 (1974): 67-96</mark>.
+* Hart, Sergiu, and Andreu Mas‐Colell. "A simple adaptive procedure leading to correlated equilibrium." Econometrica 68.5 (2000): 1127-1150.

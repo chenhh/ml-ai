@@ -172,7 +172,9 @@
 
 * [賽局數學模型](game-theory/game-theory-model.md)
   * [策略賽局(strategic game)](game-theory/game-theory-model/strategic-game.md)
+* [最小－最大定理](game-theory/minmax-theorem.md)
 * [納許均衡](game-theory/nash-equilibrium.md)
+* [相關均衡(correlated equilibrium)](<game-theory/correlated equilibrium.md>)
 * [最小遺憾](game-theory/zui-xiao-yi-han.md)
 
 ## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>

@@ -22,7 +22,7 @@ description: 戰略賽局
 * 玩家$$i$$使用混合策略$$\mathbf{s}_i$$且其它玩家使用混合策略$$\mathbf{s}_{-i}$$的<mark style="color:red;">期望報酬</mark>為$$\displaystyle  u_i(\mathbf{s}_i, \mathbf{s}_{-i}) = \sum_{\mathbf{a} \in \mathcal{A}} \left( \prod_{j \in \mathcal{N}} \mathbf{s}_j[a_j] \right) u_i(\mathbf{a})$$。
 * 如果玩家偏好某個行動，採取該行動的機率為１，則混合策略退化成<mark style="color:red;">單純策略(pure strategy)</mark>。&#x20;
 
-例：
+#### 範例
 
 考慮一雙人賽局，玩家1, 2的行動集合分別為$$\mathcal{A}_1=\{r_1, r_2, r_3\}$$, $$A_2 =\{c_1, c_2 \}$$, 而對應的混合策略機率分別為$$\mathbf{s}_1=\{p_1, p_2, p_3\}$$與$$\mathbf{s}_2=\{q_1, q_2\}$$。
 
@@ -30,3 +30,12 @@ description: 戰略賽局
 * 同理可得玩家2使用混合策略$$\mathbf{s}_2$$的期望報酬為：$$p_1 q_1 u_2(r_1, c_1) + p_1 q_2 u_2(r_1, c_2) +  p_2 q_1 u_2(r_2, c_1) + p_2 q_2 u_2(r_2, c_2) +  p_3 q_1 u_2(r_3, c_1) + p_3 q_2 u_2(r_3, c_2)$$
 
 ### 多期賽局的符號定義
+
+考慮賽局$$\Gamma$$經過了離散的局數$$t=1,2,\dots$$，
+
+* 時間$$t$$時，玩家$$i$$與其它玩家的<mark style="color:red;">行動方案</mark>為$$\mathbf{a}_t = (a_{i,t}, \mathbf{a}_{-i, t}) \in \mathcal{A}_i \times \mathcal{A}_{-i}$$。
+* 時間$$t$$時，玩家$$i$$的<mark style="color:red;">報酬</mark>為$$u_i(a_{i,t}, \mathbf{a}_{-i, t})$$，且該玩家到時間$$t$$​的<mark style="color:red;">平均報酬</mark>為$$\overline{u_i(a_{i,t}, \mathbf{a}_{-i, t})} = \frac{1}{t} \sum_{\tau=1}^t u_i(a_{i,\tau}, \mathbf{a}_{-i, \tau})$$。
+* <mark style="color:red;">時間</mark>$$t$$<mark style="color:red;">的歷史(history)</mark>，為賽局開始至時間$$t$$時，所有玩家所採取的行動方案$$\mathbf{h}_t=(\mathbf{a}_1, \mathbf{a}_2, \dots, \mathbf{a}_t) \in \mathcal{A}^t$$。
+* <mark style="color:red;">玩家</mark>$$i$$<mark style="color:red;">在時間</mark>$$t$$<mark style="color:red;">的混合策略</mark>，會參考$$t-1$$的歷史，即$$\mathbf{s}_{i,t} \equiv \mathbf{s}_{i,t}(\mathbf{h}_{t-1}) \in \Delta(\mathcal{A}_i)$$。
+* 而玩家$$i$$在時間$$t$$實際<mark style="color:red;">採取行動</mark>$$a_p$$<mark style="color:red;">的機率</mark>為$$\mathbf{s}_{i,t}[a_p]$$。
+* 玩家$$i$$在時間$$t$$的<mark style="color:red;">策略軌跡(strategic trajectory)</mark>為$$\mathbf{s}_{i,1:t}=\{\mathbf{s}_{i,1}, \mathbf{s}_{i,2}, \dots, \mathbf{s}_{i,t} \} \equiv  \{ \mathbf{s}_{i,1}, \mathbf{s}_{i,1}(\mathbf{h}_1), \dots, \mathbf{s}_{i,t}(\mathbf{h}_{t-1}) \}$$會在單純形$$\Delta(\mathcal{A}_i)$$ 中形成一條路徑。

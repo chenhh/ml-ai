@@ -170,7 +170,7 @@
 
 ## 賽局理論 <a href="#game-theory" id="game-theory"></a>
 
-* [賽局數學模型](game-theory/game-theory-model/README.md)
+* [賽局數學模型](game-theory/game-theory-model.md)
   * [策略賽局(strategic game)](game-theory/game-theory-model/strategic-game.md)
 * [Nash均衡](game-theory/nash-equilibrium.md)
 * [最小遺憾](game-theory/zui-xiao-yi-han.md)

@@ -19,7 +19,7 @@ John Nash提出「Nash equilibrium」的概念並在1994年得到諾貝爾經濟
 
 ### 賽局分類
 
-![賽局分類](../../.gitbook/assets/category\_of\_game-min.png)
+![賽局分類](../.gitbook/assets/category\_of\_game-min.png)
 
 * 依賽局的參與人數（玩家數），最少是兩人賽局，大於兩人均稱多人賽局。
 * 按照參賽者的先後順序進行分類。可以劃分為靜態賽局 (static game) 和動態賽局 (dynamic game)。

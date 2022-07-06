@@ -29,3 +29,9 @@ $$\displaystyle  \begin{aligned}   & \overline{w}_{i,t} = \frac{1}{S_t} \sum_{s_
 $$\displaystyle  \begin{aligned}  & w_{0,t}^{s_t} = (1+r_{0,t}^{s_t})\overline{w}_{0,t-1} - \sum_{i=1}^{M_c} (1+c_{i,t}^{(buy)})b_{i,t}^{s_t} + \sum_{i=1}^{M_c} (1+c_{i,t}^{(sell)})e_{i,t}^{s_t} , \\ & ~ s_t  =  1,2,\dots, S_t, ~t  = 1,2,\dots, T  \end{aligned}$$
 
 ### 限制式：資產值、買進賣出量必須為非負值
+
+$$\begin{aligned} & w_{i,t}^{s_t} \geq 0, ~ b_{i,t}^{s_t} \geq 0, ~ e_{i,t}^{s_t} \geq 0 \\ & i=1,2,\dots, M_c, ~ s_t = 1,2,\dots, S_t, ~ t=1,2,\dots, T \\ & \\ & w_{0,t}^{s_t} \geq 0, s_t=1,2,\dots, S_t, ~ t=1,2,\dots, T  \end{aligned}$$
+
+### 限制式：限定投資風險資產的數量
+
+$$\begin{aligned} & \frac{w_{i,t}^{s_t}}{\sum_{j=0}^{M_c}\overline{w}_{j, t-1}(1+r_{j,t}^{s_t}) } \leq v_{i,t}^{s_t} \\ & \sum_{i=1}^{M_c} v_{i,t}^{s_t} \leq M, ~ s_t =1,2,\dots, S_t, ~t=1,2,\dots ,T \\ & v_{i,t}^{s_t} \in \{0, 1\}, ~ i=1,2,\dots, M_c, ~ s_t=1,2,\dots, S_t, ~ t=1,2,\dots ,T  \end{aligned}$$

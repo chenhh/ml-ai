@@ -200,7 +200,8 @@
   * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)
 * [線性規劃](convex-optimization/linear-programming.md)
 * [整數規劃](convex-optimization/integer-programming.md)
-* [隨機規劃](convex-optimization/stochastic-programming.md)
+* [隨機規劃](convex-optimization/stochastic-programming/README.md)
+  * [Portfolio stochastic programming](convex-optimization/stochastic-programming/portfolio-stochastic-programming.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

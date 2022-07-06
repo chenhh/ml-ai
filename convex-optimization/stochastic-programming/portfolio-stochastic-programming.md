@@ -18,4 +18,14 @@ $$\displaystyle  \max \frac{1}{T} \sum_{t=1}^T \left( {\color{red}z_{t+1}} - \fr
 
 $$\displaystyle  \begin{aligned}  & y_{t+1}^{s_{t+1}}   \geq  z_{t+1} - \sum_{i=1}^{M_c} \overline{w}_{i,t} (1+r_{i, t+1}^{s_{t+1}}), ~ y_{t+1}^{s_{t+1}}  \geq  0 \\ & s_t  =  1,2,\dots, S_t, ~t  = 1,2,\dots, T  \end{aligned}$$
 
-### 限制式：當期資產的價值等於前一期已配置的資產乘以報酬率加減買進賣出量
+### 限制式：當期風險資產的價值等於前一期已配置的資產乘以報酬率加減買進賣出量
+
+$$\displaystyle  \begin{aligned}  & w_{i,t}^{s_t} = (1+r_{i,t}^{s_t})\overline{w}_{i,t-1} + b_{i,t}^{s_t} - e_{i,t}^{s_t}, \\ & i=1,2,\dots, M_c, ~ s_t  =  1,2,\dots, S_t, ~t  = 1,2,\dots, T  \end{aligned}$$
+
+$$\displaystyle  \begin{aligned}   & \overline{w}_{i,t} = \frac{1}{S_t} \sum_{s_t \in S_t} w_{i,t}^{s_t} \\ & i=0,1,\dots, M_c ~ t=1,2,\dots, T  \end{aligned}$$
+
+### 限制式：當前現金為前一期保留的現金乘以報酬率加減考慮手續費後買進與賣出的金額
+
+$$\displaystyle  \begin{aligned}  & w_{0,t}^{s_t} = (1+r_{0,t}^{s_t})\overline{w}_{0,t-1} - \sum_{i=1}^{M_c} (1+c_{i,t}^{(buy)})b_{i,t}^{s_t} + \sum_{i=1}^{M_c} (1+c_{i,t}^{(sell)})e_{i,t}^{s_t} , \\ & ~ s_t  =  1,2,\dots, S_t, ~t  = 1,2,\dots, T  \end{aligned}$$
+
+### 限制式：資產值、買進賣出量必須為非負值

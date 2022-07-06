@@ -10,6 +10,14 @@ Newey-West估計器在統計學和計量經濟學中用於提供迴歸型模型�
 
 用時間序列數據估計的迴歸模型往往表現出自相關；也就是說，誤差項隨時間變化而相關。
 
+## auto-regressive (AR)模型的假設
+
+> $$AR(p)$$模型: $$y_c = c + \phi_1 y_{t-1} + \dots + \phi_p y_{t-p} + \epsilon_t$$
+>
+> $$\mathrm{E}(y_t^4) < \infty$$且 $$\epsilon_t \sim WN(0, \sigma^2)$$為均齊變異(homoskedasticity)且不具序列相關。
+
+
+
 ## 參考資料
 
 * [\[wikipedia\] Newey–West estimator](https://en.wikipedia.org/wiki/Newey%E2%80%93West\_estimator)

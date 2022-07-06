@@ -1,6 +1,6 @@
 # Portfolio stochastic programming
 
-## 多期隨機規劃模型
+## 多期混合整數線性規劃(multiperiod mixed integer linear programming)
 
 ### 目標函數(objective function)
 

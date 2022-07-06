@@ -148,6 +148,7 @@
 * [點對點模型與資訊熵](information-theory/p2p-model-entropy.md)
 * [資訊度量](information-theory/information-measure.md)
 * [最大熵](information-theory/maximum-entropy.md)
+* [Kelly公式](information-theory/Kelly-formula.md)
 
 ## 學習理論 <a href="#learning-theory" id="learning-theory"></a>
 
@@ -195,8 +196,11 @@
 * [線上凸最佳化](convex-optimization/online-convex-optimization.md)
   * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
 * [Blackwell's Approachability Theorem](convex-optimization/blackwells-approachability-theorem.md)
+* [二次規劃](convex-optimization/quadratic-programming/README.md)
+  * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)
 * [線性規劃](convex-optimization/linear-programming.md)
 * [整數規劃](convex-optimization/integer-programming.md)
+* [隨機規劃](convex-optimization/stochastic-programming.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

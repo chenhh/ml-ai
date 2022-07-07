@@ -126,7 +126,7 @@
   * [奇異值分解(SVD, singular value decomposition)](linear-algebra/inner-product-space/singular-value-decomposition.md)
   * [Lagrange內插法(interpolation formula)](linear-algebra/inner-product-space/lagrange-interpolation.md)
 
-## 時間序列與訊號處理 <a href="#time-series" id="time-series"></a>
+## 時間序列 <a href="#time-series" id="time-series"></a>
 
 * [LPPL模型](time-series/lppl-mo-xing.md)
 * [簡介](time-series/time-series-introduction.md)
@@ -143,6 +143,7 @@
 * [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)
 * [真實性檢定(Reality Check Test)](time-series/reality-check-test.md)
 * [HAC estimator](time-series/hac-estimator.md)
+* [結構點轉變](time-series/structure-change.md)
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>
 

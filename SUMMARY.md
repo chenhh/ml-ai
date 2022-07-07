@@ -77,6 +77,7 @@
   * [條件分佈與期望值](probability-and-statistics/random-variable/conditional-distribution.md)
   * [隨機變數的收斂](probability-and-statistics/random-variable/nvergence-of-rv.md)
   * [條件期望值](probability-and-statistics/random-variable/conditional-variable.md)
+* [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
 
 ## 線性代數 <a href="#linear-algebra" id="linear-algebra"></a>
 

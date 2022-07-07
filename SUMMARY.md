@@ -167,6 +167,7 @@
 * [損失函數(loss function)](learning-theory/loss-function.md)
 * [在線學習(online learning)](learning-theory/online-learning.md)
 * [卡爾曼濾波器(Kalman filter)](learning-theory/kalman-filter.md)
+* [粒子過濾器(particle filter)](learning-theory/particle-filter.md)
 
 ## 強化學習與決策理論 <a href="#reinforcement-learning" id="reinforcement-learning"></a>
 

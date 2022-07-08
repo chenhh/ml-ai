@@ -138,6 +138,7 @@
 * [線性模型](time-series/linear\_model.md)
 * [ARIMA](time-series/arma.md)
 * [GARCH](time-series/garch.md)
+* [模型選擇方法](time-series/model-selection-criterion.md)
 * [共整合(cointegration)](time-series/cointegrating.md)
 * [Granger 因果關係檢定](time-series/granger-yin-guo-guan-xi-jian-ding.md)
 * [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)

@@ -54,6 +54,11 @@
 ## 機率與統計 <a href="#probability-and-statistics" id="probability-and-statistics"></a>
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
+* [隨機變數（random variable）](probability-and-statistics/random-variable/README.md)
+  * [條件分佈與期望值](probability-and-statistics/random-variable/conditional-distribution.md)
+  * [隨機變數的收斂](probability-and-statistics/random-variable/nvergence-of-rv.md)
+  * [條件期望值](probability-and-statistics/random-variable/conditional-variable.md)
+* [分佈函數(distribution function)](probability-and-statistics/distribution-function.md)
 * [機率測度(probability measure)](probability-and-statistics/probability-measure.md)
 * [動差生成函數(moment generating function)](probability-and-statistics/moment-generating-function.md)
 * [機率不等式](probability-and-statistics/probability-inequality.md)
@@ -75,10 +80,6 @@
   * [平賭(鞅)過程(Martingale process)](probability-and-statistics/random-process/martingale-process.md)
 * [貝式機率](probability-and-statistics/bayes-probability.md)
 * [關聯結構(copula)](probability-and-statistics/copula.md)
-* [隨機變數（random variable）](probability-and-statistics/random-variable/README.md)
-  * [條件分佈與期望值](probability-and-statistics/random-variable/conditional-distribution.md)
-  * [隨機變數的收斂](probability-and-statistics/random-variable/nvergence-of-rv.md)
-  * [條件期望值](probability-and-statistics/random-variable/conditional-variable.md)
 * [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
 
 ## 線性代數 <a href="#linear-algebra" id="linear-algebra"></a>

@@ -154,7 +154,7 @@ ASTC="All Student Take Calculus"，說明四個象限中，三角函數的正負
 * $$\begin{aligned} \therefore a^2 +b ^2 & =  ac \cos \beta + ab \cos \gamma +  bc \cos \alpha + ab \cos \gamma \\& = (ac \cos \beta + bc \cos \alpha)+ (ab \cos \gamma + ab \cos \gamma) \\ &=c^2  + 2 ab  \cos \gamma \end{aligned}$$
 * 移項後可得 $$c^2 = a^2 + b^2 - 2ab \cos \gamma$$ (QED)
 
-![三角函數證明法](../../.gitbook/assets/547px-triangle-with-cosines-min.png)
+![三角函數證明法](../../.gitbook/assets/547px-Triangle-with-cosines-min.png)
 
 ## 正弦定理（the law of sine）
 
@@ -168,7 +168,7 @@ proof part 1：
 * 可得 $$\sin A = \frac{h}{b}$$, $$\sin B = \frac{h}{a}$$，所以$$h = b \sin A = a \sin B$$，整理後得 $$\frac{\sin A}{a} = \frac{\sin B}{b}$$。
 * 同理可得 $$\frac{\sin B}{b} = \frac{\sin C}{c}$$，所以$$\frac{\sin A}{a} = \frac{\sin B}{b} = \frac{\sin C}{c}$$。(QED)
 
-![正弦定理證法](../../.gitbook/assets/law\_of\_sines\_proof-min.png)
+![正弦定理證法](../../.gitbook/assets/Law\_of\_sines\_proof-min.png)
 
 proof part 2：
 

@@ -86,7 +86,7 @@ $$f: I \rightarrow \mathbb{R}, I \subseteq \mathbb{R}$$
 > * 若左極限不存在，則$$\exists \epsilon >0, \forall \delta >0 \ni |f(x)-L|\geq \epsilon , c-\delta < x < c$$
 > * 若右極限不存在，則$$\exists \epsilon >0, \forall \delta >0 \ni |f(x)-L|\geq \epsilon , c < x < c+\delta$$
 
-![左、右極限在x=0均發散至無窮大](../../.gitbook/assets/infinitelimitsgraph1.png)
+![左、右極限在x=0均發散至無窮大](../../.gitbook/assets/InfiniteLimitsGraph1.png)
 
 ![左、右極限在x=1分別發散至負、正無窮大](../../.gitbook/assets/mixedverticalasymptote.gif)
 

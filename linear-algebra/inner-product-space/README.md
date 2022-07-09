@@ -120,7 +120,7 @@ Proof (7):
 >   * $$\theta = \cos^{-1}\left(  \frac{\langle u ,v \rangle}{\|u\| \|v\|} \right)$$為兩向量間的夾角。
 > * 三角不等式：$$\| u+v\| \leq \|u\| + \|v\|$$
 
-![內積為向量投影後長度的乘積](../../.gitbook/assets/inner-product-angle-min.png)
+![內積為向量投影後長度的乘積](../../.gitbook/assets/Inner-product-angle-min.png)
 
 Proof Cauchy-Schwarz inequality:
 

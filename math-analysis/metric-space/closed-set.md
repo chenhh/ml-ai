@@ -306,4 +306,4 @@ proof (2):
 > * 給定度量空間$$(X,d)$$，$$A,B \subseteq X$$稱為分離集合若$$A \cap B^c=A^c \cap B=\emptyset$$。
 > * $$S \subseteq X$$稱為連通集合，若$$S$$不為兩個非空的分離集合的聯集， 即$$A \neq \emptyset$$, $$B \neq \emptyset$$,$$A \cap B \neq \emptyset$$。
 
-![連通與分離集合](../../.gitbook/assets/220px-union\_et\_intersection\_densembles-min.png)
+![連通與分離集合](../../.gitbook/assets/220px-Union\_et\_intersection\_d'ensembles-min.png)

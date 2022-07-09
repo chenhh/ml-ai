@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
 若試驗的次數$$N$$足夠大時，且機率$$p$$固定不變時，二項式分佈近似於常態分佈。即$$B(N, p) \rightarrow N(Np, Np(1-p))$$as $$N \rightarrow \infty$$。
 
-![二項分佈在試驗次數夠大時(機率不變)，可逼近常態分佈](../.gitbook/assets/binomial\_distribution-min.png)
+![二項分佈在試驗次數夠大時(機率不變)，可逼近常態分佈](../.gitbook/assets/Binomial\_Distribution-min.png)
 
 負二項分佈(Negative binomial distribution)
 

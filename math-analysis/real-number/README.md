@@ -89,7 +89,7 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 * **由定義很容易得出集合**$$S$$**的最小上界與最大下界的唯一性**。
 
-![上界不唯一，最小上界唯一](../../.gitbook/assets/illustration\_of\_supremum-min.png)
+![上界不唯一，最小上界唯一](../../.gitbook/assets/Illustration\_of\_supremum-min.png)
 
 ![下界不唯一，最大下界唯一](../../.gitbook/assets/set\_inf-min.png)
 
@@ -355,7 +355,7 @@ eg.
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
 * 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$  。
 
-![阿基米德性質](../../.gitbook/assets/archimedean\_property.png)
+![阿基米德性質](../../.gitbook/assets/Archimedean\_property.png)
 
 proof (反證法)
 

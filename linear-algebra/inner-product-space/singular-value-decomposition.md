@@ -10,7 +10,7 @@
 >
 > 註：任何矩陣都可以做奇異值分解。
 
-![SVD，r為矩陣A的秩，等於奇異值的個數](../../.gitbook/assets/svd-min.png)
+![SVD，r為矩陣A的秩，等於奇異值的個數](../../.gitbook/assets/SVD-min.png)
 
 ![SVD線性轉換的意義](../../.gitbook/assets/svd\_step-min.png)
 

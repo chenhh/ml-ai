@@ -21,11 +21,11 @@
 
 * 函數的定義中，定義域的所有元素只能對應到在對應域的唯一元素 ($$\forall x \in X \ \exists! y \in Y \ni f(x)=y$$ )，但無法保證所有對應域的元素都會被對應，有被對應到元素的集合稱為值域。
 
-![一般的函數只有保證定義域的所有元素都有唯一函數值](<../../.gitbook/assets/function-min (2) (1) (1).png>)
+![一般的函數只有保證定義域的所有元素都有唯一函數值](<../../.gitbook/assets/function-min (2) (1).png>)
 
 * 函數必須是一對一且映成才能保證$$X, Y$$兩集合中的每一個元素均有唯一的對應關係。
 
-![等價的有限集合](../../.gitbook/assets/bijection.svg-min.png)
+![等價的有限集合](../../.gitbook/assets/Bijection.svg-min.png)
 
 * &#x20;最先被考慮的無窮集合是自然數集$$\mathbb{N}$$及其無限子集合。把所有與$$\mathbb{N}$$能夠一一對應的集合定義為**可數集(countable set)**。
 *  自然數$$\mathbb{N}$$的基數記為$$\aleph _{0}$$(aleph null)，是最小的阿列夫數。

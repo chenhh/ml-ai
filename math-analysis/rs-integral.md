@@ -31,7 +31,7 @@
 >
 > 當積分函數$$\alpha(x)=x$$時，為一般的Riemann積分，如下圖。
 
-![黎曼積分](../.gitbook/assets/riemann-integral-min.png)
+![黎曼積分](../.gitbook/assets/Riemann-integral-min.png)
 
 ## 黎曼可積分函數(Riemann-integrable function)
 
@@ -44,7 +44,7 @@
 
 為如果把$$f$$的定義域越切越細時，則分割每一區間面積的加總，會逐漸逼近至積分值。
 
-![可積分函數](../.gitbook/assets/riemann-integrable.gif)
+![可積分函數](../.gitbook/assets/Riemann-integrable.gif)
 
 ## &#x20;同一積分函數(integrator)之線性性質
 

@@ -129,7 +129,7 @@ NFA N1的轉移函數如下表，其中輸入$$\epsilon$$(空字串)表示不必
 
 
 
-![NFA N1](../.gitbook/assets/nfa\_n1.png)
+![NFA N1](../.gitbook/assets/NFA\_N1.png)
 
 ![NFA在讀取字元後，會分支成多個機器(類似行程的fork)，平行執行所有狀態](../.gitbook/assets/dfa\_nfa-min.png)
 

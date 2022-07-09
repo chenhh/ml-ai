@@ -105,7 +105,7 @@ proof 1:
 >
 > * $$x$$的每個鄰域中至少有一個點在 $$S$$ 中，且至少有一個點不在$$S$$ 中。
 
-![x為內點，y為邊界點](../../.gitbook/assets/510px-interior\_illustration-min.png)
+![x為內點，y為邊界點](../../.gitbook/assets/510px-Interior\_illustration-min.png)
 
 ## 邊界集合（boundary set）
 
@@ -307,7 +307,7 @@ Proof <=
 * $$S=\{ \frac{1}{n}, \ n \in \mathbb{N}\}$$，則$$0$$為$$S$$的極限點。
 * $$x_n=(-1)^n \frac{n}{n+1}$$極限不存在，但有兩個極限點-1與1。
 
-![極限點為序列聚集之處](../../.gitbook/assets/800px-rational\_sequence\_with\_2\_accumulation\_points\_svg.png)
+![極限點為序列聚集之處](../../.gitbook/assets/800px-Rational\_sequence\_with\_2\_accumulation\_points\_svg.png)
 
 ###
 

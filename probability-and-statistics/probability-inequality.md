@@ -10,7 +10,7 @@ Markov不等式提供了$$f(x)$$超過某特定數值$$\epsilon$$ （圖中標�
 
 例如不超過1/5的人口會有超過5倍於人均收入的收入。
 
-![Markov不等式的意義](../.gitbook/assets/markov\_inequality.svg.png)
+![Markov不等式的意義](../.gitbook/assets/Markov\_Inequality.svg.png)
 
 $${\displaystyle {\begin{aligned}{ \textrm {E}}(X)&=\int _{-\infty }^{\infty }xdF(x)\\ &=\int _{0}^{\infty }x dF(x)\\ & = \int _{0}^{t }x dF(x)+ \int_t^{\infty} xdF(x) \\ &\geqslant \int _{t}^{\infty }xdF(x)\\  &\geqslant \int _{t}^{\infty }t dF(x)\\  &=t\int _{t}^{\infty } dF(x)\\ &=t{\textrm {P}}(X\geqslant t)\end{aligned}}}$$
 

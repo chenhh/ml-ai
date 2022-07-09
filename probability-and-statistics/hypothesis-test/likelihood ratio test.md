@@ -10,6 +10,17 @@ description: likelihood ratio test, Wilks 檢定
 
 Neyman-Pearson 引理告訴我們，在簡單原假設對簡單備擇假設的檢定問題中，最優勢檢定由似然比檢定給出，即似然比檢定有最佳的檢定力。事實上，似然比檢定方法也可用在復合假設檢定問題中構造檢定。這是構造檢定的常用方法。
 
+LRT 的優點：
+
+* 簡單；
+* &#x20;p 值不會被引數尺度 (parameter scale) 左右，也就是說如果我們對引數進行了數學轉換 也不會影響似然比檢驗計算得到的\
+  p 值大小。&#x20;
+
+LRT 的缺點：
+
+* 非正態分佈的資料時，LRT 只能算是漸進有效 (asymptotic valid)，即樣本量要足夠大時結果才能令人滿意；&#x20;
+* 無法總是保證這是最佳檢驗統計量； 需要計算兩次對數似然 (MLE和虛無假設時)。
+
 ## 簡單對立假設的檢定問題
 
 > 令$$X=(X_1,X_2,\dots, X_n)$$的分佈密度函數為$$\mathrm{P}(X;\theta), ~ \theta \in \Theta$$)未知參數可能為向量。
@@ -17,7 +28,7 @@ Neyman-Pearson 引理告訴我們，在簡單原假設對簡單備擇假設的�
 > * 簡單虛無假設為$$H_0:\theta = \theta_0$$。
 > * 簡單對立假設為$$H_1: \theta=\theta_1 ~(\theta_1 \neq \theta_0)$$​。
 >
-> 此檢定問題的似然比為$$\lambda(x)=\frac{\mathrm{P}(x;\theta_1)}{\mathrm{P}(x;\theta_0)}$$，
+> 此檢定問題的似然比為$$\lambda(x)=\frac{\mathrm{L}(x;\theta_1)}{\mathrm{L}(x;\theta_0)}$$，
 
 ### 範例：常態分佈與雙參數指數分佈族的似然比
 
@@ -45,9 +56,11 @@ Neyman-Pearson 引理告訴我們，在簡單原假設對簡單備擇假設的�
 > * 虛無假設為$$H_0: \theta \in \Theta_0$$
 > * 對立假設為$$H_1: \theta \in \Theta_1$$
 >
-> 似然比$$\displaystyle \lambda(x)=\frac{\sup_{\theta \in \Theta_1} \mathrm{P}(x;\theta)}{\sup_{\theta \in \Theta_0}\mathrm{P}(x;\theta)} = \frac{\mathrm{P}(x;\hat{\theta}_1)}{\mathrm{P}(x;\hat{\theta}_0)}$$
+> 似然比$$\displaystyle \lambda(x)= -2 \log \left\{ \frac{\sup_{\theta \in \Theta_0} \mathrm{L}(x;\theta)}{\sup_{\theta \in \Theta_1}\mathrm{L}(x;\theta)} \right\} = -2 \log \left\{ \frac{\mathrm{L}(x;\hat{\theta}_0)}{\mathrm{L}(x;\hat{\theta}_1)} \right\}$$
 >
 > 其中$$\hat{\theta_0}$$​與$$\hat{\theta_1}$$​分別是$$H_0$$和$$H_1$$​成立時，$$\theta$$的MLE。
+>
+> 統計量$$\lambda(x)$$的虛無分佈會漸近收斂為$$\chi^2$$。
 >
 > <mark style="color:red;">這個檢定方法常用於區分樣本來自這類分佈，還是另一類分佈的檢驗問題</mark>。
 

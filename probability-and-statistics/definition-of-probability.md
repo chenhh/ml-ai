@@ -91,3 +91,4 @@
 ## 參考資料
 
 * [何志堅：數理統計講義](https://bookdown.org/hezhijian/book/)
+* [王 超辰：醫學統計學](https://bookdown.org/ccwang/medical\_statistics6/)

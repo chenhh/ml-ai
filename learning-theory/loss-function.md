@@ -20,7 +20,7 @@ $$
 MSE =\frac{1}{N} \sum_{i=1}^{N}(y_i -\hat{y}_i)^2
 $$
 
-![MSE為二次函數，使用梯度下降法容易找到極小值](../.gitbook/assets/MSE-min.png)
+![MSE為二次函數，使用梯度下降法容易找到極小值](../.gitbook/assets/mse-min.png)
 
 ```python
 def mse(pred, real):

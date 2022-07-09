@@ -12,7 +12,7 @@
 
 note: relation比function更一般化，因為可為一對多的對應。
 
-![關係可為一對多的對應](<../../.gitbook/assets/math\_relation-min (1).png>)
+![關係可為一對多的對應](../../.gitbook/assets/math\_relation-min-1-.png)
 
 ### 等價關係(equivalence relation)
 
@@ -58,7 +58,7 @@ note: relation比function更一般化，因為可為一對多的對應。
   * 等價於 $$\forall x,y \in X, x\neq y \Rightarrow f(x) \neq f(y)$$
   * 可保證值域和定義域等勢，$$|f(X)| = |X|$$，因此對應域的勢大於等於定義域，即 $$|X| \leq |Y|$$。
 
-![單射但非滿射](<../../.gitbook/assets/Injection\_not\_onto (2).png>)
+![單射但非滿射](../../.gitbook/assets/injection\_not\_onto.png)
 
 * 映成函數(滿射)(onto function,  surjection, surjective mapping)
   * $$\forall y \in Y \ \exists x \in X \ni f(x)=y$$

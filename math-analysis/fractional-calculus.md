@@ -72,7 +72,7 @@ Proof:
 * 根據L'Hospital rule, $$\displaystyle \lim_{t \rightarrow \infty}⁡\frac{−t^x}{e^t} = \lim_{t \rightarrow \infty}⁡ \frac{xt^{x−1}}{e^t} =\ldots =\lim_{t \rightarrow \infty}  \frac{(x−1)\cdot 0}{e^t} =0$$
 * $$\displaystyle \therefore \int_0^\infty  \frac{t^x}{e^t}  dt=x \int_0^\infty \frac{t^{x−1}}{e^t}  dt \Leftrightarrow \Gamma(x+1)=x \Gamma(x), ~ x>0$$ (QED)
 
-![迦瑪函數圖](../.gitbook/assets/1280px-Gamma\_plot-min.png)
+![迦瑪函數圖](../.gitbook/assets/1280px-gamma\_plot-min.png)
 
 * $$\displaystyle \Gamma(0)=\int_0^\infty \frac{t^{−1}}{e^t}  dt$$ 不收斂
 * $$\displaystyle \Gamma(1)=\int_0^\infty \frac{1}{e^t}  dt=-\frac{​ 1}{e^t }\bigg|_0^\infty=1$$

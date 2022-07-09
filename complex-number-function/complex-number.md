@@ -91,7 +91,7 @@
 
 ![複數除法為長度相除與角度相減](../.gitbook/assets/complex-div-min.jpg)
 
-![乘以複數為旋轉arg(z)度後，再放大|z|倍(或先放大再旋轉)](../.gitbook/assets/1195px-Complex\_multi-min.png)
+![乘以複數為旋轉arg(z)度後，再放大|z|倍(或先放大再旋轉)](../.gitbook/assets/1195px-complex\_multi-min.png)
 
 * $$z_1 (z_2+z_3 )=z_1 z_2+z_1 z_3$$
 * $$z_1 z_2=0 \Leftrightarrow z_1=0 \lor z_2=0$$
@@ -116,7 +116,7 @@
 
 
 
-![共軛複數對稱於實數軸](../.gitbook/assets/800px-Complex\_conjugate\_picture-min.png)
+![共軛複數對稱於實數軸](../.gitbook/assets/800px-complex\_conjugate\_picture-min.png)
 
 > $$\displaystyle \overline{\sum_{i=1}^n z_i} = \sum_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
 
@@ -191,7 +191,7 @@ proof (函數微分)：
 * 由微分結果知$$f$$為常數函數，因此 $$f(0)=\frac{\cos 0 + i \sin 0}{e^{i0}}=1$$
 * 可得 $$e^{ix} = \cos x + i \sin x$$ (QED)
 
-![歐拉公式的圖](../.gitbook/assets/Euler\_formula-min.png)
+![歐拉公式的圖](../.gitbook/assets/euler\_formula-min.png)
 
 ### 幾何意義
 

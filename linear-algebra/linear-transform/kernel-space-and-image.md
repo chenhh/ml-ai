@@ -90,7 +90,7 @@ Proof:
 > * 即$$\forall v \in V, \exists !b_i, a_j \in F \ni v=\sum_{i=1}^kb_i u_i + \sum_{j=1}^r a_j w_j$$且
 > * $$\{u_1, \dots,u_k, w_1, \dots, w_r\}$$為線性獨立集，$$\sum_{i=1}^kb_i u_i + \sum_{j=1}^r a_j w_j =0 \Rightarrow b_i =a_j = 0 \forall, i, j$$。
 
-![維度定理](../../.gitbook/assets/Rank-nullity-min.png)
+![維度定理](../../.gitbook/assets/rank-nullity-min.png)
 
 proof：
 

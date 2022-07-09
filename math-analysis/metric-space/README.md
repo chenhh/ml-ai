@@ -18,7 +18,7 @@
 
 ## 抽象空間
 
-![](../../.gitbook/assets/Abstract+Space+Topological+Space+Metric+Space+Normed+Space-min.png)
+![](../../.gitbook/assets/abstract+space+topological+space+metric+space+normed+space-min.png)
 
 ## 度量（metric）、內積（inner product）與範數（norm）比較
 

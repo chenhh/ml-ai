@@ -118,9 +118,9 @@ Proof:
 >
 > * 註：正項級數$$\displaystyle \sum_{k=1}^\infty x_k$$審斂法中收斂的充要條件是部份和$$S_n$$有界。
 
-![正項級數和小於等於積分值](../../.gitbook/assets/IntegralTestBelow-min.png)
+![正項級數和小於等於積分值](../../.gitbook/assets/integraltestbelow-min.png)
 
-![正項級數和大於等於積分值](../../.gitbook/assets/IntegralTestAbove-min.png)
+![正項級數和大於等於積分值](../../.gitbook/assets/integraltestabove-min.png)
 
 
 
@@ -186,7 +186,7 @@ Proof:
 >
 > 則交錯級數 $$\displaystyle \sum_{k=1}^\infty (−1)^{k+1} x_k =x_1−x_2+x_3−x_4+\cdots+(−1)^{n+1} x_n+\cdots= S$$收斂。且$$|S−S_n | \leq x_{n+1}  ~\forall n \in \mathbb{N}$$
 
-![交錯級數收斂](../../.gitbook/assets/AlternatingSeriesNumberLine-min.png)
+![交錯級數收斂](../../.gitbook/assets/alternatingseriesnumberline-min.png)
 
 Proof:
 
@@ -207,7 +207,7 @@ Proof:
 
 $$\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}=\frac{1}{1} - \frac{1}{2} + \frac{1}{3} - \frac{1}{4}+\frac{1}{5} - \cdots$$
 
-![alternating harmonic series](<../../.gitbook/assets/AltSeriesExampleGraph (1).png>)
+![alternating harmonic series](../../.gitbook/assets/AltSeriesExampleGraph.png)
 
 ## 狄利克雷審斂法(Dirichlet test)
 

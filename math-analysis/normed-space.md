@@ -8,7 +8,7 @@ description: normed space
 
 從範數公理性的四個性質，不難得到其與距離空間的四個性質是等價的。也就是說，**範數滿足距離的定義**，賦範空間也是一類特殊的距離空間，該距離空間距離函數由範數誘導。
 
-![賦範空間為度量空間的特例](../.gitbook/assets/250px-Mathematical\_Spaces-min.png)
+![賦範空間為度量空間的特例](../.gitbook/assets/250px-mathematical\_spaces-min.png)
 
 ## 賦範線性空間
 

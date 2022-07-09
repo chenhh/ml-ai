@@ -88,7 +88,7 @@ $$f(x)=\frac{1}{x},~ x \in (0,1)$$
 * 若$$M<1$$時，稱$$f$$為收縮映射。
 * 直覺上，利普希茨連續函數限制了函數改變的速度，符合利普希茨條件的函數的斜率，必小於一個稱為利普希茨常數的實數（該常數依函數而定）。
 
-![Lipschitz條件，存在有一個白色沙漏，使得函數一定能通過沙漏的正中間](../../.gitbook/assets/Lipschitz\_condition.png)
+![Lipschitz條件，存在有一個白色沙漏，使得函數一定能通過沙漏的正中間](../../.gitbook/assets/lipschitz\_condition.png)
 
 Lipschitz連續對分析復雜函數非常有用，因為它可以近似將最佳化復雜函數的問題，轉化為二次規劃問題。
 
@@ -109,7 +109,7 @@ proof:
 
 ### 有界函數不一定是利普希茨函數
 
-![有界但非利普希茨函數](../../.gitbook/assets/non-Lipschitz-func.png)
+![有界但非利普希茨函數](../../.gitbook/assets/non-lipschitz-func.png)
 
 ### 連續可微分但非利普希茨連續的函數
 

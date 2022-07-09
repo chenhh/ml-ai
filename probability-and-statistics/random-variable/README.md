@@ -2,7 +2,7 @@
 
 ## 隨機變數（r.v.）
 
-> 隨機變數是一個由樣本空間$$\Omega$$(但不是$$\Omega$$的任意集合，而是$$\sigma$$-field)映射至實數集$$\mathbb{R}$$的實函數（real-valued function）。
+> 隨機變數是一個由樣本空間$$\Omega$$映射至實數集$$\mathbb{R}$$的實函數（real-valued function）。
 >
 > * 以函數的定義，隨機變數$$X$$的值$$x \in \mathbb{R}$$的前像$$X^{-1}(x) = \{ \omega \in \Omega | X(\omega) = x\}$$為一個在樣本空間$$\Omega$$的事件$$E$$。
 > * 而在測度論中，要求事件$$E$$必須為sigma-field $$\mathcal{F}$$的元素，此時$$X$$稱為$$\mathcal{F}$$-可測函數（measurable function）。
@@ -30,8 +30,6 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，則
 * $$\displaystyle  \lim_{h \rightarrow 0} F(x+h) = F(x)$$, 則稱$$F(x)$$為右連續（right continuous）函數。
 * $$\displaystyle  \lim_{x \rightarrow \infty} F(x)=1$$且 $$\displaystyle  \lim_{x \rightarrow 0} F(x) = 0$$
 * $$P(a < X \leq b) = F_X(b) - F_X(a)$$&#x20;
-
-也可定義為$$F(x) = \mathrm{P}(X \leq x)$$
 
 ### 經驗分佈函數(empirical distribution)
 
@@ -104,7 +102,7 @@ if __name__ == '__main__':
 * 而pdf期望值的Stieltjes積分形式為 $$\displaystyle  \mathrm{E}(X) \equiv\int_{-\infty}^{\infty} xdF(x)$$
 * 期望值的不偏估計式為 $$\displaystyle \hat{\mu_X} = \frac{1}{n} \sum_{i=1}^n x_i$$
 
-### 隨機變數函數的期望值
+### 函數的期望值
 
 > * $$\displaystyle \mathrm{E}(u(X))=\sum_{i=1}^\infty u(x_i) p_i$$
 > * $$\displaystyle \mathrm{E}(u(X))=\int_{-\infty}^{\infty} u(x)f(x)dx$$
@@ -113,19 +111,6 @@ if __name__ == '__main__':
 
 > * $$\mathrm{E}(a_1X_1 + a_2 X_2 )=a_1 \mathrm{E}(X_1) + a_2 \mathrm{E}(X_2)$$
 > * $$\displaystyle \mathrm{E}(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n a_i \mathrm{E}(X_i)$$
-> * $$g_1, g$$為兩函數，若$$\mathrm{E}(g_1(X)), \mathrm{E}(g_2(X))$$存在，則$$\mathrm{E}( ag_1(X)+ bg_2(X)+c) = a\mathrm{E}(g_1(x)) + b \mathrm{E}(g_2(x))+c$$
-
-### 期望值與單調函數的性質
-
-$$g_1, g_2$$為兩函數，使得期望值$$\mathrm{E}(g_1(X)), \mathrm{E}(g_2(X))$$存在，則：
-
-* $$\forall x \in \mathbb{R}, g_1(x) \geq 0 \Rightarrow \mathrm{E}(g_1(x)) \geq 0$$
-* $$\forall x \in \mathbb{R}, g_1(x) \geq g_2(x) \Rightarrow \mathrm{E}(g_1(x)) \geq \mathrm{E}(g_2(x))$$
-* $$\forall x \in \mathbb{R},  a \leq g_1(x) \leq b \Rightarrow a \leq \mathrm{E}(g_1(x)) \leq b$$
-
-### 有界的隨機變數必存在期望值
-
-> 隨機變數$$X$$稱為有界(bounded)若$$\exists M > 0 \ni \mathrm{P}(|X| \leq M ) = 1$$。
 
 ## Theorem
 
@@ -142,7 +127,7 @@ $$g_1, g_2$$為兩函數，使得期望值$$\mathrm{E}(g_1(X)), \mathrm{E}(g_2(X
 
 常用$$\mu, \sigma^2$$表示隨機變數$$X$$的期望值與變異數。
 
-<mark style="color:red;">變異數的不偏估計式(樣本估計式)</mark>為 $$\hat{\sigma_X}^2\equiv S_n^2=\frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{x})^2$$。
+變異數的不偏估計式為 $$\hat{\sigma_X}^2=\frac{1}{n-1}\sum_{i=1}^n (x_i - \overline{x})^2$$。
 
 ```python
 # -*- coding: UTF-8 -*-
@@ -168,14 +153,6 @@ if __name__ == '__main__':
     variance(values)
 ```
 
-## 變異數的性質
-
-> $$\mathrm{Var}(aX+b) = a^2 \mathrm{Var}(X)$$
-
-proof:
-
-$$\begin{aligned} \mathrm{Var}(aX+b)  & = \mathrm{E}((aX+b - (a\mathrm{E}(X)+b))^2) \\ 	& = \mathrm{E}((aX - a\mathrm{E}(X))^2) \\ 	& = a^2 \mathrm{E}((X-\mathrm{E}(X))^2) \\ 	& = a^2 \mathrm{Var}(X) \end{aligned}$$
-
 ## 雙變量隨機變數
 
 > 若$$X,Y$$為離散型隨機變數，則
@@ -200,8 +177,8 @@ $$\begin{aligned} \mathrm{Var}(aX+b)  & = \mathrm{E}((aX+b - (a\mathrm{E}(X)+b))
 
 > 隨機變數$$X,Y$$的
 >
-> * <mark style="color:red;">共變異數（covariance</mark>） $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mathrm{E}(X))(Y-\mathrm{E}(Y))]$$
-> * <mark style="color:red;">相關係數（correlation coefficient）</mark> $$\rho_{XY} \equiv \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y}$$
+> * 共變異數（covariance） $$\mathrm{Cov}(X,Y) \equiv \mathrm{E}[(X-\mathrm{E}(X))(Y-\mathrm{E}(Y))]$$
+> * 相關係數（correlation coefficient） $$\rho_{XY} \equiv \frac{\mathrm{Cov}(X,Y)}{\sigma_X \sigma_Y}$$
 
 * $$\begin{aligned} \mathrm{Cov}(X,Y) &\equiv \mathrm{E}[(X-\mathrm{E}(X))(Y-\mathrm{E}(Y))]  \\& = \mathrm{E}[XY - X\mathrm{E}(Y) - Y\mathrm{E}(X)+ \mathrm{E}(X)\mathrm{E}(Y) ] \\ &= \mathrm{E}(XY)-\mathrm{E}(X) \mathrm{E}(Y) - \mathrm{E}(X) \mathrm{E}(Y) + \mathrm{E}(X) \mathrm{E}(Y) \\ &= \mathrm{E}(XY) - \mathrm{E}(X) \mathrm{E}(Y) \end{aligned}$$
 * 共變異數的不偏估計式為 $$\displaystyle \hat{\mathrm{Cov}}(X,Y)=\frac{1}{n-1} \sum_{i=1}^n ((x_i - \overline{x}) (y_i - \overline{y}))$$
@@ -225,9 +202,3 @@ $$\begin{aligned} \mathrm{Var}(aX+b)  & = \mathrm{E}((aX+b - (a\mathrm{E}(X)+b))
 
 > $$\begin{aligned} \mathrm{Cov}(a_1 x_1 + a_2 x_2, b_1y_1+b_2 y_2) = \\ \mathrm{Cov}(a_1 x_1, b_1y_1)+  \mathrm{Cov}(a_1 x_2, b_2 y_2) + \\  \mathrm{Cov}(a_2 x_2, b_1 y_1) + \mathrm{Cov}(a_2 x_2, b_2 y_2) \\=a_1 b_1 \mathrm{Cov}(x_1, y_1) + a_1 b_2 \mathrm{Cov}(x_1, y_2) \\+ a_2 b_1 \mathrm{Cov}(x_2, y_1) + a_2 b_2 \mathrm{Cov}(x_2, y_2) \end{aligned}$$
 
-## 樣本共變異數
-
-給定兩組隨機樣本$$X_1, \dots, X_n$$，$$Y_1, \dots, Y_n$$。
-
-* 樣本共變異數$$S_{XY} = \frac{1}{n-1} \sum_{i=1}^n (X_i - \overline{X})(Y_i - \overline{Y})$$
-* 樣本相關係數 $$R_{XY} = \frac{S_{XY}}{S_X S_Y} = \frac{ \sum_{i=1}^n (X_i - \overline{X})(Y_i - \overline{Y})} {(\sum_{i=1}^n (X_i - \overline{X})^2 \sum_{i=1}^n (Y_i - \overline{Y})^2 )^{1/2}}$$

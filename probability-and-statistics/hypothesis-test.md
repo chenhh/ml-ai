@@ -49,7 +49,7 @@
 
 依據對立假設的條件，拒絕域可分為單尾(左側或右側)與雙尾。
 
-![單尾與雙尾的拒絕域](../../.gitbook/assets/hypothesis\_regect\_region.jpg)
+![單尾與雙尾的拒絕域](../.gitbook/assets/hypothesis\_regect\_region.jpg)
 
 ## P-value
 
@@ -59,7 +59,7 @@ P值跟檢定假設的關係：
 * 也就是  虛無假設  為「真」時，從樣本資料來作檢定會得到的機率。
 * 若P 值小於顯著水準，則統計量之值 T 的絕對值會大於臨界值的絕對值，即位於拒絕域，因此拒絕虛無假設。而 p值若大於顯著水準則接受虛無假設。
 
-![虛無分佈與P值](../../.gitbook/assets/p-value-min.png)
+![虛無分佈與P值](../.gitbook/assets/p-value-min.png)
 
 P值越小，則「反對」虛無假設的證據越充分。 傳統上，我們認為P值小於5%時，已足以推翻虛無假設(即只有不到5%的機率虛無假設會成立)。
 
@@ -78,7 +78,7 @@ P值越小，則「反對」虛無假設的證據越充分。 傳統上，我們
 * 臨界點(Critical Point)：接受域與拒絕域的點，稱為臨界點。
   * 臨界值的決定，是根據顯著水準α並利用機率分佈計算而得，分成單尾和雙尾檢定兩種。
 
-![雙尾檢定的接受域與拒絕域](../../.gitbook/assets/reject\_region-min.png)
+![雙尾檢定的接受域與拒絕域](../.gitbook/assets/reject\_region-min.png)
 
 #### 單尾檢定(One-tailed test)
 

@@ -19,20 +19,6 @@ N-P基本引理告訴我們，在簡單原假設對簡單備擇假設的檢驗�
 >
 > 此檢驗問題的似然比為$$\lambda(x)=\frac{\mathrm{P}(x;\theta_1)}{\mathrm{P}(x;\theta_0)}$$，
 
-## 複合對立假設的檢驗問題
-
-> 令$$X=(X_1,X_2,\dots, X_n)$$的分佈密度函數為$$\mathrm{P}(X;\theta)$$。
->
-> * 虛無假設為$$H_0: \theta \in \Theta_0$$
-> * 對立假設為$$H_1: \theta \in \Theta_1$$
->
-> 似然比$$\displaystyle \lambda(x)=\frac{\sup_{\theta \in \Theta_1} \mathrm{P}(x;\theta)}{\sup_{\theta \in \Theta_0}\mathrm{P}(x;\theta)} = \frac{\mathrm{P}(x;\hat{\theta}_1)}{\mathrm{P}(x;\hat{\theta}_0)}$$
->
-> 其中$$\hat{\theta_0}$$​與$$\hat{\theta_1}$$​分別是$$H_0$$和$$H_1$$​成立時，$$\theta$$的MLE。
->
-> <mark style="color:red;">這個檢驗方法常用於區分樣本來自這類分佈，還是另一類分佈的檢驗問題</mark>。
-
-在$$\lambda(x)$$​之值較大時，觀察到資料從對立假設出現的機率較大，因此應拒絕虛無假設。故檢驗的拒絕域為$$\{ x: \lambda(x) \geq c\}$$。
 
 ### 範例：常態分佈與雙參數指數分佈族的似然比
 
@@ -52,6 +38,22 @@ N-P基本引理告訴我們，在簡單原假設對簡單備擇假設的檢驗�
 
 * 虛無假設為真時，type-I錯誤：$$\mathrm{P}\{ D \geq c ~| \text{ sample from N(0, 1}\}$$
 * 對立假設為真的，type-II錯誤為$$\mathrm{P}=\{ D < c | \text{ sample from exp(0, 1)}\}$$。
+
+## 複合對立假設的檢驗問題
+
+> 令$$X=(X_1,X_2,\dots, X_n)$$的分佈密度函數為$$\mathrm{P}(X;\theta)$$。
+>
+> * 虛無假設為$$H_0: \theta \in \Theta_0$$
+> * 對立假設為$$H_1: \theta \in \Theta_1$$
+>
+> 似然比$$\displaystyle \lambda(x)=\frac{\sup_{\theta \in \Theta_1} \mathrm{P}(x;\theta)}{\sup_{\theta \in \Theta_0}\mathrm{P}(x;\theta)} = \frac{\mathrm{P}(x;\hat{\theta}_1)}{\mathrm{P}(x;\hat{\theta}_0)}$$
+>
+> 其中$$\hat{\theta_0}$$​與$$\hat{\theta_1}$$​分別是$$H_0$$和$$H_1$$​成立時，$$\theta$$的MLE。
+>
+> <mark style="color:red;">這個檢驗方法常用於區分樣本來自這類分佈，還是另一類分佈的檢驗問題</mark>。
+
+在$$\lambda(x)$$​之值較大時，觀察到資料從對立假設出現的機率較大，因此應拒絕虛無假設。故檢驗的拒絕域為$$\{ x: \lambda(x) \geq c\}$$。
+
 
 ## 參考資料
 

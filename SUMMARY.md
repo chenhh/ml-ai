@@ -66,7 +66,7 @@
 * [離散分佈](probability-and-statistics/discrete-distribution.md)
 * [連續分佈](probability-and-statistics/continuous-distribution.md)
 * [假設檢定](probability-and-statistics/hypothesis-test.md)
-  * [似然比檢驗](<probability-and-statistics/hypothesis-test/likelihood ratio test.md>)
+  * [似然比檢定](<probability-and-statistics/hypothesis-test/likelihood ratio test.md>)
 * [隨機過程](probability-and-statistics/random-process/README.md)
   * [計數過程(counting process)](probability-and-statistics/random-process/counting-process.md)
   * [卜瓦松過程(Poisson process)](probability-and-statistics/random-process/poisson-process.md)

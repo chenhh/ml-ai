@@ -11,7 +11,7 @@
   * 丟一顆骰子的樣本空間為 $$\Omega=\{1,2,3,4,5,6\}$$。
   * 每天股價的樣本空間為 $$\Omega = \{x_t | 0 < x_t < \infty\}$$。
 * 而樣本空間的任一子集稱為<mark style="color:red;">**事件(event)**</mark>，$$E \subseteq \Omega$$，因此事件中包含了許多(有限或無限多個)結果。
-* <mark style="color:red;">sigma-field(sigma-algebra)</mark> $$\mathcal{F}$$為滿足特定條件的事件集合的集合。
+* <mark style="color:red;">sigma-field</mark> $$\mathcal{F}$$為滿足特定條件的事件集合的集合。
 * <mark style="color:red;">**隨機變數**</mark>$$X: \mathcal{F} \rightarrow \mathbb{R}$$為函數，將sigma-field中的元素(事件)，映射到實數值。因此給定實數值$$a \in \mathbb{R}$$，可得前像為事件集合的集合，可得$$X^{-1}(a) \in \mathcal{F}$$。
 * <mark style="color:red;">**機率測度**</mark>$$\mathrm{P}$$量測的是滿足某個實數值$$a$$的前像(事件集合的集合, $$X^{-1}(a)$$)發生的機率。(機率測度測量滿足特定條件的集合後，給出一個實數值)。
 

@@ -37,6 +37,24 @@
 
 ## 機率密度(質量)函數(probability density (mass) function)
 
-令$$X$$​為一隨機變數，$$F_X$$為其分佈函數。
+> 令$$X$$​為一隨機變數，$$F_X$$為其分佈函數。
+>
+> 若函數$$f$$滿足以下兩條件，則為隨數變數之機率密度函數：
+>
+> * $$f(x) \geq 0, ~\forall x \in \mathbb{R}$$
+> * $$\sum_{x} f(x)=1$$或$$\int_{-\infty}^{\infty} f(x)dx=1$$
 
-若$$X$$八為八
+#### 離散隨機變數
+
+若$$X$$為離散型，則其機率密度函數$$f_X(x)=\mathrm{P}(X=x), ~ x \in \mathbb{R}$$。
+
+* 在函數的定義中，可得函數上的跳躍點為可數個，而此集合為$$\mathrm{P}(X=x) >0$$的集合，稱為集合$$C$$​。
+* 因此$$\forall x \in C, ~f_X(x) \neq 0$$​。
+* 可得$$\mathrm{P}(A)=\mathrm{P}(X \in A) = \sum_{x \in A \cap C} f_X(x)$$且$$F_X(x) = \sum_{t \leq x, ~ t \in C} f_X(t), ~ x \in \mathbb{R}$$
+
+#### 連續隨機變數
+
+給定分佈函數$$F_X$$，則機率密度函數滿足以下條件(不唯一)： $$\displaystyle F_X(x) =\int_{-\infty}^x f_X(t) dt , ~ x \in \mathbb{R}$$。
+
+因為分佈函數定義要求$$\displaystyle \lim_{x \rightarrow \infty} F_X(x)=1$$，因此機率密度函數還要滿足 $$\displaystyle \int_{-\infty}^{\infty} f_X(x)dx=1$$。
+

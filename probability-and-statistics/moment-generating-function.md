@@ -10,9 +10,9 @@ description: moment：動差(tw)，矩(cn)
 
 動差生成函數本身並不是一個從某個定義域映射至某個值域的函數，取名「函數」僅是出於歷史原因。
 
-* 隨機變數的動差生成函數(MGF)具唯一性，因此若兩個隨機變數的MGF相等時，則這兩個隨機變數具有相同的機率分佈。
-* 但是並非所有隨機變數均存在動差生成函數(如Cauchy distribution不存在動差生成函數)，此時可改用特徵函數(characteristic function, CHF)證明。
-* 隨機變數的特徵函數具唯一性，且必定存在。CHF可完全取代MGF，但通常MGF計算較為簡單，因此除非MGF不存在時，才會使用CHF證明。
+* 隨機變數的動差生成函數(MGF)具唯一性，<mark style="color:red;">因此若兩個隨機變數的MGF相等時，則這兩個隨機變數具有相同的分佈函數</mark>。
+* <mark style="color:red;">但是並非所有隨機變數均存在動差生成函數</mark>(如Cauchy distribution不存在動差生成函數)，此時可改用特徵函數(characteristic function, CHF)證明。
+* <mark style="color:red;">隨機變數的特徵函數具唯一性，且必定存在。</mark>CHF可完全取代MGF，但通常MGF計算較為簡單，因此除非MGF不存在時，才會使用CHF證明。
 * **隨機變數的動差生成函數可視為隨機變數做Laplace transform (不一定存在)，而特徵函數可視為隨機變數做Fourier transform (一定存在)**。
 
 ## 隨機變數的k次動差(k-th moment)
@@ -65,11 +65,14 @@ if __name__ == '__main__':
 
 ## 動差生成函數(MGF)
 
-> 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x) \text{ or} \sum_{i=1}^n e^{t x_i}\mathrm{P}(x_i)$$，可視為隨機變數的（反）Laplace轉換。
->
-> 隨機變數的MGF$$M(t)$$不一定存在，但存在時與機率分佈$$F(x)$$有一對一的關係。若$$M_X(t), M_Y(t)$$存在，則$$F_X=F_Y \Leftrightarrow M_X(t)=M_Y(t)$$。
+> 動差生成函數 $$M(t) \equiv \operatorname{E}(e^{tX}) = \int_{-\infty}^{\infty} e^{tx}dF(x) \text{ or} \sum_{i=1}^n e^{t x_i}\mathrm{P}(x_i)$$，可視為隨機變數的（反）<mark style="color:red;">Laplace轉換</mark>。
 
-> 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x) \text{ or} \sum_{i=1}^n e^{i t x_i} \mathrm{P}(x_i)$$，可視為隨機變數的（反）Fourier轉換。
+* $$e^{tX}=1+tX+ \frac{t^2X^2}{2!}+ \dots + \frac{t^nX^n}{n!}+ \dots$$
+* $$M_X(t)= \mathrm{E}(e^{tX}) = 1+t\mathrm{E}(X) + \frac{t^2\mathrm{E}(X^2)}{2!}+ \dots + \frac{t^n \mathrm{E}(X^n)}{n!} + \dots$$
+
+> 隨機變數的MGF$$M(t)$$不一定存在，<mark style="color:red;">但存在時與分佈函數</mark>$$F(x)$$<mark style="color:red;">有一對一的關係</mark>。若$$M_X(t), M_Y(t)$$存在，則$$F_X=F_Y \Leftrightarrow M_X(t)=M_Y(t)$$。
+
+> 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x) \text{ or} \sum_{i=1}^n e^{i t x_i} \mathrm{P}(x_i)$$，可視為隨機變數的（反）<mark style="color:red;">Fourier轉換</mark>。
 >
 > 隨機變數的CHF 一定存在，且與機率分佈$$F(x)$$有一對一的關係。即$$F_X = F_Y \Leftrightarrow\phi_X(t)=\phi_Y(t)$$。
 

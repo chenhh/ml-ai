@@ -91,3 +91,24 @@ if __name__ == '__main__':
 
 有時無法根據上式求出$$f(x)$$的公式解，而必須依賴數值方法求$$f(x)$$，如亞洲式選擇權中，標的物的平均值機率分佈無法直接得到，必須先算平均股價的特徵函數後，再以上式反推平均價的機率分佈。
 
+## 樣本平均值的動差生成函數
+
+> 令$$X_1,\dots, X_n$$為獨立同分佈的$$n$$​個樣本，令樣本均值為$$\overline{X}_n=\frac{1}{n}\sum{i=1}^n X_i$$。
+>
+> 可得均值的動差生成函數
+
+$$\begin{aligned} M_{\overline{X}_n}(t) & =\mathrm{E}(e^{t\overline{X}_n}) \\ 	& = \mathrm{E}(e^{t \frac{1}{n}(X_1 + X_2+ \dots + X_n)}) \\ 	& = (\mathrm{E}(e^{\frac{t}{n}X}))^n \\ 	& = (M_X(\frac{t}{n}))^n  \end{aligned}$$
+
+### 常態分佈樣本均值的動差生成函數
+
+若$$X_1,\dots, X_n \sim N(\mu, \sigma^2)$$獨立同分佈，可得
+
+* $$M_{\overline{X}_n}(t) = e^{\mu t + \frac{\frac{\sigma^2}{n}t^2}{2}}$$，即$$\overline{X}_n \sim N(\mu, \frac{\sigma^2}{n})$$。
+
+即樣本平均仍為常態分佈，期望值不變，而變異數隨樣本數$$n$$​增多而變小。
+
+### gamma分佈樣本均值的動差生成函數
+
+若$$X_1,\dots, X_n \sim \Gamma(\alpha, \beta)$$獨立同分佈，則：
+
+* $$M_{\overline{X}_n}(t) = \left(\frac{1}{(1-\frac{\beta t}{n})^\alpha} \right)^n  = \frac{1}{(1-\frac{\beta}{n}t)^{n\alpha}}$$，即$$\overline{X}_n \sim  \Gamma(n\alpha, \frac{\beta}{n})$$

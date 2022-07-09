@@ -6,6 +6,8 @@
 
 完全不同的機率空間，可能得到相同的分佈函數(分佈收斂，如中央極限定理)。
 
+簡單的說，因為$$\mathrm{P}(X \leq x)$$中包含了$$\mathrm{P}(X=x)$$的機率，因此分佈函數為右連續。
+
 ## 分佈函數
 
 > 函數$$F: \mathbb{R} \rightarrow [0,1]$$​在滿足以下條件時，稱為分佈函數：
@@ -76,4 +78,27 @@
 給定分佈函數$$F_X$$，則機率密度函數滿足以下條件(不唯一)： $$\displaystyle F_X(x) =\int_{-\infty}^x f_X(t) dt , ~ x \in \mathbb{R}$$。
 
 因為分佈函數定義要求$$\displaystyle \lim_{x \rightarrow \infty} F_X(x)=1$$，因此機率密度函數還要滿足 $$\displaystyle \int_{-\infty}^{\infty} f_X(x)dx=1$$。
+
+## 分位函數(quantile function)
+
+> 分佈函數的分位函數為$$F^{-1}(x)=\inf\{t \in \mathbb{R} ~| ~ F(t) \geq x \}, ~ x \in (0,1)$$。
+
+* 即使分佈函數$$F$$​不一定連續，也不一定嚴格遞增，但$$F^{-1}$$​必定存在。
+* 如若分佈函數$$F$$​連續且嚴格遞增，則$$F^{-1}(x)$$​滿足$$F(t)=x$$​唯一的$$t$$​，此時與一般反函數定義相同。
+
+### 基本性質
+
+> 令$$F^{-1}$$​為分佈函數之分位函數。
+>
+> * $$\forall x, t \in \mathbb{R}$$, $$F^{-1}(x) \leq t \Leftrightarrow x \leq F(t)$$
+> * $$F^{-1}$$​為非遞減且左連續的函數
+> * 若$$F$$​為連續函數，則$$F(F^{-1}(x))=x, \forall \in (0,1)$$
+
+### 分位函數抽樣定理
+
+> 令$$F$$​為分佈函數，且隨機變數$$U \sim U(0,1)$$，則$$X=F^{-1}(U)$$以$$F$$​為分佈函數。
+
+proof:
+
+$$\mathrm{P}(X \leq t) = \mathrm{P}(F^{-1}(U) \leq t) = \mathrm{P}(U \leq F(t)) = F(t)$$(QED)
 

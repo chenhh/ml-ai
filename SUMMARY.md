@@ -33,6 +33,7 @@
   * [連續函數](math-analysis/han-shu-function/continuous-function.md)
   * [半連續函數(semi-continuity function)](math-analysis/han-shu-function/semi-continuity-function.md)
   * [三角函數](math-analysis/han-shu-function/trigonometric-function.md)
+  * [函數數列](math-analysis/han-shu-function/sequences-of-functions.md)
 * [度量空間 (metric space)](math-analysis/metric-space/README.md)
   * [點拓樸集](math-analysis/metric-space/point-topology.md)
   * [開集合](math-analysis/metric-space/open-set.md)

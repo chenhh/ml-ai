@@ -176,6 +176,7 @@
 
 ## 強化學習與決策理論 <a href="#reinforcement-learning" id="reinforcement-learning"></a>
 
+* [強化學習介紹](reinforcement-learning/RL-INTRODUCTION.md)
 * [Markov decision process (MDP)](reinforcement-learning/mdp.md)
 * [秘書聘選問題(secretary problem)](reinforcement-learning/secretary-problem.md)
 
@@ -252,7 +253,3 @@
 * [\[book\]模型思維(the model thinker)](complex-system/mo-xing-si-wei-the-model-thinker.md)
 * [碎形(分形) (fractal)](complex-system/fractal.md)
 * [相空間重構](complex-system/phase-space-reconstruction.md)
-
-## 情報學 <a href="#intelligence-science" id="intelligence-science"></a>
-
-* [\[書\]情報學](intelligence-science/book-qing-bao-xue.md)

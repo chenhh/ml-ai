@@ -8,9 +8,9 @@
 
 > $$(X,d)$$為度量空間，且$$\{a_n\}_{n \in \mathbb{N}} \subseteq X$$為一數列。> 若$$\forall \epsilon >0 ~ \exists n_0 \in \mathbb{N} \ni   d(a_n,a_m )<\epsilon ~ \forall n,m \geq n_0$$，則稱$$\{a_n\}$$為Cauchy序列。
 
-* Cauchy序列的功能在於不須知道收斂值，只須檢定數列中元素的接近程度即可判別數列是否收斂。
-* 任意度量空間中，由定或可得出收斂數列必為Cauchy數列。
-* 實數空間中，因為實數的完備性，因此Cauchy數列必為收斂數列。反之一般的度量空間，必須是完備空間，才能夠保證Cauchy數列是收斂數列。
+* <mark style="color:red;">Cauchy序列的功能在於不須知道收斂值，只須檢定數列中元素的接近程度即可判別數列是否收斂</mark>。
+* 任意度量空間中，由定義可得出收斂數列必為Cauchy數列。
+* 實數空間中，因為實數的完備性，因此Cauchy數列必為收斂數列。<mark style="color:blue;">反之一般的度量空間，必須是完備空間，才能夠保證Cauchy數列是收斂數列</mark>。
 
 ### 收斂數列必為Cauchy數列
 

@@ -36,7 +36,10 @@ E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$, $$}$$
 >
 > * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\{x \in X |\forall n \in \mathbb{N} ~\exists k>n∋x∈E_k \}$$稱為上極限集，屬於集合序列$$\{E_n\}$$中**無限多個集合的元素**的全體組成的集合就是集合序列的上限集。
 > * 等價於$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，集合序列的上限集中的元素屬於集合列的無窮多個集合，同時也不屬於無窮多個集合。
-> * 對於上極限集中的元素$$x$$，在任意給定一個索引值$$n$$之後，我們總能在$$n$$後（即$$k  > n$$）找到一個集合$$E_k$$包含$$x$$，這就保證了$$x$$屬於無限個集合。
+>   * 令$$x \in \lim\sup_{n \rightarrow \infty} E_n$$
+>     * $$M_n=\cup_{k=n}^\infty E_k$$因此$$x$$存在於$$M_n$$的部份集合當中。
+>     * $$\cap_{n=1}^\infty M_n$$可將不屬於所有$$M_n$$的元素排除了，只留下共有的元素。
+> * <mark style="color:red;">對於上極限集中的元素</mark>$$x$$，<mark style="color:red;">在任意給定一個索引值</mark>$$n$$<mark style="color:red;">之後</mark>，<mark style="color:red;">我們總能在</mark>$$n$$<mark style="color:red;">後（即</mark>$$k  > n$$）<mark style="color:red;">找到一個集合</mark>$$E_k$$<mark style="color:red;">包含</mark>$$x$$，<mark style="color:red;">這就保證了</mark>$$x$$<mark style="color:red;">屬於無限個集合</mark>。和數列的上極限定義類似。
 
 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k =(E_1 \cup E_2\cup \ldots) \cap (E_2 \cup E_3 \cup \ldots )\cap \ldots$$
 
@@ -49,7 +52,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n  =\bigcap_{n=1}^\infty \bi
     * 若$$x\in \bigcap_{n=1}^\infty M_n$$，依交集的性質可得$$x$$存在於全部的$$M_n$$ 中，但因為$$\{M_n\}$$ 為遞減集合序列，因此較前面的$$M_1,M_2, \ldots$$可能不包含$$x$$，因此$$x$$不必存在於全部的集合中，只需存在於可數個集合中即可。
 
 
-* $$(E_k \cup E_{k+1} \cup \cdots \cup E_n) \cap(E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n) = (E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n)$$，每次交集都會把最開頭的元素從聯集中排除，因此如果元素只存在序列前面某些集合中時，則經過一連串的交集會把這些不是存在後面集合的元素給排除掉。
+* $$(E_k \cup E_{k+1} \cup \cdots \cup E_n) \cap(E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n) = (E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n)$$，<mark style="color:blue;">每次交集都會把最開頭的元素從聯集中排除，因此如果元素只存在序列前面某些集合中時，則經過一連串的交集會把這些不是存在後面集合的元素給排除掉</mark>。
 
 proof：定義等價性 =>
 
@@ -151,7 +154,7 @@ Proof:
 > 給定集合$$E \subseteq X$$。定義特徵函數 $$\chi_E:X \rightarrow \mathbb{R}$$(對應域為實數可便於定義可測函數，但值域只有$$\{0,1\}$$）$$\chi_E (x)=\left \{  \begin{align} &1, \text { if } x \in E, \\ &0, \text{ if } x \notin E   \end{align} \right.$$
 >
 > * 因為$$\chi_E$$為函數，因此也可以考慮函數的極限。在分析中也常用$$I_E$$的符號表示。
-> * 特徵函數最重要的功能是可以用函數的方式自訂集合的範圍。
+> * <mark style="color:red;">特徵函數最重要的功能是可以用函數的方式自訂集合的範圍</mark>。
 
 * 特徵函數是可測函數（隨機變數）。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合中。例如$$\mathrm{E}(I_A(\omega))=\mathrm{P}(A)$$。
 * 特徵函數另一個常用的用途是定義Riemann積分: $$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{R_k}$$(step function)，其中每一個$$R_k$$都是矩形。定義Lebesgue積分$$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{E_k}$$(simple function), $$E_k$$為$$\alpha_k$$的前像集合。

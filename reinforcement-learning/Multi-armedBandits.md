@@ -126,6 +126,8 @@ $$\begin{aligned}  & \displaystyle \sum_{n=1}^\infty \alpha_n(a) = \infty \\  & 
 
 <mark style="color:blue;">此外，滿足上述條件的步長引數序列往往收斂得很慢，或者需要相當的調整才能獲得滿意的收斂率</mark>。盡管滿足這些收斂條件的步長引數序列經常被用於理論工作中，但它們很少被用於應用和實證研究中。
 
+## 樂觀的行動價值函數初始值
+
 ## 參考資料
 
 * Richard Suttion and Andrew G. Barto, "Reinforcement Learning: An Introduction," 2nd, 2018, chapter 2.

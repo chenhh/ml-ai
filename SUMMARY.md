@@ -177,6 +177,7 @@
 ## 強化學習與決策理論 <a href="#reinforcement-learning" id="reinforcement-learning"></a>
 
 * [強化學習介紹](reinforcement-learning/RL-INTRODUCTION.md)
+* [多臂吃角子老虎機](reinforcement-learning/Multi-armedBandits.md)
 * [Markov decision process (MDP)](reinforcement-learning/mdp.md)
 * [秘書聘選問題(secretary problem)](reinforcement-learning/secretary-problem.md)
 

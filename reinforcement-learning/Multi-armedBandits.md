@@ -95,6 +95,10 @@ while(true){
 
 ## 追踨非定態問題(tracking a non-stationary problem)
 
+上述討論的平均方法適合獎勵機率不隨時間變化的老虎機問題。<mark style="color:red;">而我們經常遇到的強化學習問題實際上是非穩態的。在這種情況下，給最近的獎勵比給過去的獎勵更多的權重是有意義的</mark>。
+
+最流行的方法之一是使用一個恆定的步長引數。例如，用於更新$$n-1$$個過去獎勵的平均值Qn的增量更新規則（2.3）被修改為
+
 ## 參考資料
 
 * Richard Suttion and Andrew G. Barto, "Reinforcement Learning: An Introduction," 2nd, 2018, chapter 2.

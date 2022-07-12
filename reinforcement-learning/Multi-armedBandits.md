@@ -154,6 +154,14 @@ $$\begin{aligned}  & \displaystyle \sum_{n=1}^\infty \alpha_n(a) = \infty \\  & 
 
 UCB通常表現良好，但比「$$\epsilon$$-貪婪方法」更難超越老虎機問題擴展到普遍的強化學習環境。另一個困難是處理非定態問題；需要更復雜的方法。另一個困難是處理大的狀態空間，特別是函數近似法時。使得UCB在實務上並不好用。
 
+## Gradient Bandit Algorithms(梯度老虎機算法)
+
+。在本節中，我們考慮為每個行動$$a$$學習一個數字的偏好$$H_t(a)$$。偏好越大，該行動就越經常被採取，但該偏好在獎勵方面沒有影響。只有一個行動對另一個行動的相對偏好是重要的；如果我們把所有的行動偏好都加到1000，就不會對行動機率產生影響，這些機率是根據軟最大分佈（即Gibbs或Boltzmann分佈）確定的，如下所示：
+
+* $$\displaystyle \mathrm{P}(A_t=a) = \frac{e^{H_t(a)}}{\sum_{b=1}^k e^{H_t(b)}} = \pi_t(a)$$
+* $$\pi_t(a)$$為時間$$t$$​時選擇行動$$a$$​的機率。
+* 初始時，所有行動的偏好均相同，即$$\forall a, ~H_1(a)=0$$​，此時所有行動被選擇的機率均相同。
+
 ## 參考資料
 
 * Richard Suttion and Andrew G. Barto, "Reinforcement Learning: An Introduction," 2nd, 2018, chapter 2.

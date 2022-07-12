@@ -162,6 +162,16 @@ UCB通常表現良好，但比「$$\epsilon$$-貪婪方法」更難超越老虎�
 * $$\pi_t(a)$$為時間$$t$$​時選擇行動$$a$$​的機率。
 * 初始時，所有行動的偏好均相同，即$$\forall a, ~H_1(a)=0$$​，此時所有行動被選擇的機率均相同。
 
+基於隨機梯度上升的思想，有一種自然的軟最大行動偏好學習演算法。在每一步，在選擇行動$$A_t$$並獲得獎勵$$R_t$$後，行動偏好通過以下方式更新：
+
+* \[被選中的行動更新偏好]$$H_{t+1}(A_t) = H_t(A_t) + \alpha(R_t - \overline{R}_t)(1-\pi_t(A_t))$$
+* \[沒被選中的行動也更新偏好] $$H_{t+1}(a) = H_t(a) + \alpha(R_t - \overline{R}_t)\pi_t(a), ~ \forall a \neq A_t$$
+* $$\alpha$$​為步長(step-size)參數。
+* $$\overline{R}_t \in \mathbb{R}$$​為到時間$$t$$​(不包含$$t$$​)的平均報酬，做為行動$$A_t$$​報酬$$R_t$$的基準值。
+* 如果獎勵高於基準值。那麼在未來採取$$A_t$$的機率就會增加，如果獎勵低於基準值，那麼該機率就會下降。沒被選擇的行動則向相反的方向發展。
+
+
+
 ## 參考資料
 
 * Richard Suttion and Andrew G. Barto, "Reinforcement Learning: An Introduction," 2nd, 2018, chapter 2.

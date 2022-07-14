@@ -70,10 +70,13 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。<m
 > * $$P: \mathcal{S \times A \times S }\rightarrow [0,1]$$，狀態轉移函數。$$P(s^{'} \vert s, a)$$，即在目前的狀態$$s$$，決定行動$$a$$之後，轉移到狀態$$s^{'}$$的機率。因為在現實中，無法預測未來會發現什麼事，即使在時間點$$t$$，依據狀態$$s$$執行行動$$a$$，也無法保證會轉移到相同狀態。
 > * $$R: S\times A \rightarrow \mathbb{R}$$，報酬函數 $$r(s,a)$$，在目前的狀態$$s$$，決定行動$$a$$後，會得到報酬。
 >   * 報酬可能也是隨機的，即$$P(r \vert s,a)$$。
-> * 也可將$$P, R$$寫在一起得 $$P(s^{'}, r \vert s, a) \equiv P(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t =s, A_t =a)$$。
->   * $$P(s^{'} |s,a) = \sum_{r \in \mathbb{R}} P(s^{'}, r \vert s,a)$$
->   * $$P(r  \vert s,a) = \sum_{s^{'} \in S} P(s^{'}, r \vert s,a)$$
->   * 且 $$\sum_{s^{'} \in S} \sum_{r \in \mathbb{R}} P(s^{'}, r|s, a) = 1, \ \forall s \in S, a \in A(s)$$
+> * 也可將$$P, R$$寫在一起得
+>   * $$P: \mathcal{S \times R \times S \times A} \rightarrow [0,1]$$
+>   * &#x20;$$P(s^{'}, r \vert s, a) \equiv P(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t =s, A_t =a)$$。
+>     * 狀以$$\displaystyle P(s^{'} |s,a) = \sum_{r \in \mathbb{R}} P(s^{'}, r \vert s,a)$$
+>     * $$\displaystyle P(r  \vert s,a) = \sum_{s^{'} \in S} P(s^{'}, r \vert s,a)$$
+>     * 且 $$\displaystyle \sum_{s^{'} \in S} \sum_{r \in \mathbb{R}} P(s^{'}, r|s, a) = 1, \ \forall s \in \mathcal{S}, a \in \mathcal{A}(s)$$
+>     * 前一狀態狀態與行動的組合數有$$|\mathcal{S}| \times |\mathcal{A}(s)|$$個，而玩家有可能處於其中任一組(狀態，行動)，因此總和機率為1。
 > * \[Markov property] $$P(S_t|S_{t-1}, S_{t-2}, \dots, S_0) = P(S_t|S_{t-1})$$，現在的狀態包含著過去經歷過的所有狀態的資訊。也就是說，我們所求的機率，可以捨去過去的所有狀態，只專注於眼前的狀態。這大大幫助我們減少計算量，且能夠用簡單的迭代法來求出結果。
 
 * <mark style="color:red;">MDP中，所有的過程(狀態，行動等)都有隨機性，下一個狀態轉移只與現在這個狀態有關</mark>。

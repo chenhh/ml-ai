@@ -191,6 +191,12 @@
 * [相關均衡(correlated equilibrium)](<game-theory/correlated equilibrium.md>)
 * [最小遺憾](game-theory/zui-xiao-yi-han.md)
 
+## 風險測度 <a href="#risk-measure" id="risk-measure"></a>
+
+* [一致風險測度](risk-measure/Coherent-risk-measure.md)
+* [基於動差的風險測度](risk-measure/moment-based-risk-measure.md)
+* [光譜風險測度](risk-measure/spectral-risk-measure.md)
+
 ## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
 
 * [凸集合 (convex set)](convex-optimization/convex-set/README.md)

@@ -18,9 +18,11 @@ description: Coherent Risk Measure
 >
 > 則一個風險衡量$$\rho: U \rightarrow \mathbb{R}$$為一函數且滿足以下四個條件：
 >
-> * \[轉移不變性] $$\rho(X+c) = \rho(X)-c~, \forall X \in U, ~ c \in \mathbb{R}$$
-> * \[次可加性] $$\rho(X+Y) \leq  \rho(X) + \rho(Y)~, \forall X, Y \in U$$
-> * \[正齊次性] $$\rho(cX) = c  \rho(X), ~ \forall X \in U, ~ c \geq 0$$
-> * \[單調性] $$X \leq Y \Rightarrow \rho(X) \geq  \rho(Y), ~ \forall X, Y \in U$$
+> * \[轉移不變性, translation invariance] $$\rho(X+c) = \rho(X)-c~, \forall X \in U, ~ c \in \mathbb{R}$$
+> * \[次可加性, subadditivity] $$\rho(X+Y) \leq  \rho(X) + \rho(Y)~, \forall X, Y \in U$$
+> * \[正齊次性, positive homogeneity] $$\rho(cX) = c  \rho(X), ~ \forall X \in U, ~ c \geq 0$$
+> * \[單調性, monotonicity] $$X \leq Y \Rightarrow \rho(X) \geq  \rho(Y), ~ \forall X, Y \in U$$
 
 此處的風險是指負的現金流或是小於0的收益(以現金為單位)。
+
+轉移不變性指如果在投資組合$$X$$​中增加了無風險資產$$c$$​，則風險減少$$c$$​單位。此性質保證了$$\rho(X+\rho(X))=0$$。

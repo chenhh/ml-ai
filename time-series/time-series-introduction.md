@@ -116,8 +116,11 @@ $$\hat{y}_{T+h|T}=y_{T}+\frac{h}{T-1}\sum_{t=2}^T(y_t - y_{t-1})=y_T +h\frac{y_T
 
 
 
+
+
 ## 參考資料
 
 * [Rob J Hyndman and George Athanasopoulos, Forecasting: Principles and Practice (2nd ed), Monash University, Australia](https://otexts.com/fpp2/).
 * 陳旭昇著，時間序列分析：總體經濟與財務金融之應用，民98.04，台灣東華，台北市。
-* [\[知乎\] 應用時間序列分析 · 習題與應用，(Enders 2014, 第四版)](https://www.zhihu.com/column/c\_1508348023021723648)。
+* [Rob J Hyndman and George Athanasopoulos, Forecasting: Principles and Practice (2nd ed), Monash University, Australia](https://otexts.com/fpp2/).
+* 陳旭昇著，時間序列分析：總體經濟與財務金融之應用，民98.04，台灣東華，台北市。

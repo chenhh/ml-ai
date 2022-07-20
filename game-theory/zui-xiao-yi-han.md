@@ -114,7 +114,7 @@ $$\displaystyle    \max_{j=1,2,\dots, P} \left\{  		\sum_{i=1}^P \sum_{t=1}^T s_
 <mark style="color:red;">目標集合為負象限</mark> $$S=\mathbb{R}_{-}^{P^2} \equiv \left\{  x \in \mathbb{R}^{P^2} \big| x_i \leq 0, i=1,2,\dots, P^2 \right\}$$。
 
 * 假設平均報酬最後落在零點，則所有的成對遺憾$$R_{s_{1, 1:T}}^{i \rightarrow j}  =0$$，因此沒有內部遺憾。
-* 如果平均報酬落在某個$$-x_i$$軸上時，表示行動$$i$$​的報酬比某些行動(但不是全部的行動)​的報酬高，即$$R_{s_{1, 1:T}}^{i \rightarrow j} \leq 0$$，如果行動$$i$$比其它全部行動的報酬高，才會落在負象限的軸上。
+* 如果平均報酬落在某個$$-x_i$$軸上時，表示行動$$i$$​的報酬比某些行動(但不是全部的行動)​的報酬高(>)，而與其它行動的報酬差不多(=)，即$$R_{s_{1, 1:T}}^{i \rightarrow j} \leq 0, ~\forall j \neq i$$。
 
 為了接近集合$$S$$​，使用[Blackwell可接近演算法](blackwells-approachability-theorem.md#blackwell-adaptive-strategy-shou-lian-xing-fen-xi)令現在向量平均報酬為$$\overline{u}_t \in \mathbb{R}^{P^2}$$，則向量內的元素為時間$$1 \sim t$$​的成對遺憾$$\{R^{i \rightarrow j}_{s_{1, 1:t}} \}$$所組成。定義$$y_t= \mathrm{proj}_{S}(\overline{u}_t)$$為平均報酬投影至集合的點。因此方向向量為$$w_t = (\overline{u}_t  -  y_t)^{+}$$。
 

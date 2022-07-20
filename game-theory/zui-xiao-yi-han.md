@@ -105,7 +105,7 @@ $$\displaystyle    \max_{j=1,2,\dots, P} \left\{  		\sum_{i=1}^P \sum_{t=1}^T s_
 
 * 例如$$\mathcal{A}_1 = \{1,2,3 \}$$,&#x20;
 * 第1個行動報酬向量為$$(u(a_1^1, s_{2,t}) - u(a_1^1, s_{2,t}), u(a_1^2, s_{2,t}) - u(a_1^1, s_{2,t}), u(a_1^1, s_{2,t}) - u(a_1^3, s_{2,t}), 0, 0, 0, 0, 0, 0)$$。
-* 成對遺憾寫法為$$s_{1,t}[1]( R_{t}^{1 \rightarrow 1}, R_{t}^{1 \rightarrow 2}, R_{t}^{1 \rightarrow 3}, 0,0,0,0,0,0)$$。
+* 成對遺憾寫法為$$s_{1,t}[1]( R_{t}^{1 \rightarrow 1}, R_{t}^{1 \rightarrow 2}, R_{t}^{1 \rightarrow 3}, 0,0,0,0,0,0)$$，因為權重不影響向量方向，所以可省略。
 * 第2個行動報酬向量為$$(0, 0, 0,  u(a_1^1, s_{2,t}) - u(a_1^2, s_{2,t}), u(a_1^2, s_{2,t}) - u(a_1^2, s_{2,t}), u(a_1^2, s_{2,t}) - u(a_1^3, s_{2,t}) , 0, 0, 0)$$。
 * 成對遺憾寫法為$$s_{1,t}[2]( 0,0,0, R_{t}^{2 \rightarrow 1}, R_{t}^{2 \rightarrow 2}, R_{t}^{2 \rightarrow 3} ,0,0,0)$$。
 * 第三個行動報酬向量為：$$(0, 0, 0, 0, 0, 0, u(a_1^1, s_{2,t}) - u(a_1^3, s_{2,t}), u(a_1^2, s_{2,t}) - u(a_1^3, s_{2,t}), u(a_1^3, s_{2,t}) - u(a_1^3, s_{2,t})  )$$
@@ -114,30 +114,35 @@ $$\displaystyle    \max_{j=1,2,\dots, P} \left\{  		\sum_{i=1}^P \sum_{t=1}^T s_
 <mark style="color:red;">目標集合為負象限</mark> $$S=\mathbb{R}_{-}^{P^2} \equiv \left\{  x \in \mathbb{R}^{P^2} \big| x_i \leq 0, i=1,2,\dots, P^2 \right\}$$。
 
 * 假設平均報酬最後落在零點，則所有的成對遺憾$$R_{s_{1, 1:T}}^{i \rightarrow j}  =0$$，因此沒有內部遺憾。
-* 如果平均報酬落在某個$$-x_i$$軸上時，表示行動$$i$$​的報酬比某些行動(但不是全部的行動)​的報酬高，即$$R_{s_{1, 1:T}}^{i \rightarrow j} \leq 0$$，如果行動$$i$$比其它全部行動的報酬高，才會落在負象限的軸上。
+* 如果平均報酬落在某個$$-x_i$$軸上時，表示行動$$i$$​的報酬比某些行動(但不是全部的行動)​的報酬高(>)，而與其它行動的報酬差不多(=)，即$$R_{s_{1, 1:T}}^{i \rightarrow j} \leq 0, ~\forall j \neq i$$。
 
-為了接近集合$$S$$​，使用[Blackwell可接近演算法](blackwells-approachability-theorem.md#blackwell-adaptive-strategy-shou-lian-xing-fen-xi)令現在向量平均報酬為$$\overline{u}_t \in \mathbb{R}^{P^2}$$，則向量內的元素為時間$$1 \sim t$$​的成對遺憾$$\{R^{i \rightarrow j}_{s_{1, 1:t}} \}$$所組成。定義$$y_t= \mathrm{proj}_{S}(\overline{u}_t)$$為平均報酬投影至集合的點。因此方向向量為$$w_t = (\overline{u}_t  -  y_t)^{+}$$。
+為了接近集合$$S$$​，使用[Blackwell可接近演算法](blackwells-approachability-theorem.md#blackwell-adaptive-strategy-shou-lian-xing-fen-xi)令現在向量平均成對遺憾為$$\overline{u}_t \in \mathbb{R}^{P^2}$$，則向量內的元素為時間$$1 \sim t$$​的成對遺憾$$\{R^{i \rightarrow j}_{s_{1, 1:t}} \}$$所組成。定義$$y_t= \mathrm{proj}_{S}(\overline{u}_t)$$為平均成對遺憾投影至集合的點。因此超平面法向量為$$w_t = (\overline{u}_t  -  y_t)^{+} = [\frac{1}{t} R_{s_{1, 1:t}}^{i \rightarrow j}]^{+}, ~ \forall i, j$$。
 
-為了決定$$t+1$$​期時的灝合策略$$s_{1,t+1}$$​使得報酬$$u_{t+1}$$​必定落在半空間$$H_{\overline{u}_t ~ y_t}^{(L)}$$，首先考慮當$$u_{t+1}$$​直接落在超平面$$H_{\overline{u}_t ~ y_t} =\left\{  z \in \mathbb{R}^2 \big| w_t^\top z = 0 \right\}$$的情形。
+* 如果$$\overline{u}_t \in \mathbb{R}^{P^2 +}$$，則$$w_t = \overline{u}_t - y_t$$，則$$y_t=0$$。
+* 如同上述3個行動的範例，在每一期時，可得3個行動報酬，經過$$t$$​期後，可得每個行動的累積報酬，因為為實數值，必可排名，假設是2 > 1 >3，則第2個行動向量報酬小於0，第1個行動向量中有1個元素大於0，第3個行動向量中有兩個元素大於0，而我們只需要處理大於0的元素即可。
 
-當向量$$w_t^{*}$$落在超平面時，即滿足下式：$$\displaystyle  \sum_{i=1}^P \sum_{j=1}^P w_{i,t}^{*} (u(j, s_{2,t})- u(i, s_{2,t})) \frac{1}{t} (R_{s_{1,1:t}}^{i \rightarrow j})^{+} =0$$
+為了決定$$t+1$$​期時的混合策略$$s_{1,t+1}$$​使得報酬$$u_{t+1}$$​必定落在半空間$$H_{\overline{u}_t ~ y_t}^{(L)}$$，首先考慮當$$u_{t+1}=\left[R^{i \rightarrow j}_{s_{1, t+1}} \right] = [s_{1, t+1}[i](u(a_1^j, s_{2,t+1}- u(a_1^i, s_{2,t+1}))], ~\forall i, j$$​直接落在超平面$$H_{\overline{u}_t ~ y_t} =\left\{  z \in \mathbb{R}^{P^2} \big| w_t^\top z = 0 \right\}$$的情形，因為集合$$S$$為非負象限，因此超平面必定經過0點，所以超平面截距項為0。
 
-可改寫為：$$\displaystyle \begin{aligned} & \sum_{i=1}^P \sum_{j=1}^P w_{i,t}^{*} u(j, s_{2,t}) \frac{1}{t} (R_{s_{1,1:t}}^{i \rightarrow j})^{+}  -  \\ & \sum_{j=1}^P \sum_{i=1}^P w_{j,t}^{*} u(j, s_{2,t}) \frac{1}{t} (R_{s_{1,1:t}}^{j \rightarrow i})^{+}  = 0  \\ & \rightarrow \sum_{i=1}^P \sum_{j=1}^P u(j, s_{2,t}) \left[    w_{i,t}^{*}R_{s_{1,1:t}}^{i \rightarrow j})^{+} -   w_{j,t}^{*}R_{s_{1,1:t}}^{j \rightarrow i})^{+}   \right] = 0   \end{aligned}$$
+* todo: 為何存在$$s_{1,t+1}$$使得$$u_{t+1}$$落在$$H_{\overline{u}_t ~ y_t}$$超平面上?
 
-因為對手在時間$$t$$​可能採取任意行動$$s_{2,t} \in \Delta(\mathcal{A}_2)$$，為了使上式為0，對於玩家的所有行動$$i$$​必須滿足：
+當向量$$s_{1,t+1}$$在每一期$$t$$都滿足下式時，則$$S$$為可接近集合：$$\displaystyle  \sum_{i=1}^P \sum_{j=1}^P s_{1,t+1}[i] (u(a_1^j, s_{2,t+1})- u(a_1^i, s_{2,t+1})) \frac{1}{t} (R_{s_{1,1:t}}^{i \rightarrow j})^{+} =0$$
 
-$$\displaystyle \sum_{j=1}^P  \left[ w_{i,t}^{*} (R_{s_{1, 1:t}}^{i \rightarrow j})^{+}  - w_{j,t}^{*} (R_{s_{1, 1:t}}^{j \rightarrow i})^{+}   \right] = 0$$
+可改寫為：$$\displaystyle \begin{aligned} & \sum_{i=1}^P \sum_{j=1}^P w_{i,t+1}^{*} u(j, s_{2,t+1}) \frac{1}{t} (R_{s_{1,1:t}}^{i \rightarrow j})^{+}  -  \\ & \sum_{j=1}^P \sum_{i=1}^P w_{j,t+1}^{*} u(j, s_{2,t+1}) \frac{1}{t} (R_{s_{1,1:t}}^{j \rightarrow i})^{+}  = 0  \\ & \rightarrow \sum_{i=1}^P \sum_{j=1}^P u(j, s_{2,t+1}) \left[    w_{i,t+1}^{*}R_{s_{1,1:t}}^{i \rightarrow j})^{+} -   w_{j,t}^{*}R_{s_{1,1:t}}^{j \rightarrow i})^{+}   \right] = 0   \end{aligned}$$
+
+因為對手在時間$$t+1$$​可能採取任意行動$$s_{2,t+1} \in \Delta(\mathcal{A}_2)$$，為了使上式為0，對於玩家的所有行動$$i$$​必須滿足：
+
+$$\displaystyle \sum_{j=1}^P  \left[ w_{i,t+1}^{*} (R_{s_{1, 1:t}}^{i \rightarrow j})^{+}  - w_{j,t}^{*} (R_{s_{1, 1:t}}^{j \rightarrow i})^{+}   \right] = 0$$
 
 令矩陣$$\mathbf{A} = [a_{ij}] \in \mathbb{R}^{P^2}$$為$$a_{ij} = R_{s_{1,1:t}}^{j \rightarrow i}, ~ \forall i \neq j$$且$$\displaystyle a_{ii} = - \sum_{j=1, j \neq i}^P R_{s_{1,1:t}}^{i \rightarrow j}$$，注意矩陣每一列(row)的總和為0。
 
-則上式可改寫為矩陣式$$\mathbf{A} w_t^{*} = 0$$且我們要得到非簡單解$$w_t^{*} \succeq 0$$。
+則上式可改寫為矩陣式$$\mathbf{A} w_{t+1}^{*} = 0$$且我們要得到非簡單解$$w_{t+1}^{*} \succeq 0$$。
 
 將矩陣$$\mathbf{A}$$​正規化為$$$ $$ $$$，其中$$\displaystyle \tilde{a}_{ij}=\frac{a_{ij}}{\max_{i,j}|a_{ij}|}$$，因此$$\tilde{a}_{ij} \leq 1$$且$$\sum_{i=1}^P \tilde{a}_{ij} =0$$。
 
-令矩陣$$\mathbf{P = \tilde{A} + I}$$ ，$$I$$為$$P \times P$$維的單位矩陣，則$$\mathbf{P}$$為每一列(row)總和為1的機率矩陣，則存在非負的機率向量$$w_t^{*}$$滿足$$\mathbf{P}w_t^{*} = w_t^{*}$$。
+令矩陣$$\mathbf{P = \tilde{A} + I}$$ ，$$I$$為$$P \times P$$維的單位矩陣，則$$\mathbf{P}$$為每一列(row)總和為1的機率矩陣，則存在非負的機率向量$$w_{t+1}^{*}$$滿足$$\mathbf{P}w_{t+1}^{*} = w_{t+1}^{*}$$。
 
 求上式的特徵值分解如下：
 
-$$\begin{aligned}  & \mathbf{P}w_t^{*} & = w_t^{*} \\ \Rightarrow & (\mathbf{\tilde{A} + I}) w_t^{*} & = w_t^{*} \\ \Rightarrow & \mathbf{\tilde{A}} w_t^{*} & = \mathbf{0} \\ \Rightarrow & \mathbf{A} w_t^{*} & = \mathbf{0} \\ \end{aligned}$$
+$$\begin{aligned}  & \mathbf{P}w_{t+1}^{*} & = w_{t+1}^{*} \\ \Rightarrow & (\mathbf{\tilde{A} + I}) w_{t+1}^{*} & = w_{t+1}^{*} \\ \Rightarrow & \mathbf{\tilde{A}} w_{t+1}^{*} & = \mathbf{0} \\ \Rightarrow & \mathbf{A} w_{t+1}^{*} & = \mathbf{0} \\ \end{aligned}$$
 
-因此$$w_t^{*}$$可由$$\mathbf{P}w_t^{*} = w_t^{*}$$的特徵值分解中$$\lambda=1$$​的特徵向量求得(QED)。
+因此$$w_{t+1}^{*}$$可由$$\mathbf{P}w_{t+1}^{*} = w_{t+1}^{*}$$的特徵值分解中$$\lambda=1$$​的特徵向量求得(QED)。

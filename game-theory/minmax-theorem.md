@@ -18,9 +18,9 @@ $$\mathbf{X} \subset \mathbb{R}^n, \mathbf{Y} \subset \mathbb{R}^m$$為閉(緊�
 * $$f(\cdot, y): X \rightarrow \mathbb{R}$$在給定任意$$y$$​值時均為凹函數且
 * $$f(x,\cdot): Y \rightarrow \mathbb{R}$$​在給定任意$$x$$​時均為凸函數。
 
-滿足上術條件如：
+滿足上述條件常見函數如：
 
-* $$f(x,y)=x^\top \mathbf{A} y, ~ A \in \mathbb{R}^{n \times m}$$，賽局理論當見。
+* $$f(x,y)=x^\top \mathbf{A} y, ~ A \in \mathbb{R}^{n \times m}$$，賽局理論常見。
 * $$f(x,y)=y^2 - x ^2$$​
 
 則可得$$\displaystyle \max_{x \in \mathbf{X}} \min_{{y} \in \mathbf{Y}} fx,y) = \min_{{y} \in \mathbf{Y}} \max_{x \in \mathbf{X}}f(x, y)$$
@@ -39,7 +39,7 @@ $$\mathbf{X} \subset \mathbb{R}^n, \mathbf{Y} \subset \mathbb{R}^m$$為閉(緊�
 
 $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2 \in \Delta(\mathcal{A}_2)} \mathbf{s}_1^\top \mathbf{U}_1 \mathbf{s}_2 = \min_{\mathbf{s}_2 \in \Delta(\mathcal{A}_2)} \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \mathbf{s}_1^\top \mathbf{U}_1 \mathbf{s}_2$$
 
-此最大最小值稱為<mark style="color:red;">賽局的價值（value of the game)</mark>。賽局的雙方都可採取行動防止對方獲得比此價值更高的報酬。
+此最大最小值稱為<mark style="color:red;">賽局的價值（value of the game)</mark>。<mark style="color:red;">賽局的雙方都可採取行動防止對方獲得比此價值更高的報酬</mark>。
 
 &#x20;如果雙方的報酬矩陣$$\mathbf{U}_1, \mathbf{U}_2$$滿足$$\mathbf{U}_1 + \mathbf{U}_2=\mathbf{0}$$時，稱為雙人零和賽局(zero-sum game)，通常可簡寫報酬矩陣為$$\mathbf{U}$$。
 
@@ -74,19 +74,20 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 半連續可用於定義擴展實數，且是比連續函數更弱的性質。
 
-擴展實數$$\overline{\mathbb{R}}=\mathbb{R} \cup \{-\infty, \infty \} = [-\infty, \infty]$$
+* 擴展實數$$\overline{\mathbb{R}}=\mathbb{R} \cup \{-\infty, \infty \} = [-\infty, \infty]$$
+* 註：實數$$x \leq  y$$​可寫成 $$\forall \epsilon > 0, x \leq y+ \epsilon$$。
 
 函數$$f:X \rightarrow \mathbb{R}$$​在點$$x_0$$​連續：
 
 * $$\forall \epsilon > 0, ~ \exists \delta >0 \ni |x-x_0|< \delta \Rightarrow  |f(x) - f(x_0)|<\epsilon$$
 * 一個函數在一點連續的充要條件是它在該點既上半連續也下半連續。
-* 由定義可知，當$$x$$​從左側或右側接近$$x_0$$​時，$$f(x)$$​也會同時由上側或下側接近$$f(x_0)$$。
+* 由定義可知，當$$x$$​從左側或右側非常接近$$x_0$$​時，，可保證$$f(x) <f(x_0)$$且 $$f(x_0) < f(x)$$​，即$$f(x)$$​也會同時由上側或下側接近$$f(x_0)$$。
 
 函數$$f: X \rightarrow \overline{\mathbb{R}}$$​在點$$x_0$$​上半連續：
 
 * $$\displaystyle \limsup_{x \rightarrow x_0} f(x) \leq f(x_0)$$
 * $$\forall \epsilon >0 ~ \exists \delta >0 \ni |x-x_0| < \delta \Rightarrow f(x)  < f(x_0)+\epsilon$$
-* 當$$x$$從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x) < f(x_0)$$​的結果，但不保證$$f(x) \geq f(x_0)$$。
+* 當$$x$$從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x) < f(x_0)$$​的結果。
 
 ![函數f在點x0上半連續](../.gitbook/assets/Upper\_semi.png)
 
@@ -94,7 +95,7 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 * $$\displaystyle \liminf_{x \rightarrow x_0} f(x) \geq f(x_0)$$
 * $$\forall \epsilon >0 ~ \exists \delta >0 \ni |x-x_0| < \delta \Rightarrow f(x_0) -\epsilon < f(x)$$
-* 當$$x$$​從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x_0) < f(x)$$​的結果，但不保證$$f(x_0) \geq f(x)$$​。
+* 當$$x$$​從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x_0) < f(x)$$​的結果。
 
 ![函數f在點x0下半連續](../.gitbook/assets/Lower\_semi.png)
 

@@ -25,6 +25,10 @@ $$\mathbf{X} \subset \mathbb{R}^n, \mathbf{Y} \subset \mathbb{R}^m$$為閉(緊�
 
 則可得$$\displaystyle \max_{x \in \mathbf{X}} \min_{{y} \in \mathbf{Y}} fx,y) = \min_{{y} \in \mathbf{Y}} \max_{x \in \mathbf{X}}f(x, y)$$
 
+
+
+![f(x,y)=y\*\*2 - x\*\*2](../.gitbook/assets/Saddle\_point.svg-min.png)
+
 ### 賽局理論型式
 
 > 令$$\Delta_M, ~\Delta_N$$為兩個有限行動集合的機率單純形(simplex)，函數$$f: \Delta_M \times \Delta_N \rightarrow \mathbb{R}$$為雙線性(bilinear function)函數，則函數$$f$$存在鞍點(saddle point)滿足：
@@ -47,8 +51,8 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 > 令$$\mathbb{X , Y }$$均為線性拓樸空間的閉(緊緻)凸集合，且函數$$f: \mathbb{X \times Y} \rightarrow \mathbb{R}$$滿足：
 >
-> 1. 對於固定的$$y \in \mathbb{Y}$$, $$f(x,y)$$為上半連續(upper semi-continuous)且在$$\mathbb{X}$$為準凹(quasi-concave)函數。
-> 2. 對於固定的$$x \in \mathbb{X}$$，$$f(x,y)$$​為下半連續(lower semi-cjontinuous)且在$$\mathbb{Y}$$​為準凸(quasi-convex)函數。
+> 1. 對於固定的$$y \in \mathbb{Y}$$, $$f(x,y)$$為上半連續(upper semi-continuous)且在$$\mathbb{X}$$為擬凹(quasi-concave)函數。
+> 2. 對於固定的$$x \in \mathbb{X}$$，$$f(x,y)$$​為下半連續(lower semi-cjontinuous)且在$$\mathbb{Y}$$​為擬凸(quasi-convex)函數。
 >
 > 則可得 $$\displaystyle \sup_{x \in \mathbb{X}} \inf_{y \in \mathbb{Y}} f(x,y) = \inf_{y \in \mathbb{Y}} \sup_{x \in \mathbb{X}} f(x,y)$$​
 
@@ -65,3 +69,45 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 > 假設$$c \in \mathbb{R}$$為雙人零和賽局的價值，因此最大最小定理可改寫為：
 >
 > $$\begin{aligned} & \forall s_2 \in \Delta(A_2) \exists s_1(s_2) \in \Delta(A_1) \ni s_1^{\top} \mathbf{U} s_2 \geq c \\ & \Rightarrow \exists s_1^{*} \in \Delta(A_1) \ni \forall s_2 \in \Delta(A_2), s_1^*{\top} \mathbf{U} s_2 \geq c \end{aligned}$$
+
+### 半連續(semi-continuous)
+
+半連續可用於定義擴展實數，且是比連續函數更弱的性質。
+
+擴展實數$$\overline{\mathbb{R}}=\mathbb{R} \cup \{-\infty, \infty \} = [-\infty, \infty]$$
+
+函數$$f:X \rightarrow \mathbb{R}$$​在點$$x_0$$​連續：
+
+* $$\forall \epsilon > 0, ~ \exists \delta >0 \ni |x-x_0|< \delta \Rightarrow  |f(x) - f(x_0)|<\epsilon$$
+* 一個函數在一點連續的充要條件是它在該點既上半連續也下半連續。
+* 由定義可知，當$$x$$​從左側或右側接近$$x_0$$​時，$$f(x)$$​也會同時由上側或下側接近$$f(x_0)$$。
+
+函數$$f: X \rightarrow \overline{\mathbb{R}}$$​在點$$x_0$$​上半連續：
+
+* $$\displaystyle \limsup_{x \rightarrow x_0} f(x) \leq f(x_0)$$
+* $$\forall \epsilon >0 ~ \exists \delta >0 \ni |x-x_0| < \delta \Rightarrow f(x)  < f(x_0)+\epsilon$$
+* 當$$x$$從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x) < f(x_0)$$​的結果，但不保證$$f(x) \geq f(x_0)$$。
+
+![函數f在點x0上半連續](../.gitbook/assets/Upper\_semi.png)
+
+函數$$f: X \rightarrow \overline{\mathbb{R}}$$​在點$$x_0$$​下半連續：
+
+* $$\displaystyle \liminf_{x \rightarrow x_0} f(x) \geq f(x_0)$$
+* $$\forall \epsilon >0 ~ \exists \delta >0 \ni |x-x_0| < \delta \Rightarrow f(x_0) -\epsilon < f(x)$$
+* 當$$x$$​從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x_0) < f(x)$$​的結果，但不保證$$f(x_0) \geq f(x)$$​。
+
+![函數f在點x0下半連續](../.gitbook/assets/Lower\_semi.png)
+
+## 擬凸函式（Quasiconvex function）
+
+令$$S \subseteq \mathbb{R}^n$$為凸集合，則$$f: S \rightarrow \mathbb{R}$$：
+
+* 滿足此條件時稱為凸函數：$$\forall x,y \in S, 0 \leq c \leq 1, ~ f(cx+(1-c)y) \leq cf(x)+(1-c)f(y)$$​
+* 滿足此條件時稱為凹函數：$$\forall x,y \in S, 0 \leq c \leq 1, ~ f(cx+(1-c)y) \geq cf(x)+(1-c)f(y)$$
+* 滿足此條件時稱為擬凸函數：$$\forall x,y \in S, 0 \leq c \leq 1, ~ f(cx+(1-c)y) \leq  \max\{f(x), f(y)\}$$
+* 滿足此條件時稱為擬凹函數：$$\forall x,y \in S, 0 \leq c \leq 1, ~ f(cx+(1-c)y) \leq  \min\{f(x), f(y)\}$$
+
+## 參考資料
+
+* Von Neumann, J. (1928). "Zur Theorie der Gesellschaftsspiele". Math. Ann. 100: 295–320.
+* Sion, Maurice (1958). "On general minimax theorems". Pacific Journal of Mathematics. 8 (1): 171–176

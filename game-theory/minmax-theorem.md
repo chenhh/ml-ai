@@ -9,9 +9,25 @@ description: minmax theorem
 Von Neumann首先證明了最小－最大(minimax)定理，該定理保證了雙線性函數的最大-最小不等式相等。\
 
 
-> ### theorem: minmax thoerem
->
-> 令$$\Delta_M, ~\Delta_N$$為兩個有限行動集合的機率單純形，函數$$f: \Delta_M \times \Delta_N \rightarrow \mathbb{R}$$為雙線性(bilinear function)函數，則函數$$f$$存在鞍點(saddle point)滿足：
+## minmax thoerem
+
+### 函數型式
+
+$$\mathbf{X} \subset \mathbb{R}^n, \mathbf{Y} \subset \mathbb{R}^m$$為閉(緊緻)凸集合。若$$f: \mathbf{X \times Y} \rightarrow \mathbb{R}$$為連續函數且滿足：
+
+* $$f(\cdot, y): X \rightarrow \mathbb{R}$$在給定任意$$y$$​值時均為凹函數且
+* $$f(x,\cdot): Y \rightarrow \mathbb{R}$$​在給定任意$$x$$​時均為凸函數。
+
+滿足上術條件如：
+
+* $$f(x,y)=x^\top \mathbf{A} y, ~ A \in \mathbb{R}^{n \times m}$$，賽局理論當見。
+* $$f(x,y)=y^2 - x ^2$$​
+
+則可得$$\displaystyle \max_{x \in \mathbf{X}} \min_{{y} \in \mathbf{Y}} fx,y) = \min_{{y} \in \mathbf{Y}} \max_{x \in \mathbf{X}}f(x, y)$$
+
+### 賽局理論型式
+
+> 令$$\Delta_M, ~\Delta_N$$為兩個有限行動集合的機率單純形(simplex)，函數$$f: \Delta_M \times \Delta_N \rightarrow \mathbb{R}$$為雙線性(bilinear function)函數，則函數$$f$$存在鞍點(saddle point)滿足：
 >
 > $$\displaystyle \max_{\mathbf{x} \in \Delta_M} \min_{\mathbf{y} \in \Delta_N} f(\mathbf{x}, \mathbf{y}) = \min_{\mathbf{y} \in \Delta_N} \max_{\mathbf{x} \in \Delta_M}f(\mathbf{x}, \mathbf{y})$$
 
@@ -29,7 +45,7 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 ## Sion's minmax theorem
 
-> 令$$\mathbb{X, Y}$$均為閉凸集合，且函數$$f: \mathbb{X \times Y} \rightarrow \mathbb{R}$$滿足：
+> 令$$\mathbb{X , Y }$$均為線性拓樸空間的閉(緊緻)凸集合，且函數$$f: \mathbb{X \times Y} \rightarrow \mathbb{R}$$滿足：
 >
 > 1. 對於固定的$$y \in \mathbb{Y}$$, $$f(x,y)$$為上半連續(upper semi-continuous)且在$$\mathbb{X}$$為準凹(quasi-concave)函數。
 > 2. 對於固定的$$x \in \mathbb{X}$$，$$f(x,y)$$​為下半連續(lower semi-cjontinuous)且在$$\mathbb{Y}$$​為準凸(quasi-convex)函數。

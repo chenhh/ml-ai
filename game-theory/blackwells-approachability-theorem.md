@@ -47,7 +47,30 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 因此玩家1、2的混合策略$$(f,g)$$對序列以及報酬的分佈矩陣$$M$$​可決定向量報酬隨機變數$$x_1, x_2, \dots$$。
 
-令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離，且\$$x-I
+令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。
+
+則$$S$$​稱為使用在報酬矩陣$$M$$中玩家策略$$f^{*}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
+
+$$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
+
+* $$x_i$$​是由特定的玩家策略$$f^{*}$$與任意對手策略$$g$$​所得到。
+* 即只要賽局回合數$$n$$夠多，不論對手使用任意策略$$g$$​，平均報酬與集合的距離機率收斂至0。
+
+稱$$S$$​為使用在報酬矩陣$$M$$​中對手特定策略$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
+
+$$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\mathrm{P}(\delta_n \geq d ~ \forall n \geq n_0) > 1- \epsilon$$
+
+* $$x_i$$​是玩家任意策略$$f$$​與對手特定策略$$g^{*}$$所得到。
+* 只要賽局回合數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均報酬至集合的距離無法機率收斂。
+
+Minmax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in P,~ q \in Q$$，則
+
+* 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​.&#x20;
+* 當$$t > v$$且$$g: g_n \equiv q$$​時，$$S$$​為可排除集合。
+
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合，且可排除集合的子集合仍為可排除子集</mark>。
+
+若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合。
 
 ## 向量報酬策略賽局
 

@@ -45,11 +45,9 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 同理玩家2的的混合策略為$$\{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
 
-因此玩家1''
+因此玩家1、2的混合策略$$(f,g)$$對序列以及報酬的分佈矩陣$$M$$​可決定向量報酬隨機變數$$x_1, x_2, \dots$$。
 
-
-
-。令$$S \subseteq \mathbb{R}^N$$為任意集合。
+令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離，且\$$x-I
 
 ## 向量報酬策略賽局
 

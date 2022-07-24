@@ -2,12 +2,11 @@
 
 ## 簡介
 
-* 在此討論的是測度應具有的性質，只要符合測度定義的函數均可視為測度。
-* 測度是將集合至正實數的函數。
+在此討論的是測度應具有的性質，只要符合測度定義的函數均可視為測度。 <mark style="color:red;">測度是將集合對映至正實數的函數</mark>。測度在$$\mathbb{R}^n$$​中是對長度、面積與體積的推廣。
 
 ## 測度(measure)
 
-> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
+> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](../set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
 >
 > *   定義函數$$μ: \Sigma \rightarrow [0, \infty]$$（可為無窮大）滿足以下兩個條件時稱為測度：
 >

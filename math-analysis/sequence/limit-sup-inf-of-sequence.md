@@ -21,11 +21,11 @@
 > * 上極限是由第$$n$$個元素開始的最小上界形成集合的最大下界。
 > * $$\{x_n\}$$**中只有有限個元素之值大於上極限。**
 >
-> 令數列的上極限為$$b \in \mathbb{R}$$，則$$\displaystyle \limsup_{n \rightarrow \infty} x_n = \inf_{n \geq 0}\{ \sup_{k \geq n} x_n\}=b$$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni x_n < b+ \epsilon, \forall n \geq n_0$$。
+> 令數列的上極限為$$b \in \mathbb{R}$$，則$$\displaystyle \limsup_{n \rightarrow \infty} x_n = \inf_{n \geq 0}\{ \sup_{k \geq n} x_n\}=b$$<mark style="color:red;">若且唯若</mark>$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni x_n < b+ \epsilon, \forall n \geq n_0$$。
 >
 > * 在實數中，固定索引值$$n$$後，$$x_n < b \Leftrightarrow \forall \epsilon >0, x_n < b+ \epsilon$$。
->   * 但是在數列中，滿足條件的$$n$$是依賴於給定的$$\epsilon$$而變動。因此必須先給定$$\epsilon$$之值後，得到滿足收斂條件的$$n_\epsilon$$，在$$n \geq n_\epsilon$$之後的所有（無限個）數列元素值均小於$$b+\epsilon$$。
->   * 但是在$$n_\epsilon$$之前，$$x_n$$之值可能會大於等於$$b+\epsilon$$。可得只有**有限個**元素$$\{x_1, x_2, \ldots, x_{n_\epsilon -1}\}$$可能會大於等於$$b+\epsilon$$。
+>   * 但是在數列中，滿足條件的$$n$$是依賴於給定的$$\epsilon$$而變動。因此必須先給定$$\epsilon$$之值後，得到滿足收斂條件的$$n_\epsilon$$，在$$n \geq n_\epsilon$$之後的所有（無限個）數列元素值均小於$$b$$。
+>   * 但是在$$n_\epsilon$$之前，$$x_n$$之值可能會大於等於$$b$$。可得只有**有限個**元素$$\{x_1, x_2, \ldots, x_{n_\epsilon -1}\}$$可能會大於等於$$b$$。
 >   * 如果考慮所有$$\epsilon >0$$，可得$$\{x_n\}$$**中只有有限個元素之值大於**$$b$$。
 
 * 令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
@@ -41,7 +41,7 @@
 *   因為任意序列的上極限最小值為$$−\infty$$，所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
 
 
-* 數列的上極限與下極限的定義在任意的偏序集都適用，只需要上確界和下確界存在。  在完全格裡，上確界和下確界總是存在，所以其中的數列一定有上極限和下極限。
+* <mark style="color:red;">數列的上極限與下極限的定義在任意的偏序集都適用，只需要上確界和下確界存在。  在完全格裡，上確界和下確界總是存在，所以其中的數列一定有上極限和下極限</mark>。
 
 ## 實數數列下極限(limit inferior of a sequence)
 

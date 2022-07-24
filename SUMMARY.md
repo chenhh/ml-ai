@@ -47,7 +47,7 @@
 * [Riemann-Stieltjes積分](math-analysis/rs-integral.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
 * [測度(measure)](math-analysis/measure.md)
-  * [Ｌebesgue外測度](math-analysis/measure/lebesgue-outer-measure.md)
+  * [Lebesgue外測度](math-analysis/measure/lebesgue-outer-measure.md)
 * [賦範空間](math-analysis/normed-space.md)
 * [多變數向量](math-analysis/multivariate-vector.md)
 * [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)

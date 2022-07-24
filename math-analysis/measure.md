@@ -6,7 +6,7 @@
 
 ## 測度(measure)
 
-> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](../set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
+> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
 >
 > *   定義函數$$μ: \Sigma \rightarrow [0, \infty]$$（可為無窮大）滿足以下兩個條件時稱為測度：
 >

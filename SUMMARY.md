@@ -46,7 +46,7 @@
   * [方向導數與梯度](math-analysis/derivative/fang-xiang-dao-shu-yu-ti-du.md)
 * [Riemann-Stieltjes積分](math-analysis/rs-integral.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
-* [測度(measure)](math-analysis/measure/README.md)
+* [測度(measure)](math-analysis/measure.md)
   * [Ｌebesgue外測度](math-analysis/measure/lebesgue-outer-measure.md)
 * [賦範空間](math-analysis/normed-space.md)
 * [多變數向量](math-analysis/multivariate-vector.md)

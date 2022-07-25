@@ -6,6 +6,26 @@
 
 因為給定任意的集合時，依公理可以建構出不可測的集合族（set family，元素為集合的集合），為了從冪集合中排除這類性質不佳的集合族，因此才定義sigma域，而日常所使用的集合，幾乎都滿足sigma域的條件，所以可放心使用。
 
+## 環(ring)
+
+若集合$$F$$​滿足以下三個條件時稱為環(ring)：
+
+1. $$\phi \in F$$
+2. $$A_1 \in F$$​且$$A_2 \in F$$​則$$A_1 - A_2 \in F$$
+3. 若$$A_1 \in F$$​且$$A_2 \in F$$​則$$A_1 \cup A_2 \in F$$
+
+若集合$$F$$​為環且滿足宇集合$$G \in F$$，則稱$$F$$​為代數(algebra)。
+
+可得出若$$A \in F$$，則$$A^c \in F$$​。
+
+## sigma-ring
+
+若集合$$F$$​滿足以下三個條件時，稱為sigma-ring：
+
+1. $$\phi \in F$$
+2. 若$$A_1 \in F$$​且$$A_2 \in F$$​則$$A_1 - A_2 \in F$$
+3. 若$$\{A_n\}_{n\in \mathbb{N}} \subseteq \mathbb{R}$$，則$$\bigcup_{n\in \mathbb{N}} A_n \in \mathbb{R}$$
+
 ## 域（field）或代數（algebra）
 
 令$$G$$為宇集合（universal set or space），令集合$$F \subseteq G$$為包含宇集合的某此子集，若滿足以下三個條件時，稱$$F$$為域（代數）：

@@ -42,7 +42,7 @@
 
 ### 子集合與補集的測度
 
-> * \[<mark style="color:blue;">子集合的測度</mark>] $$\forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$
+> * \[<mark style="color:blue;">子集合的測度</mark>] $$\forall E, F \in \Sigma,  E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$​
 > * <mark style="color:red;">可得集合的大小與測度值有單調的關係</mark>。
 
 proof:
@@ -51,7 +51,7 @@ proof:
 * 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
 * 因此$$\mu(E) \leq \mu(F)$$ (QED)
 
-> * \[補集的測度] $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
+> * <mark style="color:blue;">\[補集的測度]</mark> $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
 > * $$\mu(F)$$必須是有限值才有意義。
 
 ### 測度的次可加性

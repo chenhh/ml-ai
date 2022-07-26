@@ -73,6 +73,10 @@ proof <=
 * 由極限點的定義可知$$\mathbb{Z}$$不存在極限點，因此導集合$$d(\mathbb{Z})=\emptyset$$為空集合。
 * 因為空集合為任意集合的子集合，所以$$d(\mathbb{Z}) \subseteq \mathbb{Z}$$，即整數集合包含了所有的極限點。
 
+### 歐式空間中的有限集都是閉集
+
+令$$S \subset \mathbb{R}^n$$​為有限集，則$$\forall x \in \mathbb{R}^n - S$$​，取$$r > 0 \ni \forall y \in S, d(x,y) > r$$，則$$N(x,r) \subset R^n -S$$為開集合，因此$$S$$為閉集合(QED)。​
+
 ## 閉包（closure）
 
 > $$S\subseteq X$$，$$d(S)$$為集合$$S$$的導集合（所有極限點的集合），定義閉包$$\overline{S} = S \cup d(S)$$。
@@ -180,6 +184,16 @@ proof (2):
 > $$S\subseteq X$$ 稱為緊致集合若且唯若集合$$S$$的任意開覆蓋均存在有限個數的子開覆蓋。>
 
 > 即$$S\subseteq X$$為緊緻集合 $$\Leftrightarrow \exists \{I_1, I_2,\ldots, I_m\}$$為開集合族且 $$S\subseteq \bigcup_{k=1}^m I_k$$。
+
+* <mark style="color:red;">歐式空間</mark>$$\mathbb{R}^n$$<mark style="color:red;">Heine-Borel定理證明了實數上的有界閉集合等價於緊致集合</mark>。
+* <mark style="color:red;">歐式空間中的有限集是有界閉集合，因此有限集均為緊致集合</mark>。
+* <mark style="color:blue;">歐式空間中的緊致集合都是有界的閉集合</mark>。
+
+### 歐式空間中的緊致集合都是有界的閉集合
+
+令 $$S \subset \mathbb{R}^n$$​為緊致集合，令$$\{N(0, r_i), i =1,2,\dots, n\}$$​為$$S$$​的開覆蓋，即$$S \subset \bigcup_{i=1}^n N(0, r_i)$$。
+
+取 $$r = \max \{r_i\}$$​, 則$$S \subset N(0, r)$$​，因此$$S$$​為有界集合(QED)。
 
 ### 緊緻度量空間的閉集合為緊緻集合
 

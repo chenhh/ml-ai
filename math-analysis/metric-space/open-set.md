@@ -56,12 +56,26 @@ description: open set
 ### 任意（可數無限）個開集合的聯集仍是開集合
 
 > $$S_n \subseteq X, ~ n\in \mathbb{N}$$為開集合，則$$\displaystyle \cup_{n \in \mathbb{N}} S_n$$為開集合。
+>
+> 反之若$$S\neq \empty$$​為開集合，則存在$$\{S_n\}$$​為開集合族使的$$S=\cup_{n \in \mathbb{N}}S_n$$
 
-* 令集合$$S = \cup_{n \in \mathbb{N}} S_n$$，且點$$x \in S$$。
-* 因此$$x$$存在於某些開集合中，令$$x \in S_k$$。
-* 因為$$S_k$$為開集合，所以$$\exists r > 0 \ni N_r(x) \subseteq S_k$$。
-* 因為$$x \in S$$，可得 $$N_r(x) \subseteq S$$。
-* 對於$$\forall x \in S$$，均可以得到相同的結論，因此$$S$$為開集合 (QED)
+(1)
+
+令集合$$S = \cup_{n \in \mathbb{N}} S_n$$，且點$$x \in S$$。
+
+因此$$x$$存在於某些開集合中，令$$x \in S_k$$。
+
+因為$$S_k$$為開集合，所以$$\exists r > 0 \ni N_r(x) \subseteq S_k$$。
+
+因為$$x \in S$$，可得 $$N_r(x) \subseteq S$$。
+
+對於$$\forall x \in S$$，均可以得到相同的結論，因此$$S$$為開集合 (QED)
+
+(2)
+
+因為$$S$$​為非空開集合，由定義得$$\forall x \in S, \exists r_x > 0 \ni N(x,r_x) \subset S$$，可得$$S=\cup\{N(x, r_x) | \forall x \in S\}$$ (QED)。
+
+
 
 ### 有限個開集合的交集仍是開集合
 
@@ -90,8 +104,9 @@ description: open set
 > * 若$$S_1, S_2$$均為開集合，則$$S_1 + S_2 = \{ x+y | x \in S_1,~y \in S_2\}$$為開集合。
 > * 若$$S_1, S_2$$均為閉集合，則$$S_1+S_2$$為閉集合。
 
-實數的開集合結構
+## 實數的開集合結構
 
+* 空集合$$\phi$$​與$$\mathbb{R}^n$$​兩者均同時為開集合與閉集合。
 
 ### 分量區間（component interval）
 
@@ -117,3 +132,6 @@ description: open set
 * 令$$J_x$$ 為包含$$x$$的另一個分量區間，則$$I_x∪J_x$$ 為$$S$$的開區間且$$I_x \subseteq I_x \cup J_x,~ J_x\subseteq I_x \cup J_x$$  。
 * 由分量區間的定義得$$I_x \cup J_x=I_x$$  且 $$I_x \cup J_x=J_x \Rightarrow I_x=J_x$$(QED).
 
+
+
+### 實數中每個非空開集可表示為可數個兩兩不相交開區間的聯集

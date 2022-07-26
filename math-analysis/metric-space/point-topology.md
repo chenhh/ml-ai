@@ -126,7 +126,7 @@ proof 1:
 * $$A \subseteq B$$但$$\partial(A) \not \subset \partial(B)$$
 * $$\partial(A \cup B) = \{0,3\}$$, $$\partial(A) \cup \partial(B)=\{0,1,2,3\}$$
 * $$\partial (A \cap B) = \{1,2\}$$, $$\partial(A) \cap \partial(B) = \emptyset$$
-*
+* 實數$$\mathbb{R}$$​中，有理數$$\mathbb{Q}$$​與無理數$$\mathbb{R - Q}$$​的內部都是空集合，邊界都是$$\mathbb{R}$$​。
 
 ## 外點（exterior point）
 

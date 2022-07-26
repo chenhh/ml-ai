@@ -2,13 +2,13 @@
 
 有限集直觀上來說，就是集合內的元素可以一個一個數盡。無限多個元素表示我們無法一個一個的將元數盡。
 
-![&#x6709;&#x9650;&#x96C6;&#x3001;&#x53EF;&#x6578;&#x96C6;&#x3001;&#x7121;&#x9650;&#x96C6;&#x3001;&#x4E0D;&#x53EF;&#x6578;&#x96C6;&#x7684;&#x95DC;&#x4FC2;](../../.gitbook/assets/finite_countable_set_relation-min.png)
+![有限集、可數集、無限集、不可數集的關係](../../.gitbook/assets/finite\_countable\_set\_relation-min.png)
 
-## 有限集與無限集 \(finite and infinite set\)
+## 有限集與無限集 (finite and infinite set)
 
 > $$\forall k \in \mathbb{N}$$, 令 $$\mathbb{N}_k \equiv \{1,2,\ldots, k\}$$
 >
-> 若存在$$k \in \mathbb{N} \ni A \sim \mathbb{N}_k$$\(集合$$A$$等價於$$\mathbb{N}_k$$，兩者基數相同\)，則稱$$A$$為有限集合，且包含$$k$$個元素 。
+> 若存在$$k \in \mathbb{N} \ni A \sim \mathbb{N}_k$$(集合$$A$$等價於$$\mathbb{N}_k$$，兩者基數相同)，則稱$$A$$為<mark style="color:red;">有限集合</mark>，且包含$$k$$個元素 。
 >
 > 若$$A$$不是有限集，則$$A$$為無限集。
 
@@ -21,84 +21,84 @@
 * $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 * 令$$A\sim \mathbb{N}_1$$，則$$A$$只有兩個子集，$$\emptyset$$與$$A$$，兩者均為有限集
 * 假設對含有$$k$$個元素的每個有限集均成立。
-* 令$$B\subseteq A$$，若$$ k+1 \notin B$$，則$$B\subseteq \mathbb{N}_k$$，因此$$B$$為有限集。
+* 令$$B\subseteq A$$，若$$k+1 \notin B$$，則$$B\subseteq \mathbb{N}_k$$，因此$$B$$為有限集。
 * 若$$k+1 \in B$$，令$$C=B \setminus \{k+1\}$$，則$$C \subseteq \mathbb{N}_k$$，即$$C$$為有限集。而$$B = C \cup \{ k+1 \}$$，所以$$B$$為有限集。
 * 可得$$A$$有$$k+1$$個元素時的子集為有限集。
-* 依數學歸納法可得有限集的子集為有限集。\(QED\)。
+* 依數學歸納法可得有限集的子集為有限集。(QED)。
 
 ### 有限集不會等價於任意真子集
 
 一樣使用數學歸納法證明。
 
 * 若$$A \sim \mathbb{N}_1$$，則$$A$$只有一個真子集$$\emptyset$$，但$$A$$不是空集合，所以兩者不等價。
-* \[歸納假設\] 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
+* \[歸納假設] 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
 * 令$$|A|=k+1$$，因為$$A\sim \mathbb{N}_{k+1}$$，所以$$A$$的每個真子集等價於$$\mathbb{N}_{k+1}$$的某個真子集。
-* \[反證法\] 不失一般性，令$$A=\mathbb{N}_{k+1}$$，$$B\subset \mathbb{N}_{k+1}$$且$$B \sim \mathbb{N}_{k+1}$$，即存在一對一且映成的函數$$f: \mathbb{N}_{k+1} \rightarrow B$$。可分成$$B$$是否包含正整數$$k+1$$討論。
-* 若$$k+1 \notin B$$，由假設知$$ B \subset \mathbb{N}_{k+1}$$，去除一個元素仍為真子集，即$$B \setminus \{ f(k+1)\} \subset \mathbb{N}_{k+1}$$。
+* \[反證法] 不失一般性，令$$A=\mathbb{N}_{k+1}$$，$$B\subset \mathbb{N}_{k+1}$$且$$B \sim \mathbb{N}_{k+1}$$，即存在一對一且映成的函數$$f: \mathbb{N}_{k+1} \rightarrow B$$。可分成$$B$$是否包含正整數$$k+1$$討論。
+* 若$$k+1 \notin B$$，由假設知$$B \subset \mathbb{N}_{k+1}$$，去除一個元素仍為真子集，即$$B \setminus \{ f(k+1)\} \subset \mathbb{N}_{k+1}$$。
   * 因為函數$$f$$為一對一且映成，去除掉一個元素後，仍為一對一且映成，變成$$f: \mathbb{N}_k \rightarrow B \setminus \{f(k+1)\}$$，可得$$B \setminus \{ f(k+1)\} \sim \mathbb{N}_k$$，但此與歸納假設矛盾。
 * 若$$k+1 \in B$$且 $$f(k+1) = k+1$$，則$$B \setminus \{ (k+1)\} \subset \mathbb{N}_{k+1}$$，同上推論可得$$B \setminus \{ (k+1)\} \sim \mathbb{N}_k$$但此與歸納假設矛盾。
-* 若$$k+1 \in B$$但$$f(k+1) \neq k+1$$，可定義函數$$g: B \rightarrow B$$使得 
+* 若$$k+1 \in B$$但$$f(k+1) \neq k+1$$，可定義函數$$g: B \rightarrow B$$使得&#x20;
   * $$g(i) = i, \text{ if }i \neq k+1, i \neq f(k+1)$$
   * $$g(i) = k+1, \text{ if } i = f(k+1)$$
   * $$g(i) = f(k+1), \text{ if } i = k+1$$
   * 則$$g$$為一對一且映成的函數，則合成函數$$g\circ f: \mathbb{N}_{k+1} \rightarrow B$$為一對一且映成的函數，同上推論可得與歸納假設矛盾的結果。
-* 因此由數學歸納法可得有限集與不與其任何真子集等價 \(QED\)。
+* 因此由數學歸納法可得有限集與不與其任何真子集等價 (QED)。
 
 ### 自然數為無限集
 
 > 1. $$\forall a, b \in \mathbb{N}$$且$$a \neq b$$ 則 $$\mathbb{N}_a$$與$$\mathbb{N}_b$$不等價。
-> 2. $$\mathbb{N}$$為\(可數\)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
+> 2. $$\mathbb{N}$$為(可數)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
 
-1.  不失一般性 令$$a<b$$，則$$\mathbb{N}_a \subset \mathbb{N}_b$$且$$\mathbb{N}_b$$為有限集，因此兩者不等價 \(QED\)。
-2. \[反證法\]
+1. &#x20;不失一般性 令$$a<b$$，則$$\mathbb{N}_a \subset \mathbb{N}_b$$且$$\mathbb{N}_b$$為有限集，因此兩者不等價 (QED)。
+2. \[反證法]
 
 * 令$$E$$為所有正偶數形成的集合，則$$E \subset \mathbb{N}$$。
 * 令函數$$f: \mathbb{N} \rightarrow E$$, $$f(n)=2n, \forall n \in \mathbb{N}$$，則$$f$$為一對一且映成的函數。
-* 依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 \(QED\)。
+* 依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 (QED)。
 
 ### 無限集的充分必要條件
 
-> * $$A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數\]
-> * $$A$$為無限集 $$\Leftrightarrow$$$$A$$與其真子集等價。\[$$ \exists B\subset A \ni A \sim B$$\]
+> * $$A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數]
+> * $$A$$為無限集 $$\Leftrightarrow$$$$A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
 
-## 可數與不可數集合 \(countable and uncountable set\)
+## 可數與不可數集合 (countable and uncountable set)
 
-> * 集合$$S$$與自然數集合$$\mathbb{N}$$存在單射\(一對一\)關係時，則該集合為可數集。因此有限集為可數集。
+> * 集合$$S$$與自然數集合$$\mathbb{N}$$存在單射(一對一)關係時，則該集合為可數集。因此有限集為可數集。
 > * 如果$$S$$與$$\mathbb{N}$$是一對一且映成關係時，則$$S$$為無限可數集。
 > * 如果$$S$$不是可數集時，則為不可數集。
 
-* 可數集合可分為有限個元素\(有限集\)或是無限集\(無限可數集\)。
+* 可數集合可分為有限個元素(有限集)或是無限集(無限可數集)。
 * 最小的無限集合為自然數，為可數無限集合。
 
-## 不可數\(無限\)集合\(uncountable \(infinite\) set\)
+## 不可數(無限)集合(uncountable (infinite) set)
 
-> 不是可數集的無限集稱為**不可數集**。不可數集合與自然數集合$$\mathbb{N}$$不存在一對一且映成的關係，而且**不可數集合嚴格大於自然數集合的勢**$$\aleph_0$$。
+> 不是可數集的無限集稱為**不可數集**。不可數集合與自然數集合$$\mathbb{N}$$不存在一對一且映成的關係，而且**不可數集合嚴格大於自然數集合的勢**$$\aleph_0$$。&#x20;
 
 不可數集合必為無限集合。
 
-## 無限集合 \(infinite set\)
+## 無限集合 (infinite set)
 
 > 無限集合是由無限個元素組成的集合。
 
 > * 它有至少一個真子集和它等勢。
-> * 存在自然數集合到它的\(子集\)的單射\(一對一函數\)。
+> * 存在自然數集合到它的(子集)的單射(一對一函數)。>
 
 無限集可分為可數集與不可數集。
 
-無限集合有至少一個真子集合它等勢，其中一個例子是整數集合$$\mathbb{Z}$$與自然數集合$$\mathbb{N}$$等勢，兩者間存在一對一且映成的函數$$f=\Bigg\{ \begin{align}& \frac{n}{2} &,& n \text { is even} \\ &-\frac{n-1}{2} &,& n \text { is odd} \\ \end{align} $$
+無限集合有至少一個真子集合它等勢，其中一個例子是整數集合$$\mathbb{Z}$$與自然數集合$$\mathbb{N}$$等勢，兩者間存在一對一且映成的函數$$f=\Bigg\{ \begin{align}& \frac{n}{2} &,& n \text { is even} \\ &-\frac{n-1}{2} &,& n \text { is odd} \\ \end{align}$$
 
-![&#x81EA;&#x7136;&#x6578;&#x8207;&#x6574;&#x6578;&#x70BA;&#x7B49;&#x50F9;&#x7684;&#x96C6;&#x5408;](../../.gitbook/assets/natural_integer_mapping.png)
+![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
 
 ### 可數無限集合為無限集合的子集合
 
 * 無限集合$$S$$可能為可數集合時滿足敘述，
-* 令$$S$$為不可數集合。因此存在一對一函數$$f: \mathbb{N} \rightarrow S$$，可得數列$$\{f(n)\}_{ n \in \mathbb{N}} \ \subseteq S$$ \(QED\)
+* 令$$S$$為不可數集合。因此存在一對一函數$$f: \mathbb{N} \rightarrow S$$，可得數列$$\{f(n)\}_{ n \in \mathbb{N}} \ \subseteq S$$ (QED)
 
 ## 可數集合的子集合仍為可數集
 
 proof:
 
-* 令$$S$$為\(有限或無限\)可數集，且$$E \subseteq S$$。
+* 令$$S$$為(有限或無限)可數集，且$$E \subseteq S$$。
 * 若$$E$$為有限集，則為可數集。
 * 若$$E$$為無限集，則$$S$$為無限集。因為$$S$$為可數集，將$$S$$內的相異元素由小至大排列，形成數列$$\{s_1,s_2,\ldots\}$$。
 * 定義函數$$k$$滿足條件:
@@ -106,8 +106,8 @@ proof:
   * $$k(2)$$為最小的正整數$$i_2$$，且$$i_2 > i_1$$使得 $$s_{i_2} \in E$$。
   * 依序得$$k(1), k(2), \ldots k(n-1)$$
   * 令$$k(n)$$為最小的正整數$$i_n$$, 且$$i_n > i_{n-1}$$使得$$s_{i_n} \in E$$。
-  * 可得 $$ n > (n-1) \Rightarrow k(n) > k(n-1)$$$$\forall n \in \mathbb{N}$$
-  * 依此建構可得$$k: \mathbb{N} \rightarrow E$$為一對一且映成的函數，因此$$E \sim \mathbb{N}$$，則$$E$$為可數集 \(QED\)。
+  * 可得 $$n > (n-1) \Rightarrow k(n) > k(n-1)$$$$\forall n \in \mathbb{N}$$
+  * 依此建構可得$$k: \mathbb{N} \rightarrow E$$為一對一且映成的函數，因此$$E \sim \mathbb{N}$$，則$$E$$為可數集 (QED)。
 
 ## 可數集合的聯集仍為可數集
 
@@ -126,12 +126,12 @@ proof:
 
 因為$$[0,1]$$與$$\mathbb{R}$$兩集合等勢，因此只要證明$$[0,1]$$為不可數集合。
 
-proof：\(反證法\)
+proof：(反證法)
 
 * 假設$$[0,1]$$間的實數為可數集合，則可用數列$$\{s_n\}$$表示此集合，令$$s_n = 0.u_{n,1} u_{n,2} u_{n,3} \ldots$$，$$u_{n,i} \in \{ 0,1,\ldots, 9\}$$為無窮位數的小數。
-* 令實數$$y=0.v_1 v_2 v_3 \ldots$$, $$v_n = \left\{  \begin{align} &1, \text{ if } u_{n,n} \neq 1, \\ &2, \text{ if } u_{n,n} = 1 \end{align} \right.$$ 
+* 令實數$$y=0.v_1 v_2 v_3 \ldots$$, $$v_n = \left\{  \begin{align} &1, \text{ if } u_{n,n} \neq 1, \\ &2, \text{ if } u_{n,n} = 1 \end{align} \right.$$&#x20;
 * 則$$y$$不與$$\{s_n\}$$中的任意值相同，如$$s_n=0.1999 \ldots \Rightarrow y=0.2000 \ldots$$
-* 因此$$y \in [0,1]$$但$$y \notin \{s_n\}$$，即$$[0,1]$$是不可數集合 \(QED\)
+* 因此$$y \in [0,1]$$但$$y \notin \{s_n\}$$，即$$[0,1]$$是不可數集合 (QED)
 
 ### 二維整數的集合為可數集合
 
@@ -141,5 +141,4 @@ proof:
 
 * 令函數$$f: \mathbb{Z}^{+} \times  \mathbb{Z}^{+} \rightarrow \mathbb{Z}^{+}$$為$$f(m,n)=2^m 3^n$$，要證明$$f$$為一對一函數，即$$f(m_1, n_1)=f(m_2, n_2) \Rightarrow (m_1, n_1)=(m_2,n_2)$$。
 * 若$$2^{m_1} 3^{n_1}=2^{m_2} 3^{n_2}$$，則$$2^{m_1 - m_2} 3^{n_1 - n_2}=1$$
-* 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ \(QED\)
-
+* 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ (QED)

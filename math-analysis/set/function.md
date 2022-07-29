@@ -114,19 +114,31 @@ $$\Rightarrow$$
 
 令$$A, B \subseteq X$$，$$C,D \subseteq Y$$，$$f$$為函數，$$f^{-1}$$為前像但不一定是函數。
 
+### 子集合經函數轉換值域仍為子集合
+
 > $$A \subseteq B \Rightarrow f(A) \subseteq f(B)$$&#x20;
 
-* $$f(A) = \{f(x) \vert x \in A \}, \ f(B) = \{ f(x) | x \in B\}$$
-* $$\because A\subseteq B \therefore x \in A \Rightarrow x \in B$$
-* $$\therefore f(A) \subseteq f(B)$$ (QED)
+proof:&#x20;
 
-todo: 反向
+$$f(A) = \{f(x) \vert x \in A \}, \ f(B) = \{ f(x) | x \in B\}$$
+
+$$\because A\subseteq B \therefore x \in A \Rightarrow x \in B$$
+
+$$\therefore f(A) \subseteq f(B)$$ (QED)
+
+### 值域中子集合的前像仍為子集合
 
 > $$C \subseteq D \Rightarrow f^{-1}(C) \subseteq f^{-1}(D)$$
 
-* $$f^{-1}(C) = \{x\in X | f(x) \in C\}$$, $$f^{-1}(D) = \{x\in X | f(x) \in D\}$$
-* $$\because C \subseteq D \therefore f(x) \in C \Rightarrow f(x) \in D$$
-* $$\therefore f^{-1}(C) \subseteq f^{-1}(D)$$
+proof:
+
+$$f^{-1}(C) = \{x\in X | f(x) \in C\}$$, $$f^{-1}(D) = \{x\in X | f(x) \in D\}$$
+
+$$\because C \subseteq D \therefore f(x) \in C \Rightarrow f(x) \in D$$
+
+$$\therefore f^{-1}(C) \subseteq f^{-1}(D)$$
+
+### 聯集經函數轉換為個別集合值域的聯集
 
 > * $$f(A \cup B) = f(A) \cup f(B)$$
 > * 可擴展至 $$\displaystyle f\left(\bigcup_{i =1}^{\infty} A_i \right) = \bigcup_{i=1}^\infty f(A_i)$$

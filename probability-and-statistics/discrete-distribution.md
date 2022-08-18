@@ -181,6 +181,22 @@ if __name__ == '__main__':
 * 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty$$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!}$$
 * 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於卜瓦松分佈。
 
+$$n \rightarrow \infty$$​，$$n$$​為時間段。在每個分割好的時間段內，事件發生的機率都是$$p=\frac{\lambda T}{n}$$。
+
+$$\begin{aligned} \mathrm{P}(X=x) & =  \binom{n}{x} p^x (1-p)^{n-x} \\ 	& =  \binom{n}{x} (\frac{\mu}{n})^x (1-\frac{\mu}{n})^{n-x} \\ 	& =  \frac{n!}{x! (n-x)!} (\frac{\mu}{n})^x (1-\frac{\mu}{n})^{n-x} \\ 	& =  \frac{n!}{x! (n-x)!} \frac{\mu ^x}{x!} (1-\frac{\mu}{n})^{n-x} \\  \end{aligned}$$
+
+當 $$n \rightarrow \infty$$時且$$x << n$$​，可得
+
+$$\frac{n!}{n^x (n-x)!} = \frac{n(n-1)\cdots(n-x+1) }{n^x} \rightarrow  1$$
+
+所以$$(1-\frac{\mu}{n})^{n-x} \approx ((1-\frac{\mu}{n})^{n}) \rightarrow e^{- \mu}$$
+
+因此$$\mathrm{P}(X=x) \rightarrow \frac{\mu^x}{x!}e^{-\mu}$$
+
+​
+
+
+
 ### MLE參數估計
 
 給定獨立同卜瓦松分佈的$$N$$個隨機樣本值，希望得到從中推測出總體的卜瓦松分佈參數$$\lambda$$的估計。

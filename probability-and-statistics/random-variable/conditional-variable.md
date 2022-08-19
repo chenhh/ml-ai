@@ -2,7 +2,7 @@
 
 ## 簡介
 
-在初等機率論裡，我們可以定義某個事件對另一個事件的條件概率，比如P\(骰子點數是3或4\|骰子點數是偶數\)。其實就是把原先的樣本空間$$\Omega$$限制到當做條件的事件上，做個歸一化，當做一個新的概率空間。於是有貝式公式 $$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}$$。
+在初等機率論裡，我們可以定義某個事件對另一個事件的條件概率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到當做條件的事件上，做個歸一化，當做一個新的概率空間。於是有貝式公式 $$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}$$。
 
 對於事件$$A$$，考慮其示性函數（為隨機變數）$$\mathbf{1}_A(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in A \\  0,  \text{ if } \omega \not \in A \end{aligned}\right.$$。可得$$\mathrm{P}(A) = \mathrm{E}(\mathbf{1}_A)$$。同理可得$$\mathrm{P}(A|B)=\mathrm{E}(\mathbf{1}_A|B)$$。所以條件機率只是條件期望的一個特例，以下我們只考慮條件期望。
 
@@ -11,6 +11,12 @@
 對於兩個離散型隨機變數$$X,Y$$，$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega : Y(\omega)=y\}$$上求期望。但注意到這個值是$$Y$$的取值，即$$y$$的函數，即$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
 
 ## 條件期望值
+
+條件期望值有三種形式：
+
+1. $$\mathrm{E}(c|Y)$$​為一實數值。
+2. $$\mathrm{E}(X|Y=y)$$​為一實數值。
+3. $$\mathrm{E}(X|Y)$$為一依賴於$$Y$$​的隨機變數。
 
 > * $$\displaystyle \mathrm{E}(Y|X=k)=\sum_{h} h \cdot\mathrm{P}(Y=h|X=k)$$，在事件$$X=k$$下，$$Y$$的條件期望值。
 > * $$\displaystyle \mathrm{E}(Y|X=k)=\int_{-\infty}^{\infty}y\cdot f_{Y|X}(y|x)dy$$
@@ -42,8 +48,6 @@
 ## 參考資料
 
 * [\[知乎\] 淺談條件期望](https://zhuanlan.zhihu.com/p/23670286)
-
-
 
 
 

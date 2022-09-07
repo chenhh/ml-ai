@@ -8,7 +8,7 @@ description: likelihood ratio test, Wilks 檢定
 
 似然比檢定根據兩個相互競爭（一個是所有參數都是自由參數的無約束模型，另一個是由原假設約束的含較少參數的相應約束模型，nested model）的統計模型的似然比，來評估它們對資料的的擬合程度。
 
-Neyman-Pearson 引理告訴我們，在簡單原假設對簡單備擇假設的檢定問題中，最優勢檢定由似然比檢定給出，即似然比檢定有最佳的檢定力。事實上，似然比檢定方法也可用在復合假設檢定問題中構造檢定。這是構造檢定的常用方法。
+<mark style="color:red;">Neyman-Pearson 引理告訴我們，在簡單原假設對簡單備擇假設的檢定問題中，最優勢檢定由似然比檢定給出，即似然比檢定有最佳的檢定力</mark>。事實上，似然比檢定方法也可用在復合假設檢定問題中構造檢定。這是構造檢定的常用方法。
 
 LRT 的優點：
 
@@ -68,4 +68,6 @@ LRT 的缺點：
 
 ## 參考資料
 
-[\[知乎\]數理統計學習筆記：似然比檢驗](https://zhuanlan.zhihu.com/p/104583619)
+* [\[知乎\]數理統計學習筆記：似然比檢驗](https://zhuanlan.zhihu.com/p/104583619)
+* Quang H. Vuong, "Likelihood ratio tests for model selection and non-nested hypotheses." Econometrica: Journal of the Econometric Society (1989): 307-333.
+* Wilks, Samuel S. "The large-sample distribution of the likelihood ratio for testing composite hypotheses." The annals of mathematical statistics 9.1 (1938): 60-62.

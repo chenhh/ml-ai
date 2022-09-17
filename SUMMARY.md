@@ -240,6 +240,7 @@
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 
+* [Causality: Models, Reasoning and Inference](casualty-inference/causality-models-reasoning-and-inference.md)
 * [The book of why](casualty-inference/the-book-of-why/README.md)
   * [因果的三個層級](casualty-inference/the-book-of-why/ladder-of-causation.md)
   * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)

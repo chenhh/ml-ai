@@ -26,9 +26,28 @@
 > * $$\displaystyle \forall \epsilon >0, ~ \lim_{n \rightarrow \infty} \mathrm{P}(|X_n -X| < \epsilon) = 1$$
 > * $$\displaystyle \forall \epsilon >0, ~ \lim_{n \rightarrow \infty} \mathrm{P}(|X_n -X| \leq \epsilon) = 1$$
 
-機率收斂的意思是，當$$n$$趨向無窮，$$X_n$$與$$X$$之間不相等的部分機率趨向於0（對任意的結果$$\omega$$，$$|(X_n -X)(\omega) |$$很小)。即在序列夠長時，$$X_n$$會逐漸收斂至$$X$$，偶爾$$X_n$$會偏離$$X$$，但次數很少在機率上可忽略不計。
+機率收斂的意思是，當$$n$$趨向無窮，$$X_n$$與$$X$$之間不相等的部分機率趨向於0（對任意的結果$$\omega$$，$$|(X_n -X)(\omega) |$$很小)。<mark style="color:red;">即在序列夠長(樣本夠多)時，</mark>$$X_n$$<mark style="color:red;">會逐漸收斂至</mark>$$X$$<mark style="color:red;">，偶爾</mark>$$X_n$$<mark style="color:red;">會偏離</mark>$$X$$<mark style="color:red;">，但次數很少在機率上可忽略不計</mark>。
+
+機率中一個十分讓人困惑的點就是某個事件發生的機率為0，但它能發生。
 
 和處處收斂的區別是，由於誤差的存在，$$X_n$$可能在某次結果出現偏離$$X$$的情況，只不過這種可能性或許會越來越小，但不能保證不發生。也就是不能保證$$X_n$$從哪一個時刻其永遠保持恆定狀態。
+
+### 機率收斂和幾乎確定收斂的範例
+
+$$X_n= \left\{  \begin{aligned} 1, & \text{with prob }\frac{1}{n} \\ 0, & \text{with prob } 1-\frac{1}{n}  \end{aligned}  \right.$$
+
+則$$\displaystyle  \lim_{n \rightarrow \infty} \mathrm{P} (|X_n - 0| > \epsilon) =  \lim_{n \rightarrow \infty}  \frac{1}{n} = 0$$
+
+當$$n \rightarrow \infty$$時，$$X_n=1$$的機率為0，但是$$X_n=1$$仍然有可能發生。
+
+以測度論來說，$$\{\omega| X(\omega)=1\}$$這個事件的集合是零測度集，而依機率收論就是允許不收斂的$$X_n$$集合是零測度集。
+
+而幾乎處處收斂$$\displaystyle \lim_{n \rightarrow \infty}X_n= X$$不收斂的集合也是零測度集，但是零測度集為空集合$$(\exists n_0 \ni \mathbb{N} \ni \{\omega ~|~ X_n(\omega) \neq X(\omega) | n \geq n_0\} = \empty$$。
+
+整理可得：
+
+* 機率為0的事件仍可能會發生。
+* 測度為0的集合為零測度集，但是零測度度不一定是空集合。
 
 ### 經驗分佈為分佈的良好估計式
 
@@ -64,9 +83,14 @@
 
 設$$E$$ 為一事件，如果 $$P (E) = 1$$，則稱 E "happen almost surely" (a.s.)。
 
-而幾乎確定(almost sure)的意思是，當$$n$$趨向於無窮，$$X_n$$不收斂到$$X$$的機率為0。a.s.收斂可以推出依機率收斂。
-
-直觀上而言，幾乎處處收斂在乎的也是隨機變量的值，但其要求也比依機率收斂更加嚴格。
+* 而幾乎確定(almost sure)的意思是，當$$n$$趨向於無窮，$$X_n$$<mark style="color:red;">不收斂到</mark>$$X$$<mark style="color:red;">的事件集合機率為0</mark>。收斂機率等於1不像點態收斂(處處收斂)那麼嚴格，個別點不收斂(機率為0)不影響機率等於1的事件。
+* a.s.收斂可以推出依機率收斂。
+* 直觀上而言，幾乎處處收斂在乎的也是隨機變量的值，但其要求也比依機率收斂更加嚴格。
 
 ## 測度收斂(convergence in measure)
 
+
+
+## 參考資料
+
+* [\[知乎\] 通俗理解依機率收斂、有效性、無偏性和一致性](https://zhuanlan.zhihu.com/p/66658725)。

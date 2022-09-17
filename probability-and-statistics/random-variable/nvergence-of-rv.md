@@ -49,6 +49,14 @@ $$X_n= \left\{  \begin{aligned} 1, & \text{with prob }\frac{1}{n} \\ 0, & \text{
 * 機率為0的事件仍可能會發生。
 * 測度為0的集合為零測度集，但是零測度度不一定是空集合。
 
+### 範例：丟硬幣
+
+令$$X_i= \left\{  \begin{aligned} 1, & \text{第i次出現正面} \\ 0, & \text{第i次出現反面 } \end{aligned}  \right.$$$$i=1,2,\dots, n$$
+
+則正面出現的總次數為$$\sum_{i=1}^n X_i$$次。
+
+正面出現的機率為$$f_n(A)=\frac{1}{n}\sum_{i=1}^n X_i$$為隨機變數序列
+
 ### 經驗分佈為分佈的良好估計式
 
 對同一分佈函數$$F$$，雖每次會有不同的觀測值，因此會得到不同的經驗分佈$$F_n(x) = \frac{X_i \leq x}{n}, ~ \forall x \in \mathbb{R}$$。則$$\forall x \in \mathbb{R}, ~\forall \epsilon >0 ,  \mathrm{P}(|F_n(x) - F(x)| < \epsilon) \geq 1 - \frac{1}{4n\epsilon^2}$$

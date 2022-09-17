@@ -53,9 +53,20 @@ $$X_n= \left\{  \begin{aligned} 1, & \text{with prob }\frac{1}{n} \\ 0, & \text{
 
 令$$X_i= \left\{  \begin{aligned} 1, & \text{第i次出現正面} \\ 0, & \text{第i次出現反面 } \end{aligned}  \right.$$$$i=1,2,\dots, n$$
 
-則正面出現的總次數為$$\sum_{i=1}^n X_i$$次。
+則正面出現的總次數為$$\sum_{i=1}^n X_i$$次。正面出現的機率為$$f_n(A)=\frac{1}{n}\sum_{i=1}^n X_i$$為隨機變數序列。
 
-正面出現的機率為$$f_n(A)=\frac{1}{n}\sum_{i=1}^n X_i$$為隨機變數序列
+而$$\forall \epsilon >0$$，只要$$n$$足夠大，可得$$|f_n(A) - 1/2| \geq \epsilon$$不成立的情形顯然有可能發生，因此不滿足點態收斂的定義。
+
+不論$$n$$多大，，雖然機率很小，但有可能丟出全部為正面或反面的結果，此時$$f_n(A)=1$$或0，若給定$$\epsilon =0.2$$，則$$|f_n(A)-1/2|-0.5 \geq \epsilon$$發生。
+
+但可算出$$\mathrm{P}(n\text{次全為正面或反面})=\frac{1}{2^{n-1}} \rightarrow 0$$。
+
+雖然隨機變數無法直接收斂，但可將條件減弱為$$\forall \epsilon > 0$$，雖然事件$$|X_n - X| \geq \epsilon$$有可能發生，但只要$$n$$足夠大，可保證發生的機率足夠小，即$$\mathrm{P}(|X_n - X| \geq \epsilon) \rightarrow 0$$。
+
+因此機率收斂可解釋為：
+
+* $$n$$很大時，$$X_n$$ 與$$X$$出現較大偏差的可能性很小。
+* $$n$$很大時，有很高可能性$$X_n$$與$$X$$很接近。
 
 ### 經驗分佈為分佈的良好估計式
 

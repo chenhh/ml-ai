@@ -86,6 +86,7 @@
 * [貝式機率](probability-and-statistics/bayes-probability.md)
 * [關聯結構(copula)](probability-and-statistics/copula.md)
 * [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
+* [實驗設計](probability-and-statistics/experiment-design.md)
 
 ## 線性代數 <a href="#linear-algebra" id="linear-algebra"></a>
 
@@ -153,6 +154,7 @@
 * [真實性檢定(Reality Check Test)](time-series/reality-check-test.md)
 * [HAC estimator](time-series/hac-estimator.md)
 * [結構點轉變](time-series/structure-change.md)
+* [Page 1](time-series/page-1.md)
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>
 

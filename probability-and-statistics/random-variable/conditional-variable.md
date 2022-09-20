@@ -48,6 +48,7 @@
 ## 參考資料
 
 * [\[知乎\] 淺談條件期望](https://zhuanlan.zhihu.com/p/23670286)
+* [\[statlect\] Conditional probability with respect to a sigma-algebra](https://www.statlect.com/fundamentals-of-probability/conditional-probability-as-a-random-variable)
 
 
 

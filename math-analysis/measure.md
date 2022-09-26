@@ -65,7 +65,8 @@
 ## 測度的可加性
 
 > * <mark style="color:red;">\[可加性 ,additive]</mark> $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
-> * <mark style="color:red;">\[有限可加性 finitely additive]</mark> $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$>
+> * <mark style="color:red;">\[有限可加性 finitely additive]</mark> $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
+>
 
 <details>
 
@@ -86,22 +87,22 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 <summary>proof：拆解為互斥的集合</summary>
 
-
+因為$$E \subseteq F$$，可得 $$F = E \cup (F -E)$$。
+由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
+因此$$\mu(E) \leq \mu(F)$$ (QED)
 
 </details>
 
-* 因為$$E \subseteq F$$，可得 $$F = E \cup (F -E)$$。
-* 由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
-* 因此$$\mu(E) \leq \mu(F)$$ (QED)
 
 > * <mark style="color:blue;">\[補集的測度]</mark> $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
-> * $$\mu(F)$$必須是有限值才有意義。
+> * $$\mu(F) < \infty$$必須是有限值才有意義。
 
 ### 測度的次可加性
 
 > * \[<mark style="color:blue;">次可加性 ,sub-additive</mark>] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
 > * \[<mark style="color:blue;">有限次可加性, finitely sub-additive</mark>] $$\forall E_1,E_2, \ldots,E_n \in \Sigma$$$$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i )$$
-> * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$>
+> * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\forall E_1,E_2, \ldots \in \Sigma$$$$\Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
+>
 
 proof:
 
@@ -113,12 +114,14 @@ proof:
 Proof:
 
 * 令$$F_1=E_1, ~F_2=E_2−E_1, ~F_3=E_3−(E_1 \cup E_2 ), \ldots , F_n=E_n−(E_1 \cup \ldots \cup E_{n−1} )$$
-* 可得$$F_n$$ 為$$E_n$$ 的子集合 ($$F_n \subseteq E_n$$ )，且$$\{F_n\} \subseteq \Sigma$$為互斥的集合序列 $$F_i \cap F_j=\emptyset, ~ \forall i \neq j$$  。
+* 可得$$F_n$$ 為$$E_n$$ 的子集合 ($$F_n \subseteq E_n$$ )，且$$\{F_n\} \subseteq \Sigma$$為互斥的集合序列 $$F_i \cap F_j=\emptyset, ~ \forall i \neq j$$
+  。
 * $$\displaystyle \mu(\bigcup_{i=1}^\infty E_i )=\mu(\bigcup_{i=1}^\infty F_i )=\sum_{i=1}^\infty \mu(F_i )  \leq \sum_{i=1}^\infty \mu(E_i )$$   (QED).
 
 ### 有限測度與sigma有限測度
 
-> 如果對宇集合可得$$\mu(X)<\infty$$> ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
+> 如果對宇集合可得$$\mu(X)<\infty$$
+> ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
 
 * $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 * <mark style="color:blue;">所有的機率測度都是有限測度</mark>，因為$$\mu(\Omega) =1$$。
@@ -162,8 +165,10 @@ proof:
 
 Proof
 
-* $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )$$  在$$n_0$$之前的集合不會影響此值  。同樣$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n )$$在$$n_0$$ 之前的集合也不會影響此值，因此只要考慮$$n_0$$ 之後的集合即可。
-* $$E_{n_0}−E_n \in \Sigma$$ 且$$E_{n_0}−E_{n_0 + 1} \subseteq E_{n_0}−E_{n_0+2}$$為遞增的集合序列&#x20;  。
+* $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )$$  在$$n_0$$之前的集合不會影響此值
+  。同樣$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n )$$在$$n_0$$ 之前的集合也不會影響此值，因此只要考慮$$n_0$$ 之後的集合即可。
+* $$E_{n_0}−E_n \in \Sigma$$ 且$$E_{n_0}−E_{n_0 + 1} \subseteq E_{n_0}−E_{n_0+2}$$為遞增的集合序列&#x20;
+  。
 * &#x20;所以$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_{n_0 }−E_n )=\mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n  ))$$
 * 因為 $$\mu(E_{n_0} −E_n )=\mu(E_{n_0} )−\mu(E_n)$$ (兩者均為有限值)
 * 所以 $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_{n_0}−E_n )=\lim_{n \rightarrow \infty}⁡\mu(E_{n_0})−\lim_{n \rightarrow \infty} \mu(E_n )=\mu(E_{n_0})−\lim_{n \rightarrow \infty}\mu(E_n)$$
@@ -176,7 +181,8 @@ Proof
 #### 範例
 
 * $$E_n=[0, 1+\frac{1}{n}] \subseteq \mathbb{R}$$為遞減的集合
-* $$\mu(E_n )=1+\frac{1}{n  }$$
+* $$\mu(E_n )=1+\frac{1}{n
+  }$$
 * $$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1]$$
 * 所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1$$
 * 而$$\displaystyle  \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1$$

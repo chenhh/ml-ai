@@ -19,7 +19,8 @@ E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
 
 ### 單調有界集合序列極限必定存在
 
-> * 遞增集合序列$$E_n \subseteq E_{n+1}, ~ \forall n$$（因為$$E_n$$ 為宇集合$$X$$的子集合，因此$$X$$為所有集合的上界） 則 $$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$&#x20;>
+> * 遞增集合序列$$E_n \subseteq E_{n+1}, ~ \forall n$$（因為$$E_n$$ 為宇集合$$X$$的子集合，因此$$X$$為所有集合的上界） 則 $$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$&#x20;
+>
 
 > * 遞減集合序列$$E_n \supseteq  E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（空集合為任意集合的子集合，因此為所有集合的下界）
 
@@ -158,7 +159,10 @@ proof：定義等價性 <=
 > * $$\displaystyle \left( \limsup_{n \rightarrow \infty}⁡ E_n \right)^c  = \liminf_{n \rightarrow \infty}⁡ E_n^c$$
 > * $$\displaystyle \left( \liminf_{n \rightarrow \infty}⁡ E_n \right)^c  = \limsup_{n \rightarrow \infty}⁡ E_n^c$$
 
-Proof:
+<details>
+
+<summary>Proof: DeMorgan's property用於集合序列極限的定義 </summary>
 
 * $$\displaystyle \limsup_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k=(E_1 \cup E_2 \cup \ldots)\cap (E_2 \cup E_3 \cup \ldots) \cap (E_3\cup E_4\cup \ldots) \cap \ldots$$
 * 由DeMorgan's property得 $$\displaystyle( \limsup_{n \rightarrow \infty} E_n )^c=(E_1^c \cap E_2^c \cap \ldots)\cup (E_2^c \cap E_3^c \cap \ldots)\cup\ldots=\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k^c=\liminf_{n \rightarrow \infty} E_n^c$$  (QED)
+</details>

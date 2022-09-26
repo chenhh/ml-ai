@@ -8,13 +8,13 @@
 
 ## 環(ring)
 
-若集合$$F$$​滿足以下三個條件時稱為環(ring)：
+若集合(族)$$F$$​滿足以下三個條件時稱為環(ring)：
 
 1. $$\phi \in F$$
 2. $$A_1 \in F$$​且$$A_2 \in F$$​則$$A_1 - A_2 \in F$$
 3. 若$$A_1 \in F$$​且$$A_2 \in F$$​則$$A_1 \cup A_2 \in F$$
 
-若集合$$F$$​為環且滿足宇集合$$G \in F$$，則稱$$F$$​為代數(algebra)。
+若集合$$F$$​為環且滿足宇集合$$S \in F$$，則稱$$F$$​為代數(algebra)。
 
 可得出若$$A \in F$$，則$$A^c \in F$$​。
 
@@ -28,7 +28,7 @@
 
 ## 域（field）或代數（algebra）
 
-令$$G$$為宇集合（universal set or space），令集合$$F \subseteq G$$為包含宇集合的某此子集，若滿足以下三個條件時，稱$$F$$為域（代數）：
+令$$S$$為宇集合（universal set or space），令集合$$F \subseteq S$$為包含宇集合的某此子集，若滿足以下三個條件時，稱$$F$$為域（代數）：
 
 1. $$F\neq  \emptyset$$，不為空集合。
 2. \[<mark style="color:blue;">F在補集操作下為閉集</mark>]若 $$A \in F$$，則其補集合也為$$F$$內的元素，即$$A^c \in F$$。
@@ -39,29 +39,29 @@
 ### 範例
 
 * $$A_1 = \{ 1, 3\}$$, $$A_2 = \{ 2,4,5,6\}$$. $$F=\{A_1, A_2\}=\{(1,3), \{2,4,5,6\}\}$$，則$$F$$為field。
-* $$F=\{ \emptyset, G\}$$，則$$F$$為field。
-* $$F=\{$$包含所有$$G$$的子集合, 即$$G$$的冪集合$$\}$$, 則$$F$$為field。
+* $$F=\{ \emptyset, S\}$$，則$$F$$為field。
+* $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}$$, 則$$F$$為field。
 
 ## sigma-field（sigma-algebra）與可測空間
 
 > $$F$$為sigma-field若$$F$$為field且滿足 $$A_i \in F, i \in \mathbb{N} \Rightarrow \cup_{i=1}^\infty A_i \in F$$，即<mark style="color:blue;">無限可數的集合也是屬於</mark>$$F$$。
 >
-> 稱集合對$$(G, F)$$為可測空間（measurable space）。
+> 稱集合對$$(S, F)$$為<mark style="color:red;">可測空間（measurable space）</mark>。
 >
-> 由定義可知 sigma-field 必為 field。
+> 由定義可知 <mark style="color:red;">sigma-field 必為 field</mark>。
 
 * \[<mark style="color:blue;">F在可數交集下為閉集</mark>]如果$$F$$為sigma-field，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
-* 空集合$$\emptyset$$與宇集合$$G$$也都是$$F$$的元素。
+* 空集合$$\emptyset$$與宇集合$$S$$也都是$$F$$的元素。
 
 ### 範例
 
-* $$F=\{ \emptyset, G\}$$，則$$F$$為sigma-field。
-* $$F=\{$$包含所有$$G$$的子集合, 即$$G$$的冪集合$$\}$$, 則$$F$$為sigma-field。
-* $$F=\{A, A^C, G, \emptyset\}$$為sigma-field。
+* $$F=\{ \emptyset, S\}$$，則$$F$$為sigma-field。
+* $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}$$, 則$$F$$為sigma-field。
+* $$F=\{A, A^C, S, \emptyset\}$$為sigma-field。
 
 ## Borel sigma-field
 
-> 令宇集合$$G=\mathbb{R}$$為實數集（直線）。定義<mark style="color:red;">Borel sigma-field (Borel set)</mark> $$\mathcal{B}$$<mark style="color:red;">為直線上的所有開（閉）區間的集合族</mark>，即$$\mathcal{B}=\{ (x,y)| x < y \text{ and } x,y \in \mathbb{R}\}$$。
+> 令宇集合$$S=\mathbb{R}$$為實數集（直線）。定義<mark style="color:red;">Borel sigma-field (Borel set)</mark> $$\mathcal{B}$$<mark style="color:red;">為直線上的所有開（閉）區間的集合族</mark>，即$$\mathcal{B}=\{ (x,y)| x < y \text{ and } x,y \in \mathbb{R}\}$$。
 
 此處$$\mathcal{B}$$集合定義中的區間可為開區間，閉區間，或是半開區間都可以，因為根據sigma-field的定義，開區間的補集是閉區間，仍為sigma-field的元素，反之亦然。而半開區間可寫為開區間與閉區間的聯集，依定義也是sigma-field內的元素。
 

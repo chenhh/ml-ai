@@ -116,7 +116,7 @@ proof：定義等價性 <=
 
 > $$\{E_n\}_{n \in \mathbb{N}}$$ 的極限存在若序列上極限等於下極限 $$\limsup_{n \rightarrow \infty} ⁡E_n  = \liminf_{n \rightarrow \infty} ⁡E_n$$，記為$$\displaystyle \lim_{n \rightarrow \infty} E_n$$
 
-* 上極限與下限集均為集合，因此$$\limsup_{n \rightarrow \infty} ⁡E_n  = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$\limsup_{n \rightarrow \infty} ⁡E_n  \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$\limsup_{n \rightarrow \infty} ⁡E_n  \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
+上極限與下限集均為集合，因此$$\limsup_{n \rightarrow \infty} ⁡E_n  = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$\limsup_{n \rightarrow \infty} ⁡E_n  \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$\limsup_{n \rightarrow \infty} ⁡E_n  \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
 
 #### 範例1
 

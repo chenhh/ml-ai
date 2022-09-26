@@ -49,12 +49,6 @@
 
 * [\[知乎\] 淺談條件期望](https://zhuanlan.zhihu.com/p/23670286)
 * [\[statlect\] Conditional probability with respect to a sigma-algebra](https://www.statlect.com/fundamentals-of-probability/conditional-probability-as-a-random-variable)
-* [\[wiki\] conditional expectation](https://en.wikipedia.org/wiki/Conditional\_expectation#Conditional\_expectation\_with\_respect\_to\_a\_.CF.83-algebra)
-* [\[知乎\] 條件期望與全期望公式](https://zhuanlan.zhihu.com/p/417592820)
-* [\[知乎\] 重期望公式及實例運用](https://zhuanlan.zhihu.com/p/163363352)
-* [\[譚升的部落格\] 條件期望](https://face2ai.com/Math-Probability-4-7-Conditional-Expectation/)
-* [Lecture 10 Conditional Expectation](https://web.ma.utexas.edu/users/gordanz/notes/conditional\_expectation.pdf)
-  * [https://web.ma.utexas.edu/users/gordanz/lecture\_notes\_page.html](https://web.ma.utexas.edu/users/gordanz/lecture\_notes\_page.html)
 
 
 

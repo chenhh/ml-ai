@@ -131,28 +131,22 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 ## 非互斥集合聯集與交集測度之和等於各別集合測度之和(排容原理)
 
 > $$\forall E,F \in \Sigma \Rightarrow \mu(E \cup F)+\mu(E \cap F)=\mu(E)+\mu(F)$$
->
-> 有限或無限測度時均成立
 
 <details>
 
 <summary>proof: 拆解為互斥的集合</summary>
 
-$$E \cup F=E \cup (F−E)$$
-
-所以 $$\mu(E \cup F)=\mu(E)+\mu(F−E)$$
-
-若$$\mu(E \cap F)=\infty$$，因為$$E \cap F \subseteq E \cup F$$，所以$$\mu(E \cup F)=\infty$$
-
-若$$\mu(E \cap F)< \infty$$, $$\mu(F−E)=\mu(F−(E\cap F))=\mu(F)−\mu(E\cap F)$$
-
-$$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
+* $$E \cup F=E \cup (F−E)$$
+* 所以 $$\mu(E \cup F)=\mu(E)+\mu(F−E)$$
+* 若$$\mu(E \cap F)=\infty$$，因為$$E \cap F \subseteq E \cup F$$，所以$$\mu(E \cup F)=\infty$$
+* 若$$\mu(E \cap F)< \infty$$, $$\mu(F−E)=\mu(F−(E\cap F))=\mu(F)−\mu(E\cap F)$$
+* $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 
 </details>
 
 ## 遞增集合極限的測度(可穿過極限符號)
 
-> * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\cup_{n \in \mathbb{N}} E_n)$$
+> * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
 > * 如果$$\mu(E_1)=\infty$$，此性質仍然成立。
 
@@ -174,7 +168,7 @@ $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 
 
 ## 遞減集合極限的測度(可穿過極限符號)
 
-> $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j$$且$$\exists n_0 \in \mathbb{N}, \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) = \mu(\cap_{n \in \mathbb{N}} E_n)$$
+> $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j$$且$$\exists n_0 \in \mathbb{N}, \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
 >
 > * $$\exists n_0 \in \mathbb{N} \mu(E_{n_0} )<\infty$$ 意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
 > * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
@@ -212,14 +206,6 @@ $$E_n=[0, 1+\frac{1}{n}] \subseteq \mathbb{R}$$為遞減的集合
 * $$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1]$$
 * 所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1$$
 * 而$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1$$
-
-#### 範例：遞減集合序列，全部集合測度均為無窮大但極限集合測度為0
-
-$$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
-
-則$$\mu(E_n)=\infty, ~\forall n \in \mathbb{N}$$
-
-但$$\cap_{n \in \mathbb{N}} E_n=\phi$$，因此$$\mu(\cap_n E_n)=0$$
 
 ## 集合序列上下極限的單調性
 

@@ -130,6 +130,7 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 <details>
 <summary>proof: 拆解為互斥的集合</summary>
+
 * $$E \cup F=E \cup (F−E)$$
 * 所以 $$\mu(E \cup F)=\mu(E)+\mu(F−E)$$
 * 若$$\mu(E \cap F)=\infty$$，因為$$E \cap F \subseteq E \cup F$$，所以$$\mu(E \cup F)=\infty$$
@@ -144,7 +145,8 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 > * 如果$$\mu(E_1)=\infty$$，此性質仍然成立。
 
 <details>
-proof:
+<summary>proof: 拆解為互斥的集合</summary>
+
 * $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 \cup (E_2−E_1 )\cup (E_3−E_2 )\cup \ldots$$
 * 所以$$\begin{align} \displaystyle \mu(\lim_{n \rightarrow \infty}⁡ E_n ) & =\mu(\bigcup_{n=1}^\infty E_n) \\ &=\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\ldots \\ & =\lim_{n \rightarrow \infty}⁡\{\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\\ &\ldots+\mu(E_n−E_{n−1} )\} -- (1)\end{align}$$
 * 因為$$E_1, E_2-E_1, \ldots, E_n - E_{n-1}$$為兩兩互斥的集合，且$$E_1 \cup(E_2-E_1) \cup \ldots \cup (E_n - E_{n-1})= E_n$$
@@ -160,7 +162,8 @@ proof:
 > * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
 
 <details>
-Proof:
+<summary>proof: 拆解為互斥的集合</summary>
+
 * $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )$$ 在$$n_0$$之前的集合不會影響此值 。同樣$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n )$$在$$n_0$$ 之前的集合也不會影響此值，因此只要考慮$$n_0$$ 之後的集合即可。
 * $$E_{n_0}−E_n \in \Sigma$$ 且$$E_{n_0}−E_{n_0 + 1} \subseteq E_{n_0}−E_{n_0+2}$$為遞增的集合序列 。
 * 所以$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_{n_0 }−E_n )=\mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n ))$$

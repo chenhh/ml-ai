@@ -16,13 +16,11 @@
 >   * <mark style="color:blue;">\[空集合的測度為0</mark>] $$\mu(\emptyset)=0$$
 >   * <mark style="color:blue;">\[countable additive, 互斥集合聯集的測度等於各別集合測度的加總</mark>] $$\displaystyle \mu(\bigcup_{n=1}^{\infty}E_n) =\sum_{n=1}^{\infty}\mu (E_n), ~ E_n \in \Sigma$$且$$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$
 >
-> <mark style="color:red;">測度是測量給定集合的函數，定義域為sigma-field(集合族)，而不是單純集合。因為可用選擇性公理從一般集合建構出不可測的集合，因此定義域必須為sigma-field才能避開不可測集合</mark>。
+> <mark style="color:red;">測度是測量給定集合的函數，定義域為sigma-field(集合族)，而不是單純集合。因為可用選擇性公理從一般集合建構出不可測的集合，因此定義域必須為sigma域才能避開不可測集合</mark>。不可測的集合在實際應用上幾乎不存在，因此定義sigma域為了理論的嚴謹性。
 >
 > 由於測度的值域可為無窮大，因此在證明性質時也要考慮無窮大時是否滿足條件。
 >
 > 如果測度滿足countable additive，則必滿足finite-additive $$\mu(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n \mu(E_i)$$，$$E_i \in \Sigma$$且$$E_i \cap E_j = \phi~ \forall i \neq j$$。
-
-測度的定義域在$$\Sigma$$上，而不是在原始的集合$$X$$，因為如果從$$X$$取出任意的結果$$\omega$$，可依選擇性公理建構出不可測的集合$$E$$，但是不可測的集合在實際應用上幾乎不存在，為了理論的嚴謹性，所以要求測度的定義域是在可測的集合，即$$\Sigma$$中的任意集合。
 
 * 同理函數$$f: X\rightarrow \mathbb{R}$$雖然定義域是在一般集合$$X$$中，但是如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數，否則為不可測函數。
 * 註：測度之值在此定義為正實數，但之後可放寬為任意實數(如負值)或複數。
@@ -37,7 +35,7 @@
 
 常見測度
 
-在實數$$\mathbb{R}$$上常數的測度有<mark style="color:red;">Lebesgue measure</mark>
+在實數$$\mathbb{R}$$上常數的測度有<mark style="color:red;">Lebesgue measure (on Borel set)</mark>
 
 * $$\mu([a,b])=\mu([a,b))=\mu((a,b])=\mu((a,b))=|b−a|$$。
 * $$\mu([a,\infty))=\mu((a,\infty))=\mu((−\infty,b])=\mu((−\infty,b))=\infty$$
@@ -122,12 +120,13 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 > 如果對宇集合可得$$\mu(X)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
 
-* $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
-* <mark style="color:blue;">所有的機率測度都是有限測度</mark>，因為$$\mu(\Omega) =1$$。
+$$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
+
+<mark style="color:blue;">所有的機率測度都是有限測度</mark>，因為$$\mu(\Omega) =1$$。
 
 > \[<mark style="color:blue;">sigma-finite measure</mark>] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n \ni \mu(E_n )< \infty, ~ \forall n$$
 
-* 實數的長度不是有限測度，<mark style="color:blue;">但實數的長度是sigma有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+實數的長度不是有限測度，<mark style="color:blue;">但實數的長度是sigma有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 ## 非互斥集合聯集與交集測度之和等於各別集合測度之和(排容原理)
 
@@ -207,3 +206,30 @@ $$E_n=[0, 1+\frac{1}{n}] \subseteq \mathbb{R}$$為遞減的集合
 * $$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1]$$
 * 所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1$$
 * 而$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1$$
+
+## 集合序列上下極限的單調性
+
+> 令集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
+>
+> * $$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$
+> * 當$$\displaystyle \mu(\bigcup_{n=1}^\infty E_n) < \infty$$可得 $$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$
+
+## 集合序列極限的測度(可穿過極限符號)
+
+> 若極限$$\displaystyle \lim_{n \rightarrow \infty}E_n$$存在，且$$\displaystyle \mu(\bigcup_{n=1}^\infty E_n) < \infty$$，則：$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$
+
+<details>
+
+<summary>proof: 極限存在若且唯若上極限=下極限</summary>
+
+因為$$\displaystyle \lim_{n \rightarrow \infty}E_n$$存在，所以$$\displaystyle \limsup_{n \rightarrow \infty} E_n = \liminf_{n \rightarrow \infty} E_n$$
+
+可得$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) = \mu(\liminf_{n \rightarrow \infty} E_n) = \mu(\lim_{n \rightarrow \infty} E_n)$$--(1)
+
+由集合序列上下極限的單調性知：
+
+$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq  \lim_{n \rightarrow \infty} \mu(E_n) \leq  \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu (\limsup_{n \rightarrow \infty} E_n)$$--(2)
+
+由(1,2)得$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$ (QED)
+
+</details>

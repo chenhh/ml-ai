@@ -97,19 +97,21 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 > * \[<mark style="color:blue;">有限次可加性, finitely sub-additive</mark>] $$\forall E_1,E_2, \ldots,E_n \in \Sigma\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i )$$
 > * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\forall E_1,E_2, \ldots \in \Sigma \Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
 
-proof:
+<details>
+<summary>proof: 次可加性，拆解為互斥的集合</summary>
 
 * $$E \cup F = E \cup (F - E)$$
 * 由測度定義得 $$\mu(E \cup F) = \mu(E) + \mu(F-E)$$
 * 因為$$F-E \subseteq F$$可得$$\mu(F-E) \leq \mu(F)$$
 * 因此 $$\mu(E \cup F) \leq \mu (E) +\mu(F)$$ (QED)
-
-Proof:
+</details>
+<details>
+<summary>proof: 可數次可加性，拆解為互斥的集合</summary>
 
 * 令$$F_1=E_1, ~F_2=E_2−E_1, ~F_3=E_3−(E_1 \cup E_2 ), \ldots , F_n=E_n−(E_1 \cup \ldots \cup E_{n−1} )$$
 * 可得$$F_n$$ 為$$E_n$$ 的子集合 ($$F_n \subseteq E_n$$ )，且$$\{F_n\} \subseteq \Sigma$$為互斥的集合序列 $$F_i \cap F_j=\emptyset, ~ \forall i \neq j$$ 。
 * $$\displaystyle \mu(\bigcup_{i=1}^\infty E_i )=\mu(\bigcup_{i=1}^\infty F_i )=\sum_{i=1}^\infty \mu(F_i ) \leq \sum_{i=1}^\infty \mu(E_i )$$ (QED).
-
+</details>
 ### 有限測度與sigma有限測度
 
 > 如果對宇集合可得$$\mu(X)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
@@ -125,27 +127,28 @@ Proof:
 
 > $$\forall E,F \in \Sigma \Rightarrow \mu(E \cup F)+\mu(E \cap F)=\mu(E)+\mu(F)$$
 
-Proof:
-
+<details>
+<summary>proof: 拆解為互斥的集合</summary>
 * $$E \cup F=E \cup (F−E)$$
 * 所以 $$\mu(E \cup F)=\mu(E)+\mu(F−E)$$
 * 若$$\mu(E \cap F)=\infty$$，因為$$E \cap F \subseteq E \cup F$$，所以$$\mu(E \cup F)=\infty$$
 * 若$$\mu(E \cap F)< \infty$$, $$\mu(F−E)=\mu(F−(E\cap F))=\mu(F)−\mu(E\cap F)$$
 * $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
-
+</details>
 ### 遞增集合極限的測度(可穿過極限符號)
 
 > * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
 > * 如果$$\mu(E_1)=\infty$$，此性質仍然成立。
 
+<details>
 proof:
-
 * $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 \cup (E_2−E_1 )\cup (E_3−E_2 )\cup \ldots$$
 * 所以$$\begin{align} \displaystyle \mu(\lim_{n \rightarrow \infty}⁡ E_n ) & =\mu(\bigcup_{n=1}^\infty E_n) \\ &=\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\ldots \\ & =\lim_{n \rightarrow \infty}⁡\{\mu(E_1 )+\mu(E_2−E_1 )+\mu(E_3−E_2 )+\\ &\ldots+\mu(E_n−E_{n−1} )\} -- (1)\end{align}$$
 * 因為$$E_1, E_2-E_1, \ldots, E_n - E_{n-1}$$為兩兩互斥的集合，且$$E_1 \cup(E_2-E_1) \cup \ldots \cup (E_n - E_{n-1})= E_n$$
 * 因此$$\mu(E_1) + \mu(E_2 - E_1) + \ldots \mu(E_n - E_{n-1}) = \mu(E_n) -- (2)$$
 * 由(1,2)得 $$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$ (QED)
+</details>
 
 ### 遞減集合極限的測度(可穿過極限符號)
 
@@ -153,9 +156,8 @@ proof:
 >
 > * $$\exists n_0 \in \mathbb{N} \mu(E_{n_0} )<\infty$$ 意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
 > * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
-
-Proof
-
+<details>
+Proof:
 * $$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )$$ 在$$n_0$$之前的集合不會影響此值 。同樣$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n )$$在$$n_0$$ 之前的集合也不會影響此值，因此只要考慮$$n_0$$ 之後的集合即可。
 * $$E_{n_0}−E_n \in \Sigma$$ 且$$E_{n_0}−E_{n_0 + 1} \subseteq E_{n_0}−E_{n_0+2}$$為遞增的集合序列 。
 * 所以$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_{n_0 }−E_n )=\mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n ))$$
@@ -166,13 +168,11 @@ Proof
 * 所以$$\displaystyle \mu(\lim_{n \rightarrow \infty}⁡(E_{n_0}−E_n ) )=\mu(E_{n_0 }−(\bigcap_n E_n ))=\mu(E_{n_0} )− \mu(\cap_n E_n )$$
 * $$\displaystyle \mu(E_{n_0} )−\lim_{n \rightarrow \infty} \mu(E_n )= \mu(E_{n_0} )−\mu(\bigcap_n E_n )$$
 * $$\displaystyle \lim_{n \rightarrow \infty}\mu(E_n )=\mu(\bigcap_n E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )$$ (QED)
+</details>
 
 #### 範例
 
 * $$E_n=[0, 1+\frac{1}{n}] \subseteq \mathbb{R}$$為遞減的集合
-* $$$
-  }$$
-  $$$
 * $$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1]$$
 * 所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1$$
 * 而$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1$$

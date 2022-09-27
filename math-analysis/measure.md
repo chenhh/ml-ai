@@ -227,12 +227,12 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 但$$\cap_{n \in \mathbb{N}} E_n=\phi$$，因此$$\mu(\cap_n E_n)=0$$
 
-## 集合序列上下極限的單調性
+## 集合序列上下極限的測度(Fatou lemma of measure)
 
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
 >
 > 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$&#x20;
-> 2. 當可得 $$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$
+> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$
 
 <details>
 
@@ -242,11 +242,15 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 由測度單調性得 $$\mu(\bigcap_{j=k}^\infty E_j)  \leq  \mu(E_k) ~, k=1,2,\dots$$
 
-令$$M_k=\bigcap_{j=k}^\infty E_j$$，可得$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \dots$$為遞增集合序列
+令$$M_k=\bigcap_{j=k}^\infty E_j$$，可得$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \dots$$為增集合序列
 
-因為$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{j=n}^\infty E_j$$
+由continuity of measure可得$$\displaystyle \lim_{n \rightarrow \infty} \mu(⁡M_n )=\mu(\lim_{n \rightarrow \infty}⁡ M_n)=\mu(\bigcup_{n=1}^\infty M_n)$$
 
-可得
+而$$\displaystyle \mu(\bigcup_{n=1}^\infty M_n)=\mu(\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k)=\mu(\liminf_{n \rightarrow }{E_n})$$--(1)
+
+由測度的次可加性可得
+
+
 
 
 

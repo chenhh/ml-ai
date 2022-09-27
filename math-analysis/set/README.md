@@ -75,7 +75,7 @@
 令$$U$$為宇集合(universal set)，即為全部元素的集合。
 
 * 補集(complement)。$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
-  * $$X^c = U \setminus X$$
+  * $$X^c = U \setminus X \equiv U-X$$
   * $$X \cup X^c = U$$
   * $$X \cap X^c = \emptyset$$
 * 差集(difference)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。

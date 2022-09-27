@@ -18,43 +18,69 @@
 
 若$$A$$為有限集，則對$$A$$的元素個數使用數學歸納法可證明。
 
-* $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
-* 令$$A\sim \mathbb{N}_1$$，則$$A$$只有兩個子集，$$\emptyset$$與$$A$$，兩者均為有限集
-* 假設對含有$$k$$個元素的每個有限集均成立。
-* 令$$B\subseteq A$$，若$$k+1 \notin B$$，則$$B\subseteq \mathbb{N}_k$$，因此$$B$$為有限集。
-* 若$$k+1 \in B$$，令$$C=B \setminus \{k+1\}$$，則$$C \subseteq \mathbb{N}_k$$，即$$C$$為有限集。而$$B = C \cup \{ k+1 \}$$，所以$$B$$為有限集。
-* 可得$$A$$有$$k+1$$個元素時的子集為有限集。
-* 依數學歸納法可得有限集的子集為有限集。(QED)。
+proof:
+
+$$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
+
+令$$A\sim \mathbb{N}_1$$，則$$A$$只有兩個子集，$$\emptyset$$與$$A$$，兩者均為有限集
+
+假設對含有$$k$$個元素的每個有限集均成立。
+
+令$$B\subseteq A$$，若$$k+1 \notin B$$，則$$B\subseteq \mathbb{N}_k$$，因此$$B$$為有限集。
+
+若$$k+1 \in B$$，令$$C=B \setminus \{k+1\}$$，則$$C \subseteq \mathbb{N}_k$$，即$$C$$為有限集。而$$B = C \cup \{ k+1 \}$$，所以$$B$$為有限集。
+
+可得$$A$$有$$k+1$$個元素時的子集為有限集。
+
+依數學歸納法可得有限集的子集為有限集。(QED)。
 
 ### 有限集不會等價於任意真子集
 
 一樣使用數學歸納法證明。
 
-* 若$$A \sim \mathbb{N}_1$$，則$$A$$只有一個真子集$$\emptyset$$，但$$A$$不是空集合，所以兩者不等價。
-* \[歸納假設] 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
-* 令$$|A|=k+1$$，因為$$A\sim \mathbb{N}_{k+1}$$，所以$$A$$的每個真子集等價於$$\mathbb{N}_{k+1}$$的某個真子集。
-* \[反證法] 不失一般性，令$$A=\mathbb{N}_{k+1}$$，$$B\subset \mathbb{N}_{k+1}$$且$$B \sim \mathbb{N}_{k+1}$$，即存在一對一且映成的函數$$f: \mathbb{N}_{k+1} \rightarrow B$$。可分成$$B$$是否包含正整數$$k+1$$討論。
-* 若$$k+1 \notin B$$，由假設知$$B \subset \mathbb{N}_{k+1}$$，去除一個元素仍為真子集，即$$B \setminus \{ f(k+1)\} \subset \mathbb{N}_{k+1}$$。
-  * 因為函數$$f$$為一對一且映成，去除掉一個元素後，仍為一對一且映成，變成$$f: \mathbb{N}_k \rightarrow B \setminus \{f(k+1)\}$$，可得$$B \setminus \{ f(k+1)\} \sim \mathbb{N}_k$$，但此與歸納假設矛盾。
-* 若$$k+1 \in B$$且 $$f(k+1) = k+1$$，則$$B \setminus \{ (k+1)\} \subset \mathbb{N}_{k+1}$$，同上推論可得$$B \setminus \{ (k+1)\} \sim \mathbb{N}_k$$但此與歸納假設矛盾。
-* 若$$k+1 \in B$$但$$f(k+1) \neq k+1$$，可定義函數$$g: B \rightarrow B$$使得&#x20;
-  * $$g(i) = i, \text{ if }i \neq k+1, i \neq f(k+1)$$
-  * $$g(i) = k+1, \text{ if } i = f(k+1)$$
-  * $$g(i) = f(k+1), \text{ if } i = k+1$$
-  * 則$$g$$為一對一且映成的函數，則合成函數$$g\circ f: \mathbb{N}_{k+1} \rightarrow B$$為一對一且映成的函數，同上推論可得與歸納假設矛盾的結果。
-* 因此由數學歸納法可得有限集與不與其任何真子集等價 (QED)。
+proof:
+
+若$$A \sim \mathbb{N}_1$$，則$$A$$只有一個真子集$$\emptyset$$，但$$A$$不是空集合，所以兩者不等價。
+
+\[歸納假設] 假設對於所有含有$$k$$個元素的每個有限集合均不等價於任意真子集。
+
+令$$|A|=k+1$$，因為$$A\sim \mathbb{N}_{k+1}$$，所以$$A$$的每個真子集等價於$$\mathbb{N}_{k+1}$$的某個真子集。
+
+\[反證法] 不失一般性，令$$A=\mathbb{N}_{k+1}$$，$$B\subset \mathbb{N}_{k+1}$$且$$B \sim \mathbb{N}_{k+1}$$，即存在一對一且映成的函數$$f: \mathbb{N}_{k+1} \rightarrow B$$。可分成$$B$$是否包含正整數$$k+1$$討論。
+
+若$$k+1 \notin B$$，由假設知$$B \subset \mathbb{N}_{k+1}$$，去除一個元素仍為真子集，即$$B \setminus \{ f(k+1)\} \subset \mathbb{N}_{k+1}$$。
+
+因為函數$$f$$為一對一且映成，去除掉一個元素後，仍為一對一且映成，變成$$f: \mathbb{N}_k \rightarrow B \setminus \{f(k+1)\}$$，可得$$B \setminus \{ f(k+1)\} \sim \mathbb{N}_k$$，但此與歸納假設矛盾。
+
+若$$k+1 \in B$$且 $$f(k+1) = k+1$$，則$$B \setminus \{ (k+1)\} \subset \mathbb{N}_{k+1}$$，同上推論可得$$B \setminus \{ (k+1)\} \sim \mathbb{N}_k$$但此與歸納假設矛盾。
+
+若$$k+1 \in B$$但$$f(k+1) \neq k+1$$，可定義函數$$g: B \rightarrow B$$使得&#x20;
+
+* $$g(i) = i, \text{ if }i \neq k+1, i \neq f(k+1)$$
+* $$g(i) = k+1, \text{ if } i = f(k+1)$$
+* $$g(i) = f(k+1), \text{ if } i = k+1$$
+* 則$$g$$為一對一且映成的函數，則合成函數$$g\circ f: \mathbb{N}_{k+1} \rightarrow B$$為一對一且映成的函數，同上推論可得與歸納假設矛盾的結果。
+
+因此由數學歸納法可得有限集與不與其任何真子集等價 (QED)。
 
 ### 自然數為無限集
 
 > 1. $$\forall a, b \in \mathbb{N}$$且$$a \neq b$$ 則 $$\mathbb{N}_a$$與$$\mathbb{N}_b$$不等價。
 > 2. $$\mathbb{N}$$為(可數)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
 
-1. &#x20;不失一般性 令$$a<b$$，則$$\mathbb{N}_a \subset \mathbb{N}_b$$且$$\mathbb{N}_b$$為有限集，因此兩者不等價 (QED)。
-2. \[反證法]
+proof:
 
-* 令$$E$$為所有正偶數形成的集合，則$$E \subset \mathbb{N}$$。
-* 令函數$$f: \mathbb{N} \rightarrow E$$, $$f(n)=2n, \forall n \in \mathbb{N}$$，則$$f$$為一對一且映成的函數。
-* 依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 (QED)。
+1. &#x20;不失一般性 令$$a<b$$，則$$\mathbb{N}_a \subset \mathbb{N}_b$$且$$\mathbb{N}_b$$為有限集，因此兩者不等價 (QED)。
+
+proof:
+
+1. \[反證法]
+
+令$$E$$為所有正偶數形成的集合，則$$E \subset \mathbb{N}$$。
+
+令函數$$f: \mathbb{N} \rightarrow E$$, $$f(n)=2n, \forall n \in \mathbb{N}$$，則$$f$$為一對一且映成的函數。
+
+依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 (QED)。
 
 ### 無限集的充分必要條件
 
@@ -67,8 +93,9 @@
 > * 如果$$S$$與$$\mathbb{N}$$是一對一且映成關係時，則$$S$$為無限可數集。
 > * 如果$$S$$不是可數集時，則為不可數集。
 
-* 可數集合可分為有限個元素(有限集)或是無限集(無限可數集)。
-* 最小的無限集合為自然數，為可數無限集合。
+可數集合可分為有限個元素(有限集)或是無限集(無限可數集)。
+
+最小的無限集合為自然數，為可數無限集合。
 
 ## 不可數(無限)集合(uncountable (infinite) set)
 

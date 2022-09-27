@@ -150,7 +150,7 @@ $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 
 </details>
 
-## 遞增集合極限的測度(可穿過極限符號)
+## 遞增集合極限的測度(continuity of measure)
 
 > * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\cup_{n \in \mathbb{N}} E_n)$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
@@ -159,6 +159,10 @@ $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 <details>
 
 <summary>proof: 拆解為互斥的集合</summary>
+
+若存在$$n_0 \in \mathbb{N} \ni \mu(E_{n_0})=\infty$$，則可得$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\infty$$
+
+&#x20;考慮所有集合測度均為有限值，即$$\mu(E_n)<\infty, ~\forall n \in \mathbb{N}$$
 
 $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 \cup (E_2−E_1 )\cup (E_3−E_2 )\cup \ldots$$
 
@@ -172,11 +176,11 @@ $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 
 
 </details>
 
-## 遞減集合極限的測度(可穿過極限符號)
+## 遞減集合極限的測度(continuity of measure)
 
-> $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j$$且$$\exists n_0 \in \mathbb{N}, \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) = \mu(\cap_{n \in \mathbb{N}} E_n)$$
+> $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j$$且$$\exists n_0 \in \mathbb{N} \ni \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) = \mu(\cap_{n \in \mathbb{N}} E_n)$$
 >
-> * $$\exists n_0 \in \mathbb{N} \mu(E_{n_0} )<\infty$$ 意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
+> * $$\exists n_0 \in \mathbb{N} \ni \mu(E_{n_0} )<\infty$$ 意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
 > * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
 
 <details>
@@ -209,9 +213,11 @@ $$\displaystyle \lim_{n \rightarrow \infty}\mu(E_n )=\mu(\bigcap_n E_n )=\mu(\li
 
 $$E_n=[0, 1+\frac{1}{n}] \subseteq \mathbb{R}$$為遞減的集合
 
-* $$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1]$$
-* 所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1$$
-* 而$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1$$
+$$\displaystyle \lim_{n \rightarrow \infty}E_n = \lim_{n \rightarrow \infty}⁡[0, 1+\frac{1}{n}]=[0,1]$$
+
+所以 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n )=1$$
+
+而$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n )= \lim_{n \rightarrow \infty}⁡(1+\frac{1}{n})=1$$
 
 #### 範例：遞減集合序列，全部集合測度均為無窮大但極限集合測度為0
 
@@ -223,27 +229,53 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 ## 集合序列上下極限的單調性
 
-> 令集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
+> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
 >
-> * $$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$
-> * 當$$\displaystyle \mu(\bigcup_{n=1}^\infty E_n) < \infty$$可得 $$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$
-
-## 集合序列極限的測度(可穿過極限符號)
-
-> 若極限$$\displaystyle \lim_{n \rightarrow \infty}E_n$$存在，且$$\displaystyle \mu(\bigcup_{n=1}^\infty E_n) < \infty$$，則：$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$
+> 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$&#x20;
+> 2. 當可得 $$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$
 
 <details>
 
-<summary>proof: 極限存在若且唯若上極限=下極限</summary>
+<summary>proof 1: </summary>
 
-因為$$\displaystyle \lim_{n \rightarrow \infty}E_n$$存在，所以$$\displaystyle \limsup_{n \rightarrow \infty} E_n = \liminf_{n \rightarrow \infty} E_n$$
+因為$$\bigcap_{j=k}^\infty E_j \subseteq E_k~, k=1,2,\dots$$
 
-可得$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) = \mu(\liminf_{n \rightarrow \infty} E_n) = \mu(\lim_{n \rightarrow \infty} E_n)$$--(1)
+由測度單調性得 $$\mu(\bigcap_{j=k}^\infty E_j)  \leq  \mu(E_k) ~, k=1,2,\dots$$
 
-由集合序列上下極限的單調性知：
+令$$M_k=\bigcap_{j=k}^\infty E_j$$，可得$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \dots$$為遞增集合序列
 
-$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq  \lim_{n \rightarrow \infty} \mu(E_n) \leq  \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu (\limsup_{n \rightarrow \infty} E_n)$$--(2)
+因為$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{j=n}^\infty E_j$$
 
-由(1,2)得$$\displaystyle \mu(\lim_{n \rightarrow \infty}E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$ (QED)
+可得
+
+
+
+</details>
+
+## The Borel-Cantelli lemma
+
+> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$
+>
+> 如果所有的事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生的機率(測度)為0
+
+<details>
+
+<summary>proof:</summary>
+
+由測度的可數次可加性得 $$\mu(\bigcup_{n=1}^\infty E_n) \leq \sum_{n=1}^\infty \mu(E_n) < \infty$$--(1)
+
+&#x20;集合上極限的定義為$$\displaystyle \limsup_{n \rightarrow \infty} E_n = \bigcap_{n=1}^\infty  \bigcup_{k=n}^\infty E_k$$
+
+令$$M_n=\cup_{k=n}^\infty E_k$$，可得$$M_1 \supseteq M_2\supseteq \dots$$為遞減集合序列
+
+由continuity of measure得$$\displaystyle \mu(\cap_{n =1}^\infty M_n)  = \lim_{n \rightarrow \infty }⁡ \mu(M_n )$$
+
+因此$$\displaystyle \mu(\bigcap_{n =1}^\infty M_n) \equiv \mu(\bigcap_{n =1}^\infty \bigcup_{k=n}^\infty E_k) \equiv \mu(\limsup_{n \rightarrow \infty} E_n) =  \lim_{n \rightarrow \infty} \mu(M_n) \equiv \lim_{n \rightarrow \infty} \mu(\cup_{k=n}^\infty E_k)$$--(2)
+
+由(1)得 $$\displaystyle \lim_{n \rightarrow \infty} \mu(\bigcup_{k=n}^\infty E_k) \leq \lim_{n \rightarrow \infty} \sum_{k=n}^\infty \mu(E_k)$$--(3)
+
+因為$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，由無窮級數的收斂條件可得$$\displaystyle \lim_{n \rightarrow \infty} \sum_{k=n}^\infty \mu(E_k)=0$$--(4)
+
+由(2,3,4)得$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \leq \lim_{n \rightarrow \infty} \sum_{k=n}^\infty \mu(E_k)=0$$ (QED)
 
 </details>

@@ -232,31 +232,39 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
 >
 > 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$&#x20;
-> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$
+> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ if $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$
+>
+> 因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
+>
+> 在**有限測度**時，可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu(\limsup_{n \rightarrow \infty} E_n)$$
 
 <details>
 
 <summary>proof 1: </summary>
 
-因為$$\bigcap_{j=k}^\infty E_j \subseteq E_k~, k=1,2,\dots$$
+令$$M_k\equiv \bigcap_{j=k}^\infty E_j \subseteq E_k~, k=1,2,\dots$$
 
-由測度單調性得 $$\mu(\bigcap_{j=k}^\infty E_j)  \leq  \mu(E_k) ~, k=1,2,\dots$$
+可得$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \dots$$為遞增集合序列，且$$\displaystyle \lim_{n \rightarrow \infty} M_n = \bigcup_{n=1}^\infty M_n$$
 
-令$$M_k=\bigcap_{j=k}^\infty E_j$$，可得$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \dots$$為增集合序列
+由continuity of measure可得$$\displaystyle \lim_{n \rightarrow \infty} \mu(⁡M_n )=\mu(\lim_{n \rightarrow \infty}⁡ M_n)=\mu(\bigcup_{n=1}^\infty M_n)$$--(1)
 
-由continuity of measure可得$$\displaystyle \lim_{n \rightarrow \infty} \mu(⁡M_n )=\mu(\lim_{n \rightarrow \infty}⁡ M_n)=\mu(\bigcup_{n=1}^\infty M_n)$$
+而$$\displaystyle \mu(\bigcup_{n=1}^\infty M_n)=\mu(\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k)=\mu(\liminf_{n \rightarrow \infty}{E_n})$$--(2)
 
-而$$\displaystyle \mu(\bigcup_{n=1}^\infty M_n)=\mu(\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k)=\mu(\liminf_{n \rightarrow }{E_n})$$--(1)
+同理$$\displaystyle \lim_{n \rightarrow \infty} \mu(⁡M_n )= \lim_{n \rightarrow \infty} \mu(\bigcap_{k=n}^\infty E_k)$$--(3)
 
-由測度的次可加性可得
+由(1,2,3)得$$\displaystyle \mu(\liminf_{n \rightarrow \infty}{E_n}) = \lim_{n \rightarrow \infty} \mu(\bigcap_{k=n}^\infty E_k)$$--(4)
 
+由於$$\displaystyle \bigcap_{k=n}^\infty E_k \subseteq E_n$$，由測度單調性得$$\displaystyle \mu(\bigcap_{k=n}^\infty E_k) \leq \mu(E_n)$$
 
+但無法確定$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n)$$是否存在，但上下極限必定存在，因此可得$$\displaystyle \liminf_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k) \leq \liminf_{n \rightarrow \infty } \mu(E_n)$$--(5)
 
+由於$$\displaystyle \liminf_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k) = \lim_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k)$$--(6)
 
+從(4,5,6)可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$ (QED)
 
 </details>
 
-## The Borel-Cantelli lemma
+## 樣The Borel-Cantelli lemma
 
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$
 >

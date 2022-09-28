@@ -246,7 +246,7 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 可得$$M_1 \subseteq M_2 \subseteq M_3 \subseteq \dots$$為遞增集合序列，且$$\displaystyle \lim_{n \rightarrow \infty} M_n = \bigcup_{n=1}^\infty M_n$$
 
-由continuity of measure可得$$\displaystyle \lim_{n \rightarrow \infty} \mu(⁡M_n )=\mu(\lim_{n \rightarrow \infty}⁡ M_n)=\mu(\bigcup_{n=1}^\infty M_n)$$--(1)
+由continuity of measure(在$$\mu(M_1)=\infty$$時仍成立)可得$$\displaystyle \lim_{n \rightarrow \infty} \mu(⁡M_n )=\mu(\lim_{n \rightarrow \infty}⁡ M_n)=\mu(\bigcup_{n=1}^\infty M_n)$$--(1)
 
 而$$\displaystyle \mu(\bigcup_{n=1}^\infty M_n)=\mu(\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k)=\mu(\liminf_{n \rightarrow \infty}{E_n})$$--(2)
 
@@ -256,7 +256,7 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 由於$$\displaystyle \bigcap_{k=n}^\infty E_k \subseteq E_n$$，由測度單調性得$$\displaystyle \mu(\bigcap_{k=n}^\infty E_k) \leq \mu(E_n)$$
 
-但無法確定$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n)$$是否存在，但上下極限必定存在，因此可得$$\displaystyle \liminf_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k) \leq \liminf_{n \rightarrow \infty } \mu(E_n)$$--(5)
+由(4)知$$\displaystyle \lim_{n \rightarrow \infty} \mu(\bigcap_{k=n}^\infty E_k)$$存在，但無法確定$$\displaystyle \lim_{n \rightarrow \infty} \mu(E_n)$$是否存在，但數列上下極限必定存在，因此可得$$\displaystyle \liminf_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k) \leq \liminf_{n \rightarrow \infty } \mu(E_n)$$--(5)
 
 由於$$\displaystyle \liminf_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k) = \lim_{n \rightarrow \infty }\mu(\bigcap_{k=n}^\infty E_k)$$--(6)
 

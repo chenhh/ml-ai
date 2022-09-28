@@ -232,11 +232,9 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
 >
 > 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$&#x20;
-> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ if $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$
->
-> 因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
->
-> 在**有限測度**時，可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu(\limsup_{n \rightarrow \infty} E_n)$$
+> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ if $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
+> 3. 在**有限測度**時，可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu(\limsup_{n \rightarrow \infty} E_n)$$
+> 4. 在有限測度時，若$$\displaystyle \lim_{n \rightarrow \infty} E_n$$存在，且$$\displaystyle \mu(\bigcup_{n=1}^\infty E_n) < \infty$$則可得 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$
 
 <details>
 
@@ -264,7 +262,21 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 </details>
 
-## 樣The Borel-Cantelli lemma
+<details>
+
+<summary>proof 4:</summary>
+
+因為$$\displaystyle \lim_{n \rightarrow \infty} E_n$$存在，所以$$\displaystyle \limsup_{n \rightarrow \infty} E_n = \liminf_{n \rightarrow \infty} E_n$$
+
+$$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rightarrow \infty} E_n) = \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n) \leq \limsup_{n \rightarrow \infty} \mu(E_n)$$--(1)
+
+因為3得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n) \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rightarrow \infty} E_n)$$--(2)
+
+由(1,2)得$$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$ (QED)
+
+</details>
+
+## The Borel-Cantelli lemma
 
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$
 >
@@ -280,7 +292,7 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 令$$M_n=\cup_{k=n}^\infty E_k$$，可得$$M_1 \supseteq M_2\supseteq \dots$$為遞減集合序列
 
-由continuity of measure得$$\displaystyle \mu(\cap_{n =1}^\infty M_n)  = \lim_{n \rightarrow \infty }⁡ \mu(M_n )$$
+由continuity of measure且$$\mu(M_n)<\infty$$得$$\displaystyle \mu(\cap_{n =1}^\infty M_n)  = \lim_{n \rightarrow \infty }⁡ \mu(M_n )$$
 
 因此$$\displaystyle \mu(\bigcap_{n =1}^\infty M_n) \equiv \mu(\bigcap_{n =1}^\infty \bigcup_{k=n}^\infty E_k) \equiv \mu(\limsup_{n \rightarrow \infty} E_n) =  \lim_{n \rightarrow \infty} \mu(M_n) \equiv \lim_{n \rightarrow \infty} \mu(\cup_{k=n}^\infty E_k)$$--(2)
 

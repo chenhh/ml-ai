@@ -16,7 +16,11 @@
 >
 > 1. \[區間的測度為其長度] $$I \neq \empty$$且$$I \subseteq \mathbb{R}$$為Lebesgue可測集，則$$m(I)=\text{length of } I$$。
 > 2. \[平移不變性]$$E$$為Lebesgue可測集，$$y\in \mathbb{R}$$為任意實數，定義集合$$E+y=\{x+y~|~ x\in E\}$$，則$$m(E+y)=m(E)$$。
-> 3. \[可數可加性] $$\{E_n\}_{n=1}^\infty$$為
+> 3. \[可數可加性] $$\{E_n\}_{n=1}^\infty$$，$$E_i \cap E_j =\empty, ~\forall i \neq j$$為Lebesgue可測集合序列，則$$\displaystyle m(\bigcup_{n=1}^\infty E_n)=\sum_{n=1}^\infty m(E_n)$$。
+
+實數上並非所有任意集合均可定義滿足以上三個條件的函數$$m$$，必須是可測集合才可建構出滿足以上三個條件的函數$$m$$。
+
+<mark style="color:red;">不可測的集合必須使用選擇性公理才能建構出</mark>，一般應用中所遇到的集合均為可測集合，可放心使用。
 
 ## L覆蓋(L-covering)
 

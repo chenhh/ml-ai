@@ -72,7 +72,7 @@
 
 ## sigma域（sigma代數）與可測空間
 
-> $$F$$為sigma域若$$F$$為域且滿足 ，即<mark style="color:blue;">無限可數的集合也是屬於</mark>$$F$$。
+> $$F$$為sigma域若$$F$$為域且滿足$$\cup_{i=1}^\infty A_i \in F$$ ，即<mark style="color:blue;">無限可數的集合也是屬於</mark>$$F$$。
 >
 > 稱集合對$$(S, F)$$為<mark style="color:red;">可測空間（measurable space）</mark>。
 >
@@ -80,6 +80,7 @@
 
 * \[<mark style="color:blue;">F在可數交集下為閉集</mark>]如果$$F$$為sigma-field，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
 * 空集合$$\emptyset$$與宇集合$$S$$也都是$$F$$的元素。
+* 由若$$A_1, A_2,\dots \in F$$，由定義知$$\displaystyle \limsup_{n \rightarrow \infty} A_n \equiv \bigcap_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$，同理$$\displaystyle \liminf_{n \rightarrow \infty} A_n \equiv \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$。
 
 ### 範例
 

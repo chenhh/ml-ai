@@ -24,25 +24,38 @@
 
 ## L覆蓋(L-covering)
 
-> 令集合$$E \subset \mathbb{R}^n$$​，若$$\{I_k\} \subset \mathbb{R}^n$$為可數（countable)開矩體（開集合），且有$$\displaystyle E \subseteq \bigcup_{k\geq 1} I_k$$，則稱$$\{I_k\}$$​為集合$$E$$​的一組L-覆蓋。
+> 令集合$$E \subset \mathbb{R}^n$$​，若$$\{I_k\} \subset \mathbb{R}^n$$為可數（countable)開矩體（開集合），且$$I_k \neq \empty$$，且有$$\displaystyle E \subseteq \bigcup_{k = 1}^\infty I_k$$，則稱$$\{I_k\}$$​為集合$$E$$​的一組L-覆蓋。
 
-由定義知$$E$$​的L-覆蓋不唯一，可以有任意組，且每一組L-覆蓋可得$$\sum_{k \geq 1} |I_k|$$，其中$$|I_k|$$​為其體積，可以是$$+\infty$$​。
+由定義知$$E$$​的L-覆蓋不唯一，可以有任意組，且每一組L-覆蓋可得$$\sum_{k \geq 1} |I_k|$$，其中$$|I_k|$$​為其長度(體積)，可以是$$+\infty$$​。
 
 ## Lebesgue外測度(Lebesgue outer measure)
 
-> 定義$$\displaystyle m^{*}(E)=\inf \{ \sum_{k \geq 1}|I_k| ~\big|~ \{I_k\} \text{ is L-covering of set } E  \}$$
+> 定義$$\displaystyle m^{*}(E)=\inf \{ \sum_{k \geq 1}|I_k| ~\big|~ E\subseteq \bigcup_{k=1}^\infty I_k, ~\{I_k\} \text{ i.e. is L-covering of set } E  \}$$
 >
 > 為集合$$E$$​的外測度。
 
-若集合$$E$$​的任意個L-覆蓋$$\{I_k\}$$​均滿足$$\sum_{k \geq 1}|I_k|＝\infty$$，則$$m^{*}(E)=\infty$$，否則$$m^{*}(E)<\infty$$。
+* 若集合$$E$$​的任意個L-覆蓋$$\{I_k\}$$​均滿足$$\displaystyle \sum_{k \geq 1}|I_k|＝\infty$$，則$$m^{*}(E)=\infty$$，否則$$m^{*}(E)<\infty$$為有限測度。
+* 由定義知$$m^{*}(\empty)=0$$，因為$$\empty$$為任意集合的子集合，而包含$$\empty$$的最小集合為$$\empty$$。
 
-#### 歐式空間中單點集合的外測度為0
+### 外測度的單調性
 
-$$\forall x_0 \in \mathbb{R}^n, m^{*}(\{x\})=0$$
+> 若$$A \subseteq B$$，則$$m^{*}(A) \leq m^{*}(B)$$。
 
-取開集合$$I$$​且$$x_0 \in I$$​，因為$$|I|$$​任意小時(=0)仍可包含$$x_0$$​，因此外測度為０。
+因為$$B \subseteq \bigcup_{k=1}^\infty I_k$$可得$$A \subseteq \bigcup_{k=1}^\infty I_k$$
 
-#### 歐式空間中的閉矩體外測度等於其體積
+### 歐式空間中可數集合的外測度為0
+
+取開集合$$I$$​且$$x_0 \in I$$​，因為$$|I|$$​任意小時(=0)仍可包含$$x_0$$​，因此外測度為0。
+
+令$$C=\{c_k\}_{k=1}^\infty$$為可數集合。
+
+令$$\epsilon >0$$，$$\forall k \in \mathbb{N}$$，定義$$I_k=(c_k - \frac{\epsilon}{2^{k+1}},  c_k + \frac{\epsilon}{2^{k+1}})$$，因此$$C \subseteq \bigcup_{k=1}^\infty I_k$$。
+
+而$$0 \leq m^{*} \sum_{k=1}^\infty |I_k| = \sum_{k=1}^\infty \frac{\epsilon}{2^k} = \epsilon$$
+
+因為$$\forall \epsilon >0$$，上述不等式均成立，所以$$m^{*}(E)=0$$。
+
+### 歐式空間中的閉矩體外測度等於其體積
 
 $$I \subset \mathbb{R}^n$$​為開矩陣，$$\overline{I}$$​為閉矩體，則$$m^{*}(\overline{I})=|I|$$
 

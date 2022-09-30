@@ -4,11 +4,11 @@ description: measurable set
 
 # 可測集合
 
-## 可測集合
+## 可測集合定義
 
-> 給定集合$$E$$，若對於任意的集合$$A$$均滿足：$$m^{*}(A) = m^{*}(A\cap E) + m^{*}(A \cap E^c)$$，則稱$$E$$為可測集合(measurable set)。
+> 給定集合$$E\subseteq S$$，若對於任意的集合$$A \subseteq S$$均滿足：$$m^{*}(A) = m^{*}(A\cap E) + m^{*}(A \cap E^c)$$，則稱$$E$$為可測集合(Caratheodory measurable set)。
 
-若$$E$$為可測集合，則對於任意集合$$A$$，且$$E \cap A=\empty$$，可得：$$m^{*}(E \cup A) = m^{*}((E \cup A) \cap E) + m^{*}(( E\cup A) \cap E^c)=m^{*}(E) + m^{*}(A)$$
+若$$E$$為可測集合，則對於任意集合$$A$$，且$$E \cap A=\empty$$，由定義可得：$$m^{*}(E \cup A) = m^{*}((E \cup A) \cap E) + m^{*}(( E\cup A) \cap E^c)=m^{*}(E) + m^{*}(A)$$
 
 ## 可測集合的充分必要條件
 

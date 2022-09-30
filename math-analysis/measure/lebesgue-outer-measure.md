@@ -128,3 +128,7 @@ proof:
 $$\displaystyle  \begin{aligned} m^{*}(\bigcup_{k=1}^{\infty} E_k) & \leq \sum_{k,l=1}^\infty |I_{k,l}| \\ & = \sum_{k=1}^{\infty} \sum_{l=1}^{\infty} |I_{k,l}|  \\ & < \sum_{k=1}^{\infty} m^{*}(E_k) + \epsilon/2 \\ & = \sum_{k=1}^{\infty}m^{*}(E_k) + \epsilon  \end{aligned}$$--(1)
 
 $$\forall \epsilon >0$$時，(1)均成立，因此得可數次可加性(QED)。
+
+## 距離外測度性質
+
+> 給整集定

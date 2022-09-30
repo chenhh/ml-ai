@@ -53,7 +53,9 @@
 
 ### 歐式空間中可數集合的外測度為0
 
-取開集合$$I$$​且$$x_0 \in I$$​，因為$$|I|$$​任意小時(=0)仍可包含$$x_0$$​，因此外測度為0。
+> 取開集合$$I$$​且$$x_0 \in I$$​，因為$$|I|$$​任意小時(=0)仍可包含$$x_0$$​，因此外測度為0。
+
+proof:&#x20;
 
 令$$C=\{c_k\}_{k=1}^\infty$$為可數集合。
 
@@ -61,11 +63,13 @@
 
 而$$0 \leq m^{*} \sum_{k=1}^\infty |I_k| = \sum_{k=1}^\infty \frac{\epsilon}{2^k} = \epsilon$$
 
-因為$$\forall \epsilon >0$$，上述不等式均成立，所以$$m^{*}(E)=0$$。
+因為$$\forall \epsilon >0$$，上述不等式均成立，所以$$m^{*}(E)=0$$。 (QED)
 
 ### 區間的外測度等於其長度
 
-$$I \subset \mathbb{R}$$​為開區間，$$\overline{I}$$​為閉包(閉集合)，則$$m^{*}(\overline{I})=|I|$$
+> $$I \subset \mathbb{R}$$​為開區間，$$\overline{I}$$​為閉包(閉集合)，則$$m^{*}(\overline{I})=|I|$$
+
+proof:
 
 $$\forall \epsilon >0$$​，取一開區間$$J \ni \overline{I} \subset J$$且$$|J| < |I|+\epsilon$$​
 

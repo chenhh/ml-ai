@@ -33,11 +33,19 @@
 > 定義$$\displaystyle m^{*}(E)=\inf \{ \sum_{k \geq 1}|I_k| ~\big|~ E\subseteq \bigcup_{k=1}^\infty I_k, ~\{I_k\} \text{ i.e. is L-covering of set } E  \}$$
 >
 > 為集合$$E$$​的外測度。
+>
+> $$m^{*}$$在$$\mathbb{R}$$為長度，在$$\mathbb{R}^n, n \geq 2$$為體積，因為性質均相同，<mark style="color:blue;">為了便於證明與說明，一般使用實數中的長度定義</mark>。
 
 * 若集合$$E$$​的任意個L-覆蓋$$\{I_k\}$$​均滿足$$\displaystyle \sum_{k \geq 1}|I_k|＝\infty$$，則$$m^{*}(E)=\infty$$，否則$$m^{*}(E)<\infty$$為有限測度。
 * 由定義知$$m^{*}(\empty)=0$$，因為$$\empty$$為任意集合的子集合，而包含$$\empty$$的最小集合為$$\empty$$。
 
-### 外測度的單調性
+### 外測度的性質
+
+1. \[非負性] $$m^{*}(E) \geq 0, ~ m^{*}(\empty)=0$$
+2. \[單調性] $$A \subseteq B \Rightarrow m^{*}(A) \leq m^{*}(B)$$
+3. \[次可加性] $$m^{*}(\bigcup_{k=1}^\infty E_k) \leq \sum_{k=1}^\infty m^{*}(E_k)$$
+
+## 外測度的單調性
 
 > 若$$A \subseteq B$$，則$$m^{*}(A) \leq m^{*}(B)$$。
 
@@ -55,11 +63,11 @@
 
 因為$$\forall \epsilon >0$$，上述不等式均成立，所以$$m^{*}(E)=0$$。
 
-### 歐式空間中的閉矩體外測度等於其體積
+### 區間的外測度等於其長度
 
-$$I \subset \mathbb{R}^n$$​為開矩陣，$$\overline{I}$$​為閉矩體，則$$m^{*}(\overline{I})=|I|$$
+$$I \subset \mathbb{R}$$​為開區間，$$\overline{I}$$​為閉包(閉集合)，則$$m^{*}(\overline{I})=|I|$$
 
-$$\forall \epsilon >0$$​，取一開矩陣$$J \ni \overline{I} \subset J$$且$$|J| < |I|+\epsilon$$​
+$$\forall \epsilon >0$$​，取一開區間$$J \ni \overline{I} \subset J$$且$$|J| < |I|+\epsilon$$​
 
 因此可得$$\forall \epsilon >0 ~ m^{*}(|\overline{I}|) \leq |J|< |I| + \epsilon$$--(1)
 
@@ -70,3 +78,37 @@ $$\forall \epsilon >0$$​，取一開矩陣$$J \ni \overline{I} \subset J$$且$
 因此$$|I| \leq m^{*}(|\overline{I}|)$$--(2)
 
 由(1)(2)得$$m^{*}(\overline{I})=|I|$$ (QED)
+
+## 外測度的平移不變性
+
+> 對於任意的集合$$E\subseteq \mathbb{R}$$與實數$$y$$，可得$$m^{*}(E+y)=m^{*}(E)$$
+
+proof:
+
+令$$\{I_k\}_{k=1}^\infty$$為可數開集合序列且$$E \subseteq \bigcup_{k=1}^\infty I_k$$。
+
+則$$\{I_k+y\}_{k=1}^\infty$$也為開集合序列且$$E+y \subseteq \bigcup_{k=1}^\infty (I_k+y)$$
+
+若$$I_k$$為(有限或無限)開區間時，其長度與$$(I_k+y)$$一樣長，因此$$\displaystyle \sum_{k=1}^\infty |I_k| = \sum_{k=1}^\infty |I_k+y|$$--(1)
+
+(1)取inf後，由定義可得$$m^{*}(E+y)=m^{*}(E)$$(QED)
+
+## 外測度的可數次可加性
+
+> 給定可數集合序列$$\{E_k\}_{k=1}^\infty$$(不必為互斥集合)，則：$$\displaystyle m^{*} (\bigcup_{k=1}^\infty E_k) \leq \sum_{k=1}^\infty m^{*}(E_k)$$。
+
+proof:
+
+如果集合序列中任一集合的外測度為無窮大時($$\exists k \in \mathbb{N} \ni m^{*}(E_k)=\infty$$)，則不等式必成立。
+
+考慮所有集合的外測度均為有限值時$$\forall k \in \mathbb{N}, ~ m^{*}(E_k) < \infty$$。
+
+令$$\epsilon > 0$$，$$\forall k \in \mathbb{N}$$，令可數有界開集合序列$$\{I_{k,i}\}_{i=1}^\infty$$為$$E_k$$的L-覆蓋，滿足 $$E_k \subseteq \bigcup_{i=1}^\infty I_{k,i}$$且 $$\sum_{i=1}^\infty |I_{k,i}| < m^{*}(E_k) + \epsilon/2^k$$。
+
+因此可得$$\displaystyle \bigcup_{k=1}^\infty E_k \subseteq \bigcup_{k=1,i=1}^\infty I_{k,i}$$，且$$\displaystyle \sum_{k=1, i=1}^\infty |I_{k,i}| < \sum_{k=1}^\infty m^{*}(E_k) + \epsilon$$。
+
+所以$$\{I_{k,l}, k.l=1,2,\dots\}$$為$$\bigcup_{k=1}^\infty E_k$$的L-覆蓋，可得：
+
+$$\displaystyle  \begin{aligned} m^{*}(\bigcup_{k=1}^{\infty} E_k) & \leq \sum_{k,l=1}^\infty |I_{k,l}| \\ & = \sum_{k=1}^{\infty} \sum_{l=1}^{\infty} |I_{k,l}|  \\ & < \sum_{k=1}^{\infty} m^{*}(E_k) + \epsilon/2 \\ & = \sum_{k=1}^{\infty}m^{*}(E_k) + \epsilon  \end{aligned}$$--(1)
+
+$$\forall \epsilon >0$$時，(1)均成立，因此得可數次可加性(QED)。

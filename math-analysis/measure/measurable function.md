@@ -43,3 +43,17 @@ proof 4->5 (用開區間逼近閉區間)
 
 $$f^{-1}([c, \infty)=f^{-1}(\bigcap_{n=1}^\infty (c - \frac{1}{n}, \infty))=\bigcap_{n=1}^\infty f^{-1}(c-\frac{1}{n}, \infty) \in \Sigma$$ (QED)
 
+proof 5->6:
+
+令$$S = \{A \subseteq \mathbb{R}, ~f^{-1}(A) \in \Sigma \}$$，檢驗Borel set $$\mathbb{B} \subseteq S$$。
+
+由5得$$\forall c \in \mathbb{R}, [c, \infty) \subseteq S$$，且由1得$$\forall d \in \mathbb{R}, ~(-\infty, d) \subseteq S$$，還可得$$\forall e \in \mathbb{R}, (e, \infty) \subseteq S$$。
+
+因此$$(e,d) \subseteq S$$，包含了實數上的任意開區間，因此$$\mathbb{B} \subseteq S$$ (QED)。
+
+proof 6->1 ：
+
+依定義可得(QED)
+
+
+

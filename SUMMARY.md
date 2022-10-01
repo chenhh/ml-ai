@@ -50,6 +50,7 @@
 * [測度(measure)](math-analysis/measure.md)
   * [Lebesgue外測度](math-analysis/measure/lebesgue-outer-measure.md)
   * [可測集合](math-analysis/measure/measurable-set.md)
+  * [可測函數](<math-analysis/measure/measurable function.md>)
 * [賦範空間](math-analysis/normed-space.md)
 * [多變數向量](math-analysis/multivariate-vector.md)
 * [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)

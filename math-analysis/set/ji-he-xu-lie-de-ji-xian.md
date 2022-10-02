@@ -27,9 +27,15 @@ E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
 
 對於遞減集合序列，$$\bigcap_{j \geq n}E_j=E_n$$且$$\bigcup_{j \geq n} E_j=\bigcup_{j\geq 1}E_j$$。可得 $$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcap_{n=1}^\infty E_n$$
 
-#### 範例：遞減集合序列的極限
+### 範例：遞減集合序列的極限
 
 $$E_n=[n,\infty), ~\forall n \in \mathbb{N}$$為遞減集合序列，則$$\lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n=\phi$$
+
+### 範例：開區間逼近閉區間
+
+測度證明中常用給定$$c \in \mathbb{R}$$，
+
+* 區間$$\displaystyle (-\infty, c]=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n}) = \lim_{n \rightarrow \infty} (-\infty, c+\frac{1}{n})$$
 
 ## 集合序列上、下極限的圖解
 

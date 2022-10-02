@@ -51,7 +51,7 @@
 
 因為$$B \subseteq \bigcup_{k=1}^\infty I_k$$可得$$A \subseteq \bigcup_{k=1}^\infty I_k$$
 
-### 歐式空間中可數集合的外測度為0
+## 可數集合的外測度為0
 
 > 取開集合$$I$$​且$$x_0 \in I$$​，因為$$|I|$$​任意小時(=0)仍可包含$$x_0$$​，因此外測度為0。
 
@@ -65,7 +65,19 @@ proof:&#x20;
 
 因為$$\forall \epsilon >0$$，上述不等式均成立，所以$$m^{*}(E)=0$$。 (QED)
 
-### 區間的外測度等於其長度
+### 範例：有理數集合的外測度為0
+
+因為有理數集合$$\mathbb{Q}$$為可數集合，因此$$m^{*}(\mathbb{Q})=0$$。
+
+### 範例：外測度為0的集合不一定是可數集
+
+如在閉區間$$[0,1]$$的Cantor集合$$C$$的外測度為0，但$$C$$不是可數集合。
+
+因為$$C=\bigcap_{n=1}^\infty F_n$$，其中$$F_n$$是$$2^n$$個長度為$$3^{-n}$$的閉區間之聯合，因此可得：$$m^{*}(C) \leq m^{*} (F_n) \leq 2^n \cdot 3^{-n}$$
+
+所以$$m^{*}(C)=0$$，但Cantor集C不是可數集。
+
+## 區間的外測度等於其長度
 
 > $$I \subset \mathbb{R}$$​為開區間，$$\overline{I}$$​為閉包(閉集合)，則$$m^{*}(\overline{I})=|I|$$
 
@@ -116,3 +128,9 @@ proof:
 $$\displaystyle  \begin{aligned} m^{*}(\bigcup_{k=1}^{\infty} E_k) & \leq \sum_{k,l=1}^\infty |I_{k,l}| \\ & = \sum_{k=1}^{\infty} \sum_{l=1}^{\infty} |I_{k,l}|  \\ & < \sum_{k=1}^{\infty} m^{*}(E_k) + \epsilon/2 \\ & = \sum_{k=1}^{\infty}m^{*}(E_k) + \epsilon  \end{aligned}$$--(1)
 
 $$\forall \epsilon >0$$時，(1)均成立，因此得可數次可加性(QED)。
+
+## 距離外測度性質
+
+> 給定集合$$E_1, E_2 \subseteq \mathbb{R}$$，若$$d(E_1, E_2) > 0$$，則$$m^{*}(E_1 \cup E_2) = m^{*}(E_1) + m^{*}(E_2)$$。
+>
+> 此要

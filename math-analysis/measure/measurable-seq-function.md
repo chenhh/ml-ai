@@ -8,6 +8,6 @@
 
 > 定義：函數序列$$\{f_n\}$$幾幾處處點態收斂(pointwise convergent a.e.)至函數$$g$$：$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = g(x) ~\text{a.e.}$$
 >
-> 即排除掉測度為0的值域部份，函數序列的極限和$$g$$之值相等。
+> 即排除掉測度為0的定義域部份，函數序列的極限和$$g$$之值相等。
 >
 > $$\displaystyle  \mu( \{x \in X ~|~\lim_{n \rightarrow \infty} f_n(x) \neq g(x)\}) = 0$$

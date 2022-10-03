@@ -17,3 +17,9 @@ description: signed measure
 > 時，稱$$\mu$$為有號測度。
 
 定義有號測度的目的是考慮兩個測度的差值時，如$$\mu(E)=\mu_1(E) - \mu_2(E), ~ E \in \Sigma$$，其中$$\mu_1, \mu_2$$至少一個為有限測度，且定義在同一個sigma域$$\Sigma$$。
+
+<mark style="color:red;">可證明任何一個有號測度可以分解為兩個有限測度的差值 (Hahn decomposition)</mark>。
+
+#### 範例：函數的積分為有號測度
+
+$$(X, \Sigma, \mu)$$為測度空間，$$f$$為可積分函數且$$f=f^{+} - f^{-}$$，則$$\lambda(E) = \int_E f d\mu = \int_E f^{+} d \mu - \int_E f^{-}d\mu$$為在$$(X, \Sigma)$$上的有號測度。

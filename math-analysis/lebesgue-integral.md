@@ -2,7 +2,7 @@
 
 ## &#x20;零測度集合(measure zero set)
 
-> 集合$$S \subseteq \mathbb{R}$$ 的測度為0( measure zero)若
+> 定義集合$$S \subseteq \mathbb{R}$$ 的測度為0( measure zero)若
 >
 > * 對任意$$\epsilon >0$$，存在集合$$S$$可數的開區間覆蓋，且這些可數開區間覆蓋的總長度小於$$\epsilon$$。(註：Haine-Borel定理：實數上的有界閉區間(緊緻集)必可被有限開區間覆蓋)。
 > *>   令$$F_k=(a_k, b_k ), ~ k \in \mathbb{N}$$  為集合$$S$$的可數開區間覆蓋，則$$\forall \epsilon >0 , ~ S \subseteq \cup_{k \in \mathbb{N}} (a_k, b_k)$$ 且 $$\displaystyle \sum_{k \in \mathbb{N}} (b_k - a_k) < \epsilon$$。

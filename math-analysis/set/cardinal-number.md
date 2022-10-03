@@ -68,6 +68,12 @@ $$f(x) = \frac{(x-a)}{(b-a)}$$
 ## 使用函數判斷集合勢的大小
 
 > 如果存在從$$X$$到$$Y$$的一個單射（一對一映射），則集合$$Y$$大於等於一個集合$$X$$，> 記為$$|Y| \geq |X|$$，或稱集合$$Y$$有大於等於$$X$$的勢。
+>
+> * 如果存在函數$$f:X \rightarrow Y$$為1-1，則$$|X| \leq |Y|$$
+> * 如果存在函數$$f: X \rightarrow Y$$為1-1且onto，則$$|X| = |Y|$$
+> * 如果存在函數$$f: X \rightarrow Y$$為onto，則$$|X| \geq |Y|$$
+> * 如果存在函數$$f: X \rightarrow Y$$為1-1但非onto，則$$|X| < |Y|$$
+> * 如果存在函數$$f: X \rightarrow Y$$為onto，但非1-1，則$$|X | > |Y|$$
 
 一對一函數 ($$f(x_1) = f(x_2) \Rightarrow x_1 = x_2$$)中，對應域$$Y$$可能有部份的元素沒有被定義域$$X$$的元素對應，因此集合$$Y$$有大於等於$$X$$的勢，即$$|Y| \geq |X|$$。
 
@@ -84,6 +90,10 @@ $$f(x) = \frac{(x-a)}{(b-a)}$$
 ### Cantor-Bernstein-Schroeder定理&#xD;
 
 > 兩集合$$X, Y$$ 若 $$|X| \leq |Y|$$且 $$|X| \geq |Y| \Leftrightarrow |X| = |Y|$$
+
+## 集合的勢必小於其冪集合的勢
+
+> 對於任意的集合$$X$$, $$|X| < |\mathcal{P}(X)|$$
 
 有限集合的基數
 

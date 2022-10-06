@@ -50,6 +50,8 @@ description: sequences of functions
 > 假設所有的函數$$f_n$$均在點$$c \in S ~ \forall n \in \mathbb{N}$$，若$$f_n$$一致收斂至函數$$f$$，則$$f$$也在點$$c \in S$$連續。
 >
 > 若$$c$$為集合$$S$$的極限點，可得$$\displaystyle \lim_{x \rightarrow c}\lim_{n \rightarrow \infty} f_n(x) =  \lim_{n \rightarrow \infty} \lim_{x \rightarrow c} f_n(x)$$
+>
+> 在一般度量空間$$(S,d)$$也成立
 
 <details>
 
@@ -78,3 +80,34 @@ description: sequences of functions
 ### 一致收致且個別函數有界時可得一致有界
 
 > 令$$\{f_n\} \rightarrow f$$ 在集合$$S$$一致收斂，且$$f_n, ~\forall n \in \mathbb{N}$$在$$S$$上有界，則$$f_n$$在集合$$S$$一致有界。
+
+## 一致收斂的Cauchy條件
+
+> 令$$\{f_n\}$$為定義在集合$$S$$上的函數序列。
+>
+> 函數序列$$f_n \rightarrow f$$在$$S$$一致收斂 $$\Leftrightarrow$$ $$\forall \epsilon >0 \exists n_0 \in \mathbb{N} \ni |f_m(x)-f_n(x)|<\epsilon, ~\forall m,n >n_0$$
+>
+> 在一般度量空間$$(S,d)$$中也成立
+
+<details>
+
+<summary>proof</summary>
+
+\=> 令$$f_n \rightarrow f$$在點$$S$$上一致收斂，由定義得$$\forall \epsilon >0, ~\forall x \in S, ~\exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x)| < \epsilon/2, ~ \forall n > n_0$$
+
+同樣田定義可得 $$|f_m (x) - f(x) | < \epsilon/2, ~ \forall m > n_0$$
+
+合併上述兩式得$$\forall x s\in S, ~|f_m(x)-f_n(x)|<\epsilon$$ (QED)
+
+<=
+
+由Cauchy條件得$$\forall x \in S, ~\{f_n(x)\}$$收斂，令$$\displaystyle f(x)=\lim_{n \rightarrow \infty} f_n(x),~ x \in S$$。
+
+當$$\epsilon>0$$，$$\forall x \in S$$，由Cauchy條件可得$$|f_n(x) - f_{n+k}(x)|  < \epsilon/2, ~k=1,2,\dots$$
+
+因此$$\displaystyle$$$$\displaystyle \lim_{k \rightarrow \infty }|f_n(x) - f_{n+k}(x)| = |f_n(x) - f(x)|  < \epsilon/2$$
+
+因此$$\forall n > n_0$$，$$\forall x \in S$$，可得$$|f_n(x) - f(x) | < \epsilon$$ (QED)
+
+</details>
+

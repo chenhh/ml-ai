@@ -1,5 +1,7 @@
 # Littlewood, Egoroff, Lusin theorem
 
+
+
 ## Littlewood three principles \[[wiki](https://en.wikipedia.org/wiki/Littlewood's\_three\_principles\_of\_real\_analysis)]
 
 > 1. 每個（可測）集合幾乎就是一些區間(interval)的有限聯集(有限和)；&#x20;
@@ -21,7 +23,7 @@
 
 ### (處處)一致(均勻)收斂(everywhere uniformly convergence)
 
-> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in X}|f_n(x) - f(x)| < \epsilon$$
+> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in X}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$
 
 均勻收斂考慮的是全部集合內的點($$\forall x \in X$$)，因此每一點的收斂速度都相同。
 

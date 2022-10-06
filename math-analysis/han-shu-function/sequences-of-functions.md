@@ -47,4 +47,12 @@ description: sequences of functions
 
 ## 一致有界(uniformly bounded)
 
-> 函數$$\{f_n\}$$在集合$$S$$上稱為一致有界若存在常數$$M > 0$$
+> 函數$$\{f_n\}$$在集合$$S$$上稱為一致有界若存在常數$$M > 0, |f_n(x)| \leq M, ~ \forall x \in S, \forall n \in \mathbb{N}$$。
+
+一致有界對所有$$x \in S$$以及對所有$$f_n$$有共同的上下界。
+
+
+
+### 一致收致且個別函數有界時可得一致有界
+
+> 令$$\{f_n\} \rightarrow f$$ 在集合$$S$$一致收斂，且$$f_n, ~\forall n \in \mathbb{N}$$在$$S$$上有界，則$$f_n$$在集合$$S$$一致有界。

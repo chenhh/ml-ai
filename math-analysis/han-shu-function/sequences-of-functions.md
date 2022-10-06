@@ -45,9 +45,31 @@ description: sequences of functions
 
 <figure><img src="../../.gitbook/assets/uniform_conv.jpg" alt=""><figcaption><p>一致收斂，f與fn在定義域每一點都可保持在相同的距離內</p></figcaption></figure>
 
+### 連續函數一致收斂後仍為連續函數
+
+> 假設所有的函數$$f_n$$均在點$$c \in S ~ \forall n \in \mathbb{N}$$，若$$f_n$$一致收斂至函數$$f$$，則$$f$$也在點$$c \in S$$連續。
+>
+> 若$$c$$為集合$$S$$的極限點，可得$$\displaystyle \lim_{x \rightarrow c}\lim_{n \rightarrow \infty} f_n(x) =  \lim_{n \rightarrow \infty} \lim_{x \rightarrow c} f_n(x)$$
+
+<details>
+
+<summary>proof: 可分c為孤立點和極限點的情形</summary>
+
+若$$c$$為孤立點，則點$$f$$在$$c$$必定連續。
+
+若$$c$$為極限點，由一致連續假設得$$\forall \epsilon >0 \forall x \in S ~\exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x) |< \epsilon$$
+
+因為所有的函數序列均在$$c$$連續，因此存在開球$$B(c, r)$$滿足$$\forall x \in B(c,r) \cap S$$, $$|f_{n_0}(x) - f_{n_0}(c)| < \epsilon$$
+
+由於 $$|f(x)-f(c)| \leq |f(x) - f_{n_0}(x)| + |f_{n_0}(x) - f_{n_0}(c)| + |f_{n_0}(c) - f(c)|$$
+
+且當$$x \in B(c,r) \cap S$$可得$$|f(x) - f(c)|< 3 \epsilon$$ (QED)
+
+</details>
+
 ## 一致有界(uniformly bounded)
 
-> 函數$$\{f_n\}$$在集合$$S$$上稱為一致有界若存在常數$$M > 0, |f_n(x)| \leq M, ~ \forall x \in S, \forall n \in \mathbb{N}$$。
+> 函數$$\{f_n\}$$在集合$$S$$稱為一致有界若存在常數$$M > 0, |f_n(x)| \leq M, ~ \forall x \in S, \forall n \in \mathbb{N}$$。
 
 一致有界對所有$$x \in S$$以及對所有$$f_n$$有共同的上下界。
 

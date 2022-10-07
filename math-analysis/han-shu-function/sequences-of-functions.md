@@ -165,3 +165,27 @@ $$f_n=x^n,~ 0 \leq x \leq 1$$，可得$$\displaystyle \lim_{n \rightarrow \infty
 
 而$$\displaystyle \lim_{n \rightarrow \infty} \int_0^1 f_n(x)dx = \int_0^1 f(x)dx = 0$$
 
+
+
+## 有界收斂(bounded convergence)
+
+> 定義：函數序列$$\{f_n\}$$在集合$$S$$若為點斂收斂(至$$f$$)且一致有界($$\exists M >0 \ni |f_n(x) \leq M~\forall x \in S$$)，則稱$$\{f_n\}$$有界收斂。
+
+### Arzela theorem
+
+> 函數序列$$\{f_n\}$$在閉區間$$[a,b]$$有界收斂，且所有的函數$$f_n$$在$$[a,b]$$均為Riemann可積分。
+>
+> 假設極限函數$$f$$在$$[a,b]$$也為Riemann可積分，則：
+>
+> $$\displaystyle \lim_{n \rightarrow \infty} \int_a^b f_n(x) dx = \int_a^b \lim_{n \rightarrow \infty}  f_n(x) dx = \int_a^b f(x) dx$$
+
+註：存在$$\{f_n\}$$在$$[a,b]$$有界收斂且Riemann可積，但$$f$$在$$[a,b]$$不可積分。
+
+### 範例：函數序列有界收斂且可積分但極限函數不可積分
+
+令$$\{r_1, r_2,\dots\} \subseteq [0,1]$$為有理數集合，令$$f_n(x) =  \left\{ \begin{aligned} &1, ~\text{ if } x = r_k, ~k=1,2,\dots,n \\ &0, ~ \text{ otherwise } \end{aligned} \right.$$
+
+可得$$\displaystyle \int_0^1 f_n(x)dx=0, ~ \forall n$$，但$$\lim_{n \rightarrow \infty} f$$在$$[0,1]$$不可Riemann積分(但可Lebesgue積分)。
+
+
+

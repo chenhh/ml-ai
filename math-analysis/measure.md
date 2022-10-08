@@ -33,7 +33,7 @@
 
 若集合$$N \in \Sigma$$且滿足$$\mu(N)=0$$，稱為<mark style="color:red;">零測度集合(null set)</mark>。
 
-常見測度
+#### 常見測度
 
 在實數$$\mathbb{R}$$上常數的測度有<mark style="color:red;">Lebesgue measure (on Borel set)</mark>
 
@@ -52,7 +52,7 @@
 
 函數空間的情形較為複雜，因此並非所有函數都存在測度函數可量測其值，因此必須先定義出可測函數後，才可定義測度。
 
-<mark style="color:red;">Dirac measure</mark>: 令$$x_0 \in X$$, $$\delta(x_0, E)=\left\{ \begin{align} &1, \text{ if } x_0 \in E \\ &0, \text{ otherwise} \end{align} \right.$$
+<mark style="color:red;">Dirac measure</mark>: 令$$x_0 \in X$$, $$\delta(x_0, E)=\left\{ \begin{aligned} &1, \text{ if } x_0 \in E \\ &0, \text{ otherwise} \end{aligned} \right.$$
 
 ## 測度的可加性
 
@@ -93,7 +93,7 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 > * \[<mark style="color:blue;">次可加性 ,sub-additive</mark>] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
 > * \[<mark style="color:blue;">有限次可加性, finitely sub-additive</mark>] $$\forall E_1,E_2, \ldots,E_n \in \Sigma\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i )$$
-> * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\forall E_1,E_2, \ldots \in \Sigma \Rightarrow \mu(\cup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
+> * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma \Rightarrow \mu(\bigcup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
 
 <details>
 
@@ -152,7 +152,7 @@ $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 
 ## 遞增集合極限的測度(continuity of measure)
 
-> * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\cup_{n \in \mathbb{N}} E_n)$$
+> * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\bigcup_{n \in \mathbb{N}} E_n)$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
 > * 如果$$\mu(E_1)=\infty$$，此性質仍然成立。
 

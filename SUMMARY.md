@@ -53,7 +53,7 @@
   * [可測函數](<math-analysis/measure/measurable function.md>)
   * [可測的函數序列](math-analysis/measure/measurable-seq-function.md)
   * [Littlewood, Egoroff, Lusin theorem](math-analysis/measure/littlewood-egoroff-lusin-theorem.md)
-* [有號測度](math-analysis/signed-measure.md)
+  * [有號測度](math-analysis/measure/signed-measure.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
   * [有界可測函數與有限測度集的積分](math-analysis/lebesgue-integral/integral-of-a-bouned-measurable-function-over-a-set-of-finite-measure.md)
   * [可測非負函數的積分](math-analysis/lebesgue-integral/integral-of-measurable-nonnegative-function.md)

@@ -38,3 +38,6 @@ proof:
 
 反之當$$x \in [0,1]$$，可得$$\displaystyle \limsup_{n \rightarrow \infty} f_n(x)=1$$且 $$\displaystyle \liminf_{n \rightarrow \infty} f_n(x)=0$$，因此$$\{f_n\}$$在$$[0,1]$$任一點均不收斂。
 
+## 均值收斂可得積分函數序列一致收斂
+
+> 寸

@@ -40,4 +40,32 @@ proof:
 
 ## 均值收斂可得積分函數序列一致收斂
 
-> 寸
+> 令函數序列在閉區間$$[a,b]$$均值收斂$$\displaystyle \lim_{n \rightarrow \infty} \int_a^b |f_n(x) - f(x)|^2 dx = 0$$。
+>
+> 令函數$$g$$在閉區間$$[a,b]$$Riemann可積，定義$$\displaystyle h(x)=\int_a^x f(t)g(t)dt$$, $$\displaystyle h_n(x)=\int_a^x f_n(t)g(t)dt, ~ x\in [a,b]$$
+>
+> 則可得$$h_n \rightarrow h$$在閉區間$$[a,b]$$一致收斂。​
+
+<details>
+
+<summary>proof: Cauchy-Schawarz不原式</summary>
+
+$$\displaystyle 0 \leq \left(   \int_a^x |f(t) - f_n(t)||g(t)| dt \right)^2 \leq  \left(  \int_a^x |f(t) - f_n(t)|^2 dt \right)  \left( \int_a^x |g(t)|^2 dt  \right)$$--(1)
+
+給定$$\epsilon >0$$可得$$n_0 \in \mathbb{N} \ni  \displaystyle \int_a^b |f(t) - f_n(t)|^2 dt < \frac{\epsilon^2}{A} ~ \forall n > n_0$$--(2)
+
+$$\displaystyle A=1+ \int_a^b |g(t)|^2 dt$$
+
+將(2)代入(1)中可得$$\forall n > n_0 ,~0 \leq ||h(x) - h_n(x)| < \epsilon, ~x \in [a,b]$$ (QED)
+
+</details>
+
+### 更一般化的條件
+
+> 令函數序列$$f_n$$在閉區間均值收斂$$\displaystyle \lim_{n \rightarrow \infty} \int_a^b |f_n(x) - f(x)|^2 dx = 0$$且
+>
+> 函數序列$$g_n$$ 在閉區間均值收斂$$\displaystyle \lim_{n \rightarrow \infty} \int_a^b |g_n(x) - g(x)|^2 dx = 0$$
+>
+> 定義$$\displaystyle h(x)=\int_a^x f(t)g(t)dt$$, $$\displaystyle h_n(x)=\int_a^x f_n(t)g(t)dt, ~ x\in [a,b]$$
+>
+> 則可得$$h_n \rightarrow h$$在閉區間$$[a,b]$$一致收斂。

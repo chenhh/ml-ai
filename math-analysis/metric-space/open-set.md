@@ -94,9 +94,15 @@ description: open set
 
 例如$$S_n = (- \frac{1}{n}, \frac{1}{n}), ~ \cap_{n=1}^\infty S_n = 0$$收斂至單點，不是開集合。
 
-### 實數上的任意閉區間為可數開區間的交集
+### \[證明常用]實數上的任意閉區間為可數開區間的交集
 
-> 不失一般性令$$[a,b] \subseteq \mathbb{R}$$，則$$\displaystyle [a,b]= \cap_{n=1}^{\infty} \bigg(a- \frac{1}{n}, b + \frac{1}{n} \bigg)$$
+> 不失一般性令$$[a,b] \subseteq \mathbb{R}$$，則$$\displaystyle [a,b]= \bigcap_{n=1}^{\infty} \bigg(a- \frac{1}{n}, b + \frac{1}{n} \bigg) = \bigcap_{n=1}^{\infty} \bigg(a- \frac{1}{n}, b \bigg]$$
+
+上式中的左端點$$\displaystyle [a,b]= \bigcap_{n=1}^{\infty} \bigg(a- \frac{1}{n}, b + \frac{1}{n} \big)$$等價於數列$$\{a-1, a-1/2, a-1/3, \dots, a-1/n, \dots \}$$在$$\lim_{n \rightarrow \infty} a - \frac{1}{n}=a$$。
+
+### \[證明常用]實數上的任意開區間為可數閉區間的聯集
+
+> 令$$z(a,b) \subseteq \mathbb{R}$$，則$$\displaystyle (a,b) = \bigcup_{n=1}^\infty \left[a+\frac{1}{n}, b-\frac{1}{n}\right]$$
 
 ### 集合的加法
 

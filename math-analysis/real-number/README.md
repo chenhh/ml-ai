@@ -372,7 +372,7 @@ proof (反證法)
 
 * 取$$a=1, b= r$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n > r$$ (QED)
 
-### 無窮小的極限值為0
+### \[證明常用]無窮小的極限值為0
 
 > $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0$$
 
@@ -382,7 +382,7 @@ proof:
 * 而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
 * 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$(QED)
 
-### 實數中以開區間逼近閉區間
+### \[證明常用]實數中以開區間逼近閉區間
 
 > $$\forall c \in \mathbb{R}$$，閉區間$$[0,c]= \displaystyle \lim_{n \rightarrow \infty} \left(0 + \frac{1}{n}, c+\frac{1}{n} \right)$$可由外側逼近，或是$$[0,c]= \displaystyle \lim_{n \rightarrow \infty} \left(0 -\frac{1}{n}, c-\frac{1}{n} \right)$$由內側逼近。
 

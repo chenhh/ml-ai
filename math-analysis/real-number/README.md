@@ -2,9 +2,9 @@
 
 ## 簡介
 
-把有理數比做直線，則直線上會充滿了間隙，它是不完備的、不連續的。而我們則把直線看成是沒有間隙的、 完備的和連續的。 直線的連續性是什麼意思？我們必須要有連續性的一個精確定義，使它可以成為邏輯推理的基礎。
+把有理數比做直線，則直線上會充滿了間隙，它是不完備的、不連續的。<mark style="color:blue;">而我們則把直線看成是沒有間隙的、 完備的和連續的</mark>。 直線的連續性是什麼意思？我們必須要有連續性的一個精確定義，使它可以成為邏輯推理的基礎。
 
-有很多理論都可以建立實數系，而戴德金切割法(Dedekind cut method) 建構實數為最簡單。此法的特色是以有理數系為基礎，然後只利用了集合與邏輯性質建構實數系。
+有很多理論都可以建立實數系，而<mark style="color:red;">戴德金切割法(Dedekind cut method) 建構實數為最簡單</mark>。此法的特色是以有理數系為基礎，然後只利用了集合與邏輯性質建構實數系。
 
 切割法簡單的說，就是在直線(實數)上任意選一點$$r$$切割，可將實數分成左、右兩個集合。將小於$$r$$(一定不會包含$$r$$)左側的全體有理數且沒有最大值的集合稱為左分割$$S$$。而將大於$$r$$(可能會包含$$r$$)右則的全體有理數形成的集合稱為右分割$$T \equiv (\mathbb{Q} \setminus S$$)。
 
@@ -335,11 +335,11 @@ eg.
 實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), 但是兩者最大的差別在於實數集具有完備性(所有收斂數列均收斂在集合中)，而有理數集沒有完備性。
 
 1. **Dedekind切割原理(Dedekind cut theorem)**：對於實數集的任何一個切割$$R$$的最小上界存在。
-2. **確界原理（ supremum and infimum principle ）**： 設S為非空數集。若S有上界，則S必有上確界；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedekind 分割證明   。
+2. **確界原理（ supremum and infimum principle ）**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明   。
 3.  **區間套定理(Nested Intervals Theorem)**：實數連續性的一種描述，幾何意義是，有一數列閉區間(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
 
     度的極限為零這兩個條件時，則這一數列區間存在唯一一個共同點。
-4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界數列必收斂（有極限）。
+4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界數列必收斂（有極限，且收斂在上(下)界)。
 5. **有限覆蓋定理(finite cover theorem)**：有界閉區間的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
 6. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列。
 7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是柯西數列。
@@ -366,7 +366,7 @@ proof (反證法)
   * $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$的最小上界矛盾。
 * 因此Archimedean property成立(QED)
 
-### 必定存在大於給定正實數的正整數
+### \[證明常用]必定存在大於給定正實數的正整數
 
 > $$\forall r \in \mathbb{R}^+ ~ \exists n \in \mathbb{N} \ni n>r$$
 
@@ -388,8 +388,9 @@ proof:
 
 proof:
 
-* $$\displaystyle \lim_{n \rightarrow \infty} 0 + \frac{1}{n} = \lim_{n \rightarrow \infty} 0 - \frac{1}{n}=0$$
-* 同理 $$\displaystyle \lim_{n \rightarrow \infty} c + \frac{1}{n} = \lim_{n \rightarrow \infty} c - \frac{1}{n}=c$$ (QED)
+$$\displaystyle \lim_{n \rightarrow \infty} 0 + \frac{1}{n} = \lim_{n \rightarrow \infty} 0 - \frac{1}{n}=0$$
+
+同理 $$\displaystyle \lim_{n \rightarrow \infty} c + \frac{1}{n} = \lim_{n \rightarrow \infty} c - \frac{1}{n}=c$$ (QED)
 
 ### 任意兩個差值大於1的實數間必存在整數
 
@@ -416,14 +417,17 @@ Proof:
 
 ## 絕對值(absolute value)
 
-> * $$|x| = \left\{  \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
+> 定義$$|x| = \left\{  \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
+>
 > * $$a \geq 0$$且$$|x| \leq a$$ $$\Leftrightarrow -a \leq x \leq a$$。
 
 ## 不等式
 
+以下不等式在Banach空間(complete normed linear space)一般都會成立。
+
 ### 三角不等式
 
-> * $$\forall x,y \in \mathbb{R}$$, $$|x+y| \leq |x|+|y|$$
+> * $$\forall x,y \in \mathbb{R}$$, $$|x+y| \leq |x| + |y|$$
 > * $$|x_1 + x_2 + \cdots +x_n | \leq |x_1| + |x_2| +\cdots +|x_n|$$
 > * $$|x_1 +x_2 + \cdots + x_n| \geq |x_1| - |x_2| - \cdots - |x_n|$$
 

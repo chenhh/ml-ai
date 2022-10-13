@@ -16,18 +16,22 @@
 
 兩集合$$S,Q$$相等，即$$S = Q \Leftrightarrow S \subseteq Q \land Q \subseteq S$$。
 
-* note: 集合中的元素無順序性，$$\therefore \{ 1, 2, 3,4, 5\} = \{ 2, 1, 4, 5, 3\}$$
-* 集合中的重複元素只算一個，$$\therefore \{ 1,2, 1, 2, 3, 4,5\} = \{ 1,2,3,4,5\}$$
+* <mark style="color:blue;">集合中的元素無順序性</mark>，$$\therefore \{ 1, 2, 3,4, 5\} = \{ 2, 1, 4, 5, 3\}$$
+* <mark style="color:blue;">集合中的重複元素只算一個(有重複元素的集合稱multiset)</mark>，$$\therefore \{ 1,2, 1, 2, 3, 4,5\} = \{ 1,2,3,4,5\}$$
 
 ## 空集合(empty set)
 
 > 空集合$$\emptyset \equiv \{ \}$$不含任何元素, $$\forall x, \ x \notin \emptyset$$。
 
-空集合唯一，即若有兩個空集合$$\emptyset, \emptyset^{'} \Rightarrow \emptyset= \emptyset^{'}$$。
+<mark style="color:red;">空集合唯一</mark>，即若有兩個空集合$$\emptyset, \emptyset^{'} \Rightarrow \emptyset= \emptyset^{'}$$。
 
-非空集合的集合必含有至少一個元素，即$$\exists x \ni x \in S$$。
+<mark style="color:red;">非空集合的集合必含有至少一個元素</mark>，即$$\exists x \ni x \in S$$。
 
-空集合的基數為零，$$| \emptyset | = 0$$。
+<mark style="color:red;">空集合為任意集合的子集合(但不一定是元素)</mark>，即$$\empty \subseteq  S$$。
+
+<mark style="color:red;">空集合的基數為零</mark>，$$| \emptyset | = 0$$。
+
+空集合的冪集$$\mathcal{P}(\empty)=\{\empty\}$$。
 
 ## singleton sets and pair sets
 
@@ -37,6 +41,15 @@
 由集合相等的定義知$$\{x,y\} = \{y,x\}$$，且$$\{x, x\} = \{x\}$$。
 
 空集合的singleton set 為$$\{ \emptyset\}$$,，因此$$\emptyset \in \{\emptyset\}$$ 。可得 $$\{ \emptyset, \{ \emptyset\} \}$$也是集合。
+
+## 集合族(collection of sets, family of set)
+
+> 集合中的元素為集合時稱為集合族。
+
+常見的集合族，令$$S=\{a,b\}$$：
+
+1. 冪集合$$\mathcal{P}(S) = \{\phi, \{a\}, \{b\}, \{a,b\}\}$$
+2. 可測集sigma代數 $$\sigma_S=\{\phi, a, b, \{a,b\}, S\}$$
 
 ## 卡式積(Cartesian product)
 
@@ -50,27 +63,46 @@
 
 令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合(index set)(有限或無窮多個)，$$U$$為包含$$X,Y$$的宇集合。
 
-聯集(union): 屬於任一個集合的元素或至少一集合存在該元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
+### 聯集(union)
+
+屬於任一個集合的元素或至少一集合存在該元素。 $$X \cup Y= \{z\ \vert \ z \in X \lor z \in Y\}$$
 
 * $$X\cup X = X \cup \emptyset = \emptyset \cup X = X$$
 * $$X \cup U = U$$
 
-交集(intersection): 同時屬於所有集合的元素，或者為所有集合都存在的素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
+### 多集合的聯集: 元素只須存在於某些集合
+
+$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
+
+### 交集(intersection)
+
+&#x20;同時屬於所有集合的元素，或者為所有集合都存在的素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
 
 * $$X \cap \emptyset = \emptyset$$
 * $$X\cap X  = X \cap U= X$$
 
-多集合的聯集: 元素只須存在於某一個集合。$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
+### 多集合的交集: 元素必須存在於所有的集合
 
-多集合的交集: 元素必須存在於所有的集合。 $$\cap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$
+&#x20;$$\cap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$
 
-交換律 (commutative law)。 $$X \cup Y = Y \cup X$$， $$X\cap Y = Y \cap X$$
+### 交換律 (commutative law)
 
-結合律 (associative law)。$$(X \cup Y) \cup Z = X \cup (Y \cup Z)$$，$$(X \cap Y) \cap Z = X \cap (Y \cap Z)$$
+&#x20;$$X \cup Y = Y \cup X$$， $$X\cap Y = Y \cap X$$
 
-分配律 (distributive law)。$$X \cap (\cup_{i \in I} Y_i) = \cup_{i \in I} (X \cap Y_i)$$，$$X \cup (\cap_{i \in I} Y_i) = \cap_{i \in I} (X \cup Y_i)$$
+### 結合律 (associative law)
 
-吸收律(absorb law)。 $$X\cup(X\cap Y) = X$$， $$X \cap (X \cup Y) = X$$
+$$(X \cup Y) \cup Z = X \cup (Y \cup Z)$$，$$(X \cap Y) \cap Z = X \cap (Y \cap Z)$$
+
+### 分配律 (distributive law)
+
+* $$X \cap (\cup_{i \in I} Y_i) = \cup_{i \in I} (X \cap Y_i)$$
+* $$X \cup (\cap_{i \in I} Y_i) = \cap_{i \in I} (X \cup Y_i)$$
+
+### 吸收律(absorb law)
+
+&#x20;$$X\cup(X\cap Y) = X$$
+
+$$X \cap (X \cup Y) = X$$
 
 ### 兩集合的關係必為不相交、部份相交或者子集合三種其中之一
 
@@ -89,26 +121,34 @@
 
 令$$U$$為宇集合(universal set)，即為全部元素的集合。
 
-補集(complement)。$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
+### 補集(complement)
+
+$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
 
 * $$X^c = U \setminus X \equiv U-X$$
 * $$X \cup X^c = U$$
 * $$X \cap X^c = \emptyset$$
 
-差集(difference)：元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
+### 差集(difference)
+
+元素只屬於第一個集合，但不屬於第二個集合，不符合交換律。
 
 * $$X\setminus Y \equiv X-Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
 
-De Morgan law:
+### De Morgan law
 
-* $$U \setminus  (X \cup Y) = (U \setminus X) \cap (U \setminus Y)$$
-* $$U \setminus (X \cap Y) = (U \setminus X) \cup (U \setminus Y)$$
+> * $$(X \cup Y)^c = X^c \cap Y^c$$
+> * $$(X \cap Y)^c = X^c \cup Y^c$$
 
 
 
-若$$X \subseteq Y$$，則$$Y \setminus (Y \setminus X)=Y$$
+若$$X \subseteq Y$$，則$$Y - (Y -X)=Y$$
 
-若$$X \cap Y = \emptyset$$，則$$X \setminus Y= X, ~ Y \setminus X=Y$$
+若$$X \cap Y = \emptyset$$，則$$X - Y= X, ~ Y - X=Y$$
+
+## 對稱差運算(symmetric difference)
+
+$$X \Delta Y \equiv =(X \cup Y)  - (X \cap Y)$$
 
 ## 子集合(subset)
 
@@ -116,11 +156,23 @@ De Morgan law:
 >
 > $$X$$為$$Y$$的真子集(proper subset) $$X \subset Y \Leftrightarrow X \subseteq Y \land X \neq Y$$
 
-$$X \subseteq Y$$and $$Y \subseteq Z$$then $$X\subseteq Z$$。
-
-$$X \subseteq Y$$ and $$Y \subseteq X$$$$\Leftrightarrow$$ $$Ｘ=Y$$。
-
 * 元素屬於集合，但不是子集合。如$$2 \in \{1,2,3\}$$but $$2 \subsetneq \{1,2,3\}$$。須改為 $$\{2\} \subseteq \{1,2,3\}$$。因為2為元素，而$$\{2\}$$是集合。
+* <mark style="color:red;">對於任意的集合</mark>$$S$$，$$S$$<mark style="color:red;">為自身集合的子集合</mark>，即$$S \subseteq S$$($$\empty \subseteq \empty$$)。
+* 空集合為任意集合的子集合(但不一定是元素)，$$\empty \subseteq S$$。
+
+### 子集合滿足遞移律
+
+> $$X \subseteq Y$$and $$Y \subseteq Z$$then $$X\subseteq Z$$
+
+proof:
+
+令$$\forall x \in X$$，因為$$X \subseteq Y$$，可得$$\forall x \in Y$$
+
+因為$$Y \subseteq Z$$，可得$$\forall x \in Z$$，因此$$X \subseteq Z$$(QED)
+
+### 集合相等的充要條件為兩集合互為子集合
+
+> $$X \subseteq Y$$ and $$Y \subseteq X$$$$\Leftrightarrow$$ $$Ｘ=Y$$
 
 ## 布林代數與sigma field(algebra)
 

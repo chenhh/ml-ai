@@ -21,7 +21,7 @@
 
 ## 空集合(empty set)
 
-> 空集合$$\emptyset \equiv \{ \}$$不含任何元素, $$\forall x, \ x \notin \emptyset$$。
+> 空集合$$\emptyset \equiv \{ \}$$不含任何元素，因此 $$\forall x \in U, ~ \ x \notin \emptyset$$。
 
 <mark style="color:red;">空集合唯一</mark>，即若有兩個空集合$$\emptyset, \emptyset^{'} \Rightarrow \emptyset= \emptyset^{'}$$。
 
@@ -29,11 +29,17 @@
 
 <mark style="color:red;">空集合為任意集合的子集合(但不一定是元素)</mark>，即$$\empty \subseteq  S$$。
 
+<mark style="color:red;">非空集合必存在至少一個元素(選擇性公理的條件)</mark>。$$S \neq \empty \Rightarrow \exists x \in S$$。
+
 <mark style="color:red;">空集合的基數為零</mark>，$$| \emptyset | = 0$$。
 
 空集合的冪集$$\mathcal{P}(\empty)=\{\empty\}$$。
 
-## singleton sets and pair sets
+* $$\empty \cup S = S$$
+* $$\empty \cap S = \empty$$
+* \[兩集合不相交(disjoint)]$$S \cap Q= \empty$$
+
+## 單元素集與雙元素集(singleton sets and pair sets)
 
 > * 若$$x$$為一物件，則$$\{x\}$$包含單一元素的集合。 即 $$\forall y, y \in \{x\} \Leftrightarrow y= x$$，稱$$\{x\}$$為包含元素$$x$$的singleton set。
 > * 若$$x,y$$為物件，則$$\{x,y\}$$為包含兩元素的集合。即$$\forall z, z \in \{x,y\} \Leftrightarrow z = x \lor z =y$$。稱$$\{x,y \}$$為包含$$x,y$$的pair set。
@@ -61,7 +67,7 @@
 
 ## 聯集與交集運算(intersection and union)
 
-令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合(index set)(有限或無窮多個)，$$U$$為包含$$X,Y$$的宇集合。
+令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合(index set)(有限或無窮多個元素)，$$U$$為包含$$X,Y$$的宇集合。
 
 ### 聯集(union)
 
@@ -87,11 +93,13 @@ $$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
 
 ### 交換律 (commutative law)
 
-&#x20;$$X \cup Y = Y \cup X$$， $$X\cap Y = Y \cap X$$
+* &#x20;$$X \cup Y = Y \cup X$$
+* $$X\cap Y = Y \cap X$$
 
 ### 結合律 (associative law)
 
-$$(X \cup Y) \cup Z = X \cup (Y \cup Z)$$，$$(X \cap Y) \cap Z = X \cap (Y \cap Z)$$
+* $$(X \cup Y) \cup Z = X \cup (Y \cup Z)$$
+* $$(X \cap Y) \cap Z = X \cap (Y \cap Z)$$
 
 ### 分配律 (distributive law)
 
@@ -100,9 +108,8 @@ $$(X \cup Y) \cup Z = X \cup (Y \cup Z)$$，$$(X \cap Y) \cap Z = X \cap (Y \cap
 
 ### 吸收律(absorb law)
 
-&#x20;$$X\cup(X\cap Y) = X$$
-
-$$X \cap (X \cup Y) = X$$
+* &#x20;$$X\cup(X\cap Y) = X$$
+* $$X \cap (X \cup Y) = X$$
 
 ### 兩集合的關係必為不相交、部份相交或者子集合三種其中之一
 
@@ -135,16 +142,27 @@ $$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
 
 * $$X\setminus Y \equiv X-Y = \{ z \ \vert \ z \in X \land z \notin Y\} =X \cap Y^c$$
 
-### De Morgan law
-
-> * $$(X \cup Y)^c = X^c \cap Y^c$$
-> * $$(X \cap Y)^c = X^c \cup Y^c$$
-
-
-
 若$$X \subseteq Y$$，則$$Y - (Y -X)=Y$$
 
 若$$X \cap Y = \emptyset$$，則$$X - Y= X, ~ Y - X=Y$$
+
+### DeMorgan law
+
+> * $$(X \cup Y)^c = X^c \cap Y^c$$
+> * $$(X \cap Y)^c = X^c \cup Y^c$$
+>
+> 在指標集$$I$$為(有限或無限)可數集甚至為不可數集時也成立：
+>
+> * $$\displaystyle \left(\bigcup_{i \in I} X_i \right)^c = \bigcap_{i \in I} \left(X_i \right)^c$$
+> * $$\displaystyle \left(\bigcap_{i \in I} X_i \right)^c = \bigcup_{i \in I} \left(X_i \right)^c$$
+
+proof:
+
+$$x \in \bigcup_{i\in I} X_i$$，可得元素$$x$$至少為其中一個集合的元素，即$$\exists j \in I \ni x \in X_j$$。
+
+而$$x \in \left(\bigcup_{i\in I} X_i \right)^c$$，可得元素$$x$$不存在所有的$$X_i, ~ \forall i \in I$$中。
+
+可得$$x \in X_i^c$$，且對於所有$$i \in I$$均成立，因此$$x \in \bigcap_{i \in I} (X_i)^c$$ (QED)。
 
 ## 對稱差運算(symmetric difference)
 
@@ -163,6 +181,8 @@ $$X \Delta Y \equiv =(X \cup Y)  - (X \cap Y)$$
 ### 子集合滿足遞移律
 
 > $$X \subseteq Y$$and $$Y \subseteq Z$$then $$X\subseteq Z$$
+>
+> $$X \not \subseteq Y, ~ Y \not \subseteq Z \Rightarrow X \not \subseteq  Z$$
 
 proof:
 

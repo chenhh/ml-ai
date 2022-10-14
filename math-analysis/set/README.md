@@ -164,6 +164,10 @@ $$x \in \bigcup_{i\in I} X_i$$，可得元素$$x$$至少為其中一個集合的
 
 可得$$x \in X_i^c$$，且對於所有$$i \in I$$均成立，因此$$x \in \bigcap_{i \in I} (X_i)^c$$ (QED)。
 
+proof:
+
+$$x \in \bigcup_{i \in I} X_i^c \Leftrightarrow   \exists j \in I \ni x \in X_j^c \Leftrightarrow x \notin \bigcap_{i \in I} X_i \Leftrightarrow x \in (\bigcap_{i \in I} X_i)^c$$ (QED)
+
 ## 對稱差運算(symmetric difference)
 
 $$X \Delta Y \equiv =(X \cup Y)  - (X \cap Y)$$

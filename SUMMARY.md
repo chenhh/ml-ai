@@ -83,6 +83,7 @@
 * [分佈函數(distribution function)](probability-and-statistics/distribution-function.md)
 * [機率測度(probability measure)](probability-and-statistics/probability-measure.md)
 * [動差生成函數(moment generating function)](probability-and-statistics/moment-generating-function.md)
+* [特徵函數(characteristic function)](probability-and-statistics/characteristic-function.md)
 * [機率不等式](probability-and-statistics/probability-inequality.md)
 * [中央極限定理(CLT)](probability-and-statistics/central-limit-theorem.md)
 * [統計量(statistics)](probability-and-statistics/statistics/README.md)

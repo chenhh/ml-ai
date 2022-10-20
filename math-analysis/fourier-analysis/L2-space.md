@@ -30,30 +30,3 @@ $$\lVert f\rVert ^2 = \langle f, f \rangle = \int_a^b f^2(t)dt$$
 > * &#x20;平方和為有限值：$$\displaystyle \sum_{i=-\infty}^\infty |x_i|^2 < \infty$$
 
 內積：$$\displaystyle \langle X, Y \rangle = \sum_{i=-\infty}^\infty x_i \overline{y}_i$$
-
-
-
-## 內積空間不等式
-
-### Cauchy-Schwarz不等式
-
-$$| \langle X, Y\rangle| \leq \lVert X \rVert \lVert Y \rVert$$
-
-可得$$| \langle X, Y\rangle| =\lVert X \rVert \lVert Y \rVert  |\cos \theta| \leq \lVert X \rVert \lVert Y \rVert$$
-
-### 三角不等式
-
-> $$\lVert X + Y \rVert \leq \lVert X \rVert + \lVert Y \rVert$$
-
-## 正交(orthogonality)
-
-$$X,Y$$為內積空間$$V$$的向量，則：
-
-* $$\langle X, Y\rangle=0$$時，稱$$X,Y$$正交。
-* 向量$$e_i, ~i=1,2,\dots.N$$稱為單範正交(orthonormal)若$$\lVert e_i \rVert=1$$且$$\langle e_i, e_j \rangle=0, ~\forall i \neq j$$
-
-### 正交投影
-
-令$$\{ e_1, \dots, e_N\}$$為向量空間$$V$$的單範正交集。若$$v \in \text{span}{(V)}$$，則可寫成$$v=\sum_{i=1}^N a_i e_i$$的形式。
-
-而係數$$a_i=\langle v, e_i \rangle$$可由向量$$v$$與$$e_i$$的內積求出。

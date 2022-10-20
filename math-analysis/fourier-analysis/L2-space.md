@@ -56,4 +56,4 @@ $$X,Y$$為內積空間$$V$$的向量，則：
 
 令$$\{ e_1, \dots, e_N\}$$為向量空間$$V$$的單範正交集。若$$v \in \text{span}{(V)}$$，則可寫成$$v=\sum_{i=1}^N a_i e_i$$的形式。
 
-而$$a_i=\langle v, e_i \rangle$$可由向量$$v$$與$$e_i$$的內積求出。
+而係數$$a_i=\langle v, e_i \rangle$$可由向量$$v$$與$$e_i$$的內積求出。

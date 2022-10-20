@@ -61,7 +61,7 @@
 * [賦範空間(normed space)](math-analysis/normed-space.md)
 * [Lp空間](math-analysis/lp-space.md)
 * [多變數向量](math-analysis/multivariate-vector.md)
-* [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis/README.md)
+* [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)
   * [摺積(convolution)](math-analysis/fourier-analysis/zhe-ji-convolution.md)
 * [分數微積分(fractional calculus)](math-analysis/fractional-calculus.md)
 

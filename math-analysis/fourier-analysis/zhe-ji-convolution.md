@@ -7,6 +7,12 @@
 ### 摺積定義
 
 > 令 $${\displaystyle f,g}$$是定義在 $${\displaystyle \mathbb {R} ^{n}}$$上的可測函數(measurable function)。定義摺積$$\displaystyle h(t)\equiv (f*g)(t) \equiv \int_{\mathbb{R}^n} f(\tau) g(t-\tau) d \tau$$
+>
+> 離散版本：$$f,~g$$為定義在$$\mathbb{Z}$$的函數，則：
+>
+> $$\displaystyle (f*g)[n]\ \equiv \sum _{m=-\infty }^{\infty }{f[m]g[n-m]} =\sum _{m=-\infty }^{\infty }f[n-m]\,g[m]$$
+>
+>
 
 在實數$$\mathbb{R}$$，可證明幾乎所有$$t \in (-\infty, \infty)$$的積分均存在。
 

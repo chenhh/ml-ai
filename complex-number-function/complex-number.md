@@ -24,6 +24,8 @@
 
 \[虛數, imaginary number] $$i=\sqrt{-1}, ~ i^2=−1, ~ i^3=−\sqrt{-1}, ~i^4=1$$
 
+### 常見形式
+
 複數$$z \in \mathbb{C}$$有以下常用型式
 
 * $$z=x+iy$$

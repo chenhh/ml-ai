@@ -10,9 +10,9 @@
 
 
 
-![音樂的時間序列](../.gitbook/assets/music-time-series-min.png)
+![音樂的時間序列](../../.gitbook/assets/music-time-series-min.png)
 
-![音樂的頻譜](../.gitbook/assets/music-frequency-min.png)
+![音樂的頻譜](../../.gitbook/assets/music-frequency-min.png)
 
 傅立葉分析中，任何週期函數，都可以看作是不同振幅，不同相位正弦波的疊加。在第一個例子裡我們可以理解為，利用對不同琴鍵不同力度，不同時間點的敲擊，可以組合出任何一首樂曲。
 

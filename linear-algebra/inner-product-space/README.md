@@ -1,5 +1,26 @@
 # 內積空間(inner product space)
 
+## Hilbert空間
+
+在數學中，希爾伯特空間是歐式空間的一個推廣，其不再侷限於有限維的情形。如果一個空間是線性且完備(所有Cauchy序列均收斂到該空間，需定義metric)，並且規定了範數(norm，必須透過metric定義)，內積(inner product，必需透過範數定義)則稱為希爾伯特空間。
+
+* $$d(x,y)$$必需滿足非負性、對稱性、與三角不等式。
+* $$\lVert x-y \rVert = d(x,y)$$ (度量由範數定義)
+* $$\lvert x \rVert_2 = \sqrt{\langle x, x \rangle}$$ (範數由內積定義)
+
+<mark style="color:red;">內積空間就是定義了內積的賦範線性空間，不一定具有完備性</mark>。
+
+* 集合 + 距離 = 度量空間(metric space)
+* 集合 + 線性 = 線性空間(linear or vector space)
+* 線性空間 + 範數 = 賦範線性空間 (normed linear space, 不一定完備)
+* 賦範線性空間 + 內積 = 內積空間 (inner product space, 不一定完備)
+* 內積空間 + 完備性 = 希爾伯特空間(Hilbert space)
+* 賦範線性空間 + 完備性 = 巴拿赫空間(Banach space)
+
+一種類型的空間可能包含很多的例子，比如定義了內積的歐式空間就是一種希爾伯特空間，同時Lebesque平方可積的函數在定義了內積，距離，範數之後也是希爾伯特空間。
+
+不是每個Banach空間都有內積的，比如$$l^1$$,$$l^p~(p＞2)$$，一個無窮維的線性空間要有內積是很苛刻的，有了內積自然可以得到範數，但是只有範數不一定能夠定義內積。
+
 ## 內積算子(inner product operator)
 
 > 向量空間$$V$$定義在體$$F$$，定義<mark style="color:red;">內積函數</mark>$$\langle \cdot, \cdot \rangle:V \times V \rightarrow F$$滿足：

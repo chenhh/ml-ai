@@ -39,9 +39,16 @@
 * $$\empty \cap S = \empty$$
 * \[兩集合不相交(disjoint)]$$S \cap Q= \empty$$
 
+### 空集合的最大下界與小上界
+
+> * $$\sup\empty=-\infty$$
+> * $$\inf \empty=\infty$$
+
+對於任意實數$$r$$，因為空集合中不存在任何元素大於或小於$$r$$，因此可將$$r$$視為$$\empty$$的下界或下界，又因為此性質對於所有的實數均成立，因此定義空集的上下界如上。
+
 ## 單元素集與雙元素集(singleton sets and pair sets)
 
-> * 若$$x$$為一物件，則$$\{x\}$$包含單一元素的集合。 即 $$\forall y, y \in \{x\} \Leftrightarrow y= x$$，稱$$\{x\}$$為包含元素$$x$$的singleton set。
+> * 若$$x$$為一物件，則$$v\{x\}$$包含單一元素的集合。 即 $$\forall y, y \in \{x\} \Leftrightarrow y= x$$，稱$$\{x\}$$為包含元素$$x$$的singleton set。
 > * 若$$x,y$$為物件，則$$\{x,y\}$$為包含兩元素的集合。即$$\forall z, z \in \{x,y\} \Leftrightarrow z = x \lor z =y$$。稱$$\{x,y \}$$為包含$$x,y$$的pair set。
 
 由集合相等的定義知$$\{x,y\} = \{y,x\}$$，且$$\{x, x\} = \{x\}$$。

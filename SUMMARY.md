@@ -16,6 +16,7 @@
   * [集合序列的極限](math-analysis/set/limit-of-function-sequence.md)
   * [集合的特徵函數](math-analysis/set/characteristic-function.md)
 * [實數(real number)](math-analysis/real-number/README.md)
+  * [戴德金分割法(cut)](math-analysis/real-number/dedekind-cut.md)
   * [擴充實數](math-analysis/real-number/extended-real-number.md)
   * [Bolzano-Weierstrass定理](math-analysis/real-number/bolzano-weierstrass-theorem.md)
   * [區間套定理(nested interval theorem)](math-analysis/real-number/nested-interval-theorem.md)

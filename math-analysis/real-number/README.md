@@ -2,23 +2,21 @@
 
 ## 簡介
 
-把有理數比做直線，則直線上會充滿了間隙，它是不完備的、不連續的。<mark style="color:blue;">而我們則把直線看成是沒有間隙的、 完備的和連續的</mark>。 直線的連續性是什麼意思？我們必須要有連續性的一個精確定義，使它可以成為邏輯推理的基礎。
+把有理數比做直線，則直線上會充滿了間隙，它是不完備(非空有界集合不一定有上確界或收斂點列均收命斂在集合內)、不連續的。<mark style="color:blue;">而我們則把直線看成是沒有間隙的、 完備的和連續的</mark>。 直線的連續性是什麼意思？我們必須要有連續性的一個精確定義，使它可以成為邏輯推理的基礎。
 
 ## 實數集完備性的七個等價定理
 
-實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), 但是兩者最大的差別在於實數
-集具有完備性(所有收斂數列均收斂在集合中)，而有理數集沒有完備性。
+實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), <mark style="background-color:red;">但是兩者最大的差別在於實數集具有完備性，而有理數集沒有完備性</mark>。
 
 1. **Dedekind切割原理(Dedekind cut theorem)**：對於實數集的任何一個切割$$R$$的最小上界必定存在。
-2. **確界原理（ supremum and infimum principle ）**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明
-   。
-3.  **區間套定理(Nested Intervals Theorem)**：實數連續性的一種描述，幾何意義是，有一數列閉區間(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
+2. **確界原理（ supremum and infimum principle）也稱實數的完備性**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明 。
+3.  **區間套定理(Nested Intervals Theorem)**：實數連續性的一種描述，幾何意義是有一閉區間序列(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
 
-    度的極限為零這兩個條件時，則這一數列區間存在唯一一個共同點。
-4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界數列必收斂（有極限，且收斂在上(下)界)。
-5. **有限覆蓋定理(finite cover theorem)**：有界閉區間的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
-6. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列。
-7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是柯西數列。
+    度的極限為零這兩個條件時，則這一序列區間存在唯一一個共同點(收斂至一點)。
+4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界序列必收斂（有極限，且收斂在上(下)確界)。
+5. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列。
+6. **有限覆蓋定理(finite cover theorem, Heine-Borel theorem)**：有界閉區間(緊緻集)的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
+7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是Cauchy數列(因為實數的完備性可以保證Cauchy數列的收斂值為實數)。
 
 這七個定理可以循環證明，因此均為實數集完備性公理的等價敘述。
 
@@ -100,8 +98,7 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 > $$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$
 
-* 若$$\emptyset \neq A \subset \mathbb{R}$$沒有上界時，因此$$\sup(⁡A)$$ 不等於任意值，因此為了方便則記為$$\sup(⁡A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號)
-  。
+* 若$$\emptyset \neq A \subset \mathbb{R}$$沒有上界時，因此$$\sup(⁡A)$$ 不等於任意值，因此為了方便則記為$$\sup(⁡A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號) 。
 * 同理若$$\emptyset \neq A \subset \mathbb{R}$$沒有下界時，因此$$\inf(⁡A)$$ 不等於任意值，因此為了方便則記為$$\inf(⁡A)=−\infty$$。
 * 對於任意實數$$r$$，空集合$$\emptyset$$沒有任何實數大於$$r$$，也沒有任何實數小於$$r$$，因此可以將$$r$$視為$$\emptyset$$的上界與下界。
 * 因為任意實數都是$$\emptyset$$的上界與下界，因此對於$$\sup(\emptyset)$$ 與$$\inf(\emptyset)$$ 的合理定義為$$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$。
@@ -111,16 +108,14 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
 > * 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
-* 因為實數是完備集合（complete set），所以才有此性質；	 可由Dedekind分劃中實數的完備性證明
-  。
+* 因為實數是完備集合（complete set），所以才有此性質； 可由Dedekind分劃中實數的完備性證明 。
 
 Proof:
 
 * $$\emptyset \neq S\subset \mathbb{R}$$，且$$S$$有上界
 * 定義$$A=\{a \in \mathbb{R} | S\text{ 中至少有一元素 }x \ni x>a\}$$
-* 定義 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$  ($$S$$所有上界形成的集合)
-  。
-* &#x20;(將實數線依集合$$S$$中某個點$$x$$切成兩分割$$A,B$$)
+* 定義 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$ ($$S$$所有上界形成的集合) 。
+* (將實數線依集合$$S$$中某個點$$x$$切成兩分割$$A,B$$)
 * $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 * 因為$$S\neq \emptyset$$,所以$$A \neq \emptyset, B \neq \emptyset$$
 * 依實數的完備性可知必存在$$r \in \mathbb{R} \ni \forall a \in A, a \leq r$$且$$\forall b \in B, r \leq b$$。
@@ -143,10 +138,9 @@ Proof 1->2:
 
 * 若$$S$$有下界$$a$$，則$$\forall x \in S,~ x \geq a$$。
 * 因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$，因為$$−S$$有上確界，令$$b=\sup⁡(−S)$$。
-* 可得 $$−b=\inf(⁡S)$$  (QED).
+* 可得 $$−b=\inf(⁡S)$$ (QED).
 
-Proof 2->1: 同理可證
-。
+Proof 2->1: 同理可證 。
 
 ### 比最小上界小的的任意元素均不為上界
 
@@ -162,13 +156,13 @@ Proof 2->1: 同理可證
 
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$若且唯若存在嚴格遞增序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i < x_j \} \subset S \ni \lim_{n \rightarrow \infty}x_n=b$$
 >
-> $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S)$$若且唯若存在嚴格遞減序列$$\displaystyle  \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subset S \ni \lim_{n \rightarrow \infty}x_n=a$$
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S)$$若且唯若存在嚴格遞減序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subset S \ni \lim_{n \rightarrow \infty}x_n=a$$
 >
 > 可以用建構法建出滿足條件的單調序列。
 
 * $$∵b=\sup{⁡}S$$, 給定$$\epsilon=1$$，可得$$x_1 \in S \ni b−1<x_1<b$$
 * 取$$\epsilon_2 = \min\{\frac{1}{2}, b-x_1\}$$，可得 $$x_2 \in S \ni b−\epsilon_2<x_2<b$$
-* 整理可得 $$x_1≤b−\epsilon_2<x_2,  ~ b−\frac{1}{2} \leq b−\epsilon_2<x_2<b$$
+* 整理可得 $$x_1≤b−\epsilon_2<x_2, ~ b−\frac{1}{2} \leq b−\epsilon_2<x_2<b$$
 * 同理可得 $$x_1, x_2,\ldots, x_n \in S \ni x_{n-1} < x_n$$且 $$b-\frac{1}{n} <x_n < b$$。
 * 所以 $$\displaystyle \lim_{n \rightarrow \infty} b - \frac{1}{n} < \lim_{n \rightarrow \infty} x_n<b$$
 * 由夾擠定理得 $$\displaystyle \lim_{n \rightarrow \infty} x_n=b$$(QED)
@@ -181,7 +175,6 @@ Proof 2->1: 同理可證
 >
 > * $$\sup(⁡S) =−\inf⁡(−S)$$
 > * $$\inf(⁡S)=−\sup⁡(−S)$$
->
 
 #### 範例
 
@@ -199,7 +192,7 @@ Proof:
 * 令$$\inf⁡S=a$$
 * $$\inf(⁡S) \Leftrightarrow \forall \epsilon>0 ~\exists x \in S \ni x<a+\epsilon$$
 * $$\forall \epsilon>0 ~\exists −x \in −S \ni −x>−a−\epsilon$$
-* $$\therefore −a$$是集合$$−S$$的最小上界，即$$−a=\sup⁡(−S) \Leftrightarrow \inf(⁡S)=−\sup⁡(−S)$$  (QED)
+* $$\therefore −a$$是集合$$−S$$的最小上界，即$$−a=\sup⁡(−S) \Leftrightarrow \inf(⁡S)=−\sup⁡(−S)$$ (QED)
 
 ### 最小上界與最大下界的四則運算
 
@@ -212,13 +205,12 @@ Proof:
 >   * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup⁡(AB)=\sup(⁡A) \sup(⁡B)$$。
 >   * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf⁡(AB)=\inf(⁡A )\inf(⁡B )$$。
 
-* 由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(⁡A)=x, ~ \sup⁡(B)=y$$存在
-  。
+* 由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(⁡A)=x, ~ \sup⁡(B)=y$$存在 。
 * 因為$$\forall a \in A, a \leq x$$ ，$$\forall b \in B, b \leq y$$，所以$$x+y$$是$$A+B$$的上界。
   * $$\sup(⁡A)=x \Leftrightarrow \forall \epsilon >0 ~ \exists a \in A \ni x−\epsilon<a$$
   * $$\sup⁡(B)=y \Leftrightarrow \forall \epsilon >0 ~\exists b \in B \ni y− \epsilon <b$$
-  * $$\therefore \forall \epsilon>0 ~\exists a \in A, b \in B \ni  x+y−2\epsilon<a+b$$
-  * $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup⁡(A+B)=x+y=\sup⁡(A)+\sup(B)$$  (QED).
+  * $$\therefore \forall \epsilon>0 ~\exists a \in A, b \in B \ni x+y−2\epsilon<a+b$$
+  * $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup⁡(A+B)=x+y=\sup⁡(A)+\sup(B)$$ (QED).
 
 ### 最小上界與最大下界的次序
 
@@ -227,33 +219,31 @@ Proof:
 > * 若$$A\subset B$$（e.g. $$(1,2) \subset [0,2]$$）
 >   * 當$$B$$有上界時，$$A$$也有上界，且$$\sup⁡(A) \leq \sup⁡(B)$$
 >   * 當$$B$$有下界時，$$A$$也有下界，且$$\inf(⁡A) \geq \inf(⁡B)$$
-> * $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(⁡A)  \leq \inf⁡(B)$$  （e.g. $$A=(1,2), B=(3,4)$$）
-> * $$\forall x\in A ~\exists y \in B \ni x\leq y$$，且$$B$$有上界，則$$A$$也有上界，且$$\sup(⁡A) \leq \sup(⁡B)$$  （e.g. $$A=(1,3), B=(2, 4)$$）
+> * $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(⁡A) \leq \inf⁡(B)$$ （e.g. $$A=(1,2), B=(3,4)$$）
+> * $$\forall x\in A ~\exists y \in B \ni x\leq y$$，且$$B$$有上界，則$$A$$也有上界，且$$\sup(⁡A) \leq \sup(⁡B)$$ （e.g. $$A=(1,3), B=(2, 4)$$）
 > * $$\forall x\in A ~\exists y \in B \ni x\geq z$$，且$$B$$有下界，則$$A$$也有下界，且$$\inf(⁡A) \geq \inf(⁡B)$$（e.g. $$A=(1,3), B=(2,4)$$）
 
 Proof: $$A\subset B$$
 
 * 因為$$B$$有上界，且$$B$$為實數中非空子集合，所以$$B$$有最小上界，令$$r=\sup(⁡B)$$。
-* $$\because A\subset B,  \therefore \forall a \in A , a\in B \Rightarrow a \leq r$$，因此$$A$$有上界$$r$$
+* $$\because A\subset B, \therefore \forall a \in A , a\in B \Rightarrow a \leq r$$，因此$$A$$有上界$$r$$
 * 因為$$A$$有上界，且$$A$$非實數中的非空子集合，所以$$A$$有最小上界，令$$s=\sup(⁡A)$$。
 * $$.\because s=\sup(⁡A)\Leftrightarrow \forall \epsilon>0 ~\exists a \in A \subset B \ni s−\epsilon <a$$
 * $$\because r=\sup(⁡B) \Leftrightarrow \forall b \in B, b \leq r$$
 * $$\therefore \forall \epsilon >0 ~ \exists a \in A\subset B \ni s−\epsilon <a \leq r$$
-* $$\therefore \sup(⁡A) \leq \sup(⁡B)$$  (QED)
-
+* $$\therefore \sup(⁡A) \leq \sup(⁡B)$$ (QED)
 
 Proof:
 
 * $$\forall x \in A, ~ \forall y \in B, x\leq y$$
 * 因為$$A$$為實數的非空集合，且A有上界，則由最小上界性質得$$\sup(⁡A)$$存在，同理得$$\inf(⁡B)$$ 存在。
-* 因為集合$$B$$中每一點都是$$A$$的上界，得$$\forall b \in B,  b \geq \sup(⁡A)$$
+* 因為集合$$B$$中每一點都是$$A$$的上界，得$$\forall b \in B, b \geq \sup(⁡A)$$
 * $$B$$的最大下界定義得$$\forall \epsilon>0 ~ \exists b \in B \ni \inf⁡(B)+\epsilon > b$$，且$$\forall b \in B,~ b \geq \sup(⁡A)$$
-* 因此$$\sup(⁡A)\leq \inf(⁡B)$$  (QED)
+* 因此$$\sup(⁡A)\leq \inf(⁡B)$$ (QED)
 
 ### 最小上界與最大下界的實數倍
 
-> 集合$$\emptyset \neq A \subset \mathbb{R}$$
-> ，實數$$c \in \mathbb{R}$$。令集合$$cA=\{cx|x \in A\}$$
+> 集合$$\emptyset \neq A \subset \mathbb{R}$$ ，實數$$c \in \mathbb{R}$$。令集合$$cA=\{cx|x \in A\}$$
 >
 > * 若$$c>0$$
 >   * 當$$A$$有上界時，$$cA$$也有上界且$$\sup⁡(cA)=c\cdot \sup(A)$$
@@ -268,14 +258,13 @@ Proof:
 * $$\inf⁡(A)=a, ~ \sup⁡(A)= b$$
 * $$c>0, cA=(ca, cb)$$或$$[ca, cb)$$或$$(ca, cb]$$或$$[ca, cb]$$
   * $$\inf(c⁡A)=ca, ~ \sup(c⁡A)=cb$$
-* $$c<0,  cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$[cb,  ca]$$
+* $$c<0, cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$[cb, ca]$$
   * $$\inf(c⁡A)=cb, ~\sup(c⁡A)=ca$$
 
 Proof: $$c>0$$
 
-* 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup⁡(A)=r$$
-  。
-* 若$$y \in cA \Rightarrow  \frac{y}{c} \in A \Rightarrow \frac{y}{c} \leq \sup(⁡A)=r$$
+* 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup⁡(A)=r$$ 。
+* 若$$y \in cA \Rightarrow \frac{y}{c} \in A \Rightarrow \frac{y}{c} \leq \sup(⁡A)=r$$
 * $$\because c>0,~\frac{y}{c}\leq r \Rightarrow y \leq cr$$ 所以$$cr$$是集合$$cA$$的上界--(1)
 * $$\because \sup(⁡A)=r \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
 * $$\because c>0$$，上式可改寫成$$∀\epsilon>0 ~\exists x \in A \ni r−\frac{\epsilon}{c}<x$$
@@ -283,12 +272,11 @@ Proof: $$c>0$$
 * 因為$$cx \in cA$$，上式表示$$cr−\epsilon$$不是集合$$cA$$的上界--(2)
 * 由(1,2)得$$cr$$是$$cA$$的最小上界(QED).
 
-
 Proof: $$c<0$$
 
 * 令$$\sup(⁡A)=r$$
 * 由定義知當 $$y \in cA$$ 則 $$\frac{y}{c}\in A ~\therefore \frac{y}{c} \leq \sup(⁡A)=r$$
-* &#x20;因為$$c<0, \frac{y}{c}\leq r$$, 所以$$y\geq cr$$，因此可得$$cr$$是集合$$cA$$的下界--(1)
+* 因為$$c<0, \frac{y}{c}\leq r$$, 所以$$y\geq cr$$，因此可得$$cr$$是集合$$cA$$的下界--(1)
 * $$r=\sup(⁡A) \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
 * $$\because c<0$$ 上式可改為成$$\forall \epsilon >0 \exists x \in A \ni r+\frac{\epsilon}{c}<x$$
 * $$\therefore \forall \epsilon >0 \ni cx<cr+\epsilon$$
@@ -302,12 +290,10 @@ Proof: $$c<0$$
 Proof:
 
 * 令集合$$A=\{x \in \mathbb{R}^+ |x^2<2\}$$
-* 因為$$1 \in A$$且 2為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(⁡A)$$
-  。
+* 因為$$1 \in A$$且 2為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(⁡A)$$ 。
 * 若$$a^2<2$$
   * 令 $$h=\frac{(2−a^2)}{2(2a+1)} \Rightarrow a+h \in A$$ 且 $$a+h>2$$
-  * &#x20;此與$$a=\sup(A)$$矛盾
-    。
+  * 此與$$a=\sup(A)$$矛盾 。
 * 若$$a^2>2$$
   * 令$$h=\frac{a^2−2}{4a} \Rightarrow 0<a−h<a$$ 且 $$(a−h)^2>2$$
   * $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
@@ -315,26 +301,19 @@ Proof:
   * 得$$a−h$$為$$A$$的上界，此與$$a=\sup(⁡A)$$ 矛盾
 * 根據實數的有序性得$$a^2=2$$ (QED).
 
-
-
-
-
-
-
 ## 阿基米德性質(Archimedean property)
 
 > $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。
 
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
-* 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$
-  。
+* 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$ 。
 
 ![阿基米德性質](../../.gitbook/assets/Archimedean\_property.png)
 
 proof (反證法)
 
 * 假設性質不成立，即$$\exists a>0, b>0 ~\forall n \in \mathbb{N} \ni na \leq b$$
-  * 因此對每一個自然數$$n \in \mathbb{N}$$, 可得$$n \leq b/a$$，即$$b/a$$ 為$$n$$的上界。&#x20;
+  * 因此對每一個自然數$$n \in \mathbb{N}$$, 可得$$n \leq b/a$$，即$$b/a$$ 為$$n$$的上界。
   * 由實數的完備性得知因為自然數集合為實數的非空子集合，因此若$$\mathbb{N}$$存在上界時，則必存在上確界。
   * 因此令$$m=\sup⁡(\mathbb{N})$$，得$$\epsilon=1,~\exists x \in \mathbb{N}∋m−1<x$$
   * $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$的最小上界矛盾。
@@ -352,7 +331,7 @@ proof (反證法)
 
 proof:
 
-* $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni  n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
+* $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
 * 而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
 * 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$(QED)
 
@@ -368,14 +347,13 @@ $$\displaystyle \lim_{n \rightarrow \infty} 0 + \frac{1}{n} = \lim_{n \rightarro
 
 ### 任意兩個差值大於1的實數間必存在整數
 
-> • $$a,b  \in \mathbb{R}, b−a>1 \Rightarrow \exists m \in \mathbb{Z} \ni a<m<b$$
+> • $$a,b \in \mathbb{R}, b−a>1 \Rightarrow \exists m \in \mathbb{Z} \ni a<m<b$$
 
 proof:
 
 * 不失一般性令$$a \geq 0$$
 * 若$$b−a>1$$，令$$A=\{p \in \mathbb{N}, p>a\}$$為$$a$$的正整數上界集合。
-* 由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數]，由於$$A$$為$$\mathbb{N}$$的子集合
-  ， 由正整數的良序性(正整數的非空子集必有最小元素)知$$A$$有最小元素$$m=\min(⁡A)$$。
+* 由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數]，由於$$A$$為$$\mathbb{N}$$的子集合 ， 由正整數的良序性(正整數的非空子集必有最小元素)知$$A$$有最小元素$$m=\min(⁡A)$$。
 * 若 $$m=1, b>a+1 \geq 1>a$$
 * 若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
 * 因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$(QED)
@@ -392,7 +370,7 @@ Proof:
 
 ## 絕對值(absolute value)
 
-> 定義$$|x| = \left\{  \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
+> 定義$$|x| = \left\{ \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
 >
 > * $$a \geq 0$$且$$|x| \leq a$$ $$\Leftrightarrow -a \leq x \leq a$$。
 
@@ -432,6 +410,3 @@ proof:
 > $$\forall a,b \in \mathbb{R}, \ a <b$$ $$\exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$a < v < b$$。
 >
 > 任兩個不相等的實數之間，必定存在無理數或有理數。
-
-
-

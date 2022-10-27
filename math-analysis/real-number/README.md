@@ -4,20 +4,23 @@
 
 把有理數比做直線，則直線上會充滿了間隙，它是不完備的、不連續的。<mark style="color:blue;">而我們則把直線看成是沒有間隙的、 完備的和連續的</mark>。 直線的連續性是什麼意思？我們必須要有連續性的一個精確定義，使它可以成為邏輯推理的基礎。
 
-有很多理論都可以建立實數系，而<mark style="color:red;">戴德金切割法(Dedekind cut method) 建構實數為最簡單</mark>。此法的特色是以有理數系為基礎，然後只利用了集合與邏輯性質建構實數系。
+## 實數集完備性的七個等價定理
 
-切割法簡單的說，就是在直線(實數)上任意選一點$$r$$切割，可將實數分成左、右兩個集合。將小於$$r$$(一定不會包含$$r$$)左側的全體有理數且沒有最大值的集合稱為左分割$$S$$。而將大於$$r$$(可能會包含$$r$$)右則的全體有理數形成的集合稱為右分割$$T \equiv (\mathbb{Q} \setminus S$$)。
+實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), 但是兩者最大的差別在於實數
+集具有完備性(所有收斂數列均收斂在集合中)，而有理數集沒有完備性。
 
-因此有理數分割 $$(S, T)$$可唯一決定實線上的任一點$$r$$。因為從集合的最大值、最小值的定理，可得以下四種結果：
+1. **Dedekind切割原理(Dedekind cut theorem)**：對於實數集的任何一個切割$$R$$的最小上界必定存在。
+2. **確界原理（ supremum and infimum principle ）**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明
+   。
+3.  **區間套定理(Nested Intervals Theorem)**：實數連續性的一種描述，幾何意義是，有一數列閉區間(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
 
-* $$S$$有最大有理數(與分割定義不符)，$$T$$沒有最小有理數，因此$$r \in S$$為有理數。
-* $$S$$沒有最大有理數，$$T$$有最小有理數  ，因此$$r \in T$$為有理數。
-* $$S$$沒有最大有理數，$$T$$沒有最小有理數，因此$$r$$為無理數。
-* $$S$$有最大有理數(與分割定義不符)且$$T$$有最小有理數的情形與定義矛盾，不存在。
+    度的極限為零這兩個條件時，則這一數列區間存在唯一一個共同點。
+4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界數列必收斂（有極限，且收斂在上(下)界)。
+5. **有限覆蓋定理(finite cover theorem)**：有界閉區間的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
+6. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列。
+7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是柯西數列。
 
-因此分割$$(S,T)$$可唯一表示一個實數，而分割形成的集合為實數集，即所有分割的集合。因為只要確定集合$$S$$，集合$$T$$唯一，因此有時只用集合$$S$$代表$$r$$的分割。
-
-而分割的集合同[有理數系](../set/rational-number.md#you-li-shu-xi-rational-number-system)，也滿足加法與乘法的體(field)性質，以及為全序集，因此可得實數系(real number system)的性質。
+這七個定理可以循環證明，因此均為實數集完備性公理的等價敘述。
 
 ## 實數集合
 
@@ -97,7 +100,8 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 > $$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$
 
-* 若$$\emptyset \neq A \subset \mathbb{R}$$沒有上界時，因此$$\sup(⁡A)$$ 不等於任意值，因此為了方便則記為$$\sup(⁡A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號)  。
+* 若$$\emptyset \neq A \subset \mathbb{R}$$沒有上界時，因此$$\sup(⁡A)$$ 不等於任意值，因此為了方便則記為$$\sup(⁡A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號)
+  。
 * 同理若$$\emptyset \neq A \subset \mathbb{R}$$沒有下界時，因此$$\inf(⁡A)$$ 不等於任意值，因此為了方便則記為$$\inf(⁡A)=−\infty$$。
 * 對於任意實數$$r$$，空集合$$\emptyset$$沒有任何實數大於$$r$$，也沒有任何實數小於$$r$$，因此可以將$$r$$視為$$\emptyset$$的上界與下界。
 * 因為任意實數都是$$\emptyset$$的上界與下界，因此對於$$\sup(\emptyset)$$ 與$$\inf(\emptyset)$$ 的合理定義為$$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$。
@@ -107,13 +111,15 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 > * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
 > * 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
-* 因為實數是完備集合（complete set），所以才有此性質；	 可由Dedekind分劃中實數的完備性證明  。
+* 因為實數是完備集合（complete set），所以才有此性質；	 可由Dedekind分劃中實數的完備性證明
+  。
 
 Proof:
 
 * $$\emptyset \neq S\subset \mathbb{R}$$，且$$S$$有上界
 * 定義$$A=\{a \in \mathbb{R} | S\text{ 中至少有一元素 }x \ni x>a\}$$
-* 定義 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$  ($$S$$所有上界形成的集合)  。
+* 定義 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$  ($$S$$所有上界形成的集合)
+  。
 * &#x20;(將實數線依集合$$S$$中某個點$$x$$切成兩分割$$A,B$$)
 * $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 * 因為$$S\neq \emptyset$$,所以$$A \neq \emptyset, B \neq \emptyset$$
@@ -139,7 +145,8 @@ Proof 1->2:
 * 因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$，因為$$−S$$有上確界，令$$b=\sup⁡(−S)$$。
 * 可得 $$−b=\inf(⁡S)$$  (QED).
 
-Proof 2->1: 同理可證。
+Proof 2->1: 同理可證
+。
 
 ### 比最小上界小的的任意元素均不為上界
 
@@ -173,7 +180,8 @@ Proof 2->1: 同理可證。
 > $$\forall \emptyset\neq S \subset \mathbb{R}$$，$$S$$為有界集合， $$−S \equiv \{−s|s \in S\}$$，則
 >
 > * $$\sup(⁡S) =−\inf⁡(−S)$$
-> * $$\inf(⁡S)=−\sup⁡(−S)$$>
+> * $$\inf(⁡S)=−\sup⁡(−S)$$
+>
 
 #### 範例
 
@@ -204,7 +212,8 @@ Proof:
 >   * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup⁡(AB)=\sup(⁡A) \sup(⁡B)$$。
 >   * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf⁡(AB)=\inf(⁡A )\inf(⁡B )$$。
 
-* 由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(⁡A)=x, ~ \sup⁡(B)=y$$存在  。
+* 由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(⁡A)=x, ~ \sup⁡(B)=y$$存在
+  。
 * 因為$$\forall a \in A, a \leq x$$ ，$$\forall b \in B, b \leq y$$，所以$$x+y$$是$$A+B$$的上界。
   * $$\sup(⁡A)=x \Leftrightarrow \forall \epsilon >0 ~ \exists a \in A \ni x−\epsilon<a$$
   * $$\sup⁡(B)=y \Leftrightarrow \forall \epsilon >0 ~\exists b \in B \ni y− \epsilon <b$$
@@ -232,7 +241,8 @@ Proof: $$A\subset B$$
 * $$\therefore \forall \epsilon >0 ~ \exists a \in A\subset B \ni s−\epsilon <a \leq r$$
 * $$\therefore \sup(⁡A) \leq \sup(⁡B)$$  (QED)
 
-Proof:
+
+Proof:
 
 * $$\forall x \in A, ~ \forall y \in B, x\leq y$$
 * 因為$$A$$為實數的非空集合，且A有上界，則由最小上界性質得$$\sup(⁡A)$$存在，同理得$$\inf(⁡B)$$ 存在。
@@ -242,7 +252,8 @@ Proof: $$A\subset B$$
 
 ### 最小上界與最大下界的實數倍
 
-> 集合$$\emptyset \neq A \subset \mathbb{R}$$> ，實數$$c \in \mathbb{R}$$。令集合$$cA=\{cx|x \in A\}$$
+> 集合$$\emptyset \neq A \subset \mathbb{R}$$
+> ，實數$$c \in \mathbb{R}$$。令集合$$cA=\{cx|x \in A\}$$
 >
 > * 若$$c>0$$
 >   * 當$$A$$有上界時，$$cA$$也有上界且$$\sup⁡(cA)=c\cdot \sup(A)$$
@@ -262,7 +273,8 @@ Proof: $$A\subset B$$
 
 Proof: $$c>0$$
 
-* 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup⁡(A)=r$$  。
+* 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup⁡(A)=r$$
+  。
 * 若$$y \in cA \Rightarrow  \frac{y}{c} \in A \Rightarrow \frac{y}{c} \leq \sup(⁡A)=r$$
 * $$\because c>0,~\frac{y}{c}\leq r \Rightarrow y \leq cr$$ 所以$$cr$$是集合$$cA$$的上界--(1)
 * $$\because \sup(⁡A)=r \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
@@ -271,7 +283,8 @@ Proof: $$c>0$$
 * 因為$$cx \in cA$$，上式表示$$cr−\epsilon$$不是集合$$cA$$的上界--(2)
 * 由(1,2)得$$cr$$是$$cA$$的最小上界(QED).
 
-Proof: $$c<0$$
+
+Proof: $$c<0$$
 
 * 令$$\sup(⁡A)=r$$
 * 由定義知當 $$y \in cA$$ 則 $$\frac{y}{c}\in A ~\therefore \frac{y}{c} \leq \sup(⁡A)=r$$
@@ -289,10 +302,12 @@ Proof: $$c>0$$
 Proof:
 
 * 令集合$$A=\{x \in \mathbb{R}^+ |x^2<2\}$$
-* 因為$$1 \in A$$且 2為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(⁡A)$$  。
+* 因為$$1 \in A$$且 2為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(⁡A)$$
+  。
 * 若$$a^2<2$$
   * 令 $$h=\frac{(2−a^2)}{2(2a+1)} \Rightarrow a+h \in A$$ 且 $$a+h>2$$
-  * &#x20;此與$$a=\sup(A)$$矛盾    。
+  * &#x20;此與$$a=\sup(A)$$矛盾
+    。
 * 若$$a^2>2$$
   * 令$$h=\frac{a^2−2}{4a} \Rightarrow 0<a−h<a$$ 且 $$(a−h)^2>2$$
   * $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
@@ -300,51 +315,9 @@ Proof:
   * 得$$a−h$$為$$A$$的上界，此與$$a=\sup(⁡A)$$ 矛盾
 * 根據實數的有序性得$$a^2=2$$ (QED).
 
-## 切割(cut)
-
-> (左)切割為一有理數子集合$$S \subset \mathbb{Q}$$，且滿足三個條件：
->
-> * $$S \neq \emptyset$$且$$S \neq \mathbb{Q}$$。
-> * \[比$$p$$小的全體有理數均為分割內的元素] 若$$p \in S$$且對於所有的$$q \in \mathbb{Q}$$滿足$$q < p$$ ，則$$q \in S$$。
-> * \[分割內沒有最大元素] 若$$p \in S$$，則存在$$q \in S$$使得$$p < q$$
-
-* (有理數)切割的直觀意義，是在直線上用某個點$$p$$將直線切成兩個分割集合，那麼這個點必定不在左分割$$S$$中，但點$$p$$不一定是右(有理數)分割$$T \equiv \mathbb{Q} \setminus S$$的元素。因為切點$$p$$可能是無理數。
-* (左)分割即為比某個數$$p$$小的全體有理數，且沒有最大值的集合。
-
-eg.
-
-* $$S = \{ r \in \mathbb{Q} |  r< 1\}$$為一分割。
-* $$S = \{ r\in \mathbb{Q} |  r \leq 0\} \cup\{ r \in \mathbb{Q} | r >0 \land r^2 < 2\}$$為一分割。
-
-### 分割的目的
-
-* 戴德金切割就成了把全部有理數分成$$S, T$$兩半的序對$$(S,T)$$ ，所以$$S \cup T = \mathbb{Q}$$。由於$$S$$與$$T$$不相交，因此確定了其中一邊也同時確定了另一邊，習慣上我們用序對左邊的集合$$S$$來定義實數，稱之為戴德金左集合（Dedekind left set）。**也就是說一個實數就是一堆有理數所形成的戴德金左集合，而全體實數就是這些戴德金左集合所形成的集合**。
-* 為什麼要把實數講得這麼古古怪怪的？因為我們假裝我們不認得無理數，只認得有理數，因此只好利用有理數以及熟知的實數的性質去捕捉實數。有了分割的定義，我們就可以定義加法和乘法，並規定其中的大小關係。
-
-### 有理數必定屬於左或右分割其中一個集合
-
-> 令$$S$$為有理數的(左)分割，則
->
-> 1. $$\forall p \in S$$, if $$q \in \mathbb{Q}$$ and $$q \notin S$$ then $$q > p$$。\[因為集合$$S$$會包含所有小於$$p$$的有理數，因此$$q$$不為$$S$$的元素時，則$$q$$
-> 2. $$\forall p, q \in \mathbb{Q}$$, $$p \notin S$$ and $$p < q$$ then $$q \notin S$$。
 
 
 
-## 實數集完備性的七個等價定理
-
-實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), 但是兩者最大的差別在於實數集具有完備性(所有收斂數列均收斂在集合中)，而有理數集沒有完備性。
-
-1. **Dedekind切割原理(Dedekind cut theorem)**：對於實數集的任何一個切割$$R$$的最小上界存在。
-2. **確界原理（ supremum and infimum principle ）**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明   。
-3.  **區間套定理(Nested Intervals Theorem)**：實數連續性的一種描述，幾何意義是，有一數列閉區間(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
-
-    度的極限為零這兩個條件時，則這一數列區間存在唯一一個共同點。
-4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界數列必收斂（有極限，且收斂在上(下)界)。
-5. **有限覆蓋定理(finite cover theorem)**：有界閉區間的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
-6. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列。
-7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是柯西數列。
-
-這七個定理可以循環證明，因此均為實數集完備性公理的等價敘述。
 
 
 
@@ -353,7 +326,8 @@ eg.
 > $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。
 
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
-* 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$  。
+* 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$
+  。
 
 ![阿基米德性質](../../.gitbook/assets/Archimedean\_property.png)
 
@@ -400,7 +374,8 @@ proof:
 
 * 不失一般性令$$a \geq 0$$
 * 若$$b−a>1$$，令$$A=\{p \in \mathbb{N}, p>a\}$$為$$a$$的正整數上界集合。
-* 由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數]，由於$$A$$為$$\mathbb{N}$$的子集合  ， 由正整數的良序性(正整數的非空子集必有最小元素)知$$A$$有最小元素$$m=\min(⁡A)$$。
+* 由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數]，由於$$A$$為$$\mathbb{N}$$的子集合
+  ， 由正整數的良序性(正整數的非空子集必有最小元素)知$$A$$有最小元素$$m=\min(⁡A)$$。
 * 若 $$m=1, b>a+1 \geq 1>a$$
 * 若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
 * 因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$(QED)

@@ -94,8 +94,6 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 </details>
 
-
-
 ## 可數與不可數集合 (countable and uncountable set)
 
 > * 集合$$S$$與自然數集合$$\mathbb{N}$$存在單射(一對一)關係時，則該集合為可數集。因此有限集為可數集。
@@ -120,35 +118,42 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 無限集的充分必要條件
 
-> * [存在自然數集合到它的(子集)的單射(一對一函數)] $$A$$為無限集 $$\Leftrightarrow$$ 存在 $$f: \mathbb{N} \rightarrow A$$為一對一函數。[集合$$A$$的勢大於等於自然數]
-> * [無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
+> * \[存在自然數集合到它的(子集)的單射(一對一函數)] $$A$$為無限集 $$\Leftrightarrow$$ 存在 $$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數]
+> * \[無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
 
 <details>
 
-<summary>proof: <=數學歸納法 </summary>
+<summary>proof:</summary>
 
-* =>
-若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。
-則$$f: \mathbb{N} \rightarrow f(\mathbb{N})$$ 為一對一且映成的函數。
-可得 $$\mathbb{N} \sim f(\mathbb{N})$$, 因此f(\mathbb{N}) 為無限集。
-由於 $$f(\mathbb{N}) \subseteq A$$，因此 $$A$$為無限集。 (QED)
+* \=>&#x20;
 
-* <= 
-若$$A$$為無限集。因此$$A \neq \empty$$。
-選 $$x_1 \in A$$，因為 $$A$$與 $$\mathbb{N}_1$$不等價，所以 $$A - \{x_1\} \neq \empty$$。
-再選 $$ x_2 \in A - \{x_1\}$$，則$$x_1$$與$$x_2$$為不同元素。
-以此方法可在$$A$$中選出$$k$$個相異元素$$x_1, x_2, \dots, x_k$$。
-因為$$A$$與 $$\mathbb{N}_k$$不等價，所以$$A-\{x_1, x_2, \dots, x_k\} \neq \empty$$。
-由數學歸納法，可在$$A$$中得出子集$$\{x_k ~|~ k \in \mathbb{N}\}$$. 
-且當$$k \neq l$$，可得$$x_k \neq x_l$$。
-因此可定義函數$$f: \mathbb{N} \rightarrow A$$, $$f(k)=x_k$$為一對一函數(QED). 
+若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。 則$$f: \mathbb{N} \rightarrow f(\mathbb{N})$$ 為一對一且映成的函數。&#x20;
+
+可得 $$\mathbb{N} \sim f(\mathbb{N})$$, 因此\$$f(\mathbb{N})\$$ 為無限集。
+
+&#x20;由於 $$f(\mathbb{N}) \subseteq A$$，因此 $$A$$為無限集。 (QED)
+
+* <=&#x20;
+
+若$$A$$為無限集。因此$$A \neq \empty$$。&#x20;
+
+選 $$x_1 \in A$$，因為 $$A$$與 $$\mathbb{N}_1$$不等價，所以 $$A - \{x_1\} \neq \empty$$。&#x20;
+
+再選 $$x_2 \in A - \{x_1\}$$，則$$x_1$$與$$x_2$$為不同元素。&#x20;
+
+以此方法可在$$A$$中選出$$k$$個相異元素$$x_1, x_2, \dots, x_k$$。 因為$$A$$與 $$\mathbb{N}_k$$不等價，所以$$A-\{x_1, x_2, \dots, x_k\} \neq \empty$$。
+
+&#x20;由數學歸納法，可在$$A$$中得出子集$$\{x_k ~|~ k \in \mathbb{N}\}$$.&#x20;
+
+且當$$k \neq l$$，可得$$x_k \neq x_l$$。 因此可定義函數$$f: \mathbb{N} \rightarrow A$$, $$f(k)=x_k$$為一對一函數(QED).
 
 </details>
 
 <details>
 
-<summary>proof: </summary>
-* =>
+<summary>proof:</summary>
+
+\* =>
 
 * <=
 
@@ -162,7 +167,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 <details>
 
-<summary> proof: 建構可數集合至無限集合的1-1函數。 </summary>
+<summary>proof: 建構可數集合至無限集合的1-1函數。</summary>
 
 無限集合$$S$$可能為可數集合時滿足敘述，
 

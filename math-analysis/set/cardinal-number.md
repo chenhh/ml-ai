@@ -64,6 +64,7 @@ $$f(x) = \frac{(x-a)}{(b-a)}$$
 <details>
 
 <summary>proof: 證明沒有函數為映成函數</summary>
+
 令$$P(A)$$為$$A$$的所有子集形成的集合。只要證明所有的函數$$f:A \rightarrow P(A)$$均不為映成函數即可。
 
 令$$B= \{ a\in A | a\notin f(a)\}$$，則$$B \subset A$$，可得$$B \in P(A)$$且$$B \neq f(a)$$。

@@ -69,7 +69,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 </details>
 
-### 自然數為無限集
+### 自然數為無限(可數)集
 
 > 1. $$\forall a, b \in \mathbb{N}$$且$$a \neq b$$ 則 $$\mathbb{N}_a$$與$$\mathbb{N}_b$$不等價。
 > 2. $$\mathbb{N}$$為(可數)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
@@ -93,6 +93,26 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 依定義$$\mathbb{N} \sim E$$，但是有限集不會等價於其任意真正集，因此$$\mathbb{N}$$為無限集 (QED)。
 
 </details>
+
+### 有限多個有限集的聯集仍為有限集
+> $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\bigcup_{i=1}^n A_i$$仍為有限集。
+
+<details>
+
+<summary>proof: </summary>
+
+</details>
+
+### 有限多個有限集的積集仍為有限集
+> $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為有限集。
+
+<details>
+
+<summary>proof: </summary>
+
+</details>
+
+
 
 ## 可數與不可數集合 (countable and uncountable set)
 
@@ -216,12 +236,15 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 有理數集合為可數集
 
-> * $$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則$$S_n \sim \mathbb{Z}$$，因此$$S_n$$為可數集。
-> * $$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
+$$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則$$S_n \sim \mathbb{Z}$$，因此$$S_n$$為可數集。
+
+$$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
 
 ### 實數集合為不可數集合
 
 因為$$[0,1]$$與$$\mathbb{R}$$兩集合等勢，因此只要證明$$[0,1]$$為不可數集合。
+
+$$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$均為不可數集。
 
 <details>
 

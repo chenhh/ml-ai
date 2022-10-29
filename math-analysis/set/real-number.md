@@ -117,9 +117,9 @@ Cantor集合可得知以下兩問題答案均為否。
 * Cantor集合是緊緻集(compact set)。
 * Cantor集合是完全集(perfect set)。
 * Cantor集合是疏落集。
-* Cantor集合是完全不連通集。
-
-
+* Cantor集合是完全不連通集。c
+* Cantor集合與正整數冪集合 $$\mathrm{P}(\mathbb{N})$$等價。
+* Cantor集合與實數集$$\mathbb{R}$$等價。
 
 
 

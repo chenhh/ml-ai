@@ -120,12 +120,13 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 無限集的充分必要條件
 
-> * $[存在自然數集合到它的(子集)的單射(一對一函數)] $A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數]
+> * [存在自然數集合到它的(子集)的單射(一對一函數)] $$A$$為無限集 $$\Leftrightarrow$$ 存在 $$f: \mathbb{N} \rightarrow A$$為一對一函數。[集合$$A$$的勢大於等於自然數]
 > * [無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
 
 <details>
 
 <summary>proof: </summary>
+
 * =>
 若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。
 則$$f: \mathbb{N} \rightarrow f(\mathbb{N})$$ 為一對一且映成的函數。

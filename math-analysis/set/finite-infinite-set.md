@@ -130,11 +130,15 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 可數無限集合為無限集合的子集合
 
-proof: 建構可數集合至無限集合的1-1函數。
+<details>
+
+<summary> proof: 建構可數集合至無限集合的1-1函數。 </summary>
 
 無限集合$$S$$可能為可數集合時滿足敘述，
 
 令$$S$$為不可數集合。因此存在一對一函數$$f: \mathbb{N} \rightarrow S$$，可得數列$$\{f(n)\}_{ n \in \mathbb{N}} \ \subseteq S$$ (QED)
+
+</details>
 
 ## 可數集合的子集合仍為可數集
 

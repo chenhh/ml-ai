@@ -42,14 +42,50 @@ description: open and closed set
 > * $$x$$為集合$$S$$的內點若存在$$r >0 \ni B_r(x) \subseteq S$$。
 > * 集合$$S$$所有的內點形成的集合記為$$S^0$$。
 
+### 內點集為集合的子集
+> $$\forall S \subseteq \mathbb{R}^n$$, 可得$$S^0 \subseteq S$$。
+
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+</details>
+
 ## 外點(exterior point)
 > 令$$S \subseteq \mathbb{R}^n$$，若$$x \in \mathbb{R}^n$$。
 > * $$x$$為集合$$S$$的外點若存在$$r >0 \ni B_r(x) \subseteq \mathbb{R}^n - S$$。
 > * 集合$$S$$所有的外點形成的集合記為$$S^e$$。
+
+## 外點集為集合補集的內點集
+> $$\forall S \subseteq \mathbb{R}^n$$, $$S^e = (\mathbb{R}^n - S)^0$$ 且 $$S^e \subseteq \mathbb{R}^n - S$$。
+
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+</details>
 
 ## 邊界點(boundary point)
 > 令$$S \subseteq \mathbb{R}^n$$，若$$x \in \mathbb{R}^n$$。
 > * $$x$$為集合$$S$$的外點若存在$$r >0 \ni B_r(x) \cap {R}^n \neq \empty$$且  $$B_r(x) \cap {R}^n - S \neq \empty$$。
 > * 集合$$S$$所有的邊界點形成的集合記為$$S^b$$。
 
- 
+### 集合與其補集的邊界集相同
+> $$\forall S \subseteq \mathbb{R}^n$$, $$S^b = (\mathbb{R}^n - S)^b$$。
+
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+</details>
+
+## 內點集、外點集、邊界集為歐式空間的分割
+>  $$\forall S \subseteq \mathbb{R}^n$$
+> * $$S^0 \cap S^e = \empty$$, $$S^0 \cap S^b = \empty$$, $$S^b \cap S^e = \empty$$。
+> * $$S^0 \cup S^e  \cup S^b= \mathbb{R}^n $$。
+
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+</details>

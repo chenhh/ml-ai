@@ -94,17 +94,9 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 </details>
 
-### 有限多個有限集的聯集仍為有限集
-> $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\bigcup_{i=1}^n A_i$$仍為有限集。
-
-<details>
-
-<summary>proof: </summary>
-
-</details>
-
-### 有限多個有限集的積集仍為有限集
-> $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為有限集。
+### 有限多個有限集的聯集與積集仍為有限集
+> * $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\bigcup_{i=1}^n A_i$$仍為有限集。
+> * $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為有限集。
 
 <details>
 
@@ -234,6 +226,25 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 * 令$$S_n = \{n\}$$為具有單一整數的集合，則$$\cup_{n \in \mathbb{N}}S_n = \mathbb{N}$$
 
+### 可數集的有限多個積集仍為可數集
+> $$A_i, ~i=1,2,\dots, n$$均為可數集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為可數集。
+
+<details>
+
+<summary>proof: </summary>
+
+</details>
+
+### 可數集經映成函數後仍為可數集
+> $$A$$為可數集，而$$f: A \rightarrow B$$為映成函數，則$$B$$為可數集。
+
+<details>
+
+<summary>proof: </summary>
+
+</details>
+
+
 ### 有理數集合為可數集
 
 $$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則$$S_n \sim \mathbb{Z}$$，因此$$S_n$$為可數集。
@@ -273,3 +284,7 @@ $$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$�
 * 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ (QED)
 
 </details>
+
+## Schroder-Bernstein定理
+> * 若三集合$$A, B, C$$滿足$$A \supseteq B \supseteq C$$且$$A \sim C$$，則$$A \sim B$$。
+> * 若$$A$$至 $$B$$間有一對一函數存在，且$$B$$至$$A$$間也有一對一函數存在，則$$A \sim B$$。

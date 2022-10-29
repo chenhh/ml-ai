@@ -125,15 +125,15 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 <summary>proof:</summary>
 
-* \=>&#x20;
+* <=&#x20;
 
 若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。 則$$f: \mathbb{N} \rightarrow f(\mathbb{N})$$ 為一對一且映成的函數。&#x20;
 
-可得 $$\mathbb{N} \sim f(\mathbb{N})$$, 因此\$$f(\mathbb{N})\$$ 為無限集。
+可得 $$\mathbb{N} \sim f(\mathbb{N})$$, 因此$$f(\mathbb{N})$$ 為無限集。
 
 &#x20;由於 $$f(\mathbb{N}) \subseteq A$$，因此 $$A$$為無限集。 (QED)
 
-* <=&#x20;
+* =>&#x20;
 
 若$$A$$為無限集。因此$$A \neq \empty$$。&#x20;
 
@@ -153,9 +153,20 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 <summary>proof:</summary>
 
-\* =>
-
 * <=
+
+若$$A$$與其某個真子集等價，依有限集不與真子集等價性質得$$A$$不為有限集。因此$$A$$為無限集。(QED)
+
+* =>
+
+若$$A$$為無限集，則得$$A$$與自然數$$\mathbb{N}$$等價，
+因此可得$$A$$中的相異數列$$\{x_k\} \subseteq A$$且$$x_k \neq x_l, ~\forall k \neq l$$ 。
+
+因為$$x_1 \in A$$，可得另一集合$$B$$滿足$$x_1 \notin B$$。
+
+定義函數$$f: A \rightarrow B$$為：$$f(x)=x$$ 若$$x \in A$$但$$x \neq x_n, ~n \in \mathbb{N}$$，$$f(x)=x_{2n}$$, 若$$x = x_n$$。
+
+則$$f$$為一對一函數，因此$$A \sim B$$ (QED)
 
 </details>
 

@@ -89,3 +89,35 @@ description: open and closed set
 <summary>proof: 由定義直接證明</summary>
 
 </details>
+
+## 開集合(open set)
+>  $$\forall S \subseteq \mathbb{R}^n$$，若$$S$$內每個點均為$$S$$的內點，
+>   即$$\forall x \in S,~ \exists r > 0 \ni B_r(x) \subseteq S $$，則稱$$S$$為開集合。
+
+由定義知開集合不包含單點(孤立點)。
+
+### 空集合與歐式空間為開集合(同時也為閉集合)
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+</details>
+
+### 任意開集合的聯集仍為開集合
+> $$S_i, i=1,2,\dots, \infty$$為開集合，則$$\bigcup_{i=1}^\infty S_i$$為開集合。 
+
+<details>
+
+<summary>proof:</summary>
+
+</details>
+
+### 有限個開集合的交集仍為開集合
+> $$S_i, i=1,2,\dots, n$$為開集合，則$$\bigcap_{i=1}^\n S_i$$為開集合。
+> 註：可數個開集合的交集可能為閉集合。
+
+<details>
+
+<summary>proof:</summary>
+
+</details>

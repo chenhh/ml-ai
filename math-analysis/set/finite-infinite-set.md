@@ -125,7 +125,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 <details>
 
-<summary>proof: </summary>
+<summary>proof: <=數學歸納法 </summary>
 
 * =>
 若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。

@@ -50,7 +50,10 @@ description: open and closed set
 
 <details>
 
-<summary>proof: 由定義直接證明</summary>
+<summary>proof: 由內點定義直接證明</summary>
+
+令$$p \in S^0$$，由內點定義得$$\exists r > 0 \ni N_r(p) \subseteq S$$。
+因為$$\forall p \in S^0$$均滿足上述的性質，因此得$$S^0 \subseteq S$$ (QED)
 
 </details>
 
@@ -63,7 +66,7 @@ description: open and closed set
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof: 極限點必定和集合有無窮多個交點 </summary>
 
 * 當$$x \in S$$為內點時，則$$\exists r > 0 \ni N_r(x) \subseteq S$$包含了$$S$$的無窮多個元素，
 * 即使扣除掉點$$x$$，$$N_r(x)$$與$$S$$的交集也不是空集合，因此$$x$$為極限點。(QED)
@@ -74,7 +77,7 @@ description: open and closed set
 
 > 給定集合$$A,B \subseteq \mathbb{R}^n$$，則
 >
-> 1. $$A\subset B \Rightarrow A^0 \subset B^0 $$
+> 1. $$A\subseteq B \Rightarrow A^0 \subseteq B^0 $$
 >    * 反之不成立，考慮孤立點不為內點的情形。$$A=\{0\} \cup [1,2]$$, $$B=[0.5, 2.5]$$, $$A^0=(1,2),~ B^0=(0.5, 2.5)$$可得 $$A^0 \subset B^0$$但$$A \nsubseteq B$$。
 > 2. $$(A\cap B)^0=A^0 \cap B^0$$
 > 3. $$A^0 \cup B^0 \subset (A \cup B)^0$$
@@ -87,6 +90,15 @@ description: open and closed set
 > 10. 若$$A$$在$$\mathbb{R}^n$$中為開集合或閉集合，令$$A^b$$為$$A$$的邊界集，則$$(A^b)^0=\emptyset$$，
 > 11. 若$$A^0=B^0=\emptyset$$，則$$A$$在$$\mathbb{R}^n$$為閉集合，則$$(A \cup B)^0=\emptyset$$
 
+<details>
+
+<summary>proof: 1 </summary>
+
+令$$x \in A^0$$，由內點定義得$$\exists r > 0 \ni N_r(x) \subseteq A$$。
+
+因為$$A \subseteq B$$，所以 $$N_r(x) \subseteq B$$，因此$$x \in B^0$$ (QED)
+
+</details>
 
 
 ## 外點(exterior point)

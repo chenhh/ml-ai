@@ -100,6 +100,16 @@ description: open and closed set
 
 </details>
 
+<details>
+
+<summary>proof: 2 </summary>
+
+令$$x \in (A\cap B)^0$$, 由內點定義得$$\exists r > 0 \ni N_r(x) \subseteq (A\cap B)。
+
+因此$$N_r(x) \subseteq A$$ 且 N_r(x) \subseteq B$$。(QED)
+
+</details>
+
 
 ## 外點(exterior point)
 > 令$$S \subseteq \mathbb{R}^n$$，若$$x \in \mathbb{R}^n$$。

@@ -230,7 +230,9 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 >  $$\forall S \subseteq \mathbb{R}^n$$，若$$S$$內每個點均為$$S$$的內點，
 >   即$$\forall x \in S,~ \exists r > 0 \ni B_r(x) \subseteq S $$，則稱$$S$$為開集合。
 
-由定義知開集合不包含單點(孤立點)。
+* 由定義知開集合不包含單點(孤立點)。
+* 實數的開集合為開區間$$(a,b)$$或者開區間的聯集$$\cup_{i=1}^\infty (a_i ,b_i)$$。
+
 
 ### 開球為開集合
 > $$B_r(x) \subseteq \mathbb{R}^n$$為開球, 則$$B_r(x)$$為開集合。

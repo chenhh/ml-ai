@@ -96,6 +96,24 @@ description: open and closed set
 
 由定義知開集合不包含單點(孤立點)。
 
+### 開球為開集合
+> $$B_r(x) \mathbb{R}^n$$為開球, 則$$$B_r(x)$$為開集合。
+
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+令$$y \in B_r(x)$$, 則$$d(x,y)< r$$。
+
+令$$h = r - d(x,y) > 0$$，取$$ p \i \mathbb{R}^n$$且$$d(x, p) < h$$。
+
+由三角不等式得$$d(x,p) \leq d(x,y) + d(y,p) < d(x,y) + r -(d,xy) <r$$。
+
+因此$$p \in B_r(x)$$為內點，由定義得$$B_r(x)$$為開集合 (QED)
+
+</details>
+
+
 ### 空集合與歐式空間為開集合(同時也為閉集合)
 <details>
 
@@ -113,11 +131,53 @@ description: open and closed set
 </details>
 
 ### 有限個開集合的交集仍為開集合
-> $$S_i, i=1,2,\dots, n$$為開集合，則$$\bigcap_{i=1}^\n S_i$$為開集合。
+> $$S_i, i=1,2,\dots, n$$為開集合，則$$\bigcap_{i=1}^n S_i$$為開集合。
 > 註：可數個開集合的交集可能為閉集合。
 
 <details>
 
 <summary>proof:</summary>
+
+</details>
+
+
+#### 範例：無限個開集合的交集可能為閉集
+$$ \forall n \in \mathbb{N}, ~ (-\frac{1}{n}, \frac{1}{n})$$均為開集合，
+
+但是$$\displaystyle \lim_{n \rightarrow \infty} (-\frac{1}{n}, \frac{1}{n}) = \{0\}$$。
+
+
+### 開集合等價於內點集
+> $$S \subseteq \mathbb{R}^n$$為開集合 $$\Leftrightarrow ~ S=S^0$$
+
+<details>
+
+<summary>proof:
+
+</summary>
+
+</details>
+
+### 開集合可表示為可數個開球的聯集
+> 令$$\empty \neq S \subseteq \mathbb{R}^n$$，
+> 則$$S$$為開集合 $$\Leftrightarrow$$ S可表示為可數個$$\mathbb{R}^n$$中開球的聯集。
+> 註：此處$$S$$可為有界或無界的開集合。
+> * <= 可數個開集合的聯集仍為開集合
+
+<details>
+
+<summary>proof:
+
+</summary>
+
+</details>
+
+#### 實數中的每個非空開集合可表示成可數個兩兩不相交的開區間(有限或無限)的聯集
+
+<details>
+
+<summary>proof:
+
+</summary>
 
 </details>

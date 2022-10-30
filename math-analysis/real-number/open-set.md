@@ -233,7 +233,7 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 由定義知開集合不包含單點(孤立點)。
 
 ### 開球為開集合
-> $$B_r(x) \mathbb{R}^n$$為開球, 則$$$B_r(x)$$為開集合。
+> $$B_r(x) \subseteq \mathbb{R}^n$$為開球, 則$$B_r(x)$$為開集合。
 
 <details>
 
@@ -243,9 +243,35 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 
 令$$h = r - d(x,y) > 0$$，取$$ p \i \mathbb{R}^n$$且$$d(x, p) < h$$。
 
-由三角不等式得$$d(x,p) \leq d(x,y) + d(y,p) < d(x,y) + r -(d,xy) <r$$。
+由三角不等式得$$d(x,p) \leq d(x,y) + d(y,p) < d(x,y) + r -d(x, y) <r$$。
 
 因此$$p \in B_r(x)$$為內點，由定義得$$B_r(x)$$為開集合 (QED)
+
+</details>
+
+### 開集合等價於內點集
+> $$S \subseteq \mathbb{R}^n$$為開集合 $$\Leftrightarrow ~ S=S^0$$
+
+<details>
+
+<summary>proof:</summary>
+
+* <= 
+
+由內點集為集合的子集得 $$S^0 \subseteq S。
+
+因為$$S = S^0$$，且$$S^0 \subseteq S$$，可得$$S \subsetq S^0$$。
+
+即$$\forall x \in S$$均為內點，因此$$S$$為開集合 (QED)
+
+* =>
+
+由內點集為集合的子集得 $$S^0 \subseteq S。
+
+因為$$S$$為開集合，$$\forall x \in S$$均為內點，可得$$x \in S^0$$。
+
+因此可得$$S = S^0$$ (QED)
+
 
 </details>
 
@@ -258,11 +284,11 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 </details>
 
 ### 任意開集合的聯集仍為開集合
-> $$S_i, i=1,2,\dots, \infty$$為開集合，則$$\bigcup_{i=1}^\infty S_i$$為開集合。 
+> $$S_i, i=1,2,\dots, \infty$$為開集合，則$$\displaystyle \bigcup_{i=1}^\infty S_i$$為開集合。 
 
 <details>
 
-<summary>proof:</summary>
+<summary>proof: 數學歸納法</summary>
 
 </details>
 
@@ -283,16 +309,7 @@ $$ \forall n \in \mathbb{N}, ~ (-\frac{1}{n}, \frac{1}{n})$$均為開集合，
 但是$$\displaystyle \lim_{n \rightarrow \infty} (-\frac{1}{n}, \frac{1}{n}) = \{0\}$$。
 
 
-### 開集合等價於內點集
-> $$S \subseteq \mathbb{R}^n$$為開集合 $$\Leftrightarrow ~ S=S^0$$
 
-<details>
-
-<summary>proof:
-
-</summary>
-
-</details>
 
 ### 開集合可表示為可數個開球的聯集
 > 令$$\empty \neq S \subseteq \mathbb{R}^n$$，

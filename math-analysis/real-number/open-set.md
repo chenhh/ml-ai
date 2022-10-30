@@ -122,18 +122,18 @@ description: open and closed set
 
 > 1. $$A \subset B$$不一定可得$$A^b \subset B^b$$。
 > 2. $$A^b \cup B^b$$不一定可得 $$(A \cup B)^b$$。
-> 3. $$\A^b \cap B^b$$不一定可得 $$(A \cap B)^b$$。
-> 4. $$(\emptyset)^b=\emptyset$$
+> 3. $$A^b \cap B^b$$不一定可得 $$(A \cap B)^b$$。
+> 4. $$\emptyset^b=\emptyset$$
 > 5. $$\mathbb{Q}^b=\mathbb{R}$$
 
 例如：
 
-* $$A=[1,2]$$的閉區間，$$\partial(A)=\{1,2\}$$
-* $$B=[0,3]$$的閉區間，$$\partial(B)=\{0,3\}$$
-* $$A \subseteq B$$但$$\partial(A) \not \subset \partial(B)$$
-* $$\partial(A \cup B) = \{0,3\}$$, $$\partial(A) \cup \partial(B)=\{0,1,2,3\}$$
-* $$\partial (A \cap B) = \{1,2\}$$, $$\partial(A) \cap \partial(B) = \emptyset$$
-* 實數$$\mathbb{R}$$​中，有理數$$\mathbb{Q}$$​與無理數$$\mathbb{R - Q}$$​的內部都是空集合，邊界都是$$\mathbb{R}$$​。
+* $$A=[1,2]$$的閉區間，$$A^b=\{1,2\}$$
+* $$B=[0,3]$$的閉區間，$$B^b=\{0,3\}$$
+* $$A \subseteq B$$但$$A^b \not \subset B^b$$
+* $$(A \cup B)^b = \{0,3\}$$, $$A^b \cup B^b=\{0,1,2,3\}$$
+* $$(A \cap B)^b = \{1,2\}$$, $$A^b \cap B^b = \emptyset$$
+* 實數$$\mathbb{R}$$中，有理數$$\mathbb{Q}$$與無理數$$\mathbb{R - Q}$$的內部都是空集合，邊界都是$$\mathbb{R}$$。
 
 
 ### 有理數集和無理數集的內點集均為空集合，且邊界集均為實數
@@ -145,7 +145,7 @@ description: open and closed set
 </details>
 
 
-## 內點集、外點集、邊界集為歐式空間的分割
+## 內點集、外點集、邊界集為歐式空間的分割(三一律)
 >  $$\forall S \subseteq \mathbb{R}^n$$
 > * $$S^0 \cap S^e = \empty$$, $$S^0 \cap S^b = \empty$$, $$S^b \cap S^e = \empty$$。
 > * $$S^0 \cup S^e  \cup S^b= \mathbb{R}^n $$。
@@ -155,15 +155,15 @@ description: open and closed set
 <summary>proof: </summary>
 
 $$\forall S \subset \mathbb{R}^n$$，有以下的性質
-* $$S^0 \subset S$$
+* $$S^0 \subseteq S$$
 * $$S^e = (\mathbb{R}^n - S)^0$$
-* $$S^e \subset \mathbb{R}^n \setminus S$$
+* $$S^e \subseteq \mathbb{R}^n - S$$
 * $$S^0 \cap S^e = \emptyset$$
 * $$S^0 \cap S^b = \emptyset$$
 * $$S^e \cap S^b = \emptyset$$
 * $$S^0 \cup S^e \cup S^b = \mathbb{R}^n$$
 
-因此點$$x \in S^0,~ x \in S^e, ~ x \in S^b$$只能有一個成立。
+因此點$$x \in S^0,~ x \in S^e, ~ x \in S^b$$只能有一個成立。 (QED)
 
 </details>
 

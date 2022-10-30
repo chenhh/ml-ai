@@ -180,8 +180,8 @@ $$(A \cap B)^b = \{1,2\}$$, $$A^b \cap B^b = \emptyset$$
 
 
 ### 有理數集和無理數集的內點集均為空集合，且邊界集均為實數
-> * $$\mathbb{Q}^0 = \empty$$, $$ (\mathbb{R} \mathbb{Q})^0 = \empty$$
-> * $$\mathbb{Q}^b = (\mathbb{R) - \mathbb{Q})^b = \mathbb{R}$$
+> * $$\mathbb{Q}^0 = \empty$$, $$ (\mathbb{R} - \mathbb{Q})^0 = \empty$$
+> * $$\mathbb{Q}^b = (\mathbb{R} - \mathbb{Q})^b = \mathbb{R}$$
 
 <details>
 
@@ -189,13 +189,11 @@ $$(A \cap B)^b = \{1,2\}$$, $$A^b \cap B^b = \emptyset$$
 
 取$$x \in \mathbb{Q}$$，由有理數的稠密性得任兩個有理數之間均存在無理數。
 
-因此不存在$$ r > 0$$使得$$B_r(x) \subseteq \mathbb{Q}$$。
-
+因此不存在$$ r > 0$$使得$$B_r(x) \subseteq \mathbb{Q}$$。 
 所以$$\mathbb{Q}^0  = \empty$$。 (QED)
 
 由邊界集定義與有理數稠密性可得$$\forall x \in \mathbb{Q}, ~\forall r>0$$, 
 $$N_r(x) \cap \mathbb{Q} \neq \empty$$ 且 $$N_r(x) \cap (\mathbb{R}-\mathbb{Q}) \neq \empty$$。
-
 因此 $$\mathbb{Q}^b = \mathbb{R}$$。 (QED)
 
 

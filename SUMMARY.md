@@ -21,7 +21,7 @@
   * [區間套定理(nested interval theorem)](math-analysis/real-number/nested-interval-theorem.md)
   * [Bolzano-Weierstrass定理](math-analysis/real-number/bolzano-weierstrass-theorem.md)
   * [開集合](math-analysis/real-number/open-set.md)
-  * [極限點](math-analysis/real-number/ji-xian-dian.md)
+  * [極限點](math-analysis/real-number/limit-point.md)
   * [閉集合](math-analysis/real-number/closed-set.md)
   * [覆蓋(covering)](math-analysis/real-number/covering.md)
   * [緊緻集合(compact set)](math-analysis/real-number/compact-set.md)

@@ -18,7 +18,7 @@
 
 函數的定義中，定義域的所有元素只能對應到在對應域的唯一元素 ($$\forall x \in X \ \exists! y \in Y \ni f(x)=y$$ )，但無法保證所有對應域(codomain)的元素都會被對應，有被對應到元素的集合稱為值域(range)。
 
-![一般的函數只有保證定義域的所有元素都有唯一函數值](<../../.gitbook/assets/function-min (2).png>)
+![一般的函數只有保證定義域的所有元素都有唯一函數值](../../.gitbook/assets/function-min.png)
 
 函數必須是一對一且映成才能保證$$X, Y$$兩集合中的每一個元素均有唯一的對應關係。
 
@@ -60,7 +60,7 @@ $$f(x) = \frac{(x-a)}{(b-a)}$$
 
 <summary>proof: 證明沒有函數為映成函數</summary>
 
-冪集合 $$ P(A)$$ 為$$A$$的所有子集形成的集合。只要證明所有的函數$$f:A \rightarrow P(A)$$均不為映成函數即可。
+冪集合 $$P(A)$$ 為$$A$$的所有子集形成的集合。只要證明所有的函數$$f:A \rightarrow P(A)$$均不為映成函數即可。
 
 令$$B= \{ a\in A | a\notin f(a)\}$$，則$$B \subset A$$，可得$$B \in P(A)$$且$$B \neq f(a)$$。
 

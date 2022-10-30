@@ -23,7 +23,7 @@ Shannon在1948年發表的A Mathematical Theory of Communication是資訊理論�
 
 資訊理論或通訊系統的抽象模型如下圖：
 
-![通訊系統抽象模型](../.gitbook/assets/686px-Shannon\_communication\_system.svg.png)
+![通訊系統抽象模型](<../.gitbook/assets/686px-Shannon\_communication\_system.svg (1).png>)
 
 在所有的資訊交流系統中，通有一個發出訊息的發送端(信源)，至少有一個接收端(信宿)，以及訊息流通的通道(信道)。在訊息傳送過程中，一定會有噪音源發出噪音干擾訊息。為了把訊息放入信道中傳輸，所以需要先將訊息編碼，在傳送到信宿後，進行解碼還原訊息。
 

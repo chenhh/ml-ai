@@ -16,7 +16,10 @@ description: open and closed set
 > * [交換性] $$\forall x, y \in \mathbb{R}^n, ~ d(x, y) = d(y, x)$$。
 > * [三角不等式] $$\forall x, y, z \in \mathbb{R}^n, ~ d(x,y) \leq d(x, z) + d(z, y)$$。
 
-歐式空間常用的度量函數為$$d(x,y)=\lVert x-y \rVert = (\sum_{i=1}^n (x_i - y_i)^2)^{1/2}$$。
+歐式空間常用的度量函數為$$d(x,y)=\lVert x-y \rVert = (\sum_{i=1}^n (x_i - y_i)^2)^{1/2}$$。 
+
+距離函數為$$d(x,y)$$只要滿足上述定義即可，因此不一定是以$$a$$為中心的圓形，可能是菱形。$$d(a,b)=|a−b|$$或是其它形狀。
+* 鄰域為開集合，因為所有的元素均為內點
 
 ## 開球(open ball)
 > 令點$$x \in \mathbb{R}^n$$且半徑$$r > 0$$
@@ -51,10 +54,46 @@ description: open and closed set
 
 </details>
 
+### 歐式空間中，內點一定是極限點
+
+> 給定集合$$S\subseteq \mathbb{R}^n$$，內點$$x \in S$$（$$\exists r > 0 \ni N_r(x) \subseteq S$$），
+> 則$$x$$為$$S$$的極限點（$$\forall r > 0  N_r(x) \cap S - \{x\} \neq \emptyset$$）。
+>
+> 註：一般拓墣空間不一定成立。
+
+<details>
+
+<summary>proof:  </summary>
+
+* 當$$x \in S$$為內點時，則$$\exists r > 0 \ni N_r(x) \subseteq S$$包含了$$S$$的無窮多個元素，
+* 即使扣除掉點$$x$$，$$N_r(x)$$與$$S$$的交集也不是空集合，因此$$x$$為極限點。(QED)
+
+</details>
+
+### 內點的性質
+
+> 給定集合$$A,B \subseteq \mathbb{R}^n$$，則
+>
+> 1. $$A\subset B \Rightarrow A^0 \subset B^0 $$
+>    * 反之不成立，考慮孤立點不為內點的情形。$$A=\{0\} \cup [1,2]$$, $$B=[0.5, 2.5]$$, $$A^0=(1,2),~ B^0=(0.5, 2.5)$$可得 $$A^0 \subset B^0$$但$$A \nsubseteq B$$。
+> 2. $$(A\cap B)^0=A^0 \cap B^0$$
+> 3. $$A^0 \cup B^0 \subset (A \cup B)^0$$
+> 4. $A^0=\mathbb{R}^n-\overline{\mathbb{R}^n-A}$$，$$\overline{\mathbb{R}^n-A}$$為$$\mathbb{R}^n-A$$的閉包（closure）。
+> 5. $$(\mathbb{R}^n-A)^0=\mathbb{R}^n-\overline{A}$$
+> 6. $$((A)^0)^0=A^0$$
+> 7. $$\displaystyle (\bigcap_{i=1}^nA_i)^0=\bigcap_{i=1}^n((A_i)^0), ~ A_i \subseteq \mathbb{R}^n$$
+> 8. $$\displaystyle (\bigcap_{i=1}^{\infty} A_i)^0 \subseteq \bigcap_{i=1}^{\infty}((A_i^0), ~ A_i \subseteq \mathbb{R}^n$$
+> 9. $$\displaystlyle \bigcup_{i=1}^{\infty} A_i^0 \subseteq \bigcup_{i=1}^{\infty} A_i^0, ~ A_i \subseteq \mathbb{R}^n$$
+> 10. 若$$A$$在$$\mathbb{R}^n$$中為開集合或閉集合，令$$A^b$$為$$A$$的邊界集，則$$(A^b)^0=\emptyset$$，
+> 11. 若$$A^0=B^0=\emptyset$$，則$$A$$在$$\mathbb{R}^n$$為閉集合，則$$(A \cup B)^0=\emptyset$$
+
+
+
 ## 外點(exterior point)
 > 令$$S \subseteq \mathbb{R}^n$$，若$$x \in \mathbb{R}^n$$。
 > * $$x$$為集合$$S$$的外點若存在$$r >0 \ni B_r(x) \subseteq \mathbb{R}^n - S$$。
 > * 集合$$S$$所有的外點形成的集合記為$$S^e$$。
+> 註：邊界點$$x$$的任意開球至少有一點在集合$$S$$內，且至少有一點在集合$$S^c$$。
 
 ## 外點集為集合補集的內點集
 > $$\forall S \subseteq \mathbb{R}^n$$, $$S^e = (\mathbb{R}^n - S)^0$$ 且 $$S^e \subseteq \mathbb{R}^n - S$$。

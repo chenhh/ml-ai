@@ -79,6 +79,16 @@ description: open and closed set
 
 </details>
 
+
+### 有理數集和無理數集的內點集均為空集合，且邊界集均為實數
+
+<details>
+
+<summary>proof:  </summary>
+
+</details>
+
+
 ## 內點集、外點集、邊界集為歐式空間的分割
 >  $$\forall S \subseteq \mathbb{R}^n$$
 > * $$S^0 \cap S^e = \empty$$, $$S^0 \cap S^b = \empty$$, $$S^b \cap S^e = \empty$$。

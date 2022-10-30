@@ -104,9 +104,9 @@ description: open and closed set
 
 <summary>proof: 2 </summary>
 
-令$$x \in (A\cap B)^0$$, 由內點定義得$$\exists r > 0 \ni N_r(x) \subseteq (A\cap B)。
+令$$x \in (A\cap B)^0$$, 由內點定義得$$\exists r > 0 \ni N_r(x) \subseteq (A\cap B)$$。
 
-因此$$N_r(x) \subseteq A$$ 且 N_r(x) \subseteq B$$。(QED)
+因此$$N_r(x) \subseteq A$$ 且 $$N_r(x) \subseteq B$$。(QED)
 
 </details>
 

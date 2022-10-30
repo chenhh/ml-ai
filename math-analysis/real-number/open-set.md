@@ -84,7 +84,7 @@ description: open and closed set
 > 4. $$A^0=\mathbb{R}^n-\overline{\mathbb{R}^n-A}$$，$$\overline{\mathbb{R}^n-A}$$為$$\mathbb{R}^n-A$$的閉包（closure）。
 > 5. $$(\mathbb{R}^n-A)^0=\mathbb{R}^n-\overline{A}$$
 > 6. $$((A)^0)^0=A^0$$
-> 7. $$\displaystyle (\bigcap_{i=1}^nA_i)^0=\bigcap_{i=1}^nA_i)^0, ~ A_i \subseteq \mathbb{R}^n$$
+> 7. $$\displaystyle (\bigcap_{i=1}^nA_i)^0=\bigcap_{i=1}^n A_i^0, ~ A_i \subseteq \mathbb{R}^n$$
 > 8. $$\displaystyle (\bigcap_{i=1}^{\infty} A_i)^0 \subseteq \bigcap_{i=1}^{\infty} A_i^0, ~ A_i \subseteq \mathbb{R}^n$$
 > 9. $$\displaystyle \bigcup_{i=1}^{\infty} A_i^0 \subseteq \bigcup_{i=1}^{\infty} A_i^0, ~ A_i \subseteq \mathbb{R}^n$$
 > 10. 若$$A$$在$$\mathbb{R}^n$$中為開集合或閉集合，令$$A^b$$為$$A$$的邊界集，則$$(A^b)^0=\emptyset$$，
@@ -107,6 +107,24 @@ description: open and closed set
 令$$x \in (A\cap B)^0$$, 由內點定義得$$\exists r > 0 \ni N_r(x) \subseteq (A\cap B)$$。
 
 因此$$N_r(x) \subseteq A$$ 且 $$N_r(x) \subseteq B$$。(QED)
+
+</details>
+
+<details>
+
+<summary>proof: 3 </summary>
+
+令$$x \in A^0 \cup B^0$$，依內點定義$$\exists r_1 >0 \ni B_{r_1}(x) \subseteq A$$，
+或$$ \exists r_2 > 0 \ni B_{r_2} (x) \subseteq B$$。
+
+取$$ r = \min{r_1, r_2}$$, 可得$$B_r(x) \subseteq (A \cup B) (QED)
+
+</details>
+
+<details>
+
+<summary>proof: 4 </summary>
+
 
 </details>
 
@@ -150,19 +168,40 @@ description: open and closed set
 
 例如：
 
-* $$A=[1,2]$$的閉區間，$$A^b=\{1,2\}$$
-* $$B=[0,3]$$的閉區間，$$B^b=\{0,3\}$$
-* $$A \subseteq B$$但$$A^b \not \subset B^b$$
-* $$(A \cup B)^b = \{0,3\}$$, $$A^b \cup B^b=\{0,1,2,3\}$$
-* $$(A \cap B)^b = \{1,2\}$$, $$A^b \cap B^b = \emptyset$$
+$$A=[1,2]$$的閉區間，$$A^b=\{1,2\}$$，$$B=[0,3]$$的閉區間，$$B^b=\{0,3\}$$
+
+$$A \subseteq B$$但$$A^b \not \subset B^b$$
+
+$$(A \cup B)^b = \{0,3\}$$, $$A^b \cup B^b=\{0,1,2,3\}$$
+
+$$(A \cap B)^b = \{1,2\}$$, $$A^b \cap B^b = \emptyset$$
+
 * 實數$$\mathbb{R}$$中，有理數$$\mathbb{Q}$$與無理數$$\mathbb{R - Q}$$的內部都是空集合，邊界都是$$\mathbb{R}$$。
 
 
 ### 有理數集和無理數集的內點集均為空集合，且邊界集均為實數
+> * $$\mathbb{Q}^0 = \empty$$, $$ (\mathbb{R} \mathbb{Q})^0 = \empty$$
+> * $$\mathbb{Q}^b = (\mathbb{R) - \mathbb{Q})^b = \mathbb{R}$$
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof: 有理數和無理數的稠密性得內點集均為空集且邊界集均為實數 </summary>
+
+取$$x \in \mathbb{Q}$$，由有理數的稠密性得任兩個有理數之間均存在無理數。
+
+因此不存在$$ r > 0$$使得$$B_r(x) \subseteq \mathbb{Q}$$。
+
+所以$$\mathbb{Q}^0  = \empty$$。 (QED)
+
+由邊界集定義與有理數稠密性可得$$\forall x \in \mathbb{Q}, ~\forall r>0$$, 
+$$N_r(x) \cap \mathbb{Q} \neq \empty$$ 且 $$N_r(x) \cap (\mathbb{R}-\mathbb{Q}) \neq \empty$$。
+
+因此 $$\mathbb{Q}^b = \mathbb{R}$$。 (QED)
+
+
+同理由無理數的稠密性得$$(\mathbb{R} - \mathbb{Q})^0 = \empty$$ 且 
+$$(\mathbb{R} - \mathbb{Q})^b = \mathbb{R}$$。
+(QED)
 
 </details>
 

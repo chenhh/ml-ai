@@ -155,6 +155,24 @@ proof：定義等價性 <=
 * 則 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n= \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = (−\infty, \infty)$$(因為$$E_{2n}$$不斷聯集到無窮大)
 * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n= \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k = (-1,1]$$
 
+#### 範例
+
+$$\displaystyle \bigcup_{n=1}^\infty (1-\frac{1}{n}, \frac{1}{n}]=(0,1]$$
+
+令$$\displaystyle \bigcup_{n=1}^\infty (1-\frac{1}{n}, \frac{1}{n}]=S$$
+
+在$$n=1$$時，$$I_1=(0,1] \subseteq S$$
+
+而且可得$$S\subseteq (0,1]$$因為$$1-\frac{1}{n} \geq 0$$且$$\frac{1}{n} >0 ~ \forall \mathbb{N}$$.&#x20;
+
+#### 範例：閉區間的無窮交集仍為閉區間
+
+$$\displaystyle \bigcap_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] = [a+1, b-1]$$
+
+#### 範例：閉區間的無窮聯集可能為開集
+
+$$\displaystyle \bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] = (a, b)$$
+
 ## 集合序列上、下極限的補集
 
 > * $$\displaystyle \left( \limsup_{n \rightarrow \infty}⁡ E_n \right)^c = \liminf_{n \rightarrow \infty}⁡ E_n^c$$

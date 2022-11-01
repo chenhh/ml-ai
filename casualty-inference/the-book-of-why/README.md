@@ -66,7 +66,7 @@ Francis Galton與Karl Pearson在統計學中，均不處理因果關係，「相
 
 ## 因果推論模型
 
-![因果推論引擎](../../.gitbook/assets/inference\_engine-min.png)
+![因果推論引擎](<../../.gitbook/assets/inference\_engine-min (1).png>)
 
 推論引擎可接受三種輸入：假設、查詢、資料。
 

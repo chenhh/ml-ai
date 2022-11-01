@@ -173,6 +173,17 @@ $$\displaystyle \bigcap_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] = [a+1, b-1]
 
 $$\displaystyle \bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] = (a, b)$$
 
+#### 範例 
+
+$$A_n = \left( \frac{1}{n}, 1+\frac{1}{n} \right)$$, 
+則$$\displaystyle \lim_{n \rightarrow \infty} A_n = (0, 1]$$
+
+#### 範例：有理數集合序列的上、下極限
+
+$$ A_n = \{\frac{m}{n} ~|~ m \in \mathbb{Z} \}$$, 則 
+* $$ \displaystyle \limsup_{n \rightarrow \infty} A_n = \mathbb{Q} $$
+* $$ \displaystyle \liminf_{n \rightarrow \infty} A_n = \mathbb{Z} $$,
+
 ## 集合序列上、下極限的補集
 
 > * $$\displaystyle \left( \limsup_{n \rightarrow \infty}⁡ E_n \right)^c = \liminf_{n \rightarrow \infty}⁡ E_n^c$$

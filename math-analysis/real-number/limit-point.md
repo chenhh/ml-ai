@@ -29,14 +29,13 @@ description: limit point, adherent point
 
 ## 孤立點（isolated point）
 
-> 集合$$S \subset \mathbb{R}^n$$，如果點$$x\in S$$滿足 $$\exists r > 0 \ni b_r(x) \cap S = \{x\}$$，則稱$$x$$為孤立點。
+> 集合$$S \subset \mathbb{R}^n$$，如果點$$x\in S$$且滿足 $$\exists r > 0 \ni b_r(x) \cap S = \{x\}$$，則稱$$x$$為孤立點。
 >
 > 若不是孤立點，則$$B_r(x) \cap S$$為不可數集合。
 
 * 孤立點是存在$$x$$的某一個開球滿足條件即可。
-* $$x$$ 是$$S$$ 的孤立點，意味著 $$x$$ 必為集合 $$S$$ 的元素，否則其開球與集合的交集為空集合。
-* 由定義知孤立點不是極限點。
 * 由定義知孤立點不是內點, 因為若$$\exists r>0 \ni N_r (x) \subseteq S$$，可得$$N_r (x)\cap S=N_r (x) \neq \{x\}$$。
+* 由定義知孤立點不是極限點, 因為極限點必定和集合相交無限而多，而孤立點只有和集合交於一點。
 * 因為$$N_r (x) \cap S$$集合中元素應為無窮多個，若只有一個點時，表示$$x$$附近沒有任何元素，即為孤立點。
   + 例如 $$S=\{1/n, \forall n \in \mathbb{N}\}$$，則$$S$$內的每一點都是孤立點。
   + 例如$$S=\{0\} \cup [1,2]$$，則0為孤立點。
@@ -60,7 +59,7 @@ description: limit point, adherent point
 從$$Q - \{x_1\}$$的集合中，可得$$r_2=\min \{  r>0  | \forall x \in Q - \{x_1\}, N_r (x) \cap S=\{x\}  \}$$ 
 且令滿足此最小半徑的點為$$x_2$$。
 
-* 以此類推，可得$$Q$$中的點與自然數集合$$\mathbb{N}$$有一對一的關係，因此$$Q$$為可數集合。 (QED)
+以此類推，可得$$Q$$中的點與自然數集合$$\mathbb{N}$$有一對一的關係，因此$$Q$$為可數集合。 (QED)
 
 </details>
 
@@ -70,12 +69,13 @@ description: limit point, adherent point
 
 <details>
 
-<summary>proof: 孤立點和集合只有交集於自身一點，因此對於任意長度的開球，交集於集合內與集合外均不為空 </summary>
+<summary>proof: 歐式空間可分為內點、邊界點、外點三類，而孤立點不是內點，也不是外點，因此為分割點。 </summary>
 
-因此$$\forall r > 0, B_r(x) \cap S \neq \empty$$ -- (1)
+因為$$x\in S$$ 因此$$\forall r > 0, ~ x \in (B_r(x) \cap S)$$ 至少包含一點$$x$$ -- (1)
 
+因為$$x \in S$$，但是$$x$$不是內點，所以$$\forall r >0, ~ B_r(x) \cap S^c \neq \empty$$ -- (2)
 
-
+由(1,2)得$$x$$為邊界點(QED)
 
 </details>
 

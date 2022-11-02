@@ -38,7 +38,7 @@ Heine-Borel覆蓋定理證明任意有界閉集合均存在有限個數的子開
 
 <details>
 
-<summary>proof: 1->2 </summary>
+<summary>proof: 緊致集合->有界閉集合(一般度量空間成立) </summary>
 
 令$$p \in S$$, 可得球集合族 $$\{N_1 (p), N_2 (p),\ldots, N_k (p), \ldots\}, k \in \mathbb{N}$$為$$S$$的可數開覆蓋。
 
@@ -74,7 +74,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 <details>
 
-<summary>proof: 2->3 </summary>
+<summary>proof: 有界閉集合->任意無限子集必有極限點 (一般度量空間成立) </summary>
 
 令 $$T\subseteq S$$, 且$$T$$中有無限多個元素。因為$$S$$為有界集合，因此$$T$$為有界集合。
 
@@ -90,7 +90,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 <details>
 
-<summary>proof: 2->1 </summary>
+<summary>proof:  有界閉集合->緊緻集合 (只在歐式空間成立) </summary>
 
 可由Heine-Borel覆蓋定理證明任意有界閉集合均存在有限個數的子開覆蓋得出。
 
@@ -100,7 +100,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 <details>
 
-<summary>proof: 3->2：(反證法) </summary>
+<summary>proof: 任意無限子集必有極限點->有界閉集合(一般度量空間成立) </summary>
 
 若$$S$$為無界集合，則$$∀m>0 ~\exists x_m \in S \ni \|x_m\|>m$$
 

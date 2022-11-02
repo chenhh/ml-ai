@@ -1,6 +1,6 @@
 # 常見可微與不可微函數
 
-可微分函數
+## 可微分函數
 
 
 ### 多項式函數（polynomial function）
@@ -11,7 +11,8 @@ $$p^{(k)}(x) = 0, \forall k > n$$
 
 ### 偶冪函數（even power function）
 
-> $$f:\mathbb{R} \rightarrow [0, \infty)$$, $$n \in \mathbb{N},\ f(x)=x^{2n}$$，則> $$f \in C^{\infty} (\mathbb{R})$$，$$f$$為凸函數且切$$x$$軸於原點0。
+> $$f:\mathbb{R} \rightarrow [0, \infty)$$, $$n \in \mathbb{N},\ f(x)=x^{2n}$$，則
+> $$f \in C^{\infty} (\mathbb{R})$$，$$f$$為凸函數且切$$x$$軸於原點0。
 
 * $$(x^{2n})^{(k)}=0, ~ \forall k > 2n$$
 * $$(x^{2n})^{''}=2n(2n-1)x^{2n-2} > 0$$，所以為凸函數。
@@ -19,7 +20,9 @@ $$p^{(k)}(x) = 0, \forall k > n$$
 
 ### 奇冪函數（odd power function）
 
-> • $$f:\mathbb{R} \rightarrow [0, \infty)$$, $$n \in \mathbb{N}$$, $$f(x)=x^{2n+1}$$，則> $$f \in C^\infty (\mathbb{R})$$，且$$f$$在$$(0,\infty)$$為凸函數，在$$(−\infty,0)$$為凹函數且切$$x$$軸於0。>
+> • $$f:\mathbb{R} \rightarrow [0, \infty)$$, $$n \in \mathbb{N}$$, $$f(x)=x^{2n+1}$$，則
+> $$f \in C^\infty (\mathbb{R})$$，且$$f$$在$$(0,\infty)$$為凸函數，在$$(−\infty,0)$$為凹函數且切$$x$$軸於0。
+>
 
 ### 指數函數（exponential function）
 
@@ -73,4 +76,5 @@ $$\displaystyle \lim_{h \rightarrow 0^+} \frac{f(h) - f(0)}{h} =  \lim_{h \right
 
 * $$\lim_{h \rightarrow 0^− }⁡\frac{f(h)−f(0)}{h}=\lim_{h \rightarrow 0^− }\frac{−h}{h}=−1$$。
 * $$\lim_{h \rightarrow 0^+ } \frac{f(h)−f(0)}{h}= \lim_{h \rightarrow 0^+ }⁡\frac{h}{h}=1$$ 左右微分不相等，因此在$$x=0$$不可微分。
-* $$\lim_{x \rightarrow 0^+ }⁡\frac{f(x)−f(0)}{x}= \lim_{x \rightarrow 0^+ }⁡ x^{−1+1/n} = \infty$$, 因此在$$x=0$$不可微  分。
+* $$\lim_{x \rightarrow 0^+ }⁡\frac{f(x)−f(0)}{x}= \lim_{x \rightarrow 0^+ }⁡ x^{−1+1/n} = \infty$$, 因此在$$x=0$$不可微
+  分。

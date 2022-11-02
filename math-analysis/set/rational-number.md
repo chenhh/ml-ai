@@ -47,8 +47,7 @@
 
 > $$\forall x,y \in \mathbb{Q}, x < y$$, let $$z=\frac{x+y}{2}$$, then $$x < z < y$$ and $$z \in \mathbb{Q}$$。
 
-有理數的十進位表示法
-
+### 有理數的十進位表示法
 
 > 給定有限位數實數$$r_n=a_0.a_1 a_2\ldots a_n, ~ a_0 \in \mathbb{Z}^{+}, a_i \in \{0,1,\ldots, 9\}, ~ i=1,2,\ldots, n$$可表示成$$r_n=a_0+\frac{a_1}{10}+\frac{a_2}{10^2} +\cdots +\frac{a_n}{10^n}$$&#x20;
 >
@@ -58,9 +57,15 @@
 
 > • 給定$$x \in \mathbb{R}^+$$, 則$$\forall n \in \mathbb{N}, ~ \exists r_n=a_0.a_1 a_2 \cdots a_n \ni r_n \leq x < r_n+\frac{1}{10^n}$$
 
-Proof:
+<details>
 
-* 令$$S=\{y \in \mathbb{N}, ~y\leq x\}\neq \emptyset$$ 為整數的子集合，因此S有上界, 由實數完備性得最小上界存在，令$$\sup(⁡S)=a_0$$。
-* 因為$$a_0 \in \mathbb{Z}^+ \Rightarrow a_0 \in S$$, 令$$a_0=[x]$$
-  ，即$$a_0 \leq x<a_0+1$$。
-* 令$$a_1=[10x−10a_0 ]$$  依序建造下去即可(QED)
+<summary> proof:  </summary>
+
+令$$S=\{y \in \mathbb{N}, ~y\leq x\}\neq \emptyset$$ 為整數的子集合，因此S有上界, 由實數完備性得最小上界存在，令$$\sup(⁡S)=a_0$$。
+
+因為$$a_0 \in \mathbb{Z}^+ \Rightarrow a_0 \in S$$, 令$$a_0=[x]$$ ，即$$a_0 \leq x<a_0+1$$。
+
+令$$a_1=[10x−10a_0 ]$$  依序建造下去即可(QED)
+
+</details>
+

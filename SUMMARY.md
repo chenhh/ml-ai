@@ -17,6 +17,7 @@
   * [集合的特徵函數](math-analysis/set/characteristic-function.md)
 * [實數(real number)](math-analysis/real-number/README.md)
   * [戴德金分割法(cut)](math-analysis/real-number/dedekind-cut.md)
+  * [Cantor收斂有理數列法](math-analysis/real-number/cantor-shou-lian-you-li-shu-lie-fa.md)
   * [上(下)確界(sup, inf)](math-analysis/real-number/supremum-Infimum.md)
   * [區間套定理(nested interval theorem)](math-analysis/real-number/nested-interval-theorem.md)
   * [Bolzano-Weierstrass定理](math-analysis/real-number/bolzano-weierstrass-theorem.md)

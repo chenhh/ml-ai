@@ -2,18 +2,28 @@
 
 ## 有理數與無理數
 
-> * $$\mathbb{Q} = \big\{ \frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, \operatorname{gcd}(m,n)=1 \big\}$$為有理數集合。
+> * $$\mathbb{Q} = \big\{ \frac{m}{n} | m, n \in \mathbb{Z}, ~ \operatorname{gcd}(m,n)=1 \big\}$$為有理數集合。
 > * 實數中不為有理數之數為無理數（irrational number）。
+
+由定義得整數集為有理數集的子集合，$$\mathbb{Z} \subseteq \mathbb{Q}$$。
 
 ### 根號2為無理數
 
-proof(反證法)
+<details>
 
-* 假設$$\sqrt{2} = \frac{m}{n}, m, n \in \mathbb{N}$$，$$gcd(m,n)=1$$為有理數。
-* 取平方可得  $$2 = \frac{m^2}{n^2} \Rightarrow m^2 = 2n^2$$，因此$$m$$為偶數。
-* 令$$m = 2a, a \in \mathbb{N}$$
-* 所以$$m^2 = 4a^2 = 2n^2 \Rightarrow n^2 = 2a^2$$，因此$$n$$為偶數。
-* 由於$$m,n$$均為偶數，可得$$gcd(m,n)=2$$，和假設不符，因此$$\sqrt{2}$$為無理數(QED)。
+<summary> proof: (反證法) </summary>
+
+假設$$\sqrt{2} = \frac{m}{n}, m, n \in \mathbb{N}$$，$$gcd(m,n)=1$$為有理數。
+
+取平方可得  $$2 = \frac{m^2}{n^2} \Rightarrow m^2 = 2n^2$$，因此$$m$$為偶數。
+
+令$$m = 2a, a \in \mathbb{N}$$
+
+所以$$m^2 = 4a^2 = 2n^2 \Rightarrow n^2 = 2a^2$$，因此$$n$$為偶數。
+
+由於$$m,n$$均為偶數，可得$$gcd(m,n)=2$$，和假設不符，因此$$\sqrt{2}$$為無理數(QED)。
+
+</details> 
 
 ## 有理數體(field)
 
@@ -51,5 +61,6 @@ proof(反證法)
 Proof:
 
 * 令$$S=\{y \in \mathbb{N}, ~y\leq x\}\neq \emptyset$$ 為整數的子集合，因此S有上界, 由實數完備性得最小上界存在，令$$\sup(⁡S)=a_0$$。
-* 因為$$a_0 \in \mathbb{Z}^+ \Rightarrow a_0 \in S$$, 令$$a_0=[x]$$  ，即$$a_0 \leq x<a_0+1$$。
-* 令$$a_1=[10x−10a_0 ]$$  依序建造下去即可(QED)
+* 因為$$a_0 \in \mathbb{Z}^+ \Rightarrow a_0 \in S$$, 令$$a_0=[x]$$
+  ，即$$a_0 \leq x<a_0+1$$。
+* 令$$a_1=[10x−10a_0 ]$$  依序建造下去即可(QED)

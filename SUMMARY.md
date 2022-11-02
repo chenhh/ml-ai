@@ -51,7 +51,7 @@
   * [導數連續性質](math-analysis/derivative/derivative-continuous.md)
   * [微分均值定理（mean-value theorem）](math-analysis/derivative/diff-mean-value-theorem.md)
   * [L'Hopital法則](math-analysis/derivative/lhopital-rule.md)
-  * [方向導數與梯度](math-analysis/derivative/fang-xiang-dao-shu-yu-ti-du.md)
+  * [方向導數與梯度](math-analysis/derivative/directional-derivative-gradient.md)
 * [Riemann-Stieltjes積分](math-analysis/rs-integral.md)
 * [測度(measure)](math-analysis/measure.md)
   * [Lebesgue外測度](math-analysis/measure/lebesgue-outer-measure.md)
@@ -70,7 +70,7 @@
 * [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)
   * [L2與l2空間](math-analysis/fourier-analysis/L2-space.md)
   * [傅立葉級數](math-analysis/fourier-analysis/fourier-series.md)
-  * [摺積(convolution)](math-analysis/fourier-analysis/zhe-ji-convolution.md)
+  * [摺積(convolution)](math-analysis/fourier-analysis/convolution.md)
 * [拉普拉斯轉換](math-analysis/Laplace-transform.md)
 * [分數微積分(fractional calculus)](math-analysis/fractional-calculus.md)
 

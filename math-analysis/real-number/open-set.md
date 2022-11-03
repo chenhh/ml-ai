@@ -323,7 +323,7 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 
 因為$$\forall i, ~ S_i$$為開集合，因此存在$$r_{x_i} > 0 \ni B_{r_{x_i}}(x) \subseteq S_i$$。
 
-令$$r_x = \min\{ r_{x_i} ~|~ i=1,2,\dots, n\}$$, 則 B_{r_x}(x) \subsetq S_i, \forall i$$。
+令$$r_x = \min\{ r_{x_i} ~|~ i=1,2,\dots, n\}$$, 則 $$B_{r_x}(x) \subsetq S_i, \forall i$$。
 
 因對$$\forall x \in S$$均可得到上述結果，所以$$S$$為開集合(QED)
 
@@ -341,14 +341,13 @@ $$ \forall n \in \mathbb{N}, ~ (-\frac{1}{n}, \frac{1}{n})$$均為開集合，
 ### 開集合可表示為可數個開球的聯集
 > 令$$\empty \neq S \subseteq \mathbb{R}^n$$，
 > 則$$S$$為開集合 $$\Leftrightarrow$$ S可表示為可數個$$\mathbb{R}^n$$中開球的聯集。
+> 
 > 註：此處$$S$$可為有界或無界的開集合。
-> * <= 可數個開集合的聯集仍為開集合
+>
 
 <details>
 
-<summary>proof:
-
-</summary>
+<summary>proof: 反向<=由可數個開集合的聯集仍為開集合可得證，因此只要證明=>方向即可 </summary>
 
 </details>
 

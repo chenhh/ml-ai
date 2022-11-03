@@ -111,4 +111,34 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 </details> 
 
 
+## 緊緻集的任一閉子集仍為緊緻集
 
+> $$ S\subseteq \mathbb{R}^n$$為緊緻集，若$$ K \subseteq S$$為閉集合，則$$K$$為緊緻集。
+>
+> 一般度量空間均成立
+
+<details>
+
+<summary> proof: 一般度量空間 </summary>
+
+令$$\{O_i\}_{i \in I}$$為集合$$K$$的開覆蓋，即$$\displaystyle K \subseteq \bigcup_{i \in I}O_i$$。
+
+可得$$ \displaystyle S \subseteq \bigcup_{i \in I} O_i \cup K^c$$。
+
+因為$$S$$為緊緻集，由定義得存在有限開覆蓋 $$ \displaystyle S \subseteq \bigcup_{i=1}^n O_i \cup K^c$$
+
+因此可得$$ \displaystyle K \subseteq \bigcup_{i=1}^n O_i$$ (QED)
+
+</details>
+
+<details>
+
+<summary> proof: 歐式空間可用Heine-Borel定理證明 </summary>
+
+因為$$S$$為緊緻集，所以$$S$$為有界閉集合。
+
+因為$$K \subseteq S$$且$$S$$為閉集合，所以$$K$$為閉集合。
+
+因為$$K$$為有界閉集合，依Heine-Borel定理得$$K$$為緊緻集合。(QED)
+
+</details>

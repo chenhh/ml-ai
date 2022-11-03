@@ -294,7 +294,9 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 </details>
 
 ### 任意開集合的聯集仍為開集合
-> $$S_i, i=1,2,\dots, \infty$$為開集合，則$$\displaystyle \bigcup_{i=1}^\infty S_i$$為開集合。 
+> $$S_i, i=1,2,\dots, \infty$$為開集合，則$$\displaystyle \bigcup_{i=1}^\infty S_i$$為開集合。
+>
+> 註：即使索引集合$$I$$為不可數集合，$$i \in I$$時，上式也成立。
 
 <details>
 

@@ -142,3 +142,9 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 因為$$K$$為有界閉集合，依Heine-Borel定理得$$K$$為緊緻集合。(QED)
 
 </details>
+
+## 緊緻集必存在收斂子數列
+
+> $$S \subseteq \mathbb{R}^n$$為緊緻集，且$$\{x_n\} \subseteq S$$為一數列(不一定收斂), 
+>
+> 則存在一子序列$$\{x_{n_i}\}$$與點$$x \in S \ni \displaystyle \lim_{i \rightarrow \infty} x_{n_i} = x$$ 

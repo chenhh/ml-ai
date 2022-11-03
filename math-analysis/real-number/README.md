@@ -29,6 +29,7 @@
 <details>
 
 <summary> proof:  </summary>
+
 給定$$a,b \in \mathbb{R}$$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$滿足$$x <y$$且$$[a,b] \subseteq I_1=[x,y]$$
 
 令$$t = (x+y)/2$$, 則$$t \in \mathbb{Q}$$為有理數。

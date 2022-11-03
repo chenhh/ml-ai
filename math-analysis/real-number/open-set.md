@@ -73,6 +73,8 @@ description: open and closed set
 
 </details>
 
+
+
 ### 內點的性質
 
 > 給定集合$$A,B \subseteq \mathbb{R}^n$$，則
@@ -128,6 +130,12 @@ description: open and closed set
 
 </details>
 
+## 不相交集與非重疊集
+> $$A, B \in \subseteq \mathbb{Q}^n$$
+> 
+> 定義若$$A \cap B = \empty$$$, 則稱$$A, B$$為不相交集。
+> 
+> 定義若內點集$$A^0 \cap B^0 = \empty$$，則稱$$A, B$$為非重疊集。
 
 ## 外點(exterior point)
 > 令$$S \subseteq \mathbb{R}^n$$，若$$x \in \mathbb{R}^n$$。

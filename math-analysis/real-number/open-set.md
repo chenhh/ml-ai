@@ -251,7 +251,7 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 
 令$$y \in B_r(x)$$, 則$$d(x,y)< r$$。
 
-令$$h = r - d(x,y) > 0$$，取$$ p \i \mathbb{R}^n$$且$$d(x, p) < h$$。
+令$$h = r - d(x,y) > 0$$，取$$ p \in \mathbb{R}^n$$且$$d(x, p) < h$$。
 
 由三角不等式得$$d(x,p) \leq d(x,y) + d(y,p) < d(x,y) + r -d(x, y) <r$$。
 
@@ -268,15 +268,15 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 
 * <= 
 
-由內點集為集合的子集得 $$S^0 \subseteq S。
+由內點集為集合的子集得 $$S^0 \subseteq S$$。
 
-因為$$S = S^0$$，且$$S^0 \subseteq S$$，可得$$S \subsetq S^0$$。
+因為$$S = S^0$$，且$$S^0 \subseteq S$$，可得$$S \subseteq S^0$$。
 
 即$$\forall x \in S$$均為內點，因此$$S$$為開集合 (QED)
 
 * =>
 
-由內點集為集合的子集得 $$S^0 \subseteq S。
+由內點集為集合的子集得 $$S^0 \subseteq S$$。
 
 因為$$S$$為開集合，$$\forall x \in S$$均為內點，可得$$x \in S^0$$。
 

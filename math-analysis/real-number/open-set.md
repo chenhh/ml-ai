@@ -294,13 +294,19 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 </details>
 
 ### 任意開集合的聯集仍為開集合
-> $$S_i, i=1,2,\dots, \infty$$為開集合，則$$\displaystyle \bigcup_{i=1}^\infty S_i$$為開集合。
+> $$S_i, i \in I,$$為開集合，則$$\displaystyle \bigcup_{i \in I} S_i= S$$為開集合。
 >
-> 註：即使索引集合$$I$$為不可數集合，$$i \in I$$時，上式也成立。
+> 註：索引集合$$I$$可能是不可數集合或者是可數集合。
 
 <details>
 
-<summary>proof: 數學歸納法</summary>
+<summary>proof: 直接以開集合定義證明</summary>
+
+令點$$x \in S$$，則存在$$n \in I \ni x \in S_{n}$$。
+
+因為$$S_n$$為開集合，依定義得$$\exists r_n > 0 \ni B_{r_n}(x) \subseteq S_n$$。
+
+因此可得$$B_{r_n}(x) \subseteq S$$，對於$$\forall x \in S$$均可得到此結果，因此$$S$$為開集合(QED)
 
 </details>
 

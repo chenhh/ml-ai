@@ -137,7 +137,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 因為$$S$$為緊緻集，所以$$S$$為有界閉集合。
 
-因為$$K \subseteq S$$且$$S$$為閉集合，所以$$K$$為閉集合。
+因為$$K \subseteq S$$且$$S$$為有界集合，所以$$K$$為有界集合。
 
 因為$$K$$為有界閉集合，依Heine-Borel定理得$$K$$為緊緻集合。(QED)
 

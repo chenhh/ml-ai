@@ -29,11 +29,11 @@
 <details>
 
 <summary> proof:  </summary>
-給定 $$a,b \in \mathbb{R}$$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$ 滿足 $$x <y$$ 且 $$[a,b] \subseteq I_1=[x,y]$$
+給定$$ a,b \in \mathbb{R} $$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$滿足$$ x <y $$且$$[a,b] \subseteq I_1=[x,y]$$
 
-令$$t = (x+y)/2, 則$$t \in \mathbb{Q}$$為有理數。
+令$$t = (x+y)/2$$, 則$$t \in \mathbb{Q}$$為有理數。
 
-將閉區間$$I_1$$分解為$$I_{11} \cup I_{12}$$, 其中$$I_11=[x, t]$$, I_{12} = [t,y]$$。
+將閉區間$$I_1$$分解為$$I_{11} \cup I_{12}$$, 其中$$I_{11}=[x, t]$$, $$I_{12} = [t,y]$$。
 
 則以下三種狀況必定有一種符合：
 * $$[a,b] \subseteq I_{11}$$
@@ -47,7 +47,7 @@ $$a < u <b$$，則得任意兩實數間必有一有理數 (QED 1)。
 
 否則得一區間序列$$\{I_n\}$$，其滿足每一區間$$I_n$$的兩端點為有理數，且$$ \displaystyle \lim_{n \rightarrow \infty} |I_n| =0 $$。
 
-因為區間長度$$b-a$$為一固定值，因此在分解區間$$m$$時，必定可得$$|I_m| < (b-a)$$，因此$$\{I_m\}$$ 必有一端點在$$(a,b)上 (QED 2)。
+因為區間長度$$b-a$$為一固定值，因此在分解區間$$m$$時，必定可得$$|I_m| < (b-a)$$，因此$$\{I_m\}$$ 必有一端點在$$(a,b)$$上 (QED 2)。
 
 同理可得無理數$$v \in \Gamma \ni  a < v < b$$ (QED 3)
 

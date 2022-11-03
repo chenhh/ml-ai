@@ -20,6 +20,39 @@
 
 這七個定理可以循環證明，因此均為實數集完備性公理的等價敘述。
 
+## 實數集的稠密性
+
+> $$\forall a,b \in \mathbb{R}, \ a <b$$ $$\exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$a < v < b$$。
+>
+> 任兩個不相等的實數之間，必定存在無理數與有理數。
+
+<details>
+
+<summary> proof:  </summary>
+給定 $$a,b \in \mathbb{R}$$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$ 滿足 $$x <y$$ 且 $$[a,b] \subseteq I_1=[x,y]$$
+
+令$$t = (x+y)/2, 則$$t \in \mathbb{Q}$$為有理數。
+
+將閉區間$$I_1$$分解為$$I_{11} \cup I_{12}$$, 其中$$I_11=[x, t]$$, I_{12} = [t,y]$$。
+
+則以下三種狀況必定有一種符合：
+* $$[a,b] \subseteq I_{11}$$
+* $$ [a,b] \subseteq I_{12}$$
+* $$ \in (a,b)$$
+
+如果$$t \in (a,b)$$，則得到$$u = t \in \mathbb{Q}$$，滿足 $$a< u < b$$。
+
+如果$$[a,b] \in I_{11}$$，令$$I_2 = I_{11}$$，以上述方式繼續分解。 若存在某一區間$$\{I_n\}$$的中點$$ u \in \mathbb{Q}$$ 使得
+$$a < u <b$$，則得任意兩實數間必有一有理數 (QED 1)。
+
+否則得一區間序列$$\{I_n\}$$，其滿足每一區間$$I_n$$的兩端點為有理數，且$$ \displaystyle \lim_{n \rightarrow \infty} |I_n| =0 $$。
+
+因為區間長度$$b-a$$為一固定值，因此在分解區間$$m$$時，必定可得$$|I_m| < (b-a)$$，因此$$\{I_m\}$$ 必有一端點在$$(a,b)上 (QED 2)。
+
+同理可得無理數$$v \in \Gamma \ni  a < v < b$$ (QED 3)
+
+</details>
+
 ## 實數集合
 
 > 定義非空實數集合$$\mathbb{R}$$滿足十個公理（axioms），且可分為三類：field axioms, order axioms, completeness axioms。
@@ -94,8 +127,4 @@ proof:
 >
 > 此為$$n$$維空間的三角不等式 $$\| \mathbf{a} + \mathbf{b}\| \leq \|\mathbf{a}\|+\|\mathbf{b}\|$$
 
-## 實數集的稠密性
 
-> $$\forall a,b \in \mathbb{R}, \ a <b$$ $$\exists u \in \mathbb{Q}, \ v \in \Gamma \ni a < u < b$$ 且 $$a < v < b$$。
->
-> 任兩個不相等的實數之間，必定存在無理數或有理數。

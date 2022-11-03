@@ -28,7 +28,7 @@
 >    。$$\forall r>0 (N_r (x)\cap S)\setminus \{x\} \neq \emptyset$$，則$$x$$為$$S$$的極限點。
 >
 
-<mark style="color:red;">而在任意度量空間中，只能保證1->2, 3 與3->1,無法保證2->1</mark> (但在$$\mathbb{R}^n$$ 成立)
+<mark style="color:red;">而在任意度量空間中，只能保證1->2, 1->3 與3->1,無法保證2->1</mark> (但在$$\mathbb{R}^n$$ 成立)
 
 有界集合不一定是閉集合，如$$S=(1,2) \subseteq \mathbb{R}$$為有界開集合。
 
@@ -70,11 +70,32 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 </details> 
 
+<details>
+
+<summary>proof: 有界閉集合->任意無限子集必有極限點 (一般度量空間的證明) </summary>
+
+反證法：
+
+令$$T \subseteq S$$為無限多點的子集合，且假設$$T$$沒有極限點(in $$S$$或$$T$$)。
+
+則$$\forall x \in S, ~ \exists r > 0 \ni B_r(x) \cap T - \{x\} = \empty $$ if $$x \notin T$$。
+
+將滿足上述條件的開球$$B_r(x)$$取聯集，可得集合$$\displaystyle S \bigcup_{x \in S} B_r(x)$$的開覆蓋。
+
+因為$$S$$為緊緻集，因此必存在可數開覆蓋$$S \displaystyle \bigcup_{i=1}^n B_{r_i}(x_i), ~ x_i \in S$$。
+
+因此可得 $$ \displaystyle T \subseteq \bigcup_{i=1}^n B_{r_i}(x_i)$$。
+
+但因為每個開球$$B_{r_i}(x_i)$$與集合$$T$$沒有交集，與假設不符，因此$$T$$必有極限點(QED)
+
+
+</details>
+
 
 
 <details>
 
-<summary>proof: 有界閉集合->任意無限子集必有極限點 (一般度量空間成立) </summary>
+<summary>proof: 有界閉集合->任意無限子集必有極限點 (歐式空間的證明) </summary>
 
 令 $$T\subseteq S$$, 且$$T$$中有無限多個元素。因為$$S$$為有界集合，因此$$T$$為有界集合。
 
@@ -109,6 +130,14 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 取$$m>1+\|y\|$$, 可得 $$\|x_m−y\| \geq \|x_m \|−\|y\|>m−\|y\|>1$$, 即$$y$$不是$$T$$的極限點（矛盾），因此$$S$$為有界集合。(QED)
 
 </details> 
+
+### 範例：一般度量空間中有界閉集合不一定為緊緻集
+
+> 給定有理數集合$$\mathbb{Q}$$與實數的度量$$d(x,y)=\lVert x - y \rVert$$。
+> 
+> 令$$S=\{r \in \mathbb{Q} ~|~ r \in (a,b), ~a, b \in \mathbb{R- Q} \}$$為開區間$$(a,b)$$間的所有有理數，且$$a,b$$均為無理數。
+> 
+> 則$$S$$為有理數集$$\mathbb{Q}$$的有界閉集合，但非緊緻集合。
 
 
 ## 緊緻集的任一閉子集仍為緊緻集

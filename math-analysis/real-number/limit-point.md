@@ -82,3 +82,32 @@ description: limit point, adherent point
 #### 邊界點不一定是孤立點
 
 例如$$S=[1,2]$$，邊界點集$$S^b=\{1,2\}$$，但都不是孤立點。
+
+
+## 極限點(limit point)
+
+> 集合$$S \subset \mathbb{R}^n$$，若點$$x\in S$$滿足$$\forall r >0, \ni B_r(x) \cap S - \{x\} \neq \empty$$, 
+> 則稱點$$x$$為集合$$S$$的極限點。
+> 
+> 極限點和附著點的差異在於極限點為去心鄰域的交集不為空。
+
+### 極限點必存在數列收斂在該點
+
+> 集合$$S \subset \mathbb{R}^n$$，且 $$a \in \mathbb{R}^n$$為集合$$S$$的極限點。
+> 
+> 則存在數列$$\{a_n\} \subseteq $$S$$滿足 $$ \displaystyle \lim_{n \rightarrow \infty} a_n = a$$。
+
+<details>
+
+<summary> proof: 直接建構 </summary>
+
+令$$a$$為集合$$S$$的極限點，由定義得$$\forall r > 0, B_r(a) \cap S - \{a\} \neq \empty$$。
+
+因此$$\forall n \in \mathbb{N}$$，令半徑$$r = \frac{1}{n}$$，取點$$a_n \in B_r(a)$$。
+
+可得$$d(a_n, a) < \frac{1}{n}$$
+
+因此$$ \displaystyle \lim_{n \rightarrow \infty} a_n = a $$ (QED)
+
+
+</details>

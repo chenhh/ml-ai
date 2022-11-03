@@ -95,7 +95,7 @@ description: limit point, adherent point
 
 > 集合$$S \subset \mathbb{R}^n$$，且 $$a \in \mathbb{R}^n$$為集合$$S$$的極限點。
 > 
-> 則存在數列$$\{a_n\} \subseteq $$S$$滿足 $$ \displaystyle \lim_{n \rightarrow \infty} a_n = a$$。
+> 則存在數列$$\{a_n\} \subseteq S$$ 滿足 $$ \displaystyle \lim_{n \rightarrow \infty} a_n = a$$。
 
 <details>
 

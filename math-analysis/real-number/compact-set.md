@@ -147,4 +147,15 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 > $$S \subseteq \mathbb{R}^n$$為緊緻集，且$$\{x_n\} \subseteq S$$為一數列(不一定收斂), 
 >
-> 則存在一子序列$$\{x_{n_i}\}$$與點$$x \in S \ni \displaystyle \lim_{i \rightarrow \infty} x_{n_i} = x$$ 
+> 則存在一子序列$$\{x_{n_i}\}$$與點$$x \in S \ni \displaystyle \lim_{i \rightarrow \infty} x_{n_i} = x$$
+
+<details>
+
+<summary> proof:  </summary>
+
+若數列$$\{x_n\}$$為有限集，則可直接使用其上(下)界得出$$x_{n_1} = x_{n_2} = \dots = x$$。
+
+如列為$$\{x_n\}$$為無限集，因為$$S$$為緊緻集，則其無限子集必有一極限點。(QED)
+
+
+</details>

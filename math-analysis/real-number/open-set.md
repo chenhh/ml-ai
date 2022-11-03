@@ -133,7 +133,7 @@ description: open and closed set
 ## 不相交集與非重疊集
 > $$A, B \in \subseteq \mathbb{Q}^n$$
 > 
-> 定義若$$A \cap B = \empty$$$, 則稱$$A, B$$為不相交集。
+> 定義若$$A \cap B = \empty$$, 則稱$$A, B$$為不相交集。
 > 
 > 定義若內點集$$A^0 \cap B^0 = \empty$$，則稱$$A, B$$為非重疊集。
 

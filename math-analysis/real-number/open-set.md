@@ -311,12 +311,21 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 </details>
 
 ### 有限個開集合的交集仍為開集合
-> $$S_i, i=1,2,\dots, n$$為開集合，則$$\bigcap_{i=1}^n S_i$$為開集合。
+> $$S_i, i=1,2,\dots, n$$為開集合，則$$\bigcap_{i=1}^n S_i = S$$為開集合。
+> 
 > 註：可數個開集合的交集可能為閉集合。
 
 <details>
 
-<summary>proof:</summary>
+<summary>proof: 由開集合定義直接證明 </summary>
+
+令點$$x \in S$$，對於$$i=1,2,\dots,n$$，依給定條件可得$$x \in S_i$$。
+
+因為$$\forall i, ~ S_i$$為開集合，因此存在$$r_{x_i} > 0 \ni B_{r_{x_i}}(x) \subseteq S_i$$。
+
+令$$r_x = \min\{ r_{x_i} ~|~ i=1,2,\dots, n\}$$, 則 B_{r_x}(x) \subsetq S_i, \forall i$$。
+
+因對$$\forall x \in S$$均可得到上述結果，所以$$S$$為開集合(QED)
 
 </details>
 

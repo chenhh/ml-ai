@@ -1,5 +1,10 @@
 # 緊緻集合(compact set)
 
+## 有界集合(bounded set)
+> $$S \subseteq \mathbb{R}^n$$為有界集, 則存在$$M > 0 \ni \forall x \in S$$, $$|x| < M$$。
+> 或者$$S \subseteq \mathbb{R}^n$$為有界集, 則存在$$M > 0, p \in \mathbb{R}^n \ni S \subseteq B_M(p)$$。
+
+
 ## 緊緻集合(compact set)
 
 > * $$S\subseteq \mathbb{R}^n$$ 稱為緊致集合若且唯若集合$$S$$的任意開覆蓋均存在有限個數的子開覆蓋。
@@ -138,7 +143,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 令 $$y \neq x$$為相異極限點, 由三角不等式得 $$|y-x| \leq |y-x_k| + |x_k - x| \leq |y-x_k| + 1/k$$ if $$x_k \in T$$。
 
-當$$k_0$$足夠大使得$$1/k < 1/2 |y-x|, ~\forall k > k_0$$時，取$$r=1/2|y-x|$$可得$x_k \neq B_r(x), ~ \forall k \geq k_0$$。
+當$$k_0$$足夠大使得$$1/k < 1/2 |y-x|, ~\forall k > k_0$$時，取$$r=1/2|y-x|$$可得$$x_k \neq B_r(x), ~ \forall k \geq k_0$$。
 
 因此$$y$$不是集合$$T$$的極限點，因此$$x$$為唯一的極限點--(3)
 
@@ -204,6 +209,50 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 若數列$$\{x_n\}$$為有限集，則可直接使用其上(下)界得出$$x_{n_1} = x_{n_2} = \dots = x$$。
 
 如列為$$\{x_n\}$$為無限集，因為$$S$$為緊緻集，則其無限子集必有一極限點。(QED)
+
+
+</details>
+
+
+## 緊緻集合的有限聯集仍為緊緻集
+> $$S_i,~ \subseteq \mathbb{R}^n ~ i=1,2,\dots,n $$為緊緻集，則$$ \displaystyle \bigcup_{i=1}^n S_i$$仍為緊緻集。
+> 
+> 一般度量空間也成立。
+
+<details>
+
+<summary> proof:  </summary>
+
+
+
+</details>
+
+
+## 緊緻集合的任意交集仍為緊緻集
+
+> $$S_i, ~ i \in \mathbb{N} \subseteq \mathbb{R}^n$$為緊緻集，則$$ \displaystyle \bigcap_{i=1}^\infty S_i$$仍為緊緻集。
+> 
+> 一般度量空間也成立。
+
+<details>
+
+<summary> proof:  </summary>
+
+
+
+</details>
+
+
+## 緊緻集與閉集合的交集仍為緊緻集
+
+> $$S, T \subseteq \mathbb{R}^n$$$，$$S$$為緊緻集合且$$T$$為閉集合，則$$S \cap T$$為閉集合。
+> 
+> 一般度量空間也成立。
+
+<details>
+
+<summary> proof:  </summary>
+
 
 
 </details>

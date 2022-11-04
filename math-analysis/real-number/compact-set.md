@@ -24,7 +24,7 @@
 >
 > 1. $$S$$為緊致集合。
 > 2. $$S$$為有界閉集合(closed and bounded set)($$\exists M >0, \exists x\in S \ni S \subseteq N_r (x)$$且 $$S$$為閉集合)。
-> 3. $$S$$的任意無窮子集合均存在極限點$$x$$，且$$x∈S$$.  (Bolzano-Weierstrass定理，任意有界無窮集合均存在極限點(in $$\mathbb{R}^n$$)
+> 3. $$S$$的任意無窮子集合均存在一個極限點$$x$$，且$$x \in S$$.  (Bolzano-Weierstrass定理，任意有界無窮集合均存在極限點(in $$\mathbb{R}^n$$)
 >    。$$\forall r>0 (N_r (x)\cap S)\setminus \{x\} \neq \emptyset$$，則$$x$$為$$S$$的極限點。
 >
 
@@ -127,7 +127,26 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 取$$T=\{x_1,x_2,\ldots\}$$為$$S$$的無窮子集合，由條件3可知$$T$$存在極限點$$y \in S$$。
 
-取$$m>1+\|y\|$$, 可得 $$\|x_m−y\| \geq \|x_m \|−\|y\|>m−\|y\|>1$$, 即$$y$$不是$$T$$的極限點（矛盾），因此$$S$$為有界集合。(QED)
+取$$m>1+\|y\|$$, 可得 $$\|x_m−y\| \geq \|x_m \|−\|y\|>m−\|y\|>1$$, 即$$y$$不是$$T$$的極限點（矛盾），因此$$S$$為有界集合。--(1)
+
+令$$x$$為集合$$S$$的極限點，因為$$\forall r > 0, ~ B_r(x) \cap S$$包含了$$S$$的無限多個點。
+
+定義開球為$$\forall k \in \mathbb{N}, ~B_{1/k}(x)$$, 且從相異開球中取出相異點$$x_k \in B_{1/k}(x) $$
+形成集合$$T=\{x_1, x_2, \dots, \} \subseteq S$$，可得$$ \displaystyle \lim_{k \rightarrow \infty} x_k = x$$。
+
+因為$$T$$為$$S$$的無限子集，由給定條件得必存在極限點 --(2)
+
+令 $$y \neq x$$為相異極限點, 由三角不等式得 $$|y-x| \leq |y-x_k| + |x_k - x| \leq |y-x_k| + 1/k$$ if $$x_k \in T$$。
+
+當$$k_0$$足夠大使得$$1/k < 1/2 |y-x|, ~\forall k > k_0$$時，取$$r=1/2|y-x|$$可得$x_k \neq B_r(x), ~ \forall k \geq k_0$$。
+
+因此$$y$$不是集合$$T$$的極限點，因此$$x$$為唯一的極限點--(3)
+
+由(2,3)得$$S$$為閉集合 --(4)
+
+由(1,4)得$$S$$為有界閉集合(QED)
+
+(QED)
 
 </details> 
 

@@ -224,7 +224,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 <summary> proof:  直接以緊緻集定義證明 </summary>
 
-因為$$S_i$$為緊緻集，令$$S_i \subseteq \displaystyle \bigcup_{j=1}^k O_{ij}$$, $$O_ij \subseteq \mathbb{R}^n$$為開集合。
+因為$$S_i$$為緊緻集，令$$S_i \subseteq \displaystyle \bigcup_{j=1}^k O_{ij}$$, $$O_{ij} \subseteq \mathbb{R}^n$$為開集合。
 
 可得$$ \displaystyle \bigcup_{i=1}^n S_i \subseteq \bigcup_{i=1}^n \bigcup_{j=1}^k O_{ij}$$。
 
@@ -236,14 +236,13 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 ## 緊緻集合的任意交集仍為緊緻集
 
-> $$S_i, ~ i \in \mathbb{N} \subseteq \mathbb{R}^n$$為緊緻集，則$$ \displaystyle \bigcap_{i=1}^\infty S_i$$仍為緊緻集。
+> $$S_i, \subseteq \mathbb{R}^n~ i \in \mathbb{N} $$為緊緻集，則$$ \displaystyle \bigcap_{i=1}^\infty S_i$$仍為緊緻集。
 > 
 > 一般度量空間也成立。
 
 <details>
 
 <summary> proof:  </summary>
-
 
 
 </details>

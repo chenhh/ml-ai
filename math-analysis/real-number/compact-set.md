@@ -250,7 +250,7 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 ## 緊緻集與閉集合的交集仍為緊緻集
 
-> $$S, T \subseteq \mathbb{R}^n$$$，$$S$$為緊緻集合且$$T$$為閉集合，則$$S \cap T$$為閉集合。
+> $$S, T \subseteq \mathbb{R}^n$$$，$$S$$為緊緻集合且$$T$$為閉集合，則$$S \cap T$$為緊緻集合。
 > 
 > 一般度量空間也成立。
 
@@ -258,6 +258,12 @@ $$x \in N_r (y) \Rightarrow \|x−y\|<r \leq r_k$$
 
 <summary> proof:  </summary>
 
+因為$$S$$為緊緻集合，所以$$S$$為有界閉集合。
 
+因為閉集合的任意交集仍為閉集合，因此$$S \cap T$$為閉集合 --(1)
+
+令$$\{O_i\}, i \in I$$為$$S \cap T$$的開覆蓋，即$$S \cap T \subseteq \displaystyle \bigcup_{i in I} O_i$$。
+
+因為$$S \cap T \subseteq S$$，且$$S$$為緊緻集，由緊緻集的任一閉子集仍為緊緻集的性質得$$S\cap T$$為緊致集 (QED)
 
 </details>

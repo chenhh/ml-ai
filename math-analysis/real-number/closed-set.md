@@ -172,8 +172,113 @@ proof: 導集合為空集合
 >
 > 定義2：閉包為包含該集合的最小閉集合
 > 
-> $$\overline{S}=\cap\{ F \subseteq \mathbb{R}^n ~|~ S \subset F \text{ and } F \text{ is closed set}  \}$$
+> $$\overline{S}=\cap\{ F \subseteq \mathbb{R}^n ~|~ S \subseteq F \text{ and } F \text{ is closed set}  \}$$
 
 例如在度量空間$$(\mathbb{R}, d(x,y)=|x-y|)$$，$$E=(1,3) \cup \{6\}$$，
 則$$\overline{E}=[1,3] \cup \{6\}$$，
 導集合為$$E^d=\{ 1,3\}$$，孤立點為$$\{6\}$$，內點為$$(1,3)$$，邊界點$$E^b=\{1,3,6\}$$。
+
+
+### 閉集合等於其閉包
+
+> $$S \subseteq \mathbb{R}^n$$為閉集合 且$$S= \overline{S}=S \cup S^d$$
+>
+> 因此閉包$$\overline{S}$$包含了$$S$$的所有極限點（所有附著點）。
+> 
+> 一般度量空間也成立
+
+<details>
+
+<summary> proof:  </summary>
+
+=>
+
+因為閉集合包含其所有極限點，可得$$S^d \subseteq S$$，所以$$\overline(S) = S \cup S^d = S$$ (QED)
+
+<=
+
+令$$x \in \overline{S}$$為極限點，則$$x \in S$$或$$x \in S^d$$。
+
+若$$x \in S$$，因為$$S^d$$為所有$$S$$極限點的集合，因此$$x \in S^d$$，所以$$x \in \overline{S}$$。
+
+若$$x \in S^d$$，因為$$S^d$$為閉集合，所以$$S^d \subseteq \overline{S}$$，可得$$x \in \overline{S}$$
+
+所以$$S=\overline{S}$$包含所有極限點，因此$$S$$為閉集合。(QED)
+
+</details>
+
+### 導集合的性質
+
+> $$S^d$$為$$S$$的導集合，$$T^d$$為$$T$$的導集合，閉包$$\overline{S}=S \cup S^d$$，則
+>
+> 1. $$S^d$$為閉集合，且$$(S^d)^d \subseteq S^d$$
+> 2. $$S \subseteq T \Rightarrow S^d \subseteq T^d$$
+> 3. $$(S \cup T)^d= S^d \cup T^d$$
+> 4. $$\overline{S}^d=S^d$$
+> 5. $$\overline{S}$$為包含$$S$$的最小閉集合。
+
+<details>
+
+<summary> proof: 1 </summary>
+
+$$S^d=\{x \in \mathbb{R}^n ~|~ \forall r>0, B_r (x) \cap S - \{x\}\neq \emptyset\}$$
+
+$$(S^d)^d= \{ x \in S | \forall r>0, B_r (x)\cap S^d \setminus\{x\} \neq \emptyset\}$$
+
+令$$x \in (S^d)^d$$ 則 $$ x \in S$$ 且滿足$$ \forall r>0, B_r (x) \cap S \setminus^d \{x\} \neq \emptyset$$
+
+因此 $$\forall r>0, B_r (x)\cap S \setminus \{x\} \neq \emptyset$$
+
+可得 $$\therefore x \in (S^d)^d \Rightarrow x \in S^d$$  (QED)
+
+</details>
+
+<details>
+
+<summary> proof: 2 </summary>
+
+給定$$x \in S^d$$ 可得 $$x \in \mathbb{R}^n, ~ \forall r>0, B_r (x)\cap S - \{x\} \neq \emptyset$$
+
+因為 $$S \subseteq T$$，，因此上式可得$$x \in \mathbb{R}^n, ~ \forall r>0, B_r (x)\cap T \setminus \{x\} \neq \emptyset$$
+
+可得$$\therefore x S^d \Rightarrow x \in T^d$$ (QED)
+
+</details>
+
+<details>
+
+<summary> proof: 3 </summary>
+
+令 $$x \in (S \cup T)^d$$，則$$ x \in \mathbb{R}^n,~ \forall r>0, B_r (x) \cap (S \cup T) - \{x\} \neq \emptyset$$
+
+由De Morgan定理得 $$B_r (x)\cap (S \cup T)=(B_r (x)\cap S) \cup (B_r (x)\cap T)$$
+
+而$$(B_r (x)\cap S)\cup (B_r (x) \cap T)- \{x\}=(B_r (x)\cap S-  \{x\})\cup (B_r (x)\cap T - \{x\})$$
+
+因此$$x \in \mathbb{R}^n,~ \forall r>0, (B_r (x)\cap S - \{x\})\cup (B_r (x)\cap T \- \{x\}) \neq \emptyset$$
+
+即$$x \in S^d \cup T^d$$
+
+同理可得$$x \in S^d \cup T^d \Rightarrow x \in (S\cup T)^d$$
+
+所以$$(S \cup T)^d=S^d \cup T^d$$  (QED)
+
+</details>
+
+<details>
+
+<summary> proof: 4 </summary>
+
+$$\overline{S}=S \cup S^d$$
+
+因此$$\(S \cup S)^d=S^d \cup (S^d)^d $$
+
+因為 $$(S^d)^d \subseteq S^d$$
+
+所以$$S^d \cup (S^d)^d= S^d$$
+
+因此$$(S \cup S^d)^d=S^d$$  (QED).
+
+
+</details>
+

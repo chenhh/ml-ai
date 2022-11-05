@@ -145,3 +145,35 @@ proof: 導集合為空集合
 
 </details>
 
+### 歐式空間中的有限集都是閉集
+
+> $$S \subset \mathbb{R}^n$$，且集合為有限集$$|S| < \infty$$，則$$S$$為閉集合。
+
+<details>
+
+<summary> proof: 補集為開集合得證  </summary>
+
+令$$S \subset \mathbb{R}^n$$為有限集，
+
+則$$\forall x \in \mathbb{R}^n - S$$，
+
+取$$r > 0 \ni \forall y \in S, d(x,y) > r$$，則$$B_r(x) \subset R^n -S$$為開集合，因此$$S$$為閉集合(QED)。
+
+</details>
+
+## 閉包（closure）
+> 
+> 定義1：閉包為集合與其導集合的聯集
+> 
+> $$S\subseteq \mathbb{R}^n$$，$$S^d$$為集合$$S$$的導集合（所有極限點的集合），定義閉包$$\overline{S} = S \cup S^d$$。
+>
+> * $$S^d \equiv \{ x \in \mathbb{R}^n ~ |~ \forall r > 0, \ B_r(x) \cap S - \{ x \} = \empty \}$$
+> * 極限點$$x \in \mathbb{R}^n$$不必為$$S$$的元素。
+>
+> 定義2：閉包為包含該集合的最小閉集合
+> 
+> $$\overline{S}=\cap\{ F \subseteq \mathbb{R}^n ~|~ S \subset F \text{ and } F \text{ is closed set}  \}$$
+
+例如在度量空間$$(\mathbb{R}, d(x,y)=|x-y|)$$，$$E=(1,3) \cup \{6\}$$，
+則$$\overline{E}=[1,3] \cup \{6\}$$，
+導集合為$$E^d=\{ 1,3\}$$，孤立點為$$\{6\}$$，內點為$$(1,3)$$，邊界點$$E^b=\{1,3,6\}$$。

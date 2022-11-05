@@ -345,9 +345,9 @@ $$x \in (S\cap T)^d$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$
 
 > 令$$S \subseteq \mathbb{R}^n$$，且存在$$T \subseteq \mathbb{R}^n$$使得$$S \subseteq T \subseteq \overline{S}$$，則稱集合$$S$$在集合$$T$$中稠密。(A dense in S)。
 >
-> * $$A$$的閉包$$\overline{A}$$是包含$$A$$的最小閉集合，其包含了$$A$$的所有極限點。因此$$S$$包含了$$A$$的所有元素，以及集合$$A$$外的部分或全部極限點。
+> $$S$$的閉包$$\overline{S}$$是包含$$S$$的最小閉集合，其包含了$$S$$的所有極限點。因此$$T$$包含了$$S$$的所有元素，以及集合$$S$$外的部分或全部極限點。
 
-* 例$$A=(0,1) \subseteq \mathbb{R}$$，$$S=[0,1)$$或$$(0,1)$$或$$(0,1]$$或$$[0,1]$$，則$$A$$在$$S$$稠密。
+* 例$$S=(0,1) \subseteq \mathbb{R}$$，$$T=[0,1)$$或$$(0,1)$$或$$(0,1]$$或$$[0,1]$$，則$$S$$在$$T$$稠密。
 * 有理數在實數稠密，因為$$\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{\overline{Q}} = \mathbb{R}$$。
 
 ### 稠密集合滿足遞移性

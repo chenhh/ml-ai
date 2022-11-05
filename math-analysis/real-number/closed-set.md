@@ -20,8 +20,11 @@ description: closed set
 
 
 ### 閉集合包含其所有極限點
-> * $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$ $$\forall r > 0~ \exists y \in S -\{x\} \ni y \in B_r(x)$$
-> * 令$$S$$所有極限點形成為集合為導集合$$S^d$$ (derived set)
+> $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$ $$\forall r > 0~ \exists y \in S -\{x\} \ni y \in B_r(x)$$
+> 
+> 令$$S$$所有極限點形成為集合為導集合$$S^d$$ (derived set)
+> 
+> 在一般度量空間中均成立
 
 <details>
 
@@ -49,6 +52,8 @@ proof <=
 > $$E_i \subseteq \mathbb{R}^n，~ i =1,2,\dots, N$$為閉集合，則$$\displaystyle \bigcup_{i=1}^N E_i$$為閉集合。
 >
 > 註：(可數或不可數)無限多個閉集合的聯集可能會變成無上、下限的集合而變成開集合。
+> 
+> 在一般度量空間中均成立
 
 <details>
 
@@ -61,7 +66,7 @@ proof <=
  同理可得 $$\cup_{i=1}^n E_i=E_1 \cup E_2 \cup \dots \cup E_n = (E_1^c \cap E_2^c \cap \dots \cap E_n^c)^c$$
 
  因為[有限多個開集合的交集仍為開集合](open-set.md#you-xian-ge-kai-ji-he-de-jiao-ji-reng-shi-kai-ji-he)，
- 且開集合的補集為閉集合，可得$$\displaystyle \bigcup_{i=1}^n E_i$$為閉集合。(QED)
+ 且開集合的補集為閉集合，可得$$\cup_{i=1}^N E_i$$為閉集合。(QED)
 
 </details>
 
@@ -70,6 +75,8 @@ proof <=
 > $$E_i \subseteq \mathbb{R}^n, ~ \ i \in I$$為閉集合，則 $$\displaystyle \cap_{i \in I} E_i$$為閉集合。
 > 
 > 指標集合$$I$$可能為可數集合或是不可數集合。
+> 
+> 在一般度量空間中均成立
 
 <details>
 
@@ -84,5 +91,20 @@ proof <=
 
 </details>
 
+### 開集合與閉集合的差集的性質
+
+> $$A,B \subseteq \mathbb{R}^n$$，若$$A$$為開集合，$$B$$為閉集合，則$$A - B$$為開集合，$$B - A$$為閉集合。
+> 
+> 在一般度量空間中均成立
+
+<details>
+
+<summary> proof: 以閉集合聯集與交集的性質可得證 </summary>
+
+proof 1: $$A - B = A \cap B^c$$， 且$$A$$為開集合，$$B^c$$為開集合，而開集合的有限交集仍為開集合 (QED)。
+
+proof 2: $$B - A = B \cap A^c$$， 且$$A^c$$為閉集合，$$B$$為閉集合，而閉集合的任意交集仍為閉集合 (QED)
+
+</details>
 
 

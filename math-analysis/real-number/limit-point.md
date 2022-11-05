@@ -111,3 +111,44 @@ description: limit point, adherent point
 
 
 </details>
+
+## 導集合（derived set）
+
+> 導集合$$S^d$$為集合$$S$$所有極限點形成的集合。
+>
+> $$S^d=\{x \in \mathbb{R}^n ~|~ \forall r >0, B_r(x) \cap S - \{ x\}\neq \emptyset \}$$
+
+* 導集合$$d(S)$$和[閉包](closed-set.md#bi-bao-closure)$$\overline{S} = S \cup d(S)$$有重要的關聯性，參考[導集合的性質](closed-set.md#dao-ji-he-de-xing-zhi)。
+* 導集合為閉集合。
+* [可數無限集有極限點] $$S=\{ \frac{1}{n}, \ n \in \mathbb{N}\}$$，則$$0$$為$$S$$的極限點。
+* $$x_n=(-1)^n \frac{n}{n+1}$$極限不存在，但有兩個極限點-1與1。
+
+![極限點為序列聚集之處](../../.gitbook/assets/800px-Rational\_sequence\_with\_2\_accumulation\_points\_svg.png)
+
+
+## 完美集合（perfect set）
+
+> $$S \subseteq \mathbb{R}^n$$稱為完全集合，若此集合等於其導集合，即$$S=S^d$$。
+> 
+> 完全集合$$S$$內全部的元素均為極限點。
+>
+
+由下面的性質可知**完全集合為不含孤立點的閉集合**。
+
+### 完美集合若且唯若集合不含孤立點且為閉集合
+
+* 由 $$S=d(S)$$  得$$S$$包含其所有極限點，因此完美集合$$S$$為閉集合。
+* 若$$x \in S$$為孤立點，則 $$\exists r >0 \ni N_r(x) \cap S \setminus \{ x\} =\emptyset$$
+* 但因為$$S=d(S)$$，因此$$\forall x \in S, N_r(x) \cap S \setminus \{x\} \neq \emptyset$$
+* 所以$$S$$中不含孤立點。(QED)
+
+### Cantor-Bendixon定理
+
+> $$F \subseteq X$$ 為不可數閉集合，則可將$$F$$分解為$$F=A \cup B$$，$$A$$完美集合，$$B$$為可數集合。
+>
+> Note: 此定理說明**任意閉集合可分解為不含孤立點的閉集合與可數集合的聯集**。
+
+* 因為$$F$$為不可數集合, 因此存在$$x \in F$$為其凝聚點。令$$T$$為$$F$$所有凝聚點形成的集合。
+* 由凝聚點的性質，得$$T$$為閉集合且$$T$$不含孤立點，且$$F \setminus T$$為可數集合。
+* 令$$A=T$$, $$B=F \setminus T$$ 得證 (QED)
+

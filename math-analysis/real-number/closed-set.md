@@ -8,9 +8,9 @@ description: closed set
 
 > 集合$$S \subseteq \mathbb{R}^n$$，則
 >
-> * $$S$$為閉集合$$\Leftrightarrow$$$$S^c \equiv \mathbb{R}^n - S$$為開集合。
-> * $$S$$為閉集合$$\Leftrightarrow$$$$S$$等於其閉包$$\overline{S}$$，即$$S = \overline{S} \equiv S \cup S^d$$。
-> * $$S$$為閉集合$$\Leftrightarrow$$$$S$$包含其所有極限點(附著點)。
+> * $$S$$為閉集合$$\Leftrightarrow$$ $$S^c \equiv \mathbb{R}^n - S$$為開集合。
+> * $$S$$為閉集合$$\Leftrightarrow$$ $$S$$等於其閉包$$\overline{S}$$，即$$S = \overline{S} \equiv S \cup S^d$$。
+> * $$S$$為閉集合$$\Leftrightarrow$$ $$S$$包含其所有極限點(附著點)。
 
 在定義上，閉集合是開集合的補集，但在結構上，閉集合有許多特殊的性質。
 
@@ -20,14 +20,14 @@ description: closed set
 
 
 ### 閉集合包含其所有極限點
-> * $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$$$\forall r > 0~ \exists y \in S -\{x\} \ni y \in B_r(x)$$
-> * 而$$S$$所有極限點形成為集合為導集合$$S^d$$
+> * $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$ $$\forall r > 0~ \exists y \in S -\{x\} \ni y \in B_r(x)$$
+> * 令$$S$$所有極限點形成為集合為導集合$$S^d$$ (derived set)
 
 <details>
 
-<summary> proof:  </summary>
+<summary> proof: 閉集合的補集不包含原集合的極限點 </summary>
 
-proof >= (閉集合的補集不包含原集合的極限點)
+proof >= 
 
 令$$x \in S^c$$，因為$$S$$為閉集合，所以$$S^c$$為開集合。
 

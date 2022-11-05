@@ -343,9 +343,9 @@ $$x \in (S\cap T)^d$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$
 
 ## 稠密集合（dense set）
 
-> 令$$S \subseteq \mathbb{R}^n$$，且存在$$T \subseteq \mathbb{R}^n$$使得$$S \subseteq T \subseteq \overline{S}$$，則稱集合$$S$$在集合$$T$$中稠密。(A dense in S)。
+> 令$$S \subseteq \mathbb{R}^n$$，且存在$$T \subseteq \mathbb{R}^n$$使得$$S \subseteq T \subseteq \overline{S}$$，則稱集合$$S$$在集合$$T$$中稠密。(S dense in T)。
 >
-> $$S$$的閉包$$\overline{S}$$是包含$$S$$的最小閉集合，其包含了$$S$$的所有極限點。因此$$T$$包含了$$S$$的所有元素，以及集合$$S$$外的部分或全部極限點。
+> $$S$$的閉包$$\overline{S}$$是包含$$S$$的最小閉集合，其包含了$$S$$的所有極限點。因此$$T$$包含了$$S$$的所有元素，以及集合$$S$$的部分或全部極限點。
 
 * 例$$S=(0,1) \subseteq \mathbb{R}$$，$$T=[0,1)$$或$$(0,1)$$或$$(0,1]$$或$$[0,1]$$，則$$S$$在$$T$$稠密。
 * 有理數在實數稠密，因為$$\mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{\overline{Q}} = \mathbb{R}$$。
@@ -354,6 +354,10 @@ $$x \in (S\cap T)^d$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$
 
 > •$$A$$在集合$$S$$中稠密，且$$S$$在集合$$T$$中稠密，則$$A$$在集合$$T$$中稠密
 > 。
+
+<details>
+
+<summary> proof:  </summary>
 
 * $$A$$在集合$$S$$中稠密 ，即$$A \subseteq S \subseteq \overline{A}=A\cup d(A)$$
 * $$S$$在集合$$T$$中稠密，即$$S\subseteq T\subseteq \overline{S}=S \cup d(S)$$
@@ -368,6 +372,10 @@ $$x \in (S\cap T)^d$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$
     * 因此$$\overline{S} \subset (A∪d(A))=\overline{A} \Rightarrow T \subset \overline{A}$$
     * 由$$A\subseteq T \subseteq \overline{A}$$ 得證 (QED)
 
+</details>
+
+
+
 
 
 ### 稠密集合的性質
@@ -375,14 +383,22 @@ $$x \in (S\cap T)^d$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$
 > 1. • 若$$A$$在集合$$S$$中稠密（$$A \subseteq S \subseteq \overline{A}$$），且$$B$$為$$S$$中的開集合，則$$B \subseteq \overline(A \cap B)$$。
 > 2. 若$$A, B$$在集合$$S$$中稠密，且$$B$$為$$S$$中的開集合，則$$A \cap B$$在$$S$$中稠密。
 
-proof (1):
+<details>
+
+<summary> proof: 1 </summary>
 
 * $$A$$在集合$$S$$中稠密，則$$S \subseteq A \subseteq \overline{S}$$
 * $$B$$為$$S$$中的開集合，由[閉包交集的性質](closed-set.md#bi-bao-jiao-ji-de-xing-zhi)得 $$B \cap \overline{A} \subseteq \overline{(A \cap B) }$$
 * 因為 $$B \subseteq S,\ S\subseteq A \Rightarrow B\subseteq A$$，所以
 * 所以 $$B=B \cap \overline{A} \subseteq \overline{(A\cap B)}$$  (QED)
 
-proof (2):
+</details> 
+
+
+
+<details>
+
+<summary> proof: 2 </summary>
 
 *   • $$A,B$$在集合$$S$$中稠密，則$$S \subseteq A \subseteq \overline{S}$$,  $$S \subseteq B \subseteq \overline{S}$$,  可得$$A \cap B \subseteq \overline{S}$$。
 
@@ -397,4 +413,8 @@ proof (2):
     &#x9;• 若$$A \supset S, B \supset S$$，則 $$A \cap B \supseteq S$$
 
     • 因此$$S \subseteq A \cap B \subseteq  \overline{S}$$  (QED)
+
+
+</details>
+
 

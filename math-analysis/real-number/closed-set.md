@@ -299,3 +299,45 @@ $$\overline{S}=S \cup S^d$$
 
 </details>
 
+### 閉包交集的性質
+
+> $$S,T \subseteq \mathbb{R}^n$$，且$$\overline{S}, \overline{T}$$為對應的閉包，則：
+>
+> 1. $$\overline{S \cap T} \subseteq \overline{S} \cap \overline{T}$$
+> 2. 若$$S$$為開集合，則$$S \cap \overline{T} \subseteq \overline{S \cap T}$$
+
+
+<details>
+
+<summary> proof: 1 </summary>
+
+$$\overline{(S\cap T)}=(S \cap T)\cup (S\cap T)^d$$ 
+
+$$\overline{S} \cap \overline{T}=(S \cup S^d )\cap (T \cup T^d )=(S\cap T) \cup (S^d \cap T) \cup (S\cap T^d ) \cup (S^d \cap T^d )$$
+
+檢驗$$(S\cap T)^d  \subseteq (S^d \cap T) \cup (S \cap T^d ) \cup (S^d \cap T^d )$$
+
+$$x \in (S \cap T)^d$$，即$$x$$為$$S \cap T$$的極限點，因此$$x$$為$$S$$的極限點且$$x$$為$$T$$的極限點，可得$$x \in S^d \cap T^d$$  (QED)
+
+</details>
+
+<details>
+
+<summary> proof: 2 </summary>
+
+若$$S$$為開集合，則$$S \cap \overline{T}=S \cap (T \cup T^d )=(S \cap T) \cup (S \cap T^d )$$
+
+$$\overline{(S \cap T)}=(S \cap T)\cup (S \cap T)^d$$
+
+檢驗 $$(S\cap T^d ) \subseteq (S\cap T)^d$$
+
+$$x \in (S\cap T)^d$$，即$$x$$為$$S\cap T$$的極限點，可得$$x$$為$$S$$的極限點且$$x$$為$$T$$的極限點 。
+
+因為$$S$$為開集合，因此$$S$$不包含所有$$S$$的極限點，即$$\exists x \in S$$, 且$$x$$不是$$S$$的極限點。
+
+因為$$x \in S \cap T^d$$，表示$$x \in S$$且$$x$$為$$T$$的極限點。
+
+因此$$S\cap \overline{T} \subseteq \overline{(S\cap T)}$$  (QED)
+
+</details>
+

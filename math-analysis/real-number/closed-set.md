@@ -217,6 +217,7 @@ proof: 導集合為空集合
 > 4. $$\overline{S}^d=S^d$$
 > 5. $$\overline{S}$$為包含$$S$$的最小閉集合。
 
+> 一般度量空間均成立
 <details>
 
 <summary> proof: 1 </summary>
@@ -229,7 +230,7 @@ $$(S^d)^d= \{ x \in S | \forall r>0, B_r (x)\cap S^d \setminus\{x\} \neq \emptys
 
 因此 $$\forall r>0, B_r (x)\cap S \setminus \{x\} \neq \emptyset$$
 
-可得 $$\therefore x \in (S^d)^d \Rightarrow x \in S^d$$  (QED)
+可得 $$x \in (S^d)^d \Rightarrow x \in S^d$$  (QED)
 
 </details>
 
@@ -241,7 +242,7 @@ $$(S^d)^d= \{ x \in S | \forall r>0, B_r (x)\cap S^d \setminus\{x\} \neq \emptys
 
 因為 $$S \subseteq T$$，，因此上式可得$$x \in \mathbb{R}^n, ~ \forall r>0, B_r (x)\cap T \setminus \{x\} \neq \emptyset$$
 
-可得$$\therefore x S^d \Rightarrow x \in T^d$$ (QED)
+可得$$x S^d \Rightarrow x \in T^d$$ (QED)
 
 </details>
 
@@ -271,7 +272,7 @@ $$(S^d)^d= \{ x \in S | \forall r>0, B_r (x)\cap S^d \setminus\{x\} \neq \emptys
 
 $$\overline{S}=S \cup S^d$$
 
-因此$$\(S \cup S)^d=S^d \cup (S^d)^d $$
+因此$$(S \cup S)^d=S^d \cup (S^d)^d $$
 
 因為 $$(S^d)^d \subseteq S^d$$
 
@@ -279,6 +280,22 @@ $$\overline{S}=S \cup S^d$$
 
 因此$$(S \cup S^d)^d=S^d$$  (QED).
 
+
+</details>
+
+### 開集合為其閉包的真子集
+
+> $$S \subseteq \mathbb{R}^n$$為開集合，則$$S \subset \overline{S}$$。
+> 
+> > 一般度量空間均成立
+
+<details>
+
+<summary> proof:  </summary>
+
+因為$$S$$為開集合，所以$$S^c$$為閉集合，所以存在集合$$S$$的極限點$$x \in S^c$$, 且$$x \notin S$$。
+
+而閉包$$\overline{S} = S \cup S^d$$，依定義$$x \in S^d$$且$$x \notin S$$，則$$S \subset \overline{S}$$。(QED)
 
 </details>
 

@@ -107,4 +107,41 @@ proof 2: $$B - A = B \cap A^c$$， 且$$A^c$$為閉集合，$$B$$為閉集合，
 
 </details>
 
+### 歐式空間中空集合與宇集合同時為開集合與閉集合
+
+> $$\empty$$與$$\mathbb{R}^n$$同時為開集合與閉集合。
+> 
+> 註：$$\mathbb{R}^n$$為無界閉集合。
+
+可得$$\forall x \in \mathbb{R}^n, \exists r>0 \ni B_r (x) \subseteq \mathbb{R}^n$$, 因此$$\mathbb{R}^n$$為開集合。
+
+因為$$\empty = (\mathbb{R}^n)^c$$, 所以$$\empty$$為閉集合。
+
+同理因為空集合$$\empty$$不存在任何元素，因此其為開集合。
+
+而$$\mathbb{R}^n=\empty^c$$, 所以$$\mathbb{R}^n$$為閉集合。
+
+### 實數中整數集合與自然數集合為（無界）閉集合
+
+> $$\mathbb{N},~ \mathbb{Z}$$均為無界閉集合。
+
+<details>
+
+<summary> proof: 可由補集為開集合或是導集合為空證明 </summary>
+
+$$\mathbb{Z}, \mathbb{N}$$為閉集合。因為$$\mathbb{R} - \mathbb{Z}$$與$$\mathbb{R} - \mathbb{N}$$為開集合。
+
+proof: 開集合
+
+$$\mathbb{R} - \mathbb{Z} = \bigcup_{a \in \mathbb{Z}}(a,a+1)$$，$$(a,a+1)$$為開區間（開集合），
+而[可數個開集合的聯集仍為開集合](open-set.md#ren-yi-wu-xian-ge-kai-ji-he-de-jiao-ji-bu-yi-ding-shi-kai-ji-he)，
+因此$$\mathbb{R} - \mathbb{Z}$$為開集合。 (QED)
+
+proof: 導集合為空集合
+
+由極限點的定義可知$$\mathbb{Z}$$不存在極限點，因此導集合$$\mathbb{Z}^d=\empty$$為空集合。
+
+因為空集合為任意集合的子集合，所以$$\mathbb{Z}^d \subseteq \mathbb{Z}$$，即整數集合包含了所有的極限點。 (QED)
+
+</details>
 

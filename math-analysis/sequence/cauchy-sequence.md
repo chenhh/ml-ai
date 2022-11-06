@@ -193,7 +193,7 @@ $$\forall \epsilon>0, \text{ take }N \in \mathbb{N} \ni d(x_n,x_m )<\frac{\epsil
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:  閉集合包含所有其極限點 </summary>
 
 令$$\{ x_n \} \subseteq  S$$為Cauchy數列，且令$$\displaystyle \lim_{n \rightarrow \infty} x_n = p$$，因為$$(S,d)$$為完備度量空間，可得$$p \in S$$。
 

@@ -166,7 +166,7 @@ $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 
   所以 $$−b$$是集合$$−S$$的最大下界，即$$−b=\inf(−S)\Leftrightarrow \sup(S)=−\inf(−S)$$ (QED)
   
-  令$$\infS=a$$，由定義得 $$ \forall \epsilon>0 ~\exists x \in S \ni x<a+\epsilon$$
+  令$$\inf(S)=a$$，由定義得 $$ \forall \epsilon>0 ~\exists x \in S \ni x<a+\epsilon$$
 
   兩邊取負號得 $$\forall \epsilon>0 ~\exists −x \in −S \ni −x>−a−\epsilon$$
 
@@ -189,90 +189,159 @@ $$\sup(−S)=−a, ~ \inf(−S)=−b$$
 
 > 集合$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$
 >
-> * 令$$A+B=\{a+b|a \in A, b \in B\}$$，則
+> 令$$A+B=\{a+b~|~a \in A, b \in B\}$$，則
 >   * 當$$A,B$$有上界時，$$A+B$$也有上界且$$\sup(A+B)=\sup(A)+\sup(B)$$。
 >   * 當$$A,B$$有下界時，$$A+B$$也有下界且$$\inf(A+B)=\inf(A)+\inf(B)$$。
-> * 令$$AB=\{xy|x \in A, y \in B \},$$，若$$A \subset \mathbb{R}^+, B \subset \mathbb{R}^+$$則
+> 
+> 令$$AB=\{xy|x \in A, y \in B \},$$，若$$A \subset \mathbb{R}^+, B \subset \mathbb{R}^+$$則
 >   * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup(AB)=\sup(A) \sup(B)$$。
 >   * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf(AB)=\inf(A )\inf(B )$$。
 
-* 由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(A)=x, ~ \sup(B)=y$$存在 。
-* 因為$$\forall a \in A, a \leq x$$ ，$$\forall b \in B, b \leq y$$，所以$$x+y$$是$$A+B$$的上界。
-  * $$\sup(A)=x \Leftrightarrow \forall \epsilon >0 ~ \exists a \in A \ni x−\epsilon<a$$
-  * $$\sup(B)=y \Leftrightarrow \forall \epsilon >0 ~\exists b \in B \ni y− \epsilon <b$$
-  * $$\therefore \forall \epsilon>0 ~\exists a \in A, b \in B \ni x+y−2\epsilon<a+b$$
-  * $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup(A+B)=x+y=\sup(A)+\sup(B)$$ (QED).
+<details>
+
+<summary>proof: 加法 </summary>
+
+由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(A)=x, ~ \sup(B)=y$$存在 。
+
+因為$$\forall a \in A, a \leq x$$ ，$$\forall b \in B, b \leq y$$，所以$$x+y$$是$$A+B$$的上界。
+
+$$\sup(A)=x \Leftrightarrow \forall \epsilon >0 ~ \exists a \in A \ni x−\epsilon<a$$
+
+$$\sup(B)=y \Leftrightarrow \forall \epsilon >0 ~\exists b \in B \ni y− \epsilon <b$$
+
+$$\therefore \forall \epsilon>0 ~\exists a \in A, b \in B \ni x+y−2\epsilon<a+b$$
+
+$$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup(A+B)=x+y=\sup(A)+\sup(B)$$ (QED).
+
+</details>
+
+
 
 ### 最小上界與最大下界的次序
 
-> 集合$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R},$$
+> 集合$$\emptyset \neq A \subseteq \mathbb{R}, ~ \emptyset \neq B \subseteq \mathbb{R}$$
 >
-> * 若$$A\subset B$$（e.g. $$(1,2) \subset [0,2]$$）
+> [子集合] 若$$A\subseteq B$$（e.g. $$(1,2) \subset [0,2]$$）
 >   * 當$$B$$有上界時，$$A$$也有上界，且$$\sup(A) \leq \sup(B)$$
 >   * 當$$B$$有下界時，$$A$$也有下界，且$$\inf(A) \geq \inf(B)$$
-> * $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(A) \leq \inf(B)$$ （e.g. $$A=(1,2), B=(3,4)$$）
+> 
+> [$$A$$完全小於$$B$$] $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(A) \leq \inf(B)$$ （e.g. $$A=(1,2), B=(3,4)$$）
+> 
+> [$$A$$部份小於$$B$$] 
 > * $$\forall x\in A ~\exists y \in B \ni x\leq y$$，且$$B$$有上界，則$$A$$也有上界，且$$\sup(A) \leq \sup(B)$$ （e.g. $$A=(1,3), B=(2, 4)$$）
 > * $$\forall x\in A ~\exists y \in B \ni x\geq z$$，且$$B$$有下界，則$$A$$也有下界，且$$\inf(A) \geq \inf(B)$$（e.g. $$A=(1,3), B=(2,4)$$）
 
-Proof: $$A\subset B$$
+<details>
 
-* 因為$$B$$有上界，且$$B$$為實數中非空子集合，所以$$B$$有最小上界，令$$r=\sup(B)$$。
-* $$\because A\subset B, \therefore \forall a \in A , a\in B \Rightarrow a \leq r$$，因此$$A$$有上界$$r$$
-* 因為$$A$$有上界，且$$A$$非實數中的非空子集合，所以$$A$$有最小上界，令$$s=\sup(A)$$。
-* $$.\because s=\sup(A)\Leftrightarrow \forall \epsilon>0 ~\exists a \in A \subset B \ni s−\epsilon <a$$
-* $$\because r=\sup(B) \Leftrightarrow \forall b \in B, b \leq r$$
-* $$\therefore \forall \epsilon >0 ~ \exists a \in A\subset B \ni s−\epsilon <a \leq r$$
-* $$\therefore \sup(A) \leq \sup(B)$$ (QED)
+<summary>proof: 子集合 </summary>
 
-Proof:
+因為$$B$$有上界，且$$B$$為實數中非空子集合，所以$$B$$有最小上界，令$$r=\sup(B)$$。
 
-* $$\forall x \in A, ~ \forall y \in B, x\leq y$$
-* 因為$$A$$為實數的非空集合，且A有上界，則由最小上界性質得$$\sup(A)$$存在，同理得$$\inf(B)$$ 存在。
-* 因為集合$$B$$中每一點都是$$A$$的上界，得$$\forall b \in B, b \geq \sup(A)$$
-* $$B$$的最大下界定義得$$\forall \epsilon>0 ~ \exists b \in B \ni \inf(B)+\epsilon > b$$，且$$\forall b \in B,~ b \geq \sup(A)$$
-* 因此$$\sup(A)\leq \inf(B)$$ (QED)
+因為$$A\subseteq B$$，所以$$\forall a \in A , a\in B \Rightarrow a \leq r$$，因此$$A$$有上界$$r$$
+
+因為$$A$$有上界，且$$A$$非實數中的非空子集合，所以$$A$$有最小上界，令$$s=\sup(A)$$。
+
+因為$$s=\sup(A)\Leftrightarrow \forall \epsilon>0 ~\exists a \in A \subseteq B \ni s−\epsilon <a$$
+
+因為$$r=\sup(B) \Leftrightarrow \forall b \in B, b \leq r$$
+
+所以$$\forall \epsilon >0 ~ \exists a \in A\subseteq B \ni s−\epsilon <a \leq r$$
+
+因此$$\sup(A) \leq \sup(B)$$ (QED)
+
+
+</details>: 
+
+
+<details>
+
+<summary>proof: 完全小於 </summary>
+
+$$\forall x \in A, ~ \forall y \in B, x\leq y$$
+
+因為$$A$$為實數的非空集合，且A有上界，則由最小上界性質得$$\sup(A)$$存在，同理得$$\inf(B)$$ 存在。
+
+因為集合$$B$$中每一點都是$$A$$的上界，得$$\forall b \in B, b \geq \sup(A)$$
+
+$$B$$的最大下界定義得$$\forall \epsilon>0 ~ \exists b \in B \ni \inf(B)+\epsilon > b$$，且$$\forall b \in B,~ b \geq \sup(A)$$
+
+因此$$\sup(A)\leq \inf(B)$$ (QED)
+
+</details>
+
+
 
 ### 最小上界與最大下界的實數倍
 
 > 集合$$\emptyset \neq A \subset \mathbb{R}$$ ，實數$$c \in \mathbb{R}$$。令集合$$cA=\{cx|x \in A\}$$
 >
-> * 若$$c>0$$
+> 若$$c>0$$
 >   * 當$$A$$有上界時，$$cA$$也有上界且$$\sup(cA)=c\cdot \sup(A)$$
 >   * 當$$A$$有下界時，$$cA$$也有下界且$$\inf(cA)=c\cdot \inf(A )$$
-> * 若$$c<0$$
+>   * 
+> 若$$c<0$$
 >   * 當$$A$$有上界時，$$cA$$也有下界且$$\inf(cA)=c\cdot\inf(A )$$
 >   * 當$$A$$有下界時，$$cA$$也有上界且$$\sup(cA)=c\cdot \sup(A)$$
 
+
+<details>
+
+<summary>proof: c為正數 </summary>
+
+因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup(A)=r$$ 。
+
+若$$y \in cA \Rightarrow \frac{y}{c} \in A \Rightarrow \frac{y}{c} \leq \sup(A)=r$$
+
+$$\because c>0,~\frac{y}{c}\leq r \Rightarrow y \leq cr$$ 所以$$cr$$是集合$$cA$$的上界--(1)
+
+$$\because \sup(A)=r \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
+
+$$\because c>0$$，上式可改寫成$$∀\epsilon>0 ~\exists x \in A \ni r−\frac{\epsilon}{c}<x$$
+
+$$\therefore \forall \epsilon>0, cr−\epsilon<cx$$
+
+因為$$cx \in cA$$，上式表示$$cr−\epsilon$$不是集合$$cA$$的上界--(2)
+
+由(1,2)得$$cr$$是$$cA$$的最小上界(QED).
+
+</details>
+
+
+<details>
+
+<summary>proof: c為負數 </summary>
+
+令$$\sup(A)=r$$
+
+由定義知當 $$y \in cA$$ 則 $$\frac{y}{c}\in A ~\therefore \frac{y}{c} \leq \sup(A)=r$$
+
+因為$$c<0, \frac{y}{c}\leq r$$, 所以$$y\geq cr$$，因此可得$$cr$$是集合$$cA$$的下界--(1)
+
+$$r=\sup(A) \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
+
+$$\because c<0$$ 上式可改為成$$\forall \epsilon >0 \exists x \in A \ni r+\frac{\epsilon}{c}<x$$
+
+$$\therefore \forall \epsilon >0 \ni cx<cr+\epsilon$$
+
+因為$$cx \in cA$$，上式表示$$\forall \epsilon>cr+\epsilon$$不是$$cA$$的下界--(2)
+
+由(1,2)得$$cr$$是$$cA$$的最大下界 (QED)
+
+</details>
+
 #### 範例
 
-* $$A=(a,b)$$或$$[a,b)$$或$$(a,b]$$或$$[a,b]$$
-* $$\inf(A)=a, ~ \sup(A)= b$$
-* $$c>0, cA=(ca, cb)$$或$$[ca, cb)$$或$$(ca, cb]$$或$$[ca, cb]$$
+$$A=(a,b)$$或$$[a,b)$$或$$(a,b]$$或$$[a,b]$$
+
+$$\inf(A)=a, ~ \sup(A)= b$$
+
+$$c>0$$: 
+  * $$cA=(ca, cb)$$或$$[ca, cb)$$或$$(ca, cb]$$或$$[ca, cb]$$
   * $$\inf(cA)=ca, ~ \sup(cA)=cb$$
-* $$c<0, cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$[cb, ca]$$
+
+$$c<0$$:
+  * $$cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$[cb, ca]$$
   * $$\inf(cA)=cb, ~\sup(cA)=ca$$
-
-Proof: $$c>0$$
-
-* 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup(A)=r$$ 。
-* 若$$y \in cA \Rightarrow \frac{y}{c} \in A \Rightarrow \frac{y}{c} \leq \sup(A)=r$$
-* $$\because c>0,~\frac{y}{c}\leq r \Rightarrow y \leq cr$$ 所以$$cr$$是集合$$cA$$的上界--(1)
-* $$\because \sup(A)=r \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
-* $$\because c>0$$，上式可改寫成$$∀\epsilon>0 ~\exists x \in A \ni r−\frac{\epsilon}{c}<x$$
-* $$\therefore \forall \epsilon>0, cr−\epsilon<cx$$
-* 因為$$cx \in cA$$，上式表示$$cr−\epsilon$$不是集合$$cA$$的上界--(2)
-* 由(1,2)得$$cr$$是$$cA$$的最小上界(QED).
-
-Proof: $$c<0$$
-
-* 令$$\sup(A)=r$$
-* 由定義知當 $$y \in cA$$ 則 $$\frac{y}{c}\in A ~\therefore \frac{y}{c} \leq \sup(A)=r$$
-* 因為$$c<0, \frac{y}{c}\leq r$$, 所以$$y\geq cr$$，因此可得$$cr$$是集合$$cA$$的下界--(1)
-* $$r=\sup(A) \Leftrightarrow \forall \epsilon>0 ~\exists x \in A \ni r−\epsilon<x$$
-* $$\because c<0$$ 上式可改為成$$\forall \epsilon >0 \exists x \in A \ni r+\frac{\epsilon}{c}<x$$
-* $$\therefore \forall \epsilon >0 \ni cx<cr+\epsilon$$
-* 因為$$cx \in cA$$，上式表示$$\forall \epsilon>cr+\epsilon$$不是$$cA$$的下界--(2)
-* 由(1,2)得$$cr$$是$$cA$$的最大下界 (QED)
 
 ### 由最小上界可得實數中包含無理數
 

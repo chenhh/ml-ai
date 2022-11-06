@@ -36,7 +36,14 @@ description: Infimum and supremum
 > * $$a$$為集合$$S$$的下界（$$\forall x \in S, a \leq x$$）
 > * 集合$$S$$不存在比$$a$$大的下界 （$$c>a \Rightarrow \exists x \in S, x \leq c$$）
 
-* **由定義很容易得出集合**$$S$$**的最小上界與最大下界的唯一性**。
+**由定義很容易得出集合**$$S$$**的最小上界與最大下界的唯一性**。
+
+令$$\sup S = b, ~ \inf S = a$$，在證明時常用寫法：
+* $$ \forall \epsilon > 0, ~ x < b+ \epsilon $$
+* $$ $$\forall \epsilon > 0, \exists x \in S \ni b -\epsilon < x $$
+* $$ \forall \epsilon > 0，~  a - \epsilon < x$$  
+* $$ \forall \epsilon >0，\exists x \in S \ni x < a + \epsilon $$
+
 
 ![上界不唯一，最小上界唯一](../../.gitbook/assets/Illustration\_of\_supremum-min.png)
 

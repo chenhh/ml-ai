@@ -41,8 +41,8 @@ description: Infimum and supremum
 令$$\sup S = b, ~ \inf S = a$$，在證明時常用寫法：
 * $$ \forall \epsilon > 0, ~ x < b+ \epsilon $$
 * $$ $$\forall \epsilon > 0, \exists x \in S \ni b -\epsilon < x $$
-* $$ \forall \epsilon > 0，~  a - \epsilon < x$$  
-* $$ \forall \epsilon >0，\exists x \in S \ni x < a + \epsilon $$
+* $$ \forall \epsilon > 0, ~  a - \epsilon < x$$  
+* $$ \forall \epsilon > 0, \exists x \in S \ni x < a + \epsilon $$
 
 
 ![上界不唯一，最小上界唯一](../../.gitbook/assets/Illustration\_of\_supremum-min.png)

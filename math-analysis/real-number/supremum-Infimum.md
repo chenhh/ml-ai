@@ -46,10 +46,19 @@ description: Infimum and supremum
 
 > $$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$
 
-* 若$$\emptyset \neq A \subset \mathbb{R}$$沒有上界時，因此$$\sup(A)$$ 不等於任意值，因此為了方便則記為$$\sup(A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號) 。
-* 同理若$$\emptyset \neq A \subset \mathbb{R}$$沒有下界時，因此$$\inf(A)$$ 不等於任意值，因此為了方便則記為$$\inf(A)=−\infty$$。
-* 對於任意實數$$r$$，空集合$$\emptyset$$沒有任何實數大於$$r$$，也沒有任何實數小於$$r$$，因此可以將$$r$$視為$$\emptyset$$的上界與下界。
-* 因為任意實數都是$$\emptyset$$的上界與下界，因此對於$$\sup(\emptyset)$$ 與$$\inf(\emptyset)$$ 的合理定義為$$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$。
+<details>
+
+<summary>proof:  </summary>
+
+若$$\emptyset \neq A \subseteq \mathbb{R}$$沒有上界時，因此$$\sup(A)$$ 不等於任意值，因此為了方便則記為$$\sup(A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號) 。
+
+同理若$$\emptyset \neq A \subset \mathbb{R}$$沒有下界時，因此$$\inf(A)$$ 不等於任意值，因此為了方便則記為$$\inf(A)=−\infty$$。
+
+對於任意實數$$r$$，空集合$$\emptyset$$沒有任何實數大於$$r$$，也沒有任何實數小於$$r$$，因此可以將$$r$$視為$$\emptyset$$的上界與下界。
+
+因為任意實數都是$$\emptyset$$的上界與下界，因此對於$$\sup(\emptyset)$$ 與$$\inf(\emptyset)$$ 的合理定義為$$\sup(\emptyset)=−\infty, ~ \inf(\emptyset)=\infty$$。
+
+</details>
 
 
 
@@ -250,7 +259,7 @@ $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup(A+B)=x+y=\sup(A)+\
 因此$$\sup(A) \leq \sup(B)$$ (QED)
 
 
-</details>: 
+</details>
 
 
 <details>
@@ -347,19 +356,35 @@ $$c<0$$:
 
 > 存在正實數$$a \in \mathbb{R}^{+} \ni a^2=2$$
 
-Proof:
+<details>
 
-* 令集合$$A=\{x \in \mathbb{R}^+ |x^2<2\}$$
-* 因為$$1 \in A$$且 2為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(A)$$ 。
-* 若$$a^2<2$$
-  * 令 $$h=\frac{(2−a^2)}{2(2a+1)} \Rightarrow a+h \in A$$ 且 $$a+h>2$$
-  * 此與$$a=\sup(A)$$矛盾 。
-* 若$$a^2>2$$
-  * 令$$h=\frac{a^2−2}{4a} \Rightarrow 0<a−h<a$$ 且 $$(a−h)^2>2$$
-  * $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
-  * 因為$$a−h>0, x>0$$ 所以$$a−h>x \forall x \in A$$
-  * 得$$a−h$$為$$A$$的上界，此與$$a=\sup(A)$$ 矛盾
-* 根據實數的有序性得$$a^2=2$$ (QED).
+<summary>proof:  </summary>
+
+令集合$$A=\{x \in \mathbb{R}^+ |x^2<2\}$$
+
+因為$$1 \in A$$且$$2$$為$$A$$的上界， 由實數的完備性知$$A$$有最小上界，令$$a=\sup(A)$$ 。
+
+若$$a^2<2$$
+
+令 $$h=\frac{(2−a^2)}{2(2a+1)} \Rightarrow a+h \in A$$ 且 $$a+h>2$$
+
+此與$$a=\sup(A)$$矛盾 。
+
+若$$a^2>2$$
+
+令$$h=\frac{a^2−2}{4a} \Rightarrow 0<a−h<a$$ 且 $$(a−h)^2>2$$
+
+$$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
+
+因為$$a−h>0, x>0$$ 所以$$a−h>x \forall x \in A$$
+
+得$$a−h$$為$$A$$的上界，此與$$a=\sup(A)$$ 矛盾
+
+根據實數的有序性得$$a^2=2$$ (QED).
+
+
+</details>
+
 
 ## 單調有界定理
 

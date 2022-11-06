@@ -18,14 +18,15 @@
 
 ## 實數數列上極限(limit superior of a sequence)
 
-> 令$$\{x_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$為一數列，
+> 令$$\{x_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$為一數列，定義
 >
-> * $$\displaystyle \overline{\lim_{n \rightarrow \infty}}x_n\equiv \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\sup_{ k \geq n} x_k = \inf_{n \geq 0}\{\sup_{k \geq n} x_k\}$$或
-> * $$\displaystyle \limsup_{n \rightarrow \infty} x_n =\lim_{ n \rightarrow \infty} (\sup_{k \geq n} x_k)$$
-> * 上極限是所有收斂子序列的最大值。
-> * 上極限是由第$$n$$個元素開始的最小上界形成集合的最大下界。
-> * $$\{x_n\}$$**中只有有限個元素之值大於上極限。**
+> $$\displaystyle \overline{\lim_{n \rightarrow \infty}}x_n\equiv \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\sup_{ k \geq n} x_k = \inf_{n \geq 0}\{\sup_{k \geq n} x_k\}$$或
+>  $$\displaystyle \limsup_{n \rightarrow \infty} x_n =\lim_{ n \rightarrow \infty} (\sup_{k \geq n} x_k)$$
 >
+>  上極限是由第$$n$$個元素開始的最小上界形成集合的最大下界。
+>  
+>  集合$$\{x_n\}$$**中只有有限個元素之值大於上極限。**
+
 > 令數列的上極限為$$b \in \mathbb{R}$$，則$$\displaystyle \limsup_{n \rightarrow \infty} x_n = \inf_{n \geq 0}\{ \sup_{k \geq n} x_n\}=b$$<mark style="color:red;">若且唯若</mark>$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni x_n < b+ \epsilon, \forall n \geq n_0$$。
 >
 > * 在實數中，固定索引值$$n$$後，$$x_n < b \Leftrightarrow \forall \epsilon >0, x_n < b+ \epsilon$$。

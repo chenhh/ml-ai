@@ -497,7 +497,8 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 
 若 $$m=1, b>a+1 \geq 1>a$$
 
-若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
+若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$ 
+$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
 
 因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$(QED)
 
@@ -507,6 +508,8 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 ### 任意兩個相異實數間存在有理數
 
 > $$a,b \in \mathbb{R}, a<b \Rightarrow \exists r \in \mathbb{Q} \ni a<r<b$$
+> 
+> 註：直觀的建構法為$$r=\frac{(a+b)}{2}$$即為所求。
 
 <details>
 

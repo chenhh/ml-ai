@@ -89,7 +89,7 @@ $$\because a_n \rightarrow q \Leftrightarrow d(a_n, q) \rightarrow 0$$as $$n \ri
 
 ### 收斂數列的四則運算仍為收斂數列
 
-> $$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$  and $$\displaystyle \lim_{n \rightarrow \infty} b_n = b$$均為收斂數列，則
+> $$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$  且 $$\displaystyle \lim_{n \rightarrow \infty} b_n = b$$均為收斂數列，則
 >
 > * $$\forall s, t \in \mathbb{R}$$,$$\displaystyle  \lim_{n \rightarrow \infty} (s a_n \pm t b_n) =  sa \pm tb$$
 > * $$\displaystyle \lim_{n \rightarrow \infty} (a_n b_n) = ab$$
@@ -97,26 +97,47 @@ $$\because a_n \rightarrow q \Leftrightarrow d(a_n, q) \rightarrow 0$$as $$n \ri
 >
 > 可由收斂數列的定義簡單得出。
 
-Proof (加減法)：
+<details>
 
-* $$\displaystyle \lim_{n \rightarrow \infty} a_n=A \Leftrightarrow \forall ϵ>0 ~\exists n_a \in \mathbb{N} \ni |a_n−A|<\epsilon ~ \forall n \geq n_a$$
-* $$\displaystyle \lim_{n \rightarrow \infty} b_n=B \Leftrightarrow \forall ϵ>0 ~\exists n_b \in \mathbb{N} \ ni |b_n−B|<\epsilon ~ \forall n \geq n_b$$
-* 取$$n_0=n_a+n_b\Rightarrow |a_n−A+b_n−B|\leq |a_n−A|+|b_n−B|\leq \epsilon, ~ \forall n \geq n_0$$ (QED).
+<summary>proof: 加減法 </summary>
+
+$$\displaystyle \lim_{n \rightarrow \infty} a_n=A \Leftrightarrow \forall \epsilon>0 ~\exists n_a \in \mathbb{N} \ni |a_n−A|<\epsilon ~ \forall n \geq n_a$$
+
+$$\displaystyle \lim_{n \rightarrow \infty} b_n=B \Leftrightarrow \forall \epsilon>0 ~\exists n_b \in \mathbb{N} \ni |b_n−B|<\epsilon ~ \forall n \geq n_b$$
+
+取$$n_0=n_a+n_b\Rightarrow |a_n−A+b_n−B|\leq |a_n−A|+|b_n−B|\leq \epsilon, ~ \forall n \geq n_0$$ (QED).
+
+</details>
 
 
-Proof (線性)：
+<details>
 
-* $$\displaystyle \lim_{n \rightarrow \infty}(ta_n+sb_n )=t \lim_{n \rightarrow \infty} a_n +s \lim_{n \rightarrow \infty} b_n=sA+tB$$ (QED)
+<summary>proof:  線性</summary>
 
-Proof (乘法)
+$$\displaystyle \lim_{n \rightarrow \infty}(ta_n+sb_n )=t \lim_{n \rightarrow \infty} a_n +s \lim_{n \rightarrow \infty} b_n=sA+tB$$ (QED)
 
-* $$|a_n b_n−AB|=|a_n b_n−Ab_n+Ab_n−AB|\leq |a_n−A||b_n |+|A||b_n−B|$$
-* 取 $$\displaystyle \epsilon=1,~\lim_{n \rightarrow \infty}b_n=B \Rightarrow \exists n_1 \in \mathbb{N}   \ni |b_n−B|<1, ~\forall n \geq n_1$$
-* 所以 $$|b_n |−|B| \leq |(|b_n |−|B|)| \leq |b_n−B|<1 \Rightarrow |b_n | \leq |B|+1$$
-* 因為 $$\displaystyle \lim_{n \rightarrow \infty} b_n=B \Rightarrow \exists n_2 \in \mathbb{N}, |b_n−B|<\epsilon/2(|A|+1) , ~\forall n \geq n_2$$
-* 因為$$\displaystyle \lim_{n \rightarrow \infty} a_n=A \Rightarrow \exists n_3 \in \mathbb{N} \ni |a_n−A|<\epsilon/2(|B|+1), ~ \forall n \geq n_3$$
-* 取$$n_0=n_1+n_2+n_3 \Rightarrow$$
-* $$\begin{align}  |a_n b_n−AB| & \leq |a_n−A||b_n |+|A||b_n−B| \\ & \leq \epsilon (|B|+1)/2(|B|+1) +|A|\epsilon/2(|A|+1) \\ &<\epsilon \end{align}$$ (QED).
+</details> 
+
+<details>
+
+<summary>proof: 乘法 </summary>
+
+$$|a_n b_n−AB|=|a_n b_n−Ab_n+Ab_n−AB|\leq |a_n−A||b_n |+|A||b_n−B|$$
+
+取 $$\displaystyle \epsilon=1,~\lim_{n \rightarrow \infty}b_n=B \Rightarrow \exists n_1 \in \mathbb{N}   \ni |b_n−B|<1, ~\forall n \geq n_1$$
+
+所以 $$|b_n |−|B| \leq |(|b_n |−|B|)| \leq |b_n−B|<1 \Rightarrow |b_n | \leq |B|+1$$
+
+因為 $$\displaystyle \lim_{n \rightarrow \infty} b_n=B \Rightarrow \exists n_2 \in \mathbb{N}, |b_n−B|<\epsilon/2(|A|+1) , ~\forall n \geq n_2$$
+
+因為$$\displaystyle \lim_{n \rightarrow \infty} a_n=A \Rightarrow \exists n_3 \in \mathbb{N} \ni |a_n−A|<\epsilon/2(|B|+1), ~ \forall n \geq n_3$$
+
+取$$n_0=n_1+n_2+n_3 \Rightarrow$$
+
+$$\begin{align}  |a_n b_n−AB| & \leq |a_n−A||b_n |+|A||b_n−B| \\ & \leq \epsilon (|B|+1)/2(|B|+1) +|A|\epsilon/2(|A|+1) \\ &<\epsilon \end{align}$$ (QED).
+
+</details> 
+
 
 ### 收斂序列的值域有界且收斂至極限點
 

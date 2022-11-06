@@ -2,13 +2,17 @@
 
 ## 簡介
 
-討論實數的無窮數列為收斂或發散是最基本的形式，分析中還會討論集合數列聯集或交集運算後的結果，函數數列（或隨機變數）的收斂形式（點態、均勻、L-p、測度收斂）等。
+討論實數的無窮數列為收斂或發散是最基本的形式，實數數列的收斂點概念或極限點有關。
+
+實變分析中還會討論集合數列聯集或交集運算後的結果，可測函數數列（或隨機變數）的收斂形式（點態、均勻、L-p、測度收斂）等。
 
 ## 有限數列與無限數列
 
 > 給定有限集合$$\{1,2,\ldots, n\}$$，與定義在此集合的函數$$f$$，則$$\{f(1), f(2),\ldots, f(n)\}$$為有限數列（finite sequence）。
 
 > 給定自然數集合$$\{1,2,\ldots \}$$與定義在此集合的函數$$f$$，則$$\{f(1), f(2), \ldots\}$$為無限數列（infinite sequence）。
+
+一般討論數列時，所使用的指標集合未指明時，為有限集合或是可數集合，而不是不可數集合。
 
 ## 子數列(subsequence)
 
@@ -17,14 +21,14 @@
 > 令$$s=\{s_n\}$$為無限數列，令函數$$k: \mathbb{N} \rightarrow T, ~ T \subseteq \mathbb{N}$$且為嚴格遞增函數（若$$m <n$$，則$$k(m) < k(n)$$）。
 >
 > 則對所有大於1的整數$$n$$，合成函數$$(s \circ k)(n) = s_{k(n)} \equiv s_{kn}$$形成的序列$$\{s_{k(n)}\} \equiv \{s_{kn}\}$$稱為$$s$$的子數列。
->
+
 > 度量空間：
 >
 > $$(X,d)$$為度量空間，$$\{a_n\}_{n \in \mathbb{N}} \subseteq X$$，令$$\{n_r\}_{r \in \mathbb{N}} \subseteq \mathbb{N}$$為自然數中嚴格遞增的序列（做為指標序列），則$$\{a_{n_r} \}_{r \in \mathbb{N}}$$ 為$$\{a_n\}_{n \in \mathbb{N}}$$ 的子序列。
 >
 > 子序列是從$$\{a_n\}$$中取出部份的元素，$$n_1$$代表取出的第一個元素在$$\{a_n\}$$的位置，依此類推，依其順序組合而成的新序列$$\{a_{n_r})\}$$為$$\{a_n\}$$的子集合，且順序仍保持相同。
 
-* 子數列就是原本的數列，依原始數列的順序，任意取出的子集合形成的數列。
+* <mark style="color:red;"> 子數列就是原本的數列，依原始數列的順序，任意取出的子集合形成的數列 </mark>。
 * 例如 $$\{a_n\}=\{9,8,4,5,1,3,4,5\}, \{n_r\}=\{1,4, 6\} \Rightarrow \{a_{n_r} \}=\{a_1,a_4,a_6\}=\{9,5,3\}$$。
 * 下圖中，把紅色圓圈內的點取出形成子數列，則可形成收斂子數列。
 
@@ -34,18 +38,22 @@
 
 ## 收斂數列
 
-> 收斂數列：實數
+> 收斂數列：實數或歐式空間
 >
-> * $$\{a_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}$$ 稱為收斂數列若$$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni |a_n -a| < \epsilon\ \forall n \geq n_0$$
+> * $$\{a_n\}_{n \in \mathbb{N}} \subseteq \mathbb{R}^n$$ 稱為收斂數列若$$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni d(a_n, a) < \epsilon\ \forall n \geq n_0$$
 > * 常寫為 $$a_n \rightarrow a$$ as $$n \rightarrow \infty$$
 > * 如果$${a_n}$$不是收斂數列(convergent sequence)，則為發散數列(divergent sequence)。
->
+
+> 發散數列 $$\exists \epsilon > 0 \exists n_0 \in \mathbb{N} \ni d(a_n, a) > \epsilon \forall n > n_0$$。
+
+
 > 收斂數列：度量空間
 >
 > * $$(X,d)$$為度量空間, $$\{a_n\}_{n \in \mathbb{N}} \subset X$$為一數列
-> * $$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni  d(a_n,a) < \epsilon\ \forall n \geq n_0$$>
+> * $$\displaystyle \lim_{n \rightarrow \infty} a_n = a \Leftrightarrow   \forall \epsilon > 0 \ \exists n_0 \in \mathbb{N} \ni  d(a_n,a) < \epsilon\ \forall n \geq n_0$$
+>
 
-* 數列收斂的直觀意義，是不論我們要使$$a_n$$ 與$$a$$接近到任何程度，只要$$n$$值夠大時一定能夠辦到。給定接近的距離$$\epsilon$$後，只要過了第$$a_0,a_1,\ldots,a_{n_{0}−1 }$$ (有限項)之後，$$a_{n_0},a_{n_0+1},\ldots$$(無窮項)與$$a$$的距離均小於$$\epsilon$$。
+* 數列收斂的直觀意義，是不論我們要使$$a_n$$ 與$$a$$接近到任何程度，只要$$n$$值夠大時一定能夠辦到。因此給定接近的距離$$\epsilon$$後，只要過了第$$a_0,a_1,\ldots,a_{n_{0}−1 }$$ (有限項)之後，$$a_{n_0},a_{n_0+1},\ldots$$(無窮項)與$$a$$的距離均小於$$\epsilon$$。
 * 由於實數的完備性，若$$\displaystyle \lim_{n \rightarrow \infty}⁡a_n$$ 收斂，收斂值必為實數且唯一。
 *   如果$$\{a_n, ~ n \geq 1\}$$有子序列收斂，將這些收斂子序列收集起來得集合$$B$$，將$$\sup (B)$$ 記為$$\displaystyle \limsup_{n \rightarrow \infty} a_n$$，$$\inf(⁡B)$$ 記為$$\displaystyle \liminf_{n \rightarrow \infty} a_n$$。
 
@@ -84,7 +92,8 @@ Proof (加減法)：
 * $$\displaystyle \lim_{n \rightarrow \infty}⁡ b_n=B \Leftrightarrow \forall ϵ>0 ~\exists n_b \in \mathbb{N} \ ni |b_n−B|<\epsilon ~ \forall n \geq n_b$$
 * 取$$n_0=n_a+n_b\Rightarrow |a_n−A+b_n−B|\leq |a_n−A|+|b_n−B|\leq \epsilon, ~ \forall n \geq n_0$$ (QED).
 
-Proof (線性)：
+
+Proof (線性)：
 
 * $$\displaystyle \lim_{n \rightarrow \infty}⁡(ta_n+sb_n )=t \lim_{n \rightarrow \infty}⁡ a_n +s \lim_{n \rightarrow \infty} b_n=sA+tB$$ (QED)
 
@@ -116,7 +125,8 @@ Proof:
 
 ### 度量空間必存在序列收斂至極限點
 
-> 給定度量空間$$(X,d)$$，且集合$$S \subseteq X$$。> 若$$a \in X$$為$$S$$中的附著點，則存在序列$$\{a_n\} \subseteq S$$且$$\displaystyle \lim_{n \rightarrow \infty} a_n=a$$
+> 給定度量空間$$(X,d)$$，且集合$$S \subseteq X$$。
+> 若$$a \in X$$為$$S$$中的附著點，則存在序列$$\{a_n\} \subseteq S$$且$$\displaystyle \lim_{n \rightarrow \infty} a_n=a$$
 
 > 註：與[收斂序列的值域有界且收斂至極限點](./#shou-lian-xu-lie-de-zhi-yu-you-jie-qie-shou-lian-zhi-ji-xian-dian)整合後得$$a$$為附著點 $$\displaystyle \Leftrightarrow  \exists \{a_n\} \subseteq X \ni \lim_{n \rightarrow \infty}⁡ a_n =a$$
 

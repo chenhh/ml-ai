@@ -66,7 +66,7 @@
 > 
 > [數列不發散，但上極限不等於下極限] $$ \displaystyle \limsup_{n \rightarrow \infty} a_n \neq \liminf_{n \rightarrow \infty} a_n$$
 
-如$$ \displaystyle \lim_{n \rightarrow \infty} sin(nx) $$發散，因為$$ \displaystyle \limsup_{n \rightarrow \infty} \sin(nx) = 1$$, \displaystyle \liminf_{n \rightarrow \infty} \sin(nx) = -1$$。 
+如$$ \displaystyle \lim_{n \rightarrow \infty} \sin(nx) $$發散，因為$$ \displaystyle \limsup_{n \rightarrow \infty} \sin(nx) = 1$$，而$$\displaystyle \liminf_{n \rightarrow \infty} \sin(nx) = -1$$。 
 
 ### 收斂數列的唯一性
 

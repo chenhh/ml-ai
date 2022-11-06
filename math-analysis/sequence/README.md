@@ -4,6 +4,8 @@
 
 討論實數的無窮數列為收斂或發散是最基本的形式，實數數列的收斂點概念或極限點有關。
 
+由於收斂數列的值域必定有界，因此一般簡寫為(有界)收斂數列。
+
 實變分析中還會討論集合數列聯集或交集運算後的結果，可測函數數列（或隨機變數）的收斂形式（點態、均勻、L-p、測度收斂）等。
 
 ## 有限數列與無限數列
@@ -213,7 +215,7 @@ $$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$\Leftrightarrow$$$
 
 ### 子數列收斂至原數列的極限點
 
-> $$\{a_n\}_{n \in \mathbb{N}}$$ 為一實數序列，則以下為等價性質：
+> $$\{a_n\}_{n \in \mathbb{N}}$$ 為一實數數列，則以下為等價性質：
 >
 > * $$L \in \mathbb{R}$$為$$\{a_n\}_{n \in \mathbb{N}}$$的極限點。
 > * 存在子數列$$\{a_{n_k}\}$$收斂至$$L$$。
@@ -221,7 +223,7 @@ $$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$\Leftrightarrow$$$
 ### 數列奇數項與偶數項收斂至同一值，則數列數斂
 
 > $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n} = a$$且 $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n+1} = a$$
->  則$$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$
+> 則 $$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$
 
 <details>
 

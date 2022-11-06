@@ -28,7 +28,7 @@
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S) \Leftrightarrow$$ 存在嚴格遞增序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i < x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=b$$
 > 
 > 若$$\{x_n\}$$為有上界遞增數列（$$x_1 \leq x_2 \leq \ldots \leq M$$），則$$\displaystyle \lim_{n \rightarrow \infty} x_n =\sup \{x_n | \forall n \in \mathbb{N}\}$$
->
+
 > <mark style="color:red;">遞減有下界數列必收斂至最大下界</mark> 。
 >
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S) \Leftrightarrow$$ 存在嚴格遞減序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=a$$
@@ -59,8 +59,6 @@
 
 <summary>proof: 以最小上界性質證明 </summary>
 
-Proof:
-
 因為$$\{x_n\}$$有上界，由實數的最小上界性質(非空有上界的集合必有最小上界)得存在上確界 $$M=\sup\{x_n | n \in \mathbb{N}\}$$。
 
 因為$$M$$為$$\{x_n\}$$的最小上界，由定義得$$\forall \epsilon>0~\exists n_0 \in \mathbb{N} \ni M−\epsilon<x_{n_0}$$
@@ -76,12 +74,3 @@ Proof:
 
 ![有下界遞減數列必收斂](../../.gitbook/assets/decrease-bounded-sequence-min.png)
 
-### 有上(下)界收斂數列必存在收斂子數列
-
-> $$\{a_n\}$$為有上（下）界收斂數列，且令$$\displaystyle \lim_{n \rightarrow \infty} a_n =a$$，則存在子數列$$\{a_{n_r} \}$$收斂至$$a$$，即$$\displaystyle \lim_{r \rightarrow \infty}⁡ a_{n_r} =a$$。
->
-> 註：收斂數列必為有界數例，且收斂收列必存在收斂至同一點的子數列。
-
-proof:
-
-由[收斂數列的子數列必為收斂數列且收斂至同一點](./#shou-lian-shu-lie-de-zi-shu-lie-bi-wei-shou-lian-shu-lie-qie-shou-lian-zhi-tong-yi-dian)得證。(QED)

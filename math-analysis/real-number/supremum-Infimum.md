@@ -393,38 +393,6 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 </details>
 
 
-## 單調有界定理
-
-> <mark style="color:red;"> 遞增有上界數列必收斂至最小上界 </mark>
-> 
-> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S) \Leftrightarrow$$ 
-> 存在嚴格遞增序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i < x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=b$$
->
-> <mark style="color:red;"> 遞減有下界數列必收斂至最大下界 </mark>。
-> 
-> $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S) \Leftrightarrow$$ 
-> 存在嚴格遞減序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=a$$
->
-> 
-
-<details>
-
-<summary>proof: 直接建構滿足條件的單調序列 </summary>
-
-因為$$b=\sup S$$, 給定$$\epsilon=1$$，可得$$x_1 \in S \ni b−1<x_1<b$$
-
-取$$\epsilon_2 = \min\{\frac{1}{2}, b-x_1\}$$，可得 $$x_2 \in S \ni b−\epsilon_2<x_2<b$$
-
-整理可得 $$x_1 \leq b−\epsilon_2<x_2$$, $$b−\frac{1}{2} \leq b−\epsilon_2<x_2<b$$
-
-同理可得 $$x_1, x_2,\ldots, x_n \in S \ni x_{n-1} < x_n$$且 $$b-\frac{1}{n} <x_n < b$$。
-
-所以 $$\displaystyle \lim_{n \rightarrow \infty} (b - \frac{1}{n}) < \lim_{n \rightarrow \infty} x_n<b$$
-
-由夾擠定理得 $$\displaystyle \lim_{n \rightarrow \infty} x_n=b$$(QED)
-
-
-</details>
 
 
 ## 阿基米德性質(Archimedean property)

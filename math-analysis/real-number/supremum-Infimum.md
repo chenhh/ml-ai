@@ -388,15 +388,17 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 ## 單調有界定理
 
-> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$ $$Leftrightarrow$$ 
+> <mark style="color:red;"> 遞增有上界數列必收斂至最小上界 </mark>
+> 
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S) \Leftrightarrow$$ 
 > 存在嚴格遞增序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i < x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=b$$
 >
-> 遞增有上界數列必收斂至最小上界。
+> <mark style="color:red;"> 遞減有下界數列必收斂至最大下界 </mark>。
 > 
-> $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S)$$ $$Leftrightarrow$$ 
+> $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S) \Leftrightarrow$$ 
 > 存在嚴格遞減序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=a$$
 >
-> 遞減有下界數列必收斂至最大下界。
+> 
 
 <details>
 
@@ -427,60 +429,94 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 ![阿基米德性質](../../.gitbook/assets/Archimedean\_property.png)
 
-proof (反證法)
+<details>
 
-* 假設性質不成立，即$$\exists a>0, b>0 ~\forall n \in \mathbb{N} \ni na \leq b$$
-  * 因此對每一個自然數$$n \in \mathbb{N}$$, 可得$$n \leq b/a$$，即$$b/a$$ 為$$n$$的上界。
-  * 由實數的完備性得知因為自然數集合為實數的非空子集合，因此若$$\mathbb{N}$$存在上界時，則必存在上確界。
-  * 因此令$$m=\sup(\mathbb{N})$$，得$$\epsilon=1,~\exists x \in \mathbb{N}∋m−1<x$$
-  * $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$的最小上界矛盾。
-* 因此Archimedean property成立(QED)
+<summary>proof:  反證法 </summary>
+
+假設性質不成立，即$$\exists a>0, b>0 ~\forall n \in \mathbb{N} \ni na \leq b$$
+
+因此對每一個自然數$$n \in \mathbb{N}$$, 可得$$n \leq b/a$$，即$$b/a$$ 為$$n$$的上界。
+
+由實數的完備性得知因為自然數集合為實數的非空子集合，因此若$$\mathbb{N}$$存在上界時，則必存在上確界。
+
+因此令$$m=\sup(\mathbb{N})$$，得$$\epsilon=1,~\exists x \in \mathbb{N}∋m−1<x$$
+
+$$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$的最小上界矛盾。
+
+因此Archimedean property成立(QED)
+
+</details> 
+
+
 
 ### \[證明常用]必定存在大於給定正實數的正整數
 
 > $$\forall r \in \mathbb{R}^+ ~ \exists n \in \mathbb{N} \ni n>r$$
 
-* 取$$a=1, b= r$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n > r$$ (QED)
+<details>
+
+<summary>proof:  </summary>
+
+取$$a=1, b= r$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n > r$$ (QED)
+
+</details>
+
+
 
 ### \[證明常用]無窮小的極限值為0
 
 > $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0$$
 
-proof:
+<details>
 
-* $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
-* 而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
-* 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$(QED)
+<summary>proof:  </summary>
 
-### \[證明常用]實數中以開區間逼近閉區間
+$$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
 
-> $$\forall c \in \mathbb{R}$$，閉區間$$[0,c]= \displaystyle \lim_{n \rightarrow \infty} \left(0 + \frac{1}{n}, c+\frac{1}{n} \right)$$可由外側逼近，或是$$[0,c]= \displaystyle \lim_{n \rightarrow \infty} \left(0 -\frac{1}{n}, c-\frac{1}{n} \right)$$由內側逼近。
+而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
 
-proof:
+由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$(QED)
 
-$$\displaystyle \lim_{n \rightarrow \infty} 0 + \frac{1}{n} = \lim_{n \rightarrow \infty} 0 - \frac{1}{n}=0$$
 
-同理 $$\displaystyle \lim_{n \rightarrow \infty} c + \frac{1}{n} = \lim_{n \rightarrow \infty} c - \frac{1}{n}=c$$ (QED)
+</details>
+
 
 ### 任意兩個差值大於1的實數間必存在整數
 
 > • $$a,b \in \mathbb{R}, b−a>1 \Rightarrow \exists m \in \mathbb{Z} \ni a<m<b$$
 
-proof:
+<details>
 
-* 不失一般性令$$a \geq 0$$
-* 若$$b−a>1$$，令$$A=\{p \in \mathbb{N}, p>a\}$$為$$a$$的正整數上界集合。
-* 由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數]，由於$$A$$為$$\mathbb{N}$$的子集合 ， 由正整數的良序性(正整數的非空子集必有最小元素)知$$A$$有最小元素$$m=\min(A)$$。
-* 若 $$m=1, b>a+1 \geq 1>a$$
-* 若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
-* 因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$(QED)
+<summary>proof:  </summary>
 
-### 任意兩個實數間存在有理數
+不失一般性令$$a \geq 0$$
+
+若$$b−a>1$$，令$$A=\{p \in \mathbb{N}, p>a\}$$為$$a$$的正整數上界集合。
+
+由阿基米德性質知$$A$$非空集合\[必定存在大於某個正實數的正整數]，由於$$A$$為$$\mathbb{N}$$的子集合 ， 由正整數的良序性(正整數的非空子集必有最小元素)知$$A$$有最小元素$$m=\min(A)$$。
+
+若 $$m=1, b>a+1 \geq 1>a$$
+
+若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
+
+因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$(QED)
+
+</details>
+
+
+### 任意兩個相異實數間存在有理數
 
 > $$a,b \in \mathbb{R}, a<b \Rightarrow \exists r \in \mathbb{Q} \ni a<r<b$$
 
-Proof:
+<details>
 
-* $$\because b−a>0$$, 由阿基米德性質得$$\exists n \in \mathbb{N} \ni n(b−a)>1$$
-* $$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差值大於1的實數間必存在整數]
-* $$\therefore a<m/n<b$$ (QED)
+<summary>proof:  </summary>
+
+$$\because b−a>0$$, 由阿基米德性質得$$\exists n \in \mathbb{N} \ni n(b−a)>1$$
+
+$$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差值大於1的實數間必存在整數]
+
+$$\therefore a<m/n<b$$ (QED)
+
+</details>
+

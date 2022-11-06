@@ -192,7 +192,7 @@ $$\forall \epsilon>0,  ~b_\epsilon (a) \cap T - \{a\} \neq \empty$$，因此$$a$
 ### 收斂數列的子數列必為收斂數列且收斂至同一點
 
 > $$\displaystyle \lim_{n \rightarrow \infty} a_n = a$$收斂 $$
-> $$ \Rightarrow \displaystyle \lim_{i \rightarrow \infty} a_{n_i}=a$$收斂
+> 則$$ \displaystyle \lim_{i \rightarrow \infty} a_{n_i}=a$$收斂
 >
 > 因為原始序列只要$$n$$夠大（大於$$n_0$$）時必定會收斂；而不論子數列如何取出，只要取出的數列索引值夠大（大於$$n_0$$）時仍會收斂。
 > 
@@ -221,7 +221,7 @@ $$\displaystyle\lim_{n \rightarrow \infty} a_n = a$$ 收斂 $$\Leftrightarrow$$$
 ### 數列奇數項與偶數項收斂至同一值，則數列數斂
 
 > $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n} = a$$且 $$\displaystyle  \lim_{n \rightarrow \infty} a_{2n+1} = a$$
-> $$\Rightarrow \displaystyle  \lim_{n \rightarrow \infty} a_n = a$$
+>  則$$\displaystyle  \lim_{n \rightarrow \infty} a_n = a$$
 
 <details>
 

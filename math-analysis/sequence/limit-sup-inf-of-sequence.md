@@ -35,48 +35,50 @@
 > 
 > 但是在$$n \leq n_0$$之前，$$x_n$$之值可能會大於等於$$b$$。因此最多只有**有限個**元素$$\{x_1, x_2, \ldots, x_{n_0 -1}\}$$可能會大於等於$$b$$。
 
-* 令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
-*   令$$\forall n \in \mathbb{N}, M_n=\sup\{x_n,x_{n+1}, x_{n+2},\ldots\}$$
 
+令$$\{x_n\}$$有上界，則$$\exists M \in \mathbb{R} \ni x_n \leq M,~ \forall n \in \mathbb{N}$$。
+
+令$$\forall n \in \mathbb{N}, M_n=\sup\{x_n,x_{n+1}, x_{n+2},\ldots\}$$
     * $$M_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最小上界。
     * $$M_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最小上界。
     * 以此類推得$$M_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最小上界。
     * 可得$$\displaystyle \limsup_{n \rightarrow \infty}x_n =\lim_{n \rightarrow \infty}M_n  \in (-\infty, \infty)$$，即數列的上極限等於數列第$$n$$個至無窮多個元素的最小上界
       。
 
+若序列$$\{x_n\}$$無上界，則$$\displaystyle  \limsup_{n \rightarrow \infty} x_n=\infty$$。
 
-*
-  若序列$$\{x_n\}$$無上界，則$$\displaystyle  \limsup_{n \rightarrow \infty} x_n=\infty$$。
-*   因為任意序列的上極限最小值為$$−\infty$$，所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
+因為任意序列的上極限最小值為$$−\infty$$，所以$$\displaystyle \limsup_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
 
-
-* <mark style="color:red;">數列的上極限與下極限的定義在任意的偏序集都適用，只需要上確界和下確界存在。
+<mark style="color:red;">數列的上極限與下極限的定義在任意的偏序集都適用，只需要上確界和下確界存在。
   在完全格裡，上確界和下確界總是存在，所以其中的數列一定有上極限和下極限</mark>。
 
 ## 實數數列下極限(limit inferior of a sequence)
 
-> * $$\displaystyle \underline{\lim_{n \rightarrow \infty}}x_n\equiv \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$或
-> * $$\displaystyle \liminf_{n \rightarrow \infty} x_n =\lim_{ n \rightarrow \infty} (\inf_{k \geq n} x_k)$$
-> * 下極限是所有收斂子序列的最小值。
-> * 下極限是由第$$n$$個元素開始的最大下界形成集合的最小上界。
-> * $$\{x_n\}$$**中只有有限個元素之值小於下極限**。
+> $$\displaystyle \underline{\lim_{n \rightarrow \infty}}x_n\equiv \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$或
+> $$\displaystyle \liminf_{n \rightarrow \infty} x_n =\lim_{ n \rightarrow \infty} (\inf_{k \geq n} x_k)$$
+> 
+> 下極限是由第$$n$$個元素開始的最大下界形成集合的最小上界。
+> 
+> $$\{x_n\}$$**中只有有限個元素之值小於下極限**。
 
-> 令數列的下極限為$$a \in \mathbb{R}$$，則$$\displaystyle \liminf_{n \rightarrow \infty} x_n = \sup_{n \geq 0}\{ \inf_{k \geq n} a_n\}=a$$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni a - \epsilon < x_n , \forall n \geq n_0$$。
+> 令數列的下極限為$$a \in \mathbb{R}$$，則$$\displaystyle \liminf_{n \rightarrow \infty} x_n = \sup_{n \geq 0}\{ \inf_{k \geq n} x_n\}=a$$若且唯若$$\forall \epsilon >0  ~\exists n_0 \in \mathbb{N} \ni a - \epsilon < x_n , \forall n \geq n_0$$。
 
-> * 在實數中，固定索引值$$n$$後，$$a < x_n \Leftrightarrow \forall \epsilon >0, a -\epsilon < x_n$$。
->   * 但是在數列中，滿足條件的$$n$$是依賴於給定的$$\epsilon$$而變動。因此必須先給定$$\epsilon$$之值後，得到滿足收斂條件的$$n_\epsilon$$，在$$n \geq n_\epsilon$$之後的所有（無限個）數列元素值均大於$$a-\epsilon$$。
->   * 但是在$$n_\epsilon$$之前，$$x_n$$之值可能會小於等於$$a-\epsilon$$。可得只有**有限個**元素$$\{x_1, x_2, \ldots, x_{n_\epsilon -1}\}$$可能會小於等於$$a-\epsilon$$。
->   * 如果考慮所有的$$\epsilon >0$$，$$\{x_n\}$$**中只有有限個元素之值小於a**。
+> 在數列中，滿足條件的$$n_0$$是依賴於給定的$$\epsilon$$而變動。因此必須先給定$$\epsilon$$之值後，得到滿足收斂條件的$$n_0$$，在$$n \geq n_0$$之後的所有（無限個）數列元素值均大於$$a-\epsilon$$。
+>  
+> 但是在$$n_0$$之前，$$x_n$$之值可能會小於等於$$a-\epsilon$$。可得只有**有限個**元素$$\{x_1, x_2, \ldots, x_{n_\epsilon -1}\}$$可能會小於等於$$a-\epsilon$$。
 
-* 令$$\{x_n\}$$有下界，則$$\exists m \in \mathbb{R} \ni x_n \geq m,~ \forall n \in \mathbb{N}$$。
-* 令$$\forall n \in \mathbb{N}, m_n=\inf\{x_n,x_{n+1}, x_{n+2},\ldots\}$$
+
+令$$\{x_n\}$$有下界，則$$\exists m \in \mathbb{R} \ni x_n \geq m,~ \forall n \in \mathbb{N}$$。
+
+令$$\forall n \in \mathbb{N}, m_n=\inf\{x_n,x_{n+1}, x_{n+2},\ldots\}$$
   * $$m_1$$ 為$$\{x_k\}_{k=1}^\infty$$ （第一個元素開始）的最大下界。
   * $$m_2$$ 為$$\{x_k\}_{k=2}^\infty$$ （從第二個元素開始）的最大下界。
   * 以此類推得$$m_n$$ 為$$\{x_k\}_{k=n}^\infty$$ （從第$$n$$個元素開始）的最大下界。
   * 可得$$\displaystyle \liminf_{n \rightarrow \infty}x_n =\lim_{n \rightarrow \infty}m_n  \in (-\infty, \infty)$$，即數列的下極限等於數列第$$n$$個至無窮多個元素的最大下界
     。
-* 若序列$$\{x_n\}$$無下界，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n=-\infty$$。
-* 因為任意序列的下極限最大值為$$\infty$$，所以$$\displaystyle \liminf_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
+若序列$$\{x_n\}$$無下界，則$$\displaystyle  \liminf_{n \rightarrow \infty} x_n=-\infty$$。
+
+因為任意序列的下極限最大值為$$\infty$$，所以$$\displaystyle \liminf_{n \rightarrow \infty} x_n  \in [−\infty, \infty]$$。
 
 #### 範例
 

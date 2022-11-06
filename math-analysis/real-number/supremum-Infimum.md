@@ -6,11 +6,11 @@ description: Infimum and supremum
 
 ## 有界集合
 
-> 集合$$S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的上界(upper bound)。註：$$b$$不必為集合$$S$$內的元素。
+> 集合$$S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的 <mark style="color:red;"> 上界(upper bound) </mark>。註：$$b$$不必為集合$$S$$內的元素。
 >
 > 若$$b \in S \ni x \leq b \forall x \in S$$，則$$b$$為集合$$S$$的最大元素(maximum element)，記為 $$b = \max(S)$$。
 >
-> 若集合不存在上界時，則稱無上界（unbounded above）。
+> 若集合不存在上界時，則稱 <mark style="color:red;"> 無上界（unbounded above） </mark>。
 >
 > 下界與最小元素為以相同的方式定義。
 
@@ -54,27 +54,46 @@ description: Infimum and supremum
 
 
 
-### 完備性公理(complete axioms)
+### 完備性公理、最小上界性質(complete axioms, least upper bound property)
 
-> * $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
-> * 同理可得實數中非空子集合（區間）若有下界則有最大下界。
+> 實數中非空有界集合必有最小上界(最大下界)。
+> 
+> $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
+> 
+> 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
-* 因為實數是完備集合（complete set），所以才有此性質； 可由Dedekind分劃中實數的完備性證明 。
+因為實數是完備集合（complete set），所以才有此性質； 可由Dedekind分劃中實數的完備性證明 。
 
-Proof:
+<details>
 
-* $$\emptyset \neq S\subset \mathbb{R}$$，且$$S$$有上界
-* 定義$$A=\{a \in \mathbb{R} | S\text{ 中至少有一元素 }x \ni x>a\}$$
-* 定義 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$ ($$S$$所有上界形成的集合) 。
-* (將實數線依集合$$S$$中某個點$$x$$切成兩分割$$A,B$$)
-* $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
-* 因為$$S\neq \emptyset$$,所以$$A \neq \emptyset, B \neq \emptyset$$
-* 依實數的完備性可知必存在$$r \in \mathbb{R} \ni \forall a \in A, a \leq r$$且$$\forall b \in B, r \leq b$$。
-* 要證明$$r \in B$$
-* 若$$r \in B$$，則依定義得$$r \in A$$。
-* 依$$A$$的定義$$\exists x \in S \ni r<x$$
-* 因為$$x \in S$$ 且$$\frac{(x+r)}{2}<x$$，所以$$\frac{(x+r)}{2} \in A$$且$$\frac{(x+r)}{2}>r$$，此與完備性中$$\forall a \in A, a \leq r$$的性質不合
-* 因此$$r \in B$$，因為$$B$$是$$S$$所有上界形成的集合，則$$r$$為$$S$$的最小上界。(QED)
+<summary>proof:  由Dedekind分劃中實數的完備性證明</summary>
+
+給定非空有上界集合 $$\emptyset \neq S\subset \mathbb{R}$$
+
+定義集合$$A=\{a \in \mathbb{R} | S\text{ 中至少有一元素 }x \ni x>a\}$$
+
+定義集合 $$B=\{b \in \mathbb{R} | S \text{ 中的每個元素 }x, x \leq b\}$$ ($$S$$所有上界形成的集合) 。
+
+則可得實數線依集合$$S$$中某個點$$x$$切成兩分割$$A,B$$)
+
+$$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
+
+因為$$S\neq \emptyset$$,所以$$A \neq \emptyset, B \neq \emptyset$$
+
+依實數的完備性可知必存在$$r \in \mathbb{R} \ni \forall a \in A, a \leq r$$且$$\forall b \in B, r \leq b$$。
+
+要證明$$r \in B$$，使用反證法
+
+若$$r \notin B$$，則依定義得$$r \in A$$。
+
+依$$A$$的定義$$\exists x \in S \ni r<x$$
+
+因為$$x \in S$$ 且$$\frac{(x+r)}{2}<x$$，所以$$\frac{(x+r)}{2} \in A$$且$$\frac{(x+r)}{2}>r$$，此與完備性中$$\forall a \in A, a \leq r$$的性質不合
+
+因此$$r \in B$$，因為$$B$$是$$S$$所有上界形成的集合，則$$r$$為$$S$$的最小上界。(QED)
+
+</details>
+
 
 ## 最小上界(最大下界)的性質
 
@@ -85,23 +104,48 @@ Proof:
 > 1. 若$$S$$有上界，則$$S$$有最小上界。
 > 2. 若$$S$$有下界，則$$S$$有最大下界。
 
-Proof 1->2:
+<details>
 
-* 若$$S$$有下界$$a$$，則$$\forall x \in S,~ x \geq a$$。
-* 因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$，因為$$−S$$有上確界，令$$b=\sup⁡(−S)$$。
-* 可得 $$−b=\inf(⁡S)$$ (QED).
+<summary>proof: 1->2 </summary>
 
-Proof 2->1: 同理可證 。
+若$$S$$有下界$$a$$，則$$\forall x \in S,~ x \geq a$$。
+因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$，因為$$−S$$有上確界，令$$b=\sup(−S)$$。
+可得 $$−b=\inf S)$$ (QED).
 
-### 比最小上界小的的任意元素均不為上界
+</details> 
+
+<details>
+
+<summary>proof: 2->1 </summary>
+
+同理可證 。
+
+
+</details>
+
+
+### [證明常用]比最小上界小的的任意元素均不為上界
 
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$，則$$\forall c <b, \exists x \in S \ni c < x \leq b$$。
+> 
+> 常寫成$$\forall \epsilon > 0, ~\exists x \ in S \ni b-\epsilon < x$$
 >
 > 同理 $$S$$有最大下界 $$a = \inf(S)$$，則$$\forall c > a~ \exists x \in S \ni a \leq x < c$$ 。
+> 
+> 常寫成$$\forall \epsilon > 0 ~ \exists x \in S \ni x < b+ \epsilon$$
 
-* 因為$$b=\sup(S)$$，由定義得$$\forall x \in S, x \leq b$$。
-* 因為$$c < b$$，所以$$c$$不是最小上界，因此$$\exists x \in S \ni c <x$$。
-* 因此可得 $$c< x \leq b$$ (QED)
+<details>
+
+<summary>proof: 由最小上界(最大下界)定義直接可得 </summary>
+
+因為$$b=\sup(S)$$，由定義得$$\forall x \in S,~ x \leq b$$。
+
+因為$$c < b$$，所以$$c$$不是最小上界，因此$$\exists x \in S \ni c <x$$。
+
+因此可得 $$c< x \leq b$$ (QED)
+
+</details>
+
 
 ### 實數集合中必存在嚴格遞增數列收斂至最小上界
 

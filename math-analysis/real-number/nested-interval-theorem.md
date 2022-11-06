@@ -69,7 +69,7 @@ $$\forall i \in \mathbb{N}$$, 由區間套定義知$$x_i \leq y_1$$，即$$y_1$$
 
 因為$$A$$有無窮多個元素且$$A \subseteq Q_1$$ 為有界集合，由Bolzano-Weierstrass定理得集合$$A$$有極限點$$x$$。
 
-由[極限點的鄰域與集合交集的元素為無窮多個](../metric-space/point-topology.md#ji-xian-dian-de-lin-yu-yu-ji-he-jiao-ji-de-yuan-su-wei-wu-qiong-duo-ge)的性質得$$\forall r>0 N_r (x)$$與$$A$$交集的元素個數為無窮多個。
+由[極限點的鄰域與集合交集的元素為無窮多個](../metric-space/point-topology.md#ji-xian-dian-de-lin-yu-yu-ji-he-jiao-ji-de-yuan-su-wei-wu-qiong-duo-ge)的性質得$$\forall r>0 B_r (x)$$與$$A$$交集的元素個數為無窮多個。
 
 因此$$\cap_{k=1}^\infty Q_k \neq \emptyset$$ \(QED\).
 

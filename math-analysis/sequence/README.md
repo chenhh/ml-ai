@@ -72,10 +72,20 @@
 
 > 度量空間$$(X,d)$$中，$$\{ a_n\} \subseteq X$$為收斂數列，若 $$\displaystyle \lim_{n \rightarrow \infty} a_n = p$$且 $$\displaystyle \lim_{n \rightarrow \infty} a_n=q$$，則$$p=q$$
 
-* $$\because a_n \rightarrow p \Leftrightarrow d(a_n, p) \rightarrow 0$$as $$n \rightarrow \infty$$
-* $$\because a_n \rightarrow q \Leftrightarrow d(a_n, q) \rightarrow 0$$as $$n \rightarrow \infty$$
-* 因為distance function $$d$$滿足三角不等式，因此$$0 \leq d(p, q) \leq d(p, a_n) + d(q, a_n) \rightarrow 0$$ as $$n \rightarrow \infty$$
-* 所以$$p=q$$ (QED)
+<details>
+
+<summary>proof: 三角不等式夾擠 </summary>
+
+$$\because a_n \rightarrow p \Leftrightarrow d(a_n, p) \rightarrow 0$$as $$n \rightarrow \infty$$
+
+$$\because a_n \rightarrow q \Leftrightarrow d(a_n, q) \rightarrow 0$$as $$n \rightarrow \infty$$
+
+因為度量函數$$d$$滿足三角不等式，因此$$0 \leq d(p, q) \leq d(p, a_n) + d(q, a_n) \rightarrow 0$$ as $$n \rightarrow \infty$$
+
+所以$$p=q$$ (QED)
+
+</details>
+
 
 ### 收斂數列的四則運算仍為收斂數列
 

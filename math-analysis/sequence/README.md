@@ -44,9 +44,6 @@
 > * 常寫為 $$a_n \rightarrow a$$ as $$n \rightarrow \infty$$
 > * 如果$${a_n}$$不是收斂數列(convergent sequence)，則為發散數列(divergent sequence)。
 
-> 發散數列 $$\exists \epsilon > 0 \exists n_0 \in \mathbb{N} \ni d(a_n, a) > \epsilon \forall n > n_0$$。
-
-
 > 收斂數列：度量空間
 >
 > * $$(X,d)$$為度量空間, $$\{a_n\}_{n \in \mathbb{N}} \subset X$$為一數列
@@ -54,18 +51,22 @@
 >
 
 * 數列收斂的直觀意義，是不論我們要使$$a_n$$ 與$$a$$接近到任何程度，只要$$n$$值夠大時一定能夠辦到。因此給定接近的距離$$\epsilon$$後，只要過了第$$a_0,a_1,\ldots,a_{n_{0}−1 }$$ (有限項)之後，$$a_{n_0},a_{n_0+1},\ldots$$(無窮項)與$$a$$的距離均小於$$\epsilon$$。
-* 由於實數的完備性，若$$\displaystyle \lim_{n \rightarrow \infty}⁡a_n$$ 收斂，收斂值必為實數且唯一。
-*   如果$$\{a_n, ~ n \geq 1\}$$有子序列收斂，將這些收斂子序列收集起來得集合$$B$$，將$$\sup (B)$$ 記為$$\displaystyle \limsup_{n \rightarrow \infty} a_n$$，$$\inf(⁡B)$$ 記為$$\displaystyle \liminf_{n \rightarrow \infty} a_n$$。
+* 由於實數的完備性，若$$\displaystyle \lim_{n \rightarrow \infty}a_n$$ 收斂，收斂值必為實數且唯一。
+*   如果$$\{a_n, ~ n \geq 1\}$$有子序列收斂，將這些收斂子序列收集起來得集合$$B$$，將$$\sup (B)$$ 記為$$\displaystyle \limsup_{n \rightarrow \infty} a_n$$，$$\inf(B)$$ 記為$$\displaystyle \liminf_{n \rightarrow \infty} a_n$$。
 
 
 
 ![收斂數列會在收斂值附近越縮越近](../../.gitbook/assets/limit\_sequence-min.png)
 
-### 發散數列((divergent sequence)
+### 發散數列(divergent sequence)
 
-> $$\displaystyle \lim_{n \rightarrow \infty}⁡ a_n=\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N}  \ni a_n \geq M ~\forall n \geq n_0$$
+> [數列發散至無窮大] $$\displaystyle \lim_{n \rightarrow \infty} a_n=\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N}  \ni a_n \geq M ~\forall n \geq n_0$$
 >
-> $$\displaystyle \lim_{n \rightarrow \infty}⁡ a_n=-\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N}  \ni a_n \leq M ~\forall n \geq n_0$$
+> [數列發散至負無窮大] $$\displaystyle \lim_{n \rightarrow \infty} a_n=-\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N}  \ni a_n \leq M ~\forall n \geq n_0$$
+> 
+> [數列不發散，但上極限不等於下極限] $$ \displaystyle \limsup_{n \rightarrow \infty} a_n \neq \liminf_{n \rightarrow \infty} a_n$$
+
+如$$ \displaystyle \lim_{n \rightarrow \infty} sin(nx) $$發散，因為$$ \displaystyle \limsup_{n \rightarrow \infty} \sin(nx) = 1$$, \displaystyle \liminf_{n \rightarrow \infty} \sin(nx) = -1$$。 
 
 ### 收斂數列的唯一性
 
@@ -88,19 +89,19 @@
 
 Proof (加減法)：
 
-* $$\displaystyle \lim_{n \rightarrow \infty}⁡ a_n=A \Leftrightarrow \forall ϵ>0 ~\exists n_a \in \mathbb{N} \ni |a_n−A|<\epsilon ~ \forall n \geq n_a$$
-* $$\displaystyle \lim_{n \rightarrow \infty}⁡ b_n=B \Leftrightarrow \forall ϵ>0 ~\exists n_b \in \mathbb{N} \ ni |b_n−B|<\epsilon ~ \forall n \geq n_b$$
+* $$\displaystyle \lim_{n \rightarrow \infty} a_n=A \Leftrightarrow \forall ϵ>0 ~\exists n_a \in \mathbb{N} \ni |a_n−A|<\epsilon ~ \forall n \geq n_a$$
+* $$\displaystyle \lim_{n \rightarrow \infty} b_n=B \Leftrightarrow \forall ϵ>0 ~\exists n_b \in \mathbb{N} \ ni |b_n−B|<\epsilon ~ \forall n \geq n_b$$
 * 取$$n_0=n_a+n_b\Rightarrow |a_n−A+b_n−B|\leq |a_n−A|+|b_n−B|\leq \epsilon, ~ \forall n \geq n_0$$ (QED).
 
 
 Proof (線性)：
 
-* $$\displaystyle \lim_{n \rightarrow \infty}⁡(ta_n+sb_n )=t \lim_{n \rightarrow \infty}⁡ a_n +s \lim_{n \rightarrow \infty} b_n=sA+tB$$ (QED)
+* $$\displaystyle \lim_{n \rightarrow \infty}(ta_n+sb_n )=t \lim_{n \rightarrow \infty} a_n +s \lim_{n \rightarrow \infty} b_n=sA+tB$$ (QED)
 
 Proof (乘法)
 
 * $$|a_n b_n−AB|=|a_n b_n−Ab_n+Ab_n−AB|\leq |a_n−A||b_n |+|A||b_n−B|$$
-* 取 $$\displaystyle \epsilon=1,~\lim_{n \rightarrow \infty}⁡b_n=B \Rightarrow \exists n_1 \in \mathbb{N}   \ni |b_n−B|<1, ~\forall n \geq n_1$$
+* 取 $$\displaystyle \epsilon=1,~\lim_{n \rightarrow \infty}b_n=B \Rightarrow \exists n_1 \in \mathbb{N}   \ni |b_n−B|<1, ~\forall n \geq n_1$$
 * 所以 $$|b_n |−|B| \leq |(|b_n |−|B|)| \leq |b_n−B|<1 \Rightarrow |b_n | \leq |B|+1$$
 * 因為 $$\displaystyle \lim_{n \rightarrow \infty} b_n=B \Rightarrow \exists n_2 \in \mathbb{N}, |b_n−B|<\epsilon/2(|A|+1) , ~\forall n \geq n_2$$
 * 因為$$\displaystyle \lim_{n \rightarrow \infty} a_n=A \Rightarrow \exists n_3 \in \mathbb{N} \ni |a_n−A|<\epsilon/2(|B|+1), ~ \forall n \geq n_3$$
@@ -117,7 +118,7 @@ Proof (乘法)
 
 Proof:
 
-* $$\displaystyle \lim_{n \rightarrow \infty}⁡a_n=a \Leftrightarrow \forall \epsilon>0 ~ \exists n_0 \in \mathbb{N} \ni d(a_n,a)<\epsilon, ~\forall n \geq n_0$$
+* $$\displaystyle \lim_{n \rightarrow \infty}a_n=a \Leftrightarrow \forall \epsilon>0 ~ \exists n_0 \in \mathbb{N} \ni d(a_n,a)<\epsilon, ~\forall n \geq n_0$$
 * 當$$\epsilon=1$$時，取$$n_1$$ 為符合收斂條件的$$n_0$$。
 * 則$$\forall n \geq n_1, \{a_n\} \subseteq N_r (a), r =1+\max \{ d(a,a_1 ), d(a,a_2 ),\ldots ,d(a,a_n )\}$$
 * 而$$\forall \epsilon>0$$，均可得出此結果，因此值域集合$$T$$有界 (QED).
@@ -128,7 +129,7 @@ Proof:
 > 給定度量空間$$(X,d)$$，且集合$$S \subseteq X$$。
 > 若$$a \in X$$為$$S$$中的附著點，則存在序列$$\{a_n\} \subseteq S$$且$$\displaystyle \lim_{n \rightarrow \infty} a_n=a$$
 
-> 註：與[收斂序列的值域有界且收斂至極限點](./#shou-lian-xu-lie-de-zhi-yu-you-jie-qie-shou-lian-zhi-ji-xian-dian)整合後得$$a$$為附著點 $$\displaystyle \Leftrightarrow  \exists \{a_n\} \subseteq X \ni \lim_{n \rightarrow \infty}⁡ a_n =a$$
+> 註：與[收斂序列的值域有界且收斂至極限點](./#shou-lian-xu-lie-de-zhi-yu-you-jie-qie-shou-lian-zhi-ji-xian-dian)整合後得$$a$$為附著點 $$\displaystyle \Leftrightarrow  \exists \{a_n\} \subseteq X \ni \lim_{n \rightarrow \infty} a_n =a$$
 
 Proof:
 

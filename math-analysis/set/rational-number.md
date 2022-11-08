@@ -69,3 +69,27 @@
 
 </details>
 
+### 無理數可用有理數數列逼近
+> 令$$q \in \mathbb{R - Q}$$為一無理數，則存在有理數數列$$\{x_n\} \subseteq \mathbb{Q}$$
+> 使得 $$ \displaystyle \lim_{n \rightarrow \infty} x_n = q $$
+
+<details>
+
+<summary>proof: 以有理數的稠密性夾擠 </summary>
+
+給定數列$$\{\frac{1}{n}\}_{n \in \mathbb{N}}$$，
+可得 $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n} = 0$$
+
+因為$$q$$為無理數，可得$$q - \frac{1}{n} < q + \frac{1}{n}, ~ \forall n \in \mathbb{N}$$
+
+因為相異兩個無理數間必有一有理數(稠密性)，因此存在$$x_n \in \mathbb{Q}$$ 使得 
+$$ q - \frac{1}{n} < x_n < q + \frac{1}{n} $$，整理後可得 $$ |x - q| < \frac{1}{n} $$。
+
+由於$$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n} = 0$$，從極限定義得
+$$ \forall \epsilon > 0 , \exists n_0 \in \mathbb{N} \ni |\frac{1}{n}|< \epsilon, ~ \forall n \geq n_0 $$
+
+由上式得$$\forall \epsilon > 0$$，在$$n \geq n_0 $$時，$$|x - q | < \frac{1}{n} < \epsilon $$。
+由極限定義得 $$ \displaystyle \lim_{n \rightarrow \infty} x_n  = q $$ (QED)
+
+
+</details>

@@ -289,3 +289,7 @@
 * [\[book\]模型思維(the model thinker)](complex-system/mo-xing-si-wei-the-model-thinker.md)
 * [碎形(分形) (fractal)](complex-system/fractal.md)
 * [相空間重構](complex-system/phase-space-reconstruction.md)
+
+## 資料融合 <a href="#data-fusion" id="data-fusion"></a>
+
+* [多感測器資料融合](data-fusion/multisensors-data-fusion.md)

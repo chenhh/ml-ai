@@ -10,7 +10,7 @@
 
 
 
-![音樂的時間序列](<../.gitbook/assets/music-time-series-min (1).png>)
+![音樂的時間序列](../.gitbook/assets/music-time-series-min.png)
 
 ![音樂的頻譜](../.gitbook/assets/music-frequency-min.png)
 

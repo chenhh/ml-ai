@@ -229,6 +229,10 @@
 * [基於動差的風險衡量](risk-measure/moment-based-risk-measure.md)
 * [光譜風險衡量](risk-measure/spectral-risk-measure.md)
 
+## 貝式方法 <a href="#bayesian-method" id="bayesian-method"></a>
+
+* [參考資料](bayesian-method/bayes-reference.md)
+
 ## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
 
 * [凸集合 (convex set)](convex-optimization/convex-set/README.md)
@@ -268,11 +272,11 @@
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 
-* [Causality: Models, Reasoning and Inference](casualty-inference/causality-models-reasoning-and-inference.md)
 * [The book of why](casualty-inference/the-book-of-why/README.md)
   * [因果的三個層級](casualty-inference/the-book-of-why/ladder-of-causation.md)
   * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)
   * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
+* [Causality: Models, Reasoning and Inference](casualty-inference/causality-models-reasoning-and-inference.md)
 
 ## 微分方程 <a href="#differential-equation" id="differential-equation"></a>
 

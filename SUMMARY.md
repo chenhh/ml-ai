@@ -293,3 +293,4 @@
 ## 資料融合 <a href="#data-fusion" id="data-fusion"></a>
 
 * [多感測器資料融合](data-fusion/multisensors-data-fusion.md)
+* [資料融合的觀點和它在資訊處理中的作用](data-fusion/zi-liao-rong-he-de-guan-dian-he-ta-zai-zi-xun-chu-li-zhong-de-zuo-yong.md)

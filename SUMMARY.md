@@ -110,7 +110,6 @@
   * [卜瓦松過程(Poisson process)](probability-and-statistics/random-process/poisson-process.md)
   * [布朗運動(Brownian motion)](probability-and-statistics/random-process/brownian-motion.md)
   * [平賭(鞅)過程(Martingale process)](probability-and-statistics/random-process/martingale-process.md)
-* [貝式機率](probability-and-statistics/bayes-probability.md)
 * [關聯結構(copula)](probability-and-statistics/copula.md)
 * [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
 * [實驗設計](probability-and-statistics/experiment-design.md)
@@ -229,9 +228,10 @@
 * [基於動差的風險衡量](risk-measure/moment-based-risk-measure.md)
 * [光譜風險衡量](risk-measure/spectral-risk-measure.md)
 
-## 貝式方法 <a href="#bayesian-method" id="bayesian-method"></a>
+## 貝葉斯方法 <a href="#bayesian-method" id="bayesian-method"></a>
 
 * [參考資料](bayesian-method/bayes-reference.md)
+* [貝葉斯機率](bayesian-method/bayes-probability.md)
 
 ## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
 

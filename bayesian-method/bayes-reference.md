@@ -12,3 +12,6 @@
 * [John k. Kruschke. "Doing Bayesian data analysis: A tutorial with R, JAGS, and Stan." 2nd, Elsevier, 2014](https://www.amazon.com/-/zh\_TW/John-Kruschke/dp/0124058884/ref=sr\_1\_1?crid=Z9MR9VZXEC25\&keywords=Doing+Bayesian+Data+Analysis\&qid=1668123900\&sprefix=doing+bayesian+data+analysis%2Caps%2C584\&sr=8-1).
 * [A. Gelman, J. B. Carlin, H. S. Stern, and D. B. Rubin. Bayesian Data Analysis. Chapman & Hall, 2004](https://www.amazon.com/-/zh\_TW/Andrew-Gelman/dp/1439840954/ref=sr\_1\_1?crid=1668YJDC9ULFO\&keywords=Bayesian+Data+Analysis\&qid=1668124424\&sprefix=%2Caps%2C352\&sr=8-1).
 
+## 科普
+
+小島寬之著，羅夢迪譯，"統計學關我什麼事：生活中的極簡統計學,"，北京時代華文書局，2018。

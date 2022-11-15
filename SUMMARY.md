@@ -231,7 +231,7 @@
 ## 貝葉斯方法 <a href="#bayesian-method" id="bayesian-method"></a>
 
 * [參考資料](bayesian-method/bayes-reference.md)
-* [貝葉斯機率](bayesian-method/bayes-probability.md)
+* [貝氏機率](bayesian-method/bayes-probability.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution.md)
 
 ## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>

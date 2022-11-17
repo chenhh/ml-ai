@@ -6,6 +6,8 @@
 * [Hoff, Peter D. A first course in Bayesian statistical methods. Vol. 580. New York: Springer, 2009](https://www.amazon.com/-/zh\_TW/Peter-D-Hoff/dp/0387922997/ref=sr\_1\_1?crid=1KOIQLLADNARM\&keywords=A+First+Course+in+Bayesian+Statistical+Methods\&qid=1668092130\&sprefix=a+first+course+in+bayesian+statistical+methods%2Caps%2C294\&sr=8-1).
 * \[入門][ N. T. Hobbs and M. B. Hooten. Bayesian Models: A Statistical Primer for Ecologists. Princeton University Press, 2015](https://www.amazon.com/-/zh\_TW/N-Thompson-Hobbs/dp/0691159289/ref=sr\_1\_1?crid=1KZTZYL25A0EM\&keywords=Bayesian+Models%3A+A+Statistical+Primer+for+Ecologists\&qid=1668124470\&sprefix=bayesian+data+analysis%2Caps%2C631\&sr=8-1).
 * [Davidson-Pilon, Cameron. Bayesian methods for hackers: probabilistic programming and Bayesian inference. Addison-Wesley Professional, 2015](https://www.amazon.com/-/zh\_TW/Cameron-Davidson-Pilon/dp/0133902838/ref=sr\_1\_1?keywords=Bayesian+Methods+for+Hackers\&qid=1668092904\&sr=8-1).
+* [Richard McElreath, "Statistical Rethinking A Bayesian Course with Examples in R and Stan,", 2nd, 2020](https://xcelab.net/rm/statistical-rethinking/).
+* [Allen B. Downey, "think Bayes 2,", online resource](https://allendowney.github.io/ThinkBayes2/).
 
 ## 機器學習
 

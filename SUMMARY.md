@@ -228,11 +228,20 @@
 * [基於動差的風險衡量](risk-measure/moment-based-risk-measure.md)
 * [光譜風險衡量](risk-measure/spectral-risk-measure.md)
 
-## 貝葉斯方法 <a href="#bayesian-method" id="bayesian-method"></a>
+## 貝氏方法 <a href="#bayesian-method" id="bayesian-method"></a>
 
 * [參考資料](bayesian-method/bayes-reference.md)
 * [貝氏機率](bayesian-method/bayes-probability.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution.md)
+
+## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
+
+* [The book of why](casualty-inference/the-book-of-why/README.md)
+  * [因果的三個層級](casualty-inference/the-book-of-why/ladder-of-causation.md)
+  * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)
+  * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
+* [Causality: Models, Reasoning and Inference](casualty-inference/causality-models-reasoning-and-inference.md)
+* [簡介](casualty-inference/jian-jie.md)
 
 ## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
 
@@ -270,14 +279,6 @@
 
 * [計算理論簡介](computation-theory/computation-theory-introduction.md)
 * [自動機(automata)](computation-theory/automata.md)
-
-## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
-
-* [The book of why](casualty-inference/the-book-of-why/README.md)
-  * [因果的三個層級](casualty-inference/the-book-of-why/ladder-of-causation.md)
-  * [因果推斷的起源](casualty-inference/the-book-of-why/start-of-casual-inference.md)
-  * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
-* [Causality: Models, Reasoning and Inference](casualty-inference/causality-models-reasoning-and-inference.md)
 
 ## 微分方程 <a href="#differential-equation" id="differential-equation"></a>
 

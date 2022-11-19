@@ -22,7 +22,29 @@
 
 ### head-to-head
 
+a->c且 b->c的結構。
+
+可得$$\mathrm{P}(a,b,c)=\mathrm{P}(a)\mathrm{P}(b)\mathrm{P}(c|a,b)$$。即在$$c$$未知的條件下，$$a,b$$被阻斷(blocked)為條件獨立。
+
 ### tail-to-tail
 
+c->a且c->b的結構。
+
+考慮$$c$$未知與$$c$$已知的兩種情形：
+
+* $$c$$未知時，有$$\mathrm{P}(a,b,c)=\mathrm{P}(c)\mathrm{P}(a|c)\mathrm{P}(b|c)$$，此時無法得出$$\mathrm{P}(a,b)=\mathrm{P}(a)\mathrm{P}(b)$$，即$$c$$未知時，$$a,b$$不獨立。
+* 在$$c$$已知時，可得$$\mathrm(P)(a,b|c)=\frac{\mathrm{P}(a,b,c)}{\mathrm{P}(c)}$$，再將$$\mathrm{P}(a,b,c)=\mathrm{P}(c)\mathrm{P}(a|c)\mathrm{P}(b|c)$$帶入式子得$$\mathrm{P}(a,b|c)=\mathrm{P}(c)\mathrm{P}(a|c)\mathrm{P}(b|c)/\mathrm{P}(c)=\mathrm{P}(a|c) \mathrm{P}(b|c)$$，即$$c$$已知時，$$a,b$$獨立。
+
 ### head-to-tail
+
+a->c且c->b的結構。
+
+考慮$$c$$未知與$$c$$已經的兩種情形：
+
+* $$c$$未知時，有$$\mathrm{P}(a,b,c)=\mathrm{P}(a)\mathrm{P}(c|a)\mathrm{P}(b|c)$$，但無法得到$$\mathrm{P}(a,b)=\mathrm{P}(a)\mathrm{P}(b)$$。即$$c$$未知時，$$a,b$$ 不獨立。
+* $$c$$ 已知時，有$$\mathrm{P}(a,b|c)=\frac{\mathrm{P}(a,b,c)}{\mathrm{P}(c)}$$，但根據$$\mathrm{P}(a,c)=\mathrm{P}(a)\mathrm{P}(c|a)=\mathrm{P}(c)\mathrm{P}(a|c)$$，可化簡得：$$\begin{aligned} \mathrm{P}(a,b|c) &= \frac{\mathrm{P}(a,b,c)}{\mathrm{P}(c)} \\ & = \mathrm{P}(a) \times \mathrm{P}(c|a) \times \frac{\mathrm{P}(b|c)}{\mathrm{P}(c)} \\ & = \mathrm{P}(a,c) \times \frac{\mathrm{P}(b|c)}{\mathrm{P}(c)} \\ & = \mathrm{P}(a|c) \times \mathrm{P}(b|c) \end{aligned}$$
+
+所以在給定$$c$$的條件下，$$a,b$$被阻斷(blocked)是獨立的。
+
+如果是$$x_1 \rightarrow x_2 \rightarrow \dots \rightarrow x_M$$這種head-to-tail結構，在給定$$x_i$$的條件下，$$x_{i+1}$$的分佈和$$x_1, x_2, \dots, x_{i-1}$$條件獨立，稱之為馬可夫鏈(Markov chain)。
 

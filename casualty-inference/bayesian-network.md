@@ -26,6 +26,8 @@ a->c且 b->c的結構。
 
 可得$$\mathrm{P}(a,b,c)=\mathrm{P}(a)\mathrm{P}(b)\mathrm{P}(c|a,b)$$。即在$$c$$未知的條件下，$$a,b$$被阻斷(blocked)為條件獨立。
 
+由$$\displaystyle \sum_{c} \mathrm{P}(a,b,c)  = \sum_{c}\mathrm{P}(a)\mathrm{P}(b)\mathrm{P}(c|a,b)$$可得$$\displaystyle \mathrm{P}(a,b)  = \mathrm{P}(a) \mathrm{P}(b)$$。
+
 ### tail-to-tail
 
 c->a且c->b的結構。
@@ -47,4 +49,11 @@ a->c且c->b的結構。
 所以在給定$$c$$的條件下，$$a,b$$被阻斷(blocked)是獨立的。
 
 如果是$$x_1 \rightarrow x_2 \rightarrow \dots \rightarrow x_M$$這種head-to-tail結構，在給定$$x_i$$的條件下，$$x_{i+1}$$的分佈和$$x_1, x_2, \dots, x_{i-1}$$條件獨立，稱之為馬可夫鏈(Markov chain)。
+
+### D-separation
+
+將上述三類節點推廣到節點集，則是：對於任意的節點集$$A,B,C$$，考察所有通過$$A$$中任意節點到$$B$$中任意節點的路徑，若要求$$A,B$$條件獨立，則需要所有的路徑都被阻斷(blocked)，即滿足下列兩個前提之一：
+
+1. $$A$$和$$B$$的head-to-tail和tail-to-tail路徑均通過$$C$$。
+2. $$A$$和$$B$$的head-to-head型路徑不通過$$C$$與$$C$$的子孫。
 

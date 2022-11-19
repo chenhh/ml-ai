@@ -4,7 +4,7 @@
 
 貝葉斯統計的優勢在於在資料較少的情況下，也可以進行推論，且資料越多，推論結果越準確。以及對所獲得的資訊可做出即時反應，自動升級「推論」的學習功能。
 
-貝葉斯公式中，包含了先驗機率(主觀機率)，因此在頻率學派(客觀機辛)中不易被接受。
+貝葉斯公式中，包含了先驗機率(主觀機率)，因此在頻率學派(客觀機率)中不易被接受。
 
 1. 通過經驗(主觀)設定先驗機率(prob. of hypothesis, P(H))。
 2. 觀察不同假設下事件發生的機率(likelihood, P(data/H))。
@@ -52,9 +52,11 @@
 
 **「後驗」在此中代表考慮了被測試事件的相關證據**。
 
-* 後驗機率(posterior probability)是機率分佈的參數$$\theta$$，在給定證據(evidence) $$X$$後的機率：$$\mathrm{P}(\theta \vert X)$$。
+* 後驗機率(posterior probability)是隨機變數$$\theta$$且先驗分佈為$$\mathrm{P}(\theta)$$，在給定證據(evidence) $$X$$後的條件機率：$$\mathrm{P}(\theta \vert X)$$。
 * 與似然函數(likelihood function)相反，其為證據$$X$$給定了參數$$\theta$$後的機率：$$\mathrm{P}(X \vert \theta)$$。
-* 首先定義參數$$\theta$$的先驗機率(prior probability)為某個帶參數的機率分佈函數$$\mathrm{P}(\theta)$$，則樣本在此參數的可能性為$$\mathrm{P}(X|\theta)$$，因此使用貝式定理得後驗機率為：
+* 首先定義統計模型參數$$\theta$$，將$$\theta$$視為隨機變數，且在觀察到樣本之前，分配一個機率分佈給$$\theta$$稱為先驗分佈(prior distribution)，記為$$\mathrm{P}(\theta)$$<mark style="color:blue;">。當樣本足夠多時，先驗分佈的選取就不重要了</mark>。但實際上，選擇一個恰當的先驗分佈能夠大大地節省後驗分佈的計算時間，甚至可以匯出後驗分佈的解析表示式。
+
+則樣本在此參數的可能性為$$\mathrm{P}(X|\theta)$$，因此使用貝式定理得後驗機率為：
 
 $$
 \mathrm{P}(\theta | X)=\frac{\mathrm{P}(\theta, X)}{\mathrm{P}(X)}=\frac{\mathrm{P}(X|\theta)\mathrm{P}(\theta)}{\mathrm{P}(X)}=\frac{(X|\theta)\mathrm{P}(\theta)}{\int_{\theta^{'}}\mathrm{P}(X| \theta^{'})\mathrm{P}(\theta^{'})d\theta^{'}}

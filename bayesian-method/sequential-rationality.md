@@ -120,4 +120,4 @@ description: sequential rationality
 * $$ \mathrm{P}(White|A)  = \frac{9}{9+16}=9/25$$
 * $$ \mathrm{P}(White|B)  = \frac{16}{9+16}=16/25$$
 
-觀察次數越多,推算結果就越接近實際。
+觀察次數越多，推算結果就越接近實際。

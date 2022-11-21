@@ -24,6 +24,9 @@
 
 Beta分佈的pdf形式如下:
 $$
-\displaystyle f(x; \alpha, beta) = \frac{1}{B(\alpha, \beta)} x^{\alpha -1} (1-x)^{\beta-1}, ~ 0 < x < 1
+\displaystyle f(x; \alpha, \beta) = \frac{1}{B(\alpha, \beta)} x^{\alpha -1} (1-x)^{\beta-1}, ~ 0 < x < 1
 $$
 其中$$B$$為beta函數，是用於正規化機率值。
+
+Beta分佈的平均值為$$\mu=\frac{\alpha}{\alpha + \beta}$$，
+變異數為$$ \sigma^2 = \frac{\alpha \beta}{(\alpha + beta)^2 (\alpha + \beta + 1)}$$

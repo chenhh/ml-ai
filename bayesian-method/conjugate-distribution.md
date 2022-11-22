@@ -105,5 +105,7 @@ Gamma分佈的兩個參數$$k, \theta$$有三種常見的使用方式：
 * [貝氏機率使用] 形狀參數$$\alpha = k $$，速度(rate)參數$$\beta = \frac{1}{\theta}$$。
 * 形狀參數$$k $$，平均參數$$ \mu = \frac{k}{\beta}$$。
 
-平均值$$\mu = k\theta$$或$$ \frac{\alpha}{\beta}$$. 
+平均值$$\mu = k\theta$$或$$ \frac{\alpha}{\beta}$$，變異數為$$k \theta^2$$或$$ \frac{\alpha}{\beta^2}$$。
+
+
 

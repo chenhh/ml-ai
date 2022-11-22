@@ -59,6 +59,10 @@ Beta分佈的平均值為$$\mu=\frac{\alpha}{\alpha + \beta}$$，
 * $$\alpha_2 = \alpha_1 + x = 0.5 + 0 = 0.5$$
 * $$\beta_2 = \beta_1 + n - x = 1.5 +1 - 0 = 2.5$$
 
+此時由Beta分佈的均值$$\mu=\frac{\alpha}{\alpha+\beta}=\frac{0.5}{0.5+2.5}=0.1667$$
+與變異數$$\sigma^2 = \frac{\alpha \beta}{(\alpha + beta)^2 (\alpha + \beta + 1)} =0.0617 $$
+可用beta分佈得到二項式分佈參數$$p$$的信賴區間。
+
 如果在給定先驗後，直接進行兩次試驗，且兩次均為失敗時，也可得到相同的結果：
 * $$\alpha_2 = \alpha_0 + x = 0.5 + 0 = 0.5$$
 * $$\beta_2 = \beta_0 + n - x = 0.5 +2 - 0 = 2.5$$

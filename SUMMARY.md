@@ -234,6 +234,7 @@
 * [貝氏機率](bayesian-method/bayes-probability.md)
 * [序貫理性](bayesian-method/sequential-rationality.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution.md)
+* [MCMC](bayesian-method/mcmc.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

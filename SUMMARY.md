@@ -234,7 +234,14 @@
 * [貝氏機率](bayesian-method/bayes-probability.md)
 * [序貫理性](bayesian-method/sequential-rationality.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution.md)
-* [MCMC](bayesian-method/mcmc.md)
+* [MCMC](bayesian-method/mcmc/README.md)
+  * [cdf反函數抽樣](bayesian-method/mcmc/inverse-cdf-sampling.md)
+  * [拒絕取樣](bayesian-method/mcmc/reject-sampling.md)
+  * [重要性取樣](bayesian-method/mcmc/importance-sampling.md)
+  * [Gibbs抽樣](bayesian-method/mcmc/Gibbs-sampling.md)
+  * [Metropolis-Hasting抽樣](bayesian-method/mcmc/Metropolis-Hasting-sampling.md)
+  * [Hamiltonian Monte Carlo(HMC)抽樣](bayesian-method/mcmc/Hamiltonian-Monte-Carlo-sampling.md)
+  * [No-U-Turn Sampler](bayesian-method/mcmc/no-u-turn-sampler.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

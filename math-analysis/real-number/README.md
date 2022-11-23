@@ -28,29 +28,29 @@
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
-給定$$a,b \in \mathbb{R}$$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$滿足$$x <y$$且$$[a,b] \subseteq I_1=[x,y]$$
+給定\$$a,b \in \mathbb{R}\$$，由Archmidean性質得必存在\$$x,y \in \mathbb{Z}\$$滿足\$$ x
 
 令$$t = (x+y)/2$$, 則$$t \in \mathbb{Q}$$為有理數。
 
 將閉區間$$I_1$$分解為$$I_{11} \cup I_{12}$$, 其中$$I_{11}=[x, t]$$, $$I_{12} = [t,y]$$。
 
 則以下三種狀況必定有一種符合：
+
 * $$[a,b] \subseteq I_{11}$$
-* $$ [a,b] \subseteq I_{12}$$
-* $$ \in (a,b)$$
+* $$[a,b] \subseteq I_{12}$$
+* $$\in (a,b)$$
 
 如果$$t \in (a,b)$$，則得到$$u = t \in \mathbb{Q}$$，滿足 $$a< u < b$$。
 
-如果$$[a,b] \in I_{11}$$，令$$I_2 = I_{11}$$，以上述方式繼續分解。 若存在某一區間$$\{I_n\}$$的中點$$ u \in \mathbb{Q}$$ 使得
-$$a < u <b$$，則得任意兩實數間必有一有理數 (QED 1)。
+如果$$[a,b] \in I_{11}$$，令$$I_2 = I_{11}$$，以上述方式繼續分解。 若存在某一區間$$\{I_n\}$$的中點$$u \in \mathbb{Q}$$ 使得 $$a < u <b$$，則得任意兩實數間必有一有理數 (QED 1)。
 
-否則得一區間序列$$\{I_n\}$$，其滿足每一區間$$I_n$$的兩端點為有理數，且$$ \displaystyle \lim_{n \rightarrow \infty} |I_n| =0 $$。
+否則得一區間序列$$\{I_n\}$$，其滿足每一區間$$I_n$$的兩端點為有理數，且$$\displaystyle \lim_{n \rightarrow \infty} |I_n| =0$$。
 
 因為區間長度$$b-a$$為一固定值，因此在分解區間$$m$$時，必定可得$$|I_m| < (b-a)$$，因此$$\{I_m\}$$ 必有一端點在$$(a,b)$$上 (QED 2)。
 
-同理可得無理數$$v \in \Gamma \ni  a < v < b$$ (QED 3)
+同理可得無理數$$v \in \Gamma \ni a < v < b$$ (QED 3)
 
 </details>
 
@@ -90,7 +90,6 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 若$$b < a$$，令$$\epsilon = \frac{b-a}{2}$$，則 $$b+\epsilon = b+ \frac{a-b}{2} = \frac{a+b}{2} < \frac{a+a}{2}=a$$(QED)。
 
-
 ## 絕對值(absolute value)
 
 > 定義$$|x| = \left\{ \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
@@ -127,5 +126,3 @@ proof:
 > $$\displaystyle \left(\sum_{k=1}^n (a_k b_k)^2\right)^{1/2} \leq \left( \sum_{k=1}^n a_k^2 \right)^{1/2} \left( \sum_{k=1}^n b_k^2 \right)^{1/2}$$
 >
 > 此為$$n$$維空間的三角不等式 $$\| \mathbf{a} + \mathbf{b}\| \leq \|\mathbf{a}\|+\|\mathbf{b}\|$$
-
-

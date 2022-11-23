@@ -234,7 +234,7 @@
 * [貝氏機率](bayesian-method/bayes-probability.md)
 * [序貫理性](bayesian-method/sequential-rationality.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution.md)
-* [MCMC](bayesian-method/mcmc/README.md)
+* [MCMC](bayesian-method/mcmc.md)
   * [cdf反函數抽樣](bayesian-method/mcmc/inverse-cdf-sampling.md)
   * [拒絕取樣](bayesian-method/mcmc/reject-sampling.md)
   * [重要性取樣](bayesian-method/mcmc/importance-sampling.md)

@@ -25,6 +25,9 @@ $$
 Metropolis演算法為只使用$$ \mathrm{P}(x|\theta)$$與$$ \mathrm{P}(\theta)$$，不必計算積分，
 即可得到$$\mathrm{P}(\theta|x)$$的樣本。
 
+假設有兩個抽樣後的參數$$\theta_1, ~ \theta_2$$，假如$$\mathrm{P}(\theta_1|x) > \mathrm{P}(\theta_2|x)$$, 則我們應該會有較高的機率
+接受$$\theta_1$$，即接受$$\theta_1$$的機率為$$p_{accept} = \min \left( \frac{\mathrm{P}(\theta_1|x)}{\mathrm{P}(\theta_2|x)}  ,1 \right)$$。
+
 
 特點：用一個多元常態分配隨機遊走，不需要對分佈本身有太多瞭解，高維空間時有效，分佈本身不需要積分=1，基本只需要保證f(x)在-∞和+∞處=0，0\<f(x)\<upper bound就行了。
 

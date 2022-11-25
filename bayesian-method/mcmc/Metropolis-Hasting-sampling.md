@@ -1,5 +1,31 @@
 # Metropolis-Hasting抽樣
 
+## Baye's update
+$$
+\displaystyle \mathrm{P}(\theta|x) 
+=
+\frac{
+\mathrm{P}(x|\theta) \mathrm{P}(\theta)}{
+\mathrm{P}(x)
+}
+= \frac{
+\mathrm{P}(x|\theta) \mathrm{P}(\theta)}{
+\int \mathrm{P}(x|\theta) \mathrm{P}(\theta)d\theta
+}
+$$
+
+計算分母的$$ \mathrm{P}(x)$$需要使用積分，只有在特殊情形下如共軛分佈時才有解析解。
+
+因為$$ \mathrm{P}(x)$$為常數，上式一般可改寫為後驗分佈(posterior)正比於似然率(likelihood)乘以先驗分佈(prior)如下：
+$$
+\displaystyle
+\mathrm{P}(\theta|x) \propto \mathrm{P}(x|\theta) \mathrm{P}(\theta)
+$$
+
+Metropolis演算法為只使用$$ \mathrm{P}(x|\theta)$$與$$ \mathrm{P}(\theta)$$，不必計算積分，
+即可得到$$\mathrm{P}(\theta|x)$$的樣本。
+
+
 特點：用一個多元常態分配隨機遊走，不需要對分佈本身有太多瞭解，高維空間時有效，分佈本身不需要積分=1，基本只需要保證f(x)在-∞和+∞處=0，0\<f(x)\<upper bound就行了。
 
 問題：隨機遊走的效率仍然不夠高。

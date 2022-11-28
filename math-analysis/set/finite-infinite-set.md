@@ -69,7 +69,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 </details>
 
-### 自然數為無限集
+### 自然數為無限(可數)集
 
 > 1. $$\forall a, b \in \mathbb{N}$$且$$a \neq b$$ 則 $$\mathbb{N}_a$$與$$\mathbb{N}_b$$不等價。
 > 2. $$\mathbb{N}$$為(可數)無限集，則$$\mathbb{N}$$與$$\mathbb{N}_k, \forall k \in \mathbb{N}$$不等價。
@@ -94,7 +94,18 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 </details>
 
+### 有限多個有限集的聯集與積集仍為有限集
 
+> * $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\bigcup_{i=1}^n A_i$$仍為有限集。
+> * $$A_i, ~i=1,2,\dots, n$$均為有限集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為有限集。
+
+<details>
+
+<summary>proof:</summary>
+
+
+
+</details>
 
 ## 可數與不可數集合 (countable and uncountable set)
 
@@ -120,48 +131,48 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 無限集的充分必要條件
 
-> * $[存在自然數集合到它的(子集)的單射(一對一函數)] $A$$為無限集 $$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數]
-> * [無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
+> * \[存在自然數集合到它的(子集)的單射(一對一函數)] $$A$$為無限集 $$\Leftrightarrow$$ 存在 $$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數]
+> * \[無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
 
 <details>
 
-<summary>proof: </summary>
-* =>
-若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。
-則$$f: \mathbb{N} \rightarrow f(\mathbb{N})$$ 為一對一且映成的函數。
-可得 $$\mathbb{N} \sim f(\mathbb{N})$$, 因此f(\mathbb{N}) 為無限集。
-由於 $$f(\mathbb{N}) \subseteq A$$，因此 $$A$$為無限集。 (QED)
-
-* <= 
-若$$A$$為無限集。因此$$A \neq \empty$$。
-選 $$x_1 \in A$$，因為 $$A$$與 $$\mathbb{N}_1$$不等價，所以 $$A - \{x_1\} \neq \empty$$。
-再選 $$ x_2 \in A - \{x_1\}$$，則$$x_1$$與$$x_2$$為不同元素。
-以此方法可在$$A$$中選出$$k$$個相異元素$$x_1, x_2, \dots, x_k$$。
-因為$$A$$與 $$\mathbb{N}_k$$不等價，所以$$A-\{x_1, x_2, \dots, x_k\} \neq \empty$$。
-由數學歸納法，可在$$A$$中得出子集$$\{x_k ~|~ k \in \mathbb{N}\}$$. 
-且當$$k \neq l$$，可得$$x_k \neq x_l$$。
-因此可定義函數$$f: \mathbb{N} \rightarrow A$$, $$f(k)=x_k$$為一對一函數(QED). 
-
-</details>
-
-<details>
-
-<summary>proof: </summary>
-* =>
+<summary>proof:</summary>
 
 * <=
 
+若 $$\mathbb{N}$$至$$A$$ 存在一對一函數$$f: \mathbb{N} \rightarrow A$$。 則$$f: \mathbb{N} \rightarrow f(\mathbb{N})$$ 為一對一且映成的函數。
+
+可得 $$\mathbb{N} \sim f(\mathbb{N})$$, 因此$$f(\mathbb{N})$$ 為無限集。
+
+由於 $$f(\mathbb{N}) \subseteq A$$，因此 $$A$$為無限集。 (QED)
+
+* \=>
+
+若$$A$$為無限集。因此$$A \neq \empty$$。
+
+選 $$x_1 \in A$$，因為 $$A$$與 $$\mathbb{N}_1$$不等價，所以 $$A - \{x_1\} \neq \empty$$。
+
+再選 $$x_2 \in A - \{x_1\}$$，則$$x_1$$與$$x_2$$為不同元素。
+
+以此方法可在$$A$$中選出$$k$$個相異元素$$x_1, x_2, \dots, x_k$$。 因為$$A$$與 $$\mathbb{N}_k$$不等價，所以$$A-\{x_1, x_2, \dots, x_k\} \neq \empty$$。
+
+由數學歸納法，可在$$A$$中得出子集$$\{x_k ~|~ k \in \mathbb{N}\}$$.
+
+且當$$k \neq l$$，可得$$x_k \neq x_l$$。 因此可定義函數$$f: \mathbb{N} \rightarrow A$$, $$f(k)=x_k$$為一對一函數(QED).
+
 </details>
+
+> 不是可數集的無限集稱為**不可數集**。不可數集合與自然數集合$$\mathbb{N}$$不存在一對一且映成的關係，而且**不可數集合嚴格大於自然數集合的勢**$$\aleph_0$$。
 
 無限集合有至少一個真子集合它等勢，其中一個例子是整數集合$$\mathbb{Z}$$與自然數集合$$\mathbb{N}$$等勢，兩者間存在一對一且映成的函數$$f=\Bigg\{ \begin{align}& \frac{n}{2} &,& n \text { is even} \\ &-\frac{n-1}{2} &,& n \text { is odd} \\ \end{align}$$
 
 ![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
 
-### 可數無限集合為無限集合的子集合
+> <mark style="color:red;">無限集合是由無限個元素組成的集合，分為可數集與不可數集</mark>。
 
 <details>
 
-<summary> proof: 建構可數集合至無限集合的1-1函數。 </summary>
+<summary>proof: 建構可數集合至無限集合的1-1函數。</summary>
 
 無限集合$$S$$可能為可數集合時滿足敘述，
 
@@ -169,7 +180,8 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 </details>
 
-## 可數集合的子集合仍為可數集
+> * \[存在自然數集合到它的(子集)的單射(一對一函數)] \$$A$$為無限集$$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A\$$的勢大於等於自然數]
+> * \[無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
 
 <details>
 
@@ -195,16 +207,43 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 > $$\forall n \in \mathbb{N}, \ S_n$$為可數集，則$$\cup_{n \in \mathbb{N}} S_n$$仍為可數集。
 
-* 令$$S_n = \{n\}$$為具有單一整數的集合，則$$\cup_{n \in \mathbb{N}}S_n = \mathbb{N}$$
+![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
+
+### 可數集的有限多個積集仍為可數集
+
+> $$A_i, ~i=1,2,\dots, n$$均為可數集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為可數集。
+
+<details>
+
+<summary>proof:</summary>
+
+
+
+</details>
+
+### 可數集經映成函數後仍為可數集
+
+> $$A$$為可數集，而$$f: A \rightarrow B$$為映成函數，則$$B$$為可數集。
+
+<details>
+
+<summary>proof:</summary>
+
+
+
+</details>
 
 ### 有理數集合為可數集
 
-> * $$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則$$S_n \sim \mathbb{Z}$$，因此$$S_n$$為可數集。
-> * $$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
+$$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則$$S_n \sim \mathbb{Z}$$，因此$$S_n$$為可數集。
+
+$$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
 
 ### 實數集合為不可數集合
 
 因為$$[0,1]$$與$$\mathbb{R}$$兩集合等勢，因此只要證明$$[0,1]$$為不可數集合。
+
+$$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$均為不可數集。
 
 <details>
 
@@ -233,3 +272,8 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 * 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ (QED)
 
 </details>
+
+## Schroder-Bernstein定理
+
+> * 若三集合$$A, B, C$$滿足$$A \supseteq B \supseteq C$$且$$A \sim C$$，則$$A \sim B$$。
+> * 若$$A$$至 $$B$$間有一對一函數存在，且$$B$$至$$A$$間也有一對一函數存在，則$$A \sim B$$。

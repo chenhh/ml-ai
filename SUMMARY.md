@@ -202,8 +202,6 @@
 * [醜小鴨定理(Ugly duckling theorem)](learning-theory/ugly-duckling-theorem.md)
 * [損失函數(loss function)](learning-theory/loss-function.md)
 * [在線學習(online learning)](learning-theory/online-learning.md)
-* [卡爾曼濾波器(Kalman filter)](learning-theory/kalman-filter.md)
-* [粒子濾波器(particle filter)](learning-theory/particle-filter.md)
 
 ## 強化學習與決策理論 <a href="#reinforcement-learning" id="reinforcement-learning"></a>
 
@@ -242,6 +240,8 @@
   * [Metropolis-Hasting抽樣](bayesian-method/mcmc/Metropolis-Hasting-sampling.md)
   * [Hamiltonian Monte Carlo(HMC)抽樣](bayesian-method/mcmc/Hamiltonian-Monte-Carlo-sampling.md)
   * [No-U-Turn Sampler](bayesian-method/mcmc/no-u-turn-sampler.md)
+* [卡爾曼濾波器(Kalman filter)](bayesian-method/kalman-filter.md)
+* [粒子濾波器(particle filter)](bayesian-method/particle-filter.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

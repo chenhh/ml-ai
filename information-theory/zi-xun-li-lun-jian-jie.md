@@ -23,7 +23,7 @@ Shannon在1948年發表的A Mathematical Theory of Communication是資訊理論�
 
 資訊理論或通訊系統的抽象模型如下圖：
 
-![通訊系統抽象模型](<../.gitbook/assets/686px-Shannon\_communication\_system.svg (1).png>)
+![通訊系統抽象模型](../.gitbook/assets/686px-Shannon\_communication\_system.svg.png)
 
 在所有的資訊交流系統中，通有一個發出訊息的發送端(信源)，至少有一個接收端(信宿)，以及訊息流通的通道(信道)。在訊息傳送過程中，一定會有噪音源發出噪音干擾訊息。為了把訊息放入信道中傳輸，所以需要先將訊息編碼，在傳送到信宿後，進行解碼還原訊息。
 
@@ -37,8 +37,8 @@ Shannon在1948年發表的A Mathematical Theory of Communication是資訊理論�
 
 資訊理論回答了通信理論中的兩個基本問題：
 
-* 什麼是最終的數據壓縮(答案：熵 H),以及
-* 什麼是通信的最終傳輸速率(答案：信道容量 C)。
+* 什麼是<mark style="color:red;">最終的數據壓縮(答案：熵 H)</mark>,以及
+* 什麼是<mark style="color:red;">通信的最終傳輸速率(答案：信道容量 C)</mark>。
 
 因此一些人認為資訊理論是通訊理論的一個子集。事實上,它在統計物理學(熱力學)、計算機科學(Kolmogorov 複雜性或算法複雜度)、統計推斷(奧卡姆剃刀：最簡單的解釋是最好的) 以及機率和統計(誤差指數最優假設檢驗和估計)都有貢獻。
 

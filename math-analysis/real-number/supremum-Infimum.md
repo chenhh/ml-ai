@@ -6,15 +6,15 @@ description: Infimum and supremum
 
 ## 有界集合
 
-> 集合$$S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的 <mark style="color:red;"> 上界(upper bound) </mark>。註：$$b$$不必為集合$$S$$內的元素。
+> 集合$$S \subseteq \mathbb{R}$$，若存在$$b \in \mathbb{R} \ni x \leq b, ~ \forall x \in S$$，則$$b$$為集合$$S$$的 <mark style="color:red;">上界(upper bound)</mark> 。註：$$b$$不必為集合$$S$$內的元素。
 >
-> 若$$b \in S \ni x \leq b \forall x \in S$$，則$$b$$為集合$$S$$的最大元素(maximum element)，記為 $$b = \max(S)$$。
+> 若$$b \in S \ni x \leq b ~ \forall x \in S$$，則$$b$$為集合$$S$$的<mark style="color:red;">最大元素(maximum element)</mark>，記為 $$b = \max(S)$$。
 >
-> 若集合不存在上界時，則稱 <mark style="color:red;"> 無上界（unbounded above） </mark>。
+> 若集合不存在上界時，則稱 <mark style="color:red;">無上界（unbounded above）</mark> 。
 >
 > 下界與最小元素為以相同的方式定義。
 
-* $$\mathbb{R}^+=\{0, \infty\}$$無上界與最大元素，（最大）下界為0，但沒有最小元素。
+* $$\mathbb{R}^+=[0, \infty]$$無上界與最大元素，（最大）下界為0，但沒有最小元素。
 * 閉區間$$S=[0,1]$$上界與最大元素同為1；（最大）下界與最小元素同為0。
 * 半開區間$$S=[0,1)$$上界為1，但無最大元素；（最大）下界與最小元素均為0。
 * $$[a,b], (a,b), (a,b], [a,b)$$四個集合的最小上界均為$$b$$，最大下界均為$$a$$。
@@ -26,24 +26,26 @@ description: Infimum and supremum
 
 ## 最小上界（最大下界）
 
-> 給定實數的非空子集合$$S$$且$$S$$有上界。$$b\in \mathbb{R}$$若滿足以下性質時稱為集合的最小上界（least upper bound），記為$$b=\sup(S)$$：
+> 給定實數的非空子集合$$S$$且$$S$$有上界。$$b\in \mathbb{R}$$若滿足以下性質時稱為集合的<mark style="color:red;">最小上界（least upper bound）</mark>，記為$$b=\sup(S)$$：
 >
 > * $$b$$為集合$$S$$的上界（$$\forall x \in S, x \leq b$$）
 > * 集合$$S$$不存在比$$b$$小的上界 ($$c < b \Rightarrow \exists x \in S, x \geq c$$)
 >
-> 若實數的非空子集合$$S$$有下界，$$a\in \mathbb{R}$$若滿足以下性質時稱為集合的最大下界（greatest lower bound），記為$$a = \inf(S)$$：
+> 若實數的非空子集合$$S$$有下界，$$a\in \mathbb{R}$$若滿足以下性質時稱為集合的<mark style="color:red;">最大下界（greatest lower bound）</mark>，記為$$a = \inf(S)$$：
 >
 > * $$a$$為集合$$S$$的下界（$$\forall x \in S, a \leq x$$）
 > * 集合$$S$$不存在比$$a$$大的下界 （$$c>a \Rightarrow \exists x \in S, x \leq c$$）
+>
+> 註：<mark style="color:red;">最小上界與最大下界不必為集合</mark>$$S$$<mark style="color:red;">內的元素</mark>。
 
 **由定義很容易得出集合**$$S$$**的最小上界與最大下界的唯一性**。
 
-令$$\sup S = b, ~ \inf S = a$$，在證明時常用寫法：
-* $$ \forall \epsilon > 0, ~ x < b+ \epsilon $$
-* $$ $$\forall \epsilon > 0, \exists x \in S \ni b -\epsilon < x $$
-* $$ \forall \epsilon > 0, ~  a - \epsilon < x$$  
-* $$ \forall \epsilon > 0, \exists x \in S \ni x < a + \epsilon $$
+令$$\sup (S) = b, ~ \inf( S) = a$$，在證明時常用寫法：
 
+* $$\forall \epsilon > 0, ~ x < b+ \epsilon$$
+* $$\forall \epsilon > 0, \exists x \in S \ni b -\epsilon < x$$
+* $$\forall \epsilon > 0, ~ a - \epsilon < x$$
+* $$\forall \epsilon > 0, \exists x \in S \ni x < a + \epsilon$$
 
 ![上界不唯一，最小上界唯一](../../.gitbook/assets/Illustration\_of\_supremum-min.png)
 
@@ -55,7 +57,7 @@ description: Infimum and supremum
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 若$$\emptyset \neq A \subseteq \mathbb{R}$$沒有上界時，因此$$\sup(A)$$ 不等於任意值，因此為了方便則記為$$\sup(A)=\infty$$(注意$$\infty$$不是一個值，而僅是一個符號) 。
 
@@ -67,22 +69,19 @@ description: Infimum and supremum
 
 </details>
 
-
-
-
 ### 完備性公理、最小上界性質(complete axioms, least upper bound property)
 
-> 實數中非空有界集合必有最小上界(最大下界)。
-> 
+> <mark style="color:red;">實數中非空有界集合必有最小上界(最大下界)</mark>。
+>
 > $$\emptyset \neq S \subseteq \mathbb{R}$$若有上界（bounded above）則有最小上界（supremum），記為$$b = \sup(S)$$。
-> 
+>
 > 同理可得實數中非空子集合（區間）若有下界則有最大下界。
 
 因為實數是完備集合（complete set），所以才有此性質； 可由Dedekind分劃中實數的完備性證明 。
 
 <details>
 
-<summary>proof:  由Dedekind分劃中實數的完備性證明</summary>
+<summary>proof: 由Dedekind分劃中實數的完備性證明</summary>
 
 給定非空有上界集合 $$\emptyset \neq S\subset \mathbb{R}$$
 
@@ -110,7 +109,6 @@ $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 
 </details>
 
-
 ## 最小上界(最大下界)的性質
 
 ### 最小上界存在時，若集合有下界則有最大下界，反之亦然
@@ -122,37 +120,37 @@ $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 
 <details>
 
-<summary>proof: 1->2 </summary>
+<summary>proof: 1->2</summary>
 
 若$$S$$有下界$$a$$，則$$\forall x \in S,~ x \geq a$$。
-因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$，因為$$−S$$有上確界，令$$b=\sup(−S)$$。
-可得 $$−b=\inf S)$$ (QED).
 
-</details> 
+&#x20;因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$
 
-<details>
-
-<summary>proof: 2->1 </summary>
-
-同理可證 。
-
+因為$$−S$$有上確界，令$$b=\sup(−S)$$。 可得 $$−b=\inf S)$$ (QED).
 
 </details>
 
+<details>
 
-### [證明常用]比最小上界小的的任意元素均不為上界
+<summary>proof: 2->1</summary>
+
+同理可證 。
+
+</details>
+
+### \[證明常用]比最小上界小的的任意元素均不為上界
 
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S)$$，則$$\forall c <b, \exists x \in S \ni c < x \leq b$$。
-> 
+>
 > 常寫成$$\forall \epsilon > 0, ~\exists x \in S \ni b-\epsilon < x$$
 >
 > 同理 $$S$$有最大下界 $$a = \inf(S)$$，則$$\forall c > a~ \exists x \in S \ni a \leq x < c$$ 。
-> 
+>
 > 常寫成$$\forall \epsilon > 0 ~ \exists x \in S \ni x < b+ \epsilon$$
 
 <details>
 
-<summary>proof: 由最小上界(最大下界)定義直接可得 </summary>
+<summary>proof: 由最小上界(最大下界)定義直接可得</summary>
 
 因為$$b=\sup(S)$$，由定義得$$\forall x \in S,~ x \leq b$$。
 
@@ -169,28 +167,26 @@ $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 > $$\forall \emptyset\neq S \subseteq \mathbb{R}$$，$$S$$為有界集合， 定義$$−S \equiv \{−s|s \in S\}$$，則
 >
 > $$\sup(S) =−\inf(−S)$$
-> 
+>
 > $$\inf(S)=−\sup(−S)$$
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
- 令$$\sup(S)=b$$，由定義可得 $$ \forall \epsilon>0~ \exists x \in S \ni b−\epsilon<x$$
+令$$\sup(S)=b$$，由定義可得 $$\forall \epsilon>0~ \exists x \in S \ni b−\epsilon<x$$
 
-  兩邊取負號得 $$\forall \epsilon>0 ~ \exists−x\in −S \ni −b+\epsilon>−x$$
+兩邊取負號得 $$\forall \epsilon>0 ~ \exists−x\in −S \ni −b+\epsilon>−x$$
 
-  所以 $$−b$$是集合$$−S$$的最大下界，即$$−b=\inf(−S)\Leftrightarrow \sup(S)=−\inf(−S)$$ (QED)
-  
-  令$$\inf(S)=a$$，由定義得 $$ \forall \epsilon>0 ~\exists x \in S \ni x<a+\epsilon$$
+所以 $$−b$$是集合$$−S$$的最大下界，即$$−b=\inf(−S)\Leftrightarrow \sup(S)=−\inf(−S)$$ (QED)
 
-  兩邊取負號得 $$\forall \epsilon>0 ~\exists −x \in −S \ni −x>−a−\epsilon$$
+令$$\inf(S)=a$$，由定義得 $$\forall \epsilon>0 ~\exists x \in S \ni x<a+\epsilon$$
 
-   因此$$−a$$是集合$$−S$$的最小上界，即$$−a=\sup(−S) \Leftrightarrow \inf(S)=−\sup(−S)$$ (QED)
+兩邊取負號得 $$\forall \epsilon>0 ~\exists −x \in −S \ni −x>−a−\epsilon$$
+
+因此$$−a$$是集合$$−S$$的最小上界，即$$−a=\sup(−S) \Leftrightarrow \inf(S)=−\sup(−S)$$ (QED)
 
 </details>
-
-
 
 #### 範例
 
@@ -200,22 +196,23 @@ $$\sup(S)=b, ~\inf(S)=a$$
 
 $$\sup(−S)=−a, ~ \inf(−S)=−b$$
 
-
 ### 最小上界與最大下界的四則運算
 
 > 集合$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$
 >
 > 令$$A+B=\{a+b~|~a \in A, b \in B\}$$，則
->   * 當$$A,B$$有上界時，$$A+B$$也有上界且$$\sup(A+B)=\sup(A)+\sup(B)$$。
->   * 當$$A,B$$有下界時，$$A+B$$也有下界且$$\inf(A+B)=\inf(A)+\inf(B)$$。
-> 
+>
+> * 當$$A,B$$有上界時，$$A+B$$也有上界且$$\sup(A+B)=\sup(A)+\sup(B)$$。
+> * 當$$A,B$$有下界時，$$A+B$$也有下界且$$\inf(A+B)=\inf(A)+\inf(B)$$。
+>
 > 令$$AB=\{xy|x \in A, y \in B \},$$，若$$A \subset \mathbb{R}^+, B \subset \mathbb{R}^+$$則
->   * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup(AB)=\sup(A) \sup(B)$$。
->   * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf(AB)=\inf(A )\inf(B )$$。
+>
+> * 當$$A,B$$有上界時，$$AB$$也有上界且$$\sup(AB)=\sup(A) \sup(B)$$。
+> * 當$$A,B$$有下界時，$$AB$$也有下界且$$\inf(AB)=\inf(A )\inf(B )$$。
 
 <details>
 
-<summary>proof: 加法 </summary>
+<summary>proof: 加法</summary>
 
 由最小上界得當$$\emptyset \neq A \subset \mathbb{R}, ~ \emptyset \neq B \subset \mathbb{R}$$時，$$\sup(A)=x, ~ \sup(B)=y$$存在 。
 
@@ -231,25 +228,25 @@ $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup(A+B)=x+y=\sup(A)+\
 
 </details>
 
-
-
 ### 最小上界與最大下界的次序
 
 > 集合$$\emptyset \neq A \subseteq \mathbb{R}, ~ \emptyset \neq B \subseteq \mathbb{R}$$
 >
-> [子集合] 若$$A\subseteq B$$（e.g. $$(1,2) \subset [0,2]$$）
->   * 當$$B$$有上界時，$$A$$也有上界，且$$\sup(A) \leq \sup(B)$$
->   * 當$$B$$有下界時，$$A$$也有下界，且$$\inf(A) \geq \inf(B)$$
-> 
-> [$$A$$完全小於$$B$$] $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(A) \leq \inf(B)$$ （e.g. $$A=(1,2), B=(3,4)$$）
-> 
-> [$$A$$部份小於$$B$$] 
+> \[子集合] 若$$A\subseteq B$$（e.g. $$(1,2) \subset [0,2]$$）
+>
+> * 當$$B$$有上界時，$$A$$也有上界，且$$\sup(A) \leq \sup(B)$$
+> * 當$$B$$有下界時，$$A$$也有下界，且$$\inf(A) \geq \inf(B)$$
+>
+> \[$$A$$完全小於$$B$$] $$\forall x \in A,~ \forall y \in B, ~x \leq y$$，則$$A$$有上界，$$B$$有下界，且$$\sup(A) \leq \inf(B)$$ （e.g. $$A=(1,2), B=(3,4)$$）
+>
+> \[$$A$$部份小於$$B$$]
+>
 > * $$\forall x\in A ~\exists y \in B \ni x\leq y$$，且$$B$$有上界，則$$A$$也有上界，且$$\sup(A) \leq \sup(B)$$ （e.g. $$A=(1,3), B=(2, 4)$$）
 > * $$\forall x\in A ~\exists y \in B \ni x\geq z$$，且$$B$$有下界，則$$A$$也有下界，且$$\inf(A) \geq \inf(B)$$（e.g. $$A=(1,3), B=(2,4)$$）
 
 <details>
 
-<summary>proof: 子集合 </summary>
+<summary>proof: 子集合</summary>
 
 因為$$B$$有上界，且$$B$$為實數中非空子集合，所以$$B$$有最小上界，令$$r=\sup(B)$$。
 
@@ -265,13 +262,11 @@ $$\therefore x+y$$為集合$$A+B$$的最小上界，即$$\sup(A+B)=x+y=\sup(A)+\
 
 因此$$\sup(A) \leq \sup(B)$$ (QED)
 
-
 </details>
-
 
 <details>
 
-<summary>proof: 完全小於 </summary>
+<summary>proof: 完全小於</summary>
 
 $$\forall x \in A, ~ \forall y \in B, x\leq y$$
 
@@ -285,24 +280,24 @@ $$B$$的最大下界定義得$$\forall \epsilon>0 ~ \exists b \in B \ni \inf(B)+
 
 </details>
 
-
-
 ### 最小上界與最大下界的實數倍
 
 > 集合$$\emptyset \neq A \subset \mathbb{R}$$ ，實數$$c \in \mathbb{R}$$。令集合$$cA=\{cx|x \in A\}$$
 >
 > 若$$c>0$$
->   * 當$$A$$有上界時，$$cA$$也有上界且$$\sup(cA)=c\cdot \sup(A)$$
->   * 當$$A$$有下界時，$$cA$$也有下界且$$\inf(cA)=c\cdot \inf(A )$$
->   * 
+>
+> * 當$$A$$有上界時，$$cA$$也有上界且$$\sup(cA)=c\cdot \sup(A)$$
+> * 當$$A$$有下界時，$$cA$$也有下界且$$\inf(cA)=c\cdot \inf(A )$$
+> *
+>
 > 若$$c<0$$
->   * 當$$A$$有上界時，$$cA$$也有下界且$$\inf(cA)=c\cdot\inf(A )$$
->   * 當$$A$$有下界時，$$cA$$也有上界且$$\sup(cA)=c\cdot \sup(A)$$
-
+>
+> * 當$$A$$有上界時，$$cA$$也有下界且$$\inf(cA)=c\cdot\inf(A )$$
+> * 當$$A$$有下界時，$$cA$$也有上界且$$\sup(cA)=c\cdot \sup(A)$$
 
 <details>
 
-<summary>proof: c為正數 </summary>
+<summary>proof: c為正數</summary>
 
 因為$$A$$為實數的非空集合且有上界，因此有最小上界，令$$\sup(A)=r$$ 。
 
@@ -322,10 +317,9 @@ $$\therefore \forall \epsilon>0, cr−\epsilon<cx$$
 
 </details>
 
-
 <details>
 
-<summary>proof: c為負數 </summary>
+<summary>proof: c為負數</summary>
 
 令$$\sup(A)=r$$
 
@@ -351,13 +345,15 @@ $$A=(a,b)$$或$$[a,b)$$或$$(a,b]$$或$$[a,b]$$
 
 $$\inf(A)=a, ~ \sup(A)= b$$
 
-$$c>0$$: 
-  * $$cA=(ca, cb)$$或$$[ca, cb)$$或$$(ca, cb]$$或$$[ca, cb]$$
-  * $$\inf(cA)=ca, ~ \sup(cA)=cb$$
+$$c>0$$:
+
+* $$cA=(ca, cb)$$或$$[ca, cb)$$或$$(ca, cb]$$或$$[ca, cb]$$
+* $$\inf(cA)=ca, ~ \sup(cA)=cb$$
 
 $$c<0$$:
-  * $$cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$[cb, ca]$$
-  * $$\inf(cA)=cb, ~\sup(cA)=ca$$
+
+* $$cA=(cb, ca)$$或 $$[cb, ca)$$ 或$$(cb, ca]$$或$$[cb, ca]$$
+* $$\inf(cA)=cb, ~\sup(cA)=ca$$
 
 ### 由最小上界可得實數中包含無理數
 
@@ -365,7 +361,7 @@ $$c<0$$:
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 令集合$$A=\{x \in \mathbb{R}^+ |x^2<2\}$$
 
@@ -389,11 +385,7 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 根據實數的有序性得$$a^2=2$$ (QED).
 
-
 </details>
-
-
-
 
 ## 阿基米德性質(Archimedean property)
 
@@ -406,7 +398,7 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 <details>
 
-<summary>proof:  反證法 </summary>
+<summary>proof: 反證法</summary>
 
 假設性質不成立，即$$\exists a>0, b>0 ~\forall n \in \mathbb{N} \ni na \leq b$$
 
@@ -420,9 +412,7 @@ $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$�
 
 因此Archimedean property成立(QED)
 
-</details> 
-
-
+</details>
 
 ### \[證明常用]必定存在大於給定正實數的正整數
 
@@ -430,13 +420,11 @@ $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$�
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 取$$a=1, b= r$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n > r$$ (QED)
 
 </details>
-
-
 
 ### \[證明常用]無窮小的極限值為0
 
@@ -444,7 +432,7 @@ $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$�
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
 
@@ -452,9 +440,7 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 
 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$(QED)
 
-
 </details>
-
 
 ### 任意兩個差值大於1的實數間必存在整數
 
@@ -462,7 +448,7 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 不失一般性令$$a \geq 0$$
 
@@ -472,23 +458,21 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 
 若 $$m=1, b>a+1 \geq 1>a$$
 
-若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$ 
-$$\Rightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
+若$$m>1$$，所以$$m−1 \in \mathbb{N}$$ 且 $$m−1 \notin A$$ $$ightarrow a \geq m−1 \Rightarrow b>a+1 \geq m \geq a$$
 
 因此若$$b−a>1$$，則$$\exists m \in \mathbb{Z} \ni a<m<b$$(QED)
 
 </details>
 
-
 ### 任意兩個相異實數間存在有理數
 
 > $$a,b \in \mathbb{R}, a<b \Rightarrow \exists r \in \mathbb{Q} \ni a<r<b$$
-> 
+>
 > 註：直觀的建構法為$$r=\frac{(a+b)}{2}$$即為所求。
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 $$\because b−a>0$$, 由阿基米德性質得$$\exists n \in \mathbb{N} \ni n(b−a)>1$$
 
@@ -497,4 +481,3 @@ $$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差�
 $$\therefore a<m/n<b$$ (QED)
 
 </details>
-

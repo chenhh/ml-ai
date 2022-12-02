@@ -30,8 +30,7 @@
 
 <summary>proof:</summary>
 
-給定$$ a,b \in \mathbb{R} $$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$
-滿足$$ x <y $$且$$[a,b] \subseteq I_1=[x,y]$$
+給定$$a,b \in \mathbb{R}$$，由Archmidean性質得必存在$$x,y \in \mathbb{Z}$$滿足滿足$$x <y$$且$$[a,b] \subseteq I_1=[x,y]$$。
 
 令$$t = (x+y)/2$$, 則$$t \in \mathbb{Q}$$為有理數。
 
@@ -41,7 +40,7 @@
 
 * $$[a,b] \subseteq I_{11}$$
 * $$[a,b] \subseteq I_{12}$$
-* $$\in (a,b)$$
+* $$t\in (a,b)$$
 
 如果$$t \in (a,b)$$，則得到$$u = t \in \mathbb{Q}$$，滿足 $$a< u < b$$。
 

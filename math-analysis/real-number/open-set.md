@@ -45,15 +45,13 @@ description: open and closed set
 > 令$$S \subseteq \mathbb{R}^n$$且$$x \in \mathbb{R}^n$$。
 >
 > * $$x$$為集合$$S$$的內點若存在$$r >0 \ni B_r(x) \subseteq S$$。
-> * <mark style="color:blue;">集合</mark>$$S$$<mark style="color:blue;">所有的內點形成的集合記為</mark>$$S^0$$。
+> * 集合$$S$$所有的內點形成的集合記為$$S^0$$。
 
 鄰域為開集合，因為所有的元素均為內點。
 
-### 內點集必為集合的子集
+### 內點集為集合的子集
 
 > $$\forall S \subseteq \mathbb{R}^n$$, 可得$$S^0 \subseteq S$$。
->
-> 註：<mark style="color:red;">當</mark>$$S^0=S$$<mark style="color:red;">時，則</mark>$$S$$<mark style="color:red;">為開集合</mark>。
 
 <details>
 
@@ -135,22 +133,18 @@ description: open and closed set
 
 ## 不相交集與非重疊集
 
-> $$A, B \in \subseteq \mathbb{R}^n$$
+> $$A, B \in \subseteq \mathbb{Q}^n$$
 >
-> 定義若$$A \cap B = \empty$$，則稱$$A, B$$為不相交集。
+> 定義若$$A \cap B = \empty$$, 則稱$$A, B$$為不相交集。
 >
 > 定義若內點集$$A^0 \cap B^0 = \empty$$，則稱$$A, B$$為非重疊集。
-
-非重疊集的邊界點可能相交，如$$A=[0,1]~B=[1,2]$$，則$$A^0=(0,1)~B^0=(1,2),~A^0\cap B^0=\empty$$。
 
 ## 外點(exterior point)
 
 > 令$$S \subseteq \mathbb{R}^n$$，若$$x \in \mathbb{R}^n$$。
 >
 > * $$x$$為集合$$S$$的外點若存在$$r >0 \ni B_r(x) \subseteq \mathbb{R}^n - S$$。
-> * <mark style="color:blue;">集合</mark>$$S$$<mark style="color:blue;">所有的外點形成的集合記為</mark>$$S^e$$。&#x20;
->
-> 註：邊界點$$x$$的任意開球至少有一點在集合$$S$$內，且至少有一點在集合$$S^c$$。
+> * 集合$$S$$所有的外點形成的集合記為$$S^e$$。 註：邊界點$$x$$的任意開球至少有一點在集合$$S$$內，且至少有一點在集合$$S^c$$。
 
 ## 外點集為集合補集的內點集
 

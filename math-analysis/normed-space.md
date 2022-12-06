@@ -26,7 +26,7 @@ description: normed space
 
 <mark style="color:red;">歐式空間</mark>$$\mathbb{R}^n, ~n < \infty$$與$$\|x\|=(|x_1|^2+|x_2|^2+\dots +|x_n|^2)^{\frac{1}{2}}$$。
 
-註：在計算範數時，元素取絕對值的原因是<mark style="color:blue;">若元素為複數時，取絕對值才是表示向量的長度；</mark>而實數在冪次方為奇數時也需要保留避免負數的影響。
+* 註：在計算範數時，元素取絕對值的原因是若元素為複數時，取絕對值才是表示向量的長度，而實數在冪次方為奇數時也需要保留避免負數的影響。
 
 <mark style="color:red;">連續函數空間</mark>$$C[0,1]$$，
 
@@ -61,6 +61,7 @@ description: normed space
 
 * 歐式空間$$(\mathbb{R}^n, \|x\|_2)$$為完備賦範空間。
 * 連續函數空間$$(C[a,b], d_1(f,g)), ~ d_1(f,g)=\sup_{a \leq x \leq b}|f(x)-g(x)|$$為完備賦範空間。
+*
 
 ## Lp空間
 

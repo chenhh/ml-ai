@@ -52,5 +52,5 @@ MCS檢定程序
 * \[Hans11] P. R. Hansen, A. Lunde, and J. M. Nason, "The Model Confidence Set," Econometrica, vol. 79, pp. 453-497, 2011.
 * \[Hsu10] Po-Hsuan Hsu , Yu-Chin Hsub, Chung-Ming Kuan, “Testing the predictive ability of technical analysis using a new stepwise test without data snooping bias,” Journal of Empirical Finance, Vol. 17, pp. 471-484, 2010.&#x20;
 * \[Clar12] T. E. Clark and M. W. McCracken, "Reality checks and comparisons of nested predictive models," Journal of Business & Economic Statistics, vol. 30, 2012.&#x20;
-* \[Mari12] R. S. Mariano and D. Preve, "Statistical tests for multiple forecast comparison," Journal of Econometrics, vol. 169, pp. 123-130, 7, 2012.
+* \[Mari12] R. S. Mariano and D. Preve, "Statistical tests for multiple forecast comparison," Journal of Econometrics, vol. 169, pp. 123-130, 7// 2012.
 

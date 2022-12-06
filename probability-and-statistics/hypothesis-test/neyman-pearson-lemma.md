@@ -54,4 +54,10 @@
 * 事先選定一個較小的型1錯誤機率$$\alpha$$。
 * 針對對立假設$$H_a$$中的$$\theta_a$$，求拒絕域$$RR$$滿足型2錯誤機率$$\beta(\theta_a)$$最小化，或者說滿足最大化檢定力$$power(\theta_a)$$。
 
+由Neyman-Pearson引理只能求簡單虛無假設vs簡單對立假設的MPT檢定。
+
+令$$\mathbf{X}=(X_1, X_2,\dots, X_n)$$為由母體參數為$$\theta$$所得隨機樣本，令虛無假設$$H_0:\theta=\theta_0$$與對立假設$$H_1: \theta=\theta_1$$。
+
+令似然比$$L(\mathbf{X}~|~\theta)$$，則對於給定顯著水準$$\alpha$$，最大化$$power(\theta_\alpha)$$檢定的拒絕域為$$RR=\left\{  \frac{L(\theta_0)}{L_(\theta_1)} < K\right\}$$
+
 ###

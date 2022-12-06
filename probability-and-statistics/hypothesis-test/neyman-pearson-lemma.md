@@ -4,7 +4,7 @@
 
 一個統計假是否可靠，拒絕它的唯一正當理由是，存在著另一個對立假設，能以更大的機率來解釋觀察到的事件。
 
-<mark style="color:red;">簡單地說，Neyman-Pearson引理(lemma)就是對於單一引數分佈的兩點似然比檢定之最佳檢定</mark>。
+<mark style="color:red;">簡單地說，Neyman-Pearson引理(lemma)就是對於單一引數分佈(簡單假設vs簡單假設)的兩點似然比檢定之最佳檢定</mark>。
 
 假設有一個檢定方法比似然比檢定更好，即在使用這個檢定方法時，犯類型I錯誤的機率$$\alpha=\mathrm{P}(\text{reject } H_0~|~ H_0 \text{ is true} )$$和使用似然比檢定時一樣或更低，而同時我們犯類型II錯誤的機率$$\beta = \mathrm{P}(\text{not reject } H_0 ~|~ H_0 \text{ is false})$$也更低。
 
@@ -40,6 +40,12 @@
 * 在$$\theta=\theta_a$$時，$$\begin{aligned} power(\theta_a) & = \mathrm{P}(T \in RR ~|~ \theta=\theta_a)\\ & =  1 -  \mathrm{P}(T \notin RR ~|~ \theta=\theta_a)\\ & =  1-\beta  \end{aligned}$$<mark style="color:red;"></mark>
 
 <mark style="color:red;">因此檢定力為假設檢定可以正確拒絕虛無假設的能力</mark>。
+
+### 最強力檢定(most powerful test)
+
+給定簡單虛無假設$$H_0:\theta=\theta_0$$與對立假設$$H_1:\theta=\theta_1$$。
+
+若一固定的拒絕域$$RR$$滿足$$\alpha=power(\theta_0)$$且針對所有顯著水準為$$\alpha$$的拒絕域$$power(\theta_1)=P(RR|\theta=\theta_1)$$之值為最大值，則該檢定稱為$$\alpha$$-level最強力檢定(alpha-level most powerful test, MPT)。
 
 ## 假設檢定
 

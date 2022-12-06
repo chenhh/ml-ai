@@ -24,10 +24,10 @@
 
 在假設檢定時，通常先指定$$\alpha$$決定$$RR$$：
 
-* 且在給定樣本大小$$n$$固定時，當$$\alpha$$上升則$$\beta$$下降，反之當$$\alpha$$下降則$$\beta$$上升，即無法同時降低兩類型錯誤。
-* 如果使用更大的樣本數時，可同時降低$$\alpha$$與$$\beta$$，因為更大的樣本數可降低統計量的變異數(中央極限定理)，得到更陡峭的分佈。
+* 且在給定樣本大小$$n$$固定時(虛無假設的分佈形狀固定)，當$$\alpha$$上升則$$\beta$$下降，反之當$$\alpha$$下降則$$\beta$$上升，即無法同時降低兩類型錯誤。
+* 如果使用更大的樣本數時(虛無假設的分佈會變的更徒峭)，可同時降低$$\alpha$$與$$\beta$$，因為更大的樣本數可降低統計量的變異數(中央極限定理)，得到更陡峭的分佈。
 
-## 檢定力(power)
+## 檢定力(power of a test)
 
 > 定義：檢定力
 >
@@ -37,7 +37,9 @@
 由定義得
 
 * 在$$\theta=\theta_0$$時，$$power(\theta_0)=\mathrm{P}(T \in RR ~|~ \theta=\theta_0)=\alpha$$。
-* 在$$\theta=\theta_a$$時，$$\begin{aligned} power(\theta_a) & = \mathrm{P}(T \in RR ~|~ \theta=\theta_a)\\ & =  1 -  \mathrm{P}(T \notin RR ~|~ \theta=\theta_a)\\ & =  1-\beta  \end{aligned}$$，即檢定可以正確拒絕虛無假設的能力。
+* 在$$\theta=\theta_a$$時，$$\begin{aligned} power(\theta_a) & = \mathrm{P}(T \in RR ~|~ \theta=\theta_a)\\ & =  1 -  \mathrm{P}(T \notin RR ~|~ \theta=\theta_a)\\ & =  1-\beta  \end{aligned}$$<mark style="color:red;"></mark>
+
+<mark style="color:red;">因此檢定力為假設檢定可以正確拒絕虛無假設的能力</mark>。
 
 ## 假設檢定
 
@@ -46,4 +48,4 @@
 * 事先選定一個較小的型1錯誤機率$$\alpha$$。
 * 針對對立假設$$H_a$$中的$$\theta_a$$，求拒絕域$$RR$$滿足型2錯誤機率$$\beta(\theta_a)$$最小化，或者說滿足最大化檢定力$$power(\theta_a)$$。
 
-### 簡單假設與複合假設
+###

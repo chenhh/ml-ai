@@ -8,7 +8,7 @@ description: heteroskedasticity and autocorrelation consistent, 非均齊變異-
 
 Newey-West估計器在統計學和計量經濟學中用於提供迴歸型模型中，當該模型不滿足迴歸分析的標准假設時，參數為共變異數矩陣的估計。該估計器用於嘗試克服模型中誤差項的自相關（也稱為序列相關）和非均齊異(變異數為時變)，通常用於應用於時間序列資料的迴歸。
 
-用時間序列數據估計的迴歸模型往往表現出自相關；也就是說，誤差項隨時間變化而相關。
+<mark style="color:red;">用時間序列數據估計的迴歸模型往往表現出自相關；也就是說，誤差項隨時間變化而相關</mark>。
 
 ## auto-regressive (AR)模型的假設
 

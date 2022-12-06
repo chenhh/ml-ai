@@ -6,7 +6,7 @@ description: information matrix
 
 ## Fisher Information 的定義
 
-給定獨立同分佈(iid)的隨機變數$$\mathbf{X}=(X_1, \dots, X_n)$$，機率密度函數為$$f(X; \theta)$$，$$\theta$$為目標參數(假設為純量，且沒有nuissance parameter)，則可得似然函數如下：
+給定獨立同分佈(iid)的隨機變數$$X_1, \dots, X_n$$，機率密度函數為$$f(X; \theta)$$，$$\theta$$為目標參數(假設為純量，且沒有nuissance parameter)，則可得似然函數如下：
 
 $$
 \displaystyle L(\mathbf{X}; \theta)= \prod_{i=1}^n f(X_i; \theta)
@@ -14,13 +14,13 @@ $$
 
 得對數似然函數$$\displaystyle l(\mathbf{X};\theta) = \sum_{i=1}^n \log f(X_i; \theta)$$，對$$\theta$$微分且令函數為0，可由MLE得$$\hat{\theta}_{MLE}$$。
 
-<mark style="color:red;">對數似然函數的一階導數也稱score函數</mark>：
+對數似然函數的一階導數也稱score函數：
 
 $$
 \displaystyle S(\mathbf{X}; \theta)=\sum_{i=1}^n \frac{\partial \log f(X_i; \theta)}{ \partial \theta}
 $$
 
-<mark style="color:red;">Fisher information定義為</mark>$$I(\theta)$$<mark style="color:red;">為score函數的二階動差</mark>：
+而Fisher information定義為$$I(\theta)$$為score函數的二階動差：
 
 $$
 I(\theta)=\mathrm{E}(S(X;\theta)^2)

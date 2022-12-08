@@ -44,7 +44,9 @@
 >
 >     註：$$\displaystyle \limsup_{n \rightarrow \infty}\chi_{E_n }$$ 為函數序列的上極限而$$\displaystyle \chi_{\limsup_{n \rightarrow \infty} E_n}$$ 為集合序列的上極限。
 
-proof:
+<details>
+
+<summary> proof:  </summary>
 
 令上極限集$$\displaystyle \limsup_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E$$
 
@@ -58,9 +60,17 @@ proof:
 
 所以$$\displaystyle \limsup_{n \rightarrow \infty} \chi_{E_n} = \chi_E(x)=\chi_{\limsup_{n \rightarrow \infty} E_n}$$(QED)
 
+</details>
+
+
+
 #### 集合序列極限存在的充要條件
 
 > $$\{E_n\} \subseteq X$$，則$$\displaystyle \lim_{n \rightarrow \infty} E_n$$ 存在若且唯若$$\displaystyle \lim_{n \rightarrow \infty} \chi_{E_n}$$ 存在
+
+<details>
+
+<summary> proof </summary>
 
 proof=>
 
@@ -75,3 +85,6 @@ proof=>
 proof <=
 
 使用相同的方法可得證(QED)
+
+</details>
+

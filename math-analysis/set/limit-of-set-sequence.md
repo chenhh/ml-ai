@@ -125,6 +125,8 @@ proof：定義等價性 <=
 
 ## 集合序列的關係
 
+> 對於任意的集合序列，以下關係成立
+>
 > $$\displaystyle \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n$$
 
 ## 集合序列的極限

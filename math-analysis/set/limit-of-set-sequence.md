@@ -21,6 +21,14 @@ E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
 
 > * 遞增集合序列$$E_n \subseteq E_{n+1}, ~ \forall n$$（因為$$E_n$$ 為宇集合$$X$$的子集合，因此$$X$$為所有集合的上界） 則 $$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$
 
+proof:
+
+因為$$\displaystyle x \in \bigcup_{n=1}^\infty E_n$$，必定存在$$n_0 \in \mathbb{N}$$使得$$x \in E_{n_0}$$，因為$$E_n \subseteq E_{n+1}~\forall n$$，所以可得$$x \in E_n$$因此$$\displaystyle x \in \liminf_{n \rightarrow \infty}E_n$$，即$$\displaystyle \bigcup_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty}E_n$$--(1)
+
+又因為對於所有的集合$$\displaystyle \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n$$--(2)
+
+由(1)(2)得$$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$(QED)
+
 > * 遞減集合序列$$E_n \supseteq E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（空集合為任意集合的子集合，因此為所有集合的下界）
 
 對於遞增集合序列，$$\displaystyle \bigcap_{j \geq n} E_j = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty E_n$$
@@ -115,11 +123,15 @@ proof：定義等價性 <=
   * $$n=3$$, $$m_3=\{3\}$$，假設$$m_{ n\geq 3}=\{3\}$$
 * 下極限$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty m_n =\{3\}$$
 
+## 集合序列的關係
+
+> $$\displaystyle \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n$$
+
 ## 集合序列的極限
 
-> $$\{E_n\}_{n \in \mathbb{N}}$$ 的極限存在若序列上極限等於下極限 $$\limsup_{n \rightarrow \infty} ⁡E_n = \liminf_{n \rightarrow \infty} ⁡E_n$$，記為$$\displaystyle \lim_{n \rightarrow \infty} E_n$$
+> $$\{E_n\}_{n \in \mathbb{N}}$$ 的極限存在若序列上極限等於下極限 $$\displaystyle \limsup_{n \rightarrow \infty} ⁡E_n = \liminf_{n \rightarrow \infty} ⁡E_n$$，記為$$\displaystyle \lim_{n \rightarrow \infty} E_n$$
 
-上極限與下限集均為集合，因此$$\limsup_{n \rightarrow \infty} ⁡E_n = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$\limsup_{n \rightarrow \infty} ⁡E_n \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$\limsup_{n \rightarrow \infty} ⁡E_n \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
+上極限與下限集均為集合，因此$$\displaystyle \limsup_{n \rightarrow \infty} ⁡E_n = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$\displaystyle\limsup_{n \rightarrow \infty} ⁡E_n \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$\displaystyle\limsup_{n \rightarrow \infty} ⁡E_n \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
 
 #### 範例1
 
@@ -163,7 +175,7 @@ $$\displaystyle \bigcup_{n=1}^\infty (1-\frac{1}{n}, \frac{1}{n}]=(0,1]$$
 
 在$$n=1$$時，$$I_1=(0,1] \subseteq S$$
 
-而且可得$$S\subseteq (0,1]$$因為$$1-\frac{1}{n} \geq 0$$且$$\frac{1}{n} >0 ~ \forall \mathbb{N}$$.&#x20;
+而且可得$$S\subseteq (0,1]$$因為$$1-\frac{1}{n} \geq 0$$且$$\frac{1}{n} >0 ~ \forall \mathbb{N}$$.
 
 #### 範例：閉區間的無窮交集仍為閉區間
 
@@ -173,16 +185,16 @@ $$\displaystyle \bigcap_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] = [a+1, b-1]
 
 $$\displaystyle \bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] = (a, b)$$
 
-#### 範例 
+#### 範例
 
-$$A_n = \left( \frac{1}{n}, 1+\frac{1}{n} \right)$$, 
-則$$\displaystyle \lim_{n \rightarrow \infty} A_n = (0, 1]$$
+$$A_n = \left( \frac{1}{n}, 1+\frac{1}{n} \right)$$, 則$$\displaystyle \lim_{n \rightarrow \infty} A_n = (0, 1]$$
 
 #### 範例：有理數集合序列的上、下極限
 
-$$ A_n = \{\frac{m}{n} ~|~ m \in \mathbb{Z} \}$$, 則 
-* $$ \displaystyle \limsup_{n \rightarrow \infty} A_n = \mathbb{Q} $$
-* $$ \displaystyle \liminf_{n \rightarrow \infty} A_n = \mathbb{Z} $$,
+$$A_n = \{\frac{m}{n} ~|~ m \in \mathbb{Z} \}$$, 則
+
+* $$\displaystyle \limsup_{n \rightarrow \infty} A_n = \mathbb{Q}$$
+* $$\displaystyle \liminf_{n \rightarrow \infty} A_n = \mathbb{Z}$$,
 
 ## 集合序列上、下極限的補集
 

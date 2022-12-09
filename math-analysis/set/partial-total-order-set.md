@@ -65,9 +65,15 @@ description: ordered set
 
 > $$(S,\leq)$$為偏序集，$$\emptyset \neq E \subseteq S$$為非空子集合。
 >
-> * 若$$\exists b \in S \ni \forall x \in E,\ x \leq b$$，稱$$b$$為集合$$E$$的上界。
-> * 若$$\exists a \in S \ni \forall x \in E,\ a \leq x$$，稱$$a$$為集合$$E$$的下界。
+> * 若$$\exists b \in S \ni \forall x \in E,\ x \leq b$$，稱$$b$$為集合$$E$$的上界；如果$$b \notin E$$，則為嚴格上界。
+> * 若$$\exists a \in S \ni \forall x \in E,\ a \leq x$$，稱$$a$$為集合$$E$$的下界；如果$$a \notin E$$，則為嚴格下界。。
 
 上、下界不必為集合$$E$$中的元素，因為當$$E$$為度量空間中的開集合或非連續集合時，可能無法直接用集合內的元素定義上下界。
 
 如$$E=\{x \in \mathbb{Q} | 0 \leq x^2 \leq 2 \}$$，$$E$$為有理數集合，而上界為$$\sqrt{2}$$是無理數。
+
+
+
+## Zorn lemma
+
+> $$(S, \leq)$$為非空偏序集，如果$$S$$的所有全序子集$$E$$都有上界，則$$S$$至少含有一個最大元。

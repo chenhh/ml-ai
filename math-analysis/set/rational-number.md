@@ -41,7 +41,7 @@
 
 ## 有理數系(rational number system)
 
-因為有理數體為[全序集](order-set.md#quan-xu-ji-total-order-set)(集合中任意兩個元素可以比較大小)，而把$$(\mathbb{Q}, + , \cdot, \leq)$$稱為有理數系。
+因為有理數體為[全序集](partial-total-order-set.md#quan-xu-ji-total-order-set)(集合中任意兩個元素可以比較大小)，而把$$(\mathbb{Q}, + , \cdot, \leq)$$稱為有理數系。
 
 ### 有理數的稠密性：任兩個不相等的有理數之間必存在第三個有理數
 

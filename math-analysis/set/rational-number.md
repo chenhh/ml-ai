@@ -11,11 +11,11 @@
 
 <details>
 
-<summary> proof: (反證法) </summary>
+<summary>proof: (反證法)</summary>
 
 假設$$\sqrt{2} = \frac{m}{n}, m, n \in \mathbb{N}$$，$$gcd(m,n)=1$$為有理數。
 
-取平方可得  $$2 = \frac{m^2}{n^2} \Rightarrow m^2 = 2n^2$$，因此$$m$$為偶數。
+取平方可得 $$2 = \frac{m^2}{n^2} \Rightarrow m^2 = 2n^2$$，因此$$m$$為偶數。
 
 令$$m = 2a, a \in \mathbb{N}$$
 
@@ -23,7 +23,7 @@
 
 由於$$m,n$$均為偶數，可得$$gcd(m,n)=2$$，和假設不符，因此$$\sqrt{2}$$為無理數(QED)。
 
-</details> 
+</details>
 
 ## 有理數體(field)
 
@@ -41,7 +41,7 @@
 
 ## 有理數系(rational number system)
 
-因為有理數體為[全序集](partial-total-order-set.md#quan-xu-ji-total-order-set)(集合中任意兩個元素可以比較大小)，而把$$(\mathbb{Q}, + , \cdot, \leq)$$稱為有理數系。
+因為有理數體為[全序集](order-set.md#quan-xu-ji-total-order-set)(集合中任意兩個元素可以比較大小)，而把$$(\mathbb{Q}, + , \cdot, \leq)$$稱為有理數系。
 
 ### 有理數的稠密性：任兩個不相等的有理數之間必存在第三個有理數
 
@@ -49,7 +49,7 @@
 
 ### 有理數的十進位表示法
 
-> 給定有限位數實數$$r_n=a_0.a_1 a_2\ldots a_n, ~ a_0 \in \mathbb{Z}^{+}, a_i \in \{0,1,\ldots, 9\}, ~ i=1,2,\ldots, n$$可表示成$$r_n=a_0+\frac{a_1}{10}+\frac{a_2}{10^2} +\cdots +\frac{a_n}{10^n}$$&#x20;
+> 給定有限位數實數$$r_n=a_0.a_1 a_2\ldots a_n, ~ a_0 \in \mathbb{Z}^{+}, a_i \in \{0,1,\ldots, 9\}, ~ i=1,2,\ldots, n$$可表示成$$r_n=a_0+\frac{a_1}{10}+\frac{a_2}{10^2} +\cdots +\frac{a_n}{10^n}$$
 >
 > 無限位數表示法為$$r=a_0.a_1 a_2 a_3\cdots$$
 
@@ -59,37 +59,32 @@
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
 令$$S=\{y \in \mathbb{N}, ~y\leq x\}\neq \emptyset$$ 為整數的子集合，因此S有上界, 由實數完備性得最小上界存在，令$$\sup(⁡S)=a_0$$。
 
 因為$$a_0 \in \mathbb{Z}^+ \Rightarrow a_0 \in S$$, 令$$a_0=[x]$$ ，即$$a_0 \leq x<a_0+1$$。
 
-令$$a_1=[10x−10a_0 ]$$  依序建造下去即可(QED)
+令$$a_1=[10x−10a_0 ]$$ 依序建造下去即可(QED)
 
 </details>
 
 ### 無理數可用有理數數列逼近
-> 令$$q \in \mathbb{R - Q}$$為一無理數，則存在有理數數列$$\{x_n\} \subseteq \mathbb{Q}$$
-> 使得 $$ \displaystyle \lim_{n \rightarrow \infty} x_n = q $$
+
+> 令$$q \in \mathbb{R - Q}$$為一無理數，則存在有理數數列$$\{x_n\} \subseteq \mathbb{Q}$$ 使得 $$\displaystyle \lim_{n \rightarrow \infty} x_n = q$$
 
 <details>
 
-<summary>proof: 以有理數的稠密性夾擠 </summary>
+<summary>proof: 以有理數的稠密性夾擠</summary>
 
-給定數列$$\{\frac{1}{n}\}_{n \in \mathbb{N}}$$，
-可得 $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n} = 0$$
+給定數列$$\{\frac{1}{n}\}_{n \in \mathbb{N}}$$， 可得 $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n} = 0$$
 
 因為$$q$$為無理數，可得$$q - \frac{1}{n} < q + \frac{1}{n}, ~ \forall n \in \mathbb{N}$$
 
-因為相異兩個無理數間必有一有理數(稠密性)，因此存在$$x_n \in \mathbb{Q}$$ 使得 
-$$ q - \frac{1}{n} < x_n < q + \frac{1}{n} $$，整理後可得 $$ |x - q| < \frac{1}{n} $$。
+因為相異兩個無理數間必有一有理數(稠密性)，因此存在$$x_n \in \mathbb{Q}$$ 使得 $$q - \frac{1}{n} < x_n < q + \frac{1}{n}$$，整理後可得 $$|x - q| < \frac{1}{n}$$。
 
-由於$$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n} = 0$$，從極限定義得
-$$ \forall \epsilon > 0 , \exists n_0 \in \mathbb{N} \ni |\frac{1}{n}|< \epsilon, ~ \forall n \geq n_0 $$
+由於$$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n} = 0$$，從極限定義得 $$\forall \epsilon > 0 , \exists n_0 \in \mathbb{N} \ni |\frac{1}{n}|< \epsilon, ~ \forall n \geq n_0$$
 
-由上式得$$\forall \epsilon > 0$$，在$$n \geq n_0 $$時，$$|x - q | < \frac{1}{n} < \epsilon $$。
-由極限定義得 $$ \displaystyle \lim_{n \rightarrow \infty} x_n  = q $$ (QED)
-
+由上式得$$\forall \epsilon > 0$$，在$$n \geq n_0$$時，$$|x - q | < \frac{1}{n} < \epsilon$$。 由極限定義得 $$\displaystyle \lim_{n \rightarrow \infty} x_n = q$$ (QED)
 
 </details>

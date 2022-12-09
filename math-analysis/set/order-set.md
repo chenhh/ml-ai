@@ -1,6 +1,14 @@
-# 偏序集或全序集
+---
+description: ordered set
+---
 
-## 偏序集(partial order set)
+# 序集
+
+## 簡介
+
+選擇公理與序集有緊密的關係，此處只討論偏序集(部份元素可比較大小)、全序集(集合內任意兩個元素可比較大小)與良序集(非空全序子集有最小元)。
+
+## 偏序集(partial order set, poset)
 
 > $$S\neq \emptyset$$，令關係$$R: S \rightarrow S$$為具有反身性、反對稱性與遞移性的二元關係，則$$R$$為一偏序關係(partial order relation)。
 >
@@ -16,6 +24,17 @@
 * 例:  $$(S,R)=(\mathbb{N}, \leq)$$
 * 例：$$(S,R)= (\text{set}, \subseteq)$$
 
+### 最大元與最小元(greatest element and least element)
+
+> $$X$$為偏序集且$$Y \subseteq X$$，則
+>
+> * $$y$$為$$Y$$的最小元若$$y \in Y$$且不存在$$z \in Y \ni z < y$$。
+> * $$y$$為$$Y$$的最大元若$$y \in Y$$且不存在$$z \in Y \ni y < z$$。
+>
+> 註：偏序集的最大元和最小元不唯一；而全序集的最大元和的最小元唯一。
+
+例: $$X=\{\{1,2\}, \{2\}, \{2,3\}, \{2,3,4\}, \{5\}\}$$，關係為$$\subseteq$$，則$$\{2\}, \{5\}$$均為最小元，$$\{1,2\}, \{2,3,4\},\{5\}$$為最大元。
+
 ### 相容(comparable)
 
 > 令$$(S, \leq)$$為一偏序集，$$x,y\in S$$且$$x \neq y$$，若$$x \leq y$$與$$y \leq x$$恰有一成立，則稱$$x$$與$$y$$<mark style="color:red;">相容</mark>，否則稱$$x$$與$$y$$不相容(incomparable)。
@@ -30,17 +49,15 @@
 
 自然數集、整數集、有理數集、無理數集、實數集均為全序集。
 
-## 小於(less than)
-
 ## 良序集(well order set)
 
 > 令$$(S, \leq)$$為偏序集，$$\forall x,y \in S$$且$$x \neq y$$則 $$x < y$$。
 
-> 若$$(S, \leq)$$為全序集，則$$S$$的任一非空子集合必含一最小元素時，為$$S$$為良序集。
+> 若$$(S, \leq)$$為全序集，則$$S$$的任一非空子集合必包含最小元(素)時，為$$S$$為良序集。
+
+<mark style="color:red;">註：自然數</mark>$$\mathbb{N}$$<mark style="color:red;">是良序集；但整數集</mark>$$\mathbb{Z}$$<mark style="color:red;">，有理數集</mark>$$\mathbb{Q}$$<mark style="color:red;">與實數集</mark>$$\mathbb{R}$$<mark style="color:red;">均非良序集</mark>。
 
 ## 三一律(trichotomy rule)
-
-自然數集$$\mathbb{N}$$為良序集。
 
 > $$x,y,z \in \mathbb{R}$$，則$$x > y, \ x=y,\ x< y$$恰有一成立。
 

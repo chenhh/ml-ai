@@ -132,7 +132,16 @@ $$\forall b \in A \setminus B$$, $$b \notin B$$且 $$b \in f(b)$$，所以$$B \n
 
 > 令$$S_1, S_2, \cdots, S_n$$均為有限集合，
 > 令$$\displaystyle |\bigcup_{i=1}^n S_i| > n$$，
-> 則存在至少一集合的基數大於等於2，即$$\exists i \in \{1,\dots, n\} \ni |S_i| \geq 2|$$。
+> 則存在至少一集合的基數大於等於2，即$$\exists i \in \{1,\dots, n\} \ni |S_i| \geq 2$$。
+
+<details>
+
+<summary> proof: 反證法 </summary>
+
+令$$S_1, S_2, \cdots, S_n$$的基數全部小於2，因此$$S_i, ~\forall i$$為空集合或是單點集合。
+因此$$|\bigcup_{i=1}^n S_i| \leq n$$ (QED)
+
+</details>
 
 ## 無限集合的基數
 
@@ -155,6 +164,9 @@ $$\forall b \in A \setminus B$$, $$b \notin B$$且 $$b \in f(b)$$，所以$$B \n
 * 基數指數 $$|X|^{|Y|} = |X^Y|$$，其中 $$X^Y$$為所有 $$Y \mapsto X$$函數的集合。
 
 當集合$$X, Y$$均為有限集合時
+
+* $$|X| + |Y| = |X \cup Y| + |X \cap Y|$$ 
+* $$Y \subseteq X \Rightarrow |Y| \leq |X|$$ 
 
 * 基數加法與乘法滿足交換律
   * $$|X| + |Y| = |Y| + |X|$$

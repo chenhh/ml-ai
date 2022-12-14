@@ -209,6 +209,8 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
 
+proof: link
+
 ### 可數集的有限多個積集仍為可數集
 
 > $$A_i, ~i=1,2,\dots, n$$均為可數集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為可數集。

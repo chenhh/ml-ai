@@ -6,7 +6,7 @@ description: ordered set
 
 ## 簡介
 
-選擇公理與序集有緊密的關係，此處只討論偏序集(部份元素可比較大小)、全序集(集合內任意兩個元素可比較大小)與良序集(非空全序子集有最小元)。
+選擇公理與序集有緊密的關係，此處只討論<mark style="color:red;">偏序集(部份元素可比較大小)</mark>、<mark style="color:red;">全序集(集合內任意兩個元素可比較大小)</mark>與<mark style="color:red;">良序集(非空全序子集有最小元)</mark>。
 
 ## 偏序集(partial order set, poset)
 
@@ -31,13 +31,17 @@ description: ordered set
 > * $$y$$為$$Y$$的最小元若$$y \in Y$$且不存在$$z \in Y \ni z < y$$。
 > * $$y$$為$$Y$$的最大元若$$y \in Y$$且不存在$$z \in Y \ni y < z$$。
 >
-> 註：偏序集的最大元和最小元不唯一；而全序集的最大元和的最小元唯一。
+> <mark style="color:blue;">註：偏序集的最大元和最小元不唯一；而全序集的最大元和的最小元唯一</mark>。
 
 例: $$X=\{\{1,2\}, \{2\}, \{2,3\}, \{2,3,4\}, \{5\}\}$$，關係為$$\subseteq$$，則$$\{2\}, \{5\}$$均為最小元，$$\{1,2\}, \{2,3,4\},\{5\}$$為最大元。
 
+自然數$$\mathbb{N}$$有最小元0，最沒有最大元。
+
+整數$$\mathbb{Z}$$沒有最小元與最大元。
+
 ### 相容(comparable)
 
-> 令$$(S, \leq)$$為一偏序集，$$x,y\in S$$且$$x \neq y$$，若$$x \leq y$$與$$y \leq x$$恰有一成立，則稱$$x$$與$$y$$<mark style="color:red;">相容</mark>，否則稱$$x$$與$$y$$不相容(incomparable)。
+> 令$$(S, \leq)$$為一偏序集，$$x,y\in S$$且$$x \neq y$$，若$$x \leq y$$與$$y \leq x$$恰有一成立(不會出現$$x,y$$無法比較的情形)，則稱$$x$$與$$y$$<mark style="color:red;">相容</mark>，否則稱$$x$$與$$y$$不相容(incomparable)。
 
 由定義知偏序集中，<mark style="color:blue;">相容的兩個元素即為可以比較大小的兩個元素</mark>。
 
@@ -77,3 +81,4 @@ description: ordered set
 ## Zorn lemma
 
 > $$(S, \leq)$$為非空偏序集，如果$$S$$的所有全序子集$$E$$都有上界，則$$S$$至少含有一個最大元。
+

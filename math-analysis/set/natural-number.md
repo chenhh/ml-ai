@@ -2,18 +2,18 @@
 
 ## 自然數集合
 
-* 自然數是人類最早認識的數，它有兩個作用: 計數與排序。
+* 自然數是人類最早認識的數，它有兩個主要功能: <mark style="color:red;">計數與排序</mark>。
 * 滿足Peano公理的集合稱為自然數，有些定義自然數會定0開始，即Peano公理的第一項改為0。
 * 自然數集合 $$\mathbb{N} = \{1,2,\cdots\}$$
-* 自然的計數，且為個數最少的無限(可數)集。
+* <mark style="color:red;">自然的計數，且為個數最少的無限(可數)集(因為無限集的充要條件是和自然數集存在1-1的函數)</mark>。
 
 ## Peano 公理(Peano axioms)
 
-> 1. \[1為自然數)] $$1 \in \mathbb{N}$$ (有些定義是從0開始，即$$0 \in \mathbb{N}$$)。
-> 2. \[每個自然數都必定有後繼數] 若$$n_1 \in \mathbb{N}$$且$$n_2$$ 為$$n_1$$的後繼數(successor,$$n_2 = n_1 ++$$)，則$$n_2 \in \mathbb{N}$$。
-> 3. $$1$$不為任何自然數的繼數。
-> 4. \[兩自然數的後繼數相等時，此兩自然數必相等] 若$$n_1,m_1 \in \mathbb{N}$$, $$n_2,m_2$$ 分別為$$n_1,m_1$$ 的後繼數，且$$n_2=m_2$$，則$$n_1=m_1$$。
-> 5. \[數學規納法(mathematical induction)] 令$$S \subset \mathbb{N}$$, 若$$1 \in S$$, $$n_1 \in S$$且可得出$$n_1$$的後繼數$$n_2 \in S$$，則$$S=\mathbb{N}$$。
+> 1. <mark style="color:blue;">\[1為自然數)]</mark> $$1 \in \mathbb{N}$$ (有些定義是從0開始，即$$0 \in \mathbb{N}$$)。
+> 2. <mark style="color:blue;">\[每個自然數都必定有後繼數]</mark> 若$$n_1 \in \mathbb{N}$$且$$n_2$$ 為$$n_1$$的後繼數(successor,$$n_2 = n_1 ++$$)，則$$n_2 \in \mathbb{N}$$。
+> 3. $$1$$<mark style="color:blue;">不為任何自然數的繼數</mark>。
+> 4. <mark style="color:blue;">\[兩自然數的後繼數相等時，此兩自然數必相等]</mark> 若$$n_1,m_1 \in \mathbb{N}$$, $$n_2,m_2$$ 分別為$$n_1,m_1$$ 的後繼數，且$$n_2=m_2$$，則$$n_1=m_1$$。
+> 5. <mark style="color:blue;">\[數學規納法(mathematical induction)]</mark> 令$$S \subset \mathbb{N}$$, 若$$1 \in S$$, $$n_1 \in S$$且可得出$$n_1$$的後繼數$$n_2 \in S$$，則$$S=\mathbb{N}$$。
 
 根據Peano公設，我們可以為自然數定義加法運算、乘法運算與次序關系，並證明與自然數系相關的各種性質。
 
@@ -30,11 +30,11 @@
 
 ## 正整數的良序性(well-ordering principle)
 
-> 非空的正整數集必有最小元素。$$\emptyset \neq S \subseteq \mathbb{N} \Rightarrow \exists a \in S  \ni \forall x \in S, a \leq x$$
+> 非空的自然數子集(正整數集)必有最小元素。$$\emptyset \neq S \subseteq \mathbb{N} \Rightarrow \exists a \in S \ni \forall x \in S, a \leq x$$
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
 令$$P(n)$$為以下命題：對於自然數的任意子集，若包含某一自然數$$a \leq n$$，則此集合必包含一最小元素。
 
@@ -52,10 +52,7 @@
 
 </details>
 
-
 註：
+
 * 整數集$$\mathbb{Z}$$在通常序下不是良序集，因該集合本身就沒有一個最小元素。
 * 在良序集合中，除了整體上最大的那個元（如果存在的話），則所有的元素都有一個唯一的後繼數：比它大的元素組成的集合中，最小的元素。
-
-
-

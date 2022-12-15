@@ -26,7 +26,7 @@ description: ordered set
 
 ### 最大元與最小元(greatest element and least element)
 
-> $$X$$為偏序集且$$Y \subseteq X$$，則
+> $$(X, \leq )$$為偏序集且$$Y \subseteq X$$，則
 >
 > * $$y$$為$$Y$$的最小元若$$y \in Y$$且不存在$$z \in Y \ni z < y$$。
 > * $$y$$為$$Y$$的最大元若$$y \in Y$$且不存在$$z \in Y \ni y < z$$。
@@ -38,6 +38,19 @@ description: ordered set
 自然數$$\mathbb{N}$$有最小元0，最沒有最大元。
 
 整數$$\mathbb{Z}$$沒有最小元與最大元。
+
+### 上界與嚴格上界(upper bound)
+
+> $$(X, \leq)$$為偏序集，且$$Y \subseteq X$$為子集合。令$$x \in X$$。
+>
+> * 如果$$\forall y \in Y$$滿足$$y \leq x$$，則稱元素$$x$$為集合$$Y$$的上界($$x$$可能為$$Y$$的元素)。
+> * 如果元素$$x$$為集合$$Y$$的上界，且$$x \notin Y$$，則稱$$x$$為集合$$Y$$的嚴格上界；即$$\forall y \in Y, ~ y < x$$。
+
+### 偏序集中存在良序子集且沒有最小上界
+
+> $$(X,\leq)$$為偏序集，則存在$$Y \subseteq X$$為良序子集且$$x_0 \in X$$為$$Y$$的最小元，且$$Y$$沒有嚴格上界。
+
+例：$$(\mathbb{R}^2, \leq)$$取$$Y=\{(p,q) \subseteq \mathbb{R}^2~|~p \geq 0, q \geq 0, p=q\}$$為第一象限$$x=y$$直線上的所有點，則最小元為$$(0,0)$$且沒有嚴格上界。
 
 ### 相容(comparable)
 

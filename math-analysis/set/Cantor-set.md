@@ -53,6 +53,8 @@ Cantor集合可得知以下兩問題答案均為否。
 
 ## Cantor集是不可數集
 
+<mark style="color:red;">註：Cantor集可寫成3進位小數中，完全不含位元1的任意實數點集</mark>。
+
 這裡需要用到實數的三進位表示，在三進位系統中，數字僅僅允許為0，1，2。
 
 構造Cantor集時，
@@ -67,13 +69,19 @@ Cantor集合可得知以下兩問題答案均為否。
 
 因此把$$[0,1]-C$$補集中的任意值以三進位表示後，至少有一位元之值為1。
 
-所以Cantor集可寫成：$$\displaystyle C=\left\{   x\in [0,1]~|~ x=(0.a_1a_2\dots a_n\dots)=\sum_{k=1}^\infty a_k3^{-k}, ~ a_k \in \{0,2 \} \right\}$$
+所以Cantor集可寫成3進位小數中，完全不含位元1的實數點集：$$\displaystyle C=\left\{   x\in [0,1]~|~ x=(0.a_1a_2\dots a_n\dots)=\sum_{k=1}^\infty a_k3^{-k}, ~ a_k \in \{0,2 \} \right\}$$
 
 令函數$$f$$將$$x=(0.a_1a_2\dots a_n\dots), ~ a_k \in \{0,2 \}$$中所有的2替換成1的函數，即$$\displaystyle f(\sum_{k=1}^\infty a_k3^{-k}) =  \sum_{k=1}^\infty \frac{a_k}{2} 2^{-k}$$。
 
-c則a轉換後的$$f(x) \in [0,1]$$為二進位實數。
+則轉換後的$$f(x) \in [0,1]$$為二進位實數。
 
-gi \$$\資料
+因此$$\forall y \in [0,1], ~\exists x \in C \ni f(x)=y$$，即$$f: C \rightarrow [0,1]$$為onto函數，所以基數$$|[0,1]| \leq |C|$$。
+
+由於$$|[0,1]|=|\mathbb{R}|=\aleph_1$$，因此$$C$$為不可數集。
+
+
+
+## 參考資料
 
 * [Wikipedia: Cantor set](https://en.wikipedia.org/wiki/Cantor\_set)
 * [\[知乎\] 搞懂Cantor（康托）集](https://zhuanlan.zhihu.com/p/54711962)

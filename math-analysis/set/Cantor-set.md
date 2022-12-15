@@ -36,7 +36,9 @@ Cantor集合可得知以下兩問題答案均為否。
 > * $$F_n =\frac{F_{n-1}}{3} \cup (\frac{2}{3}+\frac{F_{n-1}}{3}), \forall n \in \mathbb{N}, \ F_0 = [0,1]$$
 > * $$I_n = \frac{I_{n-1}}{3}\cup(\frac{2}{3} + \frac{I_{n-1}}{3})$$
 >
-> Cantor set定義為在$$[0,1]$$當中，在此遞迴刪除過程中沒有被刪除的所有點之集合。即 $$\mathcal {C} \equiv \cap _{n=1}^{\infty }C_{n}$$
+> Cantor set定義為在$$[0,1]$$當中，在此遞迴刪除過程中沒有被刪除的所有點之集合。即 $$\mathcal {C} \equiv \cap _{n=1}^{\infty }F_{n}$$
+>
+> $$\displaystyle C=[0,1]-\bigcup_{n=1}^\infty \bigcup_{k=0}^{3^{n-1}-1} \left(  \frac{3k+1}{3^n}, \frac{3k+2}{3^n}  \right)$$
 
 ![建構Cantor集前六步保留的集合](../../.gitbook/assets/cantor\_set.png)
 
@@ -56,6 +58,10 @@ Cantor集合可得知以下兩問題答案均為否。
 <mark style="color:red;">註：Cantor集可寫成3進位小數中，完全不含位元1的任意實數點集</mark>。
 
 這裡需要用到實數的三進位表示，在三進位系統中，數字僅僅允許為0，1，2。
+
+> 令$$x=0.a_1a_2\dots a_n\dots \in [0,1], a_j \in \{0,1,2\}$$為區間$$[0,1]$$中以三進位表示的實數。
+>
+> 則$$x \in C \Leftrightarrow a_j \{0,2\}, \forall n \in \mathbb{N}$$
 
 構造Cantor集時，
 
@@ -79,7 +85,13 @@ Cantor集合可得知以下兩問題答案均為否。
 
 由於$$|[0,1]|=|\mathbb{R}|=\aleph_1$$，因此$$C$$為不可數集。
 
+## Cantor集的Lebesque測度為0
 
+在閉區間$$[0,1]$$建構Cantor集時，在第$$n$$步總共會去掉$$2^{n-1}$$個開區間，且每個開區間的長度均為$$\frac{1}{3^n}$$。
+
+因此去掉的總區間長度為$$\displaystyle \sum_{n=1}^\infty 2^{n-1}\frac{1}{3^n}  = \frac{1}{3} \sum_{n=0}^\infty \left(\frac{2}{3}\right)^n  = \frac{1}{3} \left( \frac{1}{1-2/3} \right) = 1$$
+
+所以Cantor集$$C$$的長度為$$|[0,1]|-1=0$$&#x20;
 
 ## 參考資料
 

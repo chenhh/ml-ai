@@ -27,7 +27,7 @@
 
 <mark style="color:red;">非空集合的集合必含有至少一個元素</mark>，即$$\exists x \ni x \in S$$。
 
-<mark style="color:red;">空集合為任意集合的子集合(但不一定是元素)</mark>，即$$\empty \subseteq  S$$。
+<mark style="color:red;">空集合為任意集合的子集合(但不一定是元素)</mark>，即$$\empty \subseteq S$$。
 
 <mark style="color:red;">非空集合必存在至少一個元素(選擇性公理的條件)</mark>。$$S \neq \empty \Rightarrow \exists x \in S$$。
 
@@ -46,12 +46,9 @@
 
 對於任意實數$$r$$，因為空集合中不存在任何元素大於或小於$$r$$，因此可將$$r$$視為$$\empty$$的下界或下界，又因為此性質對於所有的實數均成立，因此定義空集的上下界如上。
 
-[陶哲軒] 想像直線的最右端為$$+\infty$$，而在最左端為$$-\infty$$。
-若一活塞從$$+\infty$$處向左移動直到遇到集合$$S$$為止，則活塞停下來的地方就是$$S$$的上確界。
-同理活塞從$$-\infty$$處向右移動直到遇到集合$$S$$為止，活塞停下來的地方就是$$S$$的下確界。
+\[陶哲軒] 想像直線的最右端為$$+\infty$$，而在最左端為$$-\infty$$。 若一活塞從$$+\infty$$處向左移動直到遇到集合$$S$$為止，則活塞停下來的地方就是$$S$$的上確界。 同理活塞從$$-\infty$$處向右移動直到遇到集合$$S$$為止，活塞停下來的地方就是$$S$$的下確界。
 
-當集合$$S=\emptyset$$時，活塞從$$+\infty$$移動到$$-\infty$$都沒停下來，因此空集合的上確界為$$-\infty$$；
-同理當活塞從$$-\infty$$移動到$$+\infty$$都沒停下來，因此空集合的下確界為$$+\infty$$；
+當集合$$S=\emptyset$$時，活塞從$$+\infty$$移動到$$-\infty$$都沒停下來，因此空集合的上確界為$$-\infty$$； 同理當活塞從$$-\infty$$移動到$$+\infty$$都沒停下來，因此空集合的下確界為$$+\infty$$；
 
 ## 單元素集與雙元素集(singleton sets and pair sets)
 
@@ -69,7 +66,7 @@
 常見的集合族，令$$S=\{a,b\}$$：
 
 1. 冪集合$$\mathcal{P}(S) = \{\phi, \{a\}, \{b\}, \{a,b\}\}$$
-2. 可測集sigma代數 $$\sigma_S=\{\phi, a, b, \{a,b\}, S\}$$
+2. 可測集sigma代數 $$\sigma_S=\{\emptyset, \{a\}, \{b\}, \{a,b\}, S\}$$
 
 ## 卡式積(Cartesian product)
 
@@ -81,7 +78,7 @@
 
 ## 聯集與交集運算(intersection and union)
 
-令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合(index set)(有限或無窮多個元素)，$$U$$為包含$$X,Y$$的宇集合。
+令$$X,Y$$為相異的兩個集合，$$I$$為一指標集合(index set)(有限或無窮多個元素，可數或不可數集合)，$$U$$為包含$$X,Y$$的宇集合。
 
 ### 聯集(union)
 
@@ -92,22 +89,22 @@
 
 ### 多集合的聯集: 元素只須存在於某些集合
 
-$$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
+$$\displaystyle \bigcup_{i\in I} S_i =\{ x \ \vert \ \exists j\in I, x \in S_j\}$$
 
 ### 交集(intersection)
 
-&#x20;同時屬於所有集合的元素，或者為所有集合都存在的素。$$X \cap Y= \{z \vert  z \in X \land z \in Y\}$$
+同時屬於所有集合的元素，或者為所有集合都存在的素。$$X \cap Y= \{z \vert z \in X \land z \in Y\}$$
 
 * $$X \cap \emptyset = \emptyset$$
-* $$X\cap X  = X \cap U= X$$
+* $$X\cap X = X \cap U= X$$
 
 ### 多集合的交集: 元素必須存在於所有的集合
 
-&#x20;$$\cap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$
+$$\displaystyle \bigcap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$
 
 ### 交換律 (commutative law)
 
-* &#x20;$$X \cup Y = Y \cup X$$
+* $$X \cup Y = Y \cup X$$
 * $$X\cap Y = Y \cap X$$
 
 ### 結合律 (associative law)
@@ -122,7 +119,7 @@ $$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
 
 ### 吸收律(absorb law)
 
-* &#x20;$$X\cup(X\cap Y) = X$$
+* $$X\cup(X\cap Y) = X$$
 * $$X \cap (X \cup Y) = X$$
 
 ### 兩集合的關係必為不相交、部份相交或者子集合三種其中之一
@@ -144,11 +141,13 @@ $$\cup_{i\in I} S_i =\{ x \ \vert \  \exists j\in I, x \in S_j\}$$
 
 ### 補集(complement)
 
-$$X^c  = \{ z \ \vert \ z \in U \land z \notin X\}$$
+$$X^c = \{ z \ \vert \ z \in U \land z \notin X\}$$
 
 * $$X^c = U \setminus X \equiv U-X$$
 * $$X \cup X^c = U$$
 * $$X \cap X^c = \emptyset$$
+
+可得$$X, X^c$$為宇集合$$U$$的分割。
 
 ### 差集(difference)
 
@@ -180,11 +179,13 @@ $$x \in \bigcup_{i\in I} X_i$$，可得元素$$x$$至少為其中一個集合的
 
 proof:
 
-$$x \in \bigcup_{i \in I} X_i^c \Leftrightarrow   \exists j \in I \ni x \in X_j^c \Leftrightarrow x \notin \bigcap_{i \in I} X_i \Leftrightarrow x \in (\bigcap_{i \in I} X_i)^c$$ (QED)
+$$x \in \bigcup_{i \in I} X_i^c \Leftrightarrow \exists j \in I \ni x \in X_j^c \Leftrightarrow x \notin \bigcap_{i \in I} X_i \Leftrightarrow x \in (\bigcap_{i \in I} X_i)^c$$ (QED)
 
 ## 對稱差運算(symmetric difference)
 
-$$X \Delta Y \equiv =(X \cup Y)  - (X \cap Y)$$
+> $$X \Delta Y \equiv (X \cup Y) - (X \cap Y)$$
+
+如果$$X \cap Y=\empty$$，則$$X \Delta Y = (X \cup Y)$$
 
 ## 子集合(subset)
 
@@ -198,9 +199,9 @@ $$X \Delta Y \equiv =(X \cup Y)  - (X \cap Y)$$
 
 ### 子集合滿足遞移律
 
-> $$X \subseteq Y$$and $$Y \subseteq Z$$then $$X\subseteq Z$$
+> $$X \subseteq Y$$且 $$Y \subseteq Z$$則 $$X\subseteq Z$$
 >
-> $$X \not \subseteq Y, ~ Y \not \subseteq Z \Rightarrow X \not \subseteq  Z$$
+> $$X \not \subseteq Y, ~ Y \not \subseteq Z \Rightarrow X \not \subseteq Z$$
 
 proof:
 
@@ -210,7 +211,7 @@ proof:
 
 ### 集合相等的充要條件為兩集合互為子集合
 
-> $$X \subseteq Y$$ and $$Y \subseteq X$$$$\Leftrightarrow$$ $$Ｘ=Y$$
+> $$X \subseteq Y$$ 且 $$X \supseteq Y$$則$$X=Y$$
 
 ## 布林代數與sigma field(algebra)
 
@@ -226,7 +227,7 @@ proof:
 
 但此此推論在集合論中有矛盾 (by Russell)，令 $$P(x)$$為 $$x$$is a set and $$x \notin x$$。即當$$x$$為一集合且不包含自已時，$$P(x)$$才為真。
 
-* 如$$P({1,2,3})$$為true，因為$$\{1,2,3\} \notin \{1,2,3\}$$.&#x20;
+* 如$$P({1,2,3})$$為true，因為$$\{1,2,3\} \notin \{1,2,3\}$$.
 * 令$$S$$為包含所有集合的集合，因此$$S$$為集合，而且$$S \in S$$，所以$$P(S)$$為false。
 * 考慮 $$\Omega = \{ x \vert P(x) \text{ is true}\} =\{ x \vert x \text{ is a set and } x \notin x\}$$，即$$\Omega$$為所有不包含自已集合的集合。
   * 考慮$$\Omega \in \Omega$$時，由定義知$$P(\Omega)$$為true，即$$\Omega$$為集合，且$$\Omega \notin \Omega$$。

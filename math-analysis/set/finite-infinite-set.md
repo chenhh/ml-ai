@@ -131,12 +131,14 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 無限集的充分必要條件
 
-> * \[存在自然數集合到它的(子集)的單射(一對一函數)] $$A$$為無限集 $$\Leftrightarrow$$ 存在 $$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數]
+> * \[存在自然數集合到它的(子集)的單射(一對一函數)] $$A$$為無限集 $$\Leftrightarrow$$ 存在 $$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A$$的勢大於等於自然數的勢]
 > * \[無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
+>
+> <mark style="color:red;">因為任意無限集的勢均大於等於自然數的勢</mark>$$|\mathbb{N}|=\aleph_0$$<mark style="color:red;">，可得自然數為最小的無限集</mark>。
 
 <details>
 
-<summary>proof:</summary>
+<summary>proof:無限集的勢須大於等於自然數的勢</summary>
 
 * <=
 
@@ -170,6 +172,14 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 > <mark style="color:red;">無限集合是由無限個元素組成的集合，分為可數集與不可數集</mark>。
 
+## 可數集合的聯集仍為可數集
+
+> $$\forall n \in \mathbb{N}, \ S_n$$為可數集，則$$\cup_{n \in \mathbb{N}} S_n$$仍為可數集。
+
+![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
+
+proof: [選擇公理](axiom-of-choice.md#ying-yong-ke-shu-ge-ke-shu-ji-he-de-bing-ji-reng-ran-shi-ke-shu-ji)
+
 <details>
 
 <summary>proof: 建構可數集合至無限集合的1-1函數。</summary>
@@ -179,9 +189,6 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 令$$S$$為不可數集合。因此存在一對一函數$$f: \mathbb{N} \rightarrow S$$，可得數列$$\{f(n)\}_{ n \in \mathbb{N}} \ \subseteq S$$ (QED)
 
 </details>
-
-> * \[存在自然數集合到它的(子集)的單射(一對一函數)] \$$A$$為無限集$$\Leftrightarrow$$存在$$f: \mathbb{N} \rightarrow A$$為一對一函數。\[集合$$A\$$的勢大於等於自然數]
-> * \[無限集有至少一個真子集和它等勢] $$A$$為無限集 $$\Leftrightarrow A$$與其真子集等價。\[$$\exists B\subset A \ni A \sim B$$]
 
 <details>
 
@@ -202,14 +209,6 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
   * 依此建構可得$$k: \mathbb{N} \rightarrow E$$為一對一且映成的函數，因此$$E \sim \mathbb{N}$$，則$$E$$為可數集 (QED)。
 
 </details>
-
-## 可數集合的聯集仍為可數集
-
-> $$\forall n \in \mathbb{N}, \ S_n$$為可數集，則$$\cup_{n \in \mathbb{N}} S_n$$仍為可數集。
-
-![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
-
-proof: link
 
 ### 可數集的有限多個積集仍為可數集
 

@@ -52,7 +52,7 @@ Cantor集合可得知以下兩問題答案均為否。
 * Cantor集合為不可數集。
 * Cantor集合的Lebesgue測度為0。
 * Cantor集合是緊緻集(compact set)。
-* Cantor集合是完全集(perfect set)。
+* Cantor集合是完全集(perfect set)(所有的點均為極限點)。
 * Cantor集合是疏落集。
 * Cantor集合是完全不連通集。
 * Cantor集合與正整數冪集合 $$\mathrm{P}(\mathbb{N})$$等價。
@@ -97,6 +97,12 @@ Cantor集合可得知以下兩問題答案均為否。
 因此去掉的總區間長度為$$\displaystyle \sum_{n=1}^\infty 2^{n-1}\frac{1}{3^n}  = \frac{1}{3} \sum_{n=0}^\infty \left(\frac{2}{3}\right)^n  = \frac{1}{3} \left( \frac{1}{1-2/3} \right) = 1$$
 
 所以Cantor集$$C$$的長度為$$|[0,1]|-1=0$$&#x20;
+
+## Cantor集為完全集
+
+令$$x \in C$$則$$x \in F_n$$，即對於每一層$$n$$，$$x$$屬於長度為$$\frac{1}{3^n}$$的$$2^n$$個閉區間中某一個區間。
+
+
 
 ## 參考資料
 

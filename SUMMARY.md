@@ -13,6 +13,7 @@
   * [自然數](math-analysis/set/natural-number.md)
   * [有理數](math-analysis/set/rational-number.md)
   * [實數中的集合](math-analysis/set/real-number.md)
+  * [Cantor集](math-analysis/set/Cantor-set.md)
   * [field與sigma-field](math-analysis/set/field-and-sigma-field.md)
   * [集合序列的極限](math-analysis/set/limit-of-set-sequence.md)
   * [集合的特徵函數](math-analysis/set/characteristic-function.md)

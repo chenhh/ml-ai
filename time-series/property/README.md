@@ -16,20 +16,22 @@ $$\Delta y_t \equiv y_t - y_{t-1}$$稱為$$y_t$$的<mark style="color:red;">一�
 
 > Definition: lag operator L
 >
-> $$L$$(有時使用符號$$B$$)稱為落後運算元，若$$L^ky_t \equiv y_{t-k}$$
+> $$L$$(有時使用符號$$B$$)稱為落後運算子，定義$$L^ky_t = L^k(y_t) \equiv y_{t-k}$$
+>
+> 其中$$L^k$$為落後運算子作用$$k$$次。
 >
 > <mark style="color:red;">由定義可得</mark>$$L$$<mark style="color:red;">為</mark>[<mark style="color:red;">線性算子</mark>](../../linear-algebra/linear-transform/#xian-xing-ying-she-zhuan-huan-linear-mapping-or-linear-transform)。
 >
 > * $$L^k(cy_t)=cL^k(y_t)=cy_{t-k}$$
 > * $$L^k(x_t+y_t)=L^k x_t+L^ky_t=x_{t-k}+y_{t-k}$$
 
-$$\forall a,b \in \mathbb{R},~aL^ky_t+b=ay_{t-k}+b$$
+$$\forall a,b \in \mathbb{R},~aL^k(y_t)+b=ay_{t-k}+b$$
 
 $$\forall c \in \mathbb{R} ~, Lc=c$$
 
-$$L^kL^jy_t = L^k y_{t-j}=y_{t-j-k}$$
+$$L^kL^j(y_t) = L^k (y_{t-j})=y_{t-j-k}$$
 
-$$L^0y_t=y_t$$
+$$L^0(y_t)=y_t$$
 
 $$L^{-k}y_t=y_{t+k}$$
 
@@ -57,8 +59,10 @@ $$y_t$$的<mark style="color:red;">一階差分</mark>可表示為$$\Delta y_t= 
 
 隨機樣本的均數與變異數，<mark style="color:blue;">一般條件下會隨時間變化(時變）</mark>，即：
 
-* $$\mathrm{E}(y_t) = \mu_t$$
-* $$\mathrm{Var}(y_t)=\sigma_t^2$$
+* $$\mathrm{E}(y_t) \equiv \mu_t \equiv \overline{y}_t$$
+  * 樣本均數： $$\frac{1}{T} \sum_{t=1}^T y_t$$
+* $$\mathrm{Var}(y_t)\equiv \sigma_t^2$$
+  * 樣本變異數(不偏)： $$\frac{1}{T-1}\sum_{t=1}^T (y_t - \overline{y}_t)^2$$
 
 因為時間序列中的資料，過去與未來的資料不一定為獨立同分佈，具有相關性，可用自我共變異函數(autocovariance function)與自我相關函數(autocorrelation function, ACF)來計算序列的相關。
 
@@ -69,6 +73,11 @@ $$y_t$$的<mark style="color:red;">一階差分</mark>可表示為$$\Delta y_t= 
 > $$\gamma(t,k)=\mathrm{Cov}(y_t, y_{t-k})=\mathrm{E}(y_t-\mu_t)(y_{t-k} - \mu_{t-k})$$
 >
 > 由定義可得　$$\gamma(t,0)=\mathrm{Cov}(y_t,y_t)=\mathrm{Var}(y_t)\equiv \sigma_t^2$$
+>
+> 樣本共變異數 \[[stackexchange: Question about sample autocovariance function](https://stats.stackexchange.com/questions/56238/question-about-sample-autocovariance-function)]：
+>
+> * $$\frac{1}{T-k} \sum_{t=1}^{T-k} (y_t-\overline{y}_{t})(y_{t-k}-\overline{y}_{t})$$
+> * $$\frac{1}{T} \sum_{t=1}^{T-k} (y_t-\overline{y}_{t})(y_{t-k}-\overline{y}_{t})$$
 
 ### k階自我相關係數
 

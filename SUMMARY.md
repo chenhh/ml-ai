@@ -165,7 +165,6 @@
 
 ## 時間序列 <a href="#time-series" id="time-series"></a>
 
-* [LPPL模型](time-series/lppl-mo-xing.md)
 * [簡介](time-series/time-series-introduction.md)
 * [時間序列性質](time-series/property/README.md)
   * [平穩性、定態(stationary)](time-series/property/ping-wen-xing-ding-tai-stationary.md)

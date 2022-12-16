@@ -30,7 +30,7 @@
 
 ## Lebesgue外測度(Lebesgue outer measure)
 
-> 定義$$\displaystyle m^{*}(E)=\inf \{ \sum_{k \geq 1}|I_k| ~\big|~ E\subseteq \bigcup_{k=1}^\infty I_k, ~\{I_k\} \text{ i.e. is L-covering of set } E  \}$$
+> 定義$$\displaystyle m^{*}(E)=\inf \{ \sum_{k \geq 1}|I_k| ~\big|~ E\subseteq \bigcup_{k=1}^\infty I_k, ~\{I_k\} \text{ i.e. is L-covering of set } E \}$$
 >
 > 為集合$$E$$的外測度。
 >
@@ -40,7 +40,7 @@
 * 因此在討論測度的證明時，必須要考慮無限或是有限測度。
 * 由定義知$$m^{*}(\empty)=0$$，因為$$\empty$$為任意集合的子集合，而包含$$\empty$$的最小集合為$$\empty$$。
 
-### 外測度的性質
+### 歐式空間外測度的性質
 
 1. \[非負性] $$m^{*}(E) \geq 0, ~ m^{*}(\empty)=0$$
 2. \[單調性] $$A \subseteq B \Rightarrow m^{*}(A) \leq m^{*}(B)$$
@@ -58,18 +58,17 @@
 
 <details>
 
-<summary> proof: 以epsilon球夾擠 </summary>
+<summary>proof: 以epsilon球夾擠</summary>
 
 令$$C=\{c_k\}_{k=1}^\infty$$為可數集合。
 
-令$$\epsilon >0$$，$$\forall k \in \mathbb{N}$$，定義$$I_k=(c_k - \frac{\epsilon}{2^{k+1}},  c_k + \frac{\epsilon}{2^{k+1}})$$，因此$$C \subseteq \bigcup_{k=1}^\infty I_k$$。
+令$$\epsilon >0$$，$$\forall k \in \mathbb{N}$$，定義$$I_k=(c_k - \frac{\epsilon}{2^{k+1}}, c_k + \frac{\epsilon}{2^{k+1}})$$，因此$$C \subseteq \bigcup_{k=1}^\infty I_k$$。
 
 而$$0 \leq m^{*} \sum_{k=1}^\infty |I_k| = \sum_{k=1}^\infty \frac{\epsilon}{2^k} = \epsilon$$
 
 因為$$\forall \epsilon >0$$，上述不等式均成立，所以$$m^{*}(E)=0$$。 (QED)
 
 </details>
-
 
 ### 範例：有理數集合的外測度為0
 
@@ -89,7 +88,7 @@
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
 $$\forall \epsilon >0$$，取一開區間$$J \ni \overline{I} \subset J$$且$$|J| < |I|+\epsilon$$
 
@@ -103,9 +102,7 @@ $$\forall \epsilon >0$$，取一開區間$$J \ni \overline{I} \subset J$$且$$|J
 
 由(1)(2)得$$m^{*}(\overline{I})=|I|$$ (QED)
 
-
 </details>
-
 
 ## 外測度的平移不變性
 
@@ -113,7 +110,7 @@ $$\forall \epsilon >0$$，取一開區間$$J \ni \overline{I} \subset J$$且$$|J
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
 令$$\{I_k\}_{k=1}^\infty$$為可數開集合序列且$$E \subseteq \bigcup_{k=1}^\infty I_k$$。
 
@@ -125,15 +122,13 @@ $$\forall \epsilon >0$$，取一開區間$$J \ni \overline{I} \subset J$$且$$|J
 
 </details>
 
-
-
 ## 外測度的可數次可加性
 
 > 給定可數集合序列$$\{E_k\}_{k=1}^\infty$$(不必為互斥集合)，則：$$\displaystyle m^{*} (\bigcup_{k=1}^\infty E_k) \leq \sum_{k=1}^\infty m^{*}(E_k)$$。
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
 如果集合序列中任一集合的外測度為無窮大時($$\exists k \in \mathbb{N} \ni m^{*}(E_k)=\infty$$)，則不等式必成立。
 
@@ -145,16 +140,14 @@ $$\forall \epsilon >0$$，取一開區間$$J \ni \overline{I} \subset J$$且$$|J
 
 所以$$\{I_{k,l}, k.l=1,2,\dots\}$$為$$\bigcup_{k=1}^\infty E_k$$的L-覆蓋，可得：
 
-$$\displaystyle  \begin{aligned} m^{*}(\bigcup_{k=1}^{\infty} E_k) & \leq \sum_{k,l=1}^\infty |I_{k,l}| \\ & = \sum_{k=1}^{\infty} \sum_{l=1}^{\infty} |I_{k,l}|  \\ & < \sum_{k=1}^{\infty} m^{*}(E_k) + \epsilon/2 \\ & = \sum_{k=1}^{\infty}m^{*}(E_k) + \epsilon  \end{aligned}$$--(1)
+$$\displaystyle \begin{aligned} m^{*}(\bigcup_{k=1}^{\infty} E_k) & \leq \sum_{k,l=1}^\infty |I_{k,l}| \\ & = \sum_{k=1}^{\infty} \sum_{l=1}^{\infty} |I_{k,l}| \\ & < \sum_{k=1}^{\infty} m^{*}(E_k) + \epsilon/2 \\ & = \sum_{k=1}^{\infty}m^{*}(E_k) + \epsilon \end{aligned}$$--(1)
 
 $$\forall \epsilon >0$$時，(1)均成立，因此得可數次可加性(QED)。
 
 </details>
 
-
-
 ## 距離外測度性質
 
 > 給定集合$$E_1, E_2 \subseteq \mathbb{R}$$，若$$d(E_1, E_2) > 0$$，則$$m^{*}(E_1 \cup E_2) = m^{*}(E_1) + m^{*}(E_2)$$。
 >
-> 此要
+> 此性質可證明開集的可測性。

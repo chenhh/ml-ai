@@ -207,7 +207,7 @@ Proof:
 
 $$\displaystyle \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}=\frac{1}{1} - \frac{1}{2} + \frac{1}{3} - \frac{1}{4}+\frac{1}{5} - \cdots$$
 
-![alternating harmonic series](<../../.gitbook/assets/AltSeriesExampleGraph (1).png>)
+![alternating harmonic series](../../.gitbook/assets/AltSeriesExampleGraph.png)
 
 ## 狄利克雷審斂法(Dirichlet test)
 

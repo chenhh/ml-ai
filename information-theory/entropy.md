@@ -1,4 +1,4 @@
-# 熵(entropy)
+# 熱力學熵(thermodynamics entropy)
 
 ## 簡介
 

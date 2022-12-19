@@ -189,6 +189,7 @@
 * [資訊度量](information-theory/information-measure.md)
 * [熱力學熵(thermodynamics entropy)](information-theory/entropy.md)
 * [統計力學熵(](information-theory/statistical-mechanical-entropy.md)
+* [資訊熵(information entropy)](information-theory/information-entropy.md)
 * [最大熵](information-theory/maximum-entropy.md)
 * [Kelly公式](information-theory/Kelly-formula.md)
 

@@ -14,6 +14,18 @@
 
 上述可使用函數$$g(\cdot)$$使等號成立，即$$\displaystyle g\left(\frac{1}{p_x p_y} \right) =  g \left( \frac{1}{p_x}  \right) +  g\left( \frac{1}{p_y} \right)$$，而使等號成立的$$g(x)=-\log(x)$$，可得$$\displaystyle -\log\left(\frac{1}{p_x p_y} \right) =  -\log \left( \frac{1}{p_x}  \right) -\log \left( \frac{1}{p_y} \right)$$。
 
+因此，我們可以總結出，從任何機率為$$p$$的事件發生中獲得的資訊是$$\log（\frac{1}{p}）=-\log p$$。<mark style="color:red;">Tribus（1969）認為</mark>$$-\log p$$<mark style="color:red;">是對機率為</mark>$$p$$<mark style="color:red;">的事件發生的不確定性的衡量，或者說是對該事件發生的驚訝的衡量</mark>。這個概念可以擴展到一系列以機率$$p_1, p_2, \dots, p_N$$發生的$$N$$個事件。這就導致了下面要描述的Shannon熵。
+
+## 熵的類型
+
+有幾種類型的資訊熵（Kapur, 1989），如Shannon熵（Shannon, 1948）、Tsallis熵（Tsallis, 1988）、指數熵（Pal and Pal, 1991a, b）、epsilon熵（Rosenthal和Binia，1988）、演算法熵（Zurek，1989）、Hartley熵（Hartley，1928）、Renyi熵（1961）、Kapur熵（Kapur，1989），等等。其中最<mark style="color:red;">重要的是Shannon熵、Tsallis熵、Renyi熵和指數熵</mark>。
+
+### Shannon熵
+
+1948年，Shannon提出了現在被稱為資訊理論的或簡單的資訊熵。它現在更經常被稱為Shannon熵。<mark style="color:red;">他意識到，當資訊被指定時，不確定性被減少或消除，因此他尋求一種不確定性的衡量標準</mark>。對於一個機率分佈$$P=\{p_1, p_2, \dots , p_N \}$$，其中$$p_1, p_2, \dots, p_N$$是隨機變數$$X$$或隨機實驗的$$N$$個結果（$$x_i, ~i=1,2,\dots,N$$）的機率，也就是說，每個值都對應於一個事件，我們可以寫成：
+
+$$\displaystyle -\log \left(  \frac{1}{p_1 p_2 \dots, p_N} \right) = -\log \left( \frac{1}{p_1} \right) -\log \left(\frac{1}{p_2} \right) - \dots - -\log \left(\frac{1}{p_N} \right)$$
+
 ## 參考資料
 
 * Vijay P. Singh,  "_Entropy theory and its application in environmental and water engineering," ch1,_ John Wiley & Sons, 2013.

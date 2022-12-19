@@ -187,7 +187,8 @@
 * [資訊理論簡介](information-theory/zi-xun-li-lun-jian-jie.md)
 * [點對點模型與資訊熵](information-theory/p2p-model-entropy.md)
 * [資訊度量](information-theory/information-measure.md)
-* [熵(entropy)](information-theory/entropy.md)
+* [熱力學熵(thermodynamics entropy)](information-theory/thermodynamics-entropy.md)
+* [統計力學熵(](information-theory/statistical-mechanical-entropy.md)
 * [最大熵](information-theory/maximum-entropy.md)
 * [Kelly公式](information-theory/Kelly-formula.md)
 

@@ -24,7 +24,37 @@
 
 1948年，Shannon提出了現在被稱為資訊理論的或簡單的資訊熵。它現在更經常被稱為Shannon熵。<mark style="color:red;">他意識到，當資訊被指定時，不確定性被減少或消除，因此他尋求一種不確定性的衡量標準</mark>。對於一個機率分佈$$P=\{p_1, p_2, \dots , p_N \}$$，其中$$p_1, p_2, \dots, p_N$$是隨機變數$$X$$或隨機實驗的$$N$$個結果（$$x_i, ~i=1,2,\dots,N$$）的機率，也就是說，每個值都對應於一個事件，我們可以寫成：
 
-$$\displaystyle -\log \left(  \frac{1}{p_1 p_2 \dots, p_N} \right) = -\log \left( \frac{1}{p_1} \right) -\log \left(\frac{1}{p_2} \right) - \dots - -\log \left(\frac{1}{p_N} \right)$$
+$$\displaystyle -\log \left(  \frac{1}{p_1 p_2 \dots, p_N} \right) = -\log \left( \frac{1}{p_1} \right) -\log \left(\frac{1}{p_2} \right) - \dots  -\log \left(\frac{1}{p_N} \right)$$--(1.9)
+
+上式說明了通過觀察$$N$$個事件的聯合發生所獲得的資訊。
+
+可將平均資訊量視為以下期望值形式：$$\displaystyle H=-\sum_{i=1}^N p_i \log p_i$$--(1.10)，其中$$H$$為Shannon定義的熵。
+
+方程（1.10）所給出的Shannon（1948）的資訊熵與方程（1.4b）所給出的熱力學熵的形式相似，後者的發展可以歸功於Boltzmann和Gibbs。因此，一些研究者將$$H$$命名為Shannon-Boltzmann-Gibbs熵（見Papalexiou和Koutsyiannis，2012）。在本文中，我們將稱其為Shannan熵。
+
+(1.4)或(1.10)的熵可改寫如下：
+
+$$\displaystyle H(x)=H(P)=-K \sum_{i=1}^N p(x_i) \log(p(x_i)) ~ \text{s.t.} ~ \sum_{i=1}^N p(x_i) = 1$$--(1.11)
+
+* 其中$$H(X)$$為隨機變數$$X$$的熵，$$X: \{x_1, x_2 ,\dots, x_N\}$$，$$P: \{p_1, p_2, \dots, p_N\}$$為$$X$$的分佈，$$K$$為依賴於對數基數的參數。如果使用不同的熵單位，那麼對數的基數就會改變。對數就會改變。例如，人們用位元表示基數2，用Napier或nat或nit表示基數e，而 分貝或logit或docit表示基數10。
+
+通常取$$K=1$$，因此資訊熵如下：
+
+$$\displaystyle H(X)=H(P)=-\sum_{i=1}^N p(x_i) \log p(x_i)$$--(1.12)
+
+<mark style="color:blue;"></mark>$$H(X)$$<mark style="color:blue;">由式(1.12)表示隨機變數</mark>$$X$$<mark style="color:blue;">或其機率分佈</mark>$$P(X)$$<mark style="color:blue;">的資訊量。它是不確定性的量的度量，或間接地是</mark>$$x$$<mark style="color:blue;">單個值的平均資訊量。方程(1.12)滿足了許多需求，如連續性、對稱性、可加性、可擴展性、遞迴性等(Shannon and Weaver, 1949)，並且與熱力學熵具有相同的表達形式，因此將</mark>$$H$$<mark style="color:blue;">定義為熵</mark>。
+
+（1.12）指出，$$H$$是對實驗結果的不確定性的衡量，或者是對實驗中獲得的資訊的衡量，它可以減少不確定性。它也說明了機率分佈為$$(p_1 , p_2 , \dots , p)N)$$的訊號源所傳輸的資訊量的期望值。
+
+<mark style="color:red;">Shannon熵可以被看作是猜測一種結果性質的觀察者的優柔寡斷，或者看作是可以找到不同安排的系統的無序性。這種測量方法只考慮了一個事件發生的可能性，而不是它的意義或價值。這就是熵概念的主要侷限性</mark>（Marchand, 1972）。因此，$$H$$有時被稱為資訊指數或資訊含量。
+
+如果$$X$$是一個決定性的變數，那麼它取某一數值的機率是 1，所有其他備選值的機率為零。那麼，（1.12）可得 $$H(x)=0$$，可以看作是熵函數的下限值 。這相當於絕對的確定性，也就是說，沒有不確定性，系統是完全有序的。另一方面，當所有$$x_i$$的可能性相同時，也就是說。 變數是均勻分佈的$$（p_i = 1/N, i = 1, 2, \dots, N）$$，則$$H(X)=H_{\max}(X)=\log N$$--(1.13)
+
+這表明熵函數達到最大值，式(1.13)定義了上限或將導致最大熵。這也揭示了結果的不確定性最大。由式(1.10)和式(1.13)可知，<mark style="color:red;">事件數量越大，熵測度越大</mark>。這在直覺上很吸引人，因為從更多事件的發生中獲得更多資訊，<mark style="color:red;">當然，除非事件的發生機率為零。當不確定性最大或無序性最大時，熵最大</mark>。
+
+現在我們可以說，任何變數的熵總是在以下範圍內呈現正值：
+
+$$0 \leq H(X) \leq N$$--(1.14)
 
 ## 參考資料
 

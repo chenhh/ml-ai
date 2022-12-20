@@ -58,6 +58,16 @@ $$0 \leq H(X) \leq N$$--(1.14)
 
 一般的情況是許多機率分佈位於這兩個極端之間。這表明$$H$$存在有序-無序連續統；<mark style="color:red;">也就是說，對分佈形式的更多約束導致熵的減少</mark>。統計上最可能的狀態對應於最大熵。我們可以進一步擴展這種解釋。
 
+如果有兩個結果相等的機率分佈，一個如上所述（即$$p_i=p$$，$$i=1,2,\dots,N$$），另一個為$$q_i=q$$，$$i=1,2, \dots,M$$。，那麼就可以確定這兩個分佈的資訊含量之差為$$\Delta H = H_p - H_q = \log_2 p - \log_2 q = \log_2 (p/q)$$ bits，其中$$H_p$$是$$\{p_i, ~ i = 1, 2, \dots , N\}$$的資訊含量或熵，$$H_q$$是$$\{q_i ,~ i = 1, 2, \dots , M\}$$的資訊含量或熵。我們可以看到，如果$$q>p$$或（$$M<N$$），則$$\Delta H>0$$。在這種情況下，由於可能的結果或結果不確定性的增加，熵增加或資訊丟失。另一方面，如果$$q<p$$或($$M>N$$)，則$$\Delta H<0$$。這種情況下，由於可能結果的數量減少或不確定性的增加，對應於資訊的獲得。
+
+對應於$$H_{\max}$$，資訊的度量可建構為如下：
+
+$$\displaystyle \begin{aligned} I & = H_{\max} - H \\   & = \log n + \sum_{i=1}^n p_i \log p_i \\   & = \sum_{i=1}^n p_i \log(\frac{p_i}{1/n}) \\   & = \sum_{i=1}^n p_i \log (\frac{p_i}{q_i})  \end{aligned}$$--(1.15)
+
+其中$$q_i = \frac{1}{n}$$。在(1.15)中，$$\{q_i\}$$可視為先驗分佈，而$$\{p_i\}$$可視為後驗分佈。以$$H_{\max}$$正規化後得相對冗餘度$$0 \leq R \leq 1$$：
+
+$$R = \frac{I}{H_{\max}} = 1 - \frac{H}{H_{\max}}$$--(1.16)
+
 ## 參考資料
 
 * Vijay P. Singh,  "_Entropy theory and its application in environmental and water engineering," ch1,_ John Wiley & Sons, 2013.

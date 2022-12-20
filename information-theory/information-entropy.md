@@ -56,6 +56,8 @@ $$\displaystyle H(X)=H(P)=-\sum_{i=1}^N p(x_i) \log p(x_i)$$--(1.12)
 
 $$0 \leq H(X) \leq N$$--(1.14)
 
+一般的情況是許多機率分佈位於這兩個極端之間。這表明$$H$$存在有序-無序連續統；<mark style="color:red;">也就是說，對分佈形式的更多約束導致熵的減少</mark>。統計上最可能的狀態對應於最大熵。我們可以進一步擴展這種解釋。
+
 ## 參考資料
 
 * Vijay P. Singh,  "_Entropy theory and its application in environmental and water engineering," ch1,_ John Wiley & Sons, 2013.

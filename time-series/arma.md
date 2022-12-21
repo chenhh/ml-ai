@@ -20,3 +20,6 @@ $$\displaystyle \begin{aligned} y_t & = b_0 + b_1(b_0 + b_1 y_{t-2} + \epsilon_{
 
 此時可得$$\displaystyle \begin{aligned} y_t & = b_0 \sum_{j=0}^\infty b_1^j + \sum_{j=0}^\infty b_1^j \epsilon_{t-j} \\     & = \frac{b_0}{ 1-b_1} + \sum_{j=0}^\infty b_1^j \epsilon_{t-j} \\     & = \mu + \sum_{j=0}^\infty b_1^j \epsilon_{t-j} \end{aligned}$$，其中$$\displaystyle \mu = \frac{b_0}{1-b_1}$$
 
+取期望值可得$$\displaystyle \begin{aligned} \mathrm{E}(y_t) & = \mathrm{E}(\mu) + \mathrm{E}(\sum_{j=0}^\infty b_1^j \epsilon_{t-j}) \\      & = \mathrm{E}(\mu) \\      & = \mu, ~ \forall t   \end{aligned}$$，即期望值為常數。
+
+變異數為：$$\displaystyle \begin{aligned} \gamma(0) &= \mathrm{Var}(y_t) \\     & = \mathrm{E}(y_t - \mu)^2 \\     & = \mathrm{E}(\sum_{j=0}^\infty b_1^j \epsilon_{t-j})^2 \\     & = \sum_{j=0}^\infty b_1^{2j} \mathrm{E}( \epsilon_{t-j})^2 \\     & = \sum_{j=0}^\infty b_1^{2j} \sigma^2 \\     & = \sigma^2 (1+ b_1^2 + b_1^4+\dots) \\     & = \frac{\sigma^2}{1-b_1^2} < \infty ~ \text{ if } |b_1| < 1  \end{aligned}$$

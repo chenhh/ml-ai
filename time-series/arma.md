@@ -10,9 +10,9 @@
 
 > $$y_t = b_0 + b_1 y_{t-1}+\epsilon_t$$，
 >
-> 其中$$\epsilon_t \sim WN(0,\ \sigma^2)$$為白噪音且$$\mathrm{E}(\epsilon_t y_{t-j}) > 0, ~\forall j > 0$$
+> 其中$$\epsilon_t \sim WN(0,\ \sigma^2)$$為白噪音且$$\mathrm{E}(\epsilon_t y_{t-j}) > 0, ~\forall j > 0$$，即誤差$$\epsilon_t$$只和當期的觀測值$$y_t$$有關。
 >
-> 而AR(1)為定態的條件為$$|b_1| < 1$$。
+> <mark style="color:red;">而AR(1)為定態的條件為</mark>$$|b_1| < 1$$。
 
 將疊代展開得
 
@@ -35,3 +35,23 @@ $$\displaystyle \begin{aligned} \gamma(0) &= \mathrm{Var}(y_t) \\     & = \mathr
 <mark style="color:red;">在</mark>$$|b_1|<1$$<mark style="color:red;">時，自我共變異數收斂</mark>：
 
 $$\displaystyle \begin{aligned} \gamma(j) &= \mathrm{Cov}(y_t, y_{t-j}) \\     & = \mathrm{E}(y_t - \mu)(y_{t-j} - \mu) \\     & = \mathrm{E}[(\epsilon_{t}+b_1 \epsilon_{t-1}+b_1^2 \epsilon_{t-2}+\dots)                     (\epsilon_{t-j}+ b_1 \epsilon_{t-j-1}+ b_1^2 \epsilon_{t-j-2}+\dots)] \\     & = b_1^j \mathrm{E}(\epsilon_{t-j}\epsilon_{t-j}) +          b_1^{j+1} b_1 \mathrm{E}(\epsilon_{t-j-1}\epsilon_{t-j-1}) +          b_1^{j+2} b_1^2 \mathrm{E}(\epsilon_{t-j-2}\epsilon_{t-j-2}) + \dots \\     & = \sigma^2 b_1^j (1+b_1^2 +b_1^4 + \dots ) \\     & = \frac{\sigma^2 b_1^j}{1-b_1^2} < \infty \text{ if } |b_1| < 1  \end{aligned}$$
+
+### 不考慮截距項的AR(1)
+
+> $$x_t = b_1 x_{t-1} + \epsilon_t$$
+
+有截距項同時減去$$\mu$$得：
+
+&#x20;$$y_t - \mu = b_0 - \mu + b_1 y_{t-1}+ \epsilon_t$$
+
+右側同時加減$$b_1\mu$$可得$$y_t - \mu = b_0 - \mu +b_1\mu + b_1(y_{t-1} - \mu ) + \epsilon_t$$
+
+整理後可得：
+
+$$\displaystyle  \begin{aligned} y_t - \mu & = b_0 - (1-b_1)\mu + b_1 (y_{t-1} - \mu) + \epsilon_t \\     & = b_0 - (1-b_1) \frac{b_0}{1-b_1} + b_1 (y_{t-1} - \mu) + \epsilon_t \\     & = b_1(y_{t-1} - \mu) + \epsilon_t \end{aligned}$$
+
+<mark style="color:red;">即沒有截距項的AR(1)序列為一個去掉均值的序列，即</mark>$$\mathrm{E}(x_t) = \mathrm{E}(y_t) - \mu = 0$$。
+
+## AR(1)模型參數估計
+
+> $$\displaystyle \hat{b_1} = \frac{\hat{\mathrm{Cov}}(y_t, y_{t-1})}{\hat{\mathrm{Var}}(y_t)} = \frac{}{}$$

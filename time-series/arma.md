@@ -54,4 +54,14 @@ $$\displaystyle  \begin{aligned} y_t - \mu & = b_0 - (1-b_1)\mu + b_1 (y_{t-1} -
 
 ## AR(1)模型參數估計
 
-> $$\displaystyle \hat{b_1} = \frac{\hat{\mathrm{Cov}}(y_t, y_{t-1})}{\hat{\mathrm{Var}}(y_t)} =  \frac{\sum_{t=2}^T(y_t - \overline{y})(y_{t-1}-\overline{y})}{\sum_{t=2}^T (y_t - \overline{y})^2}$$
+$$\displaystyle \hat{b_1} = \frac{\hat{\mathrm{Cov}}(y_t, y_{t-1})}{\hat{\mathrm{Var}}(y_t)} =  \frac{\sum_{t=2}^T(y_t - \overline{y})(y_{t-1}-\overline{y})}{\sum_{t=2}^T (y_t - \overline{y})^2}$$
+
+
+
+## AR(1)之衝擊反應函數(impulse response function, IRF)
+
+IRF可了解動態體系內的內生變，因此外生變動(impulse)的反應(response)。
+
+AR(1)中，衝擊反應函數指給定外生衝擊$$\epsilon_t$$的一次變動下，此模型序列對應的動態變化。
+
+$

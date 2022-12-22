@@ -54,4 +54,4 @@ $$\displaystyle  \begin{aligned} y_t - \mu & = b_0 - (1-b_1)\mu + b_1 (y_{t-1} -
 
 ## AR(1)模型參數估計
 
-> $$\displaystyle \hat{b_1} = \frac{\hat{\mathrm{Cov}}(y_t, y_{t-1})}{\hat{\mathrm{Var}}(y_t)} = \frac{}{}$$
+> $$\displaystyle \hat{b_1} = \frac{\hat{\mathrm{Cov}}(y_t, y_{t-1})}{\hat{\mathrm{Var}}(y_t)} =  \frac{\sum_{t=2}^T(y_t - \overline{y})(y_{t-1}-\overline{y})}{\sum_{t=2}^T (y_t - \overline{y})^2}$$

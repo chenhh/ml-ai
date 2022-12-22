@@ -64,4 +64,20 @@ IRF可了解動態體系內的內生變，因此外生變動(impulse)的反應(r
 
 AR(1)中，衝擊反應函數指給定外生衝擊$$\epsilon_t$$的一次變動下，此模型序列對應的動態變化。
 
-$
+AR(1)可寫為：
+
+$$ y_t = \mu + (\epsilon_t + b_1 \epsilon_{t-1} + b_1^2 \epsilon_{t-2} + \dots ) + \lim_{k \rightarrow \infty} b_1^k y_{t-k}
+
+所以：
+
+$$ y_{t+j} = \mu + (\epsilon_{t+j} + b_1 \epsilon_{t+j-1} + b_1^2 \epsilon_{t+j-2} + \dots ) + \lim_{k \rightarrow \infty} b_1^k y_{t-k}
+
+假設在第$$t$$期時有一外生衝擊$$\epsilon_t=1$$，而對於$$\epsilon_{t+j}=0, \forall j \neq 0$$，則定義衝擊反應函數$$\Psi(j)$$如下：
+
+$$\displaystyle \Psi(j)=\frac{\partial y_{t+j}}{\partial \epsilon_t} = b_1^j$$
+
+因此AR(1)中，$$\Psi(0)=1, ~ \Psi(1)=b_1, ~ \Psi(2)=b_1^2, ~ \dots, \Psi(j)=b_1^j$$。
+
+* 可得在$$|b_1|<1$$時，AR(1)序列的$$y_t$$的IRF會收斂至0。以經濟學解釋為模型受到外生衝擊之後，最後會回到穩定均衡狀態；反之若$$|b_1| >1$$，即AR(1)非定態，則$$y_t$$的IRF會發散到無窮大。
+* 如果$$b_1$$為正值，則IRF會單調的收斂或發散；
+* 如果$$b_1$$為負值，則IRF會以鋸齒狀收斂或發散；

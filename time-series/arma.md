@@ -81,3 +81,10 @@ $$\displaystyle \Psi(j)=\frac{\partial y_{t+j}}{\partial \epsilon_t} = b_1^j$$
 * 可得在$$|b_1|<1$$時，AR(1)序列的$$y_t$$的IRF會收斂至0。以經濟學解釋為模型受到外生衝擊之後，最後會回到穩定均衡狀態；反之若$$|b_1| >1$$，即AR(1)非定態，則$$y_t$$的IRF會發散到無窮大。
 * 如果$$b_1$$為正值，則IRF會單調的收斂或發散；
 * 如果$$b_1$$為負值，則IRF會以鋸齒狀收斂或發散；
+
+## p階自我迴歸模型: AR(p)
+
+> $$y_t = b_0 + b_1 y_{t-1}+ \dots + b_p y_{t-p} + \epsilon_t $$
+> 以落後運算元表示為(1-b_1 L - b_2 L - \dots - b_p L)y_t = b_0 + \epsilon_t$$
+> \epsilon_t ~ \text{WN}(0, \sigma^2)
+> 定態的條件為$$b(z)=1-b_1z-b_2z^2 - \dots - b_pz^p = 0多項式根(可能為複數或負值)的範數大於1(落於單位圓之外)

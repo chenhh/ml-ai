@@ -66,11 +66,11 @@ AR(1)中，衝擊反應函數指給定外生衝擊$$\epsilon_t$$的一次變動�
 
 AR(1)可寫為：
 
-$$ y_t = \mu + (\epsilon_t + b_1 \epsilon_{t-1} + b_1^2 \epsilon_{t-2} + \dots ) + \lim_{k \rightarrow \infty} b_1^k y_{t-k}
+$$ y_t = \mu + (\epsilon_t + b_1 \epsilon_{t-1} + b_1^2 \epsilon_{t-2} + \dots ) + \lim_{k \rightarrow \infty} b_1^k y_{t-k}$$
 
 所以：
 
-$$ y_{t+j} = \mu + (\epsilon_{t+j} + b_1 \epsilon_{t+j-1} + b_1^2 \epsilon_{t+j-2} + \dots ) + \lim_{k \rightarrow \infty} b_1^k y_{t-k}
+$$ y_{t+j} = \mu + (\epsilon_{t+j} + b_1 \epsilon_{t+j-1} + b_1^2 \epsilon_{t+j-2} + \dots ) + \lim_{k \rightarrow \infty} b_1^k y_{t-k}$$
 
 假設在第$$t$$期時有一外生衝擊$$\epsilon_t=1$$，而對於$$\epsilon_{t+j}=0, \forall j \neq 0$$，則定義衝擊反應函數$$\Psi(j)$$如下：
 

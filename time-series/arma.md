@@ -129,12 +129,17 @@ BIC和AIC的差界僅在於懲罰項，只要$$T>8$$或$$\log T > 2$$，即BIC�
 
 $$
 \displaystyle
+\begin{matrix}
+\underbrace{
 \begin{bmatrix}
 y_t \\
 y_{t-1} \\
 \vdots \\
 y_{t-p-1}
 \end{bmatrix}
+} \\
+Y_t
+\end{matrix}
  =
 
 \begin{bmatrix}

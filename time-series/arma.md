@@ -196,10 +196,10 @@ $$
 \begin{aligned}
 \mathrm{E}(y_t) &= c + b_1 \mathrm{E}(y_{t-1}) + \dots + b_p \mathrm{E}(y_{t-p}) \\
  \mu & = c + b_1 \mu + \dots + b_p \mu \\
- \mu & = \ frac{c}{1-b_1 - b_2 - \dots - b_p} \\
-\Rightarrow y_t - \mu = b_1 (y_{t-1} - \mu) + \dots + b_p (y_{t-p} - \mu) + \epsilon_t \\
-\Rightarrow B(L)(y_t - \mu) = \epsilon_t
-\Rightarrow y_t - \mu = B(L)^{-1}\epsilon_t = \psi(L) \epsilon_t
+ \mu & = \frac{c}{1-b_1 - b_2 - \dots - b_p} \\
+\Rightarrow y_t - \mu &= b_1 (y_{t-1} - \mu) + \dots + b_p (y_{t-p} - \mu) + \epsilon_t \\
+\Rightarrow B(L)(y_t - \mu) &= \epsilon_t \\
+\Rightarrow y_t - \mu &= B(L)^{-1}\epsilon_t = \psi(L) \epsilon_t
 \end{aligned}
 $$
 
@@ -212,8 +212,7 @@ $$ \displaystyle y_t = \mu + \sum_{j=0}^\infty \psi_j \epsilon_{t-j} $$
 $$ 
 \displaystyle
 \begin{aligned}
-\mathrm{E}((y_t - \mu)(y_t - \mu)) &= b_1 \mathrm{E}((y_{t-1} - \mu)(y_t - \mu)(y_t - \mu)) + \dots + b_p 
-\mathrm{E}((y_{t-p} - \mu)(y_t - \mu)) + \mathrm{E}(\epsilon(y_t - \mu)) \\
+\mathrm{E}((y_t - \mu)(y_t - \mu)) &= b_1 \mathrm{E}((y_{t-1} - \mu)(y_t - \mu)(y_t - \mu)) + \dots + b_p \mathrm{E}((y_{t-p} - \mu)(y_t - \mu)) + \mathrm{E}(\epsilon(y_t - \mu)) \\
 \gamma(0) & = b_1 \gamma(1) + \dots +b_p \gamma(p) + \sigma^2
 \end{aligned} $$
 

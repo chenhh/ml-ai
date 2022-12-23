@@ -180,5 +180,9 @@ Y_{t-1} \in \mathbb{R}^{p \times 1}
 \end{matrix}
 $$
 
-可寫成矩陣式：$$Y_t = \Phi Y_{t-1} \epsilon_t$$。
+可寫成矩陣式(伴隨形式(companion form)、狀態空間表(state space representation))：$$ Y_t = \Phi Y_{t-1} \epsilon_t $$。
+
+若在時間$$t$$要預測未來$$j$$期資料時，可用$$\mathrm{E}(y_{t+j}) = \Phi^j Y_t$$，且可用對角化求$$\Phi^j=PD^{j}P^{-1}$$。
+
+
 

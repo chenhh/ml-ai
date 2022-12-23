@@ -101,8 +101,25 @@ $$\displaystyle \Psi(j)=\frac{\partial y_{t+j}}{\partial \epsilon_t} = b_1^j$$
 * [共軛複根]例如AR(2)模型：$$y_t = 0.5 + 0.3y_{t-1}-0.4y_{t-2} + \epsilon_t$$, 多項式$$1-0.3z+0.4z^2=0$$, $$\displaystyle z=\frac{3}{8} \pm \frac{\sqrt{151}}{8}i$$, $$|z| = \sqrt{(\frac{3}{8})^2 + (\frac{\sqrt{151}}{8})^2}=\sqrt{2.5} > 1$$，因此為定態序列。
 
 ### AR(p)模型的定態條件
+
 > 若AR(p)為定態序列， 則$$\sum_{i=1}^p b_i < 1$$。
 > 
 > 若$$\sum_{i=1}^p |b_i| < 1$$，則AR(p)為定態序列。
 > 
 > $$\sum_{i=1}^p b_i=1$$，則該序列至少存在一個單根(非定態)。
+
+### AR(p)落後期數估計
+
+AR(p)模型中，$$y_t = b_0 + b_1 y_{t-1} + \dots + b_p y_{t-p} + \epsilon_t$$是多元迴歸模型，解數變數為$$y_{t-1}, \dots, y_{t-p}$$，
+因此參數$$b_1, \dots, b_p$$可用最小平方法估計，現在的問題是如何判定落後的期數$$p$$? 常用方法為AIC(Akaike information criterion)或
+BIC(Bayesian information criterion)，則最佳的落後期 $$p^{*} = \argmin_{p=1,2,3,\dots} AIC(p) \text{ or } BIC(p)$$。
+
+* $$\displaystyle AIC(p) = \log\left( \frac{\sum_{t=1}^T\hat{\epsilon}_t^2 }{T} \right) + (p+1) \frac{2}{T}$$
+* $$\hat{\epsilon}_t=y_t - \hat{y}_t = y_t - (\hat{b}_0 + \hat{b}_1 y_{t-1} + \dots + \hat{b}_p y_{t-p} )$$為殘差(未解釋變異)。
+* $$\displaystyle BIC(p) = \log\left( \frac{\sum_{t=1}^T\hat{\epsilon}_t^2 }{T} \right) + (p+1) \frac{\log T}{T}$$
+
+BIC和AIC的差界僅在於懲罰項，只要$$T>8$$或$$\log T > 2$$，即BIC對於多增日一個變數落後期作為懲罰較AIC大，因此BIC傾向選擇一個落後期較少的模型。
+
+理論上BIC所決定的落後期數$$p_{BIC}$$為真實落後期數$$p$$的一致估計式，但樣本較小時，AIC的表現較BIC佳。
+
+

@@ -123,3 +123,41 @@ BIC和AIC的差界僅在於懲罰項，只要$$T>8$$或$$\log T > 2$$，即BIC�
 理論上BIC所決定的落後期數$$p_{BIC}$$為真實落後期數$$p$$的一致估計式，但樣本較小時，AIC的表現較BIC佳。
 
 
+### AR(p)模型的預測
+
+為了簡化符號，假設AR(p)的均值為0，即$$y_t = b_1 y_{t-1} + b_2 y_{t-2} + \dots + b_p y_{t-p} + \epsilon_t$$。
+
+$$
+\displaystyle
+\begin{bmatrix}
+y_t \\
+y_{t-1} \\
+\vdots \\
+y_{t-p-1}
+\end{bmatrix}
+ =
+
+\begin{bmatrix}
+b_1 & b_2 & \dots & b_{p-1} & b_p \\
+1 & 0 & \dots & 0 & 0 \\
+0 & 1 & \dots & 0 & 0 \\
+\vdots & \vdots & \dots & \vdots & \vdots \\
+0 & 0 & \dots & 1 & 0
+\end{bmatrix} 
+\begin{bmatrix}
+y_{t-1} \\
+y_{t-2} \\
+\vdots \\
+y_{t-p}
+\end{bmatrix}
++
+\begin{bmatrix}
+\epsilon_t \\
+0 \\
+\vdots \\
+0
+\end{bmatrix}
+$$
+
+可寫成矩陣式：$$Y_t = \Phi Y_{t-1} \epsilon_t$$。
+

@@ -185,4 +185,64 @@ $$
 若在時間$$t$$要預測未來$$j$$期資料時，可用$$\mathrm{E}(y_{t+j}) = \Phi^j Y_t$$，且可用對角化求$$\Phi^j=PD^{j}P^{-1}$$。
 
 
+## Yule-Walker方程式
 
+給定定態AR(p)模型：$$ y_t = c + b_1 y_{t-1} + \dots + b_p y_{t-p} + \epsilon_t, ~ \epsilon_t \sim \text{WN}(0, \sigma^2)$$ 
+
+兩側取期望值得：
+
+$$
+\displaystyle
+\begin{aligned}
+\mathrm{E}(y_t) &= c + b_1 \mathrm{E}(y_{t-1}) + \dots + b_p \mathrm{E}(y_{t-p}) \\
+ \mu & = c + b_1 \mu + \dots + b_p \mu \\
+ \mu & = \ frac{c}{1-b_1 - b_2 - \dots - b_p} \\
+\Rightarrow y_t - \mu = b_1 (y_{t-1} - \mu) + \dots + b_p (y_{t-p} - \mu) + \epsilon_t \\
+\Rightarrow B(L)(y_t - \mu) = \epsilon_t
+\Rightarrow y_t - \mu = B(L)^{-1}\epsilon_t = \psi(L) \epsilon_t
+\end{aligned}
+$$
+
+因此可改寫AR(p)為
+$$ \displaystyle y_t = \mu + \sum_{j=0}^\infty \psi_j \epsilon_{t-j} $$
+
+給定 $$ (y_t - \mu) = b_1 (y_{t-1} - \mu) + \dots + b_p (y_{t-p} - \mu) + \epsilon $$
+
+上式同乘$$(y_t -\mu)後取期望值得：
+$$ \displaystyle
+\begin{aligned}
+\mathrm{E}((y_t - \mu)(y_t - \mu)) &= b_1 \mathrm{E}((y_{t-1} - \mu)(y_t - \mu)(y_t - \mu)) + \dots + b_p 
+\mathrm{E}((y_{t-p} - \mu)(y_t - \mu)) + \mathrm{E}(\epsilon(y_t - \mu)) \\
+\gamma(0) & = b_1 \gamma(1) + \dots +b_p \gamma(p) + \sigma^2
+\end{aligned} $$
+
+如果同乘$$(y_{t-1} -\mu)後取期望值得：
+$$ 
+\displaystyle
+\gamma(1) & = b_1 \gamma(0) + \dots +b_p \gamma(p-1)
+\end{aligned} 
+$$
+
+以此類推同乘$$(y_{t-p} -\mu)後取期望值得：
+$$ 
+\displaystyle
+\gamma(p) & = b_1 \gamma(p-1) + \dots +b_p \gamma(0)
+\end{aligned} 
+$$
+
+將上述$$p$$個方程式除以$$\gamma(0)$$得：
+$$  
+\displaystyle
+\begin{aligned}
+1 &= b_1 \rho(1) + \dots + b_p \rho(p) + \frac{\sigma^2}{\gamma(0)}  -- (1)\\
+\rho(1) &= b_1 + \dots + b_p \rho(p-1)  -- (2)\\
+\vdots & \vdots \\
+\rho(p) &= b_1 \rho(p-1) + \dots + b_p -- (3)
+\end{aligned}
+$$
+
+上式求解(2)到(3)間的$$p$$條方程式可得$$\rho(1), \rho(2), \dots, \rho(p)$$之值，而(1,2,3)稱為Yule-Walker方程式。
+
+由於$$\rho(j) = b_1 \rho(j-1) + b_2 \rho(j-2) + \dots + b_p \rho (j-p)$，可根據$$\rho(1), \dots, \rho(p)$$求得$$\rho(p+1), \rho(p+2),\dots$$。
+
+根據(1)，可得$$\displaystyle \rho(0) = \frac{\sigma^2}{1-b_1 \rho(1) - \dots - b_p \rho(p)}$$

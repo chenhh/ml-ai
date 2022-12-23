@@ -214,20 +214,19 @@ $$
 \begin{aligned}
 \mathrm{E}((y_t - \mu)(y_t - \mu)) &= b_1 \mathrm{E}((y_{t-1} - \mu)(y_t - \mu)(y_t - \mu)) + \dots + b_p \mathrm{E}((y_{t-p} - \mu)(y_t - \mu)) + \mathrm{E}(\epsilon(y_t - \mu)) \\
 \gamma(0) & = b_1 \gamma(1) + \dots +b_p \gamma(p) + \sigma^2
-\end{aligned} $$
+\end{aligned} 
+$$
 
 如果同乘$$(y_{t-1} -\mu)$$後取期望值得：
 $$ 
 \displaystyle
-\gamma(1) & = b_1 \gamma(0) + \dots +b_p \gamma(p-1)
-\end{aligned} 
+\gamma(1) = b_1 \gamma(0) + \dots +b_p \gamma(p-1) 
 $$
 
 以此類推同乘$$(y_{t-p} -\mu)$$後取期望值得：
 $$ 
 \displaystyle
-\gamma(p) & = b_1 \gamma(p-1) + \dots +b_p \gamma(0)
-\end{aligned} 
+\gamma(p)  = b_1 \gamma(p-1) + \dots +b_p \gamma(0) 
 $$
 
 將上述$$p$$個方程式除以$$\gamma(0)$$得：

@@ -138,30 +138,46 @@ y_{t-1} \\
 y_{t-p-1}
 \end{bmatrix}
 } \\
-Y_t
+Y_t \in \mathbb{R}^{p \times 1}
 \end{matrix}
  =
-
+\begin{matrix}
+\underbrace{
 \begin{bmatrix}
 b_1 & b_2 & \dots & b_{p-1} & b_p \\
 1 & 0 & \dots & 0 & 0 \\
 0 & 1 & \dots & 0 & 0 \\
 \vdots & \vdots & \dots & \vdots & \vdots \\
 0 & 0 & \dots & 1 & 0
-\end{bmatrix} 
+\end{bmatrix}
+} \\
+\Phi \in \mathbb{R}^{p \times p}
+\end{matrix}
+
+\begin{matrix}
+\underbrace{
 \begin{bmatrix}
 y_{t-1} \\
 y_{t-2} \\
 \vdots \\
 y_{t-p}
 \end{bmatrix}
+} \\
+Y_{t-1} \in \mathbb{R}^{p \times 1}
+
+\end{matrix}
 +
+\begin{matrix}
+\underbrace{
 \begin{bmatrix}
 \epsilon_t \\
 0 \\
 \vdots \\
 0
 \end{bmatrix}
+} \\
+\epsilon_t \in \mathbb{R}^{p \times 1}
+\end{matrix}
 $$
 
 可寫成矩陣式：$$Y_t = \Phi Y_{t-1} \epsilon_t$$。

@@ -233,10 +233,10 @@ $$
 $$  
 \displaystyle
 \begin{aligned}
-1 &= b_1 \rho(1) + \dots + b_p \rho(p) + \frac{\sigma^2}{\gamma(0)}  -- (1)\\
-\rho(1) &= b_1 + \dots + b_p \rho(p-1)  -- (2)\\
-\vdots & \vdots \\
-\rho(p) &= b_1 \rho(p-1) + \dots + b_p -- (3)
+1 &= b_1 \rho(1) + \dots + b_p \rho(p) + \frac{\sigma^2}{\gamma(0)} & -- (1)\\
+\rho(1) &= b_1 + \dots + b_p \rho(p-1)  &-- (2)\\
+\vdots & \vdots & \\
+\rho(p) &= b_1 \rho(p-1) + \dots + b_p &-- (3)
 \end{aligned}
 $$
 

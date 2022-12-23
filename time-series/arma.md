@@ -242,6 +242,6 @@ $$
 
 上式求解(2)到(3)間的$$p$$條方程式可得$$\rho(1), \rho(2), \dots, \rho(p)$$之值，而(1,2,3)稱為Yule-Walker方程式。
 
-由於$$\rho(j) = b_1 \rho(j-1) + b_2 \rho(j-2) + \dots + b_p \rho (j-p)$，可根據$$\rho(1), \dots, \rho(p)$$求得$$\rho(p+1), \rho(p+2),\dots$$。
+由於$$ \rho(j) = b_1 \rho(j-1) + b_2 \rho(j-2) + \dots + b_p \rho (j-p)$$，可根據$$\rho(1), \dots, \rho(p)$$求得$$\rho(p+1), \rho(p+2),\dots$$。
 
 根據(1)，可得$$\displaystyle \rho(0) = \frac{\sigma^2}{1-b_1 \rho(1) - \dots - b_p \rho(p)}$$

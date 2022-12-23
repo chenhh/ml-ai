@@ -6,9 +6,12 @@
 
 \[Das 16] 在進行任何正式的統計分析之前，評估資料的正態性是至關重要的。否則我們可能會得出錯誤的推斷和錯誤的結論。正態性可以通過視覺和正態性檢驗來評估。大多數統計軟體包都會自動生成PP圖和QQ圖。由於圖形檢驗非常主觀，所以強烈建議使用分析檢驗。然而。<mark style="color:red;">但是，當我們在回歸和/或實驗設計中測試殘差的正常性時，Shapiro-Wilk和Jarque-Bera檢驗都不合適。在這方面，我們建議使用重標動差檢驗</mark>。
 
-相關文獻
+\[Hernandez21] 判斷一個資料樣本是否來自常態分配的群體是統計學和資料分析中的一個常見做法。到目前為止，科學文獻中已經提出了幾十種檢驗正態性的方法。因此，出現的一個共同問題是。什麼是檢驗樣本正態性的最佳方法？本報告的第一部分簡要回顧了用於檢驗正態性的最重要的方法類型。然後，通過對過去30年中發表的幾種正態性測試的力量對比的調查，對55種最常見的方法進行了排名。這項分析的總冠軍是基於回歸的Shapiro-Wilk（SW）正態性檢驗。(排名見Table 2)。
+
+### 相關文獻
 
 * Keya Rani Das and A. H. M. R. Imon. "A brief review of tests for normality," pp. 5-12, Vol. 5.1, American Journal of Theoretical and Applied Statistics, 2016.
+* <mark style="color:red;">Hugo Hernandez, "Testing for normality: what is the best method," Vol. 6, 2021-05, ForsChem Research Reports, 2021</mark>.
 
 ## Jarque and Bera檢定
 

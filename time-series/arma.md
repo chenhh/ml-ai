@@ -208,22 +208,23 @@ $$ \displaystyle y_t = \mu + \sum_{j=0}^\infty \psi_j \epsilon_{t-j} $$
 
 給定 $$ (y_t - \mu) = b_1 (y_{t-1} - \mu) + \dots + b_p (y_{t-p} - \mu) + \epsilon $$
 
-上式同乘$$(y_t -\mu)後取期望值得：
-$$ \displaystyle
+上式同乘$$(y_t -\mu)$$後取期望值得：
+$$ 
+\displaystyle
 \begin{aligned}
 \mathrm{E}((y_t - \mu)(y_t - \mu)) &= b_1 \mathrm{E}((y_{t-1} - \mu)(y_t - \mu)(y_t - \mu)) + \dots + b_p 
 \mathrm{E}((y_{t-p} - \mu)(y_t - \mu)) + \mathrm{E}(\epsilon(y_t - \mu)) \\
 \gamma(0) & = b_1 \gamma(1) + \dots +b_p \gamma(p) + \sigma^2
 \end{aligned} $$
 
-如果同乘$$(y_{t-1} -\mu)後取期望值得：
+如果同乘$$(y_{t-1} -\mu)$$後取期望值得：
 $$ 
 \displaystyle
 \gamma(1) & = b_1 \gamma(0) + \dots +b_p \gamma(p-1)
 \end{aligned} 
 $$
 
-以此類推同乘$$(y_{t-p} -\mu)後取期望值得：
+以此類推同乘$$(y_{t-p} -\mu)$$後取期望值得：
 $$ 
 \displaystyle
 \gamma(p) & = b_1 \gamma(p-1) + \dots +b_p \gamma(0)

@@ -343,6 +343,11 @@ $$\forall f \in C([a,b])$$，取一個平面有理點集合$$ \mathbb{Q} \times 
 
 </details>
 
+## 無最大基數的集合
+
+> 若$$A$$為非空集合，則$$A$$與其冪集合$$P(A)$$不等價，且$$|A| < |P(A)|$$
+>
+
 
 ## Schroder-Bernstein定理
 

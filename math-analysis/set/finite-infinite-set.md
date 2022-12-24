@@ -320,8 +320,29 @@ $$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$�
 因此$$ \displaystyle \bigcup_{i=1}^\infty E_i = [1,\infty) $$等價於$$\mathbb{R}$$，
 因此基數為$$\aleph_1$$ (QED)
 
+</details>
+
+### 定義在實數區間的連續函數集合的基數為連續基數
+
+> $$C([a,b])$$為連續函數$$f: [a,b] \rightarrow \mathbb{R}$$全體形成的集合，
+> 則 $$ |C([a,b])| = \aleph_1 $$
+
+<details>
+
+<summary>proof: 找一對一且映成的函數 </summary>
+
+因為閉區間$$[a,b]$$的任意常數函數都是連續函數，因此 $$ \mathbb{R} $$與$$C([a,b])$$的一個子集等價。
+即$$C([a,b])$$的勢大於等於$$\aleph_1$$ --(1)
+
+$$\forall f \in C([a,b])$$，取一個平面有理點集合$$ \mathbb{Q} \times \mathbb{Q} $$中的一個子集與其
+對應得 $$g(f) = \{(s,t) \in \mathbb{Q} \times \mathbb{Q}: s \in [a,b], t \leq f(s) \}$$。
+
+因此$$f$$為$$C([a,b])到power set $$P(\mathbb{Q}^2)$$的一對一映成，且$$P(\mathbb{Q}^2)$$與$$P(\mathbb{N})$$等價，即$$|P(\mathbb{Q}^2)| = \aleph_1$$，因此$$C([a,b])$$的勢小於等於$$\aleph_1$$--(2)
+
+由(1,2)得$$|C([a,b])|=\aleph_1$$ (QED)
 
 </details>
+
 
 ## Schroder-Bernstein定理
 

@@ -130,7 +130,10 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 ### 任一無限集必包含一可數子集
 
 > $$S$$為無限集，則存在$$E \subseteq S$$為可數集。
+> 
 > 註：此性質說明了無限集的最小基數為$$\aleph_0$$，或者說自然數是最小的無限集。
+> 
+> 註：此為無限集的充分條件。
 
 <details>
 
@@ -229,7 +232,7 @@ proof: [選擇公理](axiom-of-choice.md#ying-yong-ke-shu-ge-ke-shu-ji-he-de-bin
   * $$k(2)$$為最小的正整數$$i_2$$，且$$i_2 > i_1$$使得 $$s_{i_2} \in E$$。
   * 依序得$$k(1), k(2), \ldots k(n-1)$$
   * 令$$k(n)$$為最小的正整數$$i_n$$, 且$$i_n > i_{n-1}$$使得$$s_{i_n} \in E$$。
-  * 可得 $$n > (n-1) \Rightarrow k(n) > k(n-1)$$$$\forall n \in \mathbb{N}$$
+  * 可得 $$n > (n-1) \Rightarrow k(n) > k(n-1) ~\forall n \in \mathbb{N}$$
   * 依此建構可得$$k: \mathbb{N} \rightarrow E$$為一對一且映成的函數，因此$$E \sim \mathbb{N}$$，則$$E$$為可數集 (QED)。
 
 </details>
@@ -237,12 +240,15 @@ proof: [選擇公理](axiom-of-choice.md#ying-yong-ke-shu-ge-ke-shu-ji-he-de-bin
 ### 可數集的有限多個積集仍為可數集
 
 > $$A_i, ~i=1,2,\dots, n$$均為可數集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為可數集。
-
+> 可擴充得 $$ \displaystyle \prod_{i=1}^\infty \mathbb{N}^i $$
 <details>
 
-<summary>proof:</summary>
+<summary>proof:質因數分解對應</summary>
 
+不失一般性令$$E = \mathbb{N}$$，則 $$ E_1 \times E_2 \times \dots \times E_n = \mathbb{N}^n $$。
 
+取相異的質數$$p_1, p_2, \dots, p_n$$，則$$\forall x = (m_1, \dots, m_n) \in \mathbb{N}^n$$，
+均可用自然數$$p_1^{m_1}, p_2^{m_2}, \dots, p_n^{m_n}$$對應，為一對一且映成的函數 (QED)
 
 </details>
 
@@ -264,11 +270,27 @@ $$\forall n \in \mathbb{N}$$, $$S_n=\{ \frac{m}{n} | m \in \mathbb{Z} \}$$，則
 
 $$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
 
-### 實數集合為不可數集合
+### 二維整數的集合為可數集合
+
+> $$\mathbb{Z}^+ =\{1,2,\ldots \}$$為正整數的集合，則$$\mathbb{Z}^{+} \times \mathbb{Z}^{+}$$為可數集合。
+
+<details>
+
+<summary>proof: 建構1-1函數</summary>
+
+* 令函數$$f: \mathbb{Z}^{+} \times \mathbb{Z}^{+} \rightarrow \mathbb{Z}^{+}$$為$$f(m,n)=2^m 3^n$$，要證明$$f$$為一對一函數，即$$f(m_1, n_1)=f(m_2, n_2) \Rightarrow (m_1, n_1)=(m_2,n_2)$$。
+* 若$$2^{m_1} 3^{n_1}=2^{m_2} 3^{n_2}$$，則$$2^{m_1 - m_2} 3^{n_1 - n_2}=1$$
+* 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ (QED)
+
+</details>
+
+## 實數集合為不可數集合
 
 因為$$[0,1]$$與$$\mathbb{R}$$兩集合等勢，因此只要證明$$[0,1]$$為不可數集合。
 
 $$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$均為不可數集。
+
+稱 $$ [0,1] $$集合的基數為連續基數，記為$$c$$或$$\aleph_1$$。
 
 <details>
 
@@ -284,17 +306,20 @@ $$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$�
 
 </details>
 
-### 二維整數的集合為可數集合
+### 連續基數的聯集的基數仍為連續基數
 
-> $$\mathbb{Z}^+ =\{1,2,\ldots \}$$為正整數的集合，則$$\mathbb{Z}^{+} \times \mathbb{Z}^{+}$$為可數集合。
+> 給定集合序列 $$ \{E_i\}_{i \in \mathbb{N}} $$，且$$|E_i|=\aleph_1, ~\forall i$$，則
+> $$ \displaystyle |\bigcup_{i=1}^\infty E_i| = \aleph_1 $$
 
 <details>
 
-<summary>proof: 建構1-1函數</summary>
+<summary>proof:  </summary>
 
-* 令函數$$f: \mathbb{Z}^{+} \times \mathbb{Z}^{+} \rightarrow \mathbb{Z}^{+}$$為$$f(m,n)=2^m 3^n$$，要證明$$f$$為一對一函數，即$$f(m_1, n_1)=f(m_2, n_2) \Rightarrow (m_1, n_1)=(m_2,n_2)$$。
-* 若$$2^{m_1} 3^{n_1}=2^{m_2} 3^{n_2}$$，則$$2^{m_1 - m_2} 3^{n_1 - n_2}=1$$
-* 因為$$gcd(2,3)=1$$，因此$$m_1-m_2=0$$且 $$n_1 - n_2=0$$, 即$$m_1=m_2$$且$$n_1 = n_2$$ (QED)
+不失一般性，令$$E_i \cap E_j = \empty ~ \forall i \neq j$$，且$$E_i = [i,i+1)$$為實數的半開區間。
+
+因此$$ \displaystyle \bigcup_{i=1}^\infty E_i = [1,\infty) $$等價於$$\mathbb{R}$$，
+因此基數為$$\aleph_1$$ (QED)
+
 
 </details>
 

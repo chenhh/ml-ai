@@ -25,9 +25,9 @@
 
 <mark style="color:red;">空集合唯一</mark>，即若有兩個空集合$$\emptyset, \emptyset^{'} \Rightarrow \emptyset= \emptyset^{'}$$。
 
-<mark style="color:red;">非空集合的集合必含有至少一個元素</mark>，即$$\exists x \ni x \in S$$。
+<mark style="color:red;">非空集合的集合必含有至少一個元素</mark>，即$$S \neq \empty \Rightarrow ~\exists x \ni x \in S$$。
 
-<mark style="color:red;">空集合為任意集合的子集合(但不一定是元素)</mark>，即$$\empty \subseteq S$$。
+<mark style="color:red;">空集合為任意集合(包含空集合)的子集合(但不一定是元素)</mark>，即$$\empty \subseteq S$$。
 
 <mark style="color:red;">非空集合必存在至少一個元素(選擇性公理的條件)</mark>。$$S \neq \empty \Rightarrow \exists x \in S$$。
 

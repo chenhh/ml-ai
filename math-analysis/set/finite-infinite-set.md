@@ -101,8 +101,13 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 <details>
 
-<summary>proof:</summary>
+<summary>proof:直接建構</summary>
 
+不失一般性，令$$A_i \cap A_j = \empty~, \forall i \neq j$$。
+
+由於$$A_i$$為有限集，因此$$\exists k_i \in \mathbb{N} \ni A_i \sim \mathbb{N}_{k_i}, ~i=1,2,\dots, n$$。
+
+因此可得 $$ \displaystyle \bigcup_{i=1}^n A_i \sim \mathbb{N}_{k_1+k_2+\dots+k_n} $$為有限集 (QED)
 
 
 </details>

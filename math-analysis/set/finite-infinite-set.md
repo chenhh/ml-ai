@@ -127,7 +127,28 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 > <mark style="color:red;">無限集合是由無限個元素組成的集合，分為可數集與不可數集</mark>。
 
-### 無限集的充要條件
+### 任一無限集必包含一可數子集
+
+> $$S$$為無限集，則存在$$E \subseteq S$$為可數集。
+
+<details>
+
+<summary>proof: 直接建構 </summary>
+
+取$$x_1 \in S$$。
+
+再取$$ x_2 \in S - \{x_1\}$$。
+
+依此步驟取元素，得集合$$\{x_1, x_2, \dots, x_n\} \subseteq S$$。
+
+因為$$S$$為無限集，可得$$S - \{x_1, x_2, \dots, x_n\} \neq \empty$$，
+因此可取$$x_{n+1} \in S - \{x_1, x_2, \dots, x_n\}$$。
+
+由數學歸納法得$$\{x_1, x_2, \dots, x_n, \dots \} \subseteq S$$ (QED)
+
+
+</details>
+
 
 ### 無限集的充分必要條件
 
@@ -172,7 +193,9 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 > <mark style="color:red;">無限集合是由無限個元素組成的集合，分為可數集與不可數集</mark>。
 
-## 可數集合的聯集仍為可數集
+## 可數集
+
+### 可數集合的聯集仍為可數集
 
 > $$\forall n \in \mathbb{N}, \ S_n$$為可數集，則$$\cup_{n \in \mathbb{N}} S_n$$仍為可數集。
 

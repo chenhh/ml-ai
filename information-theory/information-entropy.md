@@ -70,6 +70,37 @@ $$\displaystyle \begin{aligned} I & = H_{\max} - H \\   & = \log n + \sum_{i=1}^
 
 $$R = \frac{I}{H_{\max}} = 1 - \frac{H}{H_{\max}}$$--(1.16)
 
+### 資訊增益函數(information gain function)
+
+從Shannon熵的討論中，可得到從一個事件中獲得的資訊與它發生的機率成反比。定義增益函數$$G(p)$$如下：
+
+$$ \displaystyle G(p) = \Delta I =\log big(\frac{1}{p_i}) = - \log(p_i) \text{-- (1.18)}$$
+
+換句話說，事件$$i$$發生的資訊或其傳遞的資訊所消除的不確定性是由公式（1.18）來衡量的。
+如果一個事件發生的機率非常小，比如$$p_i=0.01$$，那麼這個事件傳遞的部分資訊就非常大。
+
+因為獨立事件的機率組合是一種乘法關係。因此，對數允許把它們的熵的組合表達為一個簡單的加法關係。
+例如，如果$$ \mathrm{P}(A \cap B) = \mathrm{P}(A)\mathrm{P}(B)$$，那麼$$ \mathrm{H}(AB) =-\log(\mathrm{P}(A))-\log (\mathrm{P}(B))=\mathrm{H}(A)+ \mathrm{H}(B)$$。
+
+若有$$N$$個事件，可計算總資訊增益為 $$ \displaystyle I = \sum_{i=1}^N \Delta I_i = - \sum_{i=1}^N \log(p_i)  $$。
+
+事件$$i$$的熵或總資訊量為加權值：$$ \mathrm{H}(p_i) = -p_i \log (p_i) \text{--(1.20)}$$。
+
+因此，資訊的平均或預期收益可以通過對單個資訊收益的加權平均來獲得：$$ \displaystyle H = \mathrm{E}(\Delta I) = - \sum_{i=1}^N p_i (\Delta I_i) = - \sum_{i=1}^N p_i \log(p_i) \text{--(1.21)}$$。
+
+這裡值得注意的是，人們可以通過簡單地定義增益函數或不確定性來定義不同類型的熵。本章中還定義了另外三種類型的熵。
+
+方程（1.21）可以用另一種方式來看待。實驗結果的機率對應於結果之間的空間劃分。因為結果的交集是空的，所以實驗的全域性熵是$$N$$個結果的基本熵之和：
+$$ \displaystyle  
+\begin{aligned}
+H & = H_1 + H_2 + \dots + H_N  = \sum_{i=1}^N H_i \\
+    &= p_1 \log p_1 - p_2 \log p_2 - \dots - p_N \log p_N = -\sum_{i=1}^N p_i \log(p_i) \text{--(1.22)}
+\end{aligned}
+$$
+
+上式可看出$$H$$最大值發生在所有事件發生機率均相等時，即$$p_i = \frac{1}{N}, ~i=1,2,\dots, N$$。
+
+
 ## 參考資料
 
 * Vijay P. Singh,  "_Entropy theory and its application in environmental and water engineering," ch1,_ John Wiley & Sons, 2013.

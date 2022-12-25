@@ -9,6 +9,11 @@ description: measurable function
 > 函數$$f: X \rightarrow \overline{\mathbb{R}}$$，$$(X, \Sigma)$$為可測空間，$$\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm \infty\}$$為擴充實數集合。
 >
 > 對於實數上的任意開集合$$E\subseteq \mathbb{R}$$，若前像$$f^{-1}(E)=\{x \in X~|~f(x)\in E\} \in \Sigma$$且$$f^{-1}(\{+\infty\}) \in \Sigma$$，$$f^{-1}(\{-\infty\}) \in \Sigma,$$，則稱$$f$$為可測函數，或稱$$f$$在集合$$E$$上可測。
+>
+> 或者說 $$\forall t \in \mathbb{R}$$, 集合$$\{x \in X~|~ f(x) \leq t\} \in \Sigma$$，則$$f$$為可測函數。
+
+
+可測函數的值域為擴充實數，且值域任意值的前像集合必須為可測集合，以避免出現有函數值，但沒有定義域元素對應的情形。
 
 可測函數$$f$$在機率空間$$(X,\mathbb{F}, P)$$中為隨機變數。
 
@@ -92,6 +97,62 @@ $$f^{-1}([c, \infty)=f^{-1}(\bigcap_{n=1}^\infty (c - \frac{1}{n}, \infty))=\big
 </details> 
 
 
+### 單調函數為可測函數
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為單調函數，則$$f(x)$$在閉區間$$[a,b]$$可測。
+
+<details>
+
+<summary>proof:  </summary>
+
+$$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \} $$必為以下三種集合之一： (半開或閉)區間、單點集合或空集合。
+
+因此$$E$$為可測集 (QED)
+
+
+</details>
+
+
+### 個別可測集合的函數的聯集仍為可測函數
+
+> 給定函數$$f: X_1 \cup X_2 \rightarrow \overline{R}$$，若$$f$$在 $$ X_1 $$可測，且在$$ X_2$$也可測，
+> 則在$$ X_1 \cup X_2$$也可測。
+
+<details>
+
+<summary>proof: 以定義直接證明 </summary>
+
+因為$$f$$在$$X_1$$可測，可得$$ \forall c \in \mathbb{R}$$, 可得$$f^{-1}((\infty, c)) \subseteq X_1$$。
+
+同理因為$$f$$在$$X_2$$可測，可得$$ \forall c \in \mathbb{R}$$, 可得$$f^{-1}((\infty, c)) \subseteq X_2$$
+
+因此 $$ \forall c \in \mathbb{R} $$，可得 $$ f^{-1}((\infty, c)) \subseteq X_1 \cup X_2 $$ (QED)
+
+
+</details>
+
+## 可測函數的計算性質
+
+> $$f,g$$為集合$$X$$實值可測函數，則：
+> 1. $$c \in \mathbb{R}~ cf(x)$$為可測函數。
+> 2. $$ f(x) + g(x) $$ 為可測函數。
+> 3. $$ f(x)g(x) $$為可測函數。
+
+<details>
+
+<summary>proof: 1 </summary>
+
+因為$$f$$為可測函數，所以 $$ \forall d \in \mathbb{R}, f^{-1}((-\infty, d)) \subseteq X $$
+
+若$$c >0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}((-\infty, cd)) \subseteq X$$--(1)
+
+若$$c <0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}((cd, \infty)) \subseteq X$$--(2)
+
+若$$c =0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}(\{0\}) \subseteq X$$--(3)
+
+由(1,2,3)得$$cf(x)$$為可測函數 (QED)
+
+</details>
 
 ## 特徵(指示)函數為可測函數
 
@@ -99,7 +160,7 @@ $$f^{-1}([c, \infty)=f^{-1}(\bigcap_{n=1}^\infty (c - \frac{1}{n}, \infty))=\big
 >
 > 則$$E$$為可測集合$$\Leftrightarrow \chi_E$$為可測函數。
 
-proof =>:&#x20;
+proof =>:
 
 取$$S \in \mathbb{B}(\mathbb{R})$$，可得$$\chi_E^{-1}(S) = \left\{ \begin{aligned} & X,~ \text{ if } 0, 1 \in S, \\ & E,~ \text{ if } 1 \in S, ~ 0 \notin S, \\ & E^c,~ \text{ if } 1 \notin S, ~ 0 \in S, \\ & \empty, ~ \text{ otherwise } \end{aligned} \right.$$
 

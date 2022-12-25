@@ -8,9 +8,11 @@ description: measurable function
 
 > 函數$$f: X \rightarrow \overline{\mathbb{R}}$$，$$(X, \Sigma)$$為可測空間，$$\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm \infty\}$$為擴充實數集合。
 >
-> 對於實數上的任意開集合$$E\subseteq \mathbb{R}$$，若前像$$f^{-1}(E)=\{x \in X~|~f(x)\in E\} \in \Sigma$$且$$f^{-1}(\{+\infty\}) \in \Sigma$$，$$f^{-1}(\{-\infty\}) \in \Sigma,$$，則稱$$f$$為可測函數。
+> 對於實數上的任意開集合$$E\subseteq \mathbb{R}$$，若前像$$f^{-1}(E)=\{x \in X~|~f(x)\in E\} \in \Sigma$$且$$f^{-1}(\{+\infty\}) \in \Sigma$$，$$f^{-1}(\{-\infty\}) \in \Sigma,$$，則稱$$f$$為可測函數，或稱$$f$$在集合$$E$$上可測。
 
 可測函數$$f$$在機率空間$$(X,\mathbb{F}, P)$$中為隨機變數。
+
+可測函數在極限運算下是封閉的，比連續函數在極限連算時非封閉的性質好。
 
 ## 可測函數的等價條件
 
@@ -23,27 +25,53 @@ description: measurable function
 > 5. $$\forall \in \mathbb{R}$$，$$f^{-1}([c, \infty))=\{x \in X~|~ f(x) \geq c \} \in \Sigma$$
 > 6. $$f^{-1}(B) \in \mathbb{B}$$為Borel set(由實數上所有開(閉)區間形成的最小的sigma域)。
 
-proof 1-> 2:
+<details>
+
+<summary>proof: 1-> 2 </summary>
 
 因為$$f$$為可測函數，由定義得給定$$c \in \mathbb{R}$$，$$f^{-1}(c) \in \Sigma$$，同理$$\forall d < c$$，$$f^{-1}(d) \in \Sigma$$。
 
 因為$$\Sigma$$定義集合內任意元素的聯集仍為$$\Sigma$$內的元素，因此$$f^{-1}(c \cup d) \in \Sigma$$ (QED)
 
-proof 2-> 3 (用開區間逼近閉區間)
+</details>
+
+
+
+<details>
+
+<summary>proof:  2->3，用開區間逼近閉區間 </summary>
 
 $$(-\infty, c]=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n})$$
 
 由$$\Sigma$$的定義得$$f^{-1}((-\infty, c])=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n})\in \Sigma$$ (QED)
 
-proof 3->4 (補集)
+</details> 
+
+
+
+<details>
+
+<summary>proof: 3->4，補集 </summary>
 
 $$f^{-1}((c, \infty))=f^{-1}((\mathbb{R} - (-\infty, c])=\mathbb{R}-f^{-1}((-\infty, c]) \in \Sigma$$ (QED)
 
-proof 4->5 (用開區間逼近閉區間)
+</details> 
+
+
+
+<details>
+
+<summary>proof: 4->5，用開區間逼近閉區間 </summary>
 
 $$f^{-1}([c, \infty)=f^{-1}(\bigcap_{n=1}^\infty (c - \frac{1}{n}, \infty))=\bigcap_{n=1}^\infty f^{-1}(c-\frac{1}{n}, \infty) \in \Sigma$$ (QED)
 
-proof 5->6:
+</details> 
+
+
+
+<details>
+
+<summary>proof: 5->6 </summary>
 
 令$$S = \{A \subseteq \mathbb{R}, ~f^{-1}(A) \in \Sigma \}$$，檢驗Borel set $$\mathbb{B} \subseteq S$$。
 
@@ -51,9 +79,19 @@ proof 5->6:
 
 因此$$(e,d) \subseteq S$$，包含了實數上的任意開區間，因此$$\mathbb{B} \subseteq S$$ (QED)。
 
-proof 6->1 ：
+</details> 
 
-依定義可得(QED)
+
+
+<details>
+
+<summary>proof: 6->1 </summary>
+
+依可測函數定義可得(QED)
+
+</details> 
+
+
 
 ## 特徵(指示)函數為可測函數
 

@@ -297,6 +297,49 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 </details>
 
 
+## 幾乎處處性質(almost everywhere)
+
+> 假設有一集合$$X \subseteq \mathbb{R}^n$$中的點$$x$$相關的命題$$P(x)$$，
+> 若除了$$X$$中的某一個零測度集之外，$$P(x)$$均為真，則稱$$P(x)$$在$$X$$上幾乎處處為真，
+> 並記為$$P(x) ~\text{a.e.} ~x \in X$$。
+
+### 幾乎處處相等
+
+> $$f,g: X \rightarrow \mathbb{R}$$為可測函數，若滿足：
+> $$ \displaystyle m(\{x \in X~|~ f(x) \neq g(x) \}) = 0 $$，
+> 則稱$$f,g$$在$$X$$幾乎處處相等，記為$$f(x)=g(x)~\text{a.e.} ~x \in X$$。
+
+### 幾乎處處有限
+
+> $$f: X \rightarrow \mathbb{R}$$為可測函數，若有 
+> $$ \displaystyle m(\{ x \in X~|~ |f(x)| = \infty \})=0 $$，
+> 則稱$$f$$在$$X$$上幾乎處處有限，記為$$|f(x)|<\infty ~ \text{a.e.} ~ x \in X$$。
+
+### 可測函數的幾乎處處相等函數仍可測
+
+> $$ f,g: X \rightarrow \overline{R} $$為廣義實值函數，且$$f$$在集合$$X$$可測。
+> 
+> 若$$f(x)=g(x) \text{a.e.} ~ x\ in X$$，則$$g$$在$$X$$可測。
+> 
+> 註：對一可測函數來說，改變其在零測度集合的函數值不會改變函數的可測性。
+
+<details>
+
+<summary>proof:  </summary>
+
+令$$S =\{ x \in X ~|~ f(x) \neq g(x)\}$$，則$$m(S) =0$$，且$$X- S$$為可測集。
+
+$$\forall t \in \mathbb{R}$$，可得
+$$ \{x \in X| g(x) < t\} = \{x \in X-S| g(x) < t\} \cup \{x \in S| g(x) < t\} =\{x \in X-S| f(x) < t\} \cup \{x \in S| g(x) < t\} $$
+
+因為$$f$$在$$X$$可測，所以$$\{x \in X-S| f(x) < t\} \in \Sigma$$。
+
+而m(\{x \in S| g(x) < t\}) = 0，因此可得$$ \{x \in X| g(x) < t\} \in \Sigma$$ (QED)
+
+
+
+</details>
+
 ## 特徵(指示)函數為可測函數
 
 > 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned}  &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E  \end{aligned} \right.$$

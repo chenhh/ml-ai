@@ -185,12 +185,58 @@ $$ \forall t \in \mathbb{R} $$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
 > 3. $$ \displaystyle \limsup_{k \rightarrow \infty} f_k(x)$$為可測函數。
 > 4. $$ \displaystyle \liminf_{k \rightarrow \infty} f_k(x)$$為可測函數。
 
+<details>
+
+<summary>proof: 1 </summary>
+
+令$$\Sigma$$為$$X$$的sigma域。
+
+$$ \displaystyle \{x \in X~|~ \sup_{k \geq 1} \{ f_k(x)\} < t\} = 
+\bigcup_{k=1}^\infty \{ x \in X~|~ f_k (x) < t \} \in \Sigma
+$$
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof: 2 </summary>
+
+$$ \displaystyle \inf_{k \geq 1} \{ f_k(x)\} = - \sup_{k \geq 1} \{ -f_k(x)\} \in \Sigma $$
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof: 3 </summary>
+
+$$\displaystyle \limsup_{k \rightarrow \infty} f_k(x)
+= \inf_{i \geq 1}\{\sup_{k\geq i} f_k(x)  \} \in \Sigma
+$$
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof: 4 </summary>
+
+$$\displaystyle \liminf_{k \rightarrow \infty} f_k(x) = - \limsup_{k \rightarrow \infty} -f_k(x) \in \Sigma $$
+
+(QED)
+</details>
+
 
 ## 特徵(指示)函數為可測函數
 
 > 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned}  &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E  \end{aligned} \right.$$
 >
 > 則$$E$$為可測集合$$\Leftrightarrow \chi_E$$為可測函數。
+
+<details>
+
+<summary>proof: 以定義直接證明 </summary>
 
 proof =>:
 
@@ -200,9 +246,14 @@ proof =>:
 
 因為$$X, E, E^c, \empty \in \Sigma$$，所以$$\chi_E$$為可測函數 (QED)。
 
+
 proof <=:
 
 $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (QED)
+
+
+</details>
+
 
 ## 集合序列上極限的特徵函數(可穿過limsup符號)
 

@@ -247,6 +247,37 @@ $$\displaystyle f(x)=\liminf_{k \rightarrow \infty} f_k(x)=\limsup_{k \rightarro
 
 </details>
 
+
+### 可測函數的正成份與負成份函數也為可測函數
+
+> 給定函數$$f$$，定義正成份(positive part)函數$$f^{+}(x)= \left\{ \begin{aligned} &f(x),&\text{if } f(x) > 0, \\ &0 ,& \text{if } f(x) \leq 0  \end{aligned} \right.$$
+>
+> 負成份(negative part)函數$$f^{-}(x)= \left\{ \begin{aligned} &0,&\text{if } f(x) > 0, \\ &-f(x) ,& \text{if } f(x) \leq 0  \end{aligned} \right.$$
+>
+> 則$$f$$為可測函數$$\Leftrightarrow$$ $$f^{+}, f^{-}$$為可測函數。
+
+### 可測函數的絕對值為可測函數
+
+> 若$$f$$為可測函數，則$$|f|$$與$$|f|^2$$為可測函數。
+
+proof: 可測函數的線性計算仍為可測函數
+
+正成分函數 $$f^{+}=\frac{1}{2}(f+|f|)$$，因此$$|f|=2f^{+} -f$$
+
+因為$$f^{+}, f$$均為可測函數，因此$$|f|$$為可測函數(QED)。
+
+proof:
+
+$$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
+
+因為$$f$$為可測函數，所以$$f^2=f\cdot f$$為可測函數
+
+因為$$f, f^{+}$$為可測函數，所以$$f\cdot f^{+}$$為可測函數
+
+因為$$f^{+}$$為可測函數，所以$$f^{+}$$為可測函數
+
+因為可測函數的線性組合仍為可測函數，因此$$|f|^2$$為可測函數 (QED)
+
 ## 特徵(指示)函數為可測函數
 
 > 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned}  &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E  \end{aligned} \right.$$
@@ -274,38 +305,8 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 </details>
 
 
-## 集合序列上極限的特徵函數(可穿過limsup符號)
+### 集合序列上極限的特徵函數(可穿過limsup符號)
 
 > 令$$\{E_n\}$$為集合序列，且$$\displaystyle E^{*}=\limsup_{n \rightarrow \infty} E_n \equiv \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，則：
 >
 > $$\displaystyle \chi_E^{*}(x)=\limsup_{n \rightarrow \infty} \chi_{E_n}(x)$$
-
-## 可測函數的正成份與負成份函數也為可測函數
-
-> 給定函數$$f$$，定義正成份(positive part)函數$$f^{+}(x)= \left\{ \begin{aligned} &f(x),&\text{if } f(x) > 0, \\ &0 ,& \text{if } f(x) \leq 0  \end{aligned} \right.$$
->
-> 負成份(negative part)函數$$f^{-}(x)= \left\{ \begin{aligned} &0,&\text{if } f(x) > 0, \\ &-f(x) ,& \text{if } f(x) \leq 0  \end{aligned} \right.$$
->
-> 則$$f$$為可測函數$$\Leftrightarrow$$ $$f^{+}, f^{-}$$為可測函數。
-
-## 可測函數的絕對值為可測函數
-
-> 若$$f$$為可測函數，則$$|f|$$與$$|f|^2$$為可測函數。
-
-proof: 可測函數的線性計算仍為可測函數
-
-正成分函數 $$f^{+}=\frac{1}{2}(f+|f|)$$，因此$$|f|=2f^{+} -f$$
-
-因為$$f^{+}, f$$均為可測函數，因此$$|f|$$為可測函數(QED)。
-
-proof:
-
-$$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
-
-因為$$f$$為可測函數，所以$$f^2=f\cdot f$$為可測函數
-
-因為$$f, f^{+}$$為可測函數，所以$$f\cdot f^{+}$$為可測函數
-
-因為$$f^{+}$$為可測函數，所以$$f^{+}$$為可測函數
-
-因為可測函數的線性組合仍為可測函數，因此$$|f|^2$$為可測函數 (QED)

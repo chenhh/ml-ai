@@ -142,17 +142,48 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \} $$必為�
 
 <summary>proof: 1 </summary>
 
-因為$$f$$為可測函數，所以 $$ \forall d \in \mathbb{R}, f^{-1}((-\infty, d)) \subseteq X $$
+令$$\Sigma$$為$$X$$的sigma域。
 
-若$$c >0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}((-\infty, cd)) \subseteq X$$--(1)
+因為$$f$$為可測函數，所以 $$ \forall d \in \mathbb{R}, f^{-1}((-\infty, d)) \in \Sigma $$
 
-若$$c <0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}((cd, \infty)) \subseteq X$$--(2)
+若$$c >0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}((-\infty, cd)) \in \Sigma$$--(1)
 
-若$$c =0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}(\{0\}) \subseteq X$$--(3)
+若$$c <0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}((cd, \infty)) \in \Sigma$$--(2)
+
+若$$c =0$$，可得$$f^{-1}(c(-\infty, d))=f^{-1}(\{0\}) \in \Sigma$$--(3)
 
 由(1,2,3)得$$cf(x)$$為可測函數 (QED)
 
 </details>
+
+<details>
+
+<summary>proof: 2 </summary>
+
+令$$\Sigma$$為$$X$$的sigma域。
+
+$$ \forall t \in \mathbb{R} $$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
+
+因此 $$ \displaystyle
+\{x \in X~|~ f(x)+g(x)<t \} = \bipcup_{i=1}^\infty (\{x \in X | f(x) < r_i\} \cap \{ x \in X | g(x) < t - r_i \}) $$
+
+其中$$\{r_i\}$$是所有有理數形成的集合，因此可得$$\{x \in X~|~ f(x)+g(x)<t \} \in \Sigma$$ (QED)
+
+</details>
+
+<details>
+
+<summary>proof: 3 </summary>
+
+</details>
+
+### 可測函數序列的性質
+
+> 令$$\{f_k(x)\}$$為集合$$X$$上的可測函數序列，則：
+> 1. $$ \displaystyle \sup_{k \geq 1} \{ f_k(x)\}$$為可測函數。
+> 2. $$ \displaystyle \inf_{k \geq 1} \{ f_k(x)\}$$為可測函數。
+> 3. $$ \displaystyle \limsup_{k \rightarrow \infty} f_k(x)$$為可測函數。
+> 4. $$ \displaystyle \liminf_{k \rightarrow \infty} f_k(x)$$為可測函數。
 
 ## 特徵(指示)函數為可測函數
 

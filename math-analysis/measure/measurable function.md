@@ -227,6 +227,25 @@ $$\displaystyle \liminf_{k \rightarrow \infty} f_k(x) = - \limsup_{k \rightarrow
 (QED)
 </details>
 
+### 可測函數序列的極限仍為可測函數
+
+> 給定$$\{f_k(x)\}$$為$$X$$上的可測函數，且有 $$ \displaystyle \lim_{k \rightarrow \infty} f_k(x)=f(x), ~x \in X $$
+> 則$$f(x)$$為$$X$$的可測函數。
+
+<details>
+
+<summary>proof: 由可測函數序列的性質得出 </summary>
+
+因為$$\{f_k(x)\}$$為$$X$$上的可測函數，所以$$ \displaystyle \limsup_{k \rightarrow \infty} f_k(x)$$與
+$$ \displaystyle \liminf_{k \rightarrow \infty} f_k(x)$$均為可測函數。
+
+因為$$\displaystyle \lim_{k \rightarrow \infty} f_k(x)=f(x)$$，因此可得
+$$\displaystyle f(x)=\liminf_{k \rightarrow \infty} f_k(x)=\limsup_{k \rightarrow \infty} f_k(x)$$
+
+因此$$f(x)$$為$$X$$的可測函數 (QED)
+
+
+</details>
 
 ## 特徵(指示)函數為可測函數
 

@@ -47,3 +47,12 @@ $$
 6. Wold representation表示法有唯一性，即兩相異的定態時間序列不會有相同的$$\{c_j\}與$$\{\epsilon_t\}$$。
 
 Wold representation說明了任意定態時間序列能以無窮多干擾項的線性線合表示之，但在實務上不可行，必須以 $$ \displaystyle \frac{B(L)}{C(L)} $$逼近之，即以ARMA(p,q)近似Wold representation。
+
+## 預測評估
+
+預測誤差：$$ \displaystyle e_{t+k, t} = y_{t+k} - \mathrm{E}_t(y_{t+k}) $$。
+
+預測損失函數期望值：$$ \displaystyle \mathrm{E}(L(e_{t+k, t})) $$，其中：
+1. 二次函數：$$ \displaystyle L(e_{t+k, t}) = e_{t+k, t}^2 $$, 損失稱為均方差(mean square error, MSE)
+2. 絕對函數: $$ \displaystyle L(e_{t+k, t}) = |e_{t+k, t}|  $$
+3. 效用函數: $$ \displaystyle L(e_{t+k, t}) = u(e_{t+k, t})  $$

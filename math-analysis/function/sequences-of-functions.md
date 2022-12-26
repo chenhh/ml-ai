@@ -75,6 +75,28 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 >
 > 此處$$\epsilon$$的選擇是針定所有的點$$x$$均成立，與點態收斂中$$\epsilon$$可能依$$x$$變化不同。
 
+proof=>
+
+令$$\{f_n\}\rightarrow f$$在集合$$S$$一致收斂，由定義得給定$$\epsilon =1$$，存在$$n_0 \ni \mathbb{N} \ni |f_n(x) -f(x)|\leq 1 \forall n \geq n_0, \forall x \in S$$。
+
+令$$\displaystyle M_n = \sup_{x_\in S} |f_n(x)-f(x)| \geq 0$$為有限非負值，$$\forall n \geq n_0$$。
+
+定義在$$1\leq n \leq n_0-1$$時，$$M_n \geq 0$$為任意非負值。
+
+由於函數一致收斂，因此$$n \geq n_0$$時，可得$$|f_n(x)-f(x)| < \epsilon$$，可得$$\displaystyle M_n = \sup_{x_\in S} |f_n(x)-f(x)| < \epsilon$$，因此$$\displaystyle \lim_{n \rightarrow \infty }M_n = 0$$ (QED)
+
+proof <=
+
+令$$\{M_n\}$$為非負數列$$\displaystyle \lim_{n \rightarrow \infty }M_n = 0$$，且$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n ~ \forall n \geq n_0$$
+
+給定$$\epsilon > 0$$由數列收斂得$$\exists n_1 \in \mathbb{N} \ni M_n < \epsilon ~ \forall n \geq n_1$$
+
+取$$n_2 \geq \max(n_0, n_1)+1$$，可得$$\displaystyle \sup_{x \in S}|f_n(x) - f(x)| \leq M_n <\epsilon ~ \forall n \geq n_2$$。
+
+因此可得$$n \geq n_2$$時，$$|f_n(x)-f(x)|< \epsilon ~ \forall x \in S$$，因此為一致收斂(QED)
+
+
+
 <mark style="color:red;">若</mark>$$\{f_n\} \rightarrow f$$<mark style="color:red;">一致收斂，則</mark>$${f_n} \rightarrow f$$<mark style="color:red;">點態收斂</mark>。
 
 <figure><img src="../../.gitbook/assets/pointwise_conv.jpg" alt=""><figcaption><p>點態收態，f與fn的距離在每一點x可能不同</p></figcaption></figure>

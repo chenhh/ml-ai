@@ -7,22 +7,52 @@ description: sequences of functions
 ## 簡介
 
 * 點態收斂、逐點收斂(pointwise convergence)
+  * <mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數</mark>，但能保證收斂為處處連續函數。
+  * <mark style="color:red;">點態收斂無法保證可微分函數收斂為可微分函數</mark>。
+  * <mark style="color:red;">點態收斂無法保證函數序列積分收斂到函數極限的積分</mark>。
 * 一致收斂、均勻收斂(uniform convergence)
+  * 均勻收斂保連續函數收斂為連續函數
 * 一致有界(uniformly bounded)
 * 無窮序列函數級數的一致收斂
 * Riemann-Stieltjes積分與一致收斂
 
+## 函數序列
+
+令$$S \subseteq \mathbb{R}^n$$為歐式空間非空集合，$$\forall n \in \mathbb{N}$$，給定函數$$f_n: S \rightarrow \mathbb{R}$$，則$$\{f_n\}_{n \in \mathbb{N}}$$為定義在集合$$S$$的函數序列。
+
+#### 範例
+
+* $$S=[0,1]$$, $$f_n(x)=x^n$$
+* $$S=[0,1], f_n(x)=nx(1-x^2)^n$$
+* $$S=[-\pi, \pi], a_n, b_n \in \mathbb{R}$$, $$f_n(x)=a_n \cos(nx) + b_n \sin(nx)$$
+
 ## 函數數列的點態(逐點)收斂
 
-給定同一定義域的實數(複數)函數數列$$\{f_n\}$$，若函數$$f$$滿足 $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x), ~ x \in S$$，則稱函數$$f$$為函數數列的極限函數(limit function)，且稱<mark style="color:red;">函數數列</mark>$$\{f_n\}$$<mark style="color:red;">逐點收斂至集合</mark>$$S$$。
+> 給定同一定義域的實數(複數)函數數列$$\{f_n\}$$，若函數$$f$$滿足 $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x), ~ x \in S$$，則稱函數$$f$$為函數數列的極限函數(limit function)，且稱<mark style="color:red;">函數數列</mark>$$\{f_n\}$$<mark style="color:red;">逐點收斂至集合</mark>$$S$$。
+>
+> $$\forall x \in S$$, $$\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni d(f_n(x) - f(x)) < \epsilon \forall n \geq n_0$$
+>
+> 點態收斂中，$$n_0$$依賴於$$\epsilon$$與$$x$$兩者。(均勻收斂只依顧栆$$\epsilon$$)。
 
-#### 範例1
+點態收斂中，每一點$$x$$只考慮$$B_{\epsilon}(x)$$的收斂性，而非集合$$S$$內所有點的收斂性，因此給定$$\epsilon>0$$，當$$x_1 \neq x_2$$時，兩者收斂時所需要的項次$$n_1, n_2$$可能沒有上限。
+
+<mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數，但可保證連續函數收斂為處處連續函數(不收斂的集合測度為0)</mark>。
+
+#### 範例1：點態收斂無法保證連續函數收斂為連續函數
 
 令$$f_n(x)=\frac{x^{2n}}{1+x^{2n}}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$,則$$\displaystyle \lim_{n \rightarrow \infty} f(x) = \left\{ \begin{aligned} 0 & \text{ if } |x| \leq 1, \\ \frac{1}{2} & \text{ if } |x| = 1 \\ 1 & \text{ if } |x| > 1 \end{aligned} \right.$$，由連續函數收斂至非連續函數(但為幾乎處處連續函數)。
 
 ![逐點收斂範例1](../../.gitbook/assets/Figure\_1-min.png)
 
-#### 範例2
+#### 範例：點態收斂無法保證函數可微
+
+$$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
+
+可得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = \lim_{n \rightarrow \infty} \sqrt{\frac{nx^2+1}{n}} = \lim_{n \rightarrow \infty}\sqrt{x^2+\frac{1}{n}}=\sqrt{x^2}=|x|$$
+
+因此$$f(x)=|x|$$在$$[0,1]$$連續，但是在$$x=0$$不可微分。
+
+#### 範例：點態收斂無法保證函數積分收斂到極限函數的積分
 
 函數序列$$\displaystyle \lim_{n \rightarrow \infty} \int_0^1 f_n(x) dx \neq \int_0^1 \lim_{n \rightarrow \infty} f_n(x)dx$$
 
@@ -49,7 +79,7 @@ description: sequences of functions
 
 ### 連續函數一致收斂後仍為連續函數
 
-> 假設所有的函數$$f_n$$均在點$$c \in S ~ \forall n \in \mathbb{N}$$，若$$f_n$$一致收斂至函數$$f$$，則$$f$$也在點$$c \in S$$連續。
+> 假設所有的函數$$f_n$$均在點$$c \in S ~ \forall n \in \mathbb{N}$$連續，若$$f_n$$一致收斂至函數$$f$$，則$$f$$也在點$$c \in S$$連續。
 >
 > 若$$c$$為集合$$S$$的極限點，可得$$\displaystyle \lim_{x \rightarrow c}\lim_{n \rightarrow \infty} f_n(x) =  \lim_{n \rightarrow \infty} \lim_{x \rightarrow c} f_n(x)$$
 >

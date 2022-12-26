@@ -12,6 +12,7 @@ description: sequences of functions
   * <mark style="color:red;">點態收斂無法保證函數序列積分收斂到函數極限的積分</mark>。
 * 一致收斂、均勻收斂(uniform convergence)
   * 均勻收斂保連續函數收斂為連續函數
+  * 均勻收斂可保證函數序列積分收斂至函數序列極限的積分
 * 一致有界(uniformly bounded)
 * 無窮序列函數級數的一致收斂
 * Riemann-Stieltjes積分與一致收斂
@@ -70,12 +71,33 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 >
 > 1. $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ (只依賴與於$$\epsilon$$的選擇，與$$x$$無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$
 > 2. $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
+> 3. 2可再改寫為$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n$$，其中$$\{M_n\}$$為非負值且收斂至0的數列。
 >
 > 此處$$\epsilon$$的選擇是針定所有的點$$x$$均成立，與點態收斂中$$\epsilon$$可能依$$x$$變化不同。
+
+<mark style="color:red;">若</mark>$$\{f_n\} \rightarrow f$$<mark style="color:red;">一致收斂，則</mark>$${f_n} \rightarrow f$$<mark style="color:red;">點態收斂</mark>。
 
 <figure><img src="../../.gitbook/assets/pointwise_conv.jpg" alt=""><figcaption><p>點態收態，f與fn的距離在每一點x可能不同</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/uniform_conv.jpg" alt=""><figcaption><p>一致收斂，f與fn在定義域每一點都可保持在相同的距離內</p></figcaption></figure>
+
+#### 範例
+
+$$S=[-5,5]$$，$$f_n(x)=(2xn+(-1)^n x^2)/n$$，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)=2x$$ uniformly.
+
+$$\displaystyle \begin{aligned} |f_n(x) - f(x)| & = \left|  \frac{2xn+(-1)^n x^2}{n} - 2x \right| \\ 	& = \left|  \frac{(-1)^n x^2}{n}  \right| \\ 	& = \frac{x^2}{n} \\ 	& \leq \frac{5^2}{n} ~ \because x \in [-5,5]  \end{aligned}$$
+
+因此給定$$\epsilon >0$$時，只要取$$n_0 \in \mathbb{N} \ni \frac{5^2}{n_0} < \epsilon$$，$$n_0 > \frac{5^2}{\epsilon}$$即為所求。
+
+#### 範例
+
+$$S=\mathbb{R}$$，$$f_n(x)=\sin(nx)/\sqrt{n}$$，$$f(x)=0$$
+
+$$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}} \| \\ 		&= \frac{|\sin(nx)|}{\sqrt{n}} \\ 		& \leq \frac{1}{\sqrt{n}}  \end{aligned}$$
+
+因此給定$$\epsilon >0$$，只要取$$\frac{1}{n_0} < \epsilon \Rightarrow n_0 > \frac{1}{\epsilon}$$即為所求。
+
+###
 
 ### 連續函數一致收斂後仍為連續函數
 

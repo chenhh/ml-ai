@@ -43,7 +43,7 @@ description: sequences of functions
 
 $$ f_n(x)= \frac{1}{nx^2+1}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N} $$。
 
-* 若 $$ x \neq 0 $$，則 $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=0$。
+* 若 $$ x \neq 0 $$，則 $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=0$$。
 * 若 $$ x=0 $$，可得 $$ \displaystyle \lim_{n \rightarrow \infty}f_n(x) = 1 $$
 
 給定$$\epsilon = 0.5$$，
@@ -114,9 +114,13 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 > 有二種常見的定義：令函數序列$$\{f_n\}$$在集合$$S$$內一致收斂至函數$$f$$：
 >
 > 1. $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ (只依賴與於$$\epsilon$$的選擇，與$$x$$無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$
-> 2. $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
-> 3. 2可再改寫為$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n$$，其中$$\{M_n\}$$為非負值且收斂至0的數列。
->
+> 2.[範數表示法] $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
+> 2.1. [範數表示法] 可表示為 $$ \displaystyle \lim_{n \rightarrow \infty} \sup_{x \in S} \| f_n(x) - f(x) \| = 0 $$
+> 2.2. [範數表示法] 可再改寫為$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n$$，其中$$\{M_n\}$$為非負值且收斂至0的數列。
+> 
+> 註：範數表示法的名稱是因為 $$ \|f\|_{\infty} = \sup\{\|f(x)\| ~|~ x \in S \} $$為函數的上界範數(supremum norm)
+> 
+> 註：一致收斂的充要條件是$$\{f_n\}$$滿足Cauchy條件。
 
 此處$$\epsilon$$的選擇是針定所有的點$$x$$均成立，與點態收斂中$$\epsilon$$可能依$$x$$變化不同。
  
@@ -220,9 +224,14 @@ $$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}}
 
 > 令$$\{f_n\}$$為定義在集合$$S$$上的函數序列。
 >
-> 函數序列$$f_n \rightarrow f$$在$$S$$一致收斂 $$\Leftrightarrow$$ $$\forall \epsilon >0 \exists n_0 \in \mathbb{N} \ni |f_m(x)-f_n(x)|<\epsilon, ~\forall m,n >n_0$$
+> 函數序列$$f_n \rightarrow f$$在$$S$$一致收斂 $$\Leftrightarrow$$ $$\forall \epsilon >0 \exists n_0 \in \mathbb{N} \ni |f_m(x)-f_n(x)|<\epsilon, ~\forall m,n >n_0, ~ \forall x \in S$$
 >
+> 即給定$$\epsilon$$後，集合$$S$$中的所有點只要在$$n \geq n_0$$項之後，
+> 任兩個函數列中的函數均收斂。
+> 
 > 在一般度量空間$$(S,d)$$中也成立
+
+註：可得$$\{f_n\}$$非一致收斂，即存在$$\{f_n\}$$的一個子函數列，以及$$S$$中的一個數列$$\{x_m\}$$使得子函列在$$\{x_m\}$$不收斂於0。
 
 <details>
 

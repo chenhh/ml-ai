@@ -180,7 +180,6 @@ $$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}}
 
 因此給定$$\epsilon >0$$，只要取$$\frac{1}{n_0} < \epsilon \Rightarrow n_0 > \frac{1}{\epsilon}$$即為所求。
 
-###
 
 ### 連續函數一致收斂後仍為連續函數
 
@@ -206,9 +205,24 @@ $$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}}
 
 </details>
 
-### 一致收斂的計算性質
+### 一致收斂函數序列在加減法後仍為一致收斂
 
-> $$\{f_n\} \rightarrow f$$ uniformly on $$S$$且$$\{g_n\} \rightarrow g$$ uniformly on $$S$$，則可得$$\{f_n +g_n\} \rightarrow f+g$$ uniformly on $$S$$。
+> $$\{f_n\} \rightarrow f$$ uniformly on $$S$$且$$\{g_n\} \rightarrow g$$ uniformly on $$S$$，則可得$$\{f_n \pm g_n\} \rightarrow f \pm g$$ uniformly on $$S$$。
+
+#### 範例：一致收斂函數序列在乘法時沒有一致收斂的性質
+
+$$f_n(x) = x + \frac{1}{n}, ~ x \in \mathbb{R}$$，則函數序列一致收斂至$$f(x)=x, ~\forall x \in \mathbb{R$$。
+
+$$g_n(x)=(f_n(x))^2 = x^2 + \frac{2x}{n} + \frac{1}{n^2}, ~ x \in \mathbb{R}$$，則函數序列點態收斂至$$g(x)=x^2, ~\forall x \in \mathbb{R}$$。
+
+但是$$\displaystyle \forall n \in \mathbb{N}~, \sup_{x \in \mathbb{R}}\| g_n(x) - g(x) \| = \infty$$，並非一致收斂。
+
+
+### 一致收斂與內積
+
+> $$\{f_n: S \rightarrow \mathbb{R}^n \} \rightarrow f$$ uniformly且$$\{g_n: S \rightarrow \mathbb{R}^n\} \rightarrow g$$ uniformly，
+> 
+> 若極限函數$$f,g$$均為有界函數，則內積函數序列$$\{ \langle  f_n, g_n \rangle \}$$在$$S$$一致收斂至內積 $$  \langle  f,g  \rangle $$。
 
 ## 一致有界(uniformly bounded)
 
@@ -216,6 +230,14 @@ $$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}}
 
 一致有界是對所有$$x \in S$$以及對所有$$f_n$$有共同的上下界，<mark style="color:red;">但點態收斂不保證極限函數會在此上下界中</mark>。
 
+
+### 無上下界的函數序列仍可一致收斂
+
+$$f_n(x) = x + \frac{1}{n}, ~ x \in \mathbb{R}$$，在$$\forall n \in \mathbb{N}$$均非有界函數。
+
+而極限函數 $$ \displaystyle \lim_{n \rightarrow \infty} f_n(x) = \lim_{n \rightarrow \infty} x+ \frac{1}{n} = x $$非有界函數。
+
+$$|f_n(x) - f(x)| = |x+\frac{1}{n} - x|\leq |\frac{1}{n}| $$ 只與$$n$$有關，因此為一致收斂。
 
 
 ### 一致收致且個別函數有界時可得一致有界
@@ -256,6 +278,25 @@ $$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}}
 因此$$\forall n > n_0$$，$$\forall x \in S$$，可得$$|f_n(x) - f(x) | < \epsilon$$ (QED)
 
 </details>
+
+
+## 判定一致收斂方法: Dini
+
+> 令 $$ f_n : S \rightarrow  \mathbb{R} ~ S \subseteq \mathbb{R}^n$$，若：
+> 1. $$S$$為緊致集
+> 2. $$\forall x \in S ~ \{f_n(x)\}$$均為收斂的遞減數列，其極限函數為$$f(x)$$
+> 3. $$f, f_n, ~\forall n$$均在$$S$$上連續。
+> 
+> 則$$\{f_n\}$$在集合$$S$$上一致收斂至$$f$$。
+
+## 判定一致收斂方法: Polya
+
+> $$\{ f_n: [a,b] \rightarrow \mathbb{R} \}$$，若
+> 1. 所有$$f_n$$均為遞增函數
+> 2. 函數序列$$\{f_n\}$$在$$[a,b]$$逐點收斂於函數$$f: [a,b] \rightarrow \mathbb{R}$$
+> 3. 極限函數$$f$$在$$[a,b]$$為連續函數
+>
+>  則$$\{f_n\}$$在$$[a,b]$$上一致收斂至$$f$$。
 
 ## 無窮序列函數級數的一致收斂
 

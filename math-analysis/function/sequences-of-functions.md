@@ -43,7 +43,36 @@ description: sequences of functions
 
 令$$f_n(x)=\frac{x^{2n}}{1+x^{2n}}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$,則$$\displaystyle \lim_{n \rightarrow \infty} f(x) = \left\{ \begin{aligned} 0 & \text{ if } |x| \leq 1, \\ \frac{1}{2} & \text{ if } |x| = 1 \\ 1 & \text{ if } |x| > 1 \end{aligned} \right.$$，由連續函數收斂至非連續函數(但為幾乎處處連續函數)。
 
-![逐點收斂範例1](../../.gitbook/assets/Figure\_1-min.png)
+![逐點收斂無法保換函數連續性  ](../../.gitbook/assets/Figure\_1-min.png)
+
+<details>
+
+<summary>code，逐點收斂無法保換函數連續性 </summary>
+
+```python
+# -*- coding: UTF-8 -*-
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+def PointwiseConvergeOfsequenceContinuousFunction():
+    # 點態收斂無法保證連續函數收斂為連續函數
+    xs = np.arange(-1, 1, 0.001)
+    ns = range(1, 100)
+
+    for n in ns:
+        xs2n = xs**(2*n)
+        ys = xs2n/(1+xs2n)
+        plt.plot(xs, ys)
+    plt.legend()
+    plt.show()
+
+
+if __name__ == '__main__':
+    PointwiseConvergeOfsequenceContinuousFunction()
+```
+
+</details>
 
 #### 範例：點態收斂無法保證函數可微
 

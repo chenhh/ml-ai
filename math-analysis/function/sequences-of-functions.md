@@ -29,7 +29,7 @@ description: sequences of functions
 
 ## 函數數列的點態(逐點)收斂
 
-> 給定同一定義域的實數(複數)函數數列$$\{f_n\}$$，若函數$$f$$滿足 $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x), ~ x \in S$$，則稱函數$$f$$為函數數列的極限函數(limit function)，且稱<mark style="color:red;">函數數列</mark>$$\{f_n\}$$<mark style="color:red;">逐點收斂至集合</mark>$$S$$。
+> 給定同一定義域的實數(複數)函數數列$$\{f_n\}$$，若函數$$f$$滿足 $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x), ~ x \in S$$，則稱函數$$f$$為函數數列的<mark style="color:red;">極限函數(limit function)</mark>，且稱<mark style="color:red;">函數數列</mark>$$\{f_n\}$$<mark style="color:red;">逐點收斂至集合</mark>$$S$$。
 >
 > $$\forall x \in S$$, $$\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni d(f_n(x) - f(x)) < \epsilon \forall n \geq n_0$$
 >
@@ -39,7 +39,22 @@ description: sequences of functions
 
 <mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數，但可保證連續函數收斂為處處連續函數(不收斂的集合測度為0)</mark>。
 
-#### 範例1：點態收斂無法保證連續函數收斂為連續函數
+### 點態收斂的每一點收斂速度相異
+
+$$ f_n(x)= \frac{1}{nx^2+1}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N} $$。
+
+* 若 $$ x \neq 0 $$，則 $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=0$。
+* 若 $$ x=0 $$，可得 $$ \displaystyle \lim_{n \rightarrow \infty}f_n(x) = 1 $$
+
+給定$$\epsilon = 0.5$$，
+* 在$$x=0$$時，只要$$n \geq 1$$即可滿足。
+* $$x=1$$時，須$$n > 1$$。
+* $$x=\frac{1}{100}$$時，需要$$n > \frac{1}{10000}$$。
+
+因此給定$$\epsilon$$值，對相異的$$x$$，收斂所需要$$n$$值大小程度不同(沒有上限)。
+
+
+#### 範例：點態收斂無法保證連續函數收斂為連續函數
 
 令$$f_n(x)=\frac{x^{2n}}{1+x^{2n}}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$,則$$\displaystyle \lim_{n \rightarrow \infty} f(x) = \left\{ \begin{aligned} 0 & \text{ if } |x| \leq 1, \\ \frac{1}{2} & \text{ if } |x| = 1 \\ 1 & \text{ if } |x| > 1 \end{aligned} \right.$$，由連續函數收斂至非連續函數(但為幾乎處處連續函數)。
 

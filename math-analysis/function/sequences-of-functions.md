@@ -145,11 +145,15 @@ $$\displaystyle  \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}}
 
 </details>
 
+### 一致收斂的計算性質
+
+> $$\{f_n\} \rightarrow f$$ uniformly on $$S$$且$$\{g_n\} \rightarrow g$$ uniformly on $$S$$，則可得$$\{f_n +g_n\} \rightarrow f+g$$ uniformly on $$S$$。
+
 ## 一致有界(uniformly bounded)
 
 > 函數$$\{f_n\}$$在集合$$S$$稱為一致有界若存在常數$$M > 0, |f_n(x)| \leq M, ~ \forall x \in S, \forall n \in \mathbb{N}$$。
 
-一致有界對所有$$x \in S$$以及對所有$$f_n$$有共同的上下界。
+一致有界是對所有$$x \in S$$以及對所有$$f_n$$有共同的上下界，<mark style="color:red;">但點態收斂不保證極限函數會在此上下界中</mark>。
 
 
 

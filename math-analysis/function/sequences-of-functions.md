@@ -73,7 +73,16 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 > 2. $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
 > 3. 2可再改寫為$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n$$，其中$$\{M_n\}$$為非負值且收斂至0的數列。
 >
-> 此處$$\epsilon$$的選擇是針定所有的點$$x$$均成立，與點態收斂中$$\epsilon$$可能依$$x$$變化不同。
+
+此處$$\epsilon$$的選擇是針定所有的點$$x$$均成立，與點態收斂中$$\epsilon$$可能依$$x$$變化不同。
+ 
+由2的定義可看出對於$$\forall x \in S$$，只要$$n \geq n_0$$即可保證所有點的收斂速度一致；換句話說，只要$$S$$為閉集合，只要取$$n_0$$為集合內所有點收斂時的最大值即可滿足一致收斂的定義。
+
+一致收斂在極限時可表示為只與$$n$$有關，而與$$x$$無關的函數，見以下範例。
+
+<details>
+
+<summary> proof: epsilon-delta與sup定義的等價性 </summary>
 
 proof=>
 
@@ -95,9 +104,11 @@ proof <=
 
 因此可得$$n \geq n_2$$時，$$|f_n(x)-f(x)|< \epsilon ~ \forall x \in S$$，因此為一致收斂(QED)
 
+</details>
 
 
-<mark style="color:red;">若</mark>$$\{f_n\} \rightarrow f$$<mark style="color:red;">一致收斂，則</mark>$${f_n} \rightarrow f$$<mark style="color:red;">點態收斂</mark>。
+### 一致收斂為點斂收斂
+> <mark style="color:red;">若</mark>$$\{f_n\} \rightarrow f$$<mark style="color:red;">一致收斂，則</mark>$${f_n} \rightarrow f$$<mark style="color:red;">點態收斂</mark>。
 
 <figure><img src="../../.gitbook/assets/pointwise_conv.jpg" alt=""><figcaption><p>點態收態，f與fn的距離在每一點x可能不同</p></figcaption></figure>
 

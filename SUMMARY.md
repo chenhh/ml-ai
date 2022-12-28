@@ -317,3 +317,7 @@
 
 * [多感測器資料融合](data-fusion/multisensors-data-fusion.md)
 * [資料融合的觀點和它在資訊處理中的作用](data-fusion/zi-liao-rong-he-de-guan-dian-he-ta-zai-zi-xun-chu-li-zhong-de-zuo-yong.md)
+
+## 隨機微積分 <a href="#stochastic-calculus" id="stochastic-calculus"></a>
+
+* [Black-Scholes方程式](stochastic-calculus/black-scholes-equation.md)

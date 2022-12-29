@@ -320,8 +320,6 @@
 
 ## 隨機微積分 <a href="#stochastic-calculus" id="stochastic-calculus"></a>
 
-* [複利與報酬](stochastic-calculus/fu-li-yu-bao-chou.md)
 * [複利](stochastic-calculus/compounded-return.md)
-* [Copy of 複利](stochastic-calculus/compounded-return-1.md)
 * [put-call parity](stochastic-calculus/put-call-parity.md)
 * [Black-Scholes方程式](stochastic-calculus/black-scholes-equation.md)

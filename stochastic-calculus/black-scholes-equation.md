@@ -2,6 +2,8 @@
 
 ## Black-Scholes隨機方程式
 
+> 在時間$$t$$，資產與選擇權價格關係如下：
+>
 > $$\frac{\partial V}{\partial t} + \frac{1}{2} \sigma^2 \frac{\partial^2 V}{\partial S^2} + \gamma S \frac{\partial V}{\partial S} - \gamma V = 0$$
 
 其中:

@@ -41,7 +41,21 @@ $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$
 
 因此相差$$m$$個時間步長時可得$$S_{t+m}=S_t(1+ \mu \Delta t)^m$$。
 
-當$$m \rightarrow \infty$$時，可得$$\displaystyle S_{t+m}=\lim_{m \rightarrow \infty} S_t(1+\mu \Delta t)^m \approx S_0e^{\mu m \Delta t}=S_te^{\mu T}$$，其中$$T$$為總時間長度，步數$$m=\frac{T}{\Delta t}$$，當步長$$\Delta t \rightarrow 0$$時，上式近似成立。此結果可得以下重要結論：
+當$$m \rightarrow \infty$$時，可得$$\displaystyle S_{t+m}=\lim_{m \rightarrow \infty} S_t(1+\mu \Delta t)^m \approx S_0e^{\mu m \Delta t}=S_te^{\mu T}$$，其中$$T$$為總時間長度，步數$$m=\frac{T}{\Delta t}$$，當步長$$\Delta t \rightarrow 0$$時，上式近似成立。也可用多期投資投資組合資產增長方式得到相同結論。
+
+#### 多期投資組合資產增長
+
+令$$\mathbf{b}_t \in \mathbb{R}_{+}^n, s.t. ~\mathbf{b}_t^{\top} \mathbf{1}=1~,t=1,2,\dots, T$$為第$$t$$期時，投資$$n$$筆資產的資金權重，每期資產權重總和均為1。
+
+令$$\mathbf{x}_t=\frac{\mathbf{s}_t}{\mathbf{s}_{t-1}} \in \mathbb{R}_{+}^n$$為$$n$$筆資產的相對價格。
+
+令期初的資產為$$S_0$$，則$$T$$期後，使用投資組合(權重序列)$$\mathbf{b}_1^T=\{\mathbf{b}_1, \mathbf{b}_2, \dots, \mathbf{b}_T\}$$的資產為$$\displaystyle S_T(\mathbf{b}_1^T)= S_0 \prod_{t=1}^T \mathbf{b}_t^{\top} \mathbf{x}_t = S_0 \prod_{t=1}^T \sum_{i=1}^n b_{t,i}x_{t,i}$$
+
+令$$S_0=1$$，則兩側取對數再除以$$T$$可得到平均報酬率為$$\displaystyle \frac{1}{T}\log S_T(\mathbf{b}_1^T) = \frac{1}{T} \sum_{t=1}^T \log (\mathbf{b}_t^{\top} \mathbf{x}_t)$$
+
+其中$$\displaystyle \log( \mathbf{b}_t^{\top} \mathbf{x}_t) \approx r_t^{(p)}$$為投資組合第$$t$$期的報酬率。
+
+此結果可得以下重要結論：
 
 1. <mark style="color:red;">**在沒有任何隨機性時，資產呈指數增長(連續複利)**</mark>。
 2. <mark style="color:red;">**必須是使用**</mark>$$\Delta t$$<mark style="color:red;">**乘以瞬間報酬**</mark>$$\mu$$<mark style="color:red;">**才能得到此結論，使用其它方法無此結果**</mark>。

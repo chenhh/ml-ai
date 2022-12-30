@@ -18,11 +18,13 @@ description: compounded return
 
 $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$$
 
-如果支付利息次數增加，上式可改寫為：$$\displaystyle \lim_{m \rightarrow \infty} p(1+\frac{r}{m})^{mn}=e^{mn \log (1+\frac{r}{m})} \approx e^{nr}$$
+如果支付利息次數增加，上式可改寫為：$$\displaystyle \lim_{m \rightarrow \infty} p\left(1+\frac{r}{m} \right)^{mn}=e^{mn \log (1+\frac{r}{m})} \approx e^{nr}$$
 
 ## 報酬(return)
 
 第$$t$$日資產價格為$$S_t$$，則第$$t$$日至$$t+1$$日報酬率(不考慮除權息)為$$r_t = \frac{S_{t+1}}{S_t}-1$$。
+
+也可用連續複利方式計算$$r_t \approx \log\frac{S_{t+1}}{S_t}$$
 
 收集$$M$$日的報酬可得均值與標準差為：
 
@@ -32,6 +34,8 @@ $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$
 通常日報酬率的均值會比標準差小很多，因此日交易資料中的噪音很大。
 
 <mark style="color:red;">為了建模，假設報酬率符合常態分佈(實證研究中分佈通常不是常態分佈)，因此可將報酬率視為隨機變數</mark>$$r_t \sim N(\overline{r}, \hat{\sigma})$$。
+
+## 資產以複利計算時為指數增長
 
 若將取樣週期縮短，時間步長記為$$\Delta t$$，則報酬率均值與時間步長成比例。令瞬時報酬$$\mu$$為常數，則可得$$r = \mu \Delta t$$--(1)。
 

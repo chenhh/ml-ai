@@ -4,13 +4,19 @@ description: compounded return
 
 # 複利
 
-## 複利(compounded interest return)
+## 複利(compounded return)
 
 複利有兩種形式：離散與連續複利。
+
+#### 離散複利
 
 假設在銀行存入$$p$$元，年利率為$$r$$，每年付息，則$$n$$年後總額為$$p(1+r)^n$$元。
 
 如果每年複利$$m$$次，且每期依利率$$\frac{r}{m}$$支付，則$$n$$年後總額為：$$p(1+\frac{r}{m})^{mn}$$
+
+#### 連續複利
+
+$$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$$
 
 如果支付利息次數增加，上式可改寫為：$$\displaystyle \lim_{m \rightarrow \infty} p(1+\frac{r}{m})^{mn}=e^{mn \log (1+\frac{r}{m})} \approx e^{nr}$$
 
@@ -18,16 +24,43 @@ description: compounded return
 
 第$$t$$日資產價格為$$S_t$$，則第$$t$$日至$$t+1$$日報酬率(不考慮除權息)為$$r_t = \frac{S_{t+1}}{S_t}-1$$。
 
-收集$$T$$日的報酬可得均值與標準差為：
+收集$$M$$日的報酬可得均值與標準差為：
 
-* $$\displaystyle \overline{r} = \frac{1}{T} \sum_{t=1}^T r_t$$
-* $$\displaystyle \hat{\sigma}=\left( \frac{1}{T-1} \sum_{t=1}^T (r_t - \overline{r})\right)^{1/2}$$
+* $$\displaystyle \overline{r} = \frac{1}{M} \sum_{t=1}^M r_t$$
+* $$\displaystyle \hat{\sigma}=\left( \frac{1}{M-1} \sum_{t=1}^M (r_t - \overline{r})\right)^{1/2}$$
 
 通常日報酬率的均值會比標準差小很多，因此日交易資料中的噪音很大。
 
 <mark style="color:red;">為了建模，假設報酬率符合常態分佈(實證研究中分佈通常不是常態分佈)，因此可將報酬率視為隨機變數</mark>$$r_t \sim N(\overline{r}, \hat{\sigma})$$。
 
-若將取樣週期縮短，時間步長記為$$\delta t$$，則報酬率均值與時間步長成比例。
+若將取樣週期縮短，時間步長記為$$\Delta t$$，則報酬率均值與時間步長成比例。令瞬時報酬$$\mu$$為常數，則可得$$r = \mu \Delta t$$--(1)。
+
+考慮日報酬，則可得$$\frac{S_{t+1}-S_t}{S_t} = \mu \Delta t$$，因此$$S_{t+1}=S_t(1+\mu \Delta t)$$。
+
+相差2個時間步時長時可得$$S_{t+2}=S_t(1+\mu\Delta t)^2$$。
+
+因此相差$$m$$個時間步長時可得$$S_{t+m}=S_t(1+ \mu \Delta t)^m$$。
+
+當$$m \rightarrow \infty$$時，可得$$\displaystyle S_{t+m}=\lim_{m \rightarrow \infty} S_t(1+\mu \Delta t)^m \approx S_0e^{\mu m \Delta t}=S_te^{\mu T}$$，其中$$T$$為總時間長度，步數$$m=\frac{T}{\Delta t}$$，當步長$$\Delta t \rightarrow 0$$時，上式近似成立。此結果可得以下重要結論：
+
+1. <mark style="color:red;">**在沒有任何隨機性時，資產呈指數增長(連續複利)**</mark>。
+2. <mark style="color:red;">**必須是使用**</mark>$$\Delta t$$<mark style="color:red;">**乘以瞬間報酬**</mark>$$\mu$$<mark style="color:red;">**才能得到此結論，使用其它方法無此結果**</mark>。
+
+再來考慮瞬時標準差，當$$\Delta t \rightarrow 0$$，總共有$$m=\frac{T}{\Delta t} \rightarrow \infty$$筆資料，為了保證報酬標準差為有限值，其收斂速度應為$$O(\Delta \sqrt{t})$$才為有限值。
+
+令瞬時標準差$$\sigma$$為常數，可得$$\hat{\sigma}=\sigma\sqrt{\Delta t}$$--(2)
+
+由資產報酬率公式
+
+
+
+
+
+
+
+
+
+
 
 &#x20;
 

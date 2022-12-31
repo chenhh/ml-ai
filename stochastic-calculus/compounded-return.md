@@ -35,6 +35,30 @@ $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$
 
 <mark style="color:red;">為了建模，假設報酬率符合常態分佈(實證研究中分佈通常不是常態分佈)，因此可將報酬率視為隨機變數</mark>$$r_t \sim N(\overline{r}, \hat{\sigma})$$。
 
+## 股票價格隨機漫步模型
+
+令$$S_t$$為時間$$t$$的股價，假設時間$$t+1$$股價上漲至$$hS_t$$的機率為$$p$$，且股價下跌至$$lS_t$$的機率為$$q=1-p$$，且$$h, l >0$$。
+
+初始時，$$S_0=S$$，在時間1時，股價可能為$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_1 = hS_0) = p \\ & \mathrm{P}(S_1 = lS_0)= q  \end{aligned} \right.$$，可寫成：$$\displaystyle \mathrm{P}(S_1 = h^rl^{1-r}S_0)=p^rq^{1-r}, ~r \in \{0, 1\}$$
+
+令隨機變數$$\displaystyle X_t = \left\{ \begin{aligned} & \mathrm{P}(X_t =h ) = p \\ & \mathrm{P}(X_t =l ) = q \\ \end{aligned} \right.$$，當$$X_t$$與$$S$$獨立時，可寫成$$S_1=S_0X_1$$
+
+時間2時，股價的可能性為：$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_2 = hS_1) = p \\ & \mathrm{P}(S_2 = lS_1)= q  \end{aligned} \right.$$， 擴展開得$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_2 = h^2S_0) = p^2 \\ &\mathrm{P}(S_2 = hlS_0) = 2pq \\ & \mathrm{P}(S_2 = l^2S_0)= q^2  \end{aligned} \right.$$，可寫成二項式分佈為：$$\displaystyle \mathrm{P}(S_2 = h^rl^{2-r}S_0)=\binom{2}{r}p^rq^{2-r}, ~r \in \{0, 1, 2\}$$
+
+可寫成$$S_2=S_1X_2=S_0X_1X_2$$
+
+時間$$t$$時，可寫成$$\displaystyle \mathrm{P}(S_t = h^rl^{t-r}S_0)=\binom{t}{r}p^rq^{t-r}, ~r \in \{0, 1, \dots, t\}$$
+
+股價$$\displaystyle S_t = S_0 \prod_{i=1}^t X_i$$
+
+因為$$X_t$$的意義為相對價格，即$$X_t=\frac{S_{t}}{S_{t-1}}$$，因此取對數時為(連續)報酬，即$$\displaystyle r_t = \log X_t = \log S_{t}- \log S_{t-1} = \left\{ \begin{aligned} & \mathrm{P}(\log X_t =\log h ) = p \\ & \mathrm{P}(\log X_t =\log l ) = q \\ \end{aligned} \right.$$
+
+因此$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$
+
+
+
+
+
 ## 資產以複利計算時為指數增長
 
 若將取樣週期縮短，時間步長記為$$\Delta t$$，則報酬率均值與時間步長成比例。令瞬時報酬$$\mu$$為常數，則可得$$r = \mu \Delta t$$--(1)。

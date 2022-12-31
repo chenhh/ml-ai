@@ -55,6 +55,29 @@ $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$
 
 因此$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$
 
+可得報酬的期望值與變異數如下：
+
+* $$\mathrm{E}(r_t)=p \log h +q \log l = \mu$$
+* $$\mathrm{Var}(r_t) = p (\log h)^2 + q (\log l)^2=\sigma^2$$
+
+因為$$r_t$$為獨立隨機變數，因此
+
+* $$\displaystyle \mathrm{E}(\sum_{i=1}^t r_i)=\mu t$$
+* $$\displaystyle \mathrm{Var}(\sum_{i=1}^t r_i)=\sigma^2 t$$
+
+將$$r_t$$正規化:
+
+* 令$$\omega_t = \frac{r_t - \mu}{\sigma}$$
+* 令$$W_t = W_{t-1} + \omega_t, ~W_0=0$$
+
+可得$$\mathrm{E}(\omega_t)=0$$且$$\mathrm{Var}(\omega_t)=1$$
+
+整理後可得$$\displaystyle \sum_{i=1}^t r_t = \sum_{i=1}^t (\mu + \sigma \omega_t)=\mu t + \sigma \sum_{i=1}^t \omega_i$$
+
+由於$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$，代入後可得
+
+$$\displaystyle \log S_{t} = \log S_0  + \mu t + \sigma W_t$$
+
 
 
 

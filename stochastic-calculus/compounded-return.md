@@ -49,28 +49,28 @@ $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$
 
 時間$$t$$時，可寫成$$\displaystyle \mathrm{P}(S_t = h^rl^{t-r}S_0)=\binom{t}{r}p^rq^{t-r}, ~r \in \{0, 1, \dots, t\}$$
 
-股價$$\displaystyle S_t = S_0 \prod_{i=1}^t X_i$$
+股價$$\displaystyle S_t = S_0 \prod_{i=1}^t X_i$$--(s1)
 
 因為$$X_t$$的意義為相對價格，即$$X_t=\frac{S_{t}}{S_{t-1}}$$，因此取對數時為(連續)報酬，即$$\displaystyle r_t = \log X_t = \log S_{t}- \log S_{t-1} = \left\{ \begin{aligned} & \mathrm{P}(\log X_t =\log h ) = p \\ & \mathrm{P}(\log X_t =\log l ) = q \\ \end{aligned} \right.$$
 
-因此$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$
+因此$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$--(s2)
 
 可得報酬的期望值與變異數如下：
 
-* $$\mathrm{E}(r_t)=p \log h +q \log l = \mu$$
-* $$\mathrm{Var}(r_t) = p (\log h)^2 + q (\log l)^2=\sigma^2$$
+* $$\mathrm{E}(r_t)=p \log h +q \log l = \mu$$ --(r1)
+* $$\mathrm{Var}(r_t) = p (\log h)^2 + q (\log l)^2=\sigma^2$$ --(r2)
 
 因為$$r_t$$為獨立隨機變數，因此
 
-* $$\displaystyle \mathrm{E}(\sum_{i=1}^t r_i)=\mu t$$
-* $$\displaystyle \mathrm{Var}(\sum_{i=1}^t r_i)=\sigma^2 t$$
+* $$\displaystyle \mathrm{E}(\sum_{i=1}^t r_i)=\mu t$$ --(r3)
+* $$\displaystyle \mathrm{Var}(\sum_{i=1}^t r_i)=\sigma^2 t$$ --(r4)
 
 將$$r_t$$正規化:
 
-* 令$$\omega_t = \frac{r_t - \mu}{\sigma}$$
-* 令$$W_t = W_{t-1} + \omega_t, ~W_0=0$$
+* 令$$\omega_t = \frac{r_t - \mu}{\sigma}$$-- (w1)
+* 令$$W_t = W_{t-1} + \omega_t, ~W_0=0$$--(w2)
 
-可得$$\mathrm{E}(\omega_t)=0$$且$$\mathrm{Var}(\omega_t)=1$$
+可得$$\mathrm{E}(\omega_t)=0$$且$$\mathrm{Var}(\omega_t)=1$$--(w3)
 
 整理後可得$$\displaystyle \sum_{i=1}^t r_t = \sum_{i=1}^t (\mu + \sigma \omega_t)=\mu t + \sigma \sum_{i=1}^t \omega_i$$
 
@@ -86,7 +86,13 @@ $$\displaystyle \log S_{t} = \log S_0  + \mu t + \sigma W_t$$
 
 由(1,2)得$$\Delta S_t = \mu S_{t-1} + \sigma S_{t-1}\Delta W_t$$--(3)
 
-(3)的連續型式為股價隨機微分方程式：$$dS=\mu Sdt+\sigma SdW$$。
+(3)的連續型式為股價隨機微分方程式(SDE)：$$dS=\mu Sdt+\sigma SdW$$。
+
+### 股價隨機微分方程為平賭過程
+
+考慮(s2) $$\displaystyle \log S_{t} = \log S_{t-1} + r_t$$，在上述平賭過程推導中，假設$$r_t \sim WN(\mu, \sigma^2)$$為獨立同分佈(i.i.d)。
+
+如果$$r_t=a r_{t-1} + e_t, ~ e_t \sim WN(0, \sigma_e^2)~|a|<1$$為AR(1)過程時，此時$$S$$不是隨機漫步，且非平賭過程.&#x20;
 
 
 

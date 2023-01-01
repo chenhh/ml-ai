@@ -36,7 +36,15 @@ $$S(t) >0, ~ A(t) > 0, ~ t=0,1$$
 
 令投資人在時間$$t$$的財產(wealth)為$$V(t)=xS(t)+yA(t)$$，則報酬率為$$R_V=\frac{V(1)}{V(0)}-1$$。
 
+範例：
 
+無風險資產價格$$A(0)=100, ~A(1)=110$$，因此報酬率為$$R_A=10%$$。
+
+風險資產價格$$S(0)=50$$，$$\displaystyle S(1) = \left\{ \begin{aligned} & \mathrm{P}(S(1)=52) = p \\ & \mathrm{P}(S(1)=48) = 1-p  \end{aligned} \right.$$，對應的報酬為$$\displaystyle R_S = \left\{ \begin{aligned} & 0.04 &\text{ if stock goes up } \\ & -0.04& \text{ if stock goes down }  \end{aligned} \right.$$
+
+如果時間$$t=0$$的投資組合$$(x,y)=(20,10)$$，可得$$V(0)=20\times 50 + 10 \times 100 = 2000$$。
+
+時間$$t=1$$時
 
 
 

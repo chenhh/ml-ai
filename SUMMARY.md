@@ -320,6 +320,7 @@
 
 ## 隨機微積分 <a href="#stochastic-calculus" id="stochastic-calculus"></a>
 
+* [簡單市場模型](stochastic-calculus/simple-market-model.md)
 * [複利](stochastic-calculus/compounded-return.md)
 * [put-call parity](stochastic-calculus/put-call-parity.md)
 * [Black-Scholes方程式](stochastic-calculus/black-scholes-equation.md)

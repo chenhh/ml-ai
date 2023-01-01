@@ -78,6 +78,16 @@ $$\displaystyle e^x = \lim_{m \rightarrow \infty} \left(1+\frac{x}{m} \right)^m$
 
 $$\displaystyle \log S_{t} = \log S_0  + \mu t + \sigma W_t$$
 
+可得 $$\log S_{t-1} = \log S_0 + \mu (t-1) + \sigma W_{t-1}$$
+
+上兩式相減得 $$\Delta \log S_t = \mu + \sigma (\Delta W_t)$$--(1)
+
+因為$$\displaystyle \Delta \log S_{t} = \log S_t - \log S_{t-1} = \log \frac{S_{t}}{S_{t-1}}  = \log \frac{S_{t-1} + \Delta S_t }{S_{t-1}} = \log \left( 1 + \frac{\Delta S_t}{S_{t-1}} \right) \approx \frac{\Delta S_t}{S_{t-1}}$$--(2)
+
+由(1,2)得$$\Delta S_t = \mu S_{t-1} + \sigma S_{t-1}\Delta W_t$$--(3)
+
+(3)的連續型式為股價隨機微分方程式：$$dS=\mu Sdt+\sigma SdW$$。
+
 
 
 

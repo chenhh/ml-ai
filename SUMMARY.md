@@ -282,6 +282,7 @@
 * [整數規劃](convex-optimization/integer-programming.md)
 * [隨機規劃](convex-optimization/stochastic-programming/README.md)
   * [Portfolio stochastic programming](convex-optimization/stochastic-programming/portfolio-stochastic-programming.md)
+* [投資組合策略](convex-optimization/portfolio-strategy.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

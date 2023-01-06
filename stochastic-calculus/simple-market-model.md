@@ -49,6 +49,31 @@ description: simple market model
 
 當上式$$\gamma_t=1, ~\forall t$$表示不考慮交易費用，則等價於不考慮交易費用的模型。
 
+## 買進持有策略(buy-and-hold strategy)
+
+給定初始權重$$\mathbf{w}_0$$，期間不重新調整投資組合的策略稱為買進持有(BAH)策略。經過$$T$$期後，資金變為：
+
+$$\displaystyle w_{(p),T}^{(BAH)} \equiv w_{(p),T}^{(BAH)}(\mathbf{w}_0) = \sum_{i=1}^M \left( w_{i, 0} \prod_{t=1}^T x_{i,t} \right)$$
+
+## 恆定再平衡投資組合(constant rebalanced portfolio)
+
+CRP策略在期初決定好一組固定的權重$$\mathbf{w}$$，且在每一期經過價格變動$$\mathbf{x}_t$$後，再重新調整為指定的權重$$\mathbf{w}$$，因此須要付出高額的交易費用。
+
+假設不考慮交易費用，則經過$$T$$期後，資金變為：
+
+$$\displaystyle w_{(p),T}^{(CRP)} \equiv w_{(p),T}^{(CRP)}(\mathbf{w}) = \prod_{t=1}^T \left(  \sum_{i=1}^M w_{i}  x_{i,t} \right)$$
+
+如果投資人已經知道未來所有的價格變動，即$$\displaystyle  \mathbf{x}_{1:T}=\{\mathbf{x}_1, \mathbf{x}_2, \dots, \mathbf{x}_T\}$$均為已知時，可反推得到具有最高報酬的權重$$\mathbf{w}^{*}$$，此權重稱為best CRP(BCRP)。
+
+BCRP經過$$T$$期後，資金變為：
+
+* $$\displaystyle \mathbf{w}^{*} = \argmax_{\mathbf{w} \in \Delta_M} \left( w_{(p), T}^{(CRP)}(\mathbf{w}) \right)$$
+* $$\displaystyle w_{(p),T}^{(BCRP)} \equiv w_{(p),T}^{(BCRP)}(\mathbf{w}^{*}) = \prod_{t=1}^T \left(  \sum_{i=1}^M w_{i}^{*}  x_{i,t} \right)$$
+
+由定義可得$$\displaystyle w_{(p),T}^{(CRP)}\leq w_{(p),T}^{(BCRP)} ~ \forall \mathbf{w} \in \Delta_M$$，且CRP策略中，可得到價格變動向量無論怎麼排列，都不會影到到期末的投資組合資金。
+
+因為投資人不可能事先得知所有的價格變動向量，因此BCRP在實務上是不可能計算得出，但BCRP可做為基準值，投資人可調整權重使得$$T$$期之後的報酬相對於BCRP差距為0。
+
 ## 基本假設
 
 * 隨機性(randomness)

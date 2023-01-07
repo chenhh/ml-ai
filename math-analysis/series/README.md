@@ -3,15 +3,15 @@
 ## 簡介
 
 * 實數中的級數為(有限或無限)數列的總和，可分為**收斂**與**發散級數**二類。
-* 只需考慮正項級數（與負項級數，非負項級數等價）與交錯級數的收斂性質即可。
+* <mark style="color:red;">只需考慮正項級數（與負項級數，非負項級數等價）與交錯級數的收斂性質即可</mark>。
 
 審斂法(tests for convergence)有：篩審斂法(screen test)，Cauchy審斂法，絕對值審斂法，正項級數審斂法，積分審斂法，比較審斂法，極限比較審斂法，交錯級數審斂法，Dirichlet審斂法，比值審斂法，根式審斂法。
 
 ### 收斂條件整理
 
 * 絕對收斂（$$\sum_{k=1}^\infty |x_k|$$收斂）$$\subseteq$$條件收斂（$$\sum_{k=1}^\infty |x_k|$$發散、$$\sum_{k=1}^\infty x_k$$收斂）$$\subseteq$$數列收斂至0（$$\displaystyle \lim_{n \rightarrow \infty} x_n = 0$$）。
-* 任意級數$$\sum_{k=1}^\infty x_k$$收斂$$\Leftrightarrow$$部份和數列為Cauchy數列。
-* 任意級數$$\sum_{k=1}^\infty x_k$$收斂$$\Rightarrow \displaystyle \lim_{n \rightarrow \infty} x_n =0$$。
+* \[充要條件]任意級數$$\sum_{k=1}^\infty x_k$$收斂$$\Leftrightarrow$$部份和數列為Cauchy數列。
+* \[必要條件]任意級數$$\sum_{k=1}^\infty x_k$$收斂$$\Rightarrow \displaystyle \lim_{n \rightarrow \infty} x_n =0$$。
 * 任意級數絕對收斂（$$\sum_{k=1}^\infty |x_k|$$）$$\Rightarrow$$級數$$\sum_{k=1}^\infty x_k$$收斂。
 * 若$$\exists n_0 \in \mathbb{N} \ni |x_n| \leq |y_n|, \forall n \geq n_0$$，則$$\sum_{k=1}^\infty |y_k|$$收斂$$\Rightarrow \sum_{k=1}^\infty |x_k|$$收斂。
 * 若$$\displaystyle \lim_{n \rightarrow \infty} \left|  \frac{x_n}{y_n}\right| = L \in \mathbb{R}, L \neq0$$，則$$\sum_{k=1}^\infty |y_k|$$收斂$$\Leftrightarrow \sum_{k=1}^\infty |x_k|$$收斂。

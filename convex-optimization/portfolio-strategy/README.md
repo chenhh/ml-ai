@@ -11,8 +11,6 @@ description: follow-the-winner投資組合策略
 * pattern-matching: B-H, B-K, B-S, B-NN, B-MV, B-GV。
 * meta: follow the leading history, OGU, ONU。
 
-賽局理論中，regret-minimization algorithm也可以用於投資組合中，但要注意是否有考慮到手續費。不考慮手續費的模型只適用於理論收斂性質分析。
-
 ## 基本符號
 
 投資標的為$$M$$個資產，且市場在離散時間$$t=1,2,\dots, T$$演變。

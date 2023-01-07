@@ -291,15 +291,6 @@
   * [Online mean average reversion](convex-optimization/portfolio-strategy/online-mean-average-reversion.md)
   * [robust median](convex-optimization/portfolio-strategy/robust-median.md)
   * [confidence weight mean reversion](convex-optimization/portfolio-strategy/confidence-weight-mean-reversion.md)
-  * [Nonparametric histogram log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-histogram-log-optimal-strategy.md)
-  * [Nonparametric kernel-based log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-log-optimal-strategy.md)
-  * [Nonparametric kernel-based semi-log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-semi-log-optimal-strategy.md)
-  * [Nonparametric nearest neighbor log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-nearest-neighbor-log-optimal-strategy.md)
-  * [Nonparametric kernel-based Markowitz-type strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-markowitz-type-strategy.md)
-  * [Nonparametric kernel-based GV-type strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-gv-type-strategy.md)
-  * [Follow the Leading History](convex-optimization/portfolio-strategy/follow-the-leading-history.md)
-  * [Online gradient updates](convex-optimization/portfolio-strategy/online-gradient-updates.md)
-  * [Online Newton updates](convex-optimization/portfolio-strategy/online-newton-updates.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

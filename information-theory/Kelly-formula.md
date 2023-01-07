@@ -32,7 +32,7 @@
 
 ### 投資平均報酬率
 
-> 投資人的$$T$$期平均報酬率為$$\displaystyle \overline{r} =  \frac{1}{T} \log\left(\frac{v_T}{v_0}\right)$$
+> 投資人的$$T$$期平均報酬率為$$\displaystyle \overline{r} =  \frac{1}{T} \log\left(\frac{v_T}{v_0}\right)$$，針對平均報酬率最大化求最佳投資組合。
 
 因為$$\displaystyle \begin{aligned} & \frac{1}{T} \left(   \log\left( \frac{v_1}{v_0} \right) +   \log\left( \frac{v_2}{v_1} \right) +   \dots +  \log\left( \frac{v_T}{v_{T-1}} \right)     \right)   \\ & = \frac{1}{T} \left(    \log\left( \frac{v_1}{v_0} \frac{v_2}{v_1} \dots \frac{v_T}{v_{T-1}} \right) \right)	 \\ &=  \frac{1}{T} \log \left( \frac{v_T}{v_0} \right)  \end{aligned}$$
 

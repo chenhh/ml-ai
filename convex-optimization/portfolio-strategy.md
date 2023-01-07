@@ -87,7 +87,15 @@ BCRP經過$$T$$期後，資金變為：
 
 初始權重$$\mathbf{w}_0=(1/M, 1/M, \dots, 1/M)$$
 
-$$\displaystyle \mathbf{w}_{t+1} = \frac{}{}$$
+$$\displaystyle \mathbf{w}_{t+1} = \frac {\int_{\Delta_M} \mathbf{w}v_{(p),t}(\mathbf{w}) d\mathrm{P}(\mathbf{w})} {\int_{\Delta_M} v_{(p),t}(\mathbf{w}) d\mathrm{P}(\mathbf{w}) }$$
+
+其中$$\Delta_M$$為所有權重向量$$\mathbf{w}$$的simplex，$$\mathrm{P}(\mathbf{w})$$為權重向量發生的機率，$$v_{(p),t}(\mathbf{w})$$使用固定的權重$$\mathbf{w}$$從時間1至$$t$$的CRP資金，因此分母就是所有$$\Delta_M$$內依機率加權1至t期的CRP期望資金值。
+
+由於$$\Delta_M$$的實現值隨資產$$M$$指數成長，因此用暴力法只能計算到$$M=3$$或$$M=4$$，數量再多計算量過大。
+
+
+
+
 
 ## 參考資料
 

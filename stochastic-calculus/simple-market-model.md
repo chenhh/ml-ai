@@ -6,7 +6,7 @@ description: simple market model
 
 ## 常用符號
 
-參考[投資組合策略](../convex-optimization/portfolio-strategy/)。
+參考[投資組合策略](../convex-optimization/portfolio-strategy.md)。
 
 ## 基本假設
 

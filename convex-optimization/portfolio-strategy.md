@@ -2,7 +2,7 @@
 description: follow-the-winner投資組合策略
 ---
 
-# 投資組合策略UP
+# 投資組合策略CRP,UP
 
 ## 策略分類
 
@@ -10,6 +10,8 @@ description: follow-the-winner投資組合策略
 * follow-the-loser: Anticor, PAMR, OLMAR, robust mean, CWMR。
 * pattern-matching: B-H, B-K, B-S, B-NN, B-MV, B-GV。
 * meta: follow the leading history, OGU, ONU。
+
+賽局理論中，regret-minimization algorithm也可以用於投資組合中，但要注意是否有考慮到手續費。不考慮手續費的模型只適用於理論收斂性質分析或是meta方法，而其子方法必須有考慮手續費才行。
 
 ## 基本符號
 
@@ -81,8 +83,14 @@ BCRP經過$$T$$期後，資金變為：
 
 因為投資人不可能事先得知所有的價格變動向量，因此BCRP在實務上是不可能計算得出，但BCRP可做為基準值，投資人可調整權重使得$$T$$期之後的報酬相對於BCRP差距為0。
 
-## Universal portfolio
+## 泛化投資組合(Universal portfolio)
+
+
 
 ## 參考資料
 
-* T. M. Cover and E. Ordentlich, "Universal portfolios with side information," Information Theory, IEEE Transactions on, vol. 42, pp. 348-363, 1996.
+* T. M. Cover, “Universal portfolios,” Mathematical finance, vol. 1, pp. 1-29, 1991. \[第一篇提出UP的論文]&#x20;
+* T. M. Cover and E. Ordentlich, "Universal portfolios with side information," Information Theory, IEEE Transactions on, vol. 42, pp. 348-363, 1996.&#x20;
+* V. Vovk and C. Watkins, "Universal portfolio selection," in Proceedings of the eleventh annual conference on Computational learning theory, pp. 12-23, 1998 .&#x20;
+* A. Blum and A. Kalai, "Universal portfolios with and without transaction costs," Machine Learning, vol. 35, pp. 193-205, 1999.
+* [https://github.com/Marigold/universal-portfolios](https://github.com/Marigold/universal-portfolios)

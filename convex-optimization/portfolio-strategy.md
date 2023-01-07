@@ -85,7 +85,9 @@ BCRP經過$$T$$期後，資金變為：
 
 ## 泛化投資組合(Universal portfolio)
 
+初始權重$$\mathbf{w}_0=(1/M, 1/M, \dots, 1/M)$$
 
+$$\displaystyle \mathbf{w}_{t+1} = \frac{}{}$$
 
 ## 參考資料
 

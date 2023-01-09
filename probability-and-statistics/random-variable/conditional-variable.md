@@ -12,6 +12,8 @@
 
 ### 隨機變數的條件期望值
 
+定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P}$$
+
 對於離散隨機變數$$X,Y$$，$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求期望值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。但注意到此值是$$Y$$的實現值，因此期望值是$$y$$的函數，即$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
 
 即使取$$X$$的函數值$$g(X)$$，條件期望值仍然為$$Y$$的函數，即$$\mathrm{E}(g(X)|Y)=h(Y)$$為$$Y$$的隨機變數。
@@ -28,12 +30,16 @@
 
 考慮測度空間$$(\Omega, \mathcal{F}_0, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$。
 
-考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=f(Y)$$為$$Y$$的隨機變數，且滿足：
+#### 描述性定義
+
+考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=Y$$為$$Y$$的隨機變數，且滿足：
 
 1. 隨機變數$$Y$$在$$\mathcal{F}$$可測；
-2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Y d\mathrm{P}$$
+2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Y d\mathrm{P}$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Y\mathbf{1}_A)$$。
 
-條件期望值不唯一，但任兩個版本的條件期望值只在零測集上相異。
+<mark style="color:red;">稱隨機變數</mark>$$Y$$<mark style="color:red;">為</mark>$$X$$<mark style="color:red;">關於</mark>$$\mathcal{F}$$<mark style="color:red;">的條件期望值。</mark>
+
+<mark style="color:red;">條件期望值不唯一，但任兩個版本的條件期望值只在零測集上相異</mark>。
 
 proof: 條件期望值存在性會用到Ryadon-Nikodym定理
 
@@ -52,6 +58,14 @@ proof: 條件期望值存在性會用到Ryadon-Nikodym定理
 由Raydon-Nikodym定理可得存在$$\displaystyle g=\frac{d \nu}{d \mu}$$使得$$\displaystyle \int_Af d \mathrm{P} = \nu(A) = \int_A \frac{d\nu}{d \mu} d \mathrm{P}$$
 
 可得$$g$$為所求的條件期望。(QED)
+
+#### 構造性定義
+
+令σ域$$\mathcal{F}$$中的可測序數$$\{B_n, n\in \mathbb{N}\}$$是宇集合$$\Omega$$的一組分割。令$$\mathcal{g}=\sigma(\{B_n, n \in \mathbb{N}\})$$為此序列生成的σ域。令隨機變數$$X$$的積分存在，則：
+
+$$\displaystyle \mathrm{E}(X|\mathcal{g}) = \sum_{j=1}^\infty \left(  \frac{1}{\mathrm{P}(B_j)} \int_{B_j} X(\omega)d\mathrm{P}(\omega)  \right) \mathbf{I}_{B_j} = \sum_{j=1}^\infty \mathrm{E(X| B_j)}\mathbf{I}_{B_j}$$
+
+
 
 ## 條件期望值
 

@@ -35,6 +35,24 @@
 
 條件期望值不唯一，但任兩個版本的條件期望值只在零測集上相異。
 
+proof: 條件期望值存在性會用到Ryadon-Nikodym定理
+
+> 令$$\mu, \nu$$為可測空間$$(\Omega, \mathcal{F})$$上的兩個σ-finite測度。
+>
+> 如果$$\nu \ll \mu$$ ($$\nu$$對$$\mu$$絕對連續，$$\forall A \in \mathcal{F}$$，若$$\mu(A)=0$$可得$$\nu(A)=0$$)
+>
+> 則存在$$\mathcal{F}$$可測的函數$$0\leq f <\infty$$使得$$\forall A \in \mathcal{F}$$，有$$\displaystyle \int_Af d\mu=\nu(A)$$，$$f$$記為$$\displaystyle \frac{d\nu}{d\mu}$$稱為Randon-Nikodym導數。
+>
+> 常見範例。$$f$$為在實數區間$$A$$有定義的連續函數，$$\mu$$為Lebesgue測度，則$$\int_Af d\mu$$為函數在區間$$A$$的積分值，而$$\nu(A)$$可解釋為某函數在此區間$$A$$的面積。
+
+假設隨機變數$$X \geq 0$$且令$$\mu = \mathrm{P}$$，$$\displaystyle  \nu(A)=\int_A X d \mathrm{P},~ \forall A \in \mathcal{F}$$
+
+可得$$\nu$$為σ-finite測度且$$\nu \ll \mu$$ (todo)。
+
+由Raydon-Nikodym定理可得存在$$\displaystyle g=\frac{d \nu}{d \mu}$$使得$$\displaystyle \int_Af d \mathrm{P} = \nu(A) = \int_A \frac{d\nu}{d \mu} d \mathrm{P}$$
+
+可得$$g$$為所求的條件期望。(QED)
+
 ## 條件期望值
 
 條件期望值有三種形式：

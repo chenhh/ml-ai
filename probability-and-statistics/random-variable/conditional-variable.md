@@ -2,13 +2,38 @@
 
 ## 簡介
 
-在初等機率論裡，我們可以定義某個事件對另一個事件的條件概率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到當做條件的事件上，做個歸一化，當做一個新的概率空間。於是有貝式公式 $$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}$$。
+在機率論中，可定義某個事件對另一個事件的條件機率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到給定條定件的事件上，做正規化，視為一個新的機率空間。於是有貝式公式 $$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}$$。
 
-對於事件$$A$$，考慮其示性函數（為隨機變數）$$\mathbf{1}_A(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in A \\  0,  \text{ if } \omega \not \in A \end{aligned}\right.$$。可得$$\mathrm{P}(A) = \mathrm{E}(\mathbf{1}_A)$$。同理可得$$\mathrm{P}(A|B)=\mathrm{E}(\mathbf{1}_A|B)$$。所以條件機率只是條件期望的一個特例，以下我們只考慮條件期望。
+### 事件集合的條件期望值
 
-目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把概率歸一化了之後求期望，算出來是一個實數。
+對於事件$$A$$，考慮其指示函數（為隨機變數）$$\mathbf{1}_A(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in A \\  0,  \text{ if } \omega \not \in A \end{aligned}\right.$$。可得$$\mathrm{P}_{\Omega}(A) = \mathrm{E}_{\Omega}(\mathbf{1}_A)$$。同理可得$$\mathrm{P}_{\Omega}(A|B)=\mathrm{E}_{\Omega}(\mathbf{1}_A|B)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
 
-對於兩個離散型隨機變數$$X,Y$$，$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega : Y(\omega)=y\}$$上求期望。但注意到這個值是$$Y$$的取值，即$$y$$的函數，即$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
+目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把機率正規化了之後求期望值，為一實數值。
+
+### 隨機變數的條件期望值
+
+對於離散隨機變數$$X,Y$$，$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求期望值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。但注意到此值是$$Y$$的實現值，因此期望值是$$y$$的函數，即$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
+
+即使取$$X$$的函數值$$g(X)$$，條件期望值仍然為$$Y$$的函數，即$$\mathrm{E}(g(X)|Y)=h(Y)$$為$$Y$$的隨機變數。
+
+### 隨機變數σ域的條件期望值
+
+在隨機變數的條件期望值中，兩個結果$$\omega_1, \omega_2$$是否有相同的條件期望值，取決於$$Y(\omega_1)$$是否與$$Y(\omega_2)$$有相同的函數值。因此不必考慮$$Y(\omega_1)$$的實際值為何，只需考慮$$\omega$$如何對宇集合$$\Omega$$做分割(partition)。
+
+而能夠記錄$$Y$$的相異取值而不記錄實際取值為何，就是$$\sigma(Y)$$，即宇集合$$\Omega$$中使得$$Y$$可測的最小的σ域。因此$$\mathrm{E}(g(X)|Y)$$可寫成$$\mathrm{E}(g(X)|\sigma(Y))$$。
+
+既然條件期望值只用了σ域的資訊，那麼不必管這個σ域是由那個隨機變數生成，直接對σ域定義條件期望即可。
+
+### 一般σ域的條件期望值
+
+考慮測度空間$$(\Omega, \mathcal{F}_0, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$。
+
+考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=f(Y)$$為$$Y$$的隨機變數，且滿足：
+
+1. 隨機變數$$Y$$在$$\mathcal{F}$$可測；
+2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Y d\mathrm{P}$$
+
+條件期望值不唯一，但任兩個版本的條件期望值只在零測集上相異。
 
 ## 條件期望值
 

@@ -78,6 +78,34 @@ $$\displaystyle  \begin{aligned} & \mathbf{Ax = b} \\ & \mathbf{x \succeq 0} \en
 
 Klee and Minty(1971)給出範例在最糟情形下，單純形法須走訪$$2^m-1$$個頂點，因此為指數複雜度的演算法。
 
+## 橢圓形法(ellipsoid method)
+
+多項式時間的求解演算法，基本想法是求解$$\mathbf{Mx < d}$$，其中$$\mathbf{M} \in \mathbb{R}^{m \times n}$$。但時間複雜度為$$O(n^4L^2)$$，還是相當高。
+
+線性規劃的解可由以下最佳條件決定：
+
+$$\displaystyle (OPT) \left\{ \begin{aligned} & \mathbf{c^\top x - b^\top w =0} \\ & \mathbf{Ax \leq b}, ~ \mathbf{x \geq 0} \\ & \mathbf{A^\top w \geq c}, ~ \mathbf{w \geq 0} \end{aligned} \right.$$
+
+1. 在$$(\mathbf{x,w})$$空間中，展開一個大的橢圓$$E_0=S(0, 2^{2L})$$。
+2. 如果目前的橢圓$$E_k$$可求解(OPT)，則停止。否則用更小的$$E_{k+1}$$更新。
+3. 如果$$Vol(E_{k+1})$$即橢圓，則停止，(OPT)無解。
+
+## 內點法(interior point)
+
+由可行域形成的單純形任一頂點開始，走單純形的內部往最佳解方向前進，直到收斂。時間複雜度為$$O(n^3L)$$，在大型問題求解時優於單純形法。
+
+1. 可行域形成的單純形任一頂點開始。
+2. 如果目前的解已經夠好，則停止；否則進行步驟3。
+3. 找出可改善目前解的所有方向，且往有更優解的內點方向前進，再回到步驟2。
+
+
+
+
+
+
+
+
+
 
 
 

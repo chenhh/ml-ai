@@ -46,7 +46,7 @@ $$\displaystyle  \begin{aligned} CJB & = \left(  \frac{\gamma_1}{\sqrt{\frac{6(n
 
 * [\[wikipedia\] Jarque-Bera test](https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera\_test)
 * [曾郁婷。”小樣本的常態性檢定之探討”，碩士論文，數理科學研究所，真理大學，2008](https://hdl.handle.net/11296/wqssvk)。
-* [_Jarque, Carlos M._](https://en.wikipedia.org/wiki/Carlos\_Jarque)_; Bera, Anil K. (1987). "A test for normality of observations and regression residuals". International Statistical Review. 55 (2): 163–172._ [_doi_](https://en.wikipedia.org/wiki/Doi\_\(identifier\))_:_[_10.2307/1403192_](https://doi.org/10.2307%2F1403192)_._ [_JSTOR_](https://en.wikipedia.org/wiki/JSTOR\_\(identifier\)) __ [_1403192_](https://www.jstor.org/stable/1403192)_._
+* [_Jarque, Carlos M._](https://en.wikipedia.org/wiki/Carlos\_Jarque)_; Bera, Anil K. (1987). "A test for normality of observations and regression residuals". International Statistical Review. 55 (2): 163–172._ [_doi_](https://en.wikipedia.org/wiki/Doi\_\(identifier\))_:_[_10.2307/1403192_](https://doi.org/10.2307%2F1403192)_._ [_JSTOR_](https://en.wikipedia.org/wiki/JSTOR\_\(identifier\)) [_1403192_](https://www.jstor.org/stable/1403192)_._
 
 ## Geary檢定
 

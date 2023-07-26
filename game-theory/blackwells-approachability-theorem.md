@@ -18,8 +18,8 @@ Blackwell\[首次研究了具有向量報酬函數的零和賽局，他提供了
 
 > 給定雙人賽局，玩家1,2的行動集合分別有$$r,s$$個行動，
 >
-> * 玩家1的混合策略為$$\mathbf{p}=(p_1, p_2, \dots, p_r) \in \mathbf{P}, ~p_i \geq 0, ~ \sum p_i = 1$$。
-> * 玩家2的混合策略為$$\mathbf{q}=(q_1, q_2, \dots, q_s) \in \mathbf{Q}, ~q_j \geq 0, ~ \sum q_j = 1$$。
+> * 玩家1的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \mathbf{P}, ~p_i \geq 0, ~ \sum_{i=1}^r p_i = 1$$。
+> * 玩家2的混合策略為$$\displaystyle \mathbf{q}=(q_1, q_2, \dots, q_s) \in \mathbf{Q}, ~q_j \geq 0, ~ \sum_{j=1}^s q_j = 1$$。
 > * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取行動$$i,j$$時，玩家1的報酬(零和遊戲，所以玩家2的報酬為$$-m(i,j)$$)。
 >
 > 則存在$$\mathbf{p} \in \mathbb{R}_{+}^r, ~ \mathbf{q} \in \mathbb{R}_{+}^s, ~ v \in \mathbb{R}$$ 滿足$$\sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$

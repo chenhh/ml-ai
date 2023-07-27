@@ -8,15 +8,21 @@ description: 博奕論
 
 
 
-<figure><img src="../.gitbook/assets/VNM-TGEB.jpg" alt=""><figcaption><p>TGEB, 賽局理論的原創經典之作</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/VNM-TGEB.jpg" alt="" width="129"><figcaption><p>TGEB, 賽局理論的原創經典之作</p></figcaption></figure>
 
 John Von Neumann and Oskar Morgenstern,  "Theory of games and economic behavior (60th Anniversary Commemorative Edition)," Princeton university press, 2007. \[[jstor](https://www.jstor.org/stable/j.ctt1r2gkx)]\[[Wikipedia](https://en.wikipedia.org/wiki/Theory\_of\_Games\_and\_Economic\_Behavior)]\(原版1947年出版，為賽局理論的原創經典之作，內容偏數學不適合當第一本書，但進階必讀。本書主題探討的雙人->多人的非合作零和賽局)。
 
 
 
-<figure><img src="../.gitbook/assets/A Course in Game Theory.jpg" alt=""><figcaption><p>賽局理論</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/A Course in Game Theory.jpg" alt="" width="160"><figcaption><p>賽局理論</p></figcaption></figure>
 
 Martin J. Osborne and Ariel Rubinstein, "A course in game theory," MIT press, 1994. \[[作者提供電子書](https://arielrubinstein.tau.ac.il/books/GT.pdf)] 以公理化的方式定義賽局，此書的深度，廣度，視角，表述，例題等極優秀，也非常適合自學，需要有數學基礎且很精簡的書。
+
+
+
+<figure><img src="../.gitbook/assets/prediction_learning_and_games.jpg" alt="" width="333"><figcaption><p>prediction, learning, and games</p></figcaption></figure>
+
+Nicolo Cesa-Bianchi and Gábor Lugosi,  "Prediction, learning, and games," Cambridge university press, 2006. \[[電子書](https://ii.uni.wroc.pl/\~lukstafi/pmwiki/uploads/AGT/Prediction\_Learning\_and\_Games.pdf)] 此書將預測，多期賽局的遺憾整合分析與討論，可應用至在線學習(online learning)與強化學習。
 
 ## 論文
 

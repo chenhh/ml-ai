@@ -220,7 +220,7 @@
 ## 賽局理論 <a href="#game-theory" id="game-theory"></a>
 
 * [賽局理論文獻](game-theory/sai-ju-li-lun-wen-xian.md)
-* [Theory of games and economic behavior](game-theory/theory-of-games-and-economic-behavior.md)
+* [book: Theory of games and economic behavior](game-theory/book-theory-of-games-and-economic-behavior.md)
 * [賽局數學模型](game-theory/game-theory-model.md)
   * [策略賽局(strategic game)](game-theory/game-theory-model/strategic-game.md)
 * [最小－最大定理](game-theory/minmax-theorem.md)

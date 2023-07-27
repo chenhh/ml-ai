@@ -35,7 +35,7 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 在實數中的雙人零和賽局，玩家1、2可依minmax定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$。
 
-現在考慮雙人向量(非零和)賽局中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~1 \leq i \leq r, ~ 1 \leq j \leq s$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(或每個元素的實現值是$$\mathbb{R}^N$$中的一個封閉有界凸集$$X$$上之機率分佈所得出，即報酬是隨機變數)。
+現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~1 \leq i \leq r, ~ 1 \leq j \leq s$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(或每個元素的實現值是$$\mathbb{R}^N$$中的一個封閉有界凸集$$X$$上之機率分佈所得出，即報酬是隨機變數)。
 
 報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。
 
@@ -74,7 +74,7 @@ Minmax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R
 
 ## 向量報酬策略賽局
 
-> $$N$$人向量報酬賽局$$\Gamma_{v}=(\mathcal{N}, (\mathcal{A}_i)_{ u \in \mathcal{N} }, (u_i)_{i \in \mathcal{N}})$$
+> $$N$$人向量報酬賽局$$\Gamma_{v}=(\mathcal{N}, (\mathcal{A}_i)_{ i \in \mathcal{N} }, (u_i)_{i \in \mathcal{N}})$$
 >
 > * $$\mathcal{N}$$為編號1到$$N$$的玩家集合。
 > * $$\mathcal{A}_i$$為編號$$i$$​玩家的有限行動集合。
@@ -202,7 +202,7 @@ $$\displaystyle \begin{aligned} d(\overline{u}_{t+1}, S)^2 & \leq d(\overline{u}
 
 ## 參考資料
 
-* David Blackwell, "An analog of the minimax-theorem for vector payoffs, " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
+* \[原始論文] David Blackwell, "An analog of the minimax-theorem for vector payoffs, " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
 * Abernethy, Jacob, Peter L. Bartlett, and Elad Hazan. "Blackwell approachability and no-regret learning are equivalent." Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
 * \[可接近定理幾何性質] Spinat, Xavier. "A necessary and sufficient condition for approachability." Mathematics of operations research 27.1 (2002): 31-44.

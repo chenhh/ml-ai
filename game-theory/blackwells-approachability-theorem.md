@@ -14,53 +14,71 @@ Blackwell首次研究了具有向量報酬函數的零和賽局，他提供了�
 
 <mark style="color:red;">內部或外部遺憾最小化問題的一個共同特點是，它們可以被寫成某些向量報酬賽局中精心選擇的目標集的可接近性的一個具體案例</mark>。
 
-## Minmax理論
+## 最小最大理論(Minmax theorem)
 
-> 給定雙人賽局，玩家1,2的行動集合分別有$$r,s$$個行動，
+> 給定單期雙人零合賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，
 >
 > * 玩家1的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \mathbf{P}, ~p_i \geq 0, ~ \sum_{i=1}^r p_i = 1$$。
 > * 玩家2的混合策略為$$\displaystyle \mathbf{q}=(q_1, q_2, \dots, q_s) \in \mathbf{Q}, ~q_j \geq 0, ~ \sum_{j=1}^s q_j = 1$$。
 > * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取行動$$i,j$$時，玩家1的報酬(零和遊戲，所以玩家2的報酬為$$-m(i,j)$$)。
 >
-> 則存在$$\mathbf{p} \in \mathbb{R}_{+}^r, ~ \mathbf{q} \in \mathbb{R}_{+}^s, ~ v \in \mathbb{R}$$ 滿足$$\sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$
+> 則存在$$\mathbf{p} \in \mathbb{R}_{+}^r, ~ \mathbf{q} \in \mathbb{R}_{+}^s, ~ v \in \mathbb{R}$$ 滿足$$\sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$。
 >
-> * 即玩家1存在一混合策略可保證報酬大於等於$$v$$。
-> * 玩家2也存在一混合策略可保證損失不會超過$$v$$。
+> * 玩家1存在一混合策略可保證報酬大於等於$$v$$，不論對手使用任意策略。
+> * 玩家2也存在一混合策略可保證損失不會超過$$v$$，不論對手使用任意策略。
+> *   因此$$v$$稱為此賽局的報酬。
+>
+>
 
 $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), 當$$t \rightarrow \infty$$，玩家1的報酬會以機率1大於$$v-\epsilon$$，而玩家2的損失會以機率1小於$$v+\epsilon$$。
 
+### 範例
+
+玩家1有三個行動$$R=(r_1, r_2, r_3)$$個別行動採用的機率為$$\mathbf{p}=(p_1, p_2, p_3)$$；玩家2有兩個行動$$S=(s_1, s_2)$$個別行動採用的機率為$$\mathbf{q}=(q_1, q_2)$$。
+
+<table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">max M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=-1</span></td><td><span class="math">m(1,2)=9</span></td><td>9</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=-3</span></td><td><span class="math">m(2,2)=5</span></td><td>5</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=-5</span></td><td><span class="math">m(3,2)=8</span></td><td>8</td></tr><tr><td>min M</td><td>-5</td><td>5</td><td></td></tr></tbody></table>
+
+玩家1採取行動$$r_1$$時，不論對手採取任何行動，可得到的最高報酬為9。同樣採取行動$$r_2, r_3$$時，分別可得到最高報酬為$$5,8$$。因此玩家1採取任何行動時，至少能夠得到報酬$$\min(9,5,8)=5$$。
+
+玩家2採取行動$$s_1,s_2$$時，不論對手採取任何行動，最大損失分別為$$-5, 5$$。因此玩家2採取任意行動時，最多損失為$$\max(-5,5)=5$$。
+
+多期賽局時，玩家1可保證報酬不會低於5，而玩家2可保證損失不會大於5。
+
 ## 向量報酬
 
-<mark style="color:blue;">單一的混合策略不能確保向量報酬位於某個給定的集合中。然而，這並不排除一個漸進的概念，如果我們允許賽局無限期地重復，並詢問是否存在一種策略來確保平均報酬向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
+<mark style="color:blue;">單一的混合策略不能確保向量報酬</mark>$$m(i,j) \in \mathbb{R}^N$$<mark style="color:blue;">位於某個給定的集合中。然而，這並不排除一個漸進的概念，如果我們允許無限期的賽局時，並詢問是否存在一種策略來確保平均報酬向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
 
-在實數中的雙人零和賽局，玩家1、2可依minmax定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$。
+在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$。
 
-現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~1 \leq i \leq r, ~ 1 \leq j \leq s$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(或每個元素的實現值是$$\mathbb{R}^N$$中的一個封閉有界凸集$$X$$上之機率分佈所得出，即報酬是隨機變數)。
+現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~1 \leq i \leq r, ~ 1 \leq j \leq s$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(Blackwell論文中定義的是更一般化的形式，即每個元素$$m(i,j)$$是定義在一個封閉有界凸集$$X \in \mathbb{R}^N$$上的機率分佈，因此當玩家1,2採取行動$$i,j$$時得到的報酬$$m(i,j)$$是隨機值)。
 
-報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。
+報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。
 
-玩家1使用混合策略$$f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
+玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
 
-而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意值，玩家1的混合策略為$$\{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
+而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意值$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，玩家1的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
 
-同理玩家2的的混合策略為$$\{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
+同理玩家2的的混合策略序列為$$g_{0:n} \equiv \{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
+
+* 在初始$$n=0$$時，玩家1,2分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依報酬機率分佈$$m(i_0,j_0)$$得到報酬實現值$$x_1$$。
+* 之後玩家1,2分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依報酬機率分佈$$m(i_1, j_1)$$得到報酬實現值$$x_2$$，以此類推。
 
 因此玩家1、2的混合策略$$(f,g)$$對序列以及報酬的分佈矩陣$$M$$​可決定向量報酬隨機變數$$x_1, x_2, \dots$$。
 
-令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。
+令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義。
 
-則$$S$$​稱為使用在報酬矩陣$$M$$中玩家策略$$f^{*}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
+則$$S$$​稱為使用在報酬矩陣$$M$$中玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
 
 $$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
 
-* $$x_i$$​是由特定的玩家策略$$f^{*}$$與任意對手策略$$g$$​所得到。
-* 即只要賽局回合數$$n$$夠多，不論對手使用任意策略$$g$$​，平均報酬與集合的距離機率收斂至0。
+* $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略序列$$f^{*}$$與任意對手策略序列$$g \equiv g_{0:n}$$​所得到。
+* 即只要賽局回合數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均報酬與集合的距離機率收斂至0。
 
-稱$$S$$​為使用在報酬矩陣$$M$$​中對手特定策略$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
+稱$$S$$​為使用在報酬矩陣$$M$$​中對手特定策略序列$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
 
 $$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\mathrm{P}(\delta_n \geq d ~ \forall n \geq n_0) > 1- \epsilon$$
 
-* $$x_i$$​是玩家任意策略$$f$$​與對手特定策略$$g^{*}$$所得到。
+* $$x_1, x_2,\dots, x_n$$​是玩家任意策略序列$$f_{0:n}$$​與對手特定策略$$g^{*}\equiv g^{*}_{0:n}$$所得到。
 * 只要賽局回合數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均報酬至集合的距離無法機率收斂。
 
 Minmax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in P,~ q \in Q$$，則

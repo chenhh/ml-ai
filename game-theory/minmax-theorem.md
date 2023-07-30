@@ -9,7 +9,7 @@ description: minmax theorem
 Von Neumann首先證明了最小－最大(minimax)定理，該定理保證了雙線性函數的最大-最小不等式相等。\
 
 
-## minmax thoerem
+## minimax thoerem
 
 ### 函數型式
 
@@ -110,5 +110,5 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 ## 參考資料
 
-* Von Neumann, J. (1928). "Zur Theorie der Gesellschaftsspiele". Math. Ann. 100: 295–320.
-* Sion, Maurice (1958). "On general minimax theorems". Pacific Journal of Mathematics. 8 (1): 171–176
+* John Von Neumann,  "Zur Theorie der Gesellschaftsspiele, " Mathematische annalen, pp. 295-310,  Vol. 100, 1928.
+* Maurice Sion, "On general minimax theorems, " Pacific Journal of Mathematics, pp. 171-176, Vol. 8  No. 1, 1958.

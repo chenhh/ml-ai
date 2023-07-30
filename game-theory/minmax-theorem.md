@@ -1,5 +1,5 @@
 ---
-description: minmax theorem
+description: minimax theorem
 ---
 
 # 最小－最大定理
@@ -31,7 +31,7 @@ $$\mathbf{X} \subset \mathbb{R}^n, \mathbf{Y} \subset \mathbb{R}^m$$為閉(緊�
 
 ### 賽局理論型式
 
-> 令$$\Delta_M, ~\Delta_N$$為兩個有限行動集合的機率單純形(simplex)，函數$$f: \Delta_M \times \Delta_N \rightarrow \mathbb{R}$$為雙線性(bilinear function)函數，則函數$$f$$存在鞍點(saddle point)滿足：
+> 令$$\Delta_M, ~\Delta_N$$為兩個有限行動集合的機率單純形(simplex)\[或混合策略空間]，函數$$f: \Delta_M \times \Delta_N \rightarrow \mathbb{R}$$為雙線性(bilinear function)函數，則函數$$f$$存在鞍點(saddle point)滿足：
 >
 > $$\displaystyle \max_{\mathbf{x} \in \Delta_M} \min_{\mathbf{y} \in \Delta_N} f(\mathbf{x}, \mathbf{y}) = \min_{\mathbf{y} \in \Delta_N} \max_{\mathbf{x} \in \Delta_M}f(\mathbf{x}, \mathbf{y})$$
 
@@ -110,5 +110,8 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 ## 參考資料
 
-* John Von Neumann,  "Zur Theorie der Gesellschaftsspiele, " Mathematische annalen, pp. 295-310,  Vol. 100, 1928.
-* Maurice Sion, "On general minimax theorems, " Pacific Journal of Mathematics, pp. 171-176, Vol. 8  No. 1, 1958.
+* John Von Neumann,  "Zur Theorie der Gesellschaftsspiele, " Mathematische annalen, Vol. 100, pp. 295-310, 1928.
+* Frode Terklsen, “Some minimax theorem,” Mathematica Scandinavica, Vol. 31, No. 2, pp. 405–413, 1972.
+* Maurice Sion, "On general minimax theorems, " Pacific Journal of Mathematics, Vol. 8  No. 1, pp. 171-176, 1958.
+* Jürgen Kindler, “A Simple Proof of Sion’s Minimax Theorem,” The American Mathematical Monthly, Vol. 112, No. 4 pp. 356–358, 2005.
+* Hichem Ben-El-Mechaiekh, and Robert W. Dimand,“A Simpler Proof of the Von Neumann Minimax Theorem,” The American Mathematical Monthly, Vol. 118, No. 7, pp. 636–641, 2011.

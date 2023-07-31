@@ -229,6 +229,28 @@
 * [相關均衡(correlated equilibrium)](<game-theory/correlated equilibrium.md>)
 * [最小遺憾](game-theory/zui-xiao-yi-han.md)
 
+## 在線決策 <a href="#online-decision" id="online-decision"></a>
+
+* [the weighted majority algorithm](online-decision/the-weighted-majority-algorithm.md)
+* [投資組合策略CRP,UP](online-decision/portfolio-strategy/README.md)
+  * [exponential gradient](online-decision/portfolio-strategy/exponential-gradient.md)
+  * [adaptive universal portfolio](online-decision/portfolio-strategy/adaptive-universal-portfolio.md)
+  * [Online Newton step](online-decision/portfolio-strategy/online-newton-step.md)
+  * [anti-correlation](online-decision/portfolio-strategy/anti-correlation.md)
+  * [Passive aggressive mean reversion](online-decision/portfolio-strategy/passive-aggressive-mean-reversion.md)
+  * [Online mean average reversion](online-decision/portfolio-strategy/online-mean-average-reversion.md)
+  * [robust median](online-decision/portfolio-strategy/robust-median.md)
+  * [confidence weight mean reversion](online-decision/portfolio-strategy/confidence-weight-mean-reversion.md)
+  * [Nonparametric histogram log-optimal strategy](online-decision/portfolio-strategy/nonparametric-histogram-log-optimal-strategy.md)
+  * [Nonparametric kernel-based log-optimal strategy](online-decision/portfolio-strategy/nonparametric-kernel-based-log-optimal-strategy.md)
+  * [Nonparametric kernel-based semi-log-optimal strategy](online-decision/portfolio-strategy/nonparametric-kernel-based-semi-log-optimal-strategy.md)
+  * [Nonparametric nearest neighbor log-optimal strategy](online-decision/portfolio-strategy/nonparametric-nearest-neighbor-log-optimal-strategy.md)
+  * [Nonparametric kernel-based Markowitz-type strategy](online-decision/portfolio-strategy/nonparametric-kernel-based-markowitz-type-strategy.md)
+  * [Nonparametric kernel-based GV-type strategy](online-decision/portfolio-strategy/nonparametric-kernel-based-gv-type-strategy.md)
+  * [Follow the Leading History](online-decision/portfolio-strategy/follow-the-leading-history.md)
+  * [Online gradient updates](online-decision/portfolio-strategy/online-gradient-updates.md)
+  * [Online Newton updates](online-decision/portfolio-strategy/online-newton-updates.md)
+
 ## 風險衡量 <a href="#risk-measure" id="risk-measure"></a>
 
 * [一致風險衡量](risk-measure/Coherent-risk-measure.md)
@@ -284,24 +306,6 @@
 * [整數規劃](convex-optimization/integer-programming.md)
 * [隨機規劃](convex-optimization/stochastic-programming/README.md)
   * [Portfolio stochastic programming](convex-optimization/stochastic-programming/portfolio-stochastic-programming.md)
-* [投資組合策略CRP,UP](convex-optimization/portfolio-strategy.md)
-  * [exponential gradient](convex-optimization/portfolio-strategy/exponential-gradient.md)
-  * [adaptive universal portfolio](convex-optimization/portfolio-strategy/adaptive-universal-portfolio.md)
-  * [Online Newton step](convex-optimization/portfolio-strategy/online-newton-step.md)
-  * [anti-correlation](convex-optimization/portfolio-strategy/anti-correlation.md)
-  * [Passive aggressive mean reversion](convex-optimization/portfolio-strategy/passive-aggressive-mean-reversion.md)
-  * [Online mean average reversion](convex-optimization/portfolio-strategy/online-mean-average-reversion.md)
-  * [robust median](convex-optimization/portfolio-strategy/robust-median.md)
-  * [confidence weight mean reversion](convex-optimization/portfolio-strategy/confidence-weight-mean-reversion.md)
-  * [Nonparametric histogram log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-histogram-log-optimal-strategy.md)
-  * [Nonparametric kernel-based log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-log-optimal-strategy.md)
-  * [Nonparametric kernel-based semi-log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-semi-log-optimal-strategy.md)
-  * [Nonparametric nearest neighbor log-optimal strategy](convex-optimization/portfolio-strategy/nonparametric-nearest-neighbor-log-optimal-strategy.md)
-  * [Nonparametric kernel-based Markowitz-type strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-markowitz-type-strategy.md)
-  * [Nonparametric kernel-based GV-type strategy](convex-optimization/portfolio-strategy/nonparametric-kernel-based-gv-type-strategy.md)
-  * [Follow the Leading History](convex-optimization/portfolio-strategy/follow-the-leading-history.md)
-  * [Online gradient updates](convex-optimization/portfolio-strategy/online-gradient-updates.md)
-  * [Online Newton updates](convex-optimization/portfolio-strategy/online-newton-updates.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

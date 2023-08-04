@@ -1,5 +1,5 @@
 ---
-description: 加權多數決演算法
+description: 加權多數演算法
 ---
 
 # the weighted majority algorithm
@@ -27,3 +27,4 @@ description: 加權多數決演算法
 * [https://blog.csdn.net/weixin\_43781565/article/details/106728380](https://blog.csdn.net/weixin\_43781565/article/details/106728380)
 * [https://www.zhihu.com/question/27940474/answer/621217738](https://www.zhihu.com/question/27940474/answer/621217738)
 * [https://www.lesswrong.com/posts/AAqTP6Q5aeWnoAYr4/the-weighted-majority-algorithm](https://www.lesswrong.com/posts/AAqTP6Q5aeWnoAYr4/the-weighted-majority-algorithm)
+* [https://blog.csdn.net/TgqDT3gGaMdkHasLZv/article/details/78876242?spm=1001.2101.3001.6650.6\&utm\_medium=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6-78876242-blog-106728380.235%5Ev38%5Epc\_relevant\_sort\&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6-78876242-blog-106728380.235%5Ev38%5Epc\_relevant\_sort\&utm\_relevant\_index=7](https://blog.csdn.net/TgqDT3gGaMdkHasLZv/article/details/78876242?spm=1001.2101.3001.6650.6\&utm\_medium=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6-78876242-blog-106728380.235%5Ev38%5Epc\_relevant\_sort\&depth\_1-utm\_source=distribute.pc\_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-6-78876242-blog-106728380.235%5Ev38%5Epc\_relevant\_sort\&utm\_relevant\_index=7)

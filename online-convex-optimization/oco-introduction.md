@@ -19,3 +19,4 @@ description: online convex optimization, oco
 * [Elad Hazan, Princeton University](https://www.ehazan.com/).
 * [Shai Shalev-Shwartz, The Hebrew University of Jerusalem](https://www.cs.huji.ac.il/\~shais/).
 * [張利軍(Lijun Zhang), 南京大學](https://cs.nju.edu.cn/zlj/index.htm).
+* [趙鵬(Peng Zhao), 南京大學](https://www.lamda.nju.edu.cn/zhaop/?AspxAutoDetectCookieSupport=1).

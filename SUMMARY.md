@@ -252,6 +252,8 @@
   * [Follow the Leading History](online-convex-optimization/portfolio-strategy/follow-the-leading-history.md)
   * [Online gradient updates](online-convex-optimization/portfolio-strategy/online-gradient-updates.md)
   * [Online Newton updates](online-convex-optimization/portfolio-strategy/online-newton-updates.md)
+* [dynamic and adaptive regret](online-convex-optimization/dynamic-and-adaptive-regret.md)
+* [bandit convex optimization](online-convex-optimization/bandit-convex-optimization.md)
 
 ## 風險衡量 <a href="#risk-measure" id="risk-measure"></a>
 

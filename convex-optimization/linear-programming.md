@@ -60,6 +60,17 @@ $$\displaystyle  \begin{aligned} & a_{11}x_1 + a_{12}x_2 + \dots + a_{1n} x_n  &
 
 $$\displaystyle  \begin{aligned} & \mathbf{Ax = b} \\ & \mathbf{x \succeq 0} \end{aligned}$$
 
+### 應用問題的隱含假設
+
+等比例假設(porportionality assumption)
+
+* 限制式量大時無折扣。
+* 無經濟規模。
+
+可加性假設(additivity assumption)
+
+總結果等於個體結果的總和。
+
 ## 求解的方法
 
 最佳解必定落在可行域的某一個頂點上，因此暴力法為走訪所有的頂點，找有最小函數值的解即為所求。

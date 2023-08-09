@@ -231,7 +231,7 @@
 
 ## 在線凸最佳化 <a href="#online-convex-optimization" id="online-convex-optimization"></a>
 
-* [在線凸最佳化相關資料](online-convex-optimization/oco-introduction/README.md)
+* [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
   * [paper: Online convex programming and generalized infinitesimal gradient ascent](online-convex-optimization/oco-introduction/paper-online-convex-programming-and-generalized-infinitesimal-gradient-ascent.md)
 * [OCO架構與常見應用](online-convex-optimization/oco-formulation.md)
 * [the weighted majority algorithm](online-convex-optimization/the-weighted-majority-algorithm.md)

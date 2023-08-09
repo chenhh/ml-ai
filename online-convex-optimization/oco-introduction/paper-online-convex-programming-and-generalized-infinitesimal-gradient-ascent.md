@@ -99,6 +99,24 @@ description: Martin Zinkevich, 2003，第一篇定義OCO的論文
 
 
 
+$$\forall t$$，令$$y_{t+1} = x_t - \eta_t g_t$$，由算法知$$x_{t+1} = P(y_{t+1})$$。
+
+現在考慮在時間$$t$$時，不使用固定向量$$x^{*}$$的遺憾。
+
+* $$y_{t+1} - x^{*} =  (x_t - x^{*}) - \eta_t g_t$$
+* $$(y_{t+1} - x^{*})^2 =  (x_t - x^{*})^2 - 2 \eta_t (x_t - x^{*})^\top g_t + \eta_t^2 \|g_t\|^2$$
+
+由於$$x_{t+1} \in F$$是$$y_{t+1} \in \mathbb{R}^n$$在$$F$$的投影點，由三角不等式可得$$(y-x)^2 \geq (P(y) - x)^2$$。
+
+由凸函數的一階條件可得$$\|g_t\| \leq \| \nabla c \|$$。
+
+由此兩條件可得：
+
+* $$(x_{t+1} - x^{*})^2  \leq (x_{t} - x^{*})^2 - 2 \eta_t (x_t - x^{*})^\top g_t + \eta_t^2 \|\nabla c\|^2$$
+* $$(x_t - x^{*})^\top g_t \leq  \frac{1}{2 \eta_t} ((x_t - x^{*})^2 - (x_{t+1} - x^{*})^2) +  \frac{\eta_t}{2} \|  \nabla c\|^2$$
+
+
+
 
 
 </details>

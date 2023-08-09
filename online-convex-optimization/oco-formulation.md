@@ -22,7 +22,7 @@ OCO為玩家與對手的雙人零和賽局，但有一些限制避免無法分�
 
 * 在時間$$t=1,2,\dots, T$$，玩家(player)給出行動$$\mathbf{w}_t \in \mathcal{K}$$，其中$$\mathcal{K}$$為<mark style="color:red;">凸集合</mark>。
   * 此處的行動如果是使用演算法$$\mathcal{A}$$參考已實現損失所得出時，可寫成：$$\mathbf{x}_t^{\mathcal{A}}=\mathcal{A}(f_1, \dots, f_{t-1}) \in \mathcal{K}$$
-* 對手(adversary)選擇<mark style="color:red;">凸損失函數</mark>$$f_t(\cdot): \mathcal{K} \rightarrow \mathbb{R}$$(有限損失)，之後玩家可得到損失$$f_t(\mathbf{w}_t)$$
+* 對手(adversary)選擇<mark style="color:red;">凸損失函數</mark>$$f_t(\cdot): \mathcal{K} \rightarrow \mathbb{R}$$(有限損失)，之後玩家可得到損失$$f_t(\mathbf{w}_t)$$。有時也使用$$l_t(\cdot)$$。
 
 玩家的目標是最小化遺憾：$$\displaystyle R(T) = \sum_{t=1}^T f_t(\mathbf{w}_t) - \min_{\mathbf{w} \in \mathcal{K}} \sum_{t=1}^T f_t(\mathbf{w})$$
 

@@ -6,7 +6,7 @@ description: online convex optimization, oco
 
 ## 論文
 
-* Martin Zinkevich, "Online convex programming and generalized infinitesimal gradient ascent," In Proceedings of the 20th International Conference on Machine Learning, pp. 928–936, 2003. \[第一篇定義OCO的論文]
+* Martin Zinkevich, "Online convex programming and generalized infinitesimal gradient ascent," In Proceedings of the 20th International Conference on Machine Learning, Washinton DC, pp. 928–936, 2003. \[第一篇定義OCO架構的論文]
 
 ### survey
 
@@ -20,3 +20,4 @@ description: online convex optimization, oco
 * [Shai Shalev-Shwartz, The Hebrew University of Jerusalem](https://www.cs.huji.ac.il/\~shais/).
 * [張利軍(Lijun Zhang), 南京大學](https://cs.nju.edu.cn/zlj/index.htm).
 * [趙鵬(Peng Zhao), 南京大學](https://www.lamda.nju.edu.cn/zhaop/?AspxAutoDetectCookieSupport=1).
+* [Martin Zinkevich, google](https://martin.zinkevich.org/).

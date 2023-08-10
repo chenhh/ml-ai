@@ -83,30 +83,30 @@ description: Martin Zinkevich, 2003，第一篇定義OCO的論文
 
 <summary>proof of greedy projection algorithm's regret bound</summary>
 
-不失一般性，令成本函數$$c_t(x) = g_t^\top x$$為線性函數。可得$$\nabla c_t(x_t)=g_t$$。
+不失一般性，令成本函數$$c_t(x) = g_t^\top x, ~g_t \in \mathbb{R}^n$$。可得$$\nabla c_t(x_t)=g_t$$。
 
 如果將$$c_t(x)$$全部換成$$g_t^\top x$$可得演算法的結果不變，接下來分析遺憾的部份。
 
 
 
-因為$$c_t, ~\forall x \in F$$為凸函數，由凸函數的一階條件可得 $$c_t(x) \geq \nabla c_t(x_t)^\top (x-x_t)+c_t(x_t)$$。
+因為$$c_t:F\rightarrow \mathbb{R}, ~\forall x \in F$$為凸函數，由[凸函數的一階條件](../../convex-optimization/convex-function.md#yi-jie-tiao-jian-firstorder-condition)可得 $$c_t(x) \geq \nabla c_t(x_t)^\top (x-x_t)+c_t(x_t)$$。
 
-令$$x^{*} \in F$$為靜態最佳解。可得$$c_t(x^{*}) \geq g^\top (x^{*}-x_t)+c_t(x_t)$$。
+令$$x^{*} \in F$$為靜態最佳解。可得$$c_t(x^{*}) \geq g_t^\top (x^{*}-x_t)+c_t(x_t)$$。
 
-可得$$c_t(x_t) - c_t(x^{*}) \leq c_t(x_t) - (g_t^\top (x^{*} - x_t) + c_t(x_t)) \leq g_t^\top x_t - g_t^\top x^{*}$$。
+整理可得$$c_t(x_t) - c_t(x^{*}) \leq c_t(x_t) - (g_t^\top (x^{*} - x_t) + c_t(x_t)) \leq g_t^\top x_t - g_t^\top x^{*}$$。
 
-因此用線性函數的遺憾至少和凸函數一樣多。
+因此用<mark style="color:blue;">線性函數的遺憾至少和凸函數一樣多</mark>。
 
 
 
-$$\forall t$$，令$$y_{t+1} = x_t - \eta_t g_t$$，由算法知$$x_{t+1} = P(y_{t+1})$$。
+$$\forall t$$，令$$y_{t+1} = x_t - \eta_t g_t$$，由演算法得$$x_{t+1} = P(y_{t+1})$$。
 
 現在考慮在時間$$t$$時，不使用固定向量$$x^{*}$$的遺憾。
 
 * $$y_{t+1} - x^{*} =  (x_t - x^{*}) - \eta_t g_t$$
 * $$(y_{t+1} - x^{*})^2 =  (x_t - x^{*})^2 - 2 \eta_t (x_t - x^{*})^\top g_t + \eta_t^2 \|g_t\|^2$$
 
-由於$$x_{t+1} \in F$$是$$y_{t+1} \in \mathbb{R}^n$$在$$F$$的投影點，由三角不等式可得$$(y-x)^2 \geq (P(y) - x)^2$$。
+由於$$x_{t+1} \in F$$是$$y_{t+1} \in \mathbb{R}^n$$在$$F$$的投影點，由距離函教 Ｄ三角不等式可得$$(y-x)^2 \geq (P(y) - x)^2$$。
 
 由凸函數的一階條件可得$$\|g_t\| \leq \| \nabla c \|$$。
 

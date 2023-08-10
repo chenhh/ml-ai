@@ -106,20 +106,41 @@ $$\forall t$$，令$$y_{t+1} = x_t - \eta_t g_t$$，由演算法得$$x_{t+1} = P
 * $$y_{t+1} - x^{*} =  (x_t - x^{*}) - \eta_t g_t$$
 * $$(y_{t+1} - x^{*})^2 =  (x_t - x^{*})^2 - 2 \eta_t (x_t - x^{*})^\top g_t + \eta_t^2 \|g_t\|^2$$
 
-由於$$x_{t+1} \in F$$是$$y_{t+1} \in \mathbb{R}^n$$在$$F$$的投影點，由距離函教 Ｄ三角不等式可得$$(y-x)^2 \geq (P(y) - x)^2$$。
-
-由凸函數的一階條件可得$$\|g_t\| \leq \| \nabla c \|$$。
+由於$$x_{t+1} \in F$$是$$y_{t+1} \in \mathbb{R}^n$$在$$F$$的投影點，由距離函數的三角不等式性質可得$$(y-x)^2 \geq (P(y) - x)^2$$。且由凸函數的一階條件可得$$\|g_t\| \leq \| \nabla c \|$$。
 
 由此兩條件可得：
 
 * $$(x_{t+1} - x^{*})^2  \leq (x_{t} - x^{*})^2 - 2 \eta_t (x_t - x^{*})^\top g_t + \eta_t^2 \|\nabla c\|^2$$
 * $$(x_t - x^{*})^\top g_t \leq  \frac{1}{2 \eta_t} ((x_t - x^{*})^2 - (x_{t+1} - x^{*})^2) +  \frac{\eta_t}{2} \|  \nabla c\|^2$$
 
+由regret定義得：
 
+$$\displaystyle \begin{aligned} R_G(T) & = \sum_{t=1}^T (x_t - x^{*})^\top g_t \\   & \leq \sum_{t=1}^T \frac{1}{2 \eta_t} ((x_t - x^{*})^2 - (x_{t+1} - x^{*})^2)  + \frac{\eta_t}{2} \| \nabla c\|^2 \\   & \leq \frac{1}{2 \eta_1} (x_1 - x^{*})^2  - \frac{1}{2 \eta_T} (x_{T+1} - x^{*})^2 +      \frac{1}{2} \sum_{t=2}^T \left( \frac{1}{\eta_t} - \frac{1}{\eta_{t-1}} \right) (x_t - x^{*})^2 +      \frac{\|\nabla c \|^2}{2} \sum_{t=1}^T \eta_t \\   & \leq \| F\|^2 \left( \frac{1}{2 \eta_1} + \frac{1}{2} \sum_{t=2}^T \left(    \frac{1}{\eta_t} - \frac{1}{\eta_{t-1}}   \right) \right) + \frac{\| \nabla c \|^2}{2} \sum_{t=1}^T \eta_t \\   & \leq \| F\|^2 \frac{1}{2\eta_T} + \frac{\| \nabla c \|^2}{2} \sum_{t=1}^T \eta_t \end{aligned}$$令$$\eta_t = \frac{1}{\sqrt{t}}$$可得：
 
+$$\displaystyle \begin{aligned} \sum_{t=1}^T \eta_t & = \sum_{t=1}^T \frac{1}{\sqrt{T}} \\     & \leq 1 + \int_{t=1}^T \frac{1}{\sqrt{t}} dt \\     & \leq 1 + [2\sqrt{t}]_{1}^T \\     & \leq 2 \sqrt{T} - 1 \end{aligned}$$
 
+代回$$R_G(T)$$可得$$R_G(T) \leq \frac{\|F\|^2 \sqrt{T}}{2} + \left( \sqrt{T} - \frac{1}{2} \right) \| \nabla c \|^2$$(QED)
 
 </details>
 
+## 動態遺憾(dynamic regret)
 
+前述的靜態遺憾是演算法$$A$$與固定點$$x^{*}$$累積成本差值，如果將固定點放寬為限定長度$$L$$的路徑的累積成本時，則為動態遺憾。
 
+> 定義：路徑長度(path length)
+>
+> 向量序列$$x_1, \dots, x_T$$的長度為$$\sum_{t=1}^{T-1} d(x_t, x_{t+1})$$
+
+定義集合$$\mathbb{S}(T,L)$$為$$T$$個向量，且路徑長度小於等於$$L$$的集合。
+
+> 定義：動態遺憾(dynamic regret)
+>
+> 給定演算法$$A$$以及最大路徑長度$$L$$，則動態遺憾定義為：$$R_A(T,L) = C_A(T) - \min_{A^{'} \in \mathbb{S}(T,L)}C_{A^{'}}(T)$$
+
+> theorem
+>
+> 若學習速度$$\eta$$為定值時，則貪婪投影演算法的動態遺憾滿足：
+>
+> $$R_G(T,L) \leq \frac{7 \|F\|^2}{4 \eta} + \frac{L \|F\|}{\eta} + \frac{T \eta \| \nabla c \|^2}{2}$$
+
+## generalized infinitesimal gradient ascent (GIGA)

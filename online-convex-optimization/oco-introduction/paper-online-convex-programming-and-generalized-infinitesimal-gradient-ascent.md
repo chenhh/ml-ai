@@ -146,3 +146,24 @@ $$\displaystyle \begin{aligned} \sum_{t=1}^T \eta_t & = \sum_{t=1}^T \frac{1}{\s
 ## generalized infinitesimal gradient ascent (GIGA)
 
 雙人重覆零和賽局可建模為在線線性規劃問題，且GIGA演算法為universal consistent。
+
+令$$A,B$$分別為玩家和對手的行動集合，$$A\times B$$為聯合行動(joint action)集合，效用函數$$u: A \times B \rightarrow \mathbb{R}$$越高越好。玩家和對手在時間$$t$$時，根據歷史已實現聯合行動集合決定當期的行動。
+
+例如：和局賽局 $$A=\{a_1, a_2, a_3\}$$, $$B=\{b_1, b_2, b_3\}$$，$$u(a_1, b_1)=u(a_2, b_2)=u(a_3, b_3)=1$$，其於$$u(a_i, b_j)=0, \forall i \neq j$$。
+
+令歷史(history)為聯合行動序列，$$H_t = (A\times B)_t$$為長度為$$t$$的行動序列集合。令$$H=\bigcup_{t=0}^\infty H_t$$為所有歷史的集合，且對於$$h \in H$$，定義$$|h|$$為歷史的長度。
+
+例如$$h=\{(a_3,b_1), (a_1, b_2), (a_2, b_3), (a_2, b_2), (a_2, b_2)\}$$為一歷史。得$$h_3=(a_2, b_3)$$，$$h_{1,2}=b_1$$。
+
+則歷史$$h$$的效用為$$\displaystyle u_{total}=\sum_{t=1}^{|h|}u(h_{t,1}, h_{t,2})$$。以上例計算得$$u_{total}(h)=2$$。
+
+如果考慮玩家只使用固定行動$$a_2$$的歷史，定義如下：$$h_{ * \rightarrow a_2}=\{(a_2, b_1),(a_2, b_2), (a_2, b_3), (a_2, b_2), (a_2, b_2)\}$$。可得$$u_{total}(h_{* \rightarrow a_2})=3$$。
+
+定義玩家不使用固定行動$$a$$，$$\forall h \in H$$的遺憾為：$$R_{*\rightarrow a} (h)=u_{total}(h_{* \rightarrow a}) -u_{total}(h)$$。以上例計算得$$R_{ *\rightarrow a_2}(h)=3-2=1$$。
+
+遺憾可能為負值，如$$R_{ *\rightarrow a_1}(h)=1-2=-1$$。
+
+定義最大遺憾為$$\displaystyle R(h)=\max_{a \in A}R_{ * \rightarrow a}(h)$$。以上例得$$R(h)=1$$。
+
+
+

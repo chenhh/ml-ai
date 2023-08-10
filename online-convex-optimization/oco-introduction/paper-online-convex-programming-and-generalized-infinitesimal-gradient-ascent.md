@@ -144,3 +144,5 @@ $$\displaystyle \begin{aligned} \sum_{t=1}^T \eta_t & = \sum_{t=1}^T \frac{1}{\s
 > $$R_G(T,L) \leq \frac{7 \|F\|^2}{4 \eta} + \frac{L \|F\|}{\eta} + \frac{T \eta \| \nabla c \|^2}{2}$$
 
 ## generalized infinitesimal gradient ascent (GIGA)
+
+雙人重覆零和賽局可建模為在線線性規劃問題，且GIGA演算法為universal consistent。

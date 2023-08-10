@@ -147,23 +147,57 @@ $$\displaystyle \begin{aligned} \sum_{t=1}^T \eta_t & = \sum_{t=1}^T \frac{1}{\s
 
 雙人重覆零和賽局可建模為在線線性規劃問題，且GIGA演算法為universal consistent。
 
-令$$A,B$$分別為玩家和對手的行動集合，$$A\times B$$為聯合行動(joint action)集合，效用函數$$u: A \times B \rightarrow \mathbb{R}$$越高越好。玩家和對手在時間$$t$$時，根據歷史已實現聯合行動集合決定當期的行動。
+令$$A,B$$分別為玩家和對手的<mark style="color:red;">(有限或無限)行動集合</mark>，$$A\times B$$為<mark style="color:red;">聯合行動(joint action)集合</mark>，<mark style="color:red;">效用函數</mark>$$u: A \times B \rightarrow \mathbb{R}$$越高越好。玩家和對手在時間$$t$$時，根據歷史已實現聯合行動集合決定當期的行動。
 
 例如：和局賽局 $$A=\{a_1, a_2, a_3\}$$, $$B=\{b_1, b_2, b_3\}$$，$$u(a_1, b_1)=u(a_2, b_2)=u(a_3, b_3)=1$$，其於$$u(a_i, b_j)=0, \forall i \neq j$$。
 
-令歷史(history)為聯合行動序列，$$H_t = (A\times B)_t$$為長度為$$t$$的行動序列集合。令$$H=\bigcup_{t=0}^\infty H_t$$為所有歷史的集合，且對於$$h \in H$$，定義$$|h|$$為歷史的長度。
+令<mark style="color:red;">歷史(history)</mark>為聯合行動序列，$$H_t = (A\times B)_t$$為長度為$$t$$的行動序列集合。令$$H=\bigcup_{t=0}^\infty H_t$$為<mark style="color:red;">所有歷史的集合</mark>，且對於$$h \in H$$，定義$$|h|$$為<mark style="color:red;">歷史的長度</mark>。
 
 例如$$h=\{(a_3,b_1), (a_1, b_2), (a_2, b_3), (a_2, b_2), (a_2, b_2)\}$$為一歷史。得$$h_3=(a_2, b_3)$$，$$h_{1,2}=b_1$$。
 
-則歷史$$h$$的效用為$$\displaystyle u_{total}=\sum_{t=1}^{|h|}u(h_{t,1}, h_{t,2})$$。以上例計算得$$u_{total}(h)=2$$。
+則<mark style="color:red;">歷史</mark>$$h$$<mark style="color:red;">的效用</mark>為$$\displaystyle u_{total}=\sum_{t=1}^{|h|}u(h_{t,1}, h_{t,2})$$。以上例計算得$$u_{total}(h)=2$$。
 
-如果考慮玩家只使用固定行動$$a_2$$的歷史，定義如下：$$h_{ * \rightarrow a_2}=\{(a_2, b_1),(a_2, b_2), (a_2, b_3), (a_2, b_2), (a_2, b_2)\}$$。可得$$u_{total}(h_{* \rightarrow a_2})=3$$。
+如果考慮<mark style="color:red;">玩家只使用固定行動</mark>$$a_2$$<mark style="color:red;">的歷史</mark>，定義如下：$$h_{ * \rightarrow a_2}=\{(a_2, b_1),(a_2, b_2), (a_2, b_3), (a_2, b_2), (a_2, b_2)\}$$。可得$$u_{total}(h_{* \rightarrow a_2})=3$$。
 
-定義玩家不使用固定行動$$a$$，$$\forall h \in H$$的遺憾為：$$R_{*\rightarrow a} (h)=u_{total}(h_{* \rightarrow a}) -u_{total}(h)$$。以上例計算得$$R_{ *\rightarrow a_2}(h)=3-2=1$$。
+定義<mark style="color:red;">玩家不使用固定行動</mark>$$a$$<mark style="color:red;">，</mark>$$\forall h \in H$$<mark style="color:red;">的遺憾</mark>為：$$R_{*\rightarrow a} (h)=u_{total}(h_{* \rightarrow a}) -u_{total}(h)$$。以上例計算得$$R_{ *\rightarrow a_2}(h)=3-2=1$$。
 
 遺憾可能為負值，如$$R_{ *\rightarrow a_1}(h)=1-2=-1$$。
 
-定義最大遺憾為$$\displaystyle R(h)=\max_{a \in A}R_{ * \rightarrow a}(h)$$。以上例得$$R(h)=1$$。
+定義<mark style="color:red;">最大遺憾(遺憾)</mark>為$$\displaystyle R(h)=\max_{a \in A}R_{ * \rightarrow a}(h)$$。以上例得$$R(h)=1$$。<mark style="color:blue;">由定義可知遺憾為歷史的函數，而與生成歷史的策略無關</mark>。
 
+對於任意集合$$S$$，定義$$\Delta S$$為其上所有機率分佈的集合。對於分佈$$D$$與布林斷言$$P$$，定義$$Pr_{x \in D}[P(x)]$$為當$$P(x)$$為真時，$$x \in D$$的機率。
 
+* 定義行為(behavior)$$\sigma :  H \rightarrow \Delta (A)$$為玩家由過去行動的歷史至下一個行動機率分佈的函數。
+* 定義環境(environment)$$\rho: H \rightarrow \Delta(B)$$為對手由過去行動的歷史至下一個行動機率分佈的函數。
+* 定義$$H_{\infty}=(A \times B)_{\infty}$$為無限歷史的集合。
+* 定義$$F_{\sigma, \rho}\in \Delta(H_\infty)$$為玩家依據無限歷史與機率$$\sigma$$選擇行動，對手依據無限歷史與機率$$\rho$$選擇行動的機率分佈。
+* $$\forall h \in H_\infty$$，定義$$h(t)$$為歷史$$h$$的前$$t$$個聯合行動。
+
+> 定義：universal consistent
+>
+> 行為$$\sigma$$滿足以下條件時，為universal consistent:
+>
+> $$\forall \epsilon >0 ~ \exists T ~ \ni \forall \rho$$, $$Pr_{h \in F_{\sigma, \rho}}[\forall t > T, ~ \frac{R(h(t))}{t} > \epsilon] < \epsilon$$
+
+一段時間後，平均遺憾值可能會降低。而這種隨時間收斂在所有環境中都是一致的。
+
+### 將重複賽局建模為線上線性規劃
+
+為了簡單起見，令$$A=\{1,2,\dots, n\}$$，在每個時間點，依行為$$\sigma$$的機率選取行動，定義$$F=\{x \in \mathbb{R}^n, ~x_i \geq 0, ~ \sum_{i=1}^n x_i = 1\}$$。
+
+因此是考慮效用$$u$$而非成本$$c$$，所以是使用梯度上升而非下降。
+
+> algorithm: GIGA
+>
+> 選定學習速率序列$$\{\eta_1, \eta_2, \dots \}$$。
+>
+> 給定任意初始點$$x_1 \in F$$，則$$\forall t$$
+>
+> 1. 依$$x_t$$的機率選擇行動，有$$x_{t,i}$$的機率選中行動$$i$$。
+> 2. 觀察對手的行動$$h_{t,2}$$後，再計算 $$y_{t+1, i} = x_{t,i}+\eta_t u(i, h_{t,2})$$。$$x_{t+1}=P(y_{t+1})$$。\
+>    其中$$P(y)=\argmin_{x \in F}d(x,y)$$。
+
+> theorem:&#x20;
+>
+> 當$$\eta_t=\frac{1}{\sqrt{t}}$$時，GIGA為universally consistent。
 

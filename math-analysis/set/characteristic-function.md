@@ -9,7 +9,7 @@
 > * 因為$$\chi_E$$為函數，因此也可以考慮函數的極限。在分析中也常用$$I_E$$的符號表示。
 > * <mark style="color:red;">特徵函數最重要的功能是可以用函數的方式自訂集合的範圍</mark>。
 
-* 特徵函數是可測函數（隨機變數）。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合中。例如$$\mathrm{E}(I_A(\omega))=\mathrm{P}(A)$$。
+* <mark style="color:red;">**特徵函數是可測函數（隨機變數）**</mark>。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合中。例如$$\mathrm{E}(I_A(\omega))=\mathrm{P}(A)$$。
 * 特徵函數另一個常用的用途是定義Riemann積分: $$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{R_k}$$(step function)，其中每一個$$R_k$$都是矩形。定義Lebesgue積分$$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{E_k}$$(simple function), $$E_k$$為$$\alpha_k$$的前像集合。
 
 #### 性質
@@ -25,12 +25,11 @@
 #### 聯集與交集的特徵函數
 
 > $$A,B \subseteq X$$，則
->
+
 * $$\chi_{A \cap B}= \min\{ \chi_A, \chi_B\}=\chi_A\chi_B$$
 * $$\chi_{A\cup B}=\max\{ \chi_A, \chi_B\}=\chi_A +\chi_B-\chi_A \chi_B$$
 * $$\displaystyle \chi_{\bigcup_{i \in I} A_i}(x) = \max_{i \in I}\chi_{A_i} (x)$$
 * $$\displaystyle \chi_{\bigcap_{i \in I} A_i}(x) = \min_{i \in I}\chi_{A_i} (x)$$
-
 * $$\chi_{A\cap B}= \left\{\begin{aligned}1, &\text{ if } x \in A \cap B\\ 0, &\text{ if } x \notin A \cap B \end{aligned} \right.$$
   * if $$x \in A \land x \in B$$, $$\min\{ \chi_A, \chi_B\}=1, \chi_A, \chi_B=1$$
   * if $$x \in A \land x \notin B$$, $$\min\{ \chi_A, \chi_B\}=0, \chi_A, \chi_B=0$$
@@ -46,7 +45,7 @@
 
 <details>
 
-<summary> proof:  </summary>
+<summary>proof:</summary>
 
 令上極限集$$\displaystyle \limsup_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k=E$$
 
@@ -62,15 +61,13 @@
 
 </details>
 
-
-
 #### 集合序列極限存在的充要條件
 
 > $$\{E_n\} \subseteq X$$，則$$\displaystyle \lim_{n \rightarrow \infty} E_n$$ 存在若且唯若$$\displaystyle \lim_{n \rightarrow \infty} \chi_{E_n}$$ 存在
 
 <details>
 
-<summary> proof </summary>
+<summary>proof</summary>
 
 proof=>
 
@@ -87,4 +84,3 @@ proof <=
 使用相同的方法可得證(QED)
 
 </details>
-

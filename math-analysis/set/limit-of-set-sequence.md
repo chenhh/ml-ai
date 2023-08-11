@@ -3,25 +3,32 @@
 ## 簡介
 
 * <mark style="color:red;">集合</mark>$$A, B$$<mark style="color:red;">的最小上界可視為</mark>$$A \cup B$$（因為$$A,B \subseteq A \cup B$$且任何同時包含$$A,B$$的集合均比$$A\cup B$$大），<mark style="color:red;">而最大下界可視為</mark>$$A\cap B$$（同理$$A \cap B \subseteq A, B$$且同時包含$$A,B$$共同元素的集集合均比$$A\cap B$$小）。
-* 函數序列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的相似概念，這與找出集合論中與大小關係類似的運算，即集合的包含關係。<mark style="color:red;">且集合序列的上、下極限只考慮集合序列極限的元素，而非全部的集合元素，可忽略掉前面有限次集合序列的元素</mark>。
+* 函數序列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的相似概念，這與找出集合論中與大小關係類似的運算，即集合的包含關係。<mark style="color:red;">且集合序列的上、下極限</mark>_<mark style="color:red;">只考慮集合序列極限的元素</mark>_<mark style="color:red;">，而非全部的集合元素，可忽略掉前面有限次集合序列的元素</mark>。
 * 按照集合的包含關係，所謂集合序列的「最小上界(sup)」是包含所有$$A_n$$的集合中最小的那個集合，顯而易見，這個集合就是所有$$A_n$$的聯集$$\bigcup_n A_n$$。 類似的概念可找出找出集合序列的「最大下界(inf)」，為所有$$A_n$$ 的交集$$\bigcap_n A_n$$。
-* **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略前面的集合)，會經常出現在部份集合中**</mark>。
-* **集合序列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略在前面的集合)，會出現在全部的集合中**</mark>。
-* **可以看出上極限集中的元素數量大於等於下極限集中的元素數量。如果二者相等，他們的值就被定義為集合列的極限**。
+* **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略前面的集合)，會經常出現在部份集合中(聯集的概念)**</mark>。
+* **集合序列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略在前面的集合)，會出現在全部的集合中(交集的概念)**</mark>。
+* **可以看出上極限集中的元素數量大於等於下極限集中的元素數量。如果二者相等，他們的值就被定義為集合列的極限，和數列極限的概念一致**。
 
 ## 單調集合序列(monotonic sequence of set)
 
-> * $$\{E_n \}_{n \in \mathbb{N}}$$ 為
->   * 遞增(increasing)若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
->   * 遞減(decreasing)若$$E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
+> $$\{E_n \}_{n \in \mathbb{N}}$$ 為
+>
+> * 遞增(increasing)序列若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
+> * 遞減(decreasing)序列若$$E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
+>
+> 註：單調序列在證明中經常使用，以人工方式建構而成。
 
 E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
 
-### 單調有界集合序列極限必定存在
+## 單調有界集合序列極限必定存在
 
-> * 遞增集合序列$$E_n \subseteq E_{n+1}, ~ \forall n$$（因為$$E_n$$ 為宇集合$$X$$的子集合，因此$$X$$為所有集合的上界） 則 $$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$
+### 遞增集合序列的極限為所有集合的聯集
 
-proof:
+> 遞增集合序列$$E_n \subseteq E_{n+1}, ~ \forall n$$（因為$$E_n$$ 為宇集合$$X$$的子集合，因此$$X$$為所有集合的上界） 則 $$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$
+
+<details>
+
+<summary>proof：a=b 若且唯若<span class="math">a \subseteq b</span>且<span class="math">b \subseteq a</span>。</summary>
 
 因為$$\displaystyle x \in \bigcup_{n=1}^\infty E_n$$，必定存在$$n_0 \in \mathbb{N}$$使得$$x \in E_{n_0}$$，因為$$E_n \subseteq E_{n+1}~\forall n$$，所以可得$$x \in E_n$$因此$$\displaystyle x \in \liminf_{n \rightarrow \infty}E_n$$，即$$\displaystyle \bigcup_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty}E_n$$--(1)
 
@@ -29,7 +36,11 @@ proof:
 
 由(1)(2)得$$\displaystyle \lim_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$(QED)
 
-> * 遞減集合序列$$E_n \supseteq E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（空集合為任意集合的子集合，因此為所有集合的下界）
+</details>
+
+### 遞減集合序列的極限為所有集合的交集
+
+> 遞減集合序列$$E_n \supseteq E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（空集合為任意集合的子集合，因此可為所有集合的下界）
 
 對於遞增集合序列，$$\displaystyle \bigcap_{j \geq n} E_j = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty E_n$$
 
@@ -37,13 +48,11 @@ proof:
 
 ### 範例：遞減集合序列的極限
 
-$$E_n=[n,\infty), ~\forall n \in \mathbb{N}$$為遞減集合序列，則$$\lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n=\phi$$
+$$E_n=[n,\infty), ~\forall n \in \mathbb{N}$$為遞減集合序列，則$$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n=\phi$$
 
 ### 範例：開區間逼近閉區間
 
-測度證明中常用給定$$c \in \mathbb{R}$$，
-
-* 區間$$\displaystyle (-\infty, c]=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n}) = \lim_{n \rightarrow \infty} (-\infty, c+\frac{1}{n})$$
+測度證明中常用給定$$c \in \mathbb{R}$$，區間$$\displaystyle (-\infty, c]=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n}) = \lim_{n \rightarrow \infty} (-\infty, c+\frac{1}{n})$$
 
 ## 集合序列上、下極限的圖解
 

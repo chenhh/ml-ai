@@ -84,7 +84,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 <details>
 
-<summary>proof:[反證法]</summary>
+<summary>proof:[反證法]，利用有限集不會和子集等價反證。</summary>
 
 令$$E$$為所有正偶數形成的集合，則$$E \subset \mathbb{N}$$。
 
@@ -107,8 +107,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 由於$$A_i$$為有限集，因此$$\exists k_i \in \mathbb{N} \ni A_i \sim \mathbb{N}_{k_i}, ~i=1,2,\dots, n$$。
 
-因此可得 $$ \displaystyle \bigcup_{i=1}^n A_i \sim \mathbb{N}_{k_1+k_2+\dots+k_n} $$為有限集 (QED)
-
+因此可得 $$\displaystyle \bigcup_{i=1}^n A_i \sim \mathbb{N}_{k_1+k_2+\dots+k_n}$$為有限集 (QED)
 
 </details>
 
@@ -135,29 +134,26 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 ### 任一無限集必包含一可數子集
 
 > $$S$$為無限集，則存在$$E \subseteq S$$為可數集。
-> 
+>
 > 註：此性質說明了無限集的最小基數為$$\aleph_0$$，或者說自然數是最小的無限集。
-> 
+>
 > 註：此為無限集的充分條件。
 
 <details>
 
-<summary>proof: 直接建構 </summary>
+<summary>proof: 直接建構</summary>
 
 取$$x_1 \in S$$。
 
-再取$$ x_2 \in S - \{x_1\}$$。
+再取$$x_2 \in S - \{x_1\}$$。
 
 依此步驟取元素，得集合$$\{x_1, x_2, \dots, x_n\} \subseteq S$$。
 
-因為$$S$$為無限集，可得$$S - \{x_1, x_2, \dots, x_n\} \neq \empty$$，
-因此可取$$x_{n+1} \in S - \{x_1, x_2, \dots, x_n\}$$。
+因為$$S$$為無限集，可得$$S - \{x_1, x_2, \dots, x_n\} \neq \empty$$， 因此可取$$x_{n+1} \in S - \{x_1, x_2, \dots, x_n\}$$。
 
 由數學歸納法得$$\{x_1, x_2, \dots, x_n, \dots \} \subseteq S$$ (QED)
 
-
 </details>
-
 
 ### 無限集的充分必要條件
 
@@ -244,16 +240,15 @@ proof: [選擇公理](axiom-of-choice.md#ying-yong-ke-shu-ge-ke-shu-ji-he-de-bin
 
 ### 可數集的有限多個積集仍為可數集
 
-> $$A_i, ~i=1,2,\dots, n$$均為可數集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為可數集。
-> 可擴充得 $$ \displaystyle \prod_{i=1}^\infty \mathbb{N}^i $$
+> $$A_i, ~i=1,2,\dots, n$$均為可數集，則$$\displaystyle \prod_{i=1}^n A_i$$仍為可數集。 可擴充得 $$\displaystyle \prod_{i=1}^\infty \mathbb{N}^i$$
+
 <details>
 
 <summary>proof:質因數分解對應</summary>
 
-不失一般性令$$E = \mathbb{N}$$，則 $$ E_1 \times E_2 \times \dots \times E_n = \mathbb{N}^n $$。
+不失一般性令$$E = \mathbb{N}$$，則 $$E_1 \times E_2 \times \dots \times E_n = \mathbb{N}^n$$。
 
-取相異的質數$$p_1, p_2, \dots, p_n$$，則$$\forall x = (m_1, \dots, m_n) \in \mathbb{N}^n$$，
-均可用自然數$$p_1^{m_1}, p_2^{m_2}, \dots, p_n^{m_n}$$對應，為一對一且映成的函數 (QED)
+取相異的質數$$p_1, p_2, \dots, p_n$$，則$$\forall x = (m_1, \dots, m_n) \in \mathbb{N}^n$$， 均可用自然數$$p_1^{m_1}, p_2^{m_2}, \dots, p_n^{m_n}$$對應，為一對一且映成的函數 (QED)
 
 </details>
 
@@ -295,7 +290,7 @@ $$\mathbb{Q}=\cup_{n\in \mathbb{N}} S_n$$，所以有理數集為可數集。
 
 $$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$均為不可數集。
 
-稱 $$ [0,1] $$集合的基數為連續基數，記為$$c$$或$$\aleph_1$$。
+稱 $$[0,1]$$集合的基數為連續基數，記為$$c$$或$$\aleph_1$$。
 
 <details>
 
@@ -313,42 +308,35 @@ $$\forall a, b \in \mathbb{R}, ~ a <b$$，可得$$[a,b], [a,b), (a,b], (a,b)$$�
 
 ### 連續基數的聯集的基數仍為連續基數
 
-> 給定集合序列 $$ \{E_i\}_{i \in \mathbb{N}} $$，且$$|E_i|=\aleph_1, ~\forall i$$，則
-> $$ \displaystyle |\bigcup_{i=1}^\infty E_i| = \aleph_1 $$
+> 給定集合序列 $$\{E_i\}_{i \in \mathbb{N}}$$，且$$|E_i|=\aleph_1, ~\forall i$$，則 $$\displaystyle |\bigcup_{i=1}^\infty E_i| = \aleph_1$$
 
 <details>
 
-<summary>proof:  </summary>
+<summary>proof:</summary>
 
 不失一般性，令$$E_i \cap E_j = \empty ~ \forall i \neq j$$，且$$E_i = [i,i+1)$$為實數的半開區間。
 
-因此$$ \displaystyle \bigcup_{i=1}^\infty E_i = [1,\infty) $$等價於$$\mathbb{R}$$，
-因此基數為$$\aleph_1$$ (QED)
+因此$$\displaystyle \bigcup_{i=1}^\infty E_i = [1,\infty)$$等價於$$\mathbb{R}$$， 因此基數為$$\aleph_1$$ (QED)
 
 </details>
 
 ### 定義在實數區間的連續函數集合的基數為連續基數
 
-> $$C([a,b])$$為連續函數$$f: [a,b] \rightarrow \mathbb{R}$$全體形成的集合，
-> 則 $$ |C([a,b])| = \aleph_1 $$
+> $$C([a,b])$$為連續函數$$f: [a,b] \rightarrow \mathbb{R}$$全體形成的集合， 則 $$|C([a,b])| = \aleph_1$$
 
 <details>
 
-<summary>proof: 找一對一且映成的函數 </summary>
+<summary>proof: 找一對一且映成的函數</summary>
 
-因為閉區間$$[a,b]$$的任意常數函數都是連續函數，因此 $$ \mathbb{R} $$與$$C([a,b])$$的一個子集等價。
-即$$C([a,b])$$的勢大於等於$$\aleph_1$$ --(1)
+因為閉區間$$[a,b]$$的任意常數函數都是連續函數，因此 $$\mathbb{R}$$與$$C([a,b])$$的一個子集等價。 即$$C([a,b])$$的勢大於等於$$\aleph_1$$ --(1)
 
-$$\forall f \in C([a,b])$$，取一個平面有理點集合$$ \mathbb{Q} \times \mathbb{Q} $$中的一個子集與其
-對應得 $$g(f) = \{(s,t) \in \mathbb{Q} \times \mathbb{Q}: s \in [a,b], t \leq f(s) \}$$。
+$$\forall f \in C([a,b])$$，取一個平面有理點集合$$\mathbb{Q} \times \mathbb{Q}$$中的一個子集與其 對應得 $$g(f) = \{(s,t) \in \mathbb{Q} \times \mathbb{Q}: s \in [a,b], t \leq f(s) \}$$。
 
-因此$$f$$為$$C([a,b])到power set $$P(\mathbb{Q}^2)$$的一對一映成，且$$P(\mathbb{Q}^2)$$與$$P(\mathbb{N})$$等價，即$$|P(\mathbb{Q}^2)| = \aleph_1$$，因此$$C([a,b])$$的勢小於等於$$\aleph_1$$--(2)
+因此$$f$$為$$C([a,b])到power set$$P(\mathbb{Q}^2)$$的一對一映成，且$$P(\mathbb{Q}^2)$$與$$P(\mathbb{N})$$等價，即$$|P(\mathbb{Q}^2)| = \aleph\_1$$，因此$$C(\[a,b])$$的勢小於等於$$\aleph\_1\$$--(2)
 
 由(1,2)得$$|C([a,b])|=\aleph_1$$ (QED)
 
 </details>
-
-
 
 ## Schroder-Bernstein定理
 

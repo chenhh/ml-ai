@@ -12,9 +12,9 @@ description: ordered set
 
 > $$S\neq \emptyset$$，令關係$$R: S \rightarrow S$$為具有反身性、反對稱性與遞移性的二元關係，則$$R$$為一偏序關係(partial order relation)。
 >
-> * 反身性\[reflexive] $$\forall x \in S, xRx$$
-> * 反對稱性\[anti-symmetric] $$\forall x,y\in S, \ xRy \land yRx \Rightarrow x=y$$
-> * 遞移性\[transitive] $$\forall x,y,z\in S, \ xRy \land yRz \Rightarrow xRz$$
+> * <mark style="color:blue;">反身性\[reflexive]</mark> $$\forall x \in S, xRx$$
+> * <mark style="color:blue;">反對稱性\[anti-symmetric]</mark> $$\forall x,y\in S, \ xRy \land yRx \Rightarrow x=y$$
+> * <mark style="color:blue;">遞移性\[transitive]</mark> $$\forall x,y,z\in S, \ xRy \land yRz \Rightarrow xRz$$
 >
 > 稱$$(S,R)$$為偏序集。
 >
@@ -68,9 +68,9 @@ description: ordered set
 
 ## 良序集(well order set)
 
-> 令$$(S, \leq)$$為偏序集，$$\forall x,y \in S$$且$$x \neq y$$則 $$x < y$$。
+> 定義：令$$(S, \leq)$$為偏序集，$$\forall x,y \in S$$且$$x \neq y$$則 $$x < y$$。
 
-> 若$$(S, \leq)$$為全序集，則$$S$$的任一非空子集合必包含最小元(素)時，為$$S$$為良序集。
+> 定義：若$$(S, \leq)$$為全序集，則$$S$$的任一非空子集合必包含最小元(素)時，為$$S$$為良序集。
 
 <mark style="color:red;">註：自然數</mark>$$\mathbb{N}$$<mark style="color:red;">是良序集；但整數集</mark>$$\mathbb{Z}$$<mark style="color:red;">，有理數集</mark>$$\mathbb{Q}$$<mark style="color:red;">與實數集</mark>$$\mathbb{R}$$<mark style="color:red;">均非良序集</mark>。
 

@@ -6,7 +6,7 @@ description: open and closed set
 
 ## 簡介
 
-定義開集合或閉集合，需要用到距離的概念，因此至少需要定義集合中兩點的度量(metric)。 由於$$\mathbb{R}^n$$與$$\mathbb{R}$$在開集與閉集兩者性質通用，因此直接以$$\mathbb{R}^n$$定義。
+定義開集合或閉集合，需要用到距離的概念，因此至少需要定義集合中兩點的度量(metric)。 由於度量在$$\mathbb{R}^n$$與$$\mathbb{R}$$在開集與閉集兩者性質通用，因此直接以$$\mathbb{R}^n$$定義。
 
 ## 度量函數(metric function)
 
@@ -26,7 +26,7 @@ description: open and closed set
 >
 > * $$B_r(x) \equiv N_r(x) = \{ y \in \mathbb{R}^n ~|~ d(x,y) < r \}$$ 是以$$x$$為圓心，半徑為$$r$$開球 (open ball with center $$x$$ and radius $$r$$)。
 > * $$\overline{B_r}(x) \equiv N_r(x) = \{ y \in \mathbb{R}^n ~|~ d(x,y) \leq r \}$$ 是以$$x$$為圓心，半徑為$$r$$閉球 (closed ball with center $$x$$ and radius $$r$$)。
-> * $$S_r(x) \equiv N_r(x) = \{ y \in \mathbb{R}^n ~|~ d(x,y) r \}$$ 是以$$x$$為圓心，半徑為$$r$$的球面 (sphere with center $$x$$ and radius $$r$$)。
+> * $$S_r(x) \equiv N_r(x) = \{ y \in \mathbb{R}^n ~|~ d(x,y) =r \}$$ 是以$$x$$為圓心，半徑為$$r$$的球面 (sphere with center $$x$$ and radius $$r$$)。
 
 實數$$\mathbb{R}$$
 
@@ -65,7 +65,7 @@ description: open and closed set
 
 ### 歐式空間中，內點一定是極限點
 
-> 給定集合$$S\subseteq \mathbb{R}^n$$，內點$$x \in S$$（$$\exists r > 0 \ni N_r(x) \subseteq S$$）， 則$$x$$為$$S$$的極限點（$$\forall r > 0 N_r(x) \cap S - \{x\} \neq \emptyset$$）。
+> 給定集合$$S\subseteq \mathbb{R}^n$$，內點$$x \in S$$（$$\exists r > 0 \ni B_r(x) \subseteq S$$）， 則$$x$$為$$S$$的極限點（$$\forall r > 0 N_r(x) \cap S - \{x\} \neq \emptyset$$）。
 >
 > 註：一般拓墣空間不一定成立。
 
@@ -73,8 +73,9 @@ description: open and closed set
 
 <summary>proof: 極限點必定和集合有無窮多個交點</summary>
 
-* 當$$x \in S$$為內點時，則$$\exists r > 0 \ni N_r(x) \subseteq S$$包含了$$S$$的無窮多個元素，
-* 即使扣除掉點$$x$$，$$N_r(x)$$與$$S$$的交集也不是空集合，因此$$x$$為極限點。(QED)
+當$$x \in S$$為內點時，則$$\exists r > 0 \ni B_r(x) \subseteq S$$包含了$$S$$的無窮多個元素，
+
+即使扣除掉點$$x$$，$$B_r(x)$$與$$S$$的交集也不是空集合，因此$$x$$為極限點。(QED)
 
 </details>
 
@@ -137,9 +138,9 @@ description: open and closed set
 
 > $$A, B \in \subseteq \mathbb{R}^n$$
 >
-> 定義若$$A \cap B = \empty$$，則稱$$A, B$$為不相交集。
+> 定義若$$A \cap B = \empty$$，則稱$$A, B$$為<mark style="color:red;">不相交集</mark>。
 >
-> 定義若內點集$$A^0 \cap B^0 = \empty$$，則稱$$A, B$$為非重疊集。
+> 定義若內點集$$A^0 \cap B^0 = \empty$$，則稱$$A, B$$為<mark style="color:red;">非重疊集</mark>。
 
 非重疊集的邊界點可能相交，如$$A=[0,1]~B=[1,2]$$，則$$A^0=(0,1)~B^0=(1,2),~A^0\cap B^0=\empty$$。
 
@@ -250,6 +251,8 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 ## 開集合(open set)
 
 > $$\forall S \subseteq \mathbb{R}^n$$，若$$S$$內每個點均為$$S$$的內點， 即$$\forall x \in S,~ \exists r > 0 \ni B_r(x) \subseteq S$$，則稱$$S$$為開集合。
+>
+> 依內點集的定義為$$S^0=S$$時，$$S$$為開集合。
 
 * 由定義知開集合不包含單點(孤立點)。
 * 實數的開集合為開區間$$(a,b)$$或者開區間的聯集$$\cup_{i=1}^\infty (a_i ,b_i)$$。

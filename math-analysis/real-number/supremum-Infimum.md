@@ -126,7 +126,7 @@ $$A \cup B=\mathbb{R}, ~ A \cap B=\emptyset, ~ A<B$$
 
 &#x20;因此$$−S$$有上界: $$\forall -x \in −S, ~ −x \leq −a$$
 
-因為$$−S$$有上確界，令$$b=\sup(−S)$$。 可得 $$−b=\inf S)$$ (QED).
+因為$$−S$$有上確界，令$$b=\sup(−S)$$。 可得 $$−b=\inf(S)$$ (QED).
 
 </details>
 
@@ -434,9 +434,9 @@ $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$�
 
 <summary>proof:</summary>
 
-$$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n\epsilon > 1$$可得$$\frac{1}{n} < \epsilon$$。
+$$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n\epsilon > 1$$，移項可得$$\frac{1}{n} < \epsilon$$。
 
-而$$\forall m \in \mathbb{N}, m >n$$, $$\frac{1}{m} < \epsilon$$
+而$$\forall m \in \mathbb{N}, m >n$$時，可得 $$\frac{1}{m}< \frac{1}{n} < \epsilon$$。
 
 由極限的定義得 $$\lim_{n \rightarrow \infty} \frac{1}{n}=0$$(QED)
 

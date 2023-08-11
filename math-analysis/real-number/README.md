@@ -14,7 +14,7 @@
 
     度的極限為零這兩個條件時，則這一序列區間存在唯一一個共同點(收斂至一點)。
 4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界序列必收斂（有極限，且收斂在上(下)確界)。
-5. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列。
+5. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列\[以二元切割法直接建構]。
 6. **有限覆蓋定理(finite cover theorem, Heine-Borel theorem)**：有界閉區間(緊緻集)的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
 7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是Cauchy數列(因為實數的完備性可以保證Cauchy數列的收斂值為實數)。
 
@@ -92,9 +92,7 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 
 ## 絕對值(absolute value)
 
-> 定義$$|x| = \left\{ \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$
->
-> * $$a \geq 0$$且$$|x| \leq a$$ $$\Leftrightarrow -a \leq x \leq a$$。
+> 定義$$|x| = \left\{ \begin{align} x, \text{ if } x \geq 0 \\ -x, \text{ if } x <0\end{align}\right.$$$$a \geq 0$$且$$|x| \leq a$$ $$\Leftrightarrow -a \leq x \leq a$$。
 
 ## 不等式
 
@@ -106,10 +104,15 @@ $$\forall x,y,z \in \mathbb{R}$$，有序關係性質如下：
 > * $$|x_1 + x_2 + \cdots +x_n | \leq |x_1| + |x_2| +\cdots +|x_n|$$
 > * $$|x_1 +x_2 + \cdots + x_n| \geq |x_1| - |x_2| - \cdots - |x_n|$$
 
-proof:
+<details>
 
-* $$-|x| \leq x \leq |x|, ~ -|y| \leq y \leq |y|$$。
-* $$-(|x| + |y) \leq x + y \leq |x|+ |y|$$，可得 $$|x+y| \leq |x| +|y|$$。(QED)
+<summary>proof</summary>
+
+$$-|x| \leq x \leq |x|, ~ -|y| \leq y \leq |y|$$。
+
+$$-(|x| + |y) \leq x + y \leq |x|+ |y|$$，可得 $$|x+y| \leq |x| +|y|$$。(QED)
+
+</details>
 
 ### Cauchy-Schwarz不等式
 

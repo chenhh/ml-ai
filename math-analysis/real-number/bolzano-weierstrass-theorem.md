@@ -6,22 +6,20 @@
 
 > 集合$$S \subseteq \mathbb{R}^n$$稱為有界集合，若存在點$$x \in \mathbb{R}^n ~ \exists r > 0 \ni S \subseteq B_r(x)$$。
 
-* $$\{ a_n\} \subseteq \mathbb{R}$$為**有界實數數列(bounded sequence)**，若存在$$M >0$$使得$$|a_n| \leq M, ~ \forall n$$。
+$$\{ a_n\} \subseteq \mathbb{R}$$稱為**有界實數數列(bounded sequence)**，若存在$$M >0$$使得$$|a_n| \leq M, ~ \forall n$$。
 
 ## 歐式空間的Bolzano-Weierstrass定理
 
-> * 序列：每個在$$\mathbb{R}^n$$的有界無限（元素）數列都存在收斂的子數列（收斂在極限點）\[但原始的數列不一定收斂]。
+> * 數列：每個在$$\mathbb{R}^n$$的有界無限（元素）數列都存在收斂的子數列（收斂在極限點）\[但原始的數列不一定收斂]。
 > * 集合：$$\mathbb{R}^n$$中的任意有界無限（元素）集合$$S$$至少有一個極限點（在$$\mathbb{R}^n$$）。
 >
-> 註：<mark style="color:red;">極限點的鄰域與集合交集的元素為無限多個的性質</mark>，已證明了具有極限點的集合$$S$$內的元素必定為無限多個，但具有無限多個點的集合未必有極限點。
+> 註：<mark style="color:red;">極限點的鄰域與集合交集的元素為無限多個的性質</mark>，已證明了具有極限點的集合$$S$$內的元素必定為無限多個，但具有無限多個點的集合未必有極限點，例如自然數。
 >
 > 註：有界集合的條件是因為如自然數$$\mathbb{N}$$為無界無限集，但沒有極限點。
->
 
 <details>
 
-<summary>proof: 實數數列，使用二元搜尋每次將包含序列的有界區間切半，且總是選包含無限個元素的半區間切下去，
-最後依區間套定理會收斂至極限點</summary>
+<summary>proof: 實數數列，使用二元搜尋每次將包含序列的有界區間切半，且總是選包含無限個元素的半區間切下去， 最後依區間套定理會收斂至極限點</summary>
 
 令$$\{a_{n}\}$$是有界的無限實數數列。
 
@@ -39,14 +37,13 @@
 
 註：取$$r > (b-a)$$時，$$[a,b] \subseteq B_r(x)$$。
 
-![](../../.gitbook/assets/bolzano-weistrass\_i1-min.png)
-
+<img src="../../.gitbook/assets/bolzano-weistrass_i1-min.png" alt="" data-size="original">
 
 </details>
 
 <details>
 
-<summary>proof: 歐式空間使用相同的方法證明 </summary>
+<summary>proof: 歐式空間使用相同的方法證明</summary>
 
 $$R^n$$ 空間上的證明同實數的做法，在$$R^2$$ 時把平面切成小方形後夾擠得極限點，在$$R^3$$ 將立體方塊切成小方塊後夾擠得極限點。
 
@@ -57,6 +54,3 @@ $$R^n$$ 空間上的證明同實數的做法，在$$R^2$$ 時把平面切成小�
 </details>
 
 。
-
-
-

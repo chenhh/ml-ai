@@ -16,11 +16,11 @@ Blackwell首次研究了具有向量報酬函數的零和賽局，他提供了�
 
 ## 最小最大理論(Minmax theorem)
 
-> 給定單期雙人零合賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，
+> 給定<mark style="color:blue;">單期</mark>雙人零合賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，
 >
-> * 玩家1的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \mathbf{P}, ~p_i \geq 0, ~ \sum_{i=1}^r p_i = 1$$。
-> * 玩家2的混合策略為$$\displaystyle \mathbf{q}=(q_1, q_2, \dots, q_s) \in \mathbf{Q}, ~q_j \geq 0, ~ \sum_{j=1}^s q_j = 1$$。
-> * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取行動$$i,j$$時，玩家1的報酬(零和遊戲，所以玩家2的報酬為$$-m(i,j)$$)。
+> * 玩家1(玩家)的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \mathbf{P}, ~p_i \geq 0, ~ \sum_{i=1}^r p_i = 1$$。
+> * 玩家2(對手或環境)的混合策略為$$\displaystyle \mathbf{q}=(q_1, q_2, \dots, q_s) \in \mathbf{Q}, ~q_j \geq 0, ~ \sum_{j=1}^s q_j = 1$$。
+> * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取行動$$i,j$$時，玩家1的報酬\[支付，越高越好]\(payoff)(零和遊戲，所以玩家2的報酬為$$-m(i,j)$$)。
 >
 > 則存在$$\mathbf{p} \in \mathbb{R}_{+}^r, ~ \mathbf{q} \in \mathbb{R}_{+}^s, ~ v \in \mathbb{R}$$ 滿足$$\sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$。
 >
@@ -42,7 +42,7 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 玩家2採取行動$$s_1,s_2$$時，不論對手採取任何行動，最大損失分別為$$-5, 5$$。因此玩家2採取任意行動時，最多損失為$$\max(-5,5)=5$$。
 
-多期賽局時，玩家1可保證報酬不會低於5，而玩家2可保證損失不會大於5。
+<mark style="color:blue;">多期(重複)賽局時，玩家1存在策略可保證平均報酬不會低於5；同理而玩家2存在策略可保證平均損失不會大於5</mark>。
 
 ## 向量報酬
 
@@ -50,13 +50,13 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$。
 
-現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~1 \leq i \leq r, ~ 1 \leq j \leq s$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(Blackwell論文中定義的是更一般化的形式，即每個元素$$m(i,j)$$是定義在一個封閉有界凸集$$X \in \mathbb{R}^N$$上的機率分佈，因此當玩家1,2採取行動$$i,j$$時得到的報酬$$m(i,j)$$是隨機值)。
+現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~1 \leq i \leq r, ~ 1 \leq j \leq s$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是定義在一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$<mark style="color:blue;">上的機率分佈，因此當玩家1,2採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是隨機向量</mark>)。
 
-報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。
+如果考慮每一個隨機向量$$m(i,j)$$的期望值$$\overline{m}(i,j)$$或簡寫為$$m(i,j)$$時，則報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。<mark style="color:blue;">注意此</mark>$$r\times s$$<mark style="color:blue;">個點並非均為凸包</mark>$$X$$<mark style="color:blue;">的端點，有些點是位於集合內部非端點</mark>。
 
 玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
 
-而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意值$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，玩家1的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
+而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，玩家1的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
 
 同理玩家2的的混合策略序列為$$g_{0:n} \equiv \{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
 
@@ -81,7 +81,7 @@ $$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\m
 * $$x_1, x_2,\dots, x_n$$​是玩家任意策略序列$$f_{0:n}$$​與對手特定策略$$g^{*}\equiv g^{*}_{0:n}$$所得到。
 * 只要賽局回合數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均報酬至集合的距離無法機率收斂。
 
-Minmax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in P,~ q \in Q$$，則
+Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in P,~ q \in Q$$，則
 
 * 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​.&#x20;
 * 當$$t > v$$且$$g: g_n \equiv q$$​時，$$S$$​為可排除集合。

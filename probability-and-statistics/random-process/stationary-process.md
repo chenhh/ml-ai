@@ -37,8 +37,53 @@
 
 > $$X_t = c X_{t-1} + \epsilon_t$$,  $$\epsilon_t \sim \text{i.i.d} (0, \sigma^2)$$為獨立同分佈的白噪音。
 >
+> 即$$\mathrm{E}(\epsilon_t \epsilon_s)=0, ~ \forall s \neq t$$且  $$\mathrm{E}(\epsilon_t^2)=\sigma^2$$。
+>
 > * 當$$|c| > 1$$時，為非定態過程。
 > * 當$$c=1$$時，為隨機漫步過程。
 > * 當$$|c|<1$$時，為弱定態過程。
->
->
+
+&#x20;將離散隨機過程展開得：
+
+$$\begin{aligned}  X_t & = c X_{t-1} + \epsilon_t \\     & = c(c X_{t-2}+ \epsilon_{t-1}) + \epsilon_t \\     & = c^2 X_{t-2} + c \epsilon_{t-1} + \epsilon_t \\     & \vdots \\     & = c^t X_0 + c^{t-1} \epsilon_{1} + c^{t-2} \epsilon_{2} + \dots + \epsilon_t \end{aligned}$$
+
+兩側取期望值可得：$$\mathrm{E}(X_t) = c^t \mathrm{E}(X_0)$$，如果已知$$X_0$$的實現值$$x_0$$，可寫成$$\mathrm{E}(X_t) = c^t x_0$$。
+
+變異數為：
+
+$$\displaystyle  \begin{aligned}  \mathrm{Var}(X_t) & = \mathrm{E}(X_t - \mathrm{E}(X_t))^2 \\     & = \mathrm{E}(c^{t-1} \epsilon_1 + c^{t-2} \epsilon_2 + \dots + \epsilon_t)^2 \\     & = c^{2(t-1)}\mathrm{E}(\epsilon_1^2) +c^{2(t-2)}\mathrm{E}(\epsilon_2^2) +  \dots + \mathrm{E}(\epsilon_t^2) \\     & = \sigma^2 \sum_{j=0}^{t-1} c^{2j} \end{aligned}$$
+
+共變異數值：
+
+$$\displaystyle  \begin{aligned}  \mathrm{Cov}(X_t, X_{t-s}) & = \mathrm{E}[(X_t - \mathrm{E}(X_t))(X_{t-s} - \mathrm{E}(X_{t-s})) ]  \\     & = \mathrm{E}[(c^{t-1}\epsilon_1 + c^{t-2}\epsilon_2 + \dots + \epsilon_t )                    (c^{t-s-1}\epsilon_1 + c^{t-s-2}\epsilon_2 + \dots + \epsilon_{t-s} ] \\     & = \sigma^2 \sum_{j=s}^{t-1} c^{2j-s} \end{aligned}$$
+
+以下考慮$$t \rightarrow \infty$$的性質。
+
+#### 當$$|c| > 1$$時
+
+可得$$\mathrm{E}(X_t) \rightarrow \infty$$，同理$$\mathrm{Var}(X_t) \rightarrow \infty$$且$$\mathrm{Cov}(X_t, X_{t-s}) \rightarrow \infty$$不滿足定態性質。
+
+#### 當$$c=1$$時
+
+$$X_t = X_{t-1} + \epsilon_t$$為隨機漫步模型。在時間$$t$$時可得：
+
+* $$\mathrm{E}(X_t) = x_0$$
+* $$\mathrm{Var}(X_t) =\sigma^2 t$$
+* $$\mathrm{Cov}(X_t , X_{t-s})=(t-s)\sigma^2$$
+
+期望值為定值，但變異數和共變異數隨著$$t$$變化，不滿足定態性質。
+
+#### 當$$|c| < 1$$時
+
+考慮$$t \rightarrow \infty$$可得：
+
+* $$\mathrm{E}(X_t) = 0$$為定值。
+* $$\mathrm{Var}(X_t)= \lim_{t \rightarrow \infty }\sigma^2 (1+c^2 + \dots c^{2(t-1))}) = \frac{\sigma^2}{1-c^2}$$與$$t$$無關。
+* $$\mathrm{Cov}(X_t, X_{t-1}) = \lim_{t \rightarrow \infty}c^2 (1+c^2 + \dots +c^{2(t-s-1)}) = \frac{\sigma^2 c^2}{1-c^2 }$$與$$t$$無關。
+
+因此在這個條件下為定態過程。
+
+####
+
+
+

@@ -129,6 +129,20 @@ $$X = \mathrm{ceil}(\frac{\omega}{2}) =  \left\{ \begin{aligned} 1,& \text{ if }
 
 > $$\displaystyle \mathrm{E}(Y|X) = \arg \min_{g(X)} \mathrm{E}(Y-g(X))^2$$，即$$\mathrm{E}(Y|X)$$為對於$$Y$$的最佳預測值。
 
+
+
+<details>
+
+<summary>proof: 離散隨機變數</summary>
+
+$$\displaystyle  \begin{aligned}  \mathrm{E}[(g(X)-Y)^2] & = \mathrm{E}[(g(X)- \mathrm{E}(Y|X) + \mathrm{E}(Y|X) - Y)^2] \\         & = E[(g(X) - \mathrm{E}(Y|X)^2)] \\         & + 2 \mathrm{E}[(g(X) - \mathrm{E}(Y|X))(\mathrm{E}(Y|X)- Y)] \\         & + \mathrm{E}[(\mathrm{E}(Y|X)-Y)^2] \end{aligned}$$
+
+其中第二項展開後得：$$\displaystyle  \begin{aligned} \mathrm{E}[(g(X) - \mathrm{E}(Y|X))(\mathrm{E}(Y|X)- Y)] &= \mathrm{E}[g(X) \mathrm{E}(Y|X) ] \\     & -\mathrm{E}[\mathrm{E}(Y|X) \mathrm{E}(Y|X)] \\     & - \mathrm{E}[g(X)Y] \\     & + \mathrm{E}[Y \mathrm{E}(Y|X)] \\     & = \mathrm{E}[g(X)Y] - \mathrm{E}[Y\mathrm{E}(Y|X)] - \mathrm{E}[g(X)Y] + \mathrm{E}[Y\mathrm{E}(Y|X)] \\     & = 0 \end{aligned}$$而第三項與$$g(X)$$無關。
+
+因此第一項為0時，可得$$\mathrm{E}[(Y-g(X))^2]$$有最小值，即$$g(X) = \mathrm{E}(Y|X)$$ (QED)
+
+</details>
+
 ### 重複期望值定理
 
 > $$\mathrm{E}(\mathrm{E}(X|Y))=\mathrm{E}(X)$$

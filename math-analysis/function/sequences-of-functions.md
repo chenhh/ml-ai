@@ -10,6 +10,7 @@ description: sequences of functions
   * <mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數</mark>，但能保證收斂為處處連續函數。
   * <mark style="color:red;">點態收斂無法保證可微分函數收斂為可微分函數</mark>。
   * <mark style="color:red;">點態收斂無法保證函數序列積分收斂到函數極限的積分</mark>。
+  * <mark style="color:blue;">因此連續函數在極限運算下不滿足封閉性</mark>。
 * 一致收斂、均勻收斂(uniform convergence)
   * 均勻收斂保連續函數收斂為連續函數
   * 均勻收斂可保證函數序列積分收斂至函數序列極限的積分

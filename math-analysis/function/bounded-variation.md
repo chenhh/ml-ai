@@ -98,10 +98,26 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 <summary>proof</summary>
 
+由微分均值定理可得$$\Delta f_k= f(x_k) - f(x_{k-1} )= f^{'}(t_k)(x_k - x_{k-1}), ~ t_k \in (x_{k-1}, x_k)$$
 
+因此可得$$\sum_{k=1}^n |\Delta f_k| = \sum_{k=1}^n |f^{'}(t_k)| \Delta x_k \leq M \sum_{k=1}^n \Delta x_k = A(b-a)$$ (QED)
 
 </details>
 
 ## 有界變差函數為有界函數
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數，即$$\exists M > 0 \ni \sum |\Delta f_k| \leq M$$，$$\forall P \in \mathcal{P}[a,b]$$，則$$f$$為有界函數，即$$\exists N > 0 \ni f(x) \leq N, \forall x \in [a,b]$$。
+
+<details>
+
+<summary>proof</summary>
+
+令$$x \in (a,b)$$
+
+考慮分割$$P=\{a,x,b\}$$可得 $$|f(x) - f(a)| + |f(b) - f(x) | \leq M$$
+
+即$$|f(x) - f(a)| \leq M$$，$$|f(x)| \leq |f(a)| + M$$
+
+在$$x=a$$或$$x=b$$時也可得到相同不等式(QED)
+
+</details>

@@ -101,3 +101,7 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 
 </details>
+
+## 有界變差函數為有界函數
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數，即$$\exists M > 0 \ni \sum |\Delta f_k| \leq M$$，$$\forall P \in \mathcal{P}[a,b]$$，則$$f$$為有界函數，即$$\exists N > 0 \ni f(x) \leq N, \forall x \in [a,b]$$。

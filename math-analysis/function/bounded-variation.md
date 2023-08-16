@@ -1,6 +1,12 @@
 # 變差(bounded variation)
 
-## 遞增函數的有限分割總變差小於值域之差
+## 簡介
+
+一般函數可由變差拆解成連續函數+純跳躍函數之和。
+
+布朗運動的一次變差不存在，二次變差為有限值。
+
+## 遞增函數的有限分割的總跳躍量小於值域之差
 
 > 令函數$$f: [a,b] \rightarrow \mathbb{R}$$為遞增函數。
 >
@@ -36,9 +42,9 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 令$$S_m$$為開區間$$(a,b)$$中，函數$$f$$的跳躍量超過$$\frac{1}{m}, ~ m > 0$$的點所形成的集合。
 
-若分割點$$x_1 < x_2 < \dots, x_{n-1}$$均在集合$$S_m$$中時，由遞增函數的有限分割總變差小於值域之差的性質可得 $$\frac{n-1}{m} \leq f(b) - f(a)$$。
+若分割點$$x_1 < x_2 < \dots, x_{n-1}$$均在集合$$S_m$$中時，由[遞增函數的有限分割總跳躍量小於值域之差](bounded-variation.md#di-zeng-han-shu-de-you-xian-fen-ge-de-zong-tiao-yue-liang-xiao-wu-zhi-yu-zhi-cha)的性質可得 $$\frac{n-1}{m} \leq f(b) - f(a)$$。
 
-即$$S_m$$內集合點的總變差的上限為$$f(b) - f(a)$$，因此$$S_m$$為有限集合。
+即$$S_m$$內集合點的總變動量的上限為$$f(b) - f(a)$$，所以$$n<\infty$$，因此$$S_m$$為有限集合。
 
 而函數$$f$$在開區間$$(a,b)$$的不連續點為$$\displaystyle \bigcup_{m=1}^\infty S_m$$的子集合，因此$$f$$上不連續點為可數個。(QED)
 
@@ -64,3 +70,34 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 >
 > 若存在正實數$$M > 0 \ni \sum_{k=1}^n | \Delta f(x_k)| \leq M$$，$$\forall \text{ paritition } P \in \mathcal{P}[a,b]$$，則稱$$f$$在區間$$[a,b]$$為有界變差函數。
 
+### 單調函數為有界變差函數
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為單調函數，則$$f$$在$$[a,b]$$為有界變差函數。
+
+<details>
+
+<summary>proof</summary>
+
+不失一般性令$$f$$為遞增函數。
+
+對於所有分割$$P \in \mathcal{P}[a,b]$$，遞增函數可得$$\Delta f_k=f(x_k) - f(x_{k-1}) \geq 0$$。
+
+因此$$\sum_{k=1}^n | \Delta f_k | = \sum_{k=1}^n \Delta f_k = \sum_{k=1}^n [f(x_k) - f(x_{k=1})]=f(b) -f(a)$$ (QED)
+
+</details>
+
+### 連續可微分且微分值有限的函數為有界變差函數
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為連續函數且$$f'(x)$$在$$(a,b)$$可微分。
+>
+> 若$$f'(x)$$在$$(a,b)$$有界，即$$\exists M > 0 \ni |f^{'}(x)| \leq M ~\forall x \in (a,b)$$，
+>
+> 則$$f$$在$$[a,b]$$為有界變差函數。
+
+<details>
+
+<summary>proof</summary>
+
+
+
+</details>

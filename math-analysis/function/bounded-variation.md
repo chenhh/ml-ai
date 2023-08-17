@@ -151,3 +151,28 @@ $$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函�
 * 由定義可得因為$$f$$為有界變差函數，所以$$V_f < \infty$$。
 * 因為$$\sum(P) \geq 0$$，可得$$V_f \geq 0$$。
 * $$V_f =0 \Leftrightarrow f(x) =c, \forall x \in [a,b]$$為常數。
+
+## 全變差的次可加性
+
+> $$f,g$$為定義在區間$$[a,b]$$的有界變差函數。
+>
+> 令$$A=\sup\{ |g(x)~|~ x \in [a,b]\}$$，$$B=\sup\{ |f(x)~|~ x \in [a,b]\}$$ ，可得
+>
+> * $$V_{f \pm g} \leq V_f + V_g$$
+> * $$V_{fg} \leq AV_f + BV_g$$
+
+<details>
+
+<summary>proof</summary>
+
+令$$h(x)=f(x)g(x)$$
+
+$$\forall P \in \mathcal{P}[a,b]$$可得
+
+$$\begin{aligned} |\Delta h_k| & = |f(x_k)g(x_k) - f(x_{k-1})g(x_{k-1})| \\ & = |f(x_k)g(x_k) - f(x_{k-1})g(x_{k})| \\ & + |f(x_{k-1})g(x_k) - f(x_{k-1})g(x_{k-1})| \\ & \leq A|\Delta f_k| + B |\Delta g_k|  \end{aligned}$$
+
+因此$$h$$為有界變差，可得$$V_h \leq AV_f + BV_g$$ (QED)
+
+</details>
+
+a

@@ -104,6 +104,24 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 </details>
 
+### 範例：連續函數但非有界變差函數
+
+$$f(x)=x \cos[\frac{\pi}{2x}]$$，$$if x \neq 0, f(0)=0$$。則$$f$$在$$[0,1]$$連續。
+
+若考慮分割$$P=\{0, \frac{1}{2n}, \frac{1}{2n-1}, \dots, \frac{1}{3}, \frac{1}{2}, 1\}$$
+
+可得變差$$\sum_{k=1}^2n |\Delta f_k| = \frac{1}{2n}+\frac{1}{2n} + \frac{1}{2n-2}+\frac{1}{2n-2}+\dots +\frac{1}{2} + \frac{1}{2} = 1+ \frac{1}{2} +\dots + \frac{1}{n}$$
+
+但並非對所有$$n$$收斂，如$$\sum_{n=1}^\infty \frac{1}{n}$$發散。
+
+此例中$$f{'}$$在$$(0,1)$$存在，但並非有界。
+
+### 範例：微分值有限函數不一定為有界變差函數
+
+$$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函數。
+
+但在$$x \rightarrow \infty$$時，$$f'(x) \rightarrow \infty$$。
+
 ## 有界變差函數為有界函數
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數，即$$\exists M > 0 \ni \sum |\Delta f_k| \leq M$$，$$\forall P \in \mathcal{P}[a,b]$$，則$$f$$為有界函數，即$$\exists N > 0 \ni f(x) \leq N, \forall x \in [a,b]$$。
@@ -121,3 +139,15 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 在$$x=a$$或$$x=b$$時也可得到相同不等式(QED)
 
 </details>
+
+## 全變差(total variation)
+
+> 給定$$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數，令$$\sum(P)=\sum_{k=1}^n | \Delta f_k|$$為區間$$[a,b]$$使用分割$$P=\{x_0, x_1, \dots ,x_n\}$$的變差之和。
+>
+> 定義$$V_f(a,b) = \sup \{ \sum(P) ~|~ P \in \mathcal{P}[a,b]\}$$為區間$$[a,b]$$的全變差。
+>
+> 通常簡寫為$$V_f$$
+
+* 由定義可得因為$$f$$為有界變差函數，所以$$V_f < \infty$$。
+* 因為$$\sum(P) \geq 0$$，可得$$V_f \geq 0$$。
+* $$V_f =0 \Leftrightarrow f(x) =c, \forall x \in [a,b]$$為常數。

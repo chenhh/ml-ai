@@ -195,6 +195,18 @@ $$|\Delta g_k|=\left| \frac{1}{f(x_k)} - \frac{1}{f(x_{k-1})} \right|=\left|  \f
 >
 > 假設$$c \in (a,b)$$，則$$f$$在區間$$[a,c]$$與$$[c,b]$$也為有界變差函數且滿足 $$V_f(a,b) = V_f(a,c)+V_f(c,b)$$
 
+<details>
+
+<summary>proof</summary>
+
+首先證明$$f$$在區間$$[a,c]$$與$$[c,b]$$也為有界變差函數。
+
+令$$P_1, P_2$$分別為區間$$[a,c]$$與$$[c,b]$$的分割，令$$P_0 = P_1 \cup P_2$$為$$[a,b]$$的分割。
+
+若
+
+</details>
+
 ## 全變差函數以終點為函數的性質
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數。

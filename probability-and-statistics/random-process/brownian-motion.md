@@ -4,6 +4,8 @@
 
 布朗運動是由Rober Brown(1828)首先觀察花粉分子存浮於液體內上下變動的一種物理過程。1990年時，Bachellier在他的博士論文中，將布朗運動運用在股價變動的模型。在1923年，由N.Wiener{維納）研究布朗運動的數學理論，嚴謹定義存在性，它是標度隨機漫步（scaled random walk）的極限隨機過程。因此布朗運動也稱為維納過程。Paul Samuelson（1970年諾貝爾經濟學獎得主）在1969年引入布朗運動研究財務經濟學的模型。
 
+<mark style="color:red;">布朗運動為一特殊的高斯過程(Gaussian process)</mark>。
+
 ## 標準布朗運動
 
 > 一個連續的隨機過程$$\{ W(t), 0 \leq t <T \}$$，在時間$$[0,T)$$稱為標準布朗運動（standard Brownian motion）必須滿足以下四個條件：

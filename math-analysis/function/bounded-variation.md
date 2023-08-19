@@ -6,6 +6,10 @@
 
 布朗運動的一次變差不存在，二次變差為有限值。
 
+### 對於實線的閉合有界區間上的連續函數，我們有以下包含關係
+
+<mark style="color:red;">連續可微⊆ Lipschitz 連續⊆絕對連續⊆連續且有界變差 ⊆幾乎處處可微</mark>
+
 ## 遞增函數的有限分割的總跳躍量小於值域之差
 
 > 令函數$$f: [a,b] \rightarrow \mathbb{R}$$為遞增函數。
@@ -62,13 +66,15 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 >
 > <mark style="color:blue;">令區間</mark>$$[a,b]$$<mark style="color:blue;">上所有分割形成的集合為</mark>$$\mathcal{P}[a,b]$$。
 
-> 定義：有界變差函數
+> <mark style="color:red;">定義：有界變差函數</mark>
 >
 > 給定函數$$f: [a,b] \rightarrow \mathbb{R}$$與分割$$P \in \mathcal{P}[a,b]$$。
 >
 > 令$$\Delta f_k = f(x_k) - f(x_{k-1}), ~ k =1,2,\dots, n$$。
 >
 > 若存在正實數$$M > 0 \ni \sum_{k=1}^n | \Delta f(x_k)| \leq M$$，$$\forall \text{ paritition } P \in \mathcal{P}[a,b]$$，則稱$$f$$在區間$$[a,b]$$為有界變差函數。
+>
+> 也可用全變差定義：$$V_f(a,b)=\sup\left\{  \sum_{k=1}^n |\Delta f(x_k)| ~|~ \forall P \in  \mathcal{P}[a,b] \right\}<\infty$$
 
 ### 單調函數為有界變差函數
 
@@ -76,13 +82,13 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 單調函數的變動上(下)限為|f(b)-f(a)|</summary>
 
 不失一般性令$$f$$為遞增函數。
 
 對於所有分割$$P \in \mathcal{P}[a,b]$$，遞增函數可得$$\Delta f_k=f(x_k) - f(x_{k-1}) \geq 0$$。
 
-因此$$\sum_{k=1}^n | \Delta f_k | = \sum_{k=1}^n \Delta f_k = \sum_{k=1}^n [f(x_k) - f(x_{k=1})]=f(b) -f(a)$$ (QED)
+因此$$\sum_{k=1}^n | \Delta f_k | = \sum_{k=1}^n \Delta f_k = \sum_{k=1}^n [f(x_k) - f(x_{k-1})]=f(b) -f(a)$$ (QED)
 
 </details>
 
@@ -153,6 +159,13 @@ $$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函�
 * 由定義可得因為$$f$$為有界變差函數，所以$$V_f < \infty$$。
 * 因為$$\sum(P) \geq 0$$，可得$$V_f \geq 0$$。
 * $$V_f =0 \Leftrightarrow f(x) =c, \forall x \in [a,b]$$為常數。
+* <mark style="color:red;">全變差就是函數的數值變化的差的總和</mark>。
+
+### 連續可微分函數的全變差等於其微分函數的絕對積分值
+
+> 可微分連續函數$$f: [a,b] \rightarrow \mathbb{R}$$的全變差為其弧長。
+>
+> $$\displaystyle  V_f(a,b)=\int_a^b |f^{'}(x)|dx$$
 
 ## 相異函數全變差的次可加性
 

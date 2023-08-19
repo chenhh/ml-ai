@@ -23,6 +23,8 @@
 > $$f: [a,b] \rightarrow \mathbb{R}$$為連續函數，且為有限變差，即$$V_f(x) < \infty, ~ \forall x \in [a,b]$$。
 >
 > 則$$Q_f(x)=0$$。
+>
+> [https://math.stackexchange.com/questions/3246700/quadratic-variation-of-a-continuous-function](https://math.stackexchange.com/questions/3246700/quadratic-variation-of-a-continuous-function)
 
 <details>
 

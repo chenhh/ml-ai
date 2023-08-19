@@ -296,3 +296,7 @@ proof 2
 > 令$$V_f(x)=V_f(a,x), ~x \in [a,b]$$且$$V(a)=0$$。
 >
 > 若$$f$$在點$$c\in [a,b]$$連續 $$\Leftrightarrow$$ $$V_f$$在點$$c$$連續。
+
+## 有界變差連續函數若且唯若可分解為兩個遞增連續函數的差值
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差連續函數 $$\Leftrightarrow$$ $$f$$可分解為兩個遞增函數的差值

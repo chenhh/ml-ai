@@ -38,5 +38,21 @@ $$\displaystyle  \begin{aligned} Q_f(x) & = \lim_{\Delta x_n \rightarrow 0} \sum
 
 </details>
 
+## 二次共變差(quadratic covaration)
+
+> 函數$$f, g: [a,b] \rightarrow \mathbb{R}$$，給定區間$$[a,b]$$的分割$$P=\{x_0, x_1, \dots, x_n\}$$
+>
+> 若極限存在時，定義二次共變差為：$$\displaystyle Q_{f,g}(a,b)=\lim_{\Delta x_n \rightarrow 0} \sum_{k=1}^n(\Delta f_k \Delta g_k)$$
+
+定義如果端點可變時$$Q_{f,g}(x) \equiv Q_{f,g}(a,x)$$，為$$x$$的非遞減函數。
+
+<mark style="color:red;">二次共變差滿足交換性</mark>，即$$Q_{f,g}(a,b) = Q_{g,f}(a,b)$$。
+
+## 連續函數與有界變差函數的二次共變差為0
+
+> $$f$$為連續函數，$$g$$為有界變差函數($$V_g(x) < \infty, \forall x \in [a,b]$$)，則$$V_{f,g}(a,b)=0$$
+
 ## 極化等式(polarization identity)
+
+> $$Q_{f,g}(x) = \frac{1}{2}[Q_{f+g, f+g}(x) - Q_{f,f}(x) - Q_{g,g}(x)]$$
 

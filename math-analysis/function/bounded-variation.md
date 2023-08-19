@@ -147,6 +147,8 @@ $$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函�
 > 定義$$V_f(a,b) = \sup \{ \sum(P) ~|~ P \in \mathcal{P}[a,b]\}$$為區間$$[a,b]$$的全變差。
 >
 > 通常簡寫為$$V_f$$
+>
+> 也可寫成$$\displaystyle V_f(a,b)=\lim_{\Delta x_n \rightarrow 0}\sum_{k=1}^n |\Delta f_k|$$其中$$\displaystyle \Delta x_n = \max_{1\leq k \leq n}(x_k - x_{k-1})$$。
 
 * 由定義可得因為$$f$$為有界變差函數，所以$$V_f < \infty$$。
 * 因為$$\sum(P) \geq 0$$，可得$$V_f \geq 0$$。
@@ -203,7 +205,31 @@ $$|\Delta g_k|=\left| \frac{1}{f(x_k)} - \frac{1}{f(x_{k-1})} \right|=\left|  \f
 
 令$$P_1, P_2$$分別為區間$$[a,c]$$與$$[c,b]$$的分割，令$$P_0 = P_1 \cup P_2$$為$$[a,b]$$的分割。
 
-若
+令$$\sum(P)=\sum_{k=1}^n | \Delta f_k|$$為區間$$[a,b]$$使用分割$$P$$後，函數$$f$$的變差之和。
+
+可得$$\sum({P_1}) + \sum(P_2) = \sum(P_0) \leq V_f(a,b)$$
+
+因此$$\sum({P_1}) , \sum(P_2)$$之值均為有界。
+
+因為有界變差函數為有界函數，所以$$f$$在區間$$[a,c]$$與$$[c,b]$$為有界變差函數 (QED 1)
+
+可得$$V_f(a,c) + V_f(c,b) \leq V_f(a,b)$$--(1)
+
+令$$P=\{x_0, x_1, \dots, x_n\} \in \mathcal{P}[a,b]$$且令$$P_0 = P \cup c, ~ c \in [x_{k-1},x_k]$$為一組新的分割。
+
+可得不等式 $$|f(x_k ) - f(x_{k-1})| \leq |f(x_k) - f(c)|+|f(c) - f(x_{k-1})|$$
+
+即$$\sum(P) \leq \sum(P_0)$$。
+
+令$$P_1 = \{a=x_0, \dots, c\}$$且$$P_2=\{c, \dots, x_n=b]$$，則上式可改寫為：
+
+$$\sum(P) \leq \sum(P_0) = \sum(P_1) + \sum(P_2) \leq v_f(a,c) + V_f (c,b)$$
+
+即$$V_f(a,c)+V_f(c,b)$$為$$\sum(P)$$的上界，$$\forall P \in \mathcal{P}[a,b]$$。
+
+而$$\sum(P)$$的最小上界為$$V_f(a,b)$$， 因此可得$$V_f(a,b) \leq V_f(a,c) + V_f(c,b)$$  --(2) (QED 2)
+
+由(1,2)可得$$V_f(a,b)  = V_f(a,c) + V_f(c,b)$$ (QED)
 
 </details>
 
@@ -214,8 +240,8 @@ $$|\Delta g_k|=\left| \frac{1}{f(x_k)} - \frac{1}{f(x_{k-1})} \right|=\left|  \f
 > 定義函數$$V(x)=V_f(a,x), ~ a < x \leq b, ~V(a)=0$$ ，則可得：
 
 1. $$V$$在區間$$[a,b]$$為遞增函數。
-2. $$V-f$$在區間$$[a,b]$$為遞減函數。
-3. 函數$$f = V - (V-f)$$為遞增函數與遞減函數之差值，此分解法不唯一。
+2. $$V-f$$在區間$$[a,b]$$為遞增函數。
+3. <mark style="color:red;">有界變差函數</mark>$$f = V - (V-f)$$<mark style="color:red;">為遞增函數與遞減函數之差值，但此分解法不唯一</mark>。
 
 <details>
 
@@ -240,3 +266,33 @@ proof 2
 因此$$D(y) - D(x) \geq 0$$，即$$D(y) \geq D(x)$$ (QED)
 
 </details>
+
+## 有界變差函數若且唯若可分解為二次遞增函數的差值
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數 $$\Leftrightarrow$$ $$f$$可分解為兩個遞增函數的差值
+>
+> 遞增函數的分解法不唯一
+
+<details>
+
+<summary>proof </summary>
+
+\=> 由 全變差函數以終點為函數的性質3，可得$$f = V - (V-f)$$ (QED)
+
+<=&#x20;
+
+令$$f = f_1 - f_2$$，$$f_1, f_2$$在區間$$[a,b]$$均為遞增函數。
+
+由「單調函數為有界變差函數」可得 $$f_1, f_2$$為有界變差函數，即$$\exists M_1 >0 \ni V_{f_1} <\infty$$且$$\exists M_2 >0 \ni V_{f_2} <\infty$$。
+
+由「相異函數全變差的次可加性」可得 $$V_{f_1 - f_2} \leq V_{f_1} + V_{f_2} < M_1 +M_2$$ (QED)
+
+</details>
+
+## 有界變差連續函數若且唯若全變差函數為連續函數
+
+> $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數。
+>
+> 令$$V_f(x)=V_f(a,x), ~x \in [a,b]$$且$$V(a)=0$$。
+>
+> 若$$f$$在點$$c\in [a,b]$$連續 $$\Leftrightarrow$$ $$V_f$$在點$$c$$連續。

@@ -46,6 +46,7 @@
   * [函數序列](math-analysis/function/sequences-of-functions.md)
   * [均值收斂](math-analysis/function/mean-convergence.md)
   * [變差(bounded variation)](math-analysis/function/bounded-variation.md)
+  * [二次變差(quadratic variation)](math-analysis/function/quadratic-variation.md)
 * [度量空間 (metric space)](math-analysis/metric-space/README.md)
   * [點拓樸集](math-analysis/metric-space/point-topology.md)
   * [開集合](math-analysis/metric-space/open-set.md)

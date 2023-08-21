@@ -2,19 +2,27 @@
 
 ## 簡介
 
-在機率論中，可定義某個事件對另一個事件的條件機率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到給定條定件的事件上，做正規化，視為一個新的機率空間。於是有貝式公式 $$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)} = \frac{\mathrm{E}(A\mathbf{1}_B)}{\mathrm{P}(B)}$$。
+在機率論中，可定義某個事件對另一個事件的條件機率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到給定條定件的事件上做正規化，視為一個新的機率空間。於是有貝氏公式 $$\mathrm{P}(X|Y)=\frac{\mathrm{P}(X \cap Y)}{\mathrm{P}(Y)} = \frac{\mathrm{E}(X \mathbf{1}_Y)}{\mathrm{P}(Y)}$$。
+
+<mark style="color:blue;">但貝氏公式無法計算零機率的事件的條件機率，即無法計算</mark>$$\mathrm{P}(Y)=0$$的條件機率。
+
+條件期望值可分為以下幾類：
+
+1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$。
+2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=f(y)$$。
+3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，該定義的主要優點是它允許我們以零機率事件為條件。
 
 ### 事件集合的條件期望值
 
-對於事件$$A$$，考慮其指示函數（為隨機變數）$$\mathbf{1}_A(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in A \\  0,  \text{ if } \omega \not \in A \end{aligned}\right.$$。可得$$\mathrm{P}_{\Omega}(A) = \mathrm{E}_{\Omega}(\mathbf{1}_A)$$。同理可得$$\mathrm{P}_{\Omega}(A|B)=\mathrm{E}_{\Omega}(\mathbf{1}_A|B)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
+對於事件集合$$E \subseteq \Omega$$，考慮其指示(示性)函數（為隨機變數）$$\mathbf{1}_E(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in E \\  0,  \text{ if } \omega \not \in E \end{aligned}\right.$$。可得$$\mathrm{P}_{\Omega}(E) = \mathrm{E}_{\Omega}(\mathbf{1}_E)$$。同理可得$$\mathrm{P}_{\Omega}(E|F)=\mathrm{E}_{\Omega}(\mathbf{1}_E|F)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
 
 目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把機率正規化了之後求期望值，為一實數值。
 
 ### 隨機變數的條件期望值
 
-定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P}$$
+定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P} \equiv \int_\Omega X(\omega) d \mathrm{P}(\omega)$$
 
-對於離散隨機變數$$X,Y$$，$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求期望值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。但注意到此值是$$Y$$的實現值，因此期望值是$$y$$的函數，即$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
+對於離散隨機變數$$X,Y$$，條件期望值$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求$$X(\omega)$$的期望值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。<mark style="color:red;">但注意到條件期望值之值依賴於</mark>$$Y$$<mark style="color:red;">的實現值，因此期望值是</mark>$$y$$<mark style="color:red;">的函數，即</mark>$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
 
 即使取$$X$$的函數值$$g(X)$$，條件期望值仍然為$$Y$$的函數，即$$\mathrm{E}(g(X)|Y)=h(Y)$$為$$Y$$的隨機變數。
 
@@ -123,7 +131,6 @@ $$X = \mathrm{ceil}(\frac{\omega}{2}) =  \left\{ \begin{aligned} 1,& \text{ if }
 > 5. $$C$$為常數，$$\mathrm{E}(C|X)=C$$
 > 6. $$\mathrm{E}(\mathrm{E}(Z|X,Y)|X)=\mathrm{E}(Z|X)$$
 > 7. $$X,Y$$為i.i.d.隨機變數，$$\mathrm{E}(X|X+Y)=\frac{1}{2}(X+Y)$$
-> 8.
 
 ### 條件期望值為最佳預測值
 
@@ -143,9 +150,27 @@ $$\displaystyle  \begin{aligned}  \mathrm{E}[(g(X)-Y)^2] & = \mathrm{E}[(g(X)- \
 
 </details>
 
-### 重複期望值定理
+### 重複期望值定理(law of iterated expectation, Law of total expectation)
 
-> $$\mathrm{E}(\mathrm{E}(X|Y))=\mathrm{E}(X)$$
+> &#x20;$$\mathrm{E}(\mathrm{E}(X|Y))=\mathrm{E}(X)$$
+>
+> 簡單地說，$$X$$的平均值等於條件平均值的加權平均值。
+
+<details>
+
+<summary>proof: 離散隨機變數</summary>
+
+$$\displaystyle {\begin{aligned} \mathrm {E}\left(\mathrm {E}(X|Y)\right)&{}=\sum \limits _{y}\mathrm {E}(X|Y=y)\cdot \mathrm {P}(Y=y)\\&{}=\sum \limits _{y}\left(\sum \limits _{x}x\cdot \mathrm {P}(X=x|Y=y)\right)\cdot \mathrm {P}(Y=y)\\&{}=\sum \limits _{y}\sum \limits _{x}x\cdot \mathrm {P}(X=x|Y=y)\cdot \mathrm {P}(Y=y)\\&{}=\sum \limits _{y}\sum \limits _{x}x\cdot \mathrm {P}(Y=y|X=x)\cdot \mathrm {P}(X=x)\\&{}=\sum \limits _{x}\sum \limits _{y}x\cdot \mathrm {P}(Y=y|X=x)\cdot \mathrm {P}(X=x)\\&{}=\sum \limits _{x}x\cdot \mathrm {P}(X=x)\cdot \left(\sum \limits _{y}\mathrm {P}(Y=y|X=x)\right)\\&{}=\sum \limits _{x}x\cdot \mathrm {P}(X=x)\\&{}=\mathrm {E}(X).\end{aligned}}$$
+
+</details>
+
+<details>
+
+<summary>proof: 連續隨機變數</summary>
+
+$${\displaystyle {\begin{aligned}\mathrm {E} (X)&=\int x\Pr[X=x]~dx\\\mathrm {E} (X\mid Y=y)&=\int x\Pr[X=x\mid Y=y]~dx\\\mathrm {E} (\mathrm {E} (X\mid Y))&=\int \left(\int x\Pr[X=x\mid Y=y]~dx\right)\Pr[Y=y]~dy\\&=\int \int x\Pr[X=x,Y=y]~dx~dy\\&=\int x\left(\int \Pr[X=x,Y=y]~dy\right)~dx\\&=\int x\Pr[X=x]~dx\\&=\mathrm {E} (X)\,.\end{aligned}}}$$
+
+</details>
 
 ## 參考資料
 

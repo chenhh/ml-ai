@@ -1,6 +1,14 @@
 # Lebesgue積分
 
-## &#x20;零測度集合(measure zero set)
+## 簡介
+
+建構Lebesgue積分分為三個階段：
+
+1. 定義非負可測簡單函數的積分。
+2. 考慮可測簡單函數和非負可測函數的關系。
+3. 通過$$f(x)=f^{+}(x)-f^{-}(x)$$定八一般可測函數的積分。
+
+## 零測度集合(measure zero set)
 
 > 定義集合$$S \subseteq \mathbb{R}$$ 的測度為0( measure zero)若
 >

@@ -116,3 +116,21 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 上極限可解釋為就是無窮個集合中都存在的元素的集合。
 
 假設歌手舉辦第$$k$$場演唱會，令參加該場演唱會的人數集合為$$E_k$$，而$$\mathrm{P}(E_k)$$為該場演唱會中，成為粉絲的機率。若$$\sum_{n=1}^\infty \mathrm{P}(E_n) < \infty$$，表示歌手舉辦了無限多次演唱會，且圈粉的機率總和為有限值。$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)$$表示舉辦無限次演唱會時，圈粉的機率上極限。如果$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) > 0$$, 表示每次舉辦演唱會總是可以圈粉，此時可得$$\sum_{n=1}^\infty \mathrm{P}(E_n) \rightarrow \infty$$與假設矛盾。因此$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) \leq 0$$。而機率測度公理要求$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) \geq 0$$，因此可得$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 0$$。
+
+<details>
+
+<summary>proof</summary>
+
+令$$M_n = \cup_{k=n}^\infty E_k$$
+
+可得$$M_1 \supseteq M_2 \supseteq \dots$$為遞減集合序列。因此$$\displaystyle \lim_{n  \rightarrow \infty}  M_n = \bigcap_{n=1}^\infty M_n$$。
+
+可得$$\displaystyle \mathrm{P}(\lim_{n  \rightarrow \infty}  M_n) = \lim_{n \rightarrow \infty} \mathrm{P}( M_n)$$
+
+可得：
+
+$$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)      & = \mathrm{P}(\bigcap_{n=1^\infty} \bigcup_{k=n}^\infty E_k) \\     & = \mathrm{P}(\lim_{n \rightarrow \infty } \bigcup_{k=n}^\infty E_k ) \\     & = \lim_{n \rightarrow \infty } \mathrm{P}(\bigcup_{k=n}^\infty E_k )) \\     & \leq \lim_{n \rightarrow \infty} \sum_{k=n}^\infty \mathrm{P}(E_k) \\     & = 0   \end{aligned}$$(QED)
+
+
+
+</details>

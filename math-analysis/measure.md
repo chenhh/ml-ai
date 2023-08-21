@@ -280,7 +280,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$
 >
-> 如果所有的事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生的機率(測度)為0
+> 如果所有(無窮個)事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生的機率(測度)為0
 
 <details>
 

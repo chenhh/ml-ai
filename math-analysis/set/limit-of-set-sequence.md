@@ -2,7 +2,7 @@
 
 ## 簡介
 
-* <mark style="color:red;">集合</mark>$$A, B$$<mark style="color:red;">的最小上界可視為</mark>$$A \cup B$$（因為$$A,B \subseteq A \cup B$$且任何同時包含$$A,B$$的集合均比$$A\cup B$$大），<mark style="color:red;">而最大下界可視為</mark>$$A\cap B$$（同理$$A \cap B \subseteq A, B$$且同時包含$$A,B$$共同元素的集集合均比$$A\cap B$$小）。
+* <mark style="color:red;">集合</mark>$$A, B$$<mark style="color:red;">的最小上界可視為</mark>$$A \cup B$$（因為$$A,B \subseteq A \cup B$$且任何同時包含$$A,B$$的集合均比$$A\cup B$$大），<mark style="color:red;">而最大下界可視為</mark>$$A\cap B$$（同理$$A \cap B \subseteq A, B$$且同時包含$$A,B$$共同元素的集合均比$$A\cap B$$小）。
 * 函數序列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的相似概念，這與找出集合論中與大小關係類似的運算，即集合的包含關係。<mark style="color:red;">且集合序列的上、下極限</mark>_<mark style="color:red;">只考慮集合序列極限的元素</mark>_<mark style="color:red;">，而非全部的集合元素，可忽略掉前面有限次集合序列的元素</mark>。
 * 按照集合的包含關係，所謂集合序列的「最小上界(sup)」是包含所有$$A_n$$的集合中最小的那個集合，顯而易見，這個集合就是所有$$A_n$$的聯集$$\bigcup_n A_n$$。 類似的概念可找出找出集合序列的「最大下界(inf)」，為所有$$A_n$$ 的交集$$\bigcap_n A_n$$。
 * **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略前面的集合)，會經常出現在部份集合中(聯集的概念)**</mark>。
@@ -60,13 +60,15 @@ $$E_n=[n,\infty), ~\forall n \in \mathbb{N}$$為遞減集合序列，則$$\displ
 
 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$, $$\displaystyle \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\sup_{ k \geq n} x_k = \inf_{n \geq 0}\{\sup_{k \geq n} x_k\}$$
 
-* 令 $$E_1 = \{x_1\}, \dots,E_{n+1} = E_{n} \cup \{x_{n+1}\}$$所以$$E_n$$為遞增集合
+* 令 $$E_1 = \{x_1\}, \dots,E_{n+1} = E_{n} \cup \{x_{n+1}\}$$所以$$E_n$$為遞增集合。
 * $$M_1 = (E_1 \cup E_2 \cup E_3 \cup \ldots)=\{x_k\}_{k=1}^\infty$$
 * $$M_2 = (E_2 \cup E_3 \cup \ldots)=\{x_k\}_{k=2}^\infty$$
-* 可得$$M_1 \supseteq M_2 \supseteq\ldots$$為遞減集合序列
-* $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = \lim_{n \rightarrow \infty}⁡ M_n = \bigcap_{n=1}^\infty M_n$$
+* 可得$$M_1 \supseteq M_2 \supseteq\ldots$$為<mark style="color:red;">遞減集合序列</mark>。
+* $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = \lim_{n \rightarrow \infty}⁡ M_n = \bigcap_{n=1}^\infty M_n$$ (因為[遞減集合序列的極限為所有集合的交集](limit-of-set-sequence.md#di-jian-ji-he-xu-lie-de-ji-xian-wei-suo-you-ji-he-de-jiao-ji))
 
-$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$, $$\displaystyle \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$
+同理可得 $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$
+
+&#x20;$$\displaystyle \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$
 
 ## 集合序列的上極限(superior limit of sequence of set)
 

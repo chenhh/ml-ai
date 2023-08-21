@@ -28,6 +28,10 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 可得積分為$$\int_\mathbb{R} f(x)dx = 0 \cdot \infty + 1 \cdot 0 = 0$$。
 
+### 範例：骰子
+
+令隨機變數$$X$$為丟一顆骰子的點數，令集合$$E$$為丟出偶數的事件，則$$\mathrm{E}(X)=1 \cdot 0 + 2 \cdot 1/2 + 3 \cdots 0 + 4 \cdot 1/2 + 5 \cdot 0 + 6 \cdot 1/2= 6$$。
+
 ## 積分線性性質
 
 > $$f, g: \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為可測簡單函數。
@@ -41,9 +45,24 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 > 1. 若$$c > 0$$，可得$$\displaystyle \int_E c\cdot f(x) dx = c \int_E  f(x) dx$$。
 > 2. $$\displaystyle \int_E [f(x)+g(x)] dx =  \int_E  f(x) dx +  \int_E  g(x) dx$$
 
-由定義可直接得證。
+<details>
 
+<summary>proof</summary>
 
+1. 由定義可直接得證。
+2. $$f(x)+g(x)$$在集合$$A_i \cap B_j$$上的值為$$a_i + b_j$$。
+
+可得 $$\displaystyle \begin{aligned}  \int_E [f(x)+g(x)] dx &= \sum_{i=1}^p \sum_{j=1}^q (a_i + b_j) m(E \cap A_i \cap B_j) \\ 	& = \sum_{i=1}^p a_i \sum_{j=1}^q m(E \cap A_i \cap B_j) + \sum_{j=1}^q b_j \sum_{i=1}^p m(E \cap A_i \cap B_j) \\ 	& = \sum_{i=1}^p a_i m(E  \cap A_i) + \sum_{j=1}^q b_j m(E \cap B_j) \\ 		& = \int_E f(x) dx + \int_E g(x) dx  \end{aligned}$$
+
+(QED)
+
+</details>
+
+## 非負簡單函數於遞增可測集合序列的積分
+
+> $$E_1 \subseteq E_2 \subseteq  \dots \subseteq \mathbb{R}^n$$為遞增可測集合序列且$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負可測簡單函數，則：
+>
+> $$\displaystyle \int_E f(x)dx = \lim_{k \rightarrow \infty} \int_{E_k} f(x)dx, ~ E=\bigcup_{k=1}^\infty E_k$$
 
 
 

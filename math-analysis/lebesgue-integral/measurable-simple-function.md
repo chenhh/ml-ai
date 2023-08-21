@@ -1,4 +1,4 @@
-# 可測簡單函數
+# 非負可測簡單函數
 
 ## 非負可測簡單函數
 
@@ -64,6 +64,18 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 >
 > $$\displaystyle \int_E f(x)dx = \lim_{k \rightarrow \infty} \int_{E_k} f(x)dx, ~ E=\bigcup_{k=1}^\infty E_k$$
 
+<details>
 
+<summary>proof</summary>
+
+由[遞增集合極限的測度(continuity of measure)](../measure.md#di-zeng-ji-he-ji-xian-de-ce-du-continuity-of-measure)可得$$\displaystyle \lim_{k \rightarrow} m(E_k) = m(\lim_{k \rightarrow \infty} E_k) = m(\bigcup_{k \in \mathbb{N}} E_k)=m(E)$$。
+
+令函數$$f(x)=\sum_{i=1}^p a_i \chi_{A_i}(x), ~ \bigcup_{i=1}^p A_i = \mathbb{R}^n, ~ A_i \cap A_j = \emptyset ~ \forall i \neq j$$
+
+則$$\displaystyle \begin{aligned}  \lim_{k \rightarrow \infty} \int_{E_k} f(x) dx  	& = \lim_{k \rightarrow \infty} \sum_{i=1}^p a_i m(E_k \cap A_i) \\ 	& = \sum_{i=1}^p a_i m(E \cap A_i) \\ 	& = \int_E f(x) dx  \end{aligned}$$
+
+(QED)
+
+</details>
 
 ##

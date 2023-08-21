@@ -122,5 +122,52 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 因為$$f(x) =0$$且$$h(x) \leq f(x) ~ \forall x \in F^c$$，因此可得(3) =0 (QED)
 
+<=
+
+令集合$$E_k = \{x \in E~|~ f(x) > 1/k\}$$。
+
+可得$$\displaystyle \frac{1}{k} \cdot m(E_k) = \int_{E_k} \frac{1}{k} dx \leq \int_{E_k} f(x) dx \leq \int_E f(x)dx = 0$$
+
+因此$$m(E_k)=0, k=1,2,\dots$$
+
+因為$$\displaystyle \{x \in E ~|~ f(x) > 0\} = \bigcup_{k=1}^\infty E_k$$
+
+由遞增集合序列的可測性得$$\displaystyle \lim_{k \rightarrow \infty }m(E_k) = m(\bigcup_{k=1}^\infty E_k)=0$$ (QED)
+
 </details>
 
+## 非負可積函數幾乎處處有限
+
+> $$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可積函數，即$$\displaystyle \int_E f(x)dx < \infty$$。
+>
+> 則$$f(x)$$在$$E$$幾乎處處有限，即$$\exists E \subseteq F \ni f(x) < \infty, ~\forall x \in E-F$$且$$m(F)=0$$。
+>
+> <mark style="color:blue;">註：簡單的說，如果函數可積分，則函數值為無窮大的定義域集合的測度必須為0</mark>。
+
+<details>
+
+<summary>proof: 遞減函數序列極限等於交集</summary>
+
+令$$E_k=\{x \in E ~|~ f(x) > k\}$$
+
+因為$$E_k \supseteq E_{k+1}$$為遞減集合序列，因此$$\displaystyle \lim_{k \rightarrow \infty} E_k = \{x \in E ~|~ f(x)=\infty\}=\bigcap_{k=1}^\infty E_k$$.&#x20;
+
+對於每個$$k$$，可得不等式$$\displaystyle k \cdot m(E_k) \leq \int_{E_k} f(x) dx \leq \int_E f(x) dx < \infty$$
+
+因此可得$$\displaystyle \lim_{k \rightarrow \infty }m(E_k)=0$$ (QED)
+
+</details>
+
+## Beppo Levi非負遞增函數序列的積分
+
+> 令非負可測且在集合$$E$$上遞增的函數序列$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
+>
+> 且函數序列(點態)收斂：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$，
+>
+> 則可得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) dx = \int_E f(x)dx$$。
+>
+>
+>
+> <mark style="color:red;">註：對於非負可測函數序列，極限與積分的次序可交換</mark>。
+>
+>

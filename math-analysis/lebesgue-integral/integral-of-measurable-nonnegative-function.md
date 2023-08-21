@@ -26,8 +26,6 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 <summary>proof</summary>
 
-
-
 令$$h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in E$$。
 
 則由$$f(x) \leq g(x)$$可得$$h(x) \leq g(x) ~ \forall x \in E$$。
@@ -40,7 +38,7 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 </details>
 
-## 非負可測且值域有限的函數在有限測度集合上可積分
+### 非負可測且值域有限的函數在有限測度集合上可積分
 
 > $$f(x), g(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
 >
@@ -61,3 +59,68 @@ description: The Lebesgue integral of a measurable nonnegative function
 因此可得$$\displaystyle \int_E f(x) dx = \sup_{h(x) \leq f(x)}{ \int_E h(x) dx} < \infty$$ (QED)
 
 </details>
+
+### 非負可測函數於可測子集的積分
+
+> $$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+>
+> 若$$A \subseteq E$$為可測子集合，則可得：$$\displaystyle \int_A f(x) dx = \int_E f(x) \chi_A(x) dx$$。
+>
+> 注意：此處積分值可能為$$\infty$$，即$$f$$可能在集合$$A$$上非可積分函數。
+
+<details>
+
+<summary>proof</summary>
+
+令$$h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in A$$。
+
+由積分定義得$$\displaystyle \int_A f(x) dx = \sup_{h(x) \leq f(x), ~ \forall x \in A} \int_A h(x) dx$$
+
+因為$$\displaystyle  \chi_A(x)= \left\{ \begin{aligned} 1 &, \text{ if } x \in A, \\ 0 &, \text{ if } x \notin A, \end{aligned} \right.$$，
+
+因此可改寫為$$\displaystyle \begin{aligned}  \sup_{h(x) \leq f(x), ~ \forall x \in A} \int_A h(x) dx & =  \sup_{h(x)\chi_A(x) \leq f(x)\chi_A(x), ~ \forall x \in E} \int_A h(x) dx \\ & = \int_E f(x)\chi_A(x) dx  \end{aligned}$$
+
+(QED)
+
+</details>
+
+### 非負可測函數幾乎處處為0若且唯若積分值為0
+
+> $$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+>
+> 可得$$f(x) = 0, \text{ a.e. on } E$$$$\Leftrightarrow$$$$\displaystyle \int_E f(x)dx =0$$。
+>
+> 註：$$f(x) = 0, \text{ a.e. on } E$$即$$\exists F \subseteq E \ni f(x)=0, \forall x \in E-F$$且$$m(F)=0$$。
+
+<details>
+
+<summary>proof</summary>
+
+\=>
+
+令$$h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in E$$。
+
+$$h(x)=\sum_{i=1}^p a_i \chi_{A_i}(x), ~ \bigcup_{i=1}^p A_i = E, ~ A_i \cap A_j = \emptyset ~ \forall i \neq j$$。
+
+$$\displaystyle \int_E h(x) dx \equiv \sum_{i=1}^p a_i m(E \cap A_i)$$
+
+因為$$\exists F \subseteq E \ni f(x)=0, \forall x \in E-F$$且$$m(F)=0$$。
+
+可改寫為$$F \cup F^c = E$$。
+
+由集合分配率得$$(F\cup F^c) \cap A = (F \cap A) \cup (F^c \cap A)$$且$$(F \cap A) \cap (F^c \cap A) = \emptyset$$
+
+由測度定義得$$m((F \cap A) \cup (F^c \cap A)) = m(F \cap A) + m(F^c \cap A)$$
+
+因為$$m(F)=0$$且$$m(F \cap A) \leq m(F)$$，所以$$m(F\cap A) = 0$$。
+
+因此$$m((F \cap A) \cup (F^c \cap A)) = m(F^c \cap A)$$ -- (1)
+
+由(1)可得$$\displaystyle \int_E h(x) dx = \int_{F \cup F^c} h(x) dx = \sum_{i=1}^p a_i m(F^c \cap A_i)$$--(2)
+
+$$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f(x), ~ x \in E}\{ \int_{F \cup F^c} h(x) dx\}  \\  & = \sup_{h(x) \leq f(x), ~ x \in F^c}\{ \int_{F^c} h(x) dx\}    \end{aligned}$$--(3)
+
+因為$$f(x) =0$$且$$h(x) \leq f(x) ~ \forall x \in F^c$$，因此可得(3) =0 (QED)
+
+</details>
+

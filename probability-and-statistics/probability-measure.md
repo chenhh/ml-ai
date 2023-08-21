@@ -1,6 +1,6 @@
 # 機率測度(probability measure)
 
-## 基本名詞
+基本名詞
 
 * 一個<mark style="color:red;">**隨機實驗（random experiment）**</mark>是一個機會機制（chance mechanism）且滿足以下三個條件：
   1. 實驗的所有可能結果（outcome）已事先知道。
@@ -119,7 +119,7 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 
 <details>
 
-<summary>proof</summary>
+<summary>proof:遞減事件序列集合測度</summary>
 
 令$$M_n = \cup_{k=n}^\infty E_k$$
 
@@ -132,5 +132,21 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 $$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)      & = \mathrm{P}(\bigcap_{n=1^\infty} \bigcup_{k=n}^\infty E_k) \\     & = \mathrm{P}(\lim_{n \rightarrow \infty } \bigcup_{k=n}^\infty E_k ) \\     & = \lim_{n \rightarrow \infty } \mathrm{P}(\bigcup_{k=n}^\infty E_k )) \\     & \leq \lim_{n \rightarrow \infty} \sum_{k=n}^\infty \mathrm{P}(E_k) \\     & = 0   \end{aligned}$$(QED)
 
 
+
+</details>
+
+### 逆Borel-Cantelli 引理
+
+> $$E_1, E_2, \dots$$為獨立可測集合序列，即$$E_i, E_j, i \neq j$$獨立，若$$\sum_{n=1}^\infty \mathrm{P}(E_n)=\infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 1$$
+
+<details>
+
+<summary>proof</summary>
+
+$$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)      & = \mathrm{P}(\bigcap_{n=1^\infty} \bigcup_{k=n}^\infty E_k) \\     & = \mathrm{P}(\lim_{n \rightarrow \infty } \bigcup_{k=n}^\infty E_k ) \\     & = \lim_{n \rightarrow \infty } \mathrm{P}(\bigcup_{k=n}^\infty E_k )) \\     &  \lim_{n \rightarrow \infty }[1- \mathrm{P}(\bigcap_{k=n}^\infty E_k^c)]    \end{aligned}$$
+
+因為$$E_n$$獨立，所以
+
+$$\displaystyle \begin{aligned}  \mathrm{P}(\bigcap_{k=n}^\infty E_k^c)     & = \prod_{k=n}^\infty \mathrm{P}(E_k^c) \\      & = \prod_{k=n}^\infty (1- \mathrm{P})(E_k))~ [\because 1-x \leq e^{-x}]\\      & \leq \prod_{k=n}^\infty e^{-\mathrm{P}(E_k)} \\     & = \exp(- \sum_{k=n}^\infty \mathrm{P}(E_k)) \\     & = 0 \end{aligned}$$(QED)
 
 </details>

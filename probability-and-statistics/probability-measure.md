@@ -33,14 +33,14 @@
 
 整體金融市場以機率空間表示時，$$\Omega$$為金融市場，$$\mathcal{F}$$為金融市場的訊息及相關資料，$$\mathrm{P}$$為對金融事件發生的機率測度。
 
-### 性質&#x20;
+### 性質
 
 給定機率空間為$$(\Omega, \mathcal{F}, P)$$
 
 > \[<mark style="color:blue;">事件集合機率的上下限</mark>] $$\forall E \in \mathcal{F}, 0 \leq \mathrm{P}(E) \leq 1$$
 
 * $$\mathrm{P}(\Omega) = \mathrm{P}(E \cup E^c) = \mathrm{P}(E) +\mathrm{P}(E^c) = 1$$
-* $$\because \mathrm{P}(E) \geq 0$$ 且 $$\mathrm{P}(E^c) \geq 0$$, $$\therefore  0 \leq \mathrm{P}(E) \leq 1$$(QED)
+* $$\because \mathrm{P}(E) \geq 0$$ 且 $$\mathrm{P}(E^c) \geq 0$$, $$\therefore 0 \leq \mathrm{P}(E) \leq 1$$(QED)
 
 > \[<mark style="color:blue;">補集事件發生的機率</mark>] $$\forall E \in \mathcal{F}, \mathrm{P}(E^c)=1 - \mathrm{P}(E)$$。$$E^c$$為$$E$$的餘事件（complementary event）
 
@@ -48,7 +48,7 @@
 
 > $$\mathrm{P}(\emptyset)=0$$。$$\emptyset$$為<mark style="color:red;">零事件（null event</mark>），又稱空事件，指該事件永不發生。
 
-* $$\because \Omega \cup \emptyset = \Omega$$且$$\mathrm{P}(\Omega ) = \mathrm{P}(\Omega \cup \emptyset) =  \mathrm{P}(\Omega) + \mathrm{P}(\emptyset)=1 + \mathrm{P}(\emptyset) =1$$。
+* $$\because \Omega \cup \emptyset = \Omega$$且$$\mathrm{P}(\Omega ) = \mathrm{P}(\Omega \cup \emptyset) = \mathrm{P}(\Omega) + \mathrm{P}(\emptyset)=1 + \mathrm{P}(\emptyset) =1$$。
 
 > $$\mathrm{P}(F \cap E^c)=\mathrm{P}(F) - \mathrm{P}(E \cap F)$$
 
@@ -56,7 +56,7 @@
 
 > $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
 
-* $$\begin{aligned} \mathrm{P}(E \cup F) &= \mathrm{P}((E \cap F^c) \cup (E \cap F) \cup (E^c \cap F)) \\ &= \mathrm{P}(E) - \mathrm{P}(E \cap F) + \mathrm{P}(E \cap F) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \\& = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)  \end{aligned}$$(QED)
+* $$\begin{aligned} \mathrm{P}(E \cup F) &= \mathrm{P}((E \cap F^c) \cup (E \cap F) \cup (E^c \cap F)) \\ &= \mathrm{P}(E) - \mathrm{P}(E \cap F) + \mathrm{P}(E \cap F) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \\& = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \end{aligned}$$(QED)
 
 > If $$E \subseteq F$$ then $$\mathrm{P}(F \setminus E) = \mathrm{P}(F) - \mathrm{P}(E)$$ and $$\mathrm{P}(E) \leq \mathrm{P}(F)$$
 
@@ -66,16 +66,14 @@
 >
 > * $$\mathrm{P}( (E \cap F)^c) = \mathrm{P}(\Omega \setminus (E \cap F)) = 1- \mathrm{P}(E \cap F)$$--(1)
 > * $$\mathrm{P}((E \cap F)^c)=\mathrm{P}(E^c \cup F^c) \leq \mathrm{P}(E^c)+\mathrm{P}(F^c)$$且$$\mathrm{P}(E^c)= 1-\mathrm{P}(E), \mathrm{P}(F^c)=1-\mathrm{P}(F)$$--(2)
-> * (1)(2)得 $$1-\mathrm{P}(E \cap F) \leq  2 - \mathrm{P}(E) - \mathrm{P}(F)$$移項得 $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$(QED)
+> * (1)(2)得 $$1-\mathrm{P}(E \cap F) \leq 2 - \mathrm{P}(E) - \mathrm{P}(F)$$移項得 $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$(QED)
 
 > 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割(partition)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$\mathrm{P}(F) = \sum_{i \in \mathbb{N}} \mathrm{P}(F \cap E_i), \forall F \in \mathcal{F}$$。
 
 ### 多事件聯集的機率
 
-* $$\begin{aligned} \mathrm{P}(E_1 \cup E_2 \cup E_3) & =  \mathrm{P}(E_1)+\mathrm{P}(E_2)+\mathrm{P}(E_3) \\& - \mathrm{P}(E_1 \cap E_2) - \mathrm{P}(E_1 \cap E_3) - \mathrm{P}(E_2 \cap E_3) \\ & + \mathrm{P}(E_1 \cap E_2 \cap E_3) \end{aligned}$$
+* $$\begin{aligned} \mathrm{P}(E_1 \cup E_2 \cup E_3) & = \mathrm{P}(E_1)+\mathrm{P}(E_2)+\mathrm{P}(E_3) \\& - \mathrm{P}(E_1 \cap E_2) - \mathrm{P}(E_1 \cap E_3) - \mathrm{P}(E_2 \cap E_3) \\ & + \mathrm{P}(E_1 \cap E_2 \cap E_3) \end{aligned}$$
 * $$\begin{aligned} \mathrm{P}(\cup_{i=1}^n E_i) & = \sum_{i=1}^n \mathrm{P}(E_i) \\& - \sum_{i \leq i < j \leq n} \mathrm{P}(E_i \cap E_j) \\ &+ \sum_{1 \leq i < j < k \leq n} \mathrm{P}(E_i \cap E_j \cap E_k) +\ldots \\ &+(-1)^{n+1} \mathrm{P}(E_1 \cap E_2 \cap \ldots \cap E_n) \end{aligned}$$
-
-
 
 ### 條件機率（conditional probability）
 
@@ -89,7 +87,7 @@ $$E, F_1, F_2,\ldots, F_N$$為定義於樣本空間$$\Omega$$的事件（集合�
 
 $$E,F$$為樣本空間$$\Omega$$下的二個事件，若且惟若$$\mathrm{P}(E \cap F) = \mathrm{P}(E)\mathrm{P}(F)$$，則稱$$E,F$$為二<mark style="color:red;">獨立事件</mark>。
 
-* 註：$$\mathrm{P}(E\cap F) =  \mathrm{P}(E|F)\mathrm{P}(F)$$。如果兩事件獨立時，則$$\mathrm{P}(E\cap F)=\mathrm{P}(E)\mathrm{P}(F)$$，因此可知兩事件獨立時，$$\mathrm{P}(E) = \mathrm{P}(E|F)$$，以資訊理論解釋就是事件$$F$$不包含關於事件$$E$$的資訊，因此兩事件獨立。
+* 註：$$\mathrm{P}(E\cap F) = \mathrm{P}(E|F)\mathrm{P}(F)$$。如果兩事件獨立時，則$$\mathrm{P}(E\cap F)=\mathrm{P}(E)\mathrm{P}(F)$$，因此可知兩事件獨立時，$$\mathrm{P}(E) = \mathrm{P}(E|F)$$，以資訊理論解釋就是事件$$F$$不包含關於事件$$E$$的資訊，因此兩事件獨立。
 
 $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足以下條件時，$$E_1, E_2, E_3$$為獨立事件：
 
@@ -106,3 +104,15 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 若$$E, F_1, F_2, \ldots, F_N$$為定義於樣本空間$$\Omega$$的事件且$$F_i \cap F_j = \emptyset, \ \forall i \neq j$$為互斥事件，則$$\mathrm{P}(F_i|E) = \frac{P(F_i \cap E)}{\mathrm{P}(E)} = \frac{\mathrm{P}(E|F_i)\mathrm{P}(F_i)}{\sum_{i=1}^N \mathrm{P}(E|F_i)\mathrm{P}(F_i)}$$。
 
 註：如果事件集合$$F_i \cap F_j \neq \empty$$，在證明中常用方法是建立新的集合序列$$E_1=F_1$$, $$E_2=F_2 - E_1, \dots, E_n=F_n-\cup_{k=1}^{n-1} E_n$$，如此一來為兩兩互斥的集合序列。
+
+## Borel-Cantelli lemma
+
+> $$E_1, E_2, \dots$$為可測事件序列，若$$\sum_{n=1}^\infty \mathrm{P}(E_n) < \infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 0$$。
+>
+> $$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)      & = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k \\ & = \{\omega \in \Omega ~|~ \omega \in \text{ infinitely many (often) } E_n \} \\  & = \{\omega \in \Omega ~|~ \forall n \in \mathbb{N} ~ \exists n_0 > n \ni \omega \in E_{n_0} \} \end{aligned}$$
+
+[測度版本的證明](../math-analysis/measure.md#the-borel-cantelli-lemma)。
+
+上極限可解釋為就是無窮個集合中都存在的元素的集合。
+
+假設歌手舉辦第$$k$$場演唱會，令參加該場演唱會的人數集合為$$E_k$$，而$$\mathrm{P}(E_k)$$為該場演唱會中，成為粉絲的機率。若$$\sum_{n=1}^\infty \mathrm{P}(E_n) < \infty$$，表示歌手舉辦了無限多次演唱會，且圈粉的機率總和為有限值。$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)$$表示舉辦無限次演唱會時，圈粉的機率上極限。如果$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) > 0$$, 表示每次舉辦演唱會總是可以圈粉，此時可得$$\sum_{n=1}^\infty \mathrm{P}(E_n) \rightarrow \infty$$與假設矛盾。因此$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) \leq 0$$。而機率測度公理要求$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) \geq 0$$，因此可得$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 0$$。

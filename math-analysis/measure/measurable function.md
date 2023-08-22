@@ -331,6 +331,28 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 
 </details>
 
+### 可測函數若且唯若任意開集合的前像為可測集合
+
+> $$f$$為定義在可測集合$$E$$，則：
+>
+> $$f$$在$$E$$上可測 $$\Leftrightarrow$$ $$O$$為值域的任意開集合，其前像$$f^{-1}(O)=\{x \in E~|~ f(x) \in O\}$$為可測集合。
+
+<details>
+
+<summary>proof</summary>
+
+<= 若任意開集合的前像均為可測集合，因此可知開區間$$(c, \infty)$$為可測集，得$$f^{-1}(c, \infty) \in \Sigma$$，因此$$f$$為可測函數(QED)。
+
+\=>
+
+
+
+</details>
+
+### 連續函數與可測函數的合成函數為可測函數
+
+> $$f: \mathbb{R} \rightarrow \mathbb{R}$$為連續函數且$$g: E \rightarrow \mathbb{R}$$為可測函數，則合成函數$$g \circ f(x) \equiv f(g(x))$$為可測函數。
+
 ## 幾乎處處性質(almost everywhere)
 
 > 假設有一集合$$X \subseteq \mathbb{R}^n$$中的點$$x$$相關的命題$$P(x)$$， 若除了$$X$$中的某一個零測度集之外，$$P(x)$$均為真，則稱$$P(x)$$在$$X$$上幾乎處處為真， 並記為$$P(x) ~\text{a.e.} ~x \in X$$。
@@ -365,32 +387,4 @@ $$\forall t \in \mathbb{R}$$，可得 $$\{x \in X| g(x) < t\} = \{x \in X-S| g(x
 
 </details>
 
-## 特徵(指示)函數為可測函數
-
-> 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned} &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E \end{aligned} \right.$$
->
-> 則$$E$$為可測集合$$\Leftrightarrow \chi_E$$為可測函數。
-
-<details>
-
-<summary>proof: 以定義直接證明</summary>
-
-proof =>:
-
-取$$S \in \mathbb{B}(\mathbb{R})$$，可得$$\chi_E^{-1}(S) = \left\{ \begin{aligned} & X,~ \text{ if } 0, 1 \in S, \\ & E,~ \text{ if } 1 \in S, ~ 0 \notin S, \\ & E^c,~ \text{ if } 1 \notin S, ~ 0 \in S, \\ & \empty, ~ \text{ otherwise } \end{aligned} \right.$$
-
-也可用$$\chi_E^{-1}((-\infty, c))= \left\{ \begin{aligned} & \empty,~ \text{ if } c < 0, \\ & E^c,~ \text{ if } 0 \leq c < 1, \\ & E \cup E^c,~ \text{ if } c \geq 1, \end{aligned} \right.$$
-
-因為$$X, E, E^c, \empty \in \Sigma$$，所以$$\chi_E$$為可測函數 (QED)。
-
-proof <=:
-
-$$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (QED)
-
-</details>
-
-### 集合序列上極限的特徵函數(可穿過limsup符號)
-
-> 令$$\{E_n\}$$為集合序列，且$$\displaystyle E^{*}=\limsup_{n \rightarrow \infty} E_n \equiv \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，則：
->
-> $$\displaystyle \chi_E^{*}(x)=\limsup_{n \rightarrow \infty} \chi_{E_n}(x)$$
+##

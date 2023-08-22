@@ -62,6 +62,7 @@
   * [Lebesgue外測度](math-analysis/measure/lebesgue-outer-measure.md)
   * [可測集合](math-analysis/measure/measurable-set.md)
   * [可測函數](<math-analysis/measure/measurable function.md>)
+  * [簡單函數逼近](math-analysis/measure/simple-function-approximation.md)
   * [可測的函數序列](math-analysis/measure/measurable-seq-function.md)
   * [Littlewood, Egoroff, Lusin theorem](math-analysis/measure/littlewood-egoroff-lusin-theorem.md)
   * [有號測度](math-analysis/measure/signed-measure.md)

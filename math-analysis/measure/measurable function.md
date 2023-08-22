@@ -371,7 +371,7 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 >
 > 若$$f(x)=g(x) \text{a.e.} ~ x\in X$$，則$$g$$在$$X$$可測。
 >
-> 註：對一可測函數來說，改變其在零測度集合的函數值不會改變函數的可測性。
+> 註：<mark style="color:red;">對一可測函數來說，改變其在零測度集合的函數值不會改變函數的可測性</mark>。
 
 <details>
 
@@ -383,7 +383,7 @@ $$\forall t \in \mathbb{R}$$，可得 $$\{x \in X| g(x) < t\} = \{x \in X-S| g(x
 
 因為$$f$$在$$X$$可測，所以$$\{x \in X-S| f(x) < t\} \in \Sigma$$。
 
-而m({x \in S| g(x) < t}) = 0，因此可得$$\{x \in X| g(x) < t\} \in \Sigma$$ (QED)
+而$$m({x \in S| g(x) < t}) = 0$$，因此可得$$\{x \in X| g(x) < t\} \in \Sigma$$ (QED)
 
 </details>
 

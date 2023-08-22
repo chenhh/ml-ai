@@ -162,6 +162,12 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 <summary>proof: 2</summary>
 
+[https://math.stackexchange.com/questions/541118/proving-that-sum-of-two-measurable-functions-is-measurable](https://math.stackexchange.com/questions/541118/proving-that-sum-of-two-measurable-functions-is-measurable)
+
+$$f(x)+g(x) <t \Leftrightarrow f(x) < t- g(x) \Leftrightarrow  \exists r \in \mathbb{Q} \ni f(x) < r <t-g(x)$$。
+
+因為$$\mathbb{Q}$$dense in $$\mathbb{R}$$，且取有理數是因為有理數集合內的元素為可數個。
+
 令$$\Sigma$$為$$X$$的σ域。
 
 $$\forall t \in \mathbb{R}$$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
@@ -176,7 +182,15 @@ $$\forall t \in \mathbb{R}$$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
 
 <summary>proof: 3</summary>
 
+$$fg=\frac{1}{2}[(f+g)^2 -f^2 - g^2]$$
 
+因為已經證明可測函數相加減仍為可測函數，因此只要證明$$f^2$$為可測函數即可。
+
+$$\forall t \geq 0$$，可得$$\{x\in X ~|~ f^2(x) >t\} = \{x\in X ~|~ f(x) > \sqrt{t} \} \cup \{x\in X ~|~ f(x) < - \sqrt{t}\}$$
+
+而當$$t <0$$時，可得$$\{x\in X ~|~ f^2(x) >t\} = X$$
+
+因此$$f^2$$為可測函數(QED)
 
 </details>
 
@@ -217,9 +231,9 @@ $$\forall c \in \mathbb{R}$$，可得$$\{x \in X ~|~ \min\{f(x), g(x)\}<c\}=\{x 
 
 <summary>proof: 1</summary>
 
+已知$$\{x \in X ~|~ \sup\{f(x), g(x)\}<c\}=\{x \in X ~|~ f(x) < c\} \cup \{x \in X ~|~ g(x) < c\}$$
 
-
-
+由數學歸納法得 $$\displaystyle \{x \in X ~|~ \sup_{k \geq 1} \{ f_k(x)\} > t \} = \bigcup_{k=1}^\infty \{x \in X ~|~  f_k(x) > t \} \in \Sigma$$
 
 (QED)
 
@@ -237,7 +251,9 @@ $$\displaystyle \inf_{k \geq 1} \{ f_k(x)\} = - \sup_{k \geq 1} \{ -f_k(x)\} \in
 
 <summary>proof: 3</summary>
 
+$$\displaystyle \limsup_{k \rightarrow \infty} f_k(x) = \inf_{i \geq 1}\{ \sup_{k \geq i} f_k(x)\}$$
 
+由1,2的性質得證
 
 (QED)
 

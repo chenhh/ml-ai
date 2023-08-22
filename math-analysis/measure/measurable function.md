@@ -12,7 +12,7 @@ description: measurable function
 >
 > 或者說 $$\forall t \in \mathbb{R}$$, 集合$$\{x \in X~|~ f(x) \leq t\} \in \Sigma$$，則$$f$$為可測函數。
 
-可測函數的值域為擴充實數，且值域任意值的前像集合必須為可測集合，以避免出現有函數值，但沒有定義域元素對應的情形。
+<mark style="color:blue;">可測函數的值域為擴充實數，且值域任意值的前像集合必須為可測集合，以避免出現有函數值，但沒有定義域元素對應的情形</mark>。
 
 可測函數$$f$$在機率空間$$(X,\mathbb{F}, P)$$中為隨機變數。
 
@@ -31,7 +31,7 @@ description: measurable function
 
 <details>
 
-<summary>proof: 1-> 2</summary>
+<summary>proof: 1-> 2：σ域中任意元素的聯集仍為σ域的元素。</summary>
 
 因為$$f$$為可測函數，由定義得給定$$c \in \mathbb{R}$$，$$f^{-1}(c) \in \Sigma$$，同理$$\forall d < c$$，$$f^{-1}(d) \in \Sigma$$。
 
@@ -165,18 +165,18 @@ $$\forall t \in \mathbb{R}$$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
 
 ### 可測函數序列的性質
 
-> 令$$\{f_k(x)\}$$為集合$$X$$上的可測函數序列，則：
+> 令$$\{f_k(x)\}$$為集合$$X$$上的可測函數序列，σ，則：
 >
-> 1. $$\displaystyle \sup_{k \geq 1} \{ f_k(x)\}$$為可測函數。
-> 2. $$\displaystyle \inf_{k \geq 1} \{ f_k(x)\}$$為可測函數。
-> 3. $$\displaystyle \limsup_{k \rightarrow \infty} f_k(x)$$為可測函數。
-> 4. $$\displaystyle \liminf_{k \rightarrow \infty} f_k(x)$$為可測函數。
+> 1. $$\displaystyle \sup_{k \geq 1} \{ f_k(x)\}=\sup\{f_1(x), f_2(x), \dots\}$$為可測函數。
+> 2. $$\displaystyle \inf_{k \geq 1} \{ f_k(x)\}=\inf\{f_1(x), f_2(x), \dots\}$$為可測函數。
+> 3. $$\displaystyle \limsup_{k \rightarrow \infty} f_k(x) = \inf_{i \geq 1}\{ \sup_{k \geq i} f_k(x)\}$$為可測函數。
+> 4. $$\displaystyle \liminf_{k \rightarrow \infty} f_k(x) = \sup_{i \geq 1}\{ \inf_{k \geq i} f_k(x)\}$$為可測函數。
 
 <details>
 
 <summary>proof: 1</summary>
 
-令$$\Sigma$$為$$X$$的sigma域。
+
 
 
 

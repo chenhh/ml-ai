@@ -26,8 +26,7 @@ description: measurable function
 * $$(-\infty) - (-\infty)=(- \infty) - (+ \infty) = -\infty$$。
 * 但是$$(+\infty)+(-\infty)$$、$$(+\infty) - (+\infty)$$與$$(-\infty) - (-\infty)$$未定義。
 * $$(\pm \infty)(\pm \infty) = +\infty$$、$$(\pm \infty)(\mp \infty)=-\infty$$。
-
-<mark style="color:red;">特別約定</mark>$$0 \cdot \pm \infty = 0$$<mark style="color:red;">。</mark>
+* $$\forall x \in \mathbb{R}$$，$$\displaystyle x(\pm \infty) =(\pm \infty) x =  \left\{ \begin{aligned} \pm \infty&, \text{ for } x > 0 \\ 0&, \text{ for } x = 0 \\ \mp \infty&, \text{ for } x < 0 \end{aligned} \right.$$，<mark style="color:red;">此處特別約定</mark>$$0 \cdot \pm \infty = 0$$<mark style="color:red;">。</mark>
 
 ## 可測函數的等價條件
 
@@ -134,7 +133,7 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > $$f,g$$為集合$$X$$實值可測函數，則：
 >
 > 1. $$c \in \mathbb{R}~ cf(x)$$為可測函數。
-> 2. $$f(x) + g(x)$$ 為可測函數。
+> 2. $$f(x) \pm g(x)$$ 為可測函數。
 > 3. $$f(x)g(x)$$為可測函數。
 > 4. $$\max\{f(x), g(x)\}$$為可測函數。
 > 5. $$\min\{f(x), g(x)\}$$為可測函數。
@@ -332,7 +331,7 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 
 > $$f,g: X \rightarrow \overline{R}$$為廣義實值函數，且$$f$$在集合$$X$$可測。
 >
-> 若$$f(x)=g(x) \text{a.e.} ~ x\ in X$$，則$$g$$在$$X$$可測。
+> 若$$f(x)=g(x) \text{a.e.} ~ x\in X$$，則$$g$$在$$X$$可測。
 >
 > 註：對一可測函數來說，改變其在零測度集合的函數值不會改變函數的可測性。
 

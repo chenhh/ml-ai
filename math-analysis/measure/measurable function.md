@@ -16,9 +16,18 @@ description: measurable function
 
 可測函數$$f$$在機率空間$$(X,\mathbb{F}, P)$$中為隨機變數。
 
-可測函數在極限運算下是封閉的，比連續函數在極限連算時非封閉的性質好。
+<mark style="color:red;">可測函數在極限運算下是封閉的，比連續函數在極限連算時非封閉的性質好</mark>。
 
-<mark style="color:red;">擴充實數集特別約定</mark>$$0 \cdot \pm \infty = 0$$<mark style="color:red;">。</mark>
+<mark style="color:red;">擴充實數集：</mark>
+
+* $$x + (\pm \infty )= (\pm \infty) + x = \pm \infty$$。
+* $$x - (\pm \infty)=(\mp \infty) -x =\mp \infty$$。
+* $$(+\infty) +(+ \infty)=(+\infty) -(- \infty) = + \infty$$。
+* $$(-\infty) - (-\infty)=(- \infty) - (+ \infty) = -\infty$$。
+* 但是$$(+\infty)+(-\infty)$$、$$(+\infty) - (+\infty)$$與$$(-\infty) - (-\infty)$$未定義。
+* $$(\pm \infty)(\pm \infty) = +\infty$$、$$(\pm \infty)(\mp \infty)=-\infty$$。
+
+<mark style="color:red;">特別約定</mark>$$0 \cdot \pm \infty = 0$$<mark style="color:red;">。</mark>
 
 ## 可測函數的等價條件
 
@@ -127,6 +136,8 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > 1. $$c \in \mathbb{R}~ cf(x)$$為可測函數。
 > 2. $$f(x) + g(x)$$ 為可測函數。
 > 3. $$f(x)g(x)$$為可測函數。
+> 4. $$\max\{f(x), g(x)\}$$為可測函數。
+> 5. $$\min\{f(x), g(x)\}$$為可測函數。
 >
 > 註：<mark style="color:blue;">上述計算性質對於取值為擴充實數的可測函數也成立</mark>，只要考慮$$\{x~|~ f(x)=\infty\}$$，$$\{x~|~ g(x)=\infty\}$$，$$\{x~|~ f(x)=-\infty\}$$，$$\{x~|~ g(x)=-\infty\}$$均為可測集合即可。
 
@@ -167,6 +178,30 @@ $$\forall t \in \mathbb{R}$$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
 <summary>proof: 3</summary>
 
 
+
+</details>
+
+<details>
+
+<summary>proof 4</summary>
+
+$$\forall c \in \mathbb{R}$$，可得$$\{x \in X ~|~ \max\{f(x), g(x)\}<c\}=\{x \in X ~|~ f(x) < c\} \cup \{x \in X ~|~ g(x) < c\}$$
+
+因為$$f,g$$為可測函數，因此$$\{x \in X | f(x) < c\} \in \Sigma$$且$$\{x \in X | (x) < c\} \in \Sigma$$
+
+由σ域的定義得$$\{x \in X | \max\{f(x), g(x)\}<c\} \in \Sigma$$ (QED)
+
+</details>
+
+<details>
+
+<summary>proof 5</summary>
+
+$$\forall c \in \mathbb{R}$$，可得$$\{x \in X ~|~ \min\{f(x), g(x)\}<c\}=\{x \in X ~|~ f(x) < c\} \cap \{x \in X ~|~ g(x) < c\}$$
+
+因為$$f,g$$為可測函數，因此$$\{x \in X | f(x) < c\} \in \Sigma$$且$$\{x \in X | (x) < c\} \in \Sigma$$
+
+由σ域的定義得$$\{x \in X | \min\{f(x), g(x)\}<c\} \in \Sigma$$ (QED)
 
 </details>
 

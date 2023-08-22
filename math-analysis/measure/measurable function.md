@@ -18,6 +18,8 @@ description: measurable function
 
 可測函數在極限運算下是封閉的，比連續函數在極限連算時非封閉的性質好。
 
+<mark style="color:red;">擴充實數集特別約定</mark>$$0 \cdot \pm \infty = 0$$<mark style="color:red;">。</mark>
+
 ## 可測函數的等價條件
 
 > $$f: X \rightarrow \overline{\mathbb{R}}$$，則以下條件均等價：
@@ -27,7 +29,7 @@ description: measurable function
 > 3. $$\forall c \in \mathbb{R}$$，$$f^{-1}((-\infty, c])=\{x \in X~|~ f(x)\leq c \} \in \Sigma$$
 > 4. $$\forall c \in \mathbb{R}$$，$$f^{-1}((c, \infty))=\{x \in X~|~ f(x)>c \} \in \Sigma$$
 > 5. $$\forall \in \mathbb{R}$$，$$f^{-1}([c, \infty))=\{x \in X~|~ f(x) \geq c \} \in \Sigma$$
-> 6. $$f^{-1}(B) \in \mathbb{B}$$為Borel set(由實數上所有開(閉)區間形成的最小的sigma域)。
+> 6. $$f^{-1}(B) \in \mathbb{B}$$為Borel set(由實數上所有開(閉)區間形成的最小的σ域)。
 
 <details>
 
@@ -88,6 +90,9 @@ $$f^{-1}([c, \infty)=f^{-1}(\bigcap_{n=1}^\infty (c - \frac{1}{n}, \infty))=\big
 ### 單調函數為可測函數
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$為單調函數，則$$f(x)$$在閉區間$$[a,b]$$可測。
+>
+> * 遞增函數：$$a \leq x_1 \leq x_2 \leq b \Rightarrow f(x_1 ) \leq f(x_2)$$。
+> * 遞減函數：$$a \leq x_1 \leq x_2 \leq b \Rightarrow f(x_1 ) \geq f(x_2)$$
 
 <details>
 
@@ -101,7 +106,7 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 ### 個別可測集合的函數的聯集仍為可測函數
 
-> 給定函數$$f: X_1 \cup X_2 \rightarrow \overline{R}$$，若$$f$$在 $$X_1$$可測，且在$$X_2$$也可測， 則在$$X_1 \cup X_2$$也可測。
+> 給定函數$$f: X_1 \cup X_2 \rightarrow \mathbb{\overline{R}}$$，若$$f$$在 $$X_1$$可測，且在$$X_2$$也可測， 則在$$X_1 \cup X_2$$也可測。
 
 <details>
 
@@ -122,12 +127,14 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > 1. $$c \in \mathbb{R}~ cf(x)$$為可測函數。
 > 2. $$f(x) + g(x)$$ 為可測函數。
 > 3. $$f(x)g(x)$$為可測函數。
+>
+> 註：<mark style="color:blue;">上述計算性質對於取值為擴充實數的可測函數也成立</mark>，只要考慮$$\{x~|~ f(x)=\infty\}$$，$$\{x~|~ g(x)=\infty\}$$，$$\{x~|~ f(x)=-\infty\}$$，$$\{x~|~ g(x)=-\infty\}$$均為可測集合即可。
 
 <details>
 
 <summary>proof: 1</summary>
 
-令$$\Sigma$$為$$X$$的sigma域。
+令$$\Sigma$$為$$X$$的σ域。
 
 因為$$f$$為可測函數，所以 $$\forall d \in \mathbb{R}, f^{-1}((-\infty, d)) \in \Sigma$$
 
@@ -145,11 +152,11 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 <summary>proof: 2</summary>
 
-令$$\Sigma$$為$$X$$的sigma域。
+令$$\Sigma$$為$$X$$的σ域。
 
 $$\forall t \in \mathbb{R}$$，因為$$f(x) + g(x) <t$$就是$$f(x) < t-g(x)$$
 
-因此 $$\displaystyle \{x \in X~|~ f(x)+g(x)<t \} = \bipcup_{i=1}^\infty (\{x \in X | f(x) < r_i\} \cap \{ x \in X | g(x) < t - r_i \})$$
+因此 $$\displaystyle \{x \in X~|~ f(x)+g(x)<t \} = \bigcup_{i=1}^\infty (\{x \in X | f(x) < r_i\} \cap \{ x \in X | g(x) < t - r_i \})$$
 
 其中$$\{r_i\}$$是所有有理數形成的集合，因此可得$$\{x \in X~|~ f(x)+g(x)<t \} \in \Sigma$$ (QED)
 

@@ -58,21 +58,29 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 >
 > <mark style="color:red;">註：此處簡單函數逼近切</mark>$$f$$<mark style="color:red;">的值域(但可能有無限多個值)</mark>。
 
+<figure><img src="../../.gitbook/assets/simple-function-approximation-min.png" alt="" width="286"><figcaption><p>simple function approximation</p></figcaption></figure>
+
 <details>
 
-<summary>proof</summary>
+<summary>proof：直接建構函數序列</summary>
 
-$$\forall k \in \mathbb{N}$$，可將閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
+$$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
 
-令其中第$$j$$個區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。
+令其中第$$j$$個定義域區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。
 
 而函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。
 
-取函數序列：$$\displaystyle  	h_k(x)=\left\{ 	\begin{aligned} 	&\frac{j-1}{2^k}, & x \in E_{k,j} \\ 	&k, & x \in E_k 	\end{aligned} 	\right. 	~j=1,2,\dots, k2^k, ~ k \in \mathbb{N}$$。
+取(值域)函數序列：$$\displaystyle  	h_k(x)=\left\{ 	\begin{aligned} 	&\frac{j-1}{2^k}, & x \in E_{k,j} \\ 	&k, & x \in E_k 	\end{aligned} 	\right. 	~j=1,2,\dots, k2^k, ~ k \in \mathbb{N}$$。
 
+記$$\displaystyle h_k(x)=k \cdot \chi_{E_k}(x) + \sum_{j=1}^{k \cdot 2^k} \frac{j-1}{2^k}\chi_{E_{k,j}}(x), ~ x \in E$$。
 
+因此$$h_k(x)$$都是非負可測簡單函數，且可得$$h_k(x) \leq h_{k+1}(x) \leq f(x), ~ h_k(x) \leq k$$，$$x \in E, ~ k \in \mathbb{N}$$ 為遞增函數序列。
 
+若$$\forall x \in E$$，函數有界，即$$\exists M < \infty \ni f(x) \leq M$$，則當$$k  > M$$時，可得$$0 \leq f(x) - h_{k}(x) \leq 2^{-k}, ~ x \in E$$。
 
+若 $$f(x) = \infty$$，可得$$h_k(x) = k, k \in \mathbb{N}$$
+
+因此$$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ \forall x \in E$$ (QED)
 
 </details>
 

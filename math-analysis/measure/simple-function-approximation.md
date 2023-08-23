@@ -64,6 +64,8 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 
 <summary>proof：切值域直接建構遞增簡單函數序列</summary>
 
+[https://math.stackexchange.com/questions/2943834/approximation-of-measurable-function-via-simple-functions-proof](https://math.stackexchange.com/questions/2943834/approximation-of-measurable-function-via-simple-functions-proof)
+
 $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
 
 令其中第$$j$$個定義域區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。

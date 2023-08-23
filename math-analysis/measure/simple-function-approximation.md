@@ -52,17 +52,17 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 > * $$f(x)g(x)$$為$$E$$的簡單函數。
 > * 若$$E_i, i=1,2,\dots, p$$均為可測集合，則$$f$$為可測函數。
 
-## 遞增可測簡單函數逼近非負可測函數
+## 存在遞增可測簡單函數可逼近非負可測函數
 
-> $$f: E \rightarrow \mathbb{R}^{+}$$為非負可測函數，則存在遞增非負可測簡單函數序列：$$h_k(x) \leq h_{k+1}(x), k \in \mathbb{N}$$ 使得：$$\displaystyle \lim_{k \rightarrow \infty }h_k(x) =f(x), ~ x \in E$$
+> $$f: E \rightarrow \overline{\mathbb{R}}^{+}$$為非負可測函數(函數值可為無窮大)，則存在遞增非負可測簡單函數序列：$$h_k(x) \leq h_{k+1}(x), k \in \mathbb{N}$$ 使得：$$\displaystyle \lim_{k \rightarrow \infty }h_k(x) =f(x), ~ x \in E$$。
 >
-> <mark style="color:red;">註：此處簡單函數逼近切</mark>$$f$$<mark style="color:red;">的值域(但可能有無限多個值)</mark>。
+> <mark style="color:red;">註：此處簡單函數逼近切</mark>$$f$$<mark style="color:red;">的值域(但可能有無限多個取值)</mark>。
 
 <figure><img src="../../.gitbook/assets/simple-function-approximation-min.png" alt="" width="286"><figcaption><p>simple function approximation</p></figcaption></figure>
 
 <details>
 
-<summary>proof：直接建構函數序列</summary>
+<summary>proof：切值域直接建構遞增簡單函數序列</summary>
 
 $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
 
@@ -84,9 +84,27 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 </details>
 
-## 可測簡單函數逼近可測函數
+## 存在可測簡單函數逼近可測函數
 
-> $$f: E \rightarrow \mathbb{R}$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有 $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
+> $$f: E \rightarrow \overline{\mathbb{R}}$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有 $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >
 > 若$$f(x) < \infty$$，則上述為均勻(一致)收斂，即$$\displaystyle \sup_{x\in E}\{f_k(x) \neq f(x)\}=0$$。
 
+<details>
+
+<summary>proof</summary>
+
+令$$f(x)=f^{+}(x) - f^{-}(x)$$，由存在遞增可測簡單函數可逼近非負可測函數$$m_k(x)$$與$$n_k(x)$$滿足$$\displaystyle \lim_{k \rightarrow \infty }m_k(x)=f^{+}(x)$$與$$\displaystyle \lim_{k \rightarrow \infty }n_k(x)=f^{-}(x)$$ $$x \in E$$
+
+由於$$h_k(x)=m_k(x) - n_k(x)$$為可測簡單函數，且由極限的線性性質得 $$\displaystyle \lim_{k \rightarrow \infty }m_k(x)-n_k(x)=f^{+}(x) - f^{-}(x)=f(x), ~ x \in E$$。 (QED)
+
+若在集合$$E$$上函數值有限，即$$|f(x)| \leq M$$，則當$$k>M$$時，可得：
+
+* $$\displaystyle \sup |f^{+}(x) - m_k(x)| \leq \frac{1}{2^k}, ~ x \in E$$
+* $$\displaystyle \sup |f^{-}(x) - n_k(x)| \leq \frac{1}{2^k}, ~ x \in E$$
+
+因此可得$$\displaystyle  \begin{aligned} & \lim_{k \rightarrow \infty} \sup{(f(x)-(m_k(x) - n_k(x))}  \\ & \leq \lim_{k \rightarrow \infty}\sup |f^{+}(x) - m_k(x)| + \lim_{k \rightarrow \infty}\sup |f^{-}(x) - n_k(x)| \\ & \leq \lim_{k \rightarrow \infty}\frac{1}{2^k} + \lim_{k \rightarrow \infty}\frac{1}{2^k} \\ & \leq 0   \end{aligned}$$
+
+(QED)
+
+</details>

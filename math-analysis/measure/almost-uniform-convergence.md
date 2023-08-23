@@ -1,6 +1,8 @@
-# Littlewood, Egoroff, Lusin theorem
+---
+description: almost Uniform convergence
+---
 
-
+# 幾乎一致收斂
 
 ## Littlewood three principles \[[wiki](https://en.wikipedia.org/wiki/Littlewood's\_three\_principles\_of\_real\_analysis)]
 
@@ -16,17 +18,17 @@
 
 ### (處處)點態收斂(everewhere pointwise convergence)
 
-> $$\forall x \in X, ~\forall \epsilon > 0 ~\exists n_0 \in \mathbb{N} \ni |f_n(x)-f(x)|< \epsilon ~ \forall n > n_0$$
+> $$\forall x \in E, ~\forall \epsilon > 0 ~\exists n_0 \in \mathbb{N} \ni |f_n(x)-f(x)|< \epsilon ~ \forall n > n_0$$
 
 點態收態是根據每一點$$x$$判定收斂，因此每一點收斂的速度都不相同($$f_n$$ 上每一點$$x$$的值域收斂值$$f(x)$$的速度不同)。
 
-此處處處(everywhere)強調對於定義域$$x\in X$$的性質全部成立。
+此處處處(everywhere)強調對於定義域$$x\in E$$的性質全部成立。
 
 ### (處處)一致(均勻)收斂(everywhere uniformly convergence)
 
-> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in X}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$
+> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in E}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$
 
-一致收斂考慮的是全部集合內的點($$\forall x \in X$$)，因此每一點的收斂速度都相同(有相同的上限)。
+一致收斂考慮的是全部集合內的點($$\forall x \in E$$)，因此每一點的收斂速度都相同(有相同的上限)。
 
 <mark style="color:red;">點態收斂和一致收斂通常用於分析連續函數序列的收斂性，必須為一致收斂才能保證收斂到連續函數</mark>。
 
@@ -44,7 +46,7 @@
 
 ### 幾乎一致(均勻)收斂 (almost uniformly convergence)
 
-> $$\displaystyle \forall \epsilon > 0,\exists E_0 \in \Sigma \ni \mu(E_0) < \epsilon \text{ and } f_n \rightarrow \text{ uniformly on } X - E_0$$
+> $$\displaystyle \forall \epsilon > 0,\exists E_0 \in \Sigma \ni \mu(E_0) < \epsilon \text{ and } f_n \rightarrow \text{ uniformly on } E - E_0$$
 
 在測度為0的集合$$E_0$$之外，$$f_n$$一致收斂至$$f$$。
 

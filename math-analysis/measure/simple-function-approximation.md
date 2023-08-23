@@ -1,5 +1,9 @@
 # 簡單函數逼近可測函數
 
+## 相關筆記
+
+[集合的特徵函數](../set/characteristic-function.md)。
+
 ## 特徵(指示)函數為可測函數
 
 > 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned} &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E \end{aligned} \right.$$

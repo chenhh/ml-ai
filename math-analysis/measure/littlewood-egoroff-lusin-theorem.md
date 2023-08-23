@@ -50,11 +50,11 @@
 
 
 
-## Egoroff定理 (幾乎處處收斂在有限測度條件下為幾乎均勻收斂)
+## Egoroff定理 (幾乎處處收斂在有限測度條件下為幾乎一致收斂)
 
-> 令$$\mu(X) <\infty$$為有限測度，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$
+> 令$$\mu(E) <\infty$$為有限測度集合，$$\{f_n\}$$為$$E$$上的可測函數序列，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$, $$E_0 \subseteq E$$為閉集合且$$\mu(E_0)=0$$.&#x20;
 >
-> 註：(處處)的點態收斂無法得到一致收斂。
+> <mark style="color:red;">註：點態收斂無法得到一致收斂，但去掉零測度集合後可為幾乎一致收斂</mark>。
 
 <details>
 

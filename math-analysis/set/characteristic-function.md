@@ -7,12 +7,12 @@
 > 給定集合$$E \subseteq X$$。定義特徵函數 $$\chi_E:X \rightarrow \mathbb{R}$$(對應域為實數可便於定義可測函數，但值域只有$$\{0,1\}$$）$$\chi_E (x)=\left \{ \begin{align} &1, \text { if } x \in E, \\ &0, \text{ if } x \notin E \end{align} \right.$$
 >
 > * 因為$$\chi_E$$為函數，因此也可以考慮函數的極限。在分析中也常用$$I_E$$的符號表示。
-> * <mark style="color:red;">特徵函數最重要的功能是可以用函數的方式自訂集合的範圍</mark>。
+> * <mark style="color:red;">特徵函數最重要的功能是可以用函數的方式自訂集合的範圍，因此可用於定義Lebesgue的積分區域</mark>。
 
 * <mark style="color:red;">**特徵函數是可測函數（隨機變數）**</mark>。特徵函數在討論機率的條件期望值時經常使用，因為可將隨機變數以函數的方式定義在特定的集合中。例如$$\mathrm{E}(I_A(\omega))=\mathrm{P}(A)$$。
 * 特徵函數另一個常用的用途是定義Riemann積分: $$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{R_k}$$(step function)，其中每一個$$R_k$$都是矩形。定義Lebesgue積分$$\displaystyle f = \sum_{k=1}^n \alpha_k\chi_{E_k}$$(simple function), $$E_k$$為$$\alpha_k$$的前像集合。
 
-#### 性質
+### 性質
 
 > 當$$E=X$$時，$$\chi_E(x)\equiv 1$$
 >
@@ -22,7 +22,7 @@
 >
 > $$E_1 = E_2 \Leftrightarrow \chi_{E_1}(x) =\chi_{E_2}(x)$$
 
-#### 聯集與交集的特徵函數
+### 聯集與交集的特徵函數
 
 > $$A,B \subseteq X$$，則
 

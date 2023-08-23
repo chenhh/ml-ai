@@ -79,3 +79,7 @@ $$\forall \epsilon > 0, ~ E_0=[1-\epsilon, 1]$$，可得$$m(E_0)=\epsilon$$
 令$$(X, \Sigma)$$為實數上的Lebesgue可測空間，$$f_n(x) =\chi_{(n, \infty)}(x)$$。
 
 則$$\displaystyle \lim_{n \rightarrow \infty } f_n(x) = 0 ~\text{a.e.}$$但不是almost uniformly。
+
+## Lusin定理
+
+> $$f: E \rightarrow \mathbb{R}$$為可測函數。則存在連續函數$$g: \mathbb{R} \rightarrow \mathbb{R}$$與閉集合$$F \subseteq E$$滿足$$f(x)=g(x), ~ \forall x \in F$$且$$\mu(E-F)=0$$。

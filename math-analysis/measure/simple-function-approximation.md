@@ -88,7 +88,7 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 > $$f: E \rightarrow \overline{\mathbb{R}}$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有 $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >
-> 若$$f(x) < \infty$$，則上述為均勻(一致)收斂，即$$\displaystyle \sup_{x\in E}\{f_k(x) \neq f(x)\}=0$$。
+> 若$$f(x) < \infty$$，則上述為均勻(一致)收斂，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
 
 <details>
 
@@ -106,5 +106,27 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 因此可得$$\displaystyle  \begin{aligned} & \lim_{k \rightarrow \infty} \sup{(f(x)-(m_k(x) - n_k(x))}  \\ & \leq \lim_{k \rightarrow \infty}\sup |f^{+}(x) - m_k(x)| + \lim_{k \rightarrow \infty}\sup |f^{-}(x) - n_k(x)| \\ & \leq \lim_{k \rightarrow \infty}\frac{1}{2^k} + \lim_{k \rightarrow \infty}\frac{1}{2^k} \\ & \leq 0   \end{aligned}$$
 
 (QED)
+
+</details>
+
+## 支撐集(support set)
+
+> 對於定義在$$E \subseteq \mathbb{R}^n$$的函數$$f(x)$$，定義$$\mathrm{supp}(f)=\{x \in E~|~ f(x)\neq 0\}$$為函數的支撐集。
+>
+> 如果$$\mathrm{supp}(f)$$有界\[$$\exists r >0, p \in \mathbb{R}^n \ni \mathrm{supp}(f) \subseteq B_r(p)$$]\(在歐式空間中等價於緊緻集合)，則稱函數$$f(x)$$是有緊緻支撐集的函數。
+
+### 存在可測簡單函數且函數為有緊致支撐集逼近可測函數
+
+> $$f: E \rightarrow \overline{\mathbb{R}}$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$，且$$h_k(x)$$有緊緻支撐集，使得$$|h_k(x)| \leq |f(x)|$$且有 $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
+
+<details>
+
+<summary>proof</summary>
+
+$$\forall k$$令$$g_k(x) = h_k(x) \chi_{B_k(0)}(x), ~ x \in E$$
+
+則$$g_k(x)$$仍為可測函數且有緊緻支撐集。
+
+若$$x \in E$$，則存在$$k_0 \ni k \geq k_0$$時，$$x \in B_k(0)$$，此時可得 $$\displaystyle  lim_{k \rightarrow \infty} g_k(x) = \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$ (QED)
 
 </details>

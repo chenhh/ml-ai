@@ -18,14 +18,17 @@
 
 > $$\forall x \in X, ~\forall \epsilon > 0 ~\exists n_0 \in \mathbb{N} \ni |f_n(x)-f(x)|< \epsilon ~ \forall n > n_0$$
 
-* 點態收態是根據每一點$$x$$判定收斂，因此每一點收斂的速度都不相同($$f_n$$ 上每一點$$x$$的值域收斂值$$f(x)$$的速度不同)。
-* 此處everywhere強調對於定義域$$x\in X$$的性質全部成立。
+點態收態是根據每一點$$x$$判定收斂，因此每一點收斂的速度都不相同($$f_n$$ 上每一點$$x$$的值域收斂值$$f(x)$$的速度不同)。
+
+此處處處(everywhere)強調對於定義域$$x\in X$$的性質全部成立。
 
 ### (處處)一致(均勻)收斂(everywhere uniformly convergence)
 
 > $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in X}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$
 
-均勻收斂考慮的是全部集合內的點($$\forall x \in X$$)，因此每一點的收斂速度都相同。
+一致收斂考慮的是全部集合內的點($$\forall x \in X$$)，因此每一點的收斂速度都相同(有相同的上限)。
+
+<mark style="color:red;">點態收斂和一致收斂通常用於分析連續函數序列的收斂性，必須為一致收斂才能保證收斂到連續函數</mark>。
 
 ### 幾乎處處(點態)收斂(almost everywhere convergence)
 
@@ -33,8 +36,11 @@
 >
 > $$\exists E_0 \in \Sigma, ~ \mu(E_0)=0 \ni \forall x \in X - E_0, ~ \forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x)|<\epsilon, \forall n \geq n_0$$
 
-* 函數序列在兩者不相等的集合$$E_0$$的測度為0，其餘的集合點態收斂&#x20;
-* 一般函數而言，單點(可數)集合的測度為0，因此只要$$E_0$$為可數個點的集合均滿足此性質。
+函數序列在兩者不相等的集合$$E_0$$的測度為0，其餘的集合點態收斂 。
+
+一般函數而言，單點(可數)集合的測度為0，因此只要$$E_0$$為可數個點的集合均滿足此性質。
+
+<mark style="color:red;">幾乎處處收斂的零測度集合</mark>$$E_0$$<mark style="color:red;">，對於所有函數序列中的函數都是在</mark>$$E_0$$<mark style="color:red;">中測度為0，且在</mark>$$E-E_0$$<mark style="color:red;">外均收斂；而測度收斂中，對於所有序數序列中的函數無法找到共同的</mark>$$E_0$$<mark style="color:red;">，但是可以保證收斂函數與函數序列不相等的點集的測度為0</mark>。
 
 ### 幾乎一致(均勻)收斂 (almost uniformly convergence)
 

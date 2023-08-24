@@ -6,13 +6,17 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 ## 非負可測函數的積分
 
-> 函數$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx ~| ~ h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+} \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。
+> 函數$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx ~| ~ h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+} \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的大小關係是對定義域的每個點都成立。
 >
 > <mark style="color:red;">若</mark>$$\displaystyle \int_E f(x)dx < \infty$$<mark style="color:red;">，則稱</mark>$$f$$<mark style="color:red;">在集合</mark>$$E$$<mark style="color:red;">可積，或稱</mark>$$f(x)$$<mark style="color:red;">為集合</mark>$$E$$<mark style="color:red;">上的可積函數</mark>。
 
 此處[非負可測函數$$f(x)$$是用簡單函數序列極限$$h(x)$$逼近](../measure/simple-function-approximation.md)。
 
 由切非負簡單函數的值域，當值域切的越細時，$$h(x)$$能夠越接近$$f(x)$$，此時積分值也會隨之變大，當切分到極限時，若簡單函數的積分值有限時，則$$f$$為可積分函數。
+
+我們必須證明這個積分與上面定義在簡單函式集合上的積分相符。此外還有這個積分定義是否與黎曼積分的概念有對應關係的問題。事實上可以證明這兩個問題的答案都是肯定的。
+
+勒貝格積分的分割方式很特定，每一段都是 1/2^n 的差距，所以較大的 n 除了擴大的 f(x) 計值部分外，都是較小 n 的細分。
 
 ### 非負可測函數若被可積函數控制(dominated)時為可積分函數
 

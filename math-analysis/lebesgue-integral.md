@@ -38,9 +38,9 @@
 >
 > 因為$$f$$之值為有限值，且$$[a,b]$$長度有限，因此上、下積分均為有限值。
 >
-> 函數$$f$$稱為Riemann integrable $$(R){\int_a^b }f$$ $$\Leftrightarrow$$$$(R)\underline{\int_a^b }f = (R)\overline{\int_a^b }f$$，
+> <mark style="color:red;">函數</mark>$$f$$<mark style="color:red;">稱為Riemann integrable(可積分)</mark> $$(R){\int_a^b }f$$ $$\Leftrightarrow$$$$(R)\underline{\int_a^b }f = (R)\overline{\int_a^b }f$$，
 
-## 階梯函式是Riemann integrable
+## 階梯函式是Riemann可積分
 
 > 函數$$\psi: [a,b] \rightarrow \mathbb{R}$$稱為階梯函數若給定分割$$P=\{x_0, x_1, \dots, x_n\}$$，函數$$\psi$$在每一個開區間$$(x_{i-1}, x_i)$$都只有一個實數值$$c_i < \infty$$即：
 >

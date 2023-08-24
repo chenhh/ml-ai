@@ -2,13 +2,21 @@
 
 ## 非負可測簡單函數
 
-> 定義：非負可測簡單函數
+> 定義：非負可測簡單函數(nonnegative simple function)
 >
-> 函數$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負可測簡單函數，其定義域在分集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i$$：
+> 函數$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負可測簡單函數，其定義域在集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i$$：
 >
 > $$\displaystyle f(x)=\sum_{i=1}^p c_i \chi_{E_i}(x)$$，$$\bigcup_{i=1}^p E_i = \mathbb{R}^n$$，$$E_i \cap E_j = \emptyset, ~\forall i \neq j$$。
 
 <mark style="color:blue;">由定義可知簡單函數為值域個數為有限值的函數</mark>。
+
+而$$E_i$$在定義域中並不一定是連續的區間，因為函數可為多對一的映射。
+
+
+
+<figure><img src="../../.gitbook/assets/simple_function.png" alt=""><figcaption><p>簡單函數範例</p></figcaption></figure>
+
+### 非負可測簡單函數的積分
 
 > 定義：非負可測簡單函數的積分
 >
@@ -18,7 +26,7 @@
 >
 > 其中$$dx$$是$$\mathbb{R}^n$$上Lebesgue測度的標誌。
 >
-> 此處定義$$0 \cdot \infty = 0$$。
+> <mark style="color:blue;">注意擴充實數中，定義</mark>$$0 \cdot \infty = 0$$。
 
 ### 範例：Dirichlet函數的積分
 

@@ -9,11 +9,11 @@ description: sequences of functions
 * 點態收斂、逐點收斂(pointwise convergence)
   * <mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數</mark>，但能保證收斂為處處連續函數。
   * <mark style="color:red;">點態收斂無法保證可微分函數收斂為可微分函數</mark>。
-  * <mark style="color:red;">點態收斂無法保證函數序列積分收斂到函數極限的積分</mark>。
+  * <mark style="color:red;">點態收斂無法保證函數序列(Riemann)積分收斂到函數極限的積分</mark>。
   * <mark style="color:blue;">因此連續函數在極限運算下不滿足封閉性</mark>。
 * 一致收斂、均勻收斂(uniform convergence)
   * 均勻收斂保連續函數收斂為連續函數
-  * 均勻收斂可保證函數序列積分收斂至函數序列極限的積分
+  * <mark style="color:red;">均勻收斂可保證函數序列Riemann積分收斂至函數序列極限的積分</mark>。
 * 一致有界(uniformly bounded)
 * 無窮序列函數級數的一致收斂
 * Riemann-Stieltjes積分與一致收斂
@@ -32,9 +32,9 @@ description: sequences of functions
 
 > 給定同一定義域的實數(複數)函數數列$$\{f_n\}$$，若函數$$f$$滿足 $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x), ~ x \in S$$，則稱函數$$f$$為函數數列的<mark style="color:red;">極限函數(limit function)</mark>，且稱<mark style="color:red;">函數數列</mark>$$\{f_n\}$$<mark style="color:red;">逐點收斂至集合</mark>$$S$$。
 >
-> $$\forall x \in S$$, $$\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni d(f_n(x) - f(x)) < \epsilon \forall n \geq n_0$$
+> $$\forall x \in S$$, $$\forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni d(f_n(x) - f(x)) < \epsilon ~\forall n \geq n_0$$
 >
-> 點態收斂中，$$n_0$$依賴於$$\epsilon$$與$$x$$兩者。(均勻收斂只依顧栆$$\epsilon$$)。
+> 點態收斂中，$$n_0$$依賴於$$\epsilon$$與$$x$$兩者。(一致收斂只依賴於$$\epsilon$$，而與$$x$$的實際取值無關)。
 
 點態收斂中，每一點$$x$$只考慮$$B_{\epsilon}(x)$$的收斂性，而非集合$$S$$內所有點的收斂性，因此給定$$\epsilon>0$$，當$$x_1 \neq x_2$$時，兩者收斂時所需要的項次$$n_1, n_2$$可能沒有上限。
 

@@ -59,6 +59,8 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 > $$f: E \rightarrow [0, \infty]$$為非負可測函數(函數值可為無窮大)，則存在遞增非負可測簡單函數序列：$$h_k(x) \leq h_{k+1}(x), k \in \mathbb{N}$$ 使得：$$\displaystyle \lim_{k \rightarrow \infty }h_k(x) =f(x), ~ x \in E$$。
 >
 > <mark style="color:red;">註：此處簡單函數逼近切</mark>$$f$$<mark style="color:red;">的值域(但可能有無限多個取值)</mark>。
+>
+> <mark style="color:red;">註：此逼近性質可用於定義非負可測函數的積分</mark>。
 
 <figure><img src="../../.gitbook/assets/simple-function-approximation-min.png" alt="" width="286"><figcaption><p>simple function approximation</p></figcaption></figure>
 
@@ -92,13 +94,15 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 ## 存在可測簡單函數逼近可測函數
 
-> $$f: E \rightarrow [-\infty, \infty]$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(點態收斂) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
+> $$f: E \rightarrow [-\infty, \infty]$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(<mark style="color:blue;">點態收斂</mark>) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >
-> 若$$f(x) < \infty$$，則上述為均勻(一致)收斂，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
+> 若$$f(x) < \infty$$，則上述為<mark style="color:blue;">均勻(一致)收斂</mark>，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
+>
+> <mark style="color:red;">註：此逼近性質可用於定義可測函數的積分</mark>。
 
 <details>
 
-<summary>proof</summary>
+<summary>proof：函數為正成份與負成分兩個非負函數之差</summary>
 
 令$$f(x)=f^{+}(x) - f^{-}(x)$$，由存在遞增可測簡單函數可逼近非負可測函數$$m_k(x)$$與$$n_k(x)$$滿足$$\displaystyle \lim_{k \rightarrow \infty }m_k(x)=f^{+}(x)$$與$$\displaystyle \lim_{k \rightarrow \infty }n_k(x)=f^{-}(x)$$ $$x \in E$$
 

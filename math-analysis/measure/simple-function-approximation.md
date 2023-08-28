@@ -4,6 +4,8 @@
 
 [集合的特徵函數](../set/characteristic-function.md)。
 
+特徵函數在積分時，可將子集合轉換成函數計算。$$\int_E f\chi_{E_k} d\mu = \int_{E_k}fd\mu$$。
+
 ## 特徵(指示)函數為可測函數
 
 > 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned} &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E \end{aligned} \right.$$

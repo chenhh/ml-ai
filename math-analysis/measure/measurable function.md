@@ -30,7 +30,7 @@ description: measurable function
 
 ## 可測函數的等價條件
 
-> $$f: X \rightarrow \overline{\mathbb{R}}$$，則以下條件均等價：
+> $$f: X \rightarrow [-\infty, \infty]$$，則以下條件均等價：
 >
 > 1. $$f$$為可測函數
 > 2. $$\forall c \in \mathbb{R}$$，$$f^{-1}((-\infty, c))=\{x \in X~|~ f(x)<c \} \in \Sigma$$
@@ -112,6 +112,22 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 </details>
 
+## \[證明常用] 將開(閉)區間表示為可數個集合的聯集與交集
+
+> 函數$$f: E \rightarrow [-\infty, \infty]$$為在集合$$E$$上的可測函數，則：
+>
+> * $$\displaystyle \{x \in E~|~ f(x)=\infty\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) > k\right\} = \mathbb{R} - \displaystyle \{x \in E~|~ f(x)<\infty\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) < \infty\} = \bigcup_{k=1}^\infty \left\{x\in E ~|~ f(x) <k \right\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) > - \infty\} = \bigcup_{k=1}^\infty \left\{x\in E ~|~ f(x) >-k \right\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x)=-\infty\}  = \mathbb{R} - \displaystyle \{x \in E~|~ f(x) > -\infty\}$$
+> * $$\displaystyle \{x \in E~|~ f(x)\geq t\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) > t-\frac{1}{k}\right\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) >  t\} = \mathbb{R} - \{x \in E~|~ f(x) \leq t\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x)\leq t\} = \bigcup_{k=1}^\infty \left\{x\in E ~|~ f(x) > t+\frac{1}{k}\right\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) < t \} = \mathbb{R} - \{x \in E~|~ f(x) \geq t \}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) = t \} = \displaystyle \{x \in E~|~ f(x) \geq t \} \cap \displaystyle \{x \in E~|~ f(x) \leq t \}$$
+
+###
+
 ### 個別可測集合的函數的聯集仍為可測函數
 
 > 給定函數$$f: X_1 \cup X_2 \rightarrow \mathbb{\overline{R}}$$，若$$f$$在 $$X_1$$可測，且在$$X_2$$也可測， 則在$$X_1 \cup X_2$$也可測。
@@ -135,8 +151,8 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > 1. $$c \in \mathbb{R}~ cf(x)$$為可測函數。
 > 2. $$f(x) \pm g(x)$$ 為可測函數。
 > 3. $$f(x)g(x)$$為可測函數。
-> 4. $$\max\{f(x), g(x)\}$$為可測函數。
-> 5. $$\min\{f(x), g(x)\}$$為可測函數。
+> 4. $$h(x)=\max\{f(x), g(x)\}$$為可測函數。
+> 5. $$h(x)=\min\{f(x), g(x)\}$$為可測函數。
 >
 > 註：<mark style="color:blue;">上述計算性質對於取值為擴充實數的可測函數也成立</mark>，只要考慮$$\{x~|~ f(x)=\infty\}$$，$$\{x~|~ g(x)=\infty\}$$，$$\{x~|~ f(x)=-\infty\}$$，$$\{x~|~ g(x)=-\infty\}$$均為可測集合即可。
 
@@ -295,7 +311,7 @@ $$\displaystyle \liminf_{k \rightarrow \infty} f_k(x) = - \limsup_{k \rightarrow
 
 <details>
 
-<summary>proof: 函數等於正成分減去負成份</summary>
+<summary>proof: 函數等於正成分減去負成份，可參考符號測度</summary>
 
 $$f(x) = f^{+}(x) - f^{-}(x)$$
 
@@ -351,7 +367,7 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 
 ### 連續函數與可測函數的合成函數為可測函數
 
-> $$f: \mathbb{R} \rightarrow \mathbb{R}$$為連續函數且$$g: E \rightarrow \mathbb{R}$$為可測函數，則合成函數$$g \circ f(x) \equiv f(g(x))$$為可測函數。
+> $$f: \mathbb{R} \rightarrow \mathbb{R}$$為連續函數且$$g: E \rightarrow [-\infty, \infty]$$為可測函數，則合成函數$$g \circ f(x) \equiv f(g(x))$$為可測函數。
 
 ## 幾乎處處性質(almost everywhere)
 
@@ -359,15 +375,17 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 
 ### 幾乎處處相等
 
-> $$f,g: X \rightarrow \mathbb{R}$$為可測函數，若滿足： $$\displaystyle m(\{x \in X~|~ f(x) \neq g(x) \}) = 0$$， 則稱$$f,g$$在$$X$$幾乎處處相等，記為$$f(x)=g(x)~\text{a.e.} ~x \in X$$。
+> $$f,g: X \rightarrow [-\infty, \infty]$$為可測函數，若滿足： $$\displaystyle m(\{x \in X~|~ f(x) \neq g(x) \}) = 0$$， 則稱$$f,g$$在$$X$$幾乎處處相等，記為$$f(x)=g(x)~\text{a.e.} ~x \in X$$。
 
 ### 幾乎處處有限
 
-> $$f: X \rightarrow \mathbb{R}$$為可測函數，若有 $$\displaystyle m(\{ x \in X~|~ |f(x)| = \infty \})=0$$， 則稱$$f$$在$$X$$上幾乎處處有限，記為$$|f(x)|<\infty ~ \text{a.e.} ~ x \in X$$。
+> $$f: X \rightarrow [-\infty, \infty]$$為可測函數，若有 $$\displaystyle m(\{ x \in X~|~ |f(x)| = \infty \})=0$$， 則稱$$f$$在$$X$$上幾乎處處有限，記為$$|f(x)|<\infty ~ \text{a.e.} ~ x \in X$$。
+
+<mark style="color:red;">註：幾乎處處有限不保證有界</mark>，例如$$f(x)=x, ~ x \in \mathbb{R}$$，可得$$m(\{x \in \mathbb{R}~|~ f(x)=\infty\})=0$$，但非有界函數。
 
 ### 可測函數的幾乎處處相等函數仍可測
 
-> $$f,g: X \rightarrow \overline{R}$$為廣義實值函數，且$$f$$在集合$$X$$可測。
+> $$f,g: X \rightarrow [-\infty, \infty]$$為廣義實值函數，且$$f$$在集合$$X$$可測。
 >
 > 若$$f(x)=g(x) \text{a.e.} ~ x\in X$$，則$$g$$在$$X$$可測。
 >

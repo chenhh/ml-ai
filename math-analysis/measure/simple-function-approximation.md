@@ -92,7 +92,7 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 ## 存在可測簡單函數逼近可測函數
 
-> $$f: E \rightarrow \overline{\mathbb{R}}$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有 $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
+> $$f: E \rightarrow [-\infty, \infty]$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(點態收斂) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >
 > 若$$f(x) < \infty$$，則上述為均勻(一致)收斂，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
 

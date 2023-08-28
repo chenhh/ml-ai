@@ -12,9 +12,17 @@
 
 給定可測空間$$(X,\Sigma)$$，若某性質$$P$$ almost everywhere成立，意思是對所有非零測度集，此性質$$P$$都成立。(換言之，除零測度集之外，此性質$$P$$都成立。)
 
-## 幾乎處處實值函數(a.e. real-valued function)
+##
 
-> 若可測函數$$f$$滿足$$\mu(\{x \in X ~|~ f(x)=\infty\})=0$$，則稱為幾乎處處實值函數。
+## 幾乎處處有限、幾乎處處有界(finite a.e, bounded a.e.)
+
+> 若可測函數$$f$$滿足$$\mu(\{x \in X ~|~ f(x)=\infty\})=0$$，則稱為幾乎處處有限函數，記為$$|f(x)|<\infty \text{ a.e. }  \forall x \in E$$。
+>
+> 若可測函數$$f$$存在正實數$$M > 0 \ni |f(x)|<M \text{ a.e. } \forall x \in E$$，則稱為幾乎處處有界函數。
+
+<mark style="color:red;">註：幾乎處處有界函數=> 幾乎處處有限函數，反之不一定成立。</mark>
+
+範例：$$f(x) = x, ~ x \in \mathbb{R}$$為幾乎處處有限，但非幾乎處處有界函數，因為$$\mu(\{x \in \mathbb{R} ~|~ f(x) = \infty\})=0$$。
 
 ## 幾乎處處(點態)收斂(convergence a.e.)
 

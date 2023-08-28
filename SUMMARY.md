@@ -67,7 +67,7 @@
   * [幾乎一致收斂](math-analysis/measure/almost-uniform-convergence.md)
   * [測度收斂](math-analysis/measure/convergence-in-measure.md)
   * [絕對連續函數](math-analysis/measure/absolutely-continuous-function.md)
-  * [有號測度](math-analysis/measure/signed-measure.md)
+  * [符號測度](math-analysis/measure/signed-measure.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
   * [非負可測簡單函數](math-analysis/lebesgue-integral/measurable-simple-function.md)
   * [非負可測函數的積分](math-analysis/lebesgue-integral/integral-of-measurable-nonnegative-function.md)

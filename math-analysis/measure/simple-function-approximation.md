@@ -38,9 +38,9 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 
 ## 簡單函數(simple function)
 
-> 令$$f: E \rightarrow \mathbb{R}, ~ E \subseteq \mathbb{R}^n$$，若$$S=\{y \in \mathbb{R}~|~ y=f(x), x \in E\}$$為有限集合時，則稱$$f$$為集合$$E$$上的簡單函數。
+> 令實值函數$$f: E \rightarrow \mathbb{R}, ~ E \subseteq \mathbb{R}^n$$，若$$S=\{y \in \mathbb{R}~|~ y=f(x), x \in E\}$$為有限集合時，則稱$$f$$為集合$$E$$上的簡單函數。
 >
-> <mark style="color:red;">註：簡單函數就是值域為有限取值的函數。例如離散型的隨機變數</mark>。
+> <mark style="color:red;">註：只要是有限取值的函數均可定義為簡單函數，不必限定為可測函數。例如離散型的隨機變數</mark>。
 
 若$$f$$為$$E$$上的簡單函數時，可將集合$$E$$切為$$p$$個分割$$E_1, \dots, E_p, ~ E_i \cap E_j = \emptyset$$。
 
@@ -56,7 +56,7 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 
 ## 存在遞增可測簡單函數可逼近非負可測函數
 
-> $$f: E \rightarrow \overline{\mathbb{R}}^{+}$$為非負可測函數(函數值可為無窮大)，則存在遞增非負可測簡單函數序列：$$h_k(x) \leq h_{k+1}(x), k \in \mathbb{N}$$ 使得：$$\displaystyle \lim_{k \rightarrow \infty }h_k(x) =f(x), ~ x \in E$$。
+> $$f: E \rightarrow [0, \infty]$$為非負可測函數(函數值可為無窮大)，則存在遞增非負可測簡單函數序列：$$h_k(x) \leq h_{k+1}(x), k \in \mathbb{N}$$ 使得：$$\displaystyle \lim_{k \rightarrow \infty }h_k(x) =f(x), ~ x \in E$$。
 >
 > <mark style="color:red;">註：此處簡單函數逼近切</mark>$$f$$<mark style="color:red;">的值域(但可能有無限多個取值)</mark>。
 
@@ -70,17 +70,19 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 
 $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
 
-令其中第$$j$$個定義域區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。
+令其中第$$j$$個定義域區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。<mark style="color:blue;">此時函數</mark>$$f$$<mark style="color:blue;">在此定義域的函數值最小值與最大值差距為</mark>$$\frac{1}{2^k}$$。
 
-而函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。
+而函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。此<mark style="color:blue;">集合是用於定義函數值為無窮大時</mark>。
 
 取(值域)函數序列：$$\displaystyle  	h_k(x)=\left\{ 	\begin{aligned} 	&\frac{j-1}{2^k}, & x \in E_{k,j} \\ 	&k, & x \in E_k 	\end{aligned} 	\right. 	~j=1,2,\dots, k2^k, ~ k \in \mathbb{N}$$。
 
-記$$\displaystyle h_k(x)=k \cdot \chi_{E_k}(x) + \sum_{j=1}^{k \cdot 2^k} \frac{j-1}{2^k}\chi_{E_{k,j}}(x), ~ x \in E$$。
+記$$\displaystyle h_k(x)=k \cdot \chi_{E_k}(x) + \sum_{j=1}^{k \cdot 2^k} \frac{j-1}{2^k}\chi_{E_{k,j}}(x), ~ x \in E$$。<mark style="color:blue;">因此該簡單函數的上限值為</mark>$$k$$<mark style="color:blue;">，而小於</mark>$$k$$<mark style="color:blue;">的值域切分成</mark>$$k\cdot 2^k$$<mark style="color:blue;">塊，每塊值域的長度為</mark>$$\frac{1}{2^k}$$。
 
-因此$$h_k(x)$$都是非負可測簡單函數，且可得$$h_k(x) \leq h_{k+1}(x) \leq f(x), ~ h_k(x) \leq k$$，$$x \in E, ~ k \in \mathbb{N}$$ 為遞增函數序列。
+因此$$h_k(x)$$都是非負可測簡單函數。
 
-若$$\forall x \in E$$，函數有界，即$$\exists M < \infty \ni f(x) \leq M$$，則當$$k  > M$$時，可得$$0 \leq f(x) - h_{k}(x) \leq 2^{-k}, ~ x \in E$$。
+因為給定$$x \in E$$時，若$$f(x)$$落在$$E_{k,j}$$時，表示$$\frac{j-1}{2^k}\leq f(x) < \frac{j}{2^k}$$，若切分更細時，同樣的函數值$$f(x)$$會落在比$$E_{k,j}$$切分更細的集合，即$$\frac{m-1}{2^{k+1}}\leq f(x) < \frac{m}{2^{k+1}}$$，且$$\frac{j-1}{2^k} \leq \frac{m-1}{2^{k+1}}$$，因此可得$$h_k (x) \leq h_{h+1}(x) \leq f(x)$$，$$x \in E, ~ k \in \mathbb{N}$$ 為遞增函數序列。
+
+若$$\forall x \in E$$，函數有界，即$$\exists M < \infty \ni f(x) \leq M$$，則當$$k  > M$$時，可得$$f$$與$$h_k(x)$$的差值上限為$$2^{-k}$$，即$$0 \leq f(x) - h_{k}(x) \leq 2^{-k}, ~ x \in E$$。
 
 若 $$f(x) = \infty$$，可得$$h_k(x) = k, k \in \mathbb{N}$$
 

@@ -12,8 +12,6 @@
 
 給定可測空間$$(X,\Sigma)$$，若某性質$$P$$ almost everywhere成立，意思是對所有非零測度集，此性質$$P$$都成立。(換言之，除零測度集之外，此性質$$P$$都成立。)
 
-##
-
 ## 幾乎處處有限、幾乎處處有界(finite a.e, bounded a.e.)
 
 > 若可測函數$$f$$滿足$$\mu(\{x \in X ~|~ f(x)=\infty\})=0$$，則稱為幾乎處處有限函數，記為$$|f(x)|<\infty \text{ a.e. }  \forall x \in E$$。
@@ -59,8 +57,24 @@ $$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0
 
 ### 幾乎處處一致收斂保證幾乎處處收斂
 
+> 定義在集合$$E$$的幾乎處處實值(有限)的可測函數序列$$\{f_n\}$$幾乎一致收斂於可測函數$$f$$ ，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) ~\text{a.e. on } E$$ 。
+>
+> <mark style="color:blue;">註：此處的</mark>$$\mu(E)$$<mark style="color:blue;">可為無窮大，即不限定在有限測度空間</mark>。
 
+<details>
 
-### 範例：幾乎處處收斂，但不依測度收斂
+<summary>proof</summary>
+
+因為$$\{f_n\}$$幾乎一致收斂於$$f$$，由定義得存在集合$$E_0 \subseteq E$$滿足$$\forall \epsilon > 0$$，$$\mu(E_0) < \epsilon$$ 使得$$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in E-E_0}|f_n(x) - f(x)|=0$$。
+
+因為$$\{f_n\}$$在$$E-E_0$$一致收斂至$$f$$，因此$$\{f_n\}$$在$$E -E_0$$上點態收斂至$$f$$。
+
+而由於上述收斂性質在$$\forall \epsilon >0, \mu(E_0)<\epsilon$$均成立，因此可得$$\{f_n\}$$在$$f$$幾乎處處收斂&#x20;
+
+(QED)
+
+</details>
+
+### 範例：幾乎處處收斂，但不依測度收斂&#x20;
 
 $$f_n(x)=\frac{x}{n}$$ 。則$$f_n(x)$$幾乎處處收斂於$$f(x)=0$$。但不依測度收斂。

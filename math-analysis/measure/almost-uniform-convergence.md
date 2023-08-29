@@ -12,6 +12,8 @@ description: almost Uniform convergence
 >
 > 實變函數就是為了說明這些“幾乎(almost)”的意義。
 
+由幾乎一致收斂的定義可得幾乎處處收斂。反之如果定義域測度有限，Egoroff定理證明了幾乎處處收斂可保證幾乎一致收斂。
+
 <figure><img src="../../.gitbook/assets/convergence-min.png" alt=""><figcaption><p>收斂的性質</p></figcaption></figure>
 
 ## 收斂的定義
@@ -26,7 +28,9 @@ description: almost Uniform convergence
 
 ### (處處)一致(均勻)收斂(everywhere uniformly convergence)
 
-> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in E}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$
+> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \lim_{n \rightarrow \infty} \sup_{x \in E}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$。
+>
+> 或者令$$\displaystyle d_n = \sup_{x \in E} |f_n(x) - f(x)|$$，$$\displaystyle \lim_{n \rightarrow \infty} d_n =0$$。
 
 一致收斂考慮的是全部集合內的點($$\forall x \in E$$)，因此每一點的收斂速度都相同(有相同的上限)。
 
@@ -46,18 +50,18 @@ description: almost Uniform convergence
 
 ### 幾乎一致(均勻)收斂 (almost uniformly convergence)
 
-> $$\displaystyle \forall \epsilon > 0,\exists E_0 \in \Sigma \ni \mu(E_0) < \epsilon \text{ and } f_n \rightarrow \text{ uniformly on } E - E_0$$
+> $$\displaystyle \forall \epsilon > 0,\exists E_0 \in \Sigma \ni \mu(E_0) < \epsilon \text{ and } f_n \rightarrow f \text{ uniformly on } E - E_0$$
 
-在測度為0的集合$$E_0$$之外，$$f_n$$一致收斂至$$f$$。
+在測度為0或小於$$\epsilon$$的集合$$E_0$$之外，$$f_n$$一致收斂至$$f$$。
 
 ## Egoroff定理 (幾乎處處收斂在有限測度條件下為幾乎一致收斂)
 
-> 令$$\mu(E) <\infty$$為有限測度集合，$$\{f_n\}$$為$$E$$上的幾乎處處有限的可測函數序列，則
+> 令$$\mu(E) <\infty$$為有限測度集合，$$\{f_n\}$$為$$E$$上的幾乎處處有限(幾乎處處實數值)的可測函數序列，則
 >
 > * $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$, $$E_0 \subseteq E$$為閉集合且$$\mu(E_0)=0$$
 > * $$\forall \delta > 0 \exists E_{\delta} \subseteq E , ~ m(E_{\delta }) \leq \delta$$，使得$$f_n(x) \rightarrow f(x) \text{ almost uniformly on } E - E_\delta$$
 >
-> <mark style="color:red;">註：點態收斂無法得到一致收斂，但去掉零測度集合後可為幾乎一致收斂</mark>。
+> <mark style="color:red;">註：點態收斂無法保證一致收斂，但去掉零測度集合後可為幾乎一致收斂</mark>。
 
 <details>
 
@@ -93,6 +97,6 @@ $$\forall \epsilon > 0, ~ E_0=[1-\epsilon, 1]$$，可得$$m(E_0)=\epsilon$$
 
 參考資料
 
-* [https://zhuanlan.zhihu.com/p/503514372](https://zhuanlan.zhihu.com/p/503514372)
-* [https://zhuanlan.zhihu.com/p/36952467](https://zhuanlan.zhihu.com/p/36952467)
+* [\[知乎\] Egoroff定理：重溫與昇華](https://zhuanlan.zhihu.com/p/503514372)。
+* [\[知乎\] Egoroff定理和Lusin定理](https://zhuanlan.zhihu.com/p/36952467)。
 * [https://wuli.wiki/online/EgrfTh.html](https://wuli.wiki/online/EgrfTh.html)

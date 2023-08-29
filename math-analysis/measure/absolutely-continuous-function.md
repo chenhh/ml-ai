@@ -4,6 +4,12 @@ description: absolutely continuous function
 
 # 絕對連續函數
 
+## 簡介
+
+可微分函數為連續函數，但反之不成立。Lebesgue測度中證明了連續函數幾乎處處可微。
+
+<mark style="color:blue;">而幾乎處處可微分函數中，有些函數在可微分的點導數值為0，但函數值不是常數，為了排除這一類函數，因此定義絕對連續函數</mark>。
+
 ## 絕對連續函數
 
 > 定義：$$f: [a,b] \rightarrow \mathbb{R}$$為閉區間$$[a,b]$$上的絕對連續函數：

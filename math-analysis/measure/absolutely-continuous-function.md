@@ -20,6 +20,13 @@ description: absolutely continuous function
 
 lipschitz條件⊆絕對連續函數⊆連續函數。
 
+### 絕對連續函數類
+
+* $$f$$在閉區間$$[a,b]$$ Lebesgue可積，則$$\displaystyle \int_{[a,b]} f(t)dt= F(x)$$為絕對連續函數。
+* 在閉區間$$[a,b]$$滿足Lipschitz條件的函數。
+* 在閉區間$$[a,b]$$導數有界的函數。
+* 在閉區間$$[a,b]$$導數連續的函數。
+
 ### 滿足Lipschitz條件的函數為絕對連續函數
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$滿足Lipschitz條件，即$$\exists M \geq 0 \ni \forall x_1, x_2 \in [a,b], ~ |f(x_1) - f(x_2)| \leq M |x_1 - x_2|$$，則$$f$$在$$[a,b]$$絕對連續。
@@ -42,6 +49,20 @@ lipschitz條件⊆絕對連續函數⊆連續函數。
 
 </details>
 
-### 範例：絕對連續但不滿足Lipschitz條件的函數
+#### 範例：絕對連續但不滿足Lipschitz條件的函數
 
 $$f(x) = x^{1/2}$$
+
+## 絕對連續函數是有界變差函數
+
+\>
+
+#### 範例：有界變差但非絕對連續函數
+
+$$\displaystyle f(x) = \left\{ \begin{aligned} &0, &x = 0,\\ &x+1, &0 < x \leq 1 \end{aligned}  \right.$$，則$$f$$在$$[0,1]$$為單調遞增函數，因此為有界變差函數。
+
+但$$f$$在$$0$$不連續，因此非絕對連續函數。
+
+## 參考資料
+
+* [https://zhuanlan.zhihu.com/p/545536763](https://zhuanlan.zhihu.com/p/545536763)

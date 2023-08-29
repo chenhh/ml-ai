@@ -22,7 +22,7 @@ description: convergence in measure
 
 ## 幾乎處處收斂可保證測度收斂
 
-> $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列且$$\mu(E) < \infty$$。
+> $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列且$$\mu(E) < \infty$$(有限測度空間)。
 >
 > 若$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) \text{ a.e. on } E$$且$$f$$幾乎處處有限，則$$\{f_n\}$$依測度收斂至$$f$$。
 

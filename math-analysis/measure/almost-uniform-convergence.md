@@ -12,7 +12,13 @@ description: almost Uniform convergence
 >
 > 實變函數就是為了說明這些“幾乎(almost)”的意義。
 
-由幾乎一致收斂的定義可得幾乎處處收斂。反之如果定義域測度有限，Egoroff定理證明了幾乎處處收斂可保證幾乎一致收斂。
+## 函數序列收斂關係
+
+測度$$\mu: E \rightarrow [0, \infty]$$，因此要考慮有限或無限測度的條件。
+
+* <mark style="color:blue;">\[</mark>[<mark style="color:blue;">證明</mark>](measurable-seq-function.md#ji-hu-chu-chu-yi-zhi-shou-lian-bao-zheng-ji-hu-chu-chu-shou-lian)<mark style="color:blue;">]在有限或無限測度空間時，幾乎一致收斂的定義可得幾乎處處收斂</mark><mark style="color:red;">。</mark>
+* <mark style="color:red;">\[</mark>[<mark style="color:red;">證明</mark>](almost-uniform-convergence.md#egoroff-ding-li-ji-hu-chu-chu-shou-lian-zai-you-xian-ce-du-tiao-jian-xia-wei-ji-hu-yi-zhi-shou-lian)<mark style="color:red;">]如果為有限測度空間時，Egoroff定理證明了幾乎處處收斂可保證幾乎一致收斂</mark>。
+* \[證明]如果為有限測度空間時，幾乎處處收斂可得測度收斂。
 
 <figure><img src="../../.gitbook/assets/convergence-min.png" alt=""><figcaption><p>收斂的性質</p></figcaption></figure>
 

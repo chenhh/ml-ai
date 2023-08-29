@@ -32,13 +32,15 @@
 
 <mark style="color:blue;">因為函數序列</mark>$$\{f_n(x)\}$$<mark style="color:blue;">與</mark>$$f$$<mark style="color:blue;">在極限時只有在零測度集合</mark>$$E_0$$<mark style="color:blue;">不相等，而在</mark>$$E-E_0$$<mark style="color:blue;">均相等，因此若</mark>$$\{f_n(x)\}$$<mark style="color:blue;">為可測函數序列，則可得</mark>$$f$$<mark style="color:blue;">為可測函數</mark>。
 
-## 幾乎處處一致收斂(almost uniform convergence)
+## 幾乎一致收斂(almost uniform convergence)
 
 > 函數序列$$\{f_n\}$$幾手乎處處一致收斂至函數$$f$$：
 >
 > $$\forall \epsilon > 0$$，存在可測集$$E_{\epsilon}$$且滿足$$\mu(E_{\epsilon})<\epsilon$$使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$。
 >
 > 或者說$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
+
+註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_0$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_0)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎處處一致收斂」，兩者不相同</mark>。
 
 #### 範例
 
@@ -55,7 +57,7 @@ $$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0
 
 且對於$$\forall x \in [0,1] - E_\epsilon$$，可得$$\displaystyle \sup_{x \in [0,1] - E_{\epsilon}}\|f_n(x) - f(x)\|=\sup_{x \in [0, 1-\epsilon]}\|x^n  - 0\|=\| 1- \frac{\epsilon}{2}\|^n \rightarrow 0$$ as $$n \rightarrow \infty$$。
 
-### 幾乎處處一致收斂保證幾乎處處收斂
+### 幾乎一致收斂保證幾乎處處收斂
 
 > 定義在集合$$E$$的幾乎處處實值(有限)的可測函數序列$$\{f_n\}$$幾乎一致收斂於可測函數$$f$$ ，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) ~\text{a.e. on } E$$ 。
 >

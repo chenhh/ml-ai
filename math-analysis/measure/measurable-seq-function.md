@@ -48,6 +48,14 @@
 
 範例：$$f_n(x)=x^n$$ on $$[0,1]$$，可得點態收斂$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)= \left\{ \begin{aligned} 0&, \text{ if } 0 \leq x < 1, \\ 1&, \text{ if } x = 1  \end{aligned} \right.$$為非連續函數，但即使去除掉$$x=1$$，考慮$$f_n(x)=x^n ~ \text{ on } [0,1)$$也非一致收斂(由sup的定義可得$$\displaystyle \sup_{x \in [0,1)}x^n = \sup_{x \in (0,1)}x^n = \sup_{x \in (0,1)}x^n =1$$)；更進一步可得不存在集合$$S$$使得$$f_n \rightarrow f$$ uniformly on $$[0,1]-S$$。
 
+已知$$\displaystyle e^{x}=\lim _{{n\to \infty }}\left(1+{x \over n}\right)^{n}$$因此$$\displaystyle e^{-1} = \lim_{n \rightarrow \infty}(1-\frac{1}{n})^n$$且$$\frac{1}{e} \in [0,1]$$，所以可得$$\lim_{n \rightarrow } \sup_{x \in [0,1]}x^n \neq 0$$。
+
+令$$0 < \epsilon <1$$，取$$x = \frac{1+\epsilon}{2}$$，可得$$\epsilon < x < 1$$。
+
+$$x^n = \frac{1+\epsilon}{2}^n=\frac{1}{2^n}(1+\epsilon)^n=\frac{1}{2^n} \sum_{k=0}^n \binom{n}{k}\epsilon^k > \frac{1}{2^n} \epsilon \sum_{k=0}^n \binom{n}{k} = \frac{1}{2^n} 2^n \epsilon = \epsilon$$
+
+此時不存在$$n_0 \in \mathbb{N}$$使得$$x^{n_0} < \epsilon~\forall 0 < \epsilon < 1$$，因此不為一致收斂。
+
 #### 幾乎一致收斂定義的討論
 
 * [https://math.stackexchange.com/questions/4727429/almost-uniform-convergence-equivalent-definition](https://math.stackexchange.com/questions/4727429/almost-uniform-convergence-equivalent-definition)

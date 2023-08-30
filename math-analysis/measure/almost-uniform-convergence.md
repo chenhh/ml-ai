@@ -56,9 +56,9 @@ description: almost Uniform convergence
 
 ### 幾乎一致(均勻)收斂 (almost uniformly convergence)
 
-> $$\displaystyle \forall \epsilon > 0,\exists E_0 \in \Sigma \ni \mu(E_0) < \epsilon \text{ and } f_n \rightarrow f \text{ uniformly on } E - E_0$$
+> $$\displaystyle \forall \epsilon > 0,\exists E_\epsilon \in \Sigma \ni \mu(E_\epsilon) < \epsilon \text{ and } f_n \rightarrow f \text{ uniformly on } E - E_\epsilon$$
 
-在測度為0或小於$$\epsilon$$的集合$$E_0$$之外，$$f_n$$一致收斂至$$f$$。
+在測度小於$$\epsilon$$的集合$$E_\epsilon$$之外，$$f_n$$一致收斂至$$f$$。
 
 ## Egoroff定理 (幾乎處處收斂在有限測度條件下為幾乎一致收斂)
 
@@ -67,7 +67,7 @@ description: almost Uniform convergence
 > * $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$, $$E_0 \subseteq E$$為閉集合且$$\mu(E_0)=0$$
 > * $$\forall \delta > 0 \exists E_{\delta} \subseteq E , ~ m(E_{\delta }) \leq \delta$$，使得$$f_n(x) \rightarrow f(x) \text{ almost uniformly on } E - E_\delta$$
 >
-> <mark style="color:red;">註：點態收斂無法保證一致收斂，但去掉零測度集合後可為幾乎一致收斂</mark>。
+> <mark style="color:red;">註：點態收斂無法保證一致收斂，但去掉很小的測度集合</mark>$$E_\epsilon$$<mark style="color:red;">後為幾乎一致收斂</mark>。
 
 <details>
 
@@ -83,7 +83,7 @@ $$f_n(x)=x^n, ~ x \in [0,1]$$
 
 則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) =  \left\{ \begin{aligned} &0, ~ \text{ if } 0 \leq x < 1 \\ &1, ~ \text{ if } x=1 \end{aligned} \right.$$
 
-得$$\displaystyle \sup_{x \in [0,1]}|f_n(x) - f(x)| = 1 \neq 0$$非一致收斂，但因為不收斂的點$$m(\{1\})=0$$，因此為幾乎一致收斂。
+得$$\displaystyle \sup_{x \in [0,1]}|f_n(x) - f(x)| = 1 \neq 0$$非一致收斂。
 
 $$\forall \epsilon > 0, ~ E_0=[1-\epsilon, 1]$$，可得$$m(E_0)=\epsilon$$
 

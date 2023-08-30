@@ -4,10 +4,6 @@ description: almost Uniform convergence
 
 # 幾乎一致收斂
 
-##
-
-
-
 ## 幾乎一致收斂(almost uniform convergence)
 
 > 函數序列$$\{f_n\}$$幾乎處處一致收斂至函數$$f$$：
@@ -17,6 +13,8 @@ description: almost Uniform convergence
 > 或者說$$\forall \epsilon >0, ~ \mu(E_{\epsilon}) < \infty, ~ \exist n_0 \in \mathbb{N}\ni \forall n \geq n_0$$$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
 
 註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎一致收斂」，兩者不是等價定義</mark>。
+
+<mark style="color:red;">註：不一致收斂發生於收斂函數</mark>$$f$$<mark style="color:red;">出現"突變"處，挖去突變點的附近測度可以任意小的集合(但不是零測度集)，則</mark>$$f_n$$<mark style="color:red;">可以一致收斂</mark>。
 
 因此幾乎一致收斂不可寫為$$\exists E_\epsilon \subseteq E, ~ \mu(E_\epsilon)=0 \ni f_n \rightarrow f \text{ uniformly  on } E-E_0$$；
 
@@ -78,17 +76,59 @@ $$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0
 
 ## Egoroff定理 (幾乎處處收斂在有限測度空間中幾乎一致收斂)
 
-> 令$$\mu(E) <\infty$$為有限測度集合，$$\{f_n\}$$為$$E$$上的幾乎處處有限(幾乎處處實數值)的可測函數序列，則
+> 令$$\mu(E) <\infty$$為有限測度集合，$$\{f_n\}$$為$$E$$上的幾乎處處有限(幾乎處處實數值)的可測函數序列，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$。
 >
-> * $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$
+> 若$$f_n \rightarrow f \text{ a.e. on } E$$，則$$\forall \epsilon > 0$$，存在可測集合$$E_\epsilon$$且$$\mu(E_\epsilon)<\epsilon \ni f_n \rightarrow f \text{ unif. on } E-E_\epsilon$$。
 >
-> <mark style="color:red;">註：點態收斂無法保證一致收斂，但在有限測度時，去掉很小的測度集合</mark>$$E_\epsilon$$<mark style="color:red;">後為幾乎一致收斂</mark>。
+> <mark style="color:red;">註：一般可測空間中，幾乎一致收斂可得幾乎處處收斂；而Egoroff定理證明了有限測度空間中(如機率空間)，幾乎處處收斂等價於幾乎一致收斂</mark>。
 
 <details>
 
-<summary>proof:</summary>
+<summary>proof:將不一致收斂的集合，以可數集合列表示，再利用測度的可數可加性證明為任意小</summary>
 
+proof: 不收斂的集合測度小於epsilon
 
+因為$$f_n \rightarrow f \text{ a.e. on }E$$，即存在可測集合$$E_0 \subseteq E , \mu(E_0)=0$$使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{pointwise   on} E-E_0$$。
+
+即給定$$x \in E-E_0$$, 取$$\epsilon=1/k, ~k \in \mathbb{N}$$，則存在$$n_k \in \mathbb{N} \ni |f_n(x) - f(x)|<1/k, ~\forall n \geq n_k$$。
+
+若固定$$k$$的值，上式可得在$$n \geq n_k$$之後，所有$$x \in E-E_0$$的元素都可以保證$$|f_n(x) - f(x)| < 1/k$$。
+
+令$$A_{n,k}=\{ x \in E- E_0 ~|~|f_n(x) - f(x)| \geq 1/k \}$$
+
+則給定$$k$$後，集合$$E-E_0$$中的每一點$$x$$只會在$$n < n_k$$時，有時為$$A_{n,k}$$中的元素。而所有的點$$x$$在$$n \geq n_k$$時，必定不是$$A_{n,k}$$中的元素。
+
+由集合序列上極限定義$$\displaystyle \limsup_{n \rightarrow \infty} A_{n,k}=\bigcap_{n=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k}=\emptyset$$
+
+由測度定義得$$\displaystyle \mu(\limsup_{n \rightarrow \infty} A_{n,k})=\mu(\bigcap_{n=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k})=\mu(\emptyset)=0$$--(1)
+
+令$$B_{n,k}=\bigcup_{i=n}^\infty A_{i,k}$$。
+
+且$$B_{n,k} \supseteq B_{n+1,k}\supseteq \dots$$為單調遞減集合序列，因此$$\displaystyle \lim_{n \rightarrow \infty}B_{n,k}=\bigcap_{n=1}^\infty B_{n,k}$$。
+
+整理可得$$\displaystyle \bigcap_{n=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k} = \bigcap_{n=1}^\infty B_{n,k} = \lim_{n \rightarrow \infty} B_{n,k}$$--(2)
+
+由遞減集合極限的測度且$$\mu(E)<\infty$$，(2)可得$$\displaystyle \mu( \lim_{n \rightarrow \infty} B_{n,k}) = \lim_{n \rightarrow \infty} \mu(B_{n,k})$$--(3)
+
+由(1,2,3)可得$$\displaystyle \lim_{n \rightarrow \infty} \mu(B_{n,k})=0$$。--(4)
+
+因此對於任意$$k \in \mathbb{N}$$，由(4)的極限定義得存在$$n_k \in \mathbb{N} \ni \mu(B_{n_k, k}) < \frac{\epsilon}{2^k}$$
+
+再將所有滿足條件的$$k$$的集合聯集，可得測度$$\displaystyle \mu(\bigcup_{k=1}^\infty B_{n_k, k} ) \leq \sum_{k=1}^\infty \mu(B_{n_k, k}) < \sum_{k=1}^\infty \frac{\epsilon}{2^k}=\epsilon$$--(5)
+
+即$$\displaystyle E_\epsilon = \bigcup_{k=1}^\infty B_{n_k, k} = \bigcup_{k=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k} = \{x \in E- E_0 ~|~ |f_n(x) - f(x)| \geq 1/k \}$$
+
+(QED)
+
+proof: $$f_n$$在$$E-E_\epsilon$$上一致連續。
+
+因為給定$$k \in \mathbb{N}$$，可得$$x \in E-E_0$$且$$X \notin E_\epsilon$$時，可得$$x \notin B_{n_k, k}$$，由集合定義可得$$|f_n(x)-f(x)| < 1/k, \forall n \geq n_k$$。
+
+因此可得$$f_n \rightarrow f \text{ uniform. on } (E-E_0) - E_\epsilon$$
+
+因為$$(E-E_0) -E_\epsilon = E -(E_0 \cup E_\epsilon)$$，由(5)與測度定義得$$\mu(E_0 \cup E_\epsilon) \leq \mu(E_0) + \mu(E_\epsilon) = \mu(E_\epsilon) < \epsilon$$
+
+(QED)
 
 </details>
 

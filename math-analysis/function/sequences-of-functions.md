@@ -160,6 +160,20 @@ proof <=
 
 > <mark style="color:red;">若</mark>$$\{f_n\} \rightarrow f$$<mark style="color:red;">一致收斂，則</mark>$${f_n} \rightarrow f$$<mark style="color:red;">點態收斂</mark>。
 
+<details>
+
+<summary>proof</summary>
+
+要證明$$f_n$$ 點態收斂於$$f$$ ：任取一點$$x \in E$$ ，任選一個$$\epsilon >0$$，一定能夠找到正整數$$n_0$$ (依賴於$$x$$與$$\epsilon$$)，使得 $$n \geq n_0$$時可得$$|f_n(x) - f(x)|<\epsilon$$ 。所以關鍵在於怎麼找到滿足條件的正整數$$n_0$$ 。
+
+因為$$f_n$$一致收斂於$$f$$ ，則由定義有：對每個$$\epsilon >0$$ ，存在正整數$$n_1$$ (只依賴於$$\epsilon$$)，使得$$n \geq n_1$$ ，對所有的$$x \in E$$ 可得$$|f_n(x) - f(x)|<\epsilon$$ 。
+
+因此，只需取$$n_0= n_1$$ ，可得對於給定的$$x$$，確實有$$n \geq n_0$$ ，可得$$|f_n(x)-f(x)|<\epsilon$$  。
+
+(QED)
+
+</details>
+
 <figure><img src="../../.gitbook/assets/pointwise_conv.jpg" alt=""><figcaption><p>點態收態，f與fn的距離在每一點x可能不同</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/uniform_conv.jpg" alt=""><figcaption><p>一致收斂，f與fn在定義域每一點都可保持在相同的距離內</p></figcaption></figure>

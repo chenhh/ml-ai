@@ -10,11 +10,11 @@ description: almost Uniform convergence
 
 ## 幾乎一致收斂(almost uniform convergence)
 
-> 函數序列$$\{f_n\}$$幾手乎處處一致收斂至函數$$f$$：
+> 函數序列$$\{f_n\}$$幾乎處處一致收斂至函數$$f$$：
 >
 > $$\forall \epsilon > 0$$，存在可測集$$E_{\epsilon}$$且滿足$$\mu(E_{\epsilon})<\epsilon$$使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$。
 >
-> 或者說$$\forall \epsilon >0, \ni n_0 \in \mathbb{N}\ni \forall n \geq n_0$$$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
+> 或者說$$\forall \epsilon >0, ~ \mu(E_{\epsilon}) < \infty, ~ \exist n_0 \in \mathbb{N}\ni \forall n \geq n_0$$$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
 
 註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎一致收斂」，兩者不是等價定義</mark>。
 
@@ -54,14 +54,35 @@ $$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0
 
 且對於$$\forall x \in [0,1] - E_\epsilon$$，可得$$\displaystyle \sup_{x \in [0,1] - E_{\epsilon}}\|f_n(x) - f(x)\|=\sup_{x \in [0, 1-\epsilon]}\|x^n  - 0\|=\| 1- \frac{\epsilon}{2}\|^n \rightarrow 0$$ as $$n \rightarrow \infty$$。
 
-## Egoroff定理 (幾乎處處收斂在有限測度條件下為幾乎一致收斂)
+### 幾乎一致收斂保證幾乎處處收斂
+
+> 定義在集合$$E$$的幾乎處處實值(有限)的可測函數序列$$\{f_n\}$$幾乎一致收斂於可測函數$$f$$ ，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) ~\text{a.e. on } E$$ 。
+>
+> <mark style="color:blue;">註：此處的</mark>$$\mu(E)$$<mark style="color:blue;">可為無窮大，即不限定在有限測度空間</mark>。
+
+<details>
+
+<summary>proof：由定義直接證明</summary>
+
+因為$$\{f_n\}$$幾乎一致收斂於$$f$$，由定義得存在集合$$E_\epsilon \subseteq E$$滿足$$\forall \epsilon > 0$$，$$\mu(E_\epsilon) < \epsilon$$ $$\displaystyle \exists n_0 \in \mathbb{N} \ni \forall n \geq n_0, \sup_{x \in E-E_\epsilon}|f_n(x) - f(x)|=0$$。
+
+取$$\epsilon=\frac{1}{m}, m \in \mathbb{N}$$，由一致收斂定義可得$$\forall m >1 ~\exists \mu(E_m)< \frac{1}{m} \ni f_n \rightarrow f \text{ unif. on } E_m^c$$。
+
+令$$\displaystyle F=\bigcup_{m=1}^\infty E_m^c$$，因為一致收斂為點態收斂，因此$$f_n \rightarrow f \text{ pointwise on } F$$。
+
+而$$\displaystyle \mu(F^c)= \mu(\bigcap_{m=1}^\infty E_m)\leq \mu(E_m) < \frac{1}{m}, ~\forall m \in \mathbb{N}$$，因此$$\mu(F^c)=0$$，所以$$f_n \rightarrow f \text{ a.e. on } F$$
+
+(QED)
+
+</details>
+
+## Egoroff定理 (幾乎處處收斂在有限測度空間中幾乎一致收斂)
 
 > 令$$\mu(E) <\infty$$為有限測度集合，$$\{f_n\}$$為$$E$$上的幾乎處處有限(幾乎處處實數值)的可測函數序列，則
 >
-> * $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$, $$E_0 \subseteq E$$為閉集合且$$\mu(E_0)=0$$
-> * $$\forall \delta > 0 \exists E_{\delta} \subseteq E , ~ m(E_{\delta }) \leq \delta$$，使得$$f_n(x) \rightarrow f(x) \text{ almost uniformly on } E - E_\delta$$
+> * $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{a.e.} \Rightarrow \lim_{n \rightarrow \infty} f_n(x) = f(x)~ \text{almost unif.}$$
 >
-> <mark style="color:red;">註：點態收斂無法保證一致收斂，但去掉很小的測度集合</mark>$$E_\epsilon$$<mark style="color:red;">後為幾乎一致收斂</mark>。
+> <mark style="color:red;">註：點態收斂無法保證一致收斂，但在有限測度時，去掉很小的測度集合</mark>$$E_\epsilon$$<mark style="color:red;">後為幾乎一致收斂</mark>。
 
 <details>
 

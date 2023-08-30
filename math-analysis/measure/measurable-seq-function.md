@@ -32,32 +32,6 @@
 
 <mark style="color:blue;">因為函數序列</mark>$$\{f_n(x)\}$$<mark style="color:blue;">與</mark>$$f$$<mark style="color:blue;">在極限時只有在零測度集合</mark>$$E_0$$<mark style="color:blue;">不相等，而在</mark>$$E-E_0$$<mark style="color:blue;">均相等，因此若</mark>$$\{f_n(x)\}$$<mark style="color:blue;">為可測函數序列，則可得</mark>$$f$$<mark style="color:blue;">為可測函數</mark>。
 
-##
-
-### 幾乎一致收斂保證幾乎處處收斂
-
-> 定義在集合$$E$$的幾乎處處實值(有限)的可測函數序列$$\{f_n\}$$幾乎一致收斂於可測函數$$f$$ ，則$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) ~\text{a.e. on } E$$ 。
->
-> <mark style="color:blue;">註：此處的</mark>$$\mu(E)$$<mark style="color:blue;">可為無窮大，即不限定在有限測度空間</mark>。
-
-<details>
-
-<summary>proof</summary>
-
-因為$$\{f_n\}$$幾乎一致收斂於$$f$$，由定義得存在集合$$E_\epsilon \subseteq E$$滿足$$\forall \epsilon > 0$$，$$\mu(E_\epsilon) < \epsilon$$ $$\displaystyle \exists n_0 \in \mathbb{N} \ni \forall n \geq n_0, \sup_{x \in E-E_\epsilon}|f_n(x) - f(x)|=0$$。
-
-取$$\epsilon=\frac{1}{m}, m \in \mathbb{N}$$，由一致收斂定義可得$$\forall m >1 ~\exists \mu(E_m)< \frac{1}{m} \ni f_n \rightarrow f \text{ unif. on } E_m^c$$。
-
-令$$\displaystyle F=\bigcup_{m=1}^\infty E_m^c$$，因為一致收斂為點態收斂，因此$$f_n \rightarrow f \text{ pointwise on } F$$。
-
-而$$\displaystyle \mu(F^c)= \mu(\bigcap_{m=1}^\infty E_m)\leq \mu(E_m) < \frac{1}{m}, ~\forall m \in \mathbb{N}$$，因此$$\mu(F^c)=0$$，所以$$f_n \rightarrow f \text{ a.e. on } F$$
-
-(QED)
-
-</details>
-
-###
-
 ### 範例：無限測度空間中幾乎處處收斂，但不依測度收斂&#x20;
 
 $$f_n(x)=\frac{x}{n}$$ 。則$$f_n(x)$$幾乎處處收斂於$$f(x)=0$$。但不依測度收斂。

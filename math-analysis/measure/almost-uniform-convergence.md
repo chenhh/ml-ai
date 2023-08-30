@@ -4,61 +4,55 @@ description: almost Uniform convergence
 
 # 幾乎一致收斂
 
-## Littlewood three principles \[[wiki](https://en.wikipedia.org/wiki/Littlewood's\_three\_principles\_of\_real\_analysis)]
+##
 
-> 1. 每個（可測）集合幾乎就是一些區間(interval)的有限聯集(有限和)；&#x20;
-> 2. 每個（$$L^k$$可積的）函數幾乎就是連續函數；
-> 3. 每個點態收斂的函數列幾乎就是一致收斂的。
+
+
+## 幾乎一致收斂(almost uniform convergence)
+
+> 函數序列$$\{f_n\}$$幾手乎處處一致收斂至函數$$f$$：
 >
-> 實變函數就是為了說明這些“幾乎(almost)”的意義。
-
-## 函數序列收斂關係
-
-測度$$\mu: E \rightarrow [0, \infty]$$，因此要考慮有限或無限測度的條件。
-
-* <mark style="color:blue;">\[</mark>[<mark style="color:blue;">證明</mark>](measurable-seq-function.md#ji-hu-chu-chu-yi-zhi-shou-lian-bao-zheng-ji-hu-chu-chu-shou-lian)<mark style="color:blue;">]在有限或無限測度空間時，幾乎一致收斂的定義可得幾乎處處收斂</mark><mark style="color:red;">。</mark>
-* <mark style="color:red;">\[</mark>[<mark style="color:red;">證明</mark>](almost-uniform-convergence.md#egoroff-ding-li-ji-hu-chu-chu-shou-lian-zai-you-xian-ce-du-tiao-jian-xia-wei-ji-hu-yi-zhi-shou-lian)<mark style="color:red;">]如果為有限測度空間時，Egoroff定理證明了幾乎處處收斂可保證幾乎一致收斂</mark>。
-* \[證明]如果為有限測度空間時，幾乎處處收斂可得測度收斂。
-
-<figure><img src="../../.gitbook/assets/convergence-min.png" alt=""><figcaption><p>收斂的性質</p></figcaption></figure>
-
-## 收斂的定義
-
-### (處處)點態收斂(everewhere pointwise convergence)
-
-> $$\forall x \in E, ~\forall \epsilon > 0 ~\exists n_0 \in \mathbb{N} \ni |f_n(x)-f(x)|< \epsilon ~ \forall n > n_0$$
-
-點態收態是根據每一點$$x$$判定收斂，因此每一點收斂的速度都不相同($$f_n$$ 上每一點$$x$$的值域收斂值$$f(x)$$的速度不同)。
-
-此處處處(everywhere)強調對於定義域$$x\in E$$的性質全部成立。
-
-### (處處)一致(均勻)收斂(everywhere uniformly convergence)
-
-> $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \lim_{n \rightarrow \infty} \sup_{x \in E}|f_n(x) - f(x)| < \epsilon, ~\forall n \geq n_0$$。
+> $$\forall \epsilon > 0$$，存在可測集$$E_{\epsilon}$$且滿足$$\mu(E_{\epsilon})<\epsilon$$使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$。
 >
-> 或者令$$\displaystyle d_n = \sup_{x \in E} |f_n(x) - f(x)|$$，$$\displaystyle \lim_{n \rightarrow \infty} d_n =0$$。
+> 或者說$$\forall \epsilon >0, \ni n_0 \in \mathbb{N}\ni \forall n \geq n_0$$$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
 
-一致收斂考慮的是全部集合內的點($$\forall x \in E$$)，因此每一點的收斂速度都相同(有相同的上限)。
+註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎一致收斂」，兩者不是等價定義</mark>。
 
-<mark style="color:red;">點態收斂和一致收斂通常用於分析連續函數序列的收斂性，必須為一致收斂才能保證收斂到連續函數</mark>。
+因此幾乎一致收斂不可寫為$$\exists E_\epsilon \subseteq E, ~ \mu(E_\epsilon)=0 \ni f_n \rightarrow f \text{ uniformly  on } E-E_0$$；
 
-### 幾乎處處(點態)收斂(almost everywhere convergence)
+但如果可得$$\displaystyle \sup_{x \in E-E_0}|f_n(x) - f(x)|=0, \forall n \geq n_0$$時，為一致收斂。
 
-> $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) ~ \text{a.e.}$$，即$$\mu(\{x \in X ~|~ \lim_{n \rightarrow \infty} f_n(x) \neq f(x) \}) = 0$$
->
-> $$\exists E_0 \in \Sigma, ~ \mu(E_0)=0 \ni \forall x \in X - E_0, ~ \forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x)|<\epsilon, \forall n \geq n_0$$
+#### 範例
 
-函數序列在兩者不相等的集合$$E_0$$的測度為0，其餘的集合點態收斂 。
+$$f_n(x)=x^n$$ on $$[0,1]$$，可得點態收斂$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)= \left\{ \begin{aligned} 0&, \text{ if } 0 \leq x < 1, \\ 1&, \text{ if } x = 1  \end{aligned} \right.$$為非連續函數，但即使去除掉$$x=1$$，考慮$$f_n(x)=x^n ~ \text{ on } [0,1)$$也非一致收斂(由sup的定義可得$$\displaystyle \sup_{x \in [0,1)}x^n = \sup_{x \in (0,1)}x^n = \sup_{x \in (0,1)}x^n =1$$)；更進一步可得不存在集合$$S$$使得$$f_n \rightarrow f$$ uniformly on $$[0,1]-S$$。
 
-一般函數而言，單點(可數)集合的測度為0，因此只要$$E_0$$為可數個點的集合均滿足此性質。
+令$$0 < \epsilon <1$$，取$$x = \frac{1+\epsilon}{2}$$，可得$$\epsilon < x < 1$$。
 
-<mark style="color:red;">幾乎處處收斂的零測度集合</mark>$$E_0$$<mark style="color:red;">，對於所有函數序列中的函數都是在</mark>$$E_0$$<mark style="color:red;">中測度為0，且在</mark>$$E-E_0$$<mark style="color:red;">外均收斂；而測度收斂中，對於所有序數序列中的函數無法找到共同的</mark>$$E_0$$<mark style="color:red;">，但是可以保證收斂函數與函數序列不相等的點集的測度為0</mark>。
+$$x^n = \frac{1+\epsilon}{2}^n=\frac{1}{2^n}(1+\epsilon)^n=\frac{1}{2^n} \sum_{k=0}^n \binom{n}{k}\epsilon^k > \frac{1}{2^n} \epsilon \sum_{k=0}^n \binom{n}{k} = \frac{1}{2^n} 2^n \epsilon = \epsilon$$
 
-### 幾乎一致(均勻)收斂 (almost uniformly convergence)
+此時不存在$$n_0 \in \mathbb{N}$$使得$$x^{n_0} < \epsilon~\forall 0 < \epsilon < 1$$，因此不為一致收斂。
 
-> $$\displaystyle \forall \epsilon > 0,\exists E_\epsilon \in \Sigma \ni \mu(E_\epsilon) < \epsilon \text{ and } f_n \rightarrow f \text{ uniformly on } E - E_\epsilon$$
+#### 幾乎一致收斂定義的討論
 
-在測度小於$$\epsilon$$的集合$$E_\epsilon$$之外，$$f_n$$一致收斂至$$f$$。
+* [https://math.stackexchange.com/questions/4727429/almost-uniform-convergence-equivalent-definition](https://math.stackexchange.com/questions/4727429/almost-uniform-convergence-equivalent-definition)
+* [https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence](https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence)
+* [https://math.stackexchange.com/questions/3198020/does-xn-converges-uniformly-on-0-1](https://math.stackexchange.com/questions/3198020/does-xn-converges-uniformly-on-0-1)
+* [https://math.stackexchange.com/questions/1254285/why-is-f-nx-xn-not-uniformly-convergent-on-0-1](https://math.stackexchange.com/questions/1254285/why-is-f-nx-xn-not-uniformly-convergent-on-0-1)
+
+#### 範例
+
+考慮閉區間$$[0,1]$$的Borel set。$$f_n(x)=x^n$$為連續函數，則：
+
+1. $$f_n \rightarrow f$$點態收斂。
+2. $$f_n \rightarrow f$$ 幾乎處處一致收斂。
+
+$$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=f(x)=\left\{ \begin{aligned} 0 &, ~ x \in [0, 1) \\ 1 &, ~ x= 1 \end{aligned} \right.$$為點態收斂。
+
+$$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0$$所以非一致收斂。
+
+取$$\epsilon \in (0,1)$$，$$E_{\epsilon}=(1-\frac{\epsilon}{2}, 1]$$，$$\mu(E_\epsilon)= \frac{\epsilon}{2}$$，
+
+且對於$$\forall x \in [0,1] - E_\epsilon$$，可得$$\displaystyle \sup_{x \in [0,1] - E_{\epsilon}}\|f_n(x) - f(x)\|=\sup_{x \in [0, 1-\epsilon]}\|x^n  - 0\|=\| 1- \frac{\epsilon}{2}\|^n \rightarrow 0$$ as $$n \rightarrow \infty$$。
 
 ## Egoroff定理 (幾乎處處收斂在有限測度條件下為幾乎一致收斂)
 

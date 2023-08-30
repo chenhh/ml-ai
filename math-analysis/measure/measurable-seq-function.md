@@ -40,15 +40,15 @@
 >
 > 或者說$$\forall \epsilon >0, \ni n_0 \in \mathbb{N}\ni \forall n \geq n_0$$$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
 
-註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎處處一致收斂」，兩者不是等價定義</mark>。因為在$$\mu (E_\epsilon) > 0$$時，幾乎一致收斂仍然會成立。
+註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎一致收斂」，兩者不是等價定義</mark>。
 
 因此幾乎一致收斂不可寫為$$\exists E_\epsilon \subseteq E, ~ \mu(E_\epsilon)=0 \ni f_n \rightarrow f \text{ uniformly  on } E-E_0$$；
 
 但如果可得$$\displaystyle \sup_{x \in E-E_0}|f_n(x) - f(x)|=0, \forall n \geq n_0$$時，為一致收斂。
 
-範例：$$f_n(x)=x^n$$ on $$[0,1]$$，可得點態收斂$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)= \left\{ \begin{aligned} 0&, \text{ if } 0 \leq x < 1, \\ 1&, \text{ if } x = 1  \end{aligned} \right.$$為非連續函數，但即使去除掉$$x=1$$，考慮$$f_n(x)=x^n ~ \text{ on } [0,1)$$也非一致收斂(由sup的定義可得$$\displaystyle \sup_{x \in [0,1)}x^n = \sup_{x \in (0,1)}x^n = \sup_{x \in (0,1)}x^n =1$$)；更進一步可得不存在集合$$S$$使得$$f_n \rightarrow f$$ uniformly on $$[0,1]-S$$。
+#### 範例
 
-已知$$\displaystyle e^{x}=\lim _{{n\to \infty }}\left(1+{x \over n}\right)^{n}$$因此$$\displaystyle e^{-1} = \lim_{n \rightarrow \infty}(1-\frac{1}{n})^n$$且$$\frac{1}{e} \in [0,1]$$，所以可得$$\lim_{n \rightarrow } \sup_{x \in [0,1]}x^n \neq 0$$。
+$$f_n(x)=x^n$$ on $$[0,1]$$，可得點態收斂$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)= \left\{ \begin{aligned} 0&, \text{ if } 0 \leq x < 1, \\ 1&, \text{ if } x = 1  \end{aligned} \right.$$為非連續函數，但即使去除掉$$x=1$$，考慮$$f_n(x)=x^n ~ \text{ on } [0,1)$$也非一致收斂(由sup的定義可得$$\displaystyle \sup_{x \in [0,1)}x^n = \sup_{x \in (0,1)}x^n = \sup_{x \in (0,1)}x^n =1$$)；更進一步可得不存在集合$$S$$使得$$f_n \rightarrow f$$ uniformly on $$[0,1]-S$$。
 
 令$$0 < \epsilon <1$$，取$$x = \frac{1+\epsilon}{2}$$，可得$$\epsilon < x < 1$$。
 
@@ -62,8 +62,6 @@ $$x^n = \frac{1+\epsilon}{2}^n=\frac{1}{2^n}(1+\epsilon)^n=\frac{1}{2^n} \sum_{k
 * [https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence](https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence)
 * [https://math.stackexchange.com/questions/3198020/does-xn-converges-uniformly-on-0-1](https://math.stackexchange.com/questions/3198020/does-xn-converges-uniformly-on-0-1)
 * [https://math.stackexchange.com/questions/1254285/why-is-f-nx-xn-not-uniformly-convergent-on-0-1](https://math.stackexchange.com/questions/1254285/why-is-f-nx-xn-not-uniformly-convergent-on-0-1)
-
-####
 
 #### 範例
 
@@ -90,11 +88,11 @@ $$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0
 
 <summary>proof</summary>
 
-因為$$\{f_n\}$$幾乎一致收斂於$$f$$，由定義得存在集合$$E_0 \subseteq E$$滿足$$\forall \epsilon > 0$$，$$\mu(E_0) < \epsilon$$ $$\displaystyle \exists n_0 \in \mathbb{N} \ni \forall n \geq n_0, \sup_{x \in E-E_0}|f_n(x) - f(x)|=0$$。
+因為$$\{f_n\}$$幾乎一致收斂於$$f$$，由定義得存在集合$$E_\epsilon \subseteq E$$滿足$$\forall \epsilon > 0$$，$$\mu(E_\epsilon) < \epsilon$$ $$\displaystyle \exists n_0 \in \mathbb{N} \ni \forall n \geq n_0, \sup_{x \in E-E_\epsilon}|f_n(x) - f(x)|=0$$。
 
-因為$$\{f_n\}$$在$$E-E_0$$一致收斂至$$f$$，因此$$\{f_n\}$$在$$E -E_0$$上點態收斂至$$f$$。
+因為$$\{f_n\}$$在$$E-E_\epsilon$$一致收斂至$$f$$，因此$$\{f_n\}$$在$$E -E_\epsilon$$上點態收斂至$$f$$。
 
-而由於上述收斂性質在$$\forall \epsilon >0, \mu(E_0)<\epsilon$$均成立，因此可得$$\{f_n\}$$在$$f$$幾乎處處收斂&#x20;
+而由於上述收斂性質在$$\forall \epsilon >0, \mu(E_\epsilon)<\epsilon$$均成立，因此可得$$\{f_n\}$$在$$f$$幾乎處處收斂&#x20;
 
 (QED)
 

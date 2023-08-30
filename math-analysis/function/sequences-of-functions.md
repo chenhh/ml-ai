@@ -116,7 +116,7 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 >
 > 1. $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ (只依賴與於$$\epsilon$$的選擇，與$$x$$無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$ 2.\[範數表示法] $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
 >
-> 2.1. \[範數表示法] 可表示為 $$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in S} \| f_n(x) - f(x) \| = 0$$
+> 2.1. \[範數表示法] 可表示為 $$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in S} \| f_n(x) - f(x) \| = 0$$。(此處的lim與sup是分開的，而非limsup)。為了避免混肴，可寫成$$d_n=\displaystyle \sup_{x \in S} \| f_n(x) - f(x) \|$$，$$\displaystyle \lim_{n \rightarrow \infty}d_n=0$$。
 >
 > 2.2. \[範數表示法] 可再改寫為$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n$$，其中$$\{M_n\}$$為非負值且收斂至0的數列。
 >
@@ -172,6 +172,8 @@ $$\displaystyle \begin{aligned} |f_n(x) - f(x)| & = \left| \frac{2xn+(-1)^n x^2}
 
 因此給定$$\epsilon >0$$時，只要取$$n_0 \in \mathbb{N} \ni \frac{5^2}{n_0} < \epsilon$$，$$n_0 > \frac{5^2}{\epsilon}$$即為所求。
 
+也可用$$\displaystyle d_n=\sup_{x \in S}|f_n(x)-f(x)| = \sup_{x \in S}\frac{x^2}{n} = \frac{25}{n}$$，可得$$\displaystyle \lim_{n \rightarrow \infty }d_n = 0$$為一致收斂。
+
 #### 範例
 
 $$S=\mathbb{R}$$，$$f_n(x)=\sin(nx)/\sqrt{n}$$，$$f(x)=0$$
@@ -179,6 +181,8 @@ $$S=\mathbb{R}$$，$$f_n(x)=\sin(nx)/\sqrt{n}$$，$$f(x)=0$$
 $$\displaystyle \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}} \| \\ &= \frac{|\sin(nx)|}{\sqrt{n}} \\ & \leq \frac{1}{\sqrt{n}} \end{aligned}$$
 
 因此給定$$\epsilon >0$$，只要取$$\frac{1}{n_0} < \epsilon \Rightarrow n_0 > \frac{1}{\epsilon}$$即為所求。
+
+也可用$$\displaystyle d_n=\sup_{x \in \mathbb{R}} \frac{\sin(nx)}{\sqrt{n}}=\frac{1}{\sqrt{n}}$$，可得$$\displaystyle \lim_{n \rightarrow \infty} d_n=0$$為一致收斂。
 
 ### 連續函數一致收斂後仍為連續函數
 
@@ -304,7 +308,7 @@ $$|f_n(x) - f(x)| = |x+\frac{1}{n} - x|\leq |\frac{1}{n}|$$只與$$n$$有關，�
 
 ### 一致收斂級數的Cauchy條件
 
-> $$\displaystyle \sum_{n=1}^\infty f_n(x) = f(x)$$ uniformly on $$S \Leftrightarrow$$$$\displaystyle \forall \epsilon > 0 ~ \forall x \in S~ \exists \sum_{k=n+1}^{n+p} |f_n(x)|< \epsilon, p=1,2,\dots,$$
+> $$\displaystyle \sum_{n=1}^\infty f_n(x) = f(x)$$ uniformly on $$S \Leftrightarrow\displaystyle \forall \epsilon > 0 ~ \forall x \in S~ \exists \sum_{k=n+1}^{n+p} |f_n(x)|< \epsilon, p=1,2,\dots,$$
 
 ### Weierstrass M-test
 

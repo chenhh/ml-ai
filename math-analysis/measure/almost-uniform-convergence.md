@@ -14,7 +14,7 @@ description: almost Uniform convergence
 
 註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎一致收斂」，兩者不是等價定義</mark>。
 
-<mark style="color:red;">註：不一致收斂發生於收斂函數</mark>$$f$$<mark style="color:red;">出現"突變"處，挖去突變點的附近測度可以任意小的集合(但不是零測度集)，則</mark>$$f_n$$<mark style="color:red;">可以一致收斂</mark>。
+<mark style="color:red;">註：不一致收斂發生於收斂函數</mark>$$f$$<mark style="color:red;">出現"突變"處，挖去突變點的附近測度可以任意小的集合(但不是零測度集)，則</mark>$$f_n$$<mark style="color:red;">可以一致收斂</mark>。例如觀察一個非一致致收斂的函數列，比如 $$\ f_n( x )=x^n$$ 在區間$$[ 0 , 1 ]$$上就非一致收斂，但可發現如果把區間挖掉長度$$ϵ>0$$任意小的一部分(不等於0)，那麼$$f_n$$ 在$$[0 , 1 − \epsilon]$$ 上總是一致收斂的。
 
 因此幾乎一致收斂不可寫為$$\exists E_\epsilon \subseteq E, ~ \mu(E_\epsilon)=0 \ni f_n \rightarrow f \text{ uniformly  on } E-E_0$$；
 
@@ -140,7 +140,9 @@ $$f_n(x)=x^n, ~ x \in [0,1]$$
 
 得$$\displaystyle \sup_{x \in [0,1]}|f_n(x) - f(x)| = 1 \neq 0$$非一致收斂。
 
-$$\forall \epsilon > 0, ~ E_0=[1-\epsilon, 1]$$，可得$$m(E_0)=\epsilon$$
+$$\forall \epsilon > 0, ~ E_\epsilon=[1-\epsilon, 1]$$，可得$$m(E_\epsilon)=\epsilon$$
+
+且對於所有的$$x \in [0,1]-E_\epsilon$$，可得$$\displaystyle \sup_{[0,1]-E_\epsilon}|f_n(x)-f(x)|=\sup_{x \in [0,1-\epsilon]}|x^n -0|=(1-\epsilon)^n \rightarrow 0 \text {as } n \rightarrow \infty$$，因此為一致收斂。
 
 ### 範例：非有限測度時，Egroff定理不一定成立
 

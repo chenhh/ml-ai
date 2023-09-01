@@ -1,5 +1,23 @@
 # 隨機變數（random variable）
 
+## 機率空間(probability)
+
+機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$
+
+樣本空間$$\Omega =\{\omega_a, ~ a \in A\}$$為所有可能發生的結果(outcome) $$\omega_a$$形成的集合，$$A$$為結果的指標集合(可數或不可數)。
+
+σ域$$\mathcal{F}$$為樣本空間$$\Omega$$特定子集合形成的集合族(family of set)，其內部的元素(集合)必須滿足以下三個性質：
+
+* \[宇集合為σ域的元素] $$\Omega \in \mathcal{F}$$。
+* \[補集為σ域的元素]$$E \in \mathcal{F} \Rightarrow E^c \in \mathcal{F}$$。
+* \[可數集合聯集為σ域的元素] $$\displaystyle E_i \in \mathcal{F} ~ i \in \mathbb{N} \Rightarrow \bigcup_{i=1}^\infty E_i \in \mathcal{F}$$。
+
+機率測度$$\mathrm{P}: \mathcal{F} \rightarrow [0,1]$$必須滿足以下三個性質：
+
+* $$\mathrm{P}(E) \geq 0, ~ \forall E \in \mathcal{F}$$
+* \[有限測度] $$\mathrm{P}(\Omega)= 1$$
+* \[可數可加性] $$E_i \in \mathcal{F}, i \in \mathbb{N}$$且$$E_i \cap E_j = \emptyset, ~ \forall i \neq j$$，則$$\displaystyle \mathrm{P}(\bigcup_{i=1}^\infty E_i) = \sum_{i=1}^\infty \mathrm{P}(E_i)$$
+
 ## 隨機變數（r.v.）
 
 > 隨機變數是一個由樣本空間$$\Omega$$(但不是$$\Omega$$的任意集合，而是$$\sigma$$-field)映射至實數集$$\mathbb{R}$$的實函數（real-valued function）。
@@ -13,6 +31,25 @@
 
 * 連續隨機變數：若隨機變數之值為實區間上之任意部份集合，則稱之。
 * 離散隨機變數：若隨機變數之發生值為有限或無限可數，則稱之。
+
+### 非隨機變數範例
+
+$$\Omega=\{1,2,3,4\}$$，$$\mathcal{F}=\sigma(\{1,2\}, \{3\}, \{4\})$$
+
+令$$X(1)=2, X(2)=3, X(3)=4, X(4)=5$$。
+
+因為$$\{X \leq 2\}=\{1\} \notin \mathcal{F}$$，因此$$X$$不是$$\mathcal{F}$$可測的隨機變數。
+
+令$$Y(1)=Y(2)=2, Y(3)=10, Y(4)=-500$$
+
+因為：
+
+* $$r< -500, ~\{Y \leq r\} = \emptyset \in \mathcal{F}$$
+* $$-500 \leq r < 2, ~\{Y \leq r\} = \{4\} \in \mathcal{F}$$
+* $$2 \leq r < 10, ~ \{Y \leq r\} = \{1,2,4\} \in \mathcal{F}$$
+* $$r \geq 10\}, \{Y \leq r\} = \Omega \in \mathcal{F}$$
+
+因此$$Y$$為$$\mathcal{F}$$可測的隨機變數。
 
 ## 單變數隨機變數
 

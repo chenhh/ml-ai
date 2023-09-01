@@ -8,7 +8,7 @@
 >
 > 實變函數就是為了說明這些“幾乎(almost)”的意義。
 
-## 函數序列收斂關係
+## 測度空間函數序列收斂關係
 
 測度$$\mu: E \rightarrow [0, \infty]$$，因此要考慮有限或無限測度的條件。
 
@@ -16,7 +16,17 @@
 * <mark style="color:red;">\[</mark>[<mark style="color:red;">證明</mark>](relationship-of-convergence.md#egoroff-ding-li-ji-hu-chu-chu-shou-lian-zai-you-xian-ce-du-tiao-jian-xia-wei-ji-hu-yi-zhi-shou-lian)<mark style="color:red;">]如果為有限測度空間時，Egoroff定理證明了幾乎處處收斂可保證幾乎一致收斂</mark>。
 * \[證明]如果為有限測度空間時，幾乎處處收斂可得測度收斂。
 
-<figure><img src="../../.gitbook/assets/convergence-min.png" alt=""><figcaption><p>收斂的性質</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/convergence-min.png" alt=""><figcaption><p>測度空間可測函數收斂的關係</p></figcaption></figure>
+
+### 機率空間隨機變數收斂關係
+
+
+
+<figure><img src="../../.gitbook/assets/probability_space_convergence-min.png" alt=""><figcaption><p>機率空間隨機變數收斂關係</p></figcaption></figure>
+
+機率空間為有限測度空間，而分佈收斂為機率空間中特有的收斂方式。
+
+<mark style="color:red;">註：測度空間中定義可測函數的收斂性時，大多使用可測函數的值來定義；而機率空間中定義隨機變數(機率空間中的可測函數)的收斂性時，通常使用隨機變數前像集合的機率測度來定義</mark>。
 
 ## 收斂的定義
 
@@ -27,6 +37,12 @@
 點態收態是根據每一點$$x$$判定收斂，因此每一點收斂的速度都不相同($$f_n$$ 上每一點$$x$$的值域收斂值$$f(x)$$的速度不同)。
 
 此處處處(everywhere)強調對於定義域$$x\in E$$的性質全部成立。
+
+### 一致收斂(everywhere uniformly convergence)
+
+> $$\forall \epsilon > 0  ~\exists n_0 \in \mathbb{N} \ni \forall x \in E, ~|f_n(x) - f(x)| < \epsilon, ~ \forall n \geq n_0$$
+
+一致收斂強調的是$$n_0$$之值不依賴於$$x$$的實現值，而只依於$$\epsilon$$且對此$$(\epsilon,n_0)$$的關係對於所有的$$x \in E$$均適用，即每一點的收斂速度均相同。
 
 ### (處處)一致(均勻)收斂(everywhere uniformly convergence)
 
@@ -42,7 +58,7 @@
 
 > $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) ~ \text{a.e.}$$，即$$\mu(\{x \in X ~|~ \lim_{n \rightarrow \infty} f_n(x) \neq f(x) \}) = 0$$
 >
-> $$\exists E_0 \in \Sigma, ~ \mu(E_0)=0 \ni \forall x \in X - E_0, ~ \forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x)|<\epsilon, \forall n \geq n_0$$
+> $$\exists E_0 \in \Sigma, ~ \mu(E_0)=0 \ni \forall x \in X - E_0, ~ \forall \epsilon > 0 \exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x)|<\epsilon, \forall n \geq n_0$$。
 
 函數序列在兩者不相等的集合$$E_0$$的測度為0，其餘的集合點態收斂 。
 
@@ -55,3 +71,9 @@
 > $$\displaystyle \forall \epsilon > 0,\exists E_\epsilon \in \Sigma \ni \mu(E_\epsilon) < \epsilon \text{ and } f_n \rightarrow f \text{ uniformly on } E - E_\epsilon$$
 
 在測度小於$$\epsilon$$的集合$$E_\epsilon$$之外，$$f_n$$一致收斂至$$f$$。
+
+### 測度收斂(convergence in measure)
+
+> $$\forall \epsilon >0, ~\forall \delta > 0~ \exists n_0 \in \mathbb{N} \ni \mu(|f_n(x) - f(x)| \geq \epsilon) < \delta ~ \forall n \geq n_0$$。
+>
+> 或記為$$\displaystyle \lim_{n \rightarrow \infty}\mu(|f_n(x) - f(x)| \geq \epsilon) =0$$

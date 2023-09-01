@@ -95,9 +95,10 @@
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
 * [隨機變數（random variable）](probability-and-statistics/random-variable/README.md)
-  * [條件分佈與期望值](probability-and-statistics/random-variable/conditional-distribution.md)
   * [隨機變數的收斂](probability-and-statistics/random-variable/nvergence-of-rv.md)
-  * [條件期望值](probability-and-statistics/random-variable/conditional-variable.md)
+* [條件期望值](probability-and-statistics/conditional-expectation/README.md)
+  * [條件期望值](probability-and-statistics/conditional-expectation/conditional-variable.md)
+  * [條件分佈與期望值](probability-and-statistics/conditional-expectation/conditional-distribution.md)
 * [分佈函數(distribution function)](probability-and-statistics/distribution-function.md)
 * [機率測度(probability measure)](probability-and-statistics/probability-measure.md)
 * [動差生成函數(moment generating function)](probability-and-statistics/moment-generating-function.md)

@@ -38,6 +38,7 @@
   * [級數審斂法](math-analysis/series/series-convergence-test.md)
   * [Taylor級數](math-analysis/series/taylor-series.md)
 * [函數(function)](math-analysis/function/README.md)
+  * [函數不連續的分類](math-analysis/function/classification-of-discontinuities.md)
   * [函數的極限](math-analysis/function/limit-of-function.md)
   * [實值函數的左、右極限](math-analysis/function/left-right-hand-limit-of-real-valued-function.md)
   * [連續函數](math-analysis/function/continuous-function.md)

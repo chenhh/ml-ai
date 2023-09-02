@@ -4,6 +4,10 @@ description: almost Uniform convergence
 
 # 幾乎一致收斂
 
+## 簡介
+
+幾乎一致收斂是幾乎處處收斂和其它收斂方式中介的性質，常用於證明當中。
+
 ## 幾乎一致收斂(almost uniform convergence)
 
 > 函數序列$$\{f_n\}$$幾乎處處一致收斂至函數$$f$$：
@@ -66,7 +70,7 @@ $$\displaystyle$$$$\displaystyle \sup_{x \in [0,1]} | f_n(x) - f(x) | = 1 \neq 0
 
 取$$\epsilon=\frac{1}{m}, m \in \mathbb{N}$$，由一致收斂定義可得$$\forall m >1 ~\exists \mu(E_m)< \frac{1}{m} \ni f_n \rightarrow f \text{ unif. on } E_m^c$$。
 
-令$$\displaystyle F=\bigcup_{m=1}^\infty E_m^c$$，因為一致收斂為點態收斂，因此$$f_n \rightarrow f \text{ pointwise on } F$$。
+令$$\displaystyle F=\bigcup_{m=1}^\infty E_m^c$$，因為在所有集合中均為一致收，且一致收斂為點態收斂，因此$$f_n \rightarrow f \text{ pointwise on } F$$。
 
 而$$\displaystyle \mu(F^c)= \mu(\bigcap_{m=1}^\infty E_m)\leq \mu(E_m) < \frac{1}{m}, ~\forall m \in \mathbb{N}$$，因此$$\mu(F^c)=0$$，所以$$f_n \rightarrow f \text{ a.e. on } F$$
 
@@ -94,9 +98,9 @@ proof: 不收斂的集合測度小於epsilon
 
 若固定$$k$$的值，上式可得在$$n \geq n_k$$之後，所有$$x \in E-E_0$$的元素都可以保證$$|f_n(x) - f(x)| < 1/k$$。
 
-令$$A_{n,k}=\{ x \in E- E_0 ~|~|f_n(x) - f(x)| \geq 1/k \}$$
+令集合$$A_{n,k}=\{ x \in E- E_0 ~|~|f_n(x) - f(x)| \geq 1/k \}$$
 
-則給定$$k$$後，集合$$E-E_0$$中的每一點$$x$$只會在$$n < n_k$$時，有時為$$A_{n,k}$$中的元素。而所有的點$$x$$在$$n \geq n_k$$時，必定不是$$A_{n,k}$$中的元素。
+則給定$$k$$後，集合$$E-E_0$$中的點$$x$$只會在$$n < n_k$$時，可能為$$A_{n,k}$$中的元素。而所有的點$$x$$在$$n \geq n_k$$時，必定不是$$A_{n,k}$$中的元素。
 
 由集合序列上極限定義$$\displaystyle \limsup_{n \rightarrow \infty} A_{n,k}=\bigcap_{n=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k}=\emptyset$$
 
@@ -104,7 +108,7 @@ proof: 不收斂的集合測度小於epsilon
 
 令$$B_{n,k}=\bigcup_{i=n}^\infty A_{i,k}$$。
 
-且$$B_{n,k} \supseteq B_{n+1,k}\supseteq \dots$$為單調遞減集合序列，因此$$\displaystyle \lim_{n \rightarrow \infty}B_{n,k}=\bigcap_{n=1}^\infty B_{n,k}$$。
+可得$$B_{n,k} \supseteq B_{n+1,k}\supseteq \dots$$為單調遞減集合序列，因此$$\displaystyle \lim_{n \rightarrow \infty}B_{n,k}=\bigcap_{n=1}^\infty B_{n,k}$$。
 
 整理可得$$\displaystyle \bigcap_{n=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k} = \bigcap_{n=1}^\infty B_{n,k} = \lim_{n \rightarrow \infty} B_{n,k}$$--(2)
 
@@ -116,7 +120,7 @@ proof: 不收斂的集合測度小於epsilon
 
 再將所有滿足條件的$$k$$的集合聯集，可得測度$$\displaystyle \mu(\bigcup_{k=1}^\infty B_{n_k, k} ) \leq \sum_{k=1}^\infty \mu(B_{n_k, k}) < \sum_{k=1}^\infty \frac{\epsilon}{2^k}=\epsilon$$--(5)
 
-即$$\displaystyle E_\epsilon = \bigcup_{k=1}^\infty B_{n_k, k} = \bigcup_{k=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k} = \{x \in E- E_0 ~|~ |f_n(x) - f(x)| \geq 1/k \}$$
+即$$\displaystyle E_\epsilon = \bigcup_{k=1}^\infty B_{n_k, k} = \bigcup_{k=1}^\infty \bigcup_{n=n_k}^\infty A_{n,k} = \{x \in E- E_0 ~|~ |f_n(x) - f(x)| \geq 1/k \}$$的測度$$\mu(E_\epsilon)=\epsilon$$。
 
 (QED)
 
@@ -146,15 +150,11 @@ $$\forall \epsilon > 0, ~ E_\epsilon=[1-\epsilon, 1]$$，可得$$m(E_\epsilon)=\
 
 ### 範例：非有限測度時，Egroff定理不一定成立
 
-令$$(X, \Sigma)$$為實數上的Lebesgue可測空間，$$f_n(x) =\chi_{(n, \infty)}(x)$$。
+令$$(X, \Sigma)$$為實數上的Lebesgue可測空間，$$f_n(x) =\chi_{(0, n)}(x), ~n=1,2,\dots ~ x \in (0,\infty)$$。
 
-則$$\displaystyle \lim_{n \rightarrow \infty } f_n(x) = 0 ~\text{a.e.}$$但不是almost uniformly。
+則$$\displaystyle \lim_{n \rightarrow \infty } f_n(x) = 1 ~\text{a.e. on } (0, \infty)$$但是在$$(0, \infty)$$中任一個有限測度集外均非一致收斂於$$f(x)=1$$。
 
-## Lusin定理
-
-> $$f: E \rightarrow \mathbb{R}$$為可測函數。則存在連續函數$$g: \mathbb{R} \rightarrow \mathbb{R}$$與閉集合$$F \subseteq E$$滿足$$f(x)=g(x), ~ \forall x \in F$$且$$\mu(E-F)=0$$。
->
-> <mark style="color:red;">註：可測函數去除掉測度為0的定義域集合後為連續函數</mark>。
+##
 
 
 

@@ -12,6 +12,8 @@ description: absolutely continuous function
 
 絕對連續函數在機率空間中，可用於定義分佈函數(distribution function)與機率密度函數(probability density function)之間的關係。
 
+[https://stats.stackexchange.com/questions/298293/absolutely-continuous-random-variable-vs-continuous-random-variable](https://stats.stackexchange.com/questions/298293/absolutely-continuous-random-variable-vs-continuous-random-variable)
+
 ## 絕對連續函數
 
 > 定義：$$f: [a,b] \rightarrow \mathbb{R}$$為閉區間$$[a,b]$$上的絕對連續函數：

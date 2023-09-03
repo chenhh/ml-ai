@@ -8,6 +8,8 @@ description: convergence in measure
 
 測度收斂強調的$$f_n \rightarrow f$$時，隨著$$n$$變大，不收斂的點對於所有的函數並非在一個固定的集合$$E_0$$中，但是這些不收斂的點形成的集合測度為0。
 
+<mark style="background-color:red;">在有限測度空間中，幾乎處處收斂可得測度收斂</mark>。
+
 ## 測度收斂
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，若
@@ -42,19 +44,17 @@ description: convergence in measure
 
 當$$N \rightarrow \infty$$時，$$n \rightarrow \infty$$，可得$$\displaystyle \lim_{n \rightarrow \infty }m(E)=0$$。
 
-## 測度收斂的收斂幾乎處處有限
+## 測度收斂的函數幾乎處處有限
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，若在$$E$$上依測度收斂至$$f(x)$$，則$$f(x)$$為幾乎處處有限的函數。
 >
 > $$f_n \rightarrow f \text{ in measure } \Rightarrow f \text{  finite a.e. }$$
->
-> 註：把函數$$f$$之值為$$\pm \infty$$的點分兩類：一種是$$f_n$$在這點取值均為$$\pm \infty$$ ，於是$$f$$自然在這點取值為$$\pm \infty$$ ；另一種是$$f_n$$雖然在這點取有限值，但隨著$$n \rightarrow \infty$$ ， $$f_n$$之值趨於無窮大。
 
 [https://math.stackexchange.com/questions/3565953/what-does-it-mean-to-be-a-e-finite-real-function-to-converge-in-measure](https://math.stackexchange.com/questions/3565953/what-does-it-mean-to-be-a-e-finite-real-function-to-converge-in-measure)
 
 <details>
 
-<summary>proof</summary>
+<summary>proo:f把函數<span class="math">f</span>之值為<span class="math">\pm \infty</span>的點分兩類：一種是<span class="math">f_n</span>在這點取值均為<span class="math">\pm \infty</span> ，於是<span class="math">f</span>自然在這點取值為<span class="math">\pm \infty</span> ；另一種是<span class="math">f_n</span>雖然在這點取有限值，但隨著<span class="math">n \rightarrow \infty</span> ， <span class="math">f_n</span>之值趨於無窮大。</summary>
 
 case 1:$$f_n$$在同一點取值均為$$\pm \infty$$。
 
@@ -84,13 +84,69 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，若在$$E$$上依測度收斂至$$f(x)$$與$$g(x)$$，則$$f(x) = g(x)$$ a.e. $$\forall x \in E$$。
 
+<details>
+
+<summary>proof: 三角不等式</summary>
+
+令$$S_m=\{x \in E ~|~ |f(x) - g(x)| \geq 1/m\}, ~m\in \mathbb{N}$$, $$S=\{x\in E ~|~ f(x) \neq g(x)\}$$，可得$$\displaystyle S= \bigcup_{m=1}^\infty S_m$$。
+
+若$$|f(x) - g(x)| \geq 1/m$$，可得$$|f(x) - f_n(x)| \geq 1/(2m)$$或者 $$|f_n(x) - g(x)| \geq 1/(2m)$$。
+
+因為若$$|f(x)-f_n(x)|, |f_n(x)-g(x)| < 1/(2m)$$同時成立時，由三角不等式得$$|f(x)-g(x)| \leq |f(x)-f_n(x)|+|f_n(x) - g(x)| < 1/m$$
+
+與假設不符。
+
+因此對於$$n \in \mathbb{N}$$，可得$$\displaystyle S_m \subseteq \{x \in E ~|~ |f(x) -f_n(x) \geq \frac{1}{2m} \} \cup \{ x \in E ~|~ |f_n(x) -g(x)| \geq \frac{1}{2m}\}$$
+
+由測度的次可加性得$$\displaystyle \mu(S_m) \leq \mu(\{x \in E ~|~ |f(x) -f_n(x) \geq \frac{1}{2m} \}) + \mu( \{ x \in E ~|~ |f_n(x) -g(x)| \geq \frac{1}{2m}\})$$
+
+當$$n \rightarrow \infty$$由$$f_n \rightarrow f \text{ measure }$$與$$f_n \rightarrow g \text { measure }$$的條件知右側值為0，因此$$\mu(S_m)=0$$
+
+而$$S=\bigcup_{m=1}^\infty S_m$$，由測度次可加性得$$\mu(S) \leq \sum_{m=1}^\infty \mu(S_m) =0$$
+
+因此$$\mu(S)=0$$
+
+(QED)
+
+</details>
+
+## 測度收斂的線性性質
+
+$$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
+
+### 測度收斂相加減仍為測度收斂
+
+> $$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure.
+>
+> 則$$\forall a,b \in \mathbb{R}$$, $$af_n + bg_n \rightarrow af + bg$$ in measure.
+
+### 有限測度時，測度收斂與幾乎有限函數乘積為測度收斂
+
+> 若$$\mu(E) < \infty$$，$$f_n \rightarrow f$$ in measure且$$g$$為可測的處處有限函數，則$$f_ng \rightarrow fg$$ in measure.
+
+### 有限測度時，測度收斂函數乘積為測度收斂
+
+> 若$$\mu(E) < \infty$$，$$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure，則$$f_n g_n \rightarrow fg$$ in measure.
+
+### 測度收斂的絕對值收斂
+
+> $$f_n \rightarrow f$$ in measure $$\Rightarrow |f_n| \rightarrow |f|$$ in meausre.
 
 
-## 幾乎處處收斂可保證測度收斂
+
+
+
+## 有限測度空間中幾乎處處收斂可保證測度收斂
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列且$$\mu(E) < \infty$$(有限測度空間)。
 >
 > 若$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) \text{ a.e. on } E$$且$$f$$幾乎處處有限，則$$\{f_n\}$$依測度收斂至$$f$$。
+
+
+
+### 範例：無限測度時，幾乎處處收斂無法保證測度收斂
+
+
 
 ## 依測度Cauchy序列(Cauchy sequence in measure)
 

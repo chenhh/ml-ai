@@ -42,31 +42,41 @@ description: convergence in measure
 
 當$$N \rightarrow \infty$$時，$$n \rightarrow \infty$$，可得$$\displaystyle \lim_{n \rightarrow \infty }m(E)=0$$。
 
-## 測度收斂可保證機乎處處有限
+## 測度收斂的收斂幾乎處處有限
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，若在$$E$$上依測度收斂至$$f(x)$$，則$$f(x)$$為幾乎處處有限的函數。
 >
-> 註：把函數$$f$$之值為$$\pm \infty$$的點分兩類：一種是$$f_n$$在這點取值為$$\pm \infty$$ ，於是$$f$$自然在這點取值為$$\pm \infty$$ ；另一種是$$f_n$$雖然在這點取有限值，但隨著$$n \rightarrow \infty$$ ， $$f_n$$之值趨於無窮大。
+> $$f_n \rightarrow f \text{ in measure } \Rightarrow f \text{  finite a.e. }$$
+>
+> 註：把函數$$f$$之值為$$\pm \infty$$的點分兩類：一種是$$f_n$$在這點取值均為$$\pm \infty$$ ，於是$$f$$自然在這點取值為$$\pm \infty$$ ；另一種是$$f_n$$雖然在這點取有限值，但隨著$$n \rightarrow \infty$$ ， $$f_n$$之值趨於無窮大。
+
+[https://math.stackexchange.com/questions/3565953/what-does-it-mean-to-be-a-e-finite-real-function-to-converge-in-measure](https://math.stackexchange.com/questions/3565953/what-does-it-mean-to-be-a-e-finite-real-function-to-converge-in-measure)
 
 <details>
 
 <summary>proof</summary>
 
-case 1:
+case 1:$$f_n$$在同一點取值均為$$\pm \infty$$。
 
 令$$S_n=\{x \in E~|~ f_n(x)=\pm \infty\}$$，$$\displaystyle S=\bigcup_{n=1}^\infty  S_n$$
 
 依不相交集合的測度次可加性得$$\displaystyle \mu(S) \leq \sum_{n=1}^\infty \mu(S_n)$$。
 
-因為$$f_n$$幾乎處處有限，因此$$\mu(S_n)=0$$，可得$$0 \leq \mu(S) \leq 0$$，因此$$\mu(S)=0$$ (QED)
+因為$$f_n$$幾乎處處有限，因此$$\mu(S_n)=0, \forall n$$，可得$$0 \leq \mu(S) \leq 0$$，因此$$\mu(S)=0$$ (QED)
 
-case 2:
+case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
-令$$F=\{x \in E ~|~ f(x)=\pm \infty\}$$
+已知$$f_n \rightarrow f \text{ measure }$$，且$$f_n$$ finite a.e.
 
-因為$$f_n \rightarrow f \text{ measure }$$，所以$$\forall \epsilon >0, ~ \exists n_0 \in \mathbb{N} \ni \mu(\{ x \in E ~|~ |f_n(x) - f(x)| > \epsilon\}) =0, ~ \forall n \geq n_0$$。
+令$$F=\{x \in E ~|~ f(x)=\pm \infty\}$$，由假設得$$\forall x \in F, |f_n(x)| < \infty, ~\forall n$$。
 
+因為擴充實數中$$|c-\infty|=\infty$$因此集合$$F$$中的點$$x$$滿足$$\forall \epsilon > 0, |f_n(x)-f(x)|\geq \epsilon$$。
 
+因此可得$$\displaystyle \forall \epsilon >0,~ F \subseteq \{x \in E~|~ |f_n(x) - f(x)| \geq \epsilon\}$$
+
+不相交集合的測度次可加性得$$\displaystyle \mu(F) \leq \mu(\{x \in E~|~ |f_n(x) - f(x)| \geq \epsilon\})=0$$
+
+因此$$\mu(F)=0$$ (QED)
 
 </details>
 

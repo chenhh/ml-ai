@@ -10,6 +10,8 @@ description: convergence in measure
 
 <mark style="background-color:red;">在有限測度空間中，幾乎處處收斂可得測度收斂</mark>。
 
+<mark style="color:red;">一般測度空間中，幾乎一致收斂可保證測度收斂</mark>。
+
 ## 測度收斂
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，若
@@ -134,8 +136,6 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 
 
 
-
-
 ## 有限測度空間中幾乎處處收斂可保證測度收斂
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列且$$\mu(E) < \infty$$(有限測度空間)。
@@ -144,9 +144,11 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 
 
 
+## 一般測度空間中幾乎一致收斂可保證測度收斂
 
-
-
+> $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
+>
+> 若$$\forall \epsilon > 0$$，存在集合$$E_\epsilon \subseteq E$$且$$\mu(E_\epsilon)< \epsilon$$，使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$，則$$f_n \rightarrow f \text{ in measure on } E$$。
 
 ## 依測度Cauchy序列(Cauchy sequence in measure)
 

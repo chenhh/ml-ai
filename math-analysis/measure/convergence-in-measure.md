@@ -180,9 +180,21 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 >
 > 若$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) \text{ a.e. on } E$$且$$f$$幾乎處處有限，則$$\{f_n\}$$依測度收斂至$$f$$。
 
+<details>
+
+<summary>proof: Egoroff定理保證有限測度時，a.e. => a. u. ，而a.u.在一般測度空間保證為測度收斂，因此有限測度時，a.e.=>測度收斂</summary>
+
+
+
+</details>
+
 ### 範例：一般測度空間幾乎處處收斂或非測度收斂
 
-\[todo]
+給定Lebesgue測度空間$$E=(0, \infty)$$，$$\mathcal{L}$$為Lebesgue可測集合，$$m$$為測度。
+
+令函數序列$$\displaystyle  f_n(x)= \begin{cases} 1, & x \in (0, n] \\ 0, & x \in (n, \infty) \end{cases}~ n \in \mathbb{Z}^+$$，則$$\displaystyle \lim_{n \rightarrow \infty }f_n(x)=1 \text{ a.e.}$$
+
+但是對於任意的$$n \in \mathbb{Z}^+$$，取$$0 < \epsilon < 1$$，可得$$m(\{x \in E~|~ |f_n(x)-1| \geq \epsilon\})=m((n, \infty))=\infty$$，因此$$f_n$$在$$E$$上不依測度收斂於1。
 
 ## 一般測度空間中幾乎一致收斂可保證測度收斂
 
@@ -194,9 +206,9 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 依定義直接證明</summary>
 
-一致收斂依定義得$$\forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \forall x \in E-E_\epsilon,~ |f_n(x)-f(x)| < \epsilon, ~  \forall n \geq n_0$$
+幾乎一致收斂依定義得$$\forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \forall x \in E-E_\epsilon,~ |f_n(x)-f(x)| < \epsilon, ~  \forall n \geq n_0$$
 
 因此在$$n \geq n_0$$時，只有在$$E_\epsilon$$中的點可能得到$$|f_n(x)-f(x)| \geq \epsilon$$，即$$\{x~|~|f_n(x)-f(x)| \geq \epsilon\} \subseteq E_\epsilon$$。
 

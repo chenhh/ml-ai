@@ -112,8 +112,6 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 </details>
 
-##
-
 ## 測度收斂的線性性質
 
 $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
@@ -123,6 +121,20 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 > $$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure.
 >
 > 則$$\forall a,b \in \mathbb{R}$$, $$af_n + bg_n \rightarrow af + bg$$ in measure.
+
+<details>
+
+<summary>proof：三角不等式</summary>
+
+由三角不等式得：$$|af_n +bg_n - (af+bg)|=|(af_n-af) - (bg_n-bg)|\leq |af_n-af| + |bg_n-bg|$$
+
+因此可得$$\displaystyle  \begin{aligned} \forall \epsilon >0 & ~\{x \in E ~|~ |af_n +bg_n - (af+bg)| \geq \epsilon \} \subseteq \\ 	& \{x \in E ~|~ |af_n - af| \geq \frac{\epsilon}{|a|}\} + \\ 	& \{x \in E ~|~ |bg_n - bg| \geq \frac{\epsilon}{|b|}\} \end{aligned}$$
+
+所以當$$n \rightarrow \infty$$，由測度的單調性可得$$\mu(\{x \in E ~|~ |af_n +bg_n - (af+bg)| \geq \epsilon \}) \rightarrow 0$$
+
+(QED)
+
+</details>
 
 ### 有限測度時，測度收斂與幾乎有限函數乘積為測度收斂
 

@@ -1,4 +1,4 @@
-# 收斂的定義與關係
+# 可測函數收斂的定義與關係
 
 ## Littlewood three principles \[[wiki](https://en.wikipedia.org/wiki/Littlewood's\_three\_principles\_of\_real\_analysis)]
 
@@ -27,6 +27,12 @@
 機率空間為有限測度空間，而分佈收斂為機率空間中特有的收斂方式。
 
 <mark style="color:red;">註：測度空間中定義可測函數的收斂性時，大多使用可測函數的值來定義；而機率空間中定義隨機變數(機率空間中的可測函數)的收斂性時，通常使用隨機變數前像集合的機率測度來定義</mark>。
+
+以大數定律為例，假設對樣本的均值有一個精度為$$\delta$$的要求。幾乎處處收斂是說只要樣本數量$$n$$大於一個確定的數量$$n(\delta)$$，樣本均值一定可以(機率1)在精度要求內。
+
+而依機率收斂還附加了一個$$\epsilon$$的參數，只要樣本數量$$n$$大於一個確定的數量$$n(\delta, \epsilon)$$，樣本均值以機率$$1-\epsilon$$在精度要求內，但還有$$\epsilon$$的機率的誤差大於$$\delta$$。
+
+[https://stats.stackexchange.com/questions/2230/convergence-in-probability-vs-almost-sure-convergence](https://stats.stackexchange.com/questions/2230/convergence-in-probability-vs-almost-sure-convergence)
 
 ## 收斂的定義
 

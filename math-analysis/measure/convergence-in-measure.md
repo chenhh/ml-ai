@@ -116,6 +116,10 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
 
+### 測度收斂可移項
+
+> $$f_n \rightarrow f$$ in measure$$\Leftrightarrow  f_n -f \rightarrow 0$$ in measure.
+
 ### 測度收斂相加減仍為測度收斂
 
 > $$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure.
@@ -128,7 +132,7 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 
 由三角不等式得：$$|af_n +bg_n - (af+bg)|=|(af_n-af) - (bg_n-bg)|\leq |af_n-af| + |bg_n-bg|$$
 
-因此可得$$\displaystyle  \begin{aligned} \forall \epsilon >0 & ~\{x \in E ~|~ |af_n +bg_n - (af+bg)| \geq \epsilon \} \subseteq \\ 	& \{x \in E ~|~ |af_n - af| \geq \frac{\epsilon}{|a|}\} + \\ 	& \{x \in E ~|~ |bg_n - bg| \geq \frac{\epsilon}{|b|}\} \end{aligned}$$
+因此可得$$\displaystyle  \begin{aligned} \forall \epsilon >0 & ~\{x \in E ~|~ |af_n +bg_n - (af+bg)| \geq \epsilon \} \subseteq \\ 	& \{x \in E ~|~ |af_n - af| \geq \frac{\epsilon}{|a|}\} \cup \\ 	& \{x \in E ~|~ |bg_n - bg| \geq \frac{\epsilon}{|b|}\} \end{aligned}$$
 
 所以當$$n \rightarrow \infty$$，由測度的單調性可得$$\mu(\{x \in E ~|~ |af_n +bg_n - (af+bg)| \geq \epsilon \}) \rightarrow 0$$
 
@@ -143,6 +147,10 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 ### 有限測度時，測度收斂函數乘積為測度收斂
 
 > 若$$\mu(E) < \infty$$，$$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure，則$$f_n g_n \rightarrow fg$$ in measure.
+
+### 有限測度時，測度收斂函數相除為測度收斂
+
+> 若$$\mu(E) < \infty$$，$$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure，若$$g_n, \forall n$$和$$g$$幾乎處處不為0，則$$\frac{f_n}{g_n} \rightarrow \frac{f}{g}$$ in measure.
 
 ### 測度收斂的絕對值收斂
 
@@ -172,13 +180,31 @@ $$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序�
 >
 > 若$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) \text{ a.e. on } E$$且$$f$$幾乎處處有限，則$$\{f_n\}$$依測度收斂至$$f$$。
 
+### 範例：一般測度空間幾乎處處收斂或非測度收斂
 
+\[todo]
 
 ## 一般測度空間中幾乎一致收斂可保證測度收斂
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
 >
-> 若$$\forall \epsilon > 0$$，存在集合$$E_\epsilon \subseteq E$$且$$\mu(E_\epsilon)< \epsilon$$，使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$，則$$f_n \rightarrow f \text{ in measure on } E$$。
+> $$f_n \rightarrow f$$ almost unif. $$\Rightarrow f_n \rightarrow f$$ in measure.
+>
+> 即$$\forall \epsilon > 0$$，存在集合$$E_\epsilon \subseteq E$$且$$\mu(E_\epsilon)< \epsilon$$，使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$，則$$f_n \rightarrow f \text{ in measure on } E$$。
+
+<details>
+
+<summary>proof</summary>
+
+一致收斂依定義得$$\forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \forall x \in E-E_\epsilon,~ |f_n(x)-f(x)| < \epsilon, ~  \forall n \geq n_0$$
+
+因此在$$n \geq n_0$$時，只有在$$E_\epsilon$$中的點可能得到$$|f_n(x)-f(x)| \geq \epsilon$$，即$$\{x~|~|f_n(x)-f(x)| \geq \epsilon\} \subseteq E_\epsilon$$。
+
+由測度的單調性得$$\mu(\{x~|~|f_n(x)-f(x)| \geq \epsilon\}) \leq \mu(E_\epsilon)< \epsilon$$
+
+因此$$n \rightarrow \infty$$時，可得$$f_n \rightarrow f$$ in measure (QED)
+
+</details>
 
 ## 依測度Cauchy序列(Cauchy sequence in measure)
 

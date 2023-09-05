@@ -264,11 +264,29 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 </details>
 
-## 依測度Cauchy序列(Cauchy sequence in measure)
+## 依測度柯西序列(Cauchy sequence in measure)
 
 > $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，若$$\forall \epsilon > 0$$，若
 >
-> $$\displaystyle \lim_{m,n \rightarrow \infty}\mu( x \in E ~|~ |f_m(x) - f_n(x)| > \epsilon) = 0$$，則稱$$\{f_n(x)\}$$為$$E$$上的依測度Cauchy序列。
+> $$\displaystyle \lim_{m,n \rightarrow \infty}\mu( x \in E ~|~ |f_m(x) - f_n(x)| \geq \epsilon) = 0$$，則稱$$\{f_n(x)\}$$為$$E$$上的依測度Cauchy序列。
+>
+> 或者$$\forall \epsilon >0, \forall\delta >0$$, $$\exists n \in \mathbb{N} \ni \mu(\{x\in E ~|~ |f_m(x)-f_n(x)|\geq \epsilon\})<\delta$$。
+
+證明函數序列$$\{f_n\}$$ 依測度收斂時，需要先知道收斂函數$$f$$ 。然而很多時候是沒法求出收斂函數$$f$$ 的，或者我們不關心收斂到哪個函數。因此使用“依測度柯西序列”，無需知道收斂函數$$f$$ ，即可判斷函數序列$$\{f_n\}$$ 是否依測度收斂。
+
+## 測度收斂若且唯若依測度柯西序列
+
+> $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，
+>
+> 則$$\{f_n\}$$ Cauchy in measure $$\Leftrightarrow f_n \rightarrow f$$ in measure.
+
+## 測度收斂則存在子序列幾乎一致收斂且幾乎處處收斂
+
+> $$\{f_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列，
+>
+> $$f_n \rightarrow f$$ in measure $$\Rightarrow \exists {f_{n_k}} \subseteq \{f_n\} \ni f_{n_k} \rightarrow f$$ almost uniformly.
+>
+> 因此一般測度空間中a.u.可保證a.e.因此可得$$f_{n_k} \rightarrow f$$ a.e.
 
 ## 參考資料
 

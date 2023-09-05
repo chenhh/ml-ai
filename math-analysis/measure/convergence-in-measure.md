@@ -119,8 +119,8 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 ### 測度收斂可移項
 
 1. $$f_n \rightarrow f$$ in measure$$\Leftrightarrow  f_n -f \rightarrow 0$$ in measure.
-2. $$f_n \rightarrow 0$$ in measure $$\Rightarrow f_n^2 \rightarrow 0$$ in meausre.
-3. $$\mu(E)<\infty$$$$f_n \rightarrow f$$ in measure $$\Rightarrow f_n^2 \rightarrow f^2$$ in measure.
+2. $$f_n \rightarrow 0$$ in measure $$\Leftrightarrow f_n^2 \rightarrow 0$$ in meausre.
+3. $$f_n \rightarrow f$$ in measure $$\Rightarrow f_n^2 \rightarrow f^2$$ in measure.
 
 <details>
 
@@ -152,7 +152,11 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 展開得$$f_n^2 +f^2 -2f_nf \rightarrow 0$$ in measure.--(1)
 
-因為$$f_n \rightarrow f$$ in measure，有限測度時，測度收斂與幾乎有限函數乘積為測度收斂得$$2f_nf-2f^2\rightarrow 0$$ in measure-(2)
+
+
+因為$$f_n \rightarrow f$$ in measure，可得$$2f_n \rightarrow 2f$$ in measure，而$$\{f_n\}$$幾乎處處有限且測度收斂至$$f$$，由測度收斂的函數幾乎處處有限得$$f$$幾乎處處有限。
+
+而在有限測度時，測度收斂與幾乎有限函數乘積為測度收斂，因此可得$$2f_nf\rightarrow 2f^2$$ in measure，移項得$$2f_nf-2f^2 \rightarrow 0$$ in measure-(2)
 
 由(1,2)相減得$$f_n^2-f^2 \rightarrow 0$$ in measure.
 

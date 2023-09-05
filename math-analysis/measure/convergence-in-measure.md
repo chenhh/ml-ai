@@ -114,11 +114,53 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 ## 測度收斂的線性性質
 
-$$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
+令$$\{f_n(x)\}, \{g_n(x)\}$$為集合$$E$$上幾乎處處有限的可測函數序列。
 
 ### 測度收斂可移項
 
-> $$f_n \rightarrow f$$ in measure$$\Leftrightarrow  f_n -f \rightarrow 0$$ in measure.
+1. $$f_n \rightarrow f$$ in measure$$\Leftrightarrow  f_n -f \rightarrow 0$$ in measure.
+2. $$f_n \rightarrow 0$$ in measure $$\Rightarrow f_n^2 \rightarrow 0$$ in meausre.
+3. $$\mu(E)<\infty$$$$f_n \rightarrow f$$ in measure $$\Rightarrow f_n^2 \rightarrow f^2$$ in measure.
+
+<details>
+
+<summary>proof 1: 由測度收斂定義移項即為所求</summary>
+
+由定義得$$\displaystyle \lim_{n \rightarrow \infty }\mu(\{x \in E ~|~ |f_n(x)-f(x)| \geq \epsilon\}) =0$$
+
+移項得$$\displaystyle \lim_{n \rightarrow \infty }\mu(\{x \in E ~|~ |(f_n(x)-f(x))-0| \geq \epsilon\}) =0$$
+
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof2: 由測度收斂定義移項即為所求</summary>
+
+由定義得$$\displaystyle \lim_{n \rightarrow \infty }\mu(\{x \in E ~|~ |f_n(x)| \geq \epsilon\}) =0$$
+
+&#x20;可得$$\displaystyle \lim_{n \rightarrow \infty }\mu(\{x \in E ~|~ |f_n^2(x)| \geq \epsilon^2\}) =0$$ (QED)
+
+</details>
+
+<details>
+
+<summary>proof: 移項後整理</summary>
+
+因為$$f_n \rightarrow f$$ in measure，由1得$$f_n - f \rightarrow 0$$ in meaure，由2得$$(f_n-f)^2 \rightarrow 0$$ in measure.
+
+展開得$$f_n^2 +f^2 -2f_nf \rightarrow 0$$ in measure.--(1)
+
+因為$$f_n \rightarrow f$$ in measure，有限測度時，測度收斂與幾乎有限函數乘積為測度收斂得$$2f_nf-2f^2\rightarrow 0$$ in measure-(2)
+
+由(1,2)相減得$$f_n^2-f^2 \rightarrow 0$$ in measure.
+
+移項得$$f_n^2 \rightarrow f^2$$ in measure.
+
+(QED)
+
+</details>
 
 ### 測度收斂相加減仍為測度收斂
 

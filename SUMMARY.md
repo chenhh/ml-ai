@@ -131,7 +131,6 @@
 * [關聯結構(copula)](probability-and-statistics/copula.md)
 * [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
 * [實驗設計](probability-and-statistics/experiment-design.md)
-* [block bootstrap](probability-and-statistics/block-bootstrap.md)
 
 ## 線性代數 <a href="#linear-algebra" id="linear-algebra"></a>
 
@@ -199,7 +198,13 @@
 * [Hilbert-Huang transform (HHT)](time-series/hilbert-huang-transform.md)
 * [真實性檢定(Reality Check Test)](time-series/reality-check-test.md)
 * [HAC estimator](time-series/hac-estimator.md)
+* [混合過程](time-series/mixing-process.md)
+* [block bootstrap](time-series/block-bootstrap.md)
 * [結構點轉變](time-series/structure-change.md)
+
+## 遍歷性(Ergodicity) <a href="#ergodicity" id="ergodicity"></a>
+
+* [遍歷性簡介](ergodicity/ergodicity-introduction.md)
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>
 

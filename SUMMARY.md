@@ -205,6 +205,7 @@
 ## 遍歷性(Ergodicity) <a href="#ergodicity" id="ergodicity"></a>
 
 * [遍歷性簡介](ergodicity/ergodicity-introduction.md)
+* [保測(度)轉換](ergodicity/measure-preserving-transformation.md)
 
 ## 資訊理論 <a href="#information-theory" id="information-theory"></a>
 

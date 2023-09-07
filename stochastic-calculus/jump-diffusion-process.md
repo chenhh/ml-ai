@@ -17,3 +17,14 @@ Bates (1996) 隨機波動跳躍擴散模型(Stochastic volatility jump diffusion
 [Introduction to Merton Jump Diffusion Model.](https://www.maxmatsuda.com/Papers/Intro/Intro%20to%20MJD%20Matsuda.pdf)
 
 \* [碳衍生性商品的定價:隨機波動跳躍擴散模型的實證研究](https://hdl.handle.net/11296/bb6b6n)
+
+\[wikipedia] [https://en.wikipedia.org/wiki/Stochastic\_volatility](https://en.wikipedia.org/wiki/Stochastic\_volatility)
+
+* Robert C. Merton, “Option Pricing when underlying stock returns are discontinuous,” Journal of Financial Economics Vol. 3, pp. 125-144, 1976.
+* Robert C. Merton, “The Impact on Option Pricing of Specification Error in the Underlying Stock Price Returns,” The Journal of Finance, Vol XXXI, No 2, 1976.
+* Steven L. Heston, "A closed-form solution for options with stochastic volatility with applications to bond and currency options," Review of Financial Studiesm, Vol. 6, No. 2, pp. 327–343, 1993.
+*
+
+### 實作
+
+[https://xilinx.github.io/Vitis\_Libraries/quantitative\_finance/2019.2/models\_and\_methods.html](https://xilinx.github.io/Vitis\_Libraries/quantitative\_finance/2019.2/models\_and\_methods.html)

@@ -23,8 +23,11 @@ Bates (1996) 隨機波動跳躍擴散模型(Stochastic volatility jump diffusion
 * Robert C. Merton, “Option Pricing when underlying stock returns are discontinuous,” Journal of Financial Economics Vol. 3, pp. 125-144, 1976.
 * Robert C. Merton, “The Impact on Option Pricing of Specification Error in the Underlying Stock Price Returns,” The Journal of Finance, Vol XXXI, No 2, 1976.
 * Steven L. Heston, "A closed-form solution for options with stochastic volatility with applications to bond and currency options," Review of Financial Studiesm, Vol. 6, No. 2, pp. 327–343, 1993.
-*
+* David S. Bates, "Jumps and Stochastic volatility: Exchange Rate Processes Implicity in Deutsche Mark Options," The Review of Financial Studies, Vol. 9, No. 1,  pp. 69–107, 1996.
 
 ### 實作
 
-[https://xilinx.github.io/Vitis\_Libraries/quantitative\_finance/2019.2/models\_and\_methods.html](https://xilinx.github.io/Vitis\_Libraries/quantitative\_finance/2019.2/models\_and\_methods.html)
+* [https://xilinx.github.io/Vitis\_Libraries/quantitative\_finance/2019.2/models\_and\_methods.html](https://xilinx.github.io/Vitis\_Libraries/quantitative\_finance/2019.2/models\_and\_methods.html)
+* [https://github.com/Xilinx/Vitis\_Libraries](https://github.com/Xilinx/Vitis\_Libraries)
+* [https://www.mathworks.com/help/finance/stochastic-differential-equation-sde-models.html?s\_tid=CRUX\_lftnav](https://www.mathworks.com/help/finance/stochastic-differential-equation-sde-models.html?s\_tid=CRUX\_lftnav)
+* [https://pypi.org/project/sdeint/](https://pypi.org/project/sdeint/)

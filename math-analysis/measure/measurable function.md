@@ -365,6 +365,12 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 
 </details>
 
+### 可測函數的σ域為全局σ域的子集
+
+> $$(X, \mathcal{F})$$為可測空間，$$f: \mathcal{F} \rightarrow \mathbb{R}$$為可測函數，則$$\sigma(f) \subseteq \mathcal{F}$$。
+>
+> 可測函數的資訊量小於等於全局的資訊量。
+
 ### 連續函數與可測函數的合成函數為可測函數
 
 > $$f: \mathbb{R} \rightarrow \mathbb{R}$$為連續函數且$$g: E \rightarrow [-\infty, \infty]$$為可測函數，則合成函數$$g \circ f(x) \equiv f(g(x))$$為可測函數。

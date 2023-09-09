@@ -49,7 +49,7 @@
 
 #### 條件期望值隨機變數的存在性
 
-考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=Z$$為$$Z$$的隨機變數，且滿足：
+考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$且$$\mathrm{E}(|X|) < \infty$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=Z$$為$$Z$$的隨機變數，且滿足：
 
 1. 隨機變數$$Z$$在$$\mathcal{F}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{F}$$。
 2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{F})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
@@ -58,7 +58,9 @@
 
 <mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{F})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F_0}$$相對於$$\mathcal{F}$$<mark style="color:red;">的條件機率，記為</mark>$$\mathrm{P}(A|\mathcal{F})$$。
 
-<mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{F})$$。而<mark style="color:red;">任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)</mark>。
+<mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{F})$$。
+
+而<mark style="color:red;">任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)</mark>。令$$\mathrm{Q}$$為測度$$\mathrm{P}$$在$$\mathcal{F}$$的測度，若隨機變數$$Z_1, Z_2$$均滿足條件(1,2)，則$$\mathrm{Q}(Z_1 \neq Z_2)=0$$。
 
 <details>
 
@@ -82,7 +84,7 @@
 
 <mark style="color:blue;">proof</mark>:
 
-假設隨機變數$$X \geq 0$$且可積分，令$$\mu = \mathrm{P}$$，$$\displaystyle  \nu(A)=\int_A X d \mathrm{P},~ \forall A \in \mathcal{F}$$
+假設隨機變數$$X \geq 0$$ a.s.且可積分，令$$\mu = \mathrm{P}$$，$$\displaystyle  \nu(A)=\int_A X d \mathrm{P},~ \forall A \in \mathcal{F}$$
 
 可得$$\nu$$為σ-finite測度且當$$\mathrm{P}(A)=0$$時，可得$$\nu(A)=0$$，因此$$\nu \ll \mathrm{P}$$ 。
 

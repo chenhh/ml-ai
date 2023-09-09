@@ -62,7 +62,7 @@
 
 <details>
 
-<summary>proof: 條件期望值存在性會用到Ryadon-Nikodym定理</summary>
+<summary>proof: 條件期望值存在性會用到Raydon-Nikodym定理</summary>
 
 <mark style="color:blue;">測度絕對連續</mark>：
 
@@ -114,7 +114,7 @@ $$\displaystyle \mathrm{E}(X|\mathcal{g}) = \sum_{j=1}^\infty \left(  \frac{1}{\
 
 $$\displaystyle \begin{aligned} \mathrm{E}(X|B)  	& =\mathrm{E}(X|[0,1/4])\cdot\mathbf{1}_{[0,1/4]}  \\ 	& +\mathrm{E}(X|[1/4,1/2])\cdot\mathbf{1}_{[1/4,1/2]} \\ 	& +\mathrm{E}(X|[1/2,3/4])\cdot\mathbf{1}_{[1/2,3/4]} \\ 	& +\mathrm{E}(X|[3/4,1])\cdot\mathbf{1}_{[3/4,1]} \\ 	& = 4 \int_{0}^{1/4} X(x)dx \cdot\mathbf{1}_{[0,1/4]} \\ 	& + 4 \int_{1/4}^{1/2} X(x)dx \cdot\mathbf{1}_{[1/4, 1/2]} \\ 	& + 4 \int_{1/2}^{3/4} X(x)dx \cdot\mathbf{1}_{[1/2, 3/4]} \\ 	& + 4 \int_{3/4}^{1} X(x)dx \cdot\mathbf{1}_{[3/4, 1]} \\ \end{aligned}$$
 
-## 簡單範例
+## 範例1
 
 令$$\Omega=\{1,2,\dots, 12\}$$，$$\mathcal{F}=\text{power set of }\Omega$$，$$\mathrm{P}(\{1\})=\dots=\mathrm{P}(\{12\})=1/12$$。
 
@@ -134,6 +134,22 @@ $$X = \mathrm{ceil}(\frac{\omega}{2}) =  \left\{ \begin{aligned} 1,& \text{ if }
 * $$Y$$為$$\sigma(X)$$可測(因為$$\sigma(X) \subset \sigma(Y)$$)
 * $$X$$為$$\sigma(X)$$可測(由定義可得)。
 * $$X$$不是$$\sigma(Y)$$可測，因為$$X^{-1}(\{1\})=\{1,2\} \notin \sigma(Y)$$。
+
+## 範例2
+
+給定機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$，$$\Omega=\{a,b,c,d,e,f\}$$，$$\mathrm{P}$$為均勻分佈。$$X,Y,Z$$為隨機變數如下：
+
+$$X=\begin{pmatrix} a & b&c&d&e& f \\ 1 & 3 & 3& 5 & 5& 7 \end{pmatrix}$$，$$Y=\begin{pmatrix} a & b&c&d&e& f \\ 2 & 2 & 1 & 1 & 7 & 7 \end{pmatrix}$$，$$Z=\begin{pmatrix} a & b&c&d&e& f \\ 3 & 3 & 3 & 3 & 2 & 2 \end{pmatrix}$$
+
+* 當$$Y=2$$，可得$$\mathrm{E}(X|Y=2)=\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$。
+* 當$$Y=1$$，可得$$\mathrm{E}(X|Y=1)=\frac{1}{2}X(c)+\frac{1}{2}X(d)=4$$。
+* 當$$Y=7$$，可得$$\mathrm{E}(X|Y=7)=\frac{1}{2}X(e)+\frac{1}{2}X(f)=6$$。
+
+將上述$$Y$$相異值的期望值記為期望值$$W=\begin{pmatrix} a & b&c&d&e& f \\ 2 & 2 & 4 & 4 & 6 & 6 \end{pmatrix}$$
+
+顯然$$W$$為$$\mathcal{F}$$-可測函數，且可得$$\displaystyle \int_A W d\mathrm{P} = \int_A X d\mathrm{P}$$。
+
+因此$$W=\mathrm{E}(X|Y) \equiv \mathrm{E}(X| \sigma(Y))$$。
 
 ## 參考資料
 

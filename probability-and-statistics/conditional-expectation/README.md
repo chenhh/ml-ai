@@ -35,6 +35,48 @@ description: conditional expectation
 
 * 條件期望值$$\mathrm{E}(Y|X=k)$$在$$X=k$$給定後，其值已經決定了，因此為$$k$$的函數，即$$\mathrm{E}(Y|X=k) = f(k)$$。如果$$X$$之值未定時，則$$\mathrm{E}(Y|X) = g(X)$$。
 
+### 條件期望值為最佳預測值
+
+> $$\displaystyle \mathrm{E}(Y|X) = \arg \min_{g(X)} \mathrm{E}(Y-g(X))^2$$，即$$\mathrm{E}(Y|X)$$為對於$$Y$$的最佳預測值。
+
+
+
+<details>
+
+<summary>proof: 離散隨機變數</summary>
+
+$$\displaystyle  \begin{aligned}  \mathrm{E}[(g(X)-Y)^2] & = \mathrm{E}[(g(X)- \mathrm{E}(Y|X) + \mathrm{E}(Y|X) - Y)^2] \\         & = E[(g(X) - \mathrm{E}(Y|X)^2)] \\         & + 2 \mathrm{E}[(g(X) - \mathrm{E}(Y|X))(\mathrm{E}(Y|X)- Y)] \\         & + \mathrm{E}[(\mathrm{E}(Y|X)-Y)^2] \end{aligned}$$
+
+其中第二項展開後得：$$\displaystyle  \begin{aligned} \mathrm{E}[(g(X) - \mathrm{E}(Y|X))(\mathrm{E}(Y|X)- Y)] &= \mathrm{E}[g(X) \mathrm{E}(Y|X) ] \\     & -\mathrm{E}[\mathrm{E}(Y|X) \mathrm{E}(Y|X)] \\     & - \mathrm{E}[g(X)Y] \\     & + \mathrm{E}[Y \mathrm{E}(Y|X)] \\     & = \mathrm{E}[g(X)Y] - \mathrm{E}[Y\mathrm{E}(Y|X)] - \mathrm{E}[g(X)Y] + \mathrm{E}[Y\mathrm{E}(Y|X)] \\     & = 0 \end{aligned}$$而第三項與$$g(X)$$無關。
+
+因此第一項為0時，可得$$\mathrm{E}[(Y-g(X))^2]$$有最小值，即$$g(X) = \mathrm{E}(Y|X)$$ (QED)
+
+</details>
+
+### 重複期望值定理(law of iterated expectation, Law of total expectation)
+
+> &#x20;$$\mathrm{E}(\mathrm{E}(X|Y))=\mathrm{E}(X)$$
+>
+> 簡單地說，$$X$$的平均值等於條件平均值的加權平均值。
+
+<details>
+
+<summary>proof: 離散隨機變數</summary>
+
+$$\displaystyle {\begin{aligned} \mathrm {E}\left(\mathrm {E}(X|Y)\right)&{}=\sum \limits _{y}\mathrm {E}(X|Y=y)\cdot \mathrm {P}(Y=y)\\&{}=\sum \limits _{y}\left(\sum \limits _{x}x\cdot \mathrm {P}(X=x|Y=y)\right)\cdot \mathrm {P}(Y=y)\\&{}=\sum \limits _{y}\sum \limits _{x}x\cdot \mathrm {P}(X=x|Y=y)\cdot \mathrm {P}(Y=y)\\&{}=\sum \limits _{y}\sum \limits _{x}x\cdot \mathrm {P}(Y=y|X=x)\cdot \mathrm {P}(X=x)\\&{}=\sum \limits _{x}\sum \limits _{y}x\cdot \mathrm {P}(Y=y|X=x)\cdot \mathrm {P}(X=x)\\&{}=\sum \limits _{x}x\cdot \mathrm {P}(X=x)\cdot \left(\sum \limits _{y}\mathrm {P}(Y=y|X=x)\right)\\&{}=\sum \limits _{x}x\cdot \mathrm {P}(X=x)\\&{}=\mathrm {E}(X).\end{aligned}}$$
+
+</details>
+
+<details>
+
+<summary>proof: 連續隨機變數</summary>
+
+$${\displaystyle {\begin{aligned}\mathrm {E} (X)&=\int x\Pr[X=x]~dx\\\mathrm {E} (X\mid Y=y)&=\int x\Pr[X=x\mid Y=y]~dx\\\mathrm {E} (\mathrm {E} (X\mid Y))&=\int \left(\int x\Pr[X=x\mid Y=y]~dx\right)\Pr[Y=y]~dy\\&=\int \int x\Pr[X=x,Y=y]~dx~dy\\&=\int x\left(\int \Pr[X=x,Y=y]~dy\right)~dx\\&=\int x\Pr[X=x]~dx\\&=\mathrm {E} (X)\,.\end{aligned}}}$$
+
+</details>
+
+
+
 ## 參考資料
 
 * [https://stats.stackexchange.com/questions/230545/intuition-for-conditional-expectation-of-sigma-algebra](https://stats.stackexchange.com/questions/230545/intuition-for-conditional-expectation-of-sigma-algebra)

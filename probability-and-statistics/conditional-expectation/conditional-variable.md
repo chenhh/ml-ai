@@ -1,4 +1,4 @@
-# 條件期望值
+# 一般化的條件期望值
 
 ## 簡介
 
@@ -30,42 +30,71 @@
 
 在隨機變數的條件期望值中，兩個結果$$\omega_1, \omega_2$$是否有相同的條件期望值，取決於$$Y(\omega_1)$$是否與$$Y(\omega_2)$$有相同的函數值。因此不必考慮$$Y(\omega_1)$$的實際值為何，只需考慮$$\omega$$如何對宇集合$$\Omega$$做分割(partition)。
 
-而能夠記錄$$Y$$的相異取值而不記錄實際取值為何，就是$$\sigma(Y)$$，即宇集合$$\Omega$$中使得$$Y$$可測的最小的σ域。因此$$\mathrm{E}(g(X)|Y)$$可寫成$$\mathrm{E}(g(X)|\sigma(Y))$$。
+<mark style="color:red;">而能夠記錄</mark>$$Y$$<mark style="color:red;">的相異取值而不記錄實際取值為何，就是</mark>$$\sigma(Y)$$<mark style="color:red;">，即宇集合</mark>$$\Omega$$<mark style="color:red;">中使得</mark>$$Y$$<mark style="color:red;">可測的最小的σ域。因此</mark>$$\mathrm{E}(g(X)|Y)$$<mark style="color:red;">可寫成</mark>$$\mathrm{E}(g(X)|\sigma(Y))$$。
 
 既然條件期望值只用了σ域的資訊，那麼不必管這個σ域是由那個隨機變數生成，直接對σ域定義條件期望即可。
+
+### 將σ域解釋為資訊集合
+
+令$$Y, Y_1, Y_2$$為可測空間$$(\Omega, \mathcal{F})$$隨機變數、隨機向量或隨機過程。則：
+
+* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。
+* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 稱$$Y_2$$比$$Y_1$$有更多的資訊量。
+
+由於知道了更多的資訊可知如何將$$Y_1$$中的事件分割更細得到$$Y_2$$，因此可得$$\sigma(Y_1) \subseteq \sigma(Y_2)$$。
 
 ### 一般σ域的條件期望值
 
 考慮測度空間$$(\Omega, \mathcal{F}_0, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$。
 
-#### 描述性定義
+#### 條件期望值隨機變數的存在性
 
-考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=Y$$為$$Y$$的隨機變數，且滿足：
+考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=Z$$為$$Z$$的隨機變數，且滿足：
 
-1. 隨機變數$$Y$$在$$\mathcal{F}$$可測；
-2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Y d\mathrm{P}$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Y\mathbf{1}_A)$$。
+1. 隨機變數$$Z$$在$$\mathcal{F}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{F}$$。
+2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{F})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
 
-<mark style="color:red;">稱隨機變數</mark>$$Y$$<mark style="color:red;">為</mark>$$X$$<mark style="color:red;">關於</mark>$$\mathcal{F}$$<mark style="color:red;">的條件期望值。</mark>
+<mark style="color:red;">稱隨機變數</mark>$$Z$$<mark style="color:red;">為</mark>$$X$$相對於$$\mathcal{F}$$<mark style="color:red;">的條件期望值。</mark>
 
-<mark style="color:red;">條件期望值不唯一，但任兩個版本的條件期望值只在零測集上相異</mark>。
+<mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{F})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F_0}$$相對於$$\mathcal{F}$$<mark style="color:red;">的條件機率，記為</mark>$$\mathrm{P}(A|\mathcal{F})$$。
 
-proof: 條件期望值存在性會用到Ryadon-Nikodym定理
+<mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{F})$$。而<mark style="color:red;">任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)</mark>。
 
-> 令$$\mu, \nu$$為可測空間$$(\Omega, \mathcal{F})$$上的兩個σ-finite測度。
->
-> 如果$$\nu \ll \mu$$ ($$\nu$$對$$\mu$$絕對連續，$$\forall A \in \mathcal{F}$$，若$$\mu(A)=0$$可得$$\nu(A)=0$$)
->
-> 則存在$$\mathcal{F}$$可測的函數$$0\leq f <\infty$$使得$$\forall A \in \mathcal{F}$$，有$$\displaystyle \int_Af d\mu=\nu(A)$$，$$f$$記為$$\displaystyle \frac{d\nu}{d\mu}$$稱為Randon-Nikodym導數。
->
-> 常見範例。$$f$$為在實數區間$$A$$有定義的連續函數，$$\mu$$為Lebesgue測度，則$$\int_Af d\mu$$為函數在區間$$A$$的積分值，而$$\nu(A)$$可解釋為某函數在此區間$$A$$的面積。
+<details>
 
-假設隨機變數$$X \geq 0$$且令$$\mu = \mathrm{P}$$，$$\displaystyle  \nu(A)=\int_A X d \mathrm{P},~ \forall A \in \mathcal{F}$$
+<summary>proof: 條件期望值存在性會用到Ryadon-Nikodym定理</summary>
 
-可得$$\nu$$為σ-finite測度且$$\nu \ll \mu$$ (todo)。
+<mark style="color:blue;">測度絕對連續</mark>：
 
-由Raydon-Nikodym定理可得存在$$\displaystyle g=\frac{d \nu}{d \mu}$$使得$$\displaystyle \int_Af d \mathrm{P} = \nu(A) = \int_A \frac{d\nu}{d \mu} d \mathrm{P}$$
+令$$\mu, \nu$$分別為可測空間$$(\Omega, \mathcal{F})$$上的符號測度與測度，若$$\forall A \in \mathcal{F}$$，可得$$\mu(A) =0 \Rightarrow \nu(A)=0$$，則稱$$\nu$$
 
-可得$$g$$為所求的條件期望。(QED)
+對$$\mu$$絕對連續，記為$$\nu \ll \mu$$。
+
+<mark style="color:blue;">Ryadon-Nikodym定理</mark>
+
+令$$\mu, \nu$$為可測空間$$(\Omega, \mathcal{F})$$上的兩個σ-finite測度。
+
+如果$$\nu \ll \mu$$ ($$\nu$$對$$\mu$$絕對連續，$$\forall A \in \mathcal{F}$$，若$$\mu(A)=0$$可得$$\nu(A)=0$$)
+
+則存在$$\mathcal{F}$$可測的函數$$f: \mathcal{F}\rightarrow [0, \infty)$$使得$$\forall A \in \mathcal{F}$$，有$$\displaystyle \int_Af d\mu=\nu(A)$$，$$f$$記為$$\displaystyle \frac{d\nu}{d\mu}$$稱為Randon-Nikodym導數。
+
+常見範例。$$f$$為在實數區間$$A$$有定義的連續函數，$$\mu$$為Lebesgue測度，則$$\int_Af d\mu$$為函數在區間$$A$$的積分值，而$$\nu(A)$$可解釋為某函數在此區間$$A$$的面積。
+
+<mark style="color:blue;">proof</mark>:
+
+假設隨機變數$$X \geq 0$$且可積分，令$$\mu = \mathrm{P}$$，$$\displaystyle  \nu(A)=\int_A X d \mathrm{P},~ \forall A \in \mathcal{F}$$
+
+可得$$\nu$$為σ-finite測度且當$$\mathrm{P}(A)=0$$時，可得$$\nu(A)=0$$，因此$$\nu \ll \mathrm{P}$$ 。
+
+由Raydon-Nikodym定理可得存在可測函數$$\displaystyle Z=\frac{d \nu}{d \mu}$$使得$$\displaystyle \int_A X d \mathrm{P} = \nu(A) = \int_A \frac{d\nu}{d \mu} d \mathrm{P}$$
+
+可得$$g$$為所求的條件期望。
+
+對於$$X \in \mathbb{R}$$的情形，只要使用$$X=X^{+} - X^{-}$$的性質即為所求。
+
+(QED)
+
+</details>
 
 #### 構造性定義
 
@@ -175,6 +204,7 @@ $${\displaystyle {\begin{aligned}\mathrm {E} (X)&=\int x\Pr[X=x]~dx\\\mathrm {E}
 ## 參考資料
 
 * [\[知乎\] 淺談條件期望](https://zhuanlan.zhihu.com/p/23670286)
+* [\[知乎\] 條件期望值的初步理解](https://zhuanlan.zhihu.com/p/50757083)
 * [\[statlect\] Conditional probability with respect to a sigma-algebra](https://www.statlect.com/fundamentals-of-probability/conditional-probability-as-a-random-variable)
 * [\[wiki\] conditional expectation](https://en.wikipedia.org/wiki/Conditional\_expectation#Conditional\_expectation\_with\_respect\_to\_a\_.CF.83-algebra)
 * [\[知乎\] 條件期望與全期望公式](https://zhuanlan.zhihu.com/p/417592820)

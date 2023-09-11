@@ -369,7 +369,19 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 
 > $$(X, \mathcal{F})$$為可測空間，$$f: \mathcal{F} \rightarrow \mathbb{R}$$為可測函數，則$$\sigma(f) \subseteq \mathcal{F}$$。
 >
-> 可測函數的資訊量小於等於全局的資訊量。
+> 若$$(\Omega, \Sigma)$$為可測機率空間，$$X: \Sigma\rightarrow \mathbb{R}$$為隨機變數，則$$\sigma(X) \subseteq \Sigma$$。
+>
+> 即可測函數的資訊量小於等於全局的資訊量。
+
+
+
+## 可測函數的複合函數為原函數σ域的子集
+
+> $$(X, \mathcal{F})$$為可測空間，$$f: \mathcal{F} \rightarrow \mathbb{R}$$為可測函數, $$g: \mathbb{R} \rightarrow \mathbb{R}$$為可測函數，則$$\sigma(g\circ f) \subseteq \sigma(f)$$。
+>
+> 若$$(\Omega, \Sigma)$$為可測機率空間，$$X: \Sigma\rightarrow \mathbb{R}$$為隨機變數，$$g: \mathbb{R} \rightarrow \mathbb{R}$$為可測函數，則$$\sigma(g(X)) \subseteq \sigma(X)$$。
+>
+> 即函數$$g$$無法提供比$$X$$的結構更多的資訊。
 
 ### 連續函數與可測函數的合成函數為可測函數
 

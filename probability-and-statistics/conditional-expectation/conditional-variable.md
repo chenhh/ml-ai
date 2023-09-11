@@ -223,6 +223,25 @@ $$X=\begin{pmatrix} a & b&c&d&e& f \\ 1 & 3 & 3& 5 & 5& 7 \end{pmatrix}$$，$$Y=
 
 如果$$\mathcal{F}$$提供了$$X$$的所有訊息，則$$X$$退化為為一常數值，即$$\mathrm{E}(X|\mathcal{F})(\omega)=\mathrm{E}(X(\omega)| \mathcal{F})=X(\omega) \mathrm{E}(1 | \mathcal{F})=X(\omega)$$.&#x20;
 
+## 一般化條件期望值的投影性質
+
+測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$，令$$L^2(\mathcal{F})$$為$$\Omega$$中滿足以下性質的隨機變數$$Z$$的集合：
+
+* $$Z$$的二階動差有限(存在)，即$$\mathrm{E}(Z^2) < \infty$$。
+* $$Z$$的資訊量比$$\mathcal{F}$$少，即$$\sigma(Z) \subseteq \mathcal{F}$$。若$$\mathcal{F}=\sigma(Y)$$，則$$Z$$為$$Y$$的函數。
+
+> 投影性質(projection property)
+>
+> 令$$X$$為隨機變數且$$\mathrm{E}(X^2)<\infty$$，則條件期望值$$\mathrm{E}(X|\mathcal{F})$$為$$L^2(\mathcal{F})$$中，在均值平方為距離函數時，最接近$$X$$的隨機變數。
+>
+> 即$$\displaystyle \mathrm{E}(X-\mathrm{E}(X|\mathcal{F}))^2=\min_{Z \in L^2(\mathcal{F})}\mathrm{E}(X-Z)^2$$。
+>
+> 註：$$L^2$$為內積空間，則$$\mathrm{E}(X|\mathcal{F})$$為隨機變數(向量)$$X$$投影到$$L^2(\mathcal{F})$$的向量，因此$$X-\mathrm{E}(X|\mathcal{F})$$為正交於$$L^2(\mathcal{F})$$的向量，且該向量是$$X$$到$$\mathrm{E}(X|\mathcal{F})$$距離最短的向量。
+
+
+
+
+
 ## 參考資料
 
 * [\[知乎\] 淺談條件期望](https://zhuanlan.zhihu.com/p/23670286)

@@ -6,13 +6,13 @@
 
 可得$$\displaystyle \mathrm{E}_\Omega(X|B) = \frac{\mathrm{P}_\Omega(X \cap B)}{\mathrm{P}_\Omega(B)} = \frac{\mathrm{E}_\Omega(X I_B)}{\mathrm{P}_\Omega(B)}$$。
 
-<mark style="color:blue;">但貝氏公式無法計算零機率的事件的條件機率，即無法計算</mark>$$\mathrm{P}(Y)=0$$的條件機率。
+<mark style="color:blue;">但貝氏公式無法計算零機率的事件的條件機率，即無法計算</mark>$$\mathrm{P}(Y)=0$$<mark style="color:blue;">的條件機率</mark>。
 
 條件期望值可分為以下幾類：
 
-1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$。
-2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=f(y)$$。
-3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，該定義的主要優點是它允許我們以零機率事件為條件。
+1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$，為一常數值。
+2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=f(y)$$，為隨機變數。
+3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，為隨機變數，該定義的主要優點是它允許我們以零機率事件為條件。
 
 註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割方法不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。
 

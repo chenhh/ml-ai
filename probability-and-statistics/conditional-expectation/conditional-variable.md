@@ -1,26 +1,32 @@
+---
+description: conditional expectation with respect to sigma-field.
+---
+
 # 一般化的條件期望值
 
 ## 簡介
 
-在機率論中，可定義某個事件對另一個事件的條件機率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到給定條定件的事件上做正規化，視為一個新的機率空間。於是有貝氏公式 $$\mathrm{P}(X|Y)=\frac{\mathrm{P}(X \cap Y)}{\mathrm{P}(Y)} = \frac{\mathrm{E}(X \mathbf{1}_Y)}{\mathrm{P}(Y)}$$。
+在機率論中，可定義某個事件(隨機變數)相對另一個事件(隨機變數)的條件機率，比如P(骰子點數是3或4|骰子點數是偶數)。其實就是把原先的樣本空間$$\Omega$$限制到給定條定件的事件上做正規化，視為一個新的機率空間。於是有貝氏公式 $$\mathrm{P}(X|Y)=\frac{\mathrm{P}(X \cap Y)}{\mathrm{P}(Y)} = \frac{\mathrm{E}(X \mathbf{1}_Y)}{\mathrm{P}(Y)}, ~ \mathrm{P}(Y) > 0$$。
 
-可得$$\displaystyle \mathrm{E}_\Omega(X|B) = \frac{\mathrm{P}_\Omega(X \cap B)}{\mathrm{P}_\Omega(B)} = \frac{\mathrm{E}_\Omega(X I_B)}{\mathrm{P}_\Omega(B)}$$。
+可得$$\displaystyle \mathrm{E}_\Omega(X|Y) = \frac{\mathrm{P}_\Omega(X \cap Y)}{\mathrm{P}_\Omega(Y)} = \frac{\mathrm{E}_\Omega(X I_Y)}{\mathrm{P}_\Omega(Y)}$$。
 
-<mark style="color:blue;">但貝氏公式無法計算零機率的事件的條件機率，即無法計算</mark>$$\mathrm{P}(Y)=0$$<mark style="color:blue;">的條件機率</mark>。
+<mark style="color:blue;">但貝氏公式無法處理零機率的事件的條件機率，即無法計算</mark>$$\mathrm{P}(Y=y_i)=0$$<mark style="color:blue;">的條件機率</mark>。
 
 條件期望值可分為以下幾類：
 
 1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$，為一常數值。
-2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=f(y)$$，為隨機變數。
+2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=g(y)$$，為隨機變數。
 3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，為隨機變數，該定義的主要優點是它允許我們以零機率事件為條件。
 
-註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割方法不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。
+註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割條件不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。
 
-一般化的條件期望值通常無法計算(除了有限個取值的離散隨機變數)，因此知道條件期望值的特性比計算重要。
+一般化的條件期望值通常無法計算(除了有限個取值的離散隨機變數)，因此知道一般化條件期望值的特性比計算重要，特別是在隨機過程中常使用遞增的σ域(filitration)時條件期望值會因給定的條件不同而異。
 
-## 事件集合的條件期望值
+<mark style="background-color:red;">一般化期望值為隨機變數，但因為名稱和考慮全體σ域時計算時為常數，容易誤解為常數</mark>。
 
-對於事件集合$$E \subseteq \Omega$$，考慮其指示(示性)函數（為隨機變數）$$\mathbf{1}_E(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in E \\  0,  \text{ if } \omega \not \in E \end{aligned}\right.$$。可得$$\mathrm{P}_{\Omega}(E) = \mathrm{E}_{\Omega}(\mathbf{1}_E)$$。同理可得$$\mathrm{P}_{\Omega}(E|F)=\mathrm{E}_{\Omega}(\mathbf{1}_E|F)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
+## 事件的條件機率為期望值的特例
+
+對於事件集合$$E \subseteq \Omega$$，考慮其指示(示性)函數（為隨機變數）$$\mathbf{1}_E(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in E \\  0,  \text{ if } \omega \not \in E \end{aligned}\right.$$。可得$$\mathrm{P}(E) = \mathrm{E}(\mathbf{1}_E)$$。同理可得$$\mathrm{P}(E|F)=\mathrm{E}(\mathbf{1}_E|F)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
 
 目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把機率正規化了之後求期望值，為一實數值。
 
@@ -51,22 +57,22 @@
 
 ## 一般σ域的條件期望值
 
-考慮測度空間$$(\Omega, \mathcal{F}_0, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$。
+考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$或寫成$$X \in L^1$$ 即Lebesgue可積函數。
 
 #### 條件期望值隨機變數的存在性
 
-> 考慮子σ域$$\mathcal{F} \subset \mathcal{F}_0$$且$$\mathrm{E}(|X|) < \infty$$。若條件期望$$\mathrm{E}(X|\mathcal{F})=Z$$為$$Z$$的隨機變數，且滿足：
+> 考慮子σ域$$\mathcal{G} \subset \mathcal{F}$$且$$\mathrm{E}(|X|) < \infty$$。若條件期望$$\mathrm{E}(X|\mathcal{G})=Z$$為$$Z$$的隨機變數，且滿足：
 >
-> 1. 隨機變數$$Z$$在$$\mathcal{F}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{F}$$。
-> 2. $$\forall A \in \mathcal{F}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{F})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
+> 1. 隨機變數$$Z$$在$$\mathcal{G}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{G}$$。
+> 2. $$\forall A \in \mathcal{G}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{G})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
 >
-> 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{F}$$的條件期望值。
+> 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{G}$$的條件期望值。
 
-<mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{F})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F_0}$$相對於$$\mathcal{F}$$<mark style="color:red;">的條件機率，記為</mark>$$\mathrm{P}(A|\mathcal{F})$$。
+<mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{G})=\mathrm{P}(A|\mathcal{G})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F}$$相對於$$\mathcal{G}$$<mark style="color:red;">的條件機率</mark>。
 
-<mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{F})$$。
+<mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{G})$$。
 
-<mark style="color:red;">而任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)。令</mark>$$\mathrm{Q}$$<mark style="color:red;">為測度</mark>$$\mathrm{P}$$<mark style="color:red;">在</mark>$$\mathcal{F}$$<mark style="color:red;">的測度，若隨機變數</mark>$$Z_1, Z_2$$<mark style="color:red;">均滿足條件(1,2)，則</mark>$$\mathrm{Q}(Z_1 \neq Z_2)=0$$。
+<mark style="color:red;">而任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)。令</mark>$$\mathrm{Q}$$<mark style="color:red;">為測度</mark>$$\mathrm{P}$$<mark style="color:red;">在</mark>$$\mathcal{G}$$<mark style="color:red;">的測度，若隨機變數</mark>$$Z_1, Z_2$$<mark style="color:red;">均滿足條件(1,2)，則</mark>$$\mathrm{Q}(Z_1 \neq Z_2)=0$$。
 
 <details>
 
@@ -94,7 +100,7 @@
 
 可得$$\nu$$為σ-finite測度且當$$\mathrm{P}(A)=0$$時，可得$$\nu(A)=0$$，因此$$\nu \ll \mathrm{P}$$ 。
 
-由Raydon-Nikodym定理可得存在可測函數$$\displaystyle Z=\frac{d \nu}{d \mu}$$使得$$\displaystyle \int_A X d \mathrm{P} = \nu(A) = \int_A \frac{d\nu}{d \mu} d \mathrm{P}$$
+由Raydon-Nikodym定理可得存在可測函數$$\displaystyle \frac{d \nu}{d \mu}= Z \equiv \mathrm{E}(X|\mathcal{G})$$使得$$\displaystyle \int_A \mathrm{E}(X|\mathcal{G}) dP = \nu(A) = \int_A X dP$$
 
 可得$$Z$$為所求的條件期望。
 
@@ -108,7 +114,7 @@
 
 > 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的隨機變數$$X, Y$$，則條件期望值$$\mathrm{E}(X|Y) = \mathrm{E}(X|\sigma(Y))$$。
 >
-> 給定事件集合$$A,B \subseteq  \Omega$$，可得$$\displaystyle \mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}$$
+> 給定可測事件集合$$A,B \subseteq  \Omega$$，可得$$\displaystyle \mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}$$
 
 #### 給定離散隨機變數的條件期望值範例
 
@@ -177,19 +183,37 @@ $$X = \mathrm{ceil}(\frac{\omega}{2}) =  \left\{ \begin{aligned} 1,& \text{ if }
 
 ## 範例2
 
-給定機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$，$$\Omega=\{a,b,c,d,e,f\}$$，$$\mathrm{P}$$為均勻分佈。$$X,Y,Z$$為隨機變數如下：
+給定機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$，$$\Omega=\{a,b,c,d,e,f\}$$，$$\mathcal{F}=2^\Omega$$為冪集合，$$\mathrm{P}$$為均勻分佈。$$X,Y,Z$$為隨機變數如下：
 
 $$X=\begin{pmatrix} a & b&c&d&e& f \\ 1 & 3 & 3& 5 & 5& 7 \end{pmatrix}$$，$$Y=\begin{pmatrix} a & b&c&d&e& f \\ 2 & 2 & 1 & 1 & 7 & 7 \end{pmatrix}$$，$$Z=\begin{pmatrix} a & b&c&d&e& f \\ 3 & 3 & 3 & 3 & 2 & 2 \end{pmatrix}$$
 
-* 當$$Y=2$$，可得$$\mathrm{E}(X|Y=2)=\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$。
-* 當$$Y=1$$，可得$$\mathrm{E}(X|Y=1)=\frac{1}{2}X(c)+\frac{1}{2}X(d)=4$$。
-* 當$$Y=7$$，可得$$\mathrm{E}(X|Y=7)=\frac{1}{2}X(e)+\frac{1}{2}X(f)=6$$。
+給定資訊$$\mathcal{G}=\sigma(Y)=\sigma(\{ \{a,b\}, \{c,d\}, \{e,f\} \})$$，為資訊為$$Y$$的實際取值，即可知$$A_i=\{\omega \in \Omega ~|~ Y(\omega)=y_i\}$$的資訊。
+
+* 當$$Y=2$$，可得$$A_1=\{a,b\}$$，因此$$\mathrm{E}(X|Y=2) =\mathrm{E}(X|\\sigma({a,b\})) =\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$$$\mathrm{E}(X|Y=2) =\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$。
+* 當$$Y=1$$，可得$$A_2=\{c,d\}$$，因此$$\mathrm{E}(X|Y=1)=\frac{1}{2}X(c)+\frac{1}{2}X(d)=4$$。
+* 當$$Y=7$$，可得$$A_3=\{e,f\}$$，可得$$\mathrm{E}(X|Y=7)=\frac{1}{2}X(e)+\frac{1}{2}X(f)=6$$。
 
 將上述$$Y$$相異值的期望值記為期望值$$W=\begin{pmatrix} a & b&c&d&e& f \\ 2 & 2 & 4 & 4 & 6 & 6 \end{pmatrix}$$
 
-顯然$$W$$為$$\mathcal{F}$$-可測函數，且可得$$\displaystyle \int_A W d\mathrm{P} = \int_A X d\mathrm{P}$$。
+顯然$$W$$為$$\sigma(Y)$$-可測函數。
 
-因此$$W=\mathrm{E}(X|Y) \equiv \mathrm{E}(X| \sigma(Y))$$。
+再檢查$$\forall A \in \sigma(Y), \mathrm{E}(WI_A)=\mathrm{E}(XI_A)$$。
+
+由於$$\sigma(Y)=\sigma(\{ \{a,b\}, \{c,d\}, \{e,f\} \})$$，所有$$\sigma(Y)$$中的元素都是由$$A_1=\{a,b\}$$, $$A_2=\{c,d\}$$, $$A_3=\{e,f\}$$聯集、交集或補集求得，因此只要考慮$$A_1, A_2, A_3$$的情形即可。
+
+由於$$\displaystyle  \mathrm{E}(X | I_{A_i}) = \frac{\mathrm{E}(X I_{A_i})}{\mathrm{P}(A_i)} ~, i=1,2,3$$
+
+$$\displaystyle   \begin{aligned} & \mathrm{E}(XI_A) \\ & =\mathrm{E}( X (I_{A_1} + I_{A_2} +I_{A_3})) \\  & =\mathrm{E}(X I_{A_1}) +\mathrm{E}(X I_{A_2}) + \mathrm{E}(X I_{A_3}) \\ & = \mathrm{E}(X | I_{A_1})\mathrm{P}(A_1) + \mathrm{E}(X | I_{A_2})\mathrm{P}(A_2) + \mathrm{E}(X | I_{A_3})\mathrm{P}(A_3)  \end{aligned}$$而$$W$$的取值，也是依$$Y=y_i$$而異，即事件集合$$A_1, A_2, A_3$$而異，且在$$A_i$$上的值為$$\mathrm{E}(X|Y=y_i)$$，因此：$$\displaystyle   W(\omega)=   \begin{cases}  \mathrm{E}(X|Y=2)=\mathrm{E}(X|A_1)=2, &  \omega \in \{a,b\} \\  \mathrm{E}(X|Y=1)=\mathrm{E}(X|A_2)=4, & \omega \in \{c,d\} \\  \mathrm{E}(X|Y=7)=\mathrm{E}(X|A_3)=6, & \omega \in \{e,f\}   \end{cases}$$
+
+$$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_{A_1})\mathrm{P}(A_1) + \mathrm{E}(X | I_{A_2})\mathrm{P}(A_2) + \mathrm{E}(X | I_{A_3})\mathrm{P}(A_3)   \end{aligned}$$因此$$W=\mathrm{E}(X|Y) \equiv \mathrm{E}(X| \sigma(Y))$$。
+
+
+
+<figure><img src="../../.gitbook/assets/conditional_expection_1-min.png" alt=""><figcaption><p>給定Y的資訊(sigma域)後的條件期望值，為Y中事件相異取值的平均值</p></figcaption></figure>
+
+##
+
+<figure><img src="../../.gitbook/assets/conditional_expection_2-min.png" alt=""><figcaption><p>給定Z的資訊(sigma域)後的條件期望值，為Z中事件相異取值的平均值</p></figcaption></figure>
 
 ## 條件期望值為線性
 

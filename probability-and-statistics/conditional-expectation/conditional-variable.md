@@ -32,9 +32,9 @@ description: conditional expectation with respect to sigma-field.
 
 ## 隨機變數的條件期望值
 
-定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P} \equiv \int_\Omega X(\omega) d \mathrm{P}(\omega)$$
+定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P} \equiv \int_\Omega X(\omega) d \mathrm{P}(\omega)$$為所有樣本的均值。
 
-對於離散隨機變數$$X,Y$$，條件期望值$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求$$X(\omega)$$的期望值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。<mark style="color:red;">但注意到條件期望值之值依賴於</mark>$$Y$$<mark style="color:red;">的實現值，因此期望值是</mark>$$y$$<mark style="color:red;">的函數，即</mark>$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
+對於離散隨機變數$$X,Y$$，條件期望值$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求$$X(\omega)$$的均值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。<mark style="color:red;">但注意到條件期望值之值依賴於</mark>$$Y$$<mark style="color:red;">的實現值，因此期望值是</mark>$$y$$<mark style="color:red;">的函數，即</mark>$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
 
 即使取$$X$$的函數值$$g(X)$$，條件期望值仍然為$$Y$$的函數，即$$\mathrm{E}(g(X)|Y)=h(Y)$$為$$Y$$的隨機變數。
 
@@ -42,7 +42,7 @@ description: conditional expectation with respect to sigma-field.
 
 在隨機變數的條件期望值中，兩個結果$$\omega_1, \omega_2$$是否有相同的條件期望值，取決於$$Y(\omega_1)$$是否與$$Y(\omega_2)$$有相同的函數值。因此不必考慮$$Y(\omega_1)$$的實際值為何，只需考慮$$\omega$$如何對宇集合$$\Omega$$做分割(partition)。
 
-<mark style="color:red;">而能夠記錄</mark>$$Y$$<mark style="color:red;">的相異取值而不記錄實際取值為何，就是</mark>$$\sigma(Y)$$<mark style="color:red;">，即宇集合</mark>$$\Omega$$<mark style="color:red;">中使得</mark>$$Y$$<mark style="color:red;">可測的最小的σ域。因此</mark>$$\mathrm{E}(g(X)|Y)$$<mark style="color:red;">可寫成</mark>$$\mathrm{E}(g(X)|\sigma(Y))$$。
+<mark style="color:red;">而能夠記錄</mark>$$Y$$<mark style="color:red;">的相異取值而不記錄實際取值為何，就是</mark>$$\sigma(Y)$$<mark style="color:red;">，即宇集合</mark>$$\Omega$$<mark style="color:red;">中使得</mark>$$Y$$<mark style="color:red;">可測的最小的σ域，其包含了</mark>$$Y$$<mark style="color:red;">相異取值的結構(事件集合)。因此</mark>$$\mathrm{E}(g(X)|Y)$$<mark style="color:red;">可寫成</mark>$$\mathrm{E}(g(X)|\sigma(Y))$$，即$$\mathrm{E}(g(X)|Y)\equiv \mathrm{E}(g(X)|\sigma(Y))$$。
 
 既然條件期望值只用了σ域的資訊，那麼不必管這個σ域是由那個隨機變數生成，直接對σ域定義條件期望即可。
 
@@ -50,12 +50,14 @@ description: conditional expectation with respect to sigma-field.
 
 令$$Y, Y_1, Y_2$$為可測空間$$(\Omega, \mathcal{F})$$隨機變數、隨機向量或隨機過程。則：
 
-* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。
-* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 稱$$Y_2$$比$$Y_1$$有更多的資訊量。
+* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。<mark style="color:blue;">也可說成</mark>$$Y$$<mark style="color:blue;">為</mark>$$\mathcal{F}$$<mark style="color:blue;">可測</mark>。
+* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 <mark style="color:blue;">稱</mark>$$Y_2$$<mark style="color:blue;">比</mark>$$Y_1$$<mark style="color:blue;">有更多的資訊量</mark>。
 
 由於知道了更多的資訊可知如何將$$Y_1$$中的事件分割更細得到$$Y_2$$，因此可得$$\sigma(Y_1) \subseteq \sigma(Y_2)$$。
 
 ## 一般σ域的條件期望值
+
+給定隨機變數$$Y$$的條件期望值與給定$$\sigma(Y)$$的條件期望值等價，如果考慮更大的資訊集合$$\mathcal{G}$$的條件期望值時，需要更一般化的定義。
 
 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$或寫成$$X \in L^1$$ 即Lebesgue可積函數。
 
@@ -68,11 +70,13 @@ description: conditional expectation with respect to sigma-field.
 >
 > 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{G}$$的條件期望值。
 
-<mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{G})=\mathrm{P}(A|\mathcal{G})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F}$$相對於$$\mathcal{G}$$<mark style="color:red;">的條件機率</mark>。
+<mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{G})=\mathrm{P}(A|\mathcal{G})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F}$$<mark style="color:red;">相對於</mark>$$\mathcal{G}$$<mark style="color:red;">的條件機率</mark>。
 
 <mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{G})$$。
 
 <mark style="color:red;">而任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)。令</mark>$$\mathrm{Q}$$<mark style="color:red;">為測度</mark>$$\mathrm{P}$$<mark style="color:red;">在</mark>$$\mathcal{G}$$<mark style="color:red;">的測度，若隨機變數</mark>$$Z_1, Z_2$$<mark style="color:red;">均滿足條件(1,2)，則</mark>$$\mathrm{Q}(Z_1 \neq Z_2)=0$$。
+
+對於滿足條件的條件期望$$Z$$與$$\mathrm{E}(X|\mathcal{G})$$是在相同的資訊集$$\mathcal{G}$$幾乎處處相等，而$$X$$是在更大的資訊集$$\mathcal{F}$$的隨機變數，因此$$\mathrm{E}(X|\mathcal{G})$$可解釋為$$X$$在資訊集$$\mathcal{G}$$的最佳預測值($$L^2$$空間中， $$X$$在資訊集$$\mathcal{G}$$的投影向量）。
 
 <details>
 

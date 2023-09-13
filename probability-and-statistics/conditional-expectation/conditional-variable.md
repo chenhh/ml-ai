@@ -59,22 +59,24 @@ description: conditional expectation with respect to sigma-field.
 
 給定隨機變數$$Y$$的條件期望值與給定$$\sigma(Y)$$的條件期望值等價，如果考慮更大的資訊集合$$\mathcal{G}$$的條件期望值時，需要更一般化的定義。
 
-考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$，且$$\mathrm{E}(|X|) < \infty$$或寫成$$X \in L^1$$ 即Lebesgue可積函數。
+考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$，$$X$$為$$\mathcal{F}$$可測(即$$\sigma(X) \subseteq \mathcal{F}$$），且$$\mathrm{E}(|X|) < \infty$$或寫成$$X \in L^1$$ 即Lebesgue可積函數。
+
+<mark style="color:blue;">註：Lebesgue可積分函數中，</mark> $$\displaystyle \int_\Omega X d\mathrm{P} < \infty \Leftrightarrow \int_\Omega |X| d\mathrm{P} < \infty$$<mark style="color:blue;">，因此</mark>$$\mathrm{E}(|X|) < \infty \Leftrightarrow \mathrm{E}(X) < \infty$$。
 
 #### 條件期望值隨機變數的存在性
 
-> 考慮子σ域$$\mathcal{G} \subset \mathcal{F}$$且$$\mathrm{E}(|X|) < \infty$$。若條件期望$$\mathrm{E}(X|\mathcal{G})=Z$$為$$Z$$的隨機變數，且滿足：
+> 考慮子σ域$$\mathcal{G} \subset \mathcal{F}$$。若隨機變數$$Z$$滿足：
 >
 > 1. 隨機變數$$Z$$在$$\mathcal{G}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{G}$$。
 > 2. $$\forall A \in \mathcal{G}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{G})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
 >
-> 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{G}$$的條件期望值。
+> 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{G}$$的條件期望值，記為$$Z=\mathrm{E}(X|\mathcal{G})$$。
 
-<mark style="color:red;">而</mark>$$\mathrm{E}(I_A|\mathcal{G})=\mathrm{P}(A|\mathcal{G})$$<mark style="color:red;">稱為事件</mark>$$A\in \mathcal{F}$$<mark style="color:red;">相對於</mark>$$\mathcal{G}$$<mark style="color:red;">的條件機率</mark>。
+<mark style="color:blue;">而</mark>$$\mathrm{E}(I_A|\mathcal{G})=\mathrm{P}(A|\mathcal{G})$$<mark style="color:blue;">稱為事件</mark>$$A\in \mathcal{F}$$<mark style="color:blue;">相對於</mark>$$\mathcal{G}$$<mark style="color:blue;">的條件機率。</mark>
 
-<mark style="color:red;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{G})$$。
+<mark style="color:blue;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{G})$$<mark style="color:blue;">。</mark>
 
-<mark style="color:red;">而任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:red;">almost surely)。令</mark>$$\mathrm{Q}$$<mark style="color:red;">為測度</mark>$$\mathrm{P}$$<mark style="color:red;">在</mark>$$\mathcal{G}$$<mark style="color:red;">的測度，若隨機變數</mark>$$Z_1, Z_2$$<mark style="color:red;">均滿足條件(1,2)，則</mark>$$\mathrm{Q}(Z_1 \neq Z_2)=0$$。
+<mark style="color:blue;">而任兩個版本的條件期望值只在零測集上相異(</mark>$$Z_1 = Z_2$$ <mark style="color:blue;">almost surely)。令</mark>$$\mathrm{Q}$$<mark style="color:blue;">為測度</mark>$$\mathrm{P}$$<mark style="color:blue;">在</mark>$$\mathcal{G}$$<mark style="color:blue;">的測度，若隨機變數</mark>$$Z_1, Z_2$$<mark style="color:blue;">均滿足條件(1,2)，則</mark>$$\mathrm{Q}(Z_1 \neq Z_2)=0$$。
 
 對於滿足條件的條件期望$$Z$$與$$\mathrm{E}(X|\mathcal{G})$$是在相同的資訊集$$\mathcal{G}$$幾乎處處相等，而$$X$$是在更大的資訊集$$\mathcal{F}$$的隨機變數，因此$$\mathrm{E}(X|\mathcal{G})$$可解釋為$$X$$在資訊集$$\mathcal{G}$$的最佳預測值($$L^2$$空間中， $$X$$在資訊集$$\mathcal{G}$$的投影向量）。
 
@@ -227,11 +229,12 @@ $$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_
 
 ## 重複期望值定理(tower principle)
 
-> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的隨機變數$$X$$與$$\mathrm{E}(X|\mathcal{F})$$，則：$$\mathrm{E}(X)=\mathrm{E}(\mathrm{E}(X | \mathcal{F}))$$。
+> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$， $$\mathcal{G} \subseteq \mathcal{F}$$隨機變數$$X$$與$$\mathrm{E}(X|\mathcal{G})$$，則：
 >
-> 當子σ域 $$\mathcal{G} \subseteq \mathcal{F}$$時，可得$$\mathrm{E}( X|\mathcal{G}) = \mathrm{E}(\mathrm{E}(X|\mathcal{F})|\mathcal{G}) =\mathrm{E}(\mathrm{E}(X|\mathcal{G})|\mathcal{F})$$
+> * $$\mathrm{E}(X)=\mathrm{E}(\mathrm{E}(X | \mathcal{G}))$$。
+> * $$\mathrm{E}( X|\mathcal{G}) = \mathrm{E}(\mathrm{E}(X|\mathcal{F})|\mathcal{G}) =\mathrm{E}(\mathrm{E}(X|\mathcal{G})|\mathcal{F})$$。
 
-## 條件期望值與~~σ域~~獨立時得期望值
+## 條件期望值與σ域獨立時得期望值
 
 > 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的隨機變數$$X, Y$$，當$$X$$與$$\mathcal{F}$$獨立時(即σ域$$\mathcal{F}$$中不包含$$X$$的資訊，反之亦然)，則$$\mathrm{E}(X|\mathcal{F})=\mathrm{E}(X)$$。
 >
@@ -253,20 +256,25 @@ $$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_
 
 ## 一般化條件期望值的投影性質
 
-測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$，令$$L^2(\mathcal{F})$$為$$\Omega$$中滿足以下性質的隨機變數$$Z$$的集合：
+測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$，$$\mathcal{G} \subseteq \mathcal{F}$$，令$$L^2(\mathcal{G})$$為$$\Omega$$中滿足以下性質的隨機變數$$Z$$的集合：
 
 * $$Z$$的二階動差有限(存在)，即$$\mathrm{E}(Z^2) < \infty$$。
 * $$Z$$的資訊量比$$\mathcal{F}$$少，即$$\sigma(Z) \subseteq \mathcal{F}$$。若$$\mathcal{F}=\sigma(Y)$$，則$$Z$$為$$Y$$的函數。
 
 > 投影性質(projection property)
 >
-> 令$$X$$為隨機變數且$$\mathrm{E}(X^2)<\infty$$，則條件期望值$$\mathrm{E}(X|\mathcal{F})$$為$$L^2(\mathcal{F})$$中，在均值平方為距離函數時，最接近$$X$$的隨機變數。
+> 令$$X$$為隨機變數且$$\mathrm{E}(X^2)<\infty$$，則條件期望值$$\mathrm{E}(X|\mathcal{G})$$為$$L^2(\mathcal{G})$$中，在均值平方為距離函數時，最接近$$X$$的隨機變數。
 >
-> 即$$\displaystyle \mathrm{E}(X-\mathrm{E}(X|\mathcal{F}))^2=\min_{Z \in L^2(\mathcal{F})}\mathrm{E}(X-Z)^2$$。
+> 即$$\displaystyle \mathrm{E}(X-\mathrm{E}(X|\mathcal{G}))^2=\min_{Z \in L^2(\mathcal{G})}\mathrm{E}(X-Z)^2$$。
 >
-> 註：$$L^2$$為內積空間，則$$\mathrm{E}(X|\mathcal{F})$$為隨機變數(向量)$$X$$投影到$$L^2(\mathcal{F})$$的向量，因此$$X-\mathrm{E}(X|\mathcal{F})$$為正交於$$L^2(\mathcal{F})$$的向量，且該向量是$$X$$到$$\mathrm{E}(X|\mathcal{F})$$距離最短的向量。
+> 註：$$L^2$$為內積空間，則$$\mathrm{E}(X|\mathcal{G})$$為隨機變數(向量)$$X$$投影到$$L^2(\mathcal{G})$$的向量，因此$$X-\mathrm{E}(X|\mathcal{G})$$為正交於$$L^2(\mathcal{G})$$的向量，且該向量是$$X$$到$$\mathrm{E}(X|\mathcal{F})$$距離最短的向量。<mark style="color:red;">因此</mark>$$\mathrm{E}(X|\mathcal{G})$$<mark style="color:red;">可解釋為</mark>$$X$$<mark style="color:red;">在資訊集</mark>$$\mathcal{G}$$<mark style="color:red;">的最佳預測值</mark>。
 
 
+
+<figure><img src="../../.gitbook/assets/conditional_expectation_projection.png" alt=""><figcaption><p>一般化條件期望值投影性質</p></figcaption></figure>
+
+* 如果$$\mathcal{G}=\{\emptyset, \Omega\}$$，即σ域中包含只有最小資訊量，不含$$X$$的訊息，則得$$\mathrm{E}(X|\mathcal{G})=\mathrm{E}(X)$$為一常數值。
+* 如果$$\mathcal{G}=\mathcal{F}$$，即σ域中包含了最大資訊量，包含了$$X$$的所有訊息，因此給$$\mathcal{G}$$對於猜測$$X$$沒有作用，因此$$\mathrm{E}(X|\mathcal{G})=X$$。
 
 
 

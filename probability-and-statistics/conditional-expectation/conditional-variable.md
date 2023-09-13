@@ -92,7 +92,7 @@ $$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說
 
 <details>
 
-<summary>proof: 條件期望值存在性會用到Raydon-Nikodym定理</summary>
+<summary>proof: 條件期望值存在性會用到Raydon-Nikodym定理；沒有唯一性，但相異的條件期望值幾乎處處相等。</summary>
 
 <mark style="color:blue;">測度絕對連續</mark>：
 
@@ -110,7 +110,7 @@ $$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說
 
 常見範例。$$f$$為在實數區間$$A$$有定義的連續函數，$$\mu$$為Lebesgue測度，則$$\int_Af d\mu$$為函數在區間$$A$$的積分值，而$$\nu(A)$$可解釋為某函數在此區間$$A$$的面積。
 
-<mark style="color:blue;">proof</mark>:
+<mark style="color:blue;">proof:存在性</mark>
 
 假設隨機變數$$X \geq 0$$ a.s.且可積分，令$$\mu = \mathrm{P}$$，$$\displaystyle  \nu(A)=\int_A X d \mathrm{P},~ \forall A \in \mathcal{F}$$
 
@@ -123,6 +123,22 @@ $$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說
 對於$$X \in \mathbb{R}$$的情形，只要使用$$X=X^{+} - X^{-}$$的性質即為所求。
 
 (QED)
+
+<mark style="color:blue;">proof: 相異條件期望值幾乎處處相等</mark>。
+
+令$$Z_1, Z_2$$均為滿足條件(1,2)的隨機變數。
+
+因為$$Z_1, Z_2$$均為$$\mathcal{G}$$可測函數，所以$$Z_1-Z_2$$也為$$\mathcal{G}$$可測函數。令$$A=\{Z_1-Z_2 > 0\} \in \mathcal{G}$$。
+
+由條件(2)可得$$\displaystyle \int_A Z_1 d\mathrm{P} = \displaystyle \int_A X d\mathrm{P} = \displaystyle \int_A Z_2 d\mathrm{P}$$
+
+由積分線性性質移項可得$$\displaystyle \int_A (Z_1- Z_2) d\mathrm{P}= 0$$
+
+因為在$$A$$中$$Z_1 -Z_2 >0$$必為正值 因此上式積分值為0必可得而$$\mathrm{P}(A)=0$$，因此可得$$Z_1 \leq Z_2$$ a.e.。
+
+同樣的推論可得$$Z_1 \geq Z_2$$ a.e。
+
+因此可得$$Z_1 = Z_2$$ a.e. (QED)
 
 </details>
 

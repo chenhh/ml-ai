@@ -53,6 +53,8 @@ description: conditional expectation with respect to sigma-field.
 * 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。<mark style="color:blue;">也可說成</mark>$$Y$$<mark style="color:blue;">為</mark>$$\mathcal{F}$$<mark style="color:blue;">可測</mark>。
 * 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 <mark style="color:blue;">稱</mark>$$Y_2$$<mark style="color:blue;">比</mark>$$Y_1$$<mark style="color:blue;">有更多的資訊量</mark>。
 
+$$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說明$$Y$$。如果$$\mathcal{F}$$與$$Y$$獨立時，則$$\mathcal{F}$$中的資訊對於解釋$$Y$$沒有幫助。<mark style="color:green;">而一般化的條件期望值討論的是兩者極端間的</mark>$$\mathcal{F}$$<mark style="color:green;">，可用於估計但無法完全解釋</mark>$$Y$$。
+
 由於知道了更多的資訊可知如何將$$Y_1$$中的事件分割更細得到$$Y_2$$，因此可得$$\sigma(Y_1) \subseteq \sigma(Y_2)$$。
 
 ## 一般σ域的條件期望值
@@ -67,12 +69,20 @@ description: conditional expectation with respect to sigma-field.
 
 > 考慮子σ域$$\mathcal{G} \subset \mathcal{F}$$。若隨機變數$$Z$$滿足：
 >
-> 1. 隨機變數$$Z$$在$$\mathcal{G}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{G}$$。
-> 2. $$\forall A \in \mathcal{G}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{G})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
+> 1. <mark style="color:red;">\[可測性]</mark> 隨機變數$$Z$$在$$\mathcal{G}$$可測；或者寫成$$\sigma(Z) \subseteq \mathcal{G}$$。
+> 2. <mark style="color:red;">\[部份平均]</mark> $$\forall A \in \mathcal{G}$$，可得$$\displaystyle \int_A X d\mathrm{P} = \int_A Z d\mathrm{P}\equiv \int_A\mathrm{E}(X|\mathcal{G})dP$$或寫成$$\mathrm{E}(X\mathbf{1}_A)=\mathrm{E}(Z\mathbf{1}_A)$$。
 >
 > 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{G}$$的條件期望值，記為$$Z=\mathrm{E}(X|\mathcal{G})$$。
+>
+> 註：條件1滿足了$$X$$的條件期望值$$\mathrm{E}(X|\mathcal{G})$$是基於$$\mathcal{G}$$的資訊估計得出。條件2要求條件期望值$$\mathrm{E}(X|\mathcal{G})$$與隨機變數$$X$$在$$\mathcal{G}$$有相同的平均值。
+>
+> 簡單的說，如果$$\mathcal{G}$$中包含了許多相異$$\omega$$的資訊，即切分的集合較小時，則$$\mathrm{E}(X|\mathcal{G})$$之值為每一個小集合的平均值，因此對$$X$$的估計會較精確，如果$$\mathcal{G}$$中包含了所有$$X$$的訊息時，可得$$\mathrm{E}(X|\mathcal{G})=X$$；反之如$$\mathcal{G}$$的集合較大時，包含了較少關於$$X$$
+>
+> 的資訊時，對於$$X$$的估計較不精確，最極端的狀況是$$\mathcal{G}$$不包含任何關於$$X$$的資訊時，此時條件期望值為宇集合的平均值，退化為一常數，即$$\mathrm{E}(X|\mathcal{G})=\mathrm{E}(X)$$。
 
 <mark style="color:blue;">而</mark>$$\mathrm{E}(I_A|\mathcal{G})=\mathrm{P}(A|\mathcal{G})$$<mark style="color:blue;">稱為事件</mark>$$A\in \mathcal{F}$$<mark style="color:blue;">相對於</mark>$$\mathcal{G}$$<mark style="color:blue;">的條件機率。</mark>
+
+<mark style="color:blue;">如果</mark>$$\mathcal{G} \subseteq \sigma(W)$$<mark style="color:blue;">的資訊量比</mark>$$W$$<mark style="color:blue;">少，則一般化條件期望值通常簡寫為</mark>$$\mathrm{E}(X|W)$$<mark style="color:blue;">而較少用</mark>$$\mathrm{E}(X| \sigma(W))$$。
 
 <mark style="color:blue;">條件期望值不唯一，對於任意的隨機變數，只要滿足條件(1,2)都是條件期望值的一個版本(a version of</mark> $$\mathrm{E}(X|\mathcal{G})$$<mark style="color:blue;">。</mark>
 

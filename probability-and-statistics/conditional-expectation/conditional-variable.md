@@ -255,6 +255,14 @@ $$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_
 >
 > 可放寬條件至非可積分正值隨機變數$$X_1, X_2 \geq 0$$且$$c_1, c_2 \geq 0$$，但等式可能為$$\infty = \infty$$。
 
+<details>
+
+<summary>proof: 以定義直接證明</summary>
+
+因為$$\mathrm{E}(X_1|\mathcal{G})$$與$$\mathrm{E}(X_2|\mathcal{G})$$都是$$\mathcal{G}$$可測，因此$$c_1\mathrm{E}(X_1|\mathcal{G}) + c_2\mathrm{E}(X_2|\mathcal{G})$$為$$\mathcal{G}$$可測。--(1)
+
+</details>
+
 ## 條件期望值的乘積
 
 > 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的可積分隨機變數$$X, Y$$與$$XY$$。
@@ -291,7 +299,13 @@ $$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_
 >
 > 若隨機變數$$X$$為隨機變數$$Y$$的函數，即$$X=g(Y)$$，得$$\sigma(X) \subseteq \sigma(Y)$$，則$$\mathrm{E}(X|Y)=X$$且$$\mathrm{E}(XZ|Y)= X \cdot \mathrm{E}(Z|Y)$$。
 
-如果$$\mathcal{F}$$提供了$$X$$的所有訊息，則$$X$$退化為為一常數值，即$$\mathrm{E}(X|\mathcal{F})(\omega)=\mathrm{E}(X(\omega)| \mathcal{F})=X(\omega) \mathrm{E}(1 | \mathcal{F})=X(\omega)$$.&#x20;
+如果$$\mathcal{F}$$提供了$$X$$的所有訊息，則$$X$$退化為為一常數值，即$$\mathrm{E}(X|\mathcal{F})(\omega)=\mathrm{E}(X(\omega)| \mathcal{F})=X(\omega) \mathrm{E}(1 | \mathcal{F})=X(\omega)$$.
+
+## 條件Jensen's不等式
+
+> 令$$H(x)$$ 為凸函數，即$$H(c x + (1-c) y) \geq cH(x)+(1-c)H(y)$$，且$$X$$為可積分隨機變數，即$$\mathrm{E}(|X|)<\infty$$，則：
+>
+> $$\mathrm{E}(h(X)|\mathcal{G}) \geq h(\mathrm{E}(X|\mathcal{G}))$$
 
 ## 一般化條件期望值的投影性質
 

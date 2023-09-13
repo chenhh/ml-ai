@@ -74,7 +74,7 @@ $$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說
 >
 > 稱隨機變數$$Z$$為$$X$$相對於$$\mathcal{G}$$的條件期望值，記為$$Z=\mathrm{E}(X|\mathcal{G})$$。
 >
-> 註：條件1滿足了$$X$$的條件期望值$$\mathrm{E}(X|\mathcal{G})$$是基於$$\mathcal{G}$$的資訊估計得出。條件2要求條件期望值$$\mathrm{E}(X|\mathcal{G})$$與隨機變數$$X$$在$$\mathcal{G}$$有相同的平均值。
+> 註：條件1滿足了$$X$$的條件期望值$$\mathrm{E}(X|\mathcal{G})$$是基於$$\mathcal{G}$$的資訊估計得出。條件2要求條件期望值$$\mathrm{E}(X|\mathcal{G})$$與隨機變數$$X$$在$$\mathcal{G}$$有相同的平均值。此處並不要求$$X$$為$$\mathcal{G}$$可測，反之如果$$X$$為$$\mathcal{G}$$可測時，則$$\mathrm{E}(X|\mathcal{G})=X$$，即$$\mathcal{G}$$中包含了$$X$$的所有訊息，可寫成$$\sigma(X) \subseteq \mathcal{G}$$。
 >
 > 簡單的說，如果$$\mathcal{G}$$中包含了許多相異$$\omega$$的資訊，即切分的集合較小時，則$$\mathrm{E}(X|\mathcal{G})$$之值為每一個小集合的平均值，因此對$$X$$的估計會較精確，如果$$\mathcal{G}$$中包含了所有$$X$$的訊息時，可得$$\mathrm{E}(X|\mathcal{G})=X$$；反之如$$\mathcal{G}$$的集合較大時，包含了較少關於$$X$$
 >
@@ -249,15 +249,28 @@ $$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_
 
 ## 條件期望值為線性
 
-> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的隨機變數$$X_1, X_2$$與$$c_1, c_2 \in \mathbb{R}$$，則：
+> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的可積分隨機變數$$X_1, X_2$$，$$\mathrm{E}(|X_1|)<\infty$$，$$\mathrm{E}(|X_2|)<\infty$$與$$c_1, c_2 \in \mathbb{R}$$，$$\mathcal{G} \subseteq \mathcal{F}$$，則：
 >
-> $$\mathrm{E}(c1 X_1 + c_2 X_2 | \mathcal{F})=c_1 \mathrm{E}(X_1 | \mathcal{F}) + c_2 \mathrm{E}(X_2 | \mathcal{F})$$
+> $$\mathrm{E}(c1 X_1 + c_2 X_2 | \mathcal{G})=c_1 \mathrm{E}(X_1 | \mathcal{G}) + c_2 \mathrm{E}(X_2 | \mathcal{G})$$。
+>
+> 可放寬條件至非可積分正值隨機變數$$X_1, X_2 \geq 0$$且$$c_1, c_2 \geq 0$$，但等式可能為$$\infty = \infty$$。
+
+## 條件期望值的乘積
+
+> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$上的可積分隨機變數$$X, Y$$與$$XY$$。
+>
+> $$\mathcal{G} \subseteq \mathcal{F}$$若$$X$$為$$\mathcal{G}$$可測，則：
+>
+> $$\mathrm{E}(XY|\mathcal{G})=X\cdot \mathrm{E}(Y|\mathcal{G})$$。
+>
+> 可放寬條件至非可積分隨機變數，但等式可能為$$\infty = \infty$$。
 
 ## 重複期望值定理(tower principle)
 
-> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$， $$\mathcal{G} \subseteq \mathcal{F}$$隨機變數$$X$$與$$\mathrm{E}(X|\mathcal{G})$$，則：
+> 考慮測度空間$$(\Omega, \mathcal{F}, \mathrm{P})$$， $$\mathcal{H}\subseteq \mathcal{G} \subseteq \mathcal{F}$$隨機變數$$X$$與$$\mathrm{E}(X|\mathcal{G})$$，則：
 >
-> * $$\mathrm{E}(X)=\mathrm{E}(\mathrm{E}(X | \mathcal{G}))$$。
+> * $$\mathrm{E}(X) \equiv \mathrm{E}(X|\mathcal{F})=\mathrm{E}(\mathrm{E}(X | \mathcal{G}))$$。
+> * $$\mathrm{E}(X|\mathcal{H})=\mathrm{E}(\mathrm{E}(X | \mathcal{G})|\mathcal{H})$$
 > * $$\mathrm{E}( X|\mathcal{G}) = \mathrm{E}(\mathrm{E}(X|\mathcal{F})|\mathcal{G}) =\mathrm{E}(\mathrm{E}(X|\mathcal{G})|\mathcal{F})$$。
 
 ## 條件期望值與σ域獨立時得期望值

@@ -15,7 +15,7 @@ description: conditional expectation with respect to sigma-field.
 條件期望值可分為以下幾類：
 
 1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$，為一常數值。此處給定的條件$$\{\omega\in \Omega | Y(\omega)=y\}$$為單一事件集合。
-2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=g(y)$$，為隨機變數。假設$$Y$$為離散隨機變數，此處給定的多個事件機率$$A_i=\{\omega \in \Omega | Y(\omega)=y_i\}$$，而在事件$$A_i$$下的條件期望值為該集合的均值，因此$$\mathrm{E}(X|Y)$$為相異$$y_i$$事件集合中均值形成的隨機變數。
+2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=g(y)$$，為隨機變數。假設$$Y$$為離散隨機變數，此處給定的多個事件機率$$A_i=\{\omega \in \Omega | Y(\omega)=y_i\}$$，<mark style="color:blue;">且</mark>$$A_i$$<mark style="color:blue;">為</mark>$$\Omega$$<mark style="color:blue;">的分割</mark>，而在事件$$A_i$$下的條件期望值為該集合的均值，因此$$\mathrm{E}(X|Y)$$為相異$$y_i$$事件集合中均值形成的隨機變數。
 3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，為隨機變數，該定義的主要優點是它允許我們以零機率事件為條件。
 
 註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割條件不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。
@@ -56,6 +56,8 @@ $$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}({2})=\frac{1}{4}$$， $$\mathrm
 ## 隨機變數的條件期望值
 
 定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P} \equiv \int_\Omega X(\omega) d \mathrm{P}(\omega)$$為所有樣本的均值。
+
+離散隨機變數$$Y$$的取值$$y_i$$等價於將樣本空間$$\Omega$$做分割，即$$A_i=\{\omega \in \Omega | Y(\omega)=y_i\}$$，$$\displaystyle \bigcup_i A_i = \Omega$$且$$\displaystyle A_i \cap A_j =\emptyset, ~ \forall i \neq j$$。
 
 對於離散隨機變數$$X,Y$$，條件期望值$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求$$X(\omega)$$的均值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。<mark style="color:red;">但注意到條件期望值之值依賴於</mark>$$Y$$<mark style="color:red;">的實現值，因此期望值是</mark>$$y$$<mark style="color:red;">的函數，即</mark>$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
 

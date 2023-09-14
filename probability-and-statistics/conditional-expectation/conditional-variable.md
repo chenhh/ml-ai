@@ -30,7 +30,7 @@ description: conditional expectation with respect to sigma-field.
 
 目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把機率正規化了之後求期望值，為一實數值。
 
-### 範例：事件集合的條件機率
+### 範例：給定事件集合的條件期望值
 
 $$\Omega=\{1,2,3,4\}$$，$$\mathcal{F}=\sigma(\{1\}, \{2\}, \{3\}, \{4\})$$。
 
@@ -60,6 +60,22 @@ $$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}({2})=\frac{1}{4}$$， $$\mathrm
 對於離散隨機變數$$X,Y$$，條件期望值$$\mathrm{E}(X|Y=y)$$也是一樣的道理，限制在子集$$\{ \omega ~|~ Y(\omega)=y\}$$上求$$X(\omega)$$的均值，而連續隨機變數也只是限制在$$\{\omega ~|~ a \leq Y(\omega) \leq b\}$$，概念相同。<mark style="color:red;">但注意到條件期望值之值依賴於</mark>$$Y$$<mark style="color:red;">的實現值，因此期望值是</mark>$$y$$<mark style="color:red;">的函數，即</mark>$$f(y)=\mathrm{E}(X|Y=y)$$。於是我們可以把$$\mathrm{E}(X|Y)$$看做$$Y$$的函數，一個隨機變數$$f(Y)$$。
 
 即使取$$X$$的函數值$$g(X)$$，條件期望值仍然為$$Y$$的函數，即$$\mathrm{E}(g(X)|Y)=h(Y)$$為$$Y$$的隨機變數。
+
+### 範例：給定隨機變數條件期望值
+
+$$\Omega=\{1,2,3\}$$，$$\mathcal{F}=2^{\Omega}$$。$$\mathrm{P}(\{1\})=\frac{1}{2}$$、$$\mathrm{P}({2})=\frac{1}{3}$$、$$\mathrm{P}(\{3\})=\frac{1}{6}$$。
+
+令隨機變數$$X(\omega)=\omega$$，$$Y(\omega)=4-\omega$$
+
+聯合機率$$\displaystyle  \mathrm{P}_{X,Y}= \begin{bmatrix} \frac{1}{12} & \frac{1}{24} & \frac{1}{48} \\ \frac{1}{6}  & \frac{1}{8} & \frac{1}{16} \\ \frac{1}{4}  & \frac{1}{12} & \frac{1}{6}  \end{bmatrix}$$
+
+邊際分佈$$\displaystyle  \mathrm{P}_Y= \begin{bmatrix} \mathrm{P}_Y(1) \\ \mathrm{P}_Y(2) \\ \mathrm{P}_Y(3) \\ \end{bmatrix}  = \begin{bmatrix} \mathrm{P}(1,1) + \mathrm{P}(2,1) +\mathrm{P}(3,1) \\ \mathrm{P}(1,2) + \mathrm{P}(2,2) + \mathrm{P}(3,2) \\ \mathrm{P}(1,3) + \mathrm{P}(2,3) + \mathrm{P}(3,3) \\ \end{bmatrix}  = \begin{bmatrix} \frac{1}{2} \\ \frac{1}{4} \\  \frac{1}{4} \end{bmatrix}$$
+
+條件機率：$$\displaystyle  \mathrm{P}_{X|Y}= \begin{bmatrix} \mathrm{P}_{X|Y}(1|1) & \mathrm{P}_{X|Y}(1|2) & \mathrm{P}_{X|Y}(1|3) \\ \mathrm{P}_{X|Y}(2|1) & \mathrm{P}_{X|Y}(2|2) & \mathrm{P}_{X|Y}(2|3) \\ \mathrm{P}_{X|Y}(3|1) & \mathrm{P}_{X|Y}(3|2) & \mathrm{P}_{X|Y}(3|3) \\ \end{bmatrix}  = \begin{bmatrix} \frac{1}{6} & \frac{1}{6} & \frac{1}{12} \\ \frac{1}{3} & \frac{1}{2} & \frac{1}{4} \\ \frac{1}{2} & \frac{1}{3} & \frac{2}{3} \\ \end{bmatrix}$$
+
+可得條件機率：$$\displaystyle  \mathrm{E}(X|Y)= \begin{bmatrix} \mathrm{E}(X|Y=1) \\ \mathrm{E}(X|Y=2) \\ \mathrm{E}(X|Y=3)  \end{bmatrix}  = \begin{bmatrix} 1 \cdot \mathrm{P}_{X|Y}(1|1) + 2 \cdot \mathrm{P}_{X|Y}(2|1) + 3 \cdot 1 \cdot \mathrm{P}_{X|Y}(3|1) \\ 1 \cdot \mathrm{P}_{X|Y}(1|2) + 2 \cdot \mathrm{P}_{X|Y}(2|2) + 3 \cdot 1 \cdot \mathrm{P}_{X|Y}(3|2) \\  1 \cdot \mathrm{P}_{X|Y}(1|3) + 2 \cdot \mathrm{P}_{X|Y}(2|3) + 3 \cdot 1 \cdot \mathrm{P}_{X|Y}(3|3) \end{bmatrix} = \begin{bmatrix} \frac{7}{3} \\ \frac{13}{6} \\ \frac{31}{6}  \end{bmatrix}$$
+
+在條件機率中，如果不明確指定$$Y$$的值，可得$$\mathrm{E}(X|Y)$$為隨機變數。
 
 ## 隨機變數σ域的條件期望值
 

@@ -30,6 +30,29 @@ description: conditional expectation with respect to sigma-field.
 
 目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把機率正規化了之後求期望值，為一實數值。
 
+### 範例：事件集合的條件機率
+
+$$\Omega=\{1,2,3,4\}$$，$$\mathcal{F}=\sigma(\{1\}, \{2\}, \{3\}, \{4\})$$。
+
+$$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}({2})=\frac{1}{4}$$， $$\mathrm{P}({3})=\frac{1}{6}$$，$$\mathrm{P}(\{4\})=\frac{1}{12}$$。
+
+令事件集合$$B=\{1,2,3\}$$，則：$$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\frac{1}{2}+\frac{1}{4}+\frac{1}{6}}=\frac{12}{11}\mathrm{P}(A \cap B)$$。
+
+因此可得條件機率：
+
+* $$\mathrm{P}(\{1\}|B)=\frac{12}{11}\mathrm{P}(\{1\})=\frac{6}{11}$$
+* $$\mathrm{P}(\{2\}|B)=\frac{12}{11}\mathrm{P}(\{2\})=\frac{3}{11}$$
+* $$\mathrm{P}(\{3\}|B)=\frac{12}{11}\mathrm{P}(\{3\})=\frac{2}{11}$$
+* $$\mathrm{P}(\{4\}|B)=\frac{12}{11}\mathrm{P}(\{4\})=0$$
+
+令隨機變數$$\displaystyle  X = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 2 & 1 \end{pmatrix}$$
+
+可得期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}) \\ & = 4 \cdot \frac{1}{2} + 3 \cdot \frac{1}{4} + 2 \cdot \frac{1}{6} +  1 \cdot \frac{1}{12} = \frac{19}{6}  \end{aligned}$$
+
+條件期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X|B) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}|B) \\ & = 4 \cdot \frac{6}{11} + 3 \cdot \frac{3}{11} + 2 \cdot \frac{2}{11} +  1 \cdot 0 = \frac{37}{11}  \end{aligned}$$
+
+以圖形來解釋得期望值$$\mathrm{E}(X)$$為$$X$$的實現值$$X(\omega)$$在樣本空間$$\Omega$$的平均值(高度)，而條件期望值$$\mathrm{E}(X|B)$$為$$X$$的實現值$$X(\omega)$$限制在集合$$B$$的平均值(高度)。
+
 ## 隨機變數的條件期望值
 
 定義在機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$的隨機變數$$X$$的期望值$$\displaystyle \mathrm{E}_{\Omega}(X)\equiv \int_\Omega X d \mathrm{P} \equiv \int_\Omega X(\omega) d \mathrm{P}(\omega)$$為所有樣本的均值。
@@ -179,6 +202,8 @@ $$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說
 令σ域$$\mathcal{F}$$中的可測序數$$\{B_n, n\in \mathbb{N}\}$$是宇集合$$\Omega$$的一組分割。令$$\mathcal{g}=\sigma(\{B_n, n \in \mathbb{N}\})$$為此序列生成的σ域。令隨機變數$$X$$的積分存在，則：
 
 $$\displaystyle \mathrm{E}(X|\mathcal{g}) = \sum_{j=1}^\infty \left(  \frac{1}{\mathrm{P}(B_j)} \int_{B_j} X(\omega)d\mathrm{P}(\omega)  \right) \mathbf{I}_{B_j} = \sum_{j=1}^\infty \mathrm{E(X| B_j)}\mathbf{I}_{B_j}$$
+
+###
 
 ### 範例
 

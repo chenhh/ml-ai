@@ -14,8 +14,8 @@ description: conditional expectation with respect to sigma-field.
 
 條件期望值可分為以下幾類：
 
-1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$，為一常數值。
-2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=g(y)$$，為隨機變數。
+1. 依賴隨機變數的特定實現值$$\mathrm{E}(X|Y=y)$$，為一常數值。此處給定的條件$$\{\omega\in \Omega | Y(\omega)=y\}$$為單一事件集合。
+2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=g(y)$$，為隨機變數。假設$$Y$$為離散隨機變數，此處給定的多個事件機率$$A_i=\{\omega \in \Omega | Y(\omega)=y_i\}$$，而在事件$$A_i$$下的條件期望值為該集合的均值，因此$$\mathrm{E}(X|Y)$$為相異$$y_i$$事件集合中均值形成的隨機變數。
 3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，為隨機變數，該定義的主要優點是它允許我們以零機率事件為條件。
 
 註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割條件不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。

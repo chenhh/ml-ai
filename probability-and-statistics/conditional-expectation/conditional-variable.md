@@ -261,6 +261,14 @@ $$\displaystyle    \begin{aligned} & \mathrm{E}(W I_A)  \\ & = \mathrm{E}(X | I_
 
 因為$$\mathrm{E}(X_1|\mathcal{G})$$與$$\mathrm{E}(X_2|\mathcal{G})$$都是$$\mathcal{G}$$可測，因此$$c_1\mathrm{E}(X_1|\mathcal{G}) + c_2\mathrm{E}(X_2|\mathcal{G})$$為$$\mathcal{G}$$可測。--(1)
 
+因為$$\mathrm{E}(X_1|\mathcal{G})$$與$$\mathrm{E}(X_2|\mathcal{G})$$都滿足部份平均的性質，可得：
+
+$$\displaystyle  \begin{aligned} & \int_A (c_1 \mathrm{E}(X_1|\mathcal{G}) + c_2 \mathrm{E}(X_2|\mathcal{G})) d\mathrm{P} \\ & = c_1 \int_A \mathrm{E}(X_1|\mathcal{G})d\mathrm{P} +      c_2 \int_A \mathrm{E}(X_2|\mathcal{G})d\mathrm{P} \\  & [\text{ both satisfy partial average property}]\\     & = c_1 \int_A X_1 d\mathrm{P} + c_2 \int_A X_1 d\mathrm{P}  \\  & = \int_A (c_1 X_1 + c_2 X_2) d\mathrm{P}       \end{aligned}$$--(2)
+
+也滿足部份平均的條件。
+
+由(1,2)得滿足條件期望值的條件。(QED)
+
 </details>
 
 ## 條件期望值的乘積

@@ -79,6 +79,10 @@ $$\Omega=\{1,2,3\}$$，$$\mathcal{F}=2^{\Omega}$$。$$\mathrm{P}(\{1\})=\frac{1}
 
 在條件機率中，如果不明確指定$$Y$$的值，可得$$\mathrm{E}(X|Y)$$為隨機變數。
 
+### 範例：分割樣本空間的條件期望值
+
+給定機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$與樣本空間的可測分割$$D=\{D_1, D_2, \dots, D_n\}$$，$$\bigcup_{i} D_i = \Omega$$，$$D_i \cap D_j = \emptyset, ~ \forall i \neq j$$且$$D_i \in \mathcal{F}~\forall i$$。
+
 ## 隨機變數σ域的條件期望值
 
 在隨機變數的條件期望值中，兩個結果$$\omega_1, \omega_2$$是否有相同的條件期望值，取決於$$Y(\omega_1)$$是否與$$Y(\omega_2)$$有相同的函數值。因此不必考慮$$Y(\omega_1)$$的實際值為何，只需考慮$$\omega$$如何對宇集合$$\Omega$$做分割(partition)。

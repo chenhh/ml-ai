@@ -79,9 +79,15 @@ $$\Omega=\{1,2,3\}$$，$$\mathcal{F}=2^{\Omega}$$。$$\mathrm{P}(\{1\})=\frac{1}
 
 在條件機率中，如果不明確指定$$Y$$的值，可得$$\mathrm{E}(X|Y)$$為隨機變數。
 
-### 範例：分割樣本空間的條件期望值
+## 分割樣本空間的條件期望值
 
-給定機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$與樣本空間的可測分割$$D=\{D_1, D_2, \dots, D_n\}$$，$$\bigcup_{i} D_i = \Omega$$，$$D_i \cap D_j = \emptyset, ~ \forall i \neq j$$且$$D_i \in \mathcal{F}~\forall i$$。
+> 給定機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$與樣本空間的可測分割$$D=\{D_1, D_2, \dots, D_n\}$$，$$\bigcup_{i} D_i = \Omega$$，$$D_i \cap D_j = \emptyset, ~ \forall i \neq j$$且$$D_i \in \mathcal{F}~\forall i$$。
+>
+> 令$$\mathrm{P}(D_i) >0, ~\forall i$$，因此可定義$$\mathrm{P}(A|D_i), \forall A \in \mathcal{F}$$。
+>
+> 定義條件機率$$\displaystyle \mathrm{P}(A|D)=\sum_{i=1}^n \mathrm{P}(A|D_i)I_{D_i}$$
+
+$$\displaystyle \mathrm{P}(A|D) = \frac{\mathrm{P}(A \cap D)}{\mathrm{P}(D)}  = \frac{\mathrm{P}(A \cap (\bigcup_{i=1}^n D_i))}{\mathrm{P}(\bigcup_{i=1}^n D_i)}  = \frac{\mathrm{P}(\bigcup_{i=1}^n (A \cap D_i)}{\sum_{i=1}^n \mathrm{P}(D_i))} = \frac{\bigcup_{i=1}^n (A \cap D_i)}{\sum_{i=1}^n \mathrm{P}(D_i)}  = \sum_{i=1}^n \mathrm{P}(A|D_i)I_{D_i}$$
 
 ## 隨機變數σ域的條件期望值
 
@@ -268,7 +274,7 @@ $$X=\begin{pmatrix} a & b&c&d&e& f \\ 1 & 3 & 3& 5 & 5& 7 \end{pmatrix}$$，$$Y=
 
 給定資訊$$\mathcal{G}=\sigma(Y)=\sigma(\{ \{a,b\}, \{c,d\}, \{e,f\} \})$$，為資訊為$$Y$$的實際取值，即可知$$A_i=\{\omega \in \Omega ~|~ Y(\omega)=y_i\}$$的資訊。
 
-* 當$$Y=2$$，可得$$A_1=\{a,b\}$$，因此$$\mathrm{E}(X|Y=2) =\mathrm{E}(X|\\sigma({a,b\})) =\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$$$\mathrm{E}(X|Y=2) =\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$。
+* 當$$Y=2$$，可得$$A_1=\{a,b\}$$，因此$$\mathrm{E}(X|Y=2) =\mathrm{E}(X|\sigma(\{a,b\})) =\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$$$\mathrm{E}(X|Y=2) =\frac{1}{2} X(a) + \frac{1}{2} X(b)=2$$。
 * 當$$Y=1$$，可得$$A_2=\{c,d\}$$，因此$$\mathrm{E}(X|Y=1)=\frac{1}{2}X(c)+\frac{1}{2}X(d)=4$$。
 * 當$$Y=7$$，可得$$A_3=\{e,f\}$$，可得$$\mathrm{E}(X|Y=7)=\frac{1}{2}X(e)+\frac{1}{2}X(f)=6$$。
 

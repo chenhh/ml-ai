@@ -49,6 +49,39 @@
 
 任意的$$t<s$$ ，可得$$\mathcal{F}_t \subseteq \mathcal{F}_s$$ 。若是按照sigma代數作為隨機事件“資訊”的直觀理解，這實際上是說隨著時間的推進，我們對這個隨機過程所獲得的資訊是“單調增加”的。<mark style="color:blue;">通常我們會把</mark>$$\mathcal{F}_t$$ <mark style="color:blue;">看作（或者取作）截止到時間</mark>$$t$$ <mark style="color:blue;">所能獲取的所有有關這個隨機過程的資訊</mark>。那麼$$X_t$$ adapted to $$\mathcal{F}_t$$ 的直觀意思實際上就很簡單了，就是說在時間$$t$$我們才能知道$$X_t$$ 的值應該是多少。
 
+## 有限維分佈(finite-dimensional distributions, FDDs)
+
+給定隨機過程$$X_t \equiv \{X_t, ~ t\in I\}$$，
+
+在$$t=t_1$$時，對$$X_t$$而言，$$X_{t_1}$$為一維的隨機變數，其分佈函數為$$F_1(x_1)=\mathrm{P}(X_{t_1} \leq x_1)$$且機率密度函數為$$f_1(x_1)=\frac{\partial F_1(x_1)}{\partial x_1}$$。以此類推，可得一族機率分佈，稱為有限維機率分布函數。
+
+> 定義：有限維分佈的隨機變數
+>
+> 給定任選的時間點集合$$t_1, t_2, \dots, t_n \in I$$，$$n \geq 1$$，則$$\{X_{t_1}, X_{t_2}, \dots, X_{t_n}\}$$為隨機過程$$X_t$$的有限維分佈的隨機變數族。
+
+可得有限維分佈為$$F_n(x_1, x_2, \dots, x_n; t_1, t_2, \dots, t_n)=\mathrm{P}(X_{t_1}\leq x_1, X_{t_2} \leq t_2, \dots, X_{t_n} \leq x_n)$$。
+
+其機率密度函數為$$f_n(x_1, x_2, \dots, x_n; t_1, t_2, \dots, t_n)=\frac{\partial^n}{\partial x_1 \partial x_2 \dots \partial x_n} F_n(x_1, x_2, \dots, x_n; t_1, t_2, \dots, t_n)$$。
+
+相當類似於隨機向量的分佈函數與機率密度函數。<mark style="color:blue;">但有限維分佈中的</mark>$$t_1, \dots, t_n$$<mark style="color:blue;">是任意選出的，並沒有特定的選擇方式，與隨機向量中要求序列性不同</mark>。
+
+此做法類似於分析極限時，當$$n \rightarrow \infty$$時，事實上等同於分析$$X_t$$無限維度的性質。但有部份性質如隨機過程的樣本不連續或跳躍的性質無法用FDDs分析，因此FDDs還需滿足以下性質：
+
+#### 對稱性(symmetric)
+
+對於$$1,2,\dots, n$$的任意排列$$i_1, i_2, \dots, i_n$$，若有：
+
+* $$F_n(x_1, x_2, \dots, x_n; t_1, t_2, \dots, t_n)=F_n(x_{i_1}, x_{i_2}, \dots, x_{i_n}; t_{i_1}, t_{i_2}, \dots, t_{i_n})$$或
+* $$\mathrm{P}(X_{t_1}\leq x_1, X_{t_2} \leq t_2, \dots, X_{t_n} \leq x_n) = \mathrm{P}(X_{t_{i_1}}\leq x_{i_1}, X_{t_{i_2}} \leq t_{i_2}, \dots, X_{t_{i_n}} \leq x_{i_n})$$
+
+即將$$X_t$$分佈的各個時間點$$t_i$$任意排列，其分佈並未因此改變，則此FDDs滿足對稱性條件。
+
+#### 一致性(consistency)
+
+對於$$m < n$$，若有：$$F_m(x_1, x_2, \dots, x_m; t_1, t_2, \dots, t_m)=F_n(x_1, x_2, \dots, x_m, \infty, \dots, \infty ; t_1, t_2, \dots, t_m, t_{m+1}, \dots, t_n)$$
+
+即將觀察時刻任意增加，FDDs也不會因此改變。
+
 ## 隨機過程與時間序列的比較
 
 隨機過程與時間序列分析的關係類似機率論與統計學的關係。前者是研究一些已經給定的抽象的機率模型，來研究該模型的種種性質；而後者通常是由一些具體的數據，通過數據來分析其適用的模型，並檢驗之，然後得到一些有用的資訊。用隨機過程可以給時間序列建模並分析，但是分析時間序列不一定適用隨機過程。

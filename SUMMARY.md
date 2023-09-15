@@ -129,7 +129,7 @@
   * [隨機漫步(random walk)](probability-and-statistics/random-process/random-walk.md)
   * [布朗運動(Brownian motion)](probability-and-statistics/random-process/brownian-motion.md)
   * [平賭(鞅)過程(Martingale process)](probability-and-statistics/random-process/martingale-process.md)
-* [Levy過程](probability-and-statistics/levy-process.md)
+  * [Levy過程](probability-and-statistics/random-process/levy-process.md)
 * [關聯結構(copula)](probability-and-statistics/copula.md)
 * [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
 * [實驗設計](probability-and-statistics/experiment-design.md)

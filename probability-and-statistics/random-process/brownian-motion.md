@@ -64,5 +64,10 @@
 
 > \[time homogeneity] $$W(t+h) - W(t), ~ t \geq 0$$是布朗運動。
 
+## 參考資料
 
+* [https://zhuanlan.zhihu.com/p/260675093](https://zhuanlan.zhihu.com/p/260675093)
+* [https://www.zhihu.com/column/c\_1355638234190479360](https://www.zhihu.com/column/c\_1355638234190479360)
+* [https://zhuanlan.zhihu.com/p/383030923](https://zhuanlan.zhihu.com/p/383030923)
+* [https://songhuiming.github.io/pages/2017/06/03/mai-ru-gu-piao-shi-mai-ru-jie-zhi-shao-she-wei-duo-shao-cai-neng-bao-zheng-you-jiu-cheng-de-ba-wo-zai-dang-tian-cheng-jiao/](https://songhuiming.github.io/pages/2017/06/03/mai-ru-gu-piao-shi-mai-ru-jie-zhi-shao-she-wei-duo-shao-cai-neng-bao-zheng-you-jiu-cheng-de-ba-wo-zai-dang-tian-cheng-jiao/)
 

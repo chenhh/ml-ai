@@ -43,6 +43,7 @@
 > * $$\mathrm{Cov}(B_s, B_t)=\sigma^2 s$$。
 > * $$\mathrm{Var}(B_t - B_s)=\sigma^2(t-s)$$。
 > * $$\mathrm{Var}(aB_s + bB_t)=\sigma^2(a^2s+b^2t+2abs)$$。
+> * $$\mathrm{Corr}(B_s, B_t)  =  \frac{\mathrm{Cov}(B_s, B_t)}{\sqrt{\mathrm{Var}(B_s)\mathrm{Var}(B_t)}}  = \frac{\sigma^2 s}{\sqrt{\sigma^2 s \sigma^2 t}}  =  \sqrt{\frac{s}{t}}$$
 
 <details>
 

@@ -38,17 +38,17 @@
 
 ## 布朗運動性質
 
-> $$\{B_t \sim N(0, t), t \geq 0\}$$為標準布朗運動，$$0 < s < t$$，$$a,b, \in \mathbb{R}$$, 則：
+> $$\{B_t \sim N(0, \sigma^2t), t \geq 0\}$$為布朗運動，$$0 < s < t$$，$$a,b, \in \mathbb{R}$$, 則：
 >
-> * $$\mathrm{Cov}(B_s, B_t)=s$$。
-> * $$\mathrm{Var}(B_t - B_s)=t-s$$。
-> * $$\mathrm{Var}(aB_s + bB_t)=a^2s+b^2t+2abs$$。
+> * $$\mathrm{Cov}(B_s, B_t)=\sigma^2 s$$。
+> * $$\mathrm{Var}(B_t - B_s)=\sigma^2(t-s)$$。
+> * $$\mathrm{Var}(aB_s + bB_t)=\sigma^2(a^2s+b^2t+2abs)$$。
 
 <details>
 
 <summary>proof: 共變異數</summary>
 
-$$\displaystyle  \begin{aligned} \mathrm{Cov}(B_s, B_t)  & = \mathrm{Cov}(B_s, B_s+ B_t - B_s) \\ & = \mathrm{Cov}(B_s, B_s) + \mathrm{Cov}(B_s, B_t - B_s) \\ & = \mathrm{Cov}(B_s, B_s) + 0 [\because \text{ 獨立增量 }]\\ & = s   \end{aligned}$$
+$$\displaystyle  \begin{aligned} \mathrm{Cov}(B_s, B_t)  & = \mathrm{Cov}(B_s, B_s+ B_t - B_s) \\  & = \mathrm{Cov}(B_s, B_s) + \mathrm{Cov}(B_s, B_t - B_s) \\  & = \mathrm{Cov}(B_s, B_s) + 0 [\because \text{ 獨立增量 }]\\ & = \mathrm{Var}(B_s) \\   & = \sigma^2s   \end{aligned}$$
 
 (QED)
 
@@ -58,11 +58,11 @@ $$\displaystyle  \begin{aligned} \mathrm{Cov}(B_s, B_t)  & = \mathrm{Cov}(B_s, B
 
 <summary>proof: 變異數</summary>
 
-$$\displaystyle  \begin{aligned} \mathrm{Var}(B_t - B_s)   & = \mathrm{Var}(B_t) + \mathrm{Var}(B_s) - 2 \mathrm{Cov}(B_t, B_s) \\ & = t + s - 2s \\ & = t- s  \end{aligned}$$
+$$\displaystyle  \begin{aligned} \mathrm{Var}(B_t - B_s)   & = \mathrm{Var}(B_t) + \mathrm{Var}(B_s) - 2 \mathrm{Cov}(B_t, B_s) \\ & = \sigma^2(t + s - 2s) \\ & = \sigma^2(t- s)  \end{aligned}$$
 
 (QED)
 
-$$\displaystyle  \begin{aligned} \mathrm{Var}(aB_s + bB_t)   & = a^2 \mathrm{Var}(B_s) + b^2 \mathrm{Var}(B_t) + 2ab \mathrm{Cov}(B_t, B_s) \\ & = a^2 s + b^2 t + 2ab s  \end{aligned}$$
+$$\displaystyle  \begin{aligned} \mathrm{Var}(aB_s + bB_t)   & = a^2 \mathrm{Var}(B_s) + b^2 \mathrm{Var}(B_t) + 2ab \mathrm{Cov}(B_t, B_s) \\ & = \sigma^2(a^2 s + b^2 t + 2ab s)  \end{aligned}$$
 
 (QED)
 

@@ -121,5 +121,45 @@ $$\displaystyle S_0 \Rightarrow \begin{cases} uS_0 \Rightarrow \begin{cases} u^2
 
 <mark style="color:red;">以此類推可得股價在時間</mark>$$t$$<mark style="color:red;">價格與機率的通式</mark>：
 
-$$\displaystyle S_t = S_0 \prod_{i=1}^n X_i$$，$$\mathrm{P}(S_t=S_0 u^r d^{t-r})=\binom{t}{r}p^r q^{t-r}, ~r=0,1,2,\dots, t$$。
+$$\displaystyle S_t = S_0 \prod_{i=1}^n X_i$$，$$\mathrm{P}(S_t=S_0 u^r d^{t-r})=\binom{t}{r}p^r q^{t-r}, ~r=0,1,2,\dots, t$$。--(1)
 
+#### 將隨機變數$$X_t$$視為連續複利
+
+因為$$S_t=S_{t-1}X_t$$ 且$$S_t, S_{t-1} > 0$$，移項可得$$X_t=\frac{S_t}{S_{t-1}}$$，兩邊取對數得$$\log{X_t}=\log{S_t} - \log{S_{t-1}}$$得$$X_t$$為當期(連續)報酬率。
+
+令$$\epsilon_t \equiv \log X_t=\begin{cases} \log u, \text{ with prob. } p \\ \log d, \text{ with prob. } q \end{cases}$$
+
+則(1)可改寫為$$\displaystyle \log S_t = \log S_0 + \sum_{i=1}^t \epsilon_i$$ 或$$\log S_t = \log S_{t-1} + \epsilon_t$$。--(2)
+
+由$$\epsilon_t$$定義可得：
+
+* $$\mathrm{E}(\epsilon_t)=p \log u + q \log d$$，與時間$$t$$無關。
+* $$\mathrm{E}(\epsilon_t^2)=p (\log u)^2 + q (\log d)^2$$
+* $$\mathrm{Var}(\epsilon_t)=\mathrm{E}(\epsilon_t^2) - \mathrm{E}^2(\epsilon_t)=pq(\log u - \log d)^2$$，與時間$$t$$無關
+
+為了簡化符號，令$$\mathrm{E}(\epsilon_t)= \mu$$, $$\mathrm{Var}(\epsilon_t)=\sigma^2$$--(3)。
+
+因為假設$$X_t$$為獨立同分佈的二項式變數，因此可得$$\displaystyle \mathrm{E}(\sum_{i=1}^t \epsilon_t)=\mu t$$，$$\displaystyle \mathrm{Var}(\sum_{i=1}^t \epsilon_t)= \sigma^2 t$$--(4)
+
+#### 將連續複利表示為遞迴關係式
+
+令$$h_t = \frac{\epsilon_t - \mu}{\sigma}$$，$$\epsilon_t = \mu + \sigma h_t$$，可得
+
+* $$\mathrm{E}(h_t)=p \cdot \frac{\log u -( p \log u + q \log d) }{\sigma} + q \cdot \frac{\log u - (p \log u + q \log d) }{\sigma} =0$$
+* $$\mathrm{Var}(h_t) = 1$$。
+
+<mark style="color:blue;">令</mark>$$W_0=0$$<mark style="color:blue;">，且</mark>$$W_t = W_{t-1} + h_t$$<mark style="color:blue;">為i.i.d.(0,1)的隨機變數</mark>$$h_t$$<mark style="color:blue;">經過</mark>$$t$$<mark style="color:blue;">期的隨機變數(此假設滿足</mark>$$S_t$$<mark style="color:blue;">為平賭過程)</mark>，可得：$$\displaystyle W_t = \sum_{i=1}^t h_t$$。
+
+因此$$\displaystyle \sum_{i=1}^t {\epsilon_i} = \sum_{i=1}^t (\mu + \sigma h_t) = \mu t + \sigma \sum_{i=1}^t h_t=\mu t + \sigma W_t$$--(5)
+
+由(2,5)得$$\log S_t = \log S_0 + \mu t + \sigma W_t$$
+
+
+
+####
+
+
+
+
+
+####

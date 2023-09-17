@@ -103,8 +103,16 @@ $$\displaystyle  \begin{aligned} \mathrm{E}(X_{t+1} ~|~ X_1, X_2, \dots, X_t)  &
 
 ## 股價的隨機漫步模型(binomial model)
 
-> 令初始時的股價為$$S_0$$，時間$$t$$的股價為$$S_t$$，在時間$$t+1$$時股價上漲為$$uS_t, ~ u \geq 1$$ 的機率為$$p$$，下跌為$$dSt, 0 < d <1$$的機率為$$q=1-p$$。
+> $$\Delta S_t = \mu S_{t-1} + \sigma S_{t-1} \Delta W_t$$ <mark style="color:red;">為Black-Scholes股價模型的離散型式。</mark>
 >
+> $$W_t\sim \text{i.i.d}(0,1)$$為獨立同分佈，平均值為0，變異數為1的隨機變數(白噪音)。
+>
+> $$\mu, \sigma^2$$分別為股價漲跌比例的期望值與變異數。
+>
+> 連續型式為$$d S_t = \mu S_t dt + \sigma S_t dW_t$$。
+
+令初始時的股價為$$S_0$$，時間$$t$$的股價為$$S_t$$，在時間$$t+1$$時股價上漲為$$uS_t, ~ u \geq 1$$ 的機率為$$p$$，下跌為$$dSt, 0 < d <1$$的機率為$$q=1-p$$。
+
 > <mark style="color:blue;">假設每一期股價上漲與下跌的機率不變</mark>。
 
 在時間$$t=1$$的股價為：$$\displaystyle S_0 \Rightarrow \begin{cases} \mathrm{P}(S_1=uS_0)=p \\ \mathrm{P}(S_1=dS_0)=q \\ \end{cases}$$
@@ -141,7 +149,7 @@ $$\displaystyle S_t = S_0 \prod_{i=1}^n X_i$$，$$\mathrm{P}(S_t=S_0 u^r d^{t-r}
 
 因為假設$$X_t$$為獨立同分佈的二項式變數，因此可得$$\displaystyle \mathrm{E}(\sum_{i=1}^t \epsilon_t)=\mu t$$，$$\displaystyle \mathrm{Var}(\sum_{i=1}^t \epsilon_t)= \sigma^2 t$$--(4)
 
-#### 將連續複利表示為遞迴關係式
+#### 將正規化的連續複利視為隨機變數且表示為隨機漫步
 
 令$$h_t = \frac{\epsilon_t - \mu}{\sigma}$$，$$\epsilon_t = \mu + \sigma h_t$$，可得
 
@@ -154,7 +162,17 @@ $$\displaystyle S_t = S_0 \prod_{i=1}^n X_i$$，$$\mathrm{P}(S_t=S_0 u^r d^{t-r}
 
 由(2,5)得$$\log S_t = \log S_0 + \mu t + \sigma W_t$$
 
+因此$$\log S_{t-1} = \log S_0 + \mu (t-1) + \sigma W_{t-1}$$，兩式相減得：
 
+$$\Delta \log S_t = \mu + \sigma \Delta W_t$$--(6)
+
+因為$$\Delta \log S_t = \log S_t - \log S_{t-1} = \log \frac{S_t}{S_{t-1}}= \log (1 + \frac{\Delta S_t}{S_{t-1}})\approx\frac{\Delta S_t}{S_{t-1}}$$，最後近似關係由連續複利性質得出。
+
+<mark style="color:red;">因此(6)可改寫為：</mark>
+
+<mark style="color:red;">。</mark>
+
+<mark style="color:red;">連續型式為</mark>$$\frac{dS_t}{dt} = \mu S_t + \sigma S_t \frac{dW_t}{dt}$$<mark style="color:red;">，通常寫為</mark>$$d S_t = \mu S_t dt + \sigma S_t dW_t$$。
 
 ####
 

@@ -122,6 +122,7 @@
   * [常態分佈檢定](probability-and-statistics/hypothesis-test/normal-dist-test.md)
 * [迴歸分析](probability-and-statistics/regression-analysis.md)
 * [隨機過程](probability-and-statistics/random-process/README.md)
+  * [停時(stopping time)](probability-and-statistics/random-process/stopping-time.md)
   * [定態過程(stationary process)](probability-and-statistics/random-process/stationary-process.md)
   * [計數過程(counting process)](probability-and-statistics/random-process/counting-process.md)
   * [卜瓦松過程(Poisson process)](probability-and-statistics/random-process/poisson-process.md)

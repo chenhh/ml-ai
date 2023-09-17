@@ -148,7 +148,7 @@ $$\displaystyle S_t = S_0 \prod_{i=1}^n X_i$$，$$\mathrm{P}(S_t=S_0 u^r d^{t-r}
 * $$\mathrm{E}(h_t)=p \cdot \frac{\log u -( p \log u + q \log d) }{\sigma} + q \cdot \frac{\log u - (p \log u + q \log d) }{\sigma} =0$$
 * $$\mathrm{Var}(h_t) = 1$$。
 
-<mark style="color:blue;">令</mark>$$W_0=0$$<mark style="color:blue;">，且</mark>$$W_t = W_{t-1} + h_t$$<mark style="color:blue;">為i.i.d.(0,1)的隨機變數</mark>$$h_t$$<mark style="color:blue;">經過</mark>$$t$$<mark style="color:blue;">期的隨機變數(此假設滿足</mark>$$S_t$$<mark style="color:blue;">為平賭過程)</mark>，可得：$$\displaystyle W_t = \sum_{i=1}^t h_t$$。
+<mark style="color:blue;">令</mark>$$W_0=0$$<mark style="color:blue;">，且</mark>$$W_t = W_{t-1} + h_t$$<mark style="color:blue;">為i.i.d.(0,1)的隨機變數</mark>$$h_t$$<mark style="color:blue;">經過</mark>$$t$$<mark style="color:blue;">期的隨機變數(此假設滿足</mark>$$S_t$$<mark style="color:blue;">為平賭過程，或者說</mark>$$h_t$$<mark style="color:blue;">也是隨機漫步模型)</mark>，可得：$$\displaystyle W_t = \sum_{i=1}^t h_t$$。
 
 因此$$\displaystyle \sum_{i=1}^t {\epsilon_i} = \sum_{i=1}^t (\mu + \sigma h_t) = \mu t + \sigma \sum_{i=1}^t h_t=\mu t + \sigma W_t$$--(5)
 

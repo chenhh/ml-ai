@@ -6,6 +6,8 @@
 
 關於隨機過程$$X_1,X2, X3, \dots$$的停時是隨機變數$$\tau$$ ，這一隨機變數具有如下性質：對於每一個時間 ，事件 $$\tau=t$$ 的發生與否僅取決於$$X_1,X_2, \dots,X_t$$ 的取值。從定義中可以感受到的直覺是在任一特定時刻$$t$$，可以判別在這一時刻隨機過程是否到了停時。
 
+停時為隨機變數，且等價於停止過程(stopping process)，即初始值為1，在某時刻變為0隨機過程。討論詳見Fischer(2013)。
+
 ## 停時
 
 > 定義：停時
@@ -14,7 +16,7 @@
 >
 > $$\forall t \in I, \{\tau = t\} \in \mathcal{F}_t$$。
 
-$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，到時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來，或者在之前就停下來</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
+$$\forall t \in I, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，在每一個時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，均足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來，或者在之前就停下來，而不需要使用到未來</mark>$$\{\tau > t\}$$<mark style="color:red;">的資訊</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
 
 
 
@@ -37,3 +39,5 @@ $$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，
 * [https://www.zhihu.com/question/24358372](https://www.zhihu.com/question/24358372)
 * [https://zh.wikipedia.org/zh-tw/%E5%81%9C%E6%97%B6](https://zh.wikipedia.org/zh-tw/%E5%81%9C%E6%97%B6)
 * [https://web.archive.org/web/20120226140702/http://www.bramdejonge.nl/pdf/stoppingtimes.pdf](https://web.archive.org/web/20120226140702/http://www.bramdejonge.nl/pdf/stoppingtimes.pdf)
+* [https://ece.iisc.ac.in/\~parimal/2020/spqt/lecture-04.pdf](https://ece.iisc.ac.in/\~parimal/2020/spqt/lecture-04.pdf)
+* [Tom Fischer, "On simple representations of stopping times and stopping time sigma-algebras," _Statistics & Probability Letters_, Vol. _83, No._ 1,pp. 345-349, 2013](https://doi.org/10.1016/j.spl.2012.09.024).

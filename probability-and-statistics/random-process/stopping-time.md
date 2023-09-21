@@ -2,23 +2,95 @@
 
 ## 簡介
 
-停時這是指一個隨機過程停止表現其狀態的那個時間點，因為我們不會事先知道它什麼時候會停止，這個時間點通常是個隨機變數。通常是當作一個停止機制，只要我們的隨機過程符合某個條件，就讓它停下來， 並且把第一次符合那個條件的時間點當作停時。
+停時這是指一個隨機過程停止的時間點，因為無法事先知道過程何時會停止，這個時間點通常是個隨機變數。通常有一個事先訂好的停止條件，只要隨機過程符合此條件，隨機過程就停下來。
 
-關於隨機過程$$X_1,X2, X3, \dots$$的停時是隨機變數$$\tau$$ ，這一隨機變數具有如下性質：對於每一個時間 ，事件 $$\tau=t$$ 的發生與否僅取決於$$X_1,X_2, \dots,X_t$$ 的取值。從定義中可以感受到的直覺是在任一特定時刻$$t$$，可以判別在這一時刻隨機過程是否到了停時。
+關於隨機過程$$X\equiv (X_t)_{t \in T}$$的停時是隨機變數$$\tau$$ ，這一隨機變數具有如下性質：對於每一個時間 ，事件 $$\tau=t$$ 的發生與否僅取決於$$\{X_s, ~ s \leq t\}$$ 的取值。簡單的說在任一特定時刻$$t$$，由現在的資訊$$\mathcal{F}_t$$可以判別在這一時刻隨機過程是否到了停時。
 
 停時為隨機變數，且等價於停止過程(stopping process)，即初始值為1，在某時刻變為0隨機過程。討論詳見Fischer(2013)。
 
-## 停時
+## 停時(stopping time)
 
 > 定義：停時
 >
-> 給定$$I=[0, \infty)$$與機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$，則隨機變數$$\tau: \Omega\rightarrow I \cup \{\infty\}$$稱為停時，若滿足$$\forall t \in I, \{ \tau \leq t \} \in \mathcal{F}_t$$。
+> 給定$$\mathcal{T}=[0, \infty)$$與機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$，則隨機變數$$\tau: \Omega\rightarrow \mathcal{T} \cup \{\infty\}$$稱為停時，若滿足$$\forall t \in \mathcal{T}, \{ \tau \leq t \} \in \mathcal{F}_t$$。
 >
-> $$\forall t \in I, \{\tau = t\} \in \mathcal{F}_t$$。
+> 等價於:
+>
+> * $$\forall t \in \mathcal{T}, \{\tau = t\} \in \mathcal{F}_t$$。
+> * $$\forall t \in \mathcal{T}, \{\tau > t\} \in \mathcal{F}_t$$。
 
-$$\forall t \in I, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，在每一個時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，均足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來，或者在之前就停下來，而不需要使用到未來</mark>$$\{\tau > t\}$$<mark style="color:red;">的資訊</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
+$$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，在每一個時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，均足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來，或者在之前就停下來，而不需要使用到未來</mark>$$\{\tau > t\}$$<mark style="color:red;">的資訊</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
+
+<details>
+
+<summary>proof: 等價定義的證明</summary>
+
+\=> 由$$\{ \tau = t \} \in \mathcal{F}_t \Rightarrow  \{ \tau \leq t \} \in \mathcal{F}_t$$
+
+因為$$\forall t \in \mathcal{T}, ~\{ \tau = t \} \in \mathcal{F}_t$$
+
+因此得$$\forall t \in \mathcal{T}, ~ \forall s \leq t, ~ \{\tau = s\} \in \mathcal{F}_s$$
+
+由於$$\forall s \leq t, ~ \mathcal{F}_s \subseteq \mathcal{F}_t$$，因此$$\forall t \in \mathcal{T}, ~ \forall s \leq t, ~ \{\tau = s\} \in \mathcal{F}_t$$
+
+由於σ域元素的可數聯集或交集仍為其元素，其實數的區間可表示為可數集合的聯集或交集，因此$$\forall t \in \mathcal{T}, ~ \bigcup_{s \leq t} \{ \tau = s\} \in \mathcal{F}_t$$
+
+所以 $$\forall t \in \mathcal{T}, \{\tau \leq t\} \in \mathcal{F}_t$$
+
+(QED)
+
+<= 由$$\{ \tau \leq t \} \in \mathcal{F}_t \Rightarrow \{ \tau = t \} \in \mathcal{F}_t$$
+
+因為$$\{ \tau \leq t\} = \{\tau < t \} \cup \{\tau = t\} \in \mathcal{F}_t$$且$$S_t \equiv \{\tau < t\} = \bigcup_{s < t}\{\tau =s \}  \in \mathcal{F}_t$$
+
+可得$$\displaystyle  \begin{aligned} \{\tau = t\} & = \{\tau \leq t\} - S_t \\ & = \{\tau \leq t\} \cap S_t^c \\ & = \{\{\tau \leq  t\} \cup S\}^c \in \mathcal{F}_t  \end{aligned}$$
+
+(QED)
 
 
+
+</details>
+
+### 兩個停時取最小或最大運算仍為停時
+
+> 令$$\tau_1, \tau_2$$為相對於filtration $$\mathcal{F}_t$$的停時，令:
+>
+> * $$\tau_{\max} = \max\{ \tau_1, \tau_2\}$$。
+> * $$\tau_{\min} = \min\{\tau_1, \tau_2\}$$。
+>
+> 則$$\tau_{\max}, \tau_{\min}$$為相對於filtration $$\mathcal{F}_t$$的停時。
+
+<details>
+
+<summary>proof: 用停時的定義與filitration的性質證明</summary>
+
+max
+
+$$\{\tau_{\max} = t\}$$可能是因為$$\tau_1 \geq \tau_2$$而得到$$\{\tau_1 = t\}$$或是$$\tau _1 \leq \tau_2$$得到$$\{\tau_2 = t\}$$。
+
+因此$$\{\tau_{\max} = t\}  =  [\{\tau_{1} = t\} \cap \{\tau_{2} \leq  t\}] \cup  [\{\tau_{1} \leq t\} \cap \{\tau_{2} =  t\}]$$
+
+因為由停時定義得$$\{\tau_{1} = t\} \in \mathcal{F}_t$$且$$\{\tau_{2} \leq t\} \in \mathcal{F}_t$$且σ域內元素任意交集仍為其元素，因此$$[\{\tau_{1} = t\} \cap \{\tau_{2} \leq  t\}] \in \mathcal{F}_t$$。
+
+同理可得$$[\{\tau_{1} \leq t\} \cap \{\tau_{2} =  t\}] \in \mathcal{F}_t$$
+
+因此$$\{\tau_{\max} = t\}  =  [\{\tau_{1} = t\} \cap \{\tau_{2} \leq  t\}] \cup  [\{\tau_{1} \leq t\} \cap \{\tau_{2} =  t\}] \in \mathcal{F}_t, ~ \forall t \in \mathcal{T}$$
+
+(QED)
+
+min
+
+$$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$或是$$\tau _1 \geq \tau_2$$得到$$\{\tau_2 = t\}$$。
+
+由於停時不能依賴於未來的資訊，因此再拆解為$$\tau_1 < \tau_2$$得到$$\{\tau_1 = t\}$$，$$\tau _1 > \tau_2$$得到$$\{\tau_2 = t\}$$，或者兩者相同$$\tau_1 = \tau_2$$得$$\{\tau_1 = t\} \cap \{\tau_2=t\}$$
+
+因此$$\{\tau_{\min} = t\}  =  [\{\tau_{1} = t\} \cap \{\tau_{2} > t\}] \cup  [\{\tau_{1} > t\} \cap \{\tau_{2} =  t\}] \cup  [\{\tau_{1} = t\} \cap \{\tau_{2} =  t\}]$$
+
+等號右側所有集合都是$$\mathcal{F}_t$$的元素，且σ域內元素任意交(聯集)集仍為其元素，因此$$\{\tau_{\min} = t\} ~\forall t \in \mathcal{T}$$。
+
+(QED)
+
+</details>
 
 
 

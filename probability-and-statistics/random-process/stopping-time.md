@@ -94,11 +94,27 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 ### 包含停時的σ域
 
-> 令$$\tau$$為機率空間$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$的停時隨機變數，則$$\mathcal{F}\tau =\{ A \in \mathcal{F} ~|~ A \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0\}$$為其σ域。
+> 令$$\tau$$為機率空間$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$的停時隨機變數，則$$\mathcal{F}\tau =\{ A \in \mathcal{F} ~|~ A \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0\}$$為其σ域。其中$$\mathcal{F} \equiv \mathcal{F}_\infty$$為全局的σ域。
 >
 > 此定義即停時的σ域，是由停止時間$$\tau$$發生之前事件形成的資訊集合。
 
+<details>
 
+<summary>proof: 證明<span class="math">\mathcal{F}_\tau</span>滿足σ域的三個條件</summary>
+
+1. 證明$$\Omega \in \mathcal{F}_\tau$$。
+
+因為$$\mathcal{F}$$為σ域，可得$$\Omega \in \mathcal{F}$$。同理$$\mathcal{F}_t, \forall t \in \mathcal{T}$$都是σ域，因此$$\Omega \in \mathcal{F}t, ~ \forall t \in \mathcal{T}$$。
+
+因此可得$$\Omega \in \mathcal{F}_\tau$$ (QED)
+
+2. 證明$$E \in \mathcal{F}_\tau \Rightarrow E^c \in \mathcal{F}_\tau$$
+
+
+
+3. 證明元素可數聯集封閉性
+
+</details>
 
 ### 停時範例
 

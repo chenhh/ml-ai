@@ -110,7 +110,17 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 2. 證明$$E \in \mathcal{F}_\tau \Rightarrow E^c \in \mathcal{F}_\tau$$
 
+令$$E \in \mathcal{F}_\tau$$，由定義可得$$E\cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0$$--(1)
 
+因為$$\{\tau \leq t\} = [\{\tau \leq t\} \cap E] \cup [\{\tau \leq t\} \cap E^c], ~\forall t \geq 0$$--(2)
+
+已知$$[\{\tau \leq t\} \cap E]  \in \mathcal{F}_t$$，因此只需考慮$$\{\tau \leq t\} \cap E^c$$。
+
+而$$\{\tau \leq t\} \cap E^c =  \{\tau \leq t\} \cap [\{\tau \leq t\} \cap E]^c = \{\tau \leq t\}^c \cup [\{\tau \leq t\} \cap E]^c, ~\forall t \geq 0$$--(3)
+
+因為$$\{\tau \leq  t \} \in \mathcal{F}_t$$且$$\mathcal{F}_t$$為σ域，因此$$\{\tau \leq t\}^c \in \mathcal{F}_t$$--(4)
+
+由(1,3,4)得$$\{\tau \leq t\} \cap E]^c \in \mathcal{F}_t$$ (QED)
 
 3. 證明元素可數聯集封閉性
 

@@ -92,6 +92,12 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 </details>
 
+### 包含停時的σ域
+
+> 令$$\tau$$為機率空間$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$的停時隨機變數，則$$\mathcal{F}\tau =\{ A \in \mathcal{F} ~|~ A \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0\}$$為其σ域。
+>
+> 此定義即停時的σ域，是由停止時間$$\tau$$發生之前事件形成的資訊集合。
+
 
 
 ### 停時範例

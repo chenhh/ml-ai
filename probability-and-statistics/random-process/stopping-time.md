@@ -12,7 +12,7 @@
 
 > 定義：停時
 >
-> 給定$$\mathcal{T}=[0, \infty)$$與機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$，則隨機變數$$\tau: \Omega\rightarrow \mathcal{T} \cup \{\infty\}$$稱為停時，若滿足$$\forall t \in \mathcal{T}, \{ \tau \leq t \} \in \mathcal{F}_t$$。
+> 給定$$\mathcal{T}=[0, \infty)$$與機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$，則幾乎確定有限的隨機變數$$\tau: \Omega\rightarrow \mathcal{T} \cup \{\infty\}$$稱為停時，若滿足$$\forall t \in \mathcal{T}, \{ \tau \leq t \} \in \mathcal{F}_t$$。
 >
 > 等價於:
 >
@@ -47,11 +47,15 @@ $$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style
 
 (QED)
 
-
-
 </details>
 
-### 兩個停時取最小或最大運算仍為停時
+### 範例：獨立的Bernoulli序列
+
+&#x20;考慮獨立同分佈(i.i.d.)的Bernoulli序列$$X: \Omega \rightarrow \{0, 1\}^{\mathbb{N}}$$，且定義到時間$$n$$試驗成功的次數為$$S_n \equiv \sum_{i=1}^n X_i$$，則可定義停時為 $$T_k \equiv \min\{ n \in \mathbb{N} ~|~ S_n = k\}, ~ \forall \in \mathbb{N}$$為成功$$k$$次所需的最短時間。
+
+由定義可得$$T_k$$幾乎確定有限，且$$\{T_k=n\} = \bigcap_{i=1}^{n-1} \{S_i < k\} \cap \{S_n =k\} \in \mathcal{F}_n$$
+
+## 兩個停時取最小或最大運算仍為停時
 
 > 令$$\tau_1, \tau_2$$為相對於filtration $$\mathcal{F}_t$$的停時，令:
 >
@@ -92,7 +96,7 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 </details>
 
-### 包含停時的σ域
+## 包含停時的σ域
 
 > 令$$\tau$$為機率空間$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$的停時隨機變數，則$$\mathcal{F}\tau =\{ A \in \mathcal{F} ~|~ A \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0\}$$為其σ域。其中$$\mathcal{F} \equiv \mathcal{F}_\infty$$為全局的σ域。
 >
@@ -104,7 +108,7 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 1. 證明$$\Omega \in \mathcal{F}_\tau$$。
 
-因為$$\mathcal{F}$$為σ域，可得$$\Omega \in \mathcal{F}$$。同理$$\mathcal{F}_t, \forall t \in \mathcal{T}$$都是σ域，因此$$\Omega \in \mathcal{F}t, ~ \forall t \in \mathcal{T}$$。
+因為$$\mathcal{F}$$為σ域，可得$$\Omega \in \mathcal{F}$$。同理$$\mathcal{F}_t, \forall t \in \mathcal{T}$$都是σ域，因此$$\Omega \in \mathcal{F}_t, ~ \forall t \in \mathcal{T}$$。
 
 因此可得$$\Omega \in \mathcal{F}_\tau$$ (QED)
 
@@ -126,11 +130,42 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 令$$E_1, E_2, \dots \in \mathcal{F}_\tau$$，由定義得$$\forall n \in \mathbb{N}, ~ E_n \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0$$
 
-&#x20;因為$$\mathcal{F}_t$$為σ域，斤&#x20;
+&#x20;因為$$\mathcal{F}_t$$為σ域，可數個元素的聯集仍在集合中， 可得$$\bigcup_{n \in \mathbb{N}} [E_n \cap \{\tau \leq t \}] \in \mathcal{F}_t, ~\forall t \geq 0$$。
+
+整理後可得$$[\bigcup_{n \in \mathbb{N}} E_n] \cap \{\tau \leq t\} \in \mathcal{F}_t, ~\forall t  \geq 0$$。
+
+由定義可得$$[\bigcup_{n \in \mathbb{N}} E_n] \in \mathcal{F}_\tau$$ (QED).
 
 </details>
 
-### 停時範例
+### 停時σ域的單調性
+
+> 給定機率空間$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$與隨機過程$$X: \Omega \rightarrow \mathcal{X}^{\mathcal{T}}$$，令$$\tau, \tau_1, \tau_2$$均為停時，則：
+>
+> 1. 若$$\tau_1 \leq \tau_2$$ a.s.，則$$\mathcal{F}{\tau_1} \subseteq  \mathcal{F}{\tau_2}$$。
+> 2. $$\sigma(\tau) \subseteq \mathcal{F}_\tau$$且$$\sigma(X_\tau) \subseteq \mathcal{F}_\tau$$。
+
+<details>
+
+<summary>proof</summary>
+
+proof 1
+
+因為$$\tau_1 \leq \tau_2$$ a.s. 即$$\mathrm{P}(\tau_1(\omega) \leq \tau_2(\omega))=1, ~ \forall \omega  \in \Omega - \Omega_0$$
+
+因此給定$$t \in \mathcal{T}$$時，$$\forall \omega -\Omega_0, \tau_2(\omega) \leq t$$可保證$$\tau_1(\omega) \leq t$$。因此$$\{\tau_2 \leq t\} \subseteq \{\tau_1 \leq t\}$$ a.s.
+
+所以$$\forall A \in \mathcal{F}_{\tau_1}$$，可得$$A \cap \{\tau_2 \leq t\} = A \cap [\{\tau_2 \leq t\} \cap \{\tau_1 \leq t\}] \in \mathcal{F}_t$$ (QED)
+
+proof 2:
+
+$$\sigma(\tau)$$是由$$\{\tau \leq s\} \equiv \{\omega \in \Omega~|~ \tau(\omega) \leq s\}, ~ s \in \mathbb{R}$$所生成的最小σ域。
+
+令$$A \in \sigma(\tau)$$，由$$\mathcal{F}\tau =\{ A \in \mathcal{F} ~|~ A \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0\}$$的定義得$$\{\tau \leq s\} \cap \{\tau \leq t\} = \{\tau \leq \min{s,t\}} \in \mathcal{F}_t$$。所以$$A \in \mathcal{F}_\tau$$  (QED )
+
+</details>
+
+## 停時範例
 
 現實生活中停時的例子如賭徒離開賭桌的時刻，這一時刻可能是賭徒以前贏得錢財的函數（例如在賭徒沒有錢時，他才可能離開賭桌），但是他不可能根據還未完成的賽局的結果來選擇離開還是留下。
 

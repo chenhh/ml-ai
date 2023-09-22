@@ -124,6 +124,10 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 
 3. 證明元素可數聯集封閉性
 
+令$$E_1, E_2, \dots \in \mathcal{F}_\tau$$，由定義得$$\forall n \in \mathbb{N}, ~ E_n \cap \{\tau \leq t \} \in \mathcal{F}_t, ~ \forall t \geq 0$$
+
+&#x20;因為$$\mathcal{F}_t$$為σ域，斤&#x20;
+
 </details>
 
 ### 停時範例

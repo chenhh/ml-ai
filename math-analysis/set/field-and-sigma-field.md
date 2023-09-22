@@ -149,7 +149,7 @@ $$S=\{1,2,3,4\}$$，$$G=\{\{1,2\},\{4\}\}$$，則$$\sigma(G)=\{\phi, \{1,2,\}  \
 >
 > 稱$$(\Omega, \mathcal{F}, \{\mathcal{F}\}, \mathrm{P})$$為filtrated 機率空間。
 
-* Filtration $$\mathcal{F}_t$$為隨機過程中，隨時間擴大的<mark style="color:red;">資訊集合</mark>；
+* Filtration $$\mathcal{F}_t$$為隨機過程中$$X(t,\omega)$$，隨時間擴大的<mark style="color:red;">資訊集合</mark>，而在$$t \rightarrow \infty$$時，才可得到$$\mathcal{F}_\infty \equiv \mathcal{F}$$； 因為隨機過程的一條樣本路徑$$X(\omega)$$，必須要經過所有的時間$$t \in \mathcal{T}$$才可得出；反之在特定時間點$$t$$得到的樣本$$X(t)$$只是部分未走完樣本的實現值，因此只包含部份的資訊。
 * 機率的核心在於可測性。**簡單來說，我們是想通過現在能夠觀測到的資訊來對未來可能發生的事件做出預測**。其中$$\mathcal{F}$$是所有能夠觀察到的事件，<mark style="color:blue;">而filtration則體現了隨時間變化的可測性：隨著時間過去，能觀測到的事件越多</mark>。
 
 什麼是$$X_t$$適應$$\mathcal{F}_t$$呢？那就是在同一時刻下，我能夠計算的機率不會超出我的知識範圍。隨著「能形成看待的事物的知識範圍」不斷增大，這樣就組成了一個filtration。

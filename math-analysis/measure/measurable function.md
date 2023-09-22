@@ -372,6 +372,8 @@ $$|f|^2 = (2f^{+}-f)^2=4f^{+} -2f^{+}\cdot f+f^2$$
 > 若$$(\Omega, \Sigma)$$為可測機率空間，$$X: \Sigma\rightarrow \mathbb{R}$$為隨機變數，則$$\sigma(X) \subseteq \Sigma$$。
 >
 > 即可測函數的資訊量小於等於全局的資訊量。
+>
+> <mark style="color:red;">此性質常用於隨機過程中的filitration</mark> $$\mathcal{F}_t$$<mark style="color:red;">，當</mark>$$X$$<mark style="color:red;">為</mark>$$\mathcal{F}_t$$<mark style="color:red;">可測時，則</mark>$$\sigma(X) \subseteq \mathcal{F}_t$$。
 
 
 

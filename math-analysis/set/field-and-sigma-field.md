@@ -151,11 +151,11 @@ $$S=\{1,2,3,4\}$$，$$G=\{\{1,2\},\{4\}\}$$，則$$\sigma(G)=\{\phi, \{1,2,\}  \
 * $$\mathcal{B} =\{ (x,y] | x<y \text{ and } x, y \in \mathbb{R} \}$$包含所有實數上的半開區間為Borel σ域。
 * $$\mathcal{B} =\{ [x,y] | x<y \text{ and } x, y \in \mathbb{R} \}$$包含所有實數上的閉區間為Borel σ域。
 
-## filtration
+## 濾流(filtration)
 
 > 令 $$\Omega$$為一個樣本空間，$$\mathcal{F}$$為事件 (可測集) 組成的σ域，$$\mathrm{P}: \mathcal{F} \rightarrow [0,1]$$為一個測度且$$\mathrm{P}(\Omega)=1$$ 。把$$(\Omega, \mathcal{F}, \mathrm{P})$$稱為機率空間。
 >
-> 將滿足以下性質的一族σ域$$\{ \mathcal{F}_t\}$$稱為filitration：
+> 將滿足以下性質的一族σ域$$\{ \mathcal{F}_t\}$$稱為濾流：
 >
 > * \[遞增集合]若$$s<t$$，則$$\mathcal{F}_s \subseteq \mathcal{F}_t$$
 > * 對於 $$\displaystyle \sigma(\cup_t \mathcal{F}_t)\equiv \mathcal{F}_\infty \subseteq \mathcal{F}$$
@@ -174,6 +174,7 @@ filtration可以看作一個資訊庫，而且這個資訊庫並不是固定的�
 ### 參考資料
 
 * [\[知乎\]以測度為基礎的概率基本概念與結論](https://zhuanlan.zhihu.com/p/32334499)
+* [https://zhuanlan.zhihu.com/p/345656686](https://zhuanlan.zhihu.com/p/345656686)
 
 
 

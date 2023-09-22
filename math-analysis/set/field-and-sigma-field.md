@@ -6,7 +6,7 @@ description: σ代數
 
 ## 簡介
 
-<mark style="color:red;">定義</mark>σ<mark style="color:red;">域（代數）的主要用途，是在定義實值可測函數（實值隨機變數）的前像，必須為sigma域內的元素才符合可測函數的定義。並非</mark>定義域中的任意集合(power set)均可定義隨機變數。
+<mark style="color:red;">定義σ域（代數）的主要用途，是在定義實值可測函數（實值隨機變數）的前像，必須為sigma域內的元素才符合可測函數的定義。並非</mark>定義域中的任意集合(power set)均可定義隨機變數。
 
 因為給定任意的集合時，依公理可以建構出不可測的集合族（set family，元素為集合的集合），為了從冪集合中排除這類性質不佳的集合族，因此才定義sigma域，而日常所使用的集合，幾乎都滿足sigma域的條件，所以可放心使用。
 
@@ -40,9 +40,9 @@ description: σ代數
 
 </details>
 
-## σ-ring
+## σ環(σ-ring)
 
-若集合$$F$$​滿足以下三個條件時，稱為sigma-ring：
+若集合$$F$$​滿足以下三個條件時，稱為σ-環：
 
 1. $$\phi \in F$$
 2. 若$$A_1 \in F$$​且$$A_2 \in F$$​則$$A_1 - A_2 \in F$$
@@ -50,7 +50,7 @@ description: σ代數
 
 ### 任意σ環的交集仍為σ環
 
-> $$F_1, F_2$$均為sigma環，則$$F_1 \cap F_2$$為sigma環
+> $$F_1, F_2$$均為sigma環，則$$F_1 \cap F_2$$為σ環
 
 ## 域（field）或代數（algebra）
 
@@ -66,9 +66,9 @@ description: σ代數
 
 ### 範例
 
-* $$A_1 = \{ 1, 3\}$$,  $$F=\{A_1, A_2\}=\{(1,3), \{2,4,5,6\}\}$$，則$$F$$為field。
-* $$F=\{ \emptyset, S\}$$，則$$F$$為field。
-* $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}$$, 則$$F$$為field。
+* $$A_1 = \{ 1, 3\}$$,  $$F=\{A_1, A_2\}=\{(1,3), \{2,4,5,6\}\}$$，則$$F$$為域。
+* $$F=\{ \emptyset, S\}$$，則$$F$$為域。
+* $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}$$, 則$$F$$為域。
 
 ### <mark style="color:red;">任意域的的交集仍為域</mark>
 
@@ -84,20 +84,33 @@ description: σ代數
 
 * \[<mark style="color:blue;">F在可數交集下為閉集</mark>]如果$$F$$為σ域，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
 * 空集合$$\emptyset$$與宇集合$$S$$也都是$$F$$的元素。
-* 由若$$A_1, A_2,\dots \in F$$，由定義知$$\displaystyle \limsup_{n \rightarrow \infty} A_n \equiv \bigcap_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$，同理$$\displaystyle \liminf_{n \rightarrow \infty} A_n \equiv \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$。
+* 若$$A_1, A_2,\dots \in F$$，由定義知$$\displaystyle \limsup_{n \rightarrow \infty} A_n \equiv \bigcap_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$，同理$$\displaystyle \liminf_{n \rightarrow \infty} A_n \equiv \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$。
+
+### σ域的原子集合(atomic set)
+
+> 令$$\mathcal{F}$$為σ域，定義集合族中最小的元素集合族為：
+>
+> $$A(\mathcal{F})=\{S \in \mathcal{F} ~|~ S \neq \emptyset, \text{ and  if } H \in \mathcal{F} \text{ and} H \subseteq S, \text{ then } H = S\}$$為$$\mathcal{F}$$中無法被其它元素可數聯集的集合所組成的集合族。
+>
+> 由定義得$$A(\mathcal{F}) \subseteq \mathcal{F}$$，且$$\forall \emptyset \neq S \in \mathcal{F}$$，$$S$$可由$$A(\mathcal{F})$$聯集得出。
+>
+> 當$$| \mathcal{F}| < \infty$$時，$$A(\mathcal{F})$$形成$$\Omega$$的一組分割，可得$$\mathcal{F}=\sigma(A(\mathcal{F}))$$。
+>
+> $$\Omega \notin A(\mathcal{F})$$，假設$$\emptyset \neq H \in \mathcal{F}$$，必可得$$H \subset \Omega$$且$$H \neq \Omega$$。
 
 ### 範例
 
-\[trivial σ域] $$F=\{ \emptyset, S\}$$，則$$F$$為sigma域 <mark style="color:red;">(最小的σ域)</mark>。
+<mark style="background-color:orange;">\[trivial σ域]</mark> $$F=\{ \emptyset, S\}$$，則$$F$$為σ域 <mark style="color:red;">(最小的σ域)</mark>。而$$A(\mathcal{F})=\emptyset$$。
 
-\[power set] $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}\equiv 2^S$$, 則$$F$$為σ域<mark style="color:red;">(最大的σ域)</mark>。
+<mark style="background-color:orange;">\[power set]</mark> $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}\equiv 2^S$$, 則$$F$$為σ域<mark style="color:red;">(最大的σ域)</mark>。而$$A(\mathcal{F})=S$$中每一個元素形成的signleton集合族。
 
-$$F=\{A, A^C, S, \emptyset\}$$為σ域。
+<mark style="background-color:orange;">\[包含集合A的最小σ域]</mark> $$F=\{A, A^C, \emptyset\, \Omega\}$$為σ域。
 
 $$S=\{1,2,3\}$$，則：
 
-* $$F_1=\{\phi, \{1\}, \{2,3\}, S\}$$為σ域。
+* $$F_1=\{\phi, \{1\}, \{2,3\}, S\}$$為σ域。$$A(\mathcal{F}_1)=\{\{1\}, \{2,3\}\}$$。
 * $$F_2=\{\phi, \{1\}, \{2\},\{3\}, S\}$$不是σ域，因為$$\{2,3\} \notin F_2$$。
+* $$F_3=\{\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{2,3\}, \{1,3\}, \{1,2,3\}\}$$為冪集合是σ域。$$A(\mathcal{F})=\{\{1\}, \{2\}, \{3\}\}$$。
 
 $$S=\mathbb{N}$$則：
 
@@ -122,7 +135,7 @@ $$S=\mathbb{N}$$則：
 
 #### 範例
 
-$$S=\{1,2,3,4\}$$，$$G=\{\{1,2\},\{4\}\}$$，則$$\sigma(G)=\{\phi, \{1,2,\}  \{3\}, \{4\}, \{1,2,3\}, \{1,2,4\}, \{3,4\}, S \}$$
+$$S=\{1,2,3,4\}$$，$$G=\{\{1,2\},\{4\}\}$$，則$$\sigma(G)=\{\phi, \{1,2,\}  \{3\}, \{4\}, \{1,2,3\}, \{1,2,4\}, \{3,4\}, S \}$$。$$A(\sigma(G))=G$$。
 
 ## Borel σ域
 
@@ -147,7 +160,7 @@ $$S=\{1,2,3,4\}$$，$$G=\{\{1,2\},\{4\}\}$$，則$$\sigma(G)=\{\phi, \{1,2,\}  \
 > * \[遞增集合]若$$s<t$$，則$$\mathcal{F}_s \subseteq \mathcal{F}_t$$
 > * 對於 $$\displaystyle \sigma(\cup_t \mathcal{F}_t)\equiv \mathcal{F}_\infty \subseteq \mathcal{F}$$
 >
-> 稱$$(\Omega, \mathcal{F}, \{\mathcal{F}\}, \mathrm{P})$$為filtrated 機率空間。
+> 稱$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$為filtrated 機率空間。通常用於隨機過程中。
 
 * Filtration $$\mathcal{F}_t$$為隨機過程中$$X(t,\omega)$$，隨時間擴大的<mark style="color:red;">資訊集合</mark>，而在$$t \rightarrow \infty$$時，才可得到$$\mathcal{F}_\infty \equiv \mathcal{F}$$； 因為隨機過程的一條樣本路徑$$X(\omega)$$，必須要經過所有的時間$$t \in \mathcal{T}$$才可得出；反之在特定時間點$$t$$得到的樣本$$X(t)$$只是部分未走完樣本的實現值，因此只包含部份的資訊。
 * 機率的核心在於可測性。**簡單來說，我們是想通過現在能夠觀測到的資訊來對未來可能發生的事件做出預測**。其中$$\mathcal{F}$$是所有能夠觀察到的事件，<mark style="color:blue;">而filtration則體現了隨時間變化的可測性：隨著時間過去，能觀測到的事件越多</mark>。

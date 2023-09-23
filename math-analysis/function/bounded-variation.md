@@ -93,10 +93,14 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 ### 單調函數為有界變差函數
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$為單調函數，則$$f$$在$$[a,b]$$為有界變差函數。
+>
+> 反之若$$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數，若$$V_f(a,b)=f(b)-f(a)$$，則$$f$$為遞增函數。
 
 <details>
 
 <summary>proof: 單調函數的變動上(下)限為|f(b)-f(a)|</summary>
+
+proof 1
 
 不失一般性令$$f$$為遞增函數。
 

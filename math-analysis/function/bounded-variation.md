@@ -1,10 +1,20 @@
-# 變差(bounded variation)
+# 有界變差(bounded variation)
 
 ## 簡介
 
-一般函數可由變差拆解成連續函數+純跳躍函數之和。
+一般函數可由有界變差拆解成連續函數+純跳躍函數之和。
 
 布朗運動的一次變差不存在，二次變差為有限值。
+
+有界變差的幾何意義為函數的弧長。
+
+有界變差函數為有界函數。
+
+有界變差函數<=>可分解為兩個單調遞增函數的差值(但不唯一)。
+
+有界變差函數幾乎處處可微分。
+
+有界變數函數之值為0 <=> 函數為常數值。
 
 ### 對於實線的閉合有界區間上的連續函數，我們有以下包含關係
 
@@ -12,7 +22,7 @@
 
 ## 遞增函數的有限分割的總跳躍量小於值域之差
 
-> 令函數$$f: [a,b] \rightarrow \mathbb{R}$$為遞增函數。
+> 令函數$$f: [a,b] \rightarrow \mathbb{R}$$為遞增函數(不必為連續函數)。
 >
 > 令$$x_0, x_1, \dots, x_n$$為閉區間$$[a,b]$$的一組有限分割且滿足$$a=x_0 < x_1 < \dots <x_n=b$$
 >
@@ -22,7 +32,7 @@
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 使用遞增函數的性質</summary>
 
 令$$y_k \in (x_k , x_{k+1})$$
 
@@ -48,9 +58,9 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 若分割點$$x_1 < x_2 < \dots, x_{n-1}$$均在集合$$S_m$$中時，由[遞增函數的有限分割總跳躍量小於值域之差](bounded-variation.md#di-zeng-han-shu-de-you-xian-fen-ge-de-zong-tiao-yue-liang-xiao-wu-zhi-yu-zhi-cha)的性質可得 $$\frac{n-1}{m} \leq f(b) - f(a)$$。
 
-即$$S_m$$內集合點的總變動量的上限為$$f(b) - f(a)$$，所以$$n<\infty$$，因此$$S_m$$為有限集合。
+即$$S_m$$內集合點的總變動量的上限為$$f(b) - f(a)$$，所以$$n<\infty$$，因此$$S_m$$為有限個元素的集合  。
 
-而函數$$f$$在開區間$$(a,b)$$的不連續點為$$\displaystyle \bigcup_{m=1}^\infty S_m$$的子集合，因此$$f$$上不連續點為可數個。(QED)
+而函數$$f$$在開區間$$(a,b)$$的不連續點形成的集合為$$\displaystyle \bigcup_{m=1}^\infty S_m$$的子集合，因此$$f$$上不連續點為可數個。(QED)
 
 </details>
 
@@ -74,7 +84,9 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 >
 > 若存在正實數$$M > 0 \ni \sum_{k=1}^n | \Delta f(x_k)| \leq M$$，$$\forall \text{ paritition } P \in \mathcal{P}[a,b]$$，則稱$$f$$在區間$$[a,b]$$為有界變差函數。
 >
-> 也可用全變差定義：$$V_f(a,b)=\sup\left\{  \sum_{k=1}^n |\Delta f(x_k)| ~|~ \forall P \in  \mathcal{P}[a,b] \right\}<\infty$$
+> 也可用全變差定義：$$V_f(a,b)=\sup\left\{  \sum_{k=1}^n |\Delta f(x_k)| ~|~ \forall P \in  \mathcal{P}[a,b] \right\}<\infty$$。
+>
+> 記$$[a,b]$$上有界變差函數的集合為$$\mathrm{BV}([a,b])$$。
 
 ### 單調函數為有界變差函數
 
@@ -92,9 +104,9 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 </details>
 
-### 連續可微分且微分值有限的函數為有界變差函數
+### 可微分且微分值有限的函數為有界變差函數
 
-> $$f: [a,b] \rightarrow \mathbb{R}$$為連續函數且$$f'(x)$$在$$(a,b)$$可微分。
+> $$f: [a,b] \rightarrow \mathbb{R}$$數且$$f'(x)$$在$$(a,b)$$可微分。
 >
 > 若$$f'(x)$$在$$(a,b)$$有界，即$$\exists M > 0 \ni |f^{'}(x)| \leq M ~\forall x \in (a,b)$$，
 >
@@ -102,7 +114,7 @@ $$\sum_{k=1}^{n-1} f(x_{k+}) - f(x_{k-})  \leq \sum_{k=1}^{n-1}f(y_k) - f(y_{k-1
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 因為函數變動斜率M為有限值，因此函數變動量有限</summary>
 
 由微分均值定理可得$$\Delta f_k= f(x_k) - f(x_{k-1} )= f^{'}(t_k)(x_k - x_{k-1}), ~ t_k \in (x_{k-1}, x_k)$$
 
@@ -122,7 +134,7 @@ $$f(x)=x \cos[\frac{\pi}{2x}]$$，$$if x \neq 0, f(0)=0$$。則$$f$$在$$[0,1]$$
 
 此例中$$f{'}$$在$$(0,1)$$存在，但並非有界。
 
-### 範例：微分值有限函數不一定為有界變差函數
+### 範例：函數微分值有限但不是定義在閉區間時不一定為有界變差函數
 
 $$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函數。
 
@@ -131,10 +143,12 @@ $$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函�
 ## 有界變差函數為有界函數
 
 > $$f: [a,b] \rightarrow \mathbb{R}$$為有界變差函數，即$$\exists M > 0 \ni \sum |\Delta f_k| \leq M$$，$$\forall P \in \mathcal{P}[a,b]$$，則$$f$$為有界函數，即$$\exists N > 0 \ni f(x) \leq N, \forall x \in [a,b]$$。
+>
+> 反之可得$$f$$不是有界函數=> $$f$$不是有界變差函數。
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 有界變差函數的變動量為函數的弧長，若有限時，表示函數有上下限。</summary>
 
 令$$x \in (a,b)$$
 
@@ -156,7 +170,7 @@ $$f(x)=x^{1/3}$$在任意有限區間為單調函數，因此為有界變差函�
 >
 > 也可寫成$$\displaystyle V_f(a,b)=\lim_{\Delta x_n \rightarrow 0}\sum_{k=1}^n |\Delta f_k|$$其中$$\displaystyle \Delta x_n = \max_{1\leq k \leq n}(x_k - x_{k-1})$$。
 
-* 由定義可得因為$$f$$為有界變差函數，所以$$V_f < \infty$$。
+* 由定義可得若$$f$$為有界變差函數，則$$V_f < \infty$$。
 * 因為$$\sum(P) \geq 0$$，可得$$V_f \geq 0$$。
 * $$V_f =0 \Leftrightarrow f(x) =c, \forall x \in [a,b]$$為常數。
 * <mark style="color:red;">全變差就是函數的數值變化的差的總和</mark>。

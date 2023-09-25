@@ -6,7 +6,20 @@
 
 1. 定義非負可測簡單函數的積分。
 2. 考慮可測簡單函數和非負可測函數的關系。
-3. 通過$$f(x)=f^{+}(x)-f^{-}(x)$$定八一般可測函數的積分。
+3. 通過$$f(x)=f^{+}(x)-f^{-}(x)$$定義一般可測函數的積分。
+
+* 若$$m(E)<\infty$$，則定義在$$E$$上的所有有界可測函數$$f$$相對於$$E$$均可積(即$$\int_E f(x)dm(x) < \infty$$)。
+* $$f$$在$$E$$可積$$\Leftrightarrow$$$$|f|$$在$$E$$可積分，且$$|\int_E f dm| \leq \int_E |f|dm$$。
+* $$m(E) <\infty$$且$$f$$在$$E$$為上有界函數，若將$$E$$可分割為$$E=\bigcup_{i=1}^m E_i$$，則$$\int_E fdm = \sum_{i=1}^m \int_{E_i} fdm$$。
+* $$f,g$$在$$E$$均可，且$$f \leq g \text{ a.e. on } E$$，則$$\int_E f dm \leq \int_E g dm$$。
+* 積分有線性性質 $$\int_E (af+g)dm = a\int_E f dm + \int_E g dm$$。
+* $$f \in L(E)$$，則存在簡單函數$$g$$可逼近$$f$$，即$$\forall \epsilon > 0, ~\int_E |f(t) - g(t)| dm < \epsilon$$。
+* $$E$$上的Riemann可積函數$$f$$必為Lebesgue可積函數，且積分值相等。
+* \[Domain control theorem, DCT]
+* \[Monotone converge theorem, MCT]
+*   \[Fatou lemma]
+
+
 
 ## 零測度集合(measure zero set)
 

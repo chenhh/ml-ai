@@ -26,7 +26,9 @@ description: Lebesgue p-th integrable space
 
 > 定義：Lp空間($$p=\infty$$)
 >
-> 令$$M\geq 0, |f(x)| \leq M \text{ a.e. } \forall x \in E$$．定義<mark style="color:red;">一致範數</mark>(uniform norm)$$\begin{aligned} \|f\|_\infty &= \inf \{ M\geq 0 ~|~ |f(x)| \leq M \text{ a.e.} ~x \in E\} \\ &= \inf \{ M \geq 0 ~|~ m(\{x \in E ~|~ |f(x)| > M\})=0\} \\ & = \mathrm{ess} \sup |f| \end{aligned}$$如果令$$S = \{x \in E ~|~ |f(x)| > M\} = f^{-1}(-\infty, -M) \cup f^{-1}(M, \infty)$$，則：$$\|f\|_\infty =  \begin{cases} \mathrm{ess} \sup |f| & \text{ if } m(S) > 0, \\ 0,  & \text{ if } m(S) = 0 \end{cases}$$
+> 令$$M\geq 0, |f(x)| \leq M \text{ a.e. } \forall x \in E$$．定義<mark style="color:red;">一致範數(uniform norm)</mark>$$\begin{aligned} \|f\|_\infty &= \inf \{ M\geq 0 ~|~ |f(x)| \leq M \text{ a.e.} ~x \in E\} \\ &= \inf \{ M \geq 0 ~|~ m(\{x \in E ~|~ |f(x)| > M\})=0\} \\ & = \mathrm{ess} \sup |f| \end{aligned}$$
+>
+> 如果令$$S = \{x \in E ~|~ |f(x)| > M\} = f^{-1}(-\infty, -M) \cup f^{-1}(M, \infty)$$，則：$$\|f\|_\infty =  \begin{cases} \mathrm{ess} \sup |f| & \text{ if } m(S) > 0, \\ 0,  & \text{ if } m(S) = 0 \end{cases}$$
 >
 > 令$$L\infty$$空間為本性有界函數(幾乎處處有界函數)的集合。
 
@@ -78,9 +80,7 @@ $$\inf f = \inf \{b \in \mathbb{R} ~|~ f(x) \geq b\}$$，即$$\forall x \in E,~ 
 >
 > $$-\infty \leq \inf f \leq \mathrm{ess} \inf f\leq f  \leq \mathrm{ess} \sup f \leq \sup f  \leq \infty$$。
 >
-> 若$$m(E_0)=0$$
->
-> 註：令$$E_0 \subseteq E$$且$$m(E_0)=0$$。如果$$E_0=\emptyset$$時，$$\inf(f)=\mathrm{ess} \inf (f)$$且$$\sup(f)=\mathrm{ess} \sup (f)$$。
+> 註：令$$E_0 \subseteq E$$且$$E_0=\emptyset$$時，則$$\inf(f)=\mathrm{ess} \inf (f)$$且$$\sup(f)=\mathrm{ess} \sup (f)$$且有可能等於$$\pm \infty$$。如果只有$$m(E_0)=0$$時，無法得到此等式，見下例。
 
 註：空集合的上/下確界為$$\sup(\emptyset)=-\infty$$，$$\inf(\emptyset)=\infty$$。且$$m(\emptyset)=0$$。因此當函數的定義域$$m(E)=0$$時，得$$\infty = \mathrm{ess} \inf f \geq \mathrm{ess} \sup f = -\infty$$。
 
@@ -90,7 +90,7 @@ $$\displaystyle f(x) = \begin{cases} 5 & \text{ if } x = 1,\\ -4 & \text{ if } x
 
 則$$\sup(f)=5, ~\inf(f)=-4$$，但由於$$m(\{x~|~f(x)=5\})=0$$且$$m(\{x~|~f(x)=-4\})=0$$，所以$$\mathrm{ess} \sup (f) = \mathrm{ess} \inf (f)=2$$。
 
-#### 範例
+#### 範例：無上/下界但有本性上/下界的函數
 
 $$\displaystyle f(x) = \begin{cases} x^3 & \text{ if } x  \in \mathbb{Q},\\ \arctan(x) & \text{ if } x  \in \mathbb{R-Q} \end{cases}$$
 

@@ -36,6 +36,19 @@ description: Lebesgue p-th integrable space
 * 令$$f \in L^{\infty}(E)$$，則存在$$E$$的可測且有界函數$$g$$，且$$f=g \text{ a.e. }$$。
 * <mark style="color:red;">在</mark>$$p=2$$<mark style="color:red;">時，可得</mark>$$f, g \in L^2(E) \Rightarrow fg \in L^1(E)$$<mark style="color:red;">，因此可定義內積</mark>$$\displaystyle \langle f,g  \rangle = \int_E f(x)g(x) dx$$<mark style="color:red;">為兩函數間的角度</mark>。<mark style="color:red;">進而得到可積函數(無限維)的內積空間</mark>。
 
+### 一致範數等價於無限p範數
+
+> $$f: E \rightarrow \mathbb{R}$$，$$\displaystyle  \|f\|_p = \left( \int_E |f(x)|^p dx\right)^{\frac{1}{p}}, ~ 0 < p < \infty$$，$$\|f\|_\infty = \mathrm{ess} \sup |f|$$，則：\
+> $$\displaystyle \lim_{p \rightarrow \infty}\|f\|_p =\|f\|_\infty$$
+
+<details>
+
+<summary>proof: [todo]</summary>
+
+
+
+</details>
+
 ### 本性(本質)有界函數(essentially bounded function)
 
 > 令$$f$$為定義在$$E \subseteq \mathbb{R}^n$$的可測函數且$$m(E) > 0$$。

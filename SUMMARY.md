@@ -79,7 +79,7 @@
   * [測度收斂](math-analysis/lebesgue-integral/ce-du-shou-lian.md)
 * [賦範空間(normed space)](math-analysis/normed-space.md)
 * [Lp空間](math-analysis/lp-space/README.md)
-  * [Lp空間結構](math-analysis/lp-space/lp-space-structure.md)
+  * [Holder不等式](math-analysis/lp-space/holder-inequality.md)
   * [捲積](math-analysis/lp-space/convolution.md)
 * [多變數向量](math-analysis/multivariate-vector.md)
 * [傅立葉分析(Fourier analysis)](math-analysis/fourier-analysis.md)

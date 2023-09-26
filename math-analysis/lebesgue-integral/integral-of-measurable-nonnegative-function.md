@@ -12,7 +12,7 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 ## 非負可測函數的積分
 
-> 函數$$f(x): \mathbb{R}^n \rightarrow [0,\infty]$$(可取值至無窮大)在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx\equiv \sum_{i=1}^p c_i m(E \cap E_i) ~| ~ h(x): \mathbb{R}^n \rightarrow [0,\infty) \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的$$h(x) \leq f(x)$$大小關係是對定義域的每個點都成立。\[[簡單函數h(x)必存在](../measure/simple-function-approximation.md)]
+> 函數$$f(x): E\rightarrow [0,\infty]$$(可取值至無窮大)在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx\equiv \sum_{i=1}^p c_i m(E \cap E_i) ~| ~ h(x): \mathbb{R}^n \rightarrow [0,\infty) \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的$$h(x) \leq f(x)$$大小關係是對定義域的每個點都成立。\[[簡單函數h(x)必存在](../measure/simple-function-approximation.md)]
 >
 > <mark style="color:red;">若</mark>$$\displaystyle \int_E f(x)dx < \infty$$<mark style="color:red;">，則稱</mark>$$f$$<mark style="color:red;">在集合</mark>$$E$$<mark style="color:red;">可積，或稱</mark>$$f(x)$$<mark style="color:red;">為集合</mark>$$E$$<mark style="color:red;">上的可積函數</mark>。常記為$$f \in L(E)$$。
 
@@ -40,19 +40,21 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 ### 非負可測函數若被可積函數控制(dominated)時為可積分函數
 
-> $$f(x), g(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+> $$f(x), g(x): E\rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
 >
 > 若$$f(x) \leq g(x) ~ \forall x \in E$$，則可得積分單調性：$$\displaystyle \int_E f(x) dx \leq \int_E g(x) dx$$。
 >
-> 注意：此處積分值可能為$$\infty$$。即$$f(x), g(x)$$可能不是可積分函數。
+> 註：<mark style="color:blue;">此處積分值可能為</mark>$$\infty$$<mark style="color:blue;">。即</mark>$$f(x), g(x)$$<mark style="color:blue;">可能不是可積分函數</mark>。
 >
-> <mark style="color:red;">如果</mark>$$g(x)$$<mark style="color:red;">為</mark>$$E$$<mark style="color:red;">的可積分函數，則</mark>$$f(x)$$<mark style="color:red;">為</mark>$$E$$<mark style="color:red;">的可積分函數</mark>。
+> <mark style="color:red;">反之如果</mark>$$g(x)$$<mark style="color:red;">為</mark>$$E$$<mark style="color:red;">的可積分函數，則</mark>$$f(x)$$<mark style="color:red;">為</mark>$$E$$<mark style="color:red;">的可積分函數</mark>。
+>
+> <mark style="color:red;">因此條件可弱化為若</mark>$$g$$<mark style="color:red;">可積分，</mark>$$f$$<mark style="color:red;">為可測函數，且</mark>$$f \leq g$$<mark style="color:red;">則</mark>$$f$$<mark style="color:red;">為可積分函數(類似DCT的敘述)。</mark>
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 上確界的單調性</summary>
 
-令$$h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in E$$。
+令$$h(x): \mathbb{R}^n \rightarrow [0,\infty]$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in E$$。
 
 則由$$f(x) \leq g(x)$$可得$$h(x) \leq g(x) ~ \forall x \in E$$。
 
@@ -66,9 +68,11 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 ### 非負可測且值域有限的函數在有限測度集合上可積分
 
-> $$f(x), g(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+> $$f(x): E\rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
 >
-> <mark style="color:red;">如果</mark>$$f(x)$$<mark style="color:red;">在</mark>$$E$$<mark style="color:red;">有界，且</mark>$$m(E) < \infty$$<mark style="color:red;">，則</mark>$$f(x)$$<mark style="color:red;">為</mark>$$E$$<mark style="color:red;">的可積分函數(有限值域的函數在有限測度集合可積分)</mark>。
+> <mark style="color:red;">如果</mark>$$f(x)$$<mark style="color:red;">在</mark>$$E$$<mark style="color:red;">有界，且</mark>$$m(E) < \infty$$<mark style="color:red;">，則</mark>$$f(x)$$<mark style="color:red;">為</mark>$$E$$<mark style="color:red;">的可積分函數</mark>
+>
+> <mark style="color:red;">即有限值域的函數在有限測度集合必可積分。</mark>
 
 <details>
 
@@ -76,7 +80,7 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 簡單函數$$h(x)=\sum_{i=1}^p a_i \chi_{A_i}(x), ~ \bigcup_{i=1}^p A_i = E, ~ A_i \cap A_j = \emptyset ~ \forall i \neq j$$
 
-如果$$f(x)$$在$$E$$上有界，則簡單函數$$h(x)$$的在$$E$$的值域有上界，即$$a_i < \infty, \forall i$$。
+如果$$f(x)$$在$$E$$上有界，即$$f(x)<\infty, ~\forall x \in E$$，則簡單函數$$h(x)$$的在$$E$$的值域有上界，即$$a_i < \infty, \forall i$$。
 
 因為積分值為$$\displaystyle \int_E h(x) dx \equiv \sum_{i=1}^p a_i m(E \cap A_i)$$
 
@@ -88,17 +92,17 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 ### 非負可測函數於可測子集的積分
 
-> $$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+> $$f: E \rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
 >
 > 若$$A \subseteq E$$為可測子集合，則可得：$$\displaystyle \int_A f(x) dx = \int_E f(x) \chi_A(x) dx$$。
 >
-> 注意：此處積分值可能為$$\infty$$，即$$f$$可能在集合$$A$$上非可積分函數。
+> 注意：<mark style="color:blue;">此處積分值可能為</mark>$$\infty$$<mark style="color:blue;">，即</mark>$$f$$<mark style="color:blue;">可能在集合</mark>$$A$$<mark style="color:blue;">上非可積分函數</mark>。
 
 <details>
 
 <summary>proof</summary>
 
-令$$h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in A$$。
+令$$h(x):E \rightarrow [0,\infty]$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in A$$。
 
 由積分定義得$$\displaystyle \int_A f(x) dx = \sup_{h(x) \leq f(x), ~ \forall x \in A} \int_A h(x) dx$$
 
@@ -112,11 +116,13 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 ### 非負可測函數幾乎處處為0若且唯若積分值為0
 
-> $$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+> $$f: E \rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
 >
 > 可得$$f(x) = 0, \text{ a.e. on } E$$$$\Leftrightarrow$$$$\displaystyle \int_E f(x)dx =0$$。
 >
 > 註：$$f(x) = 0, \text{ a.e. on } E$$即$$\exists F \subseteq E \ni f(x)=0, \forall x \in E-F$$且$$m(F)=0$$。
+>
+> <mark style="color:blue;">因為</mark>$$0\cdot \infty=0$$<mark style="color:blue;">因此可得</mark>$$m(E)=0 \Rightarrow \int _E f(x)dx=0$$<mark style="color:blue;">。</mark>
 
 <details>
 
@@ -124,7 +130,7 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 \=>
 
-令$$h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in E$$。
+令$$h(x): E\rightarrow [0,\infty]$$為非負簡單函數，且$$h(x) \leq f(x)~ \forall x \in E$$。
 
 $$h(x)=\sum_{i=1}^p a_i \chi_{A_i}(x), ~ \bigcup_{i=1}^p A_i = E, ~ A_i \cap A_j = \emptyset ~ \forall i \neq j$$。
 
@@ -164,11 +170,11 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 ## 非負可積函數幾乎處處有限
 
-> $$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可積函數，即$$\displaystyle \int_E f(x)dx < \infty$$。
+> $$f(x): E\rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可積函數，即$$\displaystyle \int_E f(x)dx < \infty$$。
 >
 > 則$$f(x)$$在$$E$$幾乎處處有限，即$$\exists E \subseteq F \ni f(x) < \infty, ~\forall x \in E-F$$且$$m(F)=0$$。
 >
-> <mark style="color:blue;">註：簡單的說，如果函數可積分，則函數值為無窮大的定義域集合的測度必須為0</mark>。
+> <mark style="color:blue;">註：簡單的說，如果函數可積分，則函數值為無窮大的前像集合的測度必須為0</mark>。
 
 <details>
 
@@ -180,7 +186,7 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 對於每個$$k$$，可得不等式$$\displaystyle k \cdot m(E_k) \leq \int_{E_k} f(x) dx \leq \int_E f(x) dx < \infty$$
 
-因此可得$$\displaystyle \lim_{k \rightarrow \infty }m(E_k)=0$$ (QED)
+因為$$k > 0$$，因此可得$$\displaystyle \lim_{k \rightarrow \infty }m(E_k)=0$$ (QED)
 
 </details>
 

@@ -247,6 +247,12 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 > 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限，即$$\displaystyle f(x) = \lim_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
 >
 > 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)
+>
+> 註：極限函數的積分可能小於原始函數序列極限的積分，而Fatou's lemma證明反之不會成立。
+
+$$\displaystyle \liminf_{n \rightarrow \infty} f_n=\sup_{n \rightarrow \infty}(\inf_{m \geq n} f_m)$$
+
+所以$$\displaystyle \int_E \liminf_{n \rightarrow  \infty} f_n dx=\sup_{n \rightarrow \infty} \int_E (\inf_{m \geq n} f_m)dx$$
 
 ## 參考資料
 

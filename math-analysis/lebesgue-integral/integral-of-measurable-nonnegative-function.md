@@ -4,19 +4,39 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 # 非負可測函數的積分
 
+## 簡介
+
+非負可測函數的積分若存在，則一般函數的積分可用$$f=f^{+}-f^{-}$$定義之。
+
+函數絕對值可積分若且唯若函數可積分，因為$$|f|=f^{+}+f^{-}, ~ f=f^{+} -f^{-}$$。
+
 ## 非負可測函數的積分
 
-> 函數$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx ~| ~ h(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+} \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的大小關係是對定義域的每個點都成立。
+> 函數$$f(x): \mathbb{R}^n \rightarrow [0,\infty]$$(可取值至無窮大)在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx\equiv \sum_{i=1}^p c_i m(E \cap E_i) ~| ~ h(x): \mathbb{R}^n \rightarrow [0,\infty) \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的$$h(x) \leq f(x)$$大小關係是對定義域的每個點都成立。\[[簡單函數h(x)必存在](../measure/simple-function-approximation.md)]
 >
-> <mark style="color:red;">若</mark>$$\displaystyle \int_E f(x)dx < \infty$$<mark style="color:red;">，則稱</mark>$$f$$<mark style="color:red;">在集合</mark>$$E$$<mark style="color:red;">可積，或稱</mark>$$f(x)$$<mark style="color:red;">為集合</mark>$$E$$<mark style="color:red;">上的可積函數</mark>。
+> <mark style="color:red;">若</mark>$$\displaystyle \int_E f(x)dx < \infty$$<mark style="color:red;">，則稱</mark>$$f$$<mark style="color:red;">在集合</mark>$$E$$<mark style="color:red;">可積，或稱</mark>$$f(x)$$<mark style="color:red;">為集合</mark>$$E$$<mark style="color:red;">上的可積函數</mark>。常記為$$f \in L(E)$$。
 
-此處[非負可測函數$$f(x)$$是用簡單函數序列極限$$h(x)$$逼近](../measure/simple-function-approximation.md)。
+此處[非負可測函數$$f(x)$$是用簡單函數序列極限$$h(x)$$逼近](../measure/simple-function-approximation.md)。(<mark style="color:blue;">因為</mark>$$L^1(E)$$<mark style="color:blue;">為可分空間，可用連續函數或簡單函數逼近給定的函數</mark>)。
 
-由切非負簡單函數的值域，當值域切的越細時，$$h(x)$$能夠越接近$$f(x)$$，此時積分值也會隨之變大，當切分到極限時，若簡單函數的積分值有限時，則$$f$$為可積分函數。
+切割值域方法：
+
+* $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
+* 閉區間$$[0,k]$$的第$$j$$個定義域區間(長度均為$$1/2^k$$)為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$
+* 函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。
+* 簡單函數序列：$$\displaystyle h_k(x)=k \cdot \chi_{E_k}(x) + \sum_{j=1}^{k \cdot 2^k} \frac{j-1}{2^k}\chi_{E_{k,j}}(x), ~ x \in E$$
+* 可得$$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ \forall x \in E$$。
+
+因為函數$$f$$的取值可為$$\infty$$，只要前像的測度$$m(f^{-1}\{\infty\})=0$$就可積分，不必像Riemann瑕積分必須分開討論。
+
+與Riemann積分切定義域不同，Lebesgue積分是切非負簡單函數的值域，當值域切的越細時，$$h(x)$$能夠越接近$$f(x)$$，此時積分值也會隨之變大，當切分到極限時，若簡單函數的積分值有限時，則$$f$$為可積分函數。
 
 我們必須證明這個積分與上面定義在簡單函式集合上的積分相符。此外還有這個積分定義是否與黎曼積分的概念有對應關係的問題。事實上可以證明這兩個問題的答案都是肯定的。
 
-勒貝格積分的分割方式很特定，每一段都是 1/2^n 的差距，所以較大的 n 除了擴大的 f(x) 計值部分外，都是較小 n 的細分。
+Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所以較大的$$n$$ 除了取值為$$\infty$$的$$f(x)$$ 外，都是較小的細分。
+
+
+
+<figure><img src="../../.gitbook/assets/lebesgue-integral-step-function-min.png" alt="" width="375"><figcaption><p>簡單函數逼近可測函數。切值域而非定義域</p></figcaption></figure>
 
 ### 非負可測函數若被可積函數控制(dominated)時為可積分函數
 

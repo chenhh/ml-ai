@@ -10,7 +10,7 @@
 
 > 定義：非負可測簡單函數(nonnegative simple function)
 >
-> 函數$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負可測簡單函數，其定義域在集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i$$：
+> 函數$$f(x): \mathbb{R}^n \rightarrow [0, \infty)$$為非負可測簡單函數，其定義域在可測集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i \in \mathbb{R}$$：
 >
 > $$\displaystyle f(x)=\sum_{i=1}^p c_i \chi_{E_i}(x)$$，$$\bigcup_{i=1}^p E_i = \mathbb{R}^n$$，$$E_i \cap E_j = \emptyset, ~\forall i \neq j$$。
 
@@ -26,13 +26,20 @@
 
 > 定義：非負可測簡單函數的積分
 >
-> 給定歐式空間上的σ域$$\Sigma$$，若集合$$E \in \Sigma$$，定義非負簡單函數在$$E$$的積分為：
+> 給定歐式空間上的σ域$$\Sigma$$，若可測集合$$E \in \Sigma$$，定義非負簡單函數在$$E$$的積分為：
 >
 > $$\displaystyle \int_E f(x) dx \equiv \sum_{i=1}^p c_i m(E \cap E_i)$$。
 >
 > 其中$$dx$$是$$\mathbb{R}^n$$上Lebesgue測度的標誌，若是可測空間可使用$$dm(x)$$或$$d\mu(x)$$。
 >
 > <mark style="color:blue;">上述定義的積分可能為</mark>$$\pm \infty$$，<mark style="color:blue;">因為測度可取值為</mark>$$\pm \infty$$。要<mark style="color:blue;">注意擴充實數中，定義</mark>$$0 \cdot \infty = 0$$。
+
+## 指示函數的積分
+
+> $$1_{A}=\begin{cases} 1,& \text{ if } x \in A \\ 0, & \text{ otherwise } \end{cases}$$。
+>
+> 令$$A \in \Sigma$$，則可定義積分為：\
+> $$\displaystyle \int_E 1_A dx = 1\cdot m(E \cap A) + 0 \cdot m(E \cap A^c) = m(E \cap A)$$
 
 ### 範例：Dirichlet函數的積分
 
@@ -48,7 +55,7 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 ## 非負簡單函數積分線性性質
 
-> $$f, g: \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為可測簡單函數。
+> $$f, g: \mathbb{R}^n \rightarrow [0,\infty)$$為非負可測簡單函數。
 >
 > $$f(x)=\sum_{i=1}^p a_i \chi_{A_i}(x), ~ \bigcup_{i=1}^p A_i = \mathbb{R}^n, ~ A_i \cap A_j = \emptyset ~ \forall i \neq j$$。
 >
@@ -61,7 +68,7 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 有限元素的級數和</summary>
 
 1. 由定義可直接得證。
 2. $$f(x)+g(x)$$在集合$$A_i \cap B_j$$上的值為$$a_i + b_j$$。
@@ -74,13 +81,13 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 ## 非負簡單函數於遞增可測集合序列的積分
 
-> $$E_1 \subseteq E_2 \subseteq  \dots \subseteq \mathbb{R}^n$$為遞增可測集合序列且$$f(x): \mathbb{R}^n \rightarrow \mathbb{R}^{+}$$為非負可測簡單函數，則：
+> $$E_1 \subseteq E_2 \subseteq  \dots \subseteq \mathbb{R}^n$$為遞增可測集合序列且$$f(x): \mathbb{R}^n \rightarrow [0,\infty)$$為非負可測簡單函數，則：
 >
 > $$\displaystyle \int_E f(x)dx = \lim_{k \rightarrow \infty} \int_{E_k} f(x)dx, ~ E=\bigcup_{k=1}^\infty E_k$$
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 遞增集合極限的測度等於聯集的測度</summary>
 
 由[遞增集合極限的測度(continuity of measure)](../measure.md#di-zeng-ji-he-ji-xian-de-ce-du-continuity-of-measure)可得$$\displaystyle \lim_{k \rightarrow \infty} m(E_k) = m(\lim_{k \rightarrow \infty} E_k) = m(\bigcup_{k \in \mathbb{N}} E_k)=m(E)$$。
 
@@ -92,4 +99,6 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 </details>
 
-##
+## 參考資料
+
+* [https://naturale0.github.io/2020/12/19/PTE-1.4-Lebesgue-integral](https://naturale0.github.io/2020/12/19/PTE-1.4-Lebesgue-integral)

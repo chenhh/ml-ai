@@ -26,7 +26,7 @@ description: Lebesgue p-th integrable space
 
 > 定義：Lp空間($$p=\infty$$)
 >
-> 令$$M\geq 0, |f(x)| \leq M \text{ a.e. } \forall x \in E$$．定義<mark style="color:red;">一致範數(uniform norm)</mark>$$\begin{aligned} \|f\|_\infty &= \inf \{ M\geq 0 ~|~ |f(x)| \leq M \text{ a.e.} ~x \in E\} \\ &= \inf \{ M \geq 0 ~|~ m(\{x \in E ~|~ |f(x)| > M\})=0\} \\ & = \mathrm{ess} \sup |f| \end{aligned}$$
+> 令$$M\geq 0, |f(x)| \leq M \text{ a.e. } \forall x \in E$$．定義<mark style="color:red;">本性上界範數(essential supremum norm)</mark>$$\begin{aligned} \|f\|_\infty &= \inf \{ M\geq 0 ~|~ |f(x)| \leq M \text{ a.e.} ~x \in E\} \\ &= \inf \{ M \geq 0 ~|~ m(\{x \in E ~|~ |f(x)| > M\})=0\} \\ & = \mathrm{ess} \sup |f| \end{aligned}$$
 >
 > 如果令$$S = \{x \in E ~|~ |f(x)| > M\} = f^{-1}(-\infty, -M) \cup f^{-1}(M, \infty)$$，則：$$\|f\|_\infty =  \begin{cases} \mathrm{ess} \sup |f| & \text{ if } m(S) > 0, \\ 0,  & \text{ if } m(S) = 0 \end{cases}$$
 >

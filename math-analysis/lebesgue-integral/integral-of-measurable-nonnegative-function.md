@@ -10,6 +10,8 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 函數絕對值可積分若且唯若函數可積分，因為$$|f|=f^{+}+f^{-}, ~ f=f^{+} -f^{-}$$。
 
+Fatou's Lemma和單調收斂定理(MCT)不僅可以各自單獨被證明，還可以進行互推導（即在已知Fatou's Lemma的條件下證MCT，反之亦然，但不可循環論證）。
+
 ## 非負可測函數的積分
 
 > 函數$$f(x): E\rightarrow [0,\infty]$$(可取值至無窮大)在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx\equiv \sum_{i=1}^p c_i m(E \cap E_i) ~| ~ h(x): \mathbb{R}^n \rightarrow [0,\infty) \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的$$h(x) \leq f(x)$$大小關係是對定義域的每個點都成立。\[[簡單函數h(x)必存在](../measure/simple-function-approximation.md)]
@@ -244,16 +246,34 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 
 > 給定非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.
 >
-> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限，即$$\displaystyle f(x) = \lim_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
+> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限(必定存在)，即$$\displaystyle f(x) = \liminf_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
 >
 > 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)
 >
-> 註：極限函數的積分可能小於原始函數序列極限的積分，而Fatou's lemma證明反之不會成立。
+> <mark style="color:blue;">註：下極限函數的積分可能小於原始函數序列極限的積分，而Fatou's lemma證明反之不會成立</mark>。
+>
+> <mark style="color:blue;">Fatou 引理中可得點態收斂不見得能保留函式的(Lebesgue)積分值，因此考慮其他方式的收斂</mark>。
 
 $$\displaystyle \liminf_{n \rightarrow \infty} f_n=\sup_{n \rightarrow \infty}(\inf_{m \geq n} f_m)$$
 
 所以$$\displaystyle \int_E \liminf_{n \rightarrow  \infty} f_n dx=\sup_{n \rightarrow \infty} \int_E (\inf_{m \geq n} f_m)dx$$
 
+### 範例：極限函數的積分小於函數序列極限的積分
+
+令$$f_n(x)=\begin{cases} \chi_{(1,2]}, & \text{ if } n \text{ is even } \\ \chi_{[0,1]}, & \text{ if } n \text{ is odd } \end{cases}$$
+
+因為$$(1,2], [0,1]$$都是可測集，因此$$f_n$$為可測函數。
+
+當$$n$$為奇數或偶數時，$$\displaystyle \int_0^1 f_n(x) dx=\int_1^2 f_n(x)dx=1$$
+
+因為極限存在，因此可得$$\displaystyle \liminf_{n \rightarrow \infty}\int_{\mathbb{R}} f_n(x)dx=1$$--(1)
+
+而$$\displaystyle \liminf_{n \rightarrow \infty} f_n(x)=0$$，所以$$\displaystyle \int_\mathbb{R} \liminf_{n \rightarrow \infty} f_n(x) dx =0$$--(2)
+
+由(1,2)得積分不相等。
+
 ## 參考資料
 
-[https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem](https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem)
+* [https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem](https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem)
+* [https://www.cnblogs.com/chetianjian/articles/16294322.html](https://www.cnblogs.com/chetianjian/articles/16294322.html)
+* [https://math.stackexchange.com/questions/2332476/showing-that-the-fatous-lemma-inequality-can-be-strict](https://math.stackexchange.com/questions/2332476/showing-that-the-fatous-lemma-inequality-can-be-strict)

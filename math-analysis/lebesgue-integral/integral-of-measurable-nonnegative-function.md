@@ -240,7 +240,13 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 >
 > 同條件下，若$$f_n$$為Riemann可積，可得$$\displaystyle \lim_{n \rightarrow \infty}\int_E f_n dx = \int_E f dx$$。
 
+## Fatou's lemma
 
+> 給定非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.
+>
+> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限，即$$\displaystyle f(x) = \lim_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
+>
+> 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)
 
 ## 參考資料
 

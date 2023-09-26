@@ -66,6 +66,14 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 </details>
 
+### 非負可測函數子集合積分的單調性
+
+> $$f(x): E\rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數.&#x20;
+>
+> 若$$F \subseteq E$$為可測集合，則：
+>
+> $$\displaystyle \int_F f dx \leq \int_E f dx$$。
+
 ### 非負可測且值域有限的函數在有限測度集合上可積分
 
 > $$f(x): E\rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
@@ -113,6 +121,8 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 (QED)
 
 </details>
+
+
 
 ### 非負可測函數幾乎處處為0若且唯若積分值為0
 
@@ -190,16 +200,48 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 </details>
 
-## Beppo Levi非負遞增函數序列的積分
+## Beppo Levi非負遞增函數序列的積分(Monotone Convergence Theorem, MCT)
 
-> 令非負可測且在集合$$E$$上遞增的函數序列$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
+> 令非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
 >
 > 且函數序列(點態)收斂：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$，
 >
-> 則可得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) dx = \int_E f(x)dx$$。
+> 則可得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) dx = \int_E f(x)dx$$。(積分可能為$$\infty$$，但若積分存在時則相等)
 >
 >
 >
 > <mark style="color:red;">註：對於非負可測函數序列，極限與積分的次序可交換</mark>。
 >
+> 此定理證明可分為使用或不使用Fatou's lemma兩種。
+
+
+
+#### 範例
+
+$$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{n \rightarrow \infty} \int_E n \log \left(1+\frac{f}{n} \right)dx = \int_E f dx$$
+
+令$$f_n =n \log \left( 1 + \frac{f}{n}\right) = \log \left( 1+ \frac{f}{n}\right)^n$$
+
+因為$$f_n \geq 0$$且可測，而且$$f_n \leq f_{n+1}, \forall n$$
+
+由自然數定義得：$$\displaystyle \lim_{n \rightarrow \infty }f_n(x) = \lim_{n \rightarrow \infty }\left( 1+ \frac{f}{n} \right)^n = \log e^{f(x)} = f(x)$$
+
+由MCT得$$\displaystyle \lim_{n \rightarrow \infty} \int_E f_n dx = \int_E f dx$$。
+
+## Dini's theorem
+
+> 給定在緊緻集合$$E$$上遞增的連續函數序列$$f_n: E \rightarrow \mathbb{R}$$$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$
 >
+> 且函數序列(點態)收斂至連續函數：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$
+>
+> 則此收斂為一致收斂。
+>
+> 註：此為MCT的連續函數版本，單調連續函數若在緊緻集收斂則為一致收斂。
+>
+> 同條件下，若$$f_n$$為Riemann可積，可得$$\displaystyle \lim_{n \rightarrow \infty}\int_E f_n dx = \int_E f dx$$。
+
+
+
+## 參考資料
+
+[https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem](https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem)

@@ -254,7 +254,23 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 >
 > <mark style="color:blue;">Fatou 引理中可得點態收斂不見得能保留函式的(Lebesgue)積分值，因此考慮其他方式的收斂</mark>。
 
-$$\displaystyle \liminf_{n \rightarrow \infty} f_n=\sup_{n \rightarrow \infty}(\inf_{m \geq n} f_m)$$
+<details>
+
+<summary>proof: 使用MCT遞增函數的積分極限等於極限函數的積分</summary>
+
+令$$g_n(x)=\inf\{f_k(x), ~k\geq n\}$$
+
+可得$$g_n(x) \leq g_{n+1}(x), \forall n \in \mathbb{N}$$為遞增函數。
+
+由下極限定義得：$$\displaystyle \liminf_{n \rightarrow \infty} f_n=\lim_{n \rightarrow \infty} \inf_{k \geq n} f_k(x) = \lim_{n \rightarrow \infty} g_n(x)$$
+
+因為$$g_n$$為遞增函數，由MCT得：
+
+$$\displaystyle  \begin{aligned} & \int_E \liminf_{n \rightarrow \infty} f_n(x) dx  \\ & = \int_E  \lim_{n \rightarrow \infty} g_n(x) dx \\ 	& = \lim_{n \rightarrow \infty} \int_E g_n(x) dx ~ \text{ [by MCT] } \\ 	& = \liminf_{n \rightarrow \infty} \int_E g_n(x) dx ~ \text{ [極限存在時，上極限=下極限] } \\ 	& \leq \liminf_{n \rightarrow \infty} \int)E f_n(x) dx   \end{aligned}$$
+
+</details>
+
+
 
 所以$$\displaystyle \int_E \liminf_{n \rightarrow  \infty} f_n dx=\sup_{n \rightarrow \infty} \int_E (\inf_{m \geq n} f_m)dx$$
 

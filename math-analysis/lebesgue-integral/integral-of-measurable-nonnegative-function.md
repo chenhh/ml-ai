@@ -253,26 +253,26 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 > <mark style="color:blue;">註：下極限函數的積分可能小於原始函數序列極限的積分，而Fatou's lemma證明反之不會成立</mark>。
 >
 > <mark style="color:blue;">Fatou 引理中可得點態收斂不見得能保留函式的(Lebesgue)積分值，因此考慮其他方式的收斂</mark>。
+>
+> 可用於判斷極限函數的可積性，如$$E$$上的非負可測函數序列滿足$$\displaystyle \int_E f_n(x) dx \leq M, ~ n \in \mathbb{N}$$時，可得到$$\displaystyle \int_E \liminf_{n \rightarrow \infty} f_n(x) dx \leq M$$。
 
 <details>
 
 <summary>proof: 使用MCT遞增函數的積分極限等於極限函數的積分</summary>
 
-令$$g_n(x)=\inf\{f_k(x), ~k\geq n\}$$
+令$$g_n(x)=\inf\{f_k(x), ~k\geq n\}$$，由下確界定義得$$\displaystyle g_n(x) \equiv \inf_{n \geq k}f_k(x) \leq f_n(x), ~\forall n \in \mathbb{N}$$。
 
 可得$$g_n(x) \leq g_{n+1}(x), \forall n \in \mathbb{N}$$為遞增函數。
 
-由下極限定義得：$$\displaystyle \liminf_{n \rightarrow \infty} f_n=\lim_{n \rightarrow \infty} \inf_{k \geq n} f_k(x) = \lim_{n \rightarrow \infty} g_n(x)$$
+由下極限定義得：$$\displaystyle f(x)=\liminf_{n \rightarrow \infty} f_n(x)=\lim_{n \rightarrow \infty} \inf_{k \geq n} f_k(x) = \lim_{n \rightarrow \infty} g_n(x)$$，因此$$f$$為可測函數。
 
 因為$$g_n$$為遞增函數，由MCT得：
 
-$$\displaystyle  \begin{aligned} & \int_E \liminf_{n \rightarrow \infty} f_n(x) dx  \\ & = \int_E  \lim_{n \rightarrow \infty} g_n(x) dx \\ 	& = \lim_{n \rightarrow \infty} \int_E g_n(x) dx ~ \text{ [by MCT] } \\ 	& = \liminf_{n \rightarrow \infty} \int_E g_n(x) dx ~ \text{ [極限存在時，上極限=下極限] } \\ 	& \leq \liminf_{n \rightarrow \infty} \int)E f_n(x) dx   \end{aligned}$$
+$$\displaystyle  \begin{aligned} & \int_E \liminf_{n \rightarrow \infty} f_n(x) dx  \\ & = \int_E  \lim_{n \rightarrow \infty} g_n(x) dx \\ 	& = \lim_{n \rightarrow \infty} \int_E g_n(x) dx ~ \text{ [by MCT] } \\ 	& = \liminf_{n \rightarrow \infty} \int_E g_n(x) dx ~ \text{ [極限存在時，上極限=下極限] } \\ 	& \leq \liminf_{n \rightarrow \infty} \int_E f_n(x) dx  ~ \text{ because } g_n \leq f_n, ~ \forall n  \end{aligned}$$
+
+(QED)
 
 </details>
-
-
-
-所以$$\displaystyle \int_E \liminf_{n \rightarrow  \infty} f_n dx=\sup_{n \rightarrow \infty} \int_E (\inf_{m \geq n} f_m)dx$$
 
 ### 範例：極限函數的積分小於函數序列極限的積分
 
@@ -287,6 +287,14 @@ $$\displaystyle  \begin{aligned} & \int_E \liminf_{n \rightarrow \infty} f_n(x) 
 而$$\displaystyle \liminf_{n \rightarrow \infty} f_n(x)=0$$，所以$$\displaystyle \int_\mathbb{R} \liminf_{n \rightarrow \infty} f_n(x) dx =0$$--(2)
 
 由(1,2)得積分不相等。
+
+### 範例：極限函數的積分小於函數序列極限的積分2
+
+$$\displaystyle  f_n(x) =  \begin{cases} 0, & x = 0, \\ n, & 0 < x < \frac{1}{n}, \\ 0, & \frac{1}{n} \leq x \leq 1 \end{cases} ~, n \in \mathbb{N}$$
+
+因此得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)=0, ~ x \in [0,1]$$
+
+而$$\displaystyle \int_{[0,1]} \lim_{n \rightarrow \infty} f_n(x)dx = 0 < 1 = \lim_{n \rightarrow \infty} \int_{[0,1]} f_n(x)dx$$.&#x20;
 
 ## Reverse Fatou's lemma
 

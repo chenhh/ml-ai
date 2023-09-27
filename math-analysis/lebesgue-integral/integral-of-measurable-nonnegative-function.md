@@ -212,9 +212,11 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 >
 >
 >
-> <mark style="color:red;">註：對於非負可測函數序列，極限與積分的次序可交換</mark>。
+> <mark style="color:red;">註：對於非負可測遞增函數序列若收斂，則極限與積分的次序可交換</mark>。
 >
 > 此定理證明可分為使用或不使用Fatou's lemma兩種。
+>
+> \[[單調有界定理(實數中的有界單調數列必收斂)](../sequence/monotonic-sequence.md#chan-diao-you-jie-ding-li-shi-shu-zhong-de-you-jie-chan-diao-shu-lie-bi-shou-lian)]固定$$x \in E$$時，可將$$\{f_k(x)\}$$視為遞增序列，則此序列有極限(可能為$$\infty$$)，如果序列有界時，則極限有界。
 
 
 

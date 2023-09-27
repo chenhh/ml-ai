@@ -44,7 +44,7 @@
   * [連續函數](math-analysis/function/continuous-function.md)
   * [半連續函數(semi-continuity function)](math-analysis/function/semi-continuity-function.md)
   * [三角函數](math-analysis/function/trigonometric-function.md)
-  * [函數序列](math-analysis/function/sequences-of-functions.md)
+  * [函數序列收斂性](math-analysis/function/sequences-of-functions-convergence.md)
   * [函數序列上/下極限](math-analysis/function/limsup-inf-function-sequence.md)
   * [均值收斂](math-analysis/function/mean-convergence.md)
   * [有界變差(bounded variation)](math-analysis/function/bounded-variation.md)

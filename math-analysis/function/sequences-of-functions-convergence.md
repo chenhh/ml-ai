@@ -2,7 +2,7 @@
 description: sequences of functions
 ---
 
-# 函數序列
+# 函數序列收斂性
 
 ## 簡介
 
@@ -198,7 +198,7 @@ $$\displaystyle \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}} 
 
 也可用$$\displaystyle d_n=\sup_{x \in \mathbb{R}} \frac{\sin(nx)}{\sqrt{n}}=\frac{1}{\sqrt{n}}$$，可得$$\displaystyle \lim_{n \rightarrow \infty} d_n=0$$為一致收斂。
 
-### 連續函數一致收斂後仍為連續函數
+### 連續函數序列若一致收斂仍為連續函數
 
 > 假設所有的函數$$f_n$$均在點$$c \in S ~ \forall n \in \mathbb{N}$$連續，若$$f_n$$一致收斂至函數$$f$$，則$$f$$也在點$$c \in S$$連續。
 >

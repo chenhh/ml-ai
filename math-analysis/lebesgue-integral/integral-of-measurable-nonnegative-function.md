@@ -15,6 +15,25 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 Fatou's Lemma和單調收斂定理(MCT)不僅可以各自單獨被證明，還可以進行互推導（即在已知Fatou's Lemma的條件下證MCT，反之亦然，但不可循環論證。
 
+
+
+* 若$$f_n \rightarrow f$$且$$f_n$$可積，無法保證$$f$$可積。
+* 若$$f_n \rightarrow f$$且$$f_n, f$$可積也無法保證$$\int f_n \rightarrow \int f$$。
+
+$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)=f(x) \text{ a.e. or in measure }$$ ，需要再加什麼條件，才能保證$$f$$ 可積且$$\displaystyle \lim_{n \rightarrow \infty }\int_E f_n dx =\int_E f dx$$  呢？或何時極限和積分可交換次序，即$$\displaystyle \lim_{n \rightarrow \infty }\int_E f_n dx =\int_E \lim_{n \rightarrow \infty } f_n dx$$ ？
+
+答案是只需再加以下其中一個條件即可：
+
+(a) $$\{f_n\}$$是Cauchy in mean；
+
+(b)（控制收斂定理）：$$\forall n \in \mathbb{N}, ~|f_n| \leq g$$ , 且$$g$$可積分；
+
+(c)（單調收斂定理）： $$0\leq f_n \leq f_{n+1}$$非負單調遞增，幾乎處處收斂於$$f$$ 。
+
+
+
+
+
 ## 非負可測函數的積分
 
 > 函數$$f(x): E\rightarrow [0,\infty]$$(可取值至無窮大)在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數，定義函數$$f$$在集合$$E$$上的積分為：$$\displaystyle \int_E f(x)dx = \sup_{h(x) \leq f(x), \forall x \in E} \left\{  \int_E h(x)dx\equiv \sum_{i=1}^p c_i m(E \cap E_i) ~| ~ h(x): \mathbb{R}^n \rightarrow [0,\infty) \text{ is simple non-negative function } \right\}$$注意此處定義的積分值可為$$\infty$$。這裡的$$h(x) \leq f(x)$$大小關係是對定義域的每個點都成立。\[[簡單函數h(x)必存在](../measure/simple-function-approximation.md)]
@@ -207,7 +226,7 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 ## Beppo Levi非負遞增函數序列的積分(單調收斂定理, Monotone Convergence Theorem, MCT)
 
-> 令非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
+> 令非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$0 \leq f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~\leq \infty, \forall x \in E$$.，
 >
 > 且函數序列(點態)收斂(或幾乎處處收斂)：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$\[可能為$$\infty$$]
 >
@@ -219,7 +238,11 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 >
 > 點態收斂可放寬為幾乎處處收斂，因為測度0的定義域集合不影響積分值。
 >
-> 此定理證明可分為使用或不使用Fatou's lemma兩種。
+> 點態收斂條件可得$$\displaystyle  f(x) = \lim_{k \rightarrow \infty} f_k(x) = \liminf_{k \rightarrow \infty} f_k(x) = \limsup_{k \rightarrow \infty} f_k(x)$$
+>
+> 遞增函數序列條件可得：$$\displaystyle  0 \leq \int_E f_1(x)dx \leq \int_E f_2(x)dx \leq \dots \leq \infty$$
+
+> 此定理證明可分為使用或不使用Fatou's lemma兩種，也可用DCT證明。
 >
 > \[[單調有界定理(實數中的有界單調數列必收斂)](../sequence/monotonic-sequence.md#chan-diao-you-jie-ding-li-shi-shu-zhong-de-you-jie-chan-diao-shu-lie-bi-shou-lian)]固定$$x \in E$$時，可將$$\{f_k(x)\}$$視為遞增序列，則此序列有極限(可能為$$\infty$$)，如果序列有界時，則極限有界。
 
@@ -229,7 +252,7 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 給定$$x \in E$$，因為$$f_k(x) \leq f_{k+1}(x)$$為遞增序列，且對於所有的$$x \in E$$均成立，由單調函數的性質知$$f(x)$$為非負可測函數且可定義積分$$\int_Ef(x)dx$$(但可能為$$\infty$$)。
 
-因為$$f_k(x) \leq f_{k+1}(x) ~\forall k \in \mathbb{N}$$且為非負可測函數，因此可得$$\displaystyle \int_E f_k(x) dx \leq \int_E f_{k+1}(x) dx , ~ k \in \mathbb{N}$$。所以$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx$$有定義。
+因為$$f_k(x) \leq f_{k+1}(x) ~\forall k \in \mathbb{N}$$且為非負可測函數，因此可得$$\displaystyle \int_E f_k(x) dx \leq \int_E f_{k+1}(x) dx , ~ k \in \mathbb{N}$$。所以$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx$$有定義(但可能為$$\infty$$)。
 
 由遞增函數積分的單調性得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx \leq \int_E f(x)dx$$--(1)
 
@@ -335,7 +358,7 @@ $$\displaystyle  \begin{aligned} & \int_E \liminf_{n \rightarrow \infty} f_n(x) 
 
 </details>
 
-### 範例：極限函數的積分小於函數序列極限的積分
+### 範例：極限函數的積分小於函數積分序列的極限
 
 令$$f_n(x)=\begin{cases} \chi_{(1,2]}, & \text{ if } n \text{ is even } \\ \chi_{[0,1]}, & \text{ if } n \text{ is odd } \end{cases}$$
 
@@ -361,7 +384,7 @@ $$\displaystyle  f_n(x) =  \begin{cases} 0, & x = 0, \\ n, & 0 < x < \frac{1}{n}
 
 > 給定非負可測且在集合$$E$$上的函數序列$$f_n: E \rightarrow [0, \infty], ~ n \in \mathbb{N}$$.
 >
-> 若存在$$E$$的可積函數$$g$$(即$$\displaystyle \int_E gdx < \infty$$)，且滿足$$f_n \leq g, ~\forall n \in \mathbb{N}$$。
+> <mark style="color:blue;">若存在</mark>$$E$$<mark style="color:blue;">的可積函數</mark>$$g$$(即$$\displaystyle \int_E gdx < \infty$$)，且滿足$$f_n \leq g, ~\forall n \in \mathbb{N}$$。
 >
 > 則：$$\displaystyle \limsup_{n \rightarrow \infty} \int_E f_ndx \leq \int_E \limsup_{n \rightarrow \infty} f_n dx$$
 
@@ -370,3 +393,5 @@ $$\displaystyle  f_n(x) =  \begin{cases} 0, & x = 0, \\ n, & 0 < x < \frac{1}{n}
 * [https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem](https://en.wikipedia.org/wiki/Monotone\_convergence\_theorem)
 * [https://www.cnblogs.com/chetianjian/articles/16294322.html](https://www.cnblogs.com/chetianjian/articles/16294322.html)
 * [https://math.stackexchange.com/questions/2332476/showing-that-the-fatous-lemma-inequality-can-be-strict](https://math.stackexchange.com/questions/2332476/showing-that-the-fatous-lemma-inequality-can-be-strict)
+* [https://zhuanlan.zhihu.com/p/37364245](https://zhuanlan.zhihu.com/p/37364245)
+* [https://zhuanlan.zhihu.com/p/64459030](https://zhuanlan.zhihu.com/p/64459030)

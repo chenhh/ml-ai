@@ -209,13 +209,15 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 > 令非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
 >
-> 且函數序列(點態)收斂：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$\[可能為$$\infty$$]
+> 且函數序列(點態)收斂(或幾乎處處收斂)：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$\[可能為$$\infty$$]
 >
 > 則可得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) dx = \int_E f(x)dx$$。(積分可能為$$\infty$$，但若積分存在時則相等)
 >
 >
 >
 > <mark style="color:red;">註：對於非負可測遞增函數序列，極限與積分的次序可交換</mark>。
+>
+> 點態收斂可放寬為幾乎處處收斂，因為測度0的定義域集合不影響積分值。
 >
 > 此定理證明可分為使用或不使用Fatou's lemma兩種。
 >
@@ -303,7 +305,7 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 
 > 給定非負可測且在集合$$E$$上的函數序列$$f_n: E \rightarrow [0, \infty], ~ n \in \mathbb{N}$$.
 >
-> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限(必定存在，但可能函數值為$$\pm \infty$$)，即$$\displaystyle f(x) = \liminf_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
+> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限(必定存在，但可能函數值為$$\pm \infty$$，可放寬為a.e.)，即$$\displaystyle f(x) = \liminf_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
 >
 > 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)
 >

@@ -305,9 +305,11 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 
 > 給定非負可測且在集合$$E$$上的函數序列$$f_n: E \rightarrow [0, \infty], ~ n \in \mathbb{N}$$.
 >
-> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限(必定存在，但可能函數值為$$\pm \infty$$，可放寬為a.e.)，即$$\displaystyle f(x) = \liminf_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。
+> 令函數$$f: E \rightarrow [0,\infty]$$為函數序列的下極限(必定存在，但可能函數值為$$\pm \infty$$)，即$$\displaystyle f(x) = \liminf_{n \rightarrow \infty} f_n(x), ~\forall x \in E$$。(可放寬為a.e.不影響積分)
 >
-> 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)
+> 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)。
+>
+>
 >
 > <mark style="color:blue;">註：下極限函數的積分小於等於函數序列積分的下極限</mark>。
 >

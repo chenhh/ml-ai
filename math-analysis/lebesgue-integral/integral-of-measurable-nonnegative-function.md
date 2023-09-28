@@ -10,7 +10,10 @@ description: The Lebesgue integral of a measurable nonnegative function
 
 函數絕對值可積分若且唯若函數可積分，因為$$|f|=f^{+}+f^{-}, ~ f=f^{+} -f^{-}$$。
 
-Fatou's Lemma和單調收斂定理(MCT)不僅可以各自單獨被證明，還可以進行互推導（即在已知Fatou's Lemma的條件下證MCT，反之亦然，但不可循環論證）。
+* <mark style="color:red;">單調收斂定理(MCT)：非負可測遞增函數序列，極限與積分的次序可交換</mark>。
+* <mark style="color:red;">Fatou's Lemma：下極限函數積分小於等於函數序列積分的下極限</mark>。
+
+Fatou's Lemma和單調收斂定理(MCT)不僅可以各自單獨被證明，還可以進行互推導（即在已知Fatou's Lemma的條件下證MCT，反之亦然，但不可循環論證。
 
 ## 非負可測函數的積分
 
@@ -206,19 +209,47 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 > 令非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
 >
-> 且函數序列(點態)收斂：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$，
+> 且函數序列(點態)收斂：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$\[可能為$$\infty$$]
 >
 > 則可得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) dx = \int_E f(x)dx$$。(積分可能為$$\infty$$，但若積分存在時則相等)
 >
 >
 >
-> <mark style="color:red;">註：對於非負可測遞增函數序列若收斂，則極限與積分的次序可交換</mark>。
+> <mark style="color:red;">註：對於非負可測遞增函數序列，極限與積分的次序可交換</mark>。
 >
 > 此定理證明可分為使用或不使用Fatou's lemma兩種。
 >
 > \[[單調有界定理(實數中的有界單調數列必收斂)](../sequence/monotonic-sequence.md#chan-diao-you-jie-ding-li-shi-shu-zhong-de-you-jie-chan-diao-shu-lie-bi-shou-lian)]固定$$x \in E$$時，可將$$\{f_k(x)\}$$視為遞增序列，則此序列有極限(可能為$$\infty$$)，如果序列有界時，則極限有界。
 
+<details>
 
+<summary>proof: 使用定義直接證明</summary>
+
+給定$$x \in E$$，因為$$f_k(x) \leq f_{k+1}(x)$$為遞增序列，且對於所有的$$x \in E$$均成立，由單調函數的性質知$$f(x)$$為非負可測函數且可定義積分$$\int_Ef(x)dx$$(但可能為$$\infty$$)。
+
+因為$$f_k(x) \leq f_{k+1}(x) ~\forall k \in \mathbb{N}$$且為非負可測函數，因此可得$$\displaystyle \int_E f_k(x) dx \leq \int_E f_{k+1}(x) dx , ~ k \in \mathbb{N}$$。所以$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx$$有定義。
+
+由遞增函數積分的單調性得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx \leq \int_E f(x)dx$$--(1)
+
+
+
+令$$0 < c < 1$$且$$h(x)$$為$$E$$上任一非負可測簡單函數，且$$h(x) \leq f(x), ~ x \in E$$。
+
+記$$E_k = \{ x \in E ~|~ f_k(x) \geq c\cdot h(x)\}, k \in \mathbb{N}$$，則$$E_k \subseteq E_{k+1}$$為遞增可測集合，$$\displaystyle \lim_{k \rightarrow \infty} E_k= E$$。
+
+由\[非負簡單函數於遞增可測集合序列的積分] 得$$\displaystyle  \lim_{k \rightarrow \infty}c\dot \int_{E_k} h(x) dx = c \int_E h(x) dx$$--(2)
+
+得不等式$$\displaystyle \int_E f_k(x)dx \geq \int_{E_k} f_k(x) dx \geq \int_{E_k} ch(x)dx =c \int_{E_k} h(x)dx$$--(3)
+
+由(1,2,3)得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) \geq c\int_E h(x)dx$$--(4)
+
+令$$c \rightarrow 1$$時。上式可得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) \geq \int_E h(x)dx$$
+
+由非負函數積分定義得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) \geq \int_E f(x)dx$$--(5)
+
+由(1,5)得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx = \int_E f(x)dx$$ (QED)
+
+</details>
 
 #### 範例
 
@@ -252,7 +283,7 @@ $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{
 >
 > 則$$f$$為可測函數且$$\displaystyle \int_E f dx  \equiv \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$(積分可能為$$\infty$$)
 >
-> <mark style="color:blue;">註：下極限函數的積分可能小於原始函數序列極限的積分，而Fatou's lemma證明反之不會成立</mark>。
+> <mark style="color:blue;">註：下極限函數的積分小於等於函數序列積分的下極限</mark>。
 >
 > <mark style="color:blue;">Fatou 引理中可得點態收斂不見得能保留函式的(Lebesgue)積分值，因此考慮其他方式的收斂</mark>。
 >

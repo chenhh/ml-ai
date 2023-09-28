@@ -205,7 +205,7 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 </details>
 
-## Beppo Levi非負遞增函數序列的積分(Monotone Convergence Theorem, MCT)
+## Beppo Levi非負遞增函數序列的積分(單調收斂定理, Monotone Convergence Theorem, MCT)
 
 > 令非負可測且在集合$$E$$上遞增的函數序列$$f_k: E \rightarrow [0, \infty]$$，$$f_1(x) \leq f_2(x) \leq \dots \leq f_k(x) \leq \dots~, \forall x \in E$$.，
 >
@@ -248,6 +248,30 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 由非負函數積分定義得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) \geq \int_E f(x)dx$$--(5)
 
 由(1,5)得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x)dx = \int_E f(x)dx$$ (QED)
+
+</details>
+
+<details>
+
+<summary>proof: 使用Fatou's Lemma下極限函數積分小於等於函數序列積分的下極限。</summary>
+
+由Fatou's lemma得$$\displaystyle \int_E \liminf_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$
+
+由於函數序列點態收斂，可得：$$\displaystyle \lim_{k \rightarrow \infty} f_k(x) =\liminf_{k \rightarrow \infty} f_k(x) = f(x), ~ \forall x \in E$$
+
+因此$$\displaystyle \int_E \lim_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$--(1)
+
+由於$$\{f_k\}$$為遞增函數序列，因此$$f_n \leq f, ~\forall n$$，由積分單調性得$$\displaystyle \int_E f_n dx \leq \int_E f dx$$。
+
+可得$$\displaystyle \limsup_{n \rightarrow \infty} \int_E f_n dx \leq \int_E f dx$$--(2)
+
+由(1,2)得$$\displaystyle \limsup_{n \rightarrow \infty} \int_E f_n dx \leq \int_E \lim_{n \rightarrow \infty} f_n dx\leq \liminf_{n \rightarrow \infty} \int_E f_n dx$$--(3)
+
+因於一般的函數序列必滿足$$\displaystyle  \liminf_{n \rightarrow \infty} \int_E f_n dx \leq \int_E \lim_{n \rightarrow \infty} f_n dx\leq \limsup_{n \rightarrow \infty} \int_E f_n dx$$--(4)
+
+由(3,4)得$$\displaystyle \int_E \lim_{n \rightarrow \infty} f_n dx = \lim_{n \rightarrow \infty} \int_E f_n dx$$
+
+(QED)
 
 </details>
 

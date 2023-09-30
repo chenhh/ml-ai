@@ -53,7 +53,7 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 令隨機變數$$X$$為丟一顆骰子的點數，令集合$$E$$為丟出偶數的事件，則$$\mathrm{E}(X)=1 \cdot 0 + 2 \cdot 1/2 + 3 \cdots 0 + 4 \cdot 1/2 + 5 \cdot 0 + 6 \cdot 1/2= 6$$。
 
-## 非負簡單函數積分線性性質
+## 非負簡單函數積分線性性質與單調性
 
 > $$f, g: \mathbb{R}^n \rightarrow [0,\infty)$$為非負可測簡單函數。
 >
@@ -62,22 +62,14 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 > $$g(x)=\sum_{i=1}^q b_i \chi_{B_i}(x), ~ \bigcup_{i=1}^q B_i = \mathbb{R}^n, ~ B_i \cap B_j = \emptyset ~ \forall i \neq j$$。
 >
 > 給定歐式空間上的σ域$$\Sigma$$，集合$$E \in \Sigma$$，
->
-> 1. 若$$c > 0$$，可得$$\displaystyle \int_E c\cdot f(x) dx = c \int_E  f(x) dx$$。
-> 2. $$\displaystyle \int_E [f(x)+g(x)] dx =  \int_E  f(x) dx +  \int_E  g(x) dx$$
 
-<details>
+1. 若$$c > 0$$，可得$$\displaystyle \int_E c\cdot f(x) dx = c \int_E  f(x) dx$$。
+2. $$\displaystyle \int_E [f(x)+g(x)] dx =  \int_E  f(x) dx +  \int_E  g(x) dx$$
+3. 若$$m \leq f(x) \leq M \text{ a.e. }$$在$$E$$上，且$$m(E)<\infty$$，則$$\displaystyle m \cdot m(E) \leq \int_E f(x)dx \leq M \cdot m(E)$$。
+4. 若$$f(x) \geq 0 \text{ a.e.}$$，$$E,F$$均為可測集合且$$E \subseteq F$$，則$$\displaystyle \int_E f(x)dx \leq \int_F f(x)dx$$。
+5. 若可測集合$$E$$可分割為可數集合的聯集$$\displaystyle \bigcup_{i=1}^\infty E_i, ~ E_i \cap E_j =\emptyset ~ \forall i \neq j$$, 則$$\displaystyle \int_E f(x)dx = \sum_{i=1}^\infty \int_{E_i} f(x)dx$$。
 
-<summary>proof: 有限元素的級數和</summary>
 
-1. 由定義可直接得證。
-2. $$f(x)+g(x)$$在集合$$A_i \cap B_j$$上的值為$$a_i + b_j$$。
-
-可得 $$\displaystyle \begin{aligned}  \int_E [f(x)+g(x)] dx &= \sum_{i=1}^p \sum_{j=1}^q (a_i + b_j) m(E \cap A_i \cap B_j) \\ 	& = \sum_{i=1}^p a_i \sum_{j=1}^q m(E \cap A_i \cap B_j) + \sum_{j=1}^q b_j \sum_{i=1}^p m(E \cap A_i \cap B_j) \\ 	& = \sum_{i=1}^p a_i m(E  \cap A_i) + \sum_{j=1}^q b_j m(E \cap B_j) \\ 		& = \int_E f(x) dx + \int_E g(x) dx  \end{aligned}$$
-
-(QED)
-
-</details>
 
 ## 非負簡單函數於遞增可測集合序列的積分
 
@@ -96,6 +88,32 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 則$$\displaystyle \begin{aligned}  \lim_{k \rightarrow \infty} \int_{E_k} f(x) dx  	& = \lim_{k \rightarrow \infty} \sum_{i=1}^p a_i m(E_k \cap A_i) \\ 	& = \sum_{i=1}^p a_i m(E \cap A_i) \\ 	& = \int_E f(x) dx  \end{aligned}$$
 
 (QED)
+
+</details>
+
+## Cauchy (sequence) in mean
+
+> 定義：可積簡單函數序列$$\{f_n\}$$滿足以下條件時，稱Cauchy seqeunce in mean。
+>
+> $$\displaystyle \lim_{n,m \rightarrow \infty} \int_E |f_n(x) - f_m(x)|dx=0$$。
+
+### Cauchy in mean測度收斂至幾乎處處有限函數
+
+> 可積簡單函數序列$$\{f_n\}$$若Cauchy in mean，則測度收斂至處處有限函數$$f$$.&#x20;
+>
+> 若$$\displaystyle \lim_{n,m \rightarrow \infty} \int_E|f_n(x)-f_m(x)|dx=0$$，則$$\displaystyle \forall \epsilon >0, ~\lim_{n \rightarrow \infty } m(\{x\in E~|~|f_n(x)-f(x)|>\epsilon \})=0$$。
+
+<details>
+
+<summary>proof</summary>
+
+$$\forall \epsilon >0$$，令集合$$E_{n,m}=\{x \in E | |f_n(x)-f_m(x)|> \epsilon\}$$。
+
+因為$$\displaystyle \lim_{n,m \rightarrow \infty} \int_E|f_n(x)-f_m(x)|dx=0$$，因此$$|f_n-f_m|$$可積分，得$$E_{n,m}$$的測度有限。
+
+由積分單調性可得$$\displaystyle \int_E |f_n(x)-f_m(x)|dx > \epsilon\cdot m(E_{n,m})$$
+
+所以當$$n,m \rightarrow \infty$$，可得$$m(E_{n,m})\rightarrow 0$$ (QED)
 
 </details>
 

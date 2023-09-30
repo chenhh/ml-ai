@@ -2,11 +2,22 @@
 
 ## 可測函數的積分
 
-> def: $$f(x): E \rightarrow \mathbb{R}, ~ E \subseteq \mathbb{R}^n$$是可測函數，若積分：$$\displaystyle \int_E f^{+}(x) dx, \int_E f^{-}(x)dx$$至少有一個是有限值時，則定義$$\displaystyle \int_E f(x) dx = \int_E f^{+}(x) dx - \int_E f^{-}(x)dx$$為$$f$$在集合$$E$$上的積分。
+> def: 可積分函數(以非負可積函數定義)
+>
+> $$f(x): E \rightarrow \mathbb{R}, ~ E \subseteq \mathbb{R}^n$$是可測函數，若積分：$$\displaystyle \int_E f^{+}(x) dx, \int_E f^{-}(x)dx$$至少有一個是有限值時，則定義$$\displaystyle \int_E f(x) dx = \int_E f^{+}(x) dx - \int_E f^{-}(x)dx$$為$$f$$在集合$$E$$上的積分。
 >
 > 如果$$f^{+}$$與$$f^{-}$$均為可積分函數時，則稱$$f$$為在$$E$$上可積分函數。
 >
-> 定義在$$E$$上可積分函數的集合為$$L(E)$$。
+> 定義在$$E$$上可積分函數的集合為$$L(E)$$
+>
+>
+>
+> def: 可積分函數(以Cauchy in mean函數序列定義)。
+>
+> $$f(x): E \rightarrow \mathbb{R}, ~ E \subseteq \mathbb{R}^n$$是可測函數，若存在可測(一般)簡單函數$$\{f_n(x)\}$$滿足以下條件時，稱$$f$$在$$E$$可積分：
+>
+> 1. $$\{f_n(x)\}$$為Cauchy sequence in mean，即$$\displaystyle \lim_{n,m \rightarrow \infty}\int_E |f_n(x) - f_m(x)|dx=0$$。
+> 2. $$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x) \text{ a.e.}$$(弱化為測度收斂也成立)。
 
 * 因為$$|f|=f^{+} + f^{-}$$，因此在$$f$$可測的條件下，$$f$$可積分$$\Leftrightarrow$$$$|f|$$可積分。
 * $$f$$可積分時，可得$$\displaystyle \left|\int_E f(x) dx \right| \leq \int_E |f(x)|dx$$。

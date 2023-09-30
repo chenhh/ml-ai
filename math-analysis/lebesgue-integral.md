@@ -2,13 +2,19 @@
 
 ## 簡介
 
-建構Lebesgue積分分為三個階段：
+一般建構Lebesgue積分分為三個階段：
 
 1. 定義非負可測簡單函數的積分。
 2. 考慮可測簡單函數和非負可測函數的關系。
 3. 通過$$f(x)=f^{+}(x)-f^{-}(x)$$定義一般可測函數的積分。
 
+也可以使用Cauchy in mean建構Lebesgue積分：
+
+1. 定義一般簡單函數的積分。
+2. 定義Cauchy sequence in mean的函數序列$$(\displaystyle \lim_{n,m \rightarrow \infty}\int_E |f_n(x)-f_m(x)|=0$$)，且函數序列幾乎處處(或測度)收斂$$(\displaystyle \lim_{n \rightarrow \infty} f_n(x)=f(x)$$)。則積分定義為$$\displaystyle \int_E f(x)dx = \lim_{n \rightarrow \infty}\int_E f_n(x)dx$$。
+
 * 若$$m(E)<\infty$$，則定義在$$E$$上的所有有界可測函數$$f$$相對於$$E$$均可積(即$$\int_E f(x)dm(x) < \infty$$)。
+* 在集合$$E$$的可測函數$$f$$不可積分，即$$\displaystyle \int_E f(x)dx = \pm \infty$$。因為Lebesgue積分是切值域，如果不能積分時只會往$$\pm \infty$$發散，不會像Riemann積分還須另外判斷是否上/下積分不相等。
 * $$f$$在$$E$$可積$$\Leftrightarrow$$$$|f|$$在$$E$$可積分，且$$|\int_E f dm| \leq \int_E |f|dm$$。
 * $$m(E) <\infty$$且$$f$$在$$E$$為上有界函數，若將$$E$$可分割為$$E=\bigcup_{i=1}^m E_i$$，則$$\int_E fdm = \sum_{i=1}^m \int_{E_i} fdm$$。
 * $$f,g$$在$$E$$均可，且$$f \leq g \text{ a.e. on } E$$，則$$\int_E f dm \leq \int_E g dm$$。

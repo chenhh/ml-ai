@@ -30,7 +30,9 @@ $$\displaystyle \lim_{n \rightarrow \infty} f_n(x)=f(x) \text{ a.e. or in measur
 
 (c)（單調收斂定理）： $$0\leq f_n \leq f_{n+1}$$非負單調遞增，幾乎處處收斂於$$f$$ 。
 
+可積分函數積分上/下極限不等式：
 
+$$\displaystyle  \int_E \liminf_{n \rightarrow \infty} f_n(x)dx \leq  \liminf_{n \rightarrow \infty} \int_E f_n(x) dx \leq  \limsup_{n \rightarrow \infty} \int_E f_n(x) dx \leq \int_E \limsup_{n \rightarrow \infty} f_n(x)dx$$
 
 
 
@@ -146,7 +148,11 @@ Lebesgue積分的分割方式很特定，每一段都是$$1/2^n$$的區間，所
 
 </details>
 
+### 非負可測函數於可測遞增集合序列聯集的積分
 
+> $$f: E \rightarrow [0,\infty]$$在集合$$E \subseteq \mathbb{R}^n$$為非負可測函數。
+>
+> 若$$\displaystyle E = \bigcup_{k=1}^\infty E_k, ~ E_k \subseteq E_{k+1}$$，則：$$\displaystyle  \int_E f(x) dx =  \lim_{k \rightarrow \infty} \int_{E_k} f(x)dx$$。
 
 ### 非負可測函數幾乎處處為0若且唯若積分值為0
 
@@ -223,6 +229,12 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 因為$$k > 0$$，因此可得$$\displaystyle \lim_{k \rightarrow \infty }m(E_k)=0$$ (QED)
 
 </details>
+
+## 可積分函數序列上/下極限積分不等式
+
+> 給定可積分函數$$f$$與非負可積分函數序列$$\{f_n\}$$且滿足$$0 \leq f_n \leq f \text{ a.e.}$$ (在$$|f_n(x)| \leq f(x) \text{ a.e. }$$也成立)，則：
+>
+> $$\displaystyle  \int_E \liminf_{n \rightarrow \infty} f_n(x)dx \leq  \liminf_{n \rightarrow \infty} \int_E f_n(x) dx \leq  \limsup_{n \rightarrow \infty} \int_E f_n(x) dx \leq \int_E \limsup_{n \rightarrow \infty} f_n(x)dx$$
 
 ## Beppo Levi非負遞增函數序列的積分(單調收斂定理, Monotone Convergence Theorem, MCT)
 

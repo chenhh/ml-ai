@@ -22,9 +22,21 @@
 * 因為$$|f|=f^{+} + f^{-}$$，因此在$$f$$可測的條件下，$$f$$可積分$$\Leftrightarrow$$$$|f|$$可積分。
 * $$f$$可積分時，可得$$\displaystyle \left|\int_E f(x) dx \right| \leq \int_E |f(x)|dx$$。
 
+##
+
+##
+
 ## 有界可測函數在有限測度集合可積分
 
 > $$f$$在集合$$E$$為有界可測函數($$\exists 0 \leq M < \infty \ni |f(x)|\leq M, ~\forall x \in E$$)，且$$m(E) < \infty$$，則$$f \in L(E)$$。
+
+## 可積分函數性質
+
+> 給定$$f,g: E \rightarrow \mathbb{R}$$為可測函數，若：
+>
+> 1. $$(f^2+g^2)^{1/2}$$為可積分函數，則$$f,g$$為可積分函數。
+> 2. 若$$f^2, g^2$$為可積分函數，則$$fg$$為可積分函數。
+> 3. 若$$f,g$$為可積分函數，則$$\max(f,g)$$與$$\min(f,g)$$為可積分函數。
 
 ## 控制收斂定理(dominated control theorem, DCT)
 

@@ -28,13 +28,15 @@
 
 ## 控制收斂定理(dominated control theorem, DCT)
 
-> 給定可積分函數序列$$f_k \in L(E), ~ k \in \mathbb{N}$$，且函數序列點態(或幾乎處處)收斂: $$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x) \text{ a.e.} x \in E$$。
+> 給定可積分函數序列$$f_k \in L(E), ~ k \in \mathbb{N}$$，且函數序列點態(或幾乎處處、測度)收斂: $$\displaystyle \lim_{k \rightarrow \infty} f_k(x) = f(x) \text{ a.e.} x \in E$$。
 >
 > 若存在$$E$$上的可積分函數$$F(x)$$滿足$$|f_k(x)| \leq F(x) \text{ a.e. } ~ x \in E, ~ k \in \mathbb{N}$$，
 >
 > 則：$$\displaystyle  \lim_{k \rightarrow \infty} \int_E |f_k(x) - f(x)|dx \Rightarrow  \lim_{k \rightarrow \infty} \int_E f_k(x) = \int_E f(x)dx$$。
 >
 > 註：通常稱$$F(x)$$為函數序列$$\{f_k(x)\}$$的控制函數。
+>
+> <mark style="color:green;">也稱為Bounded convergence theorem, BCT</mark>。
 
 <details>
 
@@ -65,4 +67,32 @@ $$\displaystyle \left| \int_E f dx -\int_E f_k dx  \right|  = \left| \int_E (f-f
 可得：$$\displaystyle \lim_{k \rightarrow \infty} \int_E f dx =\int_E f_k dx$$ (QED)
 
 </details>
+
+## 可測函數若幾乎處處被可積函數控制則可積分
+
+> 令$$f,g: E \rightarrow \mathbb{R}$$為可測函數，若$$|f| \leq g \text{ a.e. }$$且$$g$$在$$E$$可積分($$\int_E g(x)dx < \infty$$)，則$$f$$在$$E$$可積分($$\int_E f(x)dx < \infty$$)
+
+## 本性(本質)有界函數(essentially bounded function)
+
+> $$f: E \rightarrow \mathbb{R}$$稱為本性有界函數，若存在常數$$c < \infty$$使得函數幾乎處處有界$$|f(x)| \leq c, ~ x \in E$$。$$c$$稱為函數$$f$$在$$E$$的本性上界(essential upper bound)。
+>
+> 本性上界集合中的最大下界稱為函數$$f$$在$$E$$的本性上確界，即$$\displaystyle  \begin{aligned} \mathrm{ess} \sup_{x \in E} |f| &= \inf\{ c \in \mathbb{R}~|~ m(\{x ~|~ |f(x)| > c\})=0\} \\ &	= \inf\{ c \in \mathbb{R}~|~ m(f^{-1}(c, \infty) \cup f^{-1}(-\infty, -c))=0\} \end{aligned}$$。
+>
+> 若為空集時則$$\displaystyle  \mathrm{ess}\sup_{x \in E} |f| = \emptyset$$。
+>
+> [\[Lp空間\]詳細討論](../lp-space/#ben-xing-ben-zhi-you-jie-han-shu-essentially-bounded-function)。
+
+## 可積分函數與可測且本性有界函數的乘積為可積分函數
+
+> $$f$$為可積分函數且$$g$$為可測且本性有界函數，則$$fg$$為可積分函數。
+
+因為$$|fg| \leq c |f| \text{ a.e. }$$且$$c|f|$$可積分，由DCT可得$$fg$$可積分。
+
+## 可測且本性有界函數若集合測度有限則可積分
+
+> $$f: E \rightarrow \mathbb{R}$$為可積分函數且在$$F \subseteq E$$本性有界。若$$m(F) < \infty$$，則$$\displaystyle \int_F f(x) dx < \infty$$。
+
+因為函數$$|\chi_F f | \leq c \chi_F$$且$$c < \infty$$，$$c\chi_F$$為可積分函數，由\[可測函數若幾乎處處被可積函數控制則可積分]得$$f$$在$$F$$可積分。
+
+
 

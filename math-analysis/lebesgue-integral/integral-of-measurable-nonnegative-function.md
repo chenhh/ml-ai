@@ -300,6 +300,28 @@ $$\displaystyle  \begin{aligned} \int_{F \cup F^c} f(x) dx & = \sup_{h(x) \leq f
 
 </details>
 
+<details>
+
+<summary>proof: 以dominated control theorem證明</summary>
+
+若$$f$$可積分，且$$0\leq f_n \leq f, \forall n$$，由DCT得$$\displaystyle \lim_{k \rightarrow \infty} \int_E f_k(x) dx = \int_E f(x)dx$$(QED)
+
+以下證明$$f$$不可積分時，則$$\displaystyle \int_E f(x)dx=\infty$$，
+
+
+
+不論$$f$$是否可積分(如果$$f$$不可積分，則$$\displaystyle \int_E f(x)dx=\infty$$)，因為$$f_n \leq f$$，
+
+依積分單調性得$$\displaystyle \int_E f_n(x)dx \leq \int_E f(x)dx, ~ \forall n$$--(1)。
+
+因此$$\displaystyle \lim_{n \rightarrow \infty} \int_E f_n(x) dx \leq \int_E f(x)dx$$--(2)
+
+
+
+若$$m \leq n$$，由函數單調性得$$f_m \leq f_n$$，由積分單調性得：$$\displaystyle  \begin{aligned} \int_E |f_n(x) - f_m(x)|dx & = \int_E f_n(x) - f_m(x) dx \\ & =\int_E f_n(x) dx - \int_E f_m(x)dx  \end{aligned}$$
+
+</details>
+
 #### 範例
 
 $$f: E \rightarrow [0,\infty]$$為非負可測函數，則$$\displaystyle \lim_{n \rightarrow \infty} \int_E n \log \left(1+\frac{f}{n} \right)dx = \int_E f dx$$
@@ -395,3 +417,4 @@ $$\displaystyle  f_n(x) =  \begin{cases} 0, & x = 0, \\ n, & 0 < x < \frac{1}{n}
 * [https://math.stackexchange.com/questions/2332476/showing-that-the-fatous-lemma-inequality-can-be-strict](https://math.stackexchange.com/questions/2332476/showing-that-the-fatous-lemma-inequality-can-be-strict)
 * [https://zhuanlan.zhihu.com/p/37364245](https://zhuanlan.zhihu.com/p/37364245)
 * [https://zhuanlan.zhihu.com/p/64459030](https://zhuanlan.zhihu.com/p/64459030)
+* [https://zhuanlan.zhihu.com/p/65966051](https://zhuanlan.zhihu.com/p/65966051)

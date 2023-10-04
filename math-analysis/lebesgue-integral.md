@@ -6,6 +6,8 @@
 
 由於測度$$m: \Sigma \rightarrow [0,\infty]$$和可測函數$$f: E\rightarrow [-\infty, \infty]$$之值均可能為$$\infty$$，因此討論可積分函數$$\int_E f<\infty$$要特別討論測度為0且函數值為$$\infty$$與測度為$$\infty$$且函數值為0兩種條件(因為$$0\cdot \infty=0$$)。
 
+Tom M. Apostol在數學分析中使用了切割定義域的上積分差值定義Lebesgue積分，因為在數學分析中沒有定義測度，所以此定義方法不常見。
+
 ### 建構Lebesgue積分(周民強/陶哲軒/Walter Rudin，使用非負簡單函數)
 
 1. 定義非負可測簡單函數的積分。
@@ -45,21 +47,7 @@
 
 
 
-## 零測集(measure zero set, null set)
-
-> 定義集合$$S \subseteq \mathbb{R}$$ 的Lebesgue測度為0( measure zero)若
->
-> * 對任意$$\epsilon >0$$，存在集合$$S$$可數的開區間覆蓋，且這些可數開區間覆蓋的總長度小於$$\epsilon$$。(註：Haine-Borel定理：實數上的有界閉區間(緊緻集)必可被有限開區間覆蓋)。
-> *>   令$$F_k=(a_k, b_k) \subset \mathbb{R}, ~ k \in \mathbb{N}$$  為集合$$S$$的可數開區間覆蓋，則$$\displaystyle \forall \epsilon >0 , ~ S \subseteq \bigcup_{k \in \mathbb{N}} (a_k, b_k)$$ 且 $$\displaystyle \sum_{k \in \mathbb{N}} (b_k - a_k) < \epsilon$$。
-> * 即$$S$$為零測集若$$S$$為測度(長度)任意小的開區間聯集之子集合（即不論多小的開區集之聯集，S均為此聯集的子集合）>
-
-* 註：因為在基礎分析沒有定義測度與其性質，因此使用此Lebesgue測度任意小時，使用夾擠收斂來描述集合測度為0時應該有的性質。
-* 給定測度空間$$(X, \Sigma, m)$$，則零測集$$S \in \Sigma$$滿足$$m(S)=0$$。
-* 空集合$$\emptyset$$為零測集。但也存在非空集的測度為0。
-* 實數的有限或可數無限子集都是零測集。自然數集合和有理數集合都是實數集的可數無限子集，因此它們是零測集。Cantor集是一個不可數的零測集。
-* 可數零測集的聯集仍為零測集。
-* 零測集的可測子集為零測集。
-* [https://en.wikipedia.org/wiki/Null\_set](https://en.wikipedia.org/wiki/Null\_set)
+##
 
 ## Riemann積分
 

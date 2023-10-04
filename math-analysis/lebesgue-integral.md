@@ -4,6 +4,8 @@
 
 建構Lebesgue積分的方法各本書方法不完全一致。雖然都是切割一般可測函數$$f$$的值域$$[-\infty, \infty]$$後，確認前像在σ域內，相乘後再加總得積分。但建構過程各異。
 
+由於測度$$m: \Sigma \rightarrow [0,\infty]$$和可測函數$$f: E\rightarrow [-\infty, \infty]$$之值均可能為$$\infty$$，因此討論可積分函數$$\int_E fdm<\infty$$要特別討論測度為0且函數值為$$\infty$$與測度為$$\infty$$且函數值為0兩種條件(因為$$0\cdot \infty=0$$)。
+
 ### 建構Lebesgue積分(周民強/陶哲軒/Walter Rudin，使用非負簡單函數)
 
 1. 定義非負可測簡單函數的積分。
@@ -29,13 +31,13 @@
 
 
 
-* 若$$m(E)<\infty$$，則定義在$$E$$上的所有有界可測函數$$f$$相對於$$E$$均可積(即$$\int_E f(x)dm(x) < \infty$$)。
-* 在集合$$E$$的可測函數$$f$$不可積分，即$$\displaystyle \int_E f(x)dx = \pm \infty$$。因為Lebesgue積分是切值域，如果不能積分時只會往$$\pm \infty$$發散，不會像Riemann積分還須另外判斷是否上/下積分不相等。
-* $$f$$在$$E$$可積$$\Leftrightarrow$$$$|f|$$在$$E$$可積分，且$$|\int_E f dm| \leq \int_E |f|dm$$。
-* $$m(E) <\infty$$且$$f$$在$$E$$為上有界函數，若將$$E$$可分割為$$E=\bigcup_{i=1}^m E_i$$，則$$\int_E fdm = \sum_{i=1}^m \int_{E_i} fdm$$。
-* $$f,g$$在$$E$$均可，且$$f \leq g \text{ a.e. on } E$$，則$$\int_E f dm \leq \int_E g dm$$。
-* 積分有線性性質 $$\int_E (af+g)dm = a\int_E f dm + \int_E g dm$$。
-* $$f \in L(E)$$，則存在簡單函數$$g$$可逼近$$f$$，即$$\forall \epsilon > 0, ~\int_E |f(t) - g(t)| dm < \epsilon$$。
+* 若$$m(E)<\infty$$，則定義在$$E$$上的所有有界可測函數$$f$$相對於$$E$$均可積(即$$\int_E f < \infty$$)。
+* 在集合$$E$$的可測函數$$f$$不可積分，即$$\displaystyle \int_E f = \pm \infty$$。
+* $$f$$在$$E$$可積$$\Leftrightarrow$$$$|f|$$在$$E$$可積分，且$$|\int_E f| \leq \int_E |f|$$。因此絕對可積分等價於可積分。
+* $$m(E) <\infty$$且$$f$$在$$E$$為上有界函數，若將$$E$$可分割為$$E=\bigcup_{i=1}^m E_i$$，則$$\int_E f = \sum_{i=1}^m \int_{E_i} f$$。
+* $$f,g$$在$$E$$均可積分，且$$f \leq g \text{ a.e. on } E$$，則$$\int_E f \leq \int_E g$$。
+* 積分有線性性質 $$\int_E (af+g) = a\int_E f  + \int_E g$$。
+* $$f \in L(E)$$，則存在簡單函數$$g$$可逼近$$f$$，即$$\forall \epsilon > 0, ~\int_E |f - g|  < \epsilon$$。
 * $$E$$上的Riemann可積函數$$f$$必為Lebesgue可積函數，且積分值相等。
 * \[Domain control theorem, DCT]
 * \[Monotone converge theorem, MCT]

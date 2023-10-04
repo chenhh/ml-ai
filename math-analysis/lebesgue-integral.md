@@ -2,16 +2,32 @@
 
 ## 簡介
 
-一般建構Lebesgue積分分為三個階段：
+建構Lebesgue積分的方法各本書方法不完全一致。雖然都是切割一般可測函數$$f$$的值域$$[-\infty, \infty]$$後，確認前像在σ域內，相乘後再加總得積分。但建構過程各異。
 
-1. 定義非負可測簡單函數的積分。1.a有界函數且有限測度可用Lebesgue的上/下簡單函數積分相等定義。
-2. 考慮可測簡單函數和非負可測函數的關系。
+### 建構Lebesgue積分(周民強/陶哲軒，使用非負簡單函數)
+
+1. 定義非負可測簡單函數的積分。
+2. 可測簡單函數積分上界定義非負可測函數的積分。
 3. 通過$$f(x)=f^{+}(x)-f^{-}(x)$$定義一般可測函數的積分。
 
-也可以使用Cauchy in mean建構Lebesgue積分：
+### 建構Lebesgue積分(Halsey Royden/Gerald B. Folland/Elias M. Stein, 使用一般簡單函數)
+
+1. 定義一般簡單函數在有限測度集相對於有界函數的積分。
+2. 用一般簡單函數在有限測度集的上/下積分夾擠得有界函數的積分。
+3. 用有界非負函數在有限支撐集的積分上界定義一般非負可測函數在一般測度的積分。
+4. 一般可測函數的積分。
+
+### 建構Lebesgue積分(Avner Friedman, 使用Cauchy in mean)
 
 1. 定義一般簡單函數的積分。
 2. 定義Cauchy sequence in mean的函數序列$$(\displaystyle \lim_{n,m \rightarrow \infty}\int_E |f_n(x)-f_m(x)|=0$$)，且函數序列幾乎處處(或測度)收斂$$(\displaystyle \lim_{n \rightarrow \infty} f_n(x)=f(x)$$)。則積分定義為$$\displaystyle \int_E f(x)dx = \lim_{n \rightarrow \infty}\int_E f_n(x)dx$$。
+
+### 建構Lebesgue積分(Charles Pugh，使用函數的undergraph定義)
+
+1. 定義非負實值可測函數$$f: \mathbb{R} \rightarrow [0, \infty)$$在值域以下相對於實數面積$$uf=\{(x,y) \in \mathbb{R} \times [0, \infty) ~|~ 0 \leq y <f(x)\}$$的測度$$m(uf)$$為積分。
+2. 定義非負可測函數$$f: \mathbb{R} \rightarrow [0, \infty)$$在值域(含)相對於實數面積$$\hat{u}f=\{(x,y) \in \mathbb{R} \times [0, \infty) ~|~ 0 \leq y \leq f(x)\}$$與可積分時的性質。
+
+
 
 * 若$$m(E)<\infty$$，則定義在$$E$$上的所有有界可測函數$$f$$相對於$$E$$均可積(即$$\int_E f(x)dm(x) < \infty$$)。
 * 在集合$$E$$的可測函數$$f$$不可積分，即$$\displaystyle \int_E f(x)dx = \pm \infty$$。因為Lebesgue積分是切值域，如果不能積分時只會往$$\pm \infty$$發散，不會像Riemann積分還須另外判斷是否上/下積分不相等。

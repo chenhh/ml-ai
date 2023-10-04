@@ -2,7 +2,7 @@
 
 ## 簡介
 
-在此討論的是測度應具有的性質，只要符合測度定義的函數均可視為測度。 <mark style="color:red;">測度是將集合對映至正實數的函數</mark>。測度在$$\mathbb{R}^n$$​中是對長度、面積與體積的抽象推廣。
+在此討論的是測度應具有的性質，只要符合測度定義的函數均可視為測度。 <mark style="color:red;">測度是將可測集合對映至</mark>$$[0,\infty]$$<mark style="color:red;">的函數(注意測度值可為無窮大)，符號測度的值域為</mark>$$[-\infty, \infty]$$<mark style="color:red;">)</mark>。測度在$$\mathbb{R}^n$$​中是對長度、面積與體積的抽象推廣。
 
 討論建構測度的步驟，首先是用外測度處理實數中任意的集合，取能夠覆蓋該集合的最小可數子集合的外測度做為該集合的外測度。但是並非所有的實數集合都滿足外測度的性質，實數中只有可測的集合可滿足外測度的性質，而實數中可測的集合為sigma域。
 
@@ -10,28 +10,27 @@
 
 ## 測度(measure)
 
-> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的[sigma-field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
+> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的σ-[field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
 >
 > * 定義函數$$μ: \Sigma \rightarrow [0, \infty]$$（可為無窮大）滿足以下兩個條件時稱為測度：
 >   * <mark style="color:blue;">\[空集合的測度為0</mark>] $$\mu(\emptyset)=0$$
->   * <mark style="color:blue;">\[countable additive, 互斥集合聯集的測度等於各別集合測度的加總</mark>] $$\displaystyle \mu(\bigcup_{n=1}^{\infty}E_n) =\sum_{n=1}^{\infty}\mu (E_n), ~ E_n \in \Sigma$$且$$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$
+>   * <mark style="color:blue;">\[countable additive, 可數可加性</mark>] $$\displaystyle \mu(\bigcup_{n=1}^{\infty}E_n) =\sum_{n=1}^{\infty}\mu (E_n), ~ E_n \in \Sigma$$且$$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$
 >
-> <mark style="color:red;">測度是測量給定集合的函數，定義域為sigma-field(集合族)，而不是單純集合。因為可用選擇性公理從一般集合建構出不可測的集合，因此定義域必須為sigma域才能避開不可測集合</mark>。不可測的集合在實際應用上幾乎不存在，因此定義sigma域為了理論的嚴謹性。
+> <mark style="color:red;">測度是測量給定集合的函數，定義域為</mark><mark style="color:red;">σ</mark><mark style="color:red;">-field(集合族)，而不是單純集合。因為可用選擇性公理從一般集合建構出不可測的集合，因此定義域必須為</mark><mark style="color:red;">σ</mark><mark style="color:red;">域才能避開不可測集合</mark>。不可測的集合在實際應用上幾乎不存在，因此定義σ域為了理論的嚴謹性。
 >
 > 由於測度的值域可為無窮大，因此在證明性質時也要考慮無窮大時是否滿足條件。
 >
-> 如果測度滿足countable additive，則必滿足finite-additive $$\mu(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n \mu(E_i)$$，$$E_i \in \Sigma$$且$$E_i \cap E_j = \phi~ \forall i \neq j$$。
+> 因為測度滿足可數可加性，則必滿足有限可加性(finite-additive) $$\mu(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n \mu(E_i)$$，$$E_i \in \Sigma$$且$$E_i \cap E_j = \phi~ \forall i \neq j$$。
 
-* 同理函數$$f: X\rightarrow \mathbb{R}$$雖然定義域是在一般集合$$X$$中，但是如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數，否則為不可測函數。
-* 註：測度之值在此定義為正實數，但之後可放寬為任意實數(如負值)或複數。
+* 同理函數$$f: E\rightarrow [-\infty, \infty]$$：定義域是在可測集合$$E$$中，如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數(measurable function)，否則為不可測函數。
 
 如果滿足$$\displaystyle \mu(X)=1$$的條件時，稱為<mark style="color:red;">機率測度(probability measure)</mark>。
 
 如果滿足$$\mu(X)<\infty$$時，稱為<mark style="color:red;">有限測度(finite measure)</mark>。
 
-如果存在$$\{E_n\}_{n \in \mathbb{N}} \in \Sigma$$且$$\bigcup_{n \in \mathbb{N}}E_n =X$$，$$\mu(E_n) < \infty$$，賹稱$$\sigma$$<mark style="color:red;">-finite測度</mark>。
+如果存在$$\{E_n\}_{n \in \mathbb{N}} \in \Sigma$$且$$\bigcup_{n \in \mathbb{N}}E_n =X$$，$$\mu(E_n) < \infty$$，稱<mark style="color:red;">σ-</mark><mark style="color:red;">finite測度</mark>。
 
-若集合$$N \in \Sigma$$且滿足$$\mu(N)=0$$，稱為<mark style="color:red;">零測度集合(null set)</mark>。
+若集合$$N \in \Sigma$$且滿足$$\mu(N)=0$$，稱為<mark style="color:red;">零測集(null set)</mark>。
 
 #### 常見測度
 
@@ -44,7 +43,7 @@
 
 * $$\mu([1,2,3,4,5])=\#([1,2,3,4,5])=5$$。
 * $$\mu(\mathbb{N})=\infty$$
-* 令$$E_n=\{n\}$$，可得$$\mu(E_n)=1$$且$$\mathbb{N}=\bigcup_{n\in\mathbb{N}} E_n$$，因此$$\mu$$為sigma-finite測度。
+* 令$$E_n=\{n\}$$，可得$$\mu(E_n)=1$$且$$\mathbb{N}=\bigcup_{n\in\mathbb{N}} E_n$$，因此$$\mu$$為σ-finite測度。
 
 平面空間$$\mathbb{R}^2$$ 上的測度為<mark style="color:red;">面積</mark>。
 
@@ -74,14 +73,19 @@
 
 > * <mark style="color:red;">\[可加性 ,additive]</mark> $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
 > * <mark style="color:red;">\[有限可加性 finitely additive]</mark> $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
+> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
 
 <details>
 
 <summary>proof: 由測度定義可得出</summary>
 
+proof: 有限可加性
+
 令$$E_1, \dots, E_n, \phi, \phi, \dots$$集合兩兩互斥
 
-$$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty E_i) \\ & = \sum_{i \in \mathbb{N}} \mu(E_i) \\ & = \sum_{i=1}^n \mu(E_i) + \sum_{i=n+1}^ \infty \mu(\phi) \\ & = \sum_{i=1}^n \mu(E_i) \end{aligned}$$(QED)
+$$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty E_i) \\ & = \sum_{i \in \mathbb{N}} \mu(E_i) \\ & = \sum_{i=1}^n \mu(E_i) + \sum_{i=n+1}^ \infty \mu(\phi) \\ & = \sum_{i=1}^n \mu(E_i) \end{aligned}$$
+
+(QED)
 
 </details>
 
@@ -89,6 +93,7 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 > * \[<mark style="color:blue;">子集合的測度</mark>] $$\forall E, F \in \Sigma, E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$​
 > * <mark style="color:red;">集合的大小與測度值有單調的關係</mark>。
+> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
 
 <details>
 
@@ -96,20 +101,41 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 因為$$E \subseteq F$$，可得 $$F = E \cup (F -E)$$。
 
-由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
+由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$
 
-因此$$\mu(E) \leq \mu(F)$$ (QED)
+如果$$\mu(E) < \infty$$，因為$$\mu(F-E) \geq 0$$，可得$$\mu(E) \leq \mu(F)$$。--(1)
+
+如果$$\mu(E) =\infty$$，因為$$\infty + c = \infty$$，$$c \in [0, \infty]$$，所以$$\mu(E)=\mu(F)$$。--(2)
+
+如果$$\mu(F)=\infty$$，顯然$$\mu(E) \leq \mu(F)$$--(3)
+
+由(1,2,3)得$$\mu(E) \leq \mu(F)$$ (QED)
 
 </details>
 
 > * <mark style="color:blue;">\[補集的測度]</mark> $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
-> * $$\mu(F) < \infty$$必須是有限值才有意義。
+> * $$\mu(F) < \infty$$必須是有限值，否則無法移項得到等式。
+
+<details>
+
+<summary>proof: 拆解成互斥的集合</summary>
+
+因為$$E \subseteq F$$，得 $$F = E \cup (F -E)$$。
+
+由測度定義得 $$\mu(F) = \mu (E) + \mu (F-E)$$且$$\mu(F-E) \geq 0$$。
+
+因為$$\mu(F)<\infty$$，所以上式可同減$$\mu(E)$$得$$\mu(F-E)=\mu(F)-\mu(E)$$。
+
+(QED)
+
+</details>
 
 ## 測度的次可加性
 
 > * \[<mark style="color:blue;">次可加性 ,sub-additive</mark>] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
 > * \[<mark style="color:blue;">有限次可加性, finitely sub-additive</mark>] $$\forall E_1,E_2, \ldots,E_n \in \Sigma\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i )$$
 > * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma \Rightarrow \mu(\bigcup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
+> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
 
 <details>
 
@@ -132,9 +158,9 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 </details>
 
-## 有限測度與sigma有限測度
+## 有限測度與σ有限測度
 
-> 如果對宇集合可得$$\mu(X)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
+> 如果對集合可得$$\mu(E)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
 
 $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 
@@ -142,13 +168,13 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 
 > \[<mark style="color:blue;">sigma-finite measure</mark>] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n \ni \mu(E_n )< \infty, ~ \forall n$$
 
-實數的長度不是有限測度，<mark style="color:blue;">但實數的長度是sigma有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+實數的長度不是有限測度，<mark style="color:blue;">但實數的長度是</mark>σ<mark style="color:blue;">有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 ## 非互斥集合聯集與交集測度之和等於各別集合測度之和(排容原理)
 
 > $$\forall E,F \in \Sigma \Rightarrow \mu(E \cup F)+\mu(E \cap F)=\mu(E)+\mu(F)$$
 >
-> 有限或無限測度時均成立
+> 有限或無限測度時均成立。
 
 <details>
 
@@ -166,11 +192,11 @@ $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 
 </details>
 
-## 遞增集合極限的測度(continuity of measure)
+## <mark style="background-color:red;">遞增集合極限的測度(測度的連續性，continuity of measure)</mark>
 
 > * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\bigcup_{n \in \mathbb{N}} E_n)$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
-> * 如果$$\mu(E_1)=\infty$$，此性質仍然成立。
+> * <mark style="color:red;">如果</mark>$$\mu(E_1)=\infty$$<mark style="color:red;">，此性質仍然成立</mark>。
 
 <details>
 
@@ -192,12 +218,12 @@ $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 
 
 </details>
 
-## 遞減集合極限的測度(continuity of measure)
+## <mark style="background-color:red;">遞減集合極限的測度(測度的連續性，continuity of measure)</mark>
 
 > $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j$$且$$\exists n_0 \in \mathbb{N} \ni \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) = \mu(\cap_{n \in \mathbb{N}} E_n)$$
 >
 > * $$\exists n_0 \in \mathbb{N} \ni \mu(E_{n_0} )<\infty$$ 意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
-> * 若$$\mu(E_n )=\infty ~\forall n$$，則此性質不成立。
+> * <mark style="color:red;">若</mark>$$\mu(E_n )=\infty ~\forall n$$<mark style="color:red;">，則此性質不成立</mark>。
 
 <details>
 
@@ -292,11 +318,17 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 
 </details>
 
-## The Borel-Cantelli lemma
+## <mark style="background-color:red;">The Borel-Cantelli lemma</mark>
 
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$
 >
-> 如果所有(無窮個)事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生的機率(測度)為0
+>
+>
+> $$\displaystyle \limsup_{n \rightarrow \infty} E_n =  \lim_{n \rightarrow \infty} \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$為集合序列極限的最小上界。
+>
+> 如果所有(無窮個)事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生的機率(測度)為0。
+>
+> 如果無限多個集合的測度和為有限值，那麼包含於在無限多個集合中的子集的測度必為0，否則這無限多個集合每個測度都不小於$$\epsilon$$ ，總和為無窮大。
 
 <details>
 

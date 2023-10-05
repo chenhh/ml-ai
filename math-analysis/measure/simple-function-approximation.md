@@ -36,15 +36,23 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 >
 > $$\displaystyle \chi_E^{*}(x)=\limsup_{n \rightarrow \infty} \chi_{E_n}(x)$$
 
-## 簡單函數(simple function)
+## (可測)簡單函數(simple function)
 
-> 令實值函數$$f: E \rightarrow \mathbb{R}, ~ E \subseteq \mathbb{R}^n$$，若$$S=\{y \in \mathbb{R}~|~ y=f(x), x \in E\}$$為有限集合時，則稱$$f$$為集合$$E$$上的簡單函數。
+> 令實值函數$$f: E \rightarrow \mathbb{R}$$，若$$S=\{y \in \mathbb{R}~|~ y=f(x), x \in E\}$$為有限集合時，$$E$$為可測集合且$$f$$為可測函數，則稱$$f$$為集合$$E$$上的簡單函數。
 >
-> <mark style="color:red;">註：只要是有限取值的函數均可定義為簡單函數，不必限定為可測函數。例如離散型的隨機變數</mark>。
+> 令$$f(x)$$的取值為$$c_1, c_2, \dots, c_n$$，且
+>
+> $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\} \in \sigma(E)$$為可測集。可得$$c_i \neq c_j \Leftrightarrow E_i \cap E_j=\emptyset$$。且$$f$$為可測函數。
+>
+> <mark style="color:red;">註：定義在可測集上有限取值的函數為可測函數，才是簡單函數。</mark>
+>
+> 註：可測集合中的子集不一定是可測集。如實數為可測集，但Cantor集為不可測集。
 
-若$$f$$為$$E$$上的簡單函數時，可將集合$$E$$切為$$p$$個分割$$E_1, \dots, E_p, ~ E_i \cap E_j = \emptyset$$。
+若$$f$$為$$E$$上的簡單函數時，令$$f(x)$$的取值為$$c_1, c_2, \dots, c_n$$，可將集合$$E$$切為$$n$$個互斥分割$$E_1, \dots, E_n, ~ E_i \cap E_j = \emptyset$$。
 
-且$$f(x) = c_i, \forall x \in E_i$$，則可得$$\displaystyle f(x)=\sum_{i=1}^p c_i \chi_{E_i}(x), ~x \in E$$。
+$$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
+
+且$$f(x) = c_i, \forall x \in E_i$$，則可得$$\displaystyle f(x)=\sum_{i=1}^n c_i \chi_{E_i}(x), ~x \in E$$。
 
 ### 簡單函數的性質
 
@@ -52,7 +60,40 @@ $$\chi_E^{-1}((1/2, \infty))=\{ x\in X ~|~ \chi_{E}(x) > 1/2 \}=E \in \Sigma$$ (
 >
 > * $$f(x) \pm g(x)$$為$$E$$的簡單函數。
 > * $$f(x)g(x)$$為$$E$$的簡單函數。
-> * 若$$E_i, i=1,2,\dots, p$$均為可測集合，則$$f$$為可測函數。
+> * 若$$E_i, i=1,2,\dots, n$$均為可測集合，則$$f$$為可測函數。
+
+## 存在可測簡單函數可夾擠有界可測實值函數
+
+> 給定實值可測函數$$f: E \rightarrow \mathbb{R}$$且$$f$$有界(即$$\exists M\geq 0 \ni |f(x)|\leq M, ~ \forall x \in E$$)。
+>
+> 則$$\forall \epsilon >0$$，存在定義在集合$$E$$的可測簡單函數$$h_\epsilon,g_\epsilon$$滿足：
+>
+> $$h_\epsilon(x) \leq f(x) \leq g_\epsilon(x)$$且$$0 \leq g_\epsilon(x) - h_\epsilon(x) < \epsilon, ~\forall x \in E$$。
+
+<details>
+
+<summary>proof: 切割值域建立<span class="math">y_{k-1} \leq f(x) &#x3C;y_k</span>的簡單ＷＵ函數。</summary>
+
+因為$$f$$為有界函數，令有界開區間包含函數值域，即$$f(E) \subseteq (c,d)$$且切割為$$c=y_0 < y_1<\dots<y_n=d$$。給定$$\epsilon > 0$$，此切割必須滿足$$y_k - y_{k-1}<\epsilon, ~ 1\leq k \leq n$$。
+
+令$$I_k=[y_{k-1}, y_k)$$且$$E_k=f^{-1}(I_k),  1 \leq k \leq n$$為前像。
+
+因為$$I_k$$為實數區間(Borel可測)，且$$f$$為可測函數，因此$$E_k$$為可測集。--(1)
+
+定義在$$E$$上的簡單函數$$h_\epsilon, g_\epsilon$$為：
+
+* $$h_\epsilon(x) = \sum_{i=1}^n y_{k-1} \chi_{E_k}(x)$$
+* $$g_\epsilon(x) = \sum_{i=1}^n y_{k} \chi_{E_k}(x)$$
+
+給定$$x \in E$$，因為$$f(E) \subseteq (c,d)$$，因此存在唯一的整數$$k \ni 1 \leq k \leq n$$滿足$$y_{k-1} \leq f(x) < y_k$$。
+
+因此$$h_\epsilon(x) =y_{k-1} \leq f(x) <y_k = g_{\epsilon}(x)$$
+
+由於$$y_k - y_{k-1}<\epsilon$$，因此$$h_\epsilon, g_{\epsilon}$$即為所求。
+
+(QED)
+
+</details>
 
 ## 存在遞增可測簡單函數可逼近非負可測函數
 

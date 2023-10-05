@@ -60,7 +60,13 @@ description: >-
 >
 > 註：反之不一定成立。
 
+### 有界可測實值函數若定義在有限測度集則必定可積分
 
+> $$f: E \rightarrow \mathbb{R}$$為可測函數，$$f$$有界(即$$\exists M\geq 0 \ni |f(x)|\leq M, ~\forall x \in E$$)且$$m(E)<\infty$$。
+>
+> 則$$f$$必定可積分，即$$\displaystyle \int_E f < \infty$$。
+>
+> <mark style="color:blue;">註：可測函數不可省略，因並非所有有界實值函數都可積分</mark>。
 
 ## 參考資料
 

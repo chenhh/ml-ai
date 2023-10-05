@@ -1,4 +1,4 @@
-# 非負可測簡單函數
+# 非負可測簡單函數的積分
 
 ## 簡介
 
@@ -10,7 +10,7 @@
 
 > 定義：非負可測簡單函數(nonnegative simple function)
 >
-> 函數$$f(x): \mathbb{R}^n \rightarrow [0, \infty)$$為非負可測簡單函數，其定義域在可測集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i \in \mathbb{R}$$：
+> 函數$$f(x): \mathbb{R}^n \rightarrow [0, \infty]$$為非負可測簡單函數，其定義域在可測集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i \in \mathbb{R}$$：
 >
 > $$\displaystyle f(x)=\sum_{i=1}^p c_i \chi_{E_i}(x)$$，$$\bigcup_{i=1}^p E_i = \mathbb{R}^n$$，$$E_i \cap E_j = \emptyset, ~\forall i \neq j$$。
 
@@ -32,7 +32,7 @@
 >
 > 其中$$dx$$是$$\mathbb{R}^n$$上Lebesgue測度的標誌，若是可測空間可使用$$dm(x)$$或$$d\mu(x)$$。
 >
-> <mark style="color:blue;">上述定義的積分可能為</mark>$$\pm \infty$$，<mark style="color:blue;">因為測度可取值為</mark>$$\pm \infty$$。要<mark style="color:blue;">注意擴充實數中，定義</mark>$$0 \cdot \infty = 0$$。
+> <mark style="color:blue;">上述定義的積分可能為</mark>$$\infty$$，<mark style="color:blue;">因為測度可取值為</mark>$$\infty$$。要<mark style="color:blue;">注意擴充實數中，定義</mark>$$0 \cdot \infty = 0$$。
 
 ## 指示函數的積分
 
@@ -55,7 +55,7 @@ $$\displaystyle  f(x)=\chi_{\mathbb{Q}}(x)=  \left\{ \begin{aligned} & 1,& ~ x \
 
 ## 非負簡單函數積分線性性質與單調性
 
-> $$f, g: \mathbb{R}^n \rightarrow [0,\infty)$$為非負可測簡單函數。
+> $$f, g: \mathbb{R}^n \rightarrow [0,\infty]$$為非負可測簡單函數。
 >
 > $$f(x)=\sum_{i=1}^p a_i \chi_{A_i}(x), ~ \bigcup_{i=1}^p A_i = \mathbb{R}^n, ~ A_i \cap A_j = \emptyset ~ \forall i \neq j$$。
 >

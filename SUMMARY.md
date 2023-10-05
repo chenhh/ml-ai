@@ -74,7 +74,7 @@
   * [絕對連續測度](math-analysis/measure/abs-continuous-measure.md)
   * [符號測度](math-analysis/measure/signed-measure.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
-  * [非負可測簡單函數](math-analysis/lebesgue-integral/measurable-simple-function.md)
+  * [非負可測簡單函數的積分](math-analysis/lebesgue-integral/measurable-simple-function.md)
   * [非負可測函數的積分](math-analysis/lebesgue-integral/integral-of-measurable-nonnegative-function.md)
   * [一般可測函數的積分](math-analysis/lebesgue-integral/integral-of-measurable-function.md)
   * [有界可測函數與有限測度集的積分](math-analysis/lebesgue-integral/integral-of-a-bouned-measurable-function-over-a-set-of-finite-measure.md)

@@ -77,7 +77,7 @@
   * [非負可測簡單函數的積分](math-analysis/lebesgue-integral/measurable-simple-function.md)
   * [非負可測函數的積分](math-analysis/lebesgue-integral/integral-of-measurable-nonnegative-function.md)
   * [一般可測函數的積分](math-analysis/lebesgue-integral/integral-of-measurable-function.md)
-  * [有界可測函數與有限測度集的積分](math-analysis/lebesgue-integral/integral-of-a-bouned-measurable-function-over-a-set-of-finite-measure.md)
+  * [2.a有界可測函數在有限測度集的積分](math-analysis/lebesgue-integral/integral-of-a-bouned-measurable-function-over-a-set-of-finite-measure.md)
   * [平均收斂](math-analysis/lebesgue-integral/convergence-in-the-mean.md)
 * [賦範空間(normed space)](math-analysis/normed-space.md)
 * [Lp空間](math-analysis/lp-space/README.md)

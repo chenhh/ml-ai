@@ -141,7 +141,7 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 
 
-## 存在可測簡單函數逼近可測函數
+## 一般函數可測若且唯若存在可測簡單函數逼近一般函數
 
 > $$f: E \rightarrow [-\infty, \infty]$$為可測函數<mark style="color:red;">若且唯若</mark>存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(<mark style="color:blue;">點態收斂</mark>) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >

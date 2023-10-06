@@ -6,6 +6,8 @@
 
 特徵函數在積分時，可將子集合轉換成函數計算。$$\int_E f\chi_{E_k} d\mu = \int_{E_k}fd\mu$$。
 
+函數為實值函數與函數有界是不同概念，如$$x \in \mathbb{R}, ~f(x)=x$$為實值函數，但非不是有界函數。
+
 ## 特徵(指示)函數為可測函數
 
 > 集合$$E$$的特徵(指示)函數為$$\chi_E(x)\equiv \mathbb{I}_E(x)= \left\{ \begin{aligned} &1 ~ \text{ if } x \in E, \\ &0 ~ \text{ if } x \notin E \end{aligned} \right.$$
@@ -69,10 +71,12 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 > 則$$\forall \epsilon >0$$，存在定義在集合$$E$$的可測簡單函數$$h_\epsilon,g_\epsilon$$滿足：
 >
 > $$h_\epsilon(x) \leq f(x) \leq g_\epsilon(x)$$且$$0 \leq g_\epsilon(x) - h_\epsilon(x) < \epsilon, ~\forall x \in E$$。
+>
+> <mark style="color:blue;">註：</mark>$$f$$<mark style="color:blue;">必須有界才能保證切值域時，兩點之間長度小於</mark>$$\epsilon$$。
 
 <details>
 
-<summary>proof: 切割值域建立<span class="math">y_{k-1} \leq f(x) &#x3C;y_k</span>的簡單ＷＵ函數。</summary>
+<summary>proof: 切割值域建立<span class="math">y_{k-1} \leq f(x) &#x3C;y_k</span>的簡單可測函數。</summary>
 
 因為$$f$$為有界函數，令有界開區間包含函數值域，即$$f(E) \subseteq (c,d)$$且切割為$$c=y_0 < y_1<\dots<y_n=d$$。給定$$\epsilon > 0$$，此切割必須滿足$$y_k - y_{k-1}<\epsilon, ~ 1\leq k \leq n$$。
 
@@ -94,6 +98,8 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 (QED)
 
 </details>
+
+##
 
 ## 存在遞增可測簡單函數可逼近非負可測函數
 
@@ -133,11 +139,13 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 </details>
 
+
+
 ## 存在可測簡單函數逼近可測函數
 
-> $$f: E \rightarrow [-\infty, \infty]$$為可測函數，則存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(<mark style="color:blue;">點態收斂</mark>) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
+> $$f: E \rightarrow [-\infty, \infty]$$為可測函數<mark style="color:red;">若且唯若</mark>存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(<mark style="color:blue;">點態收斂</mark>) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >
-> 若$$f(x) < \infty$$，則上述為<mark style="color:blue;">均勻(一致)收斂</mark>，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
+> 若$$f(x)$$有界，則上述為<mark style="color:blue;">均勻(一致)收斂</mark>，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
 >
 > <mark style="color:red;">註：此逼近性質可用於定義可測函數的積分</mark>。
 

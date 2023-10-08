@@ -141,9 +141,9 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 
 
-## 一般函數可測若且唯若存在可測簡單函數逼近一般函數
+## 一般函數可測若且唯若存在可測簡單函數逼近一般函數(the simple approximation theorem)
 
-> $$f: E \rightarrow [-\infty, \infty]$$為可測函數<mark style="color:red;">若且唯若</mark>存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(<mark style="color:blue;">點態收斂</mark>) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
+> $$E$$為可測集合，$$f: E \rightarrow [-\infty, \infty]$$為可測函數<mark style="color:red;">若且唯若</mark>存在可測簡單函數序列$$\{h_k(x)\}$$使得$$|h_k(x)| \leq |f(x)|$$且有(<mark style="color:blue;">點態收斂</mark>) $$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$。
 >
 > 若$$f(x)$$有界，則上述為<mark style="color:blue;">均勻(一致)收斂</mark>，即$$\displaystyle \lim_{k \rightarrow \infty }\sup_{x\in E}\{f_k(x) - f(x)\}=0$$。
 >
@@ -151,7 +151,11 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 <details>
 
-<summary>proof：函數為正成份與負成分兩個非負函數之差</summary>
+<summary>proof：&#x3C;= 可測函數序列的極限仍為可測函數。<br>=>函數為正成份與負成分兩個非負函數之差，因此只要處理非負函數即可。</summary>
+
+<= 因為$$\{h_k(x)\}$$為可測函數序列，且點態收斂至$$f$$，由\[可測函數序列的極限仍為可測函數]得$$f$$為可測函數。
+
+\=>
 
 令$$f(x)=f^{+}(x) - f^{-}(x)$$，由存在遞增可測簡單函數可逼近非負可測函數$$m_k(x)$$與$$n_k(x)$$滿足$$\displaystyle \lim_{k \rightarrow \infty }m_k(x)=f^{+}(x)$$與$$\displaystyle \lim_{k \rightarrow \infty }n_k(x)=f^{-}(x)$$ $$x \in E$$
 

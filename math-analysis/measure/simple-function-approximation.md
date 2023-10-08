@@ -99,8 +99,6 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 
 </details>
 
-##
-
 ## 存在遞增可測簡單函數可逼近非負可測函數
 
 > $$f: E \rightarrow [0, \infty]$$為非負可測函數(函數值可為無窮大)，則存在遞增非負可測簡單函數序列：$$h_k(x) \leq h_{k+1}(x), k \in \mathbb{N}$$ 使得：$$\displaystyle \lim_{k \rightarrow \infty }h_k(x) =f(x), ~ x \in E$$。
@@ -155,11 +153,30 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 <= 因為$$\{h_k(x)\}$$為可測函數序列，且點態收斂至$$f$$，由\[可測函數序列的極限仍為可測函數]得$$f$$為可測函數。
 
-\=>
+\=> ($$f$$不必為有界函數, proof 1)
 
-令$$f(x)=f^{+}(x) - f^{-}(x)$$，由存在遞增可測簡單函數可逼近非負可測函數$$m_k(x)$$與$$n_k(x)$$滿足$$\displaystyle \lim_{k \rightarrow \infty }m_k(x)=f^{+}(x)$$與$$\displaystyle \lim_{k \rightarrow \infty }n_k(x)=f^{-}(x)$$ $$x \in E$$
+令$$f(x)=f^{+}(x) - f^{-}(x)$$，且$$f$$為可測函數，由\[存在遞增可測簡單函數可逼近非負可測函數]$$m_k(x)$$與$$n_k(x)$$滿足$$\displaystyle \lim_{k \rightarrow \infty }m_k(x)=f^{+}(x)$$與$$\displaystyle \lim_{k \rightarrow \infty }n_k(x)=f^{-}(x)$$ $$x \in E$$
 
-由於$$h_k(x)=m_k(x) - n_k(x)$$為可測簡單函數，且由極限的線性性質得 $$\displaystyle \lim_{k \rightarrow \infty }m_k(x)-n_k(x)=f^{+}(x) - f^{-}(x)=f(x), ~ x \in E$$。 (QED)
+由於$$h_k(x)=m_k(x) - n_k(x)$$為可測簡單函數，且由極限的線性性質得 $$\displaystyle \lim_{k \rightarrow \infty }m_k(x)-n_k(x)=f^{+}(x) - f^{-}(x)=f(x), ~ x \in E$$。 (QED )
+
+\=>  ($$f \geq 0$$不必為有界函數, proof 2)
+
+不失一般性令且$$f \geq 0$$為非負可測函數。
+
+定義$$E_n=\{x \in E~|~ f(x) \leq n\}, ~ n \in \mathbb{N}$$，則$$E_n$$為可測集合且$$f$$定義在$$E_n$$上為非負有界可測函數。
+
+由\[存在可測簡單函數可夾擠有界可測實值函數]得給定$$\epsilon=1/n$$，存在定義在$$E_n$$上的簡單函數$$h_n$$與$$g_n$$滿足$$0 \leq h_n(x) \leq f(x) \leq g_n(x)$$--(1)，且$$0 \leq g_n(x)-h_n(x) < 1/n$$ on $$E_n$$--(2)。
+
+(1)中同減$$h_n(x)$$後，由(2)可得$$0 \leq f(x)-h_n(x) \leq g_n(x)-h_n(x) <1/n$$ on $$E_n$$。--(3)
+
+令$$h_n(x)=n \text{ if } f(x) > n$$，則$$h_n(x)$$可定義在$$E$$上。--(4)
+
+由(3,4)得$$0 \leq h_n(x) \leq f(x), ~ \forall x \in E$$--(5)
+
+* 若$$f$$為有界函數時，則存在$$N_0 \in \mathbb{N} \ni f(x)<N_0$$，由(3)得$$0 \leq f(x) - h_n(x) < 1/n, ~ \forall n \geq N_0$$，因此$$\displaystyle \lim_{n \rightarrow \infty }h_n(x)=f(x)$$。
+* 若$$f(x)=\infty$$，由(4)得$$h_n(x)=n, \forall n$$，因此$$\displaystyle \lim_{n \rightarrow \infty }h_n(x)=f(x)$$ (QED)
+
+\=> ($$f$$為有界函數)
 
 若在集合$$E$$上函數值有限，即$$|f(x)| \leq M$$，則當$$k>M$$時，可得：
 

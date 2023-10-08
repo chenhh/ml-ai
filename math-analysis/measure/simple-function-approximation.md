@@ -117,9 +117,9 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 
 $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2^k$$等長區間。
 
-令其中第$$j$$個定義域區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。<mark style="color:blue;">此時函數</mark>$$f$$<mark style="color:blue;">在此定義域的函數值最小值與最大值差距為</mark>$$\frac{1}{2^k}$$。
+令其中第$$j$$個定義域區間為$$E_{k,j}=\{x \in E ~|~ \frac{j-1}{2^k} \leq f(x) < \frac{j}{2^k}\}, j=1,2,\dots, k2^k$$。<mark style="color:blue;">此時函數</mark>$$f$$<mark style="color:blue;">在此定義域的函數值最小值與最大值差距為</mark>$$\frac{1}{2^k}$$。(<mark style="background-color:red;">用於定義</mark>$$f(x)<\infty$$<mark style="background-color:red;">為有限值時的前像</mark>)
 
-而函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。此<mark style="color:blue;">集合是用於定義函數值為無窮大時</mark>。
+而函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。<mark style="background-color:red;">此集合是用於定義函數值為無窮大時的前像</mark>。
 
 取(值域)函數序列：$$\displaystyle  	h_k(x)=\left\{ 	\begin{aligned} 	&\frac{j-1}{2^k}, & x \in E_{k,j} \\ 	&k, & x \in E_k 	\end{aligned} 	\right. 	~j=1,2,\dots, k2^k, ~ k \in \mathbb{N}$$。
 

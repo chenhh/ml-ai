@@ -16,7 +16,7 @@ description: >-
 >
 > $$f(x) = \sum_{i=1}^n c_i \chi_{E_i}(x)$$，$$E_i = f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 >
-> 註：此處$$c_i \in \mathbb{R} \equiv (-\infty, \infty)$$，因此$$f(x)\neq \infty, ~\forall x \in E$$。
+> 註：此處$$c_i \in \mathbb{R} \equiv (-\infty, \infty)$$，因此$$f(x)\neq \infty, ~\forall x \in E$$。但$$f(x)$$不一定有界。
 
 由於函數的定義為一對一或多對一，因此給定$$c_i \neq c_j$$的前像$$f^{-1}(c_i) \neq f^{-1}(c_j)$$必定會得到互斥的前像。
 
@@ -31,7 +31,15 @@ description: >-
 > 令$$f,g: E \rightarrow \mathbb{R}$$且$$m(E)<\infty$$，則$$\forall a, b\in \mathbb{R}$$：
 >
 > * $$\displaystyle \int_E (af+bg)=a\int_E f + b \int_E g$$。
-> * 若$$f \leq g$$ on $$E$$，則$$\displaystyle \int_E f \leq \int_E g$$
+> * 若$$f \leq g$$ on $$E$$，則$$\displaystyle \int_E f \leq \int_E g$$。
+
+<details>
+
+<summary>proof</summary>
+
+
+
+</details>
 
 ## 有界實值函數在有限測度集的積分
 

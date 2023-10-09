@@ -14,9 +14,9 @@ description: >-
 
 有界可測實值函數，且定義域的測度有限時必定可積分。
 
-有界可測實值函數序列，且定義域的測度有限。若函數序列一致收斂，則積分序列收斂。
+有界可測實值函數序列，且定義域的測度有限(必定可積分)。若函數序列一致收斂，則積分序列收斂。
 
-有界可測實值函數序列，且定義域的測度有限。若函數序列一致有界且點態收斂，則積分序列收斂。
+\[The bounded convergence theorem]有界可測實值函數序列，且定義域的測度有限。若函數序列一致有界且點態收斂，則積分序列收斂。
 
 ## (可測)簡單函數
 
@@ -148,8 +148,10 @@ $$\displaystyle 0 \leq  \inf\left\{ \int_E g | g \text{ simple, and } g \geq f \
 > 若$$\{f_n\} \rightarrow f \text{ unif. on } E$$ ($$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in E}|f_n(x) - f(x)|=0$$)，則$$\displaystyle \lim_{n \rightarrow \infty} \int_E f_n = \int_E f$$。
 >
 > 註：之後會證明在pointwise a.e. 條件下，積分序列也會收斂。
+>
+> 註：此為BCT的特例。
 
-## The bounded convergence theorem
+## The bounded convergence theorem(BCT)
 
 > $$f_n: E \rightarrow \mathbb{R}, ~ n \in \mathbb{N}$$為有界可測實值函數序列，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
 >
@@ -157,7 +159,25 @@ $$\displaystyle 0 \leq  \inf\left\{ \int_E g | g \text{ simple, and } g \geq f \
 >
 > 若點態收斂 $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=f(x) \text{ on } E$$，則$$\displaystyle \lim_{n \rightarrow \infty} \int_E f_n(x) = \int_E f(x)$$。
 
+## 有界函數在零測度集上為可測函數且積分值為0
 
+> $$f: E \rightarrow \mathbb{R}$$為有界實值函數(不一定可測)，若集合測度為0，即$$m(E)=0$$。
+>
+> 則$$f$$為可測函數且$$\displaystyle \int_E f =0$$。
+
+## 非負有界可測函數在有限測度集上若積分為0則函數幾乎處處為0
+
+> $$f: E \rightarrow [0,\infty),$$為非負有界可測函數，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
+>
+> 若$$\displaystyle \int_E f =0$$，則$$f=0 \text{ a.e. on } E$$。
+
+## 可積分有界可測函數在有限測度集若存在有界且幾乎處處相等的函數則積分值相同
+
+> $$f: E \rightarrow \mathbb{R}$$為有界可測實值函數，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
+>
+> 若$$g$$為有界函數且$$f = g \text{ a.e. on } E$$，則$$\displaystyle \int_E f = \int_E g$$。
+>
+> 註：此定理說明零測度集$$m(\{x \in E ~|~ f(x) \neq g(x)\})=0$$不會影響積分值。
 
 ## 參考資料
 

@@ -114,5 +114,42 @@ $$\displaystyle 0 \leq  \inf\left\{ \int_E g | g \text{ simple, and } g \geq f \
 
 </details>
 
+## 積分線性與單調性
+
+> $$f,g: E \rightarrow \mathbb{R}$$為有界可測實值函數，且定義域$$E$$的測度有限，即$$m(E)<\infty$$，則$$\forall a,b \in \mathbb{R}$$：
+>
+> * $$\displaystyle \int_E (af+bg) = a\int_E f + b \int_E g$$。
+> * 若$$f \leq g \text{ on } E$$，則$$\displaystyle \int_E f \leq \int_E g$$。
+
+## 互斥集合積分的可加性
+
+> $$f: E \rightarrow \mathbb{R}$$為有界可測實值函數，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
+>
+> 若$$A,B \subseteq E$$且$$A \cap B = \emptyset$$，則：$$\displaystyle \int_{A \cup B} f = \int_A f + \int_B f$$。
+
+## 函數積分的絕對值小於等於函數絕對值的積分
+
+> $$f: E \rightarrow \mathbb{R}$$為有界可測實值函數，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
+>
+> 則：$$\displaystyle \left| \int_E f \right| \leq \int_E |f|$$。
+
+## 函數序列一致收斂則積分序列也收斂
+
+> $$f_n: E \rightarrow \mathbb{R}, ~ n \in \mathbb{N}$$為有界可測實值函數序列，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
+>
+> 若$$\{f_n\} \rightarrow f \text{ unif. on } E$$ ($$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in E}|f_n(x) - f(x)|=0$$)，則$$\displaystyle \lim_{n \rightarrow \infty} \int_E f_n = \int_E f$$。
+>
+> 註：之後會證明在pointwise a.e. 條件下，積分序列也會收斂。
+
+## The bounded convergence theorem
+
+> $$f_n: E \rightarrow \mathbb{R}, ~ n \in \mathbb{N}$$為有界可測實值函數序列，且定義域$$E$$的測度有限，即$$m(E)<\infty$$。
+>
+> 令$$\{f_n\}$$在集合$$E$$一致有界，即$$\exists M \geq 0 \ni |f_n(x)| \leq M, ~\forall x \in E, ~ \forall n$$。
+>
+> 若點態收斂 $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=f(x) \text{ on } E$$，則$$\displaystyle \lim_{n \rightarrow \infty} \int_E f_n(x) = \int_E f(x)$$。
+
+
+
 ## 參考資料
 

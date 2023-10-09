@@ -72,13 +72,13 @@ proof: 單調性
 > * $$\displaystyle \overline{\int_E f}=\sup \left\{ \int_E h ~|~ h\text{ is simple and } h \leq f \text{ on } E\right\}$$。
 > * $$\displaystyle \underline{\int_E f}=\inf \left\{ \int_E h ~|~ h\text{ is simple and } f \leq h \text{ on } E\right\}$$。
 >
-> 因為$$f$$是有界函數，因此上/下積分存在，且由簡單積分單調性得：$$\displaystyle -\infty<\underline{\int_E f} \leq \overline{\int_E f} < \infty$$。
+> <mark style="color:red;">因為</mark>$$f$$<mark style="color:red;">是有界函數，因此上/下積分存在</mark>，且由簡單積分單調性得：$$\displaystyle -\infty<\underline{\int_E f} \leq \overline{\int_E f} < \infty$$。
 >
 > <mark style="color:red;">定義：有界實值數在有限測度集的積分</mark>
 >
 > 有界實值函數$$f$$在有限測度集$$E$$為Lebesgue可積分若且唯若其上積分等於下積分。
 >
-> $$\displaystyle \int_E f<\infty \Leftrightarrow \underline{\int_E f} = \overline{\int_E f}$$
+> $$\displaystyle m(E)<\infty,~ \int_E f<\infty \Leftrightarrow \underline{\int_E f} = \overline{\int_E f}$$
 
 ### 有界實值函數定義在閉有界區間則Riemann積分值等於Lebesgue積分值
 
@@ -90,11 +90,29 @@ proof: 單調性
 
 ### 有界可測實值函數若定義在有限測度集則必定可積分
 
-> $$f: E \rightarrow \mathbb{R}$$為可測函數，$$f$$有界(即$$\exists M\geq 0 \ni |f(x)|\leq M, ~\forall x \in E$$)且$$m(E)<\infty$$。
+> $$f: E \rightarrow \mathbb{R}$$為可測函數，$$f$$有界(即$$\exists M\geq 0 \ni |f(x)|\leq M, ~\forall x \in E$$)且$$E$$為有限測度集，即$$m(E)<\infty$$。
 >
 > 則$$f$$必定可積分，即$$\displaystyle \int_E f < \infty$$。
 >
 > <mark style="color:blue;">註：可測函數不可省略，因並非所有有界實值函數都可積分</mark>。
+
+<details>
+
+<summary>proof</summary>
+
+令$$n \in \mathbb{N}$$，由\[一般函數可測若且唯若存在可測簡單函數逼近一般函數(the simple approximation theorem)]令$$\epsilon=1/n$$，則存在兩個定義在$$E$$簡單函數$$h_n,g_n$$m滿足：$$h_n \leq f \leq g_n \text{ on } E$$且$$0 \leq g_n -h_n \leq 1/n \text{ on } E$$。
+
+由簡單函數積分的單調性與線性得：$$\displaystyle 0 \leq \int_E g_n - \int_E h_n =\int_E (g_n-h_n) \leq 1/n \cdot m(E)$$
+
+由上積分與下積分定義得：
+
+$$\displaystyle 0 \leq  \inf\left\{ \int_E g | g \text{ simple, and } g \geq f \right\} -  \sup\left\{ \int_E h | h \text{ simple, and } h \leq  f\right\}  \leq \int_E g_n - \int_E h_n \leq 1/n \cdot m(E)$$
+
+上述不等式在$$\forall n \in \mathbb{N}$$且$$m(E) <\infty$$成立。
+
+(QED)
+
+</details>
 
 ## 參考資料
 

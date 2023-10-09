@@ -20,7 +20,7 @@
 
 
 
-<figure><img src="../../.gitbook/assets/simple_function.png" alt=""><figcaption><p>簡單函數範例</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/simple_function.png" alt=""><figcaption><p>簡單函數。</p></figcaption></figure>
 
 ### 非負可測簡單函數的積分
 

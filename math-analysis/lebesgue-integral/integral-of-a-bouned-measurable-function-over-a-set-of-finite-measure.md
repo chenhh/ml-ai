@@ -10,34 +10,54 @@ description: >-
 
 包含了有界可測簡單函數與一般函數的積分。
 
-## 簡單函數
+## (可測)簡單函數
 
 > 可測實數值簡單函數$$f: E \rightarrow \mathbb{R}$$具有有限個相異的函數值$$c_1, c_2, \dots, c_n$$可表示成：
 >
 > $$f(x) = \sum_{i=1}^n c_i \chi_{E_i}(x)$$，$$E_i = f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 >
-> 註：此處$$c_i \in \mathbb{R} \equiv (-\infty, \infty)$$，因此$$f(x)\neq \infty, ~\forall x \in E$$。但$$f(x)$$不一定有界。
+> 註：此處$$c_i \in \mathbb{R} \equiv (-\infty, \infty)$$，因此$$f(x)\neq \infty, ~\forall x \in E$$。<mark style="color:red;">但</mark>$$f(x)$$<mark style="color:red;">不一定有界</mark>。
 
-由於函數的定義為一對一或多對一，因此給定$$c_i \neq c_j$$的前像$$f^{-1}(c_i) \neq f^{-1}(c_j)$$必定會得到互斥的前像。
+<mark style="color:blue;">由於函數的定義為一對一或多對一，因此給定</mark>$$c_i \neq c_j$$<mark style="color:blue;">的前像</mark>$$f^{-1}(c_i) \cap f^{-1}(c_j)=\emptyset$$<mark style="color:blue;">必定會得到互斥的前像</mark>。
 
 ## 簡單函數在有限測度集的積分
 
-> 給定可測實數值簡單函數$$f: E \rightarrow \mathbb{R}$$，若$$m(E)<\infty$$，則定義積分$$\displaystyle \int_E f = \sum_{i=1}^n c_i m(E_i)$$。
+> 給定可測實數值簡單函數$$f: E \rightarrow \mathbb{R}$$，若$$E$$為有限測度集，即$$m(E)<\infty$$，則定義積分$$\displaystyle \int_E f = \sum_{i=1}^n c_i m(E_i)$$。
 
 因為$$c_i \in \mathbb{R}, \forall i$$且$$m(E)<\infty$$，因此可得$$\displaystyle \int_E f<\infty$$必定可積分。
 
 ## 積分的線性與單調性
 
-> 令$$f,g: E \rightarrow \mathbb{R}$$且$$m(E)<\infty$$，則$$\forall a, b\in \mathbb{R}$$：
+> 令可測實數值簡單函數$$f,g: E \rightarrow \mathbb{R}$$且$$E$$為有限測度集，即$$m(E)<\infty$$，則$$\forall a, b\in \mathbb{R}$$：
 >
 > * $$\displaystyle \int_E (af+bg)=a\int_E f + b \int_E g$$。
-> * 若$$f \leq g$$ on $$E$$，則$$\displaystyle \int_E f \leq \int_E g$$。
+> * 若$$f \leq g$$ on $$E$$，則$$\displaystyle \int_E f \leq \int_E g$$
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 將<span class="math">E</span>做分割，以f,g在分割的取值得證。</summary>
 
+proof 1: 線性
 
+因為$$f,g$$為簡單函數，在$$E$$上為有限個取值。
+
+將集合$$E$$做$$n$$個分割，令$$E_i=\{x \in E~|~ f(x)=c_i\}=\{x \in E ~|~ g(x)=d_i\}$$
+
+則$$E_i \cap E_j=\emptyset, ~\bigcup_{i=1}^n E_i=E$$。
+
+可得$$\displaystyle \int_E f = \sum_{i=1}^n c_i m(E_i)~ \int_E g = \sum_{i=1}^n d_i m(E_i)$$。
+
+因此$$\begin{aligned} \displaystyle \int_E (af+bg) & =\sum_{i=1}^n (ac_i + bd_i) m(E_i) \\  & = a \sum_{i=1}^n c_i m(E_i) + b \sum_{i=1}^n d_i m(E_i) \\ & = \int_E f + b \int_E g   \end{aligned}$$
+
+(QED)
+
+proof: 單調性
+
+因為$$f \leq g$$ on $$E$$，令$$h =g-f\geq 0$$ on $$E$$。
+
+則由線性得$$\displaystyle \int_E g - \int_E f = \int_E g-f = \int_E h \geq 0$$
+
+(QED)
 
 </details>
 
@@ -45,14 +65,14 @@ description: >-
 
 > 定義：有界實值函數在有限測度集的上/下積分
 >
-> $$f: E \rightarrow \mathbb{R}$$，$$f$$有界(即$$\exists M\geq 0 \ni |f(x)|\leq M, ~\forall x \in E$$)且$$m(E)<\infty$$。
+> $$f: E \rightarrow \mathbb{R}$$，$$f$$有界(即$$\exists M\geq 0 \ni |f(x)|\leq M, ~\forall x \in E$$)且$$E$$為有限測度集，即$$m(E)<\infty$$。
 >
 > 定義上/下Lebesgue積分：
 >
 > * $$\displaystyle \overline{\int_E f}=\sup \left\{ \int_E h ~|~ h\text{ is simple and } h \leq f \text{ on } E\right\}$$。
 > * $$\displaystyle \underline{\int_E f}=\inf \left\{ \int_E h ~|~ h\text{ is simple and } f \leq h \text{ on } E\right\}$$。
 >
-> 因為$$f$$是有界函數，因此上/下積分存在，且由簡單積分單調性得：$$\displaystyle \underline{\int_E f} \leq \overline{\int_E f} < \infty$$。
+> 因為$$f$$是有界函數，因此上/下積分存在，且由簡單積分單調性得：$$\displaystyle -\infty<\underline{\int_E f} \leq \overline{\int_E f} < \infty$$。
 >
 > <mark style="color:red;">定義：有界實值數在有限測度集的積分</mark>
 >

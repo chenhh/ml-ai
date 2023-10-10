@@ -116,14 +116,14 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 > 函數$$f: E \rightarrow [-\infty, \infty]$$為在集合$$E$$上的可測函數，則：
 >
-> * $$\displaystyle \{x \in E~|~ f(x)=\infty\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) > k\right\} = \mathbb{R} - \displaystyle \{x \in E~|~ f(x)<\infty\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x)=\infty\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) > k\right\} = E- \displaystyle \{x \in E~|~ f(x)<\infty\}$$。
 > * $$\displaystyle \{x \in E~|~ f(x) < \infty\} = \bigcup_{k=1}^\infty \left\{x\in E ~|~ f(x) <k \right\}$$。
 > * $$\displaystyle \{x \in E~|~ f(x) > - \infty\} = \bigcup_{k=1}^\infty \left\{x\in E ~|~ f(x) >-k \right\}$$。
-> * $$\displaystyle \{x \in E~|~ f(x)=-\infty\}  = \mathbb{R} - \displaystyle \{x \in E~|~ f(x) > -\infty\}$$
+> * $$\displaystyle \{x \in E~|~ f(x)=-\infty\}  = E - \displaystyle \{x \in E~|~ f(x) > -\infty\}$$
 > * $$\displaystyle \{x \in E~|~ f(x)\geq t\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) > t-\frac{1}{k}\right\}$$。
-> * $$\displaystyle \{x \in E~|~ f(x) >  t\} = \mathbb{R} - \{x \in E~|~ f(x) \leq t\}$$。
-> * $$\displaystyle \{x \in E~|~ f(x)\leq t\} = \bigcup_{k=1}^\infty \left\{x\in E ~|~ f(x) > t+\frac{1}{k}\right\}$$。
-> * $$\displaystyle \{x \in E~|~ f(x) < t \} = \mathbb{R} - \{x \in E~|~ f(x) \geq t \}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) >  t\} =\bigcup_{k=1}^\infty \{x\in E ~|~ f(x) > t+\frac{1}{k} \}= E - \{x \in E~|~ f(x) \leq t\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x)\leq t\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) < t+\frac{1}{k}\right\} = E - \displaystyle \{x \in E~|~ f(x)> t\}$$。
+> * $$\displaystyle \{x \in E~|~ f(x) < t \} =\bigcup_{k=1}^\infty \{x\in E ~|~ f(x) < t-\frac{1}{k}\}= E - \{x \in E~|~ f(x) \geq t \}$$。
 > * $$\displaystyle \{x \in E~|~ f(x) = t \} = \displaystyle \{x \in E~|~ f(x) \geq t \} \cap \displaystyle \{x \in E~|~ f(x) \leq t \}$$
 
 * 令$$S_m=\{x \in E ~|~ |f(x) - g(x)| \geq 1/m\}, ~m\in \mathbb{N}$$, $$S=\{x\in E ~|~ f(x) \neq g(x)\}$$，可得$$\displaystyle S= \bigcup_{m=1}^\infty S_m$$

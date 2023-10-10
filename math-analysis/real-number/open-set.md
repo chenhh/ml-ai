@@ -351,9 +351,9 @@ $$\forall S \subset \mathbb{R}^n$$，有以下的性質
 
 #### 範例：無限個開集合的交集可能為閉集
 
-$$\forall n \in \mathbb{N}, ~ (-\frac{1}{n}, \frac{1}{n})$$均為開集合，
+$$\forall n \in \mathbb{N}, ~ (-\frac{1}{n}, \frac{1}{n})$$均為開集合，但是$$\displaystyle \bigcap_{n=1}^\infty (-\frac{1}{n}, \frac{1}{n}) = \{0\}$$。
 
-但是$$\displaystyle \lim_{n \rightarrow \infty} (-\frac{1}{n}, \frac{1}{n}) = \{0\}$$。
+$$\forall a,b \in \mathbb{R}$$，$$\displaystyle [a,b]=\bigcap_{n=1}^\infty (a-\frac{1}{n}, b+\frac{1}{n})$$
 
 ### 開集合可表示為可數個開球的聯集
 

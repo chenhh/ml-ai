@@ -127,8 +127,12 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > * $$\displaystyle \{x \in E~|~ f(x) = t \} = \displaystyle \{x \in E~|~ f(x) \geq t \} \cap \displaystyle \{x \in E~|~ f(x) \leq t \}$$
 
 * 令$$S_m=\{x \in E ~|~ |f(x) - g(x)| \geq 1/m\}, ~m\in \mathbb{N}$$, $$S=\{x\in E ~|~ f(x) \neq g(x)\}$$，可得$$\displaystyle S= \bigcup_{m=1}^\infty S_m$$
-* $$\displaystyle [a,b]=\bigcap_{k=1}^\infty (a-\frac{1}{k}, b+\frac{1}{k})$$
-* $$\displaystyle (a,b)=\bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$
+* $$\displaystyle [a,b]=\bigcap_{k=1}^\infty (a-\frac{1}{k}, b+\frac{1}{k})$$ \[由外部交集夾擠]
+* $$\displaystyle (a,b)=\bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$ \[由內部聯集擴充], $$a,b$$可為$$\pm \infty$$。
+* $$\displaystyle (-\infty, \infty)=\bigcup_{n=\infty}^\infty (n, n+1)$$
+* 單點集 $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k})$$
+
+[https://math.stackexchange.com/questions/323327/open-interval-written-as-countable-union-of-closed-intervals](https://math.stackexchange.com/questions/323327/open-interval-written-as-countable-union-of-closed-intervals)
 
 ### 個別可測集合的函數的聯集仍為可測函數
 

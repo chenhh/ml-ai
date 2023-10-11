@@ -128,6 +128,21 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 * 令$$S_m=\{x \in E ~|~ |f(x) - g(x)| \geq 1/m\}, ~m\in \mathbb{N}$$, $$S=\{x\in E ~|~ f(x) \neq g(x)\}$$，可得$$\displaystyle S= \bigcup_{m=1}^\infty S_m$$
 * $$\displaystyle [a,b]=\bigcap_{k=1}^\infty (a-\frac{1}{k}, b+\frac{1}{k})$$ \[由外部交集夾擠]
+
+<details>
+
+<summary>proof</summary>
+
+因為$$[a,b] \subseteq (a-1/k, b+1/k), \forall k \in \mathbb{N}$$，因此$$[a,b] \subseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(1)
+
+要證明$$[a,b] \supseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$
+
+令$$x \notin [a,b]$$，即$$x < a$$或$$x >b$$。如果可得$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$時，則可證明上式。即若能夠得出$$\exist k_0 \in \mathbb{N} \ni x \notin (a-1/k_0, b+1/k_0)$$則可證明上式。。
+
+
+
+</details>
+
 * $$\displaystyle (a,b)=\bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$ \[由內部聯集擴充], $$a,b$$可為$$\pm \infty$$。
 * $$\displaystyle (-\infty, \infty)=\bigcup_{n=\infty}^\infty (n, n+1)$$
 * 單點集 $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k})$$。可想成$$B_a(\frac{1}{k})=\{ x\in \mathbb{R}~|~ |x-a|<\frac{1}{k}\}$$

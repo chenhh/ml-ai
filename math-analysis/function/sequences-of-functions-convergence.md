@@ -273,9 +273,9 @@ $$|f_n(x) - f(x)| = |x+\frac{1}{n} - x|\leq |\frac{1}{n}|$$只與$$n$$有關，�
 
 
 
-### 一致收致且個別函數有界時可得一致有界
+### 一致收斂且個別函數有界時可得一致有界
 
-> 令$$\{f_n\} \rightarrow f$$ 在集合$$S$$一致收斂，且$$f_n, ~\forall n \in \mathbb{N}$$在$$S$$上有界，則$$f_n$$在集合$$S$$一致有界。
+> 令$$\{f_n\} \rightarrow f$$ 在集合$$S$$一致收斂，且$$f_n, ~\forall n \in \mathbb{N}$$在$$S$$上(逐點)有界，則$$f_n$$在集合$$S$$一致有界。
 
 ### 範例：一致有界函數序列不一致收斂
 
@@ -347,7 +347,18 @@ $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=\lim_{n \rightarrow \infty} \f
 >
 > 則$$\{f_n\}$$在$$[a,b]$$上一致收斂至$$f$$。
 
-##
+## 一致收斂與Riemann-Stieltjes積分
+
+> 令函數$$\alpha$$在閉區間$$[a,b]$$有界變差。
+>
+> 令實值函數序列$$\{f_n\}$$在$$[a,b]$$相對於$$\alpha$$Riemann-Stieltjes可積$$\forall n \in \mathbb{N}$$。
+>
+> 若$$f_n \rightarrow f$$在$$[a,b]$$一致收斂，且定義$$g_n(x)=\int_a^x f_n(t) d \alpha(t), x \in [a,b], n \in \mathbb{N}$$，則：
+>
+> 1. $$f$$在$$[a,b]$$相對於$$\alpha$$ RS可積。
+> 2. $$g_n \rightarrow g$$在$$[a,b]$$一致收斂，$$g(x)=\int_a^x f(t) d \alpha(t)$$。
+>
+> 即$$\forall x \in [a,b]$$，可得$$\displaystyle \lim_{n \rightarrow \infty}\int_a^x f_n(t)d\alpha(t)=\int_a^x \lim_{n \rightarrow \infty} f_n(t)d \alpha(t)$$。
 
 ## 有界收斂(bounded convergence)
 

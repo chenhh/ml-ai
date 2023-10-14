@@ -17,6 +17,8 @@ description: sequences of functions
 * 一致有界(uniformly bounded)
 * 有界收斂
 
+在Lebesgue積分中，只要可測函數序列幾乎點態收斂再加上部分限制條件，即可保證Lebesuge積分收斂。
+
 ## 函數序列
 
 令$$S \subseteq \mathbb{R}^n$$為歐式空間非空集合，$$\forall n \in \mathbb{N}$$，給定函數$$f_n: S \rightarrow \mathbb{R}$$，則$$\{f_n\}_{n \in \mathbb{N}}$$為定義在集合$$S$$的函數序列。

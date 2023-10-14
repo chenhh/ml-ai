@@ -58,11 +58,11 @@ $$f_n(x)= \frac{1}{nx^2+1}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$。
 
 令$$f_n(x)=\frac{x^{2n}}{1+x^{2n}}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$,則$$\displaystyle \lim_{n \rightarrow \infty} f(x) = \left\{ \begin{aligned} 0 & \text{ if } |x| \leq 1, \\ \frac{1}{2} & \text{ if } |x| = 1 \\ 1 & \text{ if } |x| > 1 \end{aligned} \right.$$，由連續函數收斂至非連續函數(但為幾乎處處連續函數)。
 
-![逐點收斂無法保換函數連續性](../../.gitbook/assets/Figure\_1-min.png)
+![逐點收斂無法保證函數連續性](../../.gitbook/assets/Figure\_1-min.png)
 
 <details>
 
-<summary>code，逐點收斂無法保換函數連續性</summary>
+<summary>code，逐點收斂無法保證函數連續性</summary>
 
 ```python
 # -*- coding: UTF-8 -*-
@@ -113,7 +113,7 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 
 > 有二種常見的定義：令函數序列$$\{f_n\}$$在集合$$S$$內一致收斂至函數$$f$$：
 >
-> 1. $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ (只依賴與於$$\epsilon$$的選擇，與$$x$$無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$ 2.\[範數表示法] $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
+> 1. $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ ($$n_0$$只依賴與於$$\epsilon$$的選擇，與$$x$$的實值取值無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$ 2.\[範數表示法] $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
 >
 > 2.1. \[範數表示法] 可表示為 $$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in S} \| f_n(x) - f(x) \| = 0$$。(此處的lim與sup是分開的，而非limsup)。為了避免混肴，可寫成$$d_n=\displaystyle \sup_{x \in S} \| f_n(x) - f(x) \|$$，$$\displaystyle \lim_{n \rightarrow \infty}d_n=0$$。
 >

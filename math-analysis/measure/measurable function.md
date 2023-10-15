@@ -133,13 +133,24 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 <summary>proof</summary>
 
+\=>
+
 因為$$[a,b] \subseteq (a-1/k, b+1/k), \forall k \in \mathbb{N}$$，因此$$[a,b] \subseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(1)
 
-要證明$$[a,b] \supseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$
+\[QED]
 
-令$$x \notin [a,b]$$，即$$x < a$$或$$x >b$$。如果可得$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$時，則可證明上式。即若能夠得出$$\exist k_0 \in \mathbb{N} \ni x \notin (a-1/k_0, b+1/k_0)$$則可證明上式。。
+<=
 
+要證明$$[a,b] \supseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(2)
 
+令$$x \notin [a,b]$$，即$$x<a$$或$$x >b$$。如果可得$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$時，則可證明(2)。
+
+\[反證法]假設$$x \notin [a,b]$$且$$x \in \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(3)。
+
+* 由(3)可得$$a-\frac{1}{k} < x  < a, ~ \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$--(4)
+* 同理可得$$b < x < b+\frac{1}{k}, \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni b < x < b+ \frac{1}{k_0}$$--(5)
+
+由(4,5)得假設$$x \notin [a,b]$$且$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$(QED)
 
 </details>
 

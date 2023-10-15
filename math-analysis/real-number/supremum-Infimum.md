@@ -468,7 +468,7 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 
 > $$a,b \in \mathbb{R}, a<b \Rightarrow \exists r \in \mathbb{Q} \ni a<r<b$$
 >
-> 註：直觀的建構法為$$r=\frac{(a+b)}{2}$$即為所求。
+> 註：如果$$a,b \in \mathbb{Q}$$時，直觀的建構法為$$r=\frac{(a+b)}{2}$$。但要考慮無理數的情形。
 
 <details>
 

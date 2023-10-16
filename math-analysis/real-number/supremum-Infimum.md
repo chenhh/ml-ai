@@ -428,7 +428,9 @@ $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$�
 
 ### \[證明常用]無窮小的極限值為0
 
-> $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0$$
+> $$\displaystyle \lim_{n \rightarrow \infty} \frac{1}{n}=0$$。
+
+註：因此$$\displaystyle \forall c \in \mathbb{R}, ~\lim_{n \rightarrow \infty} c+ \frac{1}{n} = \lim_{n \rightarrow \infty} c- \frac{1}{n}=c$$。
 
 <details>
 
@@ -479,5 +481,68 @@ $$\because b−a>0$$, 由阿基米德性質得$$\exists n \in \mathbb{N} \ni n(b
 $$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差值大於1的實數間必存在整數]
 
 $$\therefore a<m/n<b$$ (QED)
+
+</details>
+
+### \[證明常用]閉(開)區間可用開(閉)區間
+
+> $$\displaystyle [a,b]=\bigcap_{n=1}^\infty (a-\frac{1}{n}, b+\frac{1}{n})$$。(由開區間夾擠閉區間)
+>
+> $$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}]$$。(由閉區間擴張得開區間)
+
+
+
+
+
+> <details>
+>
+> <summary>proof</summary>
+>
+> \=>
+>
+> 因為$$[a,b] \subseteq (a-1/k, b+1/k), \forall k \in \mathbb{N}$$，因此$$[a,b] \subseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(1)
+>
+> \[QED]
+>
+> <=
+>
+> 要證明$$[a,b] \supseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(2)
+>
+> 令$$x \notin [a,b]$$，即$$x<a$$或$$x >b$$。如果可得$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$時，則可證明(2)。
+>
+> \[反證法]假設$$x \notin [a,b]$$且$$x \in \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(3)。
+>
+> * 由(3)可得$$a-\frac{1}{k} < x  < a, ~ \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$，因此存在$$x \notin (a-1/k_0, b+1/k_0)$$--(4)
+> * 同理可得$$b < x < b+\frac{1}{k}, \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni b < x \leq b+ \frac{1}{k_0}$$--(5)
+>
+> 由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$(QED)
+>
+> 註：開區間$$(a-\frac{1}{k}, b+\frac{1}{k})$$改為$$[a-\frac{1}{k}, b+\frac{1}{k}]$$時也成立。
+>
+> 因為(1)仍然成立。而(3)可得 $$a-\frac{1}{k} \leq x < a, ~\forall k \in \mathbb{N}$$但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$--(6)
+>
+> 同樣可得$$\exists k_0 \in \mathbb{N} \ni b < x \leq b+ \frac{1}{k_0}$$--(7)
+>
+> 由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty [a-1/k, b+1/k]$$(QED)
+>
+> </details>
+
+<details>
+
+<summary>proof</summary>
+
+因為$$\exists k \ni \mathbb{N}\ni[a+1/k, b-1/k] \subseteq (a,b)$$，所以$$\displaystyle (a,b)\supseteq \bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$--(1)
+
+要證明$$\displaystyle (a,b) \subseteq \bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$--(2)
+
+令$$x \in (a,b)$$，即$$a < x < b$$。
+
+由Archmedian property得$$\exists k_a \in \mathbb{N}\ni  a < a+1/k_a <x$$。
+
+同理可得$$\exists K_b \in \mathbb{N} \ni x < b-1/k_b < b$$。
+
+取$$k_0 = \max(k_a, k_b)$$，可得$$x \in (a+1/k_0, b-1-k_0) \subseteq [a+1/k_0, b-1-k_0]$$，因此(2)成立
+
+(QED)
 
 </details>

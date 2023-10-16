@@ -6,7 +6,7 @@ description: measurable function
 
 ## 可測函數定義
 
-> 函數$$f: X \rightarrow \overline{\mathbb{R}}$$，$$(X, \Sigma)$$為可測空間，$$\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm \infty\}$$為擴充實數集合。
+> 函數$$f: X \rightarrow \overline{\mathbb{R}}$$或$$f: X \rightarrow [-\infty, \infty]$$，$$(X, \Sigma)$$為可測空間，$$\overline{\mathbb{R}}=\mathbb{R}\cup\{\pm \infty\}$$為擴充實數集合。
 >
 > 對於實數上的任意開集合$$E\subseteq \mathbb{R}$$，若前像$$f^{-1}(E)=\{x \in X~|~f(x)\in E\} \in \Sigma$$且$$f^{-1}(\{+\infty\}) \in \Sigma$$，$$f^{-1}(\{-\infty\}) \in \Sigma,$$，則稱$$f$$為可測函數，或稱$$f$$在集合$$E$$上可測。
 >
@@ -14,11 +14,13 @@ description: measurable function
 
 <mark style="color:blue;">可測函數的值域為擴充實數，且值域任意值的前像集合必須為可測集合，以避免出現有函數值，但沒有定義域元素對應的情形</mark>。
 
+可測函數包含了連續與非連續函數(連續與離散隨機變數)，因此更一般化。
+
 可測函數$$f$$在機率空間$$(X,\mathbb{F}, P)$$中為隨機變數。
 
 <mark style="color:red;">可測函數在極限運算下是封閉的，比連續函數在極限連算時非封閉的性質好</mark>。
 
-<mark style="color:red;">擴充實數集：</mark>
+### 擴充實數集的計算
 
 * $$x + (\pm \infty )= (\pm \infty) + x = \pm \infty$$。
 * $$x - (\pm \infty)=(\mp \infty) -x =\mp \infty$$。
@@ -127,7 +129,7 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > * $$\displaystyle \{x \in E~|~ f(x) = t \} = \displaystyle \{x \in E~|~ f(x) \geq t \} \cap \displaystyle \{x \in E~|~ f(x) \leq t \}$$
 
 * 令$$S_m=\{x \in E ~|~ |f(x) - g(x)| \geq 1/m\}, ~m\in \mathbb{N}$$, $$S=\{x\in E ~|~ f(x) \neq g(x)\}$$，可得$$\displaystyle S= \bigcup_{m=1}^\infty S_m$$
-* $$\displaystyle [a,b]=\bigcap_{k=1}^\infty (a-\frac{1}{k}, b+\frac{1}{k})$$ \[由外部交集夾擠]
+* $$\displaystyle [a,b]=\bigcap_{k=1}^\infty (a-\frac{1}{k}, b+\frac{1}{k})$$ \[由外部交集夾擠，開區間改成閉區間也成立]
 
 <details>
 
@@ -147,14 +149,43 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 
 \[反證法]假設$$x \notin [a,b]$$且$$x \in \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(3)。
 
-* 由(3)可得$$a-\frac{1}{k} < x  < a, ~ \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$--(4)
-* 同理可得$$b < x < b+\frac{1}{k}, \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni b < x < b+ \frac{1}{k_0}$$--(5)
+* 由(3)可得$$a-\frac{1}{k} < x  < a, ~ \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$，因此存在$$x \notin (a-1/k_0, b+1/k_0)$$--(4)
+* 同理可得$$b < x < b+\frac{1}{k}, \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni b < x \leq b+ \frac{1}{k_0}$$--(5)
 
-由(4,5)得假設$$x \notin [a,b]$$且$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$(QED)
+由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$(QED)
+
+註：開區間$$(a-\frac{1}{k}, b+\frac{1}{k})$$改為$$[a-\frac{1}{k}, b+\frac{1}{k}]$$時也成立。
+
+因為(1)仍然成立。而(3)可得 $$a-\frac{1}{k} \leq x < a, ~\forall k \in \mathbb{N}$$但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$--(6)
+
+同樣可得$$\exists k_0 \in \mathbb{N} \ni b < x \leq b+ \frac{1}{k_0}$$--(7)
+
+由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty [a-1/k, b+1/k]$$(QED)
 
 </details>
 
-* $$\displaystyle (a,b)=\bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$ \[由內部聯集擴充], $$a,b$$可為$$\pm \infty$$。
+* $$\displaystyle (a,b)=\bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$ \[由內部聯集擴充，閉區間改為開區間也成立].&#x20;
+
+<details>
+
+<summary>proof</summary>
+
+因為$$\exists k \ni \mathbb{N}\ni[a+1/k, b-1/k] \subseteq (a,b)$$，所以$$\displaystyle (a,b)\supseteq \bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$--(1)
+
+要證明$$\displaystyle (a,b) \subseteq \bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$--(2)
+
+令$$x \in (a,b)$$，即$$a < x < b$$。
+
+由Archmedian property得$$\exists k_a \in \mathbb{N}\ni  a < a+1/k_a <x$$。
+
+同理可得$$\exists K_b \in \mathbb{N} \ni x < b-1/k_b < b$$。
+
+取$$k_0 = \max(k_a, k_b)$$，可得$$x \in (a+1/k_0, b-1-k_0) \subseteq [a+1/k_0, b-1-k_0]$$，因此(2)成立
+
+(QED)
+
+</details>
+
 * $$\displaystyle (-\infty, \infty)=\bigcup_{n=\infty}^\infty (n, n+1)$$
 * 單點集 $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k})$$。可想成$$B_a(\frac{1}{k})=\{ x\in \mathbb{R}~|~ |x-a|<\frac{1}{k}\}$$
 

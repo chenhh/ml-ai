@@ -389,7 +389,9 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 ## 阿基米德性質(Archimedean property)
 
-> $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。
+> $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。(等號也成立 $$\exists n \in \mathbb{N} \ni na \geq b$$)
+
+[https://math.stackexchange.com/questions/2182965/why-can-we-include-equality-in-the-archimedean-property](https://math.stackexchange.com/questions/2182965/why-can-we-include-equality-in-the-archimedean-property)
 
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
 * 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$ 。
@@ -486,46 +488,38 @@ $$\therefore a<m/n<b$$ (QED)
 
 ### \[證明常用]閉(開)區間可用開(閉)區間
 
-> $$\displaystyle [a,b]=\bigcap_{n=1}^\infty (a-\frac{1}{n}, b+\frac{1}{n})$$。(由開區間夾擠閉區間)
+> $$\displaystyle [a,b]=\bigcap_{n=1}^\infty (a-\frac{1}{n}, b+\frac{1}{n})$$。(由開區間夾擠閉區間。開區間可改成閉區間)
 >
-> $$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}]$$。(由閉區間擴張得開區間)
+> $$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}]$$。(由閉區間擴張得開區間。閉區間可改成開區間)
 
+<details>
 
+<summary>proof</summary>
 
+\=>
 
+因為$$[a,b] \subseteq (a-1/k, b+1/k), \forall k \in \mathbb{N}$$，因此$$[a,b] \subseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(1)
 
-> <details>
->
-> <summary>proof</summary>
->
-> \=>
->
-> 因為$$[a,b] \subseteq (a-1/k, b+1/k), \forall k \in \mathbb{N}$$，因此$$[a,b] \subseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(1)
->
-> \[QED]
->
-> <=
->
-> 要證明$$[a,b] \supseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(2)
->
-> 令$$x \notin [a,b]$$，即$$x<a$$或$$x >b$$。如果可得$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$時，則可證明(2)。
->
-> \[反證法]假設$$x \notin [a,b]$$且$$x \in \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(3)。
->
-> * 由(3)可得$$a-\frac{1}{k} < x  < a, ~ \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$，因此存在$$x \notin (a-1/k_0, b+1/k_0)$$--(4)
-> * 同理可得$$b < x < b+\frac{1}{k}, \forall k \in \mathbb{N}$$，但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni b < x \leq b+ \frac{1}{k_0}$$--(5)
->
-> 由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$(QED)
->
-> 註：開區間$$(a-\frac{1}{k}, b+\frac{1}{k})$$改為$$[a-\frac{1}{k}, b+\frac{1}{k}]$$時也成立。
->
-> 因為(1)仍然成立。而(3)可得 $$a-\frac{1}{k} \leq x < a, ~\forall k \in \mathbb{N}$$但實數中不存在滿足此條件的$$x$$，因此(3)矛盾，即$$\exists k_0 \in \mathbb{N} \ni a-\frac{1}{k_0} \le x < a$$--(6)
->
-> 同樣可得$$\exists k_0 \in \mathbb{N} \ni b < x \leq b+ \frac{1}{k_0}$$--(7)
->
-> 由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty [a-1/k, b+1/k]$$(QED)
->
-> </details>
+\[QED]
+
+<=
+
+要證明$$[a,b] \supseteq \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(2)
+
+令$$x \notin [a,b]$$，即$$x<a$$或$$x >b$$。如果可得$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$時，則可證明(2)。
+
+\[反證法]假設$$x \notin [a,b]$$且$$x \in \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$--(3)。
+
+* 由$$x<a$$得$$a-x>0$$，從Archimedean性質得$$\exists k_a \ni \mathbb{N} \ni k_a(a-x) \geq 1$$。整理得$$x \leq a-1/k_a$$，所以$$x \notin (a-1/k_a, b+1/k_a)$$ --(4)
+* 同理由$$x>b$$得$$x-b>0$$，從Archimedean性質得$$\exists k_b \ni \mathbb{N} \ni k_b(x-b) \geq 1$$。整理得$$x \geq b+1/k_b$$，所以$$x \notin (a-1/k_b, b+1/k_b)$$--(5)
+
+由(4,5)得假設$$x \notin [a,b]$$=>$$x \notin \bigcap_{k=1}^\infty (a-1/k, b+1/k)$$(QED)
+
+註：開區間$$(a-\frac{1}{k}, b+\frac{1}{k})$$改為$$[a-\frac{1}{k}, b+\frac{1}{k}]$$時也成立。
+
+因為(1)仍然成立。而(4)可從$$\exists k_a \ni \mathbb{N} \ni k_a(a-x) > 1$$，得$$x< a-1/k_a$$，所以$$x \notin [a-1/k_a, b+1/k_a]$$
+
+</details>
 
 <details>
 
@@ -537,7 +531,7 @@ $$\therefore a<m/n<b$$ (QED)
 
 令$$x \in (a,b)$$，即$$a < x < b$$。
 
-由Archmedian property得$$\exists k_a \in \mathbb{N}\ni  a < a+1/k_a <x$$。
+因為$$x-a>0$$，由Archmedian property得$$\exists k_a \in \mathbb{N}\ni k_a(x-a)>1$$。整理得$$a+1/k_0 < x$$。
 
 同理可得$$\exists K_b \in \mathbb{N} \ni x < b-1/k_b < b$$。
 

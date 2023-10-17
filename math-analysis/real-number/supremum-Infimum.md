@@ -488,13 +488,15 @@ $$\therefore a<m/n<b$$ (QED)
 
 ### \[證明常用]閉(開)區間可用開(閉)區間
 
-> $$\displaystyle [a,b]=\bigcap_{n=1}^\infty (a-\frac{1}{n}, b+\frac{1}{n})$$。(由開區間夾擠閉區間。開區間可改成閉區間)
+> $$\displaystyle [a,b]=\bigcap_{n=1}^\infty (a-\frac{1}{n}, b+\frac{1}{n})=\bigcap_{n=1}^\infty [a-\frac{1}{n}, b+\frac{1}{n}]$$。(由開區間夾擠閉區間)
 >
-> $$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}]$$。(由閉區間擴張得開區間。閉區間可改成開區間)
+> $$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] =\bigcup_{n=1}^\infty (a+\frac{1}{n}, b-\frac{1}{n})$$。(由閉區間擴張得開區間)
+>
+> $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k}) =\bigcap_{k=1}^\infty[a-\frac{1}{k}, a+\frac{1}{k}]$$  \[單點集]
 
 <details>
 
-<summary>proof</summary>
+<summary>proof:由開區間夾擠閉區間 </summary>
 
 \=>
 
@@ -523,7 +525,7 @@ $$\therefore a<m/n<b$$ (QED)
 
 <details>
 
-<summary>proof</summary>
+<summary>proof:  由閉區間擴張得開區間</summary>
 
 因為$$\exists k \ni \mathbb{N}\ni[a+1/k, b-1/k] \subseteq (a,b)$$，所以$$\displaystyle (a,b)\supseteq \bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}]$$--(1)
 
@@ -531,12 +533,34 @@ $$\therefore a<m/n<b$$ (QED)
 
 令$$x \in (a,b)$$，即$$a < x < b$$。
 
-因為$$x-a>0$$，由Archmedian property得$$\exists k_a \in \mathbb{N}\ni k_a(x-a)>1$$。整理得$$a+1/k_0 < x$$。
+因為$$x-a>0$$，由Archmedian property得$$\exists k_a \in \mathbb{N}\ni k_a(x-a)\geq1$$。整理得$$a+1/k_0 \leq x$$。
 
-同理可得$$\exists K_b \in \mathbb{N} \ni x < b-1/k_b < b$$。
+同理可得$$\exists K_b \in \mathbb{N} \ni x \leq b-1/k_b$$。
 
-取$$k_0 = \max(k_a, k_b)$$，可得$$x \in (a+1/k_0, b-1-k_0) \subseteq [a+1/k_0, b-1-k_0]$$，因此(2)成立
+取$$k_0 = \max(k_a, k_b)$$，可得$$x \in  [a+1/k_0, b-1-k_0]$$，因此(2)成立
 
 (QED)
+
+</details>
+
+<details>
+
+<summary>proof: 單點集</summary>
+
+$$\{a\} \subseteq  (a-1/k, a+1/k)$$顯然成立--(1)
+
+to prove $$\displaystyle \bigcap_{k=1}^\infty (a-1/k, a+1/k) \subseteq \{a\}$$--(2)
+
+令$$x \neq a$$，如果能得到$$x \notin \bigcap_{k=1}^\infty(a-1/k, a+1/k)$$則可得到--(2)
+
+\[反證法]
+
+令$$x > a$$，得$$x-a>0$$，由Archimedean propery得$$\exists k_0 \in \mathbb{N} \ni k_0 (x-a) \geq 1$$。整理得$$x \geq a+\frac{1}{k_0}$$，即$$x \notin (a-1/k_0, a+1/k_0)$$--(3)。
+
+同理當$$x <a$$時，可得$$x \leq a-1/k_1$$，即$$x \notin (a-1/k_1, a+1/k_1)$$--(4)。
+
+由(3,4)得(2)
+
+由(1,2)得證 (QED)
 
 </details>

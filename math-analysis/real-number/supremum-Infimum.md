@@ -10,15 +10,18 @@ description: Infimum and supremum
 >
 > 若$$b \in S \ni x \leq b ~ \forall x \in S$$，則$$b$$為集合$$S$$的<mark style="color:red;">最大元素(maximum element)</mark>，記為 $$b = \max(S)$$。
 >
-> 若集合不存在上界時，則稱 <mark style="color:red;">無上界（unbounded above）</mark> 。
+> 若集合不存在上界時，則稱<mark style="color:red;">無上界（unbounded above，記為</mark>$$\sup(S)=\infty$$。
 >
 > 下界與最小元素為以相同的方式定義。
+>
+> 若集合不存在下界時，則稱<mark style="color:red;">無下界（unbounded above，記為</mark>$$\inf(S)=-\infty$$。
 
 * $$\mathbb{R}^+=[0, \infty]$$無上界與最大元素，（最大）下界為0，但沒有最小元素。
 * 閉區間$$S=[0,1]$$上界與最大元素同為1；（最大）下界與最小元素同為0。
 * 半開區間$$S=[0,1)$$上界為1，但無最大元素；（最大）下界與最小元素均為0。
 * $$[a,b], (a,b), (a,b], [a,b)$$四個集合的最小上界均為$$b$$，最大下界均為$$a$$。
 * $$\{r \in \mathbb{Q}| r\geq 0 \cap r^2 \leq 2\}$$的最小上界為$$\sqrt{2}$$，但無最大元素，最大下界為0。
+* 空集合的最小上界與最大下界分別為$$\sup(\emptyset)=-\infty, ~\inf(\emptyset)=\infty$$。
 * $$\inf(\mathbb{N})=1,~ \sup(\mathbb{N})=\infty$$
 * $$\inf(\mathbb{Z})=−\infty, ~ \sup(\mathbb{Z})=\infty$$
 * $$\inf\{(−1)^n+\frac{1}{n}, ~n=1,2,\ldots\})=−1$$
@@ -389,9 +392,14 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 ## 阿基米德性質(Archimedean property)
 
-> $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。(等號也成立 $$\exists n \in \mathbb{N} \ni na \geq b$$)
+> 1. $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。
+> 2. \[等號也成立] $$\exists n \in \mathbb{N} \ni na \geq b$$。
+
+1.2兩種寫成等價。1->2: 因為$$n a >b$$必定可得$$na \geq b$$。2->1：因為$$n_2 a \geq b$$，取$$n=n_2+1$$仍為自然數，因此可得$$na > b$$。
 
 [https://math.stackexchange.com/questions/2182965/why-can-we-include-equality-in-the-archimedean-property](https://math.stackexchange.com/questions/2182965/why-can-we-include-equality-in-the-archimedean-property)
+
+
 
 * 若$$a>b$$，則取$$n=1$$可得$$a>b$$。
 * 不論$$a$$有多小，$$b$$有多大，必定可以找到$$n \in \mathbb{N} \ni na>b$$ 。
@@ -420,13 +428,7 @@ $$m<x+1$$，但因為$$x+1 \in \mathbb{N}$$, 此結果與$$m$$為$$\mathbb{N}$$�
 
 > $$\forall r \in \mathbb{R}^+ ~ \exists n \in \mathbb{N} \ni n>r$$
 
-<details>
-
-<summary>proof:</summary>
-
 取$$a=1, b= r$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni n > r$$ (QED)
-
-</details>
 
 ### \[證明常用]無窮小的極限值為0
 
@@ -468,7 +470,33 @@ $$\forall \epsilon >0$$，由阿基米德性質得$$\exists n \in \mathbb{N} \ni
 
 </details>
 
-### 任意兩個相異實數間存在有理數
+### 實數必位於兩個連續整數之間
+
+> $$\forall x \in \mathbb{R}, ~\exists n \in \mathbb{Z} \ni n \leq x < n+1$$，常將滿足此條件的$$n$$記為$$[x]$$。
+>
+> 註：$$n$$為整數，因此$$[-3.41]=-4, [3,41]=4$$。
+
+<details>
+
+<summary>proof</summary>
+
+若$$x$$為整數，令$$n=x$$，則依Archimedean性質，得$$S=\{m \in \mathbb{N}~|~ m >x\}$$不是空集合。
+
+因為$$S \subset \mathbb{N}$$，依正整數的良序性得$$S$$有最小元素記為$$k$$，因此$$k > x$$且$$k-1 \leq x$$。
+
+令$$n=k-1$$即為所求的整數。
+
+若$$x <0$$且非整數，依前述方面可得正整數$$h \in \mathbb{N} \ni h-1<-x<h$$或$$-h < x < -h+1$$，令$$n=-h$$即為所求。(QED)
+
+</details>
+
+### \[證明常用]正實數與0之間必存在有理數
+
+> $$\forall a >0 ~ \exists n \in \mathbb{N} \ni 0 < \frac{1}{n} < a$$
+
+由Archimedean性質$$\forall 0 < a, 1 \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > 1$$。移項可得$$0 < \frac{1}{n} < a$$。
+
+### \[證明常用]任意兩個相異實數間存在有理數
 
 > $$a,b \in \mathbb{R}, a<b \Rightarrow \exists r \in \mathbb{Q} \ni a<r<b$$
 >

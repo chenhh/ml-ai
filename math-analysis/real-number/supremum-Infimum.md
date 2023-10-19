@@ -390,6 +390,28 @@ $$\therefore (a−h)^2>2>x^2, ~ \forall x \in A$$
 
 </details>
 
+## \[單調有界定理]單調有界數列必收斂至最小上界(最大下界)
+
+> * 若$$\{a_n\}_{n\in \mathbb{N}}$$為有界遞增數列，則$$\displaystyle \lim_{n \rightarrow \infty} a_n = \sup_{n \in \mathbb{N}}\{a_n\}$$。
+> * 若$$\{b_n\}_{n\in \mathbb{N}}$$為有界遞減數列，則$$\displaystyle \lim_{n \rightarrow \infty} b_n = \inf_{n \in \mathbb{N}}\{b_n\}$$。\
+>   註：可分為建構數列\[[證明](../sequence/monotonic-sequence.md#chan-diao-you-jie-ding-li-shi-shu-zhong-de-you-jie-chan-diao-shu-lie-bi-shou-lian)]和集合的證明法，此處考慮集合法。
+
+<details>
+
+<summary>proof: 實數的最小上界性質(非空有上界的集合必有最小上界)</summary>
+
+$$\{a_n\}$$為有界遞增數列，依實數的最小上界性質得集合$$\{a_n\}$$有最小上界$$\displaystyle M=\sup_{n \in \mathbb{N}}\{a_n\}$$。
+
+由\[比最小上界小的的任意元素均不為上界]得$$\forall \epsilon > 0, ~\exists n_0 \in \mathbb{N} \ni M-  \epsilon < a_{n_0}$$--(1)
+
+因為$$\{a_n\}$$為遞增函數，所以當$$n > n_0$$，由(1)得$$M-\epsilon < a_{0} \leq a_n$$--(2)
+
+由最小上界定義得$$\forall \epsilon > 0, a_n < M + \epsilon, \forall n \in \mathbb{N}$$--(3)
+
+由(2,3)得$$\forall \epsilon >0,~ \exists n_0 \in \mathbb{N} \ni M-\epsilon < a_{n_0}  \leq a_n < M+\epsilon$$，因此$$\displaystyle \lim_{n \rightarrow \infty} a_n=M$$ (QED)
+
+</details>
+
 ## 阿基米德性質(Archimedean property)
 
 > 1. $$\forall 0 < a, b \in \mathbb{R} \Rightarrow \exists n \in \mathbb{N} \ni na > b$$。
@@ -513,6 +535,13 @@ $$nb−na>1 \Rightarrow \exists m \in \mathbb{Z} \ni na<m<nb$$\[任意兩個差�
 $$\therefore a<m/n<b$$ (QED)
 
 </details>
+
+### 實數的倍數可逼近整數
+
+> 1. $$x \in \mathbb{R}, ~ n \in \mathbb{N}$$，則存在$$h, k \in \mathbb{Z}, ~0 <k \leq n \ni |kx-h|<\frac{1}{n}$$。
+> 2. 若$$x$$為無理數，則有無限多個有理數$$h/k$$滿足$$|x-h/k|<1/k^2$$。
+>
+> e.g. $$x=1.25, n=12$$，則$$k=12, , h=0, |12 \times 1.25 - 15|=0<1/12$$。
 
 ### \[證明常用]閉(開)區間可用開(閉)區間
 

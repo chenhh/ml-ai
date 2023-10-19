@@ -493,6 +493,8 @@ $$\therefore a<m/n<b$$ (QED)
 > $$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\frac{1}{n}, b-\frac{1}{n}] =\bigcup_{n=1}^\infty (a+\frac{1}{n}, b-\frac{1}{n})$$。(由閉區間擴張得開區間)
 >
 > $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k}) =\bigcap_{k=1}^\infty[a-\frac{1}{k}, a+\frac{1}{k}]$$  \[單點集]
+>
+> [https://math.stackexchange.com/questions/2869734/show-that-a-b-bigcap-n-1-infty-a-1-n-b1-n](https://math.stackexchange.com/questions/2869734/show-that-a-b-bigcap-n-1-infty-a-1-n-b1-n)
 
 <details>
 

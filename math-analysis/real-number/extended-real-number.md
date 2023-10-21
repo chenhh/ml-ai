@@ -27,6 +27,7 @@ $$a,b \in \mathbb{R}^{*}$$，定義：
 
 > $$x \in \mathbb{R}$$,
 >
+> * $$-\infty < x < \infty \Leftrightarrow x \in (-\infty, \infty)$$
 > * $$x+ \infty = \infty$$
 > * $$x - \infty = -\infty$$
 > * $$x + (-\infty) = - \infty$$

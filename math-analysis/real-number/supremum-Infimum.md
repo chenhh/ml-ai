@@ -72,6 +72,13 @@ description: Infimum and supremum
 
 </details>
 
+### 上(下)確界的接近性質
+
+> $$\emptyset \neq S \subseteq \mathbb{R}$$，且有上/下確界，令$$b=\sup(S), a=\inf(S)$$，則：
+>
+> * $$\forall x < b, \exists y \in S \ni x < y\leq b$$。
+> * $$\forall x > a, \exists y \in S \ni a\leq y < x$$。
+
 ### 完備性公理、最小上界性質(complete axioms, least upper bound property)
 
 > <mark style="color:red;">實數中非空有界集合必有最小上界(最大下界)</mark>。
@@ -623,5 +630,43 @@ to prove $$\displaystyle \bigcap_{k=1}^\infty (a-1/k, a+1/k) \subseteq \{a\}$$--
 由(3,4)得(2)
 
 由(1,2)得證 (QED)
+
+</details>
+
+## 有理數的十進位表示法
+
+假設$$r\in \mathbb{R}$$可表示為有限十進位表示法。
+
+即$$r=a_0+\frac{a_1}{10}+\frac{a_2}{10^2}+\dots+\frac{a_n}{10^n}, ~ a_i \in \{0, 1,\dots, 9\}, \forall i$$。常寫成：$$r=a_0.a_1a_2\dots a_n$$。
+
+但只有部份有理數可寫成此種表示法，有理數如$$1/3$$或無理數無法寫成有限十進位表示法。
+
+### 實數可用有限十進位表示法逼近
+
+> 令$$x$$為正實數。則$$\forall n \in \mathbb{N}, ~\exists r_n=a_0.a_1a_2\dots a_n\ni r_n \leq x < r_n +\frac{1}{10^n}$$。
+>
+> 例：$$x=\frac{1}{3}$$，則$$r_n=0.33$$，$$0.33 \leq \frac{1}{3}<0.34$$。
+
+<details>
+
+<summary>proof: 直接建構法</summary>
+
+令集合$$S=\{y \in \mathbb{Z^+}~|~ 0 \leq y \leq x\}$$，則可得至少有$$0 \in S$$，因此不是空集合且有上界$$x$$。
+
+由\[最小上界性質]得$$S$$有最小上界記為$$a_0=\sup S$$。
+
+由$$S$$的定義得$$a_0 \in S$$且$$a_0 \in \mathbb{Z}^{+}$$。
+
+可得$$a_0 \leq x < a_0+1$$，記$$a_0=[x]$$。
+
+令$$a_1=[10x-10a_0]$$。因為$$0 \leq 10x-10a_0=10(x-a_0)<10$$，可得$$0 \leq a_1 \leq9$$，且$$a_1 \leq 10 x - 10a_0 < a_1 +1$$。
+
+因此$$a_1$$為滿足以下條件的最大整數：$$a_0+\frac{a_1}{10} \leq x < a_0 + \frac{a_1+1}{10}$$。
+
+以此類推可得$$a_1, \dots, a_{n-1}, ~0 \leq a_i \leq 9$$，令$$a_n$$為滿足以下不等式的最大整數：
+
+$$a_0+\frac{a_1}{10}+\dots +\frac{a_n}{10^n} \leq x < a_0+\frac{a_1}{10}+\dots +\frac{a_n+1}{10^n}$$，則$$0 \leq a_n \leq 9$$。
+
+則可得$$r_n \leq x < r_n + \frac{1}{10^n}$$ (QED)
 
 </details>

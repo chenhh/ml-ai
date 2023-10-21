@@ -8,7 +8,7 @@
 >
 > $$\mathbb{R}^{*} = [ -\infty, \infty]$$
 
-擴充實數集合中，可保證每個集合都有上界$$\infty$$，對於無上界的集合$$S$$可得$$\sup(S) = \infty$$。
+擴充實數集合中，可保證每個集合都有上/下界$$\infty/-\infty$$，對於無上界(下界)的集合$$S$$可得$$\sup(S) = \infty$$/$$\inf(S)=-\infty$$。
 
 ### 區間(interval)
 

@@ -33,7 +33,7 @@ $$a,b \in \mathbb{R}^{*}$$，定義：
 > * $$x + (-\infty) = - \infty$$
 > * $$x - (-\infty) = \infty$$
 > * $$\frac{x}{\infty} = \frac{x}{-\infty} = 0$$
-> * $$-\infty < x < \infty$$
+> * <mark style="color:red;">如果</mark>$$x=0$$<mark style="color:red;">時，定義</mark>$$x \cdot \infty =0$$。此定義在討論測度與積分時經常使用。
 >
 > $$x >0$$時
 >

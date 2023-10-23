@@ -18,15 +18,24 @@ description: signed measure
 >
 > 則稱$$\mu$$為符號測度。
 
-由定義可知一般測度為有限測度的特例。
+由定義可知<mark style="color:green;">一般測度為有限測度</mark>的特例。
 
-定義符號測度的目的是考慮兩個測度的差值時，如$$\mu(E)=\mu_1(E) - \mu_2(E), ~ E \in \Sigma$$，<mark style="color:blue;">其中</mark>$$\mu_1, \mu_2$$<mark style="color:blue;">至少一個為有限測度(因為擴充實數中，兩個無窮大相減無定義)</mark>，且定義在同一個σ域$$\Sigma$$。
+定義符號測度的應用：
 
-<mark style="color:red;">可證明任何一個符號測度可以分解為兩個有限測度的差值 (Hahn decomposition)</mark>。
+1. 兩個(正)測度的差值時，如$$\mu(E)=\mu_1(E) - \mu_2(E), ~ E \in \Sigma$$，<mark style="color:blue;">其中</mark>$$\mu_1, \mu_2$$<mark style="color:blue;">至少一個為有限測度(因為擴充實數中，兩個無窮大相減無定義)</mark>，且定義在同一個σ域$$\Sigma$$。
+2. $$(X, \Sigma, \mu)$$為測度空間，$$f$$為測函數且$$f=f^{+} - f^{-}$$，若至少一個函數$$\int f^+<\infty$$或$$\int f^{-} <\infty$$(因為$$f=f^+-f^{-}$$，而擴充實數中，兩個無窮大相減無定義)，則$$\lambda(E) = \int_E f d\mu = \int_E f^{+} d \mu - \int_E f^{-}d\mu$$為在$$(X, \Sigma)$$上的符號測度。
 
-### 範例：函數的積分為符號測度
+<mark style="color:red;">可證明任何一個符號測度可以分解為兩個有限測度的差值 (Hahn decomposition)或者為可測函數的積分</mark>。
 
-$$(X, \Sigma, \mu)$$為測度空間，$$f$$為可積分函數且$$f=f^{+} - f^{-}$$，則$$\lambda(E) = \int_E f d\mu = \int_E f^{+} d \mu - \int_E f^{-}d\mu$$為在$$(X, \Sigma)$$上的有號測度。
+### 測度的連續性
+
+> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+>
+> 若$$\{E_n\}$$為$$\Sigma$$上的遞增集合，則$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
+>
+> 若$$\{E_n\}$$為$$\Sigma$$上的遞減集合且$$\nu(E_1)<\infty$$，則$$\displaystyle \nu(\bigcap_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
+>
+> 註：此性質和[正測度的連續性](../measure.md#di-zeng-ji-he-ji-xian-de-ce-du-ce-du-de-lian-xu-xing-continuity-of-measure)相同。
 
 
 

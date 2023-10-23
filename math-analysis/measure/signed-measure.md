@@ -96,7 +96,13 @@ description: signed measure
 >
 > <mark style="color:red;">常將此兩測度用正交符號記為：</mark>$$\mu \perp \nu$$<mark style="color:red;">。</mark>
 
-註：可測函數$$f=f^{+}-f^{-}$$，其中集合$$({f^{+}})^{-1}$$與$$({f^{-}})^{-1}$$在各自的符號測度下相互奇異。
+註：可測函數$$f=f^{+}-f^{-}$$，其中集合$$({f^{+}})^{-1}$$與$$({f^{-}})^{-1}$$在各自的符號測度下相互奇異(正交)。
+
+## Jordan分解定理(the Jordan decomposition theorem)
+
+> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
+>
+> 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$且$$\nu^{+} \perp \nu^{-}$$。
 
 ## 參考資料
 

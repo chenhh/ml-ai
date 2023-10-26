@@ -137,7 +137,15 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 如果在有限步內無法完成，令$$S=E-\bigcup_{i=1}^\infty E_i$$。即$$E= S \bigcup (\bigcup_{i=1}^\infty E_i)$$。因為$$S$$與$$E_i$$兩兩互斥，因此可得$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i)$$--(1)。
 
-因為假設$$\nu(E) <\infty$$，因此$$\sum_{i=1}^{\infty} \nu(E_i)$$必須絕對收斂。
+因為假設$$\nu(E) <\infty$$，因此$$\sum_{i=1}^{\infty} \nu(E_i)$$必須絕對收斂。因此當$$k \rightarrow \infty$$時，$$1/n_k < |\nu(E_k)| \rightarrow 0$$即$$n_k \rightarrow \infty$$。所以$$\lim_{k \rightarrow \infty}|\nu(E_k)|=0$$--(2)
+
+取可測子集$$F \subseteq S$$，因為$$S=E-\bigcup_{i=1}^\infty E_i$$，所以$$F \subseteq E-\bigcup_{i=1}^k E_i, \forall k$$。
+
+但是$$\nu(F) < -1/(n_k-1)$$不成立，因為若成立時，則$$\nu(F) < -1/(n_k-1) < -1/n_k$$，此與前述$$n_k$$條件不符，因此$$\nu(F) \geq -1/(n_k-1), \forall k$$。
+
+因此在$$k \rightarrow \infty$$時，$$n_k \rightarrow \infty$$得$$\nu(F) \geq 0$$，因此$$S$$
+
+為正測集(QED)
 
 </details>
 
@@ -158,6 +166,22 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 > [https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem](https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem)
 >
 > [https://zhuanlan.zhihu.com/p/36652587](https://zhuanlan.zhihu.com/p/36652587)
+
+<details>
+
+<summary>proof</summary>
+
+假設$$\nu: \Sigma \rightarrow [-\infty, \infty)$$。
+
+對於$$X$$上的正測集$$A_0$$，取$$M=\sup_{A_0 \geq 0} \nu(A_0)$$。
+
+因為$$M$$為正測集的上確界且有界，因此存在正測集合序列$$\{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。
+
+令$$A = \bigcup_{j=1}^\infty A_j$$，由定義得$$A \geq 0$$。因此$$\nu(A) \leq M$$。--(1)
+
+因為$$A = \bigcup_{j=1}^\infty A_j \geq A_j$$，由單調性得$$\nu(A) \geq nu(A_j)$$
+
+</details>
 
 ## 相互奇異(正交)測度(mutually signular measures)
 

@@ -6,7 +6,9 @@ description: signed measure
 
 一般討論測度$$u: \Sigma \rightarrow [0, \infty]$$要求其值域為非負值，而符號測度討論的是值域可為負值的情形。
 
-<mark style="color:red;">Hahn分解可得符號測度的本質表示：有號測度是兩正測度的差</mark>。
+<mark style="color:red;">Hahn分解可得宇集合可分割為正/負測集。</mark>
+
+<mark style="color:red;">Jordan分解可得符號測度的本質表示：有號測度是兩正測度的差</mark>。
 
 ## 符號測度
 
@@ -106,9 +108,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集。
 >
-> <mark style="color:red;">註：Hahn分解可得符號測度是兩正測度的差</mark>。
+> <mark style="color:red;">註：Hahn分解可得宇集合可分割為正/負測集</mark>。
 >
 > Hahn分解不唯一(因為有零測集存在)。
+>
+> 如果$$X$$不存在零測集時，則Hahn分解唯一。
 >
 > [https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem](https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem)
 >

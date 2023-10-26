@@ -59,22 +59,42 @@ description: signed measure
 
 以$$\nu(E)=\int_E f d\mu$$為例，正測集即$$f \geq 0 \text{ a.e. on }  E$$，負測集則$$f \leq 0 \text{ a.e. on } E$$，零測集則$$f = 0 \text{ a.e. on } E$$。
 
-### 正集合的子集仍為正集合且正集合的可數連集仍為正集合
+### 正測集的性質
 
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E$$為可測集且$$\nu(E) \geq 0$$，則$$\forall F \subseteq E$$，$$\nu(F) \geq 0$$。
->
-> 若$$\{E_n\}$$為可測集且$$\nu(E_n) \geq 0, \forall n$$，則$$\displaystyle \forall S \in \bigcup_{n=1}^\infty E_n,~  \nu(S) \geq 0$$。
+> * 若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
+> * 若$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
+> * 若$$E$$為正測集，$$F \subseteq E$$為可測集，則$$\nu(F) \leq \nu(E)$$。
+> * $$P$$為正測集，$$N$$為負測集，則$$P \cap N$$為零測集。
 
 <details>
 
 <summary>proof: 將集合拆解為互斥集合</summary>
 
-1. 因為$$F \subseteq E$$，且$$\nu(E) \geq 0$$，由正集合定義得$$\nu(F) \geq 0$$。(QED)
-2. 令$$F_n = E_n - \bigcup_{n=1}^{n-1} E_n$$，可得$$F_n \subseteq E_n$$，由正集合定義得$$\nu(F_n)\geq 0$$。
+因為$$E$$為正測集且$$F \subseteq E$$，由定義得$$\nu(E) \geq 0$$。--(1)
 
-因此若$$S \subseteq \bigcup_{n=1}^\infty E_n$$，則$$\nu(S)=\sum_{n=1}^\infty \nu(S \cap Q_n) \geq 0$$ (QED)
+令可測集$$G \subseteq F$$，可得$$G \subseteq E$$，由正測集定義得$$\nu(G) \geq 0$$。--(2)
+
+由(1,2)得$$F$$為正測集。
+
+(QED)
+
+令$$F_n = E_n - \bigcup_{n=1}^{n-1} E_n$$，可得$$F_n \subseteq E_n$$，由正測集定義得$$\nu(F_n)\geq 0$$。
+
+因此若$$S \subseteq \bigcup_{n=1}^\infty E_n$$，則$$\nu(S)=\sum_{n=1}^\infty \nu(S \cap F_n) \geq 0$$ (QED)
+
+$$F \subseteq E$$可得$$E=F \cup (E-F)$$。
+
+由測度定義得$$\nu(E)=\nu(F) + \nu(E-F)$$。
+
+因為$$E-F \subseteq E$$且可測，由正測集定義得$$\nu(E-F) \geq 0$$。
+
+因此$$\nu(E) \geq \nu(F)$$ (QED)
+
+令$$F \subseteq P \cap N$$為可測集，則$$F \subseteq P$$且$$F \subseteq N$$。
+
+由正/負測集定義得$$\nu(F) \geq 0$$且$$\nu(F) \leq 0$$，因此$$\nu(F)=0$$ (QED)
 
 </details>
 

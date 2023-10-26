@@ -41,7 +41,23 @@ description: signed measure
 >
 > 註：此性質和[正測度的連續性](../measure.md#di-zeng-ji-he-ji-xian-de-ce-du-ce-du-de-lian-xu-xing-continuity-of-measure)相同。
 
+### 有限測集的子集仍為有限測集
 
+> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+>
+> $$F \subseteq E$$為可測集，若$$|\nu(E)|<\infty$$，則$$|\nu(F)|<\infty$$。
+
+<details>
+
+<summary> proof: 反證法</summary>
+
+$$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
+
+不失一般性令$$\nu(F)=\infty$$。則$$\nu: \Sigma \rightarrow (-\infty, \infty]$$。--(2)
+
+由(1,2)得$$\nu(E)=\infty$$ (QED)
+
+</details>
 
 ## 正測集與負測集(positive set and negative set)
 
@@ -61,7 +77,7 @@ description: signed measure
 
 以$$\nu(E)=\int_E f d\mu$$為例，正測集即$$f \geq 0 \text{ a.e. on }  E$$，負測集則$$f \leq 0 \text{ a.e. on } E$$，零測集則$$f = 0 \text{ a.e. on } E$$。
 
-### 正測集的性質
+### 正(負)測集的性質
 
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
@@ -97,6 +113,31 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 令$$F \subseteq P \cap N$$為可測集，則$$F \subseteq P$$且$$F \subseteq N$$。
 
 由正/負測集定義得$$\nu(F) \geq 0$$且$$\nu(F) \leq 0$$，因此$$\nu(F)=0$$ (QED)
+
+</details>
+
+### 有限非負測度集合包含正測集
+
+> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+>
+> 若$$E \in \Sigma, ~ 0 \leq \nu(E) <\infty$$，則存在$$F \subseteq E$$且$$F$$為正測集。
+>
+> 註：$$E$$只是測度大於等於0，不一定為正測集。如果$$E$$是正測集時，依定義必滿足條件。
+
+<details>
+
+<summary>proof: 遞迴排除E中的負測度集</summary>
+
+如果$$E$$為正測集，由\[正(負)測集的性質]得其任意子集為正測集。
+
+若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) < -1/n, \forall n \geq n_1$$。
+
+* 如果$$E-E_1$$為正測集，則證明完成。否則遞迴$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) < -1/n, \forall n \geq n_2$$。
+* 做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則$$\exists n_k \in \mathbb{N} \ni \nu(E_k) < -1/n, \forall n \geq n_k$$
+
+如果在有限步內無法完成，令$$S=E-\bigcup_{i=1}^\infty E_i$$。即$$E= S \bigcup (\bigcup_{i=1}^\infty E_i)$$。因為$$S$$與$$E_i$$兩兩互斥，因此可得$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i)$$--(1)。
+
+因為假設$$\nu(E) <\infty$$，因此$$\sum_{i=1}^{\infty} \nu(E_i)$$必須絕對收斂。
 
 </details>
 

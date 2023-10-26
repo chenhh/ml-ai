@@ -10,11 +10,13 @@ description: signed measure
 
 ## 符號測度
 
-> 給定可測空間$$(X, \Sigma)$$，定義函數$$\nu: \Sigma \rightarrow [-\infty, \infty]$$可取值$$\pm\infty$$且滿足：
+> 給定可測空間$$(X, \Sigma)$$，定義符號測度$$\nu$$可取值$$\pm\infty$$(但不可同時為$$\pm \infty$$)即$$\nu: \Sigma \rightarrow (-\infty, \infty]$$或$$\nu: \Sigma \rightarrow [-\infty, \infty)$$，且滿足：
 >
 > 1. 定義域$$\Sigma$$為σ域
 > 2. $$\nu(\empty)=0$$
-> 3. $$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) = \sum_{n=1}^\infty \nu(E_n)$$，$$E_i \cap E_j = \empty$$且$$\bigcup_{n=1}^\infty E_n \in \Sigma$$。此處要求當$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) < \infty$$時，$$\displaystyle \sum_{n=1}^\infty \nu(E_n)$$ 為絕對收斂。
+> 3. $$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) = \sum_{n=1}^\infty \nu(E_n)$$，$$E_i \cap E_j = \empty$$且$$\bigcup_{n=1}^\infty E_n \in \Sigma$$。
+>
+> 此處要求當$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) < \infty$$時，$$\displaystyle \sum_{n=1}^\infty \nu(E_n)$$ 為絕對收斂。
 >
 > 則稱$$\nu$$為符號測度。
 
@@ -33,23 +35,29 @@ description: signed measure
 >
 > 若$$\{E_n\}$$為$$\Sigma$$上的遞增集合，則$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
 >
-> 若$$\{E_n\}$$為$$\Sigma$$上的遞減集合且$$\nu(E_1)<\infty$$，則$$\displaystyle \nu(\bigcap_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
+> 若$$\{E_n\}$$為$$\Sigma$$上的遞減集合且$$\nu(E_1)\neq \pm \infty$$，則$$\displaystyle \nu(\bigcap_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
 >
 > 註：此性質和[正測度的連續性](../measure.md#di-zeng-ji-he-ji-xian-de-ce-du-ce-du-de-lian-xu-xing-continuity-of-measure)相同。
 
 
 
-## 正集合與負集合(positive set and negative set)
+## 正測集與負測集(positive set and negative set)
 
 > 令$$\nu$$為符號測度，則
 >
-> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正集合(positive set)</mark>，若$$E \subseteq A$$為可測集合且$$\nu(E) \geq 0$$。
-> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負集合(negative set)</mark>，若$$E \subseteq B$$為可測集合且$$\nu(E) \leq 0$$。
-> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若$$E \subseteq C$$為可測集合且$$\nu(E)=0$$。
+> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若$$\forall E \subseteq A$$為可測集合且$$\nu(E) \geq 0$$。記為$$A \geq 0$$。
+> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若$$\forall E \subseteq B$$為可測集合且$$\nu(E) \leq 0$$。記為$$B \leq 0$$。
+> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若$$\forall E \subseteq C$$為可測集合且$$\nu(E)=0$$。記為$$C=0$$。
+>
+> 註：零測集同時為正測集與負測集。
+>
+> 正測集就是其所有可測子集的符號測度都是大於等於0。負測集就是其所有可測子集的符
+>
+> 號測度都是小於等於0
 >
 > [https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets](https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets)
 
-以$$\nu(E)=\int_E f d\mu$$為例，正集合即$$f \geq 0 \text{ a.e. on }  E$$，負集合則$$f \leq 0 \text{ a.e. on } E$$，零測集則$$f = 0 \text{ a.e. on } E$$。
+以$$\nu(E)=\int_E f d\mu$$為例，正測集即$$f \geq 0 \text{ a.e. on }  E$$，負測集則$$f \leq 0 \text{ a.e. on } E$$，零測集則$$f = 0 \text{ a.e. on } E$$。
 
 ### 正集合的子集仍為正集合且正集合的可數連集仍為正集合
 
@@ -106,4 +114,5 @@ description: signed measure
 
 ## 參考資料
 
-[https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
+* [https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
+* [https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf](https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf)

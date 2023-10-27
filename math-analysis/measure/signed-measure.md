@@ -81,10 +81,10 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
-> * 若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
-> * 若$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
-> * 若$$E$$為正測集，$$F \subseteq E$$為可測集，則$$\nu(F) \leq \nu(E)$$。
-> * $$P$$為正測集，$$N$$為負測集，則$$P \cap N$$為零測集。
+> * \[正測集的可測子集為正測集]若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
+> * \[正測集的聯集為正測集]若$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
+> * \[正測集的測度單調性]若$$E$$為正測集，$$F \subseteq E$$為可測集，則$$\nu(F) \leq \nu(E)$$。
+> * \[零測集同時為正負測集]$$P$$為正測集，$$N$$為負測集，則$$P \cap N$$為零測集。
 
 <details>
 
@@ -120,7 +120,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E \in \Sigma, ~ 0 \leq \nu(E) <\infty$$，則存在$$F \subseteq E$$且$$F$$為正測集。
+> 若$$E \in \Sigma, ~ 0 \leq \nu(E) <\infty$$，則存在可測子集$$F \subseteq E$$且$$F$$為正測集。
 >
 > 註：$$E$$只是測度大於等於0，不一定為正測集。如果$$E$$是正測集時，依定義必滿足條件。
 
@@ -128,24 +128,25 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 <summary>proof: 遞迴排除E中的負測度集</summary>
 
-如果$$E$$為正測集，由\[正(負)測集的性質]得其任意子集為正測集。
+如果$$E$$為正測集，由\[正(負)測集的性質/正測集的可測子集為正測集]得其任意可測子集為正測集。
 
-若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) < -1/n, \forall n \geq n_1$$。
+若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則存在最小的自然數$$n_1$$滿足以下條件：$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) < -1/n, \forall n \geq n_1$$。
 
-* 如果$$E-E_1$$為正測集，則證明完成。否則遞迴$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) < -1/n, \forall n \geq n_2$$。
-* 做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則$$\exists n_k \in \mathbb{N} \ni \nu(E_k) < -1/n, \forall n \geq n_k$$
+如果$$E-E_1$$為正測集，則證明完成。否則遞迴從$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則存在最小的自然數$$n_2$$滿足以下條件$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) < -1/n, \forall n \geq n_2$$。
 
-如果在有限步內無法完成，令$$S=E-\bigcup_{i=1}^\infty E_i$$。即$$E= S \bigcup (\bigcup_{i=1}^\infty E_i)$$。因為$$S$$與$$E_i$$兩兩互斥，因此可得$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i)$$--(1)。
+做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則存在最小的自然數$$n_k$$滿足以下條件$$\exists n_k \in \mathbb{N} \ni \nu(E_k) < -1/n, \forall n \geq n_k$$
 
-因為假設$$\nu(E) <\infty$$，因此$$\sum_{i=1}^{\infty} \nu(E_i)$$必須絕對收斂。因此當$$k \rightarrow \infty$$時，$$1/n_k < |\nu(E_k)| \rightarrow 0$$即$$n_k \rightarrow \infty$$。所以$$\lim_{k \rightarrow \infty}|\nu(E_k)|=0$$--(2)
+如果在有限步內無法完成，令$$S=E-\bigcup_{i=1}^\infty E_i$$。即$$E= S \bigcup (\bigcup_{i=1}^\infty E_i)$$。因為在建構過程中$$S$$與$$E_i$$兩兩互斥， 由測度定義得$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i)$$--(1)。
 
-取可測子集$$F \subseteq S$$，因為$$S=E-\bigcup_{i=1}^\infty E_i$$，所以$$F \subseteq E-\bigcup_{i=1}^k E_i, \forall k$$。
+因為假設$$\nu(E) <\infty$$，因此$$\sum_{i=1}^{\infty} \nu(E_i)$$必須[絕對收斂](../series/series-convergence-test.md#jue-dui-shou-lian-yu-tiao-jian-shou-lian)。因此當$$\displaystyle \lim_{i \rightarrow \infty} |\nu(E_i)|=0$$。因為$$\nu(E_i) > 1/n_i$$，因此$$\displaystyle \lim_{i \rightarrow \infty} n_i = \infty$$。--(2)
 
-但是$$\nu(F) < -1/(n_k-1)$$不成立，因為若成立時，則$$\nu(F) < -1/(n_k-1) < -1/n_k$$，此與前述$$n_k$$條件不符，因此$$\nu(F) \geq -1/(n_k-1), \forall k$$。
+取可測子集$$F \subseteq S$$，因為$$S=E-\bigcup_{i=1}^\infty E_i$$，所以$$F \subseteq E-\bigcup_{i=1}^\infty E_i$$--(3)。
 
-因此在$$k \rightarrow \infty$$時，$$n_k \rightarrow \infty$$得$$\nu(F) \geq 0$$，因此$$S$$
+由(3)假設$$\nu(F) < - 1/(n_i-1), i \in \mathbb{N}$$。
 
-為正測集(QED)
+可得$$\nu(F)<-1/(n_i-1) < -1/n_i$$，因此$$F \in  E_i$$ 但這與(3)矛盾。因此$$\nu(F) \geq -1/(n_i-1), \forall i \in \mathbb{N}$$--(4)
+
+由(2,4)得$$\nu(F) \geq 0$$，因此$$S$$為正測集(QED)
 
 </details>
 

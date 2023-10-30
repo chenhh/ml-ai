@@ -21,18 +21,18 @@
 
 [收斂數列必為有界數列且收斂至極限點](./#shou-lian-shu-lie-de-zhi-yu-you-jie-qie-shou-lian-zhi-ji-xian-dian)。
 
-## 單調有界定理(實數中的有界單調數列必收斂)
+## \[實數]單調有界定理(bounded convergence theorem)
 
 > <mark style="color:red;">遞增有上界數列必收斂至最小上界</mark>
 >
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最小上界$$b= \sup(S) \Leftrightarrow$$ 存在嚴格遞增序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i < x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=b$$
-> 
+>
 > 若$$\{x_n\}$$為有上界遞增數列（$$x_1 \leq x_2 \leq \ldots \leq M$$），則$$\displaystyle \lim_{n \rightarrow \infty} x_n =\sup \{x_n | \forall n \in \mathbb{N}\}$$
 
 > <mark style="color:red;">遞減有下界數列必收斂至最大下界</mark> 。
 >
 > $$\emptyset \neq S \subseteq \mathbb{R}$$有最大下界$$a= \inf(S) \Leftrightarrow$$ 存在嚴格遞減序列$$\displaystyle \{x_n, n \in \mathbb{N}| \forall i< j, ~x_i > x_j \} \subseteq S \ni \lim_{n \rightarrow \infty}x_n=a$$
-> 
+>
 > 若$$\{x_n\}$$為有下界遞減數列（$$x_1 \geq x_2 \geq \cdots \geq N$$），則$$\displaystyle \lim_{n \rightarrow \infty} x_n =\inf\{x_n |\forall n \in \mathbb{N}\}$$
 
 > 此定理告訴我們不必知道單調數列極限而能判定收斂數列的方法。
@@ -57,7 +57,7 @@
 
 <details>
 
-<summary>proof: 以最小上界性質證明 </summary>
+<summary>proof: 以最小上界性質證明</summary>
 
 因為$$\{x_n\}$$有上界，由實數的最小上界性質(非空有上界的集合必有最小上界)得存在上確界 $$M=\sup\{x_n | n \in \mathbb{N}\}$$。
 
@@ -67,10 +67,8 @@
 
 </details>
 
-
 註: 由以下兩圖可知遞增（減）數列，因為有界數列，因此到了$$n \geq n_0$$的時候，可以上升（下降）的量就已經到達到了一個很小的範圍，此時就如同函數極限的定義一般，值域在一個很小的範圍$$\epsilon$$內變動，因此收斂。
 
 ![有上界遞增數列必收斂](../../.gitbook/assets/increase-bounded-sequence-min.png)
 
 ![有下界遞減數列必收斂](../../.gitbook/assets/decrease-bounded-sequence-min.png)
-

@@ -182,7 +182,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 對於$$X$$上的所有正測集集合族$$A_0$$，取$$\displaystyle M=\sup_{A_0 \geq 0} \nu(A_0)$$--(1)。
 
-因為$$M$$為正測集的上確界且有界($$M < \infty$$)，由\[單調有界定理(實數中的有界單調數列必收斂)]存在遞增正測集合序列$$\displaystyle  \{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。
+因為$$M$$為正測集的上確界且有界($$M < \infty$$)，由\[[實數單調有界定理](../sequence/monotonic-sequence.md#shi-shu-chan-diao-you-jie-ding-li-bounded-convergence-theorem)]存在測度遞增正測集合序列$$\displaystyle  \{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。(注意是$$\nu(A_j) \leq \nu(A_{j+1})$$，而不是$$A_j \subseteq A_{j+1}$$)
 
 令$$A = \bigcup_{j=1}^\infty A_j$$，由\[正測集的可數聯集為正測集]得$$A$$為正測集。i由(1)得$$\nu(A) \leq M$$。--(2)
 

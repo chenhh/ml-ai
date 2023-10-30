@@ -82,7 +82,7 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
 > * \[正測集的可測子集為正測集]若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
-> * $$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
+> * \[正測集的可數聯集為正測集]$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
 > * \[正測集的測度單調性]若$$E$$為正測集，$$F \subseteq E$$為可測集，則$$\nu(F) \leq \nu(E)$$。
 > * \[零測集同時為正負測集]$$P$$為正測集，$$N$$為負測集，則$$P \cap N$$為零測集。
 
@@ -126,7 +126,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 <details>
 
-<summary>proof: 遞迴排除E中的負測度集</summary>
+<summary>proof: 遞迴排除E中的負測度集，排除後(可能有無窮多個)剩下的集合為正測集。</summary>
 
 如果$$E$$為正測集，由\[正(負)測集的性質/正測集的可測子集為正測集]得其任意可測子集為正測集。
 
@@ -149,6 +149,12 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 由(2,4)得$$\nu(F) \geq 0$$，因此$$S$$為正測集(QED)
 
 </details>
+
+### 有限符號測度中集合的測度存在正測集的測度大於集合測度
+
+> 令$$\nu: X\rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
+>
+> 若$$E \in \Sigma$$，$$\nu(E)\neq \infty$$，則存在可測子集$$P \subseteq E \ni \nu(P) > \nu(E)$$。
 
 ## Hahn分解定理(The Hahn decomposition theorem)
 
@@ -174,13 +180,13 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 假設$$\nu: \Sigma \rightarrow [-\infty, \infty)$$。\[若值域為$$(-\infty, \infty]$$時，討論$$-\nu$$即可]
 
-對於$$X$$上的正測集$$A_0$$，取$$\displaystyle M=\sup_{A_0 \geq 0} \nu(A_0)$$。
+對於$$X$$上的所有正測集集合族$$A_0$$，取$$\displaystyle M=\sup_{A_0 \geq 0} \nu(A_0)$$--(1)。
 
-因為$$M$$為正測集的上確界且有界($$M < \infty$$)，因此存在正測集合序列$$\displaystyle  \{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。
+因為$$M$$為正測集的上確界且有界($$M < \infty$$)，由\[單調有界定理(實數中的有界單調數列必收斂)]存在遞增正測集合序列$$\displaystyle  \{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。
 
-令$$A = \bigcup_{j=1}^\infty A_j$$，由\[\[正測集的聯集為正測集]]得$$A$$為正測集。因此$$\nu(A) \leq M$$。--(1)
+令$$A = \bigcup_{j=1}^\infty A_j$$，由\[正測集的可數聯集為正測集]得$$A$$為正測集。i由(1)得$$\nu(A) \leq M$$。--(2)
 
-因為$$A = \bigcup_{j=1}^\infty A_j \geq A_j$$，由\[正測集的測度單調性]
+因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$
 
 </details>
 

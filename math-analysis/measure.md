@@ -94,6 +94,7 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 > * \[<mark style="color:blue;">子集合的測度</mark>] $$\forall E, F \in \Sigma, E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$​
 > * <mark style="color:red;">集合的大小與測度值有單調的關係</mark>。
 > * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
+> * 註：反向不一定成立，即$$\nu(E) \leq \nu(F) \;\not\!\!\!\implies E \subseteq F$$。
 
 <details>
 
@@ -113,6 +114,11 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 </details>
 
+#### 範例：測度較大的集合不一定是子集合
+
+$$E=[1,3]$$，$$F=[4,7]$$。$$\mu(F)=3, \mu (E)=2$$，但$$E \cap F=\emptyset$$。
+
+> *
 > * <mark style="color:blue;">\[補集的測度]</mark> $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
 > * $$\mu(F) < \infty$$必須是有限值，否則無法移項得到等式。
 

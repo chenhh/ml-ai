@@ -186,7 +186,21 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 令$$A = \bigcup_{j=1}^\infty A_j$$，由\[正測集的可數聯集為正測集]得$$A$$為正測集。i由(1)得$$\nu(A) \leq M$$。--(2)
 
-因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$
+因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$，因此$$\displaystyle \lim_{j \rightarrow \infty} \nu(A) \geq \lim_{j \rightarrow \infty} \nu(A_j)\implies \nu(A) \geq M$$--(3)
+
+由(2,3)得$$\nu(A)=M$$--(4)
+
+\[反證法]令$$B=X-A$$且假設$$B$$不是負測集。
+
+因此存在可測子集$$E \subseteq B \ni \nu(E) > 0$$。
+
+由\[有限非負測度集合包含正測集]得存在$$F \subseteq E \ni \nu(F) \geq 0$$，且$$F \cap A = \emptyset$$，且$$F \cup A$$為正測集。
+
+因此$$M \geq \nu(F \cup A) = \nu(F) + \nu(A) = \nu(F) + M$$
+
+因此若$$\nu(F) > 0$$時，會得到$$M > M$$的矛盾，因此只能得到$$\nu(F) =0$$。但這又與$$\nu(E) > 0$$的假設矛盾，因此$$B$$為負測集&#x20;
+
+(QED)
 
 </details>
 

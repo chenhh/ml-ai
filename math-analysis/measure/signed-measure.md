@@ -12,7 +12,7 @@ description: signed measure
 
 ## 符號測度
 
-> 給定可測空間$$(X, \Sigma)$$，定義符號測度$$\nu$$可取值$$\pm\infty$$(但不可同時為$$\pm \infty$$)即$$\nu: \Sigma \rightarrow (-\infty, \infty]$$或$$\nu: \Sigma \rightarrow [-\infty, \infty)$$，且滿足：
+> 給定可測空間$$(X, \Sigma)$$，定義符號測度$$\nu$$可取值$$\pm\infty$$(但不可同時為$$\pm \infty$$)即$$\nu: \Sigma \rightarrow (-\infty, \infty]$$或$$\nu: \Sigma \rightarrow [-\infty, \infty)$$避免出現無窮大符號之間沒有定義的行為出現，且滿足：
 >
 > 1. 定義域$$\Sigma$$為σ域
 > 2. $$\nu(\empty)=0$$

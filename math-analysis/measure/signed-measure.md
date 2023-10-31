@@ -4,7 +4,7 @@ description: signed measure
 
 # 符號測度
 
-一般討論測度$$u: \Sigma \rightarrow [0, \infty]$$要求其值域為非負值，而符號測度討論的是值域可為負值的情形。
+一般討論測度$$u: \Sigma \rightarrow [0, \infty]$$要求其值域為非負值，而符號測度討論的是值域可為負值的情形，但正/負無窮大只能取一，即$$\nu: \Sigma \rightarrow [-\infty, \infty) \text{ or } \nu: \Sigma \rightarrow (-\infty, \infty]$$。
 
 <mark style="color:red;">Hahn分解可得宇集合可分割為正/負測集。</mark>
 
@@ -154,11 +154,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 > 令$$\nu: X\rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E \in \Sigma$$，$$\nu(E)\neq -\infty$$，則存在正測集$$P \subseteq E \ni \nu(P) \geq  \nu(E)$$。
+> 若$$E \in \Sigma$$，$$\nu(E)\neq -\infty$$(有限測度)，則存在正測集$$P \subseteq E \ni \nu(P) \geq  \nu(E)$$。
 
 ## Hahn分解定理(The Hahn decomposition theorem)
 
-> 在可測空間$$(X, \Sigma)$$中，令$$\nu$$為符號測度，則存在正集合$$A$$與負集合$$B$$(均在測度$$\nu$$下)滿足：
+> 在可測空間$$(X, \Sigma)$$中，令$$\nu$$為符號測度，則存在正測集$$A$$與負測合$$B$$(均在測度$$\nu$$下)滿足：
 >
 > $$X = A \cup B$$且$$A\cap B = \emptyset$$。
 >
@@ -180,11 +180,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 假設$$\nu: \Sigma \rightarrow [-\infty, \infty)$$。\[若值域為$$(-\infty, \infty]$$時，討論$$-\nu$$即可]
 
-對於$$X$$上的所有正測集集合族$$A_0$$，取$$\displaystyle M=\sup_{A_0 \geq 0} \nu(A_0)$$--(1)。
+對於$$X$$上的所有正測集集合族$$A_0$$，取$$\displaystyle M=\sup_{A_0 \geq 0} \nu(A_0)$$。可得$$M \geq 0$$--(1)。
 
 因為$$M$$為正測集的上確界且有界($$M < \infty$$)，由\[[實數單調有界定理](../sequence/monotonic-sequence.md#shi-shu-chan-diao-you-jie-ding-li-bounded-convergence-theorem)]存在測度遞增正測集合序列$$\displaystyle  \{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。(注意是$$\nu(A_j) \leq \nu(A_{j+1})$$，而不是$$A_j \subseteq A_{j+1}$$)
 
-令$$A = \bigcup_{j=1}^\infty A_j$$，由\[正測集的可數聯集為正測集]得$$A$$為正測集。i由(1)得$$\nu(A) \leq M$$。--(2)
+令$$A = \bigcup_{j=1}^\infty A_j$$，由\[正測集的可數聯集為正測集]得$$A$$為正測集。由(1)得$$\nu(A) \leq M$$。--(2)
 
 因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j~,\forall j \in \mathbb{N}$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$，因此$$\displaystyle \nu(A) \geq \lim_{j \rightarrow \infty} \nu(A_j)\implies \nu(A) \geq M$$--(3)
 
@@ -192,7 +192,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 \[反證法]令$$B=X-A$$且假設$$B$$不是負測集。
 
-因此存在可測子集$$E \subseteq B \ni \nu(E) > 0$$。
+因此存在可測正測集$$E \subseteq B \ni \nu(E) > 0$$。
 
 由\[有限非負測度集合包含正測集]得存在$$F \subseteq E \ni \nu(F) \geq 0$$，且$$F \cap A = \emptyset$$，且$$F \cup A$$為正測集。
 

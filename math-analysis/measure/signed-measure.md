@@ -150,11 +150,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 </details>
 
-### 有限符號測度中集合的測度存在正測集的測度大於集合測度
+### 有限符號測度中的集合中存在正測集的測度大於集合測度
 
 > 令$$\nu: X\rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E \in \Sigma$$，$$\nu(E)\neq \infty$$，則存在可測子集$$P \subseteq E \ni \nu(P) > \nu(E)$$。
+> 若$$E \in \Sigma$$，$$\nu(E)\neq -\infty$$，則存在正測集$$P \subseteq E \ni \nu(P) \geq  \nu(E)$$。
 
 ## Hahn分解定理(The Hahn decomposition theorem)
 
@@ -186,7 +186,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 令$$A = \bigcup_{j=1}^\infty A_j$$，由\[正測集的可數聯集為正測集]得$$A$$為正測集。i由(1)得$$\nu(A) \leq M$$。--(2)
 
-因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$，因此$$\displaystyle \lim_{j \rightarrow \infty} \nu(A) \geq \lim_{j \rightarrow \infty} \nu(A_j)\implies \nu(A) \geq M$$--(3)
+因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j~,\forall j \in \mathbb{N}$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$，因此$$\displaystyle \nu(A) \geq \lim_{j \rightarrow \infty} \nu(A_j)\implies \nu(A) \geq M$$--(3)
 
 由(2,3)得$$\nu(A)=M$$--(4)
 

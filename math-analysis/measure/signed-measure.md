@@ -63,9 +63,9 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 > 令$$\nu$$為符號測度，則
 >
-> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若$$\forall E \subseteq A$$為可測集合且$$\nu(E) \geq 0$$。記為$$A \geq 0$$。
-> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若$$\forall E \subseteq B$$為可測集合且$$\nu(E) \leq 0$$。記為$$B \leq 0$$。
-> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若$$\forall E \subseteq C$$為可測集合且$$\nu(E)=0$$。記為$$C=0$$。
+> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若$$\nu(A) \geq 0$$ 且$$\forall E \subseteq A$$為可測集合且$$\nu(E) \geq 0$$。記為$$A \geq 0$$。
+> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若$$\nu(B) \leq 0$$且$$\forall E \subseteq B$$為可測集合且$$\nu(E) \leq 0$$。記為$$B \leq 0$$。
+> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若$$\nu(C)=0$$且$$\forall E \subseteq C$$為可測集合且$$\nu(E)=0$$。記為$$C=0$$。
 >
 > 註：零測集同時為正測集與負測集。
 >
@@ -222,7 +222,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$($$\forall E \in \Sigma, ~\nu(E)=\nu^{+}(E)-\nu^{-}(E)$$)且$$\nu^{+} \perp \nu^{-}$$。
 >
-> 註：唯一性是指測度值相等，即$$\nu(E)=\mu(E)$$。
+> 註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
+>
+> $$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative varitation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
+>
+> <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
 
 <details>
 
@@ -253,6 +257,52 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 (QED)
 
 </details>
+
+### 零測度集合若且唯若集合測度全變差為0
+
+> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
+>
+> $$E \in \Sigma, \nu(E)=0, ~ \forall F \subseteq E, ~ F \in \Sigma, ~ \nu(F) = 0 \iff |\nu|(E)=0$$。
+
+<details>
+
+<summary>proof: 零測集同時為正/負測集</summary>
+
+\=>(反證法)
+
+全變差測度$$|\nu|: \Sigma \rightarrow \infty [0, \infty]$$，$$|\nu|=\nu^{+} + \nu^{-}$$。
+
+令$$|\nu|(E) > 0$$ (可能為無窮大)。
+
+因為$$|\nu|(E)=\nu^{+}(E) + \nu^{-}(E) > 0$$且$$\nu^{+}(E) \geq 0,~\nu^{-}(E) \geq 0$$
+
+因此$$\nu^{+}(E),~\nu^{-}(E)$$不會同時為0
+
+所以$$\nu(E) = \nu^{+}(E) - \nu^{-}(E) \neq 0$$
+
+同理對$$E$$的任意可測子集$$F \subseteq E$$也可得到$$\nu(F) \neq 0$$
+
+因此$$E$$不是零測集(QED)
+
+<=
+
+因為$$|\nu|(E)=\nu^{+}(E) + \nu^{-}(E) = 0$$，且$$\nu^{+}, \nu^{-}$$均為正測度，因此得$$\nu^{+}(E) =  \nu^{-}(E)=0$$。--(1)
+
+同理對$$E$$的任意可測子集$$F \subseteq E$$，因為$$|\nu|$$為正測度且由有號測度的單調性得$$0\leq |\nu|(F) \leq |\nu|(E)=0$$。--(2)
+
+由(1,2)得$$E$$為零測集(QED)
+
+
+
+
+
+</details>
+
+### 相互奇異測度與全變差、正/負變差均相互奇異
+
+> 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu$$為符號測度。
+>
+> $$\nu \perp \mu \iff \|\nu| \perp \mu \iff \nu^{+} \perp \mu \iff \nu^{-} \perp \mu$$
 
 ## 參考資料
 

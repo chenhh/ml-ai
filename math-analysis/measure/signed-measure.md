@@ -210,7 +210,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 稱$$\mu, \nu$$兩測度相互奇異(mutually signularity)或$$\nu$$相對於$$\mu$$奇異($$\nu$$ is singularity w.r.t. $$\mu$$)若：
 >
-> ($$E,F$$為$$X$$的可測分割且$$E$$為$$\mu$$的零測集，$$F$$為$$\nu$$的零測集)，$$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ 且$$\mu(E)=0, \nu(F)=0$$。
+> ($$E,F$$為$$X$$的可測分割且$$E$$為$$\mu$$的零測集，$$F$$為$$\nu$$的零測集)，$$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ $$\mu(E)=0, \nu(F)=0$$且$$\forall E_s \in \Sigma, E_s \subseteq E,~ \mu(E_s) =0$$，$$\forall F_s \in \Sigma, F_s \subseteq F,~ \nu(F_s) =0$$。
 >
 > <mark style="color:red;">常將此兩測度用正交符號記為：</mark>$$\mu \perp \nu$$<mark style="color:red;">。</mark>
 
@@ -258,7 +258,7 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 
 </details>
 
-### 零測度集合若且唯若集合測度全變差為0
+### 零測度集合若且唯若全變差測度為0
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
 >
@@ -272,15 +272,15 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 
 全變差測度$$|\nu|: \Sigma \rightarrow \infty [0, \infty]$$，$$|\nu|=\nu^{+} + \nu^{-}$$。
 
-令$$|\nu|(E) > 0$$ (可能為無窮大)。
+令$$0<|\nu|(E) <\infty$$。
 
 因為$$|\nu|(E)=\nu^{+}(E) + \nu^{-}(E) > 0$$且$$\nu^{+}(E) \geq 0,~\nu^{-}(E) \geq 0$$
 
-因此$$\nu^{+}(E),~\nu^{-}(E)$$不會同時為0
+因此$$\nu^{+}(E),~\nu^{-}(E)$$不會同時為0。
 
-所以$$\nu(E) = \nu^{+}(E) - \nu^{-}(E) \neq 0$$
-
-同理對$$E$$的任意可測子集$$F \subseteq E$$也可得到$$\nu(F) \neq 0$$
+* 如果$$\nu^{+}(E),~\nu^{-}(E)$$有一者為0 ，可得$$\nu(E) = \nu^{+}(E) - \nu^{-}(E) \neq 0$$.&#x20;
+* 如果$$\nu^{+}(E),~\nu^{-}(E)$$均不為0，且兩者不相等時，可得$$\nu(E) = \nu^{+}(E) - \nu^{-}(E) \neq 0$$。
+* 如果$$\nu^{+}(E),~\nu^{-}(E)$$均不為0，且兩者相等時，由\[有限非負測度集合包含正測集]得$$E$$不是零測集。
 
 因此$$E$$不是零測集(QED)
 
@@ -292,17 +292,27 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 
 由(1,2)得$$E$$為零測集(QED)
 
-
-
-
-
 </details>
 
 ### 相互奇異測度與全變差、正/負變差均相互奇異
 
 > 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu$$為符號測度。
 >
-> $$\nu \perp \mu \iff \|\nu| \perp \mu \iff \nu^{+} \perp \mu \iff \nu^{-} \perp \mu$$
+> $$\nu \perp \mu \iff |\nu| \perp \mu \iff \nu^{+} \perp \mu \iff \nu^{-} \perp \mu$$。
+>
+> $$\nu=\nu^{+} - \nu^{-}, ~|\nu|=\nu^{+} + \nu^{-}$$
+
+<details>
+
+<summary>proof</summary>
+
+因為$$\nu \perp \mu$$，由定義得$$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ 且$$\mu(E)=0, \nu(F)=0$$且$$\forall E_s \in \Sigma, E_s \subseteq E,~ \mu(E_s) =0$$，$$\forall F_s \in \Sigma, F_s \subseteq F,~ \nu(F_s) =0$$。。
+
+因為$$F$$為$$\nu$$的零測集，由\[零測度集合若且唯若全變差測度為0]得$$|\nu|(F)=0$$因此可得$$|\nu| \perp \mu$$ (QED)。
+
+因為$$\nu(F)=\nu^{+}(F)-\nu^{-}(F)=0$$且$$|\nu|(F)=\nu^{+}(F)+\nu^{-}(F)=0$$，求解後可得$$\nu^{+}(F)=\nu^{-}(F)=0$$且對其任意可測子集均成立，因此$$\nu^{+} \perp \mu$$且$$\nu^{-} \perp \mu$$。 (QED)
+
+</details>
 
 ## 參考資料
 

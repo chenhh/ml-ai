@@ -258,6 +258,32 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 
 </details>
 
+### 符號測度的Jordan分解測是最小測度
+
+> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度，$$\lambda, \mu$$為正測度且滿足$$\nu=\lambda - \mu$$。
+>
+> 若$$\nu=\nu^{+}-\nu^{-}$$為Jordan分解，則$$\lambda \geq \nu^{+}$$且$$\mu \geq \nu^{-}$$。
+
+<details>
+
+<summary>proof</summary>
+
+若$$\nu(E)= \mu(E)=\nu(E)=\infty$$時，必可得$$\lambda(E) \geq \nu^{+}(E)$$且$$\lambda(E) \geq \nu^{-}(E)$$。
+
+令$$\nu(E), \mu(E), \nu(E) < \infty$$的情形。
+
+
+
+</details>
+
+### 有限符號測度的三角不等式
+
+> 在可測空間$$(X, \Sigma)$$中，$$\nu_1, \nu_2: \Sigma \rightarrow \mathbb{R}$$為有限符號測度，則：
+>
+> $$|\nu_1 + \nu_2| \leq |\nu_1| + |\nu_2|$$。
+
+
+
 ### 零測度集合若且唯若全變差測度為0
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
@@ -271,6 +297,8 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 \=>(反證法)
 
 全變差測度$$|\nu|: \Sigma \rightarrow \infty [0, \infty]$$，$$|\nu|=\nu^{+} + \nu^{-}$$。
+
+如果$$|\nu|(E)=\infty$$，則$$\nu^{+} (E)=\infty$$或$$\nu^{-}(E)=\infty$$。因此$$\nu(E) \neq 0$$。
 
 令$$0<|\nu|(E) <\infty$$。
 

@@ -162,7 +162,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > $$X = A \cup B$$且$$A\cap B = \emptyset$$。
 >
-> 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集。
+> 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集或者說$$A \oplus E$$在測度$$\nu$$下為零測集。
 >
 > <mark style="color:red;">註：Hahn分解可得宇集合可分割為正/負測集</mark>。
 >
@@ -176,7 +176,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 宇集合去掉正測集後，再證明剩下的集合為負測集</summary>
 
 假設$$\nu: \Sigma \rightarrow [-\infty, \infty)$$。\[若值域為$$(-\infty, \infty]$$時，討論$$-\nu$$即可]
 
@@ -208,7 +208,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 > 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu$$為符號測度。
 >
-> 稱$$\mu, \nu$$兩測度相互奇異(mutually signularity)或$$\nu$$相對於$$\mu$$奇異($$\nu$$ si singularity w.r.t. $$\mu$$)若：
+> 稱$$\mu, \nu$$兩測度相互奇異(mutually signularity)或$$\nu$$相對於$$\mu$$奇異($$\nu$$ is singularity w.r.t. $$\mu$$)若：
 >
 > ($$E,F$$為$$X$$的可測分割且$$E$$為$$\mu$$的零測集，$$F$$為$$\nu$$的零測集)，$$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ 且$$\mu(E)=0, \nu(F)=0$$。
 >
@@ -220,7 +220,39 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
 >
-> 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$且$$\nu^{+} \perp \nu^{-}$$。
+> 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$($$\forall E \in \Sigma, ~\nu(E)=\nu^{+}(E)-\nu^{-}(E)$$)且$$\nu^{+} \perp \nu^{-}$$。
+>
+> 註：唯一性是指測度值相等，即$$\nu(E)=\mu(E)$$。
+
+<details>
+
+<summary>proof: 任意集合依Hann分解定理可分割為正/負測集。再定義正/負測集的正測度即為所求。</summary>
+
+令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。
+
+存在性：
+
+$$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu(S \cap N)$$。
+
+因此可得$$\nu(S)=\nu^{+}(S) - \nu^{-}(S)$$且$$\nu^{+}(S) \perp \nu^{-}(S)$$。&#x20;
+
+唯一性：
+
+令$$\nu=\mu^{+} - \mu^{-}$$且$$\mu^{+} \perp \mu^{-}$$。
+
+令$$E, F \in \Sigma, ~ E \cap F = \emptyset, ~ E \cup F= X$$且$$\mu^{+}(F)=\mu^{-}(E)=0$$。
+
+則$$X=E \cup F$$為測度$$\nu$$的另一組Hahn分解。
+
+由Hahn 分解可得$$P \oplus E = (P \cap E^c) \cup (P^c \cap E)$$為$$\nu$$的零測集。
+
+可得$$\forall A \in \Sigma, ~ \mu^{+}(A)=\mu^{+}(A \cap E) =\nu(A \cap E)=\nu(A \cap E)=\nu^{+}(A)$$。
+
+同理可得$$\mu^{-}(A)=\nu^{-}(A)$$。
+
+(QED)
+
+</details>
 
 ## 參考資料
 

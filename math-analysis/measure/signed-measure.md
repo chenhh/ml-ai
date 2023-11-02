@@ -224,6 +224,8 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
 >
+> $$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=\nu(S \cap N)$$
+>
 > $$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative varitation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
 >
 > <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
@@ -268,7 +270,11 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 
 <summary>proof</summary>
 
-若$$\nu(E)= \mu(E)=\nu(E)=\infty$$時，必可得$$\lambda(E) \geq \nu^{+}(E)$$且$$\lambda(E) \geq \nu^{-}(E)$$。
+令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$
+
+若$$\nu(E)=-\infty$$時，$$\lambda(E) \in \mathbb{R}, ~\mu(E)=\infty$$
+
+若$$\lambda(E)=\infty$$或\$$時，必可得$$\lambda(E) \geq \nu^{+}(E)$$且$$\lambda(E) \geq \nu^{-}(E)$$。
 
 令$$\nu(E), \mu(E), \nu(E) < \infty$$的情形。
 

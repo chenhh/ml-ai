@@ -238,7 +238,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 存在性：
 
-$$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu(S \cap N)$$。
+$$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\nu(S \cap N)$$。
 
 因此可得$$\nu(S)=\nu^{+}(S) - \nu^{-}(S)$$且$$\nu^{+}(S) \perp \nu^{-}(S)$$。&#x20;
 
@@ -265,20 +265,31 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度，$$\lambda, \mu$$為正測度且滿足$$\nu=\lambda - \mu$$。
 >
 > 若$$\nu=\nu^{+}-\nu^{-}$$為Jordan分解，則$$\lambda \geq \nu^{+}$$且$$\mu \geq \nu^{-}$$。
+>
+> 註：$$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=-\nu(S \cap N)$$。
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: [todo]</summary>
 
-令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$
+令$$E,F \in \Sigma, ~E \cup F=X, ~E \cap F=\emptyset$$為宇集合$$X$$的一組分割。
 
-若$$\nu(E)=-\infty$$時，$$\lambda(E) \in \mathbb{R}, ~\mu(E)=\infty$$
+$$\forall S \in \Sigma$$，令$$\lambda (S)=\nu(S \cap E), ~\mu(S)=-\nu(S \cap F)$$。
 
-若$$\lambda(E)=\infty$$或\$$時，必可得$$\lambda(E) \geq \nu^{+}(E)$$且$$\lambda(E) \geq \nu^{-}(E)$$。
+可得$$\nu(S)=\nu((S \cap E) \cup (S \cap F))=\nu(S \cap E) + \nu(S \cap F)=\lambda(S)-\nu(S)$$--(1)
 
-令$$\nu(E), \mu(E), \nu(E) < \infty$$的情形。
+令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$P, N$$分別為集合$$X$$最大的正/負測集。
 
+則$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=-\nu(S \cap N)$$。$$\nu(S)=\nu^{+}(S) - \nu^{-}(S)$$--(2)
 
+因為$$(E,F), ~(P,N)$$均為$$X$$的分割，不失一般性令$$E$$上含有較多測度為正值的集合，可分為以下兩種情形討論：
+
+1. $$E \subseteq P$$，則$$F = N \cup (P-E)$$。
+2. $$F \subseteq N$$，則$$E=P \cup(N-F)$$。
+
+Case 1:&#x20;
+
+因為$$E \subseteq P$$，依測度的單調性得$$\nu(E) \leq \nu(P)$$
 
 </details>
 
@@ -288,7 +299,17 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=\nu
 >
 > $$|\nu_1 + \nu_2| \leq |\nu_1| + |\nu_2|$$。
 
+<details>
 
+<summary>proof: [todo]</summary>
+
+$$|\nu_1+\nu_2| = (\nu_1+\nu_2)^{+} + (\nu_1+\nu_2)^{-}$$
+
+$$|\nu_1| = \nu_1^{+} + \nu_1^{-}$$
+
+$$|\nu_2| = \nu_2^{+} + \nu_2^{-}$$
+
+</details>
 
 ### 零測度集合若且唯若全變差測度為0
 

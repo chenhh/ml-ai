@@ -323,13 +323,23 @@ $$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \geq -\
 
 <details>
 
-<summary>proof: [todo]</summary>
+<summary>proof: 由Hahn分解證明</summary>
 
 $$|\nu_1+\nu_2| = (\nu_1+\nu_2)^{+} + (\nu_1+\nu_2)^{-}$$
 
-$$|\nu_1| = \nu_1^{+} + \nu_1^{-}$$
+$$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=-\nu(S \cap N)$$。
 
-$$|\nu_2| = \nu_2^{+} + \nu_2^{-}$$
+$$\forall E \in \Sigma$$,&#x20;
+
+$$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{+}(E) &= (\nu_1 + \nu_2)(E \cap P) \\ 	&= (\nu_1^{+}+ \nu_2^{+} - \nu_1^{-} - \nu_2^{-})(E \cap P) \\ 	& \leq (\nu_1^{+}+ \nu_2^{+})(E \cap P) ~[\because \nu_1^{-},\nu_2^{-} \geq 0] \\ 	& \leq \nu_1^{+}(E) + \nu_2^{+}(E)~ [\because E \cap P \subseteq E] \end{aligned}$$
+
+同理可得
+
+$$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \cap N) \\ 	& \leq \nu_1^{-}(E) + \nu_2^{-}(E)~  \end{aligned}$$
+
+因此$$\displaystyle  \begin{aligned} |\nu_1 + \nu_2|(E) &= (\nu_1 + \nu_2)^{+}(E) + (\nu_1 + \nu_2)^{-}(E) \\ 	& \leq \nu_1^{+}(E) + \nu_1^{-}(E) + \nu_2^{+}(E) + \nu_2^{-}(E) \\ 	& = |\nu_1(E)| + |\nu_2(E)| \end{aligned}$$
+
+(QED)
 
 </details>
 

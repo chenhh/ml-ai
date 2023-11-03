@@ -52,7 +52,27 @@
 
 > 給定可測空間$$(X, \Sigma)$$與有限符號測度$$\nu: \Sigma \rightarrow (-\infty, \infty)$$與正測度$$\mu: \Sigma \rightarrow [0,\infty]$$。
 >
-> 則$$\nu \ll \mu \iff E \in \Sigma,  \forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ,~ \nu(E) < \delta$$。
+> 則$$\nu \ll \mu \iff E \in \Sigma,  \forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ~\text{ whenever } \mu(E) < \delta$$。
+>
+> 註：因為$$\nu \ll \mu \iff |\nu| \ll \mu$$且$$|\nu(E)| \leq |\nu|(E)$$，因此只要考慮$$\nu=|\nu|$$非負值部份即可。
+>
+> [https://math.stackexchange.com/questions/3053527/absolute-continuity-of-measure-and-epsilon-delta-condtion](https://math.stackexchange.com/questions/3053527/absolute-continuity-of-measure-and-epsilon-delta-condtion)
+
+<details>
+
+<summary>proof</summary>
+
+<=
+
+令$$E \in \Sigma, ~\mu(E)=0$$
+
+若$$\forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ,\text{ whenever } \mu(E) < \delta$$
+
+因為$$\mu(E)=0 \implies  \forall \epsilon >0, ~ |\nu(E)|<\epsilon$$，因此$$\nu(E)=0$$ (QED)
+
+
+
+</details>
 
 ## 參考資料
 

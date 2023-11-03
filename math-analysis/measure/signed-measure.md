@@ -204,11 +204,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 </details>
 
-## 相互奇異(正交)測度(mutually signular measures)
+## 相互奇異(正交)測度(mutually singular measures)
 
 > 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu$$為符號測度。
 >
-> 稱$$\mu, \nu$$兩測度相互奇異(mutually signularity)或$$\nu$$相對於$$\mu$$奇異($$\nu$$ is singularity w.r.t. $$\mu$$)若：
+> 稱$$\mu, \nu$$兩測度相互奇異(mutually singularity)或$$\nu$$相對於$$\mu$$奇異($$\nu$$ is singularity w.r.t. $$\mu$$)若：
 >
 > ($$E,F$$為$$X$$的可測分割且$$E$$為$$\mu$$的零測集，$$F$$為$$\nu$$的零測集)，$$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ $$\mu(E)=0, \nu(F)=0$$且$$\forall E_s \in \Sigma, E_s \subseteq E,~ \mu(E_s) =0$$，$$\forall F_s \in \Sigma, F_s \subseteq F,~ \nu(F_s) =0$$。
 >
@@ -230,7 +230,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > $$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=\nu(S \cap N)$$
 >
-> $$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative varitation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
+> $$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative variation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
 >
 > <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
 
@@ -268,12 +268,22 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為有限符號測度，則：
 >
-> $$\nu = \nu^{+} - \nu^{-}$$且
+> $$\nu = \nu^{+} - \nu^{-}$$且$$\forall E \in \Sigma$$：
 >
 > * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。
 > * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。
 
-### 符號測度的Jordan分解的最小性質(minimality property)
+<details>
+
+<summary>proof</summary>
+
+令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。
+
+給定$$E \in \Sigma, ~ B \subseteq E, ~ B \in \Sigma$$
+
+</details>
+
+### 符號測度的Jordan分解的最小性質(minimal property)
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度，$$\lambda, \mu: \Sigma \rightarrow [0, \infty)$$為有限正測度且滿足$$\nu=\lambda - \mu$$。
 >

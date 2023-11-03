@@ -222,6 +222,10 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$($$\forall E \in \Sigma, ~\nu(E)=\nu^{+}(E)-\nu^{-}(E)$$)且$$\nu^{+} \perp \nu^{-}$$。
 >
+> 其中$$\nu^{+}, \nu^{-}$$至少有一個測度為實數值(不可同時為無窮大)。
+>
+>
+>
 > 註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
 >
 > $$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=\nu(S \cap N)$$
@@ -260,9 +264,18 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 </details>
 
-### 符號測度的Jordan分解測是最小測度
+### 有限符號測度的Jordan分解是測度的上/下界
 
-> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度，$$\lambda, \mu$$為正測度且滿足$$\nu=\lambda - \mu$$。
+> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為有限符號測度，則：
+>
+> $$\nu = \nu^{+} - \nu^{-}$$且
+>
+> * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。
+> * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。
+
+### 符號測度的Jordan分解的最小性質(minimality property)
+
+> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度，$$\lambda, \mu: \Sigma \rightarrow [0, \infty)$$為有限正測度且滿足$$\nu=\lambda - \mu$$。
 >
 > 若$$\nu=\nu^{+}-\nu^{-}$$為Jordan分解，則$$\lambda \geq \nu^{+}$$且$$\mu \geq \nu^{-}$$。
 >
@@ -310,6 +323,8 @@ $$|\nu_1| = \nu_1^{+} + \nu_1^{-}$$
 $$|\nu_2| = \nu_2^{+} + \nu_2^{-}$$
 
 </details>
+
+
 
 ### 零測度集合若且唯若全變差測度為0
 

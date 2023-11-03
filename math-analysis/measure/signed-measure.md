@@ -264,7 +264,7 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 </details>
 
-### 有限符號測度的Jordan分解是測度的上/下界
+### 有限符號測度的Jordan分解是測度的最小上界/最大下界
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為有限符號測度，則：
 >
@@ -275,11 +275,17 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: <span class="math"> E \cap P \subseteq E, ~ E \cap N \subseteq E</span>。</summary>
 
 令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。
 
-給定$$E \in \Sigma, ~ B \subseteq E, ~ B \in \Sigma$$
+給定$$E \in \Sigma, ~ B \subseteq E, ~ B \in \Sigma$$，可得$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \leq \nu^{+}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \leq \nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = \nu(E \cap P)     \end{aligned}$$因為$$E \cap P \subseteq E$$，因此$$\sup \nu(B)=\nu^{+}(E)$$。
+
+同理得：
+
+$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \geq -\nu^{-}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \geq -\nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = -\nu(E \cap N)     \end{aligned}$$因為$$E \cap N \subseteq E$$，因此$$\sup -\nu(B)=\nu^{-}(E)$$
+
+(QED)
 
 </details>
 
@@ -293,26 +299,19 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 <details>
 
-<summary>proof: [todo]</summary>
+<summary>proof: 反證法</summary>
 
-令$$E,F \in \Sigma, ~E \cup F=X, ~E \cap F=\emptyset$$為宇集合$$X$$的一組分割。
+令$$E \in \Sigma$$且$$\lambda(E) < \nu^{+}(E)$$--(1)。
 
-$$\forall S \in \Sigma$$，令$$\lambda (S)=\nu(S \cap E), ~\mu(S)=-\nu(S \cap F)$$。
+因為$$E=(E \cap P) \cup (E \cap N)$$為分割，由(1)可得不等式：$$\lambda(E \cap P) + \lambda(E \cap N) < \nu^{+}( E \cap P) + \nu^{+}( E \cap N)$$
 
-可得$$\nu(S)=\nu((S \cap E) \cup (S \cap F))=\nu(S \cap E) + \nu(S \cap F)=\lambda(S)-\nu(S)$$--(1)
+由Jordan分解得$$\nu^{+}(E \cap N)=0$$且$$\lambda (E \cap N) \geq 0$$，因此$$\lambda (E \cap P) < \nu^{+}(E \cap P)$$--(2)
 
-令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$P, N$$分別為集合$$X$$最大的正/負測集。
+因為$$\lambda (E \cap P) - \mu(E \cap P) = \nu^{+}(E \cap P) - \nu^{-}( E \cap P)$$--(3)
 
-則$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=-\nu(S \cap N)$$。$$\nu(S)=\nu^{+}(S) - \nu^{-}(S)$$--(2)
+由(2,3)得$$\mu^(E \cap P ) < \nu^{-}(E \cap P)=0$$，但$$\mu$$為正測度不可為負值，因此假設(1)矛盾&#x20;
 
-因為$$(E,F), ~(P,N)$$均為$$X$$的分割，不失一般性令$$E$$上含有較多測度為正值的集合，可分為以下兩種情形討論：
-
-1. $$E \subseteq P$$，則$$F = N \cup (P-E)$$。
-2. $$F \subseteq N$$，則$$E=P \cup(N-F)$$。
-
-Case 1:&#x20;
-
-因為$$E \subseteq P$$，依測度的單調性得$$\nu(E) \leq \nu(P)$$
+(QED)
 
 </details>
 

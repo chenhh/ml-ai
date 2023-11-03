@@ -70,7 +70,15 @@
 
 因為$$\mu(E)=0 \implies  \forall \epsilon >0, ~ |\nu(E)|<\epsilon$$，因此$$\nu(E)=0$$ (QED)
 
+\=> (反證法)
 
+假設$$\exists \epsilon > 0 \ni \forall n \in \mathbb{N}$$，存在$$E_n \in \Sigma$$且$$\mu(E_n) < 1/2^n$$且$$\nu(E_n) \geq \epsilon$$。
+
+令$$F_k =\bigcup_{n=k}^\infty E_n$$ 且 $$F =\bigcap_{k=1}^\infty F_k$$
+
+則$$\nu(F_k)< \sum_{n=k}^\infty 1/2^n = 2^{1-k}$$，因此$$\mu(F)=0$$，但$$\nu(F_k) \geq \epsilon, \forall k$$。
+
+因為$$\nu$$為有限測度，$$\nu(F)=\lim_{k \rightarrow \infty} F_k \geq \epsilon$$，因此不是絕對連續。(QED)
 
 </details>
 

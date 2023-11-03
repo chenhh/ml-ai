@@ -10,6 +10,10 @@ description: signed measure
 
 <mark style="color:red;">Jordan分解可得符號測度的本質表示：有號測度是兩正測度的差</mark>。
 
+若全變差測度$$|\nu|$$為有限(σ-有限)測度，則符號測度$$\nu$$為有限(σ-有限)測度。
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>來源: <a href="https://zhuanlan.zhihu.com/p/36652587">https://zhuanlan.zhihu.com/p/36652587</a></p></figcaption></figure>
+
 ## 符號測度
 
 > 給定可測空間$$(X, \Sigma)$$，定義符號測度$$\nu$$可取值$$\pm\infty$$(但不可同時為$$\pm \infty$$)即$$\nu: \Sigma \rightarrow (-\infty, \infty]$$或$$\nu: \Sigma \rightarrow [-\infty, \infty)$$避免出現無窮大符號之間沒有定義的行為出現，且滿足：

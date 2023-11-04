@@ -4,11 +4,15 @@ description: signed measure
 
 # 符號測度
 
+## 簡介
+
+在討論(正)測度的線性組合時，自然會考慮到測度為負值的情形。即在可測空間$$(X, \Sigma)$$中定義兩測度$$\mu_1, \mu_2$$，在相加時測度仍為正值沒問題，但若兩測度相減如$$\nu(E)=\mu_1(E)-\mu_2(E)$$時的定義，就必須避開$$\mu_1, \mu_2$$同時為無窮大的情形。
+
 一般討論測度$$u: \Sigma \rightarrow [0, \infty]$$要求其值域為非負值，而符號測度討論的是值域可為負值的情形，但正/負無窮大只能取一，即$$\nu: \Sigma \rightarrow [-\infty, \infty) \text{ or } \nu: \Sigma \rightarrow (-\infty, \infty]$$。
 
 <mark style="color:red;">Hahn分解可得宇集合可分割為正/負測集。</mark>
 
-<mark style="color:red;">Jordan分解可得符號測度的本質表示：有號測度是兩正測度的差</mark>。
+<mark style="color:red;">Jordan分解可得符號測度的本質表示：符號測度是兩正測度的差(而且是(正)測度值最小的分解)</mark>。
 
 若全變差測度$$|\nu|$$為有限(σ-有限)測度，則符號測度$$\nu$$為有限(σ-有限)測度。
 
@@ -18,11 +22,11 @@ description: signed measure
 
 > 給定可測空間$$(X, \Sigma)$$，定義符號測度$$\nu$$可取值$$\pm\infty$$(但不可同時為$$\pm \infty$$)即$$\nu: \Sigma \rightarrow (-\infty, \infty]$$或$$\nu: \Sigma \rightarrow [-\infty, \infty)$$避免出現無窮大符號之間沒有定義的行為出現，且滿足：
 >
-> 1. 定義域$$\Sigma$$為σ域
+> 1. 定義域$$\Sigma$$為σ域，且值域為$$[-\infty, \infty)$$或$$(-\infty, \infty]$$。一般是討論$$[-\infty, \infty)$$。
 > 2. $$\nu(\empty)=0$$
 > 3. $$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) = \sum_{n=1}^\infty \nu(E_n)$$，$$E_i \cap E_j = \empty$$且$$\bigcup_{n=1}^\infty E_n \in \Sigma$$。
 >
-> 此處要求當$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) < \infty$$時，$$\displaystyle \sum_{n=1}^\infty \nu(E_n)$$ 為絕對收斂。
+> 此處要求當$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) < \infty$$時，$$\displaystyle \sum_{n=1}^\infty \nu(E_n)$$ 為絕對收斂(converges absoulutely)。
 >
 > 則稱$$\nu$$為符號測度。
 
@@ -85,10 +89,10 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
-> * \[正測集的可測子集為正測集]若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
-> * \[正測集的可數聯集為正測集]$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
-> * \[正測集的測度單調性]若$$E$$為正測集，$$F \subseteq E$$為可測集，則$$\nu(F) \leq \nu(E)$$。
-> * \[零測集同時為正負測集]$$P$$為正測集，$$N$$為負測集，則$$P \cap N$$為零測集。
+> * <mark style="color:red;">\[正測集的可測子集為正測集]</mark>若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
+> * <mark style="color:red;">\[正測集的可數聯集為正測集]</mark>$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
+> * <mark style="color:red;">\[正測集的測度單調性]</mark>若$$E$$為正測集，$$F \subseteq E$$為可測集，則$$\nu(F) \leq \nu(E)$$。
+> * <mark style="color:red;">\[零測集同時為正負測集]</mark>$$P$$為正測集，$$N$$為負測集，則$$P \cap N$$為零測集。
 
 <details>
 
@@ -120,11 +124,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 </details>
 
-### 有限非負測度集合包含正測集
+### 有限非負測度集合包含正測集(Hahn's lemma)
 
 > 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E \in \Sigma, ~ 0 \leq \nu(E) <\infty$$，則存在可測子集$$F \subseteq E$$且$$F$$為正測集。
+> 若$$E \in \Sigma, ~ 0 < \nu(E) <\infty$$，則存在可測子集$$F \subseteq E$$且$$F$$為正測集。
 >
 > 註：$$E$$只是測度大於等於0，不一定為正測集。如果$$E$$是正測集時，依定義必滿足條件。
 
@@ -227,16 +231,16 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 > 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$($$\forall E \in \Sigma, ~\nu(E)=\nu^{+}(E)-\nu^{-}(E)$$)且$$\nu^{+} \perp \nu^{-}$$。
 >
 > 其中$$\nu^{+}, \nu^{-}$$至少有一個測度為實數值(不可同時為無窮大)。
->
->
->
-> 註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
->
-> $$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=\nu(S \cap N)$$
->
-> $$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative variation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
->
-> <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
+
+註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
+
+如果$$\nu^{+}<\infty$$且$$\nu^{-}<\infty$$，則稱$$\nu$$為<mark style="color:red;">有限符號測度(finite signed measure)</mark>。
+
+$$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=\nu(S \cap N)$$
+
+$$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative variation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
+
+<mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
 
 <details>
 
@@ -268,6 +272,19 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 </details>
 
+### 範例：可積函數的Jordan分解
+
+$$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定可測集合$$E \in \mathcal{B}$$，定義符號測度$$\displaystyle \nu(E)=\int_E f dm < \infty$$。
+
+定義$$A =\{ x \in \mathbb{R} ~|~ f(x) \geq 0\}$$，$$B ={ x \in \mathbb{R} | f(x) <0}$$。
+
+定義(正)測度：
+
+* $$\displaystyle \nu^{+}(E)=\int_{A \cap E}f dm$$
+* $$\displaystyle \nu^{-}(E)=-\int_{B \cap E}f dm$$
+
+則$$\{A, B\}$$為實數上相對於符號測度$$\nu$$的Hahn分解。$$\nu^{+}, \nu^{-}$$是符號測度$$\nu$$的Jordan分解。
+
 ### 有限符號測度的Jordan分解是測度的最小上界/最大下界
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu$$為有限符號測度，則：
@@ -276,6 +293,7 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 >
 > * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。
 > * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。
+> * $$|\nu|(E)=\sup \sum_{i=1}^n |\nu(E_i)|$$，$$\{E_i\}_{i=1}^n \subseteq X$$為互斥的可測集合。
 
 <details>
 

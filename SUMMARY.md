@@ -73,6 +73,7 @@
   * [可測與連續函數的關係](math-analysis/measure/measurable-continuous-function.md)
   * [絕對連續函數](math-analysis/measure/absolutely-continuous-function.md)
   * [絕對連續測度](math-analysis/measure/abs-continuous-measure.md)
+  * [Lebesgue-Radon-Nikodym定理](math-analysis/measure/lebesgue-radon-nikodym-thm.md)
   * [符號測度](math-analysis/measure/signed-measure.md)
 * [Lebesgue積分](math-analysis/lebesgue-integral.md)
   * [非負可測簡單函數的積分](math-analysis/lebesgue-integral/measurable-simple-function.md)

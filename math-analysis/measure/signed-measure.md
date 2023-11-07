@@ -10,9 +10,11 @@ description: signed measure
 
 一般討論測度$$u: \Sigma \rightarrow [0, \infty]$$要求其值域為非負值，而符號測度討論的是值域可為負值的情形，但正/負無窮大只能取一，即$$\nu: \Sigma \rightarrow [-\infty, \infty) \text{ or } \nu: \Sigma \rightarrow (-\infty, \infty]$$。
 
-<mark style="color:red;">Hahn分解可得宇集合可分割為正/負測集。</mark>
+<mark style="color:red;">Hahn分解可得宇集合可分割為正/負測集。</mark>Hahn分解定理的一個重要的推論是Jordan分解定理，任何一個符號測度都可以像實值函數那樣分解成正部與負部的差。
 
 <mark style="color:red;">Jordan分解可得符號測度的本質表示：符號測度是兩正測度的差(而且是(正)測度值最小的分解)</mark>。
+
+由Jordan分解的結果可定義符號測度的積分：$$\displaystyle \int_X f d\mu = \int_X f d\mu^{+} - \int_X f d\mu^{-}$$。等號在兩側積分存在時成立。
 
 若全變差測度$$|\nu|$$為有限(σ-有限)測度，則符號測度$$\nu$$為有限(σ-有限)測度。
 
@@ -184,7 +186,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 <details>
 
-<summary>proof: 宇集合去掉正測集後，再證明剩下的集合為負測集</summary>
+<summary>proof: 找到一個“最大”的正測集，再來證明它的補集一定是負測集。</summary>
 
 假設$$\nu: \Sigma \rightarrow [-\infty, \infty)$$。\[若值域為$$(-\infty, \infty]$$時，討論$$-\nu$$即可]
 
@@ -461,3 +463,4 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 * [https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
 * [https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf](https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf)
 * [https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
+* [https://zhuanlan.zhihu.com/p/159129138](https://zhuanlan.zhihu.com/p/159129138)

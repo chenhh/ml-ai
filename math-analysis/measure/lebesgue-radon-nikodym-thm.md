@@ -10,6 +10,20 @@ description: Radon-Nikodym derivative
 * 在金融數學上，將實際機率(actual probability) 轉換成 風險中性的機率(risk neutral probability)。
 * 可用來導出在$$L^p, ~1\leq p \leq  \infty$$等空間上的 Riesz 表現定理。
 
+## Lebesgue分解
+
+任意一個分佈函數都可以寫成一個離散型隨機變數、一個連續型隨機變數以及一個奇異型隨機變數的和，這就是Lebesgue分解定理，它更深刻地揭示了分佈函數的本質。
+
+機率空間中的分佈函數$$F$$滿足三性質：
+
+1. 單調性：$$F(x)$$單調遞增。
+2. 有界性：$$0 \leq F(x) \leq 1$$。
+3. 右連續性：$$F(x)$$右連續存在。
+
+$$F$$存在如下分解：$$F(x)=g_1(x)+g_2(x)+g_3(x)$$ ,其中$$g_1$$為絕對連續的單調遞增函數，$$g_2$$為奇異函數， $$g_3$$為階躍函數。
+
+這並不是說任意一個隨機變數一定是這三種之一，比如說一個連續隨機變數+一個離散隨機變數所得的結果既不是連續型也不是離散型，只是說一般的隨機變數分解成這三類隨機變數的和。
+
 ## 以可積分函數定義符號測度
 
 給定可積空間$$(X,\Sigma)$$。
@@ -47,4 +61,5 @@ description: Radon-Nikodym derivative
 * [https://en.wikipedia.org/wiki/Lebesgue%27s\_decomposition\_theorem](https://en.wikipedia.org/wiki/Lebesgue's\_decomposition\_theorem)
 * [http://www.scu.edu.tw/math/Chieping/n.5-dimension/calculus-on-measure.html](http://www.scu.edu.tw/math/Chieping/n.5-dimension/calculus-on-measure.html)
 * [https://www.colorado.edu/amath/sites/default/files/attached-files/lebesgue\_decomp.pdf](https://www.colorado.edu/amath/sites/default/files/attached-files/lebesgue\_decomp.pdf)
-*
+* [https://zhuanlan.zhihu.com/p/80783917](https://zhuanlan.zhihu.com/p/80783917)
+* [https://zhuanlan.zhihu.com/p/388395062](https://zhuanlan.zhihu.com/p/388395062)

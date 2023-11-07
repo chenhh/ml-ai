@@ -416,6 +416,26 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 
 </details>
 
+<details>
+
+<summary>proof2</summary>
+
+\=>
+
+若$$E$$為零測集，則$$|\nu|(E)=\nu^{+}(E)+\nu^{-}(E)=\nu(E \cap P) - \nu(E \cap N)=0 - 0 = 0$$
+
+(QED)
+
+<=
+
+若$$|\nu|(E)=0$$，則$$\nu^{+}(E)+\nu^{-}(E)=0$$且$$\nu^{+}(E) \geq 0, \nu^{-}(E) \geq 0$$。
+
+因此$$\nu^{+}(E)=0, \nu^{-}(E)=0$$。
+
+且對於任何可測子集$$F \subseteq E$$，均可得$$\nu(F)=\nu^{+}(F)-\nu^{-}(F)=0$$ (QED)
+
+</details>
+
 ### 相互奇異測度與全變差、正/負變差均相互奇異
 
 > 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu$$為符號測度。

@@ -20,6 +20,8 @@ description: Radon-Nikodym derivative
 
 常將上式寫為微分形式：$$d\nu = f d\mu$$。
 
+<mark style="color:red;">也可推廣測度</mark>$$\mu$$<mark style="color:red;">為符號測度，但一般應用使用測度即可</mark>。
+
 ## 引理
 
 > 給定可積空間$$(X,\Sigma)$$與有限測度$$\nu, \mu: \Sigma \rightarrow [0, \infty)$$。
@@ -37,9 +39,12 @@ description: Radon-Nikodym derivative
 > 1. $$\nu=\nu_0 + \nu_1$$。(<mark style="color:red;">Lebesgue分解(decomposition</mark>)
 > 2. $$\nu_0 \ll \mu$$ (絕對連續，即$$\forall E \in \Sigma, ~\mu(E)=0 \implies \nu_0(E)=0$$)
 > 3. $$\nu_1 \perp \mu$$ (相互奇異(正交)，即$$\exists E, F \in \Sigma, E \cup F =X, E\cap F=\emptyset, \nu_1(E)=0, \mu(F)=0$$且$$E$$為$$\nu_1$$的零測集，$$F$$為$$\mu$$的零測集)。
+>
+> Radon–Nikodym–Lebesgue 定理把測度沿著 σ-有限測度分解為絕對連續部分與奇異部分，並給出絕對連續部分的分類。
 
 ## 參考資料
 
 * [https://en.wikipedia.org/wiki/Lebesgue%27s\_decomposition\_theorem](https://en.wikipedia.org/wiki/Lebesgue's\_decomposition\_theorem)
 * [http://www.scu.edu.tw/math/Chieping/n.5-dimension/calculus-on-measure.html](http://www.scu.edu.tw/math/Chieping/n.5-dimension/calculus-on-measure.html)
+* [https://www.colorado.edu/amath/sites/default/files/attached-files/lebesgue\_decomp.pdf](https://www.colorado.edu/amath/sites/default/files/attached-files/lebesgue\_decomp.pdf)
 *

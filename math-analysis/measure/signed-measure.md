@@ -184,7 +184,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集或者說$$A \oplus E = (A \cap E^c) \cup (A^c \cap E)$$在測度$$\nu$$下為零測集。
 >
-> <mark style="color:red;">註：Hahn分解可得宇集合(在任意符號測度下)可分割為正/負測集</mark>。
+> <mark style="color:red;">註：Hahn分解可得宇集合(在任意符號測度下)可分割為正/負測集(零測集只會存在於正或負測集中，因此正/負測集中會有一分割嚴格大於0或小於0)。</mark>
 >
 > Hahn分解不唯一(因為有零測集存在)。
 >

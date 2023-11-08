@@ -55,7 +55,7 @@ description: signed measure
 
 ### 有限測集的子集仍為有限測集
 
-> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+> 令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
 > $$F \subseteq E$$為可測集，若$$|\nu(E)|<\infty$$，則$$|\nu(F)|<\infty$$。
 
@@ -65,9 +65,11 @@ description: signed measure
 
 $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
-不失一般性令$$\nu(F)=\infty$$。則$$\nu: \Sigma \rightarrow (-\infty, \infty]$$。--(2)
+不失一般性令$$|\nu(F)|=\infty$$，即$$\nu(F)=-\infty$$--(2)
 
-由(1,2)得$$\nu(E)=\infty$$ (QED)
+由(1,2)得$$\nu(E)=-\infty$$ ，即$$|\nu(E)|=\infty$$，但與假設$$|\nu(E)|<\infty$$矛盾。
+
+因此$$|\nu(F)|<\infty$$ (QED)
 
 </details>
 

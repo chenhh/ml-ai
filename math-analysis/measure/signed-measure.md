@@ -228,11 +228,13 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 ## 相互奇異(正交)測度(mutually singular measures)
 
-> 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu$$為符號測度。
+> 在可測空間$$(X, \Sigma)$$中，令$$\mu,\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
 >
 > 稱$$\mu, \nu$$兩測度相互奇異(mutually singularity)或$$\nu$$相對於$$\mu$$奇異($$\nu$$ is singularity w.r.t. $$\mu$$)若：
 >
-> ($$E,F$$為$$X$$的可測分割且$$E$$為$$\mu$$的零測集，$$F$$為$$\nu$$的零測集)，$$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ $$\mu(E)=0, \nu(F)=0$$且$$\forall E_s \in \Sigma, E_s \subseteq E,~ \mu(E_s) =0$$，$$\forall F_s \in \Sigma, F_s \subseteq F,~ \nu(F_s) =0$$。
+> ($$E,F$$為$$X$$的可測分割且$$E$$為$$\mu$$的零測集，$$F$$為$$\nu$$的零測集)。
+>
+> $$\exists E,F \in \Sigma$$，$$E \cap F=\emptyset$$，$$E \cup F = X$$ $$\mu(E)=0, \nu(F)=0$$且$$\forall E_s \in \Sigma, E_s \subseteq E,~ \mu(E_s) =0$$，$$\forall F_s \in \Sigma, F_s \subseteq F,~ \nu(F_s) =0$$。
 >
 > <mark style="color:red;">常將此兩測度用正交符號記為：</mark>$$\mu \perp \nu$$<mark style="color:red;">。</mark>
 
@@ -240,11 +242,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 ## Jordan分解定理(the Jordan decomposition theorem)
 
-> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
+> 在可測空間$$(X, \Sigma)$$中，$$\mu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
 >
 > 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$($$\forall E \in \Sigma, ~\nu(E)=\nu^{+}(E)-\nu^{-}(E)$$)且$$\nu^{+} \perp \nu^{-}$$。
 >
-> 其中$$\nu^{+}, \nu^{-}$$至少有一個測度為實數值(不可同時為無窮大)。
+> 其中$$\nu^{+}, \nu^{-}: \Sigma \rightarrow [0, \infty]$$至少有一個測度為實數值(不可同時為無窮大)。
 
 註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
 
@@ -290,7 +292,7 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定可測集合$$E \in \mathcal{B}$$，定義符號測度$$\displaystyle \nu(E)=\int_E f dm < \infty$$。
 
-定義$$A =\{ x \in \mathbb{R} ~|~ f(x) \geq 0\}$$，$$B ={ x \in \mathbb{R} | f(x) <0}$$。
+定義$$A =\{ x \in \mathbb{R} ~|~ f(x) \geq 0\}$$，$$B =\{ x \in \mathbb{R} | f(x) <0\}$$。
 
 定義(正)測度：
 

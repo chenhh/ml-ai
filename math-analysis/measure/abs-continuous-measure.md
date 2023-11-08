@@ -1,3 +1,7 @@
+---
+description: absolutely continuous
+---
+
 # 絕對連續測度
 
 ## 簡介
@@ -11,16 +15,20 @@
 
 ## 絕對連續測度
 
-> 給定可測空間$$(X, \Sigma)$$與符號測度$$\nu: \Sigma \rightarrow [-\infty, \infty)$$與正測度$$\mu: \Sigma \rightarrow [0,\infty]$$。
+> 給定可測空間$$(X, \Sigma)$$與符號測度$$\nu: \Sigma \rightarrow [-\infty, \infty)$$與測度$$\mu: \Sigma \rightarrow [0,\infty]$$。
 >
 > 稱符號測度$$\nu$$相對於測度$$\mu$$絕對連續若$$\forall E \in \Sigma, ~ \mu(E)=0 \implies \nu(E)=0$$，記為$$\nu \ll \mu$$。
 >
+> 有些定義符號測度$$\nu$$相對於測度$$\mu$$絕對連續為$$|\nu| \ll \mu$$。因為$$|\nu| \ll \mu \iff \nu \ll \mu$$兩者通用。
+>
 > 註：符號$$\ll$$可解釋為遠小於。
 >
-> 註：因為$$|\nu| \ll \mu$$與$$\nu \ll \mu$$等價，因此符號測度/正測度的絕對連續和正測度/正測度的絕對連續等價。
+> 註：因為(正)測度為符號測度的特例，因為若$$\nu$$為正測度時，$$\nu \ll \mu$$條件不變。
 
 ### 絕對連續測度與全變差測度和Jordan分解測度等價
 
+> 給定可測空間$$(X, \Sigma)$$與符號測度$$\nu: \Sigma \rightarrow [-\infty, \infty)$$與正測度$$\mu: \Sigma \rightarrow [0,\infty]$$。
+>
 > $$\nu \ll \mu \iff |\nu| \ll \mu \iff \nu^{+} \ll \mu \iff \nu^{-} \ll \mu$$。
 >
 > * 符號測度的Jordan分解：$$\nu=\nu^{+} - \nu^{-}$$。其中$$\nu^{+}, \nu^{-}$$為正測度且不會同時為無窮大。

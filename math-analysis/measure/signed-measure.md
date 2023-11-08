@@ -24,7 +24,7 @@ description: signed measure
 
 > 給定可測空間$$(X, \Sigma)$$，定義符號測度$$\nu$$可取值$$\pm\infty$$(但不可同時為$$\pm \infty$$)即$$\nu: \Sigma \rightarrow (-\infty, \infty]$$或$$\nu: \Sigma \rightarrow [-\infty, \infty)$$避免出現無窮大符號之間沒有定義的行為出現，且滿足：
 >
-> 1. 定義域$$\Sigma$$為σ域，且值域為$$[-\infty, \infty)$$或$$(-\infty, \infty]$$。一般是討論$$[-\infty, \infty)$$。
+> 1. 定義域$$\Sigma$$為σ域，且值域一般是使用$$[-\infty, \infty)$$。
 > 2. $$\nu(\empty)=0$$
 > 3. $$\displaystyle \nu(\bigcup_{n=1}^\infty E_n) = \sum_{n=1}^\infty \nu(E_n)$$，$$E_i \cap E_j = \empty$$且$$\bigcup_{n=1}^\infty E_n \in \Sigma$$。
 >
@@ -67,19 +67,17 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 不失一般性令$$|\nu(F)|=\infty$$，即$$\nu(F)=-\infty$$--(2)
 
-由(1,2)得$$\nu(E)=-\infty$$ ，即$$|\nu(E)|=\infty$$，但與假設$$|\nu(E)|<\infty$$矛盾。
-
-因此$$|\nu(F)|<\infty$$ (QED)
+由(1,2)得$$\nu(E)=-\infty$$ ，即$$|\nu(E)|=\infty$$ (QED)
 
 </details>
 
 ## 正測集與負測集(positive set and negative set)
 
-> 令$$\nu$$為符號測度，則
+> 令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度，則
 >
-> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若任意可測子集測度均大於等於0。。記為$$A \geq 0$$。
-> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若任意可測子集測度均小於等於0。若$$\forall E \subseteq B, ~ E \in \Sigma, ~\mu(B) \leq 0$$。記為$$B \leq 0$$。
-> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若若任意可測子集測度均等於0。$$\forall E \subseteq C, ~ E \in \Sigma, ~\mu(C) = 0$$。記為$$C=0$$。
+> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若任意可測子集測度均大於等於0$$\forall E \subseteq A, ~ E \in \Sigma, ~\mu(E) \geq 0$$。記為$$A \geq 0$$。
+> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若任意可測子集測度均小於等於0。若$$\forall E \subseteq B, ~ E \in \Sigma, ~\mu(E) \leq 0$$。記為$$B \leq 0$$。
+> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若若任意可測子集測度均等於0。$$\forall E \subseteq C, ~ E \in \Sigma, ~\mu(E) = 0$$。記為$$C=0$$。
 >
 > 註：零測集同時為正測集與負測集。
 >
@@ -89,7 +87,7 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 ### 正(負)測集的性質
 
-> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+> 令$$\nu: \Sigma \rightarrow [-\infty , \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
 > * <mark style="color:red;">\[正測集的可測子集為正測集]</mark>若$$E$$為正測集，則$$\forall F \subseteq E$$且$$F$$為可測集，則$$F$$為正測集。
 > * <mark style="color:red;">\[正測集的可數聯集為正測集]</mark>$$\{E_n\}$$為正測集序列，則$$\bigcup_{n=1}^\infty E_n$$為正測集。
@@ -132,27 +130,29 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 ### 有限非負測度集合包含正測集(Hahn's lemma)
 
-> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+> 令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E \in \Sigma, ~ 0 < \nu(E) <\infty$$，則存在可測子集$$F \subseteq E$$且$$F$$為正測集。
+> 若$$E$$為有限可測集合且測度非負值($$E \in \Sigma, ~ 0 \leq \nu(E) <\infty$$)，則存在可測子集$$F \subseteq E$$且$$F$$為正測集。
 >
 > 註：$$E$$只是測度大於等於0，不一定為正測集。如果$$E$$是正測集時，依定義必滿足條件。
 
 <details>
 
-<summary>proof: 遞迴排除E中的負測度集，排除後(可能有無窮多個)剩下的集合為正測集。</summary>
+<summary>proof: 遞迴排除E中的負測度值集合後，排除後(可能有無窮多個)剩下的集合為正測集。</summary>
 
 如果$$E$$為正測集，由\[正(負)測集的性質/正測集的可測子集為正測集]得其任意可測子集為正測集。
 
-若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則存在最小的自然數$$n_1$$滿足以下條件：$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) < -1/n, \forall n \geq n_1$$。
+若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則存在最小的自然數$$n_1$$滿足以下條件：$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) \leq -1/n, \forall n \geq n_1$$。
 
-如果$$E-E_1$$為正測集，則證明完成。否則遞迴從$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則存在最小的自然數$$n_2$$滿足以下條件$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) < -1/n, \forall n \geq n_2$$。
+如果$$E-E_1$$為正測集，則證明完成。否則遞迴從$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則存在最小的自然數$$n_2$$滿足以下條件$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) \leq -1/n, \forall n \geq n_2$$。
 
-做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則存在最小的自然數$$n_k$$滿足以下條件$$\exists n_k \in \mathbb{N} \ni \nu(E_k) < -1/n, \forall n \geq n_k$$
+做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則存在最小的自然數$$n_k$$滿足以下條件$$\exists n_k \in \mathbb{N} \ni \nu(E_k) \leq -1/n, \forall n \geq n_k$$
 
 如果在有限步內無法完成，令$$S=E-\bigcup_{i=1}^\infty E_i$$。即$$E= S \bigcup (\bigcup_{i=1}^\infty E_i)$$。因為在建構過程中$$S$$與$$E_i$$兩兩互斥， 由測度定義得$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i)$$--(1)。
 
-因為假設$$\nu(E) <\infty$$，因此$$\sum_{i=1}^{\infty} \nu(E_i)$$必須[絕對收斂](../series/series-convergence-test.md#jue-dui-shou-lian-yu-tiao-jian-shou-lian)。因此當$$\displaystyle \lim_{i \rightarrow \infty} |\nu(E_i)|=0$$。因為$$\nu(E_i) > 1/n_i$$，因此$$\displaystyle \lim_{i \rightarrow \infty} n_i = \infty$$。--(2)
+因為假設$$\nu(E) <\infty$$，由定義得$$\sum_{i=1}^{\infty} \nu(E_i)$$必須[絕對收斂](../series/series-convergence-test.md#jue-dui-shou-lian-yu-tiao-jian-shou-lian)即$$\displaystyle \sum_{i=1}^\infty |\nu(E_i)|<\infty$$。
+
+因此得$$\displaystyle \lim_{i \rightarrow \infty} |\nu(E_i)|=0$$。因為$$\nu(E_i) \leq 1/n_i$$，因此$$\displaystyle \lim_{i \rightarrow \infty} n_i = \infty$$。--(2)
 
 取可測子集$$F \subseteq S$$，因為$$S=E-\bigcup_{i=1}^\infty E_i$$，所以$$F \subseteq E-\bigcup_{i=1}^\infty E_i$$--(3)。
 

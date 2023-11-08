@@ -32,18 +32,18 @@
 
 若集合$$N \in \Sigma$$且滿足$$\mu(N)=0$$，稱為<mark style="color:red;">零測集(null set)</mark>。
 
-#### 常見測度
+### 常見測度
 
 在實數$$\mathbb{R}$$上常數的測度有<mark style="color:red;">Lebesgue measure (on Borel set)</mark>
 
 * $$\mu([a,b])=\mu([a,b))=\mu((a,b])=\mu((a,b))=|b−a|$$。
 * $$\mu([a,\infty))=\mu((a,\infty))=\mu((−\infty,b])=\mu((−\infty,b))=\infty$$
 
-自然數或整數上的測度為<mark style="color:red;">計數測度</mark>(<mark style="color:red;">counting measure)。令</mark>$$X=\mathbb{N}$$，$$\Sigma=2^{\mathbb{N}}$$， $$\mu: \Sigma \rightarrow [0, \infty]$$
+自然數或整數上的測度為<mark style="color:red;">計數測度</mark>(<mark style="color:red;">counting measure)。令</mark>$$X=\mathbb{N}$$，$$\Sigma=2^{\mathbb{N}}$$， $$\mu: \Sigma \rightarrow [0, \infty]$$。$$\mu(E)=\begin{cases}  |E|, & E \text{ 為有限集 }\\  \infty, & E \text{ 為無限集 } .  \end{cases}$$
 
 * $$\mu([1,2,3,4,5])=\#([1,2,3,4,5])=5$$。
 * $$\mu(\mathbb{N})=\infty$$
-* 令$$E_n=\{n\}$$，可得$$\mu(E_n)=1$$且$$\mathbb{N}=\bigcup_{n\in\mathbb{N}} E_n$$，因此$$\mu$$為σ-finite測度。
+* 令$$E_n=\{n\}$$，可得$$\mu(E_n)=1$$且$$\mathbb{N}=\bigcup_{n\in\mathbb{N}} E_n$$，因此$$\mu$$為σ-有限測度。
 
 平面空間$$\mathbb{R}^2$$ 上的測度為<mark style="color:red;">面積</mark>。
 
@@ -51,7 +51,7 @@
 
 函數空間的情形較為複雜，因此並非所有函數都存在測度函數可量測其值，因此必須先定義出可測函數後，才可定義測度。
 
-<mark style="color:red;">Dirac measure</mark>: 令$$x_0 \in X$$, $$\delta(x_0, E)=\left\{ \begin{aligned} &1, \text{ if } x_0 \in E \\ &0, \text{ otherwise} \end{aligned} \right.$$
+<mark style="color:red;">Dirac測度：</mark> 令$$x_0 \in X$$, $$\delta(x_0, E)=\left\{ \begin{aligned} &1, \text{ if } x_0 \in E \\ &0, \text{ otherwise} \end{aligned} \right.$$，稱為$$x_0$$處的點質量(point mass at x0)。此測度非平移不變，即$$\delta(x_0, E) \neq \delta(x_0, y+E)$$。
 
 ## 零測集(measure zero set, null set)
 
@@ -69,7 +69,7 @@
 * 零測集的可測子集為零測集。
 * [https://en.wikipedia.org/wiki/Null\_set](https://en.wikipedia.org/wiki/Null\_set)
 
-## 測度的可加性
+## 測度的有限可加性
 
 > * <mark style="color:red;">\[可加性 ,additive]</mark> $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
 > * <mark style="color:red;">\[有限可加性 finitely additive]</mark> $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
@@ -89,9 +89,19 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 </details>
 
-### 子集合與補集的測度
+### 範例：有限可加性不一定為可數可加性
 
-> * \[<mark style="color:blue;">子集合的測度</mark>] $$\forall E, F \in \Sigma, E \subseteq F \Rightarrow \mu (E) \leq \mu(F)$$​
+令$$\omega$$為自然數$$\mathbb{N}$$的非主超濾子(non-principal ultrafilter)。
+
+定義 $$\mu(A)=\begin{cases}  0, & A \cap \mathbb{N} \notin \omega, \\  1, & A \cap \mathbb{N} \in \omega.  \end{cases}$$，則$$\mu$$為有限可加性。
+
+但若令$$A_n=\{0,1,\dots, n\}$$，則$$\forall n \in \mathbb{N}, \mu(A_n)=0$$。
+
+但$$\mu(\bigcup_{n \in \mathbb{N}} A_n)=\mu(\mathbb{N})=1$$，即$$\mu(\bigcup_{n \in \mathbb{N} A_n} \neq \sum_{n\in \mathbb{N}}\mu(A_n)$$。
+
+### 測度單調性與補集的測度
+
+> * \[<mark style="color:blue;">測度單調性</mark>] $$\forall E, F \in \Sigma, E \subseteq F \implies \mu (E) \leq \mu(F)$$​
 > * <mark style="color:red;">集合的大小與測度值有單調的關係</mark>。
 > * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
 > * 註：反向不一定成立，即$$\nu(E) \leq \nu(F) \;\not\!\!\!\implies E \subseteq F$$。
@@ -174,9 +184,15 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 
 <mark style="color:blue;">所有的機率測度都是有限測度</mark>，因為$$\mu(\Omega) =1$$。
 
-> \[<mark style="color:blue;">sigma-finite measure</mark>] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n \ni \mu(E_n )< \infty, ~ \forall n$$
+> \[<mark style="color:red;">σ有限測度</mark>] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n \ni \mu(E_n )< \infty, ~ \forall n$$。
+>
+> 但不要求$$\mu(X)<\infty$$。只要求$$X$$的可數分割中，每一個分割集的測度有限即可。
+>
+> 由定義可知<mark style="color:blue;">有限測度</mark>$$\subseteq$$<mark style="color:blue;">σ有限測度</mark>。因為若$$\mu(X)<\infty$$，則其任意可測子集$$\mu(E) < \infty$$。
 
 實數的長度不是有限測度，<mark style="color:blue;">但實數的長度是</mark>σ<mark style="color:blue;">有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+
+<mark style="color:blue;">一般常用的測度大多為σ有限測度</mark>。如Lebesgue測度($$\mathbb{R}^n$$)，計數測度。
 
 ## 非互斥集合聯集與交集測度之和等於各別集合測度之和(排容原理)
 
@@ -359,3 +375,12 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 由(2,3,4)得$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \leq \lim_{n \rightarrow \infty} \sum_{k=n}^\infty \mu(E_k)=0$$ (QED)
 
 </details>
+
+## 測度空間(measure space)
+
+> * $$(X, \Sigma, \mu)$$稱為測度空間。
+> * 若$$\mu(X)<\infty$$，則$$(X, \Sigma, \mu)$$稱為有限測度空間。
+> * 若存在可測集合$$E_i \in \Sigma, ~i \in \mathbb{N}$$且$$\mu(E_i) < \infty, \forall i$$，$$X =\bigcup_{i \in \mathbb{N}}E_i$$，則$$(X, \sigma, \mu)$$為σ有限測度空間。
+> * 若$$E$$為零測集(null set)，且$$\forall E \subseteq  X, ~ E  \in \Sigma$$，則$$(X, \Sigma, \mu)$$稱為完備測度空間(complete measure space)。
+>
+>

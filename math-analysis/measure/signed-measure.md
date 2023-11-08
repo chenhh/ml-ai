@@ -45,7 +45,7 @@ description: signed measure
 
 ### 測度的連續性
 
-> 令$$\nu$$為$$(X, \Sigma)$$上的符號測度。
+> 令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
 > 若$$\{E_n\}$$為$$\Sigma$$上的遞增集合，則$$\displaystyle \nu(\bigcup_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
 >
@@ -128,31 +128,33 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 </details>
 
-### 有限非負測度集合包含正測集(Hahn's lemma)
+### 有限正值測度集合包含正測集且測度為正值(Hahn's lemma)
 
 > 令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
-> 若$$E$$為有限可測集合且測度非負值($$E \in \Sigma, ~ 0 \leq \nu(E) <\infty$$)，則存在可測子集$$F \subseteq E$$且$$F$$為正測集。
+> 若$$E$$為有限可測集合且測度為正值($$E \in \Sigma, ~ 0 < \nu(E) <\infty$$)，則存在可測子集$$F \subseteq E$$，$$F$$為正測集且$$\nu(F) > 0$$。。
 >
-> 註：$$E$$只是測度大於等於0，不一定為正測集。如果$$E$$是正測集時，依定義必滿足條件。
+> 註：$$E$$只是測度大於0，不一定為正測集。如果$$E$$是正測集時，依定義必滿足條件。
 
 <details>
 
 <summary>proof: 遞迴排除E中的負測度值集合後，排除後(可能有無窮多個)剩下的集合為正測集。</summary>
 
-如果$$E$$為正測集，由\[正(負)測集的性質/正測集的可測子集為正測集]得其任意可測子集為正測集。
+如果$$E$$為正測集，由\[正(負)測集的性質/正測集的可測子集為正測集]得其任意可測子集為正測集, 排除掉零測集之後即為所求。
 
-若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則存在最小的自然數$$n_1$$滿足以下條件：$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) \leq -1/n, \forall n \geq n_1$$。
+若$$E$$非正測集，則存在可測子集$$E_1 \subseteq E$$且$$\nu(E_1) < 0$$。則存在最小的自然數$$n_1$$滿足以下條件：$$\exists n_1 \in \mathbb{N} \ni \nu(E_1) < -1/n, \forall n \geq n_1$$。
 
-如果$$E-E_1$$為正測集，則證明完成。否則遞迴從$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則存在最小的自然數$$n_2$$滿足以下條件$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) \leq -1/n, \forall n \geq n_2$$。
+如果$$E-E_1$$為正測集，則證明完成。否則遞迴從$$E-E_1$$中存在可測子集$$E_2 \subseteq E-E_1$$且$$\nu(E_2) < 0$$。則存在最小的自然數$$n_2$$滿足以下條件$$\exists n_2 \in \mathbb{N} \ni \nu(E_2) < -1/n, \forall n \geq n_2$$。
 
-做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則存在最小的自然數$$n_k$$滿足以下條件$$\exists n_k \in \mathbb{N} \ni \nu(E_k) \leq -1/n, \forall n \geq n_k$$
+做到第$$k$$步，如果$$E-\bigcup_{i=1}^k E_i$$不是正測集，則$$E-\bigcup_{i=1}^k E_i$$存在可測子集$$E_k \subseteq E-\bigcup_{i=1}^k E_i$$且$$\nu(E_k) < 0$$。則存在最小的自然數$$n_k$$滿足以下條件$$\exists n_k \in \mathbb{N} \ni \nu(E_k) < -1/n, \forall n \geq n_k$$
 
 如果在有限步內無法完成，令$$S=E-\bigcup_{i=1}^\infty E_i$$。即$$E= S \bigcup (\bigcup_{i=1}^\infty E_i)$$。因為在建構過程中$$S$$與$$E_i$$兩兩互斥， 由測度定義得$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i)$$--(1)。
 
 因為假設$$\nu(E) <\infty$$，由定義得$$\sum_{i=1}^{\infty} \nu(E_i)$$必須[絕對收斂](../series/series-convergence-test.md#jue-dui-shou-lian-yu-tiao-jian-shou-lian)即$$\displaystyle \sum_{i=1}^\infty |\nu(E_i)|<\infty$$。
 
-因此得$$\displaystyle \lim_{i \rightarrow \infty} |\nu(E_i)|=0$$。因為$$\nu(E_i) \leq 1/n_i$$，因此$$\displaystyle \lim_{i \rightarrow \infty} n_i = \infty$$。--(2)
+因此得$$\displaystyle \lim_{i \rightarrow \infty} |\nu(E_i)|=0$$。因為$$\nu(E_i) <- 1/n_i$$，因此$$\displaystyle \lim_{i \rightarrow \infty} n_i = \infty$$。--(2)
+
+接下來證明$$S$$為正測集。
 
 取可測子集$$F \subseteq S$$，因為$$S=E-\bigcup_{i=1}^\infty E_i$$，所以$$F \subseteq E-\bigcup_{i=1}^\infty E_i$$--(3)。
 
@@ -160,7 +162,9 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 可得$$\nu(F)<-1/(n_i-1) < -1/n_i$$，因此$$F \in  E_i$$ 但這與(3)矛盾。因此$$\nu(F) \geq -1/(n_i-1), \forall i \in \mathbb{N}$$--(4)
 
-由(2,4)得$$\nu(F) \geq 0$$，因此$$S$$為正測集(QED)
+由(2,4)得$$\nu(F) \geq 0$$，因此$$S$$為正測集
+
+因為$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i) > 0$$且$$\nu(\sum_{i=1}^{\infty} \nu(E_i)) <0$$因此$$\nu(S) > 0$$ (QED)
 
 </details>
 
@@ -172,11 +176,11 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 ## Hahn分解定理(The Hahn decomposition theorem)
 
-> 在可測空間$$(X, \Sigma)$$中，令$$\nu$$為符號測度，則存在正測集$$A$$與負測集$$B$$(均在測度$$\nu$$下)滿足：
+> 在可測空間$$(X, \Sigma)$$中，令$$\nu : \Sigma \rightarrow [-\infty, \infty)$$為符號測度，則存在正測集$$A$$與負測集$$B$$(均在測度$$\nu$$下)滿足：
 >
 > $$X = A \cup B$$且$$A\cap B = \emptyset$$。
 >
-> 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集或者說$$A \oplus E$$在測度$$\nu$$下為零測集。
+> 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集或者說$$A \oplus E = (A \cap E^c) \cup (A^c \cap E)$$在測度$$\nu$$下為零測集。
 >
 > <mark style="color:red;">註：Hahn分解可得宇集合(在任意符號測度下)可分割為正/負測集</mark>。
 >
@@ -194,7 +198,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 假設$$\nu: \Sigma \rightarrow [-\infty, \infty)$$。\[若值域為$$(-\infty, \infty]$$時，討論$$-\nu$$即可]
 
-對於$$X$$上的所有正測集集合族$$A_0$$，取$$\displaystyle M=\sup_{A_0 \geq 0} \nu(A_0)$$。可得$$M \geq 0$$--(1)。
+對於$$X$$上的所有正測集集合族$$\mathbb{A}_0 =\{A \in \Sigma ~|~ A \geq 0\}$$，取$$\displaystyle M=\sup_{A \in \mathbb{A}_0} \nu(A)<\infty$$為正測集的測度值最小上界。可得$$M \geq 0$$--(1)。
 
 因為$$M$$為正測集的上確界且有界($$M < \infty$$)，由\[[實數單調有界定理](../sequence/monotonic-sequence.md#shi-shu-chan-diao-you-jie-ding-li-bounded-convergence-theorem)]存在測度遞增正測集合序列$$\displaystyle  \{A_j \geq 0\} \ni \lim_{j \rightarrow \infty} \nu(A_j) =M$$。(注意是$$\nu(A_j) \leq \nu(A_{j+1})$$，而不是$$A_j \subseteq A_{j+1}$$)
 
@@ -202,17 +206,19 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 因為$$A = \bigcup_{j=1}^\infty A_j \supseteq A_j~,\forall j \in \mathbb{N}$$，由\[正測集的測度單調性]得$$\nu(A) \geq \nu(A_j)$$，因此$$\displaystyle \nu(A) \geq \lim_{j \rightarrow \infty} \nu(A_j)\implies \nu(A) \geq M$$--(3)
 
-由(2,3)得$$\nu(A)=M$$--(4)
+由(2,3)得$$\nu(A)=M$$，即$$A$$的測度等於正測集的最小上界--(4)
 
 \[反證法]令$$B=X-A$$且假設$$B$$不是負測集。
 
-因此存在可測正測集$$E \subseteq B \ni \nu(E) > 0$$。
+則存在可測且測度為有限正值的子集合(但不一定是正測集)$$E \subseteq B \ni 0< \nu(E) <\infty$$。
 
-由\[有限非負測度集合包含正測集]得存在$$F \subseteq E \ni \nu(F) \geq 0$$，且$$F \cap A = \emptyset$$，且$$F \cup A$$為正測集。
+由\[Hahn's lemma]得存在正測子集$$F \subseteq E \ni \nu(F) > 0$$。
 
-因此$$M \geq \nu(F \cup A) = \nu(F) + \nu(A) = \nu(F) + M$$
+可得$$F \cap A = \emptyset$$，且$$F \cup A$$為正測集。
 
-因此若$$\nu(F) > 0$$時，會得到$$M > M$$的矛盾，因此只能得到$$\nu(F) =0$$。但這又與$$\nu(E) > 0$$的假設矛盾，因此$$B$$為負測集&#x20;
+由(1)得$$M \geq \nu(F \cup A) = \nu(F) + \nu(A) = \nu(F) + M$$，因此得到$$\nu(F) =0$$。
+
+但這又與$$\nu(F) > 0$$的假設矛盾，因此$$B$$為負測集&#x20;
 
 (QED)
 
@@ -466,5 +472,5 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 
 * [https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
 * [https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf](https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf)
-* [https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
 * [https://zhuanlan.zhihu.com/p/159129138](https://zhuanlan.zhihu.com/p/159129138)
+* [https://zhuanlan.zhihu.com/p/68660066](https://zhuanlan.zhihu.com/p/68660066)

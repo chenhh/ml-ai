@@ -10,7 +10,7 @@
 
 ## 測度(measure)
 
-> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的σ-[field](set/field-and-sigma-field.md#sigmafieldsigmaalgebra-yu-ke-ce-kong-jian)。
+> 給定集合$$X$$，$$Σ$$為定義在$$X$$上的σ域(σ-field)。
 >
 > * 定義函數$$μ: \Sigma \rightarrow [0, \infty]$$（可為無窮大）滿足以下兩個條件時稱為測度：
 >   * <mark style="color:blue;">\[空集合的測度為0</mark>] $$\mu(\emptyset)=0$$
@@ -167,6 +167,8 @@ $$E=[1,3]$$，$$F=[4,7]$$。$$\mu(F)=3, \mu (E)=2$$，但$$E \cap F=\emptyset$$�
 ## 有限測度與σ有限測度
 
 > 如果對集合可得$$\mu(E)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
+>
+> 註：一般有限測度是指對宇集合的測度為有限值，即$$\mu(X) <\infty$$。因為測度有單調性，因此$$\forall E \subseteq X, ~0 \leq \mu(E) \leq \mu(X) <\infty$$。
 
 $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 

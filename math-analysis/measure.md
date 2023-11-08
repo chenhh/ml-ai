@@ -148,7 +148,7 @@ $$E=[1,3]$$，$$F=[4,7]$$。$$\mu(F)=3, \mu (E)=2$$，但$$E \cap F=\emptyset$$�
 
 ## 測度的次可加性
 
-> * \[<mark style="color:blue;">次可加性 ,sub-additive</mark>] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$
+> * \[<mark style="color:blue;">次可加性 ,sub-additive</mark>] $$\forall E,F \in \Sigma, ~\mu(E \cup F) \leq \mu(E)+\mu(F)$$，等號成立於$$E \cap F=\emptyset$$。
 > * \[<mark style="color:blue;">有限次可加性, finitely sub-additive</mark>] $$\forall E_1,E_2, \ldots,E_n \in \Sigma\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i ) \leq \sum_{i=1}^n\mu(E_i )$$
 > * \[<mark style="color:blue;">可數次可加性, countable sub-additive</mark>] $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma \Rightarrow \mu(\bigcup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mu(E_i)$$
 > * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。

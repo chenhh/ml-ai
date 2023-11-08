@@ -12,7 +12,7 @@ description: signed measure
 
 <mark style="color:red;">Hahn分解可得宇集合可分割為正/負測集。</mark>Hahn分解定理的一個重要的推論是Jordan分解定理，任何一個符號測度都可以像實值函數那樣分解成正部與負部的差。
 
-<mark style="color:red;">Jordan分解可得符號測度的本質表示：符號測度是兩正測度的差(而且是(正)測度值最小的分解)</mark>。
+<mark style="color:red;">Jordan分解可得符號測度的本質表示：(有限)符號測度是兩(有限)正測度的差(而且是(正)測度值最小的分解)</mark>。
 
 由Jordan分解的結果可定義符號測度的積分：$$\displaystyle \int_X f d\mu = \int_X f d\mu^{+} - \int_X f d\mu^{-}$$。等號在兩側積分存在時成立。
 
@@ -32,7 +32,9 @@ description: signed measure
 >
 > 則稱$$\nu$$為符號測度。
 
-由定義可知<mark style="color:green;">一般測度為有限測度</mark>的特例。
+由定義可知<mark style="color:red;">一般測度為有限測度的特例</mark>。
+
+如果$$\nu: \Sigma \rightarrow (-\infty, \infty)$$時，稱為<mark style="color:red;">有限符號測度</mark>。
 
 定義符號測度的應用：
 
@@ -73,19 +75,15 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 > 令$$\nu$$為符號測度，則
 >
-> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若$$\nu(A) \geq 0$$ 且$$\forall E \subseteq A$$為可測集合且$$\nu(E) \geq 0$$。記為$$A \geq 0$$。
-> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若$$\nu(B) \leq 0$$且$$\forall E \subseteq B$$為可測集合且$$\nu(E) \leq 0$$。記為$$B \leq 0$$。
-> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若$$\nu(C)=0$$且$$\forall E \subseteq C$$為可測集合且$$\nu(E)=0$$。記為$$C=0$$。
+> * 稱$$A$$在測度$$\mu$$下為<mark style="color:red;">正測集(positive set)</mark>，若任意可測子集測度均大於等於0。。記為$$A \geq 0$$。
+> * 稱$$B$$在測度$$\mu$$下為<mark style="color:red;">負測集(negative set)</mark>，若任意可測子集測度均小於等於0。若$$\forall E \subseteq B, ~ E \in \Sigma, ~\mu(B) \leq 0$$。記為$$B \leq 0$$。
+> * 稱$$C$$在測度$$\mu$$下<mark style="color:red;">零測集(null set)</mark>，若若任意可測子集測度均等於0。$$\forall E \subseteq C, ~ E \in \Sigma, ~\mu(C) = 0$$。記為$$C=0$$。
 >
 > 註：零測集同時為正測集與負測集。
 >
-> 正測集就是其所有可測子集的符號測度都是大於等於0。負測集就是其所有可測子集的符
->
-> 號測度都是小於等於0
->
 > [https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets](https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets)
 
-以$$\nu(E)=\int_E f d\mu$$為例，正測集即$$f \geq 0 \text{ a.e. on }  E$$，負測集則$$f \leq 0 \text{ a.e. on } E$$，零測集則$$f = 0 \text{ a.e. on } E$$。
+以$$\nu(E)=\int_E f d\mu$$為例，正測集即$$\int_E f \geq 0 \text{ a.e. on }  E$$，負測集則$$\int_E f \leq 0 \text{ a.e. on }  E$$，零測集則$$\int_E f = 0 \text{ a.e. on } E$$。<mark style="color:blue;">注意此處的測度值是</mark>$$f$$<mark style="color:blue;">在集合</mark>$$E$$<mark style="color:blue;">的積分值，而非函數值</mark>。
 
 ### 正(負)測集的性質
 
@@ -100,7 +98,7 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 <summary>proof: 將集合拆解為互斥集合</summary>
 
-因為$$E$$為正測集且$$F \subseteq E$$，由定義得$$\nu(E) \geq 0$$。--(1)
+因為$$E$$為正測集且$$F \subseteq E$$，由定義得$$\nu(F) \geq 0$$。--(1)
 
 令可測集$$G \subseteq F$$，可得$$G \subseteq E$$，由正測集定義得$$\nu(G) \geq 0$$。--(2)
 
@@ -110,7 +108,9 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 
 令$$F_n = E_n - \bigcup_{n=1}^{n-1} E_n$$，可得$$F_n \subseteq E_n$$，由正測集定義得$$\nu(F_n)\geq 0$$。
 
-因此若$$S \subseteq \bigcup_{n=1}^\infty E_n$$，則$$\nu(S)=\sum_{n=1}^\infty \nu(S \cap F_n) \geq 0$$ (QED)
+因此若$$S \subseteq \bigcup_{n=1}^\infty E_n$$，則$$\nu(S)=\sum_{n=1}^\infty \nu(S \cap F_n) \geq 0$$&#x20;
+
+(QED)
 
 $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
@@ -118,7 +118,9 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 因為$$E-F \subseteq E$$且可測，由正測集定義得$$\nu(E-F) \geq 0$$。
 
-因此$$\nu(E) \geq \nu(F)$$ (QED)
+因此$$\nu(E) \geq \nu(F)$$&#x20;
+
+(QED)
 
 令$$F \subseteq P \cap N$$為可測集，則$$F \subseteq P$$且$$F \subseteq N$$。
 
@@ -168,13 +170,13 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 ## Hahn分解定理(The Hahn decomposition theorem)
 
-> 在可測空間$$(X, \Sigma)$$中，令$$\nu$$為符號測度，則存在正測集$$A$$與負測合$$B$$(均在測度$$\nu$$下)滿足：
+> 在可測空間$$(X, \Sigma)$$中，令$$\nu$$為符號測度，則存在正測集$$A$$與負測集$$B$$(均在測度$$\nu$$下)滿足：
 >
 > $$X = A \cup B$$且$$A\cap B = \emptyset$$。
 >
 > 若$$E, F$$為另一組滿足上述條件的集合，則$$A \cap E=B \cap F$$在測度$$\nu$$下為零測集或者說$$A \oplus E$$在測度$$\nu$$下為零測集。
 >
-> <mark style="color:red;">註：Hahn分解可得宇集合可分割為正/負測集</mark>。
+> <mark style="color:red;">註：Hahn分解可得宇集合(在任意符號測度下)可分割為正/負測集</mark>。
 >
 > Hahn分解不唯一(因為有零測集存在)。
 >

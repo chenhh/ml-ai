@@ -83,6 +83,8 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 >
 > [https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets](https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets)
 
+令$$P$$為$$X$$中的最大正測集，則$$N=X-P$$為負測集且不含零測集，即$$\forall E \subseteq N, E \in \Sigma, \nu(E)<0$$。同理令$$N$$為$$X$$中的最大負測集，則$$P=X-N$$為負測集且不含零測集，即$$\forall E \in P, E \in \Sigma,  \mu(E)>0$$。
+
 以$$\nu(E)=\int_E f d\mu$$為例，正測集即$$\int_E f \geq 0 \text{ a.e. on }  E$$，負測集則$$\int_E f \leq 0 \text{ a.e. on }  E$$，零測集則$$\int_E f = 0 \text{ a.e. on } E$$。<mark style="color:blue;">注意此處的測度值是</mark>$$f$$<mark style="color:blue;">在集合</mark>$$E$$<mark style="color:blue;">的積分值，而非函數值</mark>。
 
 ### 正(負)測集的性質
@@ -138,7 +140,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 <details>
 
-<summary>proof: 遞迴排除E中的負測度值集合後，排除後(可能有無窮多個)剩下的集合為正測集。</summary>
+<summary>proof: 遞迴排除E中的負測度值集合後，排除後(可能有無窮多個)剩下的集合為正測集且不含零測集。</summary>
 
 如果$$E$$為正測集，由\[正(負)測集的性質/正測集的可測子集為正測集]得其任意可測子集為正測集, 排除掉零測集之後即為所求。
 
@@ -162,7 +164,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 
 可得$$\nu(F)<-1/(n_i-1) < -1/n_i$$，因此$$F \in  E_i$$ 但這與(3)矛盾。因此$$\nu(F) \geq -1/(n_i-1), \forall i \in \mathbb{N}$$--(4)
 
-由(2,4)得$$\nu(F) \geq 0$$，因此$$S$$為正測集
+由(2,4)得$$\nu(F) \geq 0$$，因此$$S$$為正測集。
 
 因為$$\nu(E)=\nu(S)+\sum_{i=1}^{\infty} \nu(E_i) > 0$$且$$\nu(\sum_{i=1}^{\infty} \nu(E_i)) <0$$因此$$\nu(S) > 0$$ (QED)
 

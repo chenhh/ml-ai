@@ -238,6 +238,8 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > <mark style="color:red;">常將此兩測度用正交符號記為：</mark>$$\mu \perp \nu$$<mark style="color:red;">。</mark>
 
+在\[絕對連續測度]中，以測度在集合集中定義相互奇異測度。
+
 註：可測函數$$f=f^{+}-f^{-}$$，其中集合$$({f^{+}})^{-1}$$與$$({f^{-}})^{-1}$$在各自的符號測度下相互奇異(正交)。
 
 ## Jordan分解定理(the Jordan decomposition theorem)
@@ -308,7 +310,7 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 > * $$\nu^{-}(E) \leq \nu(E) \leq \nu^{+}(E)$$。
 > * $$|\nu(E)| \leq |\nu|(E)$$。
 
-###
+
 
 ### 有限符號測度的Jordan分解是測度的最小上界/最大下界
 
@@ -318,7 +320,9 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 >
 > * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。
 > * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。
-> * $$|\nu|(E)=\sup \sum_{i=1}^n |\nu(E_i)|$$，$$\{E_i\}_{i=1}^n \subseteq X$$為互斥的可測集合。
+> * $$|\nu|(E)=\sup \sum_{i=1}^\infty |\nu(E_i)|$$，$$\{E_i\}_{i=1}^\infty \subseteq X$$為可測分割。
+>
+> 此為$$\nu^{+}, \nu^{-}, |\nu|$$的等價定義。
 
 <details>
 

@@ -43,6 +43,8 @@ description: absolutely continuous
 >
 > [https://math.stackexchange.com/questions/956634/equivalence-of-definition-of-measure-concentrated-on-a-set-a](https://math.stackexchange.com/questions/956634/equivalence-of-definition-of-measure-concentrated-on-a-set-a)
 
+任意可測集$$S = (S \cap E) \cup (S \cap E^c)$$，由$$\nu(S)=\nu(S \cap E)$$可得$$\nu(S \cap E^c)=0$$，即$$S$$在集合$$E$$中，可用$$\nu$$量測。
+
 <details>
 
 <summary>proof: 等價定義證明</summary>

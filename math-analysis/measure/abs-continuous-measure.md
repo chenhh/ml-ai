@@ -15,7 +15,7 @@ description: absolutely continuous
 
 ## 絕對連續測度
 
-給定可測空間$$(X, \Sigma)$$
+給定可測空間$$(X, \Sigma)$$：
 
 #### 正測度絕對連續於正測度
 
@@ -85,7 +85,25 @@ description: absolutely continuous
 > 6. 若$$\nu_1 \ll \mu, ~ \nu_2 \perp \mu$$，則$$\nu_1 \perp \nu_2$$。
 > 7. 若$$\nu \ll \mu, ~ \nu \perp \mu$$，則$$\nu=0$$。
 
+<details>
 
+<summary>proof 1</summary>
+
+因為$$\nu$$在$$E$$集中，所以$$\forall S \in \Sigma, ~ S\cap E =\emptyset \implies \nu(S)=0$$。
+
+且$$\forall Q \subseteq S, ~ Q \cap E=\emptyset \implies \nu(Q)=0$$。
+
+因此$$S$$為$$\nu$$零測集。
+
+令$$\displaystyle \mathbf{S}=\left\{\{S_n\}_{n=1}^\infty | \bigcup_{n=1}^\infty S_n =S, ~ S_i \cap S_j=\emptyset, \forall i \neq j\right\}$$為$$S$$的一組可數分割集合，則$$\nu(S_n)=0, \forall n$$。
+
+可得$$\displaystyle |\nu|(S)=\sup_{\{S_n\} \in \mathbf{S}} \sum_{n=1}^\infty |\nu(S_n)| = 0$$
+
+(QED)
+
+
+
+</details>
 
 
 

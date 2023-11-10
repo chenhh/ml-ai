@@ -238,17 +238,19 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > <mark style="color:red;">常將此兩測度用正交符號記為：</mark>$$\mu \perp \nu$$<mark style="color:red;">。</mark>
 
-在\[絕對連續測度]中，以測度在集合集中定義相互奇異測度。
+在\[絕對連續測度]中，以測度$$\mu$$在集合$$E$$集中($$\forall S \in \Sigma, ~ \nu(S)=\nu(S\cap E)$$)定義相互奇異測度。
 
 註：可測函數$$f=f^{+}-f^{-}$$，其中集合$$({f^{+}})^{-1}$$與$$({f^{-}})^{-1}$$在各自的符號測度下相互奇異(正交)。
 
 ## Jordan分解定理(the Jordan decomposition theorem)
 
-> 在可測空間$$(X, \Sigma)$$中，$$\mu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
+> 在可測空間$$(X, \Sigma)$$中，$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
 >
 > 存在唯一的(正)測度$$\nu^{+}$$與$$\nu^{-}$$使得$$\nu=\nu^{+}-\nu^{-}$$($$\forall E \in \Sigma, ~\nu(E)=\nu^{+}(E)-\nu^{-}(E)$$)且$$\nu^{+} \perp \nu^{-}$$。
 >
 > 其中$$\nu^{+}, \nu^{-}: \Sigma \rightarrow [0, \infty]$$至少有一個測度為實數值(不可同時為無窮大)。
+>
+> <mark style="color:red;">Jordan分解證明了任意符號測度都可以像實值函數分解成正部與負部的差</mark>。
 
 註：唯一性是指相異測度對同一集合的測度值相等，即$$\nu(E)=\mu(E)$$。
 
@@ -257,8 +259,6 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 $$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\nu^{+}(S)=\nu(S \cap P), ~\nu^{-}(S)=\nu(S \cap N)$$
 
 $$\nu^{+}, \nu^{-}$$也稱為符號測度$$\nu$$的<mark style="color:red;">正/負變差(positive/negative variation)</mark>。$$\nu=\nu^{+}-\nu^{-}$$稱為<mark style="color:red;">Jordan(測度)分解</mark>。類似於遞增函數的分解。
-
-<mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
 
 <details>
 
@@ -290,6 +290,24 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 </details>
 
+## 全變差測度(total variation of measure)
+
+> <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
+>
+> 如果$$\nu < \infty$$，則$$\nu^{+}(X)=\nu(P)<\infty$$ ，此時$$\nu^{+}$$ 是有限測度且$$\nu$$有上界$$\nu^{+}(X)$$。同理可推論$$-\infty < \nu$$ 。因此若$$-\infty < \nu(E) < \infty$$時，$$\nu$$為有限測度。
+
+正測度$$\mu$$可得$$|\mu|=\mu$$，因此其Jordan分解等於全變差，即$$\nu^{+}-\nu^{-} = \nu^{+} + \nu^{-}$$且$$\nu^{+} \geq 0, \nu^{-} \geq 0$$。可得$$\nu^{-}=0$$。
+
+### 符號測度做為積分算子
+
+在可測空間$$(X, \Sigma)$$中，$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
+
+令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。$$\mu=|\nu|$$為全變差測度，函數$$f=\chi_P -\chi_N$$，則可定義：$$\displaystyle \nu(E)=\int_E f d\mu$$。
+
+$$L^1(\nu) =L^1(\nu^{+})\cap L^{1} (\nu^{-})$$
+
+$$\displaystyle \int f d\nu = \int f d\nu^{+} - \int f d\nu^{-}, ~ f \in L^{1}(\nu)$$
+
 ### 範例：可積函數的Jordan分解
 
 $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定可測集合$$E \in \mathcal{B}$$，定義符號測度$$\displaystyle \nu(E)=\int_E f dm < \infty$$。
@@ -314,15 +332,19 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 
 ### 有限符號測度的Jordan分解是測度的最小上界/最大下界
 
-> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為有限符號測度，則：
+> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為<mark style="color:red;">有限符號測度</mark>，則：
 >
 > $$\nu = \nu^{+} - \nu^{-}$$且$$\forall E \in \Sigma$$：
 >
-> * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。
-> * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。
-> * $$|\nu|(E)=\sup \sum_{i=1}^\infty |\nu(E_i)|$$，$$\{E_i\}_{i=1}^\infty \subseteq X$$為可測分割。
+> * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。(可測子集合測度的最小上界)
+> * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。(可測子集合的最大下界取負值)
+> * $$\displaystyle |\nu|(E)=\sup_{\{E_i\} \in \mathbf{E}} \sum_{i=1}^\infty |\nu(E_i)|$$，$$\displaystyle \bigcup_{i=1}^\infty E_i = E, ~ E_i \cap E_j = \emptyset ~ \forall i \neq j$$為$$E$$的可測分割，而$$\mathbf{E}$$為所有$$E$$的可測分割形成的集合族。(宇集合可數分割測度的最小上界)
 >
 > 此為$$\nu^{+}, \nu^{-}, |\nu|$$的等價定義。
+>
+> <mark style="color:red;">此處定義的</mark>$$\nu^{+}, \nu^{-}, |\nu|$$<mark style="color:red;">在測度、符號測度、與複測度都通用</mark>。
+>
+> [https://math.stackexchange.com/questions/885776/total-variation-measure-definition](https://math.stackexchange.com/questions/885776/total-variation-measure-definition)
 
 <details>
 
@@ -330,13 +352,23 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 
 令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。
 
-給定$$E \in \Sigma, ~ B \subseteq E, ~ B \in \Sigma$$，可得$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \leq \nu^{+}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \leq \nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = \nu(E \cap P)     \end{aligned}$$因為$$E \cap P \subseteq E$$，因此$$\sup \nu(B)=\nu^{+}(E)$$。
+給定$$E \in \Sigma, ~ B \subseteq E, ~ B \in \Sigma$$，可得$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \leq \nu^{+}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \leq \nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = \nu(E \cap P)     \end{aligned}$$
+
+因為$$E \cap P \subseteq E$$，因此$$\sup \nu(B)=\nu^{+}(E)$$。
 
 同理得：
 
-$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \geq -\nu^{-}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \geq -\nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = -\nu(E \cap N)     \end{aligned}$$因為$$E \cap N \subseteq E$$，因此$$\sup -\nu(B)=\nu^{-}(E)$$
+$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \geq -\nu^{-}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \geq -\nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = -\nu(E \cap N)     \end{aligned}$$
+
+因為$$E \cap N \subseteq E$$，因此$$\sup -\nu(B)=\nu^{-}(E)$$
 
 (QED)
+
+$$E = \bigcup_{i=1}^\infty E_i, ~E_i \cap E_j=\emptyset, ~\forall i \neq j$$
+
+$$\begin{aligned} \displaystyle |\nu|(E ) & =\sum_{i=1}^\infty |\nu|(E_i) \\           & \geq \sum_{i=1}^\infty |\nu(E_i)| \quad [\because |\nu|(E) \geq |\nu(E)|]  \end{aligned}$$
+
+因為\$$
 
 </details>
 

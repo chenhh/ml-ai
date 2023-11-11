@@ -43,7 +43,17 @@ description: signed measure
 
 <mark style="color:red;">可證明任何一個符號測度可以分解為兩個有限測度的差值 (Hahn decomposition)或者為可測函數的積分</mark>。
 
-### 測度的連續性
+### &#x20;範例：符號測度不滿足單調性
+
+$$F \subseteq E$$無法保證$$\nu(F) \leq \nu(E)$$。
+
+因為$$E = F \cup (E-F)$$，可得$$\nu(E)=\nu(F) + \nu(E-F)$$，但$$\nu(E-F)$$可能為負值。
+
+如$$X=\{0, 1\}$$，$$\Sigma=\{\emptyset, \{0\}, \{1\}, X\}$$，$$\nu(0)=1, \nu(1)=-1$$。
+
+令$$E=X$$，$$F=\{1\}$$，則$$F \subseteq E$$但$$\nu(F)=1$$而$$\nu(E)=0$$。
+
+### 符號測度的連續性
 
 > 令$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為$$(X, \Sigma)$$上的符號測度。
 >
@@ -292,7 +302,7 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 
 ## 全變差測度(total variation of measure)
 
-> <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度為(正)測度。
+> <mark style="color:red;">符號測度</mark>$$\nu$$<mark style="color:red;">的全變差(total variation)</mark>定義為$$|\nu|=\nu^{+} + \nu^{-}$$。注意全變差測度$$|\nu|: \Sigma \rightarrow [0, \infty]$$為(正)測度。
 >
 > 如果$$\nu < \infty$$，則$$\nu^{+}(X)=\nu(P)<\infty$$ ，此時$$\nu^{+}$$ 是有限測度且$$\nu$$有上界$$\nu^{+}(X)$$。同理可推論$$-\infty < \nu$$ 。因此若$$-\infty < \nu(E) < \infty$$時，$$\nu$$為有限測度。
 
@@ -332,19 +342,25 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 
 ### 有限符號測度的Jordan分解是測度的最小上界/最大下界
 
-> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為<mark style="color:red;">有限符號測度</mark>，則：
+> 在可測空間$$(X, \Sigma)$$中，$$\nu: \Sigma \rightarrow (-\infty, \infty)$$為<mark style="color:red;">有限符號測度</mark>，則：
 >
 > $$\nu = \nu^{+} - \nu^{-}$$且$$\forall E \in \Sigma$$：
 >
 > * $$\displaystyle \nu^{+}(E)=\sup_{B \in \Sigma, B \subseteq E}\nu(B)$$。(可測子集合測度的最小上界)
 > * $$\displaystyle \nu^{-}(E)=-\inf_{B \in \Sigma, B \subseteq E}\nu(B)=\sup_{B \in \Sigma, B \subseteq E}-\nu(B)$$。(可測子集合的最大下界取負值)
-> * $$\displaystyle |\nu|(E)=\sup_{\{E_i\} \in \mathbf{E}} \sum_{i=1}^\infty |\nu(E_i)|$$，$$\displaystyle \bigcup_{i=1}^\infty E_i = E, ~ E_i \cap E_j = \emptyset ~ \forall i \neq j$$為$$E$$的可測分割，而$$\mathbf{E}$$為所有$$E$$的可測分割形成的集合族。(宇集合可數分割測度的最小上界)
+> * $$\displaystyle |\nu|(E)=\sup_{\{E_i\} \in \mathbf{E}} \sum_{i=1}^\infty |\nu(E_i)|$$，$$\displaystyle \bigcup_{i=1}^\infty E_i = E, ~ E_i \cap E_j = \emptyset ~ \forall i \neq j$$為$$E$$的可測分割，而$$\mathbf{E}$$為所有$$E$$的可數分割(有些文獻使用有限個分割定義)形成的集合族。(宇集合可數分割測度的最小上界)。
 >
 > 此為$$\nu^{+}, \nu^{-}, |\nu|$$的等價定義。
 >
-> <mark style="color:red;">此處定義的</mark>$$\nu^{+}, \nu^{-}, |\nu|$$<mark style="color:red;">在測度、符號測度、與複測度都通用</mark>。
+> <mark style="color:red;">此處定義的</mark>$$\nu^{+}, \nu^{-}, |\nu|$$<mark style="color:red;">在符號測度、與複測度都通用</mark>。
 >
-> [https://math.stackexchange.com/questions/885776/total-variation-measure-definition](https://math.stackexchange.com/questions/885776/total-variation-measure-definition)
+> [https://math.stackexchange.com/questions/885776/total-variation-measure-definition](https://math.stackexchange.com/questions/885776/total-variation-measure-definition)[https://math.stackexchange.com/questions/4803761/corollary-of-jordan-decomposition-theorem](https://math.stackexchange.com/questions/4803761/corollary-of-jordan-decomposition-theorem)
+>
+> [https://math.stackexchange.com/questions/359464/why-does-the-supremum-over-finite-partitions-not-suffice-in-defining-total-varia](https://math.stackexchange.com/questions/359464/why-does-the-supremum-over-finite-partitions-not-suffice-in-defining-total-varia)
+>
+> [https://math.stackexchange.com/questions/3868989/total-variation-mesure-according-to-jordan-decomposition](https://math.stackexchange.com/questions/3868989/total-variation-mesure-according-to-jordan-decomposition)
+>
+>
 
 <details>
 
@@ -352,15 +368,17 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 
 令$$X=P \cup N$$為測度$$\nu$$的Hahn分解。
 
-給定$$E \in \Sigma, ~ B \subseteq E, ~ B \in \Sigma$$，可得$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \leq \nu^{+}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \leq \nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = \nu(E \cap P)     \end{aligned}$$
+給定$$E \in \Sigma, ~ \forall B \subseteq E, ~ B \in \Sigma$$，可得$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \leq \nu^{+}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \leq \nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = \nu(E \cap P) \end{aligned}$$
 
-因為$$E \cap P \subseteq E$$，因此$$\sup \nu(B)=\nu^{+}(E)$$。
+因為上式在$$B \subseteq E$$時均成立，因此可得: $$\displaystyle \sup_{B\subseteq E}\nu(B) \leq \nu(E \cap P)$$--(1)
 
-同理得：
+因為$$E \cap P \subseteq E$$為可測子集，因此其測度必小於等於$$E$$中可測子集的最小上界，即$$\nu(E \cap P) \leq \sup\{\nu(B), B \in \Sigma, B \subseteq E\}$$--(2)
 
-$$\displaystyle  \begin{aligned} \nu(B) & =\nu^{+}(B) - \nu^{-}(B) \\  & \geq -\nu^{-}(B) ~ [\because \nu^{+}, ~\nu^{-} \text{ both positive measures  }] \\  & \geq -\nu^{+}(E)~ [\because B \subseteq E, ~\text{ monotonicity} ] \\     & = -\nu(E \cap N)     \end{aligned}$$
+&#x20;由(1,2)得$$\displaystyle \nu^{+}(E) \equiv \nu(E \cap P)=\sup_{B \in \Sigma, ~B \subseteq E} \nu(B)$$
 
-因為$$E \cap N \subseteq E$$，因此$$\sup -\nu(B)=\nu^{-}(E)$$
+(QED)
+
+同理得：$$\displaystyle \nu^{-}(E) \equiv -\nu(E \cap N)=\sup_{B \in \Sigma, ~B \subseteq E} -\nu(B)$$
 
 (QED)
 
@@ -368,7 +386,17 @@ $$E = \bigcup_{i=1}^\infty E_i, ~E_i \cap E_j=\emptyset, ~\forall i \neq j$$
 
 $$\begin{aligned} \displaystyle |\nu|(E ) & =\sum_{i=1}^\infty |\nu|(E_i) \\           & \geq \sum_{i=1}^\infty |\nu(E_i)| \quad [\because |\nu|(E) \geq |\nu(E)|]  \end{aligned}$$
 
-因為\$$
+因為上式對所有的分割均成立，因此$$|\nu|(E) \geq \sup_{\mathbf{E}} \sum_{i=1}^\infty |\nu(E_i)|$$--(1)
+
+$$|\nu|(E)=\nu^{+}(E)+\nu^{-}(E)=\nu(E \cap P)-\nu(E \cap N) = |\nu(E \cap P)|+|\nu(E \cap N)|$$--(2)
+
+因為$$E \cap P \subseteq E, ~ E \cap N \subseteq E$$且$$(E \cap P)\cap (E \cap N)=\emptyset$$， 因此$$|\nu(E\cap P)|+|\nu(E \cap N)| \leq \sum_{i=1}^\infty |\nu(E_i)|$$--(3)
+
+因為$$E$$可為任意$${E_i}_{i=1}^\infty$$分割，因此由(2,3)可得$$|\nu|)(E) \leq \sup_{\mathbf{E}} |\nu(E_i)|$$--(4)
+
+由(1,4)得$$|\nu|(E)=\sup_{\mathbf{E}}|\nu(E_i)$$|
+
+(QED)
 
 </details>
 
@@ -511,6 +539,7 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 ## 參考資料
 
 * [https://zhuanlan.zhihu.com/p/274555361](https://zhuanlan.zhihu.com/p/274555361)
+* [https://zhuanlan.zhihu.com/p/36652587](https://zhuanlan.zhihu.com/p/36652587)
 * [https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf](https://www.ams.org/proc/1980-080-02/S0002-9939-1980-0577778-7/S0002-9939-1980-0577778-7.pdf)
 * [https://zhuanlan.zhihu.com/p/159129138](https://zhuanlan.zhihu.com/p/159129138)
 * [https://zhuanlan.zhihu.com/p/68660066](https://zhuanlan.zhihu.com/p/68660066)

@@ -333,12 +333,36 @@ $$f: \mathbb{R} \rightarrow \mathbb{R}$$為實數上的可積分函數，給定�
 
 ### 正負變差與全變差測度的不等式
 
-> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度，則$$\forall E \in \Sigma$$：
+> 在可測空間$$(X, \Sigma)$$中，$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度，則$$\forall E \in \Sigma$$：
 >
-> * $$\nu^{-}(E) \leq \nu(E) \leq \nu^{+}(E)$$。
+> * $$-\nu^{-}(E) \leq \nu(E) \leq \nu^{+}(E)$$。
 > * $$|\nu(E)| \leq |\nu|(E)$$。
 
+<details>
 
+<summary>proof:</summary>
+
+由Hahn與Jordan分解得$$X=P \cup N, P \cap N =\emptyset$$, $$\nu(E) = \nu^{+}(E) - \nu^{-}(E), ~ \nu^{+}(E)=\nu(E\cap P), ~ \nu^{-}(E)=-\nu(E \cap N)$$。
+
+如果$$\nu^-(E) = \infty$$，由定義得$$\nu^{+}(E)<\infty$$，因此$$\nu(E)=-\infty$$，可得$$-\nu^{-}(E) \leq \nu^(E) \leq \nu^{+}(E)$$--(1)。
+
+如果$$\nu^{-}(E) < \infty$$，因為$$\nu^{+}(E) \geq 0, ~ -\nu^{-}(E) \leq 0$$，因此$$-\nu^{-}(E) \leq \nu^(E) \leq \nu^{+}(E)\nu(E) \leq \nu^{+}(E)$$--(2)
+
+由(1,2)得證
+
+(QED)
+
+$$\nu(E)=\nu^{+}(E) - \nu^{-}(E)$$，其中$$\nu^{+}, \nu^{-}: \Sigma \rightarrow [0, \infty]$$至少有一個測度為實數值(不可同時為無窮大)。
+
+$$|\nu|(E)=\nu^{+}(E) + \nu^{-}(E)$$
+
+可得：
+
+$$\begin{aligned} |\nu(E)| & = |\nu^{+}(E) - \nu^{-}(E)|  \\     & \leq |\nu^{+}(E) + \nu^{-}(E)| \\     & =  \nu^{+}(E) + \nu^{-}(E) ~[\because \nu^{+} \geq 0, \nu^{-} \geq 0] \\     & = |\nu|(E) \end{aligned}$$
+
+(QED)
+
+</details>
 
 ### 有限符號測度的Jordan分解是測度的最小上界/最大下界
 

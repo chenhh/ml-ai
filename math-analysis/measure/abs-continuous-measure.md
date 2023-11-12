@@ -107,7 +107,7 @@ description: absolutely continuous
 
 > 給定可測空間$$(X, \Sigma)$$，$$\nu, \nu_1, \nu_2$$為任意測度(正測度、符號測度、複測度)，$$\mu: \Sigma \rightarrow [0, \infty]$$為正測度，則：
 >
-> 1. 若$$\nu$$在$$E$$集中，則$$|\nu|$$在$$E$$集中。
+> 1. 若$$\nu$$在$$E$$集中，則$$|\nu|$$在$$E$$集中。(因為在$$E$$之外的任意可測集均為$$\nu$$零測集)
 > 2. 若$$\nu_1 \perp \nu_2$$，則$$|\nu_1| \perp |\nu_2|$$。
 > 3. 若$$\nu_1 \perp \mu, ~ \nu_2 \perp \mu$$，則$$\nu_1 + \nu_2 \perp \mu$$。
 > 4. 若$$\nu_1 \ll \mu, ~ \nu_2 \ll \mu$$，則$$\nu_1 + \nu_2 \ll \mu$$。
@@ -117,7 +117,7 @@ description: absolutely continuous
 
 <details>
 
-<summary>proof 1</summary>
+<summary>proof 1: 由|v|為任意分割測度總和的最小上界=0得出</summary>
 
 因為$$\nu$$在$$E$$集中，所以$$\forall S \in \Sigma, ~ S\cap E =\emptyset \implies \nu(S)=0$$。
 
@@ -135,7 +135,31 @@ description: absolutely continuous
 
 </details>
 
+<details>
 
+<summary>proof2: 由1與相互奇異測度(以測度集中定義)得出。</summary>
+
+令$$X =P \cup N$$為Hahn分解，且$$\nu_1$$在$$P$$集中，$$\nu_2$$在$$N$$集中。
+
+由1得$$|\nu_1|$$在$$P$$集中且$$|\nu_2|$$在$$N$$集中。
+
+由\[相互奇異測度(以測度集中定義)]定義得$$|\nu_1| \perp |\nu_2|$$。
+
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof 3</summary>
+
+令$$X =P_1 \cup N_1$$為Hahn分解，且$$\nu_1$$在$$P_1$$集中，$$\mu$$在$$N_1$$集中。
+
+令$$X =P_2 \cup N_2$$為Hahn分解，且$$\nu_2$$在$$P_2$$集中，$$\mu$$在$$N_2$$集中。
+
+因為Hahn的任意分解只會相差零測度集，即$$P_1 \oplus P_2$$為$$\mu$$零測集。而$$N_1 \oplus N_2$$為$$\nu_1$$或$$\nu_2$$零測集。
+
+</details>
 
 ### 絕對連續測度與全變差測度和Jordan分解測度等價
 

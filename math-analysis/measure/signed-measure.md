@@ -478,15 +478,21 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 
 (QED)
 
+因為$$\nu_1, \nu_2$$為有限符號測度，由定義得：$$\forall E \in \Sigma, ~ -\infty<\nu_1(E) < \infty, ~ -\infty<\nu_2(E)<\infty$$。
+
+則$$\forall a,b \in \mathbb{R}$$, $$-\infty < a \nu_1(E) + b \nu_2(E) < \infty$$&#x20;
+
+(QED)
+
+$$\displaystyle \forall a \in \mathbb{R}, ~|a\nu|(E)=\sup_{\{E_i\} \in \mathbf{E}} \sum_{i=1}^\infty |a\nu(E_i)| = |a|\sup_{\{E_i\} \in \mathbf{E}} \sum_{i=1}^\infty |\nu(E_i)|=|a| |\nu|(E)$$ (QED)
+
 </details>
-
-
 
 ### 零測度集合若且唯若全變差測度為0
 
-> 在可測空間$$(X, \Sigma)$$中，$$\nu$$為符號測度。
+> 在可測空間$$(X, \Sigma)$$中，$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
 >
-> $$E \in \Sigma, \nu(E)=0, ~ \forall F \subseteq E, ~ F \in \Sigma, ~ \nu(F) = 0 \iff |\nu|(E)=0$$。
+> $$\forall F \subseteq E, ~ F \in \Sigma, ~ \nu(F) = 0 \iff |\nu|(E)=0$$。
 
 <details>
 
@@ -514,7 +520,7 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 
 因為$$|\nu|(E)=\nu^{+}(E) + \nu^{-}(E) = 0$$，且$$\nu^{+}, \nu^{-}$$均為正測度，因此得$$\nu^{+}(E) =  \nu^{-}(E)=0$$。--(1)
 
-同理對$$E$$的任意可測子集$$F \subseteq E$$，因為$$|\nu|$$為正測度且由有號測度的單調性得$$0\leq |\nu|(F) \leq |\nu|(E)=0$$。--(2)
+同理對$$E$$的任意可測子集$$F \subseteq E$$，因為$$|\nu|$$為正測度且由測度的單調性得$$0\leq |\nu|(F) \leq |\nu|(E)=0$$。--(2)
 
 由(1,2)得$$E$$為零測集(QED)
 
@@ -526,7 +532,9 @@ $$\displaystyle  \begin{aligned} (\nu_1 + \nu_2)^{-}(E) &= -(\nu_1 + \nu_2)(E \c
 
 \=>
 
-若$$E$$為零測集，則$$|\nu|(E)=\nu^{+}(E)+\nu^{-}(E)=\nu(E \cap P) - \nu(E \cap N)=0 - 0 = 0$$
+若$$E$$為零測集，則其任意可測子集測度值均為0，因此$$\nu(E\cap P)=\nu(E \cap N)=0$$。
+
+得$$|\nu|(E)=\nu^{+}(E)+\nu^{-}(E)=\nu(E \cap P) - \nu(E \cap N)=0 - 0 = 0$$
 
 (QED)
 

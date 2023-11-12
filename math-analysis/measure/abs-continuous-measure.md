@@ -11,7 +11,7 @@ description: absolutely continuous
 而RK導數主要應用在一般化的條件期望值的存在性，即$$Z=\mathrm{E}(X|\mathcal{F})$$隨機變數的存在性。
 
 * 符號測度$$\nu$$相對於測度$$\mu$$絕對連續若$$\forall E \in \Sigma, ~ \mu(E)=0 \implies \nu(E)=0$$，記為$$\nu \ll \mu$$。
-* 有限符號測度的絕對連續可定義為：$$\nu \ll \mu \iff E \in \Sigma,  \forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ,~ \nu(E) < \delta$$。
+* <mark style="color:red;">有限符號測度</mark>的絕對連續可定義為：$$\nu \ll \mu \iff E \in \Sigma,  \forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ,~ \nu(E) < \delta$$。
 
 ## 絕對連續測度
 
@@ -24,6 +24,8 @@ description: absolutely continuous
 #### 符號測度絕對連續於符號測度
 
 符號測度$$\nu: \Sigma \rightarrow [-\infty, \infty)$$相對於符號測度$$\mu: \Sigma \rightarrow [-\infty, \infty)$$絕對連續，記為$$\nu \ll \mu$$若$$\forall E \in \Sigma, |\mu|(E)=0 \implies \nu(E)=0$$。
+
+其中$$|\mu|=\mu^{+}+\mu^{-}$$為全變差測度。
 
 #### 任意測度絕對連續於正測度
 
@@ -43,7 +45,7 @@ description: absolutely continuous
 >
 > [https://math.stackexchange.com/questions/956634/equivalence-of-definition-of-measure-concentrated-on-a-set-a](https://math.stackexchange.com/questions/956634/equivalence-of-definition-of-measure-concentrated-on-a-set-a)
 
-任意可測集$$S = (S \cap E) \cup (S \cap E^c)$$，由$$\nu(S)=\nu(S \cap E)$$可得$$\nu(S \cap E^c)=0$$，即$$S$$在集合$$E$$中，可用$$\nu$$量測。
+任意可測集$$S = (S \cap E) \cup (S \cap E^c)$$，由$$\nu(S)=\nu(S \cap E)$$可得$$\nu(S \cap E^c)=0$$，即$$S$$在集合$$E$$中，可用$$\nu$$量測。而在集合$$E$$之外的部份的量測值必為0。
 
 <details>
 

@@ -73,7 +73,35 @@ description: absolutely continuous
 
 > 令$$\nu, \mu$$為可測空間$$(X, \Sigma)$$的任意測度(正測度、符號測度、複測度)。
 >
-> 如果能找到兩可測集合$$A, B \in \Sigma, ~ A \cap B=\emptyset$$使得$$\nu$$在$$A$$集中，$$\mu$$在$$B$$集中，則稱$$\nu, \mu$$相互奇異，記為$$\nu \perp \mu$$。
+> \[測度集中]如果能找到兩可測集合$$A, B \in \Sigma, ~ A \cap B=\emptyset$$使得$$\nu$$在$$A$$集中($$\forall E \in \Sigma, (E \cap A) =\emptyset \implies \mu(E)=0$$)，$$\mu$$在$$B$$集中($$\forall E \in \Sigma, (E \cap B) =\emptyset \implies \nu(E)=0$$)，則稱$$\nu, \mu$$相互奇異，記為$$\nu \perp \mu$$。
+>
+> \[零測集]$$X=A \cup B, ~ A \cap B=\emptyset$$且$$B$$為$$\nu$$的零測集($$\forall E \in \Sigma, E \subseteq B, \nu(E)=0)$$，$$A$$為$$\mu$$的零測集($$\forall E \in \Sigma, E \subseteq A, \mu(E)=0$$)，則$$\nu \perp \mu$$。
+
+<details>
+
+<summary>proof: 兩定義的等價性</summary>
+
+集中=> 零測集
+
+因為$$\nu$$在$$A$$集中，則$$\forall E \in \Sigma, E \cap A=\emptyset \implies \nu(E)=0$$。
+
+因為$$A \cup B=X, ~ A \cap B=\emptyset$$，因此$$E \cap A=\emptyset \implies E \subseteq B$$，則$$\nu(E)=0$$，即$$B$$為$$\nu$$Ｄ的零測集。
+
+同理可得$$A$$為$$\mu$$的零測集
+
+(QED)
+
+零測集=>集中
+
+因為$$B$$為$$\nu$$的零測集，得$$\forall E \in \Sigma, E \subseteq B, \nu(E)=0$$。
+
+因為$$A \cup B=X, ~ A \cap B=\emptyset$$，因此$$E \subseteq B \implies E \cap A=\emptyset$$，因此$$\nu(E \cap A)=0=\nu(E)$$，所以$$\nu$$在$$A$$集中。
+
+同理可得$$\mu$$在$$B$$集中。
+
+(QED)
+
+</details>
 
 ### 絕對連續與相互奇異測度的性質
 

@@ -11,6 +11,8 @@ description: absolutely continuous
 而RK導數主要應用在一般化的條件期望值的存在性，即$$Z=\mathrm{E}(X|\mathcal{F})$$隨機變數的存在性。
 
 * 符號測度$$\nu$$相對於測度$$\mu$$絕對連續若$$\forall E \in \Sigma, ~ \mu(E)=0 \implies \nu(E)=0$$，記為$$\nu \ll \mu$$。
+* 符號測度$$\nu$$相對於符號測度$$\mu$$絕對連續若$$\forall E \in \Sigma, ~ |\mu|(E)=0 \implies \nu(E)=0$$，記為$$|\nu| \ll |\mu| \iff \nu \ll |\mu|$$。
+* <mark style="color:red;">絕對連續測度</mark>$$\nu \ll |\mu|$$<mark style="color:red;">可保證</mark>$$\mu$$<mark style="color:red;">零測集仍為</mark>$$\nu$$<mark style="color:red;">零測集</mark>。因為正測度$$\mu=|\mu|$$，因此如果$$\nu \ll |\mu|$$可寫為$$\nu \ll \mu$$。
 * <mark style="color:red;">有限符號測度</mark>的絕對連續可定義為：$$\nu \ll \mu \iff E \in \Sigma,  \forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ,~ \nu(E) < \delta$$。
 
 ## 絕對連續測度
@@ -19,21 +21,25 @@ description: absolutely continuous
 
 #### 正測度絕對連續於正測度
 
-測度$$\nu: \Sigma \rightarrow [0, \infty)$$相對於測度$$\mu: \Sigma \rightarrow [0,\infty]$$絕對連續，記為$$\nu \ll \mu$$若$$\forall E \in \Sigma, \mu(E)=0 \implies \nu(E)=0$$。
+正測度$$\nu: \Sigma \rightarrow [0, \infty)$$相對於正測度$$\mu: \Sigma \rightarrow [0,\infty]$$絕對連續，記為$$\nu \ll \mu$$若$$\forall E \in \Sigma, \mu(E)=0 \implies \nu(E)=0$$。
 
 #### 符號測度絕對連續於符號測度
 
-符號測度$$\nu: \Sigma \rightarrow [-\infty, \infty)$$相對於符號測度$$\mu: \Sigma \rightarrow [-\infty, \infty)$$絕對連續，記為$$\nu \ll \mu$$若$$\forall E \in \Sigma, |\mu|(E)=0 \implies \nu(E)=0$$。
+符號測度$$\nu: \Sigma \rightarrow [-\infty, \infty)$$相對於符號測度$$\mu: \Sigma \rightarrow [-\infty, \infty)$$絕對連續，記為$$\nu \ll |\mu|$$若$$\forall E \in \Sigma, |\mu|(E)=0 \implies \nu(E)=0$$。
 
 其中$$|\mu|=\mu^{+}+\mu^{-}$$為全變差測度。
+
+<mark style="color:blue;">符號測度在絕對連續時必須使用全變差測度是因為\[零測度集合若且唯若全變差測度為0]，如此才能保證</mark>$$E$$<mark style="color:blue;">為</mark>$$|\mu|$$<mark style="color:blue;">零測集。</mark>
+
+如果$$\mu$$為正測度時，因為可保證$$E$$為零測集，仍然考慮$$\nu \ll \mu$$即可。
+
+注意$$\nu \ll |\mu| \iff |\nu| \ll |\mu|$$。
 
 #### 任意測度絕對連續於正測度
 
 任意測度$$\nu$$(正測度、符號測度、複測度)與測度$$\mu: \Sigma \rightarrow [0,\infty]$$絕對連續，記為$$\nu \ll \mu$$若$$\forall E \in \Sigma, \mu(E)=0 \implies \nu(E)=0$$。
 
 註：符號$$\ll$$可解釋為遠小於。
-
-註：因為(正)測度為符號測度的特例，因為若$$\nu$$為正測度時，$$\nu \ll \mu$$條件不變。
 
 ## 測度在集合集中
 
@@ -165,7 +171,11 @@ description: absolutely continuous
 
 > 給定可測空間$$(X, \Sigma)$$與符號測度$$\nu, \mu: \Sigma \rightarrow [-\infty, \infty)$$。
 >
-> $$\nu \ll \mu \iff |\nu| \ll |\mu| \iff \nu^{+} \ll \mu \iff \nu^{-} \ll \mu$$。
+> $$\nu \ll |\mu| \iff |\nu| \ll |\mu| \iff \nu^{+} \ll |\mu| \iff \nu^{-} \ll |\mu|$$。
+>
+> 如果$$\mu$$為正測度，$$\nu$$為符號測度時：
+>
+> $$a$$
 >
 > * 符號測度的Jordan分解：$$\nu=\nu^{+} - \nu^{-}$$。其中$$\nu^{+}, \nu^{-}$$為正測度且不會同時為無窮大。
 > * 全變差測度$$|\nu|=\nu^{+} + \nu^{-}$$。
@@ -202,7 +212,8 @@ description: absolutely continuous
 >
 > 註：因為$$\nu \ll \mu \iff |\nu| \ll \mu$$且$$|\nu(E)| \leq |\nu|(E)$$，因此只要考慮$$\nu=|\nu|$$非負值部份即可。
 >
-> [https://math.stackexchange.com/questions/3053527/absolute-continuity-of-measure-and-epsilon-delta-condtion](https://math.stackexchange.com/questions/3053527/absolute-continuity-of-measure-and-epsilon-delta-condtion)
+> * [https://math.stackexchange.com/questions/3053527/absolute-continuity-of-measure-and-epsilon-delta-condtion](https://math.stackexchange.com/questions/3053527/absolute-continuity-of-measure-and-epsilon-delta-condtion)
+> * [https://math.stackexchange.com/questions/780824/equivalent-ideas-of-absolute-continuity-of-measures](https://math.stackexchange.com/questions/780824/equivalent-ideas-of-absolute-continuity-of-measures)
 
 <details>
 

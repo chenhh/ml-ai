@@ -306,7 +306,7 @@ $$\forall S \in \Sigma$$，定義$$\nu^{+}(S)=\nu(S \cap P)$$，$$\nu^{-}(S)=-\n
 >
 > 如果$$\nu < \infty$$，則$$\nu^{+}(X)=\nu(P)<\infty$$ ，此時$$\nu^{+}$$ 是有限測度且$$\nu$$有上界$$\nu^{+}(X)$$。同理可推論$$-\infty < \nu$$ 。因此若$$-\infty < \nu(E) < \infty$$時，$$\nu$$為有限測度。
 
-正測度$$\mu$$可得$$|\mu|=\mu$$，因此其Jordan分解等於全變差，即$$\nu^{+}-\nu^{-} = \nu^{+} + \nu^{-}$$且$$\nu^{+} \geq 0, \nu^{-} \geq 0$$。可得$$\nu^{-}=0$$。
+<mark style="color:red;">正測度</mark>$$\mu$$<mark style="color:red;">可得</mark>$$|\mu|=\mu$$。因為其Jordan分解等於全變差，即$$\nu^{+}-\nu^{-} = \nu^{+} + \nu^{-}$$且$$\nu^{+} \geq 0, \nu^{-} \geq 0$$。可得$$\nu^{-}=0$$。
 
 ### 符號測度做為積分算子
 
@@ -492,13 +492,19 @@ $$\displaystyle \forall a \in \mathbb{R}, ~|a\nu|(E)=\sup_{\{E_i\} \in \mathbf{E
 
 > 在可測空間$$(X, \Sigma)$$中，$$\nu: \Sigma \rightarrow [-\infty, \infty)$$為符號測度。
 >
+> 得$$E$$為$$\nu$$零測集若且唯若$$E$$的全變差測度為0。
+>
 > $$\forall F \subseteq E, ~ F \in \Sigma, ~ \nu(F) = 0 \iff |\nu|(E)=0$$。
+>
+> 註：<mark style="color:red;">正測度</mark>$$\mu$$<mark style="color:red;">為符號測度</mark>$$\nu$$<mark style="color:red;">的特例，且</mark>$$|\mu|=\mu$$<mark style="color:red;">，因此</mark>$$E$$<mark style="color:red;">為</mark>$$\mu$$<mark style="color:red;">零測集</mark>$$\iff ~ \mu(E)=0$$<mark style="color:red;">。</mark>
+>
+> <mark style="color:red;">此性質常用於絕對連續測度中</mark>$$(|\mu| \ll |\nu|$$<mark style="color:red;">)以保證</mark>$$\nu$$<mark style="color:red;">零測集可得到</mark>$$\mu$$<mark style="color:red;">零測集</mark>。
 
 <details>
 
-<summary>proof: 零測集同時為正/負測集</summary>
+<summary>proof: 零測集同時為正/負測集或使用全變差測度為任意分割測度總和的最小上限定義. </summary>
 
-\=>(反證法)
+\=> proof 1反證法
 
 全變差測度$$|\nu|: \Sigma \rightarrow \infty [0, \infty]$$，$$|\nu|=\nu^{+} + \nu^{-}$$。
 
@@ -515,6 +521,14 @@ $$\displaystyle \forall a \in \mathbb{R}, ~|a\nu|(E)=\sup_{\{E_i\} \in \mathbf{E
 * 如果$$\nu^{+}(E),~\nu^{-}(E)$$均不為0，且兩者相等時，由\[有限非負測度集合包含正測集]得$$E$$不是零測集。
 
 因此$$E$$不是零測集(QED)
+
+\=> proof 2, 使用全變差測度為任意分割測度總和的最小上限定義
+
+$$\displaystyle |\nu|(E)=\sup_{\{E_i\} \in \mathbf{E}} \sum_{i=1}^\infty |\nu(E_i)|$$
+
+因為$$E$$為零測集，由定義可知其任意可測子集的測度均為0，即$$\nu(E_i)=0, \forall i$$，因此可得$$|\nu|(E)=0$$
+
+(QED)
 
 <=
 

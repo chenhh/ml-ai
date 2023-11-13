@@ -4,7 +4,21 @@ description: Radon-Nikodym derivative
 
 # Lebesgue-Radon-Nikodym定理
 
+## 簡介
+
+Radon-Nikodym 導數定理的證明跟 Lebesgue 分解定理是非常接近的，有些書都是直接稱之為 Lebesgue-Radon-Nikodym-Legesgue 定理，而且是先證了 Lebesgue 分解定理，再推出 Radon-Nikodym 的結論。
+
 ## Radon-Nikodym 導數應用
+
+$$\forall E \in \Sigma, \nu(E)=\int_E f d\mu$$。
+
+把上式的函數$$f$$ 定義為測度$$\nu$$ 對於測度$$\mu$$ 的 Radon-Nikodym 微分(Radon-Nikodym Derivative of $$\nu$$ with respect to $$\mu$$ )，或者稱為測度$$\nu$$對於測度$$\mu$$的密度 (density of $$\nu$$ with respect to $$\mu$$)。記為$$f =\frac{d\nu}{d\mu}$$或記為$$d\nu=f d\mu$$。
+
+Radon-Nikodym 微分是對 "絕對連續函數可以表示其導數的不定積分" 這一概念的廣義擴展。
+
+唯一性：
+
+若有$$d\nu = f d\mu$$，$$d\nu = g d\nu$$，由定義得$$\int (f-g)d\mu=0$$。因此$$f=g ~ \mu \text{ -a.e.}$$。
 
 * 將在實數上機率理論(如機率密度函數)推廣為在測度空間上的測度論。
 * 在金融數學上，將實際機率(actual probability) 轉換成 風險中性的機率(risk neutral probability)。
@@ -59,6 +73,15 @@ $$F$$存在如下分解：$$F(x)=g_1(x)+g_2(x)+g_3(x)$$ ,其中$$g_1$$為絕對�
 > σ-finite $$\nu$$測度指的是對於任意可測分割$$\bigcup_{n=1}^\infty E_n = X$$，$$\nu(E_n) < \infty, ~\forall n$$，但$$\nu(X)$$可能為$$\infty$$。因此可得有限測度為σ有限測度的子集合。
 >
 > Radon–Nikodym–Lebesgue 定理把測度沿著 σ-有限測度分解為絕對連續部分與奇異部分，並給出絕對連續部分的分類。
+>
+> 有界變差函數可以在精確到加減常數的意義下唯一分解為一個絕對連續函數、一個奇異函數和一個跳躍函數的和。
+
+step:
+
+* 從$$\mu, \nu$$建構$$\nu_0$$使得$$\nu_0 \ll \mu$$。
+* 驗證$$\nu - \nu_0 \perp \mu$$。
+
+
 
 ## 參考資料
 

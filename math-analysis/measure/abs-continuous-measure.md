@@ -41,7 +41,7 @@ description: absolutely continuous
 
 註：符號$$\ll$$可解釋為遠小於。
 
-## 測度在集合集中
+## 測度在集合集中(或測度在集合支撐(support on the set))
 
 > 令$$\nu$$為可測空間$$(X, \Sigma)$$的任意測度(正測度、符號測度、複測度)。
 >

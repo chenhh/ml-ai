@@ -235,6 +235,20 @@ $$\nu_2 \perp \mu$$，則存在$$X=P \cup N, P \cap N =\emptyset$$ ，$$\nu_2$$�
 
 </details>
 
+<details>
+
+<summary>proof 7: 由6得<span class="math">\nu \perp \nu</span>，因此得<span class="math">\nu=0</span></summary>
+
+由6得$$\nu \ll \mu$$且$$\nu \perp \mu$$，因此$$\nu \perp \nu$$。
+
+令$$P, N$$為$$X$$的Hahn分解，且$$P,N$$為$$\nu$$的零測集。
+
+即$$\forall E \in \Sigma, E \subseteq P \cup N=X, ~ \nu(E)=0$$&#x20;
+
+(QED)
+
+</details>
+
 ### 絕對連續測度與全變差測度和Jordan分解測度等價
 
 > 給定可測空間$$(X, \Sigma)$$與符號測度$$\nu, \mu: \Sigma \rightarrow [-\infty, \infty)$$。

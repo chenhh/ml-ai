@@ -257,7 +257,7 @@ $$\nu_2 \perp \mu$$，則存在$$X=P \cup N, P \cap N =\emptyset$$ ，$$\nu_2$$�
 >
 > 如果$$\mu$$為正測度，$$\nu$$為符號測度時：
 >
-> $$a$$
+> $$\nu \ll \mu \iff |\nu| \ll \mu \iff \nu^{+} \ll \mu \iff \nu^{-} \ll \mu$$
 >
 > * 符號測度的Jordan分解：$$\nu=\nu^{+} - \nu^{-}$$。其中$$\nu^{+}, \nu^{-}$$為正測度且不會同時為無窮大。
 > * 全變差測度$$|\nu|=\nu^{+} + \nu^{-}$$。
@@ -303,7 +303,7 @@ $$\nu_2 \perp \mu$$，則存在$$X=P \cup N, P \cap N =\emptyset$$ ，$$\nu_2$$�
 
 <=
 
-令$$E \in \Sigma, ~\mu(E)=0$$
+令$$E \in \Sigma, ~\mu(E)=0$$為$$\mu$$零測集。
 
 若$$\forall \epsilon > 0, ~ \exists \delta >0 \ni |\nu(E)|< \epsilon ,\text{ whenever } \mu(E) < \delta$$
 

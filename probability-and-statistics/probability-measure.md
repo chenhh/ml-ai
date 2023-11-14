@@ -111,7 +111,7 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 >
 > $$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)      & = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k \\ & = \{\omega \in \Omega ~|~ \omega \in \text{ infinitely many (often) } E_n \} \\  & = \{\omega \in \Omega ~|~ \forall n \in \mathbb{N} ~ \exists n_0 > n \ni \omega \in E_{n_0} \} \end{aligned}$$
 
-[測度版本的證明](../math-analysis/measure.md#the-borel-cantelli-lemma)。
+[測度版本的證明](../math-analysis/measure/#the-borel-cantelli-lemma)。
 
 上極限可解釋為就是無窮個集合中都存在的元素的集合。
 

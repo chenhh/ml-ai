@@ -58,7 +58,7 @@ note: relation比function更一般化，因為可為一對多的對應。
   * 等價於 $$\forall x,y \in X, x\neq y \Rightarrow f(x) \neq f(y)$$
   * <mark style="color:blue;">可保證值域和定義域等勢</mark>，$$|f(X)| = |X|$$，<mark style="color:blue;">因此對應域的勢大於等於定義域</mark>，即 $$|X| \leq |Y|$$。
 
-![單射但非滿射](<../../.gitbook/assets/Injection\_not\_onto (2).png>)
+![單射但非滿射](<../../.gitbook/assets/Injection\_not\_onto (1).png>)
 
 * 映成函數(滿射)(onto function,  surjection, surjective mapping)
   * $$\forall y \in Y \ \exists x \in X \ni f(x)=y$$

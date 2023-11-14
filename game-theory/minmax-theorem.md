@@ -45,7 +45,7 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 範例
 
-![雙人零和賽局，賽局價值為５](<../.gitbook/assets/minmax\_game-min (1).png>)
+![雙人零和賽局，賽局價值為５](../.gitbook/assets/minmax\_game-min.png)
 
 ## Sion's minmax theorem
 

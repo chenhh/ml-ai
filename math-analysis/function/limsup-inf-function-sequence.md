@@ -4,7 +4,7 @@
 
 [集合序列的極限](../set/limit-of-set-sequence.md)。
 
-[實數上(下)確界](../real-number/supremum-Infimum.md)。
+[實數上(下)確界](../real-number/supremum-infimum.md)。
 
 [數列的上、下極限](../sequence/limit-sup-inf-of-sequence.md)。
 

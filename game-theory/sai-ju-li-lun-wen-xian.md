@@ -14,7 +14,7 @@ John Von Neumann and Oskar Morgenstern,  "Theory of games and economic behavior 
 
 
 
-<figure><img src="../.gitbook/assets/A Course in Game Theory.jpg" alt="" width="160"><figcaption><p>賽局理論</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/A Course in Game Theory (1).jpg" alt="" width="160"><figcaption><p>賽局理論</p></figcaption></figure>
 
 Martin J. Osborne and Ariel Rubinstein, "A course in game theory," MIT press, 1994. \[[作者提供電子書](https://arielrubinstein.tau.ac.il/books/GT.pdf)] 以公理化的方式定義賽局，此書的深度，廣度，視角，表述，例題等極優秀，也非常適合自學，需要有數學基礎且很精簡的書。
 

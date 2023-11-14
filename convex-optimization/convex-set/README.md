@@ -104,7 +104,7 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 
 ![hyperplane](<../../.gitbook/assets/hyperplane (1).png>)
 
-![halfspace](<../../.gitbook/assets/halfspace (2).png>)
+![halfspace](../../.gitbook/assets/halfspace.png)
 
 ## 歐式球與橢圓(Euclidean balls and ellipsoids)
 

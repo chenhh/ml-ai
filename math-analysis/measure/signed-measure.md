@@ -61,7 +61,7 @@ $$F \subseteq E$$無法保證$$\nu(F) \leq \nu(E)$$。
 >
 > 若$$\{E_n\}$$為$$\Sigma$$上的遞減集合且$$\nu(E_1)\neq \pm \infty$$，則$$\displaystyle \nu(\bigcap_{n=1}^\infty E_n)=\lim_{n \rightarrow \infty} \nu(E_n)$$。
 >
-> 註：此性質和[正測度的連續性](../measure.md#di-zeng-ji-he-ji-xian-de-ce-du-ce-du-de-lian-xu-xing-continuity-of-measure)相同。
+> 註：此性質和[正測度的連續性](./#di-zeng-ji-he-ji-xian-de-ce-du-ce-du-de-lian-xu-xing-continuity-of-measure)相同。
 
 ### 有限測集的子集仍為有限測集
 

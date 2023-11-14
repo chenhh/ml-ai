@@ -89,7 +89,7 @@ description: Martin Zinkevich, 2003，第一篇定義OCO的論文
 
 
 
-因為$$c_t:F\rightarrow \mathbb{R}, ~\forall x \in F$$為凸函數，由[凸函數的一階條件](../../convex-optimization/convex-function.md#yi-jie-tiao-jian-firstorder-condition)可得 $$c_t(x) \geq \nabla c_t(x_t)^\top (x-x_t)+c_t(x_t)$$。
+因為$$c_t:F\rightarrow \mathbb{R}, ~\forall x \in F$$為凸函數，由[凸函數的一階條件](../../convex-optimization/convex-function/#yi-jie-tiao-jian-firstorder-condition)可得 $$c_t(x) \geq \nabla c_t(x_t)^\top (x-x_t)+c_t(x_t)$$。
 
 令$$x^{*} \in F$$為靜態最佳解。可得$$c_t(x^{*}) \geq g_t^\top (x^{*}-x_t)+c_t(x_t)$$。
 

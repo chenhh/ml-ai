@@ -96,9 +96,36 @@ step:
 
 ## Radon-Nikodym定理
 
+> $$(X, \Sigma)$$為可積空間，$$\mu: \Sigma \rightarrow [0, \infty]$$為 σ-有限正測度，$$\nu$$為任意測度(正測度/符號測度/複測度)，且$$\nu \ll \mu$$，則：
+>
+> 1. 存在$$\mu$$可測的函數$$f$$滿足$$\forall E \in \Sigma, ~ \nu(E)=\int_E f d \mu$$。
+> 2. 若$$\forall E \in \Sigma, \nu(E)=\int_E g d\mu$$，則$$f=g \text { a. e. on } (\mu)$$。
+>
+> 幾乎所有的拓展都是圍繞測度$$\nu$$來進行的，而測度 $$\mu$$的條件則一直都是  σ-有限正測度。這個條件很重要，如果不滿足的話，Radon-Nikodym 定理是不成立的。
+>
+> 如果我們要求 Radon-Nikodym 定理中的函數$$f$$的值域有限，那麼測度$$\nu$$的σ-有限性也是必須的.。
 
 
 
+### 範例：非σ-有限正測度不滿足Radon-Nikodym定理
+
+考慮實數$$\mathbb{R}$$上的Borel集合$$\mathbb{B}$$ , 令$$\mu$$是($$\mathbb{R}, \mathbb{B})$$ 上的計數測度。可得$$\mu$$不是  σ-有限測度，因為有很多 Borel 集都不能寫成可數個有限集的聯集。
+
+令$$\nu$$為Lebesgue測度($$\nu$$是  σ-有限測度)，可得$$\nu \ll \mu$$。因為$$\nu(E)=0 \implies E=\emptyset \implies \nu(E)=0$$。
+
+如果Radon-Nikodym定理成立，則存在$$\mu$$可測函數$$f \ni \forall E \in \mathbb{B}, ~ \nu(E)=\int_E f d\mu$$。
+
+令$$S=\{a\}, a \in \mathbb{R}$$為單點集。則$$\nu(S)=0$$。而$$\int_S f d\mu=f(a)$$。因此$$\forall a \in \mathbb{R}, f(a)=0$$，即Lebesgue測度$$\nu$$永遠等於0，與定義矛盾。
+
+### 範例：非σ-有限正測度且函數的值域有限時不滿足Radon-Nikodym定理
+
+$$\mu$$為有限正測度，$$\nu$$為正測度但不是  σ-有限測度。
+
+令$$X=\{0\}$$，$$\mu(X)=1$$，$$\nu(X)=\infty$$。
+
+則$$\mu(E) \implies E=\emptyset \implies \nu(E)=0 \implies \nu \ll \mu$$。
+
+但是不存在函數的值域$$f(X) \in (-\infty, \infty)$$滿足 Radon-Nikodym 定理；但是如果允許$$f(x)=\infty$$ 則可以。
 
 ## 參考資料
 

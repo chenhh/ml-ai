@@ -16,7 +16,7 @@ description: topological space
 
 > 給定集合$$X$$，拓樸$$\mathcal{T}$$為滿足以下條件的集合族(開集合公理):
 >
-> 1. $$\emptyset \in \mathcal{T}$$、$$X \in \mathcal{T}$$。
+> 1. \[空集合/宇集合均同時為開/閉集合]$$\emptyset \in \mathcal{T}$$、$$X \in \mathcal{T}$$。
 > 2. \[可數集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in \mathbb{N}$$，則可數聯集仍為拓樸中的元素，$$\bigcup_{i \in \mathbb{N}} E_i \in \mathcal{T}$$。
 > 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。
 >

@@ -8,7 +8,7 @@ description: topological space
 
 度量空間$$(X,d)$$，開集合$$E$$包含了所有內點，且可數個開集合的聯集仍為開集合，有限個開集合的聯集仍為開集合。
 
-而拓樸空間使用開集合的性質，定義了更一般化的空間。類似於σ代數，<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)，而不需使用度量</mark>$$d$$。
+而拓樸空間使用開集合的性質，定義了更一般化的空間。<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)，而不需使用度量</mark>$$d$$。
 
 拓撲空間賦予「一點附近」這個概念的抽象數學結構，由此可以定義出如收斂、連通、連續等概念。
 
@@ -20,7 +20,7 @@ description: topological space
 > 2. \[任意集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in I$$，$$I$$為指標集合(有限或無限，不一定可數)，則聯集仍為拓樸中的元素，$$\bigcup_{i \in I} E_i \in \mathcal{T}$$。
 > 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。
 >
-> 註：由於開集合的補集為閉集合，也可以用閉集合定義。
+> 註：由於開集合的補集為閉集合，也可以用閉集合定義。但兩者不是對宇集合的分割，有些集合(如空間集和宇集合)同時為開集合與閉集合，且有些集合(如實數上的半開區間)不是開集合也不是閉集合。
 >
 > 註：<mark style="color:red;">任意集合(包含可數與不可數)的聯集的條件比可數集合的聯集條件更一般化</mark>。
 
@@ -28,7 +28,7 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱�
 
 給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或indiscrete topology。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topolog</mark>y。
 
-對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。未指定一般使用標準拓樸(或者是度量空間)。
+對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
 
 若$$x \in X$$且$$E \subseteq X, ~ E \in \mathcal{T}$$滿足$$x \in E$$，則稱$$E$$為$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
 

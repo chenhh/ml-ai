@@ -14,7 +14,7 @@ description: topological space
 
 ## 拓樸(topology)
 
-> 給定集合$$X$$，拓樸$$\mathcal{T}$$為滿足以下條件的集合族(開集合公理):
+> 給定非空集合$$X$$，拓樸$$\mathcal{T}$$為滿足以下條件的集合族(開集合公理):
 >
 > 1. \[空集合/宇集合均同時為開/閉集合]$$\emptyset \in \mathcal{T}$$、$$X \in \mathcal{T}$$。
 > 2. \[任意集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in I$$，$$I$$為指標集合(有限或無限，不一定可數)，則聯集仍為拓樸中的元素，$$\bigcup_{i \in I} E_i \in \mathcal{T}$$。
@@ -24,9 +24,13 @@ description: topological space
 >
 > 註：<mark style="color:red;">任意集合(包含可數與不可數)的聯集的條件比可數集合的聯集條件更一般化</mark>。
 
-$$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱元素$$E \in \mathcal{T}$$為開集合。
+$$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱元素$$E \in \mathcal{T}$$為<mark style="color:red;">開集合(</mark><mark style="color:blue;">此處的開集合是滿足公理存在</mark>$$\mathcal{T}$$<mark style="color:blue;">的元素，不需距離函數的定義</mark>)。
 
-給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或indiscrete topology。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology</mark>。
+[https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology](https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology)
+
+因此存在拓樸空間$$(X,\mathcal{T})$$中的開集合，但在度量空間$$(X,d)$$中不一定是開集合(注意兩空間的開集合(拓樸)定義不同)。
+
+給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或<mark style="color:red;">indiscrete topology(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
 
 對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
 

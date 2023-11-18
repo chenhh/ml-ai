@@ -28,15 +28,17 @@ description: topological space
 
 $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱元素$$E \in \mathcal{T}$$為<mark style="color:red;">開集合(</mark><mark style="color:blue;">此處的開集合是滿足公理存在</mark>$$\mathcal{T}$$<mark style="color:blue;">的元素，不需距離函數的定義</mark>)。
 
-[https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology](https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology)
+若$$E$$為開集合，則$$E^c=X-E$$為<mark style="color:red;">閉集合</mark>。[https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology](https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology)
 
 因此存在拓樸空間$$(X,\mathcal{T})$$中的開集合，但在度量空間$$(X,d)$$中不一定是開集合(注意兩空間的開集合(拓樸)定義不同)。
 
-給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或<mark style="color:red;">indiscrete topology(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
+給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology (the weakest/coarsest  topology)</mark>或<mark style="color:red;">indiscrete topology(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology(the strongest/finest topology)(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
 
 對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
 
-若$$x \in X$$且$$E \subseteq X, ~ E \in \mathcal{T}$$滿足$$x \in E$$，則稱$$E$$為$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
+若$$x \in X$$且$$x\in E \subseteq X, ~ E \in \mathcal{T}$$，則稱$$E$$為點$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
+
+若$$A \subseteq X$$且$$A \subseteq E, E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。
 
 <mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合。
 

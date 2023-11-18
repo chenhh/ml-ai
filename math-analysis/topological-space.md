@@ -17,22 +17,74 @@ description: topological space
 > 給定集合$$X$$，拓樸$$\mathcal{T}$$為滿足以下條件的集合族(開集合公理):
 >
 > 1. \[空集合/宇集合均同時為開/閉集合]$$\emptyset \in \mathcal{T}$$、$$X \in \mathcal{T}$$。
-> 2. \[可數集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in \mathbb{N}$$，則可數聯集仍為拓樸中的元素，$$\bigcup_{i \in \mathbb{N}} E_i \in \mathcal{T}$$。
+> 2. \[任意集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in I$$，$$I$$為指標集合(有限或無限，不一定可數)，則聯集仍為拓樸中的元素，$$\bigcup_{i \in I} E_i \in \mathcal{T}$$。
 > 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。
 >
 > 註：由於開集合的補集為閉集合，也可以用閉集合定義。
+>
+> 註：<mark style="color:red;">任意集合(包含可數與不可數)的聯集的條件比可數集合的聯集條件更一般化</mark>。
 
 $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱元素$$E \in \mathcal{T}$$為開集合。
 
+給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或indiscrete topology。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topolog</mark>y。
+
+對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。未指定一般使用標準拓樸(或者是度量空間)。
+
 若$$x \in X$$且$$E \subseteq X, ~ E \in \mathcal{T}$$滿足$$x \in E$$，則稱$$E$$為$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
 
-### 拓樸和σ代數的比較
+<mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合。
+
+
+
+## 度量空間中的開集合(拓樸)
+
+已知度量空間$$(X,d)$$，給定點$$x \in X$$與半徑$$r >0$$的<mark style="color:red;">開球(open ball</mark>)為：$$\displaystyle B_r(x)=\{ y\in X~|~ d(x,y) <r\}$$。
+
+定義度量空間<mark style="color:red;">開集合</mark>$$O$$滿足：任取裡面的點$$x$$ ，都會有一個夠小的開球$$B_r(x)$$完全落在這個區域裡。即$$\forall x \in O, \exists r >0 \ni B_r(x) \subseteq O$$。
+
+### 開集合的交集也是開集
+
+$$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集合定義得$$\exists r_1, r_2 >0 \ni B_{r_1}(x) \subseteq O_1, ~ B_{r_2}(x) \subseteq O_2$$。
+
+取$$r=\min\{r_1, r_2\}$$可得$$B_r(x) \subseteq O_1 \cap O_2$$&#x20;
+
+因此取有限個開集合的交集時仍為開集合(QED)
+
+### 任意個開集的聯集也會是開集
+
+令$$\mathcal{O} \subseteq X$$為開集合族，即$$O \in \mathcal{O} \implies \forall x \in O, ~\exists r >0 \ni B_r(x) \subseteq O$$。
+
+取$$y \in \bigcup_{O \in \mathcal{O}} O$$，則$$y$$必定為開集合族中至少一個開集合$$O_s$$中的元素。
+
+
+
+## 拓樸和σ代數的比較
 
 集合$$X$$的σ代數$$\Sigma$$滿足：
 
 1. $$\emptyset \in \Sigma$$。
 2. $$\forall E \in \Sigma \implies E^c \in \Sigma$$。
-3. $$\forall E_i \in \Sigma, ~i \in \mathbb{N} \implies \bigcup_{i \in \mathbb{N}} E_i \in \Sigma$$。
+3. \[可數聯集的封閉性]$$\forall E_i \in \Sigma, ~i \in \mathbb{N} \implies \bigcup_{i \in \mathbb{N}} E_i \in \Sigma$$。
+
+由1,2可得$$X \in \Sigma$$。
+
+由2,3得$$\displaystyle \overline{\bigcup_{i \in \mathbb{N}} E_i} = \bigcap_{i \in \mathbb{N}} E_i^c \in \Sigma$$，因此有限交集仍為σ代數中的元素。
+
+<mark style="color:red;">因此可得在可數集合生成的σ代數是拓樸。但是所有的σ代數不一定是拓樸</mark>。
+
+### 範例: σ代數但不是拓樸
+
+給定單點集$$\{x_0\}, 1 < x_0 <1$$與在開區間$$I=(0,1)$$的Borel集$$\mathcal{B}$$(σ代數)。
+
+若$$\mathcal{B}$$滿足拓樸的條件，則單點集任意的聯集仍為Borel集中的元素\[因為拓樸中任意聯集具封閉性]。
+
+但這也隱含了$$I=(0,1)$$中任意子集為Borel集(因為所有集合為均為單點集的聯集所形成)。
+
+但是已知任意子集不一定是Borel集。因此Borel集不是拓樸。
+
+[https://math.stackexchange.com/questions/51222/is-there-an-example-of-a-sigma-algebra-that-is-not-a-topology/932730#932730](https://math.stackexchange.com/questions/51222/is-there-an-example-of-a-sigma-algebra-that-is-not-a-topology/932730#932730)
+
+[https://math.stackexchange.com/questions/932746/example-of-sigma-algebra-that-is-not-a-topology](https://math.stackexchange.com/questions/932746/example-of-sigma-algebra-that-is-not-a-topology)
 
 ## 參考資料
 

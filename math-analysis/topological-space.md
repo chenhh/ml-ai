@@ -6,7 +6,7 @@ description: topological space
 
 ## 簡介
 
-度量空間$$(X,d)$$，開集合$$E$$包含了所有內點，且可數個開集合的聯集仍為開集合，有限個開集合的聯集仍為開集合。
+度量空間$$(X,d)$$，開集合$$E$$包含了所有內點(內點$$x$$必定存在半徑$$r>0$$使得開球$$B_r(x)\subseteq E$$為子集)，且可數個開集合的聯集仍為開集合，有限個開集合的聯集仍為開集合。
 
 而拓樸空間使用開集合的性質，定義了更一般化的空間。<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)，而不需使用度量</mark>$$d$$。
 
@@ -18,7 +18,7 @@ description: topological space
 >
 > 1. \[空集合/宇集合均同時為開/閉集合]$$\emptyset \in \mathcal{T}$$、$$X \in \mathcal{T}$$。
 > 2. \[任意集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in I$$，$$I$$為指標集合(有限或無限，不一定可數)，則聯集仍為拓樸中的元素，$$\bigcup_{i \in I} E_i \in \mathcal{T}$$。
-> 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。
+> 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。等價於$$E_1, E_2 \in \mathcal{T} \implies E_1 \cap E_2 \in \mathcal{T}$$。
 >
 > 註：由於開集合的補集為閉集合，也可以用閉集合定義。但兩者不是對宇集合的分割，有些集合(如空間集和宇集合)同時為開集合與閉集合，且有些集合(如實數上的半開區間)不是開集合也不是閉集合。
 >
@@ -26,7 +26,7 @@ description: topological space
 
 $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱元素$$E \in \mathcal{T}$$為開集合。
 
-給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或indiscrete topology。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topolog</mark>y。
+給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology</mark>或indiscrete topology。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology</mark>。
 
 對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
 
@@ -36,7 +36,9 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱�
 
 
 
-## 度量空間中的開集合(拓樸)
+## 度量空間中的拓樸
+
+度量空間$$(X,d)$$中開集合形成的拓樸稱為<mark style="color:red;">度量拓樸(metric topology)</mark>。
 
 已知度量空間$$(X,d)$$，給定點$$x \in X$$與半徑$$r >0$$的<mark style="color:red;">開球(open ball</mark>)為：$$\displaystyle B_r(x)=\{ y\in X~|~ d(x,y) <r\}$$。
 
@@ -56,8 +58,6 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 取$$y \in \bigcup_{O \in \mathcal{O}} O$$，則$$y$$必定為開集合族中至少一個開集合$$O_s$$中的元素。
 
-
-
 ## 拓樸和σ代數的比較
 
 集合$$X$$的σ代數$$\Sigma$$滿足：
@@ -70,7 +70,7 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 由2,3得$$\displaystyle \overline{\bigcup_{i \in \mathbb{N}} E_i} = \bigcap_{i \in \mathbb{N}} E_i^c \in \Sigma$$，因此有限交集仍為σ代數中的元素。
 
-<mark style="color:red;">因此可得在可數集合生成的σ代數是拓樸。但是所有的σ代數不一定是拓樸</mark>。
+<mark style="color:red;">因此可得若σ代數為可數時是拓樸。但是所有的σ代數不一定是拓樸</mark>。
 
 ### 範例: σ代數但不是拓樸
 
@@ -85,6 +85,16 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 [https://math.stackexchange.com/questions/51222/is-there-an-example-of-a-sigma-algebra-that-is-not-a-topology/932730#932730](https://math.stackexchange.com/questions/51222/is-there-an-example-of-a-sigma-algebra-that-is-not-a-topology/932730#932730)
 
 [https://math.stackexchange.com/questions/932746/example-of-sigma-algebra-that-is-not-a-topology](https://math.stackexchange.com/questions/932746/example-of-sigma-algebra-that-is-not-a-topology)
+
+## 相對拓樸(relative topology)
+
+> $$(X, \mathcal{T})$$為拓樸空間，$$Y \subseteq X$$，則:
+>
+> $$\mathcal{S}=\{H \subseteq Y ~|~ H= G \cap Y \text{ for some }G \in \mathcal{T}\}$$為$$Y$$的拓樸。
+>
+> 則$$(Y, \mathcal{S})$$稱為$$(X, \mathcal{T})$$的拓樸子空間。
+
+範：區間$$[0, 1/2)$$為$$[0,1]$$的開子集(相對於$$[0,1]$$的標準拓樸)，因為$$[0,1/2)=(-1/2, 1/2) \cap [0,1]$$。
 
 ## 參考資料
 

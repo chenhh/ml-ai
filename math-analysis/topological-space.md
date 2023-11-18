@@ -12,6 +12,8 @@ description: topological space
 
 拓撲空間賦予「一點附近」這個概念的抽象數學結構，由此可以定義出如收斂、連通、連續等概念。
 
+給定開集合$$E$$後，定義補集$$E^c$$為閉集合。<mark style="color:blue;">但是集合</mark>$$S$$<mark style="color:blue;">可能是開集合、閉集合、同時為開/閉集合(如空集合和宇集合)、不是開或閉集合(如實數上的半開區間)</mark>。
+
 ## 拓樸(topology)
 
 > 給定非空集合$$X$$，拓樸$$\mathcal{T}$$為滿足以下條件的集合族(開集合公理):
@@ -104,4 +106,5 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 * [台灣師範大學數學系: 拓樸導論](https://www.google.com.tw/url?sa=t\&rct=j\&q=\&esrc=s\&source=web\&cd=\&cad=rja\&uact=8\&ved=2ahUKEwi3qabdvMqCAxWMd\_UHHSErAQMQFnoECAoQAQ\&url=https%3A%2F%2Fmath.ntnu.edu.tw%2F\~li%2FTopology%2FTopology.pdf\&usg=AOvVaw0RhUQulup4SZA2j3iomw4U\&opi=89978449)。
 * [https://zh.wikipedia.org/zh-tw/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4](https://zh.wikipedia.org/zh-tw/%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4)
+* [https://en.wikipedia.org/wiki/Open\_set](https://en.wikipedia.org/wiki/Open\_set)
 

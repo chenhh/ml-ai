@@ -119,6 +119,36 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 >
 > 反之如果$$\mathcal{B}$$為$$X$$中的集合族且滿足1,2的性質，則存在唯一的拓樸$$\mathcal{T}$$使得$$\mathcal{B}$$為$$\mathcal{T}$$的一組基底。
 
+<details>
+
+<summary>proof: 存在唯一的拓樸使得B為基底</summary>
+
+存在性:
+
+要證明存在性，首先定義$$\mathcal{T}$$。
+
+因為$$\mathcal{B}$$為基底的定義是每個開集合都是$$\mathcal{B}$$中元素的聯集，因此$$\mathcal{T}$$自然可寫成$$\mathcal{B}$$中元素的聯集加上$$\emptyset$$。
+
+定義$$\mathcal{T}$$為空集合$$\emptyset$$以及所有可寫成$$\mathcal{B}$$中元素的聯集形成的集合族。
+
+已知$$\emptyset \in \mathcal{T}$$，且由$$X=\bigcup_{S \in \mathcal{B}}S$$得$$X \in \mathcal{T}$$--(1)。
+
+因為$$\mathcal{T}$$中所有元素可寫成$$\mathcal{B}$$中一些元素的聯集，因為$$\mathcal{T}$$中一些元素可寫成$$\mathcal{B}$$中一些元素的聯集--(2)。
+
+要證明$$T_1 \cap T_2 \cap \dots \cap T_n$$可寫成$$\mathcal{B}$$中一些元素的聯集。使用數學歸納法，只要證明$$n=2$$的情形即可。
+
+假設$$T_1, T_2 \in \mathcal{T}$$，依定義存在指標集合$$I, J$$使得$$T_1 =\bigcup_{i\in I}S_i, ~ T_2 =\bigcup_{j \in J} S_j$$，其中$$S_i, S_j \in \mathcal{B}$$。
+
+由聯集分配律得$$T_1 \cap T_2 = \bigcup_{i \in I, ~ j \in J} S_i \cap S_j$$。
+
+$$\forall x \in S_i \cap S_j$$，因為$$S_i, S_j \in \mathcal{B}$$，由2得存在$$S_x \in \mathcal{B} \ni x \in S_x$$且$$S_x \subseteq S_i \cap S_j$$。
+
+因此可得$$S_i \cap S_j = \bigcap_{x \in S_i \cap S_j} S_x$$--(3)
+
+由1,2,3得$$\mathcal{T}$$為拓樸。(QED)
+
+</details>
+
 ## 相對拓樸(relative topology)
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$Y \subseteq X$$，則:

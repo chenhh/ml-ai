@@ -94,6 +94,22 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 [https://math.stackexchange.com/questions/932746/example-of-sigma-algebra-that-is-not-a-topology](https://math.stackexchange.com/questions/932746/example-of-sigma-algebra-that-is-not-a-topology)
 
+## 拓樸的基底(basis of topology)
+
+> 給定拓樸空間$$(X, \mathcal{T})$$，若$$\mathcal{B}$$是由$$\mathcal{T}$$中的一些開集合所組成的集合，且滿足$$\mathcal{T}$$中非空的開集合(元素)均可以$$\mathcal{B}$$中的開集合(元素)聯集，則稱$$\mathcal{B}$$為$$\mathcal{T}$$的基底(basis)。
+>
+> 註：類似向量空間的基底，基底元素間彼此線性獨立，而向量空間元素均可由基底線性組合而成。
+>
+> 註：基底不唯一但數量唯一。
+>
+> 一組基底可建構出唯一的拓樸<mark style="color:red;">。因此若兩個拓樸有相同的基底時，則兩個拓樸有相同的元素(開集合)，即兩拓樸相等</mark>。
+
+實數的標準拓樸上的開集合是由開區間(open interval)(可能有無限多個)的聯集所組成。
+
+在度量拓樸的開集合，也是由開球(open ball)聯集所得。這些建構拓樸的基本集合稱為基底(basis)。
+
+<mark style="color:blue;">範例：度量拓樸中，所有半徑為有理數的開球為基底</mark>。
+
 ## 相對拓樸(relative topology)
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$Y \subseteq X$$，則:

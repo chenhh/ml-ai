@@ -110,6 +110,15 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 <mark style="color:blue;">範例：度量拓樸中，所有半徑為有理數的開球為基底</mark>。
 
+### 基底的必要條件
+
+> 令$$\mathcal{B}$$為集合 $$X$$的一組基底，則$$\mathcal{B}$$滿足：
+>
+> 1. $$\displaystyle X = \bigcup_{S \in \mathcal{B}}S$$。
+> 2. 若$$S_1, S_2 \in \mathcal{B}$$且$$x \in S_1 \cap S_2$$，則存在$$S \in \mathcal{B} \ni x \in S, ~ S \in S_1 \cap S_2$$。
+>
+> 反之如果$$\mathcal{B}$$為$$X$$中的集合族且滿足1,2的性質，則存在唯一的拓樸$$\mathcal{T}$$使得$$\mathcal{B}$$為$$\mathcal{T}$$的一組基底。
+
 ## 相對拓樸(relative topology)
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$Y \subseteq X$$，則:

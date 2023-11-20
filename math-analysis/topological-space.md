@@ -207,7 +207,11 @@ $$\forall x \in S_i \cap S_j$$，因為$$S_i, S_j \in \mathcal{B}$$，由2得存
 
 ## 開對映(open map)
 
+> $$X, Y$$為拓樸空間，$$f: X \rightarrow Y$$為函數滿足$$\forall S \subseteq X$$為開集合，$$f(S) \subseteq Y$$為開集合(不需1-1，onto或continous的假設)，則稱$$f$$為開對映。
 
+考慮兩個拓樸，如果要描述兩集合相同，則存在一對一且映成的函數(兩集合元素完全1-1對映)，由於拓樸的元素為開集合，因此為連續函數(保證值域為開集合時，前像為開集合，類似映成的概念)，但這三個條件仍不足，還缺一個開集合一對一的概念，即定義域為開集合時，值域必為開集合的限制。如此才能夠保證$$X \leftrightarrow Y$$集合為同構，且$$\mathcal{T}_X \leftrightarrow  \mathcal{T}_Y$$也為同構。
+
+如$$f: (X, \{ \emptyset, X\}  \rightarrow (X, \mathbb{P}(X))$$為identity map，在$$X$$中元素大於1個時，即使滿足一對一、映成且連續函數，仍不會將兩拓樸視為相同。
 
 ## 參考資料
 

@@ -213,6 +213,32 @@ $$\forall x \in S_i \cap S_j$$，因為$$S_i, S_j \in \mathcal{B}$$，由2得存
 
 如$$f: (X, \{ \emptyset, X\}  \rightarrow (X, \mathbb{P}(X))$$為identity map，在$$X$$中元素大於1個時，即使滿足一對一、映成且連續函數，仍不會將兩拓樸視為相同。
 
+### 映成的連續函數相異集合的前像為相異的集合
+
+> $$X, Y$$為拓樸空間，$$f: X \rightarrow Y$$為映成的連續函數，則：
+>
+> $$\forall U_1, U_2 \subseteq Y$$為相異開集合，則$$f^{-1}(U_1) ,f^{-1}(U_2)$$為$$X$$的相異集合。
+>
+> 註：映成：$$\forall y \in Y ~\exists x \in X \ni f(x)=y$$。
+
+### 一對一的開對映相異集合值域為相異集合
+
+> $$X, Y$$為拓樸空間，$$f: X \rightarrow Y$$為一對一的開對映，則：
+>
+> $$\forall S_1, S_2 \subseteq X$$為相異開集合，則$$f(S_1), f(S_2)$$為$$Y$$的相異集合。
+>
+> 註：一對一: $$f(x_1)=f(x_2) \implies x_1=x_2$$。
+
+## 同胚(homeomorphism)
+
+> $$X, Y$$為拓樸空間，若$$f: X \rightarrow Y$$一對一、映成、連續且為開對映函數，則稱$$f$$是$$X,Y$$之間的同胚。
+>
+> 如果兩個拓樸空間之間存在同胚，則稱為<mark style="color:red;">同胚拓樸空間(homeomorphic topological spaces)</mark>。
+>
+> 同胚是拓撲空間範疇中的同構；也就是說它們是保持給定空間的所有拓撲性質的對映。
+>
+> 從拓撲學的觀點來看，兩個空間是相同的。 <mark style="color:red;">拓撲空間是一個幾何物體，同胚就是把物體連續延展和彎曲，使其成為一個新的物體</mark>。
+
 ## 參考資料
 
 * [台灣師範大學數學系: 拓樸導論](https://www.google.com.tw/url?sa=t\&rct=j\&q=\&esrc=s\&source=web\&cd=\&cad=rja\&uact=8\&ved=2ahUKEwi3qabdvMqCAxWMd\_UHHSErAQMQFnoECAoQAQ\&url=https%3A%2F%2Fmath.ntnu.edu.tw%2F\~li%2FTopology%2FTopology.pdf\&usg=AOvVaw0RhUQulup4SZA2j3iomw4U\&opi=89978449)。

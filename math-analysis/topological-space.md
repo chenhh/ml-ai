@@ -159,6 +159,56 @@ $$\forall x \in S_i \cap S_j$$，因為$$S_i, S_j \in \mathcal{B}$$，由2得存
 
 範：區間$$[0, 1/2)$$為$$[0,1]$$的開子集(相對於$$[0,1]$$的標準拓樸)，因為$$[0,1/2)=(-1/2, 1/2) \cap [0,1]$$。
 
+## 連續函數(continuous function)
+
+> $$X, Y$$為拓樸空間，$$f: X \rightarrow Y$$為函數。
+>
+> 若$$\forall O \subseteq Y$$為開集合且前像$$f^{-1}(O) \subseteq X$$也是開集合，則稱$$f$$為連續函數。
+
+也可使用閉集合定義連續函數：$$\forall C \subseteq Y$$為閉集合，若前像$$f^{-1}(C) \subseteq X$$為閉集合，則稱$$f$$為連續函數。(由$$C$$為閉集合若且唯若$$Y-C$$為開集合得出)。
+
+集合$$X$$上的identity函數$$f: X \rightarrow X$$有可能不是連續函數。(考慮集合上相異的拓樸)
+
+依定義要證明$$f$$為連續函數，必須驗證所有$$Y$$的開集合的前像是否為開集合。可使用基底的概念降低複雜度。
+
+### 連續函數若且唯若基底元素的前像為開集合
+
+> $$X, Y$$為拓樸空間，$$f: X \rightarrow Y$$為函數，$$\mathcal{B}$$為$$Y$$的一組基底。
+>
+> 則$$f$$為連續函數若且唯若$$\forall O \in \mathcal{B}, ~f^{-1}(U)$$為$$X$$的開集合。
+
+<details>
+
+<summary>proof</summary>
+
+\=>
+
+若$$f$$為連續函數，由定義得$$\forall O \in \mathcal{B}$$均為$$Y$$的開集合，因此$$f^{-1}(O)$$為$$X$$的開集合。
+
+(QED)
+
+<=
+
+給定對於任意的$$O \in \mathcal{B}$$，$$f^{-1}(O)$$為$$X$$的開集合。
+
+任取$$Y$$的開集合$$U$$，由於$$\mathcal{B}$$為$$Y$$的基底，存在指標集$$I$$與$$S_i \in \mathcal{B}, ~i \in I$$使得$$U=\bigcup_{i \in I} S_i$$。
+
+由於$$f^{-1}(U)=\bigcup_{i \in I} f^{-1}(S_i)$$且$$f^{-1}(S_i)$$為開集合，因此$$f^{-1}(U)$$為開集合，所以$$f$$為連續函數。
+
+(QED)
+
+</details>
+
+## 連續函數的合成函數為連續函數
+
+> $$X,Y,Z$$為拓樸空間，$$f: X \rightarrow Y, ~ g: Y \rightarrow Z$$為函數。得合成函數$$g \circ f: X \rightarrow Z$$。
+>
+> 若$$f,g$$為連續函數，則$$g \circ f$$為連續函數。
+
+## 開對映(open map)
+
+
+
 ## 參考資料
 
 * [台灣師範大學數學系: 拓樸導論](https://www.google.com.tw/url?sa=t\&rct=j\&q=\&esrc=s\&source=web\&cd=\&cad=rja\&uact=8\&ved=2ahUKEwi3qabdvMqCAxWMd\_UHHSErAQMQFnoECAoQAQ\&url=https%3A%2F%2Fmath.ntnu.edu.tw%2F\~li%2FTopology%2FTopology.pdf\&usg=AOvVaw0RhUQulup4SZA2j3iomw4U\&opi=89978449)。

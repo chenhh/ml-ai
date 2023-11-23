@@ -47,3 +47,24 @@ description: interior, exterior, boundary points
 
 </details>
 
+<details>
+
+<summary>Proof 2: 由鄰域直接證明</summary>
+
+$$\forall a \in \mathrm{int}(S)$$，由定義得存在$$a$$的開鄰域$$U \ni U \subseteq S$$。因為$$S \subseteq T$$，所以$$U \subseteq T$$，因此$$a \in \mathrm{int}(T)$$。
+
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof 3</summary>
+
+因為$$S$$為$$X$$的開集合，若$$S \subseteq T$$，由1,2得$$S=\mathrm{int}(S) \subseteq \mathrm{int}(T)$$--(1)
+
+若$$S \subseteq \mathrm{int}(T)$$，因為$$\mathrm{int}(T) \subseteq T$$，所以$$S \subseteq T$$--(2)
+
+由(1,2)得證(QED)
+
+</details>

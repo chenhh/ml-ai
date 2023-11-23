@@ -28,3 +28,22 @@ description: interior, exterior, boundary points
 > 1. 若$$S$$為$$X$$的開集合，則$$\mathrm{int}(S)=S$$。且$$\mathrm{int}(X)=X$$，$$\mathrm{int}(\emptyset)=\emptyset$$。
 > 2. 若$$S\subseteq T$$，則$$\mathrm{int}(S) \subseteq \mathrm{int}(T)$$。
 > 3. 若$$S$$為$$X$$的開集合，則$$S \subseteq T \iff S \subseteq \mathrm{int}(T)$$。
+
+<details>
+
+<summary>proof1: 已知int(S)為S的子集，要證反方向</summary>
+
+已知$$S$$為$$X$$的開集合，因此$$S \in \mathcal{T}$$，且$$\forall a \in S$$, $$S$$為$$a$$的開鄰域且滿足$$S \subseteq S$$，即$$a$$為$$S$$的內點，所以$$a \in \mathrm{int}(S)$$。
+
+因此$$S \subseteq \mathrm{int}(S)$$，依定義$$\mathrm{int}(S)\subseteq S$$，因此$$S=\mathrm{int}(S)$$。
+
+(QED)
+
+因為$$X \in \mathcal{T}$$為開集合，因此$$\mathrm{int}(X)=X$$。
+
+同理$$\emptyset \in \mathcal{T}$$為開集合，因此$$\mathrm{int}(\emptyset)=\emptyset$$。
+
+(QED)
+
+</details>
+

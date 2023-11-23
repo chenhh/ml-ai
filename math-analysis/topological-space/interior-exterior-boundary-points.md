@@ -14,7 +14,7 @@ description: interior, exterior, boundary points
 >
 > 給定$$a \in S$$，若存在$$a$$的開鄰域$$U$$使得$$U \subseteq S$$(即$$a \in U, ~U \in \mathcal{T}, ~U \subseteq S$$)，則稱$$a$$為$$S$$的內點。
 >
-> 所有$$S$$的內點稱為內點集$$\mathrm{int}(S)$$。可得$$\mathrm{int}(S) \subseteq S$$。
+> 所有$$S$$的內點稱為內點集$$\mathrm{int}(S)$$。可得$$\mathrm{int}(S) \subseteq S$$，因為$$\forall a \in \mathrm{int}(S), ~ a \in U, ~ U \in \mathcal{T}$$，則滿足此條件的所有$$U$$的聯集依定義仍為$$\mathcal{T}$$的元素且仍為$$S$$的子集，即$$\bigcup U \in \mathcal{T}$$且$$\bigcup U \subseteq S$$。
 
 <mark style="color:red;">註：非空集合的內點集可能為空集合</mark>。
 

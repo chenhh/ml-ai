@@ -8,7 +8,7 @@ description: topological space
 
 度量空間$$(X,d)$$，開集合$$E$$包含了所有內點(內點$$x$$必定存在半徑$$r>0$$使得開球$$B_r(x)\subseteq E$$為子集)，且可數個開集合的聯集仍為開集合，有限個開集合的聯集仍為開集合。
 
-而拓樸空間使用開集合的性質，定義了更一般化的空間。<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)，而不需使用度量</mark>$$d$$。
+而拓樸空間使用開集合的性質，定義了更一般化的空間。<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)(集合族)，而不需使用度量</mark>$$d$$。只要屬於拓樸中的元素即為開集合。
 
 拓撲空間賦予「一點附近」這個概念的抽象數學結構，由此可以定義出如收斂、連通、連續等概念。
 
@@ -40,7 +40,7 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱�
 
 若$$x \in X$$且$$x\in E \subseteq X, ~ E \in \mathcal{T}$$，則稱$$E$$為點$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
 
-若$$A \subseteq X$$且$$A \subseteq E, E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。
+若$$A \subseteq X$$且$$A \subseteq E, E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。此處$$A$$不必為$$\mathcal{T}$$中的元素。
 
 <mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合。
 

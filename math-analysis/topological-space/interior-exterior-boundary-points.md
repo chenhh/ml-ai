@@ -114,8 +114,8 @@ proof 2:
 
 > $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
 >
-> 1. $$S$$為$$X$$的開集合⟺ $$S = \mathrm{int}(S)$$。\[由開集合=>內點集等於集合與內點集為開集合得證]
-> 2. $$\mathrm{int}(\mathrm{int}(S))=\mathrm{int}(S)$$。
+> 1. \[<mark style="color:red;">開集合等價於內點集</mark>]$$S$$為$$X$$的開集合⟺ $$S = \mathrm{int}(S)$$。\[由開集合=>內點集等於集合，且內點集為開集合得證]
+> 2. \[<mark style="color:red;">內點集的內點集等於內點集</mark>]$$\mathrm{int}(\mathrm{int}(S))=\mathrm{int}(S)$$。\[由內點集$$\mathrm{int}(S)$$為開集合，且$$\mathrm{int}(S)$$開集合=>內點集等於集合$$\mathrm{int}(S) = \mathrm{int}(\mathrm{int}(S))$$得證]
 
 ## 外點(exterior point)
 
@@ -133,7 +133,9 @@ proof 2:
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$S, T \subseteq X$$。
 >
-> 1. $$S$$為閉集合⟺$$\mathrm{ext}(S)=S^c$$。
+> 1. $$S$$為閉集合⟺$$\mathrm{ext}(S)=S^c$$。\[$$S$$為開集合⟺$$\mathrm{int}(S)=S$$⟺$$S^c$$為閉集合，且$$\mathrm{ext}(S) = \mathrm{int}(S^c)$$]
 > 2. $$S \subseteq T \implies \mathrm{ext}(T) \subseteq \mathrm{ext}(S)$$。
 > 3. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合的聯集，即$$\displaystyle \mathrm{ext}(S) = \bigcup_{\{U \in \mathrm{T} ~|~ U \cap S =\emptyset \}} U$$。
 > 4. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合中最大的開集合。即$$\mathrm{ext}(S) \in \mathcal{T}$$且若$$U \in \mathcal{T}, ~ U \cap S = \emptyset \implies U \subseteq \mathrm{ext}(S)$$。
+>
+> <mark style="color:red;">註：無法得到</mark>$$\mathrm{ext}(\mathrm{ext}(S))=\mathrm{ext}(S)$$<mark style="color:red;">的結論</mark>。

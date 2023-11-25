@@ -137,5 +137,21 @@ proof 2:
 > 2. $$S \subseteq T \implies \mathrm{ext}(T) \subseteq \mathrm{ext}(S)$$。
 > 3. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合的聯集，即$$\displaystyle \mathrm{ext}(S) = \bigcup_{\{U \in \mathrm{T} ~|~ U \cap S =\emptyset \}} U$$。
 > 4. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合中最大的開集合。即$$\mathrm{ext}(S) \in \mathcal{T}$$且若$$U \in \mathcal{T}, ~ U \cap S = \emptyset \implies U \subseteq \mathrm{ext}(S)$$。
->
-> <mark style="color:red;">註：無法得到</mark>$$\mathrm{ext}(\mathrm{ext}(S))=\mathrm{ext}(S)$$<mark style="color:red;">的結論</mark>。
+> 5. $$\mathrm{int}(S) \subseteq \mathrm{ext}(\mathrm{ext}(S))$$。
+
+<mark style="color:red;">註：無法得到</mark>$$\mathrm{ext}(\mathrm{ext}(S))=\mathrm{ext}(S)$$<mark style="color:red;">的結論</mark>。
+
+#### 性質5等號不成立的範例
+
+考慮$$\mathbb{R}$$的標準拓樸，任意非空的開區間$$(r,s)$$必定包含無理數與有理數，因此可得$$\mathrm{int}(\mathbb{Q})=\emptyset$$。$$\mathrm{ext}(\mathbb{Q})=\mathrm{int}(\mathbb{Q}^c)=\mathrm{int}(\mathbb{R-Q})＝\emptyset$$。因此$$\mathrm{ext}(\mathrm{ext}(\mathbb{Q}))=\mathrm{ext}(\emptyset)=\mathbb{R} \neq \mathrm{int}(\mathbb{Q})$$。
+
+<details>
+
+<summary>proof 5與範例</summary>
+
+因為$$\mathrm{ext}(S) \subseteq S^c$$且由2得$$\mathrm{ext}(S^c) \subseteq \mathrm{ext}(\mathrm{ext}(S))$$由。由於$$\mathrm{ext}(S^c)=\mathrm{int}((S^c)^c)=\mathrm{int}(S)$$，因此可得$$\mathrm{int}(S) \subseteq \mathrm{ext}(\mathrm{ext}(S))$$。
+
+(QED)
+
+</details>
+

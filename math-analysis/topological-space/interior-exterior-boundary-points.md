@@ -128,3 +128,12 @@ proof 2:
 由外點集定義得$$x \in \mathrm{ext}(S) \implies x \notin S \implies x \in S^c$$，因此$$\mathrm{ext}(S) \subseteq S^c$$且$$x \in U \in \mathcal{T}, ~ U \cap S=\emptyset,  \implies U \subseteq S^c$$。
 
 <mark style="color:red;">因此可得</mark>$$S$$<mark style="color:red;">的外點集等於</mark>$$S^c$$<mark style="color:red;">的內點集</mark>，即$$\mathrm{ext}(S) = \mathrm{int}(S^c)$$。
+
+### 外點的性質
+
+> $$(X, \mathcal{T})$$為拓樸空間，$$S, T \subseteq X$$。
+>
+> 1. $$S$$為閉集合⟺$$\mathrm{ext}(S)=S^c$$。
+> 2. $$S \subseteq T \implies \mathrm{ext}(T) \subseteq \mathrm{ext}(S)$$。
+> 3. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合的聯集，即$$\displaystyle \mathrm{ext}(S) = \bigcup_{\{U \in \mathrm{T} ~|~ U \cap S =\emptyset \}} U$$。
+> 4. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合中最大的開集合。即$$\mathrm{ext}(S) \in \mathcal{T}$$且若$$U \in \mathcal{T}, ~ U \cap S = \emptyset \implies U \subseteq \mathrm{ext}(S)$$。

@@ -155,3 +155,41 @@ proof 2:
 
 </details>
 
+## 閉包(closure)
+
+> $$(X, \mathcal{T})$$為拓樸空間，$$S \subseteq X$$。
+>
+> $$\forall a \in X$$，若$$a$$的任意開鄰域$$U$$均滿足$$U \cap S \neq \emptyset$$，則稱$$a$$為$$S$$的附著點(adherent point)。
+>
+> 所有$$S$$的附著點形成的集合稱為$$S$$的閉包，記為$$\mathrm{cl}(S)$$或$$\overline{S}$$。
+
+註：閉包$$\overline{S}$$中的點是宇集合$$X$$中與$$S$$非常靠近的元素，因此可能包含不屬於$$S$$的元素，而相異宇集可能得到不同的閉包。
+
+### 閉包的性質
+
+> $$(X, \mathcal{T})$$為拓樸空間，$$S, T \subseteq X$$。
+>
+> 1. \[<mark style="color:red;">閉集合=>閉包</mark>]若$$S$$為$$X$$的閉集合，則$$\mathrm{cl}(S)=S$$且$$\mathrm{cl}(X)=X, ~\mathrm{cl}(\emptyset)=\emptyset$$。
+> 2. $$S \subseteq T \implies \mathrm{cl}(S) \subseteq \mathrm{cl}(T)$$。
+> 3. 若$$T$$為$$X$$的閉集合，則$$S \subseteq T \iff \mathrm{cl}(S) \subseteq T$$。
+
+### 閉包為所有閉集合的交集且為最小閉集合
+
+> $$(X, \mathcal{T})$$為拓樸空間，$$S\subseteq X$$。
+>
+> 1. 閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合的交集。$$\displaystyle \mathrm{cl}(S) = \bigcap_{\{ E^c \in \mathcal{T} ~|~ S \subseteq E \}} E$$。
+> 2. 閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合最小的閉集合。即$$\mathrm{cl}(S)$$為閉集合，$$E$$為閉集合且$$S \subseteq E$$，則$$\mathrm{cl}(S) \subseteq E$$.&#x20;
+
+### 閉包為閉集合的等價條件&#x20;
+
+> $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
+>
+> 1. $$S$$為$$X$$的閉集合⟺$$S=\mathrm{cl}(S)$$。
+> 2. $$\mathrm{cl}(\mathrm{cl}(S))=\mathrm{cl}(S)$$。
+
+### 閉包、外點集與內點集的關係
+
+> $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
+>
+> 則$$\mathrm{cl}(S)=\mathrm{ext}(S)^c = \mathrm{int}(S^c)^c$$。
+

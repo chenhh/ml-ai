@@ -8,7 +8,7 @@ description: topological space
 
 度量空間$$(X,d)$$，開集合$$E$$包含了所有內點(內點$$x$$必定存在半徑$$r>0$$使得開球$$B_r(x)\subseteq E$$為子集)，且可數個開集合的聯集仍為開集合，有限個開集合的聯集仍為開集合。
 
-而拓樸空間使用開集合的性質，定義了更一般化的空間。<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)(集合族)，而不需使用度量</mark>$$d$$。只要屬於拓樸中的元素即為開集合。
+而拓樸空間使用開集合的性質，定義了更一般化的空間。<mark style="color:red;">只使用開集合的聯集與交集性質定義拓樸(topology)(集合族)，而不需使用度量</mark>$$d$$。<mark style="color:red;">只要屬於拓樸中的元素即為開集合</mark>。
 
 拓撲空間賦予「一點附近」這個概念的抽象數學結構，由此可以定義出如收斂、連通、連續等概念。
 
@@ -26,7 +26,7 @@ description: topological space
 >
 > 註：<mark style="color:red;">任意集合(包含可數與不可數)的聯集的條件比可數集合的聯集條件更一般化</mark>。
 
-$$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱元素$$E \in \mathcal{T}$$為<mark style="color:red;">開集合(</mark><mark style="color:blue;">此處的開集合是滿足公理存在</mark>$$\mathcal{T}$$<mark style="color:blue;">的元素，不需距離函數的定義</mark>)。
+$$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<mark style="color:red;">元素</mark>$$E \in \mathcal{T}$$為<mark style="color:red;">開集合(</mark><mark style="color:blue;">此處的開集合是滿足公理存在</mark>$$\mathcal{T}$$<mark style="color:blue;">的元素，不需距離函數的定義</mark>)。
 
 若$$E$$為開集合，則$$E^c=X-E$$為<mark style="color:red;">閉集合</mark>。 例如實數$$\mathbb{R}$$中的單點集$$\{x_0\}$$或是單點數的可數聯集如$$\mathbb{N}$$都是閉集合。
 
@@ -40,9 +40,9 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱�
 
 若$$x \in X$$且$$x\in E \subseteq X, ~ E \in \mathcal{T}$$，則稱$$E$$為點$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
 
-若$$A \subseteq X$$且$$A \subseteq E, E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。此處$$A$$不必為$$\mathcal{T}$$中的元素。
+若$$A \subseteq X$$且$$A \subseteq E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。此處$$A$$不必為$$\mathcal{T}$$中的元素。
 
-<mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合。
+<mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合(同理由閉集合為開集合的補集可得任意閉集合$$U \subseteq Y$$的前像$$f^{-1}(U) \subseteq X$$為閉集合)。
 
 
 
@@ -66,7 +66,7 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 令$$\mathcal{O} \subseteq X$$為開集合族，即$$O \in \mathcal{O} \implies \forall x \in O, ~\exists r >0 \ni B_r(x) \subseteq O$$。
 
-取$$y \in \bigcup_{O \in \mathcal{O}} O$$，則$$y$$必定為開集合族中至少一個開集合$$O_s$$中的元素。
+取$$y \in \bigcup_{O \in \mathcal{O}} O$$，則$$y$$必定為開集合族中至少一個開集合$$O$$中的元素。
 
 ## 拓樸和σ代數的比較
 
@@ -80,7 +80,7 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 由2,3得$$\displaystyle \overline{\bigcup_{i \in \mathbb{N}} E_i} = \bigcap_{i \in \mathbb{N}} E_i^c \in \Sigma$$，因此有限交集仍為σ代數中的元素。
 
-<mark style="color:red;">因此可得若σ代數為可數時是拓樸。但是所有的σ代數不一定是拓樸</mark>。
+<mark style="color:red;">因此可得若σ代數為可數時是拓樸。但是並非所有的σ代數為拓樸</mark>。
 
 ### 範例: σ代數但不是拓樸
 
@@ -114,7 +114,7 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 ### 基底的必要條件
 
-> 令$$\mathcal{B}$$為集合 $$X$$的一組基底，則$$\mathcal{B}$$滿足：
+> 令$$\mathcal{B}$$為集合$$X$$的一組拓樸基底，則$$\mathcal{B}$$滿足：
 >
 > 1. $$\displaystyle X = \bigcup_{S \in \mathcal{B}}S$$。
 > 2. 若$$S_1, S_2 \in \mathcal{B}$$且$$x \in S_1 \cap S_2$$，則存在$$S \in \mathcal{B} \ni x \in S, ~ S \in S_1 \cap S_2$$。

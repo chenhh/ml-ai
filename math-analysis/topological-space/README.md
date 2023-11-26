@@ -34,8 +34,6 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<
 
 因此存在拓樸空間$$(X,\mathcal{T})$$中的開集合，但在度量空間$$(X,d)$$中不一定是開集合(注意兩空間的開集合(拓樸)定義不同)。
 
-給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology (the weakest/coarsest  topology)</mark>或<mark style="color:red;">indiscrete topology(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology(the strongest/finest topology)(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
-
 對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
 
 若$$x \in X$$且$$x\in E \subseteq X, ~ E \in \mathcal{T}$$，則稱$$E$$為點$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
@@ -44,9 +42,19 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<
 
 <mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合(同理由閉集合為開集合的補集可得任意閉集合$$U \subseteq Y$$的前像$$f^{-1}(U) \subseteq X$$為閉集合)。
 
+### 拓樸的比較
+
+給定集合$$X$$上相異兩拓樸$$\mathcal{T_1}, \mathcal{T_2}$$，如果$$T_2 \subseteq T_1$$，則稱$$\mathcal{T_1}$$比$$\mathcal{T}_2$$較強(或較細, finer)，或$$\mathcal{T_2}$$比$$\mathcal{T}_1$$較弱(較粗, corser)。
+
+給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology (the weakest/coarsest  topology)</mark>或<mark style="color:red;">indiscrete topology(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology(the strongest/finest topology)(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
+
+集合$$X$$上的所有可能的拓樸可得偏序性。由所有開集合形成的拓樸$$\mathbb{P}(X)$$是此拓樸集合中的極大元素，而trival topology是極小元素。
+
 
 
 ## 度量空間中的拓樸
+
+根據定義，度量空間$$(X, d)$$的開集合滿足拓樸的條件，因此<mark style="color:blue;">度量空間為拓樸空間</mark>。
 
 度量空間$$(X,d)$$中開集合形成的拓樸稱為<mark style="color:red;">度量拓樸(metric topology)</mark>。
 

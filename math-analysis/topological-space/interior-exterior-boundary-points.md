@@ -165,6 +165,8 @@ proof 2:
 
 註：閉包$$\overline{S}$$中的點是宇集合$$X$$中與$$S$$非常靠近的元素，因此可能包含不屬於$$S$$的元素，而相異宇集可能得到不同的閉包。
 
+由定義得$$S \subseteq \mathrm{cl}(S)$$。因為$$\forall x \in S$$，任意的開鄰域$$x \in U \in \mathcal{T}, ~U \subseteq S$$均可得$$U \cap S \neq \emptyset$$。
+
 ### 閉包的性質
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$S, T \subseteq X$$。
@@ -172,6 +174,54 @@ proof 2:
 > 1. \[<mark style="color:red;">閉集合=>閉包</mark>]若$$S$$為$$X$$的閉集合，則$$\mathrm{cl}(S)=S$$且$$\mathrm{cl}(X)=X, ~\mathrm{cl}(\emptyset)=\emptyset$$。
 > 2. $$S \subseteq T \implies \mathrm{cl}(S) \subseteq \mathrm{cl}(T)$$。
 > 3. 若$$T$$為$$X$$的閉集合，則$$S \subseteq T \iff \mathrm{cl}(S) \subseteq T$$。
+
+<details>
+
+<summary>proof 1</summary>
+
+已知$$S \subseteq \mathrm{cl}(S)$$，要證明$$\mathrm{cl}(S) \subseteq S$$。
+
+因為$$S$$為$$X$$的閉集合若且唯若$$S^c$$為開集合。因此改證明$$S^c \subseteq \mathrm{cl}(S)^c$$。
+
+若$$x \in S^c$$，則存在開鄰域$$x \in U \in \mathcal{T}, U \subseteq S^c$$，因此$$U \cap S=\emptyset$$。
+
+即$$x$$不是$$S$$的閉包點，因此$$x \in \mathrm{cl}(S)^c$$。
+
+(QED)
+
+因為$$X$$為$$X$$的閉集合，所以$$\mathrm{cl}(X)=X$$。
+
+同理得$$\mathrm{cl}(\emptyset)=\emptyset$$。
+
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof 2</summary>
+
+取$$x \in \mathrm{cl}(S)$$，由定義任意開鄰域$$x \in U \in \mathcal{T}, ~ U \cap S\neq \emptyset$$。
+
+因為$$S \subseteq T$$，所以$$U \cap T \neq \emptyset$$，因此可得$$x \in \mathrm{cl}(T)$$。
+
+(QED)
+
+</details>
+
+<details>
+
+<summary>proof 3</summary>
+
+由1,2得$$S \subseteq T \implies \mathrm{cl}(S) \subseteq \mathrm{cl}(T) =T$$--(1)
+
+若$$\mathrm{cl}(S) \subseteq T$$，因為$$S \subseteq \mathrm{cl}(S)$$可得$$S \subseteq T$$--(2)
+
+由(1,2)得證
+
+(QED)
+
+</details>
 
 ### 閉包為所有閉集合的交集且為最小閉集合
 

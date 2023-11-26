@@ -50,7 +50,11 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<
 
 集合$$X$$上的所有可能的拓樸可得偏序性。由所有開集合形成的拓樸$$\mathbb{P}(X)$$是此拓樸集合中的極大元素，而trival topology是極小元素。
 
+### 相異拓樸的交集仍是拓樸且是最弱的拓樸
 
+> 給定集合$$X$$上的拓樸族$$\{\mathcal{T}_i\}_{i \in I}$$，則$$\displaystyle \mathcal{T}=\bigcap_{i \in I} \mathcal{T}_i$$為拓樸且$$\mathcal{T} \subseteq \mathcal{T}_i, ~\forall i \in I$$。
+
+###
 
 ## 度量空間中的拓樸
 

@@ -57,6 +57,8 @@
 * [拓樸空間](math-analysis/topological-space/README.md)
   * [內點、外點、邊界點](math-analysis/topological-space/interior-exterior-boundary-points.md)
   * [連續函數](math-analysis/topological-space/continuous-function.md)
+  * [連通性](math-analysis/topological-space/connectedness.md)
+  * [緊緻性](math-analysis/topological-space/compactness.md)
   * [Hausdorff空間](math-analysis/topological-space/hausdorff-space.md)
 * [微分、導數(derivative)](math-analysis/derivative/README.md)
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)

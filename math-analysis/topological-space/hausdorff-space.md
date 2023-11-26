@@ -14,6 +14,10 @@ Hausdorff條件常被加到拓樸空間的附加條件，即不處理非Hausdorf
 
 > Hausdorff條件：如果對於拓樸空間$$X$$中相異兩點$$x_1, x_2$$，分別存在各自的鄰域$$U_1, U_2$$使得$$U_1 \cap U_2 =\emptyset$$，則稱$$X$$為Hausdorff空間。
 
+<mark style="color:red;">Hausdorff空間中，相異兩點必可用各自的開集合隔開</mark>。
+
+度量空間為Hausdorff空間，因為相異兩點間的距離大於0，即$$d(x_1, x_2)>0$$，因此若$$x_1$$取半徑為$$r<d(x_1, x_2)/2$$的開球，$$x_2$$取半徑小於$$d(x_1, x_2)/2$$的開球即可滿足條件。
+
 ### Hausdorff空間中任意有限集為閉集合
 
 > 有限點集為閉集合的條件(T1公理)比Hausdorff條件更弱。

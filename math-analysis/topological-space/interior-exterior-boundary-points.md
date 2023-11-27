@@ -136,7 +136,7 @@ proof 2:
 > 1. $$S$$為閉集合⟺$$\mathrm{ext}(S)=S^c$$。\[$$S$$為開集合⟺$$\mathrm{int}(S)=S$$⟺$$S^c$$為閉集合，且$$\mathrm{ext}(S) = \mathrm{int}(S^c)$$]
 > 2. $$S \subseteq T \implies \mathrm{ext}(T) \subseteq \mathrm{ext}(S)$$。
 > 3. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合的聯集，即$$\displaystyle \mathrm{ext}(S) = \bigcup_{\{U \in \mathrm{T} ~|~ U \cap S =\emptyset \}} U$$。
-> 4. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合中最大的開集合。即$$\mathrm{ext}(S) \in \mathcal{T}$$且若$$U \in \mathcal{T}, ~ U \cap S = \emptyset \implies U \subseteq \mathrm{ext}(S)$$。
+> 4. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合中最大的<mark style="color:red;">開集合</mark>。即$$\mathrm{ext}(S) \in \mathcal{T}$$且若$$U \in \mathcal{T}, ~ U \cap S = \emptyset \implies U \subseteq \mathrm{ext}(S)$$。
 > 5. $$\mathrm{int}(S) \subseteq \mathrm{ext}(\mathrm{ext}(S))$$。
 
 <mark style="color:red;">註：無法得到</mark>$$\mathrm{ext}(\mathrm{ext}(S))=\mathrm{ext}(S)$$<mark style="color:red;">的結論</mark>。
@@ -269,7 +269,7 @@ proof 2
 
 > $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
 >
-> 1. $$S$$為$$X$$的閉集合⟺$$S=\mathrm{cl}(S)$$。\[]
+> 1. $$S$$為$$X$$的閉集合⟺$$S=\mathrm{cl}(S)$$。
 > 2. $$\mathrm{cl}(\mathrm{cl}(S))=\mathrm{cl}(S)$$。 \[因為$$\mathrm{cl}(S)$$為$$X$$的閉集合，由1得證]
 
 <details>
@@ -289,6 +289,30 @@ proof 2
 > $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
 >
 > 則$$\mathrm{cl}(S)=\mathrm{ext}(S)^c = \mathrm{int}(S^c)^c$$。
+
+<mark style="color:blue;">註：可用此等式做為閉包的定義，證明閉包的性質</mark>。
+
+<details>
+
+<summary>proof</summary>
+
+因為$$\mathrm{ext}(S)$$為開集合，所以$$\mathrm{ext}(S)^c$$為閉集合。
+
+因為$$\mathrm{ext}(S) \subseteq S^c$$，所以$$S=(S^c)^c \subseteq \mathrm{ext}(S)^c$$。
+
+由於閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合中最小的閉集合，因此$$\mathrm{cl}(S) \subseteq \mathrm{ext}(S)^c$$--(1)
+
+若$$x \in \mathrm{ext}(S)^c$$，即$$x \notin \mathrm{ext}(S)$$，由定義得對於$$x$$的任意開鄰域$$U$$不滿足$$U \subseteq S^c$$，即$$U \cap S \neq \emptyset$$，因此$$x \in \mathrm{cl}(S)$$--(2)
+
+由(1,2)得$$\mathrm{cl}(S) = \mathrm{ext}(S)^c$$
+
+(QED)
+
+因為$$\mathrm{ext}(S) = \mathrm{int}(S^c)$$。所以$$\mathrm{ext}(S)^c = \mathrm{int}(S^c)^c$$
+
+(QED)
+
+</details>
 
 ## 稠密集(sense set)
 

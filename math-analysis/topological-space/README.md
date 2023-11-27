@@ -54,7 +54,37 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<
 
 > 給定集合$$X$$上的拓樸族$$\{\mathcal{T}_i\}_{i \in I}$$，則$$\displaystyle \mathcal{T}=\bigcap_{i \in I} \mathcal{T}_i$$為拓樸且$$\mathcal{T} \subseteq \mathcal{T}_i, ~\forall i \in I$$。
 
-###
+<details>
+
+<summary>proof: 由定義直接證明</summary>
+
+所有的拓樸都包含空集合與宇集合，即$$\emptyset, X \in \mathcal{T}_i, ~\forall i \in I$$。--(1)
+
+$$\mathcal{T}_i$$任意集合聯集具封閉性，即$$\forall E_{i,j} \in \mathcal{T}_i, \bigcup_{j \in J} E_{i,j} \in \mathcal{T}_i, \forall i$$，
+
+給定$$E_j \in \bigcap_{i \in I}\mathcal{T}_i$$，因為在全部的$$\mathcal{T}_i$$中都有元素$$E_j$$，因此任意個$$E_j$$的聯集仍在$$\bigcap_{i \in I}\mathcal{T}_i$$中--(2)。
+
+同理有限個$$E_j$$的交集仍在$$\bigcap_{i \in I}\mathcal{T}_i$$中--(3)
+
+由(1,2,3)得$$\bigcap_{i \in I}\mathcal{T}_i$$為拓樸
+
+(QED)。
+
+&#x20;\[反證法]
+
+假設存在$$i \in I \ni \mathcal{T} \supseteq \mathcal{T}_i$$,&#x20;
+
+即存在$$E_j \in \mathcal{T}$$ ，$$E_j \notin \mathcal{T}_i$$。但這與$$E_j \in \bigcap_{i \in I} \mathcal{T}_i$$矛盾。
+
+(QED)
+
+</details>
+
+### 存在包含子集合的極小拓樸/由集合生成的拓樸
+
+> 給定集合$$X$$與任意子集$$B \subseteq X$$，則$$X$$中存在包含$$B$$的極小拓樸或者說由$$B$$生成的拓樸，記為$$\mathcal{T}(B)$$。
+>
+> 假設$$B \subseteq \mathcal{T}_i, ~i \in I$$，則$$\mathcal{T}(B)=\bigcap_{i \in I} \mathcal{T}_i$$。
 
 ## 度量空間中的拓樸
 
@@ -112,17 +142,15 @@ $$O_1, O_2 \subseteq X$$為兩開集合，若$$x \in O_1 \cap O_2$$，由開集�
 
 > 給定拓樸空間$$(X, \mathcal{T})$$，若$$\mathcal{B}$$是由$$\mathcal{T}$$中的一些開集合所組成的集合，且滿足$$\mathcal{T}$$中非空的開集合(元素)均可以$$\mathcal{B}$$中的開集合(元素)聯集，則稱$$\mathcal{B}$$為$$\mathcal{T}$$的基底(basis)。
 >
-> 註：類似向量空間的基底，基底元素間彼此線性獨立，而向量空間元素均可由基底線性組合而成。
+> 註：類似向量空間的基底，基底元素間彼此線性獨立，而向量空間元素均可由基底線性組合而成。因此只要給出基底即可生成集合內全部的元素。
 >
 > 註：基底不唯一但數量唯一。
 >
 > 一組基底可建構出唯一的拓樸<mark style="color:red;">。因此若兩個拓樸有相同的基底時，則兩個拓樸有相同的元素(開集合)，即兩拓樸相等</mark>。
 
-實數的標準拓樸上的開集合是由開區間(open interval)(可能有無限多個)的聯集所組成。
+實數的標準拓樸上的開集合是由開區間(open interval)(可能有無限多個)的聯集所組成。而以有理數為端點的開區間也是一組基底。
 
-在度量拓樸的開集合，也是由開球(open ball)聯集所得。這些建構拓樸的基本集合稱為基底(basis)。
-
-<mark style="color:blue;">範例：度量拓樸中，所有半徑為有理數的開球為基底</mark>。
+在度量拓樸的開集合，也是由開球(open ball)聯集所得。這些建構拓樸的基本集合稱為基底(basis)。而<mark style="color:blue;">所有圓心為有理數的開球也是基底</mark>。
 
 ### 基底的必要條件
 

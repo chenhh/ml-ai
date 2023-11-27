@@ -165,7 +165,9 @@ proof 2:
 
 註：閉包$$\overline{S}$$中的點是宇集合$$X$$中與$$S$$非常靠近的元素，因此可能包含不屬於$$S$$的元素，而相異宇集可能得到不同的閉包。
 
-由定義得$$S \subseteq \mathrm{cl}(S)$$。因為$$\forall x \in S$$，任意的開鄰域$$x \in U \in \mathcal{T}, ~U \subseteq S$$均可得$$U \cap S \neq \emptyset$$。
+
+
+由定義得$$\mathrm{int}(S) \subseteq S \subseteq \mathrm{cl}(S)$$。因為$$\forall x \in S$$，任意的開鄰域$$x \in U \in \mathcal{T}, ~U \subseteq S$$均可得$$U \cap S \neq \emptyset$$。
 
 ### 閉包的性質
 
@@ -242,4 +244,76 @@ proof 2:
 > $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
 >
 > 則$$\mathrm{cl}(S)=\mathrm{ext}(S)^c = \mathrm{int}(S^c)^c$$。
+
+## 稠密集(sense set)
+
+> $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
+>
+> 若$$\mathrm{cl}(S)=X$$，則稱$$S$$在$$X$$上稠密(S dense in X)，也稱$$S$$為$$X$$的稠密集。
+
+稠密是和閉包有關概念。<mark style="color:blue;">閉包是指宇集合</mark>$$X$$<mark style="color:blue;">中與集合</mark>$$S$$<mark style="color:blue;">非常接近的元素集合。而稠密是指宇集合</mark>$$X$$<mark style="color:blue;">上所有的點都和</mark>$$S$$<mark style="color:blue;">很接近</mark>。
+
+範例：<mark style="color:red;">有理數</mark>$$\mathbb{Q}$$<mark style="color:red;">是實數</mark>$$\mathbb{R}$$<mark style="color:red;">的稠密集</mark>，即$$\mathrm{cl}(\mathbb{Q})=\mathbb{R}$$。
+
+範例：也可以修改宇集合為較小的集合，如$$(1,2)$$為$$[1,2]$$的稠密集。
+
+## 邊界點(boundary point)
+
+> $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
+>
+> $$\forall a \in X$$，若$$a$$的任何開鄰域$$a \in U \in \mathcal{T}$$滿足$$U \cap S \neq \emptyset,~ U \cap S^c \neq \emptyset$$則稱$$a$$為$$S$$的邊界點。
+>
+> 所有$$S$$的邊界點形成的集合記為$$\mathrm{bd}(S)$$或$$\partial S$$。
+
+### 邊界點與內點、外點、閉包的分割性質
+
+> $$a$$為$$S$$的邊點界，則$$a$$為$$S$$的附著點($$a$$在$$S$$的閉包中)，且$$a \notin \mathrm{int}(S)$$。
+>
+> * \[邊界點包含附著點]$$a \in \mathrm{bd}(S) \implies a \in \mathrm{cl}(S)$$。
+> * \[邊界點不是內點] $$a \in \mathrm{bd}(S) \implies a \notin \mathrm{int}(S)$$。
+> * \[邊界點為閉包去除內點]\
+>   $$\begin{aligned} \mathrm{bd}(S) & = \mathrm{cl}(S) - \mathrm{int}(S) \\  &=\mathrm{cl}(S) \cap \mathrm{int}(S)^c \\  & = \mathrm{ext}(S)^c \cap \mathrm{int}(S)^c \\  & = X - (\mathrm{ext}(S) \cup \mathrm{int}(S))  \end{aligned}$$。
+> * \[邊界點加上內點為閉包]\
+>   $$\begin{aligned} & \mathrm{bd}(S) \cup  \mathrm{int}(S) \\  &= [\mathrm{cl}(S) \cap \mathrm{int}(S)^c] \cup  \mathrm{int}(S) \\  & = \mathrm{cl}(S) \cap \mathrm{int}(S) \\  & = \mathrm{cl}(S)  \end{aligned}$$
+> * $$\mathrm{bd}(S) = \mathrm{cl}(S) \cap \mathrm{cl}(S^c)$$。
+> *
+>
+>
+
+上式即表示可將<mark style="color:red;">閉包</mark>$$\mathrm{cl}(S)$$<mark style="color:red;">分割成邊界</mark>$$\mathrm{bd}(S)$$<mark style="color:red;">與內點</mark>$$\mathrm{int}(S)$$<mark style="color:red;">兩部份。</mark>
+
+同理可將<mark style="color:red;">宇集合</mark>$$X$$<mark style="color:red;">分割成內點</mark>$$\mathrm{int}(S)$$<mark style="color:red;">、外點</mark>$$\mathrm{ext}(S)$$<mark style="color:red;">與邊界點</mark>$$\mathrm{bd}(S)$$<mark style="color:red;">三部份</mark>。
+
+即使$$S \neq X$$，其邊界集也可能是$$X$$。因為$$\mathrm{bd}(S)=\mathrm{cl}(S) - \mathrm{int}(S)$$，當$$\mathrm{bd}(S)=X$$時，等價於$$\mathrm{cl}(S)=X$$且$$\mathrm{int}(S)=\emptyset$$。
+
+因此當$$S$$在$$X$$稠密時且$$S$$的內點為空集合時，則$$S$$的邊界點為$$X$$。如$$\mathrm{bd}(\mathbb{Q})=\mathbb{R}$$。
+
+邊界集也可能為空集合，表示$$\mathrm{cl}(S)=\mathrm{int}(S)$$。但是$$\mathrm{int}(S) \subseteq S \subseteq \mathrm{cl}(S)$$，因此等同於$$S=\mathrm{cl}(S)=\mathrm{int}(S)$$。即$$S$$同時為閉集合也為開集合，稱為<mark style="color:red;">閉開集(clopen set)</mark>。
+
+<details>
+
+<summary>proof</summary>
+
+因為$$a \in \mathrm{bd}(S)$$時，$$a$$的任何開鄰域$$a \in U \in \mathcal{T}$$滿足$$U \cap S \neq \emptyset$$，所以$$a \in \mathrm{cl}(S)$$。
+
+(QED)
+
+同理，$$a$$的任何開鄰域$$a \in U \in \mathcal{T}$$滿足$$U \cap S^c \neq \emptyset$$，表示不存在任何開鄰域$$a \in U \in \mathcal{T}$$滿足$$U \subseteq S$$，因此$$a \notin \mathrm{int}(S)$$。
+
+(QED)
+
+</details>
+
+### 邊界點的性質
+
+> $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
+>
+> * $$\mathrm{bd}(S)$$是$$X$$的閉集合($$\mathrm{bd}(S)^c$$為開集合)。
+> * $$\mathrm{bd}(S)=\mathrm{bd}(S^c)$$。
+> * \[閉集合包含邊界點] $$S$$為$$X$$的閉集合⟺$$\mathrm{bd}(S) \subseteq S$$。
+> * \[開集合不含邊界點] $$S$$為$$X$$的開集合⟺$$\mathrm{bd}(S) \cap S = \emptyset$$。
+> * $$\mathrm{bd}(\mathrm{int}(S)) \subseteq \mathrm{bd}(S)$$。
+> * $$\mathrm{bd}(\mathrm{cl}(S)) \subseteq \mathrm{bd}(S)$$。
+> * $$\mathrm{bd}(\mathrm{bd}(S)) \subseteq \mathrm{bd}(S)$$。
+> * $$\mathrm{bd}(\mathrm{bd}(\mathrm{bd}(S))) = \mathrm{bd}(\mathrm{bd}(S))$$。
 

@@ -165,8 +165,6 @@ proof 2:
 
 註：閉包$$\overline{S}$$中的點是宇集合$$X$$中與$$S$$非常靠近的元素，因此可能包含不屬於$$S$$的元素，而相異宇集可能得到不同的閉包。
 
-
-
 由定義得$$\mathrm{int}(S) \subseteq S \subseteq \mathrm{cl}(S)$$。因為$$\forall x \in S$$，任意的開鄰域$$x \in U \in \mathcal{T}, ~U \subseteq S$$均可得$$U \cap S \neq \emptyset$$。
 
 ### 閉包的性質
@@ -175,7 +173,7 @@ proof 2:
 >
 > 1. \[<mark style="color:red;">閉集合=>閉包</mark>]若$$S$$為$$X$$的閉集合，則$$\mathrm{cl}(S)=S$$且$$\mathrm{cl}(X)=X, ~\mathrm{cl}(\emptyset)=\emptyset$$。
 > 2. $$S \subseteq T \implies \mathrm{cl}(S) \subseteq \mathrm{cl}(T)$$。
-> 3. 若$$T$$為$$X$$的閉集合，則$$S \subseteq T \iff \mathrm{cl}(S) \subseteq T$$。
+> 3. \[<mark style="color:red;">子集的閉包仍為子集</mark>]若$$T$$為$$X$$的閉集合，則$$S \subseteq T \iff \mathrm{cl}(S) \subseteq T$$。
 
 <details>
 
@@ -229,15 +227,62 @@ proof 2:
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$S\subseteq X$$。
 >
-> 1. 閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合的交集。$$\displaystyle \mathrm{cl}(S) = \bigcap_{\{ E^c \in \mathcal{T} ~|~ S \subseteq E \}} E$$。
-> 2. 閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合最小的閉集合。即$$\mathrm{cl}(S)$$為閉集合，$$E$$為閉集合且$$S \subseteq E$$，則$$\mathrm{cl}(S) \subseteq E$$.&#x20;
+> 1. 閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合的交集且為閉集合。$$\displaystyle \mathrm{cl}(S) = \bigcap_{\{ E^c \in \mathcal{T} ~|~ S \subseteq E \}} E$$。
+> 2. 閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合中最小的閉集合。即$$\mathrm{cl}(S)$$為閉集合，$$E$$為閉集合且$$S \subseteq E$$，則$$\mathrm{cl}(S) \subseteq E$$.&#x20;
+> 3. 若$$C$$為$$X$$的閉集合滿足$$S \subseteq C$$，且對於閉集合$$Z$$若滿足$$S \subseteq Z$$且$$C \subseteq Z$$，則$$C =\mathrm{cl}(S)$$。
+
+可整得閉包$$\mathrm{cl}(S)$$<mark style="color:red;">⟺</mark> 所有包含$$S$$閉集合的交集且為包含$$S$$最小的閉集合。
+
+<details>
+
+<summary>proof </summary>
+
+proof 1
+
+令$$\displaystyle C = \bigcap_{\{ E^c \in \mathcal{T} ~|~ S \subseteq E \}} E$$。
+
+由於每個$$E$$均為閉集合且$$S \subseteq E$$，由閉集合的任意交集仍為閉集合得$$C$$為閉集合且$$S \subseteq C$$。
+
+由\[閉包的性質3]得$$S \subseteq C \implies \mathrm{cl}(S) \subseteq C$$--(1)。
+
+\[反證法]證明$$C \subseteq \mathrm{cl}(S)$$。
+
+令$$x \notin \mathrm{cl}(S)$$，表示存在開鄰域$$x \in U \in \mathcal{T}, ~ U \cap S =\emptyset$$，即$$U \subseteq S^c$$，等價於$$S \subseteq U^c$$。
+
+因此存在閉集合$$U^c$$滿足$$S \subseteq U^c$$但$$x \notin U^c$$，因此$$x \notin C$$--(2)
+
+由(1,2)得$$C =\mathrm{cl}(S)$$。
+
+(QED)
+
+proof 2
+
+由1得$$\mathrm{cl}(S)$$為閉集合且$$S \subseteq \mathrm{cl}(S)$$。因此$$\mathrm{cl}(S)$$為包含$$S$$的閉集合。
+
+若$$S \subseteq E$$且$$E$$為閉集合，由1得$$\mathrm{cl}(S)=C \subseteq E$$
+
+&#x20;(QED)
+
+</details>
 
 ### 閉包為閉集合的等價條件&#x20;
 
 > $$(X, \mathcal{T})$$為拓樸空間且$$S \subseteq X$$。
 >
-> 1. $$S$$為$$X$$的閉集合⟺$$S=\mathrm{cl}(S)$$。
-> 2. $$\mathrm{cl}(\mathrm{cl}(S))=\mathrm{cl}(S)$$。
+> 1. $$S$$為$$X$$的閉集合⟺$$S=\mathrm{cl}(S)$$。\[]
+> 2. $$\mathrm{cl}(\mathrm{cl}(S))=\mathrm{cl}(S)$$。 \[因為$$\mathrm{cl}(S)$$為$$X$$的閉集合，由1得證]
+
+<details>
+
+<summary>proof</summary>
+
+⇒  由\[<mark style="color:red;">閉集合=>閉包</mark>]得證。
+
+⇐ 給定$$S=\mathrm{cl}(S)$$，因為閉包$$\mathrm{cl}(S)$$為所有包含$$S$$閉集合的交集且為閉集合，所以$$S$$為閉集合。
+
+(QED)
+
+</details>
 
 ### 閉包、外點集與內點集的關係
 
@@ -276,9 +321,6 @@ proof 2:
 > * \[邊界點加上內點為閉包]\
 >   $$\begin{aligned} & \mathrm{bd}(S) \cup  \mathrm{int}(S) \\  &= [\mathrm{cl}(S) \cap \mathrm{int}(S)^c] \cup  \mathrm{int}(S) \\  & = \mathrm{cl}(S) \cap \mathrm{int}(S) \\  & = \mathrm{cl}(S)  \end{aligned}$$
 > * $$\mathrm{bd}(S) = \mathrm{cl}(S) \cap \mathrm{cl}(S^c)$$。
-> *
->
->
 
 上式即表示可將<mark style="color:red;">閉包</mark>$$\mathrm{cl}(S)$$<mark style="color:red;">分割成邊界</mark>$$\mathrm{bd}(S)$$<mark style="color:red;">與內點</mark>$$\mathrm{int}(S)$$<mark style="color:red;">兩部份。</mark>
 

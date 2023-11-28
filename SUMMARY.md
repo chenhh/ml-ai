@@ -60,6 +60,7 @@
   * [連續函數](math-analysis/topological-space/continuous-function.md)
   * [連通性](math-analysis/topological-space/connectedness.md)
   * [緊緻性](math-analysis/topological-space/compactness.md)
+  * [拓樸/度量空間比較](math-analysis/topological-space/topology-metric-space-comparison.md)
   * [Hausdorff空間](math-analysis/topological-space/hausdorff-space.md)
 * [微分、導數(derivative)](math-analysis/derivative/README.md)
   * [常見可微與不可微函數](math-analysis/derivative/diff-non-diff-function.md)

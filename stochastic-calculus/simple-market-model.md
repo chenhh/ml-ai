@@ -4,18 +4,22 @@ description: simple market model
 
 # 簡單市場模型
 
+## 簡介
+
+考慮風險資產(risky asset)如股票(stock)、無風險資產(risk-free asset)如債券(bond)或定存(deposit)、遠期合約(forward contract)與選擇權(option)形成的投資組合在無套利原則(no-arbitrage principle)下的定價模型。
+
 ## 常用符號
 
 參考[投資組合策略](../online-convex-optimization/portfolio-strategy/)。
 
 ## 基本假設
 
-* 隨機性(randomness)
-* 價格的正性(positive of price)
-* 可分性、流動性與放空(divisibliy, liquidity and short selling)
-* 償付能力(solvency)
-* 離散單位價格
-* 無套利原則(no-arbitrage principle)
+* 隨機性(randomness)：風險資產的未來價格為隨機變數。
+* 價格的正性(positive of price)：所有資產價格大於等於0。
+* 可分性、流動性與放空(divisibliy, liquidity and short selling)：一定可買賣任意數量(實數)的商品。
+* 償付能力(solvency)：投資組合的價值在投資過程中必定大於等於0 。
+* 離散單位價格：風險資產的未來價格為有限個實現值。
+* <mark style="color:red;">無套利原則(no-arbitrage principle)：不存在無初始資產的無風險利潤</mark>。
 
 假設只有一個風險(risky)資產與一個無風險(risk-free)資產形成的投資組合(portfolio)，且投資只有兩期$$t=0$$是現在，$$t=1$$是未來。
 

@@ -388,9 +388,8 @@
 
 ## 隨機微積分 <a href="#stochastic-calculus" id="stochastic-calculus"></a>
 
-* [貨幣的時間價值](stochastic-calculus/time-value-of-money.md)
 * [簡單市場模型](stochastic-calculus/simple-market-model.md)
-* [複利](stochastic-calculus/compounded-return.md)
+* [無風險資產報酬](stochastic-calculus/riskfree-asset-return.md)
 * [put-call parity](stochastic-calculus/put-call-parity.md)
 * [Ito積分](stochastic-calculus/ito-integral.md)
 * [Black-Scholes方程式](stochastic-calculus/black-scholes-equation.md)

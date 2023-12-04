@@ -22,33 +22,47 @@ description: topological space
 > 2. \[任意集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in I$$，$$I$$為指標集合(有限或無限，不一定可數)，則聯集仍為拓樸中的元素，$$\bigcup_{i \in I} E_i \in \mathcal{T}$$。
 > 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。等價於$$E_1, E_2 \in \mathcal{T} \implies E_1 \cap E_2 \in \mathcal{T}$$。
 >
-> 註：由於開集合的補集為閉集合，也可以用閉集合定義。但兩者不是對宇集合的分割，有些集合(如空間集和宇集合)同時為開集合與閉集合，且有些集合(如實數上的半開區間)不是開集合也不是閉集合。
+> 註：由於開集合的補集為閉集合，也可以用閉集合定義。但兩者不是對宇集合的分割，<mark style="color:blue;">有些集合(如空間集和宇集合)同時為開集合與閉集合，也稱為閉開集(clopen set)</mark>。且有些集合(如實數上的半開區間)不是開集合也不是閉集合。
 >
 > 註：<mark style="color:red;">任意集合(包含可數與不可數)的聯集的條件比可數集合的聯集條件更一般化</mark>。
 
 $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<mark style="color:red;">元素</mark>$$E \in \mathcal{T}$$為<mark style="color:red;">開集合(</mark><mark style="color:blue;">此處的開集合是滿足公理存在</mark>$$\mathcal{T}$$<mark style="color:blue;">的元素，不需距離函數的定義</mark>)。
 
-若$$E$$為開集合，則$$E^c=X-E$$為<mark style="color:red;">閉集合</mark>。 例如實數$$\mathbb{R}$$中的單點集$$\{x_0\}$$或是單點數的可數聯集如$$\mathbb{N}$$都是閉集合。
+若$$E$$為開集合，則$$E^c=X-E$$為<mark style="color:red;">閉集合</mark>。 例如實數$$\mathbb{R}$$標準拓樸中的單點集$$\{x_0\}$$或是單點數的可數聯集如$$\mathbb{N}$$都是閉集合。
 
 [https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology](https://math.stackexchange.com/questions/2152735/what-does-open-set-mean-in-the-concept-of-a-topology)
 
 因此存在拓樸空間$$(X,\mathcal{T})$$中的開集合，但在度量空間$$(X,d)$$中不一定是開集合(注意兩空間的開集合(拓樸)定義不同)。
 
-對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
+對於集合$$X$$，可以生成相異的拓樸$$\mathcal{T}$$。因此在討論時要說明何種拓樸空間。一般的集合加上距離函數(度量)後的度量空間，即可定義度量拓樸$$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$，是由開球為基底的開集合。
 
-若$$x \in X$$且$$x\in E \subseteq X, ~ E \in \mathcal{T}$$，則稱$$E$$為點$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
+若$$x \in X$$，則其周圍包含該點的開集合稱為開鄰域。即$$x\in E \subseteq X, ~ E \in \mathcal{T}$$，稱$$E$$為點$$x$$的<mark style="color:red;">開鄰域(open neighborhood</mark>)。
 
-若$$A \subseteq X$$且$$A \subseteq E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。此處$$A$$不必為$$\mathcal{T}$$中的元素。
+若$$A \subseteq X$$，則其周圍包含該集合的開集合稱為開鄰域。即$$A \subseteq E \in \mathcal{T}$$，稱$$E$$為集合$$A$$的<mark style="color:red;">開鄰域</mark>。此處$$A$$不必為$$\mathcal{T}$$中的元素。
 
 <mark style="color:red;">連續函數</mark>$$f: X \rightarrow Y$$的等價定義是任意開集合$$O \subseteq Y$$的前像$$f^{-1}(O) \subseteq X$$為開集合(同理由閉集合為開集合的補集可得任意閉集合$$U \subseteq Y$$的前像$$f^{-1}(U) \subseteq X$$為閉集合)。
 
 ### 拓樸的比較
 
-給定集合$$X$$上相異兩拓樸$$\mathcal{T_1}, \mathcal{T_2}$$，如果$$T_2 \subseteq T_1$$，則稱$$\mathcal{T_1}$$比$$\mathcal{T}_2$$較強(或較細, finer)，或$$\mathcal{T_2}$$比$$\mathcal{T}_1$$較弱(較粗, corser)。
+給定集合$$X$$上相異兩拓樸$$\mathcal{T_1}, \mathcal{T_2}$$，如果$$T_2 \subseteq T_1$$，則稱$$\mathcal{T_1}$$比$$\mathcal{T}_2$$較強(或較細，finer)，或$$\mathcal{T_2}$$比$$\mathcal{T}_1$$較弱(較粗， corser)。
 
-給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="color:red;">trival topology (the weakest/coarsest  topology)</mark>或<mark style="color:red;">indiscrete topology(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="color:red;">discrete topology(the strongest/finest topology)(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
+給定集合$$X$$，稱$$\mathcal{T}=\{\emptyset, X\}$$為<mark style="background-color:red;">平凡拓樸(trival topology)</mark> <mark style="color:red;">(the weakest/coarsest  topology)</mark>或<mark style="background-color:red;">密著拓樸(indiscrete topology)</mark><mark style="color:red;">(只有一個開集合</mark>$$X$$，<mark style="color:red;">其中的元素無法判定)</mark>。稱冪集合$$\mathcal{T}=\mathbb{P}(X)$$(所有子集合生成的集合)為<mark style="background-color:red;">離散拓樸(discrete topology)</mark><mark style="color:red;">(the strongest/finest topology)(</mark>$$\forall x \in X$$<mark style="color:red;">均為開集合)</mark>。
 
 集合$$X$$上的所有可能的拓樸可得偏序性。由所有開集合形成的拓樸$$\mathbb{P}(X)$$是此拓樸集合中的極大元素，而trival topology是極小元素。
+
+### 範例：直線上的拓樸
+
+$$X=[0, \infty)$$為正直線，$$\mathcal{T}=\{ \emptyset, X, \{(a, \infty)~|~ \forall a  \geq 0\} \}$$，則$$\mathcal{T}$$為拓樸。
+
+因為$$\emptyset, \mathbb{R}$$為開集合，則$$\displaystyle \bigcup_{i \in I} (a_i, \infty)=(\inf a_i, \infty)$$也是開集。
+
+同理可得$$\displaystyle \bigcap_{i=1}^n (a_i, \infty)=(\max_i a_i ,\infty)$$也是開集。
+
+### 範例：平面上的拓樸
+
+$$X=\mathbb{R}^2$$，$$\mathcal{T}=\{\emptyset, X, \{b_r(0)~|~ \forall r > 0\} \}$$，則$$\mathcal{T}$$為拓樸。
+
+
 
 ### 相異拓樸的交集仍是拓樸且是最弱的拓樸
 

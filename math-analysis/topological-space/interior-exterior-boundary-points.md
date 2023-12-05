@@ -30,7 +30,7 @@ description: interior, exterior, boundary points
 > $$(X, \mathcal{T})$$為拓樸空間，$$S, T \subseteq X$$。
 >
 > 1. \[<mark style="color:red;">開集合=>內點集等於集合</mark>] 若$$S$$為$$X$$的開集合，則$$\mathrm{int}(S)=S$$。且$$\mathrm{int}(X)=X$$，$$\mathrm{int}(\emptyset)=\emptyset$$。
-> 2. 若$$S\subseteq T$$，則$$\mathrm{int}(S) \subseteq \mathrm{int}(T)$$。
+> 2. \[<mark style="color:red;">內點集的單調性</mark>] 若$$S\subseteq T$$，則$$\mathrm{int}(S) \subseteq \mathrm{int}(T)$$。
 > 3. 若$$S$$為$$X$$的開集合，則$$S \subseteq T \iff S \subseteq \mathrm{int}(T)$$。
 
 <details>
@@ -133,8 +133,8 @@ proof 2:
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$S, T \subseteq X$$。
 >
-> 1. $$S$$為閉集合⟺$$\mathrm{ext}(S)=S^c$$。\[$$S$$為開集合⟺$$\mathrm{int}(S)=S$$⟺$$S^c$$為閉集合，且$$\mathrm{ext}(S) = \mathrm{int}(S^c)$$]
-> 2. $$S \subseteq T \implies \mathrm{ext}(T) \subseteq \mathrm{ext}(S)$$。
+> 1. \[<mark style="color:red;">閉集合的補集合等價於其外點集</mark>]$$S$$為閉集合⟺$$\mathrm{ext}(S)=S^c$$。\[$$S$$為開集合⟺$$\mathrm{int}(S)=S$$⟺$$S^c$$為閉集合，且$$\mathrm{ext}(S) = \mathrm{int}(S^c)$$]
+> 2. \[<mark style="color:red;">外點集的單調性</mark>]$$S \subseteq T \implies \mathrm{ext}(T) \subseteq \mathrm{ext}(S)$$。
 > 3. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合的聯集，即$$\displaystyle \mathrm{ext}(S) = \bigcup_{\{U \in \mathrm{T} ~|~ U \cap S =\emptyset \}} U$$。
 > 4. $$\mathrm{ext}(S)$$是所有與$$S$$不相交開集合中最大的<mark style="color:red;">開集合</mark>。即$$\mathrm{ext}(S) \in \mathcal{T}$$且若$$U \in \mathcal{T}, ~ U \cap S = \emptyset \implies U \subseteq \mathrm{ext}(S)$$。
 > 5. $$\mathrm{int}(S) \subseteq \mathrm{ext}(\mathrm{ext}(S))$$。
@@ -159,11 +159,11 @@ proof 2:
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$S \subseteq X$$。
 >
-> $$\forall a \in X$$，若$$a$$的任意開鄰域$$U$$均滿足$$U \cap S \neq \emptyset$$，則稱$$a$$為$$S$$的附著點(adherent point)。
+> $$\forall a \in X$$，若$$a$$的任意開鄰域$$U$$均滿足$$U \cap S \neq \emptyset$$，則稱$$a$$為$$S$$的<mark style="color:red;">附著點(adherent point)</mark>。
 >
 > 所有$$S$$的附著點形成的集合稱為$$S$$的閉包，記為$$\mathrm{cl}(S)$$或$$\overline{S}$$。
 
-註：閉包$$\overline{S}$$中的點是宇集合$$X$$中與$$S$$非常靠近的元素，因此可能包含不屬於$$S$$的元素，而相異宇集可能得到不同的閉包。
+註：閉包$$\overline{S}$$中的點是宇集合$$X$$中與$$S$$非常靠近的元素，因此可能包含不屬於$$S$$的元素，而相異宇集合可能得到不同的閉包。
 
 由定義得$$\mathrm{int}(S) \subseteq S \subseteq \mathrm{cl}(S)$$。因為$$\forall x \in S$$，任意的開鄰域$$x \in U \in \mathcal{T}, ~U \subseteq S$$均可得$$U \cap S \neq \emptyset$$。
 

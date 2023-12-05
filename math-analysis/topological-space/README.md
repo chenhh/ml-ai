@@ -22,7 +22,7 @@ description: topological space
 > 2. \[任意集合聯集的封閉性]$$E_i \in \mathcal{T}, \forall i \in I$$，$$I$$為指標集合(有限或無限，不一定可數)，則聯集仍為拓樸中的元素，$$\bigcup_{i \in I} E_i \in \mathcal{T}$$。
 > 3. \[有限集合交集的封閉性]$$E_i \in \mathcal{T}, i=1,2,\dots,n$$，則有限交集仍為拓樸中的元素$$\bigcap_{i=1}^n E_i \in \mathcal{T}$$。等價於$$E_1, E_2 \in \mathcal{T} \implies E_1 \cap E_2 \in \mathcal{T}$$。
 >
-> 註：由於開集合的補集為閉集合，也可以用閉集合定義。但兩者不是對宇集合的分割，<mark style="color:blue;">有些集合(如空間集和宇集合)同時為開集合與閉集合，也稱為閉開集(clopen set)</mark>。且有些集合(如實數上的半開區間)不是開集合也不是閉集合。
+> 註：由於開集合的補集為閉集合，也可以用閉集合定義。但兩者不是對宇集合的分割，<mark style="color:blue;">有些集合(如空集集和宇集合)以及離散空間的任意集合同時為開集合與閉集合，也稱為閉開集(clopen set)</mark>。且有些集合(如實數上的半開區間)不是開集合也不是閉集合。
 >
 > 註：<mark style="color:red;">任意集合(包含可數與不可數)的聯集的條件比可數集合的聯集條件更一般化</mark>。
 

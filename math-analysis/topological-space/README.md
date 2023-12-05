@@ -50,6 +50,39 @@ $$(X, \mathcal{T})$$<mark style="color:red;">稱為拓樸空間</mark>，且稱<
 
 集合$$X$$上的所有可能的拓樸可得偏序性。由所有開集合形成的拓樸$$\mathbb{P}(X)$$是此拓樸集合中的極大元素，而trival topology是極小元素。
 
+### 範例：有限集合的拓樸
+
+$$X=\{a,b,c,d\}$$，則：
+
+1. $$\mathcal{T}=\{\emptyset, X, \{a\}, \{b\}, \{a,c\}, \{a,b\}, \{a,b,c\} \}$$為拓樸。
+2. $$\mathcal{T}=\{\emptyset, X, \{a\}, \{b\}, \{a,b\}, \{b,d\}\}$$不是拓樸，因為缺$$\{a,b,d\}=\{a\} \cup \{b,d\}$$。
+3. $$\mathcal{T}=\{\emptyset, X, \{a,c,d\}, \{b,c,d\}\}$$不是拓樸，因為缺$$\{a,b,c,d\}=\{a,c,d\} \cup \{b,c,d\}$$。
+
+雙元素集合$$X=\{0,1\}$$上的拓樸總共有四種：
+
+1. $$\{\emptyset, X\}$$：密著拓樸。
+2. $$\{\emptyset, \{0\}, X\}$$：Sierpinski拓樸。
+3. $$\{\emptyset, \{1\}, X\}$$：Sierpinski拓樸。
+4. $$\{\emptyset, \{0\}, \{1\}, X\}$$：離散拓樸。
+
+其中2,3為同胚(homeomorphism)，稱為Sierpinski拓樸。因此實際上雙元素集合只有三個非等價拓樸。
+
+### 範例：實數的標準拓樸
+
+$$X=\mathbb{R}$$，$$\mathcal{T}$$為滿足$$a,b \in \mathbb{R}$$的開區間$$(a,b)$$任意聯集的集合族，則$$\mathcal{T}$$為(標準)拓樸。
+
+因為$$\mathcal{A, B}$$為相異的開區間集合族，則$$\displaystyle \bigcup_{A \in \mathcal{A}} A \cap \bigcup_{B \in \mathcal{B}}=\bigcup_{A \in \mathcal{A},~ B \in \mathcal{B}}(A \cap B)$$。而交集可簡單驗證。
+
+### 範例：實數的空集與無限子集合族不是拓樸
+
+$$X=\mathbb{R}$$，$$\mathcal{T}$$包含了空集合與所有實數上的無限子集之合族，則$$\mathcal{T}$$不是拓樸。
+
+令$$A$$為實數上所有質數之集合，$$B$$為所有偶數的集合，則$$A \cap B=\{2\} \notin \mathcal{T}$$。
+
+### 範例：實數的空集與有限子集的補集為拓樸
+
+拓撲空間被稱為$$\mathcal{T}_1$$拓撲線，記為$$\mathbb{R}_{T_1}$$。
+
 ### 範例：直線上的拓樸
 
 $$X=[0, \infty)$$為正直線，$$\mathcal{T}=\{ \emptyset, X, \{(a, \infty)~|~ \forall a  \geq 0\} \}$$，則$$\mathcal{T}$$為拓樸。
@@ -104,7 +137,7 @@ $$\mathcal{T}_i$$任意集合聯集具封閉性，即$$\forall E_{i,j} \in \math
 
 根據定義，度量空間$$(X, d)$$的開集合滿足拓樸的條件，因此<mark style="color:blue;">度量空間為拓樸空間</mark>。
 
-度量空間$$(X,d)$$中開集合形成的拓樸稱為<mark style="color:red;">度量拓樸(metric topology)</mark>。
+度量空間$$(X,d)$$中開集合形成的拓樸稱為<mark style="color:red;">度量拓樸(metric topology)</mark> $$\mathcal{T}=\{E \subseteq X ~|~ \forall x \in E, \exists r > 0 \ni B_r(x) \subseteq E\}$$。
 
 已知度量空間$$(X,d)$$，給定點$$x \in X$$與半徑$$r >0$$的<mark style="color:red;">開球(open ball</mark>)為：$$\displaystyle B_r(x)=\{ y\in X~|~ d(x,y) <r\}$$。
 

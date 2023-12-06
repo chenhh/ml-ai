@@ -320,7 +320,7 @@ proof 2
 >
 > 若$$\mathrm{cl}(S)=X$$，則稱$$S$$在$$X$$上稠密(S dense in X)，也稱$$S$$為$$X$$的稠密集。
 
-稠密是和閉包有關概念。<mark style="color:blue;">閉包是指宇集合</mark>$$X$$<mark style="color:blue;">中與集合</mark>$$S$$<mark style="color:blue;">非常接近的元素集合。而稠密是指宇集合</mark>$$X$$<mark style="color:blue;">上所有的點都和</mark>$$S$$<mark style="color:blue;">很接近</mark>。
+稠密是和閉包有關的概念。<mark style="color:blue;">閉包是指宇集合</mark>$$X$$<mark style="color:blue;">中與集合</mark>$$S$$<mark style="color:blue;">非常接近的元素集合。而稠密是指宇集合</mark>$$X$$<mark style="color:blue;">上所有的點都和</mark>$$S$$<mark style="color:blue;">很接近</mark>。
 
 範例：<mark style="color:red;">有理數</mark>$$\mathbb{Q}$$<mark style="color:red;">是實數</mark>$$\mathbb{R}$$<mark style="color:red;">的稠密集</mark>，即$$\mathrm{cl}(\mathbb{Q})=\mathbb{R}$$。
 
@@ -338,8 +338,8 @@ proof 2
 
 > $$a$$為$$S$$的邊點界，則$$a$$為$$S$$的附著點($$a$$在$$S$$的閉包中)，且$$a \notin \mathrm{int}(S)$$。
 >
-> * \[邊界點包含附著點]$$a \in \mathrm{bd}(S) \implies a \in \mathrm{cl}(S)$$。
-> * \[邊界點不是內點] $$a \in \mathrm{bd}(S) \implies a \notin \mathrm{int}(S)$$。
+> * \[邊界點包含附著點]$$a \in \mathrm{bd}(S) \implies a \in \mathrm{cl}(S)$$。\[因為$$U$$為任意開鄰域且$$U \cap S \neq \emptyset$$]
+> * \[邊界點不是內點] $$a \in \mathrm{bd}(S) \implies a \notin \mathrm{int}(S)$$。\[因為不存在開鄰域$$U \ni U \subseteq S$$]
 > * \[邊界點為閉包去除內點]\
 >   $$\begin{aligned} \mathrm{bd}(S) & = \mathrm{cl}(S) - \mathrm{int}(S) \\  &=\mathrm{cl}(S) \cap \mathrm{int}(S)^c \\  & = \mathrm{ext}(S)^c \cap \mathrm{int}(S)^c \\  & = X - (\mathrm{ext}(S) \cup \mathrm{int}(S))  \end{aligned}$$。
 > * \[邊界點加上內點為閉包]\

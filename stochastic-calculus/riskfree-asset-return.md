@@ -6,13 +6,38 @@ description: compounded return
 
 ## 時間價值
 
-貨幣的時間價值：今天的1元比一年後的一元價值高。
+貨幣的時間價值：今天的1元比一年後(未來)的1元價值高。
 
 因為投資人可以利用這1美元做投資，如果要把錢交給他人，就要考慮利息(interest)。
 
 假設利率$$r$$為常數，可分為單利(simple interest)與複利(compound interest)兩種基本類型。
 
 複利還可分成離散複利(discretely compounded)與連續複利(continuously compounded)。
+
+## 單利(simple interest)
+
+一定量的資金(<mark style="color:red;">本金</mark> $$P$$, principal)存入銀行，將得到<mark style="color:red;">利息(interest)</mark>。
+
+單利是只考慮利息由本金產生的情況，假設年利率$$r >0$$，
+
+* 一年後的利息為$$rP$$，因此投資組合的價值為$$v_{(p),1}=P+rP=(1+r)P$$。
+* 兩年後為$$v_{(p), 2}=(1+r)P + rP=(1+2r)P$$。
+* $$n$$年後為$$v_{(p), n}=(1+nr)P$$。
+* 如果以天計息時，每日利息為$$\frac{r}{365}P$$，因此$$n$$日後的利息為$$\frac{nr}{365}P$$。
+
+因此得$$t \in \mathbb{R}^{+} ~ v_{(p),t}=(1+tr)P$$，其中$$t=1$$為一年。$$(1+tr)$$為<mark style="color:red;">成長因子(growth factor)</mark>。
+
+如果是在時間$$s<t$$開始投資，則在$$t$$時的價值為$$v_{(p), t}=(1+(t-s)r)P$$。
+
+#### 範例
+
+本金150元，存款20天，年利率8%的單利，則20天後的價值為$$v_{(p), 20/365}=(1+20/365\times 0.08)\times 150=150.66$$。
+
+#### 範例
+
+本金$$P$$存入銀行91天，以8%單利計息，期末拿回1000元，則$$(1+91/365 \times 0.08)\times P =1000$$，$$P=980.44$$。
+
+
 
 ### 離散複利
 

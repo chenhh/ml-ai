@@ -47,27 +47,27 @@ description: simple market model
 
 > 投資人在時間$$t=0,1$$時，若持有$$h_{s,0}$$單位股票(風險資產)與$$h_{a,0}$$單位債券(無風險資產)，則$$(h_{s,0},h_{a,0}) \in \mathbb{R}^2$$稱為投資組合(註：$$h_{s,0}>0$$為做多(long)，$$h_{s,0}<0$$時為做空(short)，$$h_{s,0}=0$$時為不持有資產，同理$$h_{a,0}$$也是相同解釋)。
 >
-> 可解釋為在$$t=0$$時已持有，或以價格$$p_{s,0}, ~p_{a,0}$$調整成$$h_{s,0}, ~h_{a,0}$$股(不一定是買進，要依$$h_{s,t-1}, ~h_{a, t-1}$$的值判定為買進或賣出)。
+> 可解釋為在$$t=0$$時已持有，或以價格$$p_{s,0}, ~p_{a,0}$$調整成$$h_{s,0}, ~h_{a,0}$$股(不一定是買進，要依前一期$$h_{s,t-1}, ~h_{a, t-1}$$的值判定為買進或賣出)。
 >
 > 不論$$t=1$$時是否調整權重為$$h_{s,1}p_{s,1}$$，由於價格$$p_{s,1}, ~p_{a,1}$$此時已知，可求出投資組合在$$t=0 \rightarrow 1$$間的價值變化與報酬。
 
-令投資人在時間$$t$$的財產(wealth)為$$v_{(p),t}=h_{s,t}p_{s,t} + h_{a,t}p_{a,t}$$，則報酬率為$$r_{(p),1}=\frac{v_{(p),1}}{v_{(p),0}}-1$$。
+令投資人在時間$$t$$的財產(wealth)為$$\displaystyle v_{(p),t}=h_{s,t}p_{s,t} + h_{a,t}p_{a,t} = \sum_{i \in \{s,a\}} h_{i,t}p_{i,t}$$，則報酬率為$$r_{(p),1}=\frac{v_{(p),1}}{v_{(p),0}}-1$$。
 
 範例：
 
-無風險資產價格$$A(0)=100, ~A(1)=110$$，因此報酬率為$$R_A=10\%$$。
+無風險資產價格$$p_{a,0}=100, ~p_{a,1}=110$$，因此報酬率為$$r_{a,1}=10\%$$。
 
-風險資產價格$$S(0)=50$$，$$\displaystyle S(1) = \left\{ \begin{aligned} & \mathrm{P}(S(1)=52) = p \\ & \mathrm{P}(S(1)=48) = 1-p  \end{aligned} \right.$$，對應的報酬為$$\displaystyle R_S = \begin{cases}  4\% &\text{ if stock goes up } \\  -4\%& \text{ if stock goes down }  \end{cases}$$
+風險資產價格$$p_{s,0}=50$$，$$\displaystyle p_{s,1} = \begin{cases} & \mathrm{P}(p_{s,1}=52) = p \\ & \mathrm{P}(p_{s,1}=48) = 1-p  \end{cases}$$，對應的報酬為$$\displaystyle r_{s,1} = \begin{cases}  4\% &\text{ if stock goes up } \\  -4\%& \text{ if stock goes down }  \end{cases}$$
 
-如果時間$$t=0$$的投資組合$$(x,y)=(20,10)$$，可得$$V(0)=20\times 50 + 10 \times 100 = 2000$$。
+如果時間$$t=0$$的投資組合$$(h_{s,0},h_{a,0})=(20,10)$$，可得$$v_{(p),0}=20\times 50 + 10 \times 100 = 2000$$。
 
-時間$$t=1$$時，投資組合的價值：$$\displaystyle V(1) =  \begin{cases} 20 \times 52 + 10 \times 110 & = 2140 & \text{ if stock goes up } \\ 20 \times 48 + 10 \times 110 & = 2060 & \text{ if stock goes down}  \end{cases}$$
+時間$$t=1$$時，投資組合的價值：$$\displaystyle v_{(p),1} =  \begin{cases} 20 \times 52 + 10 \times 110 & = 2140 & \text{ if stock goes up } \\ 20 \times 48 + 10 \times 110 & = 2060 & \text{ if stock goes down}  \end{cases}$$
 
-因此投資組合的報酬率$$\displaystyle R_V = \left\{ \begin{aligned} 7\% & \text{ if stock goes up } \\ 3\% & \text{ if stock goes down}  \end{aligned}  \right.$$
+因此投資組合的報酬率$$\displaystyle r_{(p),1} = \left\{ \begin{aligned} 7\% & \text{ if stock goes up } \\ 3\% & \text{ if stock goes down}  \end{aligned}  \right.$$
 
 ### 可分性、流動性與放空
 
-> 令$$x \in \mathbb{R}, ~ y \in \mathbb{R}$$，正值代表作多(long)，負值代表放空(short)，0代表不持有資產。
+> 令$$h_{s,t} \in \mathbb{R}, ~ h_{a,t} \in \mathbb{R}$$，正值代表作多(long)，負值代表放空(short)，0代表不持有資產。
 
 令持有數量為實數而非整數可避免NP-Complete或NP-Hard的計算複雜度問題，<mark style="color:red;">且當投資的部位夠大時，確實能夠逼近任意實數</mark>。
 
@@ -75,15 +75,15 @@ description: simple market model
 
 ### 償付能力
 
-> 投資人的財產總是為非負值，即$$V(t) \geq 0, ~ t=0,1$$。
+> 投資人的財產總是為非負值，即$$v_{(p), t} \geq 0, ~ t=0,1$$。
 
-滿足此條件的投資組合$$(x,y)$$稱為<mark style="color:red;">可允許(admissable)</mark>的投資組合。
+滿足此條件的投資組合$$(h_{s,0}, h_{a,0})$$稱為<mark style="color:red;">可允許(admissable)</mark>的投資組合。
 
 ## 無套利原則(一價原則)(no-arbitrage principle)
 
 > 假設市場不允許沒有初始投資的無風險利潤
 >
-> 即不存在可允許的投資組合$$(x,y)$$使得$$V(0)=0$$，但是$$V(1) >0$$的非0機率。
+> 即不存在可允許的投資組合$$(h_{s,0}, h_{a,0})$$使得$$v_{(p),0}=0$$，但是$$v_{(p),1}>0$$的非0機率。
 
 如果市場上出現了套利機會，且被人們發現，則此機會會因為人們為了套利的交易很快就消失(以現今市場電子交易的速度，大約1\~2秒內馬上消失)。
 
@@ -91,17 +91,17 @@ description: simple market model
 
 ### 如果不可同時做多與放空時，不存在套利機會
 
-> 若$$x \geq 0$$且$$y \geq 0$$時，不存在$$V(0)=0$$但$$V(1) >0$$的非0機率。
+> 若$$h_{s,0} \geq 0$$且$$h_{a,0} \geq 0$$時，不存在$$v_{(p),0}=0$$但$$v_{(p),1}>0$$的非0機率。
 >
-> 若$$x \leq 0$$且$$y \leq 0$$時，不存在$$V(0)=0$$但$$V(1) >0$$的非0機率。
+> 若$$h_{s,0} \leq 0$$且$$h_{a,0} \leq 0$$時，不存在$$v_{(p),0}=0$$但$$v_{(p),1} >0$$的非0機率。
 
 proof:
 
 不失一般性，只考慮做多的情形。
 
-由價格的正性，即$$S(t) >0, A(t) >0 \forall t$$，可得$$V(0)=0 \Leftrightarrow x=0  \text{ and }  y=0$$
+由價格的正性，即$$p_{s,t}>0,~ p_{a,t} >0 \forall t$$，可得$$v_{(p),0}=0 \iff h_{s,0}=0  \text{ and }  h_{a,0}=0$$
 
-因此在$$(x,y)=(0,0)$$的情形下，無論$$S(1)$$與$$A(1)$$之值為0，必定得到$$V(1)=0$$，因此無套利機會(QED)。
+因此在$$(h_{s,0}, h_{a,0})=(0,0)$$的情形下，無論$$p_{s,1}$$與$$p_{a,1}$$之值是否為0，必定得到$$v_{(p),1}=0$$，因此無套利機會(QED)。
 
 
 
@@ -109,15 +109,15 @@ proof:
 
 ## 單期二元樹模型(one-step binomial model)的無套利原則
 
-> 令時間$$t=0$$風險與無風險資產價格分別為$$S(0)$$與$$A(0)$$。
+> 令時間$$t=0$$風險與無風險資產價格分別為$$p_{s,0}$$與$$p_{a,0}$$。
 >
-> 風險資產在時間$$t=1$$的價格為$$\displaystyle S(1) =  \begin{cases}  \mathrm{P}(S^u) =p  \\  \mathrm{P}(S^d) =1-p \end{cases}$$，$$S^d < S^u, ~ 0 < p <1$$。
+> 風險資產在時間$$t=1$$的價格為$$\displaystyle p_{s,1} =  \begin{cases}  \mathrm{P}(p_{s,1}^u) =p  \\  \mathrm{P}(p_{s,1}^d) =1-p \end{cases}$$，$$p_{s,1}^d < p_{s,1}^u, ~ 0 < p <1$$。
 >
-> 不失一般性令$$S(0)=A(0)$$，則$$S^d < A(1) < S^u$$時不存在套利機會。
+> 不失一般性令$$p_{s,0}=p_{a,0}$$，則$$p_{s,1}^d < p_{a,1} < p_{s,1}^u$$時不存在套利機會。
 >
-> 即若$$A(1) \leq S^d$$或$$S^u \leq A(1)$$時，存在投資組合$$V(0)=0, ~V(1) > 0$$。
+> 即若$$p_{a,1} \leq p_{s,1}^d$$或$$p_{s,1}^u \leq p_{a,1}$$時，存在投資組合$$(h_{s,0}, h_{a,0}) \ni v_{(p), 0}=0, ~v_{(p), 1} > 0$$。
 
-註：從投資角度說，如果一資產的報酬顯著優於另一資產報酬時，則存在套利機會(買進便宜的資產，同時放空貴的資產)。
+<mark style="color:red;">註：從投資角度說，如果一資產的報酬顯著優於另一資產報酬時，則存在套利機會(買進便宜的資產，同時放空貴的資產)</mark>。
 
 ## 投資組合的報酬與風險
 
@@ -127,30 +127,30 @@ proof:
 
 獲利結構和期貨(future)相似，主要差別是在契約、商品和交易場所的不同。
 
-遠期合約是投資人和對手約定在交割日(delivery future)，以現在約定的遠價價格$$F$$(forward price)交易風險資產的契約。
+遠期合約是投資人和對手約定在交割日(delivery future，假設為$$t=1$$)，以現在約定的遠價價格$$p_{f,0}$$(forward price)交易風險資產的契約。
 
-如果在$$t=1$$時，以價格$$F$$買進(做多)遠期合約時，且風險資產為$$S(1)$$，則報酬(payoff)為$$S(1) - F$$。如果是以價格$$F$$賣出(放空)遠期合約時，則報酬為$$F-S(1)$$。
+如果在$$t=0$$時，以價格$$p_{f,0}$$買進(做多)遠期合約時，且風險資產為$$p_{s,1}$$，則報酬(payoff)為$$p_{s,1} - p_{f,0}$$。如果是以價格$$p_{f,0}$$賣出(放空)遠期合約時，則報酬為$$p_{f,0} - p_{s,1}$$。
 
 <mark style="color:red;">遠期合約的模型於期初建立部位時，不需付錢，而是在交割日時依合約結算</mark>。
 
-令投資組合中各資產的數量分別為(風險資產、無風險資產、遠期合約)=$$(x,y,z) \in \mathbb{R}^3$$。
+令投資組合中各資產的數量分別為(風險資產、無風險資產、遠期合約)=$$(h_{s,0},h_{a,0}, h_{f, 0}) \in \mathbb{R}^3$$。
 
-* $$V(0)=xS(0) + yA(0)$$
-* $$V(1)=xS(1)+yA(1)+z(S(1)-F)$$
+* $$v_{(p),0} = h_{s,0} p_{s,0} + h_{a,0} p_{a,0}$$
+* $$v_{(p),1} = h_{s,0} p_{s,1} + h_{a,0} p_{a,1} + h_{f,0}(p_{s,1} - p_{f,0})$$
 
 ## 買權與賣權(call and put)
 
-令投資組合中各資產的數量分別為(風險資產、無風險資產、買權或賣權)=$$(x,y,z) \in \mathbb{R}^3$$。
+令投資組合中各資產的數量分別為(風險資產、無風險資產、買權或賣權)=$$(h_{s,0},h_{a,0}, h_{op, 0}) \in \mathbb{R}^3$$。
 
 買權(call)：
 
-* $$V(0)=xS(0)+yA(0)+zC(0)$$
-* $$V(1)=xS(1)+yA(1)+zC(1)$$
+* $$v_{(p),0} = h_{s,0} p_{s,0} + h_{a,0} p_{a,0} + h_{call,0} p_{call,0}$$
+* $$v_{(p),1} = h_{s,0} p_{s,1} + h_{a,0} p_{a,1} + h_{call,0} p_{call,1}$$
 
-已知$$S(1)$$的可能實現值，且$$A(1), C(1)$$已知，可由複製選擇權和反向定價得$$C(0)$$。
+已知$$p_{s,1}$$的可能實現值，且$$p_{a,1}~ p_{call,1}$$已知，可由複製選擇權和反向定價得$$p_{call, 0}$$。
 
-* (replicating the option) 由$$xS(1)+yA(1)=C(1)$$，求解得$$(x,y)$$。
-* (pricing the option) 使用$$(x,y)$$代入$$xS(0)+yA(0)=C(0)$$得$$C(0)$$。
+* (replicating the option) 由$$h_{s,0}p_{s,1}+h_{a,0}p_{a,1}=p_{call, 1}$$，求解得$$(h_{s,0}, h_{a,0})$$。
+* (pricing the option) 使用$$(h_{s,0}, h_{a,0})$$代入$$h_{s,0} p_{s, 0}+ h_{s,0}p_{a, 0}=p_{call, 0}$$得$$p_{call, 0}$$。
 
 ## 參考資料
 

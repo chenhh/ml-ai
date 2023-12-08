@@ -159,7 +159,7 @@ proof 2:
 
 > $$(X, \mathcal{T})$$為拓樸空間，$$S \subseteq X$$。
 >
-> $$\forall a \in X$$，若$$a$$的任意開鄰域$$U$$均滿足$$U \cap S \neq \emptyset$$，則稱$$a$$為$$S$$的<mark style="color:red;">附著點(adherent point)</mark>。
+> $$\forall a \in X$$，若$$a$$的任意開鄰域$$U$$均滿足$$U \cap S \neq \emptyset$$，則稱$$a$$為$$S$$的<mark style="color:red;">附著點(adherent point)</mark>。注意點$$a$$不必為$$S$$中的點。
 >
 > 所有$$S$$的附著點形成的集合稱為$$S$$的閉包，記為$$\mathrm{cl}(S)$$或$$\overline{S}$$。
 

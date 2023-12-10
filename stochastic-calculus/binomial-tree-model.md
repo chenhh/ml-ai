@@ -4,15 +4,27 @@ description: binomial tree model，二項樹
 
 # 二元樹狀模型
 
+## 股票價格動態
+
+股票在時間$$t$$的價格為$$p_{s,t}$$為隨機變數，取值為正實數$$(0, \infty)$$，因此$$p_{s,t}$$為機率空間$$(\Omega, \Sigma, \mathrm{P})$$上的隨機變數(可測函數)。
+
+價格集合$$\Omega$$中的元素稱為情境(wcenario) $$\omega \in \Omega$$。在時間$$t$$，若市場狀態為$$\omega$$，則用$$p_{s,t}(\omega)$$表示在時間$$t$$的價格。
+
+$$t=0$$時股票價格$$p_{s,0}>0$$為已知的常數(隨機變數退化成只有一個實現值)，而$$t>0$$時，未來的價格$$p_{s,t}$$均為非常數隨機變數，即至少有兩個情境$$\omega_1, \omega_2 \in \Omega \ni p_{s,t}(\omega_1) \neq p_{s,t}(\omega_2)$$。
+
+假設時間是依離散時段(discrete time step)推移，$$t=n\tau, ~ n \in \{0\} \cup \mathbb{N}$$，$$\tau$$為固定長度的時段，一般為天、周、月、季、半年或一年，通常取一年為單位即$$t=1$$為一年，天為$$\frac{1}{365}$$，周為$$\frac{1}{52}$$、月為$$\frac{1}{12}$$等。
+
+為了簡化符號，常用$$p_{s,0}, p_{s,1}, p_{s,2}, \dots$$代替$$p_{s,0}, p_{s,\tau}, p_{s,2\tau}, \dots$$.。
+
 ## 股票價格隨機漫步模型
 
 令$$S_t$$為時間$$t$$的股價，假設時間$$t+1$$股價上漲至$$hS_t$$的機率為$$p$$，且股價下跌至$$lS_t$$的機率為$$q=1-p$$，且$$h, l >0$$。
 
-初始時，$$S_0=S$$，在時間1時，股價可能為$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_1 = hS_0) = p \\ & \mathrm{P}(S_1 = lS_0)= q  \end{aligned} \right.$$，可寫成：$$\displaystyle \mathrm{P}(S_1 = h^rl^{1-r}S_0)=p^rq^{1-r}, ~r \in \{0, 1\}$$
+初始時，$$S_0=S$$，在時間1時，股價可能為$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_1 = hS_0) = p \\ & \mathrm{P}(S_1 = lS_0)= q \end{aligned} \right.$$，可寫成：$$\displaystyle \mathrm{P}(S_1 = h^rl^{1-r}S_0)=p^rq^{1-r}, ~r \in \{0, 1\}$$
 
 令隨機變數$$\displaystyle X_t = \left\{ \begin{aligned} & \mathrm{P}(X_t =h ) = p \\ & \mathrm{P}(X_t =l ) = q \\ \end{aligned} \right.$$，當$$X_t$$與$$S$$獨立時，可寫成$$S_1=S_0X_1$$
 
-時間2時，股價的可能性為：$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_2 = hS_1) = p \\ & \mathrm{P}(S_2 = lS_1)= q  \end{aligned} \right.$$， 擴展開得$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_2 = h^2S_0) = p^2 \\ &\mathrm{P}(S_2 = hlS_0) = 2pq \\ & \mathrm{P}(S_2 = l^2S_0)= q^2  \end{aligned} \right.$$，可寫成二項式分佈為：$$\displaystyle \mathrm{P}(S_2 = h^rl^{2-r}S_0)=\binom{2}{r}p^rq^{2-r}, ~r \in \{0, 1, 2\}$$
+時間2時，股價的可能性為：$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_2 = hS_1) = p \\ & \mathrm{P}(S_2 = lS_1)= q \end{aligned} \right.$$， 擴展開得$$\displaystyle \left\{ \begin{aligned} &\mathrm{P}(S_2 = h^2S_0) = p^2 \\ &\mathrm{P}(S_2 = hlS_0) = 2pq \\ & \mathrm{P}(S_2 = l^2S_0)= q^2 \end{aligned} \right.$$，可寫成二項式分佈為：$$\displaystyle \mathrm{P}(S_2 = h^rl^{2-r}S_0)=\binom{2}{r}p^rq^{2-r}, ~r \in \{0, 1, 2\}$$
 
 可寫成$$S_2=S_1X_2=S_0X_1X_2$$
 
@@ -22,7 +34,7 @@ description: binomial tree model，二項樹
 
 因為$$X_t$$的意義為相對價格，即$$X_t=\frac{S_{t}}{S_{t-1}}$$，因此取對數時為(連續)報酬，即$$\displaystyle r_t = \log X_t = \log S_{t}- \log S_{t-1} = \left\{ \begin{aligned} & \mathrm{P}(\log X_t =\log h ) = p \\ & \mathrm{P}(\log X_t =\log l ) = q \\ \end{aligned} \right.$$
 
-因此$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$--(s2)
+因此$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0 + \sum_{i=1}^t r_i$$--(s2)
 
 可得報酬的期望值與變異數如下：
 
@@ -43,15 +55,15 @@ description: binomial tree model，二項樹
 
 整理後可得$$\displaystyle \sum_{i=1}^t r_t = \sum_{i=1}^t (\mu + \sigma \omega_t)=\mu t + \sigma \sum_{i=1}^t \omega_i$$
 
-由於$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0  + \sum_{i=1}^t r_i$$，代入後可得
+由於$$\displaystyle \log S_{t} = \log S_{t-1} + r_t = \log S_0 + \sum_{i=1}^t r_i$$，代入後可得
 
-$$\displaystyle \log S_{t} = \log S_0  + \mu t + \sigma W_t$$
+$$\displaystyle \log S_{t} = \log S_0 + \mu t + \sigma W_t$$
 
 可得 $$\log S_{t-1} = \log S_0 + \mu (t-1) + \sigma W_{t-1}$$
 
 上兩式相減得 $$\Delta \log S_t = \mu + \sigma (\Delta W_t)$$--(1)
 
-因為$$\displaystyle \Delta \log S_{t} = \log S_t - \log S_{t-1} = \log \frac{S_{t}}{S_{t-1}}  = \log \frac{S_{t-1} + \Delta S_t }{S_{t-1}} = \log \left( 1 + \frac{\Delta S_t}{S_{t-1}} \right) \approx \frac{\Delta S_t}{S_{t-1}}$$--(2)
+因為$$\displaystyle \Delta \log S_{t} = \log S_t - \log S_{t-1} = \log \frac{S_{t}}{S_{t-1}} = \log \frac{S_{t-1} + \Delta S_t }{S_{t-1}} = \log \left( 1 + \frac{\Delta S_t}{S_{t-1}} \right) \approx \frac{\Delta S_t}{S_{t-1}}$$--(2)
 
 由(1,2)得$$\Delta S_t = \mu S_{t-1} + \sigma S_{t-1}\Delta W_t$$--(3)
 
@@ -61,11 +73,7 @@ $$\displaystyle \log S_{t} = \log S_0  + \mu t + \sigma W_t$$
 
 考慮(s2) $$\displaystyle \log S_{t} = \log S_{t-1} + r_t$$，在上述平賭過程推導中，假設$$r_t \sim WN(\mu, \sigma^2)$$為獨立同分佈(i.i.d)。
 
-如果$$r_t=a r_{t-1} + e_t, ~ e_t \sim WN(0, \sigma_e^2)~|a|<1$$為AR(1)過程時，此時$$S$$不是隨機漫步，且非平賭過程.&#x20;
-
-
-
-
+如果$$r_t=a r_{t-1} + e_t, ~ e_t \sim WN(0, \sigma_e^2)~|a|<1$$為AR(1)過程時，此時$$S$$不是隨機漫步，且非平賭過程.
 
 ## 資產以複利計算時為指數增長
 
@@ -115,9 +123,7 @@ $$\displaystyle S_{t+1} - S_t = \mu S_t \Delta t + \sigma S_t z \sqrt{\Delta t}$
 
 常用估計式為$$\displaystyle \sqrt{\frac{1}{(M-1)\Delta t} \sum_{t=1}^M (r_t - \overline{r})^2}$$，通常也用年化值表示。
 
-對於很小的$$\Delta t$$，也可用估計式：$$\displaystyle \sqrt{\frac{1}{(M-1)\Delta t} \sum_{t=1}^M ( \log S_t -  \log S_{t-1})^2}$$
-
-
+對於很小的$$\Delta t$$，也可用估計式：$$\displaystyle \sqrt{\frac{1}{(M-1)\Delta t} \sum_{t=1}^M ( \log S_t - \log S_{t-1})^2}$$
 
 <mark style="color:red;">波動率是衍生性商品中最重要(計算風險)也最難估計的量之一</mark>。
 

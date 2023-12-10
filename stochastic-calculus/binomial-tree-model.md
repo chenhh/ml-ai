@@ -58,6 +58,8 @@ $$t=0$$時股票價格$$p_{s,0}>0$$為已知的常數(隨機變數退化成只�
 
 其中$$u, d$$為簡單報酬率$$r_t^{(simple)}$$的可能實現值，而$$h,l$$為相對價格(price relative)$$x_t$$的可能實現值，兩者關係為$$r_t^{(simple)}=\frac{p_t}{p_{t-1}}-1 = x_t -1$$。以下用簡單報酬率討論。
 
+<mark style="color:red;">注意在每一期中，假設無風險資產報酬率為</mark>$$r$$<mark style="color:red;">，則依無套利原則必須滿足</mark>$$d < r < u$$。
+
 初始時，$$p_0$$為已知常數，在$$t=1$$時，股價可能為$$\displaystyle  \begin{cases} &\mathrm{P}(p_1 = (1+u) p_0) \equiv \mathrm{P}(p_1 = h \cdot p_0) = p \\ & \mathrm{P}(p_1 = (1+d) p_0) \equiv \mathrm{P}(p_1 =  l \cdot p_0)= q \end{cases}$$，可寫成：$$\displaystyle \mathrm{P}(p_1 = u^r d^{1-r}p_0)=p^rq^{1-r}, ~r \in \{0, 1\}$$
 
 令隨機變數$$\displaystyle X_t =  \begin{cases}  \mathrm{P}(X_t =1+u ) = p \\  \mathrm{P}(X_t =1+d ) = q \\ \end{cases}$$，當$$X_t$$與$$p_t$$獨立時，可寫成$$p_{1}=p_0X_1$$。
@@ -69,6 +71,20 @@ $$t=0$$時股票價格$$p_{s,0}>0$$為已知的常數(隨機變數退化成只�
 時間$$t$$時，可寫成$$\displaystyle \mathrm{P}(p_t = (1+u)^r (1+d)^{t-r}p_0)=\binom{t}{r}p^rq^{t-r}, ~r \in \{0, 1, \dots, t\}$$
 
 股價$$\displaystyle p_t = p_0 \prod_{i=1}^t X_i$$--(s1)
+
+### 風險中性機率(risk-neural probability)
+
+$$t=1$$時，股價的期望值為$$\mathrm{E}(p_1)=p_0(p \cdot (1+u) + q \cdot (1+d))=p_0(1+ \mathrm{E}(r_1))$$。
+
+其中$$r_1=\frac{p_1}{p_0}-1$$，因此$$\mathrm{E}(r_1)=p \cdot (\frac{(1+u)p_0}{p_0}-1) + (\frac{(1+d)p_0}{p_0}-1)=p \cdot u + q \cdot d$$為期望報酬。
+
+因為在二項分佈$$B(t,p)$$中
+
+
+
+
+
+### old
 
 因為$$X_t$$的意義為相對價格，即$$X_t=\frac{S_{t}}{S_{t-1}}$$，因此取對數時為(連續)報酬，即$$\displaystyle r_t = \log X_t = \log S_{t}- \log S_{t-1} = \left\{ \begin{aligned} & \mathrm{P}(\log X_t =\log h ) = p \\ & \mathrm{P}(\log X_t =\log l ) = q \\ \end{aligned} \right.$$
 

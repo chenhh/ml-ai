@@ -16,6 +16,28 @@ $$t=0$$時股票價格$$p_{s,0}>0$$為已知的常數(隨機變數退化成只�
 
 為了簡化符號，常用$$p_{s,0}, p_{s,1}, p_{s,2}, \dots$$代替$$p_{s,0}, p_{s,\tau}, p_{s,2\tau}, \dots$$.。
 
+
+
+<figure><img src="../.gitbook/assets/A-scenario-tree-with-4-stages-8-scenarios-and-15-nodes.png" alt=""><figcaption><p>4時段，8情境的情境樹</p></figcaption></figure>
+
+### 簡單報酬
+
+* <mark style="color:red;">簡單\[單期]報酬</mark>：$$r_{s,t}^{(simple)}=\frac{p_{s,t}}{p_{s,{t-1}}}-1$$。
+* <mark style="color:red;">簡單\[多期]報酬</mark>：$$r_{s, t_1:t_2}^{(simple)}=\frac{p_{s,t_2}}{p_{s, t_1}}-1$$。
+
+注意簡單報酬不滿足加法性，即$$r_{s,t:t+2}^{(simple)}  \neq r_{s, t+1}^{(simple)}+r_{s,t+2}^{(simple)}$$，<mark style="color:red;">因此在計算平均報酬時，如果使用簡單報酬，在市場波動大時會高估平均報酬(可改用連續報酬)</mark>。
+
+可得$$p_{s,t}=p_{s, t-1} (1+r_{s,t}^{(simple)})$$。
+
+### 連續報酬
+
+* 連續\[單期]報酬：$$r_{s,t}=\ln \frac{p_{s,t}}{p_{s,t-1}}$$。
+* 連續\[多期]報酬 $$r_{s:t_1:t_2}=\ln \frac{p_{s, t_2}}{p_{s, t_1}}$$。
+
+連續報酬滿足加法性，即$$r_{s,t:t+n}=r_{s,t+1}+\dots+r_{s,t+n}$$。
+
+因為$$\displaystyle \begin{aligned}  r_s, t:t+n & =\ln \frac{p_{s,t+n}}{p_{s,t}} \\     & = \ln \left( \frac{p_{s,t+1}}{p_{s,t}} \times \frac{p_{s,t+2}}{p_{s,t+1}} \times \dots \times \frac{p_{s,t+n}}{p_{s,t+n-1}}  \right) \\     & = \ln  \frac{p_{s,t+1}}{p_{s,t}} + \ln \frac{p_{s,t+2}}{p_{s,t+1}} + \dots + \ln \frac{p_{s,t+n}}{p_{s,t+n-1}} \\     & = r_{s, t+1} + r_{s,t+2} + \dots + r_{s, t+n} \end{aligned}$$
+
 ## 股票價格隨機漫步模型
 
 令$$S_t$$為時間$$t$$的股價，假設時間$$t+1$$股價上漲至$$hS_t$$的機率為$$p$$，且股價下跌至$$lS_t$$的機率為$$q=1-p$$，且$$h, l >0$$。

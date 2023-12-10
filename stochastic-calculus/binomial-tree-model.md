@@ -62,13 +62,13 @@ $$t=0$$時股票價格$$p_{s,0}>0$$為已知的常數(隨機變數退化成只�
 
 令隨機變數$$\displaystyle X_t =  \begin{cases}  \mathrm{P}(X_t =1+u ) = p \\  \mathrm{P}(X_t =1+d ) = q \\ \end{cases}$$，當$$X_t$$與$$p_t$$獨立時，可寫成$$p_{1}=p_0X_1$$。
 
-時間2時，股價的可能性為：$$\displaystyle  \begin{cases} \mathrm{P}(p_2 = (1+u)p_1) = p \\  \mathrm{P}(p_2 = (1+d)p_1)= q \end{cases}$$， 擴展開得$$\displaystyle  \begin{cases} \mathrm{P}(p_2 = (1+u)^2 p_0) &= p^2 \\ \mathrm{P}(p_2 = (1+u)(1+d)p_0) &= 2pq \\  \mathrm{P}(p_2 = (1+d)^2p_0) &= q^2 \end{cases}$$，可寫成二項式分佈為：$$\displaystyle \mathrm{P}(S_2 = h^rl^{2-r}S_0)=\binom{2}{r}p^rq^{2-r}, ~r \in \{0, 1, 2\}$$
+時間2時，股價的可能性為：$$\displaystyle  \begin{cases} \mathrm{P}(p_2 = (1+u)p_1) = p \\  \mathrm{P}(p_2 = (1+d)p_1)= q \end{cases}$$， 擴展開得$$\displaystyle  \begin{cases} \mathrm{P}(p_2 = (1+u)^2 p_0) &= p^2 \\ \mathrm{P}(p_2 = (1+u)(1+d)p_0) &= 2pq \\  \mathrm{P}(p_2 = (1+d)^2p_0) &= q^2 \end{cases}$$，可寫成二項式分佈為：$$\displaystyle \mathrm{P}(p_2 = (1+u)^r(1+d)^{2-r}p_0)=\binom{2}{r}p^rq^{2-r}, ~r \in \{0, 1, 2\}$$
 
-可寫成$$S_2=S_1X_2=S_0X_1X_2$$
+可寫成$$p_2=p_1X_2=p_0X_1X_2$$
 
-時間$$t$$時，可寫成$$\displaystyle \mathrm{P}(S_t = h^rl^{t-r}S_0)=\binom{t}{r}p^rq^{t-r}, ~r \in \{0, 1, \dots, t\}$$
+時間$$t$$時，可寫成$$\displaystyle \mathrm{P}(p_t = (1+u)^r (1+d)^{t-r}p_0)=\binom{t}{r}p^rq^{t-r}, ~r \in \{0, 1, \dots, t\}$$
 
-股價$$\displaystyle S_t = S_0 \prod_{i=1}^t X_i$$--(s1)
+股價$$\displaystyle p_t = p_0 \prod_{i=1}^t X_i$$--(s1)
 
 因為$$X_t$$的意義為相對價格，即$$X_t=\frac{S_{t}}{S_{t-1}}$$，因此取對數時為(連續)報酬，即$$\displaystyle r_t = \log X_t = \log S_{t}- \log S_{t-1} = \left\{ \begin{aligned} & \mathrm{P}(\log X_t =\log h ) = p \\ & \mathrm{P}(\log X_t =\log l ) = q \\ \end{aligned} \right.$$
 

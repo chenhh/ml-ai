@@ -54,9 +54,13 @@ $$t=0$$時股票價格$$p_{s,0}>0$$為已知的常數(隨機變數退化成只�
 
 由於以下討論均為股價的變動，因此省略變數下標的$$s$$。
 
-令$$p_t$$為時間$$t$$的股價，假設時間$$t+1$$股價上漲至$$u\cdotp_t$$的機率為$$p$$，且股價下跌至$$d\cdot p_t$$的機率為$$q=1-p$$，且$$-1<d<u, ~0 < p < 1$$。
+令$$p_t$$為時間$$t$$的股價，假設時間$$t+1$$股價上漲至$$(1+u)p_t=h\cdot p_t$$的機率為$$p$$，且股價下跌至$$(1+u) p_t=l \cdot  p_t$$的機率為$$q=1-p$$，且$$-1<d<u$$或$$0 < l < h,~0< p < 1$$。
 
-初始時，$$p_0$$為已知常數，在時間1時，股價可能為$$\displaystyle  \begin{cases} &\mathrm{P}(p_1 = u\cdot p_0) = p \\ & \mathrm{P}(p_1 = d\cdot p_0)= q \end{cases}$$，可寫成：$$\displaystyle \mathrm{P}(p_1 = u^r d^{1-r}p_0)=p^rq^{1-r}, ~r \in \{0, 1\}$$
+其中$$u, d$$為簡單報酬率$$r_t^{(simple)}$$的可能實現值，而$$h,l$$為相對價格(price relative)$$x_t$$的可能實現值，兩者關係為$$r_t^{(simple)}=\frac{p_t}{p_{t-1}}-1 = x_t -1$$。
+
+
+
+初始時，$$p_0$$為已知常數，在時間1時，股價可能為$$\displaystyle  \begin{cases} &\mathrm{P}(p_1 = (1+u) p_0) \equiv \mathrm{P}(p_1 = h \cdot p_0) = p \\ & \mathrm{P}(p_1 = (1+d) p_0) \equiv \mathrm{P}(p_1 =  l \cdot p_0)= q \end{cases}$$，可寫成：$$\displaystyle \mathrm{P}(p_1 = u^r d^{1-r}p_0)=p^rq^{1-r}, ~r \in \{0, 1\}$$
 
 令隨機變數$$\displaystyle X_t =  \begin{cases}  \mathrm{P}(X_t =u ) = p \\  \mathrm{P}(X_t =d ) = q \\ \end{cases}$$，當$$X_t$$與$$p_t$$獨立時，可寫成$$p_{1}=p_0X_1$$。
 

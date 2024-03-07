@@ -55,10 +55,4 @@ description: complex measure
 
 * [https://en.wikipedia.org/wiki/Complex\_measure](https://en.wikipedia.org/wiki/Complex\_measure)
 * [https://zhuanlan.zhihu.com/p/71775089](https://zhuanlan.zhihu.com/p/71775089)
-* [https://www.math.uwo.ca/faculty/adamus/teaching/4122b2020/MeasureTheoryLN1.pdf](https://www.math.uwo.ca/faculty/adamus/teaching/4122b2020/MeasureTheoryLN1.pdf)
-
-<!---->
-
-* [https://en.wikipedia.org/wiki/Complex\_measure](https://en.wikipedia.org/wiki/Complex\_measure)
-* [https://zhuanlan.zhihu.com/p/71775089](https://zhuanlan.zhihu.com/p/71775089)
 * [https://math.stackexchange.com/questions/3788084/applications-of-signed-complex-measures](https://math.stackexchange.com/questions/3788084/applications-of-signed-complex-measures)

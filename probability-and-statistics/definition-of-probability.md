@@ -7,17 +7,17 @@
 一事件$$A \subseteq \Omega$$ 發生若且唯若隨機變數的結果為$$A$$中的一元素。
 
 * e.g. 丟骰子 $$\Omega=\{1,2,3,4,5,6\}$$, 出現奇數的事件$$A=\{1,3,5\}$$。
-*   對一樣本空間$$\Omega$$與一事件 $$A \subseteq \Omega$$，定義$$A$$的機率為$$P(A)=\frac{|A|}{|Ω|}$$。
+*   對一樣本空間$$\Omega$$與一事件 $$A \subseteq \Omega$$，定義$$A$$的機率為$$\mathrm{P}(A)=\frac{|A|}{|Ω|}$$。
 
     <mark style="color:blue;">**在古典的模式中，一事件的機率為此事件中的元素個數除以可能的結果之個數**</mark>。
 
 定義機率時是以樣本空間$$\Omega$$的所有子集合為定義域的函數。 因此對於$$\Omega$$的子集合而非$$\Omega$$中的元素才能定義機率。
 
-* $$\forall \omega \in \Omega$$, $${ \omega }$$為只包含一個元素的集合，$$P({\omega})=\frac{1}{|\Omega|}$$，而 $$P(\omega)$$無定義。
+* $$\forall \omega \in \Omega$$, $${ \omega }$$為只包含一個元素的集合，$$\mathrm{P}({\omega})=\frac{1}{|\Omega|}$$，而 $$\mathrm{P}(\omega)$$無定義。
 * <mark style="color:red;">**機率測度P**</mark>必須滿足以下三個條件： $$\forall A, B \subseteq \Omega$$ ($$A, B$$為事件集合)
-  * \[機率的上下界] $$0 \leq P(A) \leq P(\Omega) = 1$$&#x20;
-  * $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$&#x20;
-  * $$P(A^C) = 1 - P(A)$$
+  * \[機率的上下界] $$0 \leq \mathrm{P}(A) \leq \mathrm{P}(\Omega) = 1$$&#x20;
+  * $$\mathrm{P}(A \cup B) = \mathrm{P}(A) + \mathrm{P}(B) - \mathrm{P}(A \cap B)$$&#x20;
+  * $$\mathrm{P}(A^C) = 1 - \mathrm{P}(A)$$
 
 計算古典機率，只需分別算出$$A$$與$$\Omega$$中的元素個數即可求出機率；但有時元素個數過多，必須使用排列組合方式才可求出個數。
 
@@ -27,7 +27,7 @@
 
 有些事件的敘述是對機率主觀的解釋，但我們立即遭遇到一個問題，因為大多數<mark style="color:blue;">主觀機率</mark>的敘述都是定性的(qualitative)，而非定量(quantitative)，因此必須將敘述數量化。 比如說「今天下午可能會下雨」，「我感覺快要生病了」。
 
-一個建模方法是將模型以賭局方式呈現：每賭一次要付$$p$$元，若事件$$A$$發生得1元，否則得0元。 因此事件$$A$$發生淨得$$1−p$$元，沒發生得$$−p$$元。若存在唯一的$$p,\ 0 \leq p \leq 1$$使某人認為此賭局公正，則我們說此人對事件$$A$$主觀的機率為$$P(A)=p$$。
+一個建模方法是將模型以賭局方式呈現：每賭一次要付$$p$$元，若事件$$A$$發生得1元，否則得0元。 因此事件$$A$$發生淨得$$1−p$$元，沒發生得$$−p$$元。若存在唯一的$$p,\ 0 \leq p \leq 1$$使某人認為此賭局公正，則我們說此人對事件$$A$$主觀的機率為$$\mathrm{P}(A)=p$$。
 
 ## 頻率
 
@@ -55,9 +55,9 @@
 
 給定機率空間 $$\displaystyle (\Omega ,\mathcal{F},P)$$，集合$$\Omega$$的子集構成的sigma-algebra $$\mathcal{F}$$ (其中的元素為事件 $$A \in \mathcal{F}$$)， 以及定義在$$\mathcal{F}$$上的機率測度$$P$$應滿足以下性質：
 
-* $$\forall A \in \subseteq \mathcal{F},\ 0 \leq P(A) \leq 1$$
-* $$P(\Omega) = 1$$
-* $$\displaystyle A_1, A_2 \cdots \in \mathcal{F}, A_i \cap A_j = \phi, \forall i \neq j,\ P(\cup_{i=1}^{\infty} A_i ) = \sum_{i=1}^{\infty} P(A_i)$$
+* $$\forall A \in \subseteq \mathcal{F},\ 0 \leq \mathrm{P}(A) \leq 1$$
+* $$\mathrm{P}(\Omega) = 1$$
+* $$\displaystyle A_1, A_2 \cdots \in \mathcal{F}, A_i \cap A_j = \phi, \forall i \neq j,\ \mathrm{P}(\cup_{i=1}^{\infty} A_i ) = \sum_{i=1}^{\infty} \mathrm{P}(A_i)$$
 
 ### 機率0
 

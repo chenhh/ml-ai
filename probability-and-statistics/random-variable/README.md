@@ -2,17 +2,19 @@
 
 ## 機率空間(probability)
 
-機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$
+機率空間$$(\Omega, \mathcal{F}, \mathrm{P})$$ 包含三個元素：
 
-樣本空間$$\Omega =\{\omega_a, ~ a \in A\}$$為所有可能發生的結果(outcome) $$\omega_a$$形成的集合，$$A$$為結果的指標集合(可數或不可數)。
+<mark style="color:red;">樣本空間 </mark> $$\Omega =\{\omega_a, ~ a \in A\}$$為所有可能發生的結果(outcome) 
+$$\omega_a$$形成的集合，$$A$$為結果的指標集合(可數或不可數)。
 
-σ域$$\mathcal{F}$$為樣本空間$$\Omega$$特定子集合形成的集合族(family of set)，其內部的元素(集合)必須滿足以下三個性質：
+<mark style="color:red;"> σ域 </mark> $$\mathcal{F}$$為樣本空間$$\Omega$$特定子集合形成的集合族(family of set)，其內部的元素
+(集合)必須滿足以下三個性質：
 
 * \[宇集合為σ域的元素] $$\Omega \in \mathcal{F}$$。
 * \[補集為σ域的元素]$$E \in \mathcal{F} \Rightarrow E^c \in \mathcal{F}$$。
 * \[可數集合聯集為σ域的元素] $$\displaystyle E_i \in \mathcal{F} ~ i \in \mathbb{N} \Rightarrow \bigcup_{i=1}^\infty E_i \in \mathcal{F}$$。
 
-機率測度$$\mathrm{P}: \mathcal{F} \rightarrow [0,1]$$必須滿足以下三個性質：
+<mark style="color:red;"> 機率測度 </mark> $$\mathrm{P}: \mathcal{F} \rightarrow [0,1]$$必須滿足以下三個性質：
 
 * $$\mathrm{P}(E) \geq 0, ~ \forall E \in \mathcal{F}$$
 * \[有限測度] $$\mathrm{P}(\Omega)= 1$$
@@ -24,8 +26,14 @@
 >
 > * 以函數的定義，隨機變數$$X$$的值$$x \in \mathbb{R}$$的前像$$X^{-1}(x) = \{ \omega \in \Omega | X(\omega) = x\}$$為一個在樣本空間$$\Omega$$的事件$$E$$。
 > * 而在測度論中，要求事件$$E$$必須為sigma-field $$\mathcal{F}$$的元素，此時$$X$$稱為$$\mathcal{F}$$-可測函數（measurable function）。
->   * $$X$$​必須是可測函數，是為了避免在實數上任一點(或區間)的前像不存在於$$\mathcal{F}$$​中沒有定義；反之如果$$X$$​為可測函數，因為在$$\mathbb{R}$$​中所有點的前像均存在於$$\mathcal{F}$$​，因此在求積分值的時候切割$$\mathbb{R}$$找對應的前像$$X^{-1}([a,b])$$​必為$$\mathcal{F}$$​的元素，因此可求值。
+>   * $$X$$ 必須是可測函數，是為了避免在實數上任一點(或區間)的前像不存在於$$\mathcal{F}$$ 中沒有定義；反之如果$$X$$ 為可測函數，因為在$$\mathbb{R}
+      > $$​中所有點的前像均存在於$$\mathcal{F}$$​，因此在求積分值的時候切割$$\mathbb{R}$$找對應的前像$$X^{-1}([a,b])$$​必為$$\mathcal{F}$$​的元素，因此可求值。
 > * 把$$X$$在$$\Omega$$上的Lebesgue積分 $$\displaystyle \mathrm{E}(X)= \int_\Omega X d\mathrm{P}$$稱為$$X$$的期望值。
+
+可測隨機變數$$X$$ 必須滿足任意實現值$$x$$的前像$$E \equiv X^{-1}(x)(\omega)$$必須是σ域的元素，是由值域反向要求定義域的特性。
+
+而宇集合$$\Omega$$中任意元素的組合均可以得到事件集合$$E$$，而此集合對於$$X$$不一定可測。
+
 
 隨機變數依值域可分為：
 

@@ -12,6 +12,8 @@ description: simple (linear) regression analysis
 自關數與應變數的線性關係依Pearson相關係數可$$\rho$$分為：負相關($$-1 \leq \rho < 0$$)，不相關($$\rho =0$$), 正相關($$0 < \rho 
 \leq 1$$)。
 
+給定資料集$$\{ (Y_1, X_1), (Y_2, X_2), \dots, (Y_t, X_t) \dots (Y_N, X_N)\}$$，假設模型如下：
+
 $$ 
 
 Y_t = \beta_1 + \beta_2 X_t + \epsilon_t 
@@ -24,6 +26,14 @@ $$
 * $$\epsilon_t$$：隨機干擾項(stochastic disturbance)、誤差項(error term)。
 * $$\beta_1, \beta_2$$ 未知的迴歸係數。
 * 註：自變數與應變數為相關關係(correlation)，不可推論為因果關係。
+
+
+誤差項需滿足三大假設:
+1. 常態性(Normality) : 若母體資料呈現常態分配(Normal Distribution)，則誤差項也會呈現同樣的分配。可採用常態機率圖(normal probability 
+plot) 或Shapiro-Wilk常態性檢定做檢查。
+2. 獨立性(Independency) : 誤差項之間應該要相互獨立，否則在估計迴歸係數時會降低統計的檢定力。可以藉由Durbin-Watson test來檢查。
+3. 變異數同質性(Constant Variance) : 變異數若不相等會導致自變數無法有效估計依變數。可以藉由殘差圖(Residual Plot)來檢查。
+
 
 如果樣本資料是依時間先後排項，則稱為<mark style="color:red;">時間序列(time-series)資料</mark>，下標$$t$$代表時間。
 如果樣本資料是某個特定時間點，針定特定地區或群體的資料，稱為<mark style="color:red;">橫斷面(cross-section)資料</mark>，下標$$t$$代表觀察對象。

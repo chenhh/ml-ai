@@ -134,7 +134,7 @@
   * [Neyman–Pearson引理](probability-and-statistics/hypothesis-test/neyman-pearson-lemma.md)
   * [似然比檢定](probability-and-statistics/hypothesis-test/likelihood-ratio-test.md)
   * [常態分佈檢定](probability-and-statistics/hypothesis-test/normal-dist-test.md)
-* [迴歸分析](probability-and-statistics/regression-analysis.md)
+* [簡單迴歸分析](probability-and-statistics/simple-regression-analysis.md)
 * [隨機過程](probability-and-statistics/random-process/README.md)
   * [停時(stopping time)](probability-and-statistics/random-process/stopping-time.md)
   * [定態過程(stationary process)](probability-and-statistics/random-process/stationary-process.md)

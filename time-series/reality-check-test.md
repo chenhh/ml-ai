@@ -67,7 +67,7 @@ West(1996)使用$$\beta^{*}$$建構假設檢定。但是對於有限樣本來說
 $$\hat{f}_{t+1}=-(y_{t+1} - X^{\top}_{1,t+1} \hat{\beta}_{1,t})+(y_{t+1} - X^{\top}_{0,t+1} \hat{\beta}_{0,t})$$
 
 * $$y_{t+1} \in \mathbb{R}$$為應變數。
-* $$\hat{\beta}_{1,t}$$是模型1使用OLS方法依據$$\{ (y_s, X_{1,s}), ~s=1,2,\dots, t\}$$算出的估計參數。
+* $$\hat{\beta}_{1,t}$$是模型1使用OLS方法依據$$\{ (y_s, X_{1,s}), ~s=1,2,\dots, t\}$$算出的估計參數。與給定的參數向量$$X^{\top}_{1,t+1}$$內積可得$$t+1$$期的預測值$$\hat{y}_{t+1} \equiv X^{\top}{1,t+1} \hat{\beta}{1,t}$$
 * $$\hat{\beta}_{0,t}$$是模型0(基準模型)使用OLS方法依據$$\{ (y_s, X_{0,s}), ~s=1,2,\dots, t\}$$算出的估計參數。
 * 此處$$\hat{\beta}_t=\begin{bmatrix} \beta_{0,t}^\top \\ \beta_{1,t}^\top \end{bmatrix}$$，注意模型1與模型0不可為巢狀模型(nested model)。
 

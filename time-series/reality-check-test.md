@@ -54,7 +54,7 @@ MCS檢定程序
 
 假設檢定是計算$$l \times 1$$維的期望向量$$\mathrm{E}(\mathbf{f^{*}})$$，其中第$$k$$個函數$$\mathbf{f^{*}}_k \equiv f_k(\mathbf{Z, \beta^{*}})$$，$$\beta^{*} = \mathrm{plim} \hat{\beta}_T$$ 表示$$\hat{\beta}_t$$機率收斂至$$\beta^{*}$$。注意此處$$l$$個函數(模型)使用相同的參數$$\mathbf{Z}$$與$$\beta^{*}$$，只有內部結構不同而已。
 
-&#x20;更準確的說，是檢定在$$l \times 1$$維的統計量 $$\displaystyle \overline{f} = \frac{1}{n} \sum_{t=R}^T \hat{f}_{t+\tau}$$，其中$$\hat{f}_{t+\tau} = f(\mathbf{Z}_{t+\tau}, \hat{\beta}_t)$$，且觀察資料是由$$\{ \mathbf{Z}_t \}$$，為定態[α](https://tw.piliapp.com/symbols/alpha/)混合([α](https://tw.piliapp.com/symbols/alpha/)-mixing)序列且有和$$\mathbf{Z}$$(在時間$$t$$)相同邊際分佈所產生。
+&#x20;更準確的說，是檢定在$$l \times 1$$維的統計量 $$\displaystyle \overline{f} = \frac{1}{n} \sum_{t=R}^T \hat{f}_{t+\tau}$$，其中$$\hat{f}_{t+\tau} = f(\mathbf{Z}_{t+\tau}, \hat{\beta}_t)$$，且觀察資料是由$$\{ \mathbf{Z}_t \}$$，為定態[α](https://tw.piliapp.com/symbols/alpha/)混合([α](https://tw.piliapp.com/symbols/alpha/)-mixing)序列\[鄰近的隨機變數有相關性，但隨著$$n$$變大則逐漸獨立或不相關]且有和$$\mathbf{Z}$$(在時間$$t$$)相同邊際分佈所產生。
 
 給定選定的函數(的差值)$$f_1,f_2,\dots, f_l$$，<mark style="color:red;">虛無假設</mark>$$H_0: \mathrm{E}(f^{*}) \leq 0$$<mark style="color:red;">表示沒有函數的預測表現(性能)比基準模型好</mark>。(<mark style="color:red;">注意此處的</mark>$$f_k$$<mark style="color:red;">不是函數之值，而是函數與基準模型預測的差值</mark>)
 

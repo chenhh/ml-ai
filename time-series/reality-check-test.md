@@ -60,16 +60,26 @@ MCS檢定程序
 
 West(1996)使用$$\beta^{*}$$建構假設檢定。但是對於有限樣本來說，$$\beta^{*}$$未必是最相關的參數。反之估計參數$$\hat{\beta}_t$$與建構預測函數(模型)直接相關。因此替代的方法為$$\displaystyle \lim_{n \rightarrow \infty} \mathrm{E}(\overline{f}) \leq 0$$即$$\displaystyle \lim_{n \rightarrow \infty} \mathrm{E}(\overline{f} ~|~ \mathbf{Z_1, \dots, Z_R}) \leq 0$$或者 $$\displaystyle \lim_{n \rightarrow \infty} \mathrm{E}(f_{t+\tau} ~|~ \mathbf{Z_1, \dots, Z_t}) \leq 0$$。
 
-#### 範例：令$$\tau=1$$(預測下一期之值)以及$$l=1$$(只有一個預測函數)
+#### 範例：MSE
 
-檢驗一組特定變數在均方誤差方面是否具有優於基準回歸模型的預測能力。
+令$$\tau=1$$(預測下一期之值)以及$$l=1$$(只有一個預測函數)
 
-$$\hat{f}_{t+1}=-(y_{t+1} - X^{\top}_{1,t+1} \hat{\beta}_{1,t})+(y_{t+1} - X^{\top}_{0,t+1} \hat{\beta}_{0,t})$$
+檢驗一組特定變數在均方誤差(MSE, 越小越好)方面是否具有優於基準回歸模型的預測能力。
+
+$$\hat{f}_{t+1}=-(y_{t+1} - X^{\top}_{1,t+1} \hat{\beta}_{1,t})^2+(y_{t+1} - X^{\top}_{0,t+1} \hat{\beta}_{0,t})^2$$
 
 * $$y_{t+1} \in \mathbb{R}$$為應變數。
 * $$\hat{\beta}_{1,t}$$是模型1使用OLS方法依據$$\{ (y_s, X_{1,s}), ~s=1,2,\dots, t\}$$算出的估計參數。與給定的參數向量$$X^{\top}_{1,t+1}$$內積可得$$t+1$$期的預測值$$\hat{y}_{t+1} \equiv X^{\top}{1,t+1} \hat{\beta}{1,t}$$
 * $$\hat{\beta}_{0,t}$$是模型0(基準模型)使用OLS方法依據$$\{ (y_s, X_{0,s}), ~s=1,2,\dots, t\}$$算出的估計參數。
 * 此處$$\hat{\beta}_t=\begin{bmatrix} \beta_{0,t}^\top \\ \beta_{1,t}^\top \end{bmatrix}$$，注意模型1與模型0不可為巢狀模型(nested model)。
+
+#### 範例：交易策略
+
+$$\hat{f}_{t+1} = \log(1+y_{t+1} S_1(X_{1, t+1}, \beta_1^{*})) - \log(1+y_{t+1} S_0(X_{0, t+1}, \beta_0^{*}))$$
+
+* $$y_{t+1}$$為資產時間$$t+1$$的報酬，取$$\log$$表示連續報酬(continuous return)。
+* $$S_0, S_1$$為訊號函數，其值域為$$\{-1, 0, 1\}$$，-1表示放空(short)，0表示不動作(neutral)，1表示買進(long)。其分別使用$$X_{0,t+1}, \beta_0^{*}$$與$$X_{1, t+1}, \beta_1^{*}$$做為參數求值。
+* $$S_0=1, ~\forall t$$表示買進持有(buy-and-hold)策略。
 
 
 

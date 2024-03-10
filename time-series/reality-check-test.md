@@ -135,9 +135,12 @@ $$
 > 1. 若$$\mathrm{E}(f^{*}) >0$$ for some $$1 \leq k \leq l$$, 則$$\forall 0 \leq c < \mathrm{E}(f_k^{*})$$, 
      $$ \mathrm{P}(\overline{f}_k <c ) \rightarrow 1 \text{ as } T \rightarrow 
      > \infty$$。
-> 2. 若$$l > 1$$ 且$$\mathrm{E}(f_1^{*}) >\mathrm{E}(f_k^{*}), \foralll k=2,\dots, l$$, 
+> 2. 若$$l > 1$$ 且$$\mathrm{E}(f_1^{*}) >\mathrm{E}(f_k^{*}), \forall k=2,\dots, l$$, 
 >    則$$\mathrm{P}(\overline{f}_1 > \overline{f}_k, ~ \forall k=2,\dots, l) \rightarrow 1$$ as 
      $$ T \rightarrow \infty$$。 
+
+第1部分指出，如果某個模型（最佳模型）優於基準模型，那么最終會得到正值的估計相對績效(即最佳模型的損失小於基準模型)。
+
 
 ## 參考資料
 

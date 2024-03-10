@@ -20,7 +20,10 @@ $$
 * $$X_t$$：自變數(independent variable），又稱獨立變數、解釋變數（explanatory variable）、外生變數。 可由研究者選擇、控制、研究，且能獨立變化而影響或引起其他變數變化的條件或因素。
 * $$\epsilon_t$$：隨機干擾項(stochastic disturbance)、誤差項(error term)。
 * $$\beta_1, \beta_2$$ 未知的迴歸係數。
-* 註：自變數與應變數為相關關係(correlation)，不可推論為因果關係。
+
+注意:
+* 自變數與應變數為相關關係(correlation)，不可推論為因果關係。
+* 每組資料假設為獨立同分佈(i.i.d.)。
 
 誤差項需滿足三大假設:
 

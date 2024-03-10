@@ -141,6 +141,22 @@ $$
 
 第1部分指出，如果某個模型（最佳模型）優於基準模型，那么最終會得到正值的估計相對績效(即最佳模型的損失小於基準模型)。
 
+當 $$l =1$$ 時，這一結果類似於 Rivers 和 Vuong（1991）在非預測環境下的模型選擇結果。當 ##l \geq 1$$ 時，它也類似於 Kloek（1972 年）的模型選擇結果。
+
+第2部分說，最佳模型最終具有相對於基準的最佳估計效能，其機率接近1。
+
+對預測模型選擇標準的虛無假設$$H_0$$檢驗來自以下命題。
+
+### Proposition 2.2
+> 假設$$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$
+> 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則當$$T \rightarrow \infty$$，可得：
+> 1. $$ \displaystyle \max_{k=1,2,\dots, l} \sqrt{n} \left{ \overline{f}_k - \mathrm{E}(f_k^{*})\right} \Rightarrow  V_l \equiv \max_{k=1,2,\dots, l} {\mathcal{Z}_k}$$ 而且
+> 2. $$ \displaystyle \min_{k=1,2,\dots, l} \sqrt{n} \left{ \overline{f}_k - \mathrm{E}(f_k^{*})\right} \Rightarrow  V_l \equiv \min_{k=1,2,\dots, l} {\mathcal{Z}_k}$$
+> 其中 $$\mathcal{Z} \sim N(0, \Omega)$$為$$l \times 1$$維的向量。
+
+鑒於漸近常態分佈，無論虛無假設還是對立假設為真，結論都成立。
+
+
 
 ## 參考資料
 

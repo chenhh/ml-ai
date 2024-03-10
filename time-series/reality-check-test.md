@@ -132,8 +132,7 @@ $$
 
 > 假設 $$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$
 > 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則：
-> 1. 若$$\mathrm{E}(f^{*}) >0$$ for some $$1 \leq k \leq l$$, 則$$\forall 0 \leq c < \mathrm{E}
-     > (f_k^{*})$$, \mathrm{P}(\overline{f}_k <c ) \rightarrow 1 \text{ as } T \rightarrow \infty$$。
+> 1. 若$$\mathrm{E}(f^{*}) >0$$ for some $$1 \leq k \leq l$$, 則$$\forall 0 \leq c < \mathrm{E}(f_k^{*})$$, \mathrm{P}(\overline{f}_k <c ) \rightarrow 1 \text{ as } T \rightarrow \infty$$。
 > 2. 若$$l > 1$$ 且$$\mathrm{E}(f_1^{*}) >\mathrm{E}(f_k^{*}), \foralll k=2,\dots, l$$, 則$$\mathrm
      > {P}(\overline{f}_1 > \overline{f}_k, ~ \forall k=2,\dots, l) \rightarrow 1 \text{ as } T 
      > \rightarrow \infty$$。 

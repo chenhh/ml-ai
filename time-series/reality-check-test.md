@@ -20,15 +20,13 @@ RC檢定必須要有一個基準模型，假設有$$m$$個要和基準模型比�
 
 ![](../.gitbook/assets/RC\_null-min.png)
 
-
-
 ## SPA(Superior Predictive Ability)檢定
 
 因RC的檢定效力在所比較的規則集合中，若有過多沒有解釋（預測）能力的規則被加入，會大大降低檢定效力。而SPA將統計量正規化後解決了這個問題，故截至目前為止是用來檢定技術分析(交易策略)是否有效的首要工具。
 
 ## Stepwise-RC & Stepwise-SPA 檢定
 
-Step-RC 檢定法可以透過多重階段，逐步找出所有顯著優於比較基準的模型。 然而Step-RC 檢定法的基礎是 RC 檢定法，所以其檢定力在各階段同樣容易受到較差模型影響。&#x20;
+Step-RC 檢定法可以透過多重階段，逐步找出所有顯著優於比較基準的模型。 然而Step-RC 檢定法的基礎是 RC 檢定法，所以其檢定力在各階段同樣容易受到較差模型影響。
 
 Hsu et al. 因此提出了 Step-SPA 檢定法，將各階段的檢定以 SPA 檢定法的方式加以調整。他們的數學證明與模擬結果均顯示，Step-SPA 檢定法可以增加 Step-RC 的檢定力。
 
@@ -38,7 +36,7 @@ Hsu et al. 因此提出了 Step-SPA 檢定法，將各階段的檢定以 SPA 檢
 
 MCS檢定程序
 
-* &#x20;確定模型集合，內有競爭模型與最佳模型。
+* 確定模型集合，內有競爭模型與最佳模型。
 * 最佳的指標是以用戶指定的標准來定義的。
 * MCS產生一個模型信賴區間集合，包含具有給定信賴區間度量的最佳模型們。
 
@@ -54,7 +52,7 @@ MCS檢定程序
 
 假設檢定是計算$$l \times 1$$維的期望向量$$\mathrm{E}(\mathbf{f^{*}})$$，其中第$$k$$個函數$$\mathbf{f^{*}}_k \equiv f_k(\mathbf{Z, \beta^{*}})$$，$$\beta^{*} = \mathrm{plim} \hat{\beta}_T$$ 表示$$\hat{\beta}_t$$機率收斂至$$\beta^{*}$$。注意此處$$l$$個函數(模型)使用相同的參數$$\mathbf{Z}$$與$$\beta^{*}$$，只有內部結構不同而已。
 
-&#x20;更準確的說，是檢定在$$l \times 1$$維的統計量 $$\displaystyle \overline{f} = \frac{1}{n} \sum_{t=R}^T \hat{f}_{t+\tau}$$，其中$$\hat{f}_{t+\tau} = f(\mathbf{Z}_{t+\tau}, \hat{\beta}_t)$$，且觀察資料是由$$\{ \mathbf{Z}_t \}$$，為定態[α](https://tw.piliapp.com/symbols/alpha/)混合([α](https://tw.piliapp.com/symbols/alpha/)-mixing)序列\[鄰近的隨機變數有相關性，但隨著$$n$$變大則逐漸獨立或不相關]且有和$$\mathbf{Z}$$(在時間$$t$$)相同邊際分佈所產生。
+更準確的說，是檢定在$$l \times 1$$維的統計量 $$\displaystyle \overline{f} = \frac{1}{n} \sum_{t=R}^T \hat{f}_{t+\tau}$$，其中$$\hat{f}_{t+\tau} = f(\mathbf{Z}_{t+\tau}, \hat{\beta}_t)$$，且觀察資料是由$$\{ \mathbf{Z}_t \}$$，為定態[α](https://tw.piliapp.com/symbols/alpha/)混合([α](https://tw.piliapp.com/symbols/alpha/)-mixing)序列\[鄰近的隨機變數有相關性，但隨著$$n$$變大則逐漸獨立或不相關]且有和$$\mathbf{Z}$$(在時間$$t$$)相同邊際分佈所產生。
 
 給定選定的函數(的差值)$$f_1,f_2,\dots, f_l$$，<mark style="color:red;">虛無假設</mark>$$H_0: \mathrm{E}(f^{*}) \leq 0$$<mark style="color:red;">表示沒有函數的預測表現(性能)比基準模型好</mark>。(<mark style="color:red;">注意此處的</mark>$$f_k$$<mark style="color:red;">不是函數之值，而是函數與基準模型預測的差值</mark>)
 
@@ -85,8 +83,6 @@ $$\hat{f}_{t+1} = \log(1+y_{t+1} S_1(X_{1, t+1}, \beta_1^{*})) - \log(1+y_{t+1} 
 
 $$\hat{f}_{t+1} = \log L_1(y_{t+1}, X_{1, t+1}, \hat{\beta}_{1,t}) - \log L_0(y_{t+1}, X_{0, t+1}, \hat{\beta}_{0,t})$$
 
-
-
 不僅在虛無假設$$\mathrm{E}(f^{*}) \leq 0$$下其它模型沒有比基準模型有更好的預測能力，且動差函數可做做為篩選模型的準則。即將$$k=1,2,\dots, l$$個模型，，在時間$$t+1$$時，每個模型獨立和基準模型比較，可得$$l$$個差值$$\hat{f}_{k, t+1}, k=1,2,\dots, l$$。
 
 如果表現最佳的模型之值仍然比基準模型差時，則可判定其它模型沒有比基準模型有更好的預測能力；因此虛無假設為$$\displaystyle H_0: \max_{k=1,2,\dots, l} \mathrm{E}(f_k^{*}) \leq 0$$ (多重假設檢定)，反之對立假設為至少有一個模型表現比基準模型好。
@@ -102,25 +98,20 @@ $$\hat{f}_{t+1} = \log L_1(y_{t+1}, X_{1, t+1}, \hat{\beta}_{1,t}) - \log L_0(y_
 West(1996)的論文中，Theorem 4.1給定了正規條件可保證分佈收斂：
 
 $$
-\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega) \text{ as } T \rightarrow 
-\infty
+\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega) \text{ as } T \rightarrow \infty
 $$
 
 且變異數矩陣$$\Omega \in \mathbb{R}^{l \times l}$$如下：
 
 $$
-\displaystyle 
-\Omega = \lim_{T \rightarrow \infty} \mathrm{Var} \left[
-\frac{1}{\sqrt{n}} \sum_{t=R}^T f(\mathbf{Z}_{t+\tau}, \beta^{*})
-\right]
+\displaystyle \Omega = \lim_{T \rightarrow \infty} \mathrm{Var} \left[ \frac{1}{\sqrt{n}} \sum_{t=R}^T f(\mathbf{Z}_{t+\tau}, \beta^{*}) \right]
 $$
-其中 $$ F = \equiv \mathrm{E}\left[ \frac{\partial}{\partial \beta} f(\mathbf{Z}, \beta^{*})\right]
-=0$$ 或 $$ \frac{n}{R} \rightarrow 0$$ 當$$ T \rightarrow \infty$$。
+
+其中 $$F = \equiv \mathrm{E}\left[ \frac{\partial}{\partial \beta} f(\mathbf{Z}, \beta^{*})\right] =0$$ 或 $$\frac{n}{R} \rightarrow 0$$ 當$$T \rightarrow \infty$$。
 
 當上述條件不成立時，West論文中的Theorem 4.1(b)仍然可以得到相同的結論，但是$$\Omega$$的形式更複雜。
 
-從上述理論中，West得到的標準漸近卡方統計量$$ n \overline{f}^\top \hat{\Omega}^{-1}\overline{f} $$為虛無假設$$\mathrm{E}(f^{*}) = 0$$的統計量。
-其中$$\hat{\Omega}$$ 為$$\Omega$$的一致估計量。
+從上述理論中，West得到的標準漸近卡方統計量$$n \overline{f}^\top \hat{\Omega}^{-1}\overline{f}$$為虛無假設$$\mathrm{E}(f^{*}) = 0$$的統計量。 其中$$\hat{\Omega}$$ 為$$\Omega$$的一致估計量。
 
 而我們感興趣的是虛無假設$$\mathrm{E}(f^{*}) \leq 0$$, 可得出基於$$\displaystyle \max_{k=1,\dots, l} \overline{f}_k$$的檢定。
 
@@ -130,46 +121,52 @@ $$
 
 ### Proposition 2.1
 
-> 假設 $$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$
-> 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則：
-> 1. 若$$\mathrm{E}(f^{*}) >0$$ for some $$1 \leq k \leq l$$, 則$$\forall 0 \leq c < \mathrm{E}(f_k^{*})$$, 
-     $$ \mathrm{P}(\overline{f}_k <c ) \rightarrow 1 \text{ as } T \rightarrow 
-     > \infty$$。
-> 2. 若$$l > 1$$ 且$$\mathrm{E}(f_1^{*}) >\mathrm{E}(f_k^{*}), \forall k=2,\dots, l$$, 
->    則$$\mathrm{P}(\overline{f}_1 > \overline{f}_k, ~ \forall k=2,\dots, l) \rightarrow 1$$ as 
-     $$ T \rightarrow \infty$$。 
+> 假設 $$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$ 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則：
+>
+> 1. 若$$\mathrm{E}(f^{*}) >0$$ for some $$1 \leq k \leq l$$, 則$$\forall 0 \leq c < \mathrm{E}(f_k^{*})$$, $$\mathrm{P}(\overline{f}_k <c ) \rightarrow 1 \text{ as } T \rightarrow > \infty$$。
+> 2. 若$$l > 1$$ 且$$\mathrm{E}(f_1^{*}) >\mathrm{E}(f_k^{*}), \forall k=2,\dots, l$$, 則$$\mathrm{P}(\overline{f}_1 > \overline{f}_k, ~ \forall k=2,\dots, l) \rightarrow 1$$ as $$T \rightarrow \infty$$。
 
 第1部分指出，如果某個模型（最佳模型）優於基準模型，那么最終會得到正值的估計相對績效(即最佳模型的損失小於基準模型)。
 
-當 $$l =1$$ 時，這一結果類似於 Rivers 和 Vuong（1991）在非預測環境下的模型選擇結果。當 ##l \geq 1$$ 時，它也類似於 Kloek（1972 年）的模型選擇結果。
+當 $$l =1$$ 時，這一結果類似於 Rivers 和 Vuong（1991）在非預測環境下的模型選擇結果。當 ##l \geq 1\$$ 時，它也類似於 Kloek（1972 年）的模型選擇結果。
 
 第2部分說，最佳模型最終具有相對於基準的最佳估計效能，其機率接近1。
 
 對預測模型選擇標準的虛無假設$$H_0$$檢驗來自以下命題。
 
 ### Proposition 2.2
-> 假設$$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$
-> 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則當$$T \rightarrow \infty$$，可得：
-> 1. $$ \displaystyle \max_{k=1,2,\dots, l} \sqrt{n}\left\{ \overline{f}_k - \mathrm{E}(f_k^{*})
-     \right\} \Rightarrow  V_l \equiv \max_{k=1,2,\dots, l} {\mathcal{Z}_k}$$ 而且
-> 2. $$ \displaystyle \min_{k=1,2,\dots, l} \sqrt{n} \left\{ \overline{f}_k - \mathrm{E}(f_k^{*})
-     \right\} \Rightarrow  W_l \equiv \min_{k=1,2,\dots, l} {\mathcal{Z}_k}$$
-> 其中 $$\mathcal{Z} \sim N(0, \Omega)$$為$$l \times 1$$維的向量。
+
+> 假設$$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$ 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則當$$T \rightarrow \infty$$，可得：
+>
+> 1. $$\displaystyle \max_{k=1,2,\dots, l} \sqrt{n}\left\{ \overline{f}_k - \mathrm{E}(f_k^{*})      \right\} \Rightarrow  V_l \equiv \max_{k=1,2,\dots, l} {\mathcal{Z}_k}$$
+> 2. $$\displaystyle \min_{k=1,2,\dots, l} \sqrt{n} \left\{ \overline{f}_k - \mathrm{E}(f_k^{*})\right\} \Rightarrow  W_l \equiv \min_{k=1,2,\dots, l} {\mathcal{Z}_k}$$
+>
+> 其中 $$\mathcal{Z}=[\mathcal{Z}_1, \dots, \mathcal{Z}_l]^\top \sim N(0, \Omega)$$為$$l \times 1$$維的向量。
 
 鑒於漸近常態分佈，無論虛無假設還是對立假設為真，結論都成立。
 
+因此使用這樣一個事實來進行虛無假設檢定，即虛無假設中，相對於對立假設的最不利條件(least favorite configuration)為$$\mathrm{E}(f_k^{*})=0,~ \forall k$$。即所有的模型表現和基準模型一樣好，不存在表現特別好的模型。
 
+因此$$\displaystyle \overline{V}_l \equiv \max_{k=1,\dots, l} \sqrt{n} \overline{f}_k$$在最不利條件下，當$$T \rightarrow \infty$$時可得漸近$$p$$值。通過以這種方式執行處無假設，我們以類似於$$\max_l (f_k^{*})$$的信賴區間反轉的方式獲得檢定的臨界值。此稱方式計算$$H_0: E(f^{*}) \leq 0$$的$$p$$值稱為真實性檢定(reality check test)。
+
+實現真實性檢定的挑戰是虛無假設的分佈，即一般情況下相關常態向量的極限值，是未知的。真實性檢定的分析方法是不可行的。
+
+然而，至少有兩種方法可以獲得期望的p值。
+
+#### Monte Carlo Reality Check
+
+首先是蒙特卡羅模擬求$$\Omega$$的一致估計式$$\hat{\Omega}$$。可從$$N(0, \hat{\Omega})$$中，以區塊自舉法(block bootstrap method)抽出大量樣本得樣本分佈後求p值。
+
+#### Bootstrap Reality Check
 
 ## 參考資料
 
-* \[Dieb95] F. X. Diebold and R. S. Mariano, "Comparing predictive accuracy," Journal of Business & economic statistics, vol. 20, 1995.&#x20;
-* <mark style="color:red;"> \[West96] K. D. West, "Asymptotic inference about predictive ability,
-" Econometrica: Journal of the Econometric Society, pp. 1067-1084, 1996. </mark>
+* \[Dieb95] F. X. Diebold and R. S. Mariano, "Comparing predictive accuracy," Journal of Business & economic statistics, vol. 20, 1995.
+* <mark style="color:red;">\[West96] K. D. West, "Asymptotic inference about predictive ability, " Econometrica: Journal of the Econometric Society, pp. 1067-1084, 1996.</mark>
 * \[Whit00] Halbert White, “A REALITY CHECK FOR DATA SNOOPING,” Econometrica, Vol. 68, No. 5, pp. 1097-1126, 2000
-* \[Roma05] Romano, J. P. and M. Wolf,. “Stepwise multiple testing as formalized data snooping,” Econometrica, Vol . 73, pp. 1237–1282, 2005.&#x20;
+* \[Roma05] Romano, J. P. and M. Wolf,. “Stepwise multiple testing as formalized data snooping,” Econometrica, Vol . 73, pp. 1237–1282, 2005.
 * \[Hans05] P.R. Hansen, “A test for superior predictive ability, ” Journal of Business and Economic Statistics, Vol. 23, No. 4, pp. 365-380, 2005.
 * \[Hans11] P. R. Hansen, A. Lunde, and J. M. Nason, "The Model Confidence Set," Econometrica, vol. 79, pp. 453-497, 2011.
-* \[Hsu10] Po-Hsuan Hsu , Yu-Chin Hsub, Chung-Ming Kuan, “Testing the predictive ability of technical analysis using a new stepwise test without data snooping bias,” Journal of Empirical Finance, Vol. 17, pp. 471-484, 2010.&#x20;
-* \[Clar12] T. E. Clark and M. W. McCracken, "Reality checks and comparisons of nested predictive models," Journal of Business & Economic Statistics, vol. 30, 2012.&#x20;
+* \[Hsu10] Po-Hsuan Hsu , Yu-Chin Hsub, Chung-Ming Kuan, “Testing the predictive ability of technical analysis using a new stepwise test without data snooping bias,” Journal of Empirical Finance, Vol. 17, pp. 471-484, 2010.
+* \[Clar12] T. E. Clark and M. W. McCracken, "Reality checks and comparisons of nested predictive models," Journal of Business & Economic Statistics, vol. 30, 2012.
 * \[Mari12] R. S. Mariano and D. Preve, "Statistical tests for multiple forecast comparison," Journal of Econometrics, vol. 169, pp. 123-130, 7, 2012.
-

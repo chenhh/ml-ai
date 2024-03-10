@@ -91,6 +91,34 @@ $$\hat{f}_{t+1} = \log L_1(y_{t+1}, X_{1, t+1}, \hat{\beta}_{1,t}) - \log L_0(y_
 
 如果表現最佳的模型之值仍然比基準模型差時，則可判定其它模型沒有比基準模型有更好的預測能力；因此虛無假設為$$\displaystyle H_0: \max_{k=1,2,\dots, l} \mathrm{E}(f_k^{*}) \leq 0$$ (多重假設檢定)，反之對立假設為至少有一個模型表現比基準模型好。
 
+上述的方法，也可使用AIC(Akake Information Criterion)方法控制變數的數量，只要將變數的數量計算為預測損失的一部分即可。
+
+我們的目標是一種不依賴於界值（如 Bonferroni 或其改進），而是直接提供（至少在漸近線上）適當 $$p$$ 值的方法。
+
+### 理論基礎
+
+只要經過適當標准化的$$\overline{f}$$具有連續的極限分布，我們就能提供上述的假設檢定方法。
+
+West(1996)的論文中，Theorem 4.1給定了正規條件可保證分佈收斂：
+
+$$
+\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega) \text{ as } T \rightarrow 
+\infty
+$$
+
+且變異數矩陣$$\Omega \in \mathbb{R}^{l \times l}$$如下：
+
+$$
+\displaystyle 
+\Omega = \lim_{T \rightarrow \infty} \mathrm{Var} \left[
+\frac{1}{\sqrt{n}} \sum_{t=R}^T f(\mathbf{Z}_{t+\tau}, \beta^{*})
+\right]
+$$
+其中 $$ F = \equiv \mathrm{E}\left[ \frac{\partial}{\partial \beta} f(\mathbf{Z}, \beta^{*})\right]
+=0$$ 或 $$ \frac{n}{R} \rightarrow 0$$ 當$$ T \rightarrow \infty$$。
+
+
+
 ## 參考資料
 
 * \[Dieb95] F. X. Diebold and R. S. Mariano, "Comparing predictive accuracy," Journal of Business & economic statistics, vol. 20, 1995.&#x20;

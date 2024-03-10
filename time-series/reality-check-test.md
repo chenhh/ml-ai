@@ -126,14 +126,26 @@ $$
 
 可檢定$$\mathrm{E}(f^{*}) =0$$的方法可直接用於我們感興趣的虛無假設。為了簡潔起來，以下限制檢定為$$\mathrm{E}(f^{*}) \leq 0$$。
 
+我們的第一個結果表明，當存在最佳預測模型時，使用最佳預測模型選擇標準選擇模型確實可以識別出最佳模型。
+
+### Proposition 2.1
+
+> 假設 $$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$
+> 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則：
+> 1. 若$$\mathrm{E}(f^{*}) >0$$ for some $$1 \leq k \leq l$$, 則$$\forall 0 \leq c < \mathrm{E}
+     > (f_k^{*})$$, \mathrm{P}(\overline{f}_k <c ) \rightarrow 1 \text{ as } T \rightarrow \infty$$。
+> 2. 若$$l > 1$$ 且$$\mathrm{E}(f_1^{*}) >\mathrm{E}(f_k^{*}), \foralll k=2,\dots, l$$, 則$$\mathrm
+     > {P}(\overline{f}_1 > \overline{f}_k, ~ \forall k=2,\dots, l) \rightarrow 1 \text{ as } T 
+     > \rightarrow \infty$$。 
 
 ## 參考資料
 
 * \[Dieb95] F. X. Diebold and R. S. Mariano, "Comparing predictive accuracy," Journal of Business & economic statistics, vol. 20, 1995.&#x20;
-* \[West96] K. D. West, "Asymptotic inference about predictive ability," Econometrica: Journal of the Econometric Society, pp. 1067-1084, 1996.&#x20;
+* <mark style="color:red;"> \[West96] K. D. West, "Asymptotic inference about predictive ability,
+" Econometrica: Journal of the Econometric Society, pp. 1067-1084, 1996. </mark>
 * \[Whit00] Halbert White, “A REALITY CHECK FOR DATA SNOOPING,” Econometrica, Vol. 68, No. 5, pp. 1097-1126, 2000
 * \[Roma05] Romano, J. P. and M. Wolf,. “Stepwise multiple testing as formalized data snooping,” Econometrica, Vol . 73, pp. 1237–1282, 2005.&#x20;
-* \[Hans05] P.R. Hansen, “A test for superior predictive ability, ” Journal of Business and Economic Statistics, Vol. 23, No. 4, pp. 365-380, 2005.&#x20;
+* \[Hans05] P.R. Hansen, “A test for superior predictive ability, ” Journal of Business and Economic Statistics, Vol. 23, No. 4, pp. 365-380, 2005.
 * \[Hans11] P. R. Hansen, A. Lunde, and J. M. Nason, "The Model Confidence Set," Econometrica, vol. 79, pp. 453-497, 2011.
 * \[Hsu10] Po-Hsuan Hsu , Yu-Chin Hsub, Chung-Ming Kuan, “Testing the predictive ability of technical analysis using a new stepwise test without data snooping bias,” Journal of Empirical Finance, Vol. 17, pp. 471-484, 2010.&#x20;
 * \[Clar12] T. E. Clark and M. W. McCracken, "Reality checks and comparisons of nested predictive models," Journal of Business & Economic Statistics, vol. 30, 2012.&#x20;

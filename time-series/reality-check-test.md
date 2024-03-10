@@ -150,8 +150,10 @@ $$
 ### Proposition 2.2
 > 假設$$\sqrt{n} (\overline{f} - \mathrm{E}(f^{*})) \Rightarrow N(0, \Omega)$$
 > 且 $$\Omega$$為正半定矩陣(Appendix的假設A成立)，則當$$T \rightarrow \infty$$，可得：
-> 1. $$ \displaystyle \max_{k=1,2,\dots, l} \sqrt{n} \left{ \overline{f}_k - \mathrm{E}(f_k^{*})\right} \Rightarrow  V_l \equiv \max_{k=1,2,\dots, l} {\mathcal{Z}_k}$$ 而且
-> 2. $$ \displaystyle \min_{k=1,2,\dots, l} \sqrt{n} \left{ \overline{f}_k - \mathrm{E}(f_k^{*})\right} \Rightarrow  V_l \equiv \min_{k=1,2,\dots, l} {\mathcal{Z}_k}$$
+> 1. $$ \displaystyle \max_{k=1,2,\dots, l} \sqrt{n}\left\{ \overline{f}_k - \mathrm{E}(f_k^{*})
+     \right\} \Rightarrow  V_l \equiv \max_{k=1,2,\dots, l} {\mathcal{Z}_k}$$ 而且
+> 2. $$ \displaystyle \min_{k=1,2,\dots, l} \sqrt{n} \left\{ \overline{f}_k - \mathrm{E}(f_k^{*})
+     \right\} \Rightarrow  W_l \equiv \min_{k=1,2,\dots, l} {\mathcal{Z}_k}$$
 > 其中 $$\mathcal{Z} \sim N(0, \Omega)$$為$$l \times 1$$維的向量。
 
 鑒於漸近常態分佈，無論虛無假設還是對立假設為真，結論都成立。

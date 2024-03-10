@@ -117,6 +117,14 @@ $$
 其中 $$ F = \equiv \mathrm{E}\left[ \frac{\partial}{\partial \beta} f(\mathbf{Z}, \beta^{*})\right]
 =0$$ 或 $$ \frac{n}{R} \rightarrow 0$$ 當$$ T \rightarrow \infty$$。
 
+當上述條件不成立時，West論文中的Theorem 4.1(b)仍然可以得到相同的結論，但是$$\Omega$$的形式更複雜。
+
+從上述理論中，West得到的標準漸近卡方統計量$$ n \overline{f}^\top \hat{\Omega}^{-1}\overline{f} $$為虛無假設$$\mathrm{E}(f^{*}) = 0$$的統計量。
+其中$$\hat{\Omega}$$ 為$$\Omega$$的一致估計量。
+
+而我們感興趣的是虛無假設$$\mathrm{E}(f^{*}) \leq 0$$, 可得出基於$$\displaystyle \max_{k=1,\dots, l} \overline{f}_k$$的檢定。
+
+可檢定$$\mathrm{E}(f^{*}) =0$$的方法可直接用於我們感興趣的虛無假設。為了簡潔起來，以下限制檢定為$$\mathrm{E}(f^{*}) \leq 0$$。
 
 
 ## 參考資料

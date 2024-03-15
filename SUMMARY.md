@@ -203,6 +203,7 @@
   * [平穩性、定態(stationary)](time-series/property/ping-wen-xing-ding-tai-stationary.md)
   * [單根檢定(unit root test)](time-series/property/unit-root-test.md)
 * [自共變異數/自相關函數](time-series/autocovariance-autocorrelation-function.md)
+* [偏自相關函函數](time-series/pacf.md)
 * [時間序列分解](time-series/ts-decomposition.md)
 * [指數平滑](time-series/exponential-smoothing.md)
 * [線性模型](time-series/linear\_model.md)

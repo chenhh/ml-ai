@@ -4,7 +4,7 @@ description: Lebesgue p-th integrable space
 
 # Lp空間
 
-簡介
+## 簡介
 
 連續(或幾乎處處連續)函數及Riemann積分理論，在很多場合可使用可測函數與Lebesgue理論所取代。
 
@@ -55,7 +55,7 @@ description: Lebesgue p-th integrable space
 >
 > 因為數學分析中的有界函數$$|f(x)|\leq M, \forall x \in  E$$條件太嚴格，因此放寬為在部分測度為0的集合之外都有界，即函數幾乎處處有界，$$\exists E_0 \subseteq E, ~m(E_0)=0$$且$$\exists M \geq  0\ni|f(x)| \leq M , \forall x \in E-E_0$$，此時稱$$f$$在集合$$E$$上本性有界(essential bounded)。而$$M$$稱為函數$$f$$的本性上界(essential upper bound)。
 >
-> 常簡寫為$$|f(x) \leq M \text{ a.e. }~ \forall x \in E$$或$$\exists M \geq  0 \ni m(\{x \in E~|~ |f(x)|>M\})=0$$。函數在定義域滿足$$f(x)> 0$$的測度為0，因此幾乎處處$$x \in E$$滿足$$f(x) \leq M$$。
+> 常簡寫為$$|f(x)| \leq M \text{ a.e. }~ \forall x \in E$$或$$\exists M \geq  0 \ni m(\{x \in E~|~ |f(x)|>M\})=0$$。函數在定義域滿足$$f(x)> 0$$的測度為0，因此幾乎處處$$x \in E$$滿足$$f(x) \leq M$$。
 >
 > 因此$$f$$(值域)幾乎處處有界（a.e. bound）就是本性有界（essential bounded)。
 

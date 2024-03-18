@@ -4,7 +4,9 @@
 
 在此討論的是測度應具有的性質，只要符合測度定義的函數均可視為測度。 <mark style="color:red;">測度是將可測集合對映至</mark>$$[0,\infty]$$<mark style="color:red;">的函數(注意測度值可為無窮大)，符號測度的值域為</mark>$$[-\infty, \infty]$$<mark style="color:red;">)</mark>。測度在$$\mathbb{R}^n$$​中是對長度、面積與體積的抽象推廣。
 
-討論建構測度的步驟，首先是用外測度處理實數中任意的集合，取能夠覆蓋該集合的最小可數子集合的外測度做為該集合的外測度。但是並非所有的實數集合都滿足外測度的性質，實數中只有可測的集合可滿足外測度的性質，而實數中可測的集合為sigma域。
+在討論測度或證明時，重點在於為<mark style="background-color:green;">有限測度(如機率測度)，或σ有限測度，或一般(正)測度</mark>。
+
+討論建構測度的步驟，首先是用外測度處理實數中任意的集合，取能夠覆蓋該集合的最小可數子集合的外測度做為該集合的外測度。但是並非所有的實數集合都滿足外測度的性質，實數中只有可測的集合可滿足外測度的性質，而實數中可測的集合為σ域。
 
 若外測度用於量測可測集合內元素之值時，因為滿足可加性，此時外測度等價於測度。
 
@@ -37,7 +39,7 @@
 在實數$$\mathbb{R}$$上常數的測度有<mark style="color:red;">Lebesgue measure (on Borel set)</mark>
 
 * $$\mu([a,b])=\mu([a,b))=\mu((a,b])=\mu((a,b))=|b−a|$$。
-* $$\mu([a,\infty))=\mu((a,\infty))=\mu((−\infty,b])=\mu((−\infty,b))=\infty$$
+* $$\mu([a,\infty))=\mu((a,\infty))=\mu((−\infty,b])=\mu((−\infty,b))=\infty$$。
 
 自然數或整數上的測度為<mark style="color:red;">計數測度</mark>(<mark style="color:red;">counting measure)。令</mark>$$X=\mathbb{N}$$，$$\Sigma=2^{\mathbb{N}}$$， $$\mu: \Sigma \rightarrow [0, \infty]$$。$$\mu(E)=\begin{cases}  |E|, & E \text{ 為有限集 }\\  \infty, & E \text{ 為無限集 } .  \end{cases}$$
 
@@ -71,9 +73,11 @@
 
 ## 測度的有限可加性
 
+> 給定測度函數$$μ: \Sigma \rightarrow [0, \infty]$$：
+>
 > * <mark style="color:red;">\[可加性 ,additive]</mark> $$\forall E,F \in Σ$$, $$E \cap F=\emptyset \Rightarrow \mu( E ∪F)=\mu(E)+\mu(F)$$
 > * <mark style="color:red;">\[有限可加性 finitely additive]</mark> $$\forall E_1,E_2,\ldots,E_n \in \Sigma$$, $$E_i \cap E_j=\emptyset, ~ \forall i \neq j$$ $$\displaystyle \Rightarrow \mu(\bigcup_{i=1}^n E_i)= \sum_{i=1}^n \mu(E_i)$$
-> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
+> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度值為無窮大時也成立。會得到$$\infty=\infty$$的結果。
 
 <details>
 
@@ -103,7 +107,7 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 > * \[<mark style="color:blue;">測度單調性</mark>] $$\forall E, F \in \Sigma, E \subseteq F \implies \mu (E) \leq \mu(F)$$​
 > * <mark style="color:red;">集合的大小與測度值有單調的關係</mark>。
-> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。
+> * 註：因為是直接用測度定義得證，因此即使有任一集合的測度為無窮大時也成立。會得到$$\infty \leq \infty$$的結果。
 > * 註：反向不一定成立，即$$\nu(E) \leq \nu(F) \;\not\!\!\!\implies E \subseteq F$$。
 
 <details>
@@ -128,9 +132,8 @@ $$\displaystyle \begin{aligned} \mu(\cup_{i=1}^n E_i) & = \mu(\cup_{i=1}^\infty 
 
 $$E=[1,3]$$，$$F=[4,7]$$。$$\mu(F)=3, \mu (E)=2$$，但$$E \cap F=\emptyset$$。
 
-> *
 > * <mark style="color:blue;">\[補集的測度]</mark> $$\forall E, F \in \Sigma, E \subseteq F$$且$$\mu(F) < \infty$$，則$$\mu(F -E) = \mu(F) - \mu(E)$$
-> * $$\mu(F) < \infty$$必須是有限值，否則無法移項得到等式。
+> * $$\mu(F) < \infty$$必須是有限值得到$$\mu(E)<\infty$$，否則無法移項得到等式。
 
 <details>
 
@@ -176,7 +179,7 @@ $$E=[1,3]$$，$$F=[4,7]$$。$$\mu(F)=3, \mu (E)=2$$，但$$E \cap F=\emptyset$$�
 
 ## 有限測度與σ有限測度
 
-> 如果對集合可得$$\mu(E)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
+> 如果對任意可測集合滿足$$\mu(E)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
 >
 > 註：一般有限測度是指對宇集合的測度為有限值，即$$\mu(X) <\infty$$。因為測度有單調性，因此$$\forall E \subseteq X, ~0 \leq \mu(E) \leq \mu(X) <\infty$$。
 
@@ -188,9 +191,9 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 >
 > 但不要求$$\mu(X)<\infty$$。只要求$$X$$的可數分割中，每一個分割集的測度有限即可。
 >
-> 由定義可知<mark style="color:blue;">有限測度</mark>$$\subseteq$$<mark style="color:blue;">σ有限測度</mark>。因為若$$\mu(X)<\infty$$，則其任意可測子集$$\mu(E) < \infty$$。
+> 由定義可知<mark style="color:blue;">有限測度</mark>⊆<mark style="color:blue;">σ有限測度</mark>。因為若$$\mu(X)<\infty$$，則其任意可測子集$$\mu(E) < \infty$$。
 
-實數的長度不是有限測度，<mark style="color:blue;">但實數的長度是</mark>σ<mark style="color:blue;">有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
+實數的長度不是有限測度，<mark style="color:blue;">但是</mark>σ<mark style="color:blue;">有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 <mark style="color:blue;">一般常用的測度大多為σ有限測度</mark>。如Lebesgue測度($$\mathbb{R}^n$$)，計數測度。
 
@@ -198,7 +201,7 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 
 > $$\forall E,F \in \Sigma \Rightarrow \mu(E \cup F)+\mu(E \cap F)=\mu(E)+\mu(F)$$
 >
-> 有限或無限測度時均成立。
+> 有限或一般測度時均成立。
 
 <details>
 
@@ -220,6 +223,7 @@ $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 
 > * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\bigcup_{n \in \mathbb{N}} E_n)$$
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
+> * 遞增集合序列極限的測度等於所有集合聯集的測度。
 > * <mark style="color:red;">如果</mark>$$\mu(E_1)=\infty$$<mark style="color:red;">，此性質仍然成立</mark>。
 
 <details>

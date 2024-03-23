@@ -2,9 +2,7 @@
 
 指數分佈（exponential distribution）
 
-
-指數分佈可以用來表示獨立隨機事件發生的**時間間隔（**兩次事件發生間的等待時間（週期））、**等待時間或是壽命的模式**。&#x20;
-比如旅客進入機場的時間間隔、打進客服中心電話的時間間隔、網站新條目出現的時間間隔等等。
+指數分佈可以用來表示獨立隨機事件發生的\*\*時間間隔（\*\*兩次事件發生間的等待時間（週期））、**等待時間或是壽命的模式**。 比如旅客進入機場的時間間隔、打進客服中心電話的時間間隔、網站新條目出現的時間間隔等等。
 
 令$$X$$ 為某一事件$$E$$ 前後兩次發生的間隔時間，對某一時間$$t>0$$， 事件發生的時間必定是大於$$t$$或是小於等於$$t$$，即
 
@@ -18,10 +16,10 @@
   * 其中$$\lambda > 0$$為每單位時間發生該事件的次數，與卜瓦松分佈的參數意義相同 。
   * $$\beta = \frac{1}{\lambda}$$為事件發生的平均等待時間。
 * 機率密度函數：
-  * $$f(X| \lambda ) = \bigg\{ \begin{aligned} &\lambda e^{-\lambda} &  x \geq 0 \\& 0 & x < 0 \end{aligned}$$
-  * $$f(X| \beta ) = \bigg\{ \begin{aligned} &\frac{1}{\beta} e^{-\frac{1}{\beta}} &  x \geq 0 \\& 0 & x < 0 \end{aligned}$$
+  * $$f(X| \lambda ) = \bigg\{ \begin{aligned} &\lambda e^{-\lambda} & x \geq 0 \\& 0 & x < 0 \end{aligned}$$
+  * $$f(X| \beta ) = \bigg\{ \begin{aligned} &\frac{1}{\beta} e^{-\frac{1}{\beta}} & x \geq 0 \\& 0 & x < 0 \end{aligned}$$
 * 期望值 $$\mathrm{E}(X) = \frac{1}{\lambda} = \beta$$
-* 變異數 $$\mathrm{Var}(X)  = \frac{1}{\lambda^2} = \beta^2$$
+* 變異數 $$\mathrm{Var}(X) = \frac{1}{\lambda^2} = \beta^2$$
 
 ### 指數分佈與卜瓦松過程的關係
 
@@ -33,7 +31,7 @@
 
 ### 指數分布具有無記憶性的性質（Memoryless Property）
 
-如果一個隨機變數呈指數分布，它的條件機率遵循：$$\displaystyle \mathrm{P}(T>s+t\;|\;T>t)= \mathrm{P}(T>s) ~ \forall s, t  \geq 0$$
+如果一個隨機變數呈指數分布，它的條件機率遵循：$$\displaystyle \mathrm{P}(T>s+t\;|\;T>t)= \mathrm{P}(T>s) ~ \forall s, t \geq 0$$
 
 ## 常態分佈（高斯分佈）(normal (Gaussian distribution)
 
@@ -59,11 +57,11 @@
 
 在實際應用上，常考慮一組資料具有近似於常態分布的機率分布。若其假設正確，則約68.3%數值分布在距離平均值有1個標準差之內的範圍，約95.4%數值分布在距離平均值有2個標準差之內的範圍，以及約99.7%數值分布在距離平均值有3個標準差之內的範圍。稱為「68-95-99.7法則」或「經驗法則」。
 
-![標準常態分佈](../.gitbook/assets/400px-Standard\_deviation\_diagram.svg.png)
+![標準常態分佈](../../.gitbook/assets/400px-Standard\_deviation\_diagram.svg.png)
 
 ### 常態分佈參數的線性組合
 
-$$X \sim N(\mu, \sigma^2)$$且 $$a,b \in \mathbb{R}$$，則$$aX+b \sim  N(a\mu +b, (a\sigma)^2)$$
+$$X \sim N(\mu, \sigma^2)$$且 $$a,b \in \mathbb{R}$$，則$$aX+b \sim N(a\mu +b, (a\sigma)^2)$$
 
 ### 獨立常態分佈隨機變數的性質
 
@@ -86,14 +84,12 @@ $$X \sim N(\mu, \sigma^2)$$且 $$a,b \in \mathbb{R}$$，則$$aX+b \sim  N(a\mu +
 
 卡方分佈(chi-square distribution)
 
+卡方分布（chi-square distribution）是常見的抽樣分佈。 $$k$$個獨立的標準常態分佈變數的平方和服從自由度為$$k$$的卡方分佈。
 
-卡方分布（chi-square distribution）是常見的抽樣分佈。
-$$k$$個獨立的標準常態分佈變數的平方和服從自由度為$$k$$的卡方分佈。
-
-由卡方分佈延伸出來Pearson卡方檢定常用於：&#x20;
+由卡方分佈延伸出來Pearson卡方檢定常用於：
 
 * 樣本某性質的比例分布與母體理論分布的適配度（例如某行政機關男女比是否符合該機關所在城鎮的男女比）；
-* &#x20;同一母體的兩個隨機變量是否獨立（例如人的身高與交通違規的關聯性）；
+* 同一母體的兩個隨機變量是否獨立（例如人的身高與交通違規的關聯性）；
 * 二或多個母體同一屬性的同質性檢定（義大利麵店和壽司店的營業額有沒有差距）。
 
 ### F分佈
@@ -108,18 +104,6 @@ beta分佈可以看作一個機率的機率分佈（meta distribution），當�
 
 在貝氏共軛函數中，對於二項式分佈$$B(n,p)$$為似然函數時，beta分佈為其共軛先驗/後驗函數。
 
-
-
-
-
 ## Gamma分佈
 
-隨機變數$$X \sim \Gamma(\alpha, \beta)$$
-，$$\alpha$$稱形狀變數
-，$$\beta$$稱尺度變數
-。
-
-
-
-
-
+隨機變數$$X \sim \Gamma(\alpha, \beta)$$ ，$$\alpha$$稱形狀變數 ，$$\beta$$稱尺度變數 。

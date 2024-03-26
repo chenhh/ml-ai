@@ -64,14 +64,35 @@ $$
 
 ## 參數估計方法
 
-* 最小平方估計法(least squares estimation)，也稱最小平方法(ordinary least square, OLS)。
+* 最小平方估計法(least squares estimation)，也稱最小平方法(ordinary least square, OLS)：最小化觀測值$$Y_t$$與平均值$$\mathrm{E}(Y_t)$$或條件平均值$$\mathrm{E}(Y_t|X_t)$$的離差平方和。
 * 最佳線性不偏估計法(best linear unbiased estimation，BLUE)。
 * 最大概似估計法(maximum likelihood estimation, MLE)。
 
+### OLS
 
+$$\displaystyle  \begin{aligned} \min_{\beta_0, ~\beta_1} S &= \sum_{t=1}^T (Y_t - \mathrm{E}(Y_t))^2 \\     & = \sum_{t=1}^T (Y_t - \beta_0 - \beta_1X_t)^2  \end{aligned}$$
 
-*
-*
+上式為無限制式的凸函數，因此極值出現在一階微分為0之處：
+
+$$\displaystyle  \begin{aligned} \frac{\partial S}{\partial \beta_0} &= -2 \sum_{t=1}^T (Y_t - \beta_0 - \beta_1 X_t) = 0  \\ \frac{\partial S}{\partial \beta_1} &= -2 \sum_{t=1}^T X_t(Y_t - \beta_0 - \beta_1 X_t) = 0   \end{aligned}$$
+
+整理可得最小平方標準式(least square normal equations)：
+
+$$\displaystyle  \begin{aligned} \sum_{t=1}^T Y_t &= \hat{\beta}_0 T +\hat{\beta}_1 \sum_{t=1}^T X_t \\ \sum_{t=1}^T X_t Y_t &= \hat{\beta}_0 \sum_{t=1}^T X_t +\hat{\beta}_1 \sum_{t=1}^T X_t^2 \\  \end{aligned}$$
+
+其中$$\hat{\beta}_0, \hat{\beta}_1$$差示由樣本得到估計值，非模型真值。
+
+令殘差$$e_t = Y_t - \hat{Y}_t$$，上式可改寫成：
+
+$$\displaystyle  \begin{aligned} \sum_{t=1}^T e_t &= 0 \\ \sum_{t=1}^T X_te_t &= 0 \\  \end{aligned}$$
+
+解聯立方程式可得：
+
+$$\displaystyle  \begin{aligned} \hat{\beta}_1 = \frac{T\sum_{t=1}^T X_t Y_t - \sum_{t=1}^T X_t \sum_{t=1}^T Y_t  }{T \sum_{t=1}^T X_t^2 - (\sum_{t=1}^T X_t)^2} =  \frac{\sum_{t=1}^T (X_t - \overline{X})(Y_t - \overline{Y})}{\sum_{t=1}^T (X_t - \overline{X})^2}  \end{aligned}$$。
+
+$$\displaystyle  \begin{aligned} \hat{\beta}_0 = \overline{Y} - \hat{\beta}_1 \overline{X}  \end{aligned}$$。
+
+註：上式也可用線性代數的[正交投影矩陣](../linear-algebra/inner-product-space/least-square-solution.md)的到相同的結果。
 
 
 

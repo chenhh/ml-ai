@@ -92,6 +92,8 @@ $$\displaystyle  \begin{aligned} \hat{\beta}_1 = \frac{T\sum_{t=1}^T X_t Y_t - \
 
 $$\displaystyle  \begin{aligned} \hat{\beta}_0 = \overline{Y} - \hat{\beta}_1 \overline{X}  \end{aligned}$$。
 
+<mark style="color:red;">因此樣本迴歸直接必會通過(</mark>$$\overline{X}, \overline{Y}$$<mark style="color:red;">)這一點</mark>。
+
 註：上式也可用線性代數的[正交投影矩陣](../linear-algebra/inner-product-space/least-square-solution.md)的到相同的結果。
 
 

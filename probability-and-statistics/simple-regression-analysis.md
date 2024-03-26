@@ -98,6 +98,19 @@ $$\displaystyle  \begin{aligned} \hat{\beta}_0 = \overline{Y} - \hat{\beta}_1 \o
 
 
 
+```python
+import numpy as np
+
+def simple_ols(dataset):
+    rec = np.array(dataset)
+    ys, xs = rec[:, 0], rec[:, 1]
+    adj_ys = ys - ys.mean()
+    adj_xs = xs - xs.mean()
+    beta_1 = (adj_ys * adj_xs).sum()/(adj_xs *adj_xs).sum()
+    beta_0 = ys.mean() - beta_1 * xs.mean()
+    print(f"intercept: {beta_0}, slope: {beta_1}")
+```
+
 ### Libreoffice迴歸分析
 
 {% embed url="https://help.libreoffice.org/6.4/zh-CN/text/scalc/01/statistics_regression.html?DbPAR=CALC" %}

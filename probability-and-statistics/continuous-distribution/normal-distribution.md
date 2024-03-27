@@ -1,6 +1,12 @@
+---
+description: 高斯(Gaussian)分佈, 正態分佈
+---
+
 # 常態分佈
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="375"><figcaption><p>常態分佈區間</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="375"><figcaption><p>常態分佈區間</p></figcaption></figure>
+
+常態分佈是已知二階統計量的最大熵分佈。它的機率分佈可以完全由二階統計量得出。
 
 常態分配基本上就是在描述一個變數，他的平均值跟標準差會形成一個固定的分佈。&#x20;
 

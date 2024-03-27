@@ -8,6 +8,8 @@ description: student distribution
 
 常用的三大抽樣分佈之一，t分佈，卡方分佈，F分佈。
 
+令隨機變數$$X \sim N(0,1)$$，$$Y \sim \chi_n^2$$為自由度$$n$$的卡方分佈，則$$T=\frac{X}{\sqrt{Y/n}} \sim t(n)$$為自由度$$n$$的t分佈。
+
 t 分佈說明當母體標準差$$\sigma$$不明，且觀察結果來自常態分佈母體時，樣本平均數與母體平均數之間的標準距離。
 
 * 和常態分佈相同，t 分佈的形狀很平滑。&#x20;
@@ -23,3 +25,15 @@ t 分佈說明當母體標準差$$\sigma$$不明，且觀察結果來自常態�
 <figure><img src="../../.gitbook/assets/image (19).png" alt="" width="375"><figcaption><p>t 分佈與標準常態分佈。</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (20).png" alt="" width="375"><figcaption><p>常態分佈與自由度為 30 時的 t 分佈</p></figcaption></figure>
+
+## 機率密度函數
+
+$$X \sim t(n)$$，
+
+$$\displaystyle  \begin{aligned} f(t) &= \frac{\Gamma((n+1)/2)}{\sqrt{n \pi} \Gamma(n/2)} (1+t^2/n)^{-(n+1)/2}, ~ t \in \mathbb{R} \\ \Gamma(n) &= \int_0^\infty t^{n-1} e^{-t} dt, ~ n > 0  \end{aligned}$$
+
+在 t 分佈裡, 若自由度$$n=1$$，得到柯西分佈$$\mathcal{C}(0,1)$$。
+
+期望值：$$\mathrm{E}(X) =0, n \geq 2$$。
+
+變異數：$$\mathrm{Var}(X) = \frac{n}{n-2}, n \geq 3$$。

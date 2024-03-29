@@ -299,7 +299,7 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 ## 集合序列上下極限的測度(Fatou lemma of measure)
 
-> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，則：
+> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，(測度$$\mu(E_k)$$)則：
 >
 > 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$&#x20;
 > 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ if $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
@@ -345,6 +345,10 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 由(1,2)得$$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$ (QED)
 
 </details>
+
+### Q: 何時不等式會成立
+
+
 
 ## <mark style="background-color:red;">The Borel-Cantelli lemma</mark>
 

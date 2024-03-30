@@ -72,7 +72,10 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 >
 > $$h_\epsilon(x) \leq f(x) \leq g_\epsilon(x)$$且$$0 \leq g_\epsilon(x) - h_\epsilon(x) < \epsilon, ~\forall x \in E$$。
 >
-> <mark style="color:blue;">註：</mark>$$f$$<mark style="color:blue;">必須有界才能保證切值域時，兩點之間長度小於</mark>$$\epsilon$$。
+> <mark style="color:blue;">註：</mark>$$f$$<mark style="color:blue;">必須有界才能保證切值域時，兩點之間長度小於$$\epsilon$$ </mark>。
+> 
+> 因為函數$$f$$有界，因此將值域切$$n$$段，每段的長度均小於$$\epsilon$$。令其中第$$k$$段為$$I_k=[y_{k-1}, y_k)$$，取所有的$$y_{k-1}$$
+> 得簡單函數$$$$h_\epsilon(x) = \sum_{k=1}^n y_{k-1} \chi_{E_k}(x)$$與$$g_\epsilon(x) = \sum_{k=1}^n y_{k} \chi_{E_k}(x)$$夾擠$$f(x)$$。
 
 <details>
 
@@ -86,8 +89,8 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 
 定義在$$E$$上的簡單函數$$h_\epsilon, g_\epsilon$$為：
 
-* $$h_\epsilon(x) = \sum_{i=1}^n y_{k-1} \chi_{E_k}(x)$$
-* $$g_\epsilon(x) = \sum_{i=1}^n y_{k} \chi_{E_k}(x)$$
+* $$h_\epsilon(x) = \sum_{k=1}^n y_{k-1} \chi_{E_k}(x)$$
+* $$g_\epsilon(x) = \sum_{k=1}^n y_{k} \chi_{E_k}(x)$$
 
 給定$$x \in E$$，因為$$f(E) \subseteq (c,d)$$，因此存在唯一的整數$$k \ni 1 \leq k \leq n$$滿足$$y_{k-1} \leq f(x) < y_k$$。
 

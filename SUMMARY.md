@@ -161,6 +161,7 @@
 * [關聯結構(copula)](probability-and-statistics/copula.md)
 * [一般動差法(GMM)](probability-and-statistics/yi-ban-dong-cha-fa-gmm.md)
 * [實驗設計](probability-and-statistics/experiment-design.md)
+* [直方圖（Histogram）與長條圖（Bar chart）](probability-and-statistics/histogram-barchart.md)
 
 ## 線性代數 <a href="#linear-algebra" id="linear-algebra"></a>
 

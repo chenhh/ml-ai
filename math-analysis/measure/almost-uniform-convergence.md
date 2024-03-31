@@ -10,13 +10,23 @@ description: almost Uniform convergence
 
 ## 幾乎一致收斂(almost uniform convergence)
 
-> 函數序列$$\{f_n\}$$幾乎處處一致收斂至函數$$f$$：
+> 函數序列$$\{f_n\}$$幾乎一致收斂至函數$$f$$：
 >
 > $$\forall \epsilon > 0$$，存在可測集$$E_{\epsilon}$$且滿足$$\mu(E_{\epsilon})<\epsilon$$使得$$\displaystyle \lim_{n \rightarrow \infty} f_n(x) = f(x)$$uniformly on $$E_\epsilon^c$$。
 >
 > 或者說$$\forall \epsilon >0, ~ \mu(E_{\epsilon}) < \infty, ~ \exist n_0 \in \mathbb{N}\ni \forall n \geq n_0$$$$\displaystyle \sup_{x \in X - E_\epsilon^c}\| f_n(x) - f(x)\| < \epsilon$$。
+>
+> 對於任何給定值 ε，都可以找到一個「可忽略不計」的集合（測度小於ε ），在這個集合上允許不均勻收斂，而在其他定義域，均滿足一致收斂。
+>
+> 幾乎處處一致收斂(uniform convergence almost everywhere )\[條件更嚴格]
+>
+> $$\displaystyle \exists E_0，\mu(E_0)=0 \ni  \lim_{n \rightarrow \infty }\sup_{x \in X-E_0} |f_n(x)-f(x)|=0$$。
+>
+> 此處有一測量0的集合，可允許非均勻收斂，而在其它定義域，均滿足一致收斂。
+>
+> <mark style="background-color:red;">幾乎處處一致收斂=>幾乎一致收斂</mark>。
 
-註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」絕對不可以說成「幾乎一致收斂」，兩者不是等價定義</mark>。
+註：<mark style="color:blue;">幾乎一致收斂，只要求一致收斂不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度很小，即</mark> $$\mu(E_\epsilon)< \epsilon$$<mark style="color:blue;">。而幾乎處處有性質</mark>$$P(x)$$<mark style="color:blue;">，則要求</mark>$$P(x)$$<mark style="color:blue;">不成立的集合</mark>$$E_\epsilon$$<mark style="color:blue;">的測度為0，即</mark>$$\mu(E_\epsilon)=0$$ <mark style="color:blue;">。因此「幾乎一致收斂」並非「幾乎處處一致收斂」</mark>。<mark style="color:red;">幾乎處處一致收斂可保證幾乎一致收斂，反之不成立</mark><mark style="color:blue;">。</mark>
 
 <mark style="color:red;">註：不一致收斂發生於收斂函數</mark>$$f$$<mark style="color:red;">出現"突變"處，挖去突變點的附近測度可以任意小的集合(但不是零測度集)，則</mark>$$f_n$$<mark style="color:red;">可以一致收斂</mark>。例如觀察一個非一致致收斂的函數列，比如 $$\ f_n( x )=x^n$$ 在區間$$[ 0 , 1 ]$$上就非一致收斂，但可發現如果把區間挖掉長度$$ϵ>0$$任意小的一部分(不等於0)，那麼$$f_n$$ 在$$[0 , 1 − \epsilon]$$ 上總是一致收斂的。
 
@@ -24,7 +34,7 @@ description: almost Uniform convergence
 
 但如果可得$$\displaystyle \sup_{x \in E-E_0}|f_n(x) - f(x)|=0, \forall n \geq n_0$$時，為一致收斂。
 
-#### 範例
+#### 範例：幾乎一致收斂但非幾乎處處一致收斂
 
 $$f_n(x)=x^n$$ on $$[0,1]$$，可得點態收斂$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)= \left\{ \begin{aligned} 0&, \text{ if } 0 \leq x < 1, \\ 1&, \text{ if } x = 1  \end{aligned} \right.$$為非連續函數，但即使去除掉$$x=1$$，考慮$$f_n(x)=x^n ~ \text{ on } [0,1)$$也非一致收斂(由sup的定義可得$$\displaystyle \sup_{x \in [0,1)}x^n = \sup_{x \in (0,1)}x^n = \sup_{x \in (0,1)}x^n =1$$)；更進一步可得不存在集合$$S$$使得$$f_n \rightarrow f$$ uniformly on $$[0,1]-S$$。
 
@@ -38,6 +48,8 @@ $$x^n = \frac{1+\epsilon}{2}^n=\frac{1}{2^n}(1+\epsilon)^n=\frac{1}{2^n} \sum_{k
 
 * [https://math.stackexchange.com/questions/4727429/almost-uniform-convergence-equivalent-definition](https://math.stackexchange.com/questions/4727429/almost-uniform-convergence-equivalent-definition)
 * [https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence](https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence)
+* [https://math.stackexchange.com/questions/2714634/equivalent-definition-of-almost-uniform-convergence?rq=1](https://math.stackexchange.com/questions/2714634/equivalent-definition-of-almost-uniform-convergence?rq=1)
+* [https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence?rq=1](https://math.stackexchange.com/questions/4414448/doubts-regarding-almost-uniform-convergence?rq=1)
 * [https://math.stackexchange.com/questions/3198020/does-xn-converges-uniformly-on-0-1](https://math.stackexchange.com/questions/3198020/does-xn-converges-uniformly-on-0-1)
 * [https://math.stackexchange.com/questions/1254285/why-is-f-nx-xn-not-uniformly-convergent-on-0-1](https://math.stackexchange.com/questions/1254285/why-is-f-nx-xn-not-uniformly-convergent-on-0-1)
 
@@ -154,7 +166,9 @@ $$\forall \epsilon > 0, ~ E_\epsilon=[1-\epsilon, 1]$$，可得$$m(E_\epsilon)=\
 
 則$$\displaystyle \lim_{n \rightarrow \infty } f_n(x) = 1 ~\text{a.e. on } (0, \infty)$$但是在$$(0, \infty)$$中任一個有限測度集外均非一致收斂於$$f(x)=1$$。
 
-##
+## 幾乎處處收斂保證測度收斂
+
+* [https://math.stackexchange.com/questions/3332265/almost-uniform-convergence-implies-convergence-in-measure?rq=1](https://math.stackexchange.com/questions/3332265/almost-uniform-convergence-implies-convergence-in-measure?rq=1)
 
 
 

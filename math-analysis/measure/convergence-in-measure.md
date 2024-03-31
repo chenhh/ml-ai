@@ -119,7 +119,7 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 ### 測度收斂可移項
 
 1. $$f_n \rightarrow f$$ in measure$$\Leftrightarrow  f_n -f \rightarrow 0$$ in measure.
-2. $$f_n \rightarrow 0$$ in measure $$\Leftrightarrow f_n^2 \rightarrow 0$$ in meausre.
+2. $$f_n \rightarrow 0$$ in measure $$\Leftrightarrow f_n^2 \rightarrow 0$$ in measure.
 3. $$f_n \rightarrow f$$ in measure $$\Rightarrow f_n^2 \rightarrow f^2$$ in measure.
 
 <details>
@@ -166,7 +166,7 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 </details>
 
-### 測度收斂相加減仍為測度收斂
+### 測度收斂相加減仍為測度收斂(線性性質)
 
 > $$f_n \rightarrow f$$ in measure且$$g_n \rightarrow g$$ in measure.
 >
@@ -200,7 +200,7 @@ case 2:$$f_n$$在該點均為有限值，但隨$$n$$發散。
 
 ### 測度收斂的絕對值收斂
 
-> $$f_n \rightarrow f$$ in measure $$\Rightarrow |f_n| \rightarrow |f|$$ in meausre.
+> $$f_n \rightarrow f$$ in measure $$\Rightarrow |f_n| \rightarrow |f|$$ in measure.
 
 <details>
 

@@ -20,9 +20,9 @@ Radon-Nikodym 導數定理的證明跟 Lebesgue 分解定理是非常接近的�
 2. 有界性：$$0 \leq F(x) \leq 1$$。
 3. 右連續性：$$F(x)$$右連續存在。
 
-$$F$$存在如下分解：$$F(x)=g_1(x)+g_2(x)+g_3(x)$$ ,其中$$g_1$$為絕對連續的單調遞增函數，$$g_2$$為奇異函數， $$g_3$$為階躍函數。
+$$F$$<mark style="background-color:purple;">存在如下分解：</mark>$$F(x)=g_1(x)+g_2(x)+g_3(x)$$<mark style="background-color:purple;">，其中</mark>$$g_1$$<mark style="background-color:purple;">為絕對連續的單調遞增函數，</mark>$$g_2$$<mark style="background-color:purple;">為奇異函數，</mark> $$g_3$$<mark style="background-color:purple;">為階躍函數</mark>。
 
-這並不是說任意一個隨機變數一定是這三種之一，比如說一個連續隨機變數+一個離散隨機變數所得的結果既不是連續型也不是離散型，只是說一般的隨機變數分解成這三類隨機變數的和。
+這並不是說任意一個隨機變數一定是這三種之一，比如說一個連續隨機變數+一個離散隨機變數所得的結果既不是連續型也不是離散型，只是說<mark style="background-color:purple;">一般的隨機變數可分解成這三類隨機變數的和</mark>。
 
 ## Radon-Nikodym 導數應用
 

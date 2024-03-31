@@ -6,7 +6,7 @@ description: absolutely continuous function
 
 ## 簡介
 
-可微分函數為連續函數，但反之不成立。Lebesgue測度中證明了連續函數幾乎處處可微。
+可微分函數為連續函數，但反之不成立(例如$$f(x)=|x|$$在$$x=0$$不可微分)。<mark style="color:red;">Lebesgue測度中證明了連續函數幾乎處處可微</mark>。
 
 <mark style="color:blue;">而幾乎處處可微分函數中，有些函數在可微分的點導數值為0，但函數值不是常數(例如Cantor函數)，為了排除這一類函數，因此定義絕對連續函數</mark>。
 
@@ -22,7 +22,7 @@ description: absolutely continuous function
 >
 > 若$$\displaystyle \forall \epsilon > 0, ~\exists \delta > 0 \ni \sum_{k=1}^n |b_k - a_k| < \delta \Rightarrow \sum_{k=1}^n |f(b_k) - f(a_k)|<\epsilon$$。
 
-lipschitz條件⊆絕對連續函數⊆連續函數。
+<mark style="background-color:red;">Lipschitz條件⊆絕對連續函數⊆連續函數</mark>。
 
 ### 絕對連續函數類
 
@@ -39,7 +39,7 @@ lipschitz條件⊆絕對連續函數⊆連續函數。
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: Lipschitz條件中，任兩點之間的斜率必(存在)為有限值。因此當<span class="math">n</span>個值域總和小於<span class="math">\epsilon</span>時，只要定義域<span class="math">n</span>個區間，每個區間的長度<span class="math">\delta</span>均小於<span class="math">\epsilon/max(m_1, \dots, m_n)</span>時，必可滿足絕對連續的條件。</summary>
 
 取$$[a,b]$$中任意有限個不相交的開區間$$(a_i, b_i), ~i=1,2,\dots, n$$。
 
@@ -47,7 +47,7 @@ lipschitz條件⊆絕對連續函數⊆連續函數。
 
 因此$$\forall \epsilon > 0$$ 取$$\delta = \frac{\epsilon}{\max(m_1, \dots, m_n)}$$，只要$$\sum_{i=1}^n |a_i -b_i| < \delta$$，
 
-可得$$\sum_{i=1}^n |f(a_i - f(b_i)| \leq sum_{i=1}^m  |a_i - b_i| \leq \max(m_1, \dots ,m_n) \cdot \delta \leq \epsilon$$&#x20;
+可得$$\sum_{i=1}^n |f(a_i - f(b_i)| \leq \sum_{i=1}^m  |a_i - b_i| \leq \max(m_1, \dots ,m_n) \cdot \delta \leq \epsilon$$&#x20;
 
 (QED)
 

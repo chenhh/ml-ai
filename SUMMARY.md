@@ -91,6 +91,7 @@
   * [2.a有界可測函數在有限測度集的積分](math-analysis/lebesgue-integral/integral-of-a-bouned-measurable-function-over-a-set-of-finite-measure.md)
   * [2.b非負可測函數的積分](math-analysis/lebesgue-integral/2.b-fei-fu-ke-ce-han-shu-de-ji-fen.md)
   * [平均收斂](math-analysis/lebesgue-integral/convergence-in-the-mean.md)
+  * [一致可積函數](math-analysis/lebesgue-integral/uniformly-integrable-function.md)
 * [賦範空間(normed space)](math-analysis/normed-space.md)
 * [Lp空間](math-analysis/lp-space/README.md)
   * [Holder不等式](math-analysis/lp-space/holder-inequality.md)

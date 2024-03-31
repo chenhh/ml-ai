@@ -6,27 +6,29 @@
 
 由於測度$$m: \Sigma \rightarrow [0,\infty]$$和可測函數$$f: E\rightarrow [-\infty, \infty]$$之值均可能為$$\infty$$，因此討論可積分函數$$\int_E f<\infty$$要特別討論測度為0且函數值為$$\infty$$與測度為$$\infty$$且函數值為0兩種條件(因為$$0\cdot \infty=0$$)。
 
-Tom M. Apostol在數學分析中使用了切割定義域的上積分差值定義Lebesgue積分，因為在數學分析中沒有定義測度，所以此定義方法不常見。
+Tom M. Apostol在數學分析中使用了切割定義域的上積分差值定義Lebesgue積分，因為在數學分析中沒有定義測度，所以此定義方法在實變分析不常見。
 
-### 建構Lebesgue積分(周民強/陶哲軒/Walter Rudin，使用非負簡單函數)
+## 常見建構Lebesgue積分
+
+### 使用非負簡單函數，周民強/陶哲軒/Walter Rudin
 
 1. 定義非負可測簡單函數的積分。
 2. 可測簡單函數積分上界定義非負可測函數的積分。
 3. 通過$$f(x)=f^{+}(x)-f^{-}(x)$$定義一般可測函數的積分。
 
-### 建構Lebesgue積分(Halsey Royden/Gerald B. Folland/Elias M. Stein, 使用一般簡單函數)
+### 使用一般簡單函數，Halsey Royden/Gerald B. Folland/Elias M. Stein
 
 1. 定義一般簡單函數在有限測度集相對於有界函數的積分。
 2. 用一般簡單函數在有限測度集的上/下積分夾擠得有界函數的積分。
 3. 用有界非負函數在有限支撐集的積分上界定義一般非負可測函數在一般測度的積分。
 4. 一般可測函數的積分。
 
-### 建構Lebesgue積分(Avner Friedman, 使用Cauchy in mean)
+### 使用Cauchy in mean建構積分, Avner Friedman
 
 1. 定義一般簡單函數的積分。
 2. 定義Cauchy sequence in mean的函數序列$$(\displaystyle \lim_{n,m \rightarrow \infty}\int_E |f_n-f_m|=0$$)，且函數序列幾乎處處(或測度)收斂$$(\displaystyle \lim_{n \rightarrow \infty} f_n(x)=f(x)$$)。則積分定義為$$\displaystyle \int_E f(x)dx = \lim_{n \rightarrow \infty}\int_E f_n(x)dx$$。
 
-### 建構Lebesgue積分(Charles Pugh，使用函數的undergraph定義)
+### 使用函數的undergraph定義積分Charles Pugh
 
 1. 定義非負實值可測函數$$f: \mathbb{R} \rightarrow [0, \infty)$$在值域以下相對於實數面積$$uf=\{(x,y) \in \mathbb{R} \times [0, \infty) ~|~ 0 \leq y <f(x)\}$$的測度$$m(uf)$$為積分。
 2. 定義非負可測函數$$f: \mathbb{R} \rightarrow [0, \infty)$$在值域(含)相對於實數面積$$\hat{u}f=\{(x,y) \in \mathbb{R} \times [0, \infty) ~|~ 0 \leq y \leq f(x)\}$$與可積分時的性質。

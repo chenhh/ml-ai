@@ -89,7 +89,9 @@
 
 ### 多集合的聯集: 元素只須存在於某些集合
 
-$$\displaystyle \bigcup_{i\in I} S_i =\{ x \ \vert \ \exists j\in I, x \in S_j\}$$
+$$\displaystyle \bigcup_{i\in I} S_i =\{ x \ \vert \ \exists j\in I, x \in S_j\}$$，此處$$I$$可能為不可數集合。
+
+如果$$I$$為可數(無限)集合時，常會寫為$$\displaystyle \bigcup_{i=1}^\infty S_i= \{x ~|~ x \in S_i \text{ for some } i\}$$。
 
 ### 交集(intersection)
 
@@ -100,7 +102,9 @@ $$\displaystyle \bigcup_{i\in I} S_i =\{ x \ \vert \ \exists j\in I, x \in S_j\}
 
 ### 多集合的交集: 元素必須存在於所有的集合
 
-$$\displaystyle \bigcap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$
+$$\displaystyle \bigcap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$，此處$$I$$可能為不可數集合。
+
+如果$$I$$為可數(無限)集合時，常會寫為$$\displaystyle \bigcap_{i=1}^\infty S_i= \{x ~|~ x \in S_i \forall i\}$$。
 
 ### 交換律 (commutative law)
 

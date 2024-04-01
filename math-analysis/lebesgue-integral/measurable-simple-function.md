@@ -4,11 +4,11 @@
 
 函數的定義域$$\{E_i\}$$為實數上的分割，且相異集合的函數取值相異$$f(\{x \in E_i\})=c_i$$，此可計算測度值$$m(E \cap E_i)$$與函數$$f(x)=c_i, x \in E_i$$在各個分割的乘積。全部分割的乘積總和即為積分值。
 
-可知若$$m(E \cap E_i) < \infty$$且$$f(x)=c_i < \infty$$, $$i=1,2,\dots, p$$時，則函數$$f$$必定可積分。
+可知若$$m(E \cap E_i) < \infty$$且$$f(x)=c_i < \infty$$, $$i=1,2,\dots, p$$(有限個)時，則函數$$f$$必定可積分。
 
 ## 非負可測簡單函數
 
-> 定義：非負可測簡單函數(nonnegative simple function)
+> 定義：非負可測簡單函數(non-negative simple function)
 >
 > 函數$$f(x): \mathbb{R}^n \rightarrow [0, \infty]$$為非負可測簡單函數，其定義域在可測集合$$E_i \subseteq \mathbb{R}^n,~i=1,2,\dots, p$$分別為取值為$$c_i \in \mathbb{R}$$：
 >
@@ -26,7 +26,7 @@
 
 > 定義：非負可測簡單函數的積分
 >
-> 給定歐式空間上的σ域$$\Sigma$$，若可測集合$$E \in \Sigma$$，定義非負簡單函數在$$E$$的積分為：
+> 給定歐式空間上的σ域$$\Sigma$$，若可測集合$$E \in \Sigma$$，定義非負簡單函數在$$E$$的函數$$f: E \rightarrow [0, \infty]$$積分為：
 >
 > $$\displaystyle \int_E f(x) dx \equiv \sum_{i=1}^p c_i m(E \cap E_i)$$。
 >

@@ -560,6 +560,8 @@ $$\therefore a<m/n<b$$ (QED)
 >
 > $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k}) =\bigcap_{k=1}^\infty[a-\frac{1}{k}, a+\frac{1}{k}]$$  \[單點集]
 >
+> $$\displaystyle \mathbb{R}^{+}\equiv[0,\infty)=\bigcup_{k=0}^\infty [k, k+1)$$
+>
 > [https://math.stackexchange.com/questions/2869734/show-that-a-b-bigcap-n-1-infty-a-1-n-b1-n](https://math.stackexchange.com/questions/2869734/show-that-a-b-bigcap-n-1-infty-a-1-n-b1-n)
 
 <details>

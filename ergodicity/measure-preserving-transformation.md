@@ -4,6 +4,8 @@ description: Measure preserving transformation
 
 # 保測(度)轉換
 
+保測度轉換(Measure-preserving transformation)若有遍歷性 則在轉換下不變的集合,其測度必為0或1
+
 ## 可測轉換(measurable transformation)
 
 > 若對任意可測集合$$E$$，其前像$$T^{-1}(E)$$仍為可測集合則稱轉換T為可測轉換。

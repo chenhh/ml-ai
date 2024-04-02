@@ -12,6 +12,10 @@ description: 卜阿松分佈, Poisson distribution
 
 卜瓦松分佈是二項分佈處理罕見事件的特殊情形，亦即樣本的數目趨向無窮大$$n \rightarrow \infty$$，事件發生的機率趨向無窮小$$p \rightarrow 0$$。在這情況下，二項分佈就可簡化成卜瓦松分佈。
 
+
+
+
+
 卜瓦松分佈有一個很方便的特徵：它的<mark style="color:red;">平均值就是變異數</mark>，再開平方根就是標準差。
 
 卜瓦松分佈的假設：
@@ -29,6 +33,11 @@ description: 卜阿松分佈, Poisson distribution
 由動差生成函數證明。
 
 ### &#x20;<mark style="color:red;">卜瓦松分佈可由二項分佈逼近</mark>
+
+當一個事件，在一段時間$$T$$ 中可能發生的次數是$$\lambda$$ 。那麼可以認爲，經過時間$$T$$ ，該事件發生的期望次數是$$\mathrm{E} ( X )=\lambda T$$ 。&#x20;
+
+若將這段時間$$T$$等分成$$n$$ 個時間段，當$$n \rightarrow \infty$$ 時，每個微小的時間段內最多發生一次該事件。那麼每每個微小的時間段，可以視爲是一個Bernoulli實驗（事件發生或不發生），那麼這整段時間\
+$$T$$ 內發生的事件可以視爲是一個二項分佈實驗。
 
 * 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty$$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!}$$
 * 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於卜瓦松分佈。
@@ -56,3 +65,7 @@ $$\frac{n!}{n^x (n-x)!} = \frac{n(n-1)\cdots(n-x+1) }{n^x} \rightarrow  1$$
 * log-likelihood function $$\begin{aligned} \displaystyle l(\lambda|X) & =\log \bigg({\prod_{i=1}^N f(x_i | \lambda)} \bigg) \\ &=\sum_{i=1}^N \log \bigg(\frac{e^{- \lambda \lambda ^{x_i}}}{x_i !} \bigg) \\ &= -N \lambda + \bigg(\sum_{i=1}^N x_i\bigg) \log \lambda - \sum_{i=1}^N \log(x_i!) \end{aligned}$$
 * 令$$\frac{\partial l}{\partial \lambda} = 0$$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$
 * 所以 $$\hat{\lambda}_{MLE}= \frac{1}{N} \sum_{i=1}^N x_i$$。
+
+
+
+[https://wangcc.me/LSHTMlearningnote/poisson.html](https://wangcc.me/LSHTMlearningnote/poisson.html)

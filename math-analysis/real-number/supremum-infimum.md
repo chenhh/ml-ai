@@ -635,6 +635,18 @@ to prove $$\displaystyle \bigcap_{k=1}^\infty (a-1/k, a+1/k) \subseteq \{a\}$$--
 
 </details>
 
+<details>
+
+<summary>proof: 正實數</summary>
+
+$$[k, k+1) \subseteq \mathbb{R}^+, ~k=0,1,2,\dots$$--(1)
+
+要證明$$\mathbb{R}^+ \subseteq \bigcup_{k=0}^\infty [k, k+1)$$，令$$a \notin \bigcup_{k=0}^\infty [k, k+1)$$，則$$a$$不是$$[0,1)$$間的實數，也不是$$[1,2)$$間的實數，以此類推$$a$$不是任意的正實數--(2)
+
+由(1,2)得證(QED)
+
+</details>
+
 ## 有理數的十進位表示法
 
 假設$$r\in \mathbb{R}$$可表示為有限十進位表示法。

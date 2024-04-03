@@ -2,6 +2,8 @@
 
 ## 貝氏機率
 
+<figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
+
 ### 頻率派與貝氏派的思考方法
 
 貝葉斯統計的優勢在於在資料較少的情況下，也可以進行推論，且資料越多，推論結果越準確。以及對所獲得的資訊可做出即時反應，自動升級「推論」的學習功能。
@@ -29,7 +31,7 @@
 
 貝氏學派認為參數$$\theta$$是隨機變數，而樣本$$X$$是已觀察到的固定實現值，因此研究重點是$$\theta$$的分佈。
 
-* 先驗分佈$$\mathrm{P}(\theta)$$+ 樣本資訊$$X$$=後驗分佈$$\mathrm{P}(\theta~|~X)$$。
+* <mark style="background-color:red;">先驗分佈</mark>$$\mathrm{P}(\theta)$$<mark style="background-color:red;">+ 樣本資訊</mark>$$X$$<mark style="background-color:red;">=後驗分佈</mark>$$\mathrm{P}(\theta~|~X)$$<mark style="background-color:red;">。</mark>
 
 貝氏統計的優勢在於，「在資料較少的情況下也可以進行推論，且資料越多，推論結果越準確」，以及「對所獲的信息可做出瞬時反應，自動升級推論」的學習功能。
 
@@ -71,6 +73,22 @@ Savage運用的是經濟學傳統方法：假設，若事件$$A$$發生，可獲
 * 貝氏統計重視先驗資訊的收集，使其形成先驗分佈加到統計推論中。
 
 ### 先驗、似然、後驗機率(prior， likelihood， posterior probability)
+
+統計歸納是從一種族群成員的子集中瞭解該族群的一般特徵的過程。
+
+<mark style="color:blue;">總體的特徵的數值通常用</mark>$$\theta$$<mark style="color:blue;">表示</mark>，<mark style="color:blue;">子集的數值描述形成了資料集</mark>$$X$$。在得到資料集之前時，總體特徵和資料集的數值都無法確定。而在得到資料集$$X$$之後，它所包含的資訊可用於降低對總體特徵的不確定性。量化不確定性的這種變化是貝氏推理的目的。
+
+### 貝氏推理流程
+
+樣本空間$$Y$$是所有可能的資料集的集合，從中將生成單個資料集$$y$$。參數空間$$\Theta$$ 是一組可能的參數值，我們希望從中確定最能代表真實總體特徵的值。貝氏學習的理想化形式始於關於 $$y$$ 和 $$\theta$$ 的聯合信念 (joint belief)的數值公式，以$$Y$$ 和$$\Theta$$的機率分佈表示。
+
+* 對於每個總體數值 $$\theta \in \Theta$$，先驗分佈$$\mathrm{P}(\theta)$$ 描述了我們認為$$\theta$$ 代表真實總體特徵的信念。
+* 對於每個$$\theta \in \Theta$$ 和$$y \in Y$$，抽樣模型$$\mathrm{P}(y|\theta)$$ 描述了我們的信念，即如果我們知道 $$\theta$$ 為真，$$y$$ 將是我們研究的出像。
+
+一旦我們獲得了資料(實現值)$$y$$，最後一步就是更新對$$\theta$$的信念：
+
+* 對於$$\theta \in \Theta$$ 的每個數值，後驗分佈$$\mathrm{P}(\theta|y)$$ 描述了我們在觀察資料集$$y$$ 之後，認為$$\theta$$ 是真實值的信念。
+* <mark style="color:red;">後驗分佈是從先驗分佈和採樣中獲得的</mark>。
 
 在貝式統計中，一個隨機事件或者一個不確定事件的後驗機率是在考慮和給出相關證據或數據後所得到的條件機率。 同樣，後驗機率分布是一個未知量（視為隨機變量）基於試驗和調查後得到的機率分佈。
 

@@ -3,11 +3,17 @@
 ## 貝式統計
 
 * \[超級新手入門，有高中機率統計基礎即可閱讀] [Donovan, Therese M., and Ruth M. Mickey. Bayesian statistics for beginners: A step-by-step approach. Oxford University Press, USA, 2019](https://www.amazon.com/-/zh\_TW/Therese-M-Donovan/dp/0198841302/ref=sr\_1\_fkmr0\_1?crid=2J25R69XN9YAE\&keywords=Donovan%2C+Therese+M.%2C+and+Ruth+M.+Mickey.+Bayesian+statistics+for+beginners%3A+A+step-by-step+approach.+Oxford+University+Press%2C+USA%2C+2019.\&qid=1668092584\&sprefix=donovan%2C+therese+m.%2C+and+ruth+m.+mickey.+bayesian+statistics+for+beginners+a+step-by-step+approach.+oxford+university+press%2C+usa%2C+2019.%2Caps%2C467\&sr=8-1-fkmr0).
+* Peter D. Hoff, A First Course in Bayesian Statistical Methods。入門級，書很簡約實用。
+*   James O. Berger, Statistical Decision Theory and Bayesian Analysis。早期的貝葉斯經典之一
+
+
 * [Hoff, Peter D. A first course in Bayesian statistical methods. Vol. 580. New York: Springer, 2009](https://www.amazon.com/-/zh\_TW/Peter-D-Hoff/dp/0387922997/ref=sr\_1\_1?crid=1KOIQLLADNARM\&keywords=A+First+Course+in+Bayesian+Statistical+Methods\&qid=1668092130\&sprefix=a+first+course+in+bayesian+statistical+methods%2Caps%2C294\&sr=8-1).
 * \[入門][ N. T. Hobbs and M. B. Hooten. Bayesian Models: A Statistical Primer for Ecologists. Princeton University Press, 2015](https://www.amazon.com/-/zh\_TW/N-Thompson-Hobbs/dp/0691159289/ref=sr\_1\_1?crid=1KZTZYL25A0EM\&keywords=Bayesian+Models%3A+A+Statistical+Primer+for+Ecologists\&qid=1668124470\&sprefix=bayesian+data+analysis%2Caps%2C631\&sr=8-1).
 * [Davidson-Pilon, Cameron. Bayesian methods for hackers: probabilistic programming and Bayesian inference. Addison-Wesley Professional, 2015](https://www.amazon.com/-/zh\_TW/Cameron-Davidson-Pilon/dp/0133902838/ref=sr\_1\_1?keywords=Bayesian+Methods+for+Hackers\&qid=1668092904\&sr=8-1).
 * [Richard McElreath, "Statistical Rethinking A Bayesian Course with Examples in R and Stan,", 2nd, 2020](https://xcelab.net/rm/statistical-rethinking/).
 * [Allen B. Downey, "think Bayes 2,", online resource](https://allendowney.github.io/ThinkBayes2/).
+
+[https://www.zhihu.com/question/21439132/answer/1334101688](https://www.zhihu.com/question/21439132/answer/1334101688)
 
 ## 機器學習
 

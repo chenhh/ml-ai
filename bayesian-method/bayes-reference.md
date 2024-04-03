@@ -12,6 +12,7 @@
 * [Davidson-Pilon, Cameron. Bayesian methods for hackers: probabilistic programming and Bayesian inference. Addison-Wesley Professional, 2015](https://www.amazon.com/-/zh\_TW/Cameron-Davidson-Pilon/dp/0133902838/ref=sr\_1\_1?keywords=Bayesian+Methods+for+Hackers\&qid=1668092904\&sr=8-1).
 * [Richard McElreath, "Statistical Rethinking A Bayesian Course with Examples in R and Stan,", 2nd, 2020](https://xcelab.net/rm/statistical-rethinking/).
 * [Allen B. Downey, "think Bayes 2,", online resource](https://allendowney.github.io/ThinkBayes2/).
+* [Bradley Efron,  "Large-scale inference: empirical Bayes methods for estimation, testing, and prediction." Vol. 1. Cambridge University Press, 2012](https://www.cambridge.org/core/books/largescale-inference/A0B183B0080A92966497F12CE5D12589).
 
 [https://www.zhihu.com/question/21439132/answer/1334101688](https://www.zhihu.com/question/21439132/answer/1334101688)
 
@@ -31,4 +32,7 @@
 
 ## 科普
 
-小島寬之著，羅夢迪譯，"統計學關我什麼事：生活中的極簡統計學,"，北京時代華文書局，2018。
+\[貝氏機率入門好書] 小島寬之著，羅夢迪譯，"統計學關我什麼事：生活中的極簡統計學,"，北京時代華文書局，2018。
+
+[數學之美番外篇：平凡而又神奇的貝葉斯方法](https://mindhacks.cn/2008/09/21/the-magical-bayesian-method/)。
+

@@ -2,7 +2,7 @@
 
 ## 貝氏機率
 
-<figure><img src="../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
 
 ### 頻率派與貝氏派的思考方法
 
@@ -50,11 +50,11 @@
 
 #### 主觀機率解釋
 
-Savage運用的是經濟學傳統方法：假設，若事件$$A$$發生，可獲得1萬元的$$f$$獎;若事件$$B$$發生，可獲得1萬元的$$g$$獎。 現在的問題是:你想要哪一個獎項?
+經濟學傳統方法假設，若事件$$A$$發生，可獲得1萬元的$$f$$獎;若事件$$B$$發生，可獲得1萬元的$$g$$獎。 現在的問題是:你想要哪一個獎項?
 
 假設你的回答是$$f$$獎。那麼經濟學上將這個答案記做$$f>g$$。此時，相比於$$B$$，你更相信$$A$$的「準確性」， 這點是無疑的。 如果將所有的事件都做成上述調查問卷的形式，那麼根據你的答案，就可以判斷出所有事物的準 性的大小關係，而這個關係就可以被定義為「機率」。
 
-在剛才的例子中，則顯示為$$\mathrm{P}(A)> \mathrm{P}(B)$$，而這個機率不等式，是根據人們的主觀判斷而得來的。 Savage主張，像這樣得來的便是「主觀機率」。
+在剛才的例子中，則顯示為$$\mathrm{P}(A)> \mathrm{P}(B)$$，而這個機率不等式，是根據人們的主觀判斷而得來的。 像這樣得來的便是「主觀機率」。
 
 ### 貝氏統計推論中所使用的三種資訊
 
@@ -74,38 +74,41 @@ Savage運用的是經濟學傳統方法：假設，若事件$$A$$發生，可獲
 
 ### 先驗、似然、後驗機率(prior， likelihood， posterior probability)
 
-統計歸納是從一種族群成員的子集中瞭解該族群的一般特徵的過程。
+統計歸納是從一種總體(population)成員的子集合中瞭解該總體的一般特徵的過程。
 
-<mark style="color:blue;">總體的特徵的數值通常用</mark>$$\theta$$<mark style="color:blue;">表示</mark>，<mark style="color:blue;">子集的數值描述形成了資料集</mark>$$X$$。在得到資料集之前時，總體特徵和資料集的數值都無法確定。而在得到資料集$$X$$之後，它所包含的資訊可用於降低對總體特徵的不確定性。量化不確定性的這種變化是貝氏推理的目的。
+<mark style="color:blue;">總體的特徵的數值通常用</mark>$$\theta$$<mark style="color:blue;">表示</mark>，<mark style="color:blue;">子集的數值描述形成了資料集</mark>$$x$$。在得到資料集之前時，總體特徵和資料集的數值都無法確定。而在得到資料集$$x$$之後，它所包含的資訊可用於降低對總體特徵的不確定性。量化不確定性的這種變化是貝氏推理的目的。
 
 ### 貝氏推理流程
 
-樣本空間$$Y$$是所有可能的資料集的集合，從中將生成單個資料集$$y$$。參數空間$$\Theta$$ 是一組可能的參數值，我們希望從中確定最能代表真實總體特徵的值。貝氏學習的理想化形式始於關於 $$y$$ 和 $$\theta$$ 的聯合信念 (joint belief)的數值公式，以$$Y$$ 和$$\Theta$$的機率分佈表示。
+樣本空間$$X$$是所有可能的資料集的集合，從中將生成單個資料集$$x$$。參數空間$$\Theta$$ 是一組可能的參數值，我們希望從中確定最能代表真實總體特徵的值。貝氏學習的理想化形式始於關於 $$x$$ 和 $$\theta$$ 的聯合信念 (joint belief)的數值公式，以$$X$$ 和$$\Theta$$的機率分佈表示。
 
-* 對於每個總體數值 $$\theta \in \Theta$$，先驗分佈$$\mathrm{P}(\theta)$$ 描述了我們認為$$\theta$$ 代表真實總體特徵的信念。
-* 對於每個$$\theta \in \Theta$$ 和$$y \in Y$$，抽樣模型$$\mathrm{P}(y|\theta)$$ 描述了我們的信念，即如果我們知道 $$\theta$$ 為真，$$y$$ 將是我們研究的出像。
+* 對於每個總體數值 $$\theta \in \Theta$$，先驗(prior)分佈$$\mathrm{P}(\theta)$$ 描述了我們認為$$\theta$$ 代表真實總體特徵的信念。
+* 對於每個$$\theta \in \Theta$$ 和$$x \in X$$，抽樣(likelihood)模型$$\mathrm{P}(x|\theta)$$ 描述了我們的信念，即如果我們知道 $$\theta$$ 為真，$$x$$ 將是我們研究的出像。
 
-一旦我們獲得了資料(實現值)$$y$$，最後一步就是更新對$$\theta$$的信念：
+一旦我們獲得了資料(實現值)$$x$$，最後一步就是更新對$$\theta$$的信念：
 
-* 對於$$\theta \in \Theta$$ 的每個數值，後驗分佈$$\mathrm{P}(\theta|y)$$ 描述了我們在觀察資料集$$y$$ 之後，認為$$\theta$$ 是真實值的信念。
+* 對於$$\theta \in \Theta$$ 的每個數值，後驗(posterior)分佈$$\mathrm{P}(\theta|x)$$ 描述了我們在觀察資料集$$x$$ 之後，認為$$\theta$$ 是真實值的信念。
 * <mark style="color:red;">後驗分佈是從先驗分佈和採樣中獲得的</mark>。
 
 在貝式統計中，一個隨機事件或者一個不確定事件的後驗機率是在考慮和給出相關證據或數據後所得到的條件機率。 同樣，後驗機率分布是一個未知量（視為隨機變量）基於試驗和調查後得到的機率分佈。
 
+<figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption><p>貝氏推理</p></figcaption></figure>
+
 **「後驗」在此中代表考慮了被測試事件的相關證據**。
 
-* 後驗機率(posterior probability)是隨機變數$$\theta$$且先驗分佈為$$\mathrm{P}(\theta)$$，在給定證據(evidence) $$X$$後的條件機率：$$\mathrm{P}(\theta \vert X)$$。
-* 與似然函數(likelihood function)相反，其為證據$$X$$給定了參數$$\theta$$後的機率：$$\mathrm{P}(X \vert \theta)$$。
+* <mark style="background-color:red;">後驗機率(posterior probability)是隨機變數</mark>$$\theta$$<mark style="background-color:red;">且先驗分佈為</mark>$$\mathrm{P}(\theta)$$<mark style="background-color:red;">，在給定證據(evidence)</mark> $$X$$<mark style="background-color:red;">後的條件機率：</mark>$$\mathrm{P}(\theta \vert X)$$。
+* 似然函數(likelihood function)與後驗機率相反，其為給定了參數$$\theta$$後，證據$$X$$的條件機率：$$\mathrm{P}(X \vert \theta)$$。
 * 首先定義統計模型參數$$\theta$$，將$$\theta$$視為隨機變數，且在觀察到樣本之前，分配一個機率分佈給$$\theta$$稱為先驗分佈(prior distribution)，記為$$\mathrm{P}(\theta)$$<mark style="color:blue;">。當樣本足夠多時，先驗分佈的選取就不重要了</mark>。但實際上，選擇一個恰當的先驗分佈能夠大大地節省後驗分佈的計算時間，甚至可以匯出後驗分佈的解析表示式。
 
-則樣本在此參數的可能性為$$\mathrm{P}(X|\theta)$$，因此使用貝式定理得後驗機率為：
+給定參數的先驗分佈$$\mathrm{P}(\theta)$$與樣本在給定參數的似然性分佈為$$\mathrm{P}(X|\theta)$$，可使用貝式定理得後驗機率$$\mathrm{P}(\theta|X)$$為：
 
 $$
 \mathrm{P}(\theta | X)=\frac{\mathrm{P}(\theta， X)}{\mathrm{P}(X)}=\frac{\mathrm{P}(X|\theta)\mathrm{P}(\theta)}{\mathrm{P}(X)}=\frac{(X|\theta)\mathrm{P}(\theta)}{\int_{\theta^{'}}\mathrm{P}(X| \theta^{'})\mathrm{P}(\theta^{'})d\theta^{'}}
 $$
 
-* 後驗機率可以寫成更易記憶的形式，為後驗機率(posterior probability) ∝似然率(likelihood)×先驗機率(prior probability)。
+* 後驗機率可以寫成更易記憶的形式，為<mark style="background-color:red;">後驗機率(posterior probability) ∝似然率(likelihood)×先驗機率(prior probability)</mark>。
 * Posterior = ( Likelihood \* Prior ) / Evidence。
+* 註：分母中資料分佈$$\mathrm{P}(X)$$通常難以得出，因此在給定先驗分佈/似然性分佈後，為了計算後驗分佈，通常會選用<mark style="background-color:red;">共軛分佈</mark>簡化計算。
 
 通常先驗概率可通過經驗來判斷；在特殊情況下，即使沒有類似經驗，也可以進行判斷。「事前」的含義是：在獲得某項信息之前。此處的信息是指附加的狀況 。
 

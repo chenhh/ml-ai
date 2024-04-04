@@ -17,6 +17,8 @@
 
 [https://www.zhihu.com/question/21439132/answer/1334101688](https://www.zhihu.com/question/21439132/answer/1334101688)
 
+[https://wangcc.me/LSHTMlearningnote/intro-Bayes.html](https://wangcc.me/LSHTMlearningnote/intro-Bayes.html)
+
 ## 機器學習
 
 * [John k. Kruschke. "Doing Bayesian data analysis: A tutorial with R, JAGS, and Stan." 2nd, Elsevier, 2014](https://www.amazon.com/-/zh\_TW/John-Kruschke/dp/0124058884/ref=sr\_1\_1?crid=Z9MR9VZXEC25\&keywords=Doing+Bayesian+Data+Analysis\&qid=1668123900\&sprefix=doing+bayesian+data+analysis%2Caps%2C584\&sr=8-1).
@@ -39,4 +41,8 @@
 \[貝氏機率入門好書] 小島寬之著，羅夢迪譯，"統計學關我什麼事：生活中的極簡統計學,"，北京時代華文書局，2018。
 
 [數學之美番外篇：平凡而又神奇的貝葉斯方法](https://mindhacks.cn/2008/09/21/the-magical-bayesian-method/)。
+
+[貝葉斯主義投資高手的三類方法](https://finance.sina.cn/fund/sm/2023-07-14/detail-imzarutt5100091.d.html?vt=4\&cid=90642\&node\_id=90642)。
+
+[https://blog.udn.com/mobile/nilnimest/124668370](https://blog.udn.com/mobile/nilnimest/124668370)
 

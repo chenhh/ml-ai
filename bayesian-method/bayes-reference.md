@@ -3,6 +3,7 @@
 ## 貝式統計
 
 * \[超級新手入門，有高中機率統計基礎即可閱讀] [Donovan, Therese M., and Ruth M. Mickey. Bayesian statistics for beginners: A step-by-step approach. Oxford University Press, USA, 2019](https://www.amazon.com/-/zh\_TW/Therese-M-Donovan/dp/0198841302/ref=sr\_1\_fkmr0\_1?crid=2J25R69XN9YAE\&keywords=Donovan%2C+Therese+M.%2C+and+Ruth+M.+Mickey.+Bayesian+statistics+for+beginners%3A+A+step-by-step+approach.+Oxford+University+Press%2C+USA%2C+2019.\&qid=1668092584\&sprefix=donovan%2C+therese+m.%2C+and+ruth+m.+mickey.+bayesian+statistics+for+beginners+a+step-by-step+approach.+oxford+university+press%2C+usa%2C+2019.%2Caps%2C467\&sr=8-1-fkmr0).
+  * [\[中文版\] AI 必須！從做中學貝氏統計 修訂第二版：從事機器學習、深度學習、資料科學、大資料分析一定要懂的統計利器,旗標版社，2023](https://www.books.com.tw/products/0010953797?sloc=main)。
 * Peter D. Hoff, A First Course in Bayesian Statistical Methods。入門級，書很簡約實用。
 *   James O. Berger, Statistical Decision Theory and Bayesian Analysis。早期的貝葉斯經典之一
 
@@ -24,6 +25,9 @@
 ## 計算
 
 * [https://bayesiancomputationbook.com/](https://bayesiancomputationbook.com/)
+* Allen Downey, "貝葉斯思維：統計建模的Python學習法,", 人民郵電出版社, 2015.
+  * [https://github.com/NemoHoHaloAi/Think-Bayes](https://github.com/NemoHoHaloAi/Think-Bayes)
+  * [https://greenteapress.com/wp/think-bayes/](https://greenteapress.com/wp/think-bayes/)
 
 ## 貝氏網路
 

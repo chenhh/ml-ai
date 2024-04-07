@@ -54,6 +54,7 @@ David J.C. MacKay, "Information Theory, Inference, and Learning Algorithms, "Cam
 * [數學之美番外篇：平凡而又神奇的貝葉斯方法](https://mindhacks.cn/2008/09/21/the-magical-bayesian-method/)。
 * [貝葉斯主義投資高手的三類方法](https://finance.sina.cn/fund/sm/2023-07-14/detail-imzarutt5100091.d.html?vt=4\&cid=90642\&node\_id=90642)。
 * [\[林澤民\], 貝氏定理在生活中很有用，可是它到底怎麼算](https://blog.udn.com/mobile/nilnimest/124668370)？
+* [\[知乎討論區\] 貝葉斯統計](https://www.zhihu.com/topic/19632220/hot)。&#x20;
 
 ### 交易
 

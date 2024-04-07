@@ -414,3 +414,8 @@
 * [Ito積分](stochastic-calculus/ito-integral.md)
 * [Black-Scholes方程式](stochastic-calculus/black-scholes-equation.md)
 * [跳躍-擴散過程](stochastic-calculus/jump-diffusion-process.md)
+
+## 金融泡沫 <a href="#financial-bubble" id="financial-bubble"></a>
+
+* [龍王理論](financial-bubble/dragon-king-theory.md)
+* [LPPLS模型](financial-bubble/lppls-model.md)

@@ -95,6 +95,10 @@ $$
 * [https://zhuanlan.zhihu.com/p/41931776](https://zhuanlan.zhihu.com/p/41931776)
 * [破解股市泡沫之謎——對數週期冪率（LPPL）模型](https://www.kancloud.cn/wizardforcel/python-quant-uqer/186247)
 
+論文
+
+* \[book] Dean Fantazzini and Petr Geraskin, "[Everything you always wanted to know about log-periodic power laws for bubble modeling but were afraid to ask](https://www.taylorfrancis.com/chapters/edit/10.4324/9780429198557-3/everything-always-wanted-know-log-periodic-power-laws-bubble-modeling-afraid-ask-petr-geraskin-dean-fantazzini)," New Facets of Economic Complexity in Modern Financial Markets, pp. 30-55,  2019.
+
 ## 圖書
 
 * Didier Sornette, "Why Stock Markets Crash: Critical Events in Complex Financial Systems, "Princeton University Press.

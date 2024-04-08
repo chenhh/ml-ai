@@ -121,6 +121,9 @@ $$
   * 有條件的期望報酬表現出快於指數的加速度，由加速振蕩裝飾，稱為“對數週期冪律”（LPPL）。殘差測試顯示，當應用於 GARCH 基準時，誤報率非常低 （0.2%）。
   * 我們的模型還提供了對泡沫持續時間的診斷：應用於1987年10月崩盤之前的時期，有明確的證據表明泡沫至少在4年前開始。
   * 我們確認了波動率限制的LPPL模型在過去二十年中世界上發生的其他七個主要泡沫的有效性和普遍性。使用貝葉斯推理，我們發現與標準基準相比，我們的模型具有非常強的統計偏好，這與Chang和Feigenbaum（2006）使用單位根模型進行殘差相矛盾。
+* Z. Forró, Ryan Woodard, and Didier Sornette, "[Using trading strategies to detect phase transitions in financial markets](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.91.042803)," Physical Review E, Vol. 91, Issue 4, 2015.
+  * LPPLS模型是智慧體之間正反饋及其分層動態組織的數學體現，在金融市場中具有重要的預測能力。我們發現，基於LPPLS的策略明顯優於隨機策略，並且它們在大量資產和時間段選擇方面是穩健的。<mark style="color:blue;">因此，價格動態明顯偏離了某些可預測性的隨機性，而這種隨機性可能與泡沫市場制度有關</mark>。
+  * 我們的混合方法將金融與交易策略相結合，將關鍵現象與LPPLS相結合，表明以相變相關的資訊為目標，可以預測金融泡沫和崩潰，從而影響價格動態。
 
 ## 圖書
 

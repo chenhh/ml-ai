@@ -97,10 +97,30 @@ $$
 
 ### 論文
 
+* James A. Feigenbaum and Peter  G.O. Freund, "[Discrete Scaling in Stock Markets Before Crashes](https://www.worldscientific.com/doi/abs/10.1142/S021797929600204X)," International Journal of Modern Physics, Vol. 10, No. 27, pp. 3737-3745, 1996.
+  * 本文提出了一個股票市場崩潰的關鍵點在一個系統的離散尺度不變性的圖像。臨界指數是複雜的，導致股票市場指數的對數週期波動。
+* Didier Sornette, Anders Johansen and Jean-Philippe Bouchaud, "S[tock market crashes, Precursors and Replicas,](https://jp1.journaldephysique.org/articles/jp1/abs/1996/01/jp1v6p167/jp1v6p167.html) " Journal de Physique I France, No. 6, pp. 167-175 1996.
+  * 本文分析了1987年10月市場崩潰前後的S\&P500指數的時間行為，並確定了隨機模式以及餘震特徵和特徵振盪。結合起來，它們都表明了一種動力學臨界點的影象，<mark style="color:blue;">具有特徵性的對數週期特徵</mark>，類似於最近發現的地震。這些觀察結果在其他較小的崩潰中得到了證實，並加強了股票市場作為自組織合作系統的一個例子的觀點。
+* Anders Johansen and Didier Sornette, "[Large Stock Market Price Drawdowns are Outliers](https://www.risk.net/journal-risk/2161095/large-stock-market-price-drawdowns-are-outliers), " The Journal of Risk, Vol. 4, No. 2, pp. 69-110, 2001.
+  * 下跌（drawdown, 從上一個區域性最大值到下一個區域性最小值的損失）提供了比變異數、風險值（VaR）或其他基於固定時間尺度收益分佈的度量更自然的真實的市場風險度量。
+  * 約98%的下降機率分佈可以很好地由指數分佈（或具有略微粗尾的微小修改）表示，而少數最大的下降發生的速度明顯快於指數分佈的預測。這一點通過對替代資料的廣泛測試得到了證實。
+  * 因此，非常大的下降分佈屬於其自身的一類且有特定的放大機制。 在所研究的市場中，只有大約一半的市場表現出類似的行為。
+* Wei-Xing Zhou and Didier Sornette, "[Evidence of a Worldwide Stock Market Log- Periodic Anti-Bubble since mid-2000](https://www.sciencedirect.com/science/article/abs/pii/S0378437103008586)," Physics A, Vol. 330, No. 3, pp. 543-583, 2003.
+  * 分析了38個世界股票市場指數，並確定了21個“看跌反泡沫”和6個“看漲反泡沫”。
+  * 反泡沫(anti-bubbles)被定義為具有自相似膨脹對數週期振蕩的自強化價格軌跡。看跌反泡沫的特徵是冪律、價格（或價格對數）隨時間變化的下降和對數週期振蕩的擴大。我們認為，<mark style="color:blue;">看跌的反泡沫是由積極的價格對價格反饋產生的</mark>，這些反饋助長了整體悲觀情緒和負面市場情緒，而人際互動進一步加強了這種情緒。看漲的反泡沫在這裡首次被識別出來。
+  * 最引人注目的發現是，<mark style="color:red;">大多數歐洲和西方股票市場指數以及其他股票指數都表現出與美國標準普爾500指數幾乎相同的對數週期冪律反泡沫結構</mark>。
 * \[LPPL模型用於DJIA與HSI] Didier Sornette and Wei-Xing Zhou, "[Predictability of large future changes in major financial indices](https://www.sciencedirect.com/science/article/abs/pii/S0169207005000191), " International Journal of Forecasting, Vol 22, Issue 1, pp. 153-168, 2006.
+  * 本文提出了一種系統演算法，用於測試社會系統中主體行為中集體自組織的存在性，並在 20 世紀的DJIA指數 和香港恆生指數(HSI)上進行測試。
+  * 該演算法結合了關鍵現象、代理人期望的影響、多尺度分析以及稀疏資料模式識別的數學方法的想法。我們的演算法經過對DJIA指數本世紀三場重大崩盤的訓練，展現了卓越的泛化能力，並提前檢測到其他 8 次重大下跌或走勢變化。 HSI 的應用也給出了有希望的結果。對於識別演算法的變化，結果是穩健的。
 * \[book] Dean Fantazzini and Petr Geraskin, "[Everything you always wanted to know about log-periodic power laws for bubble modeling but were afraid to ask](https://www.taylorfrancis.com/chapters/edit/10.4324/9780429198557-3/everything-always-wanted-know-log-periodic-power-laws-bubble-modeling-afraid-ask-petr-geraskin-dean-fantazzini)," New Facets of Economic Complexity in Modern Financial Markets, pp. 30-55,  2019.
 * Didier Sornette, Ryan Woodard, Wanfeng Yan and Wei-Xing Zhou, "[Clarifications to questions and criticisms on the Johansen–Ledoit–Sornette financial bubble model,](https://www.sciencedirect.com/science/article/abs/pii/S0378437113004342) " Physica A, pp. 4417–4428, 2013.
+  * 本文建立了具有有限時間奇異崩潰風險率的理性預期泡沫的Johansen-Ledoit-Sornette（JLS）模型，用以描述金融泡沫和崩潰的動態過程。它已成功地應用於許多不同市場的各種金融泡沫。
+  * 然而，這些文獻中在理論和實證方面似乎都存在一些嚴重的誤解。這些問題中的一些源於JLS模型和相關作品的文獻的快速發展。為了消除可能的誤解和促進有用的未來發展，我們總結了這些常見的問題和批評有關的JLS模型，並綜合了目前的最先進的技術和現有的最佳實踐。
 * L. Lin, R.E. Ren and D. Sornette, "[The volatility-confined LPPL model: A consistent model of ‘explosive’ financial bubbles with mean-reverting residuals](https://www.sciencedirect.com/science/article/abs/pii/S1057521914000350), " International Review of Financial Analysis, Vol. 33, pp. 210-225, 2014.
+  * 利用具有臨界行為的隨機貼現因數的概念，我們提出了一個自洽的金融泡沫爆炸模型，該模型結合了均值回歸波動過程和隨機條件報酬，反映了非線性的正反饋和投資者信念和情緒的持續更新。
+  * 有條件的期望報酬表現出快於指數的加速度，由加速振蕩裝飾，稱為“對數週期冪律”（LPPL）。殘差測試顯示，當應用於 GARCH 基準時，誤報率非常低 （0.2%）。
+  * 我們的模型還提供了對泡沫持續時間的診斷：應用於1987年10月崩盤之前的時期，有明確的證據表明泡沫至少在4年前開始。
+  * 我們確認了波動率限制的LPPL模型在過去二十年中世界上發生的其他七個主要泡沫的有效性和普遍性。使用貝葉斯推理，我們發現與標準基準相比，我們的模型具有非常強的統計偏好，這與Chang和Feigenbaum（2006）使用單位根模型進行殘差相矛盾。
 
 ## 圖書
 

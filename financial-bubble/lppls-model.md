@@ -95,9 +95,12 @@ $$
 * [https://zhuanlan.zhihu.com/p/41931776](https://zhuanlan.zhihu.com/p/41931776)
 * [破解股市泡沫之謎——對數週期冪率（LPPL）模型](https://www.kancloud.cn/wizardforcel/python-quant-uqer/186247)
 
-論文
+### 論文
 
+* \[LPPL模型用於DJIA與HSI] Didier Sornette and Wei-Xing Zhou, "[Predictability of large future changes in major financial indices](https://www.sciencedirect.com/science/article/abs/pii/S0169207005000191), " International Journal of Forecasting, Vol 22, Issue 1, pp. 153-168, 2006.
 * \[book] Dean Fantazzini and Petr Geraskin, "[Everything you always wanted to know about log-periodic power laws for bubble modeling but were afraid to ask](https://www.taylorfrancis.com/chapters/edit/10.4324/9780429198557-3/everything-always-wanted-know-log-periodic-power-laws-bubble-modeling-afraid-ask-petr-geraskin-dean-fantazzini)," New Facets of Economic Complexity in Modern Financial Markets, pp. 30-55,  2019.
+* Didier Sornette, Ryan Woodard, Wanfeng Yan and Wei-Xing Zhou, "[Clarifications to questions and criticisms on the Johansen–Ledoit–Sornette financial bubble model,](https://www.sciencedirect.com/science/article/abs/pii/S0378437113004342) " Physica A, pp. 4417–4428, 2013.
+* L. Lin, R.E. Ren and D. Sornette, "[The volatility-confined LPPL model: A consistent model of ‘explosive’ financial bubbles with mean-reverting residuals](https://www.sciencedirect.com/science/article/abs/pii/S1057521914000350), " International Review of Financial Analysis, Vol. 33, pp. 210-225, 2014.
 
 ## 圖書
 

@@ -15,5 +15,6 @@ description: dragon king theory
 ## 參考資料
 
 * [https://en.wikipedia.org/wiki/Dragon\_king\_theory](https://en.wikipedia.org/wiki/Dragon\_king\_theory)
-* D. Sornette, Dragon-Kings, Black Swans and the Prediction of Crises, International Journal of Terraspace Science and Engineering 1(3), 1–17 (2009).
-*
+* D. Sornette, "[Dragon-Kings, Black Swans and the Prediction of Crises](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=1470006),", International Journal of Terraspace Science and Engineering,  Vol 1, pp. 1-17,  2009.
+* Didier Sornette and Guy Ouillon, "[Dragon-kings: mechanisms, statistical methods and empirical evidence](https://link.springer.com/article/10.1140/epjst/e2012-01559-5),"The European Physical Journal Special Topics, Vol. 205, pp. 1-26, 2012.
+* \[日內當沖的冪律與龍王分佈]Vladimir Filimonov and Didier Sornette, "[Power law scaling and ‘‘Dragon-Kings’’ in distributions of intraday financial drawdowns](https://www.sciencedirect.com/science/article/abs/pii/S0960077914002124), " Chaos, Solitons & Fractals, Vol. 74, pp. 27.45, 2015.

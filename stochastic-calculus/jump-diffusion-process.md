@@ -24,6 +24,7 @@ Bates (1996) 隨機波動跳躍擴散模型(Stochastic volatility jump diffusion
 * Robert C. Merton, “The Impact on Option Pricing of Specification Error in the Underlying Stock Price Returns,” The Journal of Finance, Vol XXXI, No 2, 1976.
 * Steven L. Heston, "A closed-form solution for options with stochastic volatility with applications to bond and currency options," Review of Financial Studiesm, Vol. 6, No. 2, pp. 327–343, 1993.
 * David S. Bates, "Jumps and Stochastic volatility: Exchange Rate Processes Implicity in Deutsche Mark Options," The Review of Financial Studies, Vol. 9, No. 1,  pp. 69–107, 1996.
+* [https://medium.com/@polanitzer/jump-diffusion-process-with-drift-in-python-simulate-the-future-distribution-of-foreign-exchange-3d448e6f1d95](https://medium.com/@polanitzer/jump-diffusion-process-with-drift-in-python-simulate-the-future-distribution-of-foreign-exchange-3d448e6f1d95)
 
 ### 實作
 

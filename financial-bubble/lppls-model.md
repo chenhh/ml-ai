@@ -4,6 +4,8 @@ description: Log-Periodic Power Law Singularity, 對數週期冪律奇點
 
 # LPPLS模型
 
+<figure><img src="../.gitbook/assets/image (23).png" alt="" width="360"><figcaption><p>正負(反)泡沫</p></figcaption></figure>
+
 Johansen 和 Sornette認為金融市場上由於投資者之間的羊群效應及正回饋機制造成的資產價格泡沫的膨脹與破裂可由 LPPL 模型進行建模。
 
 LPPL 模型具有如下特性:&#x20;

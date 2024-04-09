@@ -13,6 +13,26 @@
 3. $$\forall t>0, B_t \sim N(0, \sigma^2 t)$$
 4. $$B(t)$$為時間的連續的函數。
 
+```python
+# https://scipy-cookbook.readthedocs.io/items/BrownianMotion.html
+# 要注意給定的是標準差還是變異數
+from scipy.stats import norm
+
+# parameters
+delta = 0.25    # standard deviation
+dt = 0.1        # interval
+n_step = 20
+
+# initial condition
+x = 0.0
+
+for k in range(n_step):
+    # https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html
+    # scale為標準差
+    x = x + norm.rvs(scale=delta**2*dt)
+    print(x)
+```
+
 ## 布朗運動
 
 > 一個連續的隨機過程$$\{ B_t, 0 \leq t <\infty \}$$，在時間$$[0,\infty)$$稱為標準布朗運動（standard Brownian motion）必須滿足以下四個條件：

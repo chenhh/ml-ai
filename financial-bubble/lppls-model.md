@@ -144,6 +144,26 @@ $$
 * Jan Henrik Wosnitza and Didier Sornette," [Analysis of log-​periodic power law singularity patterns in time series related to credit risk](https://link.springer.com/article/10.1140/epjb/e2015-50019-9)," The European Physical Journal B Vol. 88, No. 97, pp. 1-​11, 2015.
 * Wanfeng Yan, Ryan Woodard, and Didier Sornette, "I[nferring Fundamental Value and Crash Nonlinearity from Bubble Calibration](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=1719124)," Quantitative Finance Vol. 14, No. 7, pp. 1273-​1282, 2014.
 
+### 反泡沫(anti-bubbles)
+
+* Anders Johansen and Didier Sornette, "[Financial "anti-​bubbles'': Log-​periodicity in Gold and Nikkei collapses](https://www.worldscientific.com/doi/abs/10.1142/S0129183199000437)," International Journal of Modern Physics C, Vol. 10, No. 4, pp. 563-​575, 1999.
+  * 我們認為，交易員的羊群行為不僅會導致投機泡沫，金融市場估值可能加速高估，隨後可能出現崩盤，<mark style="color:red;">還會導致“反泡沫”，即市場在歷史高點後貶值減速</mark>。
+  * 為此，我們提出了一個簡單的市場動態模型，在該模型中，需求緩慢下降，障礙逐漸熄滅，導致市場價格的冪律衰減，其特徵是對數週期振蕩減速。
+  * 我們記錄了日本日經指數從1990年至今的這種行為，以及1980年之後的黃金期貨價格，兩者都是在歷史高點。
+  * 非參數功率譜分析表明，存在具有較高統計顯著性的對數週期性，日經指數的優選尺度比為λ≈3.5，黃金期貨價格的優選尺度比為λ≈1.9，與導致崩盤的投機泡沫的值相當。
+* Anders Johansen and Didier Sornette, "[Bubbles and anti-​bubbles in Latin-​American, Asian and Western stock markets: An empirical study](https://www.worldscientific.com/doi/abs/10.1142/S0219024901001218)", International Journal of Theoretical and Applied Finance, Vol. 4, No. 6, pp. 853-​920, 2001.
+  * 本文確定了拉丁美洲和亞洲股市出現21個重大泡沫，隨後出現大規模崩盤或嚴重調整。
+  * 我們發現，除了極少數例外，這些推測性氣泡可以用預測特定冪律加速度的泡沫的理性期望模型以及所謂的對數週期幾何模式來定量描述。該模型大大擴充套件了先前為世界主要金融市場（即美國和外匯市場）提出的泡沫後崩盤或嚴重修正的理性預期模型的適用性。
+  * 根據我們的模型，分別使用價格和對數對模型預測的比較進一步表明，市場如此大幅度的下行運動只不過是前一個泡沫的耗盡，從而使市場回到均衡狀態。
+  * 此外，1994年初新興市場的一連串危機也表明，一系列二級股票市場表現出密切相關的“反泡沫”。這表明，較小的股票市場不僅由於美國市場的總體影響而無法弱同步，而且由於1994年亞洲金融危機等外部因素，它們獨立於美國市場。
+* Wei-Xing Zhou and Didier Sornette, "[Evidence of a Worldwide Stock Market Log-​Periodic Anti-​Bubble Since mid-​2000](https://www.sciencedirect.com/science/article/abs/pii/S0378437103008586), "Physica A, Vol. 330, pp. 543-​583, 2003.
+  * 繼2000年8月開始對美國S\&P指數反泡沫進行調查後，我們分析了38個世界股票市場指數，並確定了21個“看跌反泡沫”和6個“看漲反泡沫”。
+  * <mark style="color:red;">“反泡沫”被定義為具有自相似膨脹對數週期振蕩的自強化價格軌跡。</mark>從數學上講，熊市反泡沫的特徵是冪律、價格（或價格對數）隨時間變化的下降和對數週期振蕩的擴大。
+  * 我們認為，<mark style="color:blue;">看跌的反泡沫是由積極的價格對價格反饋產生的，這些反饋助長了整體悲觀情緒和負面市場情緒，而人際互動進一步加強了這種情緒</mark>。
+  * 牛市的反泡沫在這裡首次被識別出來。最引人注目的發現是，大多數歐洲和西方股票市場指數以及其他股票指數都表現出與美國S\&P500指數幾乎相同的對數週期冪律反泡沫結構。
+  * 據發現，這些反泡沫大約在2000年8月同時在所有這些市場開始。這顯示了全球同步程度的顯著程度。因此，自2000年以來全球股票市場的下跌是一個國際事件，表明全球化正在加強。
+*
+
 ## 圖書
 
 * Didier Sornette, "Why Stock Markets Crash: Critical Events in Complex Financial Systems, "Princeton University Press.

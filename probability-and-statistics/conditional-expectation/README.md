@@ -12,7 +12,7 @@ description: conditional expectation
 * 隨機變數$$X$$相對於事件集合$$E$$的期望值$$\mathrm{E}(X|E)$$為隨機變數。
 * 隨機變數$$X$$相對於σ域$$\sigma(E)$$的期望值$$\mathrm{E}(X|\sigma(E))$$為隨機變數。
 
-<mark style="color:red;">在最一般的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。
+<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。
 
 * 隨機變數$$X$$的期望值，可視為隨機變數相對於宇集合$$\Omega$$生成的σ域$$\sigma(\Omega)=\{\emptyset, \Omega\}$$的隨機變數。
 * 相對於對事件集合$$E$$的條件期望值，可視為相對於生成該事件的σ域$$\sigma(E)=\{\emptyset, E, E^c, \Omega\}$$的隨機變數。
@@ -30,7 +30,7 @@ description: conditional expectation
 3. $$\mathrm{E}(X|Y)$$為一依賴於$$Y$$​的隨機變數。
 
 > * $$\displaystyle \mathrm{E}(Y|X=k)=\sum_{h} h \cdot\mathrm{P}(Y=h|X=k)$$，在事件$$X=k$$下，$$Y$$的條件期望值。
-> * $$\displaystyle \mathrm{E}(Y|X=k)=\int_{-\infty}^{\infty}y\cdot f_{Y|X}(y|x)dy$$
+> * $$\displaystyle \mathrm{E}(Y|X=k)=\int_{-\infty}^{\infty}y\cdot f_{Y|X}(y|k)dy$$
 > * $$\mathrm{P}(Y=h|X=k) = \frac{\mathrm{P}(Y=h \cap X=k)}{\mathrm{P}(X=k)}$$
 
 * 條件期望值$$\mathrm{E}(Y|X=k)$$在$$X=k$$給定後，其值已經決定了，因此為$$k$$的函數，即$$\mathrm{E}(Y|X=k) = f(k)$$。如果$$X$$之值未定時，則$$\mathrm{E}(Y|X) = g(X)$$。
@@ -38,8 +38,8 @@ description: conditional expectation
 ### 條件期望值為最佳預測值
 
 > $$\displaystyle \mathrm{E}(Y|X) = \arg \min_{g(X)} \mathrm{E}(Y-g(X))^2$$，即$$\mathrm{E}(Y|X)$$為對於$$Y$$的最佳預測值。
-
-
+>
+> 註：也可用內積空間的[最小平方解](../../linear-algebra/inner-product-space/least-square-solution.md)得出。[https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/01\_law\_of\_iterated\_expectations.svg/1024px-01\_law\_of\_iterated\_expectations.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/01\_law\_of\_iterated\_expectations.svg/1024px-01\_law\_of\_iterated\_expectations.svg.png)
 
 <details>
 

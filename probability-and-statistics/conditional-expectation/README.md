@@ -31,6 +31,16 @@ description: conditional expectation
 
 可得$$U \cup V \cup F=\sigma(E)$$且$$U \cap F =\emptyset, ~U \cap V = \emptyset, ~V \cap F = \emptyset$$形成對$$\sigma(E)$$的分割。
 
+### σ域的資訊
+
+當我們看到條件機率的抽象定義時 $$\mathcal{G}$$ ，可以這樣解釋：
+
+1. 樣本空間$$\Omega$$有一組分割$$\mathcal{E}=\{E_i\}_{i \in I}$$。
+2. $$\mathcal{G}$$是包含所有$$\mathcal{E}$$的(最小) σ域。
+3. 在將來的某個時候，我們會被告知實現的結果(事件)$$E$$屬於一個集合$$E_i \in \mathcal{E}$$ ;
+4. 此時將能夠計算出條件機率$$\mathrm{P}(E| E_i), ~ \forall i \in I$$;
+5. 在此之前，這個條件機率是未知的，它可以被視為一個隨機變數，用$$\mathrm{P}(E|\mathcal{G})$$表示。
+
 ## 條件期望值
 
 條件期望值有三種形式：

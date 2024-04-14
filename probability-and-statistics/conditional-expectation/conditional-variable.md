@@ -34,7 +34,7 @@ description: conditional expectation with respect to sigma-field.
 
 $$\Omega=\{1,2,3,4\}$$，$$\mathcal{F}=\sigma(\{1\}, \{2\}, \{3\}, \{4\})$$。
 
-$$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}({2})=\frac{1}{4}$$， $$\mathrm{P}({3})=\frac{1}{6}$$，$$\mathrm{P}(\{4\})=\frac{1}{12}$$。
+$$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}(\{2\})=\frac{1}{4}$$， $$\mathrm{P}(\{3\})=\frac{1}{6}$$，$$\mathrm{P}(\{4\})=\frac{1}{12}$$。
 
 令事件集合$$B=\{1,2,3\}$$，則：$$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\frac{1}{2}+\frac{1}{4}+\frac{1}{6}}=\frac{12}{11}\mathrm{P}(A \cap B)$$。
 

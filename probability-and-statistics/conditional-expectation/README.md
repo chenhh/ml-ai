@@ -6,20 +6,30 @@ description: conditional expectation
 
 ## 簡介
 
-* 隨機變數$$X$$的期望值$$\mathrm{E}(X)$$為常數值。
-* 隨機變數$$X$$相對於隨機變數$$Y$$的特定實現值$$Y=y$$的期望值$$\mathrm{E}(X|Y=y)$$為常數值。
-* 隨機變數$$X$$相對於隨機變數$$Y$$的期望值$$\mathrm{E}(X|Y)$$$$=f(Y)$$為隨機變數。
-* 隨機變數$$X$$相對於事件集合$$E$$的期望值$$\mathrm{E}(X|E)$$為隨機變數。
-* 隨機變數$$X$$相對於σ域$$\sigma(E)$$的期望值$$\mathrm{E}(X|\sigma(E))$$為隨機變數。
+* 隨機變數$$X$$的期望值$$\mathrm{E}(X) \equiv \mathrm{E}(X~|~\Omega)$$為<mark style="color:blue;">常數值</mark>。
+* 隨機變數$$X$$相對於隨機變數$$Y$$的特定實現值$$Y=y$$的期望值$$\mathrm{E}(X|Y=y)$$為<mark style="color:blue;">常數值</mark>。
+* 隨機變數$$X$$相對於隨機變數$$Y$$的期望值$$\mathrm{E}(X|Y)$$$$=f(Y)$$為<mark style="color:blue;">隨機變數</mark>，依賴於$$Y$$的實現值。更準確的說是依賴於實現值前像集合對宇集合的分割，即相異$$E_i=f^{-1}(y_i)=\{\omega \in ~\Omega ~|~ f(Y)=y_i\}$$為$$\Omega$$的分割，$$\bigcup_{i \in I} E_i =\Omega, ~ E_i \cap E_j=\emptyset, ~\forall i \neq j$$，而每一個分割$$E_i$$中，均可以算出$$X$$在此分割的期望值(常數)。由於無法確定那一個實現值$$y_i$$(前像為$$E_i$$)會發生，因此為隨機變數。
+* 隨機變數$$X$$相對於事件集合$$E$$的期望值$$\mathrm{E}(X|E)$$為常數。
+* 隨機變數$$X$$相對於σ域$$\sigma(E)$$的期望值$$\mathrm{E}(X|\sigma(E))$$為<mark style="color:blue;">隨機變數</mark>。其中$$\sigma(E)$$為包含事件集合$$E$$的最小σ域。而σ域中必包含對於宇集合$$\Omega$$的分割(如下節)，而$$X$$在相異分割中均可求出期望值(常數)，而所有分割中的期望值形成隨機變數。
 
-<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。
+<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。因為$$\sigma$$域中包含了對宇集合$$\Omega$$分割的資訊。而此分割不必是特定隨機變數所生成，但存在可生成該分割的隨機變數(?)。
 
-* 隨機變數$$X$$的期望值，可視為隨機變數相對於宇集合$$\Omega$$生成的σ域$$\sigma(\Omega)=\{\emptyset, \Omega\}$$的隨機變數。
-* 相對於對事件集合$$E$$的條件期望值，可視為相對於生成該事件的σ域$$\sigma(E)=\{\emptyset, E, E^c, \Omega\}$$的隨機變數。
-* 而相對於隨機變數$$Y$$的條件期望值，可視為相對於生成該隨機變數的σ域$$\sigma(Y)$$的隨機變數。
+* 隨機變數$$X$$的期望值，可視為隨機變數相對於宇集合$$\Omega$$生成的σ域$$\sigma(\Omega)=\{\emptyset, \Omega\}$$的隨機變數。$$\sigma(\Omega)$$<mark style="color:blue;">中完全沒有對</mark>$$\Omega$$<mark style="color:blue;">的分割的資訊</mark>。
+* 相對於對事件集合$$E$$的條件期望值，可視為相對於生成該事件的σ域$$\sigma(E)=\{\emptyset, E, E^c, \Omega\}$$的隨機變數。$$\sigma(E)$$<mark style="color:blue;">包含了</mark>$$E$$<mark style="color:blue;">中基本集合對於</mark>$$\Omega$$<mark style="color:blue;">的分割的資訊</mark>。
+* 而相對於隨機變數$$Y$$的條件期望值，可視為相對於生成該隨機變數的σ域$$\sigma(Y)$$的隨機變數。$$Y$$的實現值前像對於$$\Omega$$形成分割。
 * 而相對於隨機變數$$Y$$的特定實現值$$y$$的條件期望值，為退化的$$\sigma(Y)$$的隨機變數，為常數值。
 
 離散隨機變數的條件期望值$$\mathrm{E}(X~|~Y)$$實際上就是把先把$$Y$$限制在某些值（比如2,1,7）上，求得對應的事件件（比如{a, b},{c, d}或{e, f}）（也就是可測函數的前像），然後找到$$X$$中對應的事件求均值，各個集合
+
+### σ域中必包含對於宇集合的分割
+
+令$$\sigma(E)$$為由事件$$E$$生成的σ域，不失一般性令$$A,B \in \sigma(E)$$，$$A \cup B = \sigma(E)$$，但是$$A \cap B = F\neq \emptyset$$。
+
+由σ域的定義得$$F \in \sigma(E)$$且$$F\in \sigma(E)$$，且$$U=A \setminus F = A \cap F^c \in \sigma(E)$$。
+
+同理可得$$V = B \setminus F = B \cap F^c \in \sigma(E)$$。
+
+可得$$U \cup V \cup F=\sigma(E)$$且$$U \cap F =\emptyset, ~U \cap V = \emptyset, ~V \cap F = \emptyset$$形成對$$\sigma(E)$$的分割。
 
 ## 條件期望值
 

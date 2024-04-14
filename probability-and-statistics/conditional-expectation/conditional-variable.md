@@ -99,10 +99,12 @@ $$\displaystyle \mathrm{P}(A|D) = \frac{\mathrm{P}(A \cap D)}{\mathrm{P}(D)}  = 
 
 ## 將σ域解釋為資訊集合
 
+將σ域解釋為<mark style="background-color:green;">資訊集合時，即是考慮σ域(集合族)中包含了如何切割宇集合</mark>$$\Omega$$<mark style="background-color:green;">的集合</mark>。
+
 令$$Y, Y_1, Y_2$$為可測空間$$(\Omega, \mathcal{F})$$隨機變數、隨機向量或隨機過程。則：
 
-* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。<mark style="color:blue;">也可說成</mark>$$Y$$<mark style="color:blue;">為</mark>$$\mathcal{F}$$<mark style="color:blue;">可測</mark>。
-* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 <mark style="color:blue;">稱</mark>$$Y_2$$<mark style="color:blue;">比</mark>$$Y_1$$<mark style="color:blue;">有更多的資訊量</mark>。
+* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。<mark style="color:red;">以宇集合的分割解釋，因此</mark>$$\sigma(Y)\subseteq \mathcal{F}$$<mark style="color:red;">，所以兩σ域對於</mark>$$\Omega$$<mark style="color:red;">而言有相同的分割</mark>。<mark style="color:blue;">也可說成</mark>$$Y$$<mark style="color:blue;">為</mark>$$\mathcal{F}$$<mark style="color:blue;">可測 \[</mark>[<mark style="color:blue;">可測函數定義</mark>](../../math-analysis/measure/measurable-function.md)<mark style="color:blue;">]\[</mark>[<mark style="color:blue;">證明</mark>](../../math-analysis/measure/measurable-function.md#ke-ce-han-shu-de-yu-wei-quan-ju-yu-de-zi-ji)<mark style="color:blue;">]</mark>。
+* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 <mark style="color:blue;">稱</mark>$$Y_2$$<mark style="color:blue;">比</mark>$$Y_1$$<mark style="color:blue;">有更多的資訊量</mark>。<mark style="color:red;">或者說</mark>$$\sigma(Y_2)$$<mark style="color:red;">相對於</mark>$$\sigma(Y_1)$$<mark style="color:red;">對</mark>$$\Omega$$<mark style="color:red;">有更細的分割</mark>。
 
 $$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說明$$Y$$。如果$$\mathcal{F}$$與$$Y$$獨立時，則$$\mathcal{F}$$中的資訊對於解釋$$Y$$沒有幫助。<mark style="color:green;">而一般化的條件期望值討論的是兩者極端間的</mark>$$\mathcal{F}$$<mark style="color:green;">，可用於估計但無法完全解釋</mark>$$Y$$。
 

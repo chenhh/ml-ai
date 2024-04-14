@@ -12,7 +12,7 @@ description: conditional expectation
 * 隨機變數$$X$$相對於事件集合$$E$$的期望值$$\mathrm{E}(X|E)$$為常數。
 * 隨機變數$$X$$相對於σ域$$\sigma(E)$$的期望值$$\mathrm{E}(X|\sigma(E))$$為<mark style="color:blue;">隨機變數</mark>。其中$$\sigma(E)$$為包含事件集合$$E$$的最小σ域。而σ域中必包含對於宇集合$$\Omega$$的分割(如下節)，而$$X$$在相異分割中均可求出期望值(常數)，而所有分割中的期望值形成隨機變數。
 
-<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。因為$$\sigma$$域中包含了對宇集合$$\Omega$$分割的資訊。<mark style="background-color:blue;">此處的資訊指的是將</mark>$$\Omega$$<mark style="background-color:blue;">分割的方法，與資訊理論中資訊的定義不同</mark>。
+<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。因為$$\sigma$$域中包含了對宇集合$$\Omega$$分割的資訊。<mark style="background-color:blue;">此處的資訊指的是將</mark>$$\Omega$$<mark style="background-color:blue;">分割的方法 ，與資訊理論中資訊的定義不同</mark>。資訊含量越高可將$$\Omega$$切的更細，最細的分割是將$$\Omega$$中所有的元素均切成單元素集合；反之資訊含量不足時只能得到較粗糙(較大)的集合，而最大的集合為宇集合$$\Omega$$，即沒有任意資訊可切割宇集合。
 
 * 隨機變數$$X$$的期望值，可視為隨機變數相對於宇集合$$\Omega$$生成的σ域$$\sigma(\Omega)=\{\emptyset, \Omega\}$$的隨機變數。$$\sigma(\Omega)$$<mark style="color:blue;">中完全沒有對</mark>$$\Omega$$<mark style="color:blue;">的分割的資訊</mark>。
 * 相對於對事件集合$$E$$的條件期望值，可視為相對於生成該事件的σ域$$\sigma(E)=\{\emptyset, E, E^c, \Omega\}$$的隨機變數。$$\sigma(E)$$<mark style="color:blue;">包含了</mark>$$E$$<mark style="color:blue;">中基本集合對於</mark>$$\Omega$$<mark style="color:blue;">的分割的資訊</mark>。

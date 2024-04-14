@@ -94,9 +94,21 @@ description: σ代數
 >
 > 由定義得$$A(\mathcal{F}) \subseteq \mathcal{F}$$，且$$\forall \emptyset \neq S \in \mathcal{F}$$，$$S$$可由$$A(\mathcal{F})$$聯集得出。
 >
-> 當$$| \mathcal{F}| < \infty$$時，$$A(\mathcal{F})$$形成$$\Omega$$的一組分割，可得$$\mathcal{F}=\sigma(A(\mathcal{F}))$$。
+> 當$$| \mathcal{F}| < \infty$$時，$$A(\mathcal{F})$$形成$$\Omega$$的一組有限分割，可得$$\mathcal{F}=\sigma(A(\mathcal{F}))$$。
 >
 > $$\Omega \notin A(\mathcal{F})$$，假設$$\emptyset \neq H \in \mathcal{F}$$，必可得$$H \subset \Omega$$且$$H \neq \Omega$$。
+>
+> [https://math.stackexchange.com/questions/3065633/prove-or-disprove-that-every-finite-sigma-algebra-on-omega-is-generated-by](https://math.stackexchange.com/questions/3065633/prove-or-disprove-that-every-finite-sigma-algebra-on-omega-is-generated-by) (有限元素的σ域可由宇集合的有限分割所生成)
+>
+> [https://stats.stackexchange.com/questions/372534/atoms-of-a-sigma-algebra](https://stats.stackexchange.com/questions/372534/atoms-of-a-sigma-algebra) (宇集合的可數分割可形成σ域，且分割為原子集合)
+>
+> [https://math.stackexchange.com/questions/1414129/is-every-sigma-algebra-generated-by-a-partition?rq=1](https://math.stackexchange.com/questions/1414129/is-every-sigma-algebra-generated-by-a-partition?rq=1)
+>
+> 註：可數的σ域必為有限元素，而有無限個元素的σ域必為不可數的。
+>
+> <mark style="color:red;">存在無限個元素的σ域不是由宇集合的分割生成</mark>，例如閉區間\[0,1]上的Borel集$$\mathcal{B}$$無法由\[0,1]的任意分割生成。(反證法)令$$\{E_i\}_{i \in I}$$為\[0,1]的分割，因為單點集$$\{x\} \in \mathcal{B}$$，因此可得$$E_i, ~\forall i \in I$$都必須為單點集。但是單點集的可數聯集無法生成區間$$[0,1]$$，因為\[0,1]為不可數集合，無法表示為可數集合的聯集。因此Borel集不是由\[0,1]的分割生成。
+>
+> 註：雖然Borel集不是由分割生成，但是Borel集包含了將\[0,1]切成分割的資訊。
 
 ### 範例
 
@@ -104,7 +116,7 @@ description: σ代數
 
 <mark style="background-color:orange;">\[power set]</mark> $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}\equiv 2^S$$, 則$$F$$為σ域<mark style="color:red;">(最大的σ域)</mark>。而$$A(\mathcal{F})=S$$中每一個元素形成的signleton集合族。
 
-<mark style="background-color:orange;">\[包含集合A的最小σ域]</mark> $$F=\{A, A^C, \emptyset\, \Omega\}$$為σ域。
+<mark style="background-color:orange;">\[包含集合A的最小σ域]</mark> $$F=\{A, A^C, \emptyset\ , \Omega\}$$為σ域。
 
 $$S=\{1,2,3\}$$，則：
 

@@ -12,7 +12,7 @@ description: conditional expectation
 * 隨機變數$$X$$相對於事件集合$$E$$的期望值$$\mathrm{E}(X|E)$$為常數。
 * 隨機變數$$X$$相對於σ域$$\sigma(E)$$的期望值$$\mathrm{E}(X|\sigma(E))$$為<mark style="color:blue;">隨機變數</mark>。其中$$\sigma(E)$$為包含事件集合$$E$$的最小σ域。而σ域中必包含對於宇集合$$\Omega$$的分割(如下節)，而$$X$$在相異分割中均可求出期望值(常數)，而所有分割中的期望值形成隨機變數。
 
-<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。因為$$\sigma$$域中包含了對宇集合$$\Omega$$分割的資訊。<mark style="background-color:blue;">此處的資訊指的是將</mark>$$\Omega$$<mark style="background-color:blue;">分割的方法 ，與資訊理論中資訊的定義不同</mark>。資訊含量越高可將$$\Omega$$切的更細，最細的分割是將$$\Omega$$中所有的元素均切成單元素集合；反之資訊含量不足時只能得到較粗糙(較大)的集合，而最大的集合為宇集合$$\Omega$$，即沒有任意資訊可切割宇集合。
+<mark style="color:red;">在最一般化的情況下，條件期望值是相對特定的σ域(且</mark>$$X$$<mark style="color:red;">不需為</mark>$$\mathcal{F}$$<mark style="color:red;">可測)的隨機變數</mark>。因為$$\sigma$$域中包含了對宇集合$$\Omega$$分割的資訊(<mark style="background-color:purple;">有限</mark>$$\sigma$$<mark style="background-color:purple;">域可得原子集合</mark>$$\mathcal{A}(\mathcal{F})$$<mark style="background-color:purple;">，而無限</mark>$$\sigma$$<mark style="background-color:purple;">域不一定由分割生成，但宇集合的分割為其元素</mark>)。<mark style="background-color:blue;">此處的資訊指的是將</mark>$$\Omega$$<mark style="background-color:blue;">分割的方法 ，與資訊理論中資訊的定義不同</mark>。資訊含量越高可將$$\Omega$$切的更細，最細的分割是將$$\Omega$$中所有的元素均切成單元素集合；反之資訊含量不足時只能得到較粗糙(較大)的集合，而最大的集合為宇集合$$\Omega$$，即沒有任意資訊可切割宇集合。
 
 * 隨機變數$$X$$的期望值，可視為隨機變數相對於宇集合$$\Omega$$生成的σ域$$\sigma(\Omega)=\{\emptyset, \Omega\}$$的隨機變數。$$\sigma(\Omega)$$<mark style="color:blue;">中完全沒有對</mark>$$\Omega$$<mark style="color:blue;">的分割的資訊</mark>。
 * 相對於對事件集合$$E$$的條件期望值，可視為相對於生成該事件的σ域$$\sigma(E)=\{\emptyset, E, E^c, \Omega\}$$的隨機變數。$$\sigma(E)$$<mark style="color:blue;">包含了</mark>$$E$$<mark style="color:blue;">中基本集合對於</mark>$$\Omega$$<mark style="color:blue;">的分割的資訊</mark>。
@@ -33,10 +33,12 @@ description: conditional expectation
 
 ### σ域的資訊
 
+* [https://www.statlect.com/fundamentals-of-probability/conditional-probability-as-a-random-variable](https://www.statlect.com/fundamentals-of-probability/conditional-probability-as-a-random-variable)
+
 當我們看到條件機率的抽象定義時 $$\mathcal{G}$$ ，可以這樣解釋：
 
-1. 樣本空間$$\Omega$$有一組分割$$\mathcal{E}=\{E_i\}_{i \in I}$$。
-2. $$\mathcal{G}$$是包含所有$$\mathcal{E}$$的(最小) σ域。
+1. 樣本空間$$\Omega$$有一組由$$\mathcal{G}$$的[原子集合](../../math-analysis/set/field-and-sigma-field.md#yu-de-yuan-zi-ji-he-atomic-set)$$\mathcal{A}(\mathcal{G})$$形成的分割$$\mathcal{E}=\{E_i\}_{i \in I}$$。(此處是指$$\mathcal{A}(\mathcal{G}) \subseteq \mathcal{G}$$，但$$\mathcal{G}$$不一定可由$$\mathcal{A(G)}$$生成)
+2. $$\mathcal{G}$$是包含$$\mathcal{E}$$的σ域。
 3. 在將來的某個時候，我們會被告知實現的結果(事件)$$E$$屬於一個集合$$E_i \in \mathcal{E}$$ ;
 4. 此時將能夠計算出條件機率$$\mathrm{P}(E| E_i), ~ \forall i \in I$$;
 5. 在此之前，這個條件機率是未知的，它可以被視為一個隨機變數，用$$\mathrm{P}(E|\mathcal{G})$$表示。

@@ -99,7 +99,7 @@ $$\displaystyle \mathrm{P}(A|D) = \frac{\mathrm{P}(A \cap D)}{\mathrm{P}(D)}  = 
 
 ## 將σ域解釋為資訊集合
 
-將σ域解釋為<mark style="background-color:green;">資訊集合時，即是考慮σ域(集合族)中包含了如何切割宇集合</mark>$$\Omega$$<mark style="background-color:green;">的集合</mark>。
+將σ域解釋為<mark style="background-color:green;">資訊集合時，即是考慮σ域的原子集合</mark>$$\mathcal{A}$$<mark style="background-color:green;">中包含了如何切割宇集合</mark>$$\Omega$$<mark style="background-color:green;">的集合</mark>。
 
 令$$Y, Y_1, Y_2$$為可測空間$$(\Omega, \mathcal{F})$$隨機變數、隨機向量或隨機過程。則：
 

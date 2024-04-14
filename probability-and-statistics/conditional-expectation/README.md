@@ -23,13 +23,13 @@ description: conditional expectation
 
 ### σ域中必包含對於宇集合的分割
 
-令$$\sigma(E)$$為由事件$$E$$生成的σ域，不失一般性令$$A,B \in \sigma(E)$$，$$A \cup B = \sigma(E)$$，但是$$A \cap B = F\neq \emptyset$$。
+令$$\mathcal{G}$$為σ域，不失一般性令$$A,B \in \mathcal{G}$$，$$A \cup B =\mathcal{G}$$，但是$$A \cap B = F\neq \emptyset$$。
 
-由σ域的定義得$$F \in \sigma(E)$$且$$F\in \sigma(E)$$，且$$U=A \setminus F = A \cap F^c \in \sigma(E)$$。
+由σ域的定義得$$F \in \mathcal{G}$$且$$F^c\in \mathcal{G}$$，且$$U=A \setminus F = A \cap F^c \in \mathcal{G}$$。
 
-同理可得$$V = B \setminus F = B \cap F^c \in \sigma(E)$$。
+同理可得$$V = B \setminus F = B \cap F^c \in \mathcal{G}$$。
 
-可得$$U \cup V \cup F=\sigma(E)$$且$$U \cap F =\emptyset, ~U \cap V = \emptyset, ~V \cap F = \emptyset$$形成對$$\sigma(E)$$的分割。
+可得$$U \cup V \cup F=\mathcal{G}$$且$$U \cap F =\emptyset, ~U \cap V = \emptyset, ~V \cap F = \emptyset$$形成對$$\mathcal{G}$$的分割。
 
 ### σ域的資訊
 

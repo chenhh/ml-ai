@@ -26,7 +26,7 @@ description: conditional expectation with respect to sigma-field.
 
 ## 事件的條件機率為期望值的特例
 
-對於事件集合$$E \subseteq \Omega$$，考慮其指示(示性)函數（為隨機變數）$$\mathbf{1}_E(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in E \\  0,  \text{ if } \omega \not \in E \end{aligned}\right.$$。可得$$\mathrm{P}(E) = \mathrm{E}(\mathbf{1}_E)$$。同理可得$$\mathrm{P}(E|F)=\mathrm{E}(\mathbf{1}_E|F)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
+對於事件集合$$E \subseteq \Omega$$，考慮其指示(示性)函數（為隨機變數）$$\mathbf{1}_E(\omega) = \left\{  \begin{aligned} 1, \text{ if } \omega \in E \\  0,  \text{ if } \omega \not \in E \end{aligned}\right.$$。可得$$\mathrm{P}(E) = \mathrm{E}(\mathbf{1}_E) = 1 \cdot \mathrm{P}(E) + 0 \cdot \mathrm{P}(E^c)$$。同理可得$$\mathrm{P}(E|F)=\mathrm{E}(\mathbf{1}_E|F)$$。<mark style="color:blue;">所以條件機率只是條件期望值的一個特例，以下我們只考慮條件期望值</mark>。
 
 目前為止，條件期望只是把原先的變數限制在$$\Omega$$的一個子集上，把機率正規化了之後求期望值，為一實數值。
 
@@ -36,7 +36,7 @@ $$\Omega=\{1,2,3,4\}$$，$$\mathcal{F}=\sigma(\{1\}, \{2\}, \{3\}, \{4\})$$。
 
 $$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}(\{2\})=\frac{1}{4}$$， $$\mathrm{P}(\{3\})=\frac{1}{6}$$，$$\mathrm{P}(\{4\})=\frac{1}{12}$$。
 
-令事件集合$$B=\{1,2,3\}$$，則：$$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\frac{1}{2}+\frac{1}{4}+\frac{1}{6}}=\frac{12}{11}\mathrm{P}(A \cap B)$$。
+令事件集合$$B=\{1,2,3\}$$，則任意的事件集合$$A$$的條件機率：$$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\frac{1}{2}+\frac{1}{4}+\frac{1}{6}}=\frac{12}{11}\mathrm{P}(A \cap B)$$。
 
 因此可得條件機率：
 
@@ -47,11 +47,15 @@ $$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}(\{2\})=\frac{1}{4}$$， $$\math
 
 令隨機變數$$\displaystyle  X = \begin{pmatrix} 1 & 2 & 3 & 4 \\ 4 & 3 & 2 & 1 \end{pmatrix}$$
 
-可得期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}) \\ & = 4 \cdot \frac{1}{2} + 3 \cdot \frac{1}{4} + 2 \cdot \frac{1}{6} +  1 \cdot \frac{1}{12} = \frac{19}{6}  \end{aligned}$$
+可得給定宇集合的期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}) \\ & = 4 \cdot \frac{1}{2} + 3 \cdot \frac{1}{4} + 2 \cdot \frac{1}{6} +  1 \cdot \frac{1}{12} = \frac{19}{6}  \end{aligned}$$
 
-條件期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X|B) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}|B) \\ & = 4 \cdot \frac{6}{11} + 3 \cdot \frac{3}{11} + 2 \cdot \frac{2}{11} +  1 \cdot 0 = \frac{37}{11}  \end{aligned}$$
+給定集合B的條件期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X|B) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}|B) \\ & = 4 \cdot \frac{6}{11} + 3 \cdot \frac{3}{11} + 2 \cdot \frac{2}{11} +  1 \cdot 0 = \frac{37}{11}  \end{aligned}$$
+
+給定集合$$B^c$$的條件期望值：$$\displaystyle  \begin{aligned} \mathrm{E}(X|B^c) & = \sum_{i=1}^4 X(i)\mathrm{P}(\{i\}|B^c) \\ & = 4 \cdot 0 + 3 \cdot 0 + 2 \cdot 0 +  1 \cdot \frac{1}{11} = \frac{1}{11}  \end{aligned}$$
 
 以圖形來解釋得期望值$$\mathrm{E}(X)$$為$$X$$的實現值$$X(\omega)$$在樣本空間$$\Omega$$的平均值(高度)，而條件期望值$$\mathrm{E}(X|B)$$為$$X$$的實現值$$X(\omega)$$限制在集合$$B$$的平均值(高度)。
+
+以資訊解釋為$$B=\{1,2,3\}, B^c=\{4\}$$給定了宇集合$$\Omega$$的分割，因此給定隨機變數$$X$$，可算出$$X$$分別在$$B, ~B^c$$的條件機率，進而求出其在相異分割的條件期望值。
 
 ## 隨機變數的條件期望值
 
@@ -99,14 +103,14 @@ $$\displaystyle \mathrm{P}(A|D) = \frac{\mathrm{P}(A \cap D)}{\mathrm{P}(D)}  = 
 
 ## 將σ域解釋為資訊集合
 
-將σ域解釋為<mark style="background-color:green;">資訊集合時，即是考慮σ域的原子集合</mark>$$\mathcal{A}$$<mark style="background-color:green;">中包含了如何切割宇集合</mark>$$\Omega$$<mark style="background-color:green;">的集合</mark>。
+將σ域解釋為<mark style="background-color:green;">資訊集合時，即是考慮σ域中的集合如何切割宇集合</mark>$$\Omega$$。
 
 令$$Y, Y_1, Y_2$$為可測空間$$(\Omega, \mathcal{F})$$隨機變數、隨機向量或隨機過程。則：
 
-* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。<mark style="color:red;">以宇集合的分割解釋，因此</mark>$$\sigma(Y)\subseteq \mathcal{F}$$<mark style="color:red;">，所以兩σ域對於</mark>$$\Omega$$<mark style="color:red;">而言有相同的分割</mark>。<mark style="color:blue;">也可說成</mark>$$Y$$<mark style="color:blue;">為</mark>$$\mathcal{F}$$<mark style="color:blue;">可測 \[</mark>[<mark style="color:blue;">可測函數定義</mark>](../../math-analysis/measure/measurable-function.md)<mark style="color:blue;">]\[</mark>[<mark style="color:blue;">證明</mark>](../../math-analysis/measure/measurable-function.md#ke-ce-han-shu-de-yu-wei-quan-ju-yu-de-zi-ji)<mark style="color:blue;">]</mark>。
-* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 <mark style="color:blue;">稱</mark>$$Y_2$$<mark style="color:blue;">比</mark>$$Y_1$$<mark style="color:blue;">有更多的資訊量</mark>。<mark style="color:red;">或者說</mark>$$\sigma(Y_2)$$<mark style="color:red;">相對於</mark>$$\sigma(Y_1)$$<mark style="color:red;">對</mark>$$\Omega$$<mark style="color:red;">有更細的分割</mark>。
+* 若$$\sigma(Y) \subseteq \mathcal{F}$$，則稱$$Y$$的資訊已包含在$$\mathcal{F}$$內(the information of Y is contained in F)，或者說$$Y$$沒有比$$\mathcal{F}$$更多的資訊。<mark style="color:red;">以宇集合的分割解釋，因此</mark>$$\sigma(Y)\subseteq \mathcal{F}$$<mark style="color:red;">，所以</mark>$$\mathcal{F}$$<mark style="color:red;">中含有與</mark>$$\sigma(Y)$$<mark style="color:red;">對於</mark>$$\Omega$$<mark style="color:red;">而言相同的分割方式，因此</mark>$$\sigma(Y)$$<mark style="color:red;">相對於</mark>$$\mathcal{F}$$<mark style="color:red;">並沒有提供更多的資訊</mark>。<mark style="color:blue;">也可說成</mark>$$Y$$<mark style="color:blue;">為</mark>$$\mathcal{F}$$<mark style="color:blue;">可測 \[</mark>[<mark style="color:blue;">可測函數定義</mark>](../../math-analysis/measure/measurable-function.md)<mark style="color:blue;">]\[</mark>[<mark style="color:blue;">證明</mark>](../../math-analysis/measure/measurable-function.md#ke-ce-han-shu-de-yu-wei-quan-ju-yu-de-zi-ji)<mark style="color:blue;">]</mark>。
+* 若$$\sigma(Y_1) \subseteq \sigma(Y_2)$$，則 <mark style="color:blue;">稱</mark>$$Y_2$$<mark style="color:blue;">比</mark>$$Y_1$$<mark style="color:blue;">有更多的資訊量</mark>。<mark style="color:red;">或者說</mark>$$\sigma(Y_2)$$<mark style="color:red;">相對於</mark>$$\sigma(Y_1)$$<mark style="color:red;">對</mark>$$\Omega$$<mark style="color:red;">有更細的分割或其它的分割方式</mark>。
 
-$$Y$$在$$\mathcal{F}$$可測也可解釋為$$\mathcal{F}$$中的資訊足以說明$$Y$$。如果$$\mathcal{F}$$與$$Y$$獨立時，則$$\mathcal{F}$$中的資訊對於解釋$$Y$$沒有幫助。<mark style="color:green;">而一般化的條件期望值討論的是兩者極端間的</mark>$$\mathcal{F}$$<mark style="color:green;">，可用於估計但無法完全解釋</mark>$$Y$$。
+<mark style="background-color:red;">如果</mark>$$\mathcal{F}$$<mark style="background-color:red;">與</mark>$$Y$$<mark style="background-color:red;">獨立時，則</mark>$$\mathcal{F}$$<mark style="background-color:red;">中的資訊對於解釋</mark>$$Y$$<mark style="background-color:red;">沒有幫助</mark>。<mark style="color:green;">而一般化的條件期望值討論的是兩極端之間的情形，即</mark>$$\mathcal{F}$$<mark style="color:green;">與</mark>$$Y$$<mark style="color:green;">不獨立，但也沒有包含的關係，此時</mark>$$\mathcal{F}$$<mark style="color:green;">可用於估計但無法完全解釋</mark>$$Y$$。
 
 由於知道了更多的資訊可知如何將$$Y_1$$中的事件分割更細得到$$Y_2$$，因此可得$$\sigma(Y_1) \subseteq \sigma(Y_2)$$。
 
@@ -406,6 +410,7 @@ $$\displaystyle  \begin{aligned} & \int_A (c_1 \mathrm{E}(X_1|\mathcal{G}) + c_2
 * [Lecture 10 Conditional Expectation](https://web.ma.utexas.edu/users/gordanz/notes/conditional\_expectation.pdf)
   * [https://web.ma.utexas.edu/users/gordanz/lecture\_notes\_page.html](https://web.ma.utexas.edu/users/gordanz/lecture\_notes\_page.html)
 * [Conditional expectation toy example](https://people.maths.bris.ac.uk/\~mb13434/cond\_expn\_example\_balazs.pdf)
+* 鍾開萊，A course in porbability theory, 3th edition, ch9.
 
 
 

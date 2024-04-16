@@ -88,6 +88,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \big
 >     * $$\displaystyle \bigcap_{n=1}^\infty M_n$$可將不屬於所有$$M_n$$的元素排除了，只留下共有的元素。
 > * <mark style="color:red;">對於上極限集中的元素</mark>$$x$$，<mark style="color:red;">在任意給定一個索引值</mark>$$n$$<mark style="color:red;">之後</mark>，<mark style="color:red;">我們總能在</mark>$$n$$<mark style="color:red;">後（即</mark>$$k > n$$）<mark style="color:red;">找到一個集合</mark>$$E_k$$<mark style="color:red;">包含</mark>$$x$$，<mark style="color:red;">這就保證了</mark>$$x$$<mark style="color:red;">屬於無限個集合</mark>。和數列的上極限定義類似。
 > * 上極限中的元素只需要屬於無窮多個集合即可，不需要存在於所有的集合中。
+> * 也可定義為$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\{x \in X | x \text{ in infinite many(often) } E_k \}$$。
 
 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k =(E_1 \cup E_2\cup \ldots) \cap (E_2 \cup E_3 \cup \ldots )\cap \ldots$$
 
@@ -124,8 +125,9 @@ proof: 定義等價性 <=
 > $$\{E_n\}_{n \in \mathbb{N}}$$ 為集合序列，則：
 >
 > * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\{x \in X |\exists n \in \mathbb{N} \ni \forall k > n, x \in E_k\}$$稱為下極限集，除去集合序列$$\{E_n\}$$ 中的有限多個集合外，被其餘集合均包含的元素的全體組成的集合就是集合序列的下限集。
-> * 等價於$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，集合列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合。
+> * 等價於$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，<mark style="background-color:red;">集合列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合。由於上極限內的元素會出現在無窮個集合中因此悆隱含了下極限為上極限的子集。</mark>
 > * 而對於下極限集中的元素$$x$$，我們總能找到一個數$$n$$，當$$k > n$$時，都有$$x$$屬於$$E_k$$，即$$x$$屬於$$E_k$$後的所有集合，這就保證了$$x$$只不屬於有限個集合。
+> * 也可定義為$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\{x \in X | x \text{ not belong to finite many } E_k\}$$。
 
 proof：定義等價性 =>
 
@@ -135,6 +137,12 @@ proof：定義等價性 =>
 proof：定義等價性 <=
 
 * 若$$x \in \displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，則存在自然數$$n$$使得$$\displaystyle x \in \bigcap_{k=n}^\infty E_k$$，因此$$x$$不存在於$$E_1, \ldots E_{n-1}$$有限個集合中，但屬於$$E_n, E_{n+1},\dots$$所有集合中 (QED)。
+
+### 範例：下極限是在無窮個集合中都存在的元素的集合，只不存在於有限個集合
+
+令$$E_1=\{1,a\}, E_2=\{0,b\}, E_3=\{1,b\}, E_4=\{0,b\}, E_5=\{1,b\}, \dots$$
+
+下極限$$\displaystyle \liminf_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty \bigcap_{k=1}^n E_k=\{b\}$$，不包含0與1。因為0與1雖然存在於無窮個集合，但是也有無窮個集合不包含這兩個元素。而$$b$$除了在$$E_1$$之外的所有集合均包含之。
 
 ### 範例
 

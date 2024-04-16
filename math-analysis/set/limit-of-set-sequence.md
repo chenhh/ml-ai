@@ -14,14 +14,18 @@
 
 ## 單調集合序列(monotonic sequence of set)
 
-> $$\{E_n \}_{n \in \mathbb{N}}$$ 為
+> 定義$$\{E_n \}_{n \in \mathbb{N}}$$ 為
 >
 > * 遞增(increasing)序列若 $$E_n \subseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
 > * 遞減(decreasing)序列若$$E_n \supseteq E_{n+1}, ~ \forall n \in \mathbb{N}$$。
 >
 > 註：單調序列在證明中經常使用，以人工方式建構而成。
 
-E.g. $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
+範例：
+
+* $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
+* 給定集合序列$$\{A_k\}_{k \in \mathbb{N}}$$，定義$$E_n=\bigcup_{k=n}^\infty A_k$$，則$$E_1 \supseteq E_2 \supseteq \dots$$為遞減集合序列。
+* 同上，定義$$F_n =\bigcap_{k=n}^\infty A_k$$，則$$F_1 \subseteq F_2 \subseteq \dots$$為遞增集合序列。
 
 ## 單調有界集合序列極限必定存在
 
@@ -83,6 +87,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \big
 >     * $$\displaystyle M_n=\bigcup_{k=n}^\infty E_k$$因此$$x$$存在於$$M_n$$的部份集合當中。
 >     * $$\displaystyle \bigcap_{n=1}^\infty M_n$$可將不屬於所有$$M_n$$的元素排除了，只留下共有的元素。
 > * <mark style="color:red;">對於上極限集中的元素</mark>$$x$$，<mark style="color:red;">在任意給定一個索引值</mark>$$n$$<mark style="color:red;">之後</mark>，<mark style="color:red;">我們總能在</mark>$$n$$<mark style="color:red;">後（即</mark>$$k > n$$）<mark style="color:red;">找到一個集合</mark>$$E_k$$<mark style="color:red;">包含</mark>$$x$$，<mark style="color:red;">這就保證了</mark>$$x$$<mark style="color:red;">屬於無限個集合</mark>。和數列的上極限定義類似。
+> * 上極限中的元素只需要屬於無窮多個集合即可，不需要存在於所有的集合中。
 
 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k =(E_1 \cup E_2\cup \ldots) \cap (E_2 \cup E_3 \cup \ldots )\cap \ldots$$
 
@@ -105,6 +110,14 @@ proof: 定義等價性 <=
 * 取$$n=1$$，則$$x \in \bigcup_{k=1}^\infty E_k$$，則存在$$n_1 \in \mathbb{N} \ni x \in E_{n_1}$$。
 * 取$$n = j+1$$時，則$$x \in \bigcup_{k=j+1}^\infty E_k$$，也存在$$n_2 \in \mathbb{N}, n_2\geq n_1 \ni x \in E_{n_2}$$。
 * 以此類推可得一系列自然數 $$n_1, n_2, \ldots$$對應的無限多個集合$$E_{n_1}, E_{n_2},\ldots$$均含有$$x$$。 (QED)
+
+### 範例：上極限是在無窮個集合中都存在的元素的集合，而非全部集合的交集
+
+令$$E_1=\{1,a\}, E_2=\{0,b\}, E_3=\{1,b\}, E_4=\{0,b\}, E_5=\{1,b\}, \dots$$
+
+上極限$$\displaystyle \limsup_{n \rightarrow \infty} E_n = \bigcap_{n=1}^\infty \bigcup_{k=1}^n E_k=\{0,1,b\}$$，但是全部集合的交集$$\bigcap_{n=1}^\infty E_n=\emptyset$$。
+
+可見上極限中的點$$0$$不是存在所有的集合中，但是存在於無窮多個集合。即不會永遠離開的集合的元素。
 
 ## 集合序列的下極限(inferior limit of sequence of set)
 

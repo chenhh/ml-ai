@@ -163,11 +163,22 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 
 <mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標</mark>$$n$$<mark style="background-color:red;">之後的所有集合中，因此下極限的元素只不存在於有限個集合中</mark>）。
 
+令$$M_n = \bigcup_{k=n}^\infty E_k$$，可得$$M_1 \supseteq M_2 \supseteq \dots$$為遞減集合序列
+
+假設樣本點$$x$$屬於上極限。當$$n=1$$時，$$x \in M_1 \cap M_2 \cap\dots$$為所有集合的交集，當$$n=2$$時，$$x \in M_2 \cap M_3 \cap \dots$$為排除掉$$E_1$$後的所有集合交集，因此樣本點不屬於$$E_1$$。依此類推$$x$$不屬$$E_1, E_2, \dots, E_n, \dots$$等有限個集合，只有在$$n \rightarrow \infty$$時的集合才能得到樣本點。而滿足此條件的集合有無限多個。
+
 ## Borel-Cantelli lemma
 
-> $$E_1, E_2, \dots$$為可測事件序列，若$$\sum_{n=1}^\infty \mathrm{P}(E_n) < \infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 0$$。
+> $$E_1, E_2, \dots$$為可測事件序列，若$$\sum_{n=1}^\infty \mathrm{P}(E_n) < \infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 0$$或$$\displaystyle \mathrm{P}(\liminf_{n \rightarrow \infty} E_n) = 1$$。
 >
 > $$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)      & = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k \\ & = \{\omega \in \Omega ~|~ \omega \in \text{ infinitely many (often) } E_n \} \\  & = \{\omega \in \Omega ~|~ \forall n \in \mathbb{N} ~ \exists n_0 > n \ni \omega \in E_{n_0} \} \end{aligned}$$
+>
+> 註：此處不要求$$E_i, E_j$$間為獨立事件。\
+> <mark style="color:red;">無窮多個(Infinite)事件發生的機率，其總和若為有限(Finite)，則此無窮多個事件同時發生(交集)的機率為0</mark>。
+>
+> 如果無限多個集合的測度和為有限值，那麼包含於在無限多個集合中的子集的測度必為0，否則這無限多個集合每個測度都不小於$$\epsilon$$ ，加在一起就無窮大了。
+>
+>
 
 [測度版本的證明](../math-analysis/measure/#the-borel-cantelli-lemma)。
 
@@ -195,7 +206,9 @@ $$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)  
 
 ### 逆Borel-Cantelli 引理
 
-> $$E_1, E_2, \dots$$為獨立可測集合序列，即$$E_i, E_j, i \neq j$$獨立，若$$\sum_{n=1}^\infty \mathrm{P}(E_n)=\infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 1$$
+> $$E_1, E_2, \dots$$為獨立可測集合序列，即$$E_i, E_j, i \neq j$$獨立，若$$\sum_{n=1}^\infty \mathrm{P}(E_n)=\infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 1$$或$$\displaystyle \mathrm{P}(\liminf_{n \rightarrow \infty} E_n) = 0$$。
+>
+> <mark style="color:red;">獨立的無窮多個事件機率總和若為無窮大，則此無窮多個事件同時發生的機率為1</mark>。
 
 <details>
 
@@ -208,3 +221,17 @@ $$\displaystyle \begin{aligned} \mathrm{P}(\limsup_{n \rightarrow \infty} E_n)  
 $$\displaystyle \begin{aligned}  \mathrm{P}(\bigcap_{k=n}^\infty E_k^c)     & = \prod_{k=n}^\infty \mathrm{P}(E_k^c) \\      & = \prod_{k=n}^\infty (1- \mathrm{P})(E_k))~ [\because 1-x \leq e^{-x}]\\      & \leq \prod_{k=n}^\infty e^{-\mathrm{P}(E_k)} \\     & = \exp(- \sum_{k=n}^\infty \mathrm{P}(E_k)) \\     & = 0 \end{aligned}$$(QED)
 
 </details>
+
+### 應用：Infinite monkey problem
+
+此為The Second Borel-Cantelli Lemma的一個重要思想上的應用，它敘述了一隻猴子的打字次數達到「無窮」以後，必然能夠打出一篇完整的文章。
+
+此定理當中，「必然」是數學上的定義(機率為1)，然而「猴子」卻不是真的猴子，牠也可代換成「打字員」，它主要想說明的論點是不要把非常大但是有限的數視同無限 。
+
+就英文字而言，隨機打出一個與指定文字相同者的機率是(1/26)，隨機打出兩個相同字的機率則是(1/26\*26)=(1/676)=0.148%。光是要打出20個完全與指定文字相同的機率，就已經小於10^(-29)了。
+
+在現實中，要讓一隻猴子用隨機打字的方式打出一篇完整的莎士比亞劇本，機率是微乎其微(趨近於0)，因為現實是一種非常大的有限(而不是嚴格意義上的無限)。現實是在猴子的生命週期中，不太可能打得出一篇完整的文章。
+
+現實生活中非常多件事情雖然還是有可能同時發生，但機率不會是1(也就是不必然)。同理，有可能某些事情非常不可能會發生，但機率不會是0。
+
+The Second Borel-Cantelli告訴我們，眼光放至「無窮」，才能說什麼事情不是「一定會」發生，就是「一定不會」發生。現實生活因為並非無限，任何事情都應該要考慮到「可能性」才是。

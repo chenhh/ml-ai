@@ -2,11 +2,11 @@
 
 ## 古典機率
 
-令Ω為所有可能結果的集合，稱為<mark style="color:red;">**樣本空間(sample space)**</mark>，樣本空間中每一個元素ω稱為<mark style="color:red;">**出象(outcome)**</mark>。 Ω的任一子集(subset)稱為<mark style="color:red;">**事件(event)**</mark>，記為$$A \subseteq \Omega$$，可得$$\omega \in A \subseteq \Omega$$ 。
+令Ω為所有可能結果的集合，稱為<mark style="color:red;">**樣本空間(sample space)**</mark>，樣本空間中每一個元素ω稱為<mark style="color:red;">**出象(結果)(outcome)**</mark>。 Ω的任一(可測)子集(subset)稱為<mark style="color:red;">**事件(event)**</mark>，記為$$A \subseteq \Omega$$，可得$$\omega \in A \subseteq \Omega$$ 。
 
 一事件$$A \subseteq \Omega$$ 發生若且唯若隨機變數的結果為$$A$$中的一元素。
 
-* e.g. 丟骰子 $$\Omega=\{1,2,3,4,5,6\}$$, 出現奇數的事件$$A=\{1,3,5\}$$。
+* e.g. 丟骰子 $$\Omega=\{1,2,3,4,5,6\}$$, 出現偶數的事件$$A=\{2,4,6\}$$，出現奇數的事件$$A=\{1,3,5\}$$，丟兩次，總和為4的事件為$$A=\{(1,3), (2,2), (3,1)\}$$。
 *   對一樣本空間$$\Omega$$與一事件 $$A \subseteq \Omega$$，定義$$A$$的機率為$$\mathrm{P}(A)=\frac{|A|}{|Ω|}$$。
 
     <mark style="color:blue;">**在古典的模式中，一事件的機率為此事件中的元素個數除以可能的結果之個數**</mark>。
@@ -15,8 +15,8 @@
 
 * $$\forall \omega \in \Omega$$, $${ \omega }$$為只包含一個元素的集合，$$\mathrm{P}({\omega})=\frac{1}{|\Omega|}$$，而 $$\mathrm{P}(\omega)$$無定義。
 * <mark style="color:red;">**機率測度P**</mark>必須滿足以下三個條件： $$\forall A, B \subseteq \Omega$$ ($$A, B$$為事件集合)
-  * \[機率的上下界] $$0 \leq \mathrm{P}(A) \leq \mathrm{P}(\Omega) = 1$$&#x20;
-  * $$\mathrm{P}(A \cup B) = \mathrm{P}(A) + \mathrm{P}(B) - \mathrm{P}(A \cap B)$$&#x20;
+  * \[機率的上下界] $$0 \leq \mathrm{P}(A) \leq \mathrm{P}(\Omega) = 1$$
+  * $$\mathrm{P}(A \cup B) = \mathrm{P}(A) + \mathrm{P}(B) - \mathrm{P}(A \cap B)$$
   * $$\mathrm{P}(A^C) = 1 - \mathrm{P}(A)$$
 
 計算古典機率，只需分別算出$$A$$與$$\Omega$$中的元素個數即可求出機率；但有時元素個數過多，必須使用排列組合方式才可求出個數。

@@ -105,6 +105,64 @@ $$E_1, E_2, E_3$$為樣本空間$$\Omega$$的三個事件，若且惟若滿足�
 
 註：如果事件集合$$F_i \cap F_j \neq \empty$$，在證明中常用方法是建立新的集合序列$$E_1=F_1$$, $$E_2=F_2 - E_1, \dots, E_n=F_n-\cup_{k=1}^{n-1} E_n$$，如此一來為兩兩互斥的集合序列。
 
+## 機率測度的連續性(單調集合極限的測度)
+
+> 給定集合序列$$\{E_n\}_{n \in \mathbb{N}}$$，如果：
+>
+> * [遞增集合序列](../math-analysis/set/limit-of-set-sequence.md#di-zeng-ji-he-xu-lie-de-ji-xian-wei-suo-you-ji-he-de-lian-ji)，即$$E_1 \subseteq E_2 \subseteq  \cdots$$，可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n \in \mathbb{N}} E_n$$，因此$$\displaystyle \lim_{n \rightarrow \infty} \mathrm{P}(E_n) =\mathrm{P}(\lim_{n \rightarrow \infty} E_n ) = \mathrm{P}(\bigcup_{n \in \mathbb{N}} E_n)$$。
+> * [遞減集合序列](../math-analysis/set/limit-of-set-sequence.md#di-jian-ji-he-xu-lie-de-ji-xian-wei-suo-you-ji-he-de-jiao-ji)，即$$E_1 \supseteq E_2 \supseteq \dots$$，可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcap_{n \in \mathbb{N}} E_n$$，因此$$\displaystyle \lim_{n \rightarrow \infty} \mathrm{P}(E_n) =\mathrm{P}(\lim_{n \rightarrow \infty} E_n ) = \mathrm{P}(\bigcap_{n \in \mathbb{N}} E_n)$$。
+>
+> 同[一般測度的性質](../math-analysis/measure/#di-zeng-ji-he-ji-xian-de-ce-du-ce-du-de-lian-xu-xing-continuity-of-measure)，注意機率測度為有限測度。
+
+### 機率在無窮大事件的矛盾範例
+
+給定一無窮大的袋子，且有無限多個編號為1、2、…的球。
+
+#### 實驗1&#x20;
+
+* 在中午12點前差1分時，將1\~10號球放入袋中，同時取出10號球(假設取出時不花時間)。
+* 在中午12點前差1/2分時，將11\~20號球放入袋中，同時取出20號球。
+* 在中午12點前差1/4分時，將21\~30號球放入袋中，同時取出30號球。
+* 以此類推。
+
+<mark style="color:blue;">則在12點整時候，袋子中有無限多個球</mark>。
+
+在12點前差$$(1/2)^{n-1}$$分，都是取編號$$10n$$的球。因為任一球的號數，只要不是10的倍數都在袋子中，且在12點前並沒有取出。
+
+#### 實驗2
+
+* 在中午12點前差1分時，將1\~10號球放入袋中，同時取出1號球(假設取出時不花時間)。
+* 在中午12點前差1/2分時，將11\~20號球放入袋中，同時取出2號球。
+* 在中午12點前差1/4分時，將21\~30號球放入袋中，同時取出3號球。
+* 以此類推。
+
+<mark style="color:blue;">則在12點整時候，袋子中沒有任何球</mark>。
+
+考慮編號$$n$$的球，在12點前差$$(1/2)^{n-1}$$分，該球會從袋中被取出。因此對於第$$n$$號球，在12點之前都會被取出。
+
+#### 實驗3
+
+設定同上，在12點前差$$(1/2)^{n-1}$$分，隨機取出一球，<mark style="color:blue;">則12點整時，袋中沒有任何球</mark>。
+
+考慮編號1的球，定義事件$$E_n$$為$$n$$次取球後，1號球仍在袋裡的事件。因此$$\mathrm{P}(E_n)=\frac{9 \times 18 \times 27 \times 9n}{10 \times 19 \times 28 \times \dots (9n+1)}$$。因為第1次取球時，不取到1號球的機率為9/10；第二次取球時，不取到1號球的機率為18/19，以此類推。
+
+在12點時，1號球留在袋中的事件為$$\bigcap_{n=1}^\infty E_n$$，且$$E_1 \supseteq E_2 \supseteq \dots$$為遞減集合序列，因此$$\displaystyle \mathrm{P}( \lim_{n \rightarrow \infty} E_n) =\mathrm{P}(\bigcap_{n=1}^\infty E_n) =\prod_{n=1}^\infty \left(  \frac{9n}{9n+1}\right)=0$$。
+
+令$$F_i$$為在12點時，第$$i$$號球仍在袋中的事件。已知$$\mathrm{P}(F_1)=0$$，同理可得$$\mathrm{P}(F_i)=0, \forall i \in \mathbb{N}$$。
+
+因此在12點，袋裡有球的機率為$$\mathrm{P}(\bigcup_{i=1}^\infty F_i) \leq \sum_{i=1}^\infty \mathrm{P}(F_i)=0$$。
+
+## 事件序列上/下極限
+
+> 給定集合序列$$\{E_n\}_{n \in \mathbb{N}}$$，定義：
+>
+> * 上極限$$\displaystyle \limsup_{n \rightarrow \infty} E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$。in infinitely many of the sets.
+> * 下極限$$\displaystyle \liminf_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$。in all but finitely many the sets.
+
+<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在</mark>$$n$$<mark style="background-color:red;">之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。
+
+<mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標</mark>$$n$$<mark style="background-color:red;">之後的所有集合中，因此下極限的元素只不存在於有限個集合中</mark>）。
+
 ## Borel-Cantelli lemma
 
 > $$E_1, E_2, \dots$$為可測事件序列，若$$\sum_{n=1}^\infty \mathrm{P}(E_n) < \infty$$，則$$\displaystyle \mathrm{P}(\limsup_{n \rightarrow \infty} E_n) = 0$$。

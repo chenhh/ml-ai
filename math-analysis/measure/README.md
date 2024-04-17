@@ -314,7 +314,8 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且測度$$\mu: \Sigma \rightarrow [0, \infty]$$，則：
 >
 > 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$ 。\
->    左側為下極限集合的測度，取值為$$[0,\infty]$$；右側為數列下極限，取值可為$$[-\infty, \infty]$$。
+>    左側為下極限集合的測度，取值為$$[0,\infty]$$；右側為數列下極限，取值可為$$[-\infty, \infty]$$。\
+>    當我們求集合測度的下極限時，各個集合之間元素並不互相干擾，因此測度不會互相影響。但當我們求下極限集合的測度時，這個下極限集合，是經過互相干擾後的集合，因此其測度最好的情形為集合間不互相干擾。
 > 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ 若 $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$\
 >    因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
 > 3. 在**有限測度**時，可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu(\limsup_{n \rightarrow \infty} E_n)$$
@@ -366,13 +367,17 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 
 [https://zhuanlan.zhihu.com/p/318640829](https://zhuanlan.zhihu.com/p/318640829)
 
+[https://en.wikipedia.org/wiki/Fatou's\_lemma#Examples\_for\_strict\_inequality](https://en.wikipedia.org/wiki/Fatou's\_lemma#Examples\_for\_strict\_inequality)
+
+[https://www.zhihu.com/question/328909025](https://www.zhihu.com/question/328909025)
+
 由積分的Fatou lemma得到的範例。
 
 給定實數平面$$\mathbb{R}^2$$的集合序列$$E_n = \{[0, 1/n] \times [0,n], n \in \mathbb{N}\}$$與面積測度$$m$$。
 
-可得$$E_n$$中的方塊面積總是為1。因此$$\displaystyle \lim_{n \rightarrow \infty} m(E_n)=\liminf_{n \rightarrow \infty} m(E_n)=1$$。
+隨著n增大，底變窄，高增大，但是$$E_n$$中的方塊面積總是為1。因此$$\displaystyle \lim_{n \rightarrow \infty} m(E_n)=\liminf_{n \rightarrow \infty} m(E_n)=1$$。
 
-而在$$n \rightarrow \infty$$時，$$E_n$$的長度為0，高度為$$\infty$$
+而在$$n \rightarrow \infty$$時，$$\displaystyle \liminf_{n \rightarrow \infty} E_n=\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$
 
 則可得$$\displaystyle m(\liminf_{n \rightarrow \infty} E_n) = 0 < 1 = \liminf_{n \rightarrow \infty} m (E_n)$$。
 

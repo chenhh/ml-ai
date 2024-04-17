@@ -299,10 +299,12 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 
 ## 集合序列上下極限的測度(Fatou lemma of measure)
 
-> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，(測度$$\mu(E_k)$$)則：
+> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且測度$$\mu: \Sigma \rightarrow [0, \infty]$$，則：
 >
-> 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$&#x20;
-> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ if $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
+> 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$ 。\
+>    左側為下極限集合的測度，取值為$$[0,\infty]$$；右側為數列下極限，取值為$$[-\infty, \infty]$$。
+> 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ 若 $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$\
+>    因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
 > 3. 在**有限測度**時，可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu(\limsup_{n \rightarrow \infty} E_n)$$
 > 4. 在有限測度時，若$$\displaystyle \lim_{n \rightarrow \infty} E_n$$存在，且$$\displaystyle \mu(\bigcup_{n=1}^\infty E_n) < \infty$$則可得 $$\displaystyle \mu(\lim_{n \rightarrow \infty} E_n) = \lim_{n \rightarrow \infty} \mu(E_n)$$
 
@@ -347,6 +349,8 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 </details>
 
 ### Q: 何時不等式會成立
+
+令$$E_n=(0, 1/n]$$
 
 
 

@@ -129,16 +129,27 @@ $$\forall t \in \mathbb{R}$$, 集合 $$E= \{ x \in [a,b] ~|~ f(x)<t \}$$必為�
 > * $$\displaystyle \{x \in E~|~ f(x)\leq t\} = \bigcap_{k=1}^\infty \left\{x\in E ~|~ f(x) < t+\frac{1}{k}\right\} = E - \displaystyle \{x \in E~|~ f(x)> t\}$$。
 > * $$\displaystyle \{x \in E~|~ f(x) < t \} =\bigcup_{k=1}^\infty \{x\in E ~|~ f(x) \leq t-\frac{1}{k}\}= E - \{x \in E~|~ f(x) \geq t \}$$。
 > * $$\displaystyle \{x \in E~|~ f(x) = t \} = \displaystyle \{x \in E~|~ f(x) \geq t \} \cap \displaystyle \{x \in E~|~ f(x) \leq t \}$$
+> * $$\{x \in E~|~ \sup f_n(x) \geq t\} = \bigcup_{n=1}^\infty \{x \in E ~|~ f_n(x) \geq t\}$$
+> * $$\{x \in E~|~ \sup f_n(x) \leq t\} = \bigcap_{n=1}^\infty \{x \in E ~|~ f_n(x) \leq t\}$$
+> * $$\{x \in E~|~ \inf f_n(x) \geq t\} = \bigcap_{n=1}^\infty \{x \in E ~|~ f_n(x) \geq t\}$$
+> * $$\{x \in E~|~ \inf f_n(x) \leq t\} = \bigcup_{n=1}^\infty \{x \in E ~|~ f_n(x) \leq t\}$$
+> * $$\displaystyle \{x \in E~|~ \limsup f_n(x) > t\} = \bigcup_{k=1}^\infty \bigcap_{m=1}^\infty \bigcup_{n=m}^\infty  \{x \in E ~|~ f_n(x) > t+ 1/k\}$$
+> * $$\displaystyle \{x \in E~|~ \limsup f_n(x) < t\} = \bigcap_{k=1}^\infty \bigcup_{m=1}^\infty \bigcap_{n=m}^\infty  \{x \in E ~|~ f_n(x) < t+ 1/k\}$$
+> * $$\displaystyle \{x \in E~|~ \liminf f_n(x) > t\} = \bigcap_{k=1}^\infty \bigcup_{m=1}^\infty \bigcap_{n=m}^\infty  \{x \in E ~|~ f_n(x) > t- 1/k\}$$
+> * $$\displaystyle \{x \in E~|~ \liminf f_n(x) < t\} = \bigcup_{k=1}^\infty \bigcap_{m=1}^\infty \bigcup_{n=m}^\infty  \{x \in E ~|~ f_n(x) < t- 1/k\}$$
 
 * 令$$S_m=\{x \in E ~|~ |f(x) - g(x)| \geq 1/m\}, ~m\in \mathbb{N}$$, $$S=\{x\in E ~|~ f(x) \neq g(x)\}$$，可得$$\displaystyle S= \bigcup_{m=1}^\infty S_m$$
 * $$\displaystyle [a,b]=\bigcap_{k=1}^\infty (a-\frac{1}{k}, b+\frac{1}{k}) =\bigcap_{k=1}^\infty [a-\frac{1}{k}, b+\frac{1}{k}]$$ \[[證明](../real-number/supremum-infimum.md#zheng-ming-chang-yong-bi-kai-ou-jian-ke-yong-kai-bi-ou-jian)]
 * $$\displaystyle (a,b)=\bigcup_{k=1}^\infty [a+\frac{1}{k}, b-\frac{1}{k}] =\bigcup_{k=1}^\infty (a+\frac{1}{k}, b-\frac{1}{k})$$&#x20;
 * $$\displaystyle (-\infty, \infty)=\bigcup_{n=-\infty}^\infty (n, n+1)=\bigcup_{n=-\infty}^\infty [n, n+1]$$
 * 單點集 $$\displaystyle \{a\}=\bigcap_{k=1}^\infty(a-\frac{1}{k}, a+\frac{1}{k})$$。可想成$$B_a(\frac{1}{k})=\{ x\in \mathbb{R}~|~ |x-a|<\frac{1}{k}\}$$
+*
 
 [https://math.stackexchange.com/questions/323327/open-interval-written-as-countable-union-of-closed-intervals](https://math.stackexchange.com/questions/323327/open-interval-written-as-countable-union-of-closed-intervals)
 
 [https://math.stackexchange.com/questions/2869734/show-that-a-b-bigcap-n-1-infty-a-1-n-b1-n](https://math.stackexchange.com/questions/2869734/show-that-a-b-bigcap-n-1-infty-a-1-n-b1-n)
+
+[https://www.zhihu.com/question/448010119](https://www.zhihu.com/question/448010119)
 
 ### 個別可測集合的函數的聯集仍為可測函數
 

@@ -5,7 +5,7 @@
 * <mark style="color:red;">集合</mark>$$A, B$$<mark style="color:red;">的最小上界可視為</mark>$$A \cup B$$（因為$$A,B \subseteq A \cup B$$且任何同時包含$$A,B$$的集合均比$$A\cup B$$大），<mark style="color:red;">而最大下界可視為</mark>$$A\cap B$$（同理$$A \cap B \subseteq A, B$$且同時包含$$A,B$$共同元素的集合均比$$A\cap B$$小）。
 * 函數序列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的相似概念，這與找出集合論中與大小關係類似的運算，即集合的包含關係。<mark style="color:red;">且集合序列的上、下極限</mark>_<mark style="color:red;">只考慮集合序列極限的元素</mark>_<mark style="color:red;">，而非全部的集合元素，可忽略掉前面有限次集合序列的元素</mark>。
 * 按照集合的包含關係，所謂集合序列的上界是所有$$E_n$$的聯集$$\bigcup_n E_n$$。 類似的概念可找出找出集合序列的下界是所有$$E_n$$ 的交集$$\bigcap_n E_n$$。
-* **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略無限個集合)，會經常出現在部份集合中(類似聯集的概念)**</mark>。<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在某個指標之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。&#x20;
+* **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；因此只出現在有限個集合的元素，或者不出現在有限個集合的元素均不是上極限集的元素；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略無限個集合)，會經常出現在部份集合中(類似聯集的概念)**</mark>。<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在某個指標之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。&#x20;
 * **集合序列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略有限個集合)，會出現在全部的集合中(交集的概念)**</mark>。<mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標之後的所有集合中，因此下極限的元素只不存在於有限個集合中）</mark>。
 * **可以看出上極限集中的元素數量大於等於下極限集中的元素數量。如果二者相等(元素不會永遠離開而且最終永遠存在)，他們的值就被定義為集合列的極限，和數列極限的概念一致**。
 *
@@ -72,6 +72,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \big
 * $$M_2 = (E_2 \cup E_3 \cup \ldots)=\{x_k\}_{k=2}^\infty$$
 * 可得$$M_1 \supseteq M_2 \supseteq\ldots$$為<mark style="color:red;">遞減集合序列</mark>。
 * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = \lim_{n \rightarrow \infty}⁡ M_n = \bigcap_{n=1}^\infty M_n$$ (因為[遞減集合序列的極限為所有集合的交集](limit-of-set-sequence.md#di-jian-ji-he-xu-lie-de-ji-xian-wei-suo-you-ji-he-de-jiao-ji))
+* 而$$\displaystyle b_n=\sup_{k \geq n} x_k$$為遞減數列。
 
 同理可得 $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$
 

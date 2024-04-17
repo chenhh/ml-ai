@@ -2,9 +2,11 @@
 
 ## 簡介
 
-在此討論的是測度應具有的性質，只要符合測度定義的函數均可視為測度。 <mark style="color:red;">測度是將可測集合對映至</mark>$$[0,\infty]$$<mark style="color:red;">的函數(注意測度值可為無窮大)，符號測度的值域為</mark>$$[-\infty, \infty]$$<mark style="color:red;">)</mark>。測度在$$\mathbb{R}^n$$​中是對長度、面積與體積的抽象推廣。
+在此討論的是測度應具有的性質，只要符合(正)測度定義的函數均可視為測度。 (正)<mark style="color:red;">測度是將可測集合對映至</mark>$$[0,\infty]$$<mark style="color:red;">的函數(注意測度值可為無窮大)，符號測度的值域為</mark>$$[-\infty, \infty]$$<mark style="color:red;">)</mark>。測度在$$\mathbb{R}^n$$​中是對長度、面積與體積的抽象推廣。
 
-在討論測度或證明時，重點在於為<mark style="background-color:green;">有限測度(如機率測度)，或σ有限測度，或一般(正)測度</mark>。
+一般測度如果沒有特別定義都是指正測度(可取值至無窮大)，如果為有限(正)測度則取值為實數值。因此討論時要考慮到測度無窮大時的性質。
+
+在討論測度或證明時，重點在於為<mark style="background-color:green;">有限測度(如機率測度)，或σ有限測度，或一般(正)測度</mark>。之後還會討論取值為擴充實數的符號測度。
 
 討論建構測度的步驟，首先是用外測度處理實數中任意的集合，取能夠覆蓋該集合的最小可數子集合的外測度做為該集合的外測度。但是並非所有的實數集合都滿足外測度的性質，實數中只有可測的集合可滿足外測度的性質，而實數中可測的集合為σ域。
 
@@ -22,15 +24,18 @@
 >
 > 由於測度的值域可為無窮大，因此在證明性質時也要考慮無窮大時是否滿足條件。
 >
-> 因為測度滿足可數可加性，則必滿足有限可加性(finite-additive) $$\mu(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n \mu(E_i)$$，$$E_i \in \Sigma$$且$$E_i \cap E_j = \phi~ \forall i \neq j$$。
+> 因為測度滿足可數可加性，則必滿足有限可加性(finite-additive)，反之不一定成立。\
+> &#x20;$$\mu(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n \mu(E_i)$$，$$E_i \in \Sigma$$且$$E_i \cap E_j = \phi~ \forall i \neq j$$。
 
-* 同理函數$$f: E\rightarrow [-\infty, \infty]$$：定義域是在可測集合$$E$$中，如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數(measurable function)，否則為不可測函數。
+函數$$f: E\rightarrow [-\infty, \infty]$$：定義域是在可測集合$$E$$中，如果任意由值域得到的前像$$f^{-1}$$集合均為$$\Sigma$$中的元素時，則稱為可測函數(measurable function)，否則為不可測函數。
+
+由於測度的單調性，因此宇集合$$X$$為有最大測度值的集合。
 
 如果滿足$$\displaystyle \mu(X)=1$$的條件時，稱為<mark style="color:red;">機率測度(probability measure)</mark>。
 
 如果滿足$$\mu(X)<\infty$$時，稱為<mark style="color:red;">有限測度(finite measure)</mark>。
 
-如果存在$$\{E_n\}_{n \in \mathbb{N}} \in \Sigma$$且$$\bigcup_{n \in \mathbb{N}}E_n =X$$，$$\mu(E_n) < \infty$$，稱<mark style="color:red;">σ-</mark><mark style="color:red;">finite測度</mark>。
+如果存在宇集合的可數分割，且分割的測度均為有限值，即$$\{E_n\}_{n \in \mathbb{N}} \in \Sigma$$且$$\bigcup_{n \in \mathbb{N}}E_n =X$$，$$\mu(E_n) < \infty$$，稱<mark style="color:red;">σ-</mark><mark style="color:red;">finite測度</mark>。
 
 若集合$$N \in \Sigma$$且滿足$$\mu(N)=0$$，稱為<mark style="color:red;">零測集(null set)</mark>。
 
@@ -179,7 +184,7 @@ $$E=[1,3]$$，$$F=[4,7]$$。$$\mu(F)=3, \mu (E)=2$$，但$$E \cap F=\emptyset$$�
 
 ## 有限測度與σ有限測度
 
-> 如果對任意可測集合滿足$$\mu(E)<\infty$$ ，則稱$$\mu$$為<mark style="color:red;">有限測度（finite measure）</mark>。
+> 如果對任意可測集合滿足$$\mu(E)<\infty$$ ，則稱$$\mu: \Sigma \rightarrow [0, \infty)$$為<mark style="color:red;">有限測度（finite measure）</mark>。
 >
 > 註：一般有限測度是指對宇集合的測度為有限值，即$$\mu(X) <\infty$$。因為測度有單調性，因此$$\forall E \subseteq X, ~0 \leq \mu(E) \leq \mu(X) <\infty$$。
 
@@ -199,6 +204,8 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 
 ## 非互斥集合聯集與交集測度之和等於各別集合測度之和(排容原理)
 
+> 給定測度函數$$μ: \Sigma \rightarrow [0, \infty]$$，
+>
 > $$\forall E,F \in \Sigma \Rightarrow \mu(E \cup F)+\mu(E \cap F)=\mu(E)+\mu(F)$$
 >
 > 有限或一般測度時均成立。
@@ -221,7 +228,10 @@ $$\mu(E \cup F)= \mu(E)+\mu(F)−\mu(E\cap F)$$ (QED)
 
 ## <mark style="background-color:red;">遞增集合極限的測度(測度的連續性，continuity of measure)</mark>
 
-> * $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\bigcup_{n \in \mathbb{N}} E_n)$$
+> 給定測度函數$$μ: \Sigma \rightarrow [0, \infty]$$
+>
+> $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \subseteq E_j, ~\forall i \leq j \Rightarrow \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n )=\mu(\bigcup_{n \in \mathbb{N}} E_n)$$
+>
 > * 因為$$\Sigma$$內最大的集合為宇集合$$X$$，因此遞增集合最多和宇集合一樣大。
 > * 遞增集合序列極限的測度等於所有集合聯集的測度。
 > * <mark style="color:red;">如果</mark>$$\mu(E_1)=\infty$$<mark style="color:red;">，此性質仍然成立</mark>。
@@ -248,6 +258,8 @@ $$\displaystyle \lim_{n \rightarrow \infty}⁡ E_n=\bigcup_{n=1}^\infty E_n=E_1 
 
 ## <mark style="background-color:red;">遞減集合極限的測度(測度的連續性，continuity of measure)</mark>
 
+> 給定測度函數$$μ: \Sigma \rightarrow [0, \infty]$$，
+>
 > $$\displaystyle \forall E_1,E_2, \ldots \in \Sigma, ~ E_i \supseteq E_j, ~\forall i \leq j$$且$$\exists n_0 \in \mathbb{N} \ni \mu(E_{n_0}) < \infty$$，則$$\displaystyle \lim_{n \rightarrow \infty }⁡ \mu(E_n )=\mu(\lim_{n \rightarrow \infty}⁡E_n ) = \mu(\cap_{n \in \mathbb{N}} E_n)$$
 >
 > * $$\exists n_0 \in \mathbb{N} \ni \mu(E_{n_0} )<\infty$$ 意思是某一個集合的測度有限，因為$$E_n$$為遞減集合，因此在$$n_0$$之後的集合之測度也為有限值，可避免所有的集合之測度均為無窮大的情況。
@@ -302,7 +314,7 @@ $$E_n=\{n, n+1, \dots,\}$$，且$$\mu$$為計數測度。
 > 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且測度$$\mu: \Sigma \rightarrow [0, \infty]$$，則：
 >
 > 1. &#x20;$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)$$ 。\
->    左側為下極限集合的測度，取值為$$[0,\infty]$$；右側為數列下極限，取值為$$[-\infty, \infty]$$。
+>    左側為下極限集合的測度，取值為$$[0,\infty]$$；右側為數列下極限，取值可為$$[-\infty, \infty]$$。
 > 2. &#x20;$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \geq \limsup_{n \rightarrow \infty} \mu(E_n)$$ 若 $$\mu(\bigcup_{n=1}^\infty E_n)<\infty$$\
 >    因為對任意集合序列可得：$$\displaystyle \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n$$
 > 3. 在**有限測度**時，可得$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n) \leq \liminf_{n \rightarrow \infty} \mu(E_n)  \leq \limsup_{n \rightarrow \infty} \mu(E_n) \leq  \mu(\limsup_{n \rightarrow \infty} E_n)$$
@@ -348,23 +360,33 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 
 </details>
 
-### Q: 何時不等式會成立
+### 範例：集合序列上下極限的測度不等式成立
 
-令$$E_n=(0, 1/n]$$
+[https://math.stackexchange.com/questions/545215/why-is-there-inequality-in-fatous-lemma](https://math.stackexchange.com/questions/545215/why-is-there-inequality-in-fatous-lemma)
+
+[https://zhuanlan.zhihu.com/p/318640829](https://zhuanlan.zhihu.com/p/318640829)
+
+由積分的Fatou lemma得到的範例。
+
+給定實數平面$$\mathbb{R}^2$$的集合序列$$E_n = \{[0, 1/n] \times [0,n], n \in \mathbb{N}\}$$與面積測度$$m$$。
+
+可得$$E_n$$中的方塊面積總是為1。因此$$\displaystyle \lim_{n \rightarrow \infty} m(E_n)=\liminf_{n \rightarrow \infty} m(E_n)=1$$。
+
+而在$$n \rightarrow \infty$$時，$$E_n$$的長度為0，高度為$$\infty$$
+
+則可得$$\displaystyle m(\liminf_{n \rightarrow \infty} E_n) = 0 < 1 = \liminf_{n \rightarrow \infty} m (E_n)$$。
 
 
 
 ## <mark style="background-color:red;">The Borel-Cantelli lemma</mark>
 
-> 令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$
+> 給定測度函數$$μ: \Sigma \rightarrow [0, \infty]$$，令可測集合序列$$E_1, E_2,\dots \in \Sigma$$，且滿足$$\sum_{n=1}^\infty \mu(E_n) < \infty$$，則$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n)=0$$或$$\displaystyle \mu(\liminf_{n \rightarrow \infty} E_n)=\infty$$
 >
+> $$\displaystyle \limsup_{n \rightarrow \infty} E_n =   \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$。上極限集內的元素存在於無窮多個集合中。因此若$$\displaystyle \mu(\limsup_{n \rightarrow \infty} E_n) \neq 0$$，即上極限集內的元素測度不為0，因為上極限元素存在於無窮多個集合中，因此無窮多個集合的測度均不為0，因此測度總和必定為無窮大。
 >
+> 更準確的說，如果無限多個集合的測度和為有限值，那麼包含於在無限多個集合中的子集的測度必為0，否則這無限多個集合每個測度都不小於$$\epsilon$$ ，總和為無窮大。
 >
-> $$\displaystyle \limsup_{n \rightarrow \infty} E_n =  \lim_{n \rightarrow \infty} \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$為集合序列極限的最小上界。
->
-> 如果所有(無窮個)事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生的機率(測度)為0。
->
-> 如果無限多個集合的測度和為有限值，那麼包含於在無限多個集合中的子集的測度必為0，否則這無限多個集合每個測度都不小於$$\epsilon$$ ，總和為無窮大。
+> 機率測度的解釋：如果所有(無窮個)事件$$E_n$$發生的機率(測度)總和是有限的，則這些事件有無限多個同時發生(無窮個交集)的機率(測度)為0。
 
 <details>
 

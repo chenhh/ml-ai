@@ -61,7 +61,7 @@ $$E_n=[n,\infty), ~\forall n \in \mathbb{N}$$為遞減集合序列，則$$\displ
 
 測度證明中常用給定$$c \in \mathbb{R}$$，區間$$\displaystyle (-\infty, c]=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n}) = \lim_{n \rightarrow \infty} (-\infty, c+\frac{1}{n})$$
 
-## 集合序列上、下極限的圖解
+## 集合序列上/下極限為數列上/下極限的一般化定義
 
 ![上、下虛線為序列的上、下極限](../../.gitbook/assets/Lim-Sup-and-Lim-Inf-The-pairs-n-x-n-are-connected-by-the-solid-lines-for-clarity.png)
 

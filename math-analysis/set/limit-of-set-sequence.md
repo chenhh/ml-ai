@@ -4,9 +4,9 @@
 
 * <mark style="color:red;">集合</mark>$$A, B$$<mark style="color:red;">的最小上界可視為</mark>$$A \cup B$$（因為$$A,B \subseteq A \cup B$$且任何同時包含$$A,B$$的集合均比$$A\cup B$$大），<mark style="color:red;">而最大下界可視為</mark>$$A\cap B$$（同理$$A \cap B \subseteq A, B$$且同時包含$$A,B$$共同元素的集合均比$$A\cap B$$小）。
 * 函數序列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的相似概念，這與找出集合論中與大小關係類似的運算，即集合的包含關係。<mark style="color:red;">且集合序列的上、下極限</mark>_<mark style="color:red;">只考慮集合序列極限的元素</mark>_<mark style="color:red;">，而非全部的集合元素，可忽略掉前面有限次集合序列的元素</mark>。
-* 按照集合的包含關係，所謂集合序列的「最小上界(sup)」是包含所有$$A_n$$的集合中最小的那個集合，顯而易見，這個集合就是所有$$A_n$$的聯集$$\bigcup_n A_n$$。 類似的概念可找出找出集合序列的「最大下界(inf)」，為所有$$A_n$$ 的交集$$\bigcap_n A_n$$。
-* **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略前面的集合)，會經常出現在部份集合中(聯集的概念)**</mark>。<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在某個指標之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。&#x20;
-* **集合序列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略在前面的集合)，會出現在全部的集合中(交集的概念)**</mark>。<mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標之後的所有集合中，因此下極限的元素只不存在於有限個集合中）</mark>。
+* 按照集合的包含關係，所謂集合序列的上界是所有$$E_n$$的聯集$$\bigcup_n E_n$$。 類似的概念可找出找出集合序列的下界是所有$$E_n$$ 的交集$$\bigcap_n E_n$$。
+* **集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略無限個集合)，會經常出現在部份集合中(類似聯集的概念)**</mark>。<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在某個指標之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。&#x20;
+* **集合序列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略有限個集合)，會出現在全部的集合中(交集的概念)**</mark>。<mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標之後的所有集合中，因此下極限的元素只不存在於有限個集合中）</mark>。
 * **可以看出上極限集中的元素數量大於等於下極限集中的元素數量。如果二者相等(元素不會永遠離開而且最終永遠存在)，他們的值就被定義為集合列的極限，和數列極限的概念一致**。
 *
 
@@ -23,7 +23,7 @@
 
 範例：
 
-* $$E_n= \{k \in \mathbb{N} | k\leq n \}$$
+* $$E_n= \{k \in \mathbb{N} | k\leq n \}$$為遞減集合序列。
 * 給定集合序列$$\{A_k\}_{k \in \mathbb{N}}$$，定義$$E_n=\bigcup_{k=n}^\infty A_k$$，則$$E_1 \supseteq E_2 \supseteq \dots$$為遞減集合序列。
 * 同上，定義$$F_n =\bigcap_{k=n}^\infty A_k$$，則$$F_1 \subseteq F_2 \subseteq \dots$$為遞增集合序列。
 
@@ -37,7 +37,7 @@
 
 <summary>proof：a=b 若且唯若<span class="math">a \subseteq b</span>且<span class="math">b \subseteq a</span>。</summary>
 
-因為$$\displaystyle x \in \bigcup_{n=1}^\infty E_n$$，必定存在$$n_0 \in \mathbb{N}$$使得$$x \in E_{n_0}$$，因為$$E_n \subseteq E_{n+1}~\forall n$$，所以可得$$x \in E_n$$因此$$\displaystyle x \in \liminf_{n \rightarrow \infty}E_n$$，即$$\displaystyle \bigcup_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty}E_n$$--(1)
+因為$$\displaystyle x \in \bigcup_{n=1}^\infty E_n$$，必定存在$$n_0 \in \mathbb{N}$$使得$$x \in E_{n_0}$$，因為$$E_n \subseteq E_{n+1}~\forall n$$，所以可得$$x \in E_n, \forall n \geq n_0$$。因此$$\displaystyle x \in \liminf_{n \rightarrow \infty}E_n$$，即$$\displaystyle \bigcup_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty}E_n$$--(1)
 
 又因為對於所有的集合$$\displaystyle \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n$$--(2)
 
@@ -47,7 +47,7 @@
 
 ### 遞減集合序列的極限為所有集合的交集
 
-> 遞減集合序列$$E_n \supseteq E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（空集合為任意集合的子集合，因此可為所有集合的下界）
+> 遞減集合序列$$E_n \supseteq E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（<mark style="color:red;">空集合為任意集合的子集合，因此可為所有集合的下界</mark>）
 
 對於遞增集合序列，$$\displaystyle \bigcap_{j \geq n} E_j = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty E_n$$
 
@@ -81,24 +81,23 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \big
 
 > $$\{E_n\}_{n \in \mathbb{N}}$$ 為集合序列，則：
 >
-> * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\{x \in X |\forall n \in \mathbb{N} ~\exists k>n∋x∈E_k \}$$稱為上極限集，屬於集合序列$$\{E_n\}$$<mark style="color:red;">中</mark><mark style="color:red;">**無限多個集合的元素**</mark><mark style="color:red;">的全體組成的集合就是集合序列的上限集</mark>。
-> * 等價於$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，集合序列的上限集中的元素屬於集合列的無窮多個集合，同時也不屬於無窮多個集合。
->   * 令$$x \in \lim\sup_{n \rightarrow \infty} E_n$$
+> * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\{x \in X |\forall n \in \mathbb{N} ~\exists n_0 \geq n \ni x \in E_{n_0} \}$$稱為上極限集，屬於集合序列$$\{E_n\}$$<mark style="color:red;">中</mark><mark style="color:red;">**無限多個集合的元素**</mark><mark style="color:red;">的全體組成的集合就是集合序列的上限集</mark>。
+> * 等價於$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，<mark style="background-color:red;">集合序列的上限集中的元素屬於集合列的無窮多個集合，同時也不屬於無窮多個集合</mark>。如果上極限的元素只不屬於有限個集合時，則這些元素為下極限的元素。
+>   * 令$$\displaystyle x \in \lim\sup_{n \rightarrow \infty} E_n$$
 >     * $$\displaystyle M_n=\bigcup_{k=n}^\infty E_k$$因此$$x$$存在於$$M_n$$的部份集合當中。
->     * $$\displaystyle \bigcap_{n=1}^\infty M_n$$可將不屬於所有$$M_n$$的元素排除了，只留下共有的元素。
-> * <mark style="color:red;">對於上極限集中的元素</mark>$$x$$，<mark style="color:red;">在任意給定一個索引值</mark>$$n$$<mark style="color:red;">之後</mark>，<mark style="color:red;">我們總能在</mark>$$n$$<mark style="color:red;">後（即</mark>$$k > n$$）<mark style="color:red;">找到一個集合</mark>$$E_k$$<mark style="color:red;">包含</mark>$$x$$，<mark style="color:red;">這就保證了</mark>$$x$$<mark style="color:red;">屬於無限個集合</mark>。和數列的上極限定義類似。
-> * 上極限中的元素只需要屬於無窮多個集合即可，不需要存在於所有的集合中。
+>     * $$\displaystyle \bigcap_{n=1}^\infty M_n$$可將所有集合聯集中的元素，只存在於$$E_1, E_2, \dots$$元素逐漸排除，只留下共有的元素。
+> * <mark style="color:red;">對於上極限集中的元素</mark>$$x$$，<mark style="color:red;">在任意給定一個索引值</mark>$$n$$<mark style="color:red;">之後</mark>，<mark style="color:red;">我們總能在</mark>$$n$$<mark style="color:red;">後（即</mark>$$n_0 \geq n$$）<mark style="color:red;">找到至少一個集合</mark>$$E_{n_0}$$<mark style="color:red;">包含</mark>$$x$$(不會完全不出現)，<mark style="color:red;">這就保證了</mark>$$x$$<mark style="color:red;">屬於無限個集合</mark>。換句話說，若存在索引值$$n \in \mathbb{N}$$滿足$$x$$在$$n_0 \geq n$$之後再也不出現任何集合時，則$$x$$不為上極限中的元素。因此上極限的元素必定屬於無窮多個集合，但不需要存在於所有的集合中。
 > * 也可定義為$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\{x \in X | x \text{ in infinite many(often) } E_k \}$$。
 
 $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k =(E_1 \cup E_2\cup \ldots) \cap (E_2 \cup E_3 \cup \ldots )\cap \ldots$$
 
-* 令$$\forall n \in \mathbb{N}, ~M_n = E_n \cup E_{n+1} \cup \ldots$$為從第$$n$$個集合元素的聯集（上界）。
+* 令$$\forall n \in \mathbb{N}, ~M_n = E_n \cup E_{n+1} \cup \ldots$$為從第$$n$$個集合元素的聯集。
   * $$M_1 = (E_1 \cup E_2 \cup E_3 \cup \ldots)$$
   * $$M_2 = (E_2 \cup E_3 \cup \ldots)$$
   * 可得 $$M_1 \supseteq M_2 \supseteq\ldots$$為遞減集合序列。
-  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = \lim_{n \rightarrow \infty}⁡ M_n = \bigcap_{n=1}^\infty M_n$$，為遞減集合序列的交集。
-  * 若$$\displaystyle x\in \bigcap_{n=1}^\infty M_n$$，依交集的性質可得$$x$$存在於全部的$$M_n$$ 中，但因為$$\{M_n\}$$ 為遞減集合序列，因此較前面的$$M_1,M_2, \ldots$$可能不包含$$x$$，因此$$x$$不必存在於全部的集合中，只需存在於可數個集合中即可。
-* $$(E_k \cup E_{k+1} \cup \cdots \cup E_n) \cap(E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n) = (E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n)$$，<mark style="color:blue;">每次交集都會把最開頭的元素從聯集中排除，因此如果元素只存在序列前面某些集合中時，則經過一連串的交集會把這些不是存在後面集合的元素給排除掉</mark>。
+  * 可得$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k= \bigcap_{n=1}^\infty M_n  = \lim_{n \rightarrow \infty}⁡ M_n$$，為遞減集合序列的交集。
+  * 若$$\displaystyle x\in \bigcap_{n=1}^\infty M_n$$，依交集的性質可得$$x$$存在於全部的$$M_n$$ 中，但因為$$\{M_n\}$$ 為遞減集合序列，因此較前面的$$M_1,M_2, \ldots$$可能不包含$$x$$。而若知$$x \in M_{n_0}$$，則可得$$x \in M_k, ~\forall k \geq n_0$$ ，因此$$x$$不必存在於全部的集合中，只需存在於可數個集合中即可。
+* $$(E_k \cup E_{k+1} \cup \cdots \cup E_n) \cap(E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n) = (E_{k+1} \cup E_{k+2} \cup \cdots \cup E_n)$$，<mark style="color:red;">一開始聯集是將所有的元素均視為上極限的元素，之後</mark>每次交集都會把只存在於單個集合$$E_i, ~i=k, k+1,\dots$$<mark style="color:red;">內的元素從上限極中</mark>排除。因此如果元素只存在序列中部份集合時，則經過一連串的交集會把這些不是存在無限個集合的元素給排除掉。
 
 proof：定義等價性 =>
 
@@ -112,22 +111,40 @@ proof: 定義等價性 <=
 * 取$$n = j+1$$時，則$$x \in \bigcup_{k=j+1}^\infty E_k$$，也存在$$n_2 \in \mathbb{N}, n_2\geq n_1 \ni x \in E_{n_2}$$。
 * 以此類推可得一系列自然數 $$n_1, n_2, \ldots$$對應的無限多個集合$$E_{n_1}, E_{n_2},\ldots$$均含有$$x$$。 (QED)
 
-### 範例：上極限是在無窮個集合中都存在的元素的集合，而非全部集合的交集
+### 範例：上極限是在無窮個集合中都存在的元素的集合，下極限為有限個集合不存在的元素的集合
 
 令$$E_1=\{1,a\}, E_2=\{0,b\}, E_3=\{1,b\}, E_4=\{0,b\}, E_5=\{1,b\}, \dots$$
 
 上極限$$\displaystyle \limsup_{n \rightarrow \infty} E_n = \bigcap_{n=1}^\infty \bigcup_{k=1}^n E_k=\{0,1,b\}$$，但是全部集合的交集$$\bigcap_{n=1}^\infty E_n=\emptyset$$。
 
+下極限$$\displaystyle \liminf_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty \bigcap_{k=1}^n E_k=\{b\}$$。
+
 可見上極限中的點$$0$$不是存在所有的集合中，但是存在於無窮多個集合。即不會永遠離開的集合的元素。
+
+而點0不存在於於編號為奇數的集合，點1不存在於編號偶數的集合中，因此均不屬於無窮個集合。所以點0,1均不是下極限的元素。
+
+而點$$b$$只不存在於集合$$E_1$$中，而存在於無窮個集合中，因此$$b$$為下極限中的元素。
 
 ## 集合序列的下極限(inferior limit of sequence of set)
 
 > $$\{E_n\}_{n \in \mathbb{N}}$$ 為集合序列，則：
 >
-> * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\{x \in X |\exists n \in \mathbb{N} \ni \forall k > n, x \in E_k\}$$稱為下極限集，除去集合序列$$\{E_n\}$$ 中的有限多個集合外，被其餘集合均包含的元素的全體組成的集合就是集合序列的下限集。
-> * 等價於$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，<mark style="background-color:red;">集合列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合。由於上極限內的元素會出現在無窮個集合中因此悆隱含了下極限為上極限的子集。</mark>
-> * 而對於下極限集中的元素$$x$$，我們總能找到一個數$$n$$，當$$k > n$$時，都有$$x$$屬於$$E_k$$，即$$x$$屬於$$E_k$$後的所有集合，這就保證了$$x$$只不屬於有限個集合。
-> * 也可定義為$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\{x \in X | x \text{ not belong to finite many } E_k\}$$。
+> * $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\{x \in X |\exists n_0 \in \mathbb{N} \ni \forall n \geq  n_0, x \in E_n\}$$稱為下極限集，除去集合序列$$\{E_n\}$$ 中的有限多個$$(n=1,2, \dots, n_0-1)$$集合外，其餘集合均含有的元素的全體組成的集合就是集合序列的下限集。
+> * 等價於$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，<mark style="background-color:red;">集合列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合。由於上極限內的元素會出現在無窮個集合中，但上極限內的元素也可能不存在於無窮多個集合中，因此隱含了下極限為上極限的子集。</mark>
+> * 而對於下極限集中的元素$$x$$，我們總能找到一個數$$n_0$$，當$$n > n_0$$時，都有$$x$$屬於$$E_n$$，即$$x$$屬於$$E_n$$後的所有集合，這就保證了$$x$$只不屬於有限個集合。
+> * 也可定義為$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\{x \in X | x \text{ not belong to finite many } E_n\}$$。
+
+$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k =(E_1 \cap E_2\cap \ldots) \cup (E_2 \cap E_3 \cap \ldots )\cup \ldots$$
+
+* 令$$\forall n \in \mathbb{N}, ~L_n = E_n \cap E_{n+1} \cap \ldots$$為從第$$n$$個集合元素的交集。
+  * $$L_1 = (E_1 \cap E_2 \cap E_3 \cap \ldots)$$
+  * $$L_2 = (E_2 \cap E_3 \cap \ldots)$$
+  * 可得 $$L_1 \subseteq L_2 \subseteq\ldots$$為遞增集合序列。
+  * 可得$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k= \bigcup_{n=1}^\infty L_n  = \lim_{n \rightarrow \infty}⁡ L_n$$，為遞增集合序列的聯集。
+  * 若$$\displaystyle x\in \bigcup_{n=1}^\infty L_n$$，依聯集的性質可得$$x$$存在於部份的$$L_n$$ 中，但因為$$\{L_n\}$$ 為遞增集合序列，因此若知$$x \in L_{n_0}$$，則可得$$x \in L_n, ~\forall n \geq n_0$$ ，因此$$x$$只不存在於$$E_1, E_2, \dots, E_{n_0 -1}$$有限個集合中。
+* $$(E_k \cap E_{k+1} \cap \cdots \cap E_n) \cup(E_{k+1} \cap E_{k+2} \cap \cdots \cap E_n) = (E_{k+1} \cap E_{k+2} \cap \cdots \cap E_n)$$，<mark style="color:red;">一開始交集是將所有集合的共同元素均視為下極限的元素，之後</mark>每次聯集都會加入不考慮有限個(前$$k$$個)集合之外，其餘集合共有元素進入下極限。因此如果元素只不存在序列中部份集合時，則經過一連串的聯集後，總是會把這些存在無限個集合的元素，但只不存在於有限個集合的元素加入下極限中。
+
+
 
 proof：定義等價性 =>
 
@@ -137,12 +154,6 @@ proof：定義等價性 =>
 proof：定義等價性 <=
 
 * 若$$x \in \displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，則存在自然數$$n$$使得$$\displaystyle x \in \bigcap_{k=n}^\infty E_k$$，因此$$x$$不存在於$$E_1, \ldots E_{n-1}$$有限個集合中，但屬於$$E_n, E_{n+1},\dots$$所有集合中 (QED)。
-
-### 範例：下極限是在無窮個集合中都存在的元素的集合，只不存在於有限個集合
-
-令$$E_1=\{1,a\}, E_2=\{0,b\}, E_3=\{1,b\}, E_4=\{0,b\}, E_5=\{1,b\}, \dots$$
-
-下極限$$\displaystyle \liminf_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty \bigcap_{k=1}^n E_k=\{b\}$$，不包含0與1。因為0與1雖然存在於無窮個集合，但是也有無窮個集合不包含這兩個元素。而$$b$$除了在$$E_1$$之外的所有集合均包含之。
 
 ### 範例
 

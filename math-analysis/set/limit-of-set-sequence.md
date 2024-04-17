@@ -173,7 +173,11 @@ proof：定義等價性 <=
 
 > 對於任意的集合序列，以下關係成立
 >
-> $$\displaystyle \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n$$
+> $$\displaystyle \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n$$。
+>
+> 上極限中的元素存在於無窮個多個集合，但也不存在於無窮多個集合。
+>
+> 下極限中的元素存在於無窮多個集合，只不存在於有限個集合。
 
 ## 集合序列的極限
 

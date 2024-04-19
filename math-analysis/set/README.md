@@ -100,6 +100,11 @@ $$\displaystyle \bigcup_{i\in I} S_i =\{ x \ \vert \ \exists j\in I, x \in S_j\}
 * $$X \cap \emptyset = \emptyset$$
 * $$X\cap X = X \cap U= X$$
 
+### 兩個集合的聯集與交集可視為其上/下界
+
+* $$X \cap Y \subseteq X \subseteq X \cup Y$$。
+* $$X \cap Y \subseteq Y \subseteq X \cup Y$$。
+
 ### 多集合的交集: 元素必須存在於所有的集合
 
 $$\displaystyle \bigcap_{i \in I} S_i = \{ x \ \vert \ \forall j \in I, x \in S_j\}$$，此處$$I$$可能為不可數集合。

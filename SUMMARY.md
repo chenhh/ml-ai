@@ -124,6 +124,7 @@
 * [機率不等式](probability-and-statistics/probability-inequality.md)
 * [中央極限定理(CLT)](probability-and-statistics/central-limit-theorem.md)
 * [統計量(statistics)](probability-and-statistics/statistics/README.md)
+  * [充分統計量](probability-and-statistics/statistics/sufficient-statistics.md)
   * [輔助統計量(ancillary statistics)](probability-and-statistics/statistics/ancillary-statistics.md)
 * [點估計（point estimation）](probability-and-statistics/point-estimation/README.md)
   * [最大似然估計(MLE)](probability-and-statistics/point-estimation/maximum-liklihood-estimation.md)

@@ -48,9 +48,9 @@ Spearman/Kendall相關係數：將資料各自排名後，計算兩筆資料間�
 >
 > 向量$$X$$的一實值函數$$\mathrm{T}(\mathbf{X})=\mathrm{T}(X_1,X_2,\ldots ,X_N ) \in \mathbb{R}^k, k=1,2,\dots,K$$稱為$$X$$的<mark style="color:red;">統計量</mark>。
 >
-> 簡單的說，只使用$$\mathbf{X}$$且不包含參數$$\theta$$的函數均可稱為統計量。
+> 簡單的說，<mark style="color:red;">只使用</mark>$$\mathbf{X}$$<mark style="color:red;">且不包含參數</mark>$$\theta$$<mark style="color:red;">的函數均可稱為統計量</mark>。
 
-&#x20;統計量是對樣本的加工，好的統計量應該能夠將樣本中關於母體分佈的未知資訊盡可能集中起來。
+統計量是對樣本的加工，好的統計量應該能夠將樣本中關於母體分佈的未知資訊盡可能集中起來，以達到資料縮減(data reduction)的目的。如果統計量能夠充分表達分佈，而不造成損失，則稱為<mark style="color:red;">充分統計量(sufficient statistics)</mark>，必定存在(取統計量為排序後的原始樣本)。
 
 若要研究某參數分佈族中的未知參數，為此抽取了一組樣本，樣本中所包含的資訊可分為兩類:
 

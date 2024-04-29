@@ -337,6 +337,8 @@
   * [No-U-Turn Sampler](bayesian-method/mcmc/no-u-turn-sampler.md)
 * [卡爾曼濾波器(Kalman filter)](bayesian-method/kalman-filter.md)
 * [粒子濾波器(particle filter)](bayesian-method/particle-filter.md)
+* [貝氏推論範例](bayesian-method/bayesian-inference-examples/README.md)
+  * [簡訊推論行為變化](bayesian-method/bayesian-inference-examples/jian-xun-tui-lun-hang-wei-bian-hua.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

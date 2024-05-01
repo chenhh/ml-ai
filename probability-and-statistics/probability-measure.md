@@ -19,13 +19,38 @@
 
 機率測度是用來衡量或計算某一個隨機實驗結果發生的可能性(事件集合)，加以量化。
 
-> 對於樣本空間$$\Omega$$每一個(子集合)可測的事件$$E$$而言\[（或者對於$$\Omega$$的sigma-field $$\mathcal{F}$$中的元素$$E$$）機率測度$$\mathrm{P}: \mathcal{F} \rightarrow \mathbb{R}$$\[直接考慮可測集合]，實數$$\mathrm{P}(E)$$若滿足以下三個條件時，稱$$\mathrm{P}(E)$$為事件$$E$$的機率（測度）。
+> 對於樣本空間$$\Omega$$每一個(子集合)可測的事件$$E$$而言\[（或者對於$$\Omega$$的σ域 $$\mathcal{F}$$中的元素$$E$$）機率測度$$\mathrm{P}: \mathcal{F} \rightarrow \mathbb{R}$$\[直接考慮可測集合]，實數$$\mathrm{P}(E)$$若滿足以下三個條件時，稱$$\mathrm{P}(E)$$為事件$$E$$的機率（測度）。
 >
 > 1. \[<mark style="color:blue;">機率為正實數</mark>]$$\mathrm{P}(E) \geq 0, ~ E \in \mathcal{F}$$。。
 > 2. \[<mark style="color:blue;">宇集合的機率為1</mark>] $$\mathrm{P}(\Omega) = 1$$。。
-> 3. \[<mark style="color:blue;">sigma-additive</mark>]$$\mathrm{P}(\cup_{i \in \mathbb{N}} E_i )= \sum_{i \in \mathbb{N}} \mathrm{P}(E_i)$$,$$E_i \cap E_j = \emptyset, \ \forall i \neq j$$為兩兩互斥的事件集合。不相交的事件，其聯集機率為個別事件機率之和。
+> 3. \[σ<mark style="color:blue;">-additive</mark>]$$\mathrm{P}(\cup_{i \in \mathbb{N}} E_i )= \sum_{i \in \mathbb{N}} \mathrm{P}(E_i)$$,$$E_i \cap E_j = \emptyset, \ \forall i \neq j$$為兩兩互斥的事件集合。不相交的事件，其聯集機率為個別事件機率之和。
 >
 > 註：機率測度只有定義事件的條件，可為任意的分佈。
+
+### 以有限可加性與測度連續性定義機率測度
+
+> 有些學者不使用σ-additive性質定義測度，而是使用有限可加性與遞減集合連續性定義機率測度。
+>
+> * \[有限可加性 (finite additivity)] 若$$E_1, E_2 \in \mathcal{F}$$且$$E_1 \cap E_2 = \emptyset$$，則$$\mathrm{P}(E_1 \cup E_2) =\mathrm{P}(E_1 ) + \mathrm{P}(E_2)$$。
+> * \[遞減集合連續性] 令$$E_1 \supseteq  E_2 \supseteq\dots$$為遞減集合，且$$\displaystyle \lim_{n \rightarrow \infty }E_n =\emptyset$$，則$$\displaystyle \lim_{n \rightarrow} \mathrm{P}(E_n)=0$$。
+>
+> 可得 σ<mark style="color:blue;">-additive 若且唯若(等價於) 同時滿足有限可加性與遞減集合連續性。</mark>
+
+<mark style="color:blue;">計數機率測度</mark>
+
+> $$\mathrm{P}(event) = \frac{\text{num. of elements in the event}}{\text{total number of elements in the universal set}}$$
+
+通常需要使用排序組合計算宇集合的元素個數，較為複雜。
+
+### 可數樣本的機率測度
+
+> 給定$$S=\{s_1,s_2,\dots, s_n\}$$為樣本空間，$$\Sigma$$為其σ域。令$$p_i \geq 0, i=1,2,\dots, n$$且$$\displaystyle \sum_{i=1}^n p_i=1$$。
+>
+> $$\forall E \in \Sigma$$，定義$$\displaystyle \mathrm{P}(E)=\sum_{\{i~|~ s_i \in E\}}p_i$$。則$$\mathrm{P}(\cdot)$$為$$\Sigma$$上的機率測度。
+>
+> 若$$S$$為可數集合時，上述定義也成立。
+
+
 
 ### 機率空間（probability space）
 
@@ -39,41 +64,71 @@
 
 > \[<mark style="color:blue;">事件集合機率的上下限</mark>] $$\forall E \in \mathcal{F}, 0 \leq \mathrm{P}(E) \leq 1$$
 
-* $$\mathrm{P}(\Omega) = \mathrm{P}(E \cup E^c) = \mathrm{P}(E) +\mathrm{P}(E^c) = 1$$
-* $$\because \mathrm{P}(E) \geq 0$$ 且 $$\mathrm{P}(E^c) \geq 0$$, $$\therefore 0 \leq \mathrm{P}(E) \leq 1$$(QED)
+<details>
+
+<summary>proof</summary>
+
+$$\mathrm{P}(\Omega) = \mathrm{P}(E \cup E^c) = \mathrm{P}(E) +\mathrm{P}(E^c) = 1$$
+
+$$\because \mathrm{P}(E) \geq 0$$ 且 $$\mathrm{P}(E^c) \geq 0$$, $$\therefore 0 \leq \mathrm{P}(E) \leq 1$$
+
+(QED)
+
+</details>
 
 > \[<mark style="color:blue;">補集事件發生的機率</mark>] $$\forall E \in \mathcal{F}, \mathrm{P}(E^c)=1 - \mathrm{P}(E)$$。$$E^c$$為$$E$$的餘事件（complementary event）
 
-* $$\because \mathrm{P}(\Omega)=\mathrm{P}(E \cup E^c)= \mathrm{P}(E) + \mathrm{P}(E^c)=1$$$$\therefore \mathrm{P}(E^c) = 1 - \mathrm{P}(E)$$ (QED)
+$$\because \mathrm{P}(\Omega)=\mathrm{P}(E \cup E^c)= \mathrm{P}(E) + \mathrm{P}(E^c)=1, ~\therefore \mathrm{P}(E^c) = 1 - \mathrm{P}(E)$$ (QED)
 
-> $$\mathrm{P}(\emptyset)=0$$。$$\emptyset$$為<mark style="color:red;">零事件（null event</mark>），又稱空事件，指該事件永不發生。
+> \[<mark style="color:red;">空集合的測度為0</mark>] $$\mathrm{P}(\emptyset)=0$$。$$\emptyset$$為<mark style="color:red;">零事件（null event</mark>），又稱空事件，指該事件永不發生。(註：但是機率零不代表事件不會發生)。
 
-* $$\because \Omega \cup \emptyset = \Omega$$且$$\mathrm{P}(\Omega ) = \mathrm{P}(\Omega \cup \emptyset) = \mathrm{P}(\Omega) + \mathrm{P}(\emptyset)=1 + \mathrm{P}(\emptyset) =1$$。
+$$\because \Omega \cup \emptyset = \Omega$$且$$\mathrm{P}(\Omega ) = \mathrm{P}(\Omega \cup \emptyset) = \mathrm{P}(\Omega) + \mathrm{P}(\emptyset)=1 + \mathrm{P}(\emptyset) =1$$。
 
-> $$\mathrm{P}(F \cap E^c)=\mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+> <mark style="color:blue;">\[交集的機率]</mark> $$\mathrm{P}(F \cap E^c)=\mathrm{P}(F) - \mathrm{P}(E \cap F)$$
 
-* $$\mathrm{P}(F) = \mathrm{P}((F \cap E^c) \cup (E \cap F)) = \mathrm{P}((F \cap E^c) + \mathrm{P}(E \cap F)$$ (QED)
+$$\mathrm{P}(F) = \mathrm{P}((F \cap E^c) \cup (E \cap F)) = \mathrm{P}((F \cap E^c) + \mathrm{P}(E \cap F)$$ (QED)
 
-> $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
+> <mark style="color:blue;">\[聯集的機率]</mark> $$\mathrm{P}(E \cup F) = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F)$$
 
-* $$\begin{aligned} \mathrm{P}(E \cup F) &= \mathrm{P}((E \cap F^c) \cup (E \cap F) \cup (E^c \cap F)) \\ &= \mathrm{P}(E) - \mathrm{P}(E \cap F) + \mathrm{P}(E \cap F) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \\& = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \end{aligned}$$(QED)
+$$\begin{aligned} \mathrm{P}(E \cup F) &= \mathrm{P}((E \cap F^c) \cup (E \cap F) \cup (E^c \cap F)) \\ &= \mathrm{P}(E) - \mathrm{P}(E \cap F) + \mathrm{P}(E \cap F) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \\& = \mathrm{P}(E) + \mathrm{P}(F) - \mathrm{P}(E \cap F) \end{aligned}$$(QED)
 
-> If $$E \subseteq F$$ then $$\mathrm{P}(F \setminus E) = \mathrm{P}(F) - \mathrm{P}(E)$$ and $$\mathrm{P}(E) \leq \mathrm{P}(F)$$
+> <mark style="color:blue;">\[單調性]</mark> If $$E \subseteq F$$ then $$\mathrm{P}(F \setminus E) = \mathrm{P}(F) - \mathrm{P}(E)$$ and $$\mathrm{P}(E) \leq \mathrm{P}(F)$$
 
-* $$\because \mathrm{P}(F) = \mathrm{P}(E \cup (F \setminus E)) = \mathrm{P}(E) + \mathrm{P}(F \setminus E)$$且 $$\mathrm{P}(F \setminus E) \geq 0$$, $$\therefore \mathrm{P}(F) \geq \mathrm{P}(E)$$
+$$\because \mathrm{P}(F) = \mathrm{P}(E \cup (F \setminus E)) = \mathrm{P}(E) + \mathrm{P}(F \setminus E)$$且 $$\mathrm{P}(F \setminus E) \geq 0$$, $$\therefore \mathrm{P}(F) \geq \mathrm{P}(E)$$
 
-> \[Bonferroni inequality] $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
+### <mark style="color:red;">Bonferroni inequality</mark>
+
+> <mark style="color:red;">\[Bonferroni inequality]</mark> $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$
 >
-> * $$\mathrm{P}( (E \cap F)^c) = \mathrm{P}(\Omega \setminus (E \cap F)) = 1- \mathrm{P}(E \cap F)$$--(1)
-> * $$\mathrm{P}((E \cap F)^c)=\mathrm{P}(E^c \cup F^c) \leq \mathrm{P}(E^c)+\mathrm{P}(F^c)$$且$$\mathrm{P}(E^c)= 1-\mathrm{P}(E), \mathrm{P}(F^c)=1-\mathrm{P}(F)$$--(2)
-> * (1)(2)得 $$1-\mathrm{P}(E \cap F) \leq 2 - \mathrm{P}(E) - \mathrm{P}(F)$$移項得 $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$(QED)
+> 一般化版本 $$\displaystyle \mathrm{P}(\bigcap_{i=1}^n E_i) \geq \sum_{i=1}^n \mathrm{P}(E_i) - (n-1)$$
+>
+> 此不等式可視為事件同時發生的下界，但除非獨立事件發生的機率非常大，否則此值計算值接近於0用途不大。
 
+<details>
+
+<summary>proof</summary>
+
+$$\mathrm{P}( (E \cap F)^c) = \mathrm{P}(\Omega \setminus (E \cap F)) = 1- \mathrm{P}(E \cap F)$$--(1)
+
+$$\mathrm{P}((E \cap F)^c)=\mathrm{P}(E^c \cup F^c) \leq \mathrm{P}(E^c)+\mathrm{P}(F^c)$$且$$\mathrm{P}(E^c)= 1-\mathrm{P}(E), \mathrm{P}(F^c)=1-\mathrm{P}(F)$$--(2)
+
+(1)(2)得 $$1-\mathrm{P}(E \cap F) \leq 2 - \mathrm{P}(E) - \mathrm{P}(F)$$移項得 $$\mathrm{P}(E \cap F) \geq \mathrm{P}(E) + \mathrm{P}(F) -1$$(QED)
+
+</details>
+
+### <mark style="color:red;">Boole's inequality</mark>
+
+> <mark style="color:red;">\[Boole's inequality]</mark>
+>
 > 令事件$$E_1, E_2, \ldots$$為$$\Omega$$的分割(partition)，即$$E_i \cap E_j = \emptyset,\ \forall i \neq j$$且 $$\cup_{i \in \mathbb{N}} E_i = \Omega$$，則$$\mathrm{P}(F) = \sum_{i \in \mathbb{N}} \mathrm{P}(F \cap E_i), \forall F \in \mathcal{F}$$。
+>
+> 令$$E_1,  E_2, \dots$$為$$\Omega$$的任意可測集合，可得$$\displaystyle \mathrm{P}(\bigcup_{i=1}^\infty E_i ) \leq \sum_{i=1}^\infty \mathrm{P}(E_i)$$。
 
-### 多事件聯集的機率
+### 排容原理(多事件聯集的機率)
 
-* $$\begin{aligned} \mathrm{P}(E_1 \cup E_2 \cup E_3) & = \mathrm{P}(E_1)+\mathrm{P}(E_2)+\mathrm{P}(E_3) \\& - \mathrm{P}(E_1 \cap E_2) - \mathrm{P}(E_1 \cap E_3) - \mathrm{P}(E_2 \cap E_3) \\ & + \mathrm{P}(E_1 \cap E_2 \cap E_3) \end{aligned}$$
-* $$\begin{aligned} \mathrm{P}(\cup_{i=1}^n E_i) & = \sum_{i=1}^n \mathrm{P}(E_i) \\& - \sum_{i \leq i < j \leq n} \mathrm{P}(E_i \cap E_j) \\ &+ \sum_{1 \leq i < j < k \leq n} \mathrm{P}(E_i \cap E_j \cap E_k) +\ldots \\ &+(-1)^{n+1} \mathrm{P}(E_1 \cap E_2 \cap \ldots \cap E_n) \end{aligned}$$
+$$\begin{aligned} \mathrm{P}(E_1 \cup E_2 \cup E_3) & = \mathrm{P}(E_1)+\mathrm{P}(E_2)+\mathrm{P}(E_3) \\& - \mathrm{P}(E_1 \cap E_2) - \mathrm{P}(E_1 \cap E_3) - \mathrm{P}(E_2 \cap E_3) \\ & + \mathrm{P}(E_1 \cap E_2 \cap E_3) \end{aligned}$$
+
+\[排容原理]$$\begin{aligned} \mathrm{P}(\cup_{i=1}^n E_i) & = \sum_{i=1}^n \mathrm{P}(E_i) \\& - \sum_{i \leq i < j \leq n} \mathrm{P}(E_i \cap E_j) \\ &+ \sum_{1 \leq i < j < k \leq n} \mathrm{P}(E_i \cap E_j \cap E_k) +\ldots \\ &+(-1)^{n+1} \mathrm{P}(E_1 \cap E_2 \cap \ldots \cap E_n) \end{aligned}$$
 
 ### 條件機率（conditional probability）
 
@@ -235,3 +290,4 @@ $$\displaystyle \begin{aligned}  \mathrm{P}(\bigcap_{k=n}^\infty E_k^c)     & = 
 現實生活中非常多件事情雖然還是有可能同時發生，但機率不會是1(也就是不必然)。同理，有可能某些事情非常不可能會發生，但機率不會是0。
 
 The Second Borel-Cantelli告訴我們，眼光放至「無窮」，才能說什麼事情不是「一定會」發生，就是「一定不會」發生。現實生活因為並非無限，任何事情都應該要考慮到「可能性」才是。
+

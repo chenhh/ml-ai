@@ -2,6 +2,8 @@
 
 ## 基數(cardinality)
 
+以元素數量區分集合時，可分為可數集(可再分為有限集與無限集)與不可數集(無限集)。
+
 ### 基數(cardinal number)
 
 在數學上，<mark style="color:blue;">基數(cardinal number)或勢(cardinality)，即集合中包含的元素的「個數」</mark>。

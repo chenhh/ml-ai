@@ -32,17 +32,19 @@
 
 最先被考慮的無窮集合是自然數集$$\mathbb{N}$$及其無限子集合。把所有與$$\mathbb{N}$$能夠一一對應的集合定義為<mark style="color:red;">**可數集(countable set)**</mark>。
 
-自然數$$\mathbb{N}$$的基數記為$$\aleph _{0}$$(aleph number)，是最小的阿列夫數。
+自然數$$\mathbb{N}$$的基數記為$$\aleph _{0}$$(aleph number)，是最小的阿列夫數（自然數是可數集，且為最小的無限集）。
 
 Cantor證明**有理數集合與代數數集合也是可數**的。 在1874年初，他嘗試證明是否所有無限集合均是可數，其後他得出了<mark style="color:red;">**實數集不可數**</mark>的結論。
 
-#### 等價集合的性質
+### 等價集合的性質
 
 等價關係$$\sim$$滿足反身性(reflexive)、對稱性(symmetric)、遞移性(transitive)。
 
 > * 反身性：對於任意的集合$$X$$, $$X \sim X$$。
 > * 對稱性：對於任意的集合$$X,Y$$，若 $$X\sim Y$$，則$$Y \sim X$$。
 > * 遞移性：對於任意的集合$$X,Y,Z$$，若$$X \sim Y$$且$$Y \sim Z$$，則$$X \sim Z$$。
+
+<mark style="color:red;">兩集合為等價集合若且唯若兩集合間存在一對一且映成的函數</mark>。
 
 **整數與自然數集合等價**
 

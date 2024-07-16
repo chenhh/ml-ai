@@ -10,7 +10,7 @@
 >
 > 若$$(x,y)\in \mathbf{R}$$，稱$$x$$與$$y$$具有$$\mathbf{R}$$的關係，記為$$x\mathbf{R}y$$。
 
-note: relation比function更一般化，因為可為一對多的對應。
+關係(relation)比函數更一般化，因為關數可為一對多的對應，而函數只能為一對一或多對一的對應。
 
 ![關係可為一對多的對應](<../../.gitbook/assets/math\_relation-min (1).png>)
 
@@ -34,7 +34,7 @@ note: relation比function更一般化，因為可為一對多的對應。
 
 ![函數值必唯一，可為一對一或多對一，但不可為一對多關係](<../../.gitbook/assets/function-min (1).png>)
 
-### 函數相等
+### 函數相等的條件
 
 兩函數$$f,g: X \rightarrow Y$$相等若且唯若
 
@@ -86,9 +86,11 @@ note: relation比function更一般化，因為可為一對多的對應。
 
 ### 可逆函數等價於一對一且映成函數
 
-> 此處的映成是指整個對應域$$Y$$
+> 此處的映成是指整個對應域$$Y$$即為值域$$f(X)$$。
 
-proof:&#x20;
+<details>
+
+<summary>proof</summary>
 
 $$\Leftarrow$$可由定義直接得出。
 
@@ -97,6 +99,8 @@ $$\Rightarrow$$
 * 若$$f$$不為一對一函數，則 $$\exists x_1, x_2 \in X, \ x_1 \neq x_2 \ni f(x_1) = f(x_2)$$
 * 因此關係$$g(f(x_1)), g(f(x_2))$$為一對多的映射，不滿足函數的定義。
 * 若$$f$$不為映成函數，則 $$\exists y \in Y \ni f^{-1}(y) = \emptyset$$，因此關係$$g(y)$$存在部份定義域的元素無函數值，不滿足函數的定義 (QED)。
+
+</details>
 
 ## 函數的映像與前像
 
@@ -117,8 +121,12 @@ $$\Rightarrow$$
 ### 子集合經函數轉換值域仍為子集合
 
 > $$A \subseteq B \Rightarrow f(A) \subseteq f(B)$$&#x20;
+>
+> 反向不成立是因為函數可能為多對一，因此$$f(x)\in f(A)$$ 雖然可得$$f(x) \in f(B)$$但無法保證$$x \in B$$。
 
-proof:&#x20;
+<details>
+
+<summary>proof</summary>
 
 $$f(A) = \{f(x) \vert x \in A \}, \ f(B) = \{ f(x) | x \in B\}$$
 
@@ -126,11 +134,16 @@ $$\because A\subseteq B \therefore x \in A \Rightarrow x \in B$$
 
 $$\therefore f(A) \subseteq f(B)$$ (QED)
 
+</details>
+
 ### 值域中子集合的前像仍為子集合
 
-> $$C \subseteq D \Rightarrow f^{-1}(C) \subseteq f^{-1}(D)$$
+> $$C \subseteq D \Rightarrow f^{-1}(C) \subseteq f^{-1}(D)$$\
+> 注意前像$$f^{-1}$$是集合而非函數。
 
-proof:
+<details>
+
+<summary>proof</summary>
 
 $$f^{-1}(C) = \{x\in X | f(x) \in C\}$$, $$f^{-1}(D) = \{x\in X | f(x) \in D\}$$
 
@@ -138,16 +151,37 @@ $$\because C \subseteq D \therefore f(x) \in C \Rightarrow f(x) \in D$$
 
 $$\therefore f^{-1}(C) \subseteq f^{-1}(D)$$
 
+(QED)
+
+</details>
+
 ### 聯集經函數轉換為個別集合值域的聯集
 
 > * $$f(A \cup B) = f(A) \cup f(B)$$
-> * 可擴展至 $$\displaystyle f\left(\bigcup_{i =1}^{\infty} A_i \right) = \bigcup_{i=1}^\infty f(A_i)$$
+> * \[可數聯集]可擴展至 $$\displaystyle f\left(\bigcup_{i =1}^{\infty} A_i \right) = \bigcup_{i=1}^\infty f(A_i)$$
+> * \[任意聯集] $$\displaystyle f\left(\bigcup_{i \in I} A_i \right) = \bigcup_{i \in I} f(A_i)$$
 
-* 證明 $$f(A \cup B) \subseteq f(A) \cup f(B)$$且 $$f(A) \cup f(B) \subseteq f(A \cup B)$$
+<details>
+
+<summary>proof: 證明 <span class="math">f(A \cup B) \subseteq f(A) \cup f(B)</span>且 <span class="math">f(A) \cup f(B) \subseteq f(A \cup B)</span></summary>
+
+$$f(A) = \{f(x) \vert x \in A \}, \ f(B) = \{ f(x) | x \in B\}$$
+
+若$$x \in A \cup B$$，即$$x\in A$$或$$x \in B$$，得$$f(x) \in f(A)$$或$$f(x) \in f(B)$$因此$$f(x) \in f(A) \cup f(B)$$--(1)
+
+因為$$f(A) \subseteq f(A \cup B)$$且$$f(B) \subseteq f(A \cup B)$$所以$$f(A) \cup f(b) \subseteq f(A \cup B)$$ --(2)
+
+由(1)(2)得證 (QED)
+
+可數聯集與任意聯集使用上述方法即可得證。
+
+</details>
 
 > $$f^{-1}(C \cup D) = f^{-1}(C) \cup f^{-1}(D)$$
 
 * 證明 $$f^{-1}(C \cup D) \subseteq f^{-1}(C) \cup f^{-1}(D)$$且 $$f^{-1}(C) \cup f^{-1}(D) \subseteq f^{-1}(C \cup D)$$
+
+### 交集經函數轉換為個別集合值域交集的子集
 
 > * $$f(A \cap B) \subseteq f(A) \cap f(B)$$
 > * 可擴展至 $$\displaystyle f\left(\bigcap_{i =1}^{\infty} A_i \right) = \bigcap_{i=1}^\infty f(A_i)$$
@@ -183,6 +217,8 @@ $$\therefore f^{-1}(C) \subseteq f^{-1}(D)$$
 $$f^{-1}(f(f^{-1}(C)))=f^{-1}(C)$$
 
 
+
+## 一對一函數的等價條件
 
 > 若$$f$$為一對一函數，則以下敘述等價：
 >

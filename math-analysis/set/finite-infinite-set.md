@@ -1,5 +1,7 @@
 # 有限集與無限集
 
+## 摘要
+
 有限集直觀上來說，就是集合內的元素可以一個一個數盡。無限多個元素表示我們無法一個一個的將元數盡。
 
 ![有限集、可數集、無限集、不可數集的關係](../../.gitbook/assets/finite\_countable\_set\_relation-min.png)
@@ -125,7 +127,9 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 > 不是可數集的無限集稱為**不可數集**。不可數集合與自然數集合$$\mathbb{N}$$不存在一對一且映成的關係，而且**不可數集合嚴格大於自然數集合的勢**$$\aleph_0$$。
 
-不可數集合必為無限集合。
+<mark style="color:red;">可得自然數集合為最小的無限集合。</mark>
+
+<mark style="color:red;">不可數集合必為無限集合</mark>。
 
 ## 無限集合 (infinite set)
 
@@ -202,7 +206,7 @@ $$A=\emptyset$$，因為$$A$$只有空集合的子集，為有限集。
 
 ### 可數集合的聯集仍為可數集
 
-> $$\forall n \in \mathbb{N}, \ S_n$$為可數集，則$$\cup_{n \in \mathbb{N}} S_n$$仍為可數集。
+> $$\forall n \in \mathbb{N}, \ S_n$$為可數集，則$$\displaystyle \bigcup_{n \in \mathbb{N}} S_n$$仍為可數集。
 
 ![自然數與整數為等價的集合](../../.gitbook/assets/natural\_integer\_mapping.png)
 
@@ -260,7 +264,13 @@ proof: [選擇公理](axiom-of-choice.md#ying-yong-ke-shu-ge-ke-shu-ji-he-de-bin
 
 <summary>proof:</summary>
 
+因為$$A$$為可數集，依定義得$$A$$與自然數集$$\mathbb{N}$$間存在一對一且映成函數$$g$$，可得$$|A| = |\mathbb{N}|$$。
 
+因為$$f$$為映成函數，可得$$|A| \geq |B|$$，因此可得$$|\mathbb{N} | \geq |B|$$。
+
+因此$$B$$非不可數集，所以為可數集。
+
+(QED)
 
 </details>
 

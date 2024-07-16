@@ -8,6 +8,8 @@ description: ordered set
 
 選擇公理與序集有緊密的關係，此處只討論<mark style="color:red;">偏序集(部份元素可比較大小)</mark>、<mark style="color:red;">全序集(集合內任意兩個元素可比較大小)</mark>與<mark style="color:red;">良序集(非空全序子集有最小元)</mark>。
 
+實數集為最大的全序集。
+
 ## 偏序集(partial order set, poset)
 
 > $$S\neq \emptyset$$，令關係$$R: S \rightarrow S$$為具有反身性、反對稱性與遞移性的二元關係，則$$R$$為一偏序關係(partial order relation)。
@@ -64,7 +66,7 @@ description: ordered set
 
 由定義知全序集中，任意兩個元素均可以比較大小。
 
-自然數集、整數集、有理數集、無理數集、實數集均為全序集。
+<mark style="color:red;">自然數集、整數集、有理數集、無理數集、實數集均為全序集</mark>。
 
 ## 良序集(well order set)
 

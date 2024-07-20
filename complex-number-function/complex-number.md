@@ -20,9 +20,29 @@
 7. 純量乘法對純量積結合性 $$\forall \alpha ,\beta \in F~ v \in V ~ (\alpha \beta)\cdot v=\alpha \cdot (\beta v)$$
 8. 單位純量積之單位元素 $$\forall v \in V ~ 1\cdot v=v$$
 
+```python
+!/bin/python3
+a=complex(1,2)
+b=complex(3,4)
+c=3
+print(a+b) # (4+6j)
+print(a*b) # (-5+10j)
+print(a/b) # (0.44+0.08j)
+print(a*c) # (3+6j)
+```
+
 ## 複數
 
 \[虛數, imaginary number] $$i=\sqrt{-1}, ~ i^2=−1, ~ i^3=−\sqrt{-1}, ~i^4=1$$
+
+```python
+!/bin/python3
+a=complex(0,1)
+print(a)    # 1j
+print(a*a)  # (-1+0j)
+print(a**3) # (-0-1j)
+print(a**4) # (1+0j)
+```
 
 ### 常見形式
 

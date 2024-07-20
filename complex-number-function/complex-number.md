@@ -69,6 +69,28 @@ print(a**4) # (1+0j)
 
 ![複數符號](../.gitbook/assets/complex-number-min.png)
 
+```python
+!/bin/python3
+import cmath
+
+a=complex(3,4)
+print(a)    # (3+4j)
+print(a.real) # 3
+print(a.imag) # 4
+
+# polar corrdindate
+print (cmath.polar(a))
+# (length, phase)
+# (5.0, 0.9272952180016122)
+
+print(cmath.phase(a))
+# 0.9272952180016122
+
+
+
+
+```
+
 ### 虛數的意義
 
 虛數$$i$$是-1 的平方根，可是它真正的意義是什麼呢？

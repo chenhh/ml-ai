@@ -107,7 +107,7 @@ print(f"phase: {cmath.phase(a)}")
 
 我們知道乘-1 其實就是乘了兩次$$i$$ 使線段旋轉了180 度，那麼乘一次$$i$$ 呢？答案很簡單：旋轉了90 度。
 
-同時，我們獲得了一個垂直的虛數軸。實數軸與虛數軸共同構成了一個複數的平面，也稱複平面。這樣我們就了解到，**乘虛數**$$i$$**的一個功能: 旋轉**。
+同時，我們獲得了一個垂直的虛數軸。<mark style="background-color:red;">實數軸與虛數軸共同構成了一個複數的平面，也稱複平面</mark>。這樣我們就了解到，<mark style="background-color:red;">**虛數**</mark>$$i$$<mark style="background-color:red;">**乘法運算的一個功能：平面上的旋轉**</mark>。
 
 ### 複數的四則運算
 
@@ -159,7 +159,7 @@ print(f"phase: {cmath.phase(a)}")
 ### 模(modulus)
 
 * $$|z| = \sqrt{x^2 + y^2} =\sqrt{\mathrm{Re}(z)^2 + \mathrm{Im}(z)^2}$$
-* 複數之間無法比較大小，因此不能比較$$i$$與$$2i$$的大小, 但可以比較兩者的模$$|i|<|2i|$$
+* <mark style="background-color:red;">複數之間無法比較大小，因此不能比較</mark>$$i$$<mark style="background-color:red;">與</mark>$$2i$$<mark style="background-color:red;">的大小, 但可以比較兩者的模</mark>$$|i|<|2i|$$。
 * $$|z| = |\overline{z}|$$
 
 

@@ -18,7 +18,7 @@ description: closed set
 
 實數上常見的閉集合為閉區間$$[a,b]$$，在$$n$$維空間則為閉球$$[a_1, b_1] \times [a_2, b_2] \times \cdots \times [a_n, b_n]$$。
 
-<mark style="color:blue;">歐氏空間中的有界閉集合等價於緊緻集合</mark>。
+<mark style="color:red;">閉集合不一定有界，如自然數集。歐氏空間中的有界閉集合等價於緊緻集合</mark>。
 
 ### 閉集合包含其所有極限點
 
@@ -26,7 +26,7 @@ description: closed set
 >
 > 令$$S$$所有極限點形成為集合為導集合$$S^d$$ (derived set)
 >
-> 在一般度量空間中均成立
+> 在一般度量空間中均成立。
 
 <details>
 
@@ -54,7 +54,7 @@ proof <=
 >
 > 註：(可數或不可數)無限多個閉集合的聯集可能會變成無上、下限的集合而變成開集合。
 >
-> 在一般度量空間中均成立
+> 在一般度量空間中均成立。
 
 <details>
 
@@ -80,7 +80,7 @@ $$\forall a,b \in \mathbb{R}$$，$$\displaystyle (a,b)=\bigcup_{n=1}^\infty [a+\
 >
 > 指標集合$$I$$可能為可數集合或是不可數集合。
 >
-> 在一般度量空間中均成立
+> 在一般度量空間中均成立。
 
 <details>
 

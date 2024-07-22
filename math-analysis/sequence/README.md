@@ -13,6 +13,8 @@
 > 給定有限集合$$\{1,2,\ldots, n\}$$，與定義在此集合的函數$$f$$，則$$\{f(1), f(2),\ldots, f(n)\}$$為有限數列（finite sequence）。
 >
 > 給定自然數集合$$\{1,2,\ldots \}$$與定義在此集合的函數$$f$$，則$$\{f(1), f(2), \ldots\}$$為無限數列（infinite sequence）。
+>
+> 一般簡寫數列為$$\{a_n\}_{n \in \mathbb{N}}$$。
 
 一般討論數列時，所使用的指標集合未指明時，為有限集合或是可數集合，而非不可數集合。
 
@@ -51,7 +53,8 @@
 
 * <mark style="color:red;">數列收斂的直觀意義，不論我們要使</mark>$$a_n$$ <mark style="color:red;">與</mark>$$a$$<mark style="color:red;">接近到任何程度(小於</mark>$$\epsilon$$)<mark style="color:red;">，只要</mark>$$n$$<mark style="color:red;">值夠大時一定能夠辦到</mark>。因此給定接近的距離$$\epsilon$$後，只要過了第$$a_0,a_1,\ldots,a_{n_{0}−1 }$$ (有限項)之後，$$a_{n_0},a_{n_0+1},\ldots$$(無窮項)與$$a$$的距離均小於$$\epsilon$$。
 * 由於實數的完備性，若$$\displaystyle \lim_{n \rightarrow \infty}a_n$$ 收斂，<mark style="color:blue;">收斂值必為實數且唯一</mark>。
-* 如果$$\{a_n, ~ n \geq 1\}$$有子序列收斂，將這些收斂子序列收集起來得集合$$B$$，將$$\sup (B)$$ 記為$$\displaystyle \limsup_{n \rightarrow \infty} a_n$$，$$\inf(B)$$ 記為$$\displaystyle \liminf_{n \rightarrow \infty} a_n$$。
+* 如果$$\{a_n, ~ n \geq 1\}$$有子數列收斂，將這些收斂子序列收集起來得集合$$B$$，將$$\sup (B)$$ 記為上極限$$\displaystyle \limsup_{n \rightarrow \infty} a_n$$，$$\inf(B)$$ 記為下極限$$\displaystyle \liminf_{n \rightarrow \infty} a_n$$。
+* <mark style="color:blue;">數列極限不一定存在，但是數列的上/下極限必定存在。若數列極限存在(收斂)時，則上極限等於下極限</mark>。
 
 ![收斂數列會在收斂值附近越縮越近](../../.gitbook/assets/limit\_sequence-min.png)
 
@@ -62,10 +65,12 @@
 > \[數列發散至負無窮大] $$\displaystyle \lim_{n \rightarrow \infty} a_n=-\infty \Leftrightarrow \forall M>0 ~ \exists n_0 \in \mathbb{N} \ni a_n \leq M ~\forall n \geq n_0$$
 >
 > \[數列不發散，但上極限不等於下極限] $$\displaystyle \limsup_{n \rightarrow \infty} a_n \neq \liminf_{n \rightarrow \infty} a_n$$
+>
+> 由定義可知發散數列可能為發散至正負無窮大或者是上/下極限為有限值，但上極限不等於下極限。
 
 如$$\displaystyle \lim_{n \rightarrow \infty} \sin(nx)$$發散，因為$$\displaystyle \limsup_{n \rightarrow \infty} \sin(nx) = 1$$，而$$\displaystyle \liminf_{n \rightarrow \infty} \sin(nx) = -1$$。
 
-<mark style="color:red;">發散數列定義為數列上極限不等於下極限，因此數列極限不存在。但數列的上、下極限必定存在</mark>。
+<mark style="color:red;">發散數列定義為數列上極限不等於下極限，因此數列極限不存在。但數列的上、下極限必定存在(可為</mark>$$\pm \infty$$<mark style="color:red;">)</mark>。
 
 ### 收斂數列的唯一性
 

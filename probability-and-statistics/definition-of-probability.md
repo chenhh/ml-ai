@@ -63,9 +63,9 @@
 
 ## 機率為0的概念
 
-給定機率空間 $$\displaystyle (\Omega ,\mathcal{F},P)$$，集合$$\Omega$$的子集構成的sigma-algebra $$\mathcal{F}$$ (其中的元素為事件 $$A \in \mathcal{F}$$)， 以及定義在$$\mathcal{F}$$上的機率測度$$P$$應滿足以下性質：
+給定機率空間 $$\displaystyle (\Omega ,\mathcal{F},P)$$，集合$$\Omega$$的子集構成的σ-algebra $$\mathcal{F}$$ (其中的元素為事件 $$A \in \mathcal{F}$$)， 以及定義在$$\mathcal{F}$$上的機率測度$$P$$應滿足以下性質：
 
-* $$\forall A \in \subseteq \mathcal{F},\ 0 \leq \mathrm{P}(A) \leq 1$$
+* $$\forall A \in  \mathcal{F},\ 0 \leq \mathrm{P}(A) \leq 1$$
 * $$\mathrm{P}(\Omega) = 1$$
 * $$\displaystyle A_1, A_2 \cdots \in \mathcal{F}, A_i \cap A_j = \phi, \forall i \neq j,\ \mathrm{P}(\cup_{i=1}^{\infty} A_i ) = \sum_{i=1}^{\infty} \mathrm{P}(A_i)$$
 

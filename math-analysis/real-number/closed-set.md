@@ -18,6 +18,8 @@ description: closed set
 
 實數上常見的閉集合為閉區間$$[a,b]$$，在$$n$$維空間則為閉球$$[a_1, b_1] \times [a_2, b_2] \times \cdots \times [a_n, b_n]$$。
 
+<mark style="color:blue;">歐氏空間中的有界閉集合等價於緊緻集合</mark>。
+
 ### 閉集合包含其所有極限點
 
 > $$x \in X$$為$$S$$的極限點 $$\Leftrightarrow$$ $$\forall r > 0~ \exists y \in S -\{x\} \ni y \in B_r(x)$$

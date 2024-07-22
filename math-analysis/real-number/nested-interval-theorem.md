@@ -9,9 +9,12 @@
 > 即 $$I_1 \supseteq I_2 \supseteq \ldots \supseteq I_n \supseteq \ldots$$為遞減集合。
 >
 > 則可得 $$\bigcap_{i=}^\infty I_i \neq \emptyset$$。 若$$\displaystyle \lim_{i \rightarrow \infty}⁡ |I_i |=0$$，則存在$$c \in \mathbb{R} \ni \bigcap_{i=1}^\infty I_i=\{c\}$$且 $$\displaystyle \lim_{n \rightarrow \infty}⁡ x_n= \lim_{n \rightarrow \infty}⁡y_n =c$$。
+>
+>
 
 * 長度收斂至0的閉區間套，其必交集於一點。
-* 開區間套之無窮交集可能為空集合。
+* 區間套定理中要求各個區間都是**閉區間**，才能保證定理結論成立。<mark style="color:red;">因為開區間套之無窮交集可能為空集合</mark>。
+  * 例如：開區間序列$$\{(0, \frac{1}{n})\}_{n \in \mathbb{N}}$$雖然為區間套，但是$$\displaystyle \lim_{n \rightarrow \infty}(\frac{1}{n} - 0)=0$$不屬於所有開區間的公共點。
 
 ![nested interval](../../.gitbook/assets/nested-interval-min.png)
 

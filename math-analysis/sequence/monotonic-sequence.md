@@ -8,6 +8,8 @@
 > * 嚴格遞增數列(strictly increasing sequence)：$$\forall i \leq j, a_i<a_j$$
 > * 遞減數列(decreasing sequence)：$$∀i \leq j, a_i \geq a_j$$
 > * 嚴格遞減數列(strictly decreasing sequence)：$$\forall i \leq j, a_i>a_j$$
+>
+> 注意度量空間中並非任意兩元素均可比較大小。
 
 ## 有界數列 (bounded sequence)
 

@@ -49,6 +49,8 @@ description: open and closed set
 
 鄰域為開集合，因為所有的元素均為內點。
 
+如果$$x$$為孤立點時($$\exists r>0 \ni B_r(x) \cap S =\{x\}$$)，此時$$B_r(x)$$包含了許多不屬於$$S$$中的元素，因此$$B_r(x) \not \subseteq S$$，因此<mark style="color:red;">孤立點不是內點</mark>。
+
 ### 內點集必為集合的子集
 
 > $$\forall S \subseteq \mathbb{R}^n$$, 可得$$S^0 \subseteq S$$。
@@ -63,11 +65,15 @@ description: open and closed set
 
 </details>
 
-### 歐式空間中，內點一定是極限點
+### 歐式空間的內點為極限點
 
-> 給定集合$$S\subseteq \mathbb{R}^n$$，內點$$x \in S$$（$$\exists r > 0 \ni B_r(x) \subseteq S$$）， 則$$x$$為$$S$$的極限點（$$\forall r > 0 N_r(x) \cap S - \{x\} \neq \emptyset$$）。
+> 給定集合$$S\subseteq \mathbb{R}^n$$，內點$$x \in S$$（$$\exists r > 0 \ni B_r(x) \subseteq S$$）， 則$$x$$為$$S$$的極限點（$$\forall r > 0,~ B_r(x) \cap S - \{x\} \neq \emptyset$$）。
 >
 > 註：一般拓墣空間不一定成立。
+>
+> 反過來說，<mark style="color:red;">如果</mark>$$x$$<mark style="color:red;">不是極限點時，則不是內點</mark>。
+>
+> <mark style="color:red;">孤立點不是極限點，因此孤立點不是內點</mark>。
 
 <details>
 

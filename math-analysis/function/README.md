@@ -1,6 +1,6 @@
 # 函數(function)
 
-函數的定義與集合的性質
+數的定義與集合的性質
 
 詳見 [函數中的集合](../set/function.md)。
 
@@ -15,7 +15,7 @@
 >
 > 註：奇、偶函數的名稱是來自於$$x$$的冪次方函數，$$y=x^n$$，當$$n$$為奇數與偶數時有此性質。>
 
-<figure><img src="../../.gitbook/assets/odd_even_function.png" alt=""><figcaption><p>奇函數與偶函數</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/odd_even_function.png" alt="" width="320"><figcaption><p>奇函數與偶函數</p></figcaption></figure>
 
 <details>
 
@@ -70,11 +70,60 @@ if __name__ == '__main__':
 
 ### 冪函數（power function）
 
-![正值冪函數](../../.gitbook/assets/power-function-min.png)
+<figure><img src="../../.gitbook/assets/power_function_plot (1).png" alt="" width="375"><figcaption><p>冪值函數</p></figcaption></figure>
 
-![負值冪函數](../../.gitbook/assets/power-function2-min.png)
 
-![分數值冪函數](../../.gitbook/assets/power-function3-min.png)
+
+<details>
+
+<summary>plot code</summary>
+
+```python
+# -*- coding: UTF-8 -*-
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+def power_function():
+    xs = np.arange(-1, 1, 0.01)
+    powers = 5
+    ys = np.zeros([powers, len(xs)])
+    colors = ['b', 'g', 'r', 'c', 'm', 'y', 'k']
+
+    fig, axs = plt.subplots(2, figsize=(5, 8))
+    for p in range(powers):
+        ys[p] = xs ** (p + 1)
+        axs[0].plot(xs, ys[p],
+                    color=colors[p],
+                    linewidth=1.5,
+                    label=f"$y=x^{p + 1}$")
+    axs[0].set_title("power function: $y=x^n$, n=1,2,3,4,5")
+    axs[0].legend(loc="lower right")
+    axs[0].grid(visible=True)
+
+    powers = [1 / 2., 1 / 3., 3 / 2., 2 / 3.]
+    y2s = np.zeros([len(powers), len(xs)])
+    for idx, p in enumerate(powers):
+        y2s[idx] = xs ** p
+        axs[1].plot(xs, y2s[idx],
+                    color=colors[idx],
+                    linewidth=1.5,
+                    label=f"$y=x^{{{p:.2f}}}$")
+    axs[1].set_title("power function: $y=x^n$, n=1/2, 1/3, 3/2, 2/3")
+    axs[1].legend(loc="lower right")
+    axs[1].grid(visible=True)
+
+    plt.tight_layout()
+    plt.show()
+
+
+if __name__ == '__main__':
+    power_function()
+
+```
+
+</details>
 
 ### 多項式函數(polynomial function)&#xD;
 

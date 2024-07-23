@@ -17,7 +17,7 @@
 
 <mark style="color:red;">第二類不連續點</mark>：
 
-不屬於第一類不連續點的任何一種不連續點都屬於第二類不連續點。第二類不連續點可以進一步分為無窮不連續點和震盪不連續點。
+不屬於第一類不連續點的任何一種不連續點都屬於第二類不連續點。第二類不連續點可以進一步分為無<mark style="color:red;">窮不連續點</mark>和<mark style="color:red;">震盪不連續點</mark>。
 
 ## 可移除不連續點(removable discontinuity)
 
@@ -30,6 +30,8 @@ $${\displaystyle f(x)={\begin{cases}x^{2}&{\text{ for }}x<1\\0&{\text{ for }}x=1
 <mark style="color:blue;">其中左極限與右極限存在且為有限值，左右極限相等但是不等於該點的函數值</mark>。$$\displaystyle \lim _{x\to x_{0}^{-}}f(x) =\lim _{x\to x_{0}^{+}}f(x) \neq f(x_0)$$。
 
 <mark style="color:red;">注意函數</mark>$$f(x)$$<mark style="color:red;">依定義是在</mark>$$x_0$$<mark style="color:red;">(點態)連續</mark>。
+
+<figure><img src="../../.gitbook/assets/image (24).png" alt="" width="375"><figcaption><p>可移除不連續點</p></figcaption></figure>
 
 ## 跳躍不連續點(jump discontinuity)
 
@@ -50,6 +52,8 @@ $$\displaystyle \lim _{x\to x_{0}^{-}}f(x) \neq \lim _{x\to x_{0}^{+}}f(x)$$
 $${\displaystyle f(x)={\begin{cases}\sin {\frac {5}{x-1}}&{\text{ for }}x<1\\0&{\text{ for }}x=1\\{\frac {1}{x-1}}&{\text{ for }}x>1.\end{cases}}}$$
 
 則點$$x_0=1$$為本質不連續點。
+
+<figure><img src="../../.gitbook/assets/image (25).png" alt="" width="375"><figcaption><p>震蕩不連續點</p></figcaption></figure>
 
 ## 參考資料
 

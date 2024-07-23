@@ -6,6 +6,8 @@ description: sequences of functions
 
 ## 簡介
 
+函數序列是在同一定義域的多個函數之集合，分析收斂性質時，要考慮定義域每一點的收斂速度，可分為點態收斂與一致收斂，其區別在於對於定義域所有點是否有收斂速度的上限。
+
 * 點態收斂、逐點收斂(pointwise convergence)
   * <mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數</mark>，但能保證收斂為處處連續函數。
   * <mark style="color:red;">點態收斂無法保證可微分函數收斂為可微分函數</mark>。

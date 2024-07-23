@@ -10,6 +10,8 @@
 
 下兩圖中，紅色的線是由$$n$$開始的序列最小上界（最大下界）所連成的線， 即$$\sup\{x_n, x_{n+1},x_{n+2}, \ldots\}$$與$$\inf\{x_n, x_{n+1},x_{n+2}, \ldots\}$$， 而紅色的線在$$n \rightarrow \infty$$時才是$$\limsup x_n$$與$$\liminf x_n$$ 之值。
 
+不論是數列、函數或是集合序列的上/下極限，討論的都是無窮項(操作)時的狀態，因此可忽略初始有限次的行為，只要專注無窮時的行為即可。
+
 ![數列的上、下極限必存在](../../.gitbook/assets/limsup\_inf-min.png)
 
 ![數列上、下極限的定義](../../.gitbook/assets/lim\_sup\_inf\_detail-min.png)

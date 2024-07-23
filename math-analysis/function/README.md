@@ -1,8 +1,10 @@
 # 函數(function)
 
-## 函數的定義與集合的性質
+函數的定義與集合的性質
 
 詳見 [函數中的集合](../set/function.md)。
+
+函數只能是定義域與值域之間，多對一或是一對一的關係。
 
 ## 奇函數與偶函數（odd and even function）
 
@@ -13,7 +15,52 @@
 >
 > 註：奇、偶函數的名稱是來自於$$x$$的冪次方函數，$$y=x^n$$，當$$n$$為奇數與偶數時有此性質。>
 
-![奇函數與偶函數](../../.gitbook/assets/odd\_even\_functions-min.png)
+<figure><img src="../../.gitbook/assets/odd_even_function.png" alt=""><figcaption><p>奇函數與偶函數</p></figcaption></figure>
+
+<details>
+
+<summary>plot code</summary>
+
+```python
+# -*- coding: UTF-8 -*-
+import matplotlib.pyplot as plt
+import numpy as np
+
+def odd_even_function():
+    xs = np.arange(-2, 2, 0.01)
+    y1s = xs * xs
+    y2s = y1s * xs
+
+    fig, ax = plt.subplots()
+    ax.plot(xs, y1s, color="blue", label="Odd Function")
+    p1, p1m = (1, 1), (-1, 1)
+    ax.plot(*p1, 'bo')
+    ax.text(*p1, "(x,y)", {"fontsize": 18})
+    ax.plot(*p1m, 'bo')
+    ax.text(*p1m, "(-x,y)", {"fontsize": 18})
+    ax.plot([p1[0], p1m[0]], [p1[1], p1m[1]], color="blue", linestyle='--')
+
+    ax.plot(xs, y2s, color="green", label="even Function")
+    p2, p2m = (1.5, 3.375), (-1.5, -3.375)
+    ax.plot(*p2, 'go')
+    ax.text(*p2, "(x,y)", {"fontsize": 18})
+    ax.plot(*p2m, 'go')
+    ax.text(*p2m, "(-x,y)", {"fontsize": 18})
+    ax.plot([p2[0], p2m[0]], [p2[1], p2m[1]], color="green", linestyle='--')
+
+    ax.set_title("odd function: $ y = x^2$, even function: $ y = x^3$")
+
+    ax.axhline(y=0, color='black')
+    ax.axvline(x=0, color='black')
+    plt.grid()
+    plt.show()
+
+
+if __name__ == '__main__':
+    odd_even_function()
+```
+
+</details>
 
 ## 常見的函數
 

@@ -9,4 +9,5 @@ Hamiltonian採樣器在利用梯度、仿造哈密頓力學系統構造canonical
 * [\[原始論文\] Hoffman, Matthew D., and Andrew Gelman. "The No-U-Turn sampler: adaptively setting path lengths in Hamiltonian Monte Carlo." pp. 1593-1623, Journal Machine Learning Research, Vol. 15, 2014](https://www.jmlr.org/papers/volume15/hoffman14a/hoffman14a.pdf).
 * [\[知乎\]為什麼要用NUTS採樣器（No-U-turn Sampler），以及NUTS的演算法分析](https://zhuanlan.zhihu.com/p/59473302)
 * \[github] [https://github.com/mfouesneau/NUTS](https://github.com/mfouesneau/NUTS)
+* [https://www.bilibili.com/video/BV1uV4y1U7Rr/](https://www.bilibili.com/video/BV1uV4y1U7Rr/)
 

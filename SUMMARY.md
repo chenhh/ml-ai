@@ -222,7 +222,7 @@
 * [偏自相關函函數](time-series/pacf.md)
 * [時間序列分解](time-series/ts-decomposition.md)
 * [指數平滑](time-series/exponential-smoothing.md)
-* [線性模型](time-series/linear\_model.md)
+* [線性模型](time-series/linear_model.md)
 * [AR](time-series/ar-model.md)
 * [MA](time-series/ma-model.md)
 * [ARMA](time-series/arma-model.md)
@@ -339,6 +339,8 @@
 * [粒子濾波器(particle filter)](bayesian-method/particle-filter.md)
 * [貝氏推論範例](bayesian-method/bayesian-inference-examples/README.md)
   * [簡訊推論行為變化](bayesian-method/bayesian-inference-examples/jian-xun-tui-lun-hang-wei-bian-hua.md)
+* [讀書重點整理](bayesian-method/bayes-reading-note/README.md)
+  * [統計學關我什麼事](bayesian-method/bayes-reading-note/tong-ji-xue-guan-wo-shen-mo-shi.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 
@@ -375,12 +377,12 @@
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 
-* [排列(permutation)](discrete\_math/permutation.md)
-* [組合(combination)](discrete\_math/combination.md)
-* [遞迴關係式](discrete\_math/recursive-relation/README.md)
-  * [轉換法求遞迴關係式](discrete\_math/recursive-relation/zhuan-huan-fa-qiu-di-hui-guan-xi-shi.md)
-  * [生成函數法](discrete\_math/recursive-relation/generating-function.md)
-  * [特殊類型遞迴關係式](discrete\_math/recursive-relation/te-shu-lei-xing-di-hui-guan-xi-shi.md)
+* [排列(permutation)](discrete_math/permutation.md)
+* [組合(combination)](discrete_math/combination.md)
+* [遞迴關係式](discrete_math/recursive-relation/README.md)
+  * [轉換法求遞迴關係式](discrete_math/recursive-relation/zhuan-huan-fa-qiu-di-hui-guan-xi-shi.md)
+  * [生成函數法](discrete_math/recursive-relation/generating-function.md)
+  * [特殊類型遞迴關係式](discrete_math/recursive-relation/te-shu-lei-xing-di-hui-guan-xi-shi.md)
 
 ## 計算理論 <a href="#computation-theory" id="computation-theory"></a>
 

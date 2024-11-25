@@ -2,13 +2,13 @@
 
 ## stationary bootstrap
 
-演算法參考：Halbert White, "A reality check for data snooping," _Econometrica_,  vol. _68, No._5, pp. 1097-1126, 2000.
+演算法參考：Halbert White, "A reality check for data snooping," _Econometrica_,  vol. _68, No._&#x35;, pp. 1097-1126, 2000.
 
 
 
 ## 參考資料
 
-* R. Y. Liu and K. Singh, "Moving blocks jackknife and bootstrap capture weak dependence," _Exploring the limits of bootstrap_, pp. _225-_248, 1992.
+* R. Y. Liu and K. Singh, "Moving blocks jackknife and bootstrap capture weak dependence," _Exploring the limits of bootstrap_, pp. _225-_&#x32;48, 1992.
 * S. N.  Lahiri, "On the moving block bootstrap under long range dependence," Statistics & Probability Letters, Vol. 18 No. 5, pp. 405-413, 1993.
 * Dimitris N. Politis and Joseph P. Romano, "The stationary bootstrap," Journal of the American Statistical association, Vol. 89 No. 428, pp. 1303-1313, 1994.
 * , P Hall, J. L. Horowitz, and B. Y. Jing, "On blocking rules for the bootstrap with dependent data.,"_Biometrika_, Vol. _82, No._ 3, pp. 561-574, 1995.

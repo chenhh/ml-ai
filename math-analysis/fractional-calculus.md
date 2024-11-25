@@ -13,7 +13,7 @@
     * 而對非整數$$\alpha$$ 階Caputo 導數而言，是先求$$m$$階導數，再求$$m−\alpha$$次積分( 相當於$$−(m−\alpha)$$階導數) ，可理解為**先微再積**。
     * 引入Riemann － Liouville(RL)導數定義，可以簡化分數階導數的計算； 引入Caputo 導數定義，讓其拉普拉斯變換式更簡潔，有利於分數階微分方程的討論。
     * 當$$α \in \mathbb{Z}$$ 時，這兩類分數階導數與通常的整數階導數一致。&#x20;
-    * 同樣，這兩類分數階導數和整數階導數一樣也有線性性質。 另外，對函式$$f(x)$$先求$$\alpha$$次積分再求$$\alpha$$階導數，它的值仍然是f(x)； 但是它們之間還是有很大的區別。 **整數階導數反映的是函式在某一點的區域性性質，而分數階導數從定義上看實際上是一種積分，它與函式過去的狀態有關，反映的是函式的非區域性性質。**分數階導數的這種性質使得它非常適合構造具有記憶、遺傳等效應的數學模型。
+    * 同樣，這兩類分數階導數和整數階導數一樣也有線性性質。 另外，對函式$$f(x)$$先求$$\alpha$$次積分再求$$\alpha$$階導數，它的值仍然是f(x)； 但是它們之間還是有很大的區別。 **整數階導數反映的是函式在某一點的區域性性質，而分數階導數從定義上看實際上是一種積分，它與函式過去的狀態有關，反映的是函式的非區域性性質。**&#x5206;數階導數的這種性質使得它非常適合構造具有記憶、遺傳等效應的數學模型。
 
 
 
@@ -72,7 +72,7 @@ Proof:
 * 根據L'Hospital rule, $$\displaystyle \lim_{t \rightarrow \infty}⁡\frac{−t^x}{e^t} = \lim_{t \rightarrow \infty}⁡ \frac{xt^{x−1}}{e^t} =\ldots =\lim_{t \rightarrow \infty}  \frac{(x−1)\cdot 0}{e^t} =0$$
 * $$\displaystyle \therefore \int_0^\infty  \frac{t^x}{e^t}  dt=x \int_0^\infty \frac{t^{x−1}}{e^t}  dt \Leftrightarrow \Gamma(x+1)=x \Gamma(x), ~ x>0$$ (QED)
 
-![迦瑪函數圖](../.gitbook/assets/1280px-Gamma\_plot-min.png)
+![迦瑪函數圖](../.gitbook/assets/1280px-Gamma_plot-min.png)
 
 * $$\displaystyle \Gamma(0)=\int_0^\infty \frac{t^{−1}}{e^t}  dt$$ 不收斂
 * $$\displaystyle \Gamma(1)=\int_0^\infty \frac{1}{e^t}  dt=-\frac{​ 1}{e^t }\bigg|_0^\infty=1$$

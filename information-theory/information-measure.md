@@ -4,7 +4,7 @@
 
 當我們觀測到或聽到一個事件發生時(由信源發出)，就得到了一些「訊息」。<mark style="background-color:red;">「訊息量」指的是：該訊息的內涵多寡，也可以這麼說：「訊息」的內涵是用來表達某事件之各種可能結果可能性大小(或者解釋為混亂/不確定的程度)</mark>。
 
-<mark style="color:red;">**當事件越明確時，關於此事件所包含的訊息量越小**</mark>**。**而當事件越模糊(機率接近0.5或1/n，均勻分配)時，提供一件可供判斷的參考就含有較多的訊息。&#x20;<mark style="color:red;">當機率越平均時，也就是個事件發生機率越均勻(即越無法預測，也越模糊)，「不確定性」(uncertainty)最高，此時訊息熵最大</mark>。
+<mark style="color:red;">**當事件越明確時，關於此事件所包含的訊息量越小**</mark>**。**&#x800C;當事件越模糊(機率接近0.5或1/n，均勻分配)時，提供一件可供判斷的參考就含有較多的訊息。&#x20;<mark style="color:red;">當機率越平均時，也就是個事件發生機率越均勻(即越無法預測，也越模糊)，「不確定性」(uncertainty)最高，此時訊息熵最大</mark>。
 
 故「訊息」可以視為「不確定性」或「訊息選擇的自由度」之度量。(Information is a measure of one's freedom of choice when one selects a message)一條資訊的信息量大小和它的不確定性有直接的關係，與事件發生的機率有關。
 
@@ -17,7 +17,7 @@ Hartley(1928)提出了一個資訊的對數度量。他的度量標准基本上�
 * 在事件$$x_i$$發生之前，其值等於事件$$x_i$$的不確定量。
 * 在事件$$x_i$$發生之後，其值表示事件$$x_i$$所含有或所能提供的訊息量。
 
-![熵、聯合熵、條件熵、互資訊的關係](../.gitbook/assets/information\_measure\_set-min.png)
+![熵、聯合熵、條件熵、互資訊的關係](../.gitbook/assets/information_measure_set-min.png)
 
 
 

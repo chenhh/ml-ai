@@ -12,7 +12,7 @@
 
 現在問題來了。當兩個獨立的事件$$x$$和$$y$$以機率$$p_x$$和$$p_y$$發生時，如何計算資訊量？$$x$$和$$y$$共同發生的機率是$$p_xp_y$$。符合前述邏輯的算法是從它們的共同發生中獲得的資訊，將是它們發生機率的倒數，即$$1/(p_xp_y)$$。這表明，此資訊不等於從事件$$x$$的發生中獲得的資訊$$1/p_x$$和從事件$$y$$的發生中獲得的資訊$$1/p_y$$之和。即$$\displaystyle \frac{1}{p_x p_y} \neq \frac{1}{p_x} + \frac{1}{p_y}$$。
 
-上述可使用函數$$g(\cdot)$$使等號成立，即$$\displaystyle g\left(\frac{1}{p_x p_y} \right) =  g \left( \frac{1}{p_x}  \right) +  g\left( \frac{1}{p_y} \right)$$，而使等號成立的$$g(x)=-\log(x)$$，可得$$\displaystyle -\log\left(\frac{1}{p_x p_y} \right) =  -\log \left( \frac{1}{p_x}  \right) -\log \left( \frac{1}{p_y} \right)$$。
+上述可使用函數$$g(\cdot)$$使等號成立，即$$\displaystyle g\left(\frac{1}{p_x p_y} \right) = g \left( \frac{1}{p_x} \right) + g\left( \frac{1}{p_y} \right)$$，而使等號成立的$$g(x)=-\log(x)$$，可得$$\displaystyle -\log\left(\frac{1}{p_x p_y} \right) = -\log \left( \frac{1}{p_x} \right) -\log \left( \frac{1}{p_y} \right)$$。
 
 因此，我們可以總結出，從任何機率為$$p$$的事件發生中獲得的資訊是$$\log（\frac{1}{p}）=-\log p$$。<mark style="color:red;">Tribus（1969）認為</mark>$$-\log p$$<mark style="color:red;">是對機率為</mark>$$p$$<mark style="color:red;">的事件發生的不確定性的衡量，或者說是對該事件發生的驚訝的衡量</mark>。這個概念可以擴展到一系列以機率$$p_1, p_2, \dots, p_N$$發生的$$N$$個事件。這就導致了下面要描述的Shannon熵。
 
@@ -26,7 +26,7 @@
 
 1948年，Shannon提出了現在被稱為資訊理論的或簡單的資訊熵。它現在更經常被稱為Shannon熵。<mark style="color:red;">他意識到，當資訊被觀祭到或給定時，事件的不確定性會減少或消除，因此他尋求一種不確定性的衡量標準</mark>。對於一個機率分佈$$P=\{p_1, p_2, \dots , p_N \}$$，其中$$p_1, p_2, \dots, p_N$$是隨機變數$$X$$或隨機實驗的$$N$$個結果（$$x_i, ~i=1,2,\dots,N$$）的機率，也就是說，每個值都對應於一個事件，我們可以寫成：
 
-$$\displaystyle -\log \left(  \frac{1}{p_1 p_2 \dots p_N} \right) = -\log \left( \frac{1}{p_1} \right) -\log \left(\frac{1}{p_2} \right) - \dots  -\log \left(\frac{1}{p_N} \right)$$--(1.9)
+$$\displaystyle -\log \left( \frac{1}{p_1 p_2 \dots p_N} \right) = -\log \left( \frac{1}{p_1} \right) -\log \left(\frac{1}{p_2} \right) - \dots -\log \left(\frac{1}{p_N} \right)$$--(1.9)
 
 上式說明了通過觀察$$N$$個事件的聯合發生所獲得的資訊。
 
@@ -38,13 +38,13 @@ $$\displaystyle -\log \left(  \frac{1}{p_1 p_2 \dots p_N} \right) = -\log \left(
 
 $$\displaystyle \mathrm{H}(X)=\mathrm{H}(P)=-K \sum_{i=1}^N p(x_i) \log(p(x_i)) ~ \text{s.t.} ~ \sum_{i=1}^N p(x_i) = 1$$--(1.11)
 
-* 其中$$ \mathrm{H}(X)$$為隨機變數$$X$$的熵，$$X: \{x_1, x_2 ,\dots, x_N\}$$，$$P: \{p_1, p_2, \dots, p_N\}$$為$$X$$的分佈，$$K$$為依賴於對數基數的參數。如果使用不同的熵單位，那麼對數的基數就會改變。對數就會改變。例如，人們用位元表示基數2，用Napier或nat或nit表示基數e，而 分貝或logit或docit表示基數10。
+* 其中$$\mathrm{H}(X)$$為隨機變數$$X$$的熵，$$X: \{x_1, x_2 ,\dots, x_N\}$$，$$P: \{p_1, p_2, \dots, p_N\}$$為$$X$$的分佈，$$K$$為依賴於對數基數的參數。如果使用不同的熵單位，那麼對數的基數就會改變。對數就會改變。例如，人們用位元表示基數2，用Napier或nat或nit表示基數e，而 分貝或logit或docit表示基數10。
 
 通常取$$K=1$$，因此資訊熵如下：
 
 $$\displaystyle \mathrm{H}(X)=\mathrm{H}(P)=-\sum_{i=1}^N p(x_i) \log p(x_i)$$--(1.12)
 
-<mark style="color:blue;"></mark>$$\mathrm{H}(X)$$<mark style="color:blue;">由式(1.12)表示隨機變數</mark>$$X$$<mark style="color:blue;">或其機率分佈</mark>$$ \mathrm{P}(X)$$<mark style="color:blue;">的資訊量。它是不確定性的量的度量，或間接地是</mark>$$x$$<mark style="color:blue;">單個值的平均資訊量。方程(1.12)滿足了許多需求，如連續性、對稱性、可加性、可擴展性、遞迴性等(Shannon and Weaver, 1949)，並且與熱力學熵具有相同的表達形式，因此將</mark>$$H$$<mark style="color:blue;">定義為熵</mark>。
+$$\mathrm{H}(X)$$<mark style="color:blue;">由式(1.12)表示隨機變數</mark>$$X$$<mark style="color:blue;">或其機率分佈</mark>$$\mathrm{P}(X)$$<mark style="color:blue;">的資訊量。它是不確定性的量的度量，或間接地是</mark>$$x$$<mark style="color:blue;">單個值的平均資訊量。方程(1.12)滿足了許多需求，如連續性、對稱性、可加性、可擴展性、遞迴性等(Shannon and Weaver, 1949)，並且與熱力學熵具有相同的表達形式，因此將</mark>$$H$$<mark style="color:blue;">定義為熵</mark>。
 
 （1.12）指出，$$H$$是對實驗結果的不確定性的衡量，或者是對實驗中獲得的資訊的衡量，它可以減少不確定性。它也說明了機率分佈為$$(p_1 , p_2 , \dots , p_N)$$的訊號源所傳輸的資訊量的期望值。
 
@@ -64,7 +64,7 @@ $$0 \leq \mathrm{H}(X) \leq N$$--(1.14)
 
 對應於$$\mathrm{H}_{\max}$$，資訊的度量可建構為如下：
 
-$$\displaystyle \begin{aligned} I & = H_{\max} - H \\   & = \log n + \sum_{i=1}^n p_i \log p_i \\   & = \sum_{i=1}^n p_i \log(\frac{p_i}{1/n}) \\   & = \sum_{i=1}^n p_i \log (\frac{p_i}{q_i})  \end{aligned}$$--(1.15)
+$$\displaystyle \begin{aligned} I & = H_{\max} - H \\ & = \log n + \sum_{i=1}^n p_i \log p_i \\ & = \sum_{i=1}^n p_i \log(\frac{p_i}{1/n}) \\ & = \sum_{i=1}^n p_i \log (\frac{p_i}{q_i}) \end{aligned}$$--(1.15)
 
 其中$$q_i = \frac{1}{n}$$。在(1.15)中，$$\{q_i\}$$可視為先驗分佈，而$$\{p_i\}$$可視為後驗分佈。以$$H_{\max}$$正規化後得相對冗餘度$$0 \leq R \leq 1$$：
 
@@ -74,33 +74,28 @@ $$R = \frac{I}{H_{\max}} = 1 - \frac{H}{H_{\max}}$$--(1.16)
 
 從Shannon熵的討論中，可得到從一個事件中獲得的資訊與它發生的機率成反比。定義增益函數$$G(p)$$如下：
 
-$$ \displaystyle G(p) = \Delta I =\log big(\frac{1}{p_i}) = - \log(p_i) \text{-- (1.18)}$$
+$$\displaystyle G(p) = \Delta I =\log big(\frac{1}{p_i}) = - \log(p_i) \text{-- (1.18)}$$
 
-換句話說，事件$$i$$發生的資訊或其傳遞的資訊所消除的不確定性是由公式（1.18）來衡量的。
-如果一個事件發生的機率非常小，比如$$p_i=0.01$$，那麼這個事件傳遞的部分資訊就非常大。
+換句話說，事件$$i$$發生的資訊或其傳遞的資訊所消除的不確定性是由公式（1.18）來衡量的。 如果一個事件發生的機率非常小，比如$$p_i=0.01$$，那麼這個事件傳遞的部分資訊就非常大。
 
-因為獨立事件的機率組合是一種乘法關係。因此，對數允許把它們的熵的組合表達為一個簡單的加法關係。
-例如，如果$$ \mathrm{P}(A \cap B) = \mathrm{P}(A)\mathrm{P}(B)$$，那麼$$ \mathrm{H}(AB) =-\log(\mathrm{P}(A))-\log (\mathrm{P}(B))=\mathrm{H}(A)+ \mathrm{H}(B)$$。
+因為獨立事件的機率組合是一種乘法關係。因此，對數允許把它們的熵的組合表達為一個簡單的加法關係。 例如，如果$$\mathrm{P}(A \cap B) = \mathrm{P}(A)\mathrm{P}(B)$$，那麼$$\mathrm{H}(AB) =-\log(\mathrm{P}(A))-\log (\mathrm{P}(B))=\mathrm{H}(A)+ \mathrm{H}(B)$$。
 
-若有$$N$$個事件，可計算總資訊增益為 $$ \displaystyle I = \sum_{i=1}^N \Delta I_i = - \sum_{i=1}^N \log(p_i)  $$。
+若有$$N$$個事件，可計算總資訊增益為 $$\displaystyle I = \sum_{i=1}^N \Delta I_i = - \sum_{i=1}^N \log(p_i)$$。
 
-事件$$i$$的熵或總資訊量為加權值：$$ \mathrm{H}(p_i) = -p_i \log (p_i) \text{--(1.20)}$$。
+事件$$i$$的熵或總資訊量為加權值：$$\mathrm{H}(p_i) = -p_i \log (p_i) \text{--(1.20)}$$。
 
-因此，資訊的平均或預期收益可以通過對單個資訊收益的加權平均來獲得：$$ \displaystyle H = \mathrm{E}(\Delta I) = - \sum_{i=1}^N p_i (\Delta I_i) = - \sum_{i=1}^N p_i \log(p_i) \text{--(1.21)}$$。
+因此，資訊的平均或預期收益可以通過對單個資訊收益的加權平均來獲得：$$\displaystyle H = \mathrm{E}(\Delta I) = - \sum_{i=1}^N p_i (\Delta I_i) = - \sum_{i=1}^N p_i \log(p_i) \text{--(1.21)}$$。
 
 這裡值得注意的是，人們可以通過簡單地定義增益函數或不確定性來定義不同類型的熵。本章中還定義了另外三種類型的熵。
 
 方程（1.21）可以用另一種方式來看待。實驗結果的機率對應於結果之間的空間劃分。因為結果的交集是空的，所以實驗的全域性熵是$$N$$個結果的基本熵之和：
-$$ \displaystyle  
-\begin{aligned}
-H & = H_1 + H_2 + \dots + H_N  = \sum_{i=1}^N H_i \\
-    &= p_1 \log p_1 - p_2 \log p_2 - \dots - p_N \log p_N = -\sum_{i=1}^N p_i \log(p_i) \text{--(1.22)}
-\end{aligned}
+
+$$
+\begin{aligned} H & = H_1 + H_2 + \dots + H_N = \sum_{i=1}^N H_i \\ &= p_1 \log p_1 - p_2 \log p_2 - \dots - p_N \log p_N = -\sum_{i=1}^N p_i \log(p_i) \text{--(1.22)} \end{aligned}
 $$
 
 上式可看出$$H$$最大值發生在所有事件發生機率均相等時，即$$p_i = \frac{1}{N}, ~i=1,2,\dots, N$$。
 
-
 ## 參考資料
 
-* Vijay P. Singh,  "_Entropy theory and its application in environmental and water engineering," ch1,_ John Wiley & Sons, 2013.
+* Vijay P. Singh, "_Entropy theory and its application in environmental and water engineering," ch1,_ John Wiley & Sons, 2013.

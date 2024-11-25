@@ -341,6 +341,8 @@
   * [簡訊推論行為變化](bayesian-method/bayesian-inference-examples/jian-xun-tui-lun-hang-wei-bian-hua.md)
 * [讀書重點整理](bayesian-method/bayes-reading-note/README.md)
   * [統計學關我什麼事](bayesian-method/bayes-reading-note/tong-ji-xue-guan-wo-shen-mo-shi.md)
+  * [\[podcast\]Learning Bayesian Statistics](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/README.md)
+    * [#0 What is this podcast?](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/0-what-is-this-podcast.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

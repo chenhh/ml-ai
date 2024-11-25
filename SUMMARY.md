@@ -344,6 +344,7 @@
   * [\[podcast\]Learning Bayesian Statistics](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/README.md)
     * [#0 What is this podcast?](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/0-what-is-this-podcast.md)
     * [#1 Bayes, open-source and bioinformatics, with Osvaldo Martin](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/1-bayes-open-source-and-bioinformatics-with-osvaldo-martin.md)
+    * [#2 When should you use Bayesian tools, and Bayes in sports analytics, with Chris Fonnesbeck](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/2-when-should-you-use-bayesian-tools-and-bayes-in-sports-analytics-with-chris-fonnesbeck.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

@@ -346,6 +346,7 @@
     * [#1 Bayes, open-source and bioinformatics, with Osvaldo Martin](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/1-bayes-open-source-and-bioinformatics-with-osvaldo-martin.md)
     * [#2 When should you use Bayesian tools, and Bayes in sports analytics, with Chris Fonnesbeck](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/2-when-should-you-use-bayesian-tools-and-bayes-in-sports-analytics-with-chris-fonnesbeck.md)
     * [#3.1 What is Probabilistic Programming & Why use it, with Colin Carroll](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/3.1-what-is-probabilistic-programming-and-why-use-it-with-colin-carroll.md)
+    * [#3.2 How to use Bayes in industry, with Colin Carroll](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/3.2-how-to-use-bayes-in-industry-with-colin-carroll.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

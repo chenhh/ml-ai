@@ -335,6 +335,7 @@
   * [Metropolis-Hasting抽樣](bayesian-method/mcmc/metropolis-hasting-sampling.md)
   * [Hamiltonian Monte Carlo(HMC)抽樣](bayesian-method/mcmc/hamiltonian-monte-carlo-sampling.md)
   * [No-U-Turn Sampler](bayesian-method/mcmc/no-u-turn-sampler.md)
+* [狀態-空間模型](bayesian-method/state-space-model.md)
 * [卡爾曼濾波器(Kalman filter)](bayesian-method/kalman-filter.md)
 * [粒子濾波器(particle filter)](bayesian-method/particle-filter.md)
 * [貝氏推論範例](bayesian-method/bayesian-inference-examples/README.md)

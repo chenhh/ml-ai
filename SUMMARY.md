@@ -344,6 +344,7 @@
 * [讀書重點整理](bayesian-method/bayes-reading-note/README.md)
   * [統計學關我什麼事](bayesian-method/bayes-reading-note/tong-ji-xue-guan-wo-shen-mo-shi.md)
   * [Bayesian Methods for Hackers](bayesian-method/bayes-reading-note/bayesian-methods-for-hackers.md)
+  * [Bayesian Analysis with Python](bayesian-method/bayes-reading-note/bayesian-analysis-with-python.md)
   * [\[podcast\]Learning Bayesian Statistics](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/README.md)
     * [#0 What is this podcast?](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/0-what-is-this-podcast.md)
     * [#1 Bayes, open-source and bioinformatics, with Osvaldo Martin](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/1-bayes-open-source-and-bioinformatics-with-osvaldo-martin.md)

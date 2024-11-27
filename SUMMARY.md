@@ -352,6 +352,7 @@
     * [#3.2 How to use Bayes in industry, with Colin Carroll](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/3.2-how-to-use-bayes-in-industry-with-colin-carroll.md)
     * [#4 Dirichlet Processes and Neurodegenerative Diseases, with Karin Knudson](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/4-dirichlet-processes-and-neurodegenerative-diseases-with-karin-knudson.md)
     * [#5 How to use Bayes in the biomedical industry, with Eric Ma](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/5-how-to-use-bayes-in-the-biomedical-industry-with-eric-ma.md)
+    * [#6 A principled Bayesian workflow, with Michael Betancourt](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/6-a-principled-bayesian-workflow-with-michael-betancourt.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

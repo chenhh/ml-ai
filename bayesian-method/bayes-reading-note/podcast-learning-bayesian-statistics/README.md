@@ -12,4 +12,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#3.1 What is Probabilistic Programming & Why use it, with Colin Carroll](3.1-what-is-probabilistic-programming-and-why-use-it-with-colin-carroll.md)
 * [#3.2 How to use Bayes in industry, with Colin Carroll](3.2-how-to-use-bayes-in-industry-with-colin-carroll.md)
 * [#4 Dirichlet Processes and Neurodegenerative Diseases, with Karin Knudson](4-dirichlet-processes-and-neurodegenerative-diseases-with-karin-knudson.md)
-* \#5 How to use Bayes in the biomedical industry, with Eric Ma
+* [#5 How to use Bayes in the biomedical industry, with Eric Ma](5-how-to-use-bayes-in-the-biomedical-industry-with-eric-ma.md)
+* [#6 A principled Bayesian workflow, with Michael Betancourt](6-a-principled-bayesian-workflow-with-michael-betancourt.md)

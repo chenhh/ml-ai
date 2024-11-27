@@ -14,3 +14,4 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#4 Dirichlet Processes and Neurodegenerative Diseases, with Karin Knudson](4-dirichlet-processes-and-neurodegenerative-diseases-with-karin-knudson.md)
 * [#5 How to use Bayes in the biomedical industry, with Eric Ma](5-how-to-use-bayes-in-the-biomedical-industry-with-eric-ma.md)
 * [#6 A principled Bayesian workflow, with Michael Betancourt](6-a-principled-bayesian-workflow-with-michael-betancourt.md)
+* \#7 Designing a Probabilistic Programming Language & Debugging a Model, with Junpeng Lao

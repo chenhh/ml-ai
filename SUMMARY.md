@@ -353,6 +353,7 @@
     * [#4 Dirichlet Processes and Neurodegenerative Diseases, with Karin Knudson](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/4-dirichlet-processes-and-neurodegenerative-diseases-with-karin-knudson.md)
     * [#5 How to use Bayes in the biomedical industry, with Eric Ma](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/5-how-to-use-bayes-in-the-biomedical-industry-with-eric-ma.md)
     * [#6 A principled Bayesian workflow, with Michael Betancourt](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/6-a-principled-bayesian-workflow-with-michael-betancourt.md)
+    * [#7 Designing a Probabilistic Programming Language & Debugging a Model, with Junpeng Lao](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/7-designing-a-probabilistic-programming-language-and-debugging-a-model-with-junpeng-lao.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

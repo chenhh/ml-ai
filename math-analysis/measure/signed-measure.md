@@ -18,7 +18,7 @@ description: signed measure
 
 若全變差測度$$|\nu|$$為有限(σ-有限)測度，則符號測度$$\nu$$為有限(σ-有限)測度。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>來源: <a href="https://zhuanlan.zhihu.com/p/36652587">https://zhuanlan.zhihu.com/p/36652587</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>來源: <a href="https://zhuanlan.zhihu.com/p/36652587">https://zhuanlan.zhihu.com/p/36652587</a></p></figcaption></figure>
 
 ## 符號測度
 
@@ -91,7 +91,7 @@ $$F \subseteq E \Rightarrow E=F \cup(E-F)$$。--(1)
 >
 > 註：零測集同時為正測集與負測集。
 >
-> [https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets](https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets)
+> [https://en.wikipedia.org/wiki/Positive\_and\_negative\_sets](https://en.wikipedia.org/wiki/Positive_and_negative_sets)
 
 令$$P$$為$$X$$中的最大正測集，則$$N=X-P$$為負測集且不含零測集，即$$\forall E \subseteq N, E \in \Sigma, \nu(E)<0$$。同理令$$N$$為$$X$$中的最大負測集，則$$P=X-N$$為負測集且不含零測集，即$$\forall E \in P, E \in \Sigma,  \mu(E)>0$$。
 
@@ -200,7 +200,7 @@ $$F \subseteq E$$可得$$E=F \cup (E-F)$$。
 >
 > 如果$$X$$不存在零測集時，則Hahn分解唯一。
 >
-> [https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem](https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem)
+> [https://en.wikipedia.org/wiki/Hahn\_decomposition\_theorem](https://en.wikipedia.org/wiki/Hahn_decomposition_theorem)
 >
 > [https://zhuanlan.zhihu.com/p/36652587](https://zhuanlan.zhihu.com/p/36652587)
 

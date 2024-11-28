@@ -2,7 +2,7 @@
 
 ## 貝氏機率
 
-<figure><img src="../.gitbook/assets/image (2) (3).png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (3) (1).png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
 
 $$H/\theta$$和$$E/D$$，其中$$H/\theta$$為假設、模型或參數(hypothesis或model)，$$E/D$$為證據或資料(evidence或D=data）。
 

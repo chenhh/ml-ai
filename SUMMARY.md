@@ -325,6 +325,7 @@
 
 * [參考資料](bayesian-method/bayes-reference.md)
 * [貝氏機率](bayesian-method/bayes-probability.md)
+* [貝氏定理不適用的場景](bayesian-method/bayes-not-useful-situation.md)
 * [序貫理性](bayesian-method/sequential-rationality.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution/README.md)
   * [Beta-binomial共軛分佈](bayesian-method/conjugate-distribution/beta-binomial-conjugate-dist.md)

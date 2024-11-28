@@ -2,7 +2,7 @@
 
 ## 貝氏機率
 
-<figure><img src="../.gitbook/assets/image (2).png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (3).png" alt="" width="563"><figcaption><p>傳統統計學和貝氏統計的比較</p></figcaption></figure>
 
 $$H/\theta$$和$$E/D$$，其中$$H/\theta$$為假設、模型或參數(hypothesis或model)，$$E/D$$為證據或資料(evidence或D=data）。
 
@@ -103,7 +103,7 @@ $$H/\theta$$和$$E/D$$，其中$$H/\theta$$為假設、模型或參數(hypothesi
 
 在貝式統計中，一個隨機事件或者一個不確定事件的後驗機率是在考慮和給出相關證據或數據後所得到的條件機率。 同樣，後驗機率分布是一個未知量（視為隨機變量）基於試驗和調查後得到的機率分佈。
 
-<figure><img src="../.gitbook/assets/image (1).png" alt="" width="375"><figcaption><p>貝氏推理</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (3).png" alt="" width="375"><figcaption><p>貝氏推理</p></figcaption></figure>
 
 **「後驗」在此中代表考慮了被測試事件的相關證據**。
 

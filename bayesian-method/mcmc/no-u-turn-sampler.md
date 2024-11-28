@@ -10,4 +10,6 @@ Hamiltonian採樣器在利用梯度、仿造哈密頓力學系統構造canonical
 * [\[知乎\]為什麼要用NUTS採樣器（No-U-turn Sampler），以及NUTS的演算法分析](https://zhuanlan.zhihu.com/p/59473302)
 * \[github] [https://github.com/mfouesneau/NUTS](https://github.com/mfouesneau/NUTS)
 * [https://www.bilibili.com/video/BV1uV4y1U7Rr/](https://www.bilibili.com/video/BV1uV4y1U7Rr/)
+* [https://stats.stackexchange.com/questions/311813/can-somebody-explain-to-me-nuts-in-english](https://stats.stackexchange.com/questions/311813/can-somebody-explain-to-me-nuts-in-english)
+* [https://gsejournal.biomedcentral.com/articles/10.1186/s12711-019-0515-1](https://gsejournal.biomedcentral.com/articles/10.1186/s12711-019-0515-1)
 

@@ -14,7 +14,7 @@ $$
 \displaystyle \mathrm{P}(\theta|x) \propto \mathrm{P}(x|\theta) \mathrm{P}(\theta)
 $$
 
-Metropolis演算法為只使用$$\mathrm{P}(x|\theta)$$與$$\mathrm{P}(\theta)$$，不必計算積分， 即可得到$$\mathrm{P}(\theta|x)$$的樣本。
+<mark style="color:red;">Metropolis演算法為只使用</mark>$$\mathrm{P}(x|\theta)$$<mark style="color:red;">與</mark>$$\mathrm{P}(\theta)$$<mark style="color:red;">，不必計算積分， 即可得到</mark>$$\mathrm{P}(\theta|x)$$<mark style="color:red;">的樣本</mark>。
 
 假設有兩個抽樣後的參數$$\theta_1, ~ \theta_2$$，假如$$\mathrm{P}(\theta_1|x) > \mathrm{P}(\theta_2|x)$$, 則我們應該會有較高的機率 接受$$\theta_1$$，即接受$$\theta_1$$的機率為$$p_{accept} = \min \left( \frac{\mathrm{P}(\theta_1|x)}{\mathrm{P}(\theta_2|x)} ,1 \right)$$。
 

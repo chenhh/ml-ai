@@ -329,7 +329,7 @@
 * [序貫理性](bayesian-method/sequential-rationality.md)
 * [共軛分佈(conjugate distribution)](bayesian-method/conjugate-distribution/README.md)
   * [Beta-binomial共軛分佈](bayesian-method/conjugate-distribution/beta-binomial-conjugate-dist.md)
-* [MCMC](bayesian-method/mcmc/README.md)
+* [蒙地卡羅馬可夫鏈(MCMC)](bayesian-method/mcmc/README.md)
   * [cdf反函數抽樣](bayesian-method/mcmc/inverse-cdf-sampling.md)
   * [拒絕取樣](bayesian-method/mcmc/reject-sampling.md)
   * [重要性取樣](bayesian-method/mcmc/importance-sampling.md)

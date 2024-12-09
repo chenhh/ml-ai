@@ -18,3 +18,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#8 Bayesian Inference for Software Engineers, with Max Sklar](8-bayesian-inference-for-software-engineers-with-max-sklar.md)
 * [#9 Exploring the Cosmos with Bayes and Maggie Lieu](9-exploring-the-cosmos-with-bayes-and-maggie-lieu.md)
 * [#10 Exploratory Analysis of Bayesian Models, with ArviZ and Ari Hartikainen](10-exploratory-analysis-of-bayesian-models-with-arviz-and-ari-hartikainen.md)
+* [#11 Taking care of your Hierarchical Models, with Thomas Wiecki](11-taking-care-of-your-hierarchical-models-with-thomas-wiecki.md)
+* [#12 Biostatistics and Differential Equations, with Demetri Pananos](12-biostatistics-and-differential-equations-with-demetri-pananos.md)

@@ -361,6 +361,8 @@
     * [#8 Bayesian Inference for Software Engineers, with Max Sklar](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/8-bayesian-inference-for-software-engineers-with-max-sklar.md)
     * [#9 Exploring the Cosmos with Bayes and Maggie Lieu](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/9-exploring-the-cosmos-with-bayes-and-maggie-lieu.md)
     * [#10 Exploratory Analysis of Bayesian Models, with ArviZ and Ari Hartikainen](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/10-exploratory-analysis-of-bayesian-models-with-arviz-and-ari-hartikainen.md)
+    * [#11 Taking care of your Hierarchical Models, with Thomas Wiecki](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/11-taking-care-of-your-hierarchical-models-with-thomas-wiecki.md)
+    * [#12 Biostatistics and Differential Equations, with Demetri Pananos](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/12-biostatistics-and-differential-equations-with-demetri-pananos.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

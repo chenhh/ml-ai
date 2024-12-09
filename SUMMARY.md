@@ -365,6 +365,8 @@
     * [#12 Biostatistics and Differential Equations, with Demetri Pananos](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/12-biostatistics-and-differential-equations-with-demetri-pananos.md)
     * [#13 Building a Probabilistic Programming Framework in Julia, with Chad Scherrer](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/13-building-a-probabilistic-programming-framework-in-julia-with-chad-scherrer.md)
     * [#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/14-hidden-markov-models-and-statistical-ecology-with-vianey-leos-barajas.md)
+    * [#15 The role of Python in Science and Education, with Michael Kennedy](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/15-the-role-of-python-in-science-and-education-with-michael-kennedy.md)
+    * [#16 Bayesian Statistics the Fun Way, with Will Kurt](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/16-bayesian-statistics-the-fun-way-with-will-kurt.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

@@ -24,3 +24,4 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](14-hidden-markov-models-and-statistical-ecology-with-vianey-leos-barajas.md)
 * [#15 The role of Python in Science and Education, with Michael Kennedy](15-the-role-of-python-in-science-and-education-with-michael-kennedy.md)
 * [#16 Bayesian Statistics the Fun Way, with Will Kurt](16-bayesian-statistics-the-fun-way-with-will-kurt.md)
+* [#18 How to ask good Research Questions and encourage Open Science, with Daniel Lakens](18-how-to-ask-good-research-questions-and-encourage-open-science-with-daniel-lakens.md)

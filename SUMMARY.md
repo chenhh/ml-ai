@@ -367,6 +367,7 @@
     * [#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/14-hidden-markov-models-and-statistical-ecology-with-vianey-leos-barajas.md)
     * [#15 The role of Python in Science and Education, with Michael Kennedy](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/15-the-role-of-python-in-science-and-education-with-michael-kennedy.md)
     * [#16 Bayesian Statistics the Fun Way, with Will Kurt](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/16-bayesian-statistics-the-fun-way-with-will-kurt.md)
+    * [#18 How to ask good Research Questions and encourage Open Science, with Daniel Lakens](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/18-how-to-ask-good-research-questions-and-encourage-open-science-with-daniel-lakens.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

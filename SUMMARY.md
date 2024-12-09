@@ -368,6 +368,8 @@
     * [#15 The role of Python in Science and Education, with Michael Kennedy](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/15-the-role-of-python-in-science-and-education-with-michael-kennedy.md)
     * [#16 Bayesian Statistics the Fun Way, with Will Kurt](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/16-bayesian-statistics-the-fun-way-with-will-kurt.md)
     * [#18 How to ask good Research Questions and encourage Open Science, with Daniel Lakens](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/18-how-to-ask-good-research-questions-and-encourage-open-science-with-daniel-lakens.md)
+    * [#19 Turing, Julia and Bayes in Economics, with Cameron Pfiffer](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/19-turing-julia-and-bayes-in-economics-with-cameron-pfiffer.md)
+    * [#20 Regression and Other Stories, with Andrew Gelman, Jennifer Hill & Aki Vehtari](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/20-regression-and-other-stories-with-andrew-gelman-jennifer-hill-and-aki-vehtari.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

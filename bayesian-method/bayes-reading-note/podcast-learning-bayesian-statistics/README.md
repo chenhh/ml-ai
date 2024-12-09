@@ -25,3 +25,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#15 The role of Python in Science and Education, with Michael Kennedy](15-the-role-of-python-in-science-and-education-with-michael-kennedy.md)
 * [#16 Bayesian Statistics the Fun Way, with Will Kurt](16-bayesian-statistics-the-fun-way-with-will-kurt.md)
 * [#18 How to ask good Research Questions and encourage Open Science, with Daniel Lakens](18-how-to-ask-good-research-questions-and-encourage-open-science-with-daniel-lakens.md)
+* [#19 Turing, Julia and Bayes in Economics, with Cameron Pfiffer](19-turing-julia-and-bayes-in-economics-with-cameron-pfiffer.md)
+* [#20 Regression and Other Stories, with Andrew Gelman, Jennifer Hill & Aki Vehtari](20-regression-and-other-stories-with-andrew-gelman-jennifer-hill-and-aki-vehtari.md)

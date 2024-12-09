@@ -363,6 +363,8 @@
     * [#10 Exploratory Analysis of Bayesian Models, with ArviZ and Ari Hartikainen](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/10-exploratory-analysis-of-bayesian-models-with-arviz-and-ari-hartikainen.md)
     * [#11 Taking care of your Hierarchical Models, with Thomas Wiecki](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/11-taking-care-of-your-hierarchical-models-with-thomas-wiecki.md)
     * [#12 Biostatistics and Differential Equations, with Demetri Pananos](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/12-biostatistics-and-differential-equations-with-demetri-pananos.md)
+    * [#13 Building a Probabilistic Programming Framework in Julia, with Chad Scherrer](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/13-building-a-probabilistic-programming-framework-in-julia-with-chad-scherrer.md)
+    * [#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/14-hidden-markov-models-and-statistical-ecology-with-vianey-leos-barajas.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

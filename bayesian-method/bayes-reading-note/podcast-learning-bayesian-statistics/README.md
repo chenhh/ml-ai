@@ -20,3 +20,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#10 Exploratory Analysis of Bayesian Models, with ArviZ and Ari Hartikainen](10-exploratory-analysis-of-bayesian-models-with-arviz-and-ari-hartikainen.md)
 * [#11 Taking care of your Hierarchical Models, with Thomas Wiecki](11-taking-care-of-your-hierarchical-models-with-thomas-wiecki.md)
 * [#12 Biostatistics and Differential Equations, with Demetri Pananos](12-biostatistics-and-differential-equations-with-demetri-pananos.md)
+* [#13 Building a Probabilistic Programming Framework in Julia, with Chad Scherrer](13-building-a-probabilistic-programming-framework-in-julia-with-chad-scherrer.md)
+* [#14 Hidden Markov Models & Statistical Ecology, with Vianey Leos-Barajas](14-hidden-markov-models-and-statistical-ecology-with-vianey-leos-barajas.md)

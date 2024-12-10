@@ -29,3 +29,4 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#20 Regression and Other Stories, with Andrew Gelman, Jennifer Hill & Aki Vehtari](20-regression-and-other-stories-with-andrew-gelman-jennifer-hill-and-aki-vehtari.md)
 * [#21 Gaussian Processes, Bayesian Neural Nets & SIR Models, with Elizaveta Semenova](21-gaussian-processes-bayesian-neural-nets-and-sir-models-with-elizaveta-semenova.md)
 * [#22 Eliciting Priors and Doing Bayesian Inference at Scale, with Avi Bryant](22-eliciting-priors-and-doing-bayesian-inference-at-scale-with-avi-bryant.md)
+* [#23 Bayesian Stats in Business and Marketing Analytics, with Elea McDonnel Feit](23-bayesian-stats-in-business-and-marketing-analytics-with-elea-mcdonnel-feit.md)

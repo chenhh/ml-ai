@@ -27,3 +27,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#18 How to ask good Research Questions and encourage Open Science, with Daniel Lakens](18-how-to-ask-good-research-questions-and-encourage-open-science-with-daniel-lakens.md)
 * [#19 Turing, Julia and Bayes in Economics, with Cameron Pfiffer](19-turing-julia-and-bayes-in-economics-with-cameron-pfiffer.md)
 * [#20 Regression and Other Stories, with Andrew Gelman, Jennifer Hill & Aki Vehtari](20-regression-and-other-stories-with-andrew-gelman-jennifer-hill-and-aki-vehtari.md)
+* [#21 Gaussian Processes, Bayesian Neural Nets & SIR Models, with Elizaveta Semenova](21-gaussian-processes-bayesian-neural-nets-and-sir-models-with-elizaveta-semenova.md)
+* [#22 Eliciting Priors and Doing Bayesian Inference at Scale, with Avi Bryant](22-eliciting-priors-and-doing-bayesian-inference-at-scale-with-avi-bryant.md)

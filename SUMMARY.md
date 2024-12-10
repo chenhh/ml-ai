@@ -370,6 +370,8 @@
     * [#18 How to ask good Research Questions and encourage Open Science, with Daniel Lakens](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/18-how-to-ask-good-research-questions-and-encourage-open-science-with-daniel-lakens.md)
     * [#19 Turing, Julia and Bayes in Economics, with Cameron Pfiffer](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/19-turing-julia-and-bayes-in-economics-with-cameron-pfiffer.md)
     * [#20 Regression and Other Stories, with Andrew Gelman, Jennifer Hill & Aki Vehtari](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/20-regression-and-other-stories-with-andrew-gelman-jennifer-hill-and-aki-vehtari.md)
+    * [#21 Gaussian Processes, Bayesian Neural Nets & SIR Models, with Elizaveta Semenova](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/21-gaussian-processes-bayesian-neural-nets-and-sir-models-with-elizaveta-semenova.md)
+    * [#22 Eliciting Priors and Doing Bayesian Inference at Scale, with Avi Bryant](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/22-eliciting-priors-and-doing-bayesian-inference-at-scale-with-avi-bryant.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

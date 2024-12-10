@@ -30,3 +30,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#21 Gaussian Processes, Bayesian Neural Nets & SIR Models, with Elizaveta Semenova](21-gaussian-processes-bayesian-neural-nets-and-sir-models-with-elizaveta-semenova.md)
 * [#22 Eliciting Priors and Doing Bayesian Inference at Scale, with Avi Bryant](22-eliciting-priors-and-doing-bayesian-inference-at-scale-with-avi-bryant.md)
 * [#23 Bayesian Stats in Business and Marketing Analytics, with Elea McDonnel Feit](23-bayesian-stats-in-business-and-marketing-analytics-with-elea-mcdonnel-feit.md)
+* [#24 Bayesian Computational Biology in Julia, with Seth Axen](24-bayesian-computational-biology-in-julia-with-seth-axen.md)
+* [#25 Bayesian Stats in Football Analytics, with Kevin Minkus](25-bayesian-stats-in-football-analytics-with-kevin-minkus.md)

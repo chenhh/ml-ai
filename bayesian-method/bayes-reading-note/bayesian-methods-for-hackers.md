@@ -33,6 +33,72 @@
 * **貝氏解釋**: 機率是對事件發生的信念或信心的度量。簡單來說，機率是對某個事件的主觀意見的總結。
   * **信念度**: 一個人對某個事件賦予的信念為0，表示他完全不相信該事件會發生；信念為1，表示他完全確信該事件會發生。介於0和1之間的信念度表示對其他結果的權重。
 
+```python
+import numpy as np
+from matplotlib import pyplot as plt
+import matplotlib as mpl
+
+
+# 設置全局字體為支持中文的字體
+mpl.rcParams['font.sans-serif'] = ['Microsoft JhengHei']  # 正黑體
+mpl.rcParams['axes.unicode_minus'] = False  # 解決負號 '-' 顯示為方塊的問題
+
+mpl.style.use("ggplot")
+plt.figure(figsize=(11, 9))
+
+import scipy.stats as stats
+
+dist = stats.beta
+n_trials = [0, 1, 2, 3, 4, 5, 8, 15, 50, 500]
+data = stats.bernoulli.rvs(0.5, size=n_trials[-1])
+x = np.linspace(0, 1, 100)
+
+# For the already prepared, I'm using Binomial's conj. prior.
+for k, N in enumerate(n_trials):
+    sx = plt.subplot(len(n_trials) // 2, 2, k + 1)
+    plt.xlabel("$p$, 出現正面的機率") \
+        if k in [0, len(n_trials) - 1] else None
+    plt.setp(sx.get_yticklabels(), visible=False)
+    heads = data[:N].sum()
+    y = dist.pdf(x, 1 + heads, 1 + N - heads)
+    plt.plot(x, y, label=f"{N}次丟銅版，觀測到{heads}次正面" )
+    plt.fill_between(x, 0, y, color="#348ABD", alpha=0.4)
+    plt.vlines(0.5, 0, 4, color="k", linestyles="--", lw=1)
+
+    leg = plt.legend()
+    leg.get_frame().set_alpha(0.4)
+    plt.autoscale(tight=True)
+
+plt.suptitle("後驗機率的貝氏更新",
+             y=1.02,
+             fontsize=14)
+
+plt.tight_layout()
+plt.show()
+```
+
+```python
+import numpy as np
+from matplotlib import pyplot as plt
+import matplotlib as mpl
+
+mpl.style.use("ggplot")
+plt.figure(figsize=(12.5, 4))
+
+p = np.linspace(0, 1, 50)
+plt.plot(p, 2 * p / (1 + p), color="#348ABD", lw=3)
+# plt.fill_between(p, 2*p/(1+p), alpha=.5, facecolor=["#A60628"])
+plt.scatter(0.2, 2 * (0.2) / 1.2, s=140, c="#348ABD")
+plt.xlim(0, 1)
+plt.ylim(0, 1)
+plt.xlabel("Prior, $P(A) = p$")
+plt.ylabel("Posterior, $P(A|X)$, with $P(A) = p$")
+plt.title("Are there bugs in my code?")
+plt.show()
+```
+
+
+
 ## 參考資料
 
 * [https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers)

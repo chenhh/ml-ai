@@ -6,6 +6,8 @@ description: Markov Chain Monte Carlo，蒙地卡羅馬可夫鏈
 
 ## 簡介
 
+<mark style="color:red;">**使用MCMC的目的：用於透過機率空間中的隨機取樣來近似感興趣引數的後驗分佈**</mark>。
+
 ### 抽樣的動機是什麼？
 
 在機器學習中經常會從資料中學習出一個函數 ，需要使用生成新的資料。比如說機器視覺中的生成模型，可生成一些新的圖片，就是從學習好的機率分佈中抽樣生成新的圖片。
@@ -86,3 +88,4 @@ $$
 * [PyMC](https://www.pymc.io/welcome.html)
 * \[知乎[\]告別數學公式，圖文解讀什麼是馬爾可夫鏈蒙特卡羅方法（MCMC）](https://zhuanlan.zhihu.com/p/32982140)
 * [\[知乎\]馬爾可夫鏈蒙特卡羅演算法（MCMC）](https://zhuanlan.zhihu.com/p/37121528)
+* [https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50](https://towardsdatascience.com/a-zero-math-introduction-to-markov-chain-monte-carlo-methods-dcba889e0c50)

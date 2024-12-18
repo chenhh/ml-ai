@@ -272,9 +272,14 @@
 ## 強化學習與決策理論 <a href="#reinforcement-learning" id="reinforcement-learning"></a>
 
 * [強化學習介紹](reinforcement-learning/rl-introduction.md)
-* [多臂吃角子老虎機](reinforcement-learning/multi-armedbandits.md)
+* [多臂吃角子老虎機](reinforcement-learning/multi-armedbandits/README.md)
+  * [秘書聘選問題(secretary problem)](reinforcement-learning/multi-armedbandits/secretary-problem.md)
 * [Markov decision process (MDP)](reinforcement-learning/mdp.md)
-* [秘書聘選問題(secretary problem)](reinforcement-learning/secretary-problem.md)
+* [動態規劃](reinforcement-learning/dynamic-programming.md)
+* [蒙地卡羅方法](reinforcement-learning/monte-carlo-method.md)
+* [時序差分學習](reinforcement-learning/temporal-difference-learning.md)
+* [多步自舉法](reinforcement-learning/n-step-bootstrapping.md)
+* [表格法的規劃與學習](reinforcement-learning/tabular-planning-learning.md)
 
 ## 賽局理論 <a href="#game-theory" id="game-theory"></a>
 

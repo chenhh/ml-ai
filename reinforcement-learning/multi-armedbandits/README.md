@@ -231,6 +231,56 @@ UCB 的核心想法是每個動作的真實價值 $$𝑞_{*} ( 𝑎 )$$ 位於�
 
 UCB通常表現良好，但比「$$\epsilon$$-貪婪方法」更難超越老虎機問題擴展到普遍的強化學習環境。另一個困難是處理大的狀態空間，特別是函數近似法時。使得UCB在實務上並不好用。
 
+### 廣告點擊率範例
+
+```python
+import math
+
+
+def ucb_algorithm(N: int, d: int, rewards: list[float]) -> (float, list[int]):
+    """
+    :param N: 決策次數 
+    :param d: 行動個數
+    :param rewards: 行動的報酬
+    :return: (總報酬，每個行動被選中的次數)
+    """
+    numbers_of_selections = [0] * d
+    sums_of_rewards = [0.0] * d
+    total_reward = 0.0
+
+    for n in range(N):
+        max_ucb = 0.0
+        ad = 0
+        for i in range(d):
+            if numbers_of_selections[i] == 0:
+                ucb = float('inf')
+            else:
+                avg_reward = sums_of_rewards[i] / numbers_of_selections[i]
+                ucb = avg_reward + math.sqrt(2 * math.log(n + 1) / numbers_of_selections[i])
+            if ucb > max_ucb:
+                max_ucb = ucb
+                ad = i
+        reward = rewards[ad]
+        numbers_of_selections[ad] += 1
+        sums_of_rewards[ad] += reward
+        total_reward += reward
+
+    return total_reward, numbers_of_selections
+
+
+# 廣告資料
+N = 10000  # 總決策次數
+d = 10  # 廣告數量
+rewards = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]  # 每個的點擊率
+
+total_reward, selections = ucb_algorithm(N, d, rewards)
+print("總報酬:", total_reward)
+print("每個廣告每選中的次數:", selections)
+
+# 總報酬: 9648.999999999929
+# 每個廣告每選中的次數: [21, 26, 34, 45, 62, 93, 154, 303, 855, 8407]
+```
+
 ## Gradient Bandit Algorithms(梯度老虎機算法)
 
 。在本節中，我們考慮為每個行動$$a$$學習一個數字的偏好$$H_t(a)$$。偏好越大，該行動就越經常被採取，但該偏好在獎勵方面沒有影響。只有一個行動對另一個行動的相對偏好是重要的；如果我們把所有的行動偏好都加到1000，就不會對行動機率產生影響，這些機率是根據軟最大分佈（即Gibbs或Boltzmann分佈）確定的，如下所示：

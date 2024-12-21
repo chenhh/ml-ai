@@ -196,7 +196,18 @@ UCB 的核心想法是每個動作的真實價值 $$𝑞_{*} ( 𝑎 )$$ 位於�
 * 當前價值估計$$Q_t(a)$$ （利用）。
 * 不確定性（探索），由置信區間的寬度表示。
 
-對於動作$$a$$，我們的目標是估計其真實期望值 $$q_{*}(a)$$。，對樣本平均值的估計值$$Q_t(a)$$，其置信區間(Hoeffding 不等式)可以用以下公式表示：$$Q_t(a) \pm c  \sqrt {\frac{\ln(t)}{N_t(a)}}$$。
+對於動作$$a$$，我們的目標是估計其真實期望值 $$q_{*}(a)$$。，對樣本平均值的估計值$$Q_t(a)$$，其置信區間([Hoeffding不等式](../../probability-and-statistics/probability-inequality.md))可以用以下公式表示：$$Q_t(a) \pm c  \sqrt {\frac{\ln(t)}{N_t(a)}}$$。
+
+假設我們從分佈範圍有限的隨機變量中抽取樣本，其樣本均值$$𝑄_𝑡 ( 𝑎 )$$  與真實期望值 $$𝑞_{∗} ( 𝑎 )$$ 的差異可以表示為 $$\displaystyle \mathrm{P}(|Q_t(a) - q_{*}(a)| \geq \epsilon) \leq 2 \exp (-2 \epsilon^2 N_t(a) )$$。
+
+* $$\epsilon$$是偏離真實值的允許範圍。
+* 右側的指數項描述了置信水平：隨$$N_t(a)$$增加，偏差的機率會指數級減小。
+
+根據 Hoeffding 不等式，我們可以構建$$𝑞_{∗} ( 𝑎 )$$ 的置信區間：$$𝑞_{∗} ( 𝑎 ) \in [Q_t(a) - \epsilon,  Q_t(a) + \epsilon]$$。
+
+為了確定置信區間上限，我們選擇 𝜖 ϵ 使得置信區間涵蓋真實值的概率非常高。將 𝜖表達為樣本數$$N_t (a)$$ 的函數：$$\epsilon = c \sqrt{\frac{\ln(t)}{N_t(a)}}$$，代入Hoeffding不等式可得：
+
+$$\displaystyle  \begin{aligned} \mathrm{P}\{(|Q_t(a) - q_{*}(a)| \geq \epsilon)\} & \leq 2 \exp (-2 \epsilon^2 N_t(a) ) \\ \mathrm{P}\{(|Q_t(a) - q_{*}(a)| \geq  c \sqrt{\frac{\ln(t)}{N_t(a)}})\} & \leq 2 \exp  (-2  c^2 \frac{\ln(t) }{N_t(a)} N_t(a) ) \\ \mathrm{P}\{(|Q_t(a) - q_{*}(a)| \geq  c \sqrt{\frac{\ln(t)}{N_t(a)}})\} & \leq 2 t^{-2 c^2}   \end{aligned}$$
 
 每次選擇置信區間上界最大的動作，即$$A_t = \argmax_a\left\{   Q_t(a) + c \sqrt{\frac{\ln t}{N_t(a)}}  \right\}$$
 

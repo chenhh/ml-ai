@@ -273,6 +273,7 @@
 
 * [強化學習介紹](reinforcement-learning/rl-introduction.md)
 * [多臂吃角子老虎機](reinforcement-learning/multi-armedbandits/README.md)
+  * [UCB算法](reinforcement-learning/multi-armedbandits/ucb-algo.md)
   * [秘書聘選問題(secretary problem)](reinforcement-learning/multi-armedbandits/secretary-problem.md)
 * [Markov decision process (MDP)](reinforcement-learning/mdp.md)
 * [動態規劃](reinforcement-learning/dynamic-programming.md)

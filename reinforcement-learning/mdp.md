@@ -56,7 +56,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 ## RL問題假設
 
-多強化學習都基於一種假設，即代理人(agent)與環境的交互作用可用一個MDP來表示。
+強化學習都基於一種假設，即代理人(agent)與環境的交互作用可用一個MDP來表示。
 
 * 可將代理人和環境表示為同步的有限狀態自動機；
 * 代理人和環境在離散的時間內交互作用；
@@ -64,32 +64,33 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 * 代理人執行完動作後，環境的狀態會發生變化；
 * 在代理人執行完動作後，會得到某種回報；
 
-<mark style="color:red;">也可以把代理人和環境的互動，以賽局理論(game theory)中的雙人賽局(玩家與環境)來分析的性質</mark>。
+<mark style="color:red;">也可以把代理人和環境的互動，以賽局理論(game theory)中的雙人賽局(玩家與環境)來分析</mark>。但要注意賽局理論只有考慮行動，沒有考慮狀態，因此雙人賽局是RL在狀態數為1的特例。
 
 ### 馬可夫決策過程(MDP)的符號定義
+
+<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption><p>MDP範例</p></figcaption></figure>
 
 > definition: Markov decision process
 >
 > 4-tuple $$(\mathcal{S, A, P, R})$$
 >
-> * $$\mathcal{S}=\{s_0,s_1,\dots, s_n\}$$: 環境狀態集合 (有限或無限)。
-> * $$\mathcal{A}(s) =\{ a_0, a_1,\dots, a_n\}$$: 代理人行動集合(有限或無限)。這邊行動的集合範圍是依照狀態來決定，因為每個狀態可以做的行為不一定相同。
-> * $$P: \mathcal{S \times A \times S }\rightarrow [0,1]$$，狀態轉移函數。$$P(s^{'} \vert s, a)$$，即在目前的狀態$$s$$，決定行動$$a$$之後，轉移到狀態$$s^{'}$$的機率。因為在現實中，無法預測未來會發現什麼事，即使在時間點$$t$$，依據狀態$$s$$執行行動$$a$$，也無法保證會轉移到相同狀態。
-> * $$R: S\times A \rightarrow \mathbb{R}$$，報酬函數 $$r(s,a)$$，在目前的狀態$$s$$，決定行動$$a$$後，會得到報酬。
->   * 報酬可能也是隨機的，即$$P(r \vert s,a)$$。
-> * 也可將$$P, R$$寫在一起得
->   * $$P: \mathcal{S \times R \times S \times A} \rightarrow [0,1]$$
->   * &#x20;\[<mark style="color:red;">下一狀態與報酬的機率，較常使用</mark>]$$P(s^{'}, r \vert s, a) \equiv P(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t =s, A_t =a)$$。
->     * \[<mark style="color:red;">狀態轉移函數</mark>]$$\displaystyle P(s^{'} |s,a) = \sum_{r \in \mathbb{R}} P(s^{'}, r \vert s,a)$$
->     * \[<mark style="color:red;">報酬函數</mark>]$$\displaystyle P(r  \vert s,a) = \sum_{s^{'} \in S} P(s^{'}, r \vert s,a)$$
+> * $$\mathcal{S}=\{s_0,s_1,\dots, s_n\}$$: 環境狀態集合 (有限或無限)，此處無限還可再分為可數或不可數。
+> * $$\mathcal{A}(s) =\{ a_0, a_1,\dots, a_n\}$$: 代理人行動集合(有限或無限)。這邊行動的集合是依照狀態來決定，因為每個狀態可以做的行為相異。
+> * $$\mathrm{P}: \mathcal{S \times A \times S }\rightarrow [0,1]$$，狀態轉移函數。$$\mathrm{P}(s^{'} \vert s, a)$$，即在目前的狀態$$s$$，決定行動$$a$$之後，轉移到狀態$$s^{'}$$的機率。因為在現實中，無法預測未來會發現什麼事，即使在時間點$$t$$，依據狀態$$s$$執行行動$$a$$，也無法保證一定會轉移到狀態$$s^{'}$$。
+> * $$R: S\times A \rightarrow \mathbb{R}$$，報酬函數 $$r(s,a)$$，在目前的狀態$$s$$，決定行動$$a$$後，所得到報酬。報酬可能也是隨機的，即$$\mathrm{P}(r \vert s,a)$$。
+> * 也可將$$\mathrm{P}, R$$寫在一起得
+>   * $$\mathrm{P}: \mathcal{S \times R \times S \times A} \rightarrow [0,1]$$
+>   * &#x20;\[<mark style="color:red;">下一狀態與報酬的機率，較常使用</mark>]$$\mathrm{P}(s^{'}, r \vert s, a) \equiv \mathrm{P}(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t =s, A_t =a)$$。
+>     * \[<mark style="color:red;">狀態轉移函數</mark>]$$\displaystyle \mathrm{P}(s^{'} |s,a) = \sum_{r \in \mathbb{R}} \mathrm{P}(s^{'}, r \vert s,a)$$
+>     * \[<mark style="color:red;">報酬函數</mark>]$$\displaystyle \mathrm{P}(r  \vert s,a) = \sum_{s^{'} \in S} \mathrm{P}(s^{'}, r \vert s,a)$$
 >     * \[<mark style="color:red;">狀態與行動的期望報酬</mark>] $$\displaystyle  r(s,a)=\mathrm{E}(R_t ~| ~ S_{t-1}=s, A_{t-1}=a) = \sum_{r \in \mathcal{R}} r  \sum_{s^{'} \in \mathcal{S}} \mathrm{P}(s^{'}, r ~|~s, a)$$
 >     * \[<mark style="color:red;">狀態、行動與下一狀態的期望報酬</mark>] $$\displaystyle  r(s,a, s^{'})=\mathrm{E}(R_t ~| ~ S_{t-1}=s, A_{t-1}=a, S_t=s^{'}) = \sum_{r \in \mathcal{R}} r  \frac{ \mathrm{P}(s^{'}, r ~|~s, a)}{\mathrm{P}(s^{'} ~|~s, a)}$$
 >     * 且 $$\displaystyle \sum_{s^{'} \in S} \sum_{r \in \mathbb{R}} P(s^{'}, r|s, a) = 1, \ \forall s \in \mathcal{S}, a \in \mathcal{A}(s)$$
 >     * 前一狀態狀態與行動的組合數有$$|\mathcal{S}| \times |\mathcal{A}(s)|$$個，而玩家有可能處於其中任一組(狀態，行動)，從當時(狀態，行動)組合中採取行動得到報酬的總和機率為1。
-> * \[<mark style="color:red;">Markov property</mark>] $$P(S_t|S_{t-1}, S_{t-2}, \dots, S_0) = P(S_t|S_{t-1})$$，現在的狀態包含著過去經歷過的所有狀態的資訊。也就是說，我們所求的機率，可以捨去過去的所有狀態，只專注於眼前的狀態。這大大幫助我們減少計算量，且能夠用簡單的迭代法來求出結果。
+> * \[<mark style="color:red;">Markov property</mark>] $$\mathrm{P}(S_t|S_{t-1}, S_{t-2}, \dots, S_0) = \mathrm{P}(S_t|S_{t-1})$$，現在的狀態包含著過去經歷過的所有狀態的資訊。也就是說，我們所求的機率，可以捨去過去的所有狀態，只專注於眼前的狀態。這大大幫助我們減少計算量，且能夠用簡單的迭代法來求出結果。
 
 * <mark style="color:red;">MDP中，所有的過程(狀態，行動等)都有隨機性，下一個狀態轉移只與現在這個狀態有關</mark>。
-* MDP假設環境在某個時刻$$t$$的狀態為$$s$$，則代理人在時間$$t$$採取行動$$a$$後，會使狀態轉變到下一狀態為$$s^{′}$$ 的機率為$$p(s^{′} \vert s,a)$$，且代理人得到的立即報酬為$$r(s,a)$$，只依賴於當前的狀態$$s$$與其選擇的行動$$a$$，而與歷史狀態和歷史動作無關。<mark style="color:red;">可</mark><mark style="color:red;">**解釋為將來的報酬與現在的選擇有關，而與過去無關**</mark>。
+* MDP假設環境在某個時刻$$t$$的狀態為$$s$$，則代理人在時間$$t$$採取行動$$a$$後，會使狀態轉變到下一狀態為$$s^{′}$$ 的機率為$$\mathrm{P}(s^{′} \vert s,a)$$，且代理人得到的立即報酬為$$r(s,a)$$，只依賴於當前的狀態$$s$$與其選擇的行動$$a$$，而與歷史狀態和歷史動作無關。<mark style="color:red;">可</mark><mark style="color:red;">**解釋為將來的報酬與現在的選擇有關，而與過去無關**</mark>。
 
 MDP框架是抽象的、靈活的，可以用許多不同的方式應用於許多不同的問題。
 

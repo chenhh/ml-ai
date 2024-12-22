@@ -69,7 +69,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 ### 馬可夫決策過程(MDP)的符號定義
 
-<figure><img src="../.gitbook/assets/image (42).png" alt="" width="314"><figcaption><p>MDP範例</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (42).png" alt="" width="314"><figcaption><p>MDP範例。圓圈表示狀態，方向箭頭上的小黑點為行動。狀態可採取的行動為流出的方向箭頭。而(狀態，行動)對的轉移機率總合為1。而在狀態s中選擇行動a的(策略, policy)機率也為1。</p></figcaption></figure>
 
 > definition: finite Markov decision process
 >

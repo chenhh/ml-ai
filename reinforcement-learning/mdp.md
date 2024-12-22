@@ -70,13 +70,13 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 <figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption><p>MDP範例</p></figcaption></figure>
 
-> definition: Markov decision process
+> definition: finite Markov decision process
 >
 > 4-tuple $$(\mathcal{S, A, P, R})$$
 >
-> * $$\mathcal{S}=\{s_0,s_1,\dots, s_n\}$$: 環境狀態集合 (有限或無限)，此處無限還可再分為可數或不可數。
-> * $$\mathcal{A}(s) =\{ a_0, a_1,\dots, a_n\}$$: 代理人行動集合(有限或無限)。這邊行動的集合是依照狀態來決定，因為每個狀態可以做的行為相異。
-> * $$\mathrm{P}: \mathcal{S \times A \times S }\rightarrow [0,1]$$，狀態轉移函數。$$\mathrm{P}(s^{'} \vert s, a)$$，即在目前的狀態$$s$$，決定行動$$a$$之後，轉移到狀態$$s^{'}$$的機率。因為在現實中，無法預測未來會發現什麼事，即使在時間點$$t$$，依據狀態$$s$$執行行動$$a$$，也無法保證一定會轉移到狀態$$s^{'}$$。
+> * $$\mathcal{S}=\{s_0,s_1,\dots, s_N\}$$: 環境狀態集合 (有限集合)。
+> * $$\mathcal{A}(s) =\{ a_0, a_1,\dots, a_K\}$$: 代理人行動集合(有限集合)。這邊行動的集合依狀態相異。注意行動數量$$K$$隨狀態$$s$$而異，即$$K \equiv K(s)$$。
+> * $$\mathrm{P}: \mathcal{S \times A \times S }\rightarrow [0,1]$$，狀態轉移函數。簡寫為$$p(s^{'}|s, a) \equiv \mathrm{P}(S_{t+1}=s^{'} \vert S_t=s, A_t=a)$$，即在目前的狀態$$s$$，決定行動$$a$$之後，轉移到狀態$$s^{'}$$的機率。因為在現實中，無法預測未來會發現什麼事，即使在時間點$$t$$，依據狀態$$s$$執行行動$$a$$，也無法保證一定會轉移到狀態$$s^{'}$$。
 > * $$R: S\times A \rightarrow \mathbb{R}$$，報酬函數 $$r(s,a)$$，在目前的狀態$$s$$，決定行動$$a$$後，所得到報酬。報酬可能也是隨機的，即$$\mathrm{P}(r \vert s,a)$$。
 > * 也可將$$\mathrm{P}, R$$寫在一起得
 >   * $$\mathrm{P}: \mathcal{S \times R \times S \times A} \rightarrow [0,1]$$

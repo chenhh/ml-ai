@@ -23,7 +23,7 @@ MDP是強化學習問題在數學上的一種理想化形式，對它可以做�
 
 > definition: Markov property
 >
-> 狀態$$S_t$$有馬可夫性質 $$\Leftrightarrow$$$$P(S_{t+1} \vert S_t) = P(S_{t+1} \vert S_t, S_{t-1}, S_{t-2}, \ldots, S_1)$$
+> 狀態$$S_t$$有馬可夫性質 $$\Leftrightarrow$$$$\mathrm{P}(S_{t+1} \vert S_t) = \mathrm{P}(S_{t+1} \vert S_t, S_{t-1}, S_{t-2}, \ldots, S_1)$$
 >
 > * <mark style="color:red;">當前的狀態可反應過去所有歷史狀態的訊息</mark>，因此只要知道當前的狀態$$S_t$$，不再需要其它的歷史資料$$S_{t-1}, S_{t-2}, \ldots,S_1$$。也就是說，我們所求的機率，可以捨去過去的所有狀態，只專注於眼前的狀態。這大大幫助我們減少計算量，且能夠用簡單的迭代法來求出結果。
 > * 數理統計中也稱具有馬可夫性質$$S_t$$為未來狀態的充分統計量(sufficient statistics)。
@@ -32,7 +32,12 @@ MDP是強化學習問題在數學上的一種理想化形式，對它可以做�
 
 ## 代理人-環境介面(agent-environment interface)
 
-MDP是指對從互動中學習以實現目標的問題的一種直接框架。<mark style="color:red;">學習者和決策者被稱為代理人(agent)。與它互動的東西，包括代理人之外的一切，被稱為環境</mark>。它們不斷地相互作用，代理人選擇行動，環境對這些行動作出反應，並向代理人提供新的情況。 環境也產生了獎勵，即代理人通過選擇行動尋求長期最大化的特殊數字值。
+MDP是指對從互動中學習以實現目標的問題的一種直接框架。
+
+* <mark style="color:red;">學習者和決策者被稱為代理人(agent)。</mark>
+* <mark style="color:red;">與它互動的東西，包括代理人之外的一切，被稱為環境</mark>。
+
+它們不斷地相互作用，代理人選擇行動，環境對這些行動作出反應，並向代理人提供新的狀態。 環境也產生了獎勵。<mark style="background-color:red;">代理人通過選擇行動尋求長期最大化的目標值</mark>。
 
 <mark style="color:red;">因此在強化學習中，有三個基本元素：狀態(State)、行動(Action)、報酬(Reward)。</mark>這三個元素就是我們的代理人(Agent)與環境(Environment)互相溝通的訊息，而代理人可以透過MDP選擇行動改變下一期的狀態，以提高報酬。
 

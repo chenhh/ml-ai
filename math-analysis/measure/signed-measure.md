@@ -18,7 +18,7 @@ description: signed measure
 
 若全變差測度$$|\nu|$$為有限(σ-有限)測度，則符號測度$$\nu$$為有限(σ-有限)測度。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>來源: <a href="https://zhuanlan.zhihu.com/p/36652587">https://zhuanlan.zhihu.com/p/36652587</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>來源: <a href="https://zhuanlan.zhihu.com/p/36652587">https://zhuanlan.zhihu.com/p/36652587</a></p></figcaption></figure>
 
 ## 符號測度
 

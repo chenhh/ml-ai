@@ -29,5 +29,5 @@ ACF 是一個完整的自相關函數，可為我們提供具有滯後值的任�
 * 如果將上式以矩陣形式表示，可得$$\Sigma = \begin{bmatrix}  \rho_{0} & \rho_{-1} & \dots & \rho_{1-n} \\ \rho_{1} & \rho_{0} & \dots & \rho_{2-n} \\ \vdots & \vdots & \vdots & \vdots \\ \rho_{n-1} & \rho_{n-2} & \vdots & \rho_{0}  \end{bmatrix}$$因為$$\rho_{i-j}=\rho_{j-i}$$且$$\rho_0 \geq 1$$，得$$\Sigma=\Sigma^{\top}$$為對角線為1的對稱矩陣。
 * <mark style="color:blue;">可得滿足自共變異數/自相關係數的函數=>函數滿足正半定(positive semidefinite)的性質</mark><mark style="color:red;">。</mark>
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>隨機變數的自相關係數圖(相關圖)</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>隨機變數的自相關係數圖(相關圖)</p></figcaption></figure>
 

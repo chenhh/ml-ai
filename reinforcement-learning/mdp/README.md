@@ -71,7 +71,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 ### 馬可夫決策過程(MDP)的符號定義
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt="" width="314"><figcaption><p>MDP範例。圓圈表示狀態，方向箭頭上的小黑點為行動。狀態可採取的行動為流出的方向箭頭。而(狀態，行動)對的轉移機率總合為1。而在狀態s中選擇行動a的(策略, policy)機率也為1。</p></figcaption></figure>
+<div align="center"><figure><img src="../../.gitbook/assets/image (42).png" alt="" width="471"><figcaption><p>MDP範例。圓圈表示狀態，方向箭頭上的小黑點為行動。狀態可採取的行動為流出的方向箭頭。而(狀態，行動)對的轉移機率總合為1。而在狀態s中選擇行動a的(策略, policy)機率也為1。</p></figcaption></figure></div>
 
 > definition: finite Markov decision process
 >
@@ -83,6 +83,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 >   * 簡寫為$$p(s^{'}|s, a) \equiv \mathrm{P}(S_{t+1}=s^{'} \vert S_t=s, A_t=a)$$，即在目前的狀態$$s$$，決定行動$$a$$之後，轉移到狀態$$s^{'}$$的機率。
 >   * 因為在現實中，無法預測未來會發現什麼事，即使在時間點$$t$$，依據狀態$$s$$執行行動$$a$$，也無法保證一定會轉移到狀態$$s^{'}$$。
 >   * $$\displaystyle p(s^{'} |s,a) = \sum_{r \in \mathcal{R}} p(s^{'}, r \vert s,a)$$
+>   * <mark style="background-color:orange;">MDP和一般Markov chain的區別在於轉移矩陣不是狀態->狀態，而是狀態->行動->狀態</mark>。
 > * \[期望報酬函數]，定義期望報酬函數$$r: S\times A \rightarrow \mathbb{R}$$
 >   * 簡寫為 $$\displaystyle r(s,a) \equiv \mathrm{E}(R_{t+1} ~|~ S_t=s, A_t=a)$$，在目前的狀態$$s$$，決定行動$$a$$後，所得到期望報酬。此處$$R_{t+1}$$為隨機變數。
 >   * 如果只考慮狀態，行動的期望報酬時，用此法定義較為簡單。而將隨機報酬也寫入轉移函數的定義更為詳細，但也較複雜。

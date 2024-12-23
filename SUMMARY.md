@@ -276,6 +276,8 @@
   * [UCB算法](reinforcement-learning/multi-armedbandits/ucb-algo.md)
   * [秘書聘選問題(secretary problem)](reinforcement-learning/multi-armedbandits/secretary-problem.md)
 * [Markov decision process (MDP)](reinforcement-learning/mdp/README.md)
+  * [目標與報酬](reinforcement-learning/mdp/goal-reward.md)
+  * [策略與價值函數](reinforcement-learning/mdp/policy-value-function.md)
   * [MDP與雙人零和賽局](reinforcement-learning/mdp/mdp-two-person-zero-sum-game.md)
 * [動態規劃](reinforcement-learning/dynamic-programming.md)
 * [蒙地卡羅方法](reinforcement-learning/monte-carlo-method.md)

@@ -45,7 +45,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 ![狀態、行動、報酬的互動](../../.gitbook/assets/rl-min.png)
 
 * 代理人在狀態$$S_t \in \mathcal{S}$$時，選擇行動$$A_t \in \mathcal{A}(s)$$後，會從環境得到報酬$$R_{t+1} \in \mathcal{R} \subset \mathbb{R}$$且到達下一個狀態$$S_{t+1}$$。
-* 因此可得<mark style="color:red;">軌跡(trajectory)</mark>如$$S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, \dots$$
+* 因此可得<mark style="color:red;">軌跡(trajectory)</mark>如$$S_0, A_0, R_1, S_1, A_1, R_2, S_2, A_2, R_3, \dots$$，此此是用隨機變數序列表示，實務上每次得到的軌跡都相異。
 * 在<mark style="color:red;">有限的MDP</mark>中，狀態的集合$$\mathcal{S}$$、行動的集合$$\mathcal{A}$$、報酬的集合$$\mathcal{R}$$三者均為有限集合。因此報酬和狀態的隨機變數$$R_t$$​和$$S_t$$​有只依賴於前一狀態或行動的離散機率分佈。
 
 ![代理人(通常)無法控制環境，只能觀察狀態，決定行動，得到報](../../.gitbook/assets/rl2-min.png)

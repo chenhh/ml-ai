@@ -10,7 +10,7 @@ description: policy and value functions
 
 <mark style="color:red;">強化學習方法具體說明了代理人的策略是如何因其經驗而改變的</mark>。即根據經驗，學習在狀態$$s\in\mathcal{S}$$時，採取何種行動$$a \in \mathcal{A}(s)$$可使(長期)期望報酬最大化。
 
-$$p(s^{'}, r|s, a) \equiv \mathrm{P}(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t=s, A_t=a)$$
+前面討論MDP的狀態-報酬轉移機率$$p(s^{'}, r|s, a) \equiv \mathrm{P}(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t=s, A_t=a)$$，是給定目前狀態$$S_t=s$$與行動$$A_t=a$$後的機率，而策略$$\pi(a|s)$$會影響到行動$$A_t$$的選擇，因此對於狀態轉移與期望報酬都有間接的影響。
 
 ### 狀態的價值函數
 

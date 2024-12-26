@@ -10,9 +10,19 @@ description: policy and value functions
 
 <mark style="color:red;">強化學習方法具體說明了代理人的策略是如何因其經驗而改變的</mark>。即根據經驗，學習在狀態$$s\in\mathcal{S}$$時，採取何種行動$$a \in \mathcal{A}(s)$$可使(長期)期望報酬最大化。
 
-前面討論MDP的狀態-報酬轉移機率$$p(s^{'}, r|s, a) \equiv \mathrm{P}(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t=s, A_t=a)$$，是給定目前狀態$$S_t=s$$與行動$$A_t=a$$後的機率，而策略$$\pi(a|s)$$會影響到行動$$A_t$$的選擇，因此對於狀態轉移與期望報酬都有間接的影響。
+## 狀態執行動作後的(下一期)期望報酬
 
-### 狀態的價值函數
+目前狀態$$S_t=s$$，且動作$$A_t$$是依據隨機策略$$\pi$$選擇，則報酬$$R_{t+1}$$的期望值可表示為$$\pi$$與$$p(s^{'}, r|s,a)$$的形式：
+
+$$\displaystyle \mathrm{E} (R_{t+1}|S_t=s)=\sum_{a \in A(s)} \pi(a|s) \sum_{s^{'}, r} r \cdot p(s^{'},r|s,a)$$
+
+* 在目前的狀態$$s$$，選擇行動$$a \in A(s)$$的機率為$$\pi(a|s)$$。
+* 在選定行動$$a$$後，得到報酬$$r$$且轉移到下一狀態為$$s^{'}$$的機率為$$p(s^{'}, r|s,a)$$
+* 轉移機率$$p(s^{'}, r|s, a) \equiv \mathrm{P}(S_{t+1}=s^{'}, R_{t+1}=r \vert S_t=s, A_t=a)$$，是給定目前狀態$$S_t=s$$與行動$$A_t=a$$後的機率。
+* 內部的加總$$\sum_{s^{'}, r} r \cdot p(s^{'},r|s,a)$$這一部分表示在狀態$$𝑠$$執行動作 $$𝑎$$時，根據轉移動作的機率分佈計算的期望獎勵。
+* 外部的加總$$\sum_{a \in A(s)} \pi(a|s)$$是對於狀態$$𝑠$$下的所有可能動作$$𝑎$$，根據策略選擇的機率權重進行加權平均。
+
+## 狀態的價值函數
 
 <mark style="color:red;">狀態</mark>$$s$$​<mark style="color:red;">使用策略</mark>$$\pi$$​<mark style="color:red;">的價值函數記為</mark>$$v_{\pi}(s)$$<mark style="color:red;">(state value</mark> <mark style="color:red;">function for policy</mark> $$\pi$$)，其值為在狀態$$s$$​使用策略$$\pi$$​的期望報酬。其MDP定義如下：
 
@@ -20,7 +30,7 @@ $$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s)
 
 如果任務中有終止狀態時，則該狀態的價值函數必為0。
 
-### 狀態-行動對的價值函數
+## 狀態-行動對的價值函數
 
 <mark style="color:red;">狀態</mark>$$s$$​時，<mark style="color:red;">參考策略</mark>$$\pi$$<mark style="color:red;">而採取行動</mark>$$a$$<mark style="color:red;">的價值函數記為</mark>$$q_\pi(s,a)$$<mark style="color:red;">(action-value function for policy</mark> $$\pi$$)，同樣也是此行動對的期望報酬。其MDP定義如下：
 

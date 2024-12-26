@@ -38,7 +38,7 @@ $$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s)
 
 $$\displaystyle \begin{aligned} q_{\pi}(s, a) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s, A_t = a) \\ 	& = \mathrm{E}_{\pi}\left[  		\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s, A_t = a 	\right]  \end{aligned}$$
 
-### 狀態與狀態-行動價值函數的關係
+### 狀態價值函數以狀態-行動價值函數表示
 
 $$\displaystyle v_{\pi}(s)=\sum_{a \in A(s)} \pi(a|s) q_{\pi}(s,a)$$
 
@@ -47,6 +47,15 @@ $$\displaystyle v_{\pi}(s)=\sum_{a \in A(s)} \pi(a|s) q_{\pi}(s,a)$$
 <mark style="background-color:red;">換句話說，狀態值是根據當前策略選擇行動後的期望總回報</mark>。
 
 <figure><img src="../../.gitbook/assets/image.png" alt="" width="229"><figcaption><p>狀態的價值是(狀態-行動)對的期望值</p></figcaption></figure>
+
+### 狀態-行動價值函數以狀態價值函數表示
+
+$$\displaystyle  \begin{aligned} q_{\pi}(s,a) & = \mathrm{E} (R_{t+1} + \gamma v_{\pi}(s_{t+1}) | S_t=s, A_t=a)\\     & = \sum_{s^{'} \in \mathcal{S}} p(s^{'},r|s,a)(r+\gamma v_{\pi}(s^{'})) \end{aligned}$$
+
+$$q_{\pi} (s,a)$$ 表示從狀態$$𝑠$$遵循策略$$\pi$$執行動作$$𝑎$$ 的期望回報，可以分解為：
+
+* 當前立即獲得的報酬$$R_{t+1}$$。
+* 後續狀態$$S_{t+1}$$的價值$$v_{\pi}(s^{'})$$，折扣因子$$\gamma$$用於考慮未來的回。
 
 ### 估計價值函數的方法
 

@@ -38,6 +38,14 @@ $$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s)
 
 $$\displaystyle \begin{aligned} q_{\pi}(s, a) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s, A_t = a) \\ 	& = \mathrm{E}_{\pi}\left[  		\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s, A_t = a 	\right]  \end{aligned}$$
 
+### 狀態與狀態-行動價值函數的關係
+
+$$\displaystyle v_{\pi}(s)=\sum_{a \in A(s)} \pi(a|s) q_{\pi}(s,a)$$
+
+在狀態$$S_t=s$$下，其價值$$v_{\pi}(s)$$是該狀態的所有可能行動價值$$q_{\pi}(s,a)$$的加權平均值，而權重是由策略$$\pi(a|s)$$決定。
+
+<mark style="background-color:red;">換句話說，狀態值是根據當前策略選擇行動後的期望總回報</mark>。
+
 ### 估計價值函數的方法
 
 價值函數$$v_{\pi}$$和$$q_{\pi}$$可以根據經驗估計。例如，如果代理人遵循策略$$\pi$$，並為所遇到的每個狀態保持一個遵循該狀態的實際回報的平均值，那麼當遇到該狀態的次數接近無限時，該平均值將收斂於該狀態的值$$v_{\pi}(s)$$。如果對每個狀態下採取的每個行動都保持單獨的平均數，那麼這些平均數同樣會收斂到行動值$$q_{\pi}(s, a)$$。我們稱這種估計方法為<mark style="color:blue;">蒙地卡羅方法</mark>，因為它們涉及到許多實際收益的隨機樣本的平均化。

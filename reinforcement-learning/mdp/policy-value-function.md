@@ -6,15 +6,17 @@ description: policy and value functions
 
 <mark style="color:red;">幾乎所有的強化學習演算法都涉及估計價值函數，即狀態或(狀態-行動)對的函數，這些函數估計代理人處於給定狀態有多好（或在給定狀態下執行給定行動有多好）</mark>。這裡的 "多好 "的概念是指可以預期的期望報酬。當然，代理人可望在未來獲得的回報取決於它將採取什麼行動。因此，價值函數是針對特定的行動方式（稱為策略(policy)）而定義的。
 
-<mark style="color:red;">策略(policy)是一種從狀態到選擇每種可能行動的機率的對映</mark>。如果代理人在時間$$t$$遵循策略$$\pi$$，則$$\pi(a|s)$$是狀態$$S_t = s$$時，採取行動$$A_t = a$$的機率。
+## 策略(policy)
+
+<mark style="color:red;">策略(policy)是一種給定目前狀態</mark>$$S_t=s$$，<mark style="color:red;">選擇每種可能行動的機率分佈</mark>。如果代理人在時間$$t$$遵循策略$$\pi$$，則$$\pi(a|s)$$是狀態$$S_t = s$$時，採取行動$$A_t = a$$的機率。MDP中的策略，只需考慮目前的狀態，而不需考慮完整的歷史資料，而且策略為定態(非時變)的機率分佈，即$$A_t \sim \pi(\cdot |S_t), ~ \forall t > 0$$。
 
 <mark style="color:red;">強化學習方法具體說明了代理人的策略是如何因其經驗而改變的</mark>。即根據經驗，學習在狀態$$s\in\mathcal{S}$$時，採取何種行動$$a \in \mathcal{A}(s)$$可使(長期)期望報酬最大化。
 
 ## 狀態執行動作後的(下一期)期望報酬
 
-目前狀態$$S_t=s$$，且動作$$A_t$$是依據隨機策略$$\pi$$選擇，則報酬$$R_{t+1}$$的期望值可表示為$$\pi$$與$$p(s^{'}, r|s,a)$$的形式：
+目前狀態$$S_t=s$$，且動作$$A_t$$是依據隨機策略$$\pi$$選擇，則報酬$$R_{t+1}$$的期望值可表示為$$\pi(a|s)$$與$$p(s^{'}, r|s,a)$$的形式：
 
-$$\displaystyle \mathrm{E} (R_{t+1}|S_t=s)=\sum_{a \in A(s)} \pi(a|s) \sum_{s^{'}, r} r \cdot p(s^{'},r|s,a)$$
+$$\displaystyle \mathrm{E}_{\pi} (R_{t+1}|S_t=s)=\sum_{a \in A(s)} \pi(a|s) \sum_{s^{'}, r} r \cdot p(s^{'},r|s,a)$$
 
 * 在目前的狀態$$s$$，選擇行動$$a \in A(s)$$的機率為$$\pi(a|s)$$。
 * 在選定行動$$a$$後，得到報酬$$r$$且轉移到下一狀態為$$s^{'}$$的機率為$$p(s^{'}, r|s,a)$$
@@ -24,7 +26,7 @@ $$\displaystyle \mathrm{E} (R_{t+1}|S_t=s)=\sum_{a \in A(s)} \pi(a|s) \sum_{s^{'
 
 ## 狀態的價值函數
 
-<mark style="color:red;">狀態</mark>$$s$$​<mark style="color:red;">使用策略</mark>$$\pi$$​<mark style="color:red;">的價值函數記為</mark>$$v_{\pi}(s)$$<mark style="color:red;">(state value</mark> <mark style="color:red;">function for policy</mark> $$\pi$$)，其值為在狀態$$s$$​使用策略$$\pi$$​的期望報酬。其MDP定義如下：
+<mark style="color:red;">狀態</mark>$$s$$​<mark style="color:red;">使用策略</mark>$$\pi$$​<mark style="color:red;">的價值函數記為</mark>$$v_{\pi}(s)$$<mark style="color:red;">(state value</mark> <mark style="color:red;">function for policy</mark> $$\pi$$)，其值為在狀態$$s$$​使用策略$$\pi$$​的(長期)期望報酬。其定義如下：
 
 $$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s) \\ 	& = \mathrm{E}_{\pi}\left[  		\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s 	\right], ~ \forall s \in \mathcal{S} \end{aligned}$$
 
@@ -32,7 +34,7 @@ $$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s)
 
 ## 狀態-行動對的價值函數
 
-<mark style="color:red;">狀態</mark>$$s$$​時，<mark style="color:red;">參考策略</mark>$$\pi$$<mark style="color:red;">而採取行動</mark>$$a$$<mark style="color:red;">的價值函數記為</mark>$$q_\pi(s,a)$$<mark style="color:red;">(action-value function for policy</mark> $$\pi$$)，同樣也是此行動對的期望報酬。其MDP定義如下：
+<mark style="color:red;">狀態</mark>$$s$$​時，<mark style="color:red;">參考策略</mark>$$\pi$$<mark style="color:red;">而採取行動</mark>$$a$$<mark style="color:red;">的價值函數記為</mark>$$q_\pi(s,a)$$<mark style="color:red;">(action-value function for policy</mark> $$\pi$$)，同樣也是此行動對的期望報酬。其定義如下：
 
 $$\displaystyle \begin{aligned} q_{\pi}(s, a) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s, A_t = a) \\ 	& = \mathrm{E}_{\pi}\left[  		\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s, A_t = a 	\right]  \end{aligned}$$
 

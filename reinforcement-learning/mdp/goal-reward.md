@@ -4,6 +4,8 @@ description: goal and reward
 
 # 目標與報酬
 
+短期報酬$$R_t$$與累積報酬$$G_t$$，會影響到問題目標學習時的的行為$$\pi(a|s)$$的選擇。
+
 ## 目標與報酬(goal and rewards)
 
 在強化學習中，代理人的目的或目標是以一種特殊的訊號（稱為獎賞）形式化的，從環境傳遞到代理人。在每個時間步驟中，獎勵是一個簡單的數字$$R_t \in \mathbb{ R}$$。<mark style="color:red;">這意味著最大化的不是眼前的獎勵，而是</mark><mark style="color:red;">**長期的累積獎勵**</mark><mark style="color:red;">。我們可以把這個非正式的想法清楚地表述為獎勵假說(reward hypothesis)</mark>。

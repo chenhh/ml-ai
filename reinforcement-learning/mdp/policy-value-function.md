@@ -28,7 +28,9 @@ $$\displaystyle \mathrm{E}_{\pi} (R_{t+1}|S_t=s)=\sum_{a \in A(s)} \pi(a|s) \sum
 
 <mark style="color:red;">狀態</mark>$$s$$​<mark style="color:red;">使用策略</mark>$$\pi$$​<mark style="color:red;">的價值函數記為</mark>$$v_{\pi}(s)$$<mark style="color:red;">(state value</mark> <mark style="color:red;">function for policy</mark> $$\pi$$)，其值為在狀態$$s$$​使用策略$$\pi$$​的(長期)期望報酬。其定義如下：
 
-$$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s) \\ 	& = \mathrm{E}_{\pi}\left[  		\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s 	\right], ~ \forall s \in \mathcal{S} \end{aligned}$$
+$$\begin{aligned} G_t & = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} +\dots \\ 		& = R_{t+1}  + \gamma G_{t+1} \end{aligned}$$
+
+$$\displaystyle \begin{aligned}  v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s) \\ 	 & = \mathrm{E}_{\pi}\left[\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s 	\right] ~  \\  & = \mathrm{E}_{\pi}(R_{t+1} + \gamma G_{t+1} ~|~ S_t = s) \\ 	 & = \sum_{a \in A(s)} \pi(a|s) \sum_{s^{'} \in \mathcal{S}} \sum_{r\in \mathcal{R}} p(s^{'}, r|s,a)[r+ \gamma \mathrm{E}_{\pi} (G_{t+1} ~|~ S_{t+1}=s^{'})] \\ & = \sum_{a \in A(s)} \pi(a|s) \sum_{s^{'} \in \mathcal{S}} \sum_{r \in \mathcal{R}} p(s^{'}, r|s,a)[r+ \gamma v_{\pi}(s^{'})], ~ \forall s \in \mathcal{S} \end{aligned}$$
 
 如果任務中有終止狀態時，則該狀態的價值函數必為0。
 
@@ -37,6 +39,8 @@ $$\displaystyle \begin{aligned} v_{\pi}(s) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s)
 <mark style="color:red;">狀態</mark>$$s$$​時，<mark style="color:red;">參考策略</mark>$$\pi$$<mark style="color:red;">而採取行動</mark>$$a$$<mark style="color:red;">的價值函數記為</mark>$$q_\pi(s,a)$$<mark style="color:red;">(action-value function for policy</mark> $$\pi$$)，同樣也是此行動對的期望報酬。其定義如下：
 
 $$\displaystyle \begin{aligned} q_{\pi}(s, a) & = \mathrm{E}_{\pi}(G_t ~|~ S_t = s, A_t = a) \\ 	& = \mathrm{E}_{\pi}\left[  		\sum_{k=0}^\infty \gamma^k R_{t+k+1} ~\big| S_t = s, A_t = a 	\right]  \end{aligned}$$
+
+
 
 ### 狀態價值函數以狀態-行動價值函數表示
 

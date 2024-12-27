@@ -16,7 +16,7 @@ description: policy and value functions
 
 在MDP中，狀態選擇行動的機率 $$\pi(a∣s)$$ 和選擇行動後得到的報酬與下一狀態的條件機率$$𝑝 ( 𝑠^{'}, 𝑟 ∣ 𝑠 , 𝑎 )$$ 是獨立的，這是由 MDP 的假設和數學結構決定的。
 
-即聯合機率分佈$$p(s^{'}r|s,a)=p(a|s) \cdot p(s^{'},r|s,a)$$。
+即聯合機率分佈$$p(s^{'}r,a|s)=p(a|s) \cdot p(s^{'},r|s,a)$$。
 
 決策過程的順序性：
 

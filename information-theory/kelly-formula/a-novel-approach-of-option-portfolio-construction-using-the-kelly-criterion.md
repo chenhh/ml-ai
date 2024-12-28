@@ -79,7 +79,20 @@ Mu-En Wu, Wei-Ho Chung, Chia-Jung Lee, “On the Analysis of Kelly Criterion and
 
 <mark style="background-color:red;">然而，贏和輸的實現次數取決於在進行</mark>$$T$$ <mark style="background-color:red;">輪遊戲的過程中所產生的二項式分布</mark>。例如，勝率為$$p=50\%$$ 的 100 次遊戲並不總是由 50 次贏和 50 次輸組成。
 
-## Vince HPR
+## Vince's optimal F
+
+[https://www.bituzi.com/2015/03/optimal-f.html](https://www.bituzi.com/2015/03/optimal-f.html)\
+[https://www.bituzi.com/2015/02/Vince-Optimal-f.html](https://www.bituzi.com/2015/02/Vince-Optimal-f.html)
+
+傳統凱利賭徒，固定機率固定賠率；而在真實交易上，機率是估計的、賠率也是估計的，且每次損益都不一樣。所以無法使用傳統凱利公式。
+
+Optimal f 著重於**單一投資或交易策略**的最佳投注比例，而槓桿空間模型則著重於**如何在多個投資機會之間分配資金**。
+
+Optimal f 回答了「在單一策略下應該投入多少資金」的問題，而槓桿空間模型則回答了「應該如何分配資金到不同的策略」的問題。
+
+槓桿空間模型是基於凱利法則延伸的最佳化比例(Optimal Fraction)。與現代投資組合理論最大的不同是，我們不是假設知道商品的期望報酬、標準差、以及彼此的相關係數，而是假設知道商品在這一期的漲跌分佈。
+
+這個條件要比現代投資組合理論要求的更多，畢竟知道漲跌分佈，便可知道期望報酬與標準差。在知道更多"資訊"的情況下可以做更多的事。
 
 **凱利公式的限制**
 
@@ -92,11 +105,21 @@ Mu-En Wu, Wei-Ho Chung, Chia-Jung Lee, “On the Analysis of Kelly Criterion and
 
 持有期報酬(HPR)的核心思想是將一系列交易或多個可能的結果視為一個整體，並計算出在這個整體中的最佳投注比例。
 
-Ralph Vince擴充Kelly準則，並考慮多組結果下的下注比例，而非二進制結果，也就是考慮有以下結果的遊戲： $$(b_1, b_2, \dots, b_n), ~ b_i \in \mathbb{Z}$$。
+Ralph Vince的optimal F考慮有以下結果的遊戲： $$(b_1, b_2, \dots, b_n), ~ b_i \in \mathbb{Z}$$。
 
 則每一期的持有期報酬(holding period return, HPR)為$$HPR_{i}(f)=(1-f \frac{-b_i}{L})$$，其中$$L=\min(b_1, \dots, b_n)$$為最大損失，且$$L$$的預設值為負數($$L < 0)$$。
 
+### Optimal F 的計算過程
 
+定義最大回撤 (MDD)： 最大回撤定義為交易歷史中資本從高點到低點的最大下降幅度。
+
+$$MDD=\max(v_{peak} - v_{trough})$$
+
+計算每次交易的報酬率$$𝑅_i$$ ​定義為：$$R_i = \frac{P_i - L_i}{C}$$
+
+* $$P_i$$為第i次交易的獲利，$$L_i$$第i次交易的損失，$$C$$為初始資本。
+
+最大化資本成長：通過模擬不同的投注比例 𝐹 ，找出導致最高資本增長率的值。
 
 ### &#x20;**HPR 的**步驟
 
@@ -108,3 +131,4 @@ HPR 的計算涉及以下步驟：
 * **計算每個結果的回報率：** 對於每個結果，計算其回報率，即盈利或虧損金額相對於初始資金的比例。
 * **計算加權平均回報率：** 將每個結果的回報率乘以其發生的機率，然後將所有結果的加權回報率加總，得到持有期間的平均回報率。
 * **最佳投注比例 (Opt. f)：** 基於計算出的加權平均回報率，Vince 提出了一種方法來計算最佳投注比例 (Opt. f)，這個比例旨在最大化長期資產增長。
+

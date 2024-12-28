@@ -6,6 +6,10 @@ description: policy and value functions
 
 <mark style="color:red;">幾乎所有的強化學習演算法都涉及估計價值函數，即狀態或(狀態-行動)對的函數，這些函數估計代理人處於給定狀態有多好（或在給定狀態下執行給定行動有多好）</mark>。這裡的 "多好 "的概念是指可以預期的期望報酬。當然，代理人可望在未來獲得的回報取決於它將採取什麼行動。因此，價值函數是針對特定的行動方式（稱為策略(policy)）而定義的。
 
+<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="353"><figcaption><p>確定性策略</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="448"><figcaption><p>隨機策略</p></figcaption></figure>
+
 ## 策略(policy)
 
 <mark style="color:red;">策略(policy)是一種給定目前狀態</mark>$$S_t=s$$，<mark style="color:red;">選擇每種可能行動的機率分佈</mark>。如果代理人在時間$$t$$遵循策略$$\pi$$，則$$\pi(a|s)$$是狀態$$S_t = s$$時，採取行動$$A_t = a$$的機率。MDP中的策略，只需考慮目前的狀態，而不需考慮完整的歷史資料，而且策略為定態(非時變)的機率分佈，即$$A_t \sim \pi(\cdot |S_t), ~ \forall t > 0$$。
@@ -92,7 +96,7 @@ $$\displaystyle v_{\pi}(s)=\sum_{a \in A(s)} \pi(a|s) q_{\pi}(s,a)$$
 
 <mark style="background-color:red;">換句話說，狀態值是根據當前策略選擇行動後的期望總回報</mark>。
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="229"><figcaption><p>狀態的價值是(狀態-行動)對的期望值</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="229"><figcaption><p>狀態的價值是(狀態-行動)對的期望值</p></figcaption></figure>
 
 ### 狀態-行動價值函數以狀態價值函數表示
 

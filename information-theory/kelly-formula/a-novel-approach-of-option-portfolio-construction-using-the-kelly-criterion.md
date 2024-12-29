@@ -1,5 +1,5 @@
 ---
-description: conference paper
+description: journal paper
 ---
 
 # A Novel Approach of Option Portfolio Construction Using the Kelly Criterion
@@ -253,3 +253,7 @@ Step5：根據 Vince 的最佳比例計算終端財富回報 (TWR)。然後，�
 我們單獨計算上面顯示的所有 10 個投資組合的報酬分佈。請注意，在報酬小於 1 的情況下，遊戲並不有利。在這種情況下，我們將計算相應空頭價差的報報，也就是將 「多頭 」變為 「空頭」，「空頭 」變為 「多頭」。
 
 我們的實驗結果如下。由於「買進 9300 買權 @ 90；賣出 9350 賣權 @ 54」在第三節中被計算為不利，我們計算出空頭價差位置，「賣出 9300 買權 @ 90；買進 9350 買權 @ 54」，如圖 11 所示。
+
+## 參考資料
+
+* [https://www.sciencedirect.com/science/article/pii/S2405896322027318](https://www.sciencedirect.com/science/article/pii/S2405896322027318)

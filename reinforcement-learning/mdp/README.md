@@ -50,7 +50,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 ![代理人(通常)無法控制環境，只能觀察狀態，決定行動，得到報酬](../../.gitbook/assets/rl2-min.png)
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="563"><figcaption><p>MDP流程</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>MDP流程</p></figcaption></figure>
 
 * **大寫的字母表示隨機變數，小寫的字母表示為某一實現值**。
 * <mark style="color:red;">如果決策圖中出現狀態->狀態的轉移時，表示兩個狀態間有一個決定性的行動(deterministic action)</mark>，即執行此行動後必定會轉移至下一個固定的狀態，而非是機率式的轉移。
@@ -166,7 +166,7 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
 * 獎勵：在特定狀態釣魚會產生獎勵，假設在低、中、高狀態釣魚的獎勵分別為 $5K、$50K 和 $100k。如果採取行動達到空狀態，那麼獎勵非常低 - 20 萬美元，因為它需要重新培育新的鮭魚，這需要時間和金錢。
 * 狀態轉移：在一個狀態捕魚有較高的機率轉移到鮭魚數量較少的狀態。類似地，不捕魚動作有更高的機率移動到鮭魚數量較多的狀態（高狀態除外）。
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt="" width="563"><figcaption><p>捕撈鮭魚 MDP 的轉變圖。大圓圈是狀態節點，小實心黑色圓圈是動作節點。一旦採取行動，環境就會做出獎勵並過渡到下一個狀態。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption><p>捕撈鮭魚 MDP 的轉變圖。大圓圈是狀態節點，小實心黑色圓圈是動作節點。一旦採取行動，環境就會做出獎勵並過渡到下一個狀態。</p></figcaption></figure>
 
 ### 範例：學生上課
 
@@ -178,9 +178,9 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
 * 滑Fb狀態：90%會繼續滑；10%回去上第一堂課。
 * 加考試狀態：100%通過後回去睡覺。
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="563"><figcaption><p>學生上課問題</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption><p>學生上課問題</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="531"><figcaption><p>狀態轉移矩陣，row加起來總合為1。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="531"><figcaption><p>狀態轉移矩陣，row加起來總合為1。</p></figcaption></figure>
 
 獎勵(Reward)以及衰減係數(Discount factor)：
 

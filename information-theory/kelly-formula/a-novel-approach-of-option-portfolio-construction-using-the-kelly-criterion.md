@@ -181,3 +181,42 @@ HPR= \[(1+f(-5000/W))^10%]_\[(1+f(-3000/W))^15%]_\[(1+f(-2000/W))^20%]_\[(1+f(15
 
 在 Vince 的工作中，kelly準則可被視為一個特例。Vince 的工作更適用於真實交易，因為它結合了多重結果，但仍有一些挑戰。<mark style="color:red;">**主要的挑戰是 Vince 的工作假設了一組固定的盈虧結果，這可能並不實際**</mark>。勝率和賠率會隨著時間的推移而變化。在 Vince 的工作中，<mark style="color:red;">與每個結果相關的機率是在收集了一定數量的結果實現之後計算出來的，這需要一定的時間。這種事後計算的方法往往會導致過大的下注比率</mark>。因此，在這項工作中，我們研究選擇權組合的最佳比例。<mark style="color:red;">垂直價差的選擇權的一個主要特點是它的盈虧分佈是已知的，因此我們的研究只需要專注於機率分佈</mark>。
 
+## 選擇權交易的最佳比例
+
+選擇權交易的特性之一是固定的損益分配。可運用這一特性來更好地應用Kelly準則。在我們建議的模型中，不尋找傳統的交易信號，而是研究不同履約價選擇權的持倉規模。
+
+在2017/1/13，星期五13:30台灣加權指數(TAIEX)收盤在9378點，而週選擇權會在2017/18(星期三)結算。
+
+<figure><img src="../../.gitbook/assets/image.png" alt="" width="421"><figcaption><p>當日的買/賣權不同履約價的價格</p></figcaption></figure>
+
+long 9300call@90與short 9350@54，可形成多頭價差如下：
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt="" width="381"><figcaption><p>買權多頭價差(買call 9300@90, 賣call 9350@54，成本36元)最大獲利/虧損為14/36元。</p></figcaption></figure>
+
+表 II 顯示了與傳統賽局類似的損益結構，在計算分數時所採用的損益是基於實際的結果。因此，Vince 的最佳值可適用於表二的損益結構。到這一步為止，結算日（2017-01-18）的 TAIEX 的預測仍有待處理。由於我們建構的是週五下午 13:30 的投資組合，<mark style="background-color:red;">要預測下週三 TAIEX 的分佈，直覺的方法是採用週五下午 13:30 至下週三收盤價的歷史 TAIFEX 升跌點</mark>。
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="407"><figcaption><p>以圖4的多頭價差建倉，結算時相異TAIEX點數的損益表</p></figcaption></figure>
+
+經驗分佈 (例如 PM 13:30, 2017-01-13 ∼ PM 13:30, 2017-01-18)可視為計算比例中要使用的分佈。在本工作中，我們收集 TAIEX 2007-01-5 至 2017-1-11 的資料，如表三所示。
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="563"><figcaption><p>經驗分佈</p></figcaption></figure>
+
+共有 490 個觀測結果，以經驗機率密度分佈和直方圖的形式概括並顯示在圖 5 中。
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="353"><figcaption><p>經驗分佈直方圖</p></figcaption></figure>
+
+以圖五的分佈作為 2017-01-11 至 2017-01-18 PM 13:30 TAIEX 的上漲/下跌回報預測。 2017-01-11下午13:30的TAIEX為9378，利用公式9378×（1+表三的報酬），可以得到2017-01-18下午13:30的TAIEX的分佈。結果如表四所示。
+
+<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="359"><figcaption><p>使用經驗分佈估計的下週收盤價分佈</p></figcaption></figure>
+
+我們使用表二和表四以及市場指數分佈，計算多頭價差的盈虧結構。結果如下表所示。 圖 6 和圖 7 分別是表 V 中潛在利潤或虧損的直方圖和分佈圖。
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>多頭價差的預估損益</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt="" width="344"><figcaption><p>多頭價差損益直方圖</p></figcaption></figure>
+
+根據表 V 中的盈虧向量，我們可以得到每個出價比例的回報，如表 VI 所示。換句話說，這個遊戲的預期報報為負；沒有任何出價比率是有利可圖的。報酬如圖 8 所示。雖然上述組合無利可圖，但存在可能有利可圖的反向位置。既然多頭價差無利可圖，那麼反向部位，即空頭價差，應該有利可圖。我們考慮'「做空 9300 看漲期權@90；做多 9350 看漲期權@54」'的投資組合，盈虧如下。 我們重複表 V 和表 VI 中的各種競價分數，得到其最佳競價分數為 13%，報酬率為 1.01945。圖 10 顯示不同下注分數下的報酬。
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="390"><figcaption><p>多頭價差無利可圖，改成空頭價差</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>空頭價差下注比例</p></figcaption></figure>

@@ -220,3 +220,8 @@ long 9300call@90與short 9350@54，可形成多頭價差如下：
 <figure><img src="../../.gitbook/assets/image (9).png" alt="" width="390"><figcaption><p>多頭價差無利可圖，改成空頭價差</p></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>空頭價差下注比例</p></figcaption></figure>
+
+## 最有利可圖的選擇權組合
+
+在上一節中，我們研究了可獲利選擇權組合的構建。然而，存在很多選擇權組合，包括勒式、蝶式等。在本節中，我們將探討如何尋找最有利的選擇權組合。結合上一節，我們提出以下演算法。
+

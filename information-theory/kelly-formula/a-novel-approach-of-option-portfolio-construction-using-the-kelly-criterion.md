@@ -16,9 +16,11 @@ Mu-En Wu, Wei-Ho Chung, Chia-Jung Lee, “On the Analysis of Kelly Criterion and
 
 ## 摘要
 
-資金管理是金融交易中最重要的問題之一。資金管理的許多技能都基於Kelly 準則，該準則對部位大小的最佳分數進行出價的理論最佳化。然而，資金管理的理論與實際交易之間仍然存在很大差距。在本文中，我們通過 Kelly 準則設計了一個選擇權交易策略。雖然選擇權的價格波動很大，但各種選擇權的投資組合可以通過以不同的行權價做多或做空來形成，以預先鎖定損失和利潤；然後我們通過持有選擇權投資組合進行固定的損益分配。因此，Kelly準則可以應用於選擇權交易，以計算最佳下注比例。我們提出了一種選擇權交易方法，通過下注最佳比例來查詢有利可圖的選擇權投資組合。與以前的工作相比，我們提出的模型是一種新穎的選擇權交易方法，具有部位大小的資金管理。進行實驗以證明我們的方法在實際場景中的可行性和盈利能力。最後一部分提供了未來的工作。
+資金管理是金融交易中最重要的問題之一。資金管理的許多技能都基於Kelly 準則，該準則對部位大小的最佳分數進行出價的理論最佳化。然而，資金管理的理論與實際交易之間仍然存在很大差距。在本文中，我們通過 Kelly 準則設計了一個選擇權交易策略。雖然選擇權的價格波動很大，但各種選擇權的投資組合可以通過以不同的履約價做多或做空來形成(註：垂直價差)，以預先鎖定損失和利潤；然後我們通過持有選擇權投資組合進行固定的損益分配。因此，Kelly準則可以應用於選擇權交易，以計算最佳下注比例。我們提出了一種選擇權交易方法，通過下注最佳比例來查詢有利可圖的選擇權投資組合。與以前的工作相比，我們提出的模型是一種新穎的選擇權交易方法，具有部位大小的資金管理。進行實驗以證明我們的方法在實際場景中的可行性和盈利能力。最後一部分提供了未來的工作。
 
 <mark style="background-color:orange;">**核心概念：資金管理在金融交易中至關重要，本文探討如何將理論上的最佳投注比例應用於實際選擇權交易。**</mark>
+
+<mark style="background-color:orange;">**註：**</mark><mark style="color:red;background-color:orange;">**本方法最重要的關鍵在於預測從建倉到結算時間區間內的報酬率分佈，本文是使用歷史資料估計**</mark><mark style="background-color:orange;">**。**</mark>
 
 * **Kelly 判準的應用**
   * 解決不完美資訊下的下注問題。
@@ -253,6 +255,38 @@ Step5：根據 Vince 的最佳比例計算終端財富回報 (TWR)。然後，�
 我們單獨計算上面顯示的所有 10 個投資組合的報酬分佈。請注意，在報酬小於 1 的情況下，遊戲並不有利。在這種情況下，我們將計算相應空頭價差的報報，也就是將 「多頭 」變為 「空頭」，「空頭 」變為 「多頭」。
 
 我們的實驗結果如下。由於「買進 9300 買權 @ 90；賣出 9350 賣權 @ 54」在第三節中被計算為不利，我們計算出空頭價差位置，「賣出 9300 買權 @ 90；買進 9350 買權 @ 54」，如圖 11 所示。
+
+<figure><img src="../../.gitbook/assets/image (48).png" alt="" width="320"><figcaption><p>圖11</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (49).png" alt="" width="321"><figcaption><p>圖12</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (50).png" alt="" width="309"><figcaption><p>圖13</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (51).png" alt="" width="312"><figcaption><p>圖14</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (52).png" alt="" width="304"><figcaption><p>圖15</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (53).png" alt="" width="303"><figcaption><p>圖16</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (54).png" alt="" width="302"><figcaption><p>圖17</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (55).png" alt="" width="306"><figcaption><p>圖18</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (56).png" alt="" width="311"><figcaption><p>圖19</p></figcaption></figure>
+
+## 結論
+
+研究方法：提出一種基於 Kelly 法則的新穎選擇權交易方法。 <mark style="background-color:orange;">避免傳統策略中尋找交易訊號的挑戰，改採用在獲利選擇權組合中的最佳分配比例。 持有部位至到期日，不考慮停損與停利，以減少交易策略中的不確定性</mark>。
+
+靈活性：該方法仍可應用於任意交易時間段，透過停損和停利取代到期日清算部位的方式。&#x20;
+
+估值模型與分佈預測：可採用選擇權定價模型（如 Black-Scholes）估算時間價值衰減，進而預測漲跌點的分佈。 通過回測歷史資料，選擇合適的時間段以找到漲跌點分佈。&#x20;
+
+盈虧計算與組合選擇：基於報價計算經驗盈虧分佈，並用 Kelly 法則 獲取選擇權組合的最佳投資比例。 選擇權價差交易的優勢在於固定的盈虧分佈。 一旦瞭解市場指數的分佈，即可選擇最具利潤的投資組合。&#x20;
+
+挑戰與限制：市場指數分佈無法被精準預測，僅能通過估算來接近實際分佈。 預估分佈與真實分佈的誤差會導致交易損失，方法效能取決於市場分佈的估計準確性。&#x20;
+
+未來工作：未來研究將著重於運用神經網路和機器學習等技術，預測市場指數分佈，進一步完善該方法。
 
 ## 參考資料
 

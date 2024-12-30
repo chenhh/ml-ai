@@ -254,7 +254,8 @@
 * [資訊熵(information entropy)](information-theory/information-entropy.md)
 * [最大熵](information-theory/maximum-entropy.md)
 * [Kelly公式](information-theory/kelly-formula/README.md)
-  * [A Novel Approach of Option Portfolio Construction Using the Kelly Criterion](information-theory/kelly-formula/a-novel-approach-of-option-portfolio-construction-using-the-kelly-criterion.md)
+  * [paper:A Novel Approach of Option Portfolio Construction Using the Kelly Criterion](information-theory/kelly-formula/paper-a-novel-approach-of-option-portfolio-construction-using-the-kelly-criterion.md)
+  * [book:數學公式裡的好野人](information-theory/kelly-formula/kelly-fund-manegement.md)
 
 ## 學習理論 <a href="#learning-theory" id="learning-theory"></a>
 

@@ -86,3 +86,47 @@ $$\forall \epsilon >0, ~\exists N_\epsilon \in \mathbb{N} \ni ~|\frac{N_T}{T}-p{
 可寫為機率收率形式 $$\displaystyle \lim_{T \rightarrow \infty} \mathrm{P}\left\{   \left| \frac{N_T}{T} - p\right| < \epsilon \right\} = 1$$。
 
 簡單的說，當試驗次數$$T$$越多時，樣本平均值接近期望值的機率越高。<mark style="color:red;">反之若</mark>$$T$$<mark style="color:red;">不夠大時，則無法保證機率收斂</mark>。
+
+### 小樣本時的平均值逼近期望值的誤差
+
+考慮$$p=0.5$$的賭局，取$$\epsilon =0.01$$。
+
+#### 考慮$$T=1$$
+
+則$$N_1=0 \text{ or } 1$$，所以$$\left| \frac{N_1}{1} - 0.5 \right|=0.5$$。
+
+因此$$\mathrm{P}\left\{ \left| \frac{N_1}{1} - 0.5 \right|  < 0.01\right\} =0$$ 誤差非常大。
+
+考慮$$T=2$$
+
+$$N_2=0 \text{ or } 1 \text{ or } 2$$。
+
+* 當$$N_2=1$$，則$$\left| \frac{N_2}{2} - 0.5 \right| = 0$$
+* 當$$N_2=0 \text{ or }2$$，則$$\left| \frac{N_2}{2} - 0.5 \right| = 0.5$$
+
+因此有$$1/3$$的機率$$\mathrm{P}\left\{ \left| \frac{N_2}{2} - 0.5 \right|  < 0.01\right\} =1$$。
+
+### 有限次數下賭局的獲利次數機率
+
+由WLLN中，可得賭局勝率為$$p$$，玩$$T$$次，直覺上(玩無限次)認為會贏$$T \times p$$次。
+
+但由二式項定理得$$\mathrm{P}(X_T = T \times p) = \binom{T}{ t=T \times p} p^t (1-p)^{T-t}$$。
+
+<mark style="color:red;">以</mark>$$T=10, p=0.5$$<mark style="color:red;">的賭局來說，剛好贏5次的機率約24.6%，比想像中低很多</mark>!!
+
+以下列出贏0\~10次的機率：
+
+```
+二項式分佈 PMF P(X=0) =  0.10%
+二項式分佈 PMF P(X=1) =  0.98%
+二項式分佈 PMF P(X=2) =  4.39%
+二項式分佈 PMF P(X=3) =  11.72%
+二項式分佈 PMF P(X=4) =  20.51%
+二項式分佈 PMF P(X=5) =  24.61%
+二項式分佈 PMF P(X=6) =  20.51%
+二項式分佈 PMF P(X=7) =  11.72%
+二項式分佈 PMF P(X=8) =  4.39%
+二項式分佈 PMF P(X=9) =  0.98%
+二項式分佈 PMF P(X=10) =  0.10%
+```
+

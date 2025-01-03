@@ -104,7 +104,8 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 * $$\| x\|^2 = x^{\top} x$$為歐式空間的標準範數(standard norm)。
 * $$d(x, \mathbb{S})=\inf_{y \in \mathbb{S}}d(x,y)$$為點$$x$$到集合$$\mathbb{S}$$的距離。
-* 令$$\mathcal{U}$$為所有向量報酬$$u(a_1, a_2) \in \mathbb{R}^v, ~\forall a_1 \in \mathcal{A}_1, ~ a_2 \in \mathcal{A}_2$$形成的凸包(convex hull)。$$\mathbf{U}$$$$\in \mathbb{R}^{|\mathcal{A}_1| \times \mathcal{A}_2| \times v}$$為向量報酬矩陣。
+* 令$$\mathcal{U}$$為所有向量報酬$$u(a_1, a_2) \in \mathbb{R}^v, ~\forall a_1 \in \mathcal{A}_1, ~ a_2 \in \mathcal{A}_2$$形成的凸包(convex hull)。$$\mathbf{U}$$$$\in \mathbb{R}^{|\mathcal{A}_1| \times |\mathcal{A}_2| \times v}$$為向量報酬矩陣。
+* $$\displaystyle \Delta(\mathcal{A}_i) =\left\{ \mathbf{s}_i \in \mathbb{R}_+^{|\mathcal{A_i}|} ~\bigg| ~\sum_{p=1}^{|\mathcal{A_i}|} \mathbf{s}_i[a_p]=1 \right\}$$為第$$i$$個玩家的混合策略集合。其中$$s_i[a_p]$$為玩家$$i$$採取行動$$a_p$$的機率。
 * $$\mathcal{R}(s_1) = \left\{   \mathrm{conv}(s_1^\top \mathbf{U}  s_2) ~ |~ \forall s_2 \in \Delta(\mathcal{A}_2) \right\}$$為給定玩家的混合策略$$s_1$$​後，對手所有可能的混合策略報酬形成的凸包。
 * 同理$$\mathcal{S}(s_2) = \left\{   \mathrm{conv}(s_1^\top \mathbf{U}  s_2) ~ |~ \forall s_1 \in \Delta(\mathcal{A}_1) \right\}$$為給定對手的混合策略$$s_2$$​，玩家所有的混合策略報酬形成的凸包。
 
@@ -166,7 +167,7 @@ Blackwell在論文中直接建立了適應性策略可接近B-set。
 * 因為$$S$$為B-set，$$\overline{u}_t \in S^c$$由定義得存在$$s_1^* \in \Delta(\mathcal{A}_1)$$且存在$$y_t \in \mathrm{proj}_S(\overline{u}_t)$$使得超平面$$H_{\overline{u}_t y_t}$$可分隔點$$\overline{u}_t$$與凸包$$\mathcal{R}(s_1^*)$$。
 * 令$$s_{1,t+1} \equiv s_1^*$$必可使$$\overline{u}_{t+1}$$越來越接近$$S$$，即$$d(\overline{u}_t, S) \geq d(\overline{u}_{t+1}, S)$$。 (QED)
 
-![Blackwell適應性策略演算法](../.gitbook/assets/blackwell\_adaptive\_strategy-min.png)
+![Blackwell適應性策略演算法](../.gitbook/assets/blackwell_adaptive_strategy-min.png)
 
 proof 2的必要條件：
 
@@ -196,7 +197,7 @@ proof 3:
 
 由上性質可得若玩家總是選擇混合策略$$s_{1,t+1}=s_1^{*}$$，則$$\mathcal{R}(s_{1,t+1)}) \subseteq H_{\overline{u}_t y_t}^{(L)}$$，因為$$\overline{u}_t \subseteq H_{\overline{u}_t y_t}^{(H)}$$，所以$$S$$為B-set。(QED)
 
-![使用Blackwell adaptive strategy接近凸集合](../.gitbook/assets/b-set\_approachable-min.png)
+![使用Blackwell adaptive strategy接近凸集合](../.gitbook/assets/b-set_approachable-min.png)
 
 ## Blackwell adaptive strategy收斂性分析
 
@@ -224,4 +225,4 @@ $$\displaystyle \begin{aligned} d(\overline{u}_{t+1}, S)^2 & \leq d(\overline{u}
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
 * Abernethy, Jacob, Peter L. Bartlett, and Elad Hazan. "Blackwell approachability and no-regret learning are equivalent." Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
 * \[可接近定理幾何性質] Spinat, Xavier. "A necessary and sufficient condition for approachability." Mathematics of operations research 27.1 (2002): 31-44.
-* \[wiki][https://en.wikipedia.org/wiki/Minimax\_theorem](https://en.wikipedia.org/wiki/Minimax\_theorem)[\[wiki\] Minimax theorem](https://en.wikipedia.org/wiki/Minimax\_theorem)
+* \[wiki][https://en.wikipedia.org/wiki/Minimax\_theorem](https://en.wikipedia.org/wiki/Minimax_theorem)[\[wiki\] Minimax theorem](https://en.wikipedia.org/wiki/Minimax_theorem)

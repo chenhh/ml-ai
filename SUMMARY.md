@@ -298,6 +298,7 @@
 * [納許均衡](game-theory/nash-equilibrium.md)
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)
 * [最小遺憾](game-theory/zui-xiao-yi-han.md)
+* [book:Prediction, Learning, and Games](game-theory/book-prediction-learning-and-games.md)
 
 ## 在線凸最佳化 <a href="#online-convex-optimization" id="online-convex-optimization"></a>
 

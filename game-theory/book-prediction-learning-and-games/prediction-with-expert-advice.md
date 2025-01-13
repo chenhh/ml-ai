@@ -14,9 +14,31 @@ description: prediction with expert advice
 
 決策者以順序方式計算其預測值，並將其預測結果與一組參考專家的預測結果進行比較。
 
-<mark style="background-color:orange;">更準確的說，在時間</mark>$$t$$<mark style="background-color:orange;">，決策者可參考一群專家的預測值</mark>$$\{f_{E, t} \in \mathcal{D}, ~\forall E \in \mathcal{E}\}$$<mark style="background-color:orange;">。而決策者在參考專家們的預測後，再計算出自已的預測值</mark>$$\hat{p}_t$$<mark style="background-color:orange;">，之後才得到結果</mark>$$y_t$$<mark style="background-color:orange;">。</mark>
+<mark style="background-color:orange;">更準確的說，在時間</mark>$$t$$<mark style="background-color:orange;">，決策者可參考一群專家的預測值</mark>$$\{f_{E, t} \in \mathcal{D}, ~\forall E \in \mathcal{E}\}$$<mark style="background-color:orange;">。而決策者在參考專家們的預測後，再計算出自已的預測值</mark>$$\hat{p}_t$$<mark style="background-color:orange;">，之後才得到結果</mark>$$y_t$$(此處限制$$y_t$$必須在$$\hat{p}_t$$之前就先決定了，只是決策者未知其值，以避免$$y_t$$參考$$\hat{p}_t$$的值總是給出相反的答案)<mark style="background-color:orange;">。</mark>
 
 使用非負的損失函數(loss function)$$\mathcal{l}: \mathcal{D} \times \mathcal{Y} \rightarrow \mathbb{R}^{+}$$$$\mathbb{}$$計算決策者和專家們的預測性能。
 
 在此架構下，可視為決策者(給出預測值$$\hat{p}_t$$)與環境(給出專家們的建議$$\{f_{E,t}, ~ \forall E \in \mathcal{E}\}$$與給出結果$$y_t$$)的重複賽局。
 
+### 架構流程
+
+已知參數：決策空間$$\mathcal{D}$$，出像空間$$\mathcal{Y}$$，損失函數$$\mathcal{l}$$，專家群$$\mathcal{E}$$。
+
+在每一時間點$$t=1,2,\dots$$
+
+1. 環境先決定當期的結果$$y_t$$，但不讓決策者知道；與專家們的建議$$\{f_{E,t} \in \mathcal{D}, ~ \forall E \in \mathcal{E} \}$$且讓決策者知道。
+2. 決策者給出其預測值$$\hat{p}_t \in \mathcal{D}$$。
+3. 環境秀出當期的結果$$y_t \in \mathcal{Y}$$。
+4. 計算決策者與每一個專家的損失，$$\mathcal{l}(\hat{p},y_t)$$與$$\mathcal{l}(f_{E,t},y_t), ~\forall E \in \mathcal{E}$$。
+
+決策者的目標是最小化相對於每一個專家的累積遺憾(cumulative regret)。
+
+<mark style="color:red;">決策者相對於專家</mark>$$E$$<mark style="color:red;">預測</mark>$$n$$<mark style="color:red;">期的累積遺憾</mark>(越小越好)定義為：$$\displaystyle  R_{E,n} = \sum_{t=1}^n (\mathcal{l}(\hat{p}_t, y_t) - \mathcal{l}(f_{E,t}, y_t))  \equiv \hat{L}_n - L_{E,n}$$
+
+* $$\displaystyle  \hat{L}_n \equiv \sum_{t=1}^n \mathcal{l}(\hat{p}_t, y_t)$$為決策者的累積損失。
+* $$\displaystyle  L_{E,n} \equiv \sum_{t=1}^n \mathcal{l}(f_{E,t}, y_t))$$為專家$$E$$的累積損失。
+
+可定義立即遺憾(instantaneous regret)為：$$\displaystyle  r_{E,t} = \mathcal{l}(\hat{p}_t, y_t) - \mathcal{l}(f_{E,t}, y_t)$$。
+
+* 可得$$\displaystyle  R_{E,n} = \sum_{t=1}^n r_{E,t}$$。
+* 可以將$$r_{E,t}$$視為決策者在第$$t$$個結果$$y_t$$ 揭曉後，對於沒有立即聽取專家$$E$$的建議所感到的遺憾。

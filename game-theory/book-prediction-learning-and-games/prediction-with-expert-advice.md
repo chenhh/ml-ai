@@ -61,13 +61,38 @@ description: prediction with expert advice
 我們的目標是最小化遺憾，因此選擇權重$$w_{i,t-1}$$很自然的會依據累積遺憾$$R_{i,t-1}$$。
 
 * 如果$$R_{i,t-1}$$的值很大，表示專家$$i$$預測比決策者好，因此權重$$w_{i,t-1}$$應該要高一點，反之權重要低一點。<mark style="color:red;">所以權重</mark>$$w_{i,t-1}$$<mark style="color:red;">應該是累積遺憾</mark>$$R_{i,t-1}$$<mark style="color:red;">的遞增函數</mark>。
-* 因此令此遞增函數為非負遞增凸函數$$\phi: \mathbb{R} \rightarrow \mathbb{R}$$的微分函數$$\phi^{'}$$，即$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$。
+* 因此令此遞增函數為非負遞增凸函數$$\phi: \mathbb{R} \rightarrow \mathbb{R}$$ 的微分函數$$\phi^{'}$$，即$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$。
+  * $$\displaystyle    \phi(\lambda x+(1-\lambda)y) \leq \lambda\phi(x) +(1-\lambda) \phi(y), ~ 0 \leq \lambda \leq 1$$ 且$$x \geq y \Rightarrow \phi(x) \leq \phi(y)$$且$$\phi(x) \geq 0 ~ \forall x$$。
   * 非負與遞增是權重的自然限制，而凸函數限制是因為可變成凸函數最佳化問題，數學性質較好處理。
-  * 對於非負遞增凸函數，其微分函數 $$\phi{’}(x)$$ 滿足以下性質：
-    * $$\phi{'}(x) \geq 0$$，非負（遞增性）。
-    * $$\phi^{''}(x) \geq 0$$，非遞減（凸性）。
-    * 如果 $$\phi^{''}(x) >0$$，則函數嚴格凸且增長速率不斷加快。
-  * 例如：$$\phi(x)=x^2$$；$$\phi(x)=e^x$$；$$\phi(x)=\ln(x), x>1$$。
+    * 對於非負遞增凸函數，其微分函數 $$\phi{’}(x)$$ 滿足以下性質：
+      * $$\phi{'}(x) \geq 0$$，非負（遞增性）。
+      * $$\phi^{''}(x) \geq 0$$，非遞減（凸性）。
+      * 如果 $$\phi^{''}(x) >0$$，則函數嚴格凸且增長速率不斷加快。
+    * 例如：$$\phi(x)=x^2$$；$$\phi(x)=e^x$$；$$\phi(x)=\ln(x), x>1$$。
+
+可改為預測值 $$\displaystyle  \hat{p}_t = \frac{\sum_{i=1}^N \phi^{'}(R_{i,t-1}) f_{i,t} }{ \sum_{j=1}^N \phi^{'}(R_{j,t-1}) }$$。
+
+### lemma
+
+> 如果損失函數$$l$$對於第一個參數為凸函數時，即$$\mathcal{l}(\lambda \hat{p}_t + (1-\lambda ) \lambda \hat{q}_t, y_t) \leq  \lambda  \mathcal{l}(\hat{p}_t, y_t) +   (1-\lambda ) \mathcal{l}(\hat{q}_t, y_t)$$，則得
+>
+> $$\displaystyle    \sup_{y_t \in \mathcal{Y}} \sum_{i=1}^N r_{i,t} \phi^{'}(R_{i,t-1}) \leq 0$$。
+
+Jensen不等式：變數平均值代入凸函數，其值會小於等於先套用凸函數後再平均。平均後再套用凸函式的效果，比直接套用凸函式後再平均“更保守”（數值更低）。
+
+$$\phi(\mathrm{E}(X)) \leq \mathrm{E}(\phi(X))$$。
+
+$$\displaystyle  r_{i,t} = \mathcal{l}(\hat{p}_t, y_t) - \mathcal{l}(f_{i,t}, y_t)$$
+
+$$\displaystyle     \forall y \in \mathcal{Y}, ~      \mathcal{l}(\hat{p}_t, y) =      \mathcal{l}\left(\frac{\sum_{i=1}^N \phi^{'}(R_{i,t-1}) f_{i,t} }{\sum_{j=1}^N \phi^{'}(R_{j,t-1})},y \right) \leq           \frac{\sum_{i=1}^N \phi^{'}(R_{i,t-1}) \mathcal{l}(f_{i,t},y) }{\sum_{j=1}^N \phi^{'}(R_{j,t-1})}$$
+
+因為$$\mathcal{l}(\hat{p}_t, y) \geq 0$$為非負函數，移項得$$\displaystyle      \mathcal{l}(\hat{p}_t, y) \sum_{j=1}^N \phi^{'}(R_{j,t-1}) \leq \sum_{i=1}^N \phi^{'}(R_{i,t-1}) \mathcal{l}(f_{i,t},y)$$
+
+整理得$$\displaystyle       \sum_{i=1}^N \mathcal{l}(\hat{p}_t, y) \phi^{'}(R_{i,t-1}) -\sum_{i=1}^N \phi^{'}(R_{i,t-1}) \mathcal{l}(f_{i,t},y) \leq  0$$
+
+所以$$\displaystyle       \sum_{i=1}^N [\mathcal{l}(\hat{p}_t, y)      - \mathcal{l}(f_{i,t},y)     ] \phi^{'}(R_{i,t-1})  \leq  0, ~\forall y \in \mathcal{Y}$$
+
+因此$$\displaystyle    \sup_{y_t \in \mathcal{Y}} \sum_{i=1}^N r_{i,t} \phi^{'}(R_{i,t-1}) \leq 0$$ (QED)
 
 
 

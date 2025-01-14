@@ -61,7 +61,13 @@ description: prediction with expert advice
 我們的目標是最小化遺憾，因此選擇權重$$w_{i,t-1}$$很自然的會依據累積遺憾$$R_{i,t-1}$$。
 
 * 如果$$R_{i,t-1}$$的值很大，表示專家$$i$$預測比決策者好，因此權重$$w_{i,t-1}$$應該要高一點，反之權重要低一點。<mark style="color:red;">所以權重</mark>$$w_{i,t-1}$$<mark style="color:red;">應該是累積遺憾</mark>$$R_{i,t-1}$$<mark style="color:red;">的遞增函數</mark>。
-* 因此令此遞增函數為非負遞增凸函數$$\phi: \mathbb{R} \rightarrow \mathbb{R}$$的微分函數$$\phi^{'}$$，即$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$
+* 因此令此遞增函數為非負遞增凸函數$$\phi: \mathbb{R} \rightarrow \mathbb{R}$$的微分函數$$\phi^{'}$$，即$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$。
+  * 非負與遞增是權重的自然限制，而凸函數限制是因為可變成凸函數最佳化問題，數學性質較好處理。
+  * 對於非負遞增凸函數，其微分函數 $$\phi{’}(x)$$ 滿足以下性質：
+    * $$\phi{'}(x) \geq 0$$，非負（遞增性）。
+    * $$\phi^{''}(x) \geq 0$$，非遞減（凸性）。
+    * 如果 $$\phi^{''}(x) >0$$，則函數嚴格凸且增長速率不斷加快。
+  * 例如：$$\phi(x)=x^2$$；$$\phi(x)=e^x$$；$$\phi(x)=\ln(x), x>1$$。
 
 
 

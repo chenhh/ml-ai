@@ -77,6 +77,8 @@ description: prediction with expert advice
 > 如果損失函數$$l$$對於第一個參數為凸函數時，即$$\mathcal{l}(\lambda \hat{p}_t + (1-\lambda ) \lambda \hat{q}_t, y_t) \leq  \lambda  \mathcal{l}(\hat{p}_t, y_t) +   (1-\lambda ) \mathcal{l}(\hat{q}_t, y_t)$$，則得
 >
 > $$\displaystyle    \sup_{y_t \in \mathcal{Y}} \sum_{i=1}^N r_{i,t} \phi^{'}(R_{i,t-1}) \leq 0$$。
+>
+> 損失函數$$l$$對於第一個參數為凸函數可解釋為使用多個預測的加權值(加權共識)的損失，會比單個預測損失的加權值低。
 
 Jensen不等式：變數平均值代入凸函數，其值會小於等於先套用凸函數後再平均。平均後再套用凸函式的效果，比直接套用凸函式後再平均“更保守”（數值更低）。
 
@@ -94,7 +96,21 @@ $$\displaystyle     \forall y \in \mathcal{Y}, ~      \mathcal{l}(\hat{p}_t, y) 
 
 因此$$\displaystyle    \sup_{y_t \in \mathcal{Y}} \sum_{i=1}^N r_{i,t} \phi^{'}(R_{i,t-1}) \leq 0$$ (QED)
 
+## 位勢函數(potential function)
 
+立即遺憾$$\displaystyle  r_{i,t} = \mathcal{l}(\hat{p}_t, y_t) - \mathcal{l}(f_{i,t}, y_t)$$。
+
+令立即遺憾向量(instantaneous regret vector) $$\mathbf{r}_t=(r_{1,t}, \dots, r_{N,t}) \in \mathbb{R}^N$$與(累積)遺憾向量$$\mathbf{R}_n= \sum_{t=1}^n \mathbf{r}_{t} \in \mathbb{R}^N$$。
+
+定義位勢函數$$\Phi: \mathbb{R}^N \rightarrow \mathbb{R}$$為$$\displaystyle  \Phi(\mathbf{u}) = \psi \left(  \sum_{i=1}^N \phi (u_i)\right)$$，
+
+* $$\phi: \mathbb{R} \rightarrow \mathbb{R}$$為非負、遞增、二次可微函數(註：比前述定義權重為累積遺憾的微分函數$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$再嚴格一點要求二次可微分，但不要求為凸函數)。
+* $$\psi: \mathbb{R} \rightarrow \mathbb{R}$$為非負、嚴格遞增、凹函數(concave function)、二次可微輔助函數。
+* $$\displaystyle    \Phi(\mathbf{R}_n)   = \Phi (\sum_{t=1}^n \mathbf{r}_{t})  = \Phi (\sum_{t=1}^n (r_{1,t},  r_{2,t}, \dots, r_{N,t}))  = \psi \left(  \sum_{i=1}^N \phi (\sum_{t=1}^n r_{i,t})\right)$$
+
+可改寫預測值定義在位勢函數$$\Phi$$上 $$\displaystyle  \hat{p}_t =  \frac{\sum_{i=1}^N \nabla \Phi(\mathbf{R}_{t-1})_i f_{i,t} } { \sum_{j=1}^N \nabla \Phi(\mathbf{R}_{t-1})_j }$$。
+
+其中$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1})_i = \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{i,t-1}}$$
 
 ## 多項式加權平均預測器(polynomially weighted average forecaster)
 

@@ -74,13 +74,19 @@ description: prediction with expert advice
 
 <mark style="background-color:red;">可改寫預測值</mark> $$\displaystyle  \hat{p}_t = \frac{\sum_{i=1}^N \phi^{'}(R_{i,t-1}) f_{i,t} }{ \sum_{j=1}^N \phi^{'}(R_{j,t-1}) }$$<mark style="background-color:red;">。權重為遺憾的一次可微分非負遞增凸函數</mark>。
 
-### lemma
+### lemma: blackwell condition
 
 > 如果損失函數$$l$$對於第一個參數為凸函數時，即$$\mathcal{l}(\lambda \hat{p}_t + (1-\lambda ) \lambda \hat{q}_t, y_t) \leq  \lambda  \mathcal{l}(\hat{p}_t, y_t) +   (1-\lambda ) \mathcal{l}(\hat{q}_t, y_t)$$，則得
 >
 > $$\displaystyle    \sup_{y_t \in \mathcal{Y}} \sum_{i=1}^N r_{i,t} \phi^{'}(R_{i,t-1}) \leq 0$$。
 >
+> 或以位勢函數寫為 $$\mathbf{r}_t \cdot \nabla \Phi (\mathbf{R}_{t-1}) \leq 0$$。
+>
+> 註：兩向量內積=0表示正交，小於0時表示夾角小於90度。
+>
 > 損失函數$$l$$對於第一個參數為凸函數可解釋為使用多個預測的加權值(加權共識)的損失，會比單個預測損失的加權值低。
+>
+> <mark style="color:red;">上述不等式為 Blackwell 條件，因為它與著名的 Blackwell 可接近性定理證明中使用的一個關鍵屬性相似</mark>。
 
 Jensen不等式：變數平均值代入凸函數，其值會小於等於先套用凸函數後再平均。平均後再套用凸函式的效果，比直接套用凸函式後再平均“更保守”（數值更低）。
 
@@ -116,7 +122,7 @@ $$\displaystyle     \forall y \in \mathcal{Y}, ~      \mathcal{l}(\hat{p}_t, y) 
 
 其中$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1})_i = \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{i,t-1}}$$。
 
-$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1}) =  \begin{bmatrix}  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{1,t-1}} \\  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{2,t-1}} \\  \vdots \\  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{N,t-1}} \\  \end{bmatrix}$$為梯度。
+$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1}) =  \begin{bmatrix}  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{1,t-1}} \\  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{2,t-1}} \\  \vdots \\  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{N,t-1}} \\  \end{bmatrix}$$為梯度向量。
 
 ## 多項式加權平均預測器(polynomially weighted average forecaster)
 

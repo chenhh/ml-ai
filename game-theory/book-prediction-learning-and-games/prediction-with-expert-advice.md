@@ -58,6 +58,8 @@ description: prediction with expert advice
 
 因為$$f_{i,t} \in \mathcal{D}$$，其中決策空間$$\mathcal{D}$$假設為凸集合且$$\hat{p}_t$$為$$f_{i,t}$$的凸組合，因此$$\hat{p}_t \in \mathcal{D}$$。
 
+### 表達權重為遺憾的一次可微分非負遞增凸函數
+
 我們的目標是最小化遺憾，因此選擇權重$$w_{i,t-1}$$很自然的會依據累積遺憾$$R_{i,t-1}$$。
 
 * 如果$$R_{i,t-1}$$的值很大，表示專家$$i$$預測比決策者好，因此權重$$w_{i,t-1}$$應該要高一點，反之權重要低一點。<mark style="color:red;">所以權重</mark>$$w_{i,t-1}$$<mark style="color:red;">應該是累積遺憾</mark>$$R_{i,t-1}$$<mark style="color:red;">的遞增函數</mark>。
@@ -70,7 +72,7 @@ description: prediction with expert advice
       * 如果 $$\phi^{''}(x) >0$$，則函數嚴格凸且增長速率不斷加快。
     * 例如：$$\phi(x)=x^2$$；$$\phi(x)=e^x$$；$$\phi(x)=\ln(x), x>1$$。
 
-可改為預測值 $$\displaystyle  \hat{p}_t = \frac{\sum_{i=1}^N \phi^{'}(R_{i,t-1}) f_{i,t} }{ \sum_{j=1}^N \phi^{'}(R_{j,t-1}) }$$。
+<mark style="background-color:red;">可改寫預測值</mark> $$\displaystyle  \hat{p}_t = \frac{\sum_{i=1}^N \phi^{'}(R_{i,t-1}) f_{i,t} }{ \sum_{j=1}^N \phi^{'}(R_{j,t-1}) }$$<mark style="background-color:red;">。權重為遺憾的一次可微分非負遞增凸函數</mark>。
 
 ### lemma
 
@@ -98,19 +100,23 @@ $$\displaystyle     \forall y \in \mathcal{Y}, ~      \mathcal{l}(\hat{p}_t, y) 
 
 ## 位勢函數(potential function)
 
+### 表達權重為遺憾的二次可微分非負遞增函數
+
 立即遺憾$$\displaystyle  r_{i,t} = \mathcal{l}(\hat{p}_t, y_t) - \mathcal{l}(f_{i,t}, y_t)$$。
 
 令立即遺憾向量(instantaneous regret vector) $$\mathbf{r}_t=(r_{1,t}, \dots, r_{N,t}) \in \mathbb{R}^N$$與(累積)遺憾向量$$\mathbf{R}_n= \sum_{t=1}^n \mathbf{r}_{t} \in \mathbb{R}^N$$。
 
 定義位勢函數$$\Phi: \mathbb{R}^N \rightarrow \mathbb{R}$$為$$\displaystyle  \Phi(\mathbf{u}) = \psi \left(  \sum_{i=1}^N \phi (u_i)\right)$$，
 
-* $$\phi: \mathbb{R} \rightarrow \mathbb{R}$$為非負、遞增、二次可微函數(註：比前述定義權重為累積遺憾的微分函數$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$再嚴格一點要求二次可微分，但不要求為凸函數)。
-* $$\psi: \mathbb{R} \rightarrow \mathbb{R}$$為非負、嚴格遞增、凹函數(concave function)、二次可微輔助函數。
+* $$\phi: \mathbb{R} \rightarrow \mathbb{R}$$為非負、遞增、二次可微函數(註：比前述定義權重為累積遺憾的微分函數$$w_{i,t-1}=\phi^{'} (R_{i,t-1})$$再嚴格一點要求二次可微分，<mark style="color:red;">但不要求為凸函數</mark>)。
+* $$\psi: \mathbb{R} \rightarrow \mathbb{R}$$為非負、嚴格遞增、凹函數(concave function)、二次可微輔助函數(在分析時很重要)。
 * $$\displaystyle    \Phi(\mathbf{R}_n)   = \Phi (\sum_{t=1}^n \mathbf{r}_{t})  = \Phi (\sum_{t=1}^n (r_{1,t},  r_{2,t}, \dots, r_{N,t}))  = \psi \left(  \sum_{i=1}^N \phi (\sum_{t=1}^n r_{i,t})\right)$$
 
-可改寫預測值定義在位勢函數$$\Phi$$上 $$\displaystyle  \hat{p}_t =  \frac{\sum_{i=1}^N \nabla \Phi(\mathbf{R}_{t-1})_i f_{i,t} } { \sum_{j=1}^N \nabla \Phi(\mathbf{R}_{t-1})_j }$$。
+<mark style="background-color:red;">可改寫預測值定義在位勢函數</mark>$$\Phi$$<mark style="background-color:red;">上</mark> $$\displaystyle  \hat{p}_t =  \frac{\sum_{i=1}^N \nabla \Phi(\mathbf{R}_{t-1})_i f_{i,t} } { \sum_{j=1}^N \nabla \Phi(\mathbf{R}_{t-1})_j }$$。
 
-其中$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1})_i = \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{i,t-1}}$$
+其中$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1})_i = \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{i,t-1}}$$。
+
+$$\displaystyle   \nabla \Phi(\mathbf{R}_{t-1}) =  \begin{bmatrix}  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{1,t-1}} \\  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{2,t-1}} \\  \vdots \\  \frac{\partial \Phi(\mathbf{R}_{t-1})}{\partial R_{N,t-1}} \\  \end{bmatrix}$$為梯度。
 
 ## 多項式加權平均預測器(polynomially weighted average forecaster)
 

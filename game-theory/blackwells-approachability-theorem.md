@@ -44,35 +44,36 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 <mark style="color:blue;">多期(重複)賽局時，玩家1存在策略可保證平均報酬不會低於5；同理而玩家2存在策略可保證平均損失不會大於5</mark>。
 
-## 向量報酬
+## 向量報酬的賽局(Blackwell, 1956)
 
 <mark style="color:blue;">單一的混合策略不能確保向量報酬</mark>$$m(i,j) \in \mathbb{R}^N$$<mark style="color:blue;">位於某個給定的集合中。然而，這並不排除一個漸進的概念，如果我們允許無限期的賽局時，並詢問是否存在一種策略來確保平均報酬向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
 
-在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$。
+在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$(分一般集合與凸集合兩種情形討論)。
 
-現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \{1,2,\dots, r\}, ~ j \in \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是定義在一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$<mark style="color:blue;">上的機率分佈，因此當玩家1,2採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是隨機向量</mark>)。
+現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量報酬的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \{1,2,\dots, r\}, ~ j \in \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是(離散或連續)機率分佈，其定義域為一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$，值域為實數區間$$[0,1]$$<mark style="color:blue;">，因此當玩家1,2在時間</mark>$$t$$<mark style="color:blue;">採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是由分佈</mark>$$m(i,j)$$<mark style="color:blue;">所決定的隨機向量</mark>$$x_t$$)。
 
 如果考慮每一個隨機向量$$m(i,j)$$的期望值$$\overline{m}(i,j)$$或簡寫為$$m(i,j)$$時，則報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。<mark style="color:blue;">注意此</mark>$$r\times s$$<mark style="color:blue;">個點並非均為凸包</mark>$$X$$<mark style="color:blue;">的端點，有些點是位於集合內部非端點</mark>。
 
-玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
+玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。註：此處在第$$n$$期決策時，參考的是過去的所有資料，而不是Markov性質只參考前一期的資料。
 
 而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，玩家1的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
 
 同理玩家2的的混合策略序列為$$g_{0:n} \equiv \{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
 
-* 在初始$$n=0$$時，玩家1,2分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依報酬機率分佈$$m(i_0,j_0)$$得到報酬實現值$$x_1$$。
-* 之後玩家1,2分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依報酬機率分佈$$m(i_1, j_1)$$得到報酬實現值$$x_2$$，以此類推。
+* 在初始$$n=0$$時，玩家1,2分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依機率分佈$$m(i_0,j_0)$$得到報酬實現值$$x_1$$。
+* 之後玩家1,2分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依報酬機率分佈$$m(i_1, j_1)$$得到報酬實現值$$x_2$$。
+* 之後玩家1,2分別依混合策略$$f_2(x_1,x_2), g_2(x_1,x_2)$$採取行動$$i_2, j_2$$，依報酬機率分佈$$m(i_2, j_2)$$得到報酬實現值$$x_3$$，以此類推。
 
-因此玩家1、2的混合策略$$(f,g)$$對序列以及報酬的分佈矩陣$$M$$​可決定向量報酬隨機變數$$x_1, x_2, \dots$$。
+<mark style="background-color:red;">因此玩家1、2的混合策略</mark>$$(f,g)$$<mark style="background-color:red;">對序列以及報酬的機率分佈矩陣</mark>$$M$$<mark style="background-color:red;">​可決定向量報酬隨機變數</mark>$$x_1, x_2, \dots$$。
 
-令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義。
+令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義(因為$$X$$中任意向量的均值必定還是在$$X$$中，所以討論$$X^c$$集合沒有意義)。
 
-則$$S$$​稱為使用在報酬矩陣$$M$$中玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
+定義$$S$$​為使用在報酬矩陣$$M$$中玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
 
 $$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
 
 * $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略序列$$f^{*}$$與任意對手策略序列$$g \equiv g_{0:n}$$​所得到。
-* 即只要賽局回合數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均報酬與集合的距離機率收斂至0。
+* 即只要賽局回合數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均報酬向量與集合的距離機率收斂至0。
 
 稱$$S$$​為使用在報酬矩陣$$M$$​中對手特定策略序列$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
 
@@ -86,9 +87,15 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 * 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​.&#x20;
 * 當$$t > v$$且$$g: g_n \equiv q$$​時，$$S$$​為可排除集合。
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合，且可排除集合的子集合仍為可排除子集</mark>。
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合，且可排除集合的子集合仍為可排除集合</mark>。
 
-若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合。
+由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
+
+若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬
+
+
+
+矩陣$$M$$​中為可排除集合。
 
 ## 向量報酬策略賽局
 
@@ -223,7 +230,7 @@ $$\displaystyle \begin{aligned} d(\overline{u}_{t+1}, S)^2 & \leq d(\overline{u}
 
 ## 參考資料
 
-* \[原始論文] David Blackwell, "An analog of the minimax-theorem for vector payoffs, " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
+* \[原始論文] David Blackwell, "[An analog of the minimax-theorem for vector payoffs](https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-6/issue-1/An-analog-of-the-minimax-theorem-for-vector-payoffs/pjm/1103044235.pdf), " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
 * Abernethy, Jacob, Peter L. Bartlett, and Elad Hazan. "Blackwell approachability and no-regret learning are equivalent." Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
 * \[可接近定理幾何性質] Spinat, Xavier. "A necessary and sufficient condition for approachability." Mathematics of operations research 27.1 (2002): 31-44.

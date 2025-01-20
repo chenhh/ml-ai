@@ -246,7 +246,7 @@ description: 生活中極簡統計學
   * 生女孩的機率為0.5的先驗機率為1/3
   * 生女孩的機率為0.6的先驗機率為1/3
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
 
 **獲取資訊**
 
@@ -274,7 +274,7 @@ description: 生活中極簡統計學
       * “生女孩的機率為0.5且第一胎為女孩”的標準化機率 = $$5/15$$。
       * “生女孩的機率為0.6且第一胎為女孩”的標準化機率 = $$6/15$$。
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>標準化</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>標準化</p></figcaption></figure>
 2. **計算後驗機率**
    * **後驗機率**：在觀察到第一胎為女孩的情況下，更新生女孩的機率。
    * **具體計算**：
@@ -647,7 +647,7 @@ description: 生活中極簡統計學
 * **先驗機率**：在掃描郵件之前，設定“這封郵件是垃圾郵件”和“這封郵件是正常郵件”的先驗機率。
 * **設定方法**：通常使用“理由不充分原理”，將兩種可能性各設定為0.5的機率。如果有更可靠的資料，也可以調整先驗機率。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
 
 **掃描字句與條件機率的設定**
 
@@ -657,7 +657,7 @@ description: 生活中極簡統計學
   * 垃圾郵件：附帶連結的機率為0.6，無連結的機率為0.4。
   * 正常郵件：附帶連結的機率為0.2，無連結的機率為0.8。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>條件機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>條件機率</p></figcaption></figure>
 
 **根據掃描結果，計算垃圾郵件的貝氏機率**
 

@@ -291,8 +291,8 @@
 
 * [賽局理論文獻](game-theory/sai-ju-li-lun-wen-xian.md)
 * [book: Theory of games and economic behavior](game-theory/book-theory-of-games-and-economic-behavior.md)
-* [賽局數學模型](game-theory/game-theory-model/README.md)
-  * [策略賽局(strategic game)](game-theory/game-theory-model/strategic-game.md)
+* [賽局理論基礎](game-theory/game-theory-essential/README.md)
+  * [策略賽局(strategic game)](game-theory/game-theory-essential/strategic-game.md)
 * [最小－最大定理](game-theory/minmax-theorem.md)
 * [Blackwell's Approachability Theorem](game-theory/blackwells-approachability-theorem.md)
 * [納許均衡](game-theory/nash-equilibrium.md)

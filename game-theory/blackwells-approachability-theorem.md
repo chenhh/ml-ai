@@ -36,13 +36,27 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 玩家1有三個行動$$R=(r_1, r_2, r_3)$$個別行動採用的機率為$$\mathbf{p}=(p_1, p_2, p_3)$$；玩家2有兩個行動$$S=(s_1, s_2)$$個別行動採用的機率為$$\mathbf{q}=(q_1, q_2)$$。
 
-<table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">max M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=-1</span></td><td><span class="math">m(1,2)=9</span></td><td>9</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=-3</span></td><td><span class="math">m(2,2)=5</span></td><td>5</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=-5</span></td><td><span class="math">m(3,2)=8</span></td><td>8</td></tr><tr><td>min M</td><td>-5</td><td>5</td><td></td></tr></tbody></table>
+<mark style="color:red;">雙人零和賽局並不一定有</mark><mark style="color:red;">**鞍點（saddle point）**</mark><mark style="color:red;">，但一定有</mark><mark style="color:red;">**混合策略的均衡解**</mark><mark style="color:red;">，這是由</mark> <mark style="color:red;"></mark><mark style="color:red;">**Minimax 定理**</mark> <mark style="color:red;"></mark><mark style="color:red;">保證的</mark>。
+
+### 有鞍點範例
+
+<table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=-1</span></td><td><span class="math">m(1,2)=9</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=-3</span></td><td><span class="math">m(2,2)=5</span></td><td>-3</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=-5</span></td><td><span class="math">m(3,2)=8</span></td><td>-5</td></tr><tr><td>max M</td><td>-1</td><td>9</td><td>minmax: -1</td></tr></tbody></table>
+
+### 無鞍點範例
+
+<table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=3</span></td><td><span class="math">m(1,2)=-1</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=2</span></td><td><span class="math">m(2,2)=1</span></td><td>1</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=0</span></td><td><span class="math">m(3,2)=4</span></td><td>0</td></tr><tr><td>max M</td><td>3</td><td>4</td><td></td></tr></tbody></table>
 
 玩家1採取行動$$r_1$$時，不論對手採取任何行動，可得到的最高報酬為9。同樣採取行動$$r_2, r_3$$時，分別可得到最高報酬為$$5,8$$。因此玩家1採取任何行動時，至少能夠得到報酬$$\min(9,5,8)=5$$。
 
 玩家2採取行動$$s_1,s_2$$時，不論對手採取任何行動，最大損失分別為$$-5, 5$$。因此玩家2採取任意行動時，最多損失為$$\max(-5,5)=5$$。
 
 <mark style="color:blue;">多期(重複)賽局時，玩家1存在策略可保證平均報酬不會低於5；同理而玩家2存在策略可保證平均損失不會大於5</mark>。
+
+賽局價值為5，可得對於玩家1而且，集合$$S=\{x \geq t\}, ~ t \leq 5$$都是可接近集合，集合$$T=\{x \geq t\}, ~ t > 5$$都是可排除集合。
+
+* 對於玩家1來說，因為，$$S=\{x \geq 5\}$$
+
+
 
 ## 向量報酬的賽局(Blackwell, 1956)
 
@@ -87,13 +101,15 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 * 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​.&#x20;
 * 當$$t > v$$且$$g: g_n \equiv q$$​時，$$S$$​為可排除集合。
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。
+### 引理
+
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割。
 
 由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
 
-若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合(why?)。
+若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合(why?)。idea: 將玩家與對手的角色對調時，報酬矩陣從$$M$$變為$$M^{\top}$$；此時若$$S$$為對手在報酬矩陣$$M^{\top}$$使用策略$$g^{*}$$相對於$$\forall f$$為可接近集合時，因為$$S$$的超集合仍為可接近集合，因此令$$T$$為與$$S$$不相交的閉集合；
 
-## 向量報酬策略賽局
+## 向量報酬策略賽局(Spinat, 2002)
 
 > $$N$$人向量報酬賽局$$\Gamma_{v}=(\mathcal{N}, (\mathcal{A}_i)_{ i \in \mathcal{N} }, (u_i)_{i \in \mathcal{N}})$$
 >
@@ -228,6 +244,6 @@ $$\displaystyle \begin{aligned} d(\overline{u}_{t+1}, S)^2 & \leq d(\overline{u}
 
 * \[原始論文] David Blackwell, "[An analog of the minimax-theorem for vector payoffs](https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-6/issue-1/An-analog-of-the-minimax-theorem-for-vector-payoffs/pjm/1103044235.pdf), " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
-* Abernethy, Jacob, Peter L. Bartlett, and Elad Hazan. "Blackwell approachability and no-regret learning are equivalent." Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
-* \[可接近定理幾何性質] Spinat, Xavier. "A necessary and sufficient condition for approachability." Mathematics of operations research 27.1 (2002): 31-44.
+* Jacob Abernethy, Peter L. Bartlett, and Elad Hazan, "Blackwell approachability and no-regret learning are equivalent," Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
+* \[可接近定理幾何性質] Xavier Spinat, "A necessary and sufficient condition for approachability." Mathematics of operations research, Vol. 27, No. 1, pp. 31-44, 2002.
 * \[wiki][https://en.wikipedia.org/wiki/Minimax\_theorem](https://en.wikipedia.org/wiki/Minimax_theorem)[\[wiki\] Minimax theorem](https://en.wikipedia.org/wiki/Minimax_theorem)

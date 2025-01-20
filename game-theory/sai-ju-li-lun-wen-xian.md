@@ -10,7 +10,7 @@ description: 博奕論
 
 <figure><img src="../.gitbook/assets/VNM-TGEB.jpg" alt="" width="129"><figcaption><p>TGEB, 賽局理論的原創經典之作</p></figcaption></figure>
 
-John Von Neumann and Oskar Morgenstern,  "Theory of games and economic behavior (60th Anniversary Commemorative Edition)," Princeton university press, 2007. \[[jstor](https://www.jstor.org/stable/j.ctt1r2gkx)]\[[Wikipedia](https://en.wikipedia.org/wiki/Theory\_of\_Games\_and\_Economic\_Behavior)]\(原版1947年出版，為賽局理論的原創經典之作，內容偏數學不適合當第一本書，但進階必讀。本書主題探討的雙人->多人的非合作零和賽局)。
+John Von Neumann and Oskar Morgenstern,  "Theory of games and economic behavior (60th Anniversary Commemorative Edition)," Princeton university press, 2007. \[[jstor](https://www.jstor.org/stable/j.ctt1r2gkx)]\[[Wikipedia](https://en.wikipedia.org/wiki/Theory_of_Games_and_Economic_Behavior)]\(原版1947年出版，為賽局理論的原創經典之作，內容偏數學不適合當第一本書，但進階必讀。本書主題探討的雙人->多人的非合作零和賽局)。
 
 
 
@@ -22,7 +22,9 @@ Martin J. Osborne and Ariel Rubinstein, "A course in game theory," MIT press, 19
 
 <figure><img src="../.gitbook/assets/prediction_learning_and_games.jpg" alt="" width="166"><figcaption><p>prediction, learning, and games</p></figcaption></figure>
 
-Nicolo Cesa-Bianchi and Gábor Lugosi,  "Prediction, learning, and games," Cambridge university press, 2006. \[[電子書](https://ii.uni.wroc.pl/\~lukstafi/pmwiki/uploads/AGT/Prediction\_Learning\_and\_Games.pdf)] 此書將預測，多期賽局的遺憾整合分析與討論，可應用至在線學習(online learning)與強化學習。
+Nicolo Cesa-Bianchi and Gábor Lugosi,  "Prediction, learning, and games," Cambridge university press, 2006. \[[電子書](https://ii.uni.wroc.pl/~lukstafi/pmwiki/uploads/AGT/Prediction_Learning_and_Games.pdf)] 此書將預測，多期賽局的遺憾整合分析與討論，可應用至在線學習(online learning)與強化學習。
+
+\[入門] 賽局理論(game theory, a non-technical introductiojn to the analyissi of strategy), Roger A. McCain著，陳建良譯，智勝出版，2008。
 
 ## 論文
 
@@ -62,4 +64,4 @@ Nicolo Cesa-Bianchi and Gábor Lugosi,  "Prediction, learning, and games," Cambr
 
 ## 學者
 
-* Robert J. Aumann, \[[website](http://www.ma.huji.ac.il/\~raumann/)]\[[wikipedia](https://en.wikipedia.org/wiki/Robert\_Aumann)]
+* Robert J. Aumann, \[[website](http://www.ma.huji.ac.il/~raumann/)]\[[wikipedia](https://en.wikipedia.org/wiki/Robert_Aumann)]

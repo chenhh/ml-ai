@@ -9,6 +9,16 @@ description: minimax theorem
 Von Neumann首先證明了最小－最大(minimax)定理，該定理保證了雙線性函數的最大-最小不等式相等。\
 
 
+## 雙人零和賽局
+
+雙人零和賽局並不一定有**鞍點（saddle point）**，但一定有**混合策略的均衡解**，這是由 **Minimax 定理** 保證的
+
+### 是否一定有鞍點？
+
+不一定。鞍點僅在某些特殊情況下存在，比如支付矩陣的行和列存在明確的極值，但大多數賽局不存在純策略鞍點。
+
+即使沒有純策略鞍點，**Minimax 定理**保證在混合策略的情況下，賽局一定有解，即存在玩家和對手的最優混合策略，使得 $$\displaystyle  \max_{p \in \Delta X} \min_{q \in \Delta Y} \mathrm{E}(X) =  \min_{q \in \Delta Y} \max_{p \in \Delta X} \mathrm{E}(X)$$
+
 ## minimax thoerem
 
 ### 函數型式
@@ -27,7 +37,7 @@ $$\mathbf{X} \subset \mathbb{R}^n, \mathbf{Y} \subset \mathbb{R}^m$$為閉(緊�
 
 
 
-![f(x,y)=y\*\*2 - x\*\*2](../.gitbook/assets/Saddle\_point.svg-min.png)
+![f(x,y)=y\*\*2 - x\*\*2](../.gitbook/assets/Saddle_point.svg-min.png)
 
 ### 賽局理論型式
 
@@ -45,7 +55,7 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 
 範例
 
-![雙人零和賽局，賽局價值為５](../.gitbook/assets/minmax\_game-min.png)
+![有鞍點的雙人零和賽局，賽局價值為５](../.gitbook/assets/minmax_game-min.png)
 
 ## Sion's minmax theorem
 
@@ -89,7 +99,7 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 * $$\forall \epsilon >0 ~ \exists \delta >0 \ni |x-x_0| < \delta \Rightarrow f(x)  < f(x_0)+\epsilon$$
 * 當$$x$$從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x) < f(x_0)$$​的結果。
 
-![函數f在點x0上半連續](../.gitbook/assets/Upper\_semi.png)
+![函數f在點x0上半連續](../.gitbook/assets/Upper_semi.png)
 
 函數$$f: X \rightarrow \overline{\mathbb{R}}$$​在點$$x_0$$​下半連續：
 
@@ -97,7 +107,7 @@ $$\displaystyle \max_{\mathbf{s}_1 \in \Delta(\mathcal{A}_1)} \min_{\mathbf{s}_2
 * $$\forall \epsilon >0 ~ \exists \delta >0 \ni |x-x_0| < \delta \Rightarrow f(x_0) -\epsilon < f(x)$$
 * 當$$x$$​從左側或右側接近$$x_0$$​時，只要夠接近，必定可得到$$f(x_0) < f(x)$$​的結果。
 
-![函數f在點x0下半連續](../.gitbook/assets/Lower\_semi.png)
+![函數f在點x0下半連續](../.gitbook/assets/Lower_semi.png)
 
 ## 擬凸函式（Quasiconvex function）
 

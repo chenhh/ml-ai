@@ -33,5 +33,6 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#24 Bayesian Computational Biology in Julia, with Seth Axen](24-bayesian-computational-biology-in-julia-with-seth-axen.md)
 * [#25 Bayesian Stats in Football Analytics, with Kevin Minkus](25-bayesian-stats-in-football-analytics-with-kevin-minkus.md)
 * [#26 What you’ll learn & who you’ll meet at the PyMC Conference, with Ravin Kumar & Quan Nguyen](26-what-youll-learn-and-who-youll-meet-at-the-pymc-conference-with-ravin-kumar-and-quan-nguyen.md)
-* \#[27 Modeling the US Presidential Elections, with Andrew Gelman & Merlin Heidemanns](27-modeling-the-us-presidential-elections-with-andrew-gelman-and-merlin-heidemanns.md)
+* [27 Modeling the US Presidential Elections, with Andrew Gelman & Merlin Heidemanns](27-modeling-the-us-presidential-elections-with-andrew-gelman-and-merlin-heidemanns.md)
 * [28 Game Theory, Industrial Organization & Policy Design, with Shosh Vasserman](28-game-theory-industrial-organization-and-policy-design-with-shosh-vasserman.md)
+* [#29 Model Assessment, Non-Parametric Models, And Much More, with Aki Vehtari](29-model-assessment-non-parametric-models-and-much-more-with-aki-vehtari.md)

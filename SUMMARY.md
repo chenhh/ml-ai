@@ -392,6 +392,8 @@
     * [#27 Modeling the US Presidential Elections, with Andrew Gelman & Merlin Heidemanns](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/27-modeling-the-us-presidential-elections-with-andrew-gelman-and-merlin-heidemanns.md)
     * [#28 Game Theory, Industrial Organization & Policy Design, with Shosh Vasserman](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/28-game-theory-industrial-organization-and-policy-design-with-shosh-vasserman.md)
     * [#29 Model Assessment, Non-Parametric Models, And Much More, with Aki Vehtari](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/29-model-assessment-non-parametric-models-and-much-more-with-aki-vehtari.md)
+    * [#30 Symbolic Computation & Dynamic Linear Models, with Brandon Willard](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/30-symbolic-computation-and-dynamic-linear-models-with-brandon-willard.md)
+    * [#31 Bayesian Cognitive Modeling & Decision-Making, with Michael Lee](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/31-bayesian-cognitive-modeling-and-decision-making-with-michael-lee.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

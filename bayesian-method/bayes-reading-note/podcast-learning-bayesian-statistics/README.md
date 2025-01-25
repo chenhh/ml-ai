@@ -13,7 +13,7 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#3.2 How to use Bayes in industry, with Colin Carroll](3.2-how-to-use-bayes-in-industry-with-colin-carroll.md)
 * [#4 Dirichlet Processes and Neurodegenerative Diseases, with Karin Knudson](4-dirichlet-processes-and-neurodegenerative-diseases-with-karin-knudson.md)
 * [#5 How to use Bayes in the biomedical industry, with Eric Ma](5-how-to-use-bayes-in-the-biomedical-industry-with-eric-ma.md)
-*
+* [#6 A principled Bayesian workflow, with Michael Betancourt](6-a-principled-bayesian-workflow-with-michael-betancourt.md)
 * [#7 Designing a Probabilistic Programming Language & Debugging a Model, with Junpeng Lao](7-designing-a-probabilistic-programming-language-and-debugging-a-model-with-junpeng-lao.md)
 * [#8 Bayesian Inference for Software Engineers, with Max Sklar](8-bayesian-inference-for-software-engineers-with-max-sklar.md)
 * [#9 Exploring the Cosmos with Bayes and Maggie Lieu](9-exploring-the-cosmos-with-bayes-and-maggie-lieu.md)
@@ -36,3 +36,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [27 Modeling the US Presidential Elections, with Andrew Gelman & Merlin Heidemanns](27-modeling-the-us-presidential-elections-with-andrew-gelman-and-merlin-heidemanns.md)
 * [28 Game Theory, Industrial Organization & Policy Design, with Shosh Vasserman](28-game-theory-industrial-organization-and-policy-design-with-shosh-vasserman.md)
 * [#29 Model Assessment, Non-Parametric Models, And Much More, with Aki Vehtari](29-model-assessment-non-parametric-models-and-much-more-with-aki-vehtari.md)
+* [#30 Symbolic Computation & Dynamic Linear Models, with Brandon Willard](30-symbolic-computation-and-dynamic-linear-models-with-brandon-willard.md)
+* [#31 Bayesian Cognitive Modeling & Decision-Making, with Michael Lee](31-bayesian-cognitive-modeling-and-decision-making-with-michael-lee.md)

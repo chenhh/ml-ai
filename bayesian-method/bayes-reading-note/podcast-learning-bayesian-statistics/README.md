@@ -38,3 +38,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#29 Model Assessment, Non-Parametric Models, And Much More, with Aki Vehtari](29-model-assessment-non-parametric-models-and-much-more-with-aki-vehtari.md)
 * [#30 Symbolic Computation & Dynamic Linear Models, with Brandon Willard](30-symbolic-computation-and-dynamic-linear-models-with-brandon-willard.md)
 * [#31 Bayesian Cognitive Modeling & Decision-Making, with Michael Lee](31-bayesian-cognitive-modeling-and-decision-making-with-michael-lee.md)
+* [#32 Getting involved into Bayesian Stats & Open-Source Development, with Peadar Coyle](32-getting-involved-into-bayesian-stats-and-open-source-development-with-peadar-coyle.md)
+* [#33 Bayesian Structural Time Series, with Ben Zweig](33-bayesian-structural-time-series-with-ben-zweig.md)

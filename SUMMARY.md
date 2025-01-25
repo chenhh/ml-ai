@@ -394,6 +394,8 @@
     * [#29 Model Assessment, Non-Parametric Models, And Much More, with Aki Vehtari](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/29-model-assessment-non-parametric-models-and-much-more-with-aki-vehtari.md)
     * [#30 Symbolic Computation & Dynamic Linear Models, with Brandon Willard](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/30-symbolic-computation-and-dynamic-linear-models-with-brandon-willard.md)
     * [#31 Bayesian Cognitive Modeling & Decision-Making, with Michael Lee](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/31-bayesian-cognitive-modeling-and-decision-making-with-michael-lee.md)
+    * [#32 Getting involved into Bayesian Stats & Open-Source Development, with Peadar Coyle](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/32-getting-involved-into-bayesian-stats-and-open-source-development-with-peadar-coyle.md)
+    * [#33 Bayesian Structural Time Series, with Ben Zweig](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/33-bayesian-structural-time-series-with-ben-zweig.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

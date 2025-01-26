@@ -10,11 +10,73 @@ $$\lambda x_1 + (1-\lambda) x_2,\ \lambda \in [0,1]$$ 為端點 $$x_1, x_2$$形�
 
 <mark style="color:red;">註：如果是在平面上的集合，任意兩點間畫一直線均落在集合內時，則為凸集合</mark>。
 
-![凸集合與非凸集合](../../.gitbook/assets/convex\_set-min.png)
+![凸集合與非凸集合](../../.gitbook/assets/convex_set-min.png)
 
 有些集合在相異參數時為凸集合或非凸集合。如 $$C_p = \{ (x,y)\ \vert \ (|x|^p + |y|^p)^{1/p} \leq 1 \}$$。在 $$p < 1$$時為不是凸集合。而在$$p \geq 1$$時為凸集合。
 
-![參數可調整為凸集合或非凸集合](../../.gitbook/assets/param\_convex\_set-min.png)
+![參數可調整為凸集合或非凸集合](../../.gitbook/assets/param_convex_set-min.png)
+
+
+
+{% tabs %}
+{% tab title="凸/非凸集合" %}
+<figure><img src="../../.gitbook/assets/convex_set.png" alt="" width="563"><figcaption><p>凸集合與非凸集合</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 建立畫布和子圖
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+
+# ---------- 凸集示例：圓形 ----------
+# 生成圓形的坐標
+theta = np.linspace(0, 2*np.pi, 100)
+x_convex = np.cos(theta)
+y_convex = np.sin(theta)
+
+# 繪製凸集
+ax1.fill(x_convex, y_convex, 'skyblue', alpha=0.5)
+ax1.set_title("Convex Set (Circle)", fontsize=14)
+ax1.set_xlim(-1.5, 1.5)
+ax1.set_ylim(-1.5, 1.5)
+ax1.grid(True, linestyle='--', alpha=0.7)
+
+# 新增凸集的性質說明：兩點連線在集合內
+ax1.plot([0.5, -0.5], [0.5, -0.5], 'r--', lw=2, label="Line between two points")
+ax1.scatter([0.5, -0.5], [0.5, -0.5], c='red', s=50)
+ax1.legend()
+
+
+# ---------- 非凸集示例：月牙形 ----------
+# 生成月牙形坐標（通過疊加兩個圓）
+theta = np.linspace(0, 2*np.pi, 100)
+r1, r2 = 1.0, 0.7
+x_nonconvex = np.cos(theta) * r1
+y_nonconvex = np.sin(theta) * r1
+x_hole = np.cos(theta) * r2 + 0.3  # 偏移第二個圓的中心
+y_hole = np.sin(theta) * r2 + 0.3
+
+# 繪製非凸集（通過填充差異區域）
+ax2.fill(x_nonconvex, y_nonconvex, 'lightgreen', alpha=0.5)
+ax2.fill(x_hole, y_hole, 'white')  # 挖空中心區域形成非凸
+ax2.set_title("Non-Convex Set (Crescent)", fontsize=14)
+ax2.set_xlim(-1.5, 1.5)
+ax2.set_ylim(-1.5, 1.5)
+ax2.grid(True, linestyle='--', alpha=0.7)
+
+# 新增非凸集的性質說明：兩點連線可能超出集合
+ax2.plot([-1.0, 0.8], [-0.5, 0.8], 'r--', lw=2, label="Line crossing outside")
+ax2.scatter([-1.0, 0.8], [-0.5, 0.8], c='red', s=50)
+ax2.legend()
+
+plt.tight_layout()
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
 
 ## 凸組合與凸包(convex combination and convex hull)
 
@@ -30,7 +92,7 @@ $$\lambda x_1 + (1-\lambda) x_2,\ \lambda \in [0,1]$$ 為端點 $$x_1, x_2$$形�
 
 由凸組合得到的點$$x$$，必定落在$$x_1,x_2, \dots ,x_k$$形成的凸包集合中。
 
-![convex hull](../../.gitbook/assets/convex\_hull.png)
+![convex hull](../../.gitbook/assets/convex_hull.png)
 
 凸組合可擴展到無窮級數、積分、與大部份的機率分佈：
 
@@ -60,7 +122,7 @@ $$\lambda x_1 + (1-\lambda) x_2,\ \lambda \in [0,1]$$ 為端點 $$x_1, x_2$$形�
 
 ![conic combination](../../.gitbook/assets/cone.png)
 
-![conic hull](../../.gitbook/assets/conic\_hull.png)
+![conic hull](../../.gitbook/assets/conic_hull.png)
 
 ## 仿射集合(affine set)
 
@@ -155,7 +217,7 @@ $$\begin{aligned} \mathbb{R}^n_{+}  	&= \{ x \in \mathbb{R}^n ~|~ x_i \geq 0, ~ 
 
 > 令$$k+1$$個點$$x_0, x_1, \dots, x_k \in \mathbb{R}^n$$仿射獨立，即$$x_1 - x_0, x_2- x_0, \dots, x_k - x_0$$線性獨立，則這些點決定一單純形 $$\begin{aligned} C & = \mathrm{conv}\{x_0, x_1, \dots, x_k\}  \\ & = \{c_0 x_0 + c_1 x_1 + \dots + c_k x_k ~|~ c_i \geq 0~ \forall i,~  \sum_{i=0}^k c_i = 1  \}  \end{aligned}$$
 
-應用時，經常把$$c_i \geq 0 , \sum_{i=0}^k c_i=1$$這個限制式視為<mark style="color:red;">機率分佈，且假設為符從</mark>[<mark style="color:red;">Dirichlet分佈</mark>](https://en.wikipedia.org/wiki/Dirichlet\_distribution)。
+應用時，經常把$$c_i \geq 0 , \sum_{i=0}^k c_i=1$$這個限制式視為<mark style="color:red;">機率分佈，且假設為符從</mark>[<mark style="color:red;">Dirichlet分佈</mark>](https://en.wikipedia.org/wiki/Dirichlet_distribution)。
 
 * 一維單純形為一條線段。
 * 二維單純形為三角形(含內部)。
@@ -176,9 +238,9 @@ $$X=\begin{bmatrix} x & y \\ y & z \end{bmatrix} \in \mathbf{S}_{+}^2 \Leftright
 
 ## 參考資料
 
-* Boyd, Stephen, Stephen P. Boyd, and Lieven Vandenberghe. Convex optimization. Cambridge university press, 2004. \[[website](https://web.stanford.edu/\~boyd/cvxbook/)]
+* Boyd, Stephen, Stephen P. Boyd, and Lieven Vandenberghe. Convex optimization. Cambridge university press, 2004. \[[website](https://web.stanford.edu/~boyd/cvxbook/)]
   * [\[Stanford\] EE364a: Convex Optimization I](https://web.stanford.edu/class/ee364a/)
   * [\[Stanford\] EE364b - Convex Optimization II](https://web.stanford.edu/class/ee364b/)
-* [\[MIT\] Dimitri Bertsekas](https://www.mit.edu/\~dimitrib/home.html)
+* [\[MIT\] Dimitri Bertsekas](https://www.mit.edu/~dimitrib/home.html)
 * Nesterov, Yurii. Introductory lectures on convex optimization: A basic course. Vol. 87. Springer Science & Business Media, 2003.
 * [fmin.xyz](https://fmin.xyz/)

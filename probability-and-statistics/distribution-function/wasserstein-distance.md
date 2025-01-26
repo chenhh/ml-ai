@@ -12,7 +12,7 @@ Wasserstein distance（也稱為 Earth Mover's Distance, EMD）是一種在機�
 
 asserstein distance 定義為最優傳輸問題的解，其目標是找到一種「搬運計劃」，使得將一個分佈變成另一個分佈的總成本最小化。
 
-對於兩個在空間 𝑅 𝑑 R d 上的機率分佈 $$\mu$$ 和 $$\nu$$，以及給定的距離度量$$d(x,y)$$，p-Wasserstein距離定義為：
+對於兩個在空間 $$R^d$$ 上的機率分佈 $$\mu$$ 和 $$\nu$$，以及給定的距離度量$$d(x,y)$$，p-Wasserstein距離定義為：
 
 $$\displaystyle W_p(\mu, \nu)=\left(  \inf_{\gamma \in \prod(\mu, \nu)}  \int_{\mathbb{R}^d \times \mathbb{R}^d} d(x,y)^p d \gamma(x,y)  \right)^{1/p}$$
 
@@ -20,7 +20,7 @@ $$\displaystyle W_p(\mu, \nu)=\left(  \inf_{\gamma \in \prod(\mu, \nu)}  \int_{\
 * $$d(x,y)$$為距離度量函數。
 * $$p \geq 1$$為參數(實數)。
 
-### python實作
+### python實作(一維)
 
 [https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wasserstein\_distance.html](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.wasserstein_distance.html)
 
@@ -54,6 +54,16 @@ print(f"Wasserstein distance: {distance}")
 
 ### **與其他距離的對比**
 
+$$\displaystyle D_{KL}(p, q) = \int_x p(x) \log \frac{p(x)}{q(x)}dx$$，在$$p=q$$時得最小值$$D_{KL}=0$$。
+
+根據公式，KL 背離是不對稱的。如果p接近於零，但q明顯不為零，則忽略q的效果。當我們只想測量兩個同等重要的分佈之間的相似性時，它可能會導致錯誤的結果。
+
+$$D_JS(p,q)=\frac{1}{2}D_{KL}(p, \frac{p+q}{2}) + \frac{1}{2}D_{KL}(q, \frac{p+q}{2})$$
+
+<figure><img src="../../.gitbook/assets/image (57).png" alt="" width="375"><figcaption><p>KL, JS的範例圖</p></figcaption></figure>
+
+KL當兩個分佈不相交時，給我們帶來不確定性。 JS 的值會突然跳躍時，且在x=0處不可微分。只有 Wasserstein 指標提供了平滑的度量，這對於使用梯度下降的穩定學習過程非常有説明。
+
 | 度量方法           | 優點               | 缺點           |
 | -------------- | ---------------- | ------------ |
 | KL 散度          | 計算簡單             | 不對稱；對無重疊分佈失效 |
@@ -68,7 +78,32 @@ $$\displaystyle W_1(\mu, \nu)= \inf_{\gamma \in \prod(\mu, \nu)}  \int_{\mathbb{
 
 這個版本的距離計算更加直觀，尤其適用於分佈的「質量中心」有小幅位移的情況。
 
-對偶型式：
+上述形式要列舉出聯合分佈$$\prod(P,Q)$$內所有元素需要線性規劃或是相當大量的資料，因此計算時通常使用對偶形式。
+
+### 線性規劃原始形與對偶形
+
+#### Primal form
+
+$$\begin{align*} \max_{\mathbf{x}} \quad & \mathbf{c}^\top \mathbf{x} \\ \text{s.t.} \quad & A\mathbf{x} \leq \mathbf{b}, \\ & \mathbf{x} \geq \mathbf{0}. \end{align*}$$
+
+* $$x\in \mathbb{R}^n$$，決策變數向量。
+* $$c \in \mathbb{R}^n$$，目標函式係數向量。
+* $$A \in \mathbb{R}^{m \times n}$$：約束條件的係數矩陣。
+* $$b \in \mathbb{R}^m$$：約束條件的右側常數向量。
+
+dual form
+
+$$\begin{align*} \min_{\mathbf{y}} \quad & \mathbf{b}^\top \mathbf{y} \\ \text{s.t.} \quad & A^\top \mathbf{y} \geq \mathbf{c}, \\ & \mathbf{y} \geq \mathbf{0}. \end{align*}$$
+
+* $$y \in \mathbb{R}^m$$：對偶變數向量。
+* $$A^{\top}$$.：原始約束矩陣 A 的轉置。
+
+
+
+* 若原始問題包含等式約束（如 $$Ax=b$$），對偶變數 $$y_i$$​ 將無非負限制。
+* 若原始問題為最小化目標，對偶規則需反向調整（如原始最小化 → 對偶最大化）。
+
+### Kantorovich-Rubinstein對偶型式
 
 $$\displaystyle W_1(\mu, \nu)= \sup_{\|f\|_L \leq 1}  \left| \mathrm{E}_{x \sim \mu} (f(x))  - \mathrm{E}_{y \sim \nu} (f(x))   \right|$$
 
@@ -84,3 +119,5 @@ $$W_1= 0.5 (|1-3| + |2-4|) = 2$$。
 
 * [https://lilianweng.github.io/posts/2017-08-20-gan/#what-is-wasserstein-distance](https://lilianweng.github.io/posts/2017-08-20-gan/#what-is-wasserstein-distance)
 * Ramdas, Garcia, Cuturi “On Wasserstein Two Sample Testing and Related Families of Nonparametric Tests” (2015). [arXiv:1509.02237](https://arxiv.org/abs/1509.02237).
+* [https://vincentherrmann.github.io/blog/wasserstein/](https://vincentherrmann.github.io/blog/wasserstein/)
+* [https://github.com/vincentherrmann/wasserstein-notebook/blob/master/Wasserstein\_Kantorovich.ipynb](https://github.com/vincentherrmann/wasserstein-notebook/blob/master/Wasserstein_Kantorovich.ipynb)

@@ -297,6 +297,64 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 
 $$\begin{bmatrix} x-x_c & y-y_c  \end{bmatrix} \begin{bmatrix} \frac{1}{a^2} & 0\\ 0 & \frac{1}{b^2}  \end{bmatrix}   \begin{bmatrix} x-x_c \\  y-y_c  \end{bmatrix} =1$$
 
+{% tabs %}
+{% tab title="ellipsoids" %}
+<figure><img src="../../.gitbook/assets/ellipsoids.png" alt="" width="563"><figcaption><p>橢圓範例</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 橢圓參數設定
+h, k = 3, 2         # 中心坐標
+a, b = 5, 3         # 長短半軸
+theta = np.pi/6     # 旋轉角度 (30度)
+
+# 生成橢圓軌跡的參數
+alpha = np.linspace(0, 2*np.pi, 200)
+x_ellipse = h + a * np.cos(alpha) * np.cos(theta) - b * np.sin(alpha) * np.sin(theta)
+y_ellipse = k + a * np.cos(alpha) * np.sin(theta) + b * np.sin(alpha) * np.cos(theta)
+
+# 計算長軸和短軸端點
+major_axis = np.array([
+    [h + a * np.cos(theta), k + a * np.sin(theta)],
+    [h - a * np.cos(theta), k - a * np.sin(theta)]
+])
+
+minor_axis = np.array([
+    [h - b * np.sin(theta), k + b * np.cos(theta)],
+    [h + b * np.sin(theta), k - b * np.cos(theta)]
+])
+
+# 繪圖設定
+plt.figure(figsize=(10, 8))
+plt.plot(x_ellipse, y_ellipse, 'b-', linewidth=2, label='Ellipse')
+plt.scatter(h, k, color='red', s=80, label=f'Center ({h}, {k})')
+
+# 繪製長短軸虛線
+plt.plot(major_axis[:,0], major_axis[:,1], 'r--', linewidth=1.5, label=f'Major Axis (Length={2*a})')
+plt.plot(minor_axis[:,0], minor_axis[:,1], 'g--', linewidth=1.5, label=f'Minor Axis (Length={2*b})')
+
+# 標註軸長度
+plt.text(major_axis[0,0], major_axis[0,1], f'{2*a}', ha='center', va='bottom', color='red')
+plt.text(minor_axis[0,0], minor_axis[0,1], f'{2*b}', ha='left', va='center', color='green')
+
+# 坐標軸美化
+plt.axhline(0, color='gray', linewidth=0.5)
+plt.axvline(0, color='gray', linewidth=0.5)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title(f'Ellipse: Center ({h}, {k}), Rotation {np.degrees(theta):.1f}°')
+plt.axis('equal')
+plt.legend()
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
+
 ## 範數球與範數錐(norm ball and norm cone)
 
 > 範數(norm)為距離(長度)的擴充函數，為滿足以下條件的一元函數：

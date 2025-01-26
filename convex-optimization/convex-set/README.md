@@ -1,6 +1,6 @@
 # 凸集合 (convex set)
 
-## 凸集合(convex set)
+凸集合(convex set)
 
 > $$C$$ is convex set if $$\forall x_1, x_2 \in C, \lambda \in [0,1] \Rightarrow \lambda x_1 + (1-\lambda) x_2 \in C$$.
 
@@ -92,8 +92,6 @@ plt.show()
 
 由凸組合得到的點$$x$$，必定落在$$x_1,x_2, \dots ,x_k$$形成的凸包集合中。
 
-![convex hull](../../.gitbook/assets/convex_hull.png)
-
 凸組合可擴展到無窮級數、積分、與大部份的機率分佈：
 
 * 令$$\forall i, ~c_i \geq 0, ~ \sum_{i=1}^\infty c_i =1$$
@@ -104,6 +102,52 @@ plt.show()
 
 * 函數$$p : \mathbb{R}^n \rightarrow \mathbb{R}$$對所有$$x \in C$$滿足$$p(x) \geq 0$$，且$$\int_C p(x) dx = 1$$，$$C\subseteq \mathbb{R}^n$$為凸集。
 * 若積分存在，可得凸包$$\int_C p(x)x dx \in C$$。
+
+{% tabs %}
+{% tab title="凸包" %}
+<figure><img src="../../.gitbook/assets/convex_hull.png" alt="" width="563"><figcaption><p>convex hull</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.spatial import ConvexHull
+
+# 生成 50 個隨機二維點（範圍在 [0, 10]）
+n_point = 50
+np.random.seed(42)  # 固定隨機種子以便復現
+points = np.random.rand(n_point, 2) * 10
+
+# 計算凸包
+hull = ConvexHull(points)
+
+# 繪製所有點
+plt.figure(figsize=(8, 6))
+plt.scatter(points[:, 0], points[:, 1], color='blue', label='Points', zorder=5)
+
+# 繪製凸包邊界
+# hull.vertices 返回凸包頂點按順時針或逆時針排列的索引
+hull_points = points[hull.vertices]
+hull_points = np.append(hull_points, [hull_points[0]], axis=0)  # 閉合多邊形
+plt.plot(hull_points[:, 0], hull_points[:, 1], 'r--', lw=2, label='Convex Hull')
+
+# 填充凸包內部區域（可選）
+plt.fill(hull_points[:, 0], hull_points[:, 1], 'orange', alpha=0.3)
+
+# 新增標籤和標題
+plt.title(f"Convex Hull of {n_point} Random Points", fontsize=14)
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+plt.tight_layout()
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ## 凸錐(convex cone)
 
@@ -124,6 +168,70 @@ plt.show()
 
 ![conic hull](../../.gitbook/assets/conic_hull.png)
 
+
+
+{% tabs %}
+{% tab title="conic combination" %}
+<figure><img src="../../.gitbook/assets/conic_combination.png" alt="" width="563"><figcaption><p>conic combination</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義五個第一象限的點（確保 x, y 均非負）
+points = np.array([
+    [1, 2],
+    [3, 4],
+    [2, 5],
+    [1, 1],
+    [2, 3]
+])
+
+# 檢查是否存在 x 軸和 y 軸上的點（容差 1e-8）
+has_x_axis = np.any(np.isclose(points[:, 1], 0, atol=1e-8))
+has_y_axis = np.any(np.isclose(points[:, 0], 0, atol=1e-8))
+
+plt.figure(figsize=(8, 8))
+plt.scatter(points[:, 0], points[:, 1], color='red', zorder=5)
+
+# 繪製坐標軸
+plt.axhline(0, color='black', linewidth=0.5)
+plt.axvline(0, color='black', linewidth=0.5)
+plt.grid(True)
+plt.xlim(0, np.max(points[:, 0]) * 1.2)
+plt.ylim(0, np.max(points[:, 1]) * 1.2)
+
+if has_x_axis and has_y_axis:
+    # 覆蓋整個第一象限
+    plt.fill_betweenx([0, plt.ylim()[1]], 0, plt.xlim()[1], 
+                     color='blue', alpha=0.3, label='Conic Hull')
+    plt.title('Conic Combination Covers Entire First Quadrant')
+else:
+    # 計算極角（直接使用 arctan2，已自動處理第一象限）
+    angles = np.arctan2(points[:, 1], points[:, 0])
+    theta_min = np.min(angles)
+    theta_max = np.max(angles)
+    
+    # 生成扇形區域
+    r = np.max(np.linalg.norm(points, axis=1)) * 2  # 半徑擴充套件
+    t = np.linspace(theta_min, theta_max, 100)
+    x = r * np.cos(t)
+    y = r * np.sin(t)
+    vertices = np.vstack([[0, 0], np.column_stack([x, y]), [0, 0]])
+    
+    plt.fill(vertices[:, 0], vertices[:, 1], 'blue', alpha=0.3, label='Conic Hull')
+    plt.title('Conic Combination (Sector)')
+
+plt.legend()
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
+
 ## 仿射集合(affine set)
 
 > $$C$$ 為仿射集合(affine set)若 $$C = \{ \lambda x_1 + (1-\lambda) x_2 , \forall \lambda \in \mathbb{R}, \forall x_1, x_2 \in X \}$$.
@@ -131,6 +239,12 @@ plt.show()
 > 通過集合$$C$$中任意不同兩點的直線仍在集合中時，稱$$C$$為仿射集合。
 
 $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_1, x_2$$形成的<mark style="color:red;">直線(line)</mark>，而非線段。因此 $$C$$ 為集合$$X$$中任意兩點的直線集合。
+
+幾何意義：仿射集是平移後的線性子空間。例如：一條不過原點的直線、一個不包含原點的平面。
+
+與線性子空間的區別：線性子空間必須包含原點，而仿射集通過平移（加一個固定向量）得到，不一定包含原點。
+
+仿射集是線性子空間的平移版本，它與凸集的主要區別在於對權重的限制，仿射集覆蓋無限延伸的幾何結構，而凸集僅描述有限區域。
 
 * 例：線性方程式的解集合 $$\{\mathbf{x}\ \vert \ \mathbf{Ax = b} \}$$。
 * 例：歐式空間$$\mathbb{R}^n$$中的<mark style="color:red;">平面</mark>、<mark style="color:red;">空集合</mark>$$\phi$$、以及<mark style="color:red;">單點集合</mark>$$\{x\}$$都是仿射集，因此均為凸集合。

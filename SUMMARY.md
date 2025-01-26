@@ -396,6 +396,8 @@
     * [#31 Bayesian Cognitive Modeling & Decision-Making, with Michael Lee](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/31-bayesian-cognitive-modeling-and-decision-making-with-michael-lee.md)
     * [#32 Getting involved into Bayesian Stats & Open-Source Development, with Peadar Coyle](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/32-getting-involved-into-bayesian-stats-and-open-source-development-with-peadar-coyle.md)
     * [#33 Bayesian Structural Time Series, with Ben Zweig](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/33-bayesian-structural-time-series-with-ben-zweig.md)
+    * [#34 Multilevel Regression, Post-stratification & Missing Data, with Lauren Kennedy](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/34-multilevel-regression-post-stratification-and-missing-data-with-lauren-kennedy.md)
+    * [#35 The Past, Present & Future of BRMS, with Paul Bürkner](bayesian-method/bayes-reading-note/podcast-learning-bayesian-statistics/35-the-past-present-and-future-of-brms-with-paul-burkner.md)
 
 ## 因果推論 <a href="#casualty-inference" id="casualty-inference"></a>
 

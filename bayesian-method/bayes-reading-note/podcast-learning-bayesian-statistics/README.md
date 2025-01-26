@@ -40,3 +40,5 @@ description: https://www.youtube.com/channel/UCAwVseuhVrpJFfik_cMHrhQ/videos
 * [#31 Bayesian Cognitive Modeling & Decision-Making, with Michael Lee](31-bayesian-cognitive-modeling-and-decision-making-with-michael-lee.md)
 * [#32 Getting involved into Bayesian Stats & Open-Source Development, with Peadar Coyle](32-getting-involved-into-bayesian-stats-and-open-source-development-with-peadar-coyle.md)
 * [#33 Bayesian Structural Time Series, with Ben Zweig](33-bayesian-structural-time-series-with-ben-zweig.md)
+* [#34 Multilevel Regression, Post-stratification & Missing Data, with Lauren Kennedy](34-multilevel-regression-post-stratification-and-missing-data-with-lauren-kennedy.md)
+* [#35 The Past, Present & Future of BRMS, with Paul Bürkner](35-the-past-present-and-future-of-brms-with-paul-burkner.md)

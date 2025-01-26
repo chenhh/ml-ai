@@ -14,9 +14,61 @@ $$\lambda x_1 + (1-\lambda) x_2,\ \lambda \in [0,1]$$ 為端點 $$x_1, x_2$$形�
 
 有些集合在相異參數時為凸集合或非凸集合。如 $$C_p = \{ (x,y)\ \vert \ (|x|^p + |y|^p)^{1/p} \leq 1 \}$$。在 $$p < 1$$時為不是凸集合。而在$$p \geq 1$$時為凸集合。
 
-![參數可調整為凸集合或非凸集合](../../.gitbook/assets/param_convex_set-min.png)
 
 
+{% tabs %}
+{% tab title="凸/非凸集合" %}
+<figure><img src="../../.gitbook/assets/cvx_noncvx.png" alt="" width="563"><figcaption><p>p&#x3C;1時為非凸集合，p>=1時為凸集合</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義p值和對映的標籤
+p_values = [1/8, 1/4, 1/2, 2/3, 4/5, 1, 4/3, 2, 4, np.inf]
+p_labels = ['1/8', '1/4', '1/2', '2/3', '4/5', '1', '4/3', '2', '4', '∞']
+
+# 生成網格點
+x = np.linspace(-1.5, 1.5, 500)
+y = np.linspace(-1.5, 1.5, 500)
+X, Y = np.meshgrid(x, y)
+
+# 建立2x5的子圖
+fig, axes = plt.subplots(2, 5, figsize=(20, 8))
+axes = axes.ravel()  # 展平為1D陣列
+
+# 遍歷每個p值繪製圖形
+for i, (p, label) in enumerate(zip(p_values, p_labels)):
+    ax = axes[i]
+    
+    # 計算不同p值下的條件
+    if p == np.inf:
+        # L∞范數：max(|x|, |y|) ≤ 1
+        Z = np.maximum(np.abs(X), np.abs(Y))
+    else:
+        # Lp范數：(|x|^p + |y|^p)^(1/p) ≤ 1 → |x|^p + |y|^p ≤ 1
+        Z = np.abs(X)**p + np.abs(Y)**p
+    
+    # 繪製滿足條件的區域
+    ax.contourf(X, Y, Z <= 1, levels=[0.5, 1.5], colors=['royalblue'], alpha=0.6)
+    
+    # 美化圖形
+    ax.set_title(f'p = {label}', fontsize=12)
+    ax.set_xlim(-1.1, 1.1)
+    ax.set_ylim(-1.1, 1.1)
+    ax.set_aspect('equal')
+    ax.grid(True, linestyle='--', alpha=0.5)
+    ax.axhline(0, color='black', linewidth=0.5)
+    ax.axvline(0, color='black', linewidth=0.5)
+
+# 調整子圖間距並展示
+plt.tight_layout()
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
 {% tab title="凸/非凸集合" %}

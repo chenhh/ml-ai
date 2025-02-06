@@ -48,11 +48,30 @@ ODP 中決策者的初步目標是最小化總損失，但總損失的多少取�
 
 任何用於選擇決策的方案（確定性的或隨機的）都可以用在時間$$t$$ 選擇決策$$j$$ 的機率$$w_t^j$$ 來描述。 讓$$w_t$$ 表示時間$$t$$ 的$$n$$ 元組機率。 <mark style="color:red;">請記住，</mark>$$w_t$$ <mark style="color:red;">必須僅使用在時間</mark> $$t-1$$ <mark style="color:red;">之前獲得的數據來推導出來</mark>。
 
-現在考慮一個用於選擇決策的方案$$S$$。 設$$\{w_t\}_{t \geq 0}$$ 為該方案所隱含的機率權重序列。 那麼，使用方案$$S$$ 在$$T$$個時期內的期望損失將為：$$\displaystyle L(S) = \sum_{t=1}^T \sum_{d_j \in D} W_t^j L_t^j$$。
+現在考慮一個用於選擇決策的隨機方案$$S$$。 設$$\{w_t\}_{t \geq 0}$$ 為該方案所隱含的機率權重序列。 那麼，使用方案$$S$$ 在$$T$$個時期內的期望損失將為：$$\displaystyle L(S) = \sum_{t=1}^T \sum_{d_j \in D} w_t^j L_t^j$$。
 
 想像一下，我們已經將方案$$S$$應用了$$T$$個時期。 現在，我們回顧並檢查我們的表現。 如果我們以不同的方式做事，我們是否有可能獲得更小的損失？ 具體來說，在方案$$S$$ 說我們應該以機率$$w_t^j$$ 選擇決策$$d_j$$ 的每個時間點$$t$$，如果我們改選擇決策$$d_i$$，我們會做得更好嗎？
 
-期望損失會變為：$$\displaystyle L(S) - \left( \sum_{t=1}^T w_t^j L_t^j - \sum_{t=1}^T w_t^i L_t^i  \right)$$。
+期望損失會變為：$$\displaystyle L(S) - \left( \sum_{t=1}^T w_t^j L_t^j - \sum_{t=1}^T w_t^j L_t^i  \right)$$。
 
-如果$$\sum_{t=1}^T w_t^j L_t^j - \sum_{t=1}^T w_t^i L_t^i >0$$，則表示決策$$d_j$$換成$$d_i$$會表現更好(對決策$$d_j$$而不是$$d_i$$感到遺憾)。
+如果$$\displaystyle     \sum_{t=1}^T w_t^j L_t^j - \sum_{t=1}^T w_t^j L_t^i =   \sum_{t=1}^T w_t^j(L_t^j - L_t^i)  >0$$，則表示決策$$d_j$$換成$$d_i$$會表現更好(對決策$$d_j$$而不是$$d_i$$感到遺憾)。
 
+因此定義方案$$S$$使用決策$$d_j$$的遺憾為：$$\displaystyle R_T^j(S) = \sum_{i \in D} \max \left\{  0,  \sum_{t=1}^T w_t^j (L_t^j - L_t^i)  \right\}$$。
+
+而方案$$S$$的遺憾為$$R_T(S) = \sum_{j \in D} R_T^j (S)$$。
+
+<mark style="color:red;">若方案</mark>$$S$$<mark style="color:red;">的期望遺憾非常小，即</mark>$$R_T(S) = o(T)$$<mark style="color:red;">，則稱方案</mark>$$S$$<mark style="color:red;">無內部遺憾(no internal regret)</mark>。即$$\displaystyle \lim_{T \rightarrow \infty} \frac{R_T(S)}{T} =0$$。
+
+無內部遺憾方案的存在性首先由 Foster 和 Vohra (1998) 確立。 在這裡描述的證明歸功於 Hart 和 Mas-Collel (1996)，並使用了線上決策問題中的後悔概念以及 David Blackwell 的approachability定理。
+
+## 考慮只有兩個決策的情形
+
+首先考慮$$|D|=2$$的情形。
+
+定義指示函數(indicator) $$I(j,t)= \begin{cases} 1 &  d_j \text{ chosen at time } t. \\ 0 & \text{ else} \end{cases}$$
+
+定義從決策$$d_j$$換為$$d_i$$的已實現成對遺憾(realied pairwise regret)為：$$\displaystyle R_T^{j \rightarrow i}(S) = \sum_{t=1}^T I(j,t)L_t^j - \sum_{t=1}^T I(j,t) L_t^i$$
+
+註：方案$$S$$中，可能只有部份時間的決策為$$d_j$$，如果選$$d_j$$時換成選$$d_i$$時的遺憾。
+
+<mark style="color:red;">我們的目標是找出無內部遺憾的隨機化的方案</mark>$$S$$。

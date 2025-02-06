@@ -104,3 +104,5 @@ $$\displaystyle \mathbf{w}_{t+1} = \frac {\int_{\Delta_M} \mathbf{w}v_{(p),t}(\m
 * V. Vovk and C. Watkins, "Universal portfolio selection," in Proceedings of the eleventh annual conference on Computational learning theory, pp. 12-23, 1998 .&#x20;
 * A. Blum and A. Kalai, "Universal portfolios with and without transaction costs," Machine Learning, vol. 35, pp. 193-205, 1999.
 * [https://github.com/Marigold/universal-portfolios](https://github.com/Marigold/universal-portfolios)
+* Li, Bin, and Steven CH Hoi. "Online portfolio selection: A survey." ACM Computing Surveys (CSUR) 46.3 (2014): 1-36.
+* Ozbayoglu, Ahmet Murat, Mehmet Ugur Gudelek, and Omer Berat Sezer. "Deep learning for financial applications: A survey." Applied soft computing 93 (2020): 106384.

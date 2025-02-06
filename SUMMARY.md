@@ -298,7 +298,8 @@
 * [Blackwell's Approachability Theorem](game-theory/blackwells-approachability-theorem.md)
 * [納許均衡](game-theory/nash-equilibrium.md)
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)
-* [最小遺憾](game-theory/zui-xiao-yi-han.md)
+* [最小遺憾](game-theory/zui-xiao-yi-han/README.md)
+  * [paper: Regret in the On-Line Decision Problem](game-theory/zui-xiao-yi-han/paper-regret-in-the-on-line-decision-problem.md)
 * [book:Prediction, Learning, and Games](game-theory/book-prediction-learning-and-games/README.md)
   * [以專家的建議預測](game-theory/book-prediction-learning-and-games/prediction-with-expert-advice.md)
 

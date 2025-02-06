@@ -66,12 +66,27 @@ ODP 中決策者的初步目標是最小化總損失，但總損失的多少取�
 
 ## 考慮只有兩個決策的情形
 
-首先考慮$$|D|=2$$的情形。
-
 定義指示函數(indicator) $$I(j,t)= \begin{cases} 1 &  d_j \text{ chosen at time } t. \\ 0 & \text{ else} \end{cases}$$
 
 定義從決策$$d_j$$換為$$d_i$$的已實現成對遺憾(realied pairwise regret)為：$$\displaystyle R_T^{j \rightarrow i}(S) = \sum_{t=1}^T I(j,t)L_t^j - \sum_{t=1}^T I(j,t) L_t^i$$
 
+* $$R_T^{j \rightarrow i}(S) >0$$表示決策$$d_j$$換成$$d_i$$比較好($$d_i$$優於$$d_j$$)。
+* $$R_T^{j \rightarrow i}(S) =0$$表示$$d_i$$與$$d_j$$表現一樣好。
+* $$R_T^{j \rightarrow i}(S)<0$$表示決策$$d_j$$比$$d_i$$好，不應更換決策。
+
+由定義得$$R_T^{i \rightarrow i}(S) =0$$。期望值為$$\displaystyle \mathbb{E}(R_T^{j \rightarrow i}(S)) = \sum_{t=1}^T w_t^j (L_t^j - L_t^i)$$。
+
 註：方案$$S$$中，可能只有部份時間的決策為$$d_j$$，如果選$$d_j$$時換成選$$d_i$$時的遺憾。
 
 <mark style="color:red;">我們的目標是找出無內部遺憾的隨機化的方案</mark>$$S$$。
+
+首先考慮$$|D|=2$$的情形。只需考慮$$R_T^{1 \rightarrow 0}(S), R_T^{0 \rightarrow 1}(S)$$即可，其餘兩種遺憾為0。
+
+定義賽局和目標集合如下：
+
+* 決策者在時間$$t$$，使用策略0(決策$$d_0$$)的向量報酬(payoff)為$$(L_t^0- L_t^1, 0)$$。
+* 決策者在時間$$t$$，使用策略1(決策$$d_1$$)的向量報酬(payoff)為$$(0, L_t^1- L_t^0)$$。
+
+假設決策者使用(隨機)方案$$S$$在時間$$t$$以機率$$w_t$$選擇策略0，則$$T$$期後的實現平均報酬為：$$\displaystyle \left( \frac{\sum_{t=1}^T w_t (L_t^0- L_t^1)}{T}, \frac{\sum_{t=1}^T (1-w_t) (L_t^1- L_t^0)}{T}  \right) =   \left( \frac{R_T^{0 \rightarrow 1}(S)}{T}, \frac{R_T^{1 \rightarrow 0}(S)}{T}  \right)$$
+
+因為我們的目標是無內部遺憾，因此<mark style="color:red;background-color:red;">目標集合為第三象限</mark>。

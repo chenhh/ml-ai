@@ -300,7 +300,7 @@
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)
 * [最小遺憾](game-theory/minimize-regret/README.md)
   * [paper: Regret in the On-Line Decision Problem](game-theory/minimize-regret/paper-regret-in-the-on-line-decision-problem.md)
-  * [NIPS paper:OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](game-theory/minimize-regret/nips-paper-onenet-enhancing-time-series-forecasting-models-under-concept-drift-by-online-ensembling.md)
+  * [conference:OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](game-theory/minimize-regret/conference-onenet-enhancing-time-series-forecasting-models-under-concept-drift-by-online-ensembling.md)
 * [book:Prediction, Learning, and Games](game-theory/book-prediction-learning-and-games/README.md)
   * [以專家的建議預測](game-theory/book-prediction-learning-and-games/prediction-with-expert-advice.md)
 

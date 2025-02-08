@@ -239,6 +239,7 @@
 * [混合過程](time-series/mixing-process.md)
 * [block bootstrap](time-series/block-bootstrap.md)
 * [結構點轉變](time-series/structure-change.md)
+* [概念漂移（Concept Drift）](time-series/concpet-drift.md)
 
 ## 遍歷性(Ergodicity) <a href="#ergodicity" id="ergodicity"></a>
 

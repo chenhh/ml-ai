@@ -178,9 +178,9 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
 * 滑Fb狀態：90%會繼續滑；10%回去上第一堂課。
 * 加考試狀態：100%通過後回去睡覺。
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt="" width="563"><figcaption><p>學生上課問題</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption><p>學生上課問題</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt="" width="531"><figcaption><p>狀態轉移矩陣，row加起來總合為1。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="531"><figcaption><p>狀態轉移矩陣，row加起來總合為1。</p></figcaption></figure>
 
 獎勵(Reward)以及衰減係數(Discount factor)：
 

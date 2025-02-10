@@ -331,7 +331,7 @@ $$\begin{bmatrix} (3, 3) & (5, 1) \\ (1, 5) & (4, 4) \\ \end{bmatrix}$$
 
 ## 社會困境（Social Dilemma）
 
-<figure><img src="../../.gitbook/assets/image.png" alt="" width="525"><figcaption><p>非合作均衡概念</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt="" width="525"><figcaption><p>非合作均衡概念</p></figcaption></figure>
 
 社會困境是賽局理論中的一個重要概念，描述了個人利益與集體利益之間的衝突。在社會困境中，<mark style="color:red;">個人追求自身利益最大化的行為，可能導致集體利益的損害</mark>。
 

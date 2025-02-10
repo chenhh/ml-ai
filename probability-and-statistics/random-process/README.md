@@ -31,25 +31,31 @@
 >
 > * 令$$X: [0, \infty) \times \Omega \rightarrow \mathbb{R}^d$$, $$(t, \omega) \mapsto X_t(\omega)$$。如果$$X$$是$$\mathcal{B}([0, \infty)) \otimes \mathcal{F}$$-可測函數（$$\mathcal{B}$$是Borel set），則稱$$X$$為隨機過程。
 > * 給定$$\omega \in \Omega$$，$$X(\omega): [0, \infty) \rightarrow \mathbb{R}^d$$, $$t \mapsto X_t(\omega)$$稱為樣本路徑（sample path）。
-> * 如果對於$$t \in [0, \infty)$$. $$X_t$$為$$\mathcal{F}_t$$-可測，則稱$$X$$為$$\{\mathcal{F}_t\}$$-adapted。
+> * 如果對於$$t \in [0, \infty)$$. $$X_t$$為$$\mathcal{F}_t$$-可測，則稱$$X$$為$$\{\mathcal{F}_t\}$$-的適應過程。
 > * 假設全部的資訊$$\mathcal{F}$$已知，則$$X$$為$$\mathcal{F}$$可測，但隨機過程只能知道現在和過去已經發生的值，未來發發生的事件仍為隨機，因此為$$\mathcal{F}_t$$可測。
 
 一個隨機過程 $$X$$有兩種理解方式。
 
 1. . 對於每個時間點$$t$$，$$X_t$$是一個隨機變數。
-2. 對於每個樣本$$\omega$$，$$X(\omega)$$是$$\mathbb{R}^d$$中的一條路徑。
+2. 對於每個樣本$$\omega$$，$$X(\omega)$$是$$\mathbb{R}^d$$中的一條(實現)路徑。
 
-什麼是$$X_t$$適應$$\mathcal{F}_t$$呢？那就是在同一時刻下，我能夠計算的機率不會超出我的知識範圍。隨著「能形成看待的事物的知識範圍」不斷增大，這樣就組成了一個filtration。
+### 過濾與適應過程(Filtrations and Adapted Processes)
 
-而adapted則體現了$$X$$隨時間的可測性變化，也就是說，如果現在的時間是$$t$$ ，就能夠觀測(計算)$$X_t$$的值。
+什麼是$$X_t$$適應$$\mathcal{F}_t$$呢？那就是在同一時刻下，我能夠計算的機率不會超出我的知識範圍。隨著「能形成看待的事物的知識範圍」不斷增大，這樣就組成了一個filtration(過濾或資訊流)。
+
+而適應(adapted)則體現了$$X$$隨時間的可測性變化，也就是說，如果現在的時間是$$t$$ ，就能夠觀測(計算)$$X_t$$的值。
 
 舉例來說，一個隨機過程的natural filitration包含了該過程的所有過去歷史資訊。一個隨機過程是與它的natural filtration adapted的。
 
-在一個adapted的世界中，過去和現在的事件和實現值是已知且不可改變的，但未來是隨機的和未知的。這就是它的全部內容。數學建模必須尊重這一現實世界的事實。
+在一個適應的世界中，過去和現在的事件和實現值是已知且不可改變的，但未來是隨機的和未知的。這就是它的全部內容。數學建模必須尊重這一現實世界的事實。
 
 <mark style="color:blue;">Filtration 可以被想成是資訊的揭露</mark>。如$$\mathcal{F}_0 \subseteq \mathcal{F}_1 \subseteq \mathcal{F}_2\subseteq \cdots$$，亦即表示在時間$$t=1$$的時候，我們亦可知道時間 $$t=0$$  的情況，亦即 $$t=1$$  的時候包含了  $$t=0$$  的資訊，但 不包含 $$t=2$$  (未來)的資訊。
 
 任意的$$t<s$$ ，可得$$\mathcal{F}_t \subseteq \mathcal{F}_s$$ 。若是按照sigma代數作為隨機事件“資訊”的直觀理解，這實際上是說隨著時間的推進，我們對這個隨機過程所獲得的資訊是“單調增加”的。<mark style="color:blue;">通常我們會把</mark>$$\mathcal{F}_t$$ <mark style="color:blue;">看作（或者取作）截止到時間</mark>$$t$$ <mark style="color:blue;">所能獲取的所有有關這個隨機過程的資訊</mark>。那麼$$X_t$$ adapted to $$\mathcal{F}_t$$ 的直觀意思實際上就很簡單了，就是說在時間$$t$$我們才能知道$$X_t$$ 的值應該是多少。
+
+<mark style="color:red;">濾波</mark>$$\lbrace \mathcal{F}_t \rbrace_{t \in T }$$ <mark style="color:red;">​ 定義了資訊的流動，它告訴我們隨著時間的推移，哪些事件和隨機變數可以被「知道」或「確定」</mark>。適應過程$$\lbrace X_t \}_{t\in T}$$則是在這個資訊流中「合法」的過程，它的當前值不會「超前」於當前可用的資訊。
+
+一個過程是否是適應的， 總是相對於一個特定的濾波而言的。 同一個隨機過程，相對於不同的濾波，可能會有不同的適應性。 通常，當我們說一個過程是「適應的」而沒有明確指定濾波時， 我們通常指的是它相對於其 **自然濾波** 是適應的。
 
 ## 有限維分佈(finite-dimensional distributions, FDDs)
 

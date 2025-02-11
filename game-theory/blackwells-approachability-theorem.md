@@ -38,23 +38,21 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 <mark style="color:red;">雙人零和賽局並不一定有</mark><mark style="color:red;">**鞍點（saddle point）**</mark><mark style="color:red;">，但一定有</mark><mark style="color:red;">**混合策略的均衡解**</mark><mark style="color:red;">，這是由</mark> <mark style="color:red;"></mark><mark style="color:red;">**Minimax 定理**</mark> <mark style="color:red;"></mark><mark style="color:red;">保證的</mark>。
 
-### 有鞍點範例
+### 有鞍點範例(使用單純策略即可)
 
 <table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=-1</span></td><td><span class="math">m(1,2)=9</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=-3</span></td><td><span class="math">m(2,2)=5</span></td><td>-3</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=-5</span></td><td><span class="math">m(3,2)=8</span></td><td>-5</td></tr><tr><td>max M</td><td>-1</td><td>9</td><td>minmax: -1</td></tr></tbody></table>
 
-### 無鞍點範例
+### 無鞍點範例(改為混合策略即可)
 
 <table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=3</span></td><td><span class="math">m(1,2)=-1</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=2</span></td><td><span class="math">m(2,2)=1</span></td><td>1</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=0</span></td><td><span class="math">m(3,2)=4</span></td><td>0</td></tr><tr><td>max M</td><td>3</td><td>4</td><td></td></tr></tbody></table>
 
-玩家1採取行動$$r_1$$時，不論對手採取任何行動，可得到的最高報酬為9。同樣採取行動$$r_2, r_3$$時，分別可得到最高報酬為$$5,8$$。因此玩家1採取任何行動時，至少能夠得到報酬$$\min(9,5,8)=5$$。
+玩家1採取行動$$r_1$$時，不論對手採取任何行動，可得到的最少報酬為-1。同樣採取行動$$r_2, r_3$$時，分別可得到最高報酬為$$-3,-5$$。玩家希望在這些「最差情況」中選擇最好的策略。這就是 maximin 策略，因此會選行動$$r_1$$報酬$$\max(-1,-3,-5)=-1$$。
 
-玩家2採取行動$$s_1,s_2$$時，不論對手採取任何行動，最大損失分別為$$-5, 5$$。因此玩家2採取任意行動時，最多損失為$$\max(-5,5)=5$$。
+玩家2採取行動$$s_1,s_2$$時，不論對手採取任何行動，最大損失分別為$$-1, 9$$。因此對手希望在這些「最差情況」中選擇最好的策略，最多損失為$$\min(-1,9)=-1$$。
 
-<mark style="color:blue;">多期(重複)賽局時，玩家1存在策略可保證平均報酬不會低於5；同理而玩家2存在策略可保證平均損失不會大於5</mark>。
+<mark style="color:blue;">多期(重複)賽局時，玩家1存在策略可保證平均報酬不會低於-1；同理而玩家2存在策略可保證平均損失不會大於-1</mark>。
 
-賽局價值為5，可得對於玩家1而且，集合$$S=\{x \geq t\}, ~ t \leq 5$$都是可接近集合，集合$$T=\{x \geq t\}, ~ t > 5$$都是可排除集合。
-
-* 對於玩家1來說，因為，$$S=\{x \geq 5\}$$
+賽局價值為-1，可得對於玩家1而且，集合$$S=\{x \geq t\}, ~ t \leq -1$$都是可接近集合，集合$$T=\{x \geq t\}, ~ t > -1$$都是可排除集合。
 
 
 

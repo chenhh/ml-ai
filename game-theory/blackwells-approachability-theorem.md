@@ -111,6 +111,8 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 $$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$$$H$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$。此為可接近性的充分條件。
 
+註：$$x$$為平均報酬，$$H$$為目標集合上任意點的切平面，如果玩家選定行為的下一期報酬$$z$$滿足上述性質，則可保證新的平均報酬往$$H$$方向前進。
+
 {% tabs %}
 {% tab title="plot" %}
 <figure><img src="../.gitbook/assets/approachable_sufficient.png" alt="" width="432"><figcaption><p>可接近性的充分條件</p></figcaption></figure>
@@ -179,6 +181,16 @@ plt.show()
 ```
 {% endtab %}
 {% endtabs %}
+
+## 可接近性集合定理
+
+> 定義矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第i,j個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
+>
+> 對於$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，定義$$\mathcal{R}(p)$$為$$s$$個點$$\sum_{i} p_{i=1}^r p_i \overline{m}(i,j), ~j=1,2,\dots,s$$形成的凸包(convex hull)，則可接近集合的充分條件如下：
+>
+> 令$$S$$為任意閉集合，若對於任意向量(點)$$x \notin S$$存在混合策略$$\mathbf{p} \in \mathbf{P}$$滿足$$y = \argmin dist(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩閱，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
+>
+> $$f_n = \begin{cases} p(\overline{x}_n),& \text{ if } n > 0 \text { and } \overline{x}_n =(\frac{1}{n} \sum_{i=1}^n x_i) \notin S, \\ \text{ arbitrary,} & \text{ if } n = 0 \text{ or } \overline{x}_n \in S.  \end{cases}$$
 
 ## 向量報酬策略賽局(Spinat, 2002)
 

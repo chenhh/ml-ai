@@ -4,7 +4,7 @@ description: 可接近性理論
 
 # Blackwell's Approachability Theorem
 
-## 簡介
+## roof簡介
 
 對抗性預測的歷史始於數學家David Blackwell和James Hannan的開創性工作。接近性理論起源於Blackwell的工作，並與Hannan的工作同時被發現。 幾十年來，人們對一般凸賽局中的遺憾最小化和Blackwell可接近性之間的關係並不完全瞭解。通常的想法是，事實上，Blackwell可接近性是一個更強的概念。在這一章中，<mark style="color:red;">我們表明可接近性和線上凸最佳化在強烈的意義上是等價的：兩者的演算法是等價的，而且沒有計算效率的損失</mark>。
 
@@ -182,15 +182,43 @@ plt.show()
 {% endtab %}
 {% endtabs %}
 
-## 可接近性集合定理
+## 可接近性集合定理(存在性與充分條件)
 
 > 定義矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第i,j個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
 >
 > 對於$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，定義$$\mathcal{R}(p)$$為$$s$$個點$$\sum_{i} p_{i=1}^r p_i \overline{m}(i,j), ~j=1,2,\dots,s$$形成的凸包(convex hull)，則可接近集合的充分條件如下：
 >
-> 令$$S$$為任意閉集合，若對於任意向量(點)$$x \notin S$$存在混合策略$$\mathbf{p} \in \mathbf{P}$$滿足$$y = \argmin dist(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩閱，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
+> 令$$S$$為任意閉集合，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \mathbf{P}$$滿足$$y = \argmin dist(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩閱，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
 >
 > $$f_n = \begin{cases} p(\overline{x}_n),& \text{ if } n > 0 \text { and } \overline{x}_n =(\frac{1}{n} \sum_{i=1}^n x_i) \notin S, \\ \text{ arbitrary,} & \text{ if } n = 0 \text{ or } \overline{x}_n \in S.  \end{cases}$$
+
+<mark style="color:red;">註：因為只有假設</mark>$$S$$<mark style="color:red;">為閉集合，因此</mark>$$S$$<mark style="color:red;">中距離</mark>$$x$$<mark style="color:red;">最近的點</mark>$$y$$<mark style="color:red;">不唯一</mark>。
+
+<details>
+
+<summary>proof</summary>
+
+假設玩家使用滿足以上條件的策略，對手使用任意策略，且$$x_1,x_2,\dots$$為已觀測到的報酬，令$$\overline{x}_n=(\frac{1}{n} \sum_{i=1}^n x_i) \notin S$$。
+
+令$$y_n$$為集合$$S$$中距離$$\overline{x}_n$$最近的點(不唯一)，且$$u_n = y_n - \overline{x}_n$$，則$$\forall \overline{x}_n \notin S$$，可得$$\mathrm{E}(\langle u_n, x_{n+1} \rangle ~|~ x_1, \dots, x_n) \geq \langle u_n, y_n \rangle$$--(1)
+
+令$$\delta_n$$為點$$\overline{x}_n$$至集合$$S$$的平方距離，若$$\delta_n > 0$$，則
+
+$$\delta_{n+1} \leq |\overline{x}_{n+1}- y_n| = |\overline{x}_{n}- y_n|^2 + 2 \langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle + |\overline{x}_{n+1}- \overline{x}_{n}|^2$$--(2)
+
+因為$$\overline{x}_{n+1}- \overline{x}_{n} = (x_{n+1} - \overline{x}_{n})/(n+1)$$，可得$$\langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle =  \frac{\langle \overline{x}_{n}-y_n, {x}_{n+1} - y_n \rangle }{n+1} +   \frac{\langle \overline{x}_{n}-y_n, y_n - \overline{x}_{n} \rangle}{n+1}$$--(3)
+
+且$$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$，其中$$c$$只依賴於集合$$X$$的大小--(4)
+
+由(2)與(1,3,4)，且將n改為n-1得$$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$ --(5)
+
+且$$0 \leq \delta_n \leq a$$--(6)
+
+與$$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$--(7)
+
+只要再證明(5,6,7)中，給定a,b,c時，$$\delta_n$$可機率收斂至0(如以下lemma)。
+
+</details>
 
 ## 向量報酬策略賽局(Spinat, 2002)
 

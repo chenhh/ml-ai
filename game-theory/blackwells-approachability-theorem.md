@@ -58,7 +58,7 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 ## 向量報酬的賽局(Blackwell, 1956)
 
-<mark style="color:blue;">單一的混合策略不能確保向量報酬</mark>$$m(i,j) \in \mathbb{R}^N$$<mark style="color:blue;">位於某個給定的集合中。然而，這並不排除一個漸進的概念，如果我們允許無限期的賽局時，並詢問是否存在一種策略來確保平均報酬向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
+<mark style="color:blue;">單一的混合策略不能確保向量報酬</mark>$$m(i,j) \in \mathbb{R}^N$$<mark style="color:blue;">位於某個給定的集合中。然而，如果我們允許無限期的賽局時，並詢問是否存在一種策略來確保平均報酬向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
 
 在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的報酬$$v$$。<mark style="color:red;">而在向量報酬中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$(分一般集合與凸集合兩種情形討論)。
 
@@ -66,7 +66,7 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 如果考慮每一個隨機向量$$m(i,j)$$的期望值$$\overline{m}(i,j)$$或簡寫為$$m(i,j)$$時，則報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。<mark style="color:blue;">注意此</mark>$$r\times s$$<mark style="color:blue;">個點並非均為凸包</mark>$$X$$<mark style="color:blue;">的端點，有些點是位於集合內部非端點</mark>。
 
-玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。註：此處在第$$n$$期決策時，參考的是過去的所有資料，而不是Markov性質只參考前一期的資料。
+玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。註：此處在第$$n$$期決策時，參考的是過去的所有資料(包含當期)，而不是Markov性質只參考前一期的資料。
 
 而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，玩家1的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
 
@@ -101,11 +101,84 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 ### 引理
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割。
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(因為</mark>$$\delta_n$$<mark style="color:red;">距離可接近集合的長度必大於等於其超集合的長度)，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割。
 
 由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
 
 若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合(why?)。idea: 將玩家與對手的角色對調時，報酬矩陣從$$M$$變為$$M^{\top}$$；此時若$$S$$為對手在報酬矩陣$$M^{\top}$$使用策略$$g^{*}$$相對於$$\forall f$$為可接近集合時，因為$$S$$的超集合仍為可接近集合，因此令$$T$$為與$$S$$不相交的閉集合；
+
+### 可接近性的充份條件(sufficient condition)
+
+$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$$$H$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$。此為可接近性的充分條件。
+
+{% tabs %}
+{% tab title="plot" %}
+<figure><img src="../.gitbook/assets/approachable_sufficient.png" alt="" width="432"><figcaption><p>可接近性的充分條件</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# 定義點 x 和 y
+x = np.array([0, 0])
+y = np.array([2, 2])
+
+# 定義超平面 H
+a = y[0] - x[0]
+b = y[1] - x[1]
+c = a * y[0] + b * y[1]
+
+# 繪製點 x 和 y，並標記在旁邊，避免重疊
+plt.plot(x[0], x[1], 'o')
+plt.text(x[0] - 0.3, x[1] + 0.1, 'x', fontsize=12)  # 調整位置
+plt.plot(y[0], y[1], 'o')
+plt.text(y[0] + 0.1, y[1] - 0.2, 'y', fontsize=12)  # 調整位置
+
+# 繪製超平面 H
+x_h = np.array([y[0] - b, y[0] + b])
+y_h = np.array([y[1] + a, y[1] - a])
+plt.plot(x_h, y_h, '--')
+
+
+# 繪製點 z，並標記在旁邊，避免重疊
+z = np.array([y[0] - b / 2, y[1] + a / 2])
+plt.plot(z[0], z[1], 'o')
+plt.text(z[0] + 0.1, z[1] + 0.1, 'z', fontsize=12)  # 調整位置
+
+# 繪製線段 xz
+plt.plot([x[0], z[0]], [x[1], z[1]], '-')
+
+# 繪製 "充分接近 x 的點"，並標記在旁邊，避免重疊
+t = 0.2
+x_near = x + t * (z - x)
+plt.plot(x_near[0], x_near[1], 'o')
+plt.text(x_near[0] - 0.3, x_near[1] - 0.2, 'near x', fontsize=12)  # 調整位置
+
+# 繪製線段 xy
+plt.plot([x[0], y[0]], [x[1], y[1]], '-')
+plt.text((x[0] + y[0]) / 2 + 0.1, (x[1] + y[1]) / 2 + 0.1, 'xy', fontsize=12)  # 調整位置
+
+# 繪製超平面 H 的標記，避免重疊
+plt.text(x_h[1] + 0.2, y_h[1] - 0.1, 'H', fontsize=12)  # 調整位置
+
+
+# 設定圖形標題和坐標軸標籤
+plt.title('Hyperplane and Points')
+plt.xlabel('x')
+plt.ylabel('y')
+
+# 調整坐標軸範圍，使得圖形更美觀
+plt.xlim(-1, 5)
+plt.ylim(-1, 5)
+
+# 顯示圖形
+plt.grid()
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
 
 ## 向量報酬策略賽局(Spinat, 2002)
 

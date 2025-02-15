@@ -210,21 +210,29 @@ $$u_n = y_n - \overline{x}_n$$表示由$$\overline{x}_n$$出發，往$$y_n$$方�
 
 也可解釋$$\mathrm{E}(x_{n+1} |x_1, \dots, x_n) \in R(p$$)在向量$$u_n$$上的正交投影長度大於等於$$y_n$$在$$u_n$$上的正交投影。
 
+\---------------------------------------------------------------------------------------
+
+令$$\delta_n=|\overline{x}_n-y_n|^2$$為點$$\overline{x}_n$$至集合$$S$$的平方距離，若$$\delta_n > 0$$，則
+
+$$\delta_{n+1} =|\overline{x}_{n+1}-y_{n+1}|^2 \leq |\overline{x}_{n+1}-y_{n}|^2$$ ---(2.1) (因為$$\delta_{n+1}$$是點$$\overline{x}_{n+1}$$至集合$$S$$的最短距離，集合上其它點到$$\overline{x}_{n+1}$$長度均大於等於$$\delta_{n+1}$$)。
+
+$$\begin{aligned} |\overline{x}_{n+1}- y_n|^2 &=  |(\overline{x}_{n+1}- \overline{x}_{n}) +(\overline{x}_{n}- y_n)|^2 \\ &= |\overline{x}_{n+1}- \overline{x}_{n}|^2 + 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  \overline{x}_{n}- y_n \rangle + |\overline{x}_{n}- y_n|^2 \\ & = |\overline{x}_{n+1}- \overline{x}_{n}|^2 + 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  \overline{x}_{n}- y_n \rangle + \delta_n  \end{aligned}$$--(2.2)
+
+所以$$\delta_{n+1} \leq  |\overline{x}_{n+1}- \overline{x}_{n}|^2 + 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  \overline{x}_{n}- y_n \rangle + \delta_n$$--(2)
+
+\---------------------------------------------------------------------------------------
+
+因為$$\overline{x}_{n+1}- \overline{x}_{n} = (x_{n+1} - \overline{x}_{n})/(n+1)$$$$\begin{aligned}  & \overline{x}_{n+1} = \frac{n}{n+1} \overline{x}_{n} + \frac{1}{n+1} x_{n+1}  \\ &\overline{x}_{n+1} - \overline{x}_{n} = -\frac{1}{n+1}  \overline{x}_{n} + \frac{1}{n+1} x_{n+1}    \\ &\overline{x}_{n+1} - \overline{x}_{n} = \frac{1}{n+1} (x_{n+1}  - \overline{x}_{n})  \end{aligned}$$--(3.1)
+
+，可得$$\langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle =  \frac{\langle \overline{x}_{n}-y_n, {x}_{n+1} - y_n \rangle }{n+1} +   \frac{\langle \overline{x}_{n}-y_n, y_n - \overline{x}_{n} \rangle}{n+1}$$--(3)
+
+由(3.1)得 $$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$，其中$$c$$是只依賴於集合$$X$$的大小的常數--(4)
+
+由(2)與(1,3,4)，且將n改為n-1得
 
 
 
-
-
-
-令$$\delta_n$$為點$$\overline{x}_n$$至集合$$S$$的平方距離，若$$\delta_n > 0$$，則
-
-$$\delta_{n+1} \leq |\overline{x}_{n+1}- y_n| = |\overline{x}_{n}- y_n|^2 + 2 \langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle + |\overline{x}_{n+1}- \overline{x}_{n}|^2$$--(2)
-
-因為$$\overline{x}_{n+1}- \overline{x}_{n} = (x_{n+1} - \overline{x}_{n})/(n+1)$$，可得$$\langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle =  \frac{\langle \overline{x}_{n}-y_n, {x}_{n+1} - y_n \rangle }{n+1} +   \frac{\langle \overline{x}_{n}-y_n, y_n - \overline{x}_{n} \rangle}{n+1}$$--(3)
-
-且$$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$，其中$$c$$只依賴於集合$$X$$的大小--(4)
-
-由(2)與(1,3,4)，且將n改為n-1得$$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$ --(5)
+$$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$ --(5)
 
 且$$0 \leq \delta_n \leq a$$--(6)
 

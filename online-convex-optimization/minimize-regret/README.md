@@ -97,7 +97,7 @@ $$\displaystyle    \max_{j=1,2,\dots, P} \left\{  		\sum_{i=1}^P \sum_{t=1}^T s_
 
 ## 雙人零和重複賽局必存在內部遺憾最小化的策略
 
-為了使用[Blackwell可接近定理](../blackwells-approachability-theorem.md#blackwell-ke-jie-jin-ding-li-approachability-theorem-bat)證明內部遺憾最小化策略的存在性，先定義雙人零和重複向量賽局$$\Gamma_v$$​與目標集合$$S$$​。
+為了使用[Blackwell可接近定理](../../game-theory/blackwells-approachability-theorem.md#blackwell-ke-jie-jin-ding-li-approachability-theorem-bat)證明內部遺憾最小化策略的存在性，先定義雙人零和重複向量賽局$$\Gamma_v$$​與目標集合$$S$$​。
 
 因為玩家的行動集合$$\mathcal{A}_1 = \{a_1^1, a_1^2, \dots, a_1^P \}$$有$$P$$​個元素，可得$$P^2$$​個修改策略$$s_{t}^{i \rightarrow j}$$，注意修改策略$$s_{1,t}^{i \rightarrow i} \equiv s_{1,t}$$，且成對遺憾(pairwise regret)，其中$$R_{s_{1, 1:T}}^{i \rightarrow i} =0, ~ i=1,2,\dots, P$$。
 
@@ -116,7 +116,7 @@ $$\displaystyle    \max_{j=1,2,\dots, P} \left\{  		\sum_{i=1}^P \sum_{t=1}^T s_
 * 假設平均報酬最後落在零點，則所有的成對遺憾$$R_{s_{1, 1:T}}^{i \rightarrow j}  =0$$，因此沒有內部遺憾。
 * 如果平均報酬落在某個$$-x_i$$軸上時，表示行動$$i$$​的報酬比某些行動(但不是全部的行動)​的報酬高(>)，而與其它行動的報酬差不多(=)，即$$R_{s_{1, 1:T}}^{i \rightarrow j} \leq 0, ~\forall j \neq i$$。
 
-為了接近集合$$S$$​，使用[Blackwell可接近演算法](../blackwells-approachability-theorem.md#blackwell-adaptive-strategy-shou-lian-xing-fen-xi)令現在向量平均成對遺憾為$$\overline{u}_t \in \mathbb{R}^{P^2}$$，則向量內的元素為時間$$1 \sim t$$​的平均成對遺憾平均值$$\frac{1}{t}\{R^{i \rightarrow j}_{s_{1, 1:t}} \}$$所組成。定義$$y_t= \mathrm{proj}_{S}(\overline{u}_t)$$為平均成對遺憾投影至集合的點。因此超平面法向量為$$w_t = (\overline{u}_t  -  y_t)^{+} = [\frac{1}{t} R_{s_{1, 1:t}}^{i \rightarrow j}]^{+}, ~ \forall i, j$$。
+為了接近集合$$S$$​，使用[Blackwell可接近演算法](../../game-theory/blackwells-approachability-theorem.md#blackwell-adaptive-strategy-shou-lian-xing-fen-xi)令現在向量平均成對遺憾為$$\overline{u}_t \in \mathbb{R}^{P^2}$$，則向量內的元素為時間$$1 \sim t$$​的平均成對遺憾平均值$$\frac{1}{t}\{R^{i \rightarrow j}_{s_{1, 1:t}} \}$$所組成。定義$$y_t= \mathrm{proj}_{S}(\overline{u}_t)$$為平均成對遺憾投影至集合的點。因此超平面法向量為$$w_t = (\overline{u}_t  -  y_t)^{+} = [\frac{1}{t} R_{s_{1, 1:t}}^{i \rightarrow j}]^{+}, ~ \forall i, j$$。
 
 * 如果$$\overline{u}_t \in \mathbb{R}^{P^2 +}$$，則$$w_t = \overline{u}_t - y_t$$，則$$y_t=0$$。
 * 如同上述3個行動的範例，在每一期時，可得3個行動報酬，經過$$t$$​期後，可得每個行動的累積報酬，因為為實數值，必可排名，假設是2 > 1 >3，則第2個行動向量報酬小於0，第1個行動向量中有1個元素大於0，第3個行動向量中有兩個元素大於0，而我們只需要處理大於0的元素即可。

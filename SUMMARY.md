@@ -301,16 +301,18 @@
 * [Blackwell's Approachability Theorem](game-theory/blackwells-approachability-theorem.md)
 * [納許均衡](game-theory/nash-equilibrium.md)
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)
-* [最小遺憾](game-theory/minimize-regret/README.md)
-  * [paper: Regret in the On-Line Decision Problem](game-theory/minimize-regret/paper-regret-in-the-on-line-decision-problem.md)
-  * [conference:OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](game-theory/minimize-regret/conference-onenet-enhancing-time-series-forecasting-models-under-concept-drift-by-online-ensembling.md)
 * [book:Prediction, Learning, and Games](game-theory/book-prediction-learning-and-games/README.md)
   * [以專家的建議預測](game-theory/book-prediction-learning-and-games/prediction-with-expert-advice.md)
 
 ## 在線凸最佳化 <a href="#online-convex-optimization" id="online-convex-optimization"></a>
 
-* [在線凸最佳化相關資料](online-convex-optimization/oco-introduction/README.md)
-  * [paper: Online convex programming and generalized infinitesimal gradient ascent](online-convex-optimization/oco-introduction/paper-online-convex-programming-and-generalized-infinitesimal-gradient-ascent.md)
+* [最小遺憾](online-convex-optimization/minimize-regret/README.md)
+  * [paper: Regret in the On-Line Decision Problem](online-convex-optimization/minimize-regret/paper-regret-in-the-on-line-decision-problem.md)
+  * [paper:From External to Internal Regret](online-convex-optimization/minimize-regret/paper-from-external-to-internal-regret.md)
+  * [conference: Efficient learning algorithms for changing environments](online-convex-optimization/minimize-regret/conference-efficient-learning-algorithms-for-changing-environments.md)
+  * [conference:OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](online-convex-optimization/minimize-regret/conference-onenet-enhancing-time-series-forecasting-models-under-concept-drift-by-online-ensembling.md)
+  * [paper: Online convex programming and generalized infinitesimal gradient ascent](online-convex-optimization/minimize-regret/paper-online-convex-programming-and-generalized-infinitesimal-gradient-ascent.md)
+* [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
 * [OCO架構與常見應用](online-convex-optimization/oco-formulation.md)
 * [the weighted majority algorithm](online-convex-optimization/the-weighted-majority-algorithm.md)
 * [投資組合策略CRP,UP](online-convex-optimization/portfolio-strategy/README.md)

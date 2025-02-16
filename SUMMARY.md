@@ -306,12 +306,17 @@
 
 ## 在線凸最佳化 <a href="#online-convex-optimization" id="online-convex-optimization"></a>
 
+* [外部、內部、交換遺憾](online-convex-optimization/external-internal-swap-regret.md)
 * [最小遺憾](online-convex-optimization/minimize-regret/README.md)
+  * [Page](online-convex-optimization/minimize-regret/page.md)
   * [paper: Regret in the On-Line Decision Problem](online-convex-optimization/minimize-regret/paper-regret-in-the-on-line-decision-problem.md)
   * [paper:From External to Internal Regret](online-convex-optimization/minimize-regret/paper-from-external-to-internal-regret.md)
   * [conference: Efficient learning algorithms for changing environments](online-convex-optimization/minimize-regret/conference-efficient-learning-algorithms-for-changing-environments.md)
   * [conference:OneNet: Enhancing Time Series Forecasting Models under Concept Drift by Online Ensembling](online-convex-optimization/minimize-regret/conference-onenet-enhancing-time-series-forecasting-models-under-concept-drift-by-online-ensembling.md)
   * [paper: Online convex programming and generalized infinitesimal gradient ascent](online-convex-optimization/minimize-regret/paper-online-convex-programming-and-generalized-infinitesimal-gradient-ascent.md)
+  * [arxiv: Regret Minimization with Noisy Observations](online-convex-optimization/minimize-regret/arxiv-regret-minimization-with-noisy-observations.md)
+  * [arxiv: An Equivalence Between Static and Dynamic Regret Minimization](online-convex-optimization/minimize-regret/arxiv-an-equivalence-between-static-and-dynamic-regret-minimization.md)
+  * [arxiv: Sparsity-Based Interpolation of External, Internal and Swap Regret](online-convex-optimization/minimize-regret/arxiv-sparsity-based-interpolation-of-external-internal-and-swap-regret.md)
 * [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
 * [OCO架構與常見應用](online-convex-optimization/oco-formulation.md)
 * [the weighted majority algorithm](online-convex-optimization/the-weighted-majority-algorithm.md)

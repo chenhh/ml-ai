@@ -6,13 +6,19 @@ description: Separating/supporting hyperplane theorem
 
 ## 超平面分離定理(separating hyperplane theorem)
 
-> 。令$$C, D \in X$$為不相交的相異凸集合，即$$C \cap D = \emptyset$$。則存在超平面$$H=\{x~| ~a^\top x =b, a \neq 0,b \in X\}$$使得$$\forall x \in C, a^\top x \leq b$$且$$\forall x \in D, a^\top x \geq b$$。
+> 令$$C, D \in X$$為不相交的相異凸集合，即$$C \cap D = \emptyset$$。則存在超平面$$H=\{x~| ~a^\top x =b, a \neq 0,b \in X\}$$使得$$\forall x \in C, a^\top x \leq b$$且$$\forall x \in D, a^\top x \geq b$$。
 >
 > 稱$$H$$為集合$$C,D$$的分離超平面。
 
+反之不成立，即若存在超平面可將兩凸集合分開，不能保證兩凸集合不相交。
+
+範例： $$C=D=\{0\} \subseteq \mathbb{R}$$均為單點的凸集合，兩者交集不為空，但是存在超平面$$x=0$$可將兩集合分開。
+
+範例：兩凸集合交於一點，但是存在通過交點的超平面可將兩凸集合分開。
+
 <details>
 
-<summary>proof: 假設兩集合的距離>0，則可取直線為法向量，切過中點形成超平面</summary>
+<summary>proof(嚴格分割): 假設兩集合的距離>0，則可取直線為法向量，切過中點形成超平面</summary>
 
 因為兩集合不相交，令兩集合間的距離$$d(C,D)=\inf\{ \|u-v\|_2, ~|~ u \in C, ~ v \in D\}>0$$。
 
@@ -98,3 +104,8 @@ plt.show()
 
 
 
+## 超平面支撐定理(supporting hyperplane theorem)
+
+> $$C$$為非空凸集合，且$$x_0 \in \mathrm{bd}(C)$$為其邊界點，則存在經過點$$x_0$$的支撐超平面$$H=\{x~|~ a^\top x = a^\top x_0\}$$。
+>
+> 或者說點$$x_0$$與集合$$C$$可被超平面$$H$$分開。

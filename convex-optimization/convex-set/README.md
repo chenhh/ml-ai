@@ -1,14 +1,86 @@
 # 凸集合 (convex set)
 
-凸集合(convex set)
+## 凸集合(convex set)
 
-> $$C$$ is convex set if $$\forall x_1, x_2 \in C, \lambda \in [0,1] \Rightarrow \lambda x_1 + (1-\lambda) x_2 \in C$$.
+> $$C$$ 為凸集合若 $$\forall x_1, x_2 \in C, \lambda \in [0,1] \Rightarrow \lambda x_1 + (1-\lambda) x_2 \in C$$.
+>
+> $$C$$ 為仿射集合(affine set)若 $$C = \{ \lambda x_1 + (1-\lambda) x_2 , \forall \lambda \in \mathbb{R}, \forall x_1, x_2 \in X \}$$.
 
-$$\lambda x_1 + (1-\lambda) x_2,\ \lambda \in [0,1]$$ 為端點 $$x_1, x_2$$形成的<mark style="color:red;">線段(segment)</mark>。
+### 線段與直線(segment and line)
+
+$$\lambda x_1 + (1-\lambda) x_2,\ \lambda \in [0,1]$$ 為端點 $$x_1, x_2$$形成的<mark style="color:red;">線段(segment)，為凸集合，但不是仿射集(除非退化到一點)</mark>。
+
+如果$$\lambda x_1 + (1-\lambda) x_2, \lambda \in \mathbb{R}$$時，則上述定義為包含$$x_1, x_2$$的<mark style="color:red;">直線(line)，為仿射集</mark>。
+
+如果$$x_1 + \lambda x_2, \lambda \geq 0$$，則為由$$x_1$$開始往$$x_2$$方向的<mark style="color:red;">射線(ray)</mark>，為凸集合，但不是仿射集。當$$x_1=0$$為凸錐。
 
 由定義可知向量空間必為凸集合，因為向量空間$$V$$必須滿足$$\forall a \in F$$, $$\forall u,v \in V \Rightarrow au+v \in V$$。
 
 <mark style="color:red;">註：如果是在平面上的集合，任意兩點間畫一直線均落在集合內時，則為凸集合</mark>。
+
+
+
+{% tabs %}
+{% tab title="線段" %}
+<figure><img src="../../.gitbook/assets/line_segment.png" alt="" width="563"><figcaption><p>線段與直線為凸集合</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義兩個點 x1 和 x2
+x1 = np.array([1, 2])  # 點 x1
+x2 = np.array([4, 6])  # 點 x2
+
+# 定義 lambda 的範圍
+lambda_values = np.linspace(-1.5, 1.5, 500)  # 從 -1.5 到 1.5 的連續值
+special_lambdas = [-1.5, -0.5, 0, 1, 1.5]    # 特殊標注的 lambda 值
+
+# 計算所有點的坐標
+points = np.array([lambda_val * x1 + (1 - lambda_val) * x2 for lambda_val in lambda_values])
+
+# 分離 x 和 y 坐標
+x_coords = points[:, 0]
+y_coords = points[:, 1]
+
+# 找到 lambda 在 [0, 1] 區間內的索引
+lambda_0_to_1_indices = np.where((lambda_values >= 0) & (lambda_values <= 1))[0]
+x_coords_bold = x_coords[lambda_0_to_1_indices]
+y_coords_bold = y_coords[lambda_0_to_1_indices]
+
+# 繪製圖形
+plt.figure(figsize=(8, 6))
+
+# 繪製完整的線段
+plt.plot(x_coords, y_coords, label=r"$\lambda x_1 + (1-\lambda)x_2$", color="blue", linewidth=1)
+
+# 加粗 lambda 在 [0, 1] 區間內的線段
+plt.plot(x_coords_bold, y_coords_bold, color="red", linewidth=3, label=r"$\lambda \in [0, 1]$")
+
+# 標注特殊 lambda 的點和文字
+for lambda_val in special_lambdas:
+    point = lambda_val * x1 + (1 - lambda_val) * x2
+    plt.scatter(point[0], point[1], color="black", zorder=5)  # 繪製點
+    plt.text(
+        point[0], point[1], 
+        f"  $\lambda={lambda_val}$", 
+        verticalalignment='bottom', horizontalalignment='left', fontsize=10
+    )  # 添加文字標注
+
+# 添加標題和軸標籤
+plt.title(r"Line Segment: $\lambda x_1 + (1-\lambda)x_2$, $\lambda \in [-1.5, 1.5]$")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.grid(True)
+plt.legend()
+
+# 顯示圖形
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
 
 ![凸集合與非凸集合](../../.gitbook/assets/convex_set-min.png)
 
@@ -312,12 +384,14 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 > * $$span(S) = \{\mathbf{v} \ \vert \ \mathbf{v} \text{ is a linear combination of set } S\}$$.&#x20;
 > * i.e. $$\forall \mathbf{v}_1, \mathbf{v}_2, \cdots, \mathbf{v}_n \in V$$, $$\lambda_1, \lambda_2, \cdots, \lambda_n \in F$$, $$\mathbf{v} = \sum_{i=1}^n \lambda_i \mathbf{v}_i$$.
 
-向量空間$$V$$的子空間$$S$$為滿足線性組合封閉性的空間, 即 $$\forall \lambda_1, \lambda_2 \in F, u,v \in S, \lambda_1 u + \lambda_2 v \in S$$. 而$$S$$為子空間的必要條件是：
+向量空間$$V$$的子空間$$S$$為滿足線性組合封閉性的空間, 即 $$\forall \lambda_1, \lambda_2 \in F, u,v \in S, \lambda_1 u + \lambda_2 v \in S$$。
+
+&#x20;而$$S$$為子空間的必要條件是：
 
 * $$\mathbf{0} \in S$$ (只要取線性組合的權重均為0即可得出。即 $$\lambda_1=\lambda_2=\cdots=\lambda_n = 0$$)
 * 若 $$\mathbf{v} \in S$$，則 $$\mathbf{-v} \in S$$&#x20;
 
-<mark style="color:red;">因此仿射空間為子空間的平移(translation)，而任意子空間必定為仿射空間</mark>。
+<mark style="color:red;">因此仿射空間為子空間的平移(translation)，而任意子空間必定為仿射空間，反之不成立</mark>。
 
 ## 超平面與半空間(hyperplane and halfspace)
 
@@ -326,9 +400,11 @@ $$\lambda \in \mathbb{R}$$時， $$\lambda x_1 + (1-\lambda) x_2$$為由點 $$x_
 > * 半空間(halfspace) $$\{x ~|~ a^\top x \leq b, ~ a \neq 0\}$$或$$\{x ~|~ a^\top (x -x_0) \leq 0, ~ a \neq 0\}$$，由$$x_0$$加上任意與法向量乘鈍角(或直角)的向量形成的集合。
 > * 半空間的邊界是超平面。
 >
-> $$a$$為超平面的法向量(normal vector)。
+> $$a$$為超平面的法向量(normal vector)。注意$$a=y-x_0$$是由$$x_0$$出發往$$y$$方向的向量。
 >
 > 超平面為仿射集(所以為凸集)，而半空間為凸集合，但不是仿射集。
+>
+> 半空間法向量方向的內積值為正值(非負值)，稱為上半空間(upper halfspace)；法向量反方向的內積值為負值(非正值)，稱為下半空間(lower halfspace)。
 
 ![hyperplane](<../../.gitbook/assets/hyperplane (1).png>)
 
@@ -421,13 +497,59 @@ plt.show()
 
 常用的是二階錐(second-order cone)，也常稱為Lorentz錐或是冰淇淋錐：$$\begin{aligned} C & =\{ (x,t)\in \mathbb{R}^{n+1} ~|~ \|x\|_2 \leq t\}\\   & = \left\{  	\begin{bmatrix} x \\ t \end{bmatrix} ~\bigg|~  	\begin{bmatrix} x & t\end{bmatrix}     \begin{bmatrix} I & 0 \\ 0 & -1\end{bmatrix}   \begin{bmatrix} x \\ t\end{bmatrix}  \leq 0, ~ t \geq 0   \right\} \end{aligned}$$
 
+
+
+{% tabs %}
+{% tab title="二階錐" %}
+<figure><img src="../../.gitbook/assets/2nd_cone.png" alt="" width="563"><figcaption><p>二階錐、Lorentz錐、冰淇淋錐</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# 定義繪製圓錐體的函數
+def plot_cone():
+    # 定義網格範圍
+    x1 = np.linspace(-1, 1, 100)  # x1 軸範圍
+    x2 = np.linspace(-1, 1, 100)  # x2 軸範圍
+    X1, X2 = np.meshgrid(x1, x2)  # 創建網格
+    T = np.sqrt(X1**2 + X2**2)    # 計算 t = sqrt(x1^2 + x2^2)
+
+    # 創建三維圖形
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # 繪製圓錐體表面
+    ax.plot_surface(X1, X2, T, cmap='viridis', alpha=0.7, edgecolor='none')
+
+    # 添加標題和軸標籤
+    ax.set_title(r"3D Plot of $(x_1^2 + x_2^2)^{0.5} \leq t$")
+    ax.set_xlabel("$x_1$")
+    ax.set_ylabel("$x_2$")
+    ax.set_zlabel("$t$")
+
+    # 設置視角
+    ax.view_init(elev=30, azim=45)
+
+    # 顯示圖形
+    plt.show()
+
+# 調用函數繪製圖形
+plot_cone()
+```
+{% endtab %}
+{% endtabs %}
+
 ## 多面體(polyhedra)
 
 > 多面體被定義為有限個線性等式和不等式的解集合
 >
 > $$\begin{aligned} \mathcal{P} & = \left\{ x \in \mathbb{R}^n ~| ~ a_i^\top x \leq b_i, i =1,2,\dots, m, c_j^\top x = d_j, j=1,2,\dots, p  \right\} \\ & =\left\{ x \in \mathbb{R}^n ~| ~ Ax \succeq b, ~Cx = d, ~  A \in \mathbb{R}^{m \times n}, B \in \mathbb{R}^{p \times n}  \right\}  \end{aligned}$$
 
-因此多面體是有限個半空間和超平面的交集，常見於線性規劃的限制式。
+因此多面體是有限個半空間和超平面的交集，<mark style="color:red;">常見於線性規劃的限制式</mark>。
 
 仿射集合(子空間、超平面、直線)、射線，線段和半空間也是多面體。
 
@@ -436,6 +558,70 @@ plt.show()
 #### 例如：<mark style="color:red;">非負象限(nonnegative orthant)</mark>是多面體也是錐，因此稱為多面體錐(polyhedral cone)。
 
 $$\begin{aligned} \mathbb{R}^n_{+}  	&= \{ x \in \mathbb{R}^n ~|~ x_i \geq 0, ~ i=1,2,\dots, n \} \\ 	& = \{ x\in \mathbb{R}^n ~|~ x \succeq 0\}   \end{aligned}$$
+
+
+
+{% tabs %}
+{% tab title="多面體" %}
+<figure><img src="../../.gitbook/assets/polyhedra.png" alt="" width="563"><figcaption><p>線性規劃限制式形成的多面體</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+# 定義繪製函數
+def plot_region():
+    # 定義 x 和 y 的範圍
+    x = np.linspace(0, 36, 400)  # x 從 0 到 36
+    y = np.linspace(0, 44, 400)  # y 從 0 到 44
+    X, Y = np.meshgrid(x, y)     # 創建網格
+
+    # 計算滿足條件的區域
+    condition_1 = (X >= 0) & (X <= 36)  # 0 <= x <= 36
+    condition_2 = (Y >= 0) & (Y <= 44)  # 0 <= y <= 44
+    condition_3 = (X + Y <= 48)         # x + y <= 48
+    condition_4 = (X + Y >= 20)         # x + y >= 20
+
+    # 合併所有條件
+    region = condition_1 & condition_2 & condition_3 & condition_4
+
+    # 繪製圖形
+    plt.figure(figsize=(8, 6))
+    plt.imshow(
+        region, 
+        extent=(0, 36, 0, 44),  # 定義 x 和 y 的範圍
+        origin='lower',         # 圖像的原點在左下角
+        cmap='Greens',          # 使用綠色填充
+        alpha=0.7               # 設置透明度
+    )
+
+    # 添加邊界線
+    plt.plot([0, 36], [48 - 0, 48 - 36], color='black', label='$x + y = 48$')  # x + y = 48
+    plt.plot([0, 36], [20 - 0, 20 - 36], color='blue', label='$x + y = 20$')   # x + y = 20
+    plt.axvline(x=0, color='gray', linestyle='--', label='$x = 0$')            # x = 0
+    plt.axvline(x=36, color='gray', linestyle='--', label='$x = 36$')          # x = 36
+    plt.axhline(y=0, color='gray', linestyle='--', label='$y = 0$')            # y = 0
+    plt.axhline(y=44, color='gray', linestyle='--', label='$y = 44$')          # y = 44
+
+    # 添加標題和軸標籤
+    plt.title("Region defined by inequalities")
+    plt.xlabel("$x$")
+    plt.ylabel("$y$")
+    plt.grid(True)
+
+    # 添加圖例
+    plt.legend()
+
+    # 顯示圖形
+    plt.show()
+
+# 調用函數繪製圖形
+plot_region()
+```
+{% endtab %}
+{% endtabs %}
 
 ### 單純形(simplexes)
 
@@ -447,6 +633,125 @@ $$\begin{aligned} \mathbb{R}^n_{+}  	&= \{ x \in \mathbb{R}^n ~|~ x_i \geq 0, ~ 
 * 二維單純形為三角形(含內部)。
 * 三維單純形為四面體。
 
+{% tabs %}
+{% tab title="simplex" %}
+<figure><img src="../../.gitbook/assets/simplex.png" alt=""><figcaption><p>一、二、三維單純形，均假設為均勻分佈</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import numpy as np
+
+# 定義繪製一維 simplex 的函數
+def plot_1d_simplex(ax):
+    # 定義一維 simplex 的端點
+    vertices = [0, 1]
+    x_coords = vertices
+    y_coords = [0, 0]
+
+    # 繪製線段
+    ax.plot(x_coords + [x_coords[0]], y_coords + [y_coords[0]], marker='o', label="1D Simplex", color='blue')
+
+    # 標記端點
+    for point in vertices:
+        ax.text(point, 0.01, f'  {point}', verticalalignment='bottom', horizontalalignment='center')
+
+    # 設置標題和軸範圍
+    ax.set_title("1D Simplex")
+    ax.set_xlabel("Value")
+    ax.set_ylabel("Position (1D)")
+    ax.set_ylim(-0.1, 0.1)
+    ax.grid(True)
+
+# 定義繪製二維 simplex 的函數（內部填滿顏色）
+def plot_2d_simplex(ax):
+    # 定義二維 simplex 的頂點
+    vertices = [(1, 0), (0, 1), (0, 0)]
+
+    # 提取 x 和 y 坐標
+    x_coords = [vertex[0] for vertex in vertices]
+    y_coords = [vertex[1] for vertex in vertices]
+
+    # 繪製三角形並填滿顏色
+    triangle = plt.Polygon(vertices, closed=True, edgecolor='blue', facecolor='lightblue', alpha=0.7)
+    ax.add_patch(triangle)
+
+    # 標記頂點
+    for i, (x, y) in enumerate(vertices):
+        ax.text(x, y, f'  ({x}, {y})', verticalalignment='bottom', horizontalalignment='center')
+
+    # 設置標題和比例
+    ax.set_title("2D Simplex (Filled)")
+    ax.set_xlabel("X-axis")
+    ax.set_ylabel("Y-axis")
+    ax.set_aspect('equal', adjustable='box')
+    ax.grid(True)
+
+# 定義繪製三維 simplex 的函數
+def plot_3d_simplex(ax):
+    # 定義三維 simplex 的頂點
+    vertices = [
+        [1, 0, 0],  # 頂點 A
+        [0, 1, 0],  # 頂點 B
+        [0, 0, 1],  # 頂點 C
+        [0, 0, 0]   # 頂點 D
+    ]
+
+    # 定義四面體的面（每個面由三個頂點組成）
+    faces = [
+        [vertices[0], vertices[1], vertices[2]],  # 面 ABC
+        [vertices[0], vertices[1], vertices[3]],  # 面 ABD
+        [vertices[0], vertices[2], vertices[3]],  # 面 ACD
+        [vertices[1], vertices[2], vertices[3]]   # 面 BCD
+    ]
+
+    # 繪製四面體的面
+    for face in faces:
+        face_coords = list(zip(*face))  # 提取 x, y, z 坐標
+        ax.add_collection3d(Poly3DCollection([face], alpha=0.5, edgecolor='k'))
+
+    # 繪製頂點
+    x_coords, y_coords, z_coords = zip(*vertices)
+    ax.scatter(x_coords, y_coords, z_coords, color='red', s=100)
+
+    # 標記頂點
+    for i, (x, y, z) in enumerate(vertices):
+        ax.text(x, y, z, f'  ({x}, {y}, {z})', color='black')
+
+    # 設置標題和軸範圍
+    ax.set_title("3D Simplex (Tetrahedron)")
+    ax.set_xlabel("X-axis")
+    ax.set_ylabel("Y-axis")
+    ax.set_zlabel("Z-axis")
+    ax.set_xlim([0, 1])
+    ax.set_ylim([0, 1])
+    ax.set_zlim([0, 1])
+
+# 創建 subplots
+fig = plt.figure(figsize=(12, 8))
+
+# 第一行：一維和二維 simplex
+ax1 = fig.add_subplot(2, 2, 1)  # 一維 simplex
+plot_1d_simplex(ax1)
+
+ax2 = fig.add_subplot(2, 2, 2)  # 二維 simplex（填滿顏色）
+plot_2d_simplex(ax2)
+
+# 第二行：三維 simplex（跨兩欄）
+ax3 = fig.add_subplot(2, 1, 2, projection='3d')  # 三維 simplex
+plot_3d_simplex(ax3)
+
+# 調整佈局
+plt.tight_layout()
+
+# 顯示圖形
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
+
 ## 半正定錐(positive semidefinite cone)
 
 > * 定義$$n$$階對稱方陣符號為$$\mathbf{S}^n = \{  X \in \mathbb{R}^n ~| ~ X= X^{\top} \}$$。
@@ -456,9 +761,77 @@ $$\begin{aligned} \mathbb{R}^n_{+}  	&= \{ x \in \mathbb{R}^n ~|~ x_i \geq 0, ~ 
 * 由定義可得$$\mathbf{S}^n_{+}$$為凸錐，因為$$\forall x,y\in \mathbf{S}^n_{+}, ~c_1, c_2 \geq 0, ~ c_1x + c_2 y \in \mathbf{S}^n_{+}$$。
 * 且$$\forall z \in \mathbb{R}^n$$, $$\forall x,y \succeq 0 , ~c_1, c_2 \geq 0$$，可得$$z^\top (c_1 x + c_2 y)z = c_1 z^\top x z + c_2 z^\top y z \geq 0$$。
 
-#### 範例：平面上的正半定維
+#### 範例：平面上的正半定錐
 
 $$X=\begin{bmatrix} x & y \\ y & z \end{bmatrix} \in \mathbf{S}_{+}^2 \Leftrightarrow x \geq 0, ~ z \geq 0, ~xz \geq y^2$$
+
+
+
+{% tabs %}
+{% tab title="平面正半定錐" %}
+<figure><img src="../../.gitbook/assets/square_semidefinite_cone.png" alt="" width="563"><figcaption><p>S2正半定錐</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+
+# 定義繪製函數
+def plot_region():
+    # 定義 x, y, z 的範圍
+    x = np.linspace(0.01, 1, 10)  # x 從 0 到 1
+    y = np.linspace(-1, 1, 10) # y 從 -1 到 1
+    z = np.linspace(0.01, 1, 10)  # z 從 0 到 1
+    X, Y, Z = np.meshgrid(x, y, z, indexing='ij')  # 創建三維網格
+
+    # 計算滿足條件的區域
+    condition = (X * Z >= Y**2) & (X >= 0) & (Z >= 0)
+
+    # 過濾出滿足條件的點
+    X_valid = X[condition]
+    Y_valid = Y[condition]
+    Z_valid = Z[condition]
+
+    # 創建三維圖形
+    fig = plt.figure(figsize=(10, 8))
+    ax = fig.add_subplot(111, projection='3d')
+
+    # 繪製滿足條件的點
+    #ax.scatter(X_valid, Y_valid, Z_valid, c='green', alpha=0.5, s=1, label="Region: $xz \geq y^2$")
+
+    # 添加邊界線（可選）
+    # 繪製 xz = y^2 的曲面
+    y_surface = np.linspace(-1, 1, 50)
+    x_surface = np.linspace(0.01, 1, 50)
+    Y_surface, X_surface = np.meshgrid(y_surface, x_surface)
+    Z_surface = Y_surface**2 / X_surface
+    Z_surface[X_surface == 0] = 0  # 避免除以零
+    ax.plot_surface(X_surface, Y_surface, Z_surface, color='blue', alpha=0.3, edgecolor='none')
+
+    # 添加標題和軸標籤
+    ax.set_title("3D Region defined by $x \geq 0$, $z \geq 0$, and $xz \geq y^2$")
+    ax.set_xlabel("$x$")
+    ax.set_ylabel("$y$")
+    ax.set_zlabel("$z$")
+    ax.set_xlim(0, 1)
+    ax.set_ylim(-1, 1)
+    ax.set_zlim(0, 1)
+
+    # 添加圖例
+    ax.legend()
+
+    # 顯示圖形
+    plt.show()
+
+# 調用函數繪製圖形
+plot_region()
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 ## 參考資料
 

@@ -291,6 +291,29 @@
 * [多步自舉法](reinforcement-learning/n-step-bootstrapping.md)
 * [表格法的規劃與學習](reinforcement-learning/tabular-planning-learning.md)
 
+## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
+
+* [凸集合 (convex set)](convex-optimization/convex-set/README.md)
+  * [保凸運算](convex-optimization/convex-set/operations-that-preserve-convexity.md)
+* [凸函數 (convex function)](convex-optimization/convex-function/README.md)
+  * [上境圖(epigraph)](convex-optimization/convex-function/epigraph.md)
+  * [不等式](convex-optimization/convex-function/inequality.md)
+  * [保凸運算](convex-optimization/convex-function/operations-that-preserve-convexity.md)
+  * [次梯度](convex-optimization/convex-function/subgradient.md)
+* [凸最佳化(convex optimization)](convex-optimization/convex-optimization/README.md)
+  * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
+  * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)
+* [對偶性(duality)](convex-optimization/duality.md)
+* [最佳化演算法](convex-optimization/optimization-algorithm.md)
+* [線上凸最佳化](convex-optimization/online-convex-optimization/README.md)
+  * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
+* [二次規劃](convex-optimization/quadratic-programming/README.md)
+  * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)
+* [線性規劃](convex-optimization/linear-programming.md)
+* [整數規劃](convex-optimization/integer-programming.md)
+* [隨機規劃](convex-optimization/stochastic-programming/README.md)
+  * [Portfolio stochastic programming](convex-optimization/stochastic-programming/portfolio-stochastic-programming.md)
+
 ## 賽局理論 <a href="#game-theory" id="game-theory"></a>
 
 * [賽局理論文獻](game-theory/sai-ju-li-lun-wen-xian.md)
@@ -306,9 +329,9 @@
 
 ## 在線凸最佳化 <a href="#online-convex-optimization" id="online-convex-optimization"></a>
 
+* [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
 * [外部、內部、交換遺憾](online-convex-optimization/external-internal-swap-regret.md)
 * [最小遺憾](online-convex-optimization/minimize-regret/README.md)
-  * [Page](online-convex-optimization/minimize-regret/page.md)
   * [paper: Regret in the On-Line Decision Problem](online-convex-optimization/minimize-regret/paper-regret-in-the-on-line-decision-problem.md)
   * [paper:From External to Internal Regret](online-convex-optimization/minimize-regret/paper-from-external-to-internal-regret.md)
   * [conference: Efficient learning algorithms for changing environments](online-convex-optimization/minimize-regret/conference-efficient-learning-algorithms-for-changing-environments.md)
@@ -321,10 +344,9 @@
   * [arxiv: Regret Minimization with Noisy Observations](online-convex-optimization/minimize-regret/arxiv-regret-minimization-with-noisy-observations.md)
   * [arxiv: An Equivalence Between Static and Dynamic Regret Minimization](online-convex-optimization/minimize-regret/arxiv-an-equivalence-between-static-and-dynamic-regret-minimization.md)
   * [arxiv: Sparsity-Based Interpolation of External, Internal and Swap Regret](online-convex-optimization/minimize-regret/arxiv-sparsity-based-interpolation-of-external-internal-and-swap-regret.md)
-* [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
 * [OCO架構與常見應用](online-convex-optimization/oco-formulation.md)
 * [the weighted majority algorithm](online-convex-optimization/the-weighted-majority-algorithm.md)
-* [投資組合策略CRP,UP](online-convex-optimization/portfolio-strategy/README.md)
+* [應用：投資組合策略CRP,UP](online-convex-optimization/portfolio-strategy/README.md)
   * [exponential gradient](online-convex-optimization/portfolio-strategy/exponential-gradient.md)
   * [adaptive universal portfolio](online-convex-optimization/portfolio-strategy/adaptive-universal-portfolio.md)
   * [Online Newton step](online-convex-optimization/portfolio-strategy/online-newton-step.md)
@@ -425,29 +447,6 @@
   * [從證據到原因](casualty-inference/the-book-of-why/from-evidence-to-cause.md)
 * [Causality: Models, Reasoning and Inference](casualty-inference/causality-models-reasoning-and-inference.md)
 * [簡介](casualty-inference/jian-jie.md)
-
-## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
-
-* [凸集合 (convex set)](convex-optimization/convex-set/README.md)
-  * [保凸運算](convex-optimization/convex-set/operations-that-preserve-convexity.md)
-* [凸函數 (convex function)](convex-optimization/convex-function/README.md)
-  * [上境圖(epigraph)](convex-optimization/convex-function/epigraph.md)
-  * [不等式](convex-optimization/convex-function/inequality.md)
-  * [保凸運算](convex-optimization/convex-function/operations-that-preserve-convexity.md)
-  * [次梯度](convex-optimization/convex-function/subgradient.md)
-* [凸最佳化(convex optimization)](convex-optimization/convex-optimization/README.md)
-  * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
-  * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)
-* [對偶性(duality)](convex-optimization/duality.md)
-* [最佳化演算法](convex-optimization/optimization-algorithm.md)
-* [線上凸最佳化](convex-optimization/online-convex-optimization/README.md)
-  * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
-* [二次規劃](convex-optimization/quadratic-programming/README.md)
-  * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)
-* [線性規劃](convex-optimization/linear-programming.md)
-* [整數規劃](convex-optimization/integer-programming.md)
-* [隨機規劃](convex-optimization/stochastic-programming/README.md)
-  * [Portfolio stochastic programming](convex-optimization/stochastic-programming/portfolio-stochastic-programming.md)
 
 ## 離散數學 <a href="#discrete_math" id="discrete_math"></a>
 

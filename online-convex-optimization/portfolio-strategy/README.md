@@ -2,7 +2,7 @@
 description: follow-the-winner投資組合策略
 ---
 
-# 投資組合策略CRP,UP
+# 應用：投資組合策略CRP,UP
 
 ## 策略分類
 
@@ -11,7 +11,7 @@ description: follow-the-winner投資組合策略
 * pattern-matching: B-H, B-K, B-S, B-NN, B-MV, B-GV。
 * meta: follow the leading history, OGU, ONU。
 
-賽局理論中，regret-minimization algorithm也可以用於投資組合中，但要注意是否有考慮到手續費。不考慮手續費的模型只適用於理論收斂性質分析或是meta方法，而其子方法必須有考慮手續費才行。
+<mark style="color:red;">regret-minimization algorithm也可以用於投資組合中，但要注意是否有考慮到手續費。不考慮手續費的模型只適用於理論收斂性質分析或是meta方法，而其子方法必須有考慮手續費才行</mark>。
 
 ## 基本符號
 

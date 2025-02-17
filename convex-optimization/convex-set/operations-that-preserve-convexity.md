@@ -95,3 +95,15 @@ $$S_1, S_2 \in \mathbb{R}^n \times \mathbb{R}^m$$，定義$$S=\{(x, y_1+y_2) ~|(
 <figure><img src="../../.gitbook/assets/image (61).png" alt="" width="513"><figcaption><p>透視函式的針孔相機解釋。深色水平線代表 R³ 中的平面 x₃ = 0，該平面不透明，除了原點的一個針孔。位於該平面上方的物體或光源會出現在影象平面 x₃ = -1 上，該平面顯示為較淺的水平線。光源位置到其影象位置的對映與透視函式有關。</p></figcaption></figure>
 
 <mark style="color:red;">若</mark>$$C \in \mathrm{dom} P$$<mark style="color:red;">為凸集合，則值域</mark>$$P(C)=\{P(x)| x \in C\}$$<mark style="color:red;">為凸集合</mark>。
+
+
+
+### 線性分式函數(linear-fractional function)
+
+線性分式函數是由透視函數與仿射函數組成。
+
+令$$g: \mathbb{R}^n \rightarrow \mathbb{R}^{m+1}$$為仿射函數，$$g(x)=\begin{bmatrix} A \\ c^\top \end{bmatrix} x + \begin{bmatrix} b \\ d \end{bmatrix}$$, $$A \in \mathbb{R}^{m \times n}, ~ b \in \mathbb{R}^m, ~ c \in \mathbb{R}^n, ~ d \in \mathbb{R}$$。
+
+則線性分式函數$$f: \mathbb{R}^n \rightarrow \mathbb{R}^m$$為組合函數$$f =P \circ g$$，$$f(x)=\frac{Ax+b}{c^\top x + d}$$，定義域$$\mathrm{dom}f =\{x ~|~ c^\top x +d > 0\}$$。
+
+若$$c=0$$且$$d>0$$，則$$\mathrm{dom}f = \mathbb{R}^n$$，且$$f$$為仿射函數。即線性函數為線性分式函數的特例。

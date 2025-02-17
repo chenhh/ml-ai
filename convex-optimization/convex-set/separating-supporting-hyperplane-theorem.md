@@ -2,9 +2,9 @@
 description: Separating/supporting hyperplane theorem
 ---
 
-# 超平面分離/支撐定理
+# 分離/支撐超平面定理
 
-## 超平面分離定理(separating hyperplane theorem)
+## 分離超平面定理(separating hyperplane theorem)
 
 > 令$$C, D \in X$$為不相交的相異凸集合，即$$C \cap D = \emptyset$$。則存在超平面$$H=\{x~| ~a^\top x =b, a \neq 0,b \in X\}$$使得$$\forall x \in C, a^\top x \leq b$$且$$\forall x \in D, a^\top x \geq b$$。
 >
@@ -104,8 +104,75 @@ plt.show()
 
 
 
-## 超平面支撐定理(supporting hyperplane theorem)
+## 支撐超平面定理(supporting hyperplane theorem)
 
 > $$C$$為非空凸集合，且$$x_0 \in \mathrm{bd}(C)$$為其邊界點，則存在經過點$$x_0$$的支撐超平面$$H=\{x~|~ a^\top x = a^\top x_0\}$$。
 >
 > 或者說點$$x_0$$與集合$$C$$可被超平面$$H$$分開。
+
+{% tabs %}
+{% tab title="支撐超平面" %}
+<figure><img src="../../.gitbook/assets/supporting_hyperplane.png" alt=""><figcaption><p>支撐超平面</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.spatial import ConvexHull
+
+# 定義隨機生成的點集
+np.random.seed(42)  # 固定隨機種子以確保結果可重現
+points = np.random.rand(10, 2) * 10  # 隨機生成 10 個點，範圍在 [0, 10] × [0, 10]
+
+# 計算凸包
+hull = ConvexHull(points)
+
+# 選擇一個邊界點作為目標點
+target_vertex_index = 2  # 假設選擇第 3 個邊界點（索引從 0 開始）
+target_vertex = points[hull.vertices[target_vertex_index]]
+
+# 找到該邊界點的前後鄰居點（用於計算支撐超平面的方向）
+prev_vertex = points[hull.vertices[target_vertex_index - 1]]  # 前一個點
+next_vertex = points[hull.vertices[(target_vertex_index + 1) % len(hull.vertices)]]  # 下一個點
+
+# 計算支撐超平面的法向量
+edge_vector = next_vertex - prev_vertex  # 邊的方向向量
+normal_vector = np.array([-edge_vector[1], edge_vector[0]])  # 法向量（垂直於邊）
+
+# 支撐超平面的斜率和截距
+slope = -normal_vector[0] / normal_vector[1]  # 斜率
+intercept = target_vertex[1] - slope * target_vertex[0]  # 截距
+
+# 繪製圖形
+plt.figure(figsize=(8, 6))
+
+# 繪製原始點集
+plt.scatter(points[:, 0], points[:, 1], color='gray', label="All Points")
+
+# 繪製凸包的邊界
+for simplex in hull.simplices:
+    plt.plot(points[simplex, 0], points[simplex, 1], 'r-', lw=2)
+plt.fill(points[hull.vertices, 0], points[hull.vertices, 1], 'r', alpha=0.2, label="Convex Hull")
+
+# 繪製目標邊界點
+plt.scatter(target_vertex[0], target_vertex[1], color='blue', s=100, zorder=5, label="Boundary Point")
+
+# 繪製支撐超平面
+x_vals = np.array([points[:, 0].min() - 1, points[:, 0].max() + 1])  # x 的範圍
+y_vals = slope * x_vals + intercept  # 對應的 y 值
+plt.plot(x_vals, y_vals, 'k--', lw=2, label="Supporting Hyperplane")
+
+# 添加標題和軸標籤
+plt.title("Convex Hull and Supporting Hyperplane at a Boundary Point")
+plt.xlabel("$x_1$")
+plt.ylabel("$x_2$")
+plt.legend()
+plt.grid(True)
+plt.axis('equal')  # 確保 x 和 y 軸比例相同
+
+# 顯示圖形
+plt.show()
+```
+{% endtab %}
+{% endtabs %}

@@ -296,7 +296,7 @@
 * [凸集合 (convex set)](convex-optimization/convex-set/README.md)
   * [保凸運算](convex-optimization/convex-set/operations-that-preserve-convexity.md)
   * [真錐與廣義不等式](convex-optimization/convex-set/proper_cones_and_generalized_inequalities.md)
-  * [超平面分離/支撐定理](convex-optimization/convex-set/separating-supporting-hyperplane-theorem.md)
+  * [分離/支撐超平面定理](convex-optimization/convex-set/separating-supporting-hyperplane-theorem.md)
   * [對偶錐與廣義不等式](convex-optimization/convex-set/dual-cones-and-generalized-inequalities.md)
 * [凸函數 (convex function)](convex-optimization/convex-function/README.md)
   * [上境圖(epigraph)](convex-optimization/convex-function/epigraph.md)

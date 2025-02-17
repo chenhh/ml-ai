@@ -10,6 +10,26 @@ description: Separating/supporting hyperplane theorem
 >
 > 稱$$H$$為集合$$C,D$$的分離超平面。
 
+<details>
+
+<summary>proof: 假設兩集合的距離>0，則可取直線為法向量，切過中點形成超平面</summary>
+
+因為兩集合不相交，令兩集合間的距離$$d(C,D)=\inf\{ \|u-v\|_2, ~|~ u \in C, ~ v \in D\}>0$$。
+
+令兩集合上最短距離線段的點分別為$$c \in C, d \in D$$且$$\|c-d\|_2 = d(C,D)$$。
+
+定義法向量$$a=d-c$$，常數$$b=\frac{\|d\|_2^2 - \|c\|2^2}{2}$$，可得仿射函數$$f(x)=a^\top x -b = (d-c)^\top (x-\frac{1}{2}(d+c))$$。
+
+且$$\forall u \in C, f(u) < 0$$, $$\forall v \in D, f(v) > 0$$。
+
+因此超平面$$H=\{x~|~ a^\top x = b\}$$分割了$$C, D$$，正交於線段$$cd$$且經過其中點。
+
+![](<../../.gitbook/assets/image (64).png>)
+
+(QED)
+
+</details>
+
 {% tabs %}
 {% tab title="分離超平面" %}
 <figure><img src="../../.gitbook/assets/separating_hyperplane.png" alt="" width="563"><figcaption><p>不相交凸集合必存在分離超平面</p></figcaption></figure>

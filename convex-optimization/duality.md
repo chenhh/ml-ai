@@ -55,19 +55,23 @@ $$\displaystyle L(x, \lambda, \nu) = f_o(x) + \sum_{i=1}^m \lambda_i g_i(x) + \s
 
 在多變量函數$$f(x,y)$$中，梯度向量$$\nabla f=\left(  \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)$$指向函數增長最快的方向，且其梯度$$|\nabla f|$$大小表示函數在這個方向上的變化率。
 
-函數等高線上的點具有相同的函數值$$f(x,y)=c$$，沿著等高線的方向函數值不變，在函數等高線$$f(x,y)=c$$上任一點$$(x,y)$$處的法線的斜率滿足$$\frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \times \frac{dy}{dx}=0$$。
+函數等高線上的點具有相同的函數值$$f(x,y)=c$$，沿著等高線的方向函數值不變，在函數等高線$$f(x,y)=c$$上任一點$$(x,y)$$處的切線的斜率滿足全微分為0即$$\frac{\partial f}{\partial x} + \frac{\partial f}{\partial y} \times \frac{dy}{dx}=0$$。
 
-所以切線斜率為$$\frac{dy}{dx} = - \frac{\partial f}{\partial x}/\frac{\partial f}{\partial y}$$。
+所以點$$(x,y)$$切線斜率為$$\frac{dy}{dx} = - \frac{\partial f}{\partial x}/\frac{\partial f}{\partial y}$$。
 
-由於法線與切線垂直，所以法線斜率是切線斜率的負倒數為$$\frac{\partial f}{\partial y}/\frac{\partial f}{\partial x}$$，寫為向量形式為$$\left(  \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)$$。
+由於法線與切線垂直，所以法線斜率是切線斜率的負倒數(因為內積為0)為$$\frac{\partial f}{\partial y}/\frac{\partial f}{\partial x}$$，寫為向量形式為$$\left(  \frac{\partial f}{\partial x}, \frac{\partial f}{\partial y} \right)$$。<mark style="color:red;">因此梯度向量為函數等高線的法向量，所以等高線的切線方向與梯度方向垂直。</mark>
 
-<mark style="color:red;">因此等高線的切線方向與梯度方向垂直。(梯度向量為函數等高線的法向量)</mark>。
+### Lagrange乘子法的幾何意義
 
-因為向量$$v$$與梯度向量 $$\nabla f$$垂直時，則它們的內積為零，即$$\langle v, \nabla f \rangle=0$$。而任何沿著等高線的運動（即切線方向）都不會改變函數值，因此等高線則表示函數值不變的路徑。梯度向量指向函數值增加最快的方向，所以兩者內積為0。
+在多變量函數中，梯度向量$$\nabla f(x)$$表示函數$$f(x)$$在點$$x$$的變化最快的方向。當我們在尋找函數的極值時，最優解通常位於梯度為零的點，即$$\nabla f(x) = 0$$。然而，在有約束的情況下，我們不能隨意改變$$x$$，而是必須遵循約束條件$$g(x)=0$$。
+
+約束函數$$g(x)$$定義了一個可行域，這是我們可以在其中尋找最優解的區域。這個可行域通常是多維空間中的一個曲面或邊界。當我們在這個可行域內尋找最優解時，目標函數的梯度必須與約束函數的梯度相互作用。
 
 當我們在約束條件下尋找最優解時，<mark style="color:red;">Lagrange乘子法告訴我們，最優解出現在目標函數的梯度與約束函數的梯度相等的點</mark>，即：$$\nabla f(x,y)=\lambda \nabla g(x,y)$$，$$\lambda$$為拉格朗日乘子，$$g(x,y)=0$$是約束條件。
 
-<mark style="color:red;">幾何上，這意味著在最優解處，目標函數的等高線與約束條件的等高線相切</mark>。
+* **梯度平行**：當 $$\nabla f(x)$$和$$\nabla g(x)$$相等時，這意味著目標函數的變化方向與約束函數的變化方向是平行的。換句話說，當我們在可行域的邊界上移動時，目標函數的增長率與約束的增長率是成比例的。
+* 相切：如果目標函數的等高線與約束曲面相切，則在切點處，它們的切線方向相同。由於梯度方向與等高線垂直，因此在切點處，目標函數的梯度方向與約束曲面的法線方向共線。
+* 最優解的存在：如果在某一點上，目標函數的梯度與約束函數的梯度不平行，那麼我們可以在可行域內沿著某個方向移動，從而使目標函數的值進一步增大或減小，這意味著該點不是最優解。
 
 在平面上，等高線是函數值相同的點的集合。當我們在一個約束條件下尋找最小值或最大值時，Lagrange函數的幾何意義可以通過觀察等高線的交互來理解：
 

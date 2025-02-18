@@ -35,17 +35,17 @@ $$\displaystyle \begin{aligned} \min_{\mathbf{x} \in \mathbb{R}^n } ~& ~ f(\colo
 
 問題的可行域為$$\mathcal{D} = \mathrm{dom}f \cap_{i=1}^m \mathrm{dom}g_i \cap_{j=1}^p \mathrm{dom}h_i$$為非空集合，最佳值為$$p^{*}$$，而<mark style="color:red;">問題不必為凸最佳化問題</mark>。
 
-## Lagrange函數
+## 拉格朗日函數
 
-標準型的Lagrange函數$$L: \mathbb{R}^n \times \mathbb{R}^m \times \mathbb{R}^p \rightarrow \mathbb{R}$$如下：
+標準型的拉格朗日函數$$L: \mathbb{R}^n \times \mathbb{R}^m \times \mathbb{R}^p \rightarrow \mathbb{R}$$如下：
 
 $$\displaystyle L(x, \lambda, \nu) = f_o(x) + \sum_{i=1}^m \lambda_i g_i(x) + \sum_{j=1}^p \nu_j h_j(x)$$
 
 對偶函數$$g(\lambda, \nu)=\inf_x L(x, \lambda, \nu)$$
 
 * 定義域為$$\mathrm{dom} L = \mathcal{D} \times \mathbb{R}^m \times \mathbb{R}^p$$
-* $$\lambda_i \in \mathbb{R}$$為第$$i$$個不等式約束$$g_i (x) \leq 0$$對應的<mark style="color:red;">Lagrange乘數(multiplier)，此處不限制</mark>$$\lambda_i$$<mark style="color:red;">為正數</mark>。
-* $$\nu_j \in \mathbb{R}$$為第$$j$$個等式約束$$h_j(x) =0$$對應的<mark style="color:red;">Lagrange乘數</mark>。
+* $$\lambda_i \in \mathbb{R}$$為第$$i$$個不等式約束$$g_i (x) \leq 0$$對應的<mark style="color:red;">拉格朗日乘數(multiplier)，此處不限制</mark>$$\lambda_i$$<mark style="color:red;">為正數</mark>。
+* $$\nu_j \in \mathbb{R}$$為第$$j$$個等式約束$$h_j(x) =0$$對應<mark style="color:red;">的拉格朗日乘數</mark>。
 
 拉格朗日函數$$L$$如果看成是關於$$x$$ 的函數，那它其實就是對原始問題中目標函數與約束條件進行線性加權，目標函數的權重係數是1，約束條件的權系數是$$\lambda_i$$或 $$\nu_i$$ ；&#x20;
 
@@ -65,9 +65,9 @@ $$\displaystyle L(x, \lambda, \nu) = f_o(x) + \sum_{i=1}^m \lambda_i g_i(x) + \s
 
 在多變量函數中，梯度向量$$\nabla f(x)$$表示函數$$f(x)$$在點$$x$$的變化最快的方向。當我們在尋找函數的極值時，最優解通常位於梯度為零的點，即$$\nabla f(x) = 0$$。然而，在有約束的情況下，我們不能隨意改變$$x$$，而是必須遵循約束條件$$g(x)=0$$。
 
-約束函數$$g(x)$$定義了一個可行域，這是我們可以在其中尋找最優解的區域。這個可行域通常是多維空間中的一個曲面或邊界。當我們在這個可行域內尋找最優解時，目標函數的梯度必須與約束函數的梯度相互作用。
+約束函數$$g(x)$$定義了一個可行域，這是我們可以在其中尋找最優解的區域。這個可行域通常是多維空間中的一個曲面或邊界。當我們在這個可行域內尋找最優解時，<mark style="color:red;">最優解通常出現在目標函數的等值曲線與約束條件的交點上</mark>。當這兩條曲線相切時，意味著在該點附近，目標函數的變化不會導致約束條件的違反。這種相切關係確保了在保持約束不變的情況下，目標函數達到了區域性極值。
 
-當我們在約束條件下尋找最優解時，<mark style="color:red;">Lagrange乘子法告訴我們，最優解出現在目標函數的梯度與約束函數的梯度相等的點</mark>，即：$$\nabla f(x,y)=\lambda \nabla g(x,y)$$，$$\lambda$$為拉格朗日乘子，$$g(x,y)=0$$是約束條件。
+當我們在約束條件下尋找最優解時，最優解通常出現在目標函數的等值曲線與約束條件的交點上。當這兩條曲線相切時，<mark style="color:red;">最優解出現在目標函數的梯度與約束函數的梯度平行的點</mark>，即：$$\nabla f(x,y)=\lambda \nabla g(x,y)$$，$$\lambda$$為拉格朗日乘子，$$g(x,y)=0$$是約束條件。
 
 * **梯度平行**：當 $$\nabla f(x)$$和$$\nabla g(x)$$相等時，這意味著目標函數的變化方向與約束函數的變化方向是平行的。換句話說，當我們在可行域的邊界上移動時，目標函數的增長率與約束的增長率是成比例的。
 * 相切：如果目標函數的等高線與約束曲面相切，則在切點處，它們的切線方向相同。由於梯度方向與等高線垂直，因此在切點處，目標函數的梯度方向與約束曲面的法線方向共線。
@@ -112,11 +112,19 @@ $$\inf$$符號表示取下確界。求解析式可先將$$L$$看成是關於$$x$
 
 ![對偶函數必為凹函數](../.gitbook/assets/lagrange_dual_func-min.jpg)
 
+凹函數(開口向下)定義：$$\forall x,y \in D, \lambda \in [0,1]$$，$$g(\lambda x + (1-\lambda)y) \geq \lambda g(x) + (1-\lambda)g(y)$$。
+
 因為$$g(\lambda, \nu)$$為凹函數，因此取$$\max$$可取到最大值。
 
+給定$$(\lambda_1, \nu_1), (\lambda_2, \nu_2)$$，可得對偶函數$$g(t(\lambda_1, \nu_1)+(1-t)(\lambda_2, \nu_2))=\inf_x (L(x, t(\lambda_1, \nu_1)+(1-t)(\lambda_2, \nu_2))$$。
+
+由於拉格朗日函數$$L( x ,\lambda, \nu )$$ 是關於($$\lambda, \nu)$$的線性組合，因此對於任意固定的$$x$$，$$L ( x , \dot )$$ 是一個關於$$( \lambda, \nu )$$的仿射函數。
+
+因此$$L(x, t(\lambda_1, \nu_1)+(1-t)(\lambda_2, \nu_2))= L(x, t(\lambda_1, \nu_1))+ L(x, +(1-t)(\lambda_2, \nu_2))$$
 
 
-### 對偶函數值必小於等於原問題最優解對應的目標函數值
+
+### 弱對偶性：對偶函數值必小於等於原問題最優解對應的目標函數值
 
 > * $$\forall \lambda \succeq 0, \forall \nu$$，若原問題的最佳值為$$p^{*}$$，則$$g(\lambda, \nu) \leq p^{*}$$。&#x20;
 > * 令$$d^{*} = \min g(\lambda, \nu)$$為對偶問題的最佳值，則可得$$d^{*} \leq p^{*}$$，稱為弱對偶性(weak dual)。其中$$p^{*} - d^{*} \geq 0$$稱為對偶間隙。

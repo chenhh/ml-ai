@@ -109,7 +109,9 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 ### 可接近性的充份條件(sufficient condition)
 
-$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$$$H$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$。此為可接近性的充分條件。
+#### 主要性質
+
+$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$。此為可接近性的充分條件。
 
 註：$$x$$為平均報酬，$$H$$為目標集合上任意點的切平面，如果玩家選定行為的下一期報酬$$z$$滿足上述性質，則可保證新的平均報酬往$$H$$方向前進。
 
@@ -184,11 +186,11 @@ plt.show()
 
 ## 可接近性集合定理(存在性與充分條件)
 
-> 定義矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第i,j個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
+> 定義矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第$$i,j$$個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
 >
 > 對於$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，定義$$\mathcal{R}(p)$$為$$s$$個點$$\sum_{i} p_{i=1}^r p_i \overline{m}(i,j), ~j=1,2,\dots,s$$形成的凸包(convex hull)，則可接近集合的充分條件如下：
 >
-> 令$$S$$為任意閉集合，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \mathbf{P}$$滿足$$y = \argmin dist(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩閱，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
+> 令$$S$$為任意閉集合，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \mathbf{P}$$滿足$$y = \argmin d(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩閱，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
 >
 > $$f_n = \begin{cases} p(\overline{x}_n),& \text{ if } n > 0 \text { and } \overline{x}_n =(\frac{1}{n} \sum_{i=1}^n x_i) \notin S, \\ \text{ arbitrary,} & \text{ if } n = 0 \text{ or } \overline{x}_n \in S.  \end{cases}$$
 
@@ -196,25 +198,27 @@ plt.show()
 
 <details>
 
-<summary>proof</summary>
+<summary>proof: 目標是證明平均報酬至集合的距離收斂至0，此處只證明到距離依賴於常數a(距離的上限值), b(兩次距離差值的上限),c(報酬集合X的大小)</summary>
 
-假設玩家使用滿足以上條件的策略，對手使用任意策略，且$$x_1,x_2,\dots$$為已觀測到的報酬，令$$\overline{x}_n=(\frac{1}{n} \sum_{i=1}^n x_i) \notin S$$。
+假設玩家使用滿足以上條件的策略，對手使用任意策略$$g$$，且$$x_1,x_2,\dots$$為已觀測到的報酬，令$$\overline{x}_n=(\frac{1}{n} \sum_{i=1}^n x_i) \notin S$$。
 
-令$$y_n$$為集合$$S$$中距離$$\overline{x}_n$$最近的點(不唯一)，且$$u_n = y_n - \overline{x}_n$$，則$$\forall \overline{x}_n \notin S$$，可得$$\mathrm{E}(\langle u_n, x_{n+1} \rangle ~|~ x_1, \dots, x_n) \geq \langle u_n, y_n \rangle$$--(1)
+令$$y_n$$為集合$$S$$中距離$$\overline{x}_n$$最近的點(不唯一)，且$$u_n = y_n - \overline{x}_n$$(由$$\overline{x}_n$$為起點，往$$y_n$$方向的向量)，則$$\forall \overline{x}_n \notin S$$，可得$$\mathrm{E}(\langle u_n, x_{n+1} \rangle ~|~ x_1, \dots, x_n) \geq \langle u_n, y_n \rangle$$--(1)
 
-$$u_n = y_n - \overline{x}_n$$表示由$$\overline{x}_n$$出發，往$$y_n$$方向的向量，而通過$$y_n$$的超平面$$H=\{z \in \mathbb{R}^N ~|~ \langle z-y_n, u_n \rangle  =0 \}$$。
+因為$$u_n = y_n - \overline{x}_n$$表示由$$\overline{x}_n$$出發，往$$y_n$$方向的向量，垂直於超平面$$H$$，而通過$$y_n$$的超平面$$H=\{z \in \mathbb{R}^N ~|~ \langle z-y_n, u_n \rangle  =0 \}$$。
 
-因為假設$$\mathrm{E}(x_{n+1} |x_1, \dots, x_n) \in R(p)$$且$$R(p)$$必落在以H為界與$$x$$相異的兩側，即$$R(p) \in H^{(H+}  =\{z \in \mathbb{R}^N ~|~ \langle z-y_n, u_n \rangle   \geq 0 \}$$
+因為假設$$\mathrm{E}(x_{n+1} |x_1, \dots, x_n) \in R(p)$$且$$R(p)$$必落在以$$H$$為界與$$x$$相異的兩側，即$$R(p) \in H^{(H)} =\{z \in \mathbb{R}^N ~|~ \langle z-y_n, u_n \rangle   \geq 0 \}$$
 
-代入期望值得：$$\begin{aligned} &\mathrm{E}(\langle x_{n+1}-y_n, u_n \rangle |x_1, \dots, x_n )   \geq 0 \\ &\mathrm{E}(\langle x_{n+1}, u_n \rangle |x_1, \dots, x_n ) - \mathrm{E}(\langle y_n, u_n \rangle |x_1, \dots, x_n )  \geq 0 \\ &\mathrm{E}(\langle x_{n+1}, u_n \rangle |x_1, \dots, x_n ) - \langle y_n, u_n \rangle  \geq 0 \\  & \mathrm{E}(\langle x_{n+1}, u_n \rangle |x_1, \dots, x_n )  \geq  \langle y_n, u_n \rangle  \end{aligned}$$成立
+代入期望值得下式，注意只有$$x_{n+1}$$為隨機變數，$$y_n, u_n$$為定值，取期望值等於原值：
+
+$$\begin{aligned} &\mathrm{E}(\langle x_{n+1}-y_n, u_n \rangle |x_1, \dots, x_n )   \geq 0 \\ &\mathrm{E}(\langle x_{n+1}, u_n \rangle |x_1, \dots, x_n ) - \mathrm{E}(\langle y_n, u_n \rangle |x_1, \dots, x_n )  \geq 0 \\ &\mathrm{E}(\langle x_{n+1}, u_n \rangle |x_1, \dots, x_n ) - \langle y_n, u_n \rangle  \geq 0 \\  & \mathrm{E}(\langle x_{n+1}, u_n \rangle |x_1, \dots, x_n )  \geq  \langle y_n, u_n \rangle  \end{aligned}$$
 
 移項得$$\mathrm{E}(\langle x_{n+1} - y_n, u_n \rangle |x_1, \dots, x_n ) = \mathrm{E}(\langle u_n, x_{n+1} - y_n  \rangle |x_1, \dots, x_n )  \geq  0$$--(1)
 
-也可解釋$$\mathrm{E}(x_{n+1} |x_1, \dots, x_n) \in R(p$$)在向量$$u_n$$上的正交投影長度大於等於$$y_n$$在$$u_n$$上的正交投影。
+也可解釋為$$\mathrm{E}(x_{n+1} |x_1, \dots, x_n) \in R(p$$)在向量$$u_n$$上的正交投影長度大於等於$$y_n$$在$$u_n$$上的正交投影。
 
 ***
 
-令$$\delta_n=|\overline{x}_n-y_n|^2$$為點$$\overline{x}_n$$至集合$$S$$的平方距離，若$$\delta_n > 0$$，則
+令$$\delta_n=|\overline{x}_n-y_n|^2$$為點$$\overline{x}_n$$至集合$$S$$的距離平方，若$$\delta_n > 0$$，則
 
 $$\delta_{n+1} =|\overline{x}_{n+1}-y_{n+1}|^2 \leq |\overline{x}_{n+1}-y_{n}|^2$$ ---(2.1) \
 (因為$$\delta_{n+1}$$是點$$\overline{x}_{n+1}$$至集合$$S$$的最短距離，集合上其它點到$$\overline{x}_{n+1}$$長度均大於等於$$\delta_{n+1}$$)。
@@ -229,25 +233,39 @@ $$\begin{aligned} |\overline{x}_{n+1}- y_n|^2 &=  |(\overline{x}_{n+1}- \overlin
 
 因為$$\overline{x}_{n+1}- \overline{x}_{n} = (x_{n+1} - \overline{x}_{n})/(n+1)$$$$\begin{aligned}  & \overline{x}_{n+1} = \frac{n}{n+1} \overline{x}_{n} + \frac{1}{n+1} x_{n+1}  \\ &\overline{x}_{n+1} - \overline{x}_{n} = -\frac{1}{n+1}  \overline{x}_{n} + \frac{1}{n+1} x_{n+1}    \\ &\overline{x}_{n+1} - \overline{x}_{n} = \frac{1}{n+1} (x_{n+1}  - \overline{x}_{n})  \end{aligned}$$--(3.1)
 
-$$\begin{aligned} \langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle &=   \langle -u_n, \frac{1}{n+1}(x_{n+1} - \overline{x}_{n})\rangle \\ &= -\frac{1}{n+1} \langle x_{n+1} - \overline{x}_{n}, u_n \rangle \\ &= -\frac{1}{n+1} \langle x_{n+1} -y_n + y_n - \overline{x}_{n}, u_n \rangle \\  &= -\frac{1}{n+1} \left( \langle x_{n+1}-y_n, u_n \rangle +  \langle y_n -\overline{x}_{n}, u_n \rangle \right)  \end{aligned}$$--(3.2)
+(3.1)代回(2)的內積部分得：$$\begin{aligned} \langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle &=   \langle -u_n, \frac{1}{n+1}(x_{n+1} - \overline{x}_{n})\rangle \\ &= -\frac{1}{n+1} \langle x_{n+1} - \overline{x}_{n}, u_n \rangle \\ &= -\frac{1}{n+1} \langle x_{n+1} -y_n + y_n - \overline{x}_{n}, u_n \rangle \\  &= -\frac{1}{n+1} \left( \langle x_{n+1}-y_n, u_n \rangle +  \langle y_n -\overline{x}_{n}, u_n \rangle \right)  \end{aligned}$$--(3.2)
 
 ，可得$$\langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle =  \frac{\langle \overline{x}_{n}-y_n, {x}_{n+1} - y_n \rangle }{n+1} +   \frac{\langle \overline{x}_{n}-y_n, y_n - \overline{x}_{n} \rangle}{n+1}$$--(3)
 
-$$\begin{aligned} \langle \overline{x}_{n}-y_n, \overline{x}_{n+1} - \overline{x}_{n} \rangle &=   \langle -u_n, \frac{1}{n+1}(x_{n+1} - \overline{x}_{n})\rangle \\ &= -\frac{1}{n+1} \langle x_{n+1} - \overline{x}_{n}, u_n \rangle \\ &= -\frac{1}{n+1} \langle x_{n+1} -y_n + y_n - \overline{x}_{n}, u_n \rangle \\  &= -\frac{1}{n+1} \left( \langle x_{n+1}-y_n, u_n \rangle +  \langle y_n -\overline{x}_{n}, u_n \rangle \right)  \end{aligned}$$
+***
 
-由(3.1)得 $$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$，其中$$c$$是只依賴於集合$$X$$的大小的常數--(4)
+因為假設$$X$$為有界集，由(3.1)得 $$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$，其中$$c$$是只依賴於集合$$X$$的大小的常數--(4)
 
 ***
 
 由(2)與(1,3,4)，且將n改為n-1得
 
-
-
 $$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$ --(5)
 
-方程式 (5) 的條件期望是基於$$\delta_1 ​ ,\delta_2 ​ ,\dots, \delta_n$$ ​ 而不是$$x_1 ​ ,x_2 ​ ,\dots,x_n$$ ​ ，是因為$$\delta_n$$ ​ 本身是 $$x_1 ​ ,x_2 ​ ,…,x_n$$ ​ 的函數，所以條件期望可以簡化。
+$$\mathrm{E}(\delta_{n+1} ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n+1})\delta_{n} + \frac{c}{(n+1)^2}, \text{ if } \delta_{n} >0$$ --(5)
+
+方程式 (5) 的條件期望是基於$$\delta_1 ​ ,\delta_2 ​ ,\dots, \delta_n$$ ​ 而不是$$x_1 ​ ,x_2 ​ ,\dots,x_n$$ ​ ，是因為 ​ $$\delta_n=|\overline{x}_n-y_n|^2$$本身是 $$x_1 ​ ,x_2 ​ ,…,x_n$$ ​ 的函數，提供的資訊不變，所以條件期望可以簡化。
 
 初始的條件期望是在給定 $$x_1 ​ ,x_2 ​ ,\dots,x_n$$ 的情況下考慮的，但是由於$$\delta_n$$  直接取決於$$x_n$$​ 的位置，且$$x_n$$ 的位置完全決定了$$\delta_n$$的值，因此可以認為給定$$\delta_1 ​ ,\delta_2 ​ ,\dots, \delta_n$$ ​ 的資訊足以代替$$x_1 ​ ,x_2 ​ ,\dots,x_n$$來計算條件期望。
+
+$$\delta_{n+1} \leq  |\overline{x}_{n+1}- \overline{x}_{n}|^2 - 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  u_n \rangle + \delta_n$$
+
+$$u_n = y_n - \overline{x}_n$$
+
+$$\delta_n=|\overline{x}_n-y_n|^2= \langle u_n, u_n \rangle$$
+
+$$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$
+
+$$\langle  \overline{x}_{n+1} - \overline{x}_{n}, u_n \rangle =       \frac{1}{n+1} \left( \langle x_{n+1}-y_n, u_n \rangle +  \langle y_n -\overline{x}_{n}, u_n \rangle \right)$$
+
+* $$\mathrm{E}(\langle x_{n+1} - y_n, u_n \rangle |\delta_1, \dots, \delta_n ) \geq 0$$
+
+- 而$$\langle y_n - \overline{x}_n, u_n \rangle =  \langle u_n, u_n \rangle =\delta_n \geq  0$$
 
 ***
 
@@ -255,17 +273,17 @@ $$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n})\delta
 
 方程式 (6) 是基於集合 X 的有界性和距離的非負性得出的結論。
 
-這個不等式說明了$$\delta_n​$$（即點$$\overline{x}_n​$$到集合$$S$$的距離的平方）是有界的。由於$$\delta_n​$$是距離的平方，它自然是非負的。上界$$a$$的存在是因為在遊戲過程中，所有可能的點$$x_n$$都位於一個有界閉集$$X$$內，因此從任意點$$x_n$$到集合$$S$$的距離都是有限的，其平方同樣也是有限的。這表明無論遊戲進行多少輪，$$x_n$$到$$S$$的距離都不會無限增大。
+這個不等式說明了$$\delta_n​=|\overline{x}_n - y_n|^2$$（即點$$\overline{x}_n​$$到集合$$S$$的距離的平方）是有界的。由於$$\delta_n​$$是距離的平方，它自然是非負的。上界$$a$$的存在是因為在賽局過程中，所有可能的點$$x_n$$都位於一個有界閉集$$X$$內，因此從任意點$$x_n$$到集合$$S$$的距離都是有限的，其平方同樣也是有限的。這表明無論賽局進行多少輪，$$x_n$$到$$S$$的距離都不會無限增大。
 
 ***
 
 與$$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$--(7)
 
-此不等式則提供了相鄰兩次遊戲之間$$\delta_n$$變化量的一個界限。
+此不等式則提供了相鄰兩次賽局之間$$\delta_n$$變化量的一個界限。
 
 從方程式 (2) 和 (4) 的推導中可以看出，$$\delta_n$$ 的變化受到$$x_n$$ ​ 和$$x_{n+1}$$ ​的影響，而$$x_n$$ ​ 的變化是有界的（因為 $$X$$ 是有界的）。因此，$$\delta_n$$ ​ 的變化也必然受到限制。
 
-考慮到每次遊戲後，新點$$x_{n+1}$$的選擇基於分佈$$m(i,j)$$，且該分佈定義在一個有界閉集$$X$$上，這意味著從$$x_n$$到$$x_{n+1}$$的變化不會過於劇烈。
+考慮到每次決策後，新點$$x_{n+1}$$的選擇基於分佈$$m(i,j)$$，且該分佈定義在一個有界閉集$$X$$上，這意味著從$$x_n$$到$$x_{n+1}$$的變化不會過於劇烈。
 
 更具體地說，隨著遊戲輪次$$n$$的增加，每次更新帶來的距離變化會逐漸減小。這是因為每一步移動的影響被分攤到了越來越大的$$n$$上，導致了$$∣\delta_n-\delta_{n-1}​∣$$與$$n$$成反比的關係。
 

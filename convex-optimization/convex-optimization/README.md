@@ -1,4 +1,8 @@
-# 凸最佳化(convex optimization)
+---
+description: 凸最佳化、凸函數最佳化
+---
+
+# 凸優化(convex optimization)
 
 ## 標準型式(standard form)
 

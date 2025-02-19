@@ -291,7 +291,7 @@
 * [多步自舉法](reinforcement-learning/n-step-bootstrapping.md)
 * [表格法的規劃與學習](reinforcement-learning/tabular-planning-learning.md)
 
-## 凸最佳化 <a href="#convex-optimization" id="convex-optimization"></a>
+## 凸優化 <a href="#convex-optimization" id="convex-optimization"></a>
 
 * [凸集合 (convex set)](convex-optimization/convex-set/README.md)
   * [保凸運算](convex-optimization/convex-set/operations-that-preserve-convexity.md)
@@ -303,7 +303,7 @@
   * [不等式](convex-optimization/convex-function/inequality.md)
   * [保凸運算](convex-optimization/convex-function/operations-that-preserve-convexity.md)
   * [次梯度](convex-optimization/convex-function/subgradient.md)
-* [凸最佳化(convex optimization)](convex-optimization/convex-optimization/README.md)
+* [凸優化(convex optimization)](convex-optimization/convex-optimization/README.md)
   * [Lagrange multipliers](convex-optimization/convex-optimization/lagrange-multipliers.md)
   * [Karush-Kuhn-Tucker (KKT) 條件](convex-optimization/convex-optimization/kkt-condition.md)
 * [Lagrange對偶(duality)](convex-optimization/duality.md)

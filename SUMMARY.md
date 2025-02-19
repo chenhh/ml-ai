@@ -309,8 +309,6 @@
 * [Lagrange對偶(duality)](convex-optimization/duality.md)
   * [Fenchel duality](convex-optimization/lagrange_duality/fenchel-duality.md)
 * [最佳化演算法](convex-optimization/optimization-algorithm.md)
-* [線上凸最佳化](convex-optimization/online-convex-optimization/README.md)
-  * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
 * [二次規劃](convex-optimization/quadratic-programming/README.md)
   * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)
 * [線性規劃](convex-optimization/linear-programming.md)
@@ -333,6 +331,8 @@
 
 ## 在線凸最佳化 <a href="#online-convex-optimization" id="online-convex-optimization"></a>
 
+* [線上凸最佳化](convex-optimization/online-convex-optimization/README.md)
+  * [專家問題](convex-optimization/online-convex-optimization/zhuan-jia-wen-ti.md)
 * [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
 * [外部、內部、交換遺憾](online-convex-optimization/external-internal-swap-regret.md)
 * [最小遺憾](online-convex-optimization/minimize-regret/README.md)

@@ -196,6 +196,8 @@ plt.show()
 
 <mark style="color:red;">註：因為只有假設</mark>$$S$$<mark style="color:red;">為閉集合，因此</mark>$$S$$<mark style="color:red;">中距離</mark>$$x$$<mark style="color:red;">最近的點</mark>$$y$$<mark style="color:red;">不唯一</mark>。
 
+想像你在玩一個遊戲，每次你離目標的距離（ $$\delta_n$$ ​ ）都有機會變小一點點（因為期望值減小），而且你不能跳太遠（變化有限）。雖然有時可能因為隨機性稍微偏離，但整體趨勢是越來越靠近目標。證明就像在說：只要你玩夠多次，距離幾乎一定會變得很小，偏離的機會微乎其微。
+
 <details>
 
 <summary>proof: 目標是證明平均報酬至集合的距離收斂至0，此處只證明到距離依賴於常數a(距離的上限值), b(兩次距離差值的上限),c(報酬集合X的大小)，還需要lemma</summary>
@@ -301,13 +303,26 @@ $$\begin{aligned} &\mathrm{E} \left( \delta_{n+1} ~|~ \delta_{1:n} \right) \\ & 
 
 > 隨機序列$$\delta_1, \delta_2, \dots,$$若滿足：
 >
-> * $$\mathrm{E}(\delta_n | \delta_1, \dots, \delta_{n-1}) \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$，
-> * $$0 \leq \delta_n \leq a$$
-> * $$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$
+> * $$\mathrm{E}(\delta_n | \delta_1, \dots, \delta_{n-1}) \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$，這表示每一步的「平均距離」會比前一步稍微減小一點，但會加上一個很小的正數$$c/n^2$$。
+> * $$0 \leq \delta_n \leq a$$：距離不會是負的，也不會無限大，有一個上限a。
+> * $$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$：這表示每一步的變化不會太大，隨著$$n$$增加，變化越來越小。
 >
 > 則只依賴於a,b,c的速率，以機率1收斂至0。
 >
 > 即$$\forall \epsilon >0, \exists n_0(a,b,c,) \in \mathbb{N} \ni$$ $$\forall \{\delta_n \}$$滿足以上三個條件時，可得：$$\mathrm{P}(\delta_n \geq \epsilon \text{ for some } n \geq n_0 ) <\epsilon$$。
+>
+> 引理的目標是證明：對於任何小的正數$$\epsilon>0$$ ，我們可以找到一個足夠大的步數$$n_0$$ ​ （只取決於 𝜀 , 𝑎 , 𝑏 , 𝑐），使得在$$n \geq n_0$$​ 之後， $$\delta_n$$ ​ 超過$$\epsilon$$的機率非常小（小於 $$\epsilon$$）。這意味著 $$\delta_n$$ ​ 會穩定地變得很小(會以某種速度趨近於 0，而且這種趨近是「幾乎確定」的（機率為 1）)。
+
+為了分析方便，定義了一個新序列 $$a_n$$ ​：
+
+* 如果從某個點 $$𝑛_0$$​ 開始， $$\delta_i>0$$ 一直持續到$$n$$，那麼 $$\alpha_𝑛 = \delta_n$$ ​ 。
+* 如果中間$$\delta_i=0$$，那麼之後$$a_n=0$$。
+
+這是在模擬「距離一直保持正的情況」，如果$$a_n$$變小，$$\delta_n$$也會變小。
+
+#### 證明$$a_n$$的期望值變小
+
+
 
 ## 向量報酬策略賽局(Spinat, 2002)
 

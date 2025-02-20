@@ -111,7 +111,7 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 #### 主要性質
 
-$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$。此為可接近性的充分條件。
+$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$(由三角不等式得出)。此為可接近性的充分條件。
 
 註：$$x$$為平均報酬，$$H$$為目標集合上任意點的切平面，如果玩家選定行為的下一期報酬$$z$$滿足上述性質，則可保證新的平均報酬往$$H$$方向前進。
 
@@ -198,7 +198,7 @@ plt.show()
 
 <details>
 
-<summary>proof: 目標是證明平均報酬至集合的距離收斂至0，此處只證明到距離依賴於常數a(距離的上限值), b(兩次距離差值的上限),c(報酬集合X的大小)</summary>
+<summary>proof: 目標是證明平均報酬至集合的距離收斂至0，此處只證明到距離依賴於常數a(距離的上限值), b(兩次距離差值的上限),c(報酬集合X的大小)，還需要lemma</summary>
 
 假設玩家使用滿足以上條件的策略，對手使用任意策略$$g$$，且$$x_1,x_2,\dots$$為已觀測到的報酬，令$$\overline{x}_n=(\frac{1}{n} \sum_{i=1}^n x_i) \notin S$$。
 
@@ -245,27 +245,33 @@ $$\begin{aligned} |\overline{x}_{n+1}- y_n|^2 &=  |(\overline{x}_{n+1}- \overlin
 
 由(2)與(1,3,4)，且將n改為n-1得
 
-$$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$ --(5)
+$$\mathrm{E}(\delta_n ~|~ \delta_1, \dots, \delta_{n-1})  \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$ --(5)
 
-$$\mathrm{E}(\delta_{n+1} ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n+1})\delta_{n} + \frac{c}{(n+1)^2}, \text{ if } \delta_{n} >0$$ --(5)
+$$\mathrm{E}(\delta_{n+1} ~|~ \delta_1, \dots, \delta_n)  \leq (1-\frac{2}{n+1})\delta_{n} + \frac{c}{(n+1)^2}, \text{ if } \delta_{n} >0$$ --(5')
 
-方程式 (5) 的條件期望是基於$$\delta_1 ​ ,\delta_2 ​ ,\dots, \delta_n$$ ​ 而不是$$x_1 ​ ,x_2 ​ ,\dots,x_n$$ ​ ，是因為 ​ $$\delta_n=|\overline{x}_n-y_n|^2$$本身是 $$x_1 ​ ,x_2 ​ ,…,x_n$$ ​ 的函數，提供的資訊不變，所以條件期望可以簡化。
+方程式 (5) 的條件期望是基於$$\delta_1 ​ ,\delta_2 ​ ,\dots, \delta_{n-1}$$ ​ 而不是$$x_1 ​ ,x_2 ​ ,\dots,x_{n-1}$$ ​ ，是因為 ​ $$\delta_n=|\overline{x}_n-y_n|^2$$本身是 $$x_1 ​ ,x_2 ​ ,…,x_n$$ ​ 的函數，提供的資訊不變，所以條件期望可以簡化。
 
-初始的條件期望是在給定 $$x_1 ​ ,x_2 ​ ,\dots,x_n$$ 的情況下考慮的，但是由於$$\delta_n$$  直接取決於$$x_n$$​ 的位置，且$$x_n$$ 的位置完全決定了$$\delta_n$$的值，因此可以認為給定$$\delta_1 ​ ,\delta_2 ​ ,\dots, \delta_n$$ ​ 的資訊足以代替$$x_1 ​ ,x_2 ​ ,\dots,x_n$$來計算條件期望。
+(5)的推導過程：
 
-$$\delta_{n+1} \leq  |\overline{x}_{n+1}- \overline{x}_{n}|^2 - 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  u_n \rangle + \delta_n$$
+$$\delta_{n+1} \leq  |\overline{x}_{n+1}- \overline{x}_{n}|^2 - 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  u_n \rangle + \delta_n$$--(2)
 
 $$u_n = y_n - \overline{x}_n$$
 
 $$\delta_n=|\overline{x}_n-y_n|^2= \langle u_n, u_n \rangle$$
 
-$$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$
+$$|\overline{x}_{n+1}- \overline{x}_{n}|^2 \leq c/(n+1)^2$$--(4)
 
 $$\langle  \overline{x}_{n+1} - \overline{x}_{n}, u_n \rangle =       \frac{1}{n+1} \left( \langle x_{n+1}-y_n, u_n \rangle +  \langle y_n -\overline{x}_{n}, u_n \rangle \right)$$
 
 * $$\mathrm{E}(\langle x_{n+1} - y_n, u_n \rangle |\delta_1, \dots, \delta_n ) \geq 0$$
 
 - 而$$\langle y_n - \overline{x}_n, u_n \rangle =  \langle u_n, u_n \rangle =\delta_n \geq  0$$
+
+所以$$\begin{aligned}  & \mathrm{E}(\langle  \overline{x}_{n+1} - \overline{x}_{n}, u_n \rangle ~|~ \delta_1, \dots, \delta_n)  \\  &=         \frac{1}{n+1}  \mathrm{E}   \left(    \langle x_{n+1}-y_n, u_n \rangle + \delta_n    ~|~ \delta_1, \dots, \delta_n  \right)    \\  &=         \frac{1}{n+1}  \mathrm{E}   \left(    \langle x_{n+1}-y_n, u_n \rangle    ~|~ \delta_1, \dots, \delta_n  \right)  + \delta_n  \\  & \geq   \frac{1}{n+1}    \delta_n  \\    \end{aligned}$$--(5.1)
+
+(5.1, 4)代回(2)後，取期望值得：
+
+$$\begin{aligned} &\mathrm{E} \left( \delta_{n+1} ~|~ \delta_{1:n} \right) \\ & \leq   \mathrm{E} \left( \frac{c}{(n+1)^2}  ~|~ \delta_{1:n} \right)   - \mathrm{E} \left( 2 \langle \overline{x}_{n+1}- \overline{x}_{n},  u_n \rangle  ~|~ \delta_{1:n} \right)  + \mathrm{E} \left( \delta_n ~|~ \delta_{1:n}\right) \\ & \leq   \frac{c}{(n+1)^2} - \frac{2}{n+1}\delta_n + \delta_n \\ & =  \frac{c}{(n+1)^2} +(1-  \frac{2}{n+1} )\delta_n     \end{aligned}$$--(5)
 
 ***
 
@@ -290,6 +296,18 @@ $$\langle  \overline{x}_{n+1} - \overline{x}_{n}, u_n \rangle =       \frac{1}{n
 只要再證明(5,6,7)中，給定a,b,c時，$$\delta_n$$可機率收斂至0(如以下lemma)。
 
 </details>
+
+### Lemma
+
+> 隨機序列$$\delta_1, \delta_2, \dots,$$若滿足：
+>
+> * $$\mathrm{E}(\delta_n | \delta_1, \dots, \delta_{n-1}) \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$，
+> * $$0 \leq \delta_n \leq a$$
+> * $$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$
+>
+> 則只依賴於a,b,c的速率，以機率1收斂至0。
+>
+> 即$$\forall \epsilon >0, \exists n_0(a,b,c,) \in \mathbb{N} \ni$$ $$\forall \{\delta_n \}$$滿足以上三個條件時，可得：$$\mathrm{P}(\delta_n \geq \epsilon \text{ for some } n \geq n_0 ) <\epsilon$$。
 
 ## 向量報酬策略賽局(Spinat, 2002)
 

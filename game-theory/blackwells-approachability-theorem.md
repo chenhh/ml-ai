@@ -304,25 +304,103 @@ $$\begin{aligned} &\mathrm{E} \left( \delta_{n+1} ~|~ \delta_{1:n} \right) \\ & 
 > 隨機序列$$\delta_1, \delta_2, \dots,$$若滿足：
 >
 > * $$\mathrm{E}(\delta_n | \delta_1, \dots, \delta_{n-1}) \leq (1-\frac{2}{n})\delta_{n-1} + \frac{c}{n^2}, \text{ if } \delta_{n-1} >0$$，這表示每一步的「平均距離」會比前一步稍微減小一點，但會加上一個很小的正數$$c/n^2$$。
-> * $$0 \leq \delta_n \leq a$$：距離不會是負的，也不會無限大，有一個上限a。
-> * $$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$：這表示每一步的變化不會太大，隨著$$n$$增加，變化越來越小。
+> * $$0 \leq \delta_n \leq a$$：距離不會是負的，也不會無限大，有一個上限a，避免劇烈跳動。。
+> * $$|\delta_n - \delta_{n-1}| \leq \frac{b}{n}$$：這表示每一步的變化不會太大，隨著$$n$$增加，變化越來越小，避免劇烈跳動。
 >
 > 則只依賴於a,b,c的速率，以機率1收斂至0。
 >
-> 即$$\forall \epsilon >0, \exists n_0(a,b,c,) \in \mathbb{N} \ni$$ $$\forall \{\delta_n \}$$滿足以上三個條件時，可得：$$\mathrm{P}(\delta_n \geq \epsilon \text{ for some } n \geq n_0 ) <\epsilon$$。
+> 即$$\forall \epsilon >0, \exists n_0(a,b,c,\epsilon ) \in \mathbb{N} \ni$$ $$\forall \{\delta_n \}$$滿足以上三個條件時，可得機率收斂：$$\mathrm{P}(\delta_n \geq \epsilon \text{ for some } n \geq n_0 ) <\epsilon$$。
 >
-> 引理的目標是證明：對於任何小的正數$$\epsilon>0$$ ，我們可以找到一個足夠大的步數$$n_0$$ ​ （只取決於 𝜀 , 𝑎 , 𝑏 , 𝑐），使得在$$n \geq n_0$$​ 之後， $$\delta_n$$ ​ 超過$$\epsilon$$的機率非常小（小於 $$\epsilon$$）。這意味著 $$\delta_n$$ ​ 會穩定地變得很小(會以某種速度趨近於 0，而且這種趨近是「幾乎確定」的（機率為 1）)。
+> 引理的目標是證明：隨機序列$$\delta_n$$ ​（例如平均點到集合$$S$$的距離平方）的收斂性。
+>
+> 對於任何小的正數$$\epsilon>0$$ ，我們可以找到一個足夠大的步數$$n_0$$ ​ （只取決於 𝜀 , 𝑎 , 𝑏 , 𝑐），使得在$$n \geq n_0$$​ 之後， $$\delta_n$$ ​ 超過$$\epsilon$$的機率非常小（小於 $$\epsilon$$）。這意味著 $$\delta_n$$ ​ 會穩定地變得很小(會以某種速度趨近於 0，而且這種趨近是「幾乎確定」的（機率為 1）)。
 
-為了分析方便，定義了一個新序列 $$a_n$$ ​：
+<details>
 
-* 如果從某個點 $$𝑛_0$$​ 開始， $$\delta_i>0$$ 一直持續到$$n$$，那麼 $$\alpha_𝑛 = \delta_n$$ ​ 。
-* 如果中間$$\delta_i=0$$，那麼之後$$a_n=0$$。
+<summary>proof：主要分析<span class="math">\delta_n</span> 逼近於0後，如果有<span class="math">x_{n+1}</span>突然變大造成<span class="math">\delta_n</span>遠離0時的波動行為</summary>
+
+令 $$n_0$$任意整數。要證明存在$$n_1 > n_0$$只依賴資$$n_0, \epsilon, a,c$$滿足$$\mathrm{P}(\delta_n \geq \epsilon/2 \text{ for } n_0 \leq n \leq n_1 ) < \epsilon/2$$。
+
+#### <mark style="color:red;">構造輔助序列an分析逐漸收斂的行為</mark>
+
+為了分析方便，定義了一個新序列 $$a_n$$ ​：將$$\delta_n$$ 從$$n_0$$開始(之前設為0)截斷為非負序列，並在$$\delta_n$$ 首次降為 0 後保持為 0。
+
+$$a_n=\begin{cases}  &\delta_n,  ~\forall n \geq n_0 \text{ if } \delta_i > 0, ~\forall n_0 \leq i \leq n, \\  &0, \text{ otherwise }  \end{cases}$$
+
+&#x20;因此$$a_n < \epsilon/2$$可得$$\delta_i < \epsilon /2$$，for some $$i, ~ n_0 \leq i \leq n$$。
 
 這是在模擬「距離一直保持正的情況」，如果$$a_n$$變小，$$\delta_n$$也會變小。
 
-#### 證明$$a_n$$的期望值變小
+由條件$$0 \leq \delta_n \leq a$$知$$a_{ n_0} \leq a$$且 $$\forall >n_0$$由條件1得
 
+$$\mathrm{E}(a_n|a_{n_0}, \dots, a_{n-1}) \leq (1-\frac{2}{n})a_{n-1}+\frac{c}{n^2}$$。
 
+使用重複期望值定理(Law of Total Expectation)
+
+* 左側：$$\mathrm{E}(\mathrm{E}(a_n|a_{n_0}, \dots, a_{n-1}))=\mathrm{E}(a_n)$$
+* 右側：$$\mathrm{E}((1-\frac{2}{n})a_{n-1}+\frac{c}{n^2})=(1-\frac{2}{n})\mathrm{E}(a_{n-1})+\frac{c}{n^2}$$
+* 整理得$$\mathrm{E}(a_n) \leq (1-\frac{2}{n})\mathrm{E}(a_{n-1})+\frac{c}{n^2}$$
+
+因為$$(1-\frac{2}{n})<1$$，每次期望值都會縮減一點，雖然有$$\frac{c}{n^2}$$的小增量，但隨著$$n$$ 變大，這個增量平方衰退變得微不足道。
+
+這表示$$\mathrm{E}(a_n ​ )$$ 會隨著$$𝑛$$增加而趨近於 0（速度取決於$$n_0,𝑎 , 𝑐$$）。
+
+#### 找到一個範圍 $$𝑛_0$$ ​ 到 $$𝑛_1$$ ​
+
+選一個起始點$$n_0$$，然後再找一個$$n_1 > n_0$$使得在$$n_0, n_1$$之間，$$a_n \geq \epsilon /2$$的機率小於$$\epsilon/2$$。
+
+這是因為$$\mathrm{𝐸} (a_n ​)$$ 會逐漸變小，當期望值夠小時， $$a_n \geq \epsilon/2$$ ​ 大於的機率也會很小。
+
+即$$\mathrm{P}(a_{n_1}<\epsilon/2) > 1- \epsilon/2$$。
+
+#### <mark style="color:red;">構造輔助序列z\_nk分析「突然變大」的可能性</mark>
+
+現在考慮一種情況：如果$$\delta_n$$在某個點突然從小於$$\epsilon/2$$跳到大於$$\epsilon$$。
+
+$$\forall n,k, ~n \leq k$$定義了另一個變數$$𝑧_{𝑛 𝑘}$$ ​ ，來追蹤這種「跳躍」的行為，並計算它變大的機率。
+
+</details>
+
+通過計算差值$$b_k=z_{nk}-z_{nk-1}$$，並利用條件（公式5 和 7），發現這種跳躍的期望值是負的（傾向於減小），而且變化有限。
+
+#### 應用強大數定律（Theorem 2）
+
+作者引用了自己之前證明的一個定律（Theorem 2），說的是：如果一個隨機變數序列的期望值每次都稍微減小一點，它最終不太可能累積到很大的值。
+
+用這個定律，證明$$𝑧_{𝑛 𝑘}$$ ​ 超過$$\epsilon$$的機率會隨著$$n$$增加而變得非常小（呈指數衰減）。
+
+把所有可能的情況加起來（例如$$\delta_n$$ ​ 一直大於 $$\epsilon/2$$ 或突然跳到$$\epsilon$$），總機率還是可以控制在小於$$\epsilon$$。
+
+選一個夠大的$$n_0$$ ​ ，就能保證 $$\delta_n \geq \epsilon$$ 的機率小於$$\epsilon$$ 。
+
+(QED)
+
+### Theorem 2: 滿足條件的隨機變數序列機率收斂
+
+> 假設有一個隨機變數序列 $$z_1 ​ ,z_2 ​ ,\dots$$滿足以下條件：
+>
+> 1. 範圍限制：每個$$|z_k| \leq 1$$，（變數的大小被限制在 $$[ − 1 , 1 ]$$內）。
+> 2. 期望條件：對於每個$$k$$，條件期望滿足：$$\mathrm{E}(z_k ~|~ z_1, \dots, z_{k-1}) \leq -u \max(|z_k|~|~z_1, \dots, z_{k-1})$$，其中$$u>0$$為固定的正數。\
+>    註：在給定歷史$$z_1 , … , z_{k − 1}$$下，$$z_k$$的條件期望不僅為負，且與歷史最大值成比例（比例為 $$−u$$）.&#x20;
+>
+> 則：
+>
+> $$\forall t \in \mathbb{R}$$，這個序列的累積和$$z_1+ \dots+z_k$$超過$$t$$的機率有上限：
+>
+> $$\mathrm{P}(z_1+\dots+z_k \geq t \text{ for some }k) \leq \left( \frac{1-u}{1+u} \right)^t$$\
+> 註：部分和超過$$t$$ 的機率隨$$t$$指數衰減，速率由$$\frac{1-u}{1+u}$$控制。
+
+這個定理說的是：如果一個隨機變數序列的每一步期望值都傾向於「往下拉」（負的方向），而且這種拉力與之前最大的變數大小成正比，那麼這個序列的累積和不太可能變得很大。
+
+具體來說，累積和超過某個值$$𝑡$$的機率會隨著$$𝑡$$增加而快速減小（呈指數衰減）。這裡的$$\frac{1 - 𝑢}{1+u}$$ ​ 是一個小於 1 的數，所以當$$𝑡$$很大時，機率變得非常小。
+
+<details>
+
+<summary>proof</summary>
+
+為了利用條件期望的負偏倚，定義一個指數形式的隨機變數$$M_k= \prod_{i=1}^k (1+\lambda z_i)$$
+
+</details>
 
 ## 向量報酬策略賽局(Spinat, 2002)
 

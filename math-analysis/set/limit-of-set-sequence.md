@@ -4,13 +4,27 @@
 
 <mark style="color:red;">集合</mark>$$A, B$$<mark style="color:red;">的最小上界可視為</mark>$$A \cup B$$（因為$$A,B \subseteq A \cup B$$且任何同時包含$$A,B$$的集合均比$$A\cup B$$大），<mark style="color:red;">而最大下界可視為</mark>$$A\cap B$$（同理$$A \cap B \subseteq A, B$$且同時包含$$A,B$$共同元素的集合均比$$A\cap B$$小）。
 
+給定集合序列$$\{E_n\}$$，我們想知道這個序列「長期」的行為，也就是當$$𝑛$$趨於無窮時，集合的元素穩定下來的情況。這就引出了上極限和下極限的定義。
+
 函數序列上下極限的定義，其關鍵之處在於尋找到函數數列上下確界的相似概念，這與找出集合論中與大小關係類似的運算，即集合的包含關係。<mark style="color:red;">且集合序列的上、下極限</mark>_<mark style="color:red;">只考慮集合序列極限的元素</mark>_<mark style="color:red;">，而非全部的集合元素，可忽略掉前面有限次集合序列的元素</mark>。
 
 按照集合的包含關係，所謂集合序列的上界是所有$$E_n$$的聯集$$\displaystyle \sup_{n \rightarrow \infty} E_n =\bigcup_{n=1}^\infty E_n$$。 類似的概念可找出找出集合序列的下界是所有$$E_n$$ 的交集$$\displaystyle \inf_{n \rightarrow \infty} E_n =\bigcap_{n=1}^\infty E_n$$。
 
-**集合序列的上極限集中的元素屬於集合序列的無窮多個集合，也不屬於無窮多個集合；因此只出現在有限個集合的元素，或者不出現在有限個集合的元素均不是上極限集的元素；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略無限個集合)，會經常出現(無限次)在部份集合中(類似聯集的概念)**</mark>。<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在某個指標之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。&#x20;
+**集合序列的上極限集中的元素描述的是「最終總是可能出現」的元素**，**屬於集合序列的無窮多個集合 (**&#x4E0A;極限包含那些「經常出現」或「偶爾還會冒出來」的元&#x7D20;**)；由定義可知**<mark style="color:red;">**上極限集中的元素，在觀察集合多次後(可忽略無限個集合)，會經常出現(無限次)在部份集合中(類似聯集的概念)**</mark>。<mark style="background-color:red;">上極限由「不會永遠離開」的元素組成（在某個指標之後的部份集合中，因此有無限多個集合包含這些元素）</mark>。&#x20;
 
-**集合序列的下極限集中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略有限個集合)，會出現在全部的集合中(交集的概念)**</mark>。<mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標之後的所有集合中，因此下極限的元素只不存在於有限個集合中）</mark>。
+* 若$$\displaystyle x \in\limsup E_n$$，則$$x$$存在於無窮多個$$E_n$$當中。即無論$$n$$多大，總能在後續的某個$$E_m, ~m>n$$中找到$$x \in E_m$$。
+
+**集合序列的下極限集描述的是「最終一定會出現」的元素(**&#x4E0B;極限包含那些「穩定下來一直存在」的元素。**)**。**其中的元素屬於集合序列的無數個集合，僅不屬於有限多個集合；由定義可知**<mark style="color:red;">**下極限集中的元素，在觀察集合多次後(可忽略有限個集合)，會出現在全部的集合中(交集的概念)**</mark>。<mark style="background-color:red;">下極限由「最終永遠存在」的元素組成（在某個指標之後的所有集合中，因此下極限的元素只不存在於有限個集合中）</mark>。
+
+* 若$$\displaystyle x \in\liminf E_n$$，則從某個$$n$$開始，$$x$$存在於所有的$$E_m, ~m>n$$中。
+
+上極限：抓住了序列中「偶爾出現」的可能性。&#x20;
+
+下極限：抓住了序列中「必然出現」的確定性。
+
+<mark style="color:red;">集合序列的極限可能不存在，但是上/下極限必定存在</mark>。
+
+下極限總是包含在上極限中： $$\displaystyle \in\liminf E_n \subseteq \limsup E_n$$ ，等號成立於極限(收斂)存在時。因為如果一個元素最終一直出現，那麼它必然也無窮多次出現。
 
 **可以看出上極限集中的元素數量大於等於下極限集中的元素數量。如果二者相等(元素不會永遠離開而且最終永遠存在)，他們的值就被定義為集合列的極限，和數列極限的概念一致**。
 
@@ -52,6 +66,8 @@
 ### 遞減集合序列的極限為所有集合的交集
 
 > 遞減集合序列$$E_n \supseteq E_{n+1}, ~\forall n$$，則 $$\displaystyle \lim_{n \rightarrow \infty} E_n=\bigcap_{n=1}^\infty E_n$$（<mark style="color:red;">空集合為任意集合的子集合，因此可為所有集合的下界</mark>）
+>
+> 註：證明的時候經常把集合序列$$\{A_n\}$$變成$$E_1=A_1, E_2=A_1 \cap A_2, \dots$$轉換為遞減序列。
 
 對於遞增集合序列，$$\displaystyle \bigcap_{j \geq n} E_j = \bigcap_{j \geq 1}E_j$$且 $$\bigcup_{j \geq n}E_j = E_n$$。可得$$\displaystyle \lim_{n \rightarrow \infty} E_n = \bigcup_{n=1}^\infty E_n$$
 
@@ -65,11 +81,13 @@ $$E_n=[n,\infty), ~\forall n \in \mathbb{N}$$為遞減集合序列，則$$\displ
 
 測度證明中常用給定$$c \in \mathbb{R}$$，區間$$\displaystyle (-\infty, c]=\bigcap_{n=1}^\infty (-\infty, c+\frac{1}{n}) = \lim_{n \rightarrow \infty} (-\infty, c+\frac{1}{n})$$
 
-## 集合序列上/下極限為數列上/下極限的一般化定義
+## 數列上/下極限表示為集合序列上/下極限
 
 ![上、下虛線為序列的上、下極限](../../.gitbook/assets/Lim-Sup-and-Lim-Inf-The-pairs-n-x-n-are-connected-by-the-solid-lines-for-clarity.png)
 
-$$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$, $$\displaystyle \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\sup_{ k \geq n} x_k = \inf_{n \geq 0}\{\sup_{k \geq n} x_k\}$$
+集合序列上極限： $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k$$，也就是 $$\{x_n\}$$ 中無窮多次出現的值的集合。
+
+數列上極限：$$\displaystyle \limsup_{n \rightarrow \infty} x_n=\inf_{n \geq 0}\sup_{ k \geq n} x_k = \inf_{n \geq 0}\{\sup_{k \geq n} x_k\}$$，是序列所有子序列極限點的最大值。
 
 * 令 $$E_1 = \{x_1\}, \dots,E_{n+1} = E_{n} \cup \{x_{n+1}\}$$所以$$E_n$$為遞增集合。
 * $$M_1 = (E_1 \cup E_2 \cup E_3 \cup \ldots)=\{x_k\}_{k=1}^\infty$$
@@ -78,9 +96,24 @@ $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \big
 * $$\displaystyle \limsup_{n \rightarrow \infty}⁡ E_n =\bigcap_{n=1}^\infty \bigcup_{k=n}^\infty E_k = \lim_{n \rightarrow \infty}⁡ M_n = \bigcap_{n=1}^\infty M_n$$ (因為[遞減集合序列的極限為所有集合的交集](limit-of-set-sequence.md#di-jian-ji-he-xu-lie-de-ji-xian-wei-suo-you-ji-he-de-jiao-ji))
 * 而$$\displaystyle b_n=\sup_{k \geq n} x_k$$為遞減數列。
 
-同理可得 $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$
+同理可得集合序列下極限 $$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty \bigcap_{k=n}^\infty E_k$$，包含從某個$$𝑛$$開始後穩定出現的元素。如果$$x_n$$不穩定波動，則可能為空集。
 
-&#x20;$$\displaystyle \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$
+數列下極限： $$\displaystyle \liminf_{n \rightarrow \infty} x_n=\sup_{n \geq 0}\inf_{ k \geq n} x_k = \sup_{n \geq 0}\{\inf_{k \geq n} x_k\}$$
+
+### 比較
+
+數列的上下極限是針對單個數字的收斂行為，研究的是數值在實數軸上的「波動範圍」。
+
+集合序列的上下極限研究的是元素「出現模式」的極限行為，而不是數值的大小。它的物件是集合，而不是單一數字。
+
+### 範例：集合序列和數列上下極限不相等
+
+給定數列$$x_n=(-1)^n$$，令集合$$E_n=\{x_n\}$$，則：
+
+* 集合序列上極限$$\displaystyle \limsup E_n=\{-1, 1\}$$，因為-1,1均出現無窮多次。
+* 集合序列下極限$$\displaystyle \liminf E_n=\empty$$，因為沒有元素穩定出現。
+* 數列上極限：$$\displaystyle \limsup x_n=1$$，因為序列所有子序列極限點的最大值為1。
+* 數列下極限：$$\displaystyle \liminf x_n=-1$$，因為序列所有子序列極限點的最小值為-1。
 
 ## 集合序列的上極限(superior limit of sequence of set)
 
@@ -116,6 +149,19 @@ proof: 定義等價性 <=
 * 取$$n=1$$，則$$x \in \bigcup_{k=1}^\infty E_k$$，則存在$$n_1 \in \mathbb{N} \ni x \in E_{n_1}$$。
 * 取$$n = j+1$$時，則$$x \in \bigcup_{k=j+1}^\infty E_k$$，也存在$$n_2 \in \mathbb{N}, n_2\geq n_1 \ni x \in E_{n_2}$$。
 * 以此類推可得一系列自然數 $$n_1, n_2, \ldots$$對應的無限多個集合$$E_{n_1}, E_{n_2},\ldots$$均含有$$x$$。 (QED)
+
+### 範例
+
+定義集合序列$$E_n =\begin{cases} \{1,2\}, \text{ n is odd } \\ \{2,3\} \text{ n is even }\end{cases}$$。
+
+上極限為無窮多次出現的元素：
+
+* 由於1只出現在奇數，但是會出現無窮多次，所以為上極限元素。
+* 由於2出現在所有的整數，出現無窮多次，所以為上極限元素。
+* 由於3只出現在偶數，但是會出現無窮多次，所以為上極限元素。
+* 因此$$\displaystyle \limsup E_n=\{1,2,3\}$$。
+
+下極限為在某個$$n$$之後必然出現的元素，因此由上述分析可得只有2滿足條件。因此$$\displaystyle \liminf E_n=\{2\}$$。
 
 ### 範例：上極限是在無窮個集合中都存在的元素的集合，下極限為有限個集合不存在的元素的集合
 
@@ -173,21 +219,23 @@ proof：定義等價性 <=
   * $$n=3$$, $$m_3=\{3\}$$，假設$$m_{ n\geq 3}=\{3\}$$
 * 下極限$$\displaystyle \liminf_{n \rightarrow \infty}⁡ E_n =\bigcup_{n=1}^\infty m_n =\{3\}$$
 
-## 集合序列的關係
+## 集合序列的包含關係
 
 > 對於任意的集合序列，以下關係成立
 >
 > $$\displaystyle \inf_{n \rightarrow \infty} E_n \equiv \bigcap_{n=1}^\infty E_n \subseteq \liminf_{n \rightarrow \infty} E_n \subseteq \limsup_{n \rightarrow \infty} E_n  \subseteq \bigcup_{n=1}^\infty E_n \equiv \sup_{n \rightarrow \infty} E_n$$。
 >
-> 上極限中的元素存在於無窮個多個集合，但也不存在於無窮多個集合。
+> 上極限中的元素存在於無窮個多個集合。
 >
-> 下極限中的元素存在於無窮多個集合，只不存在於有限個集合。
+> 下極限中的元素最終存在於所有集合當中。
 
 ## 集合序列的極限
 
 > $$\{E_n\}_{n \in \mathbb{N}}$$ 的極限存在若序列上極限等於下極限 $$\displaystyle \limsup_{n \rightarrow \infty} ⁡E_n = \liminf_{n \rightarrow \infty} ⁡E_n$$，記為$$\displaystyle \lim_{n \rightarrow \infty} E_n$$。
 >
-> <mark style="background-color:red;">上下極限相同的意思：每個在無窮個集合裡出現無限次的元素都只在有限個集合裡不存在</mark>。
+> 上極限中的元素存在於無窮個多個集合。下極限中的元素最終存在於所有集合當中。
+>
+> 兩者相同時，表示存在於於無窮個多個集合中的元素最終存在於所有集合當中。
 
 上極限與下限集均為集合，因此$$\displaystyle \limsup_{n \rightarrow \infty} ⁡E_n = \liminf_{n \rightarrow \infty} ⁡E_n$$表示 $$\displaystyle\limsup_{n \rightarrow \infty} ⁡E_n \subseteq \liminf_{n \rightarrow \infty} ⁡E_n$$且 $$\displaystyle\limsup_{n \rightarrow \infty} ⁡E_n \supseteq \liminf_{n \rightarrow \infty} ⁡E_n$$。
 

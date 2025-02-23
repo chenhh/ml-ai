@@ -6,17 +6,17 @@
 
 ## 實數集完備性的七個等價定理
 
-實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), <mark style="background-color:red;">但是兩者最大的差別在於實數集具有完備性，而有理數集沒有完備性</mark>。
+實數集$$\mathbb{R}$$ 與有理數系$$\mathbb{Q}$$ 兩者都是有序體(totally-ordered field), <mark style="background-color:red;">但是兩者最大的差別在於實數集具有完備性(</mark>完備性指集合中不存在「空隙」或「缺失的點」<mark style="background-color:red;">)，而有理數集沒有完備性</mark>。
 
 1. **Dedekind切割原理(Dedekind cut theorem)**：對於實數集的任何一個切割$$R$$的最小上界必定存在。
-2. **確界原理（ supremum and infimum principle）也稱實數的完備性**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；若S有下界，則S必有下確界。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明 。
-3.  **區間套定理(Nested Intervals Theorem)**：實數連續性的一種描述，幾何意義是有一閉區間序列(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
+2. **確界原理（ supremum and infimum principle）也稱實數的完備性**： 設S<mark style="color:red;">為非空集合</mark>。<mark style="color:red;">若</mark>S<mark style="color:red;">有上界，則S必有上確界</mark>；<mark style="color:red;">若S有下界，則S必有下確界</mark>。可以由實數的無限小數公理或者 Dedeki~~n~~d 分割證明 。
+3.  **區間套定理(Nested Intervals Theorem)**：實數集中的點可以被無限縮小的區間精確定位，而不會出現「空隙」。幾何意義是有一閉區間序列(兩個端點也屬於此區間)，滿足後一個閉區間包含於前一個閉區間(區間越來越小)以及閉區間長
 
     度的極限為零這兩個條件時，則這一序列區間存在唯一一個共同點(收斂至一點)。
 4. **單調有界定理(The monotone bounded convergence theorem)**：單調(遞增或遞減)有界序列必收斂（有極限，且收斂在上(下)確界)。
 5. **數列緊緻性定理 (compact sequence)**：有界數列必有收斂的子數列\[以二元切割法直接建構]。
 6. **有限覆蓋定理(finite cover theorem, Heine-Borel theorem)**：有界閉區間(緊緻集)的任何一個開覆蓋(open cover)， 必存在有限個數的子覆蓋。
-7. **柯西收斂準則(Cauchy converge criterion)**：無窮數列收斂的充分必要條件是無窮數列是Cauchy數列(因為實數的完備性可以保證Cauchy數列的收斂值為實數)。
+7. **柯西收斂準則(Cauchy converge criterion)**：柯西序列的項之間的距離隨著項數的增加而越來越小。無窮數列收斂的充分必要條件是無窮數列是Cauchy數列(因為實數的完備性可以保證Cauchy數列的收斂值為實數)。
 
 這七個定理可以循環證明，因此均為實數集完備性公理的等價敘述。
 

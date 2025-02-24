@@ -310,6 +310,7 @@
   * [Fenchel duality](convex-optimization/lagrange_duality/fenchel-duality.md)
 * [最佳化演算法](convex-optimization/optimization-algorithm/README.md)
   * [共軛梯度法](convex-optimization/optimization-algorithm/conjugate-gradient-method.md)
+  * [Nelder–Mead 方法](convex-optimization/optimization-algorithm/neldermead-fang-fa.md)
 * [二次規劃](convex-optimization/quadratic-programming/README.md)
   * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)
 * [線性規劃](convex-optimization/linear-programming.md)

@@ -13,7 +13,7 @@
 * BFGS法(Broyden–Fletcher–Goldfarb–Shanno（BFGS))
 * LM法(Levenberg–Marquardt method)
 * Powell共軛方向法(Powell's conjugate direction method)
-* Nelder–Mead method
+* [Nelder–Mead method](neldermead-fang-fa.md)
 * 置信域法、信賴域法(Trust-region method)
 * 梯度下降法(gradient descent)
 * [共軛梯度法(conjugate gradient)](conjugate-gradient-method.md)

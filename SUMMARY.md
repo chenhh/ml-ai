@@ -311,6 +311,7 @@
 * [最佳化演算法](convex-optimization/optimization-algorithm/README.md)
   * [共軛梯度法](convex-optimization/optimization-algorithm/conjugate-gradient-method.md)
   * [Nelder–Mead 方法](convex-optimization/optimization-algorithm/neldermead-fang-fa.md)
+  * [BFGS法](convex-optimization/optimization-algorithm/bfgs-method.md)
   * [梯度下降法(gradient descent)](convex-optimization/optimization-algorithm/gradient-descent.md)
 * [二次規劃](convex-optimization/quadratic-programming/README.md)
   * [均異模型(MV-model)](convex-optimization/quadratic-programming/mv-model.md)

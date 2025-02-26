@@ -432,6 +432,22 @@ $$\forall n,k, ~n \leq k$$定義了另一個變數$$𝑧_{𝑛 𝑘}$$ ​ ，�
 
 corollary 1 是定理 3 的一個特殊情況。令$$S=\mathcal{R}(p)$$，則對手的任意策略$$q \in \Delta(Q)$$，都可以找到一個點$$a=\sum_{i=1}^{r} \sum_{j=1}^{s} p_i q_j \overline{m}(i,j)$$滿足$$a \in \mathcal{R}(p)$$且$$a \in \mathcal{T}(q)$$。因此$$\mathcal{R}(p)$$與所有的$$\mathcal{T}(q)$$都有交集，所以為可接近集合。
 
+### corollary 2: 玩家必須有能力在每個方向上讓回報的投影至少和S在此方向上的下限一樣好
+
+> 一個閉凸集$$𝑆$$是可接近的⟺對於每一個向量$$u$$，賽局的「值」 $$v(u)$$滿足以下不等式：
+>
+> $$\displaystyle v(u) \geq \min_{s \in S}\langle u, s \rangle$$。
+>
+> * $$v(u)$$是以矩陣$$\| \langle u, \overline{m}(i,j) \rangle \| \in \mathbb{R}^{r \times s}$$為報酬的賽局值。
+> * $$u, \overline{m}(i,j) \in \mathbb{R}^N$$，上述矩陣是將原始矩陣$$\overline{M}$$(每一個元素為$$N$$維，共$$r \times s$$個元素)，內的每一個元素$$\overline{m}(i,j)$$與向量$$u$$內積得新矩陣(每一個元素為$$1$$維，共$$r \times s$$個元素)。
+
+假設我們選定一個方向向量$$𝑢 \in \mathbb{R}^N$$。
+
+corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$可接近的充要條件是它與每個$$\mathcal{T}(q)$$（對手策略$$𝑞$$對應的報酬凸包）有交集。corollary 2 則把這個幾何條件轉化成了一個數學不等式：
+
+* 如果$$𝑆$$與某個$$T(q)$$ 不相交，就存在一個方向$$u$$，使得$$v(u) < \min_{s \in S}\langle u, s \rangle$$。
+* 如果$$𝑆$$ 與每個$$\mathcal{T}(q), ~\forall q \in \Delta(Q)$$ 相交，那麼對於任何$$𝑢$$， $$v(u)$$ 都會滿足條件。
+
 ## 向量報酬策略賽局(Spinat, 2002)
 
 > $$N$$人向量報酬賽局$$\Gamma_{v}=(\mathcal{N}, (\mathcal{A}_i)_{ i \in \mathcal{N} }, (u_i)_{i \in \mathcal{N}})$$

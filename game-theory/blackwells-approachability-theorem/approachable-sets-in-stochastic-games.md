@@ -6,6 +6,8 @@
 
 在本文中，我們將由Blackwell的條件推廣到這個更廣泛的背景下，<mark style="color:red;">給出了從所有初始狀態開始的可接近性的充分條件</mark>。此外，我們證明了對於凸集來說，這個條件也是必要的，從而提供了遊戲中所有可接近凸集的完整特徵描述。
 
+隨機賽局：多個參與者之間的重複互動，其中環境的底層狀態隨機變化，並且取決於參與者的決策。
+
 ## 參考資料
 
-* Emanuel Milman, "Approachable sets of vector payoffs in stochastic games." Games and Economic Behavior, Vol. 56, No.1,pp. 135-147, 2006.
+* Emanuel Milman, "[Approachable sets of vector payoffs in stochastic games.](https://www.sciencedirect.com/science/article/abs/pii/S0899825605000783)" Games and Economic Behavior, Vol. 56, No.1,pp. 135-147, 2006.

@@ -18,8 +18,8 @@ description: >-
 
 以下定義向量空間的操作與集合：
 
-* $$\| x\|^2 = x^{\top} x$$為歐式空間的標準範數(standard norm)。
-* $$d(x, \mathbb{S})=\inf_{y \in \mathbb{S}}d(x,y)$$為點$$x$$到集合$$\mathbb{S}$$的距離。
+* $$\| x\|^2 = \langle x, x \rangle = x^{\top} x$$為歐式空間的標準範數(standard norm)。
+* $$\displaystyle d(x, \mathbb{S})=\inf_{y \in \mathbb{S}}d(x,y)$$為點$$x$$到集合$$\mathbb{S}$$的距離。
   * 如果$$\mathbb{S}$$為凸集合時，則點$$y$$唯一，即$$\mathbb{S}$$中其它的點到點$$x$$的距離均大於點$$y$$至$$x$$的距離。
 * 令$$\mathcal{U}$$為所有向量報酬$$u(a_1, a_2) \in \mathbb{R}^v, ~\forall a_1 \in \mathcal{A}_1, ~ a_2 \in \mathcal{A}_2$$形成的凸包(convex hull)。
 * 令$$\mathbf{U}$$$$\in \mathbb{R}^{|\mathcal{A}_1| \times |\mathcal{A}_2| \times v}$$為向量報酬矩陣。

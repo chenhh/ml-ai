@@ -32,7 +32,7 @@ Nicolo Cesa-Bianchi and Gábor Lugosi,  "Prediction, learning, and games," Cambr
 
 雙人重覆賽局中，向量報酬存在可接近的集合，也可用於在線學習的收斂分析中。
 
-* David Blackwell, "An analog of the minimax-theorem for vector payoffs, " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956. \[[筆記](blackwells-approachability-theorem.md)]\(一般賽局為實數值報酬函數，而此論文討論的是向量值報酬函數且值域非固定值可以隨機變數的性質。此類型報酬函數在多期的最小化遺憾問題中為核心問題，相當重要)。
+* David Blackwell, "An analog of the minimax-theorem for vector payoffs, " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956. \[[筆記](blackwells-approachability-theorem/)]\(一般賽局為實數值報酬函數，而此論文討論的是向量值報酬函數且值域非固定值可以隨機變數的性質。此類型報酬函數在多期的最小化遺憾問題中為核心問題，相當重要)。
 * Xavier Spinat, "A necessary and sufficient condition for approachability, " Mathematics of operations research, Vol. 27, No. 1, pp 31-44, 2002. (在雙人重覆賽局中，Blackwell定義了集合的可接近性與充分條件，而此論文討論了此集合的充分和必要條件。)
 * Ehud Lehrer, "Approachability in infinite dimensional spaces," International Journal of Game Theory,  Vol. 31, pp. 253-268,  2003.
 * Emanuel Milman, "Approachable sets of vector payoffs in stochastic games," Games and Economic Behavior,  Vol. 56, pp. 135-147, 2006.

@@ -329,6 +329,8 @@
 * [最小－最大定理](game-theory/minmax-theorem.md)
 * [Blackwell's Approachability Theorem](game-theory/blackwells-approachability-theorem/README.md)
   * [可接近集的充要條件](game-theory/blackwells-approachability-theorem/approachability-iff-condition.md)
+  * [無限維報酬的可接近集](game-theory/blackwells-approachability-theorem/wu-xian-wei-bao-chou-de-ke-jie-jin-ji.md)
+  * [隨機賽局中向量報酬的可接近集](game-theory/blackwells-approachability-theorem/approachable-sets-in-stochastic-games.md)
 * [納許均衡](game-theory/nash-equilibrium.md)
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)
 * [book:Prediction, Learning, and Games](game-theory/book-prediction-learning-and-games/README.md)

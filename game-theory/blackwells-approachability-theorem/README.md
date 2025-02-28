@@ -261,6 +261,7 @@ $$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P
 
 * $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略序列$$f^{*}$$與任意對手策略序列$$g \equiv g_{0:n}$$​所得到。
 * 即只要輪數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均回報向量與集合的距離機率收斂至0。
+* 在$$n \geq n_0$$後，雖然有些時候$$\delta_n \geq \epsilon$$，但發生機率小於$$\epsilon$$趨近於0。
 
 ### 可排除集合(excludable)
 
@@ -285,11 +286,11 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 ### 直觀引理
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(因為</mark>$$\delta_n$$<mark style="color:red;">距離可接近集合的長度必大於等於其超集合的長度)，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)。
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(</mark><mark style="background-color:red;">若</mark>$$S$$<mark style="background-color:red;">為可接近，且</mark>$$S \subseteq Q$$<mark style="background-color:red;">，則</mark>$$Q$$<mark style="background-color:red;">為可接近集。</mark><mark style="color:red;">因為當</mark>$$\delta_n = d(\overline{x}_n, S)=0$$，可得$$d(\overline{x}_n, Q)=0$$)<mark style="color:red;">，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)。
 
 由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
 
-若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合(why?)。idea: 將玩家與對手的角色對調時，報酬矩陣從$$M$$變為$$M^{\top}$$；此時若$$S$$為對手在報酬矩陣$$M^{\top}$$使用策略$$g^{*}$$相對於$$\forall f$$為可接近集合時，因為$$S$$的超集合仍為可接近集合，因此令$$T$$為與$$S$$不相交的閉集合；
+若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合(why?，參考定理4)。idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回報矩陣是$$-M$$而不是$$M^\top$$。因此$$M^{\top}$$應解釋為在決策時從對手的角度來看的回報；
 
 ### 可接近性的充份條件(sufficient condition)
 

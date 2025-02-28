@@ -18,26 +18,23 @@ description: >-
 
 ## 最小最大理論(Minmax theorem)
 
-> 給定<mark style="color:blue;">單期</mark>雙人零合賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，
+> 給定<mark style="color:blue;">單期</mark>雙人零和賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，記行動集$$\mathcal{A}_1=\{1,2,\dots, r\}$$，$$\mathcal{A}_2={1,2,\dots, s}$$。
 >
-> * 玩家1(玩家)的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \Delta(P), ~p_i \geq 0, ~ \sum_{i=1}^r p_i = 1$$。
-> * 玩家2(對手或環境)的混合策略為$$\displaystyle \mathbf{q}=(q_1, q_2, \dots, q_s) \in \Delta(Q), ~q_j \geq 0, ~ \sum_{j=1}^s q_j = 1$$。
-> * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取實際行動$$i,j$$時，玩家1的報酬\[支付，越高越好]\(payoff)(零和遊戲，所以玩家2的報酬為$$-m(i,j)$$)。
+> * 玩家1(玩家)的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \Delta(\mathcal{A}_1), \Delta(\mathcal{A}_1)=\left\{ \mathbf{p} \in \mathbb{R}_{+}^r~|~ \sum_{i=1}^r p_i = 1\right\}$$。
+> * 玩家2(對手或環境)的混合策略為$$\displaystyle \mathbf{q}=(p_1, p_2, \dots, p_r) \in \Delta(\mathcal{A}_2), \Delta(\mathcal{A}_2)=\left\{ \mathbf{q} \in \mathbb{R}_{+}^r~|~ \sum_{i=1}^s q_i = 1\right\}$$。
+> * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取實際行動$$i,j$$時，玩家1的回報\[越高越好]\(payoff)(零和遊戲，所以玩家2的回報為$$-m(i,j)$$)。
 >
 > 則存在$$\mathbf{p} \in \mathbb{R}_{+}^r, ~ \mathbf{q} \in \mathbb{R}_{+}^s, ~ v \in \mathbb{R}$$ 滿足$$\displaystyle \sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$。
 >
-> * 玩家1存在一混合策略可保證報酬大於等於$$v$$，不論對手使用任意策略。
-> * 玩家2也存在一混合策略可保證損失不會超過$$v$$，不論對手使用任意策略。
-> * 因此$$v$$稱為此賽局的報酬。
-> *   $$v$$ <mark style="background-color:red;">的意義： 表示玩家在面對對手的最優反應時，能保證的最小回報</mark>。&#x20;
->
->
+> * 玩家1存在一混合策略可保證回報大於等於$$v$$，不論對手使用任意策略。($$v$$表示玩家在面對對手的最優反應時，能保證的最小回報。)
+> * 玩家2也存在一混合策略可保證損失不會超過$$v$$，不論對手使用任意策略。($$v$$表示對手在面對玩家的最優反應時，能保證的最大損失。)
+> * 因此$$v$$稱為此<mark style="background-color:red;">賽局的回報</mark>。
 
-$$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), 當$$t \rightarrow \infty$$，玩家1的報酬會以機率1大於$$v-\epsilon$$，而玩家2的損失會以機率1小於$$v+\epsilon$$。
+$$\forall \epsilon > 0$$，在多期雙人零和賽局(報酬矩陣為$$M$$), 當$$t \rightarrow \infty$$，玩家的報酬會以機率1大於$$v-\epsilon$$，而對手的損失會以機率1小於$$v+\epsilon$$。
 
 ### 範例
 
-玩家1有三個行動$$R=(r_1, r_2, r_3)$$個別行動採用的機率為$$\mathbf{p}=(p_1, p_2, p_3)$$；玩家2有兩個行動$$S=(s_1, s_2)$$個別行動採用的機率為$$\mathbf{q}=(q_1, q_2)$$。
+玩家1有三個行動$$\mathcal{A}_1=(r_1, r_2, r_3)$$個別行動採用的機率為$$\mathbf{p}=(p_1, p_2, p_3)$$；玩家2有兩個行動$$\mathcal{A}_2=(s_1, s_2)$$個別行動採用的機率為$$\mathbf{q}=(q_1, q_2)$$。
 
 <mark style="color:red;">雙人零和賽局並不一定有</mark><mark style="color:red;">**鞍點（saddle point）**</mark><mark style="color:red;">，但一定有</mark><mark style="color:red;">**混合策略的均衡解**</mark><mark style="color:red;">，這是由</mark> <mark style="color:red;"></mark><mark style="color:red;">**Minimax 定理**</mark> <mark style="color:red;"></mark><mark style="color:red;">保證的</mark>。
 
@@ -45,17 +42,173 @@ $$\forall \epsilon > 0$$，在多期雙人零合賽局(報酬矩陣為$$M$$), �
 
 <table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=-1</span></td><td><span class="math">m(1,2)=9</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=-3</span></td><td><span class="math">m(2,2)=5</span></td><td>-3</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=-5</span></td><td><span class="math">m(3,2)=8</span></td><td>-5</td></tr><tr><td>max M</td><td>-1</td><td>9</td><td>minmax: -1</td></tr></tbody></table>
 
+玩家採取行動$$r_1$$時，不論對手採取任何行動，可得到的最小回報為-1。同樣採取行動$$r_2, r_3$$時，分別可得到最高回報為$$-3,-5$$。玩家希望在這些「最差情況」中選擇最好的策略。這就是 maximin 策略，因此會選行動$$r_1$$報酬$$\max(-1,-3,-5)=-1$$。
+
+對手採取行動$$s_1,s_2$$時，不論玩家採取任何行動，最大損失分別為$$-1, 9$$。因此對手希望在這些「最差情況」中選擇最好的策略，最大損失為$$\min(-1,9)=-1$$。
+
+<mark style="color:blue;">多期(重複)賽局時，玩家存在策略可保證平均報酬不會低於-1；同理而對手存在策略可保證平均損失不會大於-1</mark>。
+
+賽局價值為-1，可得對於玩家而且，集合$$S=\{x \geq t\}, ~ t \leq -1$$都是可接近集合，集合$$T=\{x \geq t\}, ~ t > -1$$都是可排除集合。
+
+使用線性規劃求解：
+
+$$\begin{aligned} \max \quad & v \\ \text{s.t.}  \\   & - p_1 -3 p_2 -5 p3 \geq v, \\   & 9 p_1 + 5 p_2 + 8 p_3 \geq v, \\   & p_1 + p_2 +p_3 = 1, \\   & p_1, p_2, p_3 \geq 0 \end{aligned}$$
+
+```python
+from ortools.linear_solver import pywraplp
+
+# 創建求解器
+solver = pywraplp.Solver.CreateSolver('GLOP')  
+# 使用 GLOP 求解器（Google 的線性規劃求解器）
+
+if not solver:
+    print("求解器不可用")
+    exit()
+
+# 定義變數
+p1 = solver.NumVar(0, 1, 'p1')  # p1 >= 0
+p2 = solver.NumVar(0, 1, 'p2')  # p2 >= 0
+p3 = solver.NumVar(0, 1, 'p3')  # p3 >= 0
+v = solver.NumVar(-solver.infinity(), solver.infinity(), 'v')  
+# v 是自由變數
+
+# 添加約束條件
+solver.Add(-1 * p1 - 3 * p2 - 5 * p3 >= v)  # 第一個約束
+solver.Add(9 * p1 + 5 * p2 + 8 * p3 >= v)   # 第二個約束
+solver.Add(p1 + p2 + p3 == 1)               # 概率總和為 1
+
+# 設定目標函數：最大化 v
+solver.Maximize(v)
+
+# 求解
+status = solver.Solve()
+
+# 輸出結果
+if status == pywraplp.Solver.OPTIMAL:
+    print("找到最佳解:")
+    print(f"p1 = {p1.solution_value():.6f}")
+    print(f"p2 = {p2.solution_value():.6f}")
+    print(f"p3 = {p3.solution_value():.6f}")
+    print(f"v (博弈值) = {v.solution_value():.6f}")
+else:
+    print("未找到最佳解")
+    
+/*
+找到最佳解:
+p1 = 1.000000
+p2 = 0.000000
+p3 = 0.000000
+v (博弈值) = -1.000000
+*/
+```
+
 ### 無鞍點範例(改為混合策略即可)
 
 <table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=3</span></td><td><span class="math">m(1,2)=-1</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=2</span></td><td><span class="math">m(2,2)=1</span></td><td>1</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=0</span></td><td><span class="math">m(3,2)=4</span></td><td>0</td></tr><tr><td>max M</td><td>3</td><td>4</td><td></td></tr></tbody></table>
 
-玩家1採取行動$$r_1$$時，不論對手採取任何行動，可得到的最少報酬為-1。同樣採取行動$$r_2, r_3$$時，分別可得到最高報酬為$$-3,-5$$。玩家希望在這些「最差情況」中選擇最好的策略。這就是 maximin 策略，因此會選行動$$r_1$$報酬$$\max(-1,-3,-5)=-1$$。
+玩家最佳解：$$\mathbf{p}=(0, 0.8, 0.2)$$，對手最佳解：$$\mathbf{q}=(0.6, 0.4)$$。
 
-玩家2採取行動$$s_1,s_2$$時，不論對手採取任何行動，最大損失分別為$$-1, 9$$。因此對手希望在這些「最差情況」中選擇最好的策略，最多損失為$$\min(-1,9)=-1$$。
+使用線性規劃求解：
 
-<mark style="color:blue;">多期(重複)賽局時，玩家1存在策略可保證平均報酬不會低於-1；同理而玩家2存在策略可保證平均損失不會大於-1</mark>。
+| 玩家                                                                                                                                                                                         | 對手                                                                                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $$\begin{aligned} \max \quad & v \\ \text{s.t.}  \\ & \sum_{i=1}^r p_i m(i,j) \geq v,~\forall j \\ & \sum_{i=1}^r p_i = 1, \\ & p_i \geq 0, ~ \forall i \end{aligned}$$                    | $$\begin{aligned} \min \quad & v \\ \text{s.t.}  \\ & \sum_{j=1}^s q_i m(i,j) \leq v,~\forall i \\ & \sum_{j=1}^s q_j = 1, \\ & q_j \geq 0, ~ \forall j \end{aligned}$$                           |
+| $$\begin{aligned} \max \quad & v \\ \text{s.t.}  \\  & 3 p_1 + 2 p_2 + 0 p3 \geq v, \\  & -p1 + 1 p_2 + 4 p_3 \geq v, \\  & p_1 + p_2 +p_3 = 1, \\  & p_1, p_2, p_3 \geq 0 \end{aligned}$$ | $$\begin{aligned} \min \quad & v \\  \text{s.t.}  \\   & 3 q_1 - q_2  \leq v, \\   & 2 q_1 + q_2 \leq v \\   & 0 q_1 + 4 q_2 \leq v \\   & q_1 + q_2 = 1, \\   & q_1, q_2 \geq 0  \end{aligned}$$ |
 
-賽局價值為-1，可得對於玩家1而且，集合$$S=\{x \geq t\}, ~ t \leq -1$$都是可接近集合，集合$$T=\{x \geq t\}, ~ t > -1$$都是可排除集合。
+```python
+# 玩家
+from ortools.linear_solver import pywraplp
+
+# 創建求解器
+solver = pywraplp.Solver.CreateSolver('GLOP')  
+# 使用 GLOP 求解器（Google 的線性規劃求解器）
+
+if not solver:
+    print("求解器不可用")
+    exit()
+
+# 定義變數
+p1 = solver.NumVar(0, 1, 'p1')  # p1 >= 0
+p2 = solver.NumVar(0, 1, 'p2')  # p2 >= 0
+p3 = solver.NumVar(0, 1, 'p3')  # p3 >= 0
+v = solver.NumVar(-solver.infinity(), solver.infinity(), 'v')  
+# v 是自由變數
+
+# 添加約束條件
+solver.Add(3 * p1 + 2 * p2 + 0 * p3 >= v)  # 第一個約束
+solver.Add(-1 * p1 + 1 * p2 + 4 * p3 >= v)  # 第二個約束
+solver.Add(p1 + p2 + p3 == 1)  # 機率總和為 1
+
+# 設定目標函數：最大化 v
+solver.Maximize(v)
+
+# 求解
+status = solver.Solve()
+
+# 輸出結果
+if status == pywraplp.Solver.OPTIMAL:
+    print("找到最佳解:")
+    print(f"p1 = {p1.solution_value():.6f}")
+    print(f"p2 = {p2.solution_value():.6f}")
+    print(f"p3 = {p3.solution_value():.6f}")
+    print(f"v (博弈值) = {v.solution_value():.6f}")
+else:
+    print("未找到最佳解")
+    
+/*    
+找到最佳解:
+p1 = 0.000000
+p2 = 0.800000
+p3 = 0.200000
+v (博弈值) = 1.600000
+*/
+```
+
+```python
+# 對手
+from ortools.linear_solver import pywraplp
+
+# 創建求解器
+solver = pywraplp.Solver.CreateSolver('GLOP')  
+# 使用 GLOP 求解器（Google 的線性規劃求解器）
+
+if not solver:
+    print("求解器不可用")
+    exit()
+
+# 定義變數
+q1 = solver.NumVar(0, 1, 'q1')  # q1 >= 0
+q2 = solver.NumVar(0, 1, 'q2')  # q2 >= 0
+v = solver.NumVar(-solver.infinity(), solver.infinity(), 'v')  
+# v 是自由變數
+
+# 添加約束條件
+solver.Add(3 * q1 - q2 <= v)  # 第一個約束
+solver.Add(2 * q1 + q2 <= v)  # 第二個約束
+solver.Add(0 * q1 + 4 * q2 <= v)  # 第三個約束
+solver.Add(q1 + q2 == 1)  # 機率總和為 1
+
+# 設定目標函數：最小化 v
+solver.Minimize(v)
+
+# 求解
+status = solver.Solve()
+
+# 輸出結果
+if status == pywraplp.Solver.OPTIMAL:
+    print("找到最佳解:")
+    print(f"q1 = {q1.solution_value():.6f}")
+    print(f"q2 = {q2.solution_value():.6f}")
+    print(f"v (博弈值) = {v.solution_value():.6f}")
+else:
+    print("未找到最佳解")
+/*
+找到最佳解:
+q1 = 0.600000
+q2 = 0.400000
+v (博弈值) = 1.600000
+*/
+```
 
 ## 向量報酬的賽局(Blackwell, 1956)
 

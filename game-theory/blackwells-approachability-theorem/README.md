@@ -10,11 +10,11 @@ description: >-
 
 對抗性預測的歷史始於數學家David Blackwell和James Hannan的開創性工作。接近性理論起源於Blackwell的工作，並與Hannan的工作同時被發現。 幾十年來，人們對一般凸賽局中的遺憾最小化和Blackwell可接近性之間的關係並不完全瞭解。事實上Blackwell可接近性是一個更強的概念。<mark style="color:red;">我們表明可接近性和線上凸最佳化在強烈的意義上是等價的：兩者的演算法是等價的，而且沒有計算效率的損失</mark>。
 
-賽局的報酬函數採取向量的形式，其元素代表不同的目標值，如報酬、風險等。具有不相同標準的賽局被稱為多標準賽局或具有向量報酬函數的賽局。單一目標最佳化問題的最優解，即最大解或最小解，是在實數上，因此很容易找出來。這一重要特徵對於確定向量最佳化問題的最優解是無效的，主要是因為向量空間中的次序一般是部分次序(partial order)而不是全序(total order)。因此Von-Neumann的最大最小化定理不能直接適用於向量報酬賽局。
+賽局的回報函數採取向量的形式，其元素代表不同的目標值，如報酬、風險等。具有不相同標準的賽局被稱為多標準賽局或具有向量回報函數的賽局。單一目標最佳化問題的最優解，即最大解或最小解，是在實數上，因此很容易找出來。這一重要特徵對於確定向量最佳化問題的最優解是無效的，主要是因為向量空間中的次序一般是部分次序(partial order)而不是全序(total order)。因此Von-Neumann的最大最小化定理不能直接適用於向量回報賽局。
 
-<mark style="background-color:red;">Blackwell首次研究了具有向量報酬函數的零和賽局，他提供了雙人零和重覆賽局的可接近性定理</mark>。Shapley和Rigby介紹了向量賽局的均衡點的概念，他們提到賽局的報酬函數大多是向量值函數的形式。
+<mark style="background-color:red;">Blackwell首次研究了具有向量回報函數的零和賽局，他提供了雙人零和重覆賽局的可接近性定理</mark>。Shapley和Rigby介紹了向量賽局的均衡點的概念，他們提到賽局的報酬函數大多是向量值函數的形式。
 
-<mark style="color:red;">內部或外部遺憾最小化問題的一個共同特點是，它們可以被寫成某些向量報酬賽局中精心選擇的目標集的可接近性的一個具體案例</mark>。
+<mark style="color:red;">內部或外部遺憾最小化問題的一個共同特點是，它們可以被寫成某些向量回報賽局中精心選擇的目標集的可接近性的一個具體案例</mark>。
 
 ## 最小最大理論(Minmax theorem)
 
@@ -24,10 +24,10 @@ description: >-
 > * 玩家2(對手或環境)的混合策略為$$\displaystyle \mathbf{q}=(p_1, p_2, \dots, p_r) \in \Delta(\mathcal{A}_2), \Delta(\mathcal{A}_2)=\left\{ \mathbf{q} \in \mathbb{R}_{+}^r~|~ \sum_{i=1}^s q_i = 1\right\}$$。
 > * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取實際行動$$i,j$$時，玩家1的回報\[越高越好]\(payoff)(零和遊戲，所以玩家2的回報為$$-m(i,j)$$)。
 >
-> 則存在$$\mathbf{p} \in \mathbb{R}_{+}^r, ~ \mathbf{q} \in \mathbb{R}_{+}^s, ~ v \in \mathbb{R}$$ 滿足$$\displaystyle \sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$。
+> 則存在$$\mathbf{p} \in \Delta(\mathcal{A}_1), ~ \mathbf{q} \in \Delta(\mathcal{A}_2), ~ v \in \mathbb{R}$$ 滿足$$\displaystyle \sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$。
 >
-> * 玩家1存在一混合策略可保證回報大於等於$$v$$，不論對手使用任意策略。($$v$$表示玩家在面對對手的最優反應時，能保證的最小回報。)
-> * 玩家2也存在一混合策略可保證損失不會超過$$v$$，不論對手使用任意策略。($$v$$表示對手在面對玩家的最優反應時，能保證的最大損失。)
+> * 玩家1存在混合策略$$\mathbf{p}$$可保證回報大於等於$$v$$，不論對手使用任意策略。($$v$$表示玩家在面對對手的最優反應時，能保證的最小回報。所以玩家目標是最大化最小回報。)
+> * 玩家2也存在混合策略$$\mathbf{q}$$可保證損失不會超過$$v$$，不論對手使用任意策略。($$v$$表示對手在面對玩家的最優反應時，能保證的最大損失。所以對手目標是最小化最大損失。)
 > * 因此$$v$$稱為此<mark style="background-color:red;">賽局的回報</mark>。
 
 $$\forall \epsilon > 0$$，在多期雙人零和賽局(報酬矩陣為$$M$$), 當$$t \rightarrow \infty$$，玩家的報酬會以機率1大於$$v-\epsilon$$，而對手的損失會以機率1小於$$v+\epsilon$$。
@@ -224,19 +224,19 @@ v (博弈值) = 1.600000
 
 ## 向量報酬的賽局(Blackwell, 1956)
 
-<mark style="color:blue;">單一的混合策略不能確保向量回報</mark>$$m(i,j) \in \mathbb{R}^N$$<mark style="color:blue;">位於某個給定的集合中。然而，如果我們允許無限期的賽局時，並詢問是否存在一種策略來確保平均報酬向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
+<mark style="color:blue;">單期的混合策略不能確保向量回報</mark>$$m(i,j) \in \mathbb{R}^N$$<mark style="color:blue;">位於某個給定的集合中。然而，如果我們允許無限期的賽局時，並詢問是否存在一種策略來確保平均回報向量位於某個集合中，或者至少在歐氏距離上接近它。這正是Blackwell提出的解決方案概念</mark>。
 
-在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的回報$$v$$。<mark style="color:red;">而在向量回報中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$(分一般集合與凸集合兩種情形討論，因為回報點位於集合的邊界時距離為0，因此只考慮閉集合即可)。
+在實數回報中的雙人零和賽局，玩家與對手可依最小最大定理逼近賽局的回報$$v$$。<mark style="color:red;">而在向量回報中，問題變成玩家與對手是否可逼近一個特定集合</mark>$$S$$(分一般集合與凸集合兩種情形討論。因為平均回報位於集合的邊界時距離為0，因此只考慮閉集合即可)。
 
 ### 向量回報矩陣
 
-現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量回報的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \mathcal{A}_1 \equiv \{1,2,\dots, r\}, ~ j \in \mathcal{A}_2 \equiv \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是(離散或連續)機率分佈，其定義域為一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$，值域為實數區間$$[0,1]$$<mark style="color:blue;">，因此當玩家與對手在時間</mark>$$t$$<mark style="color:blue;">採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是由分佈</mark>$$m(i,j)$$<mark style="color:blue;">所決定的隨機向量</mark>$$x_t \in \mathbb{R}^N$$。所有的行動對$$(i,j)$$得到的回報都是在$$X$$中的某一點，只是相異行動對的機率分佈$$m(i,j)$$不相同)。
+現在考慮雙人向量(不一定為零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量回報的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \mathcal{A}_1 \equiv \{1,2,\dots, r\}, ~ j \in \mathcal{A}_2 \equiv \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是(離散或連續)機率分佈，其定義域為一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$，值域為實數區間$$[0,1]$$<mark style="color:blue;">，因此當玩家與對手在時間</mark>$$t$$<mark style="color:blue;">採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是由分佈</mark>$$m(i,j)$$<mark style="color:blue;">所決定的隨機向量</mark>$$x_t \in \mathbb{R}^N$$。所有的行動對$$(i,j)$$得到的回報都是在$$X$$中的某一點，只是相異行動對的機率分佈$$m(i,j)$$不相同)。
 
-如果考慮每一個機率分佈$$m(i,j)$$的期望值$$\overline{m}(i,j)$$或簡寫為$$m(i,j)$$時，則報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。<mark style="color:blue;">注意此</mark>$$r\times s$$<mark style="color:blue;">個點並非均為凸包</mark>$$X$$<mark style="color:blue;">的端點，有些點是位於集合內部非端點</mark>。
+論文中考慮的是每一個機率分佈$$m(i,j)$$的期望值$$\overline{m}(i,j)$$，表示多次決策後，行動對$$(i,j)$$的回報會趨近於$$\overline{m}(i,j)$$，則回報矩陣$$\overline{M}$$含$$r\times s$$個向量點。
 
 ### 混合策略序列
 
-玩家使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \Delta(\mathcal{A_1}), ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
+玩家使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \Delta(\mathcal{A_1}), ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的回報(根據$$m(i,j)$$機率分佈選擇行動的實現值)(history)。
 
 * 註：此處在第$$n$$期決策時，參考的是過去的所有資料(包含當期)，而不是Markov性質只參考前一期的資料。
 * 混合策略是機率分佈，在實際決定行動時時，是依機率隨機取一行動，經過一段時間後所採取的行動經驗分佈會接近於混合策略的機率分佈。
@@ -249,34 +249,35 @@ v (博弈值) = 1.600000
 * 之後玩家與對手分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依回報機率分佈$$m(i_1, j_1)$$得到回報實現值$$x_2$$。
 * 之後玩家與對手分別依混合策略$$f_2(x_1,x_2), g_2(x_1,x_2)$$採取行動$$i_2, j_2$$，依回報機率分佈$$m(i_2, j_2)$$得到回報實現值$$x_3$$，以此類推。
 
-<mark style="background-color:red;">因此玩家與對手的混合策略</mark>$$(f,g)$$<mark style="background-color:red;">對序列以及回報的機率分佈矩陣</mark>$$M$$<mark style="background-color:red;">​可決定向量報酬隨機變數</mark>$$x_1, x_2, \dots$$。
+<mark style="background-color:red;">因此玩家與對手的混合策略</mark>$$(f,g)$$<mark style="background-color:red;">對序列以及回報的機率分佈矩陣</mark>$$M$$<mark style="background-color:red;">​可決定向量回報隨機變數序列</mark>$$x_1, x_2, \dots$$。
 
-令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量回報$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義(因為$$X$$中任意向量的均值必定還是在$$X$$中，所以討論$$X^c$$集合沒有意義)。
+令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n = d(\overline{x}_n, S)$$是平均向量回報$$\overline{x}_n = \sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義(因為$$X$$中任意向量的均值必定還是在$$X$$中，所以討論$$X^c$$集合沒有意義)。
 
 ### 可接近集合(approachable)
 
-定義$$S$$​為使用在報酬矩陣$$M$$中玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
+定義$$S$$​為使用在回報矩陣$$M$$中以玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
 
 $$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
 
-* $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略序列$$f^{*}$$與任意對手策略序列$$g \equiv g_{0:n}$$​所得到。
-* 即只要輪數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均回報向量與集合的距離機率收斂至0。
+* $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略$$f^{*}$$與任意對手策略$$g \equiv g_{0:n}$$​所得到。
+* 即只要輪數$$n$$夠多，不論對手使用任意策略$$g$$​，平均回報向量與集合的距離機率收斂至0。
 * 在$$n \geq n_0$$後，雖然有些時候$$\delta_n \geq \epsilon$$，但發生機率小於$$\epsilon$$趨近於0。
 
 ### 可排除集合(excludable)
 
-稱$$S$$​為使用在報酬矩陣$$M$$​中對手特定策略序列$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
+稱$$S$$​為使用在回報矩陣$$M$$​中以對手特定策略$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
 
 $$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\mathrm{P}(\delta_n \geq d ~ \forall n \geq n_0) > 1- \epsilon$$
 
-* $$x_1, x_2,\dots, x_n$$​是玩家任意策略序列$$f_{0:n}$$​與對手特定策略$$g^{*}\equiv g^{*}_{0:n}$$所得到。
+* $$x_1, x_2,\dots, x_n$$​是玩家任意策略$$f_{0:n}$$​與對手特定策略$$g^{*}\equiv g^{*}_{0:n}$$所得到。
 * 只要輪數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均回報至集合的距離無法機率收斂。
+* 在$$n \geq n_0$$後，偶爾會出現$$\delta_n <d$$，但幾乎都是$$\delta_n \geq d$$。
 
 ### 實數賽局的可接近/可排除集合
 
 Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in \Delta(\mathcal{A}_1),~ q \in \Delta(\mathcal{A}_2)$$，則
 
-* 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​.&#x20;
+* 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​ (固定混合策略$$p$$)。
 * 當$$t > v$$且$$g: g_n \equiv q$$​時，$$S$$​為可排除集合。
 * $$v$$ 的意義： 表示玩家在面對對手的最優反應時，能保證的最小回報。&#x20;
 * $$v^{'}$$ 的意義： 表示對手在面對玩家的最優反應時，能迫使回報(損失)不超過的最
@@ -286,19 +287,23 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 ### 直觀引理
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(</mark><mark style="background-color:red;">若</mark>$$S$$<mark style="background-color:red;">為可接近，且</mark>$$S \subseteq Q$$<mark style="background-color:red;">，則</mark>$$Q$$<mark style="background-color:red;">為可接近集。</mark><mark style="color:red;">因為當</mark>$$\delta_n = d(\overline{x}_n, S)=0$$，可得$$d(\overline{x}_n, Q)=0$$)<mark style="color:red;">，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)。
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(</mark><mark style="background-color:red;">若</mark>$$S$$<mark style="background-color:red;">為可接近，且</mark>$$S \subseteq Q$$<mark style="background-color:red;">，則</mark>$$Q$$<mark style="background-color:red;">為可接近集。</mark><mark style="color:red;">因為當</mark>$$\delta_n = d(\overline{x}_n, S)=0$$，可得$$d(\overline{x}_n, Q)=0$$)<mark style="color:red;">，且可排除集合的子集合仍為可排除集合(若</mark>$$S$$為可排除集合，且$$T \subseteq S$$，則$$T$$為可排除集合。因為$$\delta_n = d(\overline{x}_n, S) > d)$$，可得$$d(\overline{x}_, T)>d$$<mark style="color:red;">)</mark>。
 
-由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
+不存在同時為可接近且為可排除的集合(因為$$\delta_n$$只能等於0或大於0)。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)。
 
-若閉集合$$S$$​是報酬矩陣$$M^\top$$的可接近集合，則任何閉集合$$T$$​且與$$S$$​之交集為空時，在報酬矩陣$$M$$​中為可排除集合(why?，參考定理4)。idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回報矩陣是$$-M$$而不是$$M^\top$$。因此$$M^{\top}$$應解釋為在決策時從對手的角度來看的回報；
+由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合(因為$$d(\overline{x}_n, S)=d(\overline{x}_n, \overline{S})$$)，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
+
+若閉集合$$S$$​是回報矩陣$$M^\top$$的可接近集合(表示對手存在策略$$q^{*}$$，不論玩家使用任意策略$$f$$均可使回報接近$$S$$)，則任何閉集合$$T$$​且與$$S$$​之交集為空時(假設$$T$$為在對手使用策略$$q_0$$時，玩家使用任意策略形成的回報閉包，且$$T \cap S=\emptyset$$，此時只要對手一直使用$$q_0$$，則玩家永遠無法把平均回報往$$S$$前進，因此$$S$$對玩家是可排除集)，在報酬矩陣$$M$$​中為可排除集合，並且可以使用使$$S$$ 在$$M^\top$$ 中可接近的任意策略來實現這一點。
+
+idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回報矩陣是$$-M$$而不是$$M^\top$$。因此$$M^{\top}$$應解釋為在決策時從對手的角度來看的玩家回報；
 
 ### 可接近性的充份條件(sufficient condition)
 
 #### 主要性質
 
-$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過y且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$(由三角不等式得出)。此為可接近性的充分條件。
+$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過$$y$$且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$(由三角不等式得出)。此為<mark style="color:red;">可接近集的充分條件</mark>。
 
-註：$$x$$為平均報酬，$$H$$為目標集合上任意點的切平面，如果玩家選定行為的下一期報酬$$z$$滿足上述性質，則可保證新的平均報酬往$$H$$方向前進。
+註：$$x$$為平均回報，$$H$$為目標集合上任意點的切平面，如果玩家選定行為的下一期回報$$z$$滿足上述性質，則可保證新的平均回報往可接近集前進。
 
 {% tabs %}
 {% tab title="plot" %}
@@ -371,17 +376,17 @@ plt.show()
 
 ## 可接近性集合定理(存在性與充分條件)
 
-> 定義矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第$$i,j$$個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
+> 定義平均回報矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第$$i,j$$個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
 >
-> 對於$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，定義$$\mathcal{R}(p)$$為$$s$$個點$$\sum_{i} p_{i=1}^r p_i \overline{m}(i,j), ~j=1,2,\dots,s$$形成的凸包(convex hull)，則可接近集合的充分條件如下：
+> 對於$$\Delta(\mathcal{A}_1)$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，定義$$\mathcal{R}(p)$$為$$s$$個點$$\sum_{i} p_{i=1}^r p_i \overline{m}(i,j), ~j=1,2,\dots,s$$形成的玩家回報凸包(convex hull)，則可接近集合的充分條件如下：
 >
-> 令$$S$$為任意閉集合，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \mathbf{P}$$滿足$$y = \argmin d(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩閱，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
+> 令$$S$$為任意閉集合(不必為凸集合)，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \Delta(\mathcal{A}_1)$$滿足$$\displaystyle y = \argmin_{x \in \mathbb{R}^N} d(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩側，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
 >
 > $$f_n = \begin{cases} p(\overline{x}_n),& \text{ if } n > 0 \text { and } \overline{x}_n =(\frac{1}{n} \sum_{i=1}^n x_i) \notin S, \\ \text{ arbitrary,} & \text{ if } n = 0 \text{ or } \overline{x}_n \in S.  \end{cases}$$
 
 <mark style="color:red;">註：因為只有假設</mark>$$S$$<mark style="color:red;">為閉集合，因此</mark>$$S$$<mark style="color:red;">中距離</mark>$$x$$<mark style="color:red;">最近的點</mark>$$y$$<mark style="color:red;">不唯一</mark>。
 
-想像你在玩一個遊戲，每次你離目標的距離（ $$\delta_n$$ ​ ）都有機會變小一點點（因為期望值減小），而且你不能跳太遠（變化有限）。雖然有時可能因為隨機性稍微偏離，但整體趨勢是越來越靠近目標。證明就像在說：只要你玩夠多次，距離幾乎一定會變得很小，偏離的機會微乎其微。
+在決策時，每次你離目標的距離（ $$\delta_n$$ ​ ）都有機會變小一點點（因為期望值減小），而且你不能跳太遠（變化有限）。雖然有時可能因為隨機性稍微偏離，但整體趨勢是越來越靠近目標。證明就像在說：只要你玩夠多次，距離幾乎一定會變得很小，偏離的機會微乎其微。
 
 <details>
 

@@ -54,6 +54,10 @@ $$\forall \epsilon > 0$$，在多期雙人零和賽局(報酬矩陣為$$M$$), �
 
 $$\begin{aligned} \max \quad & v \\ \text{s.t.}  \\   & - p_1 -3 p_2 -5 p3 \geq v, \\   & 9 p_1 + 5 p_2 + 8 p_3 \geq v, \\   & p_1 + p_2 +p_3 = 1, \\   & p_1, p_2, p_3 \geq 0 \end{aligned}$$
 
+<details>
+
+<summary>python</summary>
+
 ```python
 from ortools.linear_solver import pywraplp
 
@@ -102,6 +106,8 @@ v (博弈值) = -1.000000
 */
 ```
 
+</details>
+
 ### 無鞍點範例(改為混合策略即可)
 
 <table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=3</span></td><td><span class="math">m(1,2)=-1</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=2</span></td><td><span class="math">m(2,2)=1</span></td><td>1</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=0</span></td><td><span class="math">m(3,2)=4</span></td><td>0</td></tr><tr><td>max M</td><td>3</td><td>4</td><td></td></tr></tbody></table>
@@ -114,6 +120,10 @@ v (博弈值) = -1.000000
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | $$\begin{aligned} \max \quad & v \\ \text{s.t.}  \\ & \sum_{i=1}^r p_i m(i,j) \geq v,~\forall j \\ & \sum_{i=1}^r p_i = 1, \\ & p_i \geq 0, ~ \forall i \end{aligned}$$                    | $$\begin{aligned} \min \quad & v \\ \text{s.t.}  \\ & \sum_{j=1}^s q_i m(i,j) \leq v,~\forall i \\ & \sum_{j=1}^s q_j = 1, \\ & q_j \geq 0, ~ \forall j \end{aligned}$$                           |
 | $$\begin{aligned} \max \quad & v \\ \text{s.t.}  \\  & 3 p_1 + 2 p_2 + 0 p3 \geq v, \\  & -p1 + 1 p_2 + 4 p_3 \geq v, \\  & p_1 + p_2 +p_3 = 1, \\  & p_1, p_2, p_3 \geq 0 \end{aligned}$$ | $$\begin{aligned} \min \quad & v \\  \text{s.t.}  \\   & 3 q_1 - q_2  \leq v, \\   & 2 q_1 + q_2 \leq v \\   & 0 q_1 + 4 q_2 \leq v \\   & q_1 + q_2 = 1, \\   & q_1, q_2 \geq 0  \end{aligned}$$ |
+
+<details>
+
+<summary>python</summary>
 
 ```python
 # 玩家
@@ -209,6 +219,8 @@ q2 = 0.400000
 v (博弈值) = 1.600000
 */
 ```
+
+</details>
 
 ## 向量報酬的賽局(Blackwell, 1956)
 

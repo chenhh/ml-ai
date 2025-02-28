@@ -216,49 +216,64 @@ v (博弈值) = 1.600000
 
 在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的回報$$v$$。<mark style="color:red;">而在向量回報中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$(分一般集合與凸集合兩種情形討論，因為回報點位於集合的邊界時距離為0，因此只考慮閉集合即可)。
 
+### 向量回報矩陣
+
 現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量回報的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \mathcal{A}_1 \equiv \{1,2,\dots, r\}, ~ j \in \mathcal{A}_2 \equiv \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是(離散或連續)機率分佈，其定義域為一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$，值域為實數區間$$[0,1]$$<mark style="color:blue;">，因此當玩家與對手在時間</mark>$$t$$<mark style="color:blue;">採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是由分佈</mark>$$m(i,j)$$<mark style="color:blue;">所決定的隨機向量</mark>$$x_t \in \mathbb{R}^N$$。所有的行動對$$(i,j)$$得到的回報都是在$$X$$中的某一點，只是相異行動對的機率分佈$$m(i,j)$$不相同)。
 
 如果考慮每一個機率分佈$$m(i,j)$$的期望值$$\overline{m}(i,j)$$或簡寫為$$m(i,j)$$時，則報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。<mark style="color:blue;">注意此</mark>$$r\times s$$<mark style="color:blue;">個點並非均為凸包</mark>$$X$$<mark style="color:blue;">的端點，有些點是位於集合內部非端點</mark>。
 
+### 混合策略序列
+
 玩家使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \Delta(\mathcal{A_1}), ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
 
 * 註：此處在第$$n$$期決策時，參考的是過去的所有資料(包含當期)，而不是Markov性質只參考前一期的資料。
-* 混合策略是機率分佈，在實際賽局時，是依機率隨機取一行動，經過一段時間後所採取的行動經驗分佈會接近於混合策略的機率分佈。
+* 混合策略是機率分佈，在實際決定行動時時，是依機率隨機取一行動，經過一段時間後所採取的行動經驗分佈會接近於混合策略的機率分佈。
 
 而$$f_0$$因為沒有參考資料，所以為$$\Delta(\mathcal{A}_1)$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r) \in \mathbb{R}_{+}^r, ~\sum_{i=1}^r p_i=1$$，玩家的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
 
 同理對手的的混合策略序列為$$g_{0:n} \equiv \{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
 
-* 在初始$$n=0$$時，玩家與對手分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依機率分佈$$m(i_0,j_0)$$得到報酬實現值$$x_1$$。
-* 之後玩家1,2分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依報酬機率分佈$$m(i_1, j_1)$$得到報酬實現值$$x_2$$。
-* 之後玩家1,2分別依混合策略$$f_2(x_1,x_2), g_2(x_1,x_2)$$採取行動$$i_2, j_2$$，依報酬機率分佈$$m(i_2, j_2)$$得到報酬實現值$$x_3$$，以此類推。
+* 在初始$$n=0$$時，玩家與對手分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依回報機率分佈$$m(i_0,j_0)$$得到回報實現值$$x_1$$。
+* 之後玩家與對手分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依回報機率分佈$$m(i_1, j_1)$$得到回報實現值$$x_2$$。
+* 之後玩家與對手分別依混合策略$$f_2(x_1,x_2), g_2(x_1,x_2)$$採取行動$$i_2, j_2$$，依回報機率分佈$$m(i_2, j_2)$$得到回報實現值$$x_3$$，以此類推。
 
-<mark style="background-color:red;">因此玩家1、2的混合策略</mark>$$(f,g)$$<mark style="background-color:red;">對序列以及報酬的機率分佈矩陣</mark>$$M$$<mark style="background-color:red;">​可決定向量報酬隨機變數</mark>$$x_1, x_2, \dots$$。
+<mark style="background-color:red;">因此玩家與對手的混合策略</mark>$$(f,g)$$<mark style="background-color:red;">對序列以及回報的機率分佈矩陣</mark>$$M$$<mark style="background-color:red;">​可決定向量報酬隨機變數</mark>$$x_1, x_2, \dots$$。
 
-令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量報酬$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義(因為$$X$$中任意向量的均值必定還是在$$X$$中，所以討論$$X^c$$集合沒有意義)。
+令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n$$是平均向量回報$$\sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義(因為$$X$$中任意向量的均值必定還是在$$X$$中，所以討論$$X^c$$集合沒有意義)。
+
+### 可接近集合(approachable)
 
 定義$$S$$​為使用在報酬矩陣$$M$$中玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
 
 $$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
 
 * $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略序列$$f^{*}$$與任意對手策略序列$$g \equiv g_{0:n}$$​所得到。
-* 即只要賽局回合數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均報酬向量與集合的距離機率收斂至0。
+* 即只要輪數$$n$$夠多，不論對手使用任意策略序列$$g$$​，平均回報向量與集合的距離機率收斂至0。
+
+### 可排除集合(excludable)
 
 稱$$S$$​為使用在報酬矩陣$$M$$​中對手特定策略序列$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
 
 $$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\mathrm{P}(\delta_n \geq d ~ \forall n \geq n_0) > 1- \epsilon$$
 
 * $$x_1, x_2,\dots, x_n$$​是玩家任意策略序列$$f_{0:n}$$​與對手特定策略$$g^{*}\equiv g^{*}_{0:n}$$所得到。
-* 只要賽局回合數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均報酬至集合的距離無法機率收斂。
+* 只要輪數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均回報至集合的距離無法機率收斂。
 
-Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in P,~ q \in Q$$，則
+### 實數賽局的可接近/可排除集合
+
+Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{R}$$​，玩家與對手的混合策略$$p \in \Delta(\mathcal{A}_1),~ q \in \Delta(\mathcal{A}_2)$$，則
 
 * 集合$$S=\{ x \geq t \}$$為可接近集合 $$\forall t \leq v$$且$$f:f_n\equiv p$$​.&#x20;
 * 當$$t > v$$且$$g: g_n \equiv q$$​時，$$S$$​為可排除集合。
+* $$v$$ 的意義： 表示玩家在面對對手的最優反應時，能保證的最小回報。&#x20;
+* $$v^{'}$$ 的意義： 表示對手在面對玩家的最優反應時，能迫使回報(損失)不超過的最
+* 值。
+* 可逼近：表示玩家可以通過選擇適當的策略，使遊戲的平均回報無限接近集合$$𝑆$$中的點。
+* 可排除： 表示對手可以通過策略，使平均回報保持遠離集合$$𝑆$$。
 
-### 引理
+### 直觀引理
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(因為</mark>$$\delta_n$$<mark style="color:red;">距離可接近集合的長度必大於等於其超集合的長度)，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割。
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(因為</mark>$$\delta_n$$<mark style="color:red;">距離可接近集合的長度必大於等於其超集合的長度)，且可排除集合的子集合仍為可排除集合</mark>。不存在同時為可接近且為可排除的集合。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)。
 
 由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
 
@@ -607,11 +622,11 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 
 ### theorem 4: 一維空間中閉集可逼近或排除的條件
 
-> 在 $$N=1$$ 的情況下($$S$$是實數軸上的一個閉集)，令$$v$$和$$v^{′}$$ 分別表示矩陣$$M$$及其轉置$$M^\top$$ 對應的遊戲的值，即$$\displaystyle v=\max_{p \in \Delta(P)} \min_{q \in \Delta(Q)} \sum_{i=1}^r \sum_{j=1}^s p_i q_j \overline{m}(i,j)$$，$$\displaystyle v^{'}=\max_{q \in \Delta(Q)} \min_{p \in \Delta(P)}\sum_{j=1}^s \sum_{i=1}^r p_i q_j \overline{m}(i,j)$$。
+> 在 $$N=1$$ 的情況下($$S$$是實數軸上的一個閉集)，令$$v$$和$$v^{′}$$ 分別表示矩陣$$M$$及其轉置$$M^\top$$ 對應的遊戲的值，即$$\displaystyle v=\max_{p \in \Delta(\mathcal{A}_1} \min_{q \in \Delta(\mathcal{A}_2)} \sum_{i=1}^r \sum_{j=1}^s p_i q_j \overline{m}(i,j) = \max_{p \in \Delta(\mathcal{A}_1} \min_{q \in \Delta(\mathcal{A}_2)} \mathbf{p}^\top M \mathbf{q}$$，$$\displaystyle v^{'}=\max_{q \in \Delta(\mathcal{A}_2)} \min_{p \in \Delta(\mathcal{A}_1)}\sum_{j=1}^s \sum_{i=1}^r p_i q_j \overline{m}(i,j) = \max_{q \in \Delta(\mathcal{A}_2)} \min_{p \in \Delta(\mathcal{A}_1)} \mathbf{q}^\top M^\top \mathbf{p}$$。
 >
 > $$v$$ 的意義： 表示玩家在面對對手的最優反應時，能保證的最小回報。&#x20;
 >
-> $$v^{'}$$ 的意義： 表示對手在面對玩家的最優反應時，能迫使回報不超過的最大值。
+> $$v^{'}$$ 的意義： 表示對手在面對玩家的最優反應時，能迫使回報(損失)不超過的最大值。
 >
 > 可逼近：表示玩家可以通過選擇適當的策略，使遊戲的平均回報無限接近集合$$𝑆$$中的點。
 >

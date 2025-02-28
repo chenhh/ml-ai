@@ -216,17 +216,20 @@ v (博弈值) = 1.600000
 
 在實數報酬中的雙人零和賽局，玩家1、2可依最小最大定理逼近賽局的回報$$v$$。<mark style="color:red;">而在向量回報中，問題變成玩家1、2是否可逼近一個特定集合</mark>$$S$$(分一般集合與凸集合兩種情形討論，因為回報點位於集合的邊界時距離為0，因此只考慮閉集合即可)。
 
-現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量回報的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \{1,2,\dots, r\}, ~ j \in \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是(離散或連續)機率分佈，其定義域為一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$，值域為實數區間$$[0,1]$$<mark style="color:blue;">，因此當玩家與對手在時間</mark>$$t$$<mark style="color:blue;">採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是由分佈</mark>$$m(i,j)$$<mark style="color:blue;">所決定的隨機向量</mark>$$x_t \in \mathbb{R}^N$$。所有的行動對$$(i,j)$$得到的回報都是在$$X$$中的某一點，只是相異行動對的機率分佈$$m(i,j)$$不相同)。
+現在考慮雙人向量(非零和)賽局有限個行動中，$$m(i,j) \in \mathbb{R}^N$$為向量回報的情形。報酬矩陣$$\mathbf{M}=[m(i,j)], ~ i \in \mathcal{A}_1 \equiv \{1,2,\dots, r\}, ~ j \in \mathcal{A}_2 \equiv \{1,2,\dots, s\}$$為$$r\times s$$的矩陣，矩陣中每個元素為$$N$$維的向量(<mark style="color:blue;">Blackwell論文中定義的是更一般化的形式，即每個元素</mark>$$m(i,j)$$<mark style="color:blue;">是(離散或連續)機率分佈，其定義域為一個封閉有界凸集</mark>$$X \in \mathbb{R}^N$$，值域為實數區間$$[0,1]$$<mark style="color:blue;">，因此當玩家與對手在時間</mark>$$t$$<mark style="color:blue;">採取行動</mark>$$i,j$$<mark style="color:blue;">時得到的報酬</mark>$$m(i,j)$$<mark style="color:blue;">是由分佈</mark>$$m(i,j)$$<mark style="color:blue;">所決定的隨機向量</mark>$$x_t \in \mathbb{R}^N$$。所有的行動對$$(i,j)$$得到的回報都是在$$X$$中的某一點，只是相異行動對的機率分佈$$m(i,j)$$不相同)。
 
 如果考慮每一個機率分佈$$m(i,j)$$的期望值$$\overline{m}(i,j)$$或簡寫為$$m(i,j)$$時，則報酬矩陣$$\mathbf{M}$$中的$$r\times s$$個向量點，可形成$$\mathbb{R}^N$$空間中的(有界)凸包(bounded convex hull, 為包含這些向量點的最小閉集合)，記為$$X \subseteq \mathbb{R}^N$$。或者說$$r\times s$$個點是閉凸集$$X$$​(不一定凸包)的元素。<mark style="color:blue;">注意此</mark>$$r\times s$$<mark style="color:blue;">個點並非均為凸包</mark>$$X$$<mark style="color:blue;">的端點，有些點是位於集合內部非端點</mark>。
 
-玩家1使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \mathbf{P}, ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。註：此處在第$$n$$期決策時，參考的是過去的所有資料(包含當期)，而不是Markov性質只參考前一期的資料。
+玩家使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \Delta(\mathcal{A_1}), ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的報酬(或根據$$m(i,j)$$機率分佈的實現值)(history)。
 
-而$$f_0$$因為沒有參考資料，所以為$$\mathbf{P}$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，玩家1的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
+* 註：此處在第$$n$$期決策時，參考的是過去的所有資料(包含當期)，而不是Markov性質只參考前一期的資料。
+* 混合策略是機率分佈，在實際賽局時，是依機率隨機取一行動，經過一段時間後所採取的行動經驗分佈會接近於混合策略的機率分佈。
 
-同理玩家2的的混合策略序列為$$g_{0:n} \equiv \{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
+而$$f_0$$因為沒有參考資料，所以為$$\Delta(\mathcal{A}_1)$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r) \in \mathbb{R}_{+}^r, ~\sum_{i=1}^r p_i=1$$，玩家的混合策略序列為$$f_{0:n} \equiv \{f_0, f_1(\mathbf{x}_1), f_2(\mathbf{x}_1, \mathbf{x}_2),f_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$。
 
-* 在初始$$n=0$$時，玩家1,2分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依機率分佈$$m(i_0,j_0)$$得到報酬實現值$$x_1$$。
+同理對手的的混合策略序列為$$g_{0:n} \equiv \{g_0, g_1(\mathbf{x}_1), g_2(\mathbf{x}_1, \mathbf{x}_2),g_3(\mathbf{x}_1, \mathbf{x}_2, \mathbf{x}_3) , \dots \}$$
+
+* 在初始$$n=0$$時，玩家與對手分別依混合策略$$f_0,g_0$$採取行動$$i_0,j_0$$，依機率分佈$$m(i_0,j_0)$$得到報酬實現值$$x_1$$。
 * 之後玩家1,2分別依混合策略$$f_1(x_1), g_1(x_1)$$採取行動$$i_1, j_1$$，依報酬機率分佈$$m(i_1, j_1)$$得到報酬實現值$$x_2$$。
 * 之後玩家1,2分別依混合策略$$f_2(x_1,x_2), g_2(x_1,x_2)$$採取行動$$i_2, j_2$$，依報酬機率分佈$$m(i_2, j_2)$$得到報酬實現值$$x_3$$，以此類推。
 

@@ -9,17 +9,27 @@ description: sequences of functions
 函數序列是在同一定義域的多個函數之集合，分析收斂性質時，要考慮定義域每一點的收斂速度，可分為點態收斂與一致收斂，其區別在於對於定義域所有點是否有收斂速度的上限。
 
 * 點態收斂、逐點收斂(pointwise convergence)
+  * 點態收斂：只要求每個點單獨收斂，速度和方式可以因點而異。
+  * 函式曲線在每個$$x$$ 上逐漸靠近極限，但某些區域可能收斂很慢。
+  * 點態收斂是「逐點檢查」的收斂。對於每個$$x$$，你單獨看序列$$\{f_n ​ (x)\}$$ 是否趨向於$$f(x)$$。
+  * $$N_0$$可以隨著$$x$$的不同而改變(每個點收斂速度不同)，也就是說，不同的$$𝑥$$可能需要不同的$$𝑛$$才能使 $$f_n ​ (x)$$ 足夠接近 $$f(x)$$。
   * <mark style="color:red;">點態收斂無法保證連續函數收斂為連續函數</mark>，但能保證收斂為處處連續函數。
   * <mark style="color:red;">點態收斂無法保證可微分函數收斂為可微分函數</mark>。
   * <mark style="color:red;">點態收斂無法保證函數序列(Riemann)積分收斂到函數極限的積分</mark>。
   * <mark style="color:blue;">因此連續函數在極限運算下不滿足封閉性</mark>。
 * 一致收斂、均勻收斂(uniform convergence)
+  * 一致收斂要求函式序列在定義域$$D$$ 上「整體一致地」接近極限函式$$f(x)$$。
+  * 函式曲線在整個定義域上「整齊地」貼近極限，像一張毯子均勻覆蓋。
+  * $$N_0$$ 是統一的，對所有的$$𝑥$$都有效，這意味著序列$${f_n ​ (x)}$$在整個定義域上的誤差同時變小，而不是某些點快、某些點慢。
   * 均勻收斂保連續函數收斂為連續函數
   * <mark style="color:red;">均勻收斂可保證函數序列Riemann積分收斂至函數序列極限的積分</mark>。
-* 一致有界(uniformly bounded)
+* 逐點有界：逐點有界的概念僅保證對於每個固定點，函式序列的值都不會無限制增大，但這個界限可能隨點而變。
+* 一致有界(uniformly bounded)：一致有界是對所有點以及對所有函有共同的全域上下界。
 * 有界收斂
 
 在Lebesgue積分中，只要可測函數序列幾乎點態收斂再加上部分限制條件，即可保證Lebesuge積分收斂。
+
+<mark style="color:red;">一個序列可以點態收斂但不一致收斂（如</mark>$$x^n$$<mark style="color:red;">在</mark>$$[0,1]$$ <mark style="color:red;">上），但如果一致收斂，則一定點態收斂</mark>。
 
 ## 函數序列
 
@@ -62,7 +72,7 @@ $$f_n(x)= \frac{1}{nx^2+1}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$。
 
 令$$f_n(x)=\frac{x^{2n}}{1+x^{2n}}, ~ x \in \mathbb{R}, ~ n \in \mathbb{N}$$,則$$\displaystyle \lim_{n \rightarrow \infty} f(x) = \left\{ \begin{aligned} 0 & \text{ if } |x| \leq 1, \\ \frac{1}{2} & \text{ if } |x| = 1 \\ 1 & \text{ if } |x| > 1 \end{aligned} \right.$$，由連續函數收斂至非連續函數(但為幾乎處處連續函數)。
 
-![逐點收斂無法保證函數連續性](../../.gitbook/assets/Figure\_1-min.png)
+![逐點收斂無法保證函數連續性](../../.gitbook/assets/Figure_1-min.png)
 
 <details>
 
@@ -93,7 +103,7 @@ if __name__ == '__main__':
 
 </details>
 
-#### 範例：點態收斂無法保證函數可微
+### 範例：點態收斂無法保證函數可微
 
 $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 
@@ -101,7 +111,7 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 
 因此$$f(x)=|x|$$在$$[0,1]$$連續，但是在$$x=0$$不可微分。
 
-#### 範例：點態收斂無法保證函數積分收斂到極限函數的積分
+### 範例：點態收斂無法保證函數積分收斂到極限函數的積分
 
 函數序列$$\displaystyle \lim_{n \rightarrow \infty} \int_0^1 f_n(x) dx \neq \int_0^1 \lim_{n \rightarrow \infty} f_n(x)dx$$
 
@@ -117,13 +127,18 @@ $$S=[0,1]$$，$$\displaystyle f_n(x)=\sqrt{\frac{nx^2+1}{n}}$$
 
 > 有二種常見的定義：令函數序列$$\{f_n\}$$在集合$$S$$內一致收斂至函數$$f$$：
 >
-> 1. $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ ($$n_0$$只依賴與於$$\epsilon$$的選擇，與$$x$$的實值取值無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$ 2.\[範數表示法] $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$
+> 1. \[ε–delta 定義] $$\forall \epsilon > 0$$ $$\exists n_0 \in \mathbb{N}$$ ($$n_0$$只依賴與於$$\epsilon$$的選擇，與$$x$$的實值取值無關)$$\forall x \in S \ni |f_n(x) - f(x)|< \epsilon, ~\forall n \geq n_0$$&#x20;
+> 2. \[上確界表示法] $$\displaystyle \forall \epsilon > 0, \exists n_0 \in \mathbb{N} \ni \sup_{x \in S}|f_n(x) - f(x)| < \epsilon~ \forall n \geq n_0$$。
 >
-> 2.1. \[範數表示法] 可表示為 $$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in S} \| f_n(x) - f(x) \| = 0$$。(此處的lim與sup是分開的，而非limsup)。為了避免混肴，可寫成$$d_n=\displaystyle \sup_{x \in S} \| f_n(x) - f(x) \|$$，$$\displaystyle \lim_{n \rightarrow \infty}d_n=0$$。
+> 2.1. \[範數表示法] 可表示為 $$\displaystyle \lim_{n \rightarrow \infty} \sup_{x \in S} \| f_n(x) - f(x) \| = 0$$。(此處的lim與sup是分開的，而非limsup。)。為了避免混肴，可寫成$$d_n=\displaystyle \sup_{x \in S} \| f_n(x) - f(x) \|$$，$$\displaystyle \lim_{n \rightarrow \infty}d_n=0$$。
 >
 > 2.2. \[範數表示法] 可再改寫為$$\sup_{x \in S}|f_n(x) - f(x)| \leq M_n$$，其中$$\{M_n\}$$為非負值且收斂至0的數列。
 >
 > 註：範數表示法的名稱是因為 $$\|f\|_{\infty} = \sup\{\|f(x)\| ~|~ x \in S \}$$為函數的上界範數(supremum norm)
+>
+> 3. \[完備空間中可用Cauchy定義] 函數序列$$f_n \rightarrow f$$在$$S$$一致收斂 ⟺ $$\{f_n\}$$ 為一致 Cauchy 序列，即$$\forall \epsilon >0 \exists n_0 \in \mathbb{N} \ni |f_m(x)-f_n(x)|<\epsilon, ~\forall m,n >n_0, ~ \forall x \in S$$
+>
+> <mark style="color:red;">重點在表達了“全域誤差”的最大值趨於零</mark>。
 >
 > 註：一致收斂的充要條件是$$\{f_n\}$$滿足Cauchy條件。$$\forall \epsilon > 0, ~\exists n_0 \in \mathbb{N} \ni |f_n(x)-f_m(x)|<\epsilon, ~ \forall m,n > n_0, \forall x \in S$$。
 
@@ -201,7 +216,7 @@ $$\displaystyle \begin{aligned} |f_n(x) - f(x)| &= \| \frac{\sin(nx)}{\sqrt{n}} 
 
 也可用$$\displaystyle d_n=\sup_{x \in \mathbb{R}} \frac{\sin(nx)}{\sqrt{n}}=\frac{1}{\sqrt{n}}$$，可得$$\displaystyle \lim_{n \rightarrow \infty} d_n=0$$為一致收斂。
 
-### 連續函數序列若一致收斂仍為連續函數
+### \[一致連續性]連續函數序列若一致收斂仍為連續函數
 
 > 假設所有的函數$$f_n$$均在點$$c \in S ~ \forall n \in \mathbb{N}$$連續，若$$f_n$$一致收斂至函數$$f$$，則$$f$$也在點$$c \in S$$連續。
 >
@@ -247,15 +262,19 @@ $$g_n(x)=(f_n(x))^2 = x^2 + \frac{2x}{n} + \frac{1}{n^2}, ~ x \in \mathbb{R}$$�
 
 > 定義：函數$$\{f_n\}$$在集合$$S$$稱為逐點有界若存在有限值域函數$$g(x) >0 \ni ~|f_n(x)| \leq g(x), ~\forall x \in S, ~\forall n \in \mathbb{N}$$
 
+對於定義在集合$$S$$上的函數序列$$\{f_n\}$$，對每一個固定的$$x \in S$$，存在一個與$$n$$無關的常數$$g(x)>0$$使得對所有的$$n$$都滿足$$|f_n(x)| \leq g(x)$$。
+
+<mark style="color:red;">逐點有界的概念僅保證對於每個固定點，函式序列的值都不會無限制增大，但這個界限可能隨點而變</mark>。
+
 ## 一致有界(uniformly bounded)
 
 > 定義：函數$$\{f_n\}$$在集合$$S$$稱為一致有界若存在常數$$M > 0, |f_n(x)| \leq M, ~ \forall x \in S, \forall n \in \mathbb{N}$$。
 
-一致有界是對所有$$x \in S$$以及對所有$$f_n$$有共同的上下界，<mark style="color:red;">但點態收斂不保證極限函數會在此上下界中</mark>。
+一致有界是對所有$$x \in S$$以及對所有$$f_n$$有共同的全域上下界，<mark style="color:red;">但點態收斂不保證極限函數會在此上下界中</mark>。
 
-逐點有界對每一點$$x \in S$$，$$f_n(x)$$的上界會隨$$g(x)$$而變動。
-
-而一致有界是對於所有的$$\forall x \in S$$，$$f_n(x)$$都有相同的上界$$M$$。
+* 逐點有界對每一點$$x \in S$$，$$f_n(x)$$的上界會隨$$g(x)$$而變動。
+* 而一致有界是對於所有的$$\forall x \in S$$，$$f_n(x)$$都有相同的上界$$M$$。
+* <mark style="color:red;">簡單判斷函數數列是否為一致有界的方法是取</mark>$$\displaystyle \lim_{n \rightarrow \infty} f_n(x)$$<mark style="color:red;">，然後看結果若只與</mark>$$n$$<mark style="color:red;">有關，則為一致有界，否則為逐點有界或無上/下界</mark>。
 
 簡單地說，一致有界中的邊界$$M$$是一個固定量，而(逐點)有界中的$$M$$是允許隨其他量變化的。例如每一個常數函數都是有界函數，但是放在一起不是一致有界的。一致有界就是一堆函數有一個共同的界。
 
@@ -263,7 +282,7 @@ $$g_n(x)=(f_n(x))^2 = x^2 + \frac{2x}{n} + \frac{1}{n^2}, ~ x \in \mathbb{R}$$�
 
 範例：$$f_n(x)=\sin(nx)$$有界且一致有界因為$$|f_n(x)| \leq 1, \forall n$$。
 
-範例：$$f_n(x)=n \cdot sin(x)$$有界但不是一致有界。因為只能得到$$|f_n(x)| \leq n, ~\forall n, \forall x$$不存在固定的上界。
+範例：$$f_n(x)=n \cdot \sin(x)$$有界但不是一致有界。因為只能得到$$|f_n(x)| \leq n, ~\forall n, \forall x$$不存在固定的上界。
 
 ### 有界且一致有界但無上下界的函數序列仍可一致收斂
 
@@ -273,13 +292,11 @@ $$f_n(x) = x + \frac{1}{n}, ~ x \in \mathbb{R}$$，在$$\forall n \in \mathbb{N}
 
 $$|f_n(x) - f(x)| = |x+\frac{1}{n} - x|\leq |\frac{1}{n}|$$只與$$n$$有關，因此為一致收斂。
 
-
-
 ### 一致收斂且個別函數有界時可得一致有界
 
 > 令$$\{f_n\} \rightarrow f$$ 在集合$$S$$一致收斂，且$$f_n, ~\forall n \in \mathbb{N}$$在$$S$$上(逐點)有界，則$$f_n$$在集合$$S$$一致有界。
 
-### 範例：一致有界函數序列不一致收斂
+### 範例：一致有界函數序列不一定收斂
 
 $$f_n(x)=\frac{x^2}{x^2+(1-nx)^2}$$
 
@@ -295,13 +312,13 @@ $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=\lim_{n \rightarrow \infty} \f
 
 ## 一致收斂的Cauchy條件
 
-> 令$$\{f_n\}$$為定義在集合$$S$$上的函數序列。
+> 令$$\{f_n\}$$為定義在\[完備空間]集合$$S$$上的函數序列。
 >
-> 函數序列$$f_n \rightarrow f$$在$$S$$一致收斂 $$\Leftrightarrow$$ $$\forall \epsilon >0 \exists n_0 \in \mathbb{N} \ni |f_m(x)-f_n(x)|<\epsilon, ~\forall m,n >n_0, ~ \forall x \in S$$
+> 函數序列$$f_n \rightarrow f$$在$$S$$一致收斂 ⟺ 則$$\{f_n\}$$為一致 Cauchy 序列，即$$\forall \epsilon >0 \exists n_0 \in \mathbb{N} \ni |f_m(x)-f_n(x)|<\epsilon, ~\forall m,n >n_0, ~ \forall x \in S$$
 >
 > 即給定$$\epsilon$$後，集合$$S$$中的所有點只要在$$n \geq n_0$$項之後， 任兩個函數列中的函數均收斂。
 >
-> 在一般度量空間$$(S,d)$$中也成立
+> 在一般度量空間$$(S,d)$$中也成立。
 
 註：可得$$\{f_n\}$$非一致收斂，即存在$$\{f_n\}$$的一個子函數列，以及$$S$$中的一個數列$$\{x_m\}$$使得子函列在$$\{x_m\}$$不收斂於0。
 
@@ -311,7 +328,7 @@ $$\displaystyle \lim_{n \rightarrow \infty}f_n(x)=\lim_{n \rightarrow \infty} \f
 
 \=> 令$$f_n \rightarrow f$$在點$$S$$上一致收斂，由定義得$$\forall \epsilon >0, ~\forall x \in S, ~\exists n_0 \in \mathbb{N} \ni |f_n(x) - f(x)| < \epsilon/2, ~ \forall n > n_0$$
 
-同樣田定義可得 $$|f_m (x) - f(x) | < \epsilon/2, ~ \forall m > n_0$$
+同樣的田定義可得 $$|f_m (x) - f(x) | < \epsilon/2, ~ \forall m > n_0$$
 
 合併上述兩式得$$\forall x s\in S, ~|f_m(x)-f_n(x)|<\epsilon$$ (QED)
 

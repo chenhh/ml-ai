@@ -41,7 +41,7 @@ description: simple market model
 
 此假設在一般的金融商品成立，<mark style="color:red;">但在2020年曾經出現石油價格為負值，而此存在資產為負值的選擇權定價模型</mark>。
 
-<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption><p>2020/04/21 西德州原油負油價</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption><p>2020/04/21 西德州原油負油價</p></figcaption></figure>
 
 ### 投資組合(portfolio)
 

@@ -33,7 +33,7 @@ description: 生活中極簡統計學
 * **定義類別**：假設顧客分為兩類：“來買東西的人”和“隨便逛逛的人”。
 * **設定先驗機率**：根據經驗，假設每5位顧客中就有1位是“來買東西的人”，即“來買東西的人”的先驗機率為0.2，而“隨便逛逛的人”的先驗機率為0.8。
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt="" width="375"><figcaption><p>先驗分佈</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69).png" alt="" width="375"><figcaption><p>先驗分佈</p></figcaption></figure>
 
 **2. 設定條件機率**
 
@@ -45,14 +45,14 @@ description: 生活中極簡統計學
 
 
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt="" width="375"><figcaption><p>條件分佈</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70).png" alt="" width="375"><figcaption><p>條件分佈</p></figcaption></figure>
 
 **3. 觀察行為並排除不可能情況**
 
 * **觀察行為**：假設你觀察到顧客上前詢問。
 * **排除不可能情況**：由於顧客已經上前詢問，因此“不上前詢問”的可能性被排除。
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt="" width="375"><figcaption><p>排除不可能的情形</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt="" width="375"><figcaption><p>排除不可能的情形</p></figcaption></figure>
 
 **4. 計算聯合機率**
 
@@ -65,7 +65,7 @@ description: 生活中極簡統計學
 
 
 
-<figure><img src="../../.gitbook/assets/image (29).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (72).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
 
 **5. 計算後驗機率**
 
@@ -74,7 +74,7 @@ description: 生活中極簡統計學
   * “來買東西的人”上前詢問的後驗機率 = 0.18 / 0.42 = 0.4286 ≈ 0.43
   * “隨便逛逛的人”上前詢問的後驗機率 = 0.24 / 0.42 = 0.5714 ≈ 0.57
 
-<figure><img src="../../.gitbook/assets/image (30).png" alt="" width="375"><figcaption><p>後驗機率，標準化</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (73).png" alt="" width="375"><figcaption><p>後驗機率，標準化</p></figcaption></figure>
 
 ### 貝氏推理的過程總結
 
@@ -108,14 +108,14 @@ description: 生活中極簡統計學
 * **先驗機率**：在沒有檢查結果的情況下，一個人患有這種癌症的機率為0.001。
 * **健康機率**：一個人健康的機率為0.999。
 
-<figure><img src="../../.gitbook/assets/image (31).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (74).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
 
 * **獲取資訊**：一個人接受了這項檢查，並且結果為陽性。
 * **條件機率**：
   * 患有癌症的人被診斷為陽性的機率為0.95。
   * 健康的人被誤診為陽性的機率為0.02。
 
-<figure><img src="../../.gitbook/assets/image (33).png" alt="" width="375"><figcaption><p>條件機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (76).png" alt="" width="375"><figcaption><p>條件機率</p></figcaption></figure>
 
 #### **計算聯合機率**
 
@@ -124,7 +124,7 @@ description: 生活中極簡統計學
   * “患有癌症且檢查結果為陽性”的機率 = 0.001 × 0.95 = 0.00095
   * “健康且檢查結果為陽性”的機率 = 0.999 × 0.02 = 0.01998
 
-<figure><img src="../../.gitbook/assets/image (34).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (77).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
 
 #### **標準化處理**
 
@@ -133,7 +133,7 @@ description: 生活中極簡統計學
   * “患有癌症且檢查結果為陽性”的標準化機率 = $$0.00095/(0.00095+0.01998)=0.00095/0.02093 \approx 0.0454​≈0.0454$$
   * “健康且檢查結果為陽性”的標準化機率 = $$0.01998/0.02093 \approx 0.9546$$
 
-<figure><img src="../../.gitbook/assets/image (36).png" alt="" width="375"><figcaption><p>標準化與後驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt="" width="375"><figcaption><p>標準化與後驗機率</p></figcaption></figure>
 
 #### **得出後驗機率**
 
@@ -175,7 +175,7 @@ description: 生活中極簡統計學
   * “喜歡你”（真命天子）的機率設為0.5。
   * “不喜歡你”（無關路人）的機率設為0.5。
 
-<figure><img src="../../.gitbook/assets/image (37).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
 
 #### **獲取資訊**
 
@@ -185,7 +185,7 @@ description: 生活中極簡統計學
     * 對於“真命天子”，她送巧克力的機率為0.4。
     * 對於“無關路人”，她送巧克力的機率為0.2。
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
 
 **計算聯合機率**
 
@@ -194,7 +194,7 @@ description: 生活中極簡統計學
   * “她是真命天子且送巧克力”的機率 = 0.5 × 0.4 = 0.2
   * “她是無關路人且送巧克力”的機率 = 0.5 × 0.2 = 0.1
 
-<figure><img src="../../.gitbook/assets/image (39).png" alt="" width="375"><figcaption><p>標準化</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82).png" alt="" width="375"><figcaption><p>標準化</p></figcaption></figure>
 
 **標準化處理**
 
@@ -210,7 +210,7 @@ description: 生活中極簡統計學
   * 觀察到“送巧克力”的情況下，她喜歡你的後驗機率約為0.667，即約66.7%。
   * 觀察到“送巧克力”的情況下，她不喜歡你的後驗機率約為0.333，即約33.3%。
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt="" width="375"><figcaption><p>後驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (83).png" alt="" width="375"><figcaption><p>後驗機率</p></figcaption></figure>
 
 #### 小結
 
@@ -246,7 +246,7 @@ description: 生活中極簡統計學
   * 生女孩的機率為0.5的先驗機率為1/3
   * 生女孩的機率為0.6的先驗機率為1/3
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (34).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
 
 **獲取資訊**
 
@@ -264,7 +264,7 @@ description: 生活中極簡統計學
   * “生女孩的機率為0.5且第一胎為女孩”的機率 = 0.5/3
   * “生女孩的機率為0.6且第一胎為女孩”的機率 = 0.6/3
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (31).png" alt="" width="375"><figcaption><p>聯合機率</p></figcaption></figure>
 
 1.  **標準化處理**
 
@@ -274,7 +274,7 @@ description: 生活中極簡統計學
       * “生女孩的機率為0.5且第一胎為女孩”的標準化機率 = $$5/15$$。
       * “生女孩的機率為0.6且第一胎為女孩”的標準化機率 = $$6/15$$。
 
-    <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>標準化</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (32).png" alt="" width="375"><figcaption><p>標準化</p></figcaption></figure>
 2. **計算後驗機率**
    * **後驗機率**：在觀察到第一胎為女孩的情況下，更新生女孩的機率。
    * **具體計算**：
@@ -647,7 +647,7 @@ description: 生活中極簡統計學
 * **先驗機率**：在掃描郵件之前，設定“這封郵件是垃圾郵件”和“這封郵件是正常郵件”的先驗機率。
 * **設定方法**：通常使用“理由不充分原理”，將兩種可能性各設定為0.5的機率。如果有更可靠的資料，也可以調整先驗機率。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (25).png" alt="" width="375"><figcaption><p>先驗機率</p></figcaption></figure>
 
 **掃描字句與條件機率的設定**
 
@@ -657,7 +657,7 @@ description: 生活中極簡統計學
   * 垃圾郵件：附帶連結的機率為0.6，無連結的機率為0.4。
   * 正常郵件：附帶連結的機率為0.2，無連結的機率為0.8。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>條件機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (26).png" alt="" width="375"><figcaption><p>條件機率</p></figcaption></figure>
 
 **根據掃描結果，計算垃圾郵件的貝氏機率**
 
@@ -668,7 +668,7 @@ description: 生活中極簡統計學
   * 機率比 = 0.3 : 0.1 = 3 : 1
   * 標準化後：垃圾郵件的後驗機率 = 3/4 = 0.75，正常郵件的後驗機率 = 1/4 = 0.25
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="375"><figcaption><p>第一條資訊標準化與後驗機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt="" width="375"><figcaption><p>第一條資訊標準化與後驗機率</p></figcaption></figure>
 
 **獲得第2條資訊後，可能性隨之變為8種**
 
@@ -678,7 +678,7 @@ description: 生活中極簡統計學
   * 正常郵件：有幽會的機率為0.05，無幽會的機率為0.95。
 * **可能性擴充套件**：總共有8種可能性。
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt="" width="375"><figcaption><p>二筆資訊的條件機率</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (28).png" alt="" width="375"><figcaption><p>二筆資訊的條件機率</p></figcaption></figure>
 
 **從2個資訊可以消去不可能的情況**
 
@@ -691,7 +691,7 @@ description: 生活中極簡統計學
     * 機率比 = 0.12 : 0.005 = 24 : 1
     * 標準化後：垃圾郵件的後驗機率 = 24/25 = 0.96，正常郵件的後驗機率 = 1/25 = 0.04
 
-    <figure><img src="../../.gitbook/assets/image (4) (1).png" alt="" width="375"><figcaption><p>二筆資訊標準化與後驗機率</p></figcaption></figure>
+    <figure><img src="../../.gitbook/assets/image (29).png" alt="" width="375"><figcaption><p>二筆資訊標準化與後驗機率</p></figcaption></figure>
 
 #### 小結
 
@@ -700,7 +700,7 @@ description: 生活中極簡統計學
 3. **機率計算**：利用乘法公式可以計算出8種可能性各自的機率。
 4. **提高精準性**：使用2條資訊推算出的結論，比僅使用1條資訊推算出的結論更加精準。
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt="" width="375"><figcaption><p>使用兩次貝氏推論</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (30).png" alt="" width="375"><figcaption><p>使用兩次貝氏推論</p></figcaption></figure>
 
 這些內容展示了如何利用貝氏推理來提高垃圾郵件過濾器的精準性和可靠性，通過逐步引入更多資訊來不斷更新和改進判斷。\
 

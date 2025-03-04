@@ -50,7 +50,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 ![代理人(通常)無法控制環境，只能觀察狀態，決定行動，得到報酬](../../.gitbook/assets/rl2-min.png)
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt="" width="563"><figcaption><p>MDP流程</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15).png" alt="" width="563"><figcaption><p>MDP流程</p></figcaption></figure>
 
 * **大寫的字母表示隨機變數，小寫的字母表示為某一實現值**。
 * <mark style="color:red;">如果決策圖中出現狀態->狀態的轉移時，表示兩個狀態間有一個決定性的行動(deterministic action)</mark>，即執行此行動後必定會轉移至下一個固定的狀態，而非是機率式的轉移。
@@ -71,7 +71,7 @@ MDP是指對從互動中學習以實現目標的問題的一種直接框架。
 
 ### 馬可夫決策過程(MDP)的符號定義
 
-<div align="center"><figure><img src="../../.gitbook/assets/image (42).png" alt="" width="471"><figcaption><p>MDP範例。圓圈表示狀態，方向箭頭上的小黑點為行動。狀態可採取的行動為流出的方向箭頭。而(狀態，行動)對的轉移機率總合為1。而在狀態s中選擇行動a的(策略, policy)機率也為1。</p></figcaption></figure></div>
+<div align="center"><figure><img src="../../.gitbook/assets/image (85).png" alt="" width="471"><figcaption><p>MDP範例。圓圈表示狀態，方向箭頭上的小黑點為行動。狀態可採取的行動為流出的方向箭頭。而(狀態，行動)對的轉移機率總合為1。而在狀態s中選擇行動a的(策略, policy)機率也為1。</p></figcaption></figure></div>
 
 > definition: finite Markov decision process
 >
@@ -166,7 +166,7 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
 * 獎勵：在特定狀態釣魚會產生獎勵，假設在低、中、高狀態釣魚的獎勵分別為 $5K、$50K 和 $100k。如果採取行動達到空狀態，那麼獎勵非常低 - 20 萬美元，因為它需要重新培育新的鮭魚，這需要時間和金錢。
 * 狀態轉移：在一個狀態捕魚有較高的機率轉移到鮭魚數量較少的狀態。類似地，不捕魚動作有更高的機率移動到鮭魚數量較多的狀態（高狀態除外）。
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt="" width="563"><figcaption><p>捕撈鮭魚 MDP 的轉變圖。大圓圈是狀態節點，小實心黑色圓圈是動作節點。一旦採取行動，環境就會做出獎勵並過渡到下一個狀態。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt="" width="563"><figcaption><p>捕撈鮭魚 MDP 的轉變圖。大圓圈是狀態節點，小實心黑色圓圈是動作節點。一旦採取行動，環境就會做出獎勵並過渡到下一個狀態。</p></figcaption></figure>
 
 ### 範例：學生上課
 
@@ -178,9 +178,9 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
 * 滑Fb狀態：90%會繼續滑；10%回去上第一堂課。
 * 加考試狀態：100%通過後回去睡覺。
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="563"><figcaption><p>學生上課問題</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21).png" alt="" width="563"><figcaption><p>學生上課問題</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt="" width="531"><figcaption><p>狀態轉移矩陣，row加起來總合為1。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20).png" alt="" width="531"><figcaption><p>狀態轉移矩陣，row加起來總合為1。</p></figcaption></figure>
 
 獎勵(Reward)以及衰減係數(Discount factor)：
 
@@ -191,9 +191,9 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
       若$$\gamma$$係數接近1 ; 代表我們需要比較宏觀看待利益。
 * 計算狀態的價值函數$$V(s)=\mathrm{E}(G_t|S_t=s)$$
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt="" width="462"><figcaption><p>短視利益時的狀態價值</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87).png" alt="" width="462"><figcaption><p>短視利益時的狀態價值</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt="" width="464"><figcaption><p>重視長期利益時的狀態價值</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88).png" alt="" width="464"><figcaption><p>重視長期利益時的狀態價值</p></figcaption></figure>
 
 ### 範例：生物反應器
 
@@ -227,7 +227,7 @@ MDP框架是對目標導向的互動學習問題的一個相當大的抽象化�
 
 最後，假設在回家充電的過程中不能收集罐子，而且在電池耗盡的步驟中也不能收集罐子。那麼這個系統就是一個有限的MDP，我們可以寫下過渡機率和預期獎勵，動態如下表所示。
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>回收機器人MDP</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption><p>回收機器人MDP</p></figcaption></figure>
 
 有些$$(s,a,s^{'})$$的組合機率為0，因此不需考慮這些組合的期望報酬。
 

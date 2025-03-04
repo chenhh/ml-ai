@@ -140,7 +140,7 @@ $$\begin{aligned} G_t & = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} +\dots \\ 
 
 ### 範例: 極點平衡(pole balancing)
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>學習目標是左右移動小車，不讓桿子倒下。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption><p>學習目標是左右移動小車，不讓桿子倒下。</p></figcaption></figure>
 
 這項任務的目標是對沿軌道移動的小車施加力，以使鉸接在小車上的桿子不致倒下。<mark style="color:blue;">如果桿子從垂直方向跌落超過一個給定的角度，或者如果小車跑到軌道外，就說發生了故障</mark>。
 
@@ -196,4 +196,4 @@ $$\begin{aligned} G_t & = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} +\dots \\ 
 
 $$G_t = \sum_{k=t+1}^T \gamma^{k-t-1}R_k$$，其中$$T=\infty$$或$$\gamma=1$$(但不可同時)也包含在此定義中。
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt="" width="563"><figcaption><p>深色的方塊為虛擬的終止狀態</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt="" width="563"><figcaption><p>深色的方塊為虛擬的終止狀態</p></figcaption></figure>

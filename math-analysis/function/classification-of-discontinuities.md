@@ -31,7 +31,7 @@ $${\displaystyle f(x)={\begin{cases}x^{2}&{\text{ for }}x<1\\0&{\text{ for }}x=1
 
 <mark style="color:red;">注意函數</mark>$$f(x)$$<mark style="color:red;">依定義是在</mark>$$x_0$$<mark style="color:red;">(點態)連續</mark>。
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt="" width="375"><figcaption><p>可移除不連續點</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt="" width="375"><figcaption><p>可移除不連續點</p></figcaption></figure>
 
 ## 跳躍不連續點(jump discontinuity)
 
@@ -53,8 +53,8 @@ $${\displaystyle f(x)={\begin{cases}\sin {\frac {5}{x-1}}&{\text{ for }}x<1\\0&{
 
 則點$$x_0=1$$為本質不連續點。
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt="" width="375"><figcaption><p>震蕩不連續點</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt="" width="375"><figcaption><p>震蕩不連續點</p></figcaption></figure>
 
 ## 參考資料
 
-[https://en.wikipedia.org/wiki/Classification\_of\_discontinuities](https://en.wikipedia.org/wiki/Classification\_of\_discontinuities)
+[https://en.wikipedia.org/wiki/Classification\_of\_discontinuities](https://en.wikipedia.org/wiki/Classification_of_discontinuities)

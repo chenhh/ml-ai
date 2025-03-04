@@ -30,7 +30,7 @@ description: Separating/supporting hyperplane theorem
 
 因此超平面$$H=\{x~|~ a^\top x = b\}$$分割了$$C, D$$，正交於線段$$cd$$且經過其中點。
 
-![](<../../.gitbook/assets/image (64).png>)
+![](<../../.gitbook/assets/image (107).png>)
 
 (QED)
 

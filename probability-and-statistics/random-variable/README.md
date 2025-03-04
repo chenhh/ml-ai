@@ -18,13 +18,13 @@
 * \[**有限測度**] $$\mathrm{P}(\Omega)= 1$$
 * \[可數可加性] $$E_i \in \mathcal{F}, i \in \mathbb{N}$$且$$E_i \cap E_j = \emptyset, ~ \forall i \neq j$$，則$$\displaystyle \mathrm{P}(\bigcup_{i=1}^\infty E_i) = \sum_{i=1}^\infty \mathrm{P}(E_i)$$
 
-## 隨機變數（r.v.）
+## 隨機變數（random variable）
 
 > 隨機變數是一個由樣本空間$$\Omega$$(但不是$$\Omega$$的任意集合，而是σ-field)映射至實數集$$\mathbb{R}$$的實函數（real-valued function）。
 >
 > * 以函數的定義，隨機變數$$X$$的值$$x \in \mathbb{R}$$的前像$$X^{-1}(x) = \{ \omega \in \Omega | X(\omega) = x\}$$為一個在樣本空間$$\Omega$$的事件$$E$$。
 > * 而在測度論中，要求事件$$E$$必須為σ-field $$\mathcal{F}$$的元素，此時$$X$$稱為$$\mathcal{F}$$-可測函數（measurable function）。
->   * $$X$$ 必須是可測函數，是為了避免在實數上任一點(或區間)的前像不存在於$$\mathcal{F}$$ 中沒有定義；反之如果$$X$$ 為可測函數，因為在$$\mathbb{R} >$$​中所有點的前像均存在於$$\mathcal{F}$$​，因此在求積分值的時候切割$$\mathbb{R}$$找對應的前像$$X^{-1}([a,b])$$​必為$$\mathcal{F}$$​的元素，因此可求值。
+> * $$X$$ 必須是可測函數，是為了避免在實數上任一點(或區間)的前像不存在於$$\mathcal{F}$$ 中沒有定義；反之如果$$X$$ 為可測函數，因為在$$\mathbb{R} >$$​中所有點的前像均存在於$$\mathcal{F}$$​，因此在求積分值的時候切割$$\mathbb{R}$$找對應的前像$$X^{-1}([a,b])$$​必為$$\mathcal{F}$$​的元素，因此可求值。
 > * 把$$X$$在$$\Omega$$上的Lebesgue積分 $$\displaystyle \mathrm{E}(X)= \int_\Omega X d\mathrm{P}$$稱為$$X$$的期望值。
 
 可測隨機變數$$X$$ 必須滿足任意實現值$$x$$的前像$$E \equiv X^{-1}(x)(\omega)$$必須是σ域的元素，是由值域反向要求定義域的特性。 而宇集合$$\Omega$$中任意元素的組合均可以得到事件集合$$E$$，而此集合對於$$X$$不一定可測。
@@ -35,6 +35,19 @@
 
 * 連續(continuous)隨機變數：若隨機變數之值為實區間上之任意部份集合，則稱之。
 * 離散(discrete)隨機變數：若隨機變數之發生值為有限或無限可數，則稱之。
+
+### 隨機變數的值可將前像的宇集合切割
+
+> 定義隨機變數$$X$$的值$$x \in \mathbb{R}$$的前像$$E_x=X^{-1}(\{x\}) = \{ \omega \in \Omega | X(\omega) = x\}$$在樣本空間$$\Omega$$。
+>
+> * 互不相交性 ：若$$x \neq y$$，則$$E_x \cap E_y = \emptyset$$。
+>   * 因為若存在$$\omega \in E_x \cap E_y$$，則$$X(\omega)=x$$且$$X(\omega)=y$$不符合函數的定義。
+> * 全覆蓋性：所有$$E_x$$的聯集為$$\Omega$$，即$$\bigcup_{x \in \mathbb{R}}E_x =\Omega$$。
+>   * 因為對於任意的$$\omega \in \Omega$$，$$X(\omega)$$必為某個$$x_0 \in \mathbb{R}$$，即$$\omega \in E_{x_0}$$。
+
+若$$X$$ 是離散的（取值為可數集合 $$\{x_1, x_2, \dots\}$$ )，則 $$\Omega$$ 被分割為可數個互不相交的事件$$E_{x_1}, E_{x_2}, \dots,$$且：$$\mathrm{P}(X=x_i)=\mathrm{P}(E_{x_i})$$。$$\Omega = \bigcup_{i \in \mathbb{N}} X^{-1}(\{x_i\})$$。
+
+若$$X$$是連續的（如常態分佈），則對所有單點$$x$$，$$\mathrm{P}(E_x ​ )=0$$。此時分割依然存在，但需通過更複雜的結構（如密度函式）描述機率分佈。通常可用區間切割$$X^{-1}([a,b))=\{\omega \in \Omega~|~ a \leq X(\omega) < b\}$$再聯集得到宇集合的畫分。
 
 ### 非隨機變數範例
 
@@ -79,7 +92,7 @@ $$F(x)$$為隨機變數$$X$$的分佈函數，須滿足以下條件：
 
 > 令$$X_1, X_2, \ldots$$為一組隨機樣本, 以$$F$$為共同分佈函數。令 $$F_n(x)=\frac{X_i \leq x}{n}, ~ \forall x \in \mathbb{R}$$，則$$F_n$$稱為此組樣本之經驗分佈函數，為一階梯函數。
 
-![經驗分佈函數](../../.gitbook/assets/empirical\_dist-min.png)
+![經驗分佈函數](../../.gitbook/assets/empirical_dist-min.png)
 
 ```python
 import numpy as np

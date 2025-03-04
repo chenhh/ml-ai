@@ -60,7 +60,7 @@ $$\displaystyle D_{KL}(p, q) = \int_x p(x) \log \frac{p(x)}{q(x)}dx$$，在$$p=q
 
 $$D_JS(p,q)=\frac{1}{2}D_{KL}(p, \frac{p+q}{2}) + \frac{1}{2}D_{KL}(q, \frac{p+q}{2})$$
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt="" width="375"><figcaption><p>KL, JS的範例圖</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (100).png" alt="" width="375"><figcaption><p>KL, JS的範例圖</p></figcaption></figure>
 
 KL當兩個分佈不相交時，給我們帶來不確定性。 JS 的值會突然跳躍時，且在x=0處不可微分。只有 Wasserstein 指標提供了平滑的度量，這對於使用梯度下降的穩定學習過程非常有説明。
 

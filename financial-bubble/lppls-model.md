@@ -4,7 +4,7 @@ description: Log-Periodic Power Law Singularity, 對數週期冪律奇點
 
 # LPPLS模型
 
-<figure><img src="../.gitbook/assets/image (23).png" alt="" width="360"><figcaption><p>正負(反)泡沫</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (66).png" alt="" width="360"><figcaption><p>正負(反)泡沫</p></figcaption></figure>
 
 Johansen 和 Sornette認為金融市場上由於投資者之間的羊群效應及正回饋機制造成的資產價格泡沫的膨脹與破裂可由 LPPL 模型進行建模。
 
@@ -126,23 +126,23 @@ $$
 * Z. Forró, Ryan Woodard, and Didier Sornette, "[Using trading strategies to detect phase transitions in financial markets](https://journals.aps.org/pre/abstract/10.1103/PhysRevE.91.042803)," Physical Review E, Vol. 91, Issue 4, 2015.
   * LPPLS模型是智慧體之間正反饋及其分層動態組織的數學體現，在金融市場中具有重要的預測能力。我們發現，基於LPPLS的策略明顯優於隨機策略，並且它們在大量資產和時間段選擇方面是穩健的。<mark style="color:blue;">因此，價格動態明顯偏離了某些可預測性的隨機性，而這種隨機性可能與泡沫市場制度有關</mark>。
   * 我們的混合方法將金融與交易策略相結合，將關鍵現象與LPPLS相結合，表明以相變相關的資訊為目標，可以預測金融泡沫和崩潰，從而影響價格動態。
-* Jerome Kreuser and Didier Sornette, "[Super-Exponential RE Bubble Model with Efficient Crashes](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=3064668), " The European Journal of Finance, 2017.
+* Jerome Kreuser and Didier Sornette, "[Super-Exponential RE Bubble Model with Efficient Crashes](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3064668), " The European Journal of Finance, 2017.
   * 我們提出了一個動態的理性預期（RE）價格泡沫模型，旨在利用它進行最佳投資策略的評估。
   * 我們的泡沫模型被定義為幾何布朗運動，結合與正泡沫（和負泡沫）相關的單獨碰撞（和反彈）離散跳躍分佈。我們假設崩盤往往會有效地將多餘的泡沫價格恢復到接近“正常”或基本值（“有效崩盤”）。然後，RE條件意味著暴露於崩盤的風險資產的超額風險溢價是預期崩盤幅度的增加函式，而預期崩盤幅度本身隨著泡沫錯誤定價而增長：因此，泡沫價格越大，其後續增長率就越大。這種價格回報的正反饋是超指數價格動態的原型，以前曾被提出作為泡沫的一般定義。
   * 我們的泡沫模型還允許一系列小幅跳躍或長期修正。我們使用 RE 條件通過加速機率函式動態估計即時崩盤機率，具體取決於增加的預期收益。
   * 在展示了如何估計模型引數之後，我們通過獲得風險資產和無風險資產的最大化預期財富對數（凱利準則）的解析表示式，研究了泡沫模型背景下的最優投資問題。我們還獲得了最優投資的閉式近似。我們在七次歷史崩盤中展示了與60/40投資組合、經典凱利組態和風險資產相比，該方法的有優異表現，以及它如何減輕正負的跳躍。
-* Didier Sornette, Peter Cauwels and Georgi Smilyanov, "[Can We Use Volatility to Diagnose Financial Bubbles? Lessons from 40 historical bubbles](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=3006642), "Quantitative Finance and Economics, Vol. 2, No. 1, pp. 486-​594, 2018.
+* Didier Sornette, Peter Cauwels and Georgi Smilyanov, "[Can We Use Volatility to Diagnose Financial Bubbles? Lessons from 40 historical bubbles](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3006642), "Quantitative Finance and Economics, Vol. 2, No. 1, pp. 486-​594, 2018.
   * 本文研究了金融資產泡沫之前、期間和之後的價格波動，以發現可能的共性，並根據經驗檢驗波動是否可以用作不可持續的價格上漲和相關崩潰的指標或預警訊號。
   * 一些研究人員和金融從業者認為，歷史和/或隱含波動率在崩盤前會增加，但我們不認為這是一種一致的行為。我們研究了40個著名的泡沫，並使用創造性的圖形表示來捕捉波動性的瞬態動態，<mark style="color:red;">發現波動性的動態不會是隨後崩潰的有用預測</mark>。
   * <mark style="color:blue;">在大約三分之二的研究泡沫中，崩盤發生在波動性較低的一段時間之後</mark>，這讓人想起「暴風雨前的平靜」。 從傳統資產定價模型的角度來看，這種自相矛盾的行為進一步質疑了風險與回報之間的一般關係。
-* Vladimir Filimonov, Guilherme Demos and Didier Sornette, "[Modified Profile Likelihood Inference and Interval Forecast of the Burst of Financial Bubbles, ](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=2739832)"Quantitative Finance, pp. 1-​20, 2017.
-* Diego Ardila and Didier Sornette, "[Dating the financial cycle: a wavelet proposition](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=2775271), "Finance Research Letters, Vol. 19,  pp. 298-​304, 2016.
+* Vladimir Filimonov, Guilherme Demos and Didier Sornette, "[Modified Profile Likelihood Inference and Interval Forecast of the Burst of Financial Bubbles, ](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2739832)"Quantitative Finance, pp. 1-​20, 2017.
+* Diego Ardila and Didier Sornette, "[Dating the financial cycle: a wavelet proposition](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2775271), "Finance Research Letters, Vol. 19,  pp. 298-​304, 2016.
   * 我們建議<mark style="color:blue;">使用最大重疊離散小波變換（MODWT）來測定和分析金融週期</mark>。
   * 本文指出了從經典商業週期文獻中得出的方法的侷限性，同時強調了它們與小波分析的聯絡。基本的時頻不確定性原理要求用區間估計值代替轉捩點的點估計值，區間估計值本身就是分析尺度的函式。我們使用來自19個OECD國家的金融時間序列來說明該工具的適用性。
-* Qun Zhang, Qunzhi Zhang and Didier Sornette, "[Early warning signals of financial crises with multi-​scale quantile regressions of Log-​Periodic Power Law Singularities](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=2674128), "PLoS ONE Vol. 11, pp. 1-​43, 2016.
-* Qunzhi Zhang, Didier Sornette, Mehmet Balcilar, Rangan Gupta, Zeynel Abidin Ozdemir and Hakan Yetkiner, "[LPPLS Bubble Indicators over Two Centuries of the S\&P 500 Index](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=2727755), " Physica A, Vol. 458, pp. 126-​139, 2016.
+* Qun Zhang, Qunzhi Zhang and Didier Sornette, "[Early warning signals of financial crises with multi-​scale quantile regressions of Log-​Periodic Power Law Singularities](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2674128), "PLoS ONE Vol. 11, pp. 1-​43, 2016.
+* Qunzhi Zhang, Didier Sornette, Mehmet Balcilar, Rangan Gupta, Zeynel Abidin Ozdemir and Hakan Yetkiner, "[LPPLS Bubble Indicators over Two Centuries of the S\&P 500 Index](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2727755), " Physica A, Vol. 458, pp. 126-​139, 2016.
 * Jan Henrik Wosnitza and Didier Sornette," [Analysis of log-​periodic power law singularity patterns in time series related to credit risk](https://link.springer.com/article/10.1140/epjb/e2015-50019-9)," The European Physical Journal B Vol. 88, No. 97, pp. 1-​11, 2015.
-* Wanfeng Yan, Ryan Woodard, and Didier Sornette, "I[nferring Fundamental Value and Crash Nonlinearity from Bubble Calibration](https://papers.ssrn.com/sol3/papers.cfm?abstract\_id=1719124)," Quantitative Finance Vol. 14, No. 7, pp. 1273-​1282, 2014.
+* Wanfeng Yan, Ryan Woodard, and Didier Sornette, "I[nferring Fundamental Value and Crash Nonlinearity from Bubble Calibration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1719124)," Quantitative Finance Vol. 14, No. 7, pp. 1273-​1282, 2014.
 
 ### 反泡沫(anti-bubbles)
 

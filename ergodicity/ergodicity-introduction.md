@@ -46,7 +46,7 @@ Bernouli實驗中，一個質地均勻的硬幣，它每一面的出現機率都
 
 ## 遍歷性
 
-<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption><p>測度定義</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption><p>測度定義</p></figcaption></figure>
 
 第一種定義：空間平均要等於時間平均。
 

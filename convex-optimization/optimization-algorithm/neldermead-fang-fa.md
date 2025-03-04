@@ -16,7 +16,7 @@ elder-Mead 方法的核心思想是使用**單純形 (Simplex)** 作為搜尋的
 * 在 2 維空間 (平面) 中，單純形是一個三角形 (3 個頂點)
 * 在 3 維空間 中，單純形是一個四面體 (4 個頂點)。
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt="" width="188"><figcaption><p>三維空間的單純形是一個四面體</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (109).png" alt="" width="188"><figcaption><p>三維空間的單純形是一個四面體</p></figcaption></figure>
 
 **幾何變換 (Geometric Operations)**： Nelder-Mead 方法主要使用以下四種幾何變換來調整單純形的形狀和位置，以朝向目標函式值更小的區域移動：
 

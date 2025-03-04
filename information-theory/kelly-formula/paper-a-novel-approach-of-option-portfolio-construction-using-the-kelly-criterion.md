@@ -189,39 +189,39 @@ HPR= \[(1+f(-5000/W))^10%]_\[(1+f(-3000/W))^15%]_\[(1+f(-2000/W))^20%]_\[(1+f(15
 
 在2017/1/13，星期五13:30台灣加權指數(TAIEX)收盤在9378點，而週選擇權會在2017/18(星期三)結算。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt="" width="421"><figcaption><p>當日的買/賣權不同履約價的價格</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="421"><figcaption><p>當日的買/賣權不同履約價的價格</p></figcaption></figure>
 
 long 9300call@90與short 9350@54，可形成多頭價差如下：
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="381"><figcaption><p>買權多頭價差(買call 9300@90, 賣call 9350@54，成本36元)最大獲利/虧損為14/36元。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="381"><figcaption><p>買權多頭價差(買call 9300@90, 賣call 9350@54，成本36元)最大獲利/虧損為14/36元。</p></figcaption></figure>
 
 表 II 顯示了與傳統賽局類似的損益結構，在計算分數時所採用的損益是基於實際的結果。因此，Vince 的最佳值可適用於表二的損益結構。到這一步為止，結算日（2017-01-18）的 TAIEX 的預測仍有待處理。由於我們建構的是週五下午 13:30 的投資組合，<mark style="background-color:red;">要預測下週三 TAIEX 的分佈，直覺的方法是採用週五下午 13:30 至下週三收盤價的歷史 TAIFEX 升跌點</mark>。
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt="" width="407"><figcaption><p>以圖4的多頭價差建倉，結算時相異TAIEX點數的損益表</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt="" width="407"><figcaption><p>以圖4的多頭價差建倉，結算時相異TAIEX點數的損益表</p></figcaption></figure>
 
 經驗分佈 (例如 PM 13:30, 2017-01-13 ∼ PM 13:30, 2017-01-18)可視為計算比例中要使用的分佈。在本工作中，我們收集 TAIEX 2007-01-5 至 2017-1-11 的資料，如表三所示。
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="563"><figcaption><p>經驗分佈</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7).png" alt="" width="563"><figcaption><p>經驗分佈</p></figcaption></figure>
 
 共有 490 個觀測結果，以經驗機率密度分佈和直方圖的形式概括並顯示在圖 5 中。
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt="" width="353"><figcaption><p>經驗分佈直方圖</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt="" width="353"><figcaption><p>經驗分佈直方圖</p></figcaption></figure>
 
 以圖五的分佈作為 2017-01-11 至 2017-01-18 PM 13:30 TAIEX 的上漲/下跌回報預測。 2017-01-11下午13:30的TAIEX為9378，利用公式9378×（1+表三的報酬），可以得到2017-01-18下午13:30的TAIEX的分佈。結果如表四所示。
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt="" width="359"><figcaption><p>使用經驗分佈估計的下週收盤價分佈</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="359"><figcaption><p>使用經驗分佈估計的下週收盤價分佈</p></figcaption></figure>
 
 我們使用表二和表四以及市場指數分佈，計算多頭價差的盈虧結構。結果如下表所示。 圖 6 和圖 7 分別是表 V 中潛在利潤或虧損的直方圖和分佈圖。
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption><p>多頭價差的預估損益</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>多頭價差的預估損益</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt="" width="344"><figcaption><p>多頭價差損益直方圖</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt="" width="344"><figcaption><p>多頭價差損益直方圖</p></figcaption></figure>
 
 根據表 V 中的盈虧向量，我們可以得到每個出價比例的回報，如表 VI 所示。換句話說，這個遊戲的預期報報為負；沒有任何出價比率是有利可圖的。報酬如圖 8 所示。雖然上述組合無利可圖，但存在可能有利可圖的反向位置。既然多頭價差無利可圖，那麼反向部位，即空頭價差，應該有利可圖。我們考慮'「做空 9300 看漲期權@90；做多 9350 看漲期權@54」'的投資組合，盈虧如下。 我們重複表 V 和表 VI 中的各種競價分數，得到其最佳競價分數為 13%，報酬率為 1.01945。圖 10 顯示不同下注分數下的報酬。
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt="" width="390"><figcaption><p>多頭價差無利可圖，改成空頭價差</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13).png" alt="" width="390"><figcaption><p>多頭價差無利可圖，改成空頭價差</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption><p>空頭價差下注比例</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption><p>空頭價差下注比例</p></figcaption></figure>
 
 ## 最有利可圖的選擇權組合
 
@@ -250,29 +250,29 @@ Step5：根據 Vince 的最佳比例計算終端財富回報 (TWR)。然後，�
 
 我們使用 2017 年 01 月 13 日收盤時的 TAIEX 指數值。我們以價平的選擇權為例（參考表一，並打算找出最有利可圖的投資組合。請注意，多頭價差的反向就是空頭價差。因此，在不失一般性的前提下，我們考慮多頭價差。有 10 種可能的組合，如下所示。
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt="" width="525"><figcaption><p>多頭價差組合</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt="" width="525"><figcaption><p>多頭價差組合</p></figcaption></figure>
 
 我們單獨計算上面顯示的所有 10 個投資組合的報酬分佈。請注意，在報酬小於 1 的情況下，遊戲並不有利。在這種情況下，我們將計算相應空頭價差的報報，也就是將 「多頭 」變為 「空頭」，「空頭 」變為 「多頭」。
 
 我們的實驗結果如下。由於「買進 9300 買權 @ 90；賣出 9350 賣權 @ 54」在第三節中被計算為不利，我們計算出空頭價差位置，「賣出 9300 買權 @ 90；買進 9350 買權 @ 54」，如圖 11 所示。
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt="" width="320"><figcaption><p>圖11</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91).png" alt="" width="320"><figcaption><p>圖11</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (49).png" alt="" width="321"><figcaption><p>圖12</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92).png" alt="" width="321"><figcaption><p>圖12</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (50).png" alt="" width="309"><figcaption><p>圖13</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt="" width="309"><figcaption><p>圖13</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt="" width="312"><figcaption><p>圖14</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (94).png" alt="" width="312"><figcaption><p>圖14</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt="" width="304"><figcaption><p>圖15</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (95).png" alt="" width="304"><figcaption><p>圖15</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt="" width="303"><figcaption><p>圖16</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (96).png" alt="" width="303"><figcaption><p>圖16</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt="" width="302"><figcaption><p>圖17</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (97).png" alt="" width="302"><figcaption><p>圖17</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt="" width="306"><figcaption><p>圖18</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (98).png" alt="" width="306"><figcaption><p>圖18</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt="" width="311"><figcaption><p>圖19</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99).png" alt="" width="311"><figcaption><p>圖19</p></figcaption></figure>
 
 ## 結論
 

@@ -1,6 +1,6 @@
 # 直方圖（Histogram）與長條圖（Bar chart）
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption><p>直方圖和長條件的比較</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption><p>直方圖和長條件的比較</p></figcaption></figure>
 
 直方圖主要在呈現資料分佈的結果，長條圖呈現的是各組資料的大小。直方圖的橫軸變數為「數值型連續變數」，長條圖則為「類別型離散變數」。至於組距的「間隔」，直方圖各組距之間是連線在一起的，彼此之間沒有間隔；長條圖則是組距之間存在著間隔（有人認為，有間隔才能呈現分佈的狀態，並讓直方圖和長條圖能有區隔；但也有人認為，有無間隔，差異不大）。
 

@@ -4,7 +4,7 @@ description: 高斯(Gaussian)分佈, 正態分佈
 
 # 常態分佈
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt="" width="375"><figcaption><p>常態分佈區間</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58).png" alt="" width="375"><figcaption><p>常態分佈區間</p></figcaption></figure>
 
 常態分佈是已知二階統計量的最大熵分佈。它的機率分佈可以完全由二階統計量得出。
 

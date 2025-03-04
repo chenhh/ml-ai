@@ -19,7 +19,7 @@ description: Multi-armedBandits
 
 決策者反復(多期決策)面臨著在$$k$$個不同的選項，或行動中的選擇。每次選擇之後，決策者都會收到一個數值獎勵（<mark style="color:blue;">**註：只知道所選的行動的獎勵，沒有選擇的行動不知道其獎勵**</mark>），這個獎勵是從一個<mark style="color:blue;">**固定的機率分佈(均為非時變且未知型式的分佈，但k個行動可有相異的分佈)**</mark>中選出，取決於你所選擇的行動。你的目標是在某個時間段內做出選擇，以最大化預期總報酬。
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt="" width="540"><figcaption><p>5個行動的報酬分佈相異，但同一個行動的報酬是從固定分佈得出。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt="" width="540"><figcaption><p>5個行動的報酬分佈相異，但同一個行動的報酬是從固定分佈得出。</p></figcaption></figure>
 
 #### <mark style="color:red;">問題關鍵假設</mark>
 
@@ -30,7 +30,7 @@ description: Multi-armedBandits
 * 每次拉桿的報酬是獨立生成的，與之前或之後的操作無關。
 * 每次拉桿立即給出報酬。
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption><p>k臂吃角子老虎機，只有選中的機器才知道報酬。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption><p>k臂吃角子老虎機，只有選中的機器才知道報酬。</p></figcaption></figure>
 
 在吃角子老虎機問題中，$$k$$個行動都有一個預期的或平均的獎勵，可稱為該行動的價值(value)。我們用$$A_t \in \{1,2,\dots,k\}$$(隨機變數)表示在時間步驟t上選擇的行動，用$$R_t \in \mathbb{R}$$(隨機變數)表示相應行動的報酬(只依賴於選擇的行動)。&#x20;
 

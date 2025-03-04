@@ -28,9 +28,9 @@ t 分佈說明當母體標準差$$\sigma$$不明，且觀察結果來自常態�
 * 隨著樣本量增加，t 分佈會越來越近似於常態分佈。
 * 大原則為在樣本量至少為 30 時，可以用常態分佈取代 t 分佈。
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt="" width="375"><figcaption><p>t 分佈與標準常態分佈。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (59).png" alt="" width="375"><figcaption><p>t 分佈與標準常態分佈。</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt="" width="375"><figcaption><p>常態分佈與自由度為 30 時的 t 分佈</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (60).png" alt="" width="375"><figcaption><p>常態分佈與自由度為 30 時的 t 分佈</p></figcaption></figure>
 
 在母體變異數/標準差未知的情況下，我們就只能用樣本的變異數/標準差估算之。 因此t分配就是把常態分佈加上與樣本數相關的「自由度」。自由度會影響分配的形狀，而當自由度越大，他就會越接近常態分佈 （可以想成樣本數越多，估出來的變異數/標準差就越接近真實值。
 

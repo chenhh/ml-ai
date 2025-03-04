@@ -92,7 +92,7 @@ $$S_1, S_2 \in \mathbb{R}^n \times \mathbb{R}^m$$，定義$$S=\{(x, y_1+y_2) ~|(
 
 可以將透視函式理解為針孔相機的作用。一個（在 R³ 中的）針孔相機由一個不透明的水平面 $$x₃ = 0$$ 組成，原點處有一個單一的針孔，光線可以穿過；以及一個水平影象平面 $$x₃ = -1$$。位於相機上方（即 $$x_3 > 0$$）的物體$$x$$，會在影象平面上的點 $$-(x₁/x₃, x₂/x₃, 1)$$處形成影象。捨棄影象點的最後一個份量（因為它始終是 -1），$$x$$ 點的影象會出現在影象平面上的 $$y = -(x₁/x₃, x₂/x₃) = -P(x)$$ 處。
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt="" width="513"><figcaption><p>透視函式的針孔相機解釋。深色水平線代表 R³ 中的平面 x₃ = 0，該平面不透明，除了原點的一個針孔。位於該平面上方的物體或光源會出現在影象平面 x₃ = -1 上，該平面顯示為較淺的水平線。光源位置到其影象位置的對映與透視函式有關。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (104).png" alt="" width="513"><figcaption><p>透視函式的針孔相機解釋。深色水平線代表 R³ 中的平面 x₃ = 0，該平面不透明，除了原點的一個針孔。位於該平面上方的物體或光源會出現在影象平面 x₃ = -1 上，該平面顯示為較淺的水平線。光源位置到其影象位置的對映與透視函式有關。</p></figcaption></figure>
 
 <mark style="color:red;">若</mark>$$C \in \mathrm{dom} P$$<mark style="color:red;">為凸集合，則值域</mark>$$P(C)=\{P(x)| x \in C\}$$<mark style="color:red;">為凸集合</mark>。
 

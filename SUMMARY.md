@@ -335,6 +335,7 @@
   * [廣義退出賽局中凸集的可接近性](game-theory/blackwells-approachability-theorem/generalized-quit-game-constraint-approachability.md)
   * [考慮折扣報酬的可接近集](game-theory/blackwells-approachability-theorem/discount-payoff-constraint-approachability.md)
   * [可接近性的近似演算法](game-theory/blackwells-approachability-theorem/approachability-approximation.md)
+  * [透過預測可接近性加快賽局求解速度](game-theory/blackwells-approachability-theorem/faster-game-solving-using-predicitive-approachability.md)
   * [隨機賽局中向量報酬的可接近集](game-theory/blackwells-approachability-theorem/approachable-sets-in-stochastic-games.md)
 * [納許均衡](game-theory/nash-equilibrium.md)
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)

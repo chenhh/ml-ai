@@ -335,8 +335,15 @@ $$S_{\epsilon} \setminus S = (S_{\epsilon}^1 \cap S_{\epsilon}^2 ) \setminus (S_
 > 定義：次要點，回報向量$$x$$對於集合$$S$$是次要點若存在$$\delta >0$$使得$$x$$是集合$$S$$的δ次要點。
 >
 > <mark style="color:red;">次要點是用來區分集合</mark>$$S$$<mark style="color:red;">中在可接近性（approachability）方面「無用」的點。為如果平均回報接近這些點，對手可以通過策略</mark>$$q$$<mark style="color:red;">迫使平均回報遠離</mark>$$S$$。
->
-> 換句話說，非次要點即$$x$$對於集合$$S$$不存在$$\delta > 0$$的路徑，即在$$\mathcal{T}(q)$$中，玩家至少有一行動的回報$$y$$形成的路徑小於$$\delta$$。
+
+### <mark style="color:red;">非次要點</mark>
+
+點$$x$$對於集合$$S$$不是次要點，若：$$\forall q \in \Delta(\mathcal{A}_2)$$與$$\lambda: \mathcal{T}(q) \rightarrow (0,1]$$，總是滿足：
+
+* $$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) =0$$或者
+* 不存在統一的$$\delta >0$$使得$$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) \geq \delta$$
+* 換句話說，對於所有$$q$$和$$\lambda(y)$$，從$$x$$到$$\mathcal{T}(q)$$的凸組合中，總能找到一些點無限靠近$$S$$（距離可以任意小）。即無論對手選擇什麼混合策略$$q$$，從$$x$$到$$\mathcal{T}(q)$$的凸包$$C(x,t)$$ 中，總存在一些路徑或點可以非常靠近$$S$$。而不會被對手的策略$$q$$ 完全阻斷。
+* 因此則對於任意$$q$$，存在從$$x$$到$$\mathcal{T}(q)$$的連續路徑，完全留在$$S$$的某個鄰域內（例如$$S_\epsilon$$ ​ ），而不必進入$$(S_\epsilon)^c$$ 。
 
 $$\lambda(y)$$是從$$\mathcal{T}(q)$$到實數區間$$(0,1]$$的連續函數，對每個回報$$y \in \mathcal{T}(q)$$指定一個權重，表示從$$x$$到$$y$$ 的「路徑」($$\lambda(y)x +(1-\lambda(y))y$$形成點$$x,y$$的線段)上的某個點。$$\lambda(y)$$可以看作一個「調節器」，它決定從起點$$x$$到終點$$y \in \mathcal{T}(q)$$的線段上，選擇哪個中間點來檢查是否靠近$$S$$。
 

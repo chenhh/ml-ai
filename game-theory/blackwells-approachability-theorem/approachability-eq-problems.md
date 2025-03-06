@@ -15,5 +15,7 @@ Blackwell可接近性、遺憾最小化和校準是評估一個策略（或算�
 ## 參考資料
 
 * \[Perchet13] Vianney Perchet,  "[Approachability, regret and calibration; implications and equivalences](https://arxiv.org/abs/1301.2663)." arXiv preprint arXiv:1301.2663, 2013.
-* \[Abernethy11] Jacob Abernethy, Peter L. Bartlett, and Elad Hazan. "Blackwell approachability and no-regret learning are equivalent." Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
+* \[Abernethy11] Jacob Abernethy, Peter L. Bartlett, and Elad Hazan. "[Blackwell approachability and no-regret learning are equivalent](https://proceedings.mlr.press/v19/abernethy11b.html)," Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
 * \[Foster99] Dean P. Foster,  "A proof of calibration via Blackwell's approachability theorem," Games and Economic Behavior, Vol. 29, No. 1-2, pp. 73-78, 1999.
+* \[Dann24] Christoph Dann et al. "[Rate-preserving reductions for blackwell approachability](https://arxiv.org/abs/2406.07585)." arXiv preprint arXiv:2406.07585, 2024.
+* [https://stephofx.github.io/2023/02/17/blackwell-approachability-theorem.html](https://stephofx.github.io/2023/02/17/blackwell-approachability-theorem.html)

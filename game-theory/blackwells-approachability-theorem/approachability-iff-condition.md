@@ -235,13 +235,79 @@ $$y=(0,0.5)$$為邊界點但不是暴露點。
 
 而正方形中的四個點(0,0), (0,1), (1,0), (1,1)為外露點，因為(0,0)存在(-1,-1)其投影點只有(0,0)。
 
+{% tabs %}
+{% tab title="圖" %}
 
 
 <figure><img src="../../.gitbook/assets/cvx_set_boundary_not_exposed.png" alt="" width="375"><figcaption><p>凸集合中存在邊界點但不是外露點</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="code" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle, Arc
+
+# 創建一個新的圖形
+plt.figure(figsize=(8, 6))
+
+# 設置坐標軸範圍
+plt.xlim(-0.5, 1.5)
+plt.ylim(-0.1, 1.1)
+
+# 繪製單位正方形 S = [0,1] × [0,1]
+square = Rectangle((0, 0), 1, 1, facecolor='lightblue', 
+                   edgecolor='blue', alpha=0.5, label='S = [0,1] × [0,1]')
+plt.gca().add_patch(square)
+
+# 定義點 y = (0, 0.5)
+y_x, y_y = 0, 0.5
+plt.plot(y_x, y_y, 'ro', markersize=8, label='y = (0, 0.5)')
+
+# 繪製虛線半圓: ε = 0.1
+theta = np.linspace(-np.pi/2, np.pi/2, 100)
+radius1 = 0.1
+x1 = y_x - radius1 * np.cos(theta)
+y1 = y_y - radius1 * np.sin(theta)
+plt.plot(x1, y1, 'g--', linewidth=2, label='ε = 0.1')
+
+# 繪製虛線半圓: ε = 0.2
+radius2 = 0.2
+x2 = y_x - radius2 * np.cos(theta)
+y2 = y_y - radius2 * np.sin(theta)
+plt.plot(x2, y2, 'r--', linewidth=2, label='ε = 0.2')
+
+# 添加半徑標籤
+plt.text(-0.15, 0.5, 'y', fontsize=12)
+plt.text(-0.15, 0.37, 'ε = 0.1', fontsize=10, color='green')
+plt.text(-0.25, 0.3, 'ε = 0.2', fontsize=10, color='red')
+
+# 添加輔助線以標示半徑
+plt.plot([0, -0.1], [0.5, 0.5], 'g-', linewidth=1)
+plt.plot([0, -0.2], [0.5, 0.5], 'r-', linewidth=1)
+
+# 網格、座標軸和標籤
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.axhline(y=0, color='k', linestyle='-', alpha=0.3)
+plt.axvline(x=0, color='k', linestyle='-', alpha=0.3)
+plt.title('unit square S and neighborhood of y', fontsize=14)
+plt.xlabel('x axis', fontsize=12)
+plt.ylabel('yaxis', fontsize=12)
+
+
+
+# 添加圖例
+plt.legend(loc='upper right')
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.97])
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
 
 ### Blackwell條件的等價寫法
 
-> 定義(本地)Blackwell條件：$$\forall y \in \mathrm{Exp}(S)$$且$$\forall x \in S^c \setminus S$$與$$\prod_S(x)=\{y\}$$，$$\exists p \in \Delta(\mathcal{A}_1)$$使得$$x$$被超平面 $$H_{xy}$$​（通過 $$y$$ 並垂直於 $$x$$ 到 $$y$$ 的向量）與 $$\mathcal{R}(p)$$ 分隔開來。
+> 定義(本地)Blackwell條件：$$\forall y \in \mathrm{Exp}(S)$$且$$\forall x \in S_\epsilon \setminus S$$與$$\prod_S(x)=\{y\}$$，$$\exists p \in \Delta(\mathcal{A}_1)$$使得$$x$$被超平面 $$H_{xy}$$​（通過 $$y$$ 並垂直於 $$x$$ 到 $$y$$ 的向量）與 $$\mathcal{R}(p)$$ 分隔開來。
 >
 > (全局)Blackwell條件定義是對所有$$x \in S^c$$ ，都存在一個策略$$\exists p \in \Delta(\mathcal{A}_1)$$且$$\exists y \in \prod_S(x)$$使得$$x$$被超平面 $$H_{xy}$$​（通過 $$y$$ 並垂直於 $$x$$ 到 $$y$$ 的向量）與 $$\mathcal{R}(p)$$ 分隔開來。
 
@@ -249,7 +315,7 @@ $$y=(0,0.5)$$為邊界點但不是暴露點。
 
 <details>
 
-<summary>proof</summary>
+<summary>proof：全局->本地很直覺，因為<span class="math">x</span>為外點。<br>而本地->全局取<span class="math">\epsilon \rightarrow 0</span>時，<span class="math">z \rightarrow x</span>且超平面<span class="math">H_{zy} \rightarrow H_{xy}</span>。</summary>
 
 全局⇒ 本地 (可在鄰域中找到點x投影到外露點，且x滿足全局條件)
 
@@ -289,7 +355,9 @@ $$y=(0,0.5)$$為邊界點但不是暴露點。
 >
 > 由theorem 1得緊致集合$$S$$​為B集合時⟹則$$S$$為可接近集。
 >
-> 註：<mark style="color:red;">當一個集合由兩個不相交的部分組成時，若整體可被玩家接近（即滿足 Blackwell 條件），則每個部分單獨也可被接近。</mark>
+> <mark style="color:red;">註：當一個集合由兩個不相交的部分組成時，若整體可被玩家接近（即滿足 Blackwell 條件），則每個部分單獨也可被接近。</mark>
+>
+> <mark style="color:red;">註：由於凸集合必為連通集，因此非連通集不是凸集合。</mark>
 
 <details>
 

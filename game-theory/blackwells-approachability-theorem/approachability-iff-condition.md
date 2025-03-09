@@ -211,11 +211,11 @@ $$S$$包含了一個可接近的子集$$\mathcal{R}(p)$$，因為可接近集的
 >
 > 定義所有外露點的集合為$$\mathrm{Exp}(S)$$。
 >
-> 由定義得$$\mathrm{Exp}(S) \subseteq \partial (S)$$。
+> 由定義得<mark style="color:red;">外露點集為邊界點的子集合</mark>，即$$\mathrm{Exp}(S) \subseteq \partial (S)$$。
 >
 > 由凸集合的外部投影點有唯一性得若$$S$$為閉嚴格凸集合，則$$\mathrm{Exp}(S) = \partial (S)$$。
 >
-> 註：外露點為只考慮(可能有多個)外點在集合上有唯一投影點的邊界點。
+> <mark style="color:red;">註：外露點為只考慮(可能有多個)外點在集合上有唯一投影點的邊界點。</mark>
 
 如果$$S$$的外露點的鄰域滿足Blackwell條件，那麼整個$$S$$也會滿足Blackwell條件，進而是個 B集合（可被逼近的集合）。
 
@@ -234,6 +234,8 @@ $$S$$包含了一個可接近的子集$$\mathcal{R}(p)$$，因為可接近集的
 * 因此$$\prod_S(x)$$總是包含$$(a,0)$$，且$$a \neq 0$$時，$$(0,0)$$不是最近點。
 
 所以不存在$$x \in S^c \ni \prod_S(x)=\{(0,0)\}$$，因為$$(0,0)$$週圍的$$S$$總會提供其它更近的點。
+
+<figure><img src="../../.gitbook/assets/boundary_not_exposed_point.png" alt="" width="375"><figcaption><p>邊界點但非外露點</p></figcaption></figure>
 
 ### Blackwell條件的等價寫法
 
@@ -326,22 +328,20 @@ $$S_{\epsilon} \setminus S = (S_{\epsilon}^1 \cap S_{\epsilon}^2 ) \setminus (S_
 
 ## 次要點(secondary point)
 
-> 定義：回報向量$$x \in X$$是(緊緻)集合$$S$$的δ次要點，若存在對手混合策略$$q \in \Delta (\mathcal{A}_2)$$與連續函數$$\lambda: \mathcal{T}(q) \rightarrow (0,1]$$滿足$$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) \geq \delta$$。
+> 定義：回報向量$$x \in X$$是(緊緻)集合$$S$$的<mark style="color:red;">δ次要點</mark>，若存在對手混合策略$$q \in \Delta (\mathcal{A}_2)$$與連續函數$$\lambda: \mathcal{T}(q) \rightarrow (0,1]$$滿足$$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) \geq \delta$$。
 >
 > 換句話說，無論玩家如何選擇策略，得到的回報$$y$$與$$x$$形成的直線路徑，這些路徑中的任意點都無法靠近$$S$$（距離至少保持$$\delta$$）。
 >
 > 其中$$\mathcal{T}(q)$$為對手選擇混合策略$$q$$時，玩家的所有可能回報集合。
 >
-> 定義：次要點，回報向量$$x$$對於集合$$S$$是次要點若存在$$\delta >0$$使得$$x$$是集合$$S$$的δ次要點。
+> 定義：<mark style="color:red;">次要點</mark>，回報向量$$x$$對於集合$$S$$是次要點若存在$$\delta >0$$使得$$x$$是集合$$S$$的δ次要點。
 >
 > <mark style="color:red;">次要點是用來區分集合</mark>$$S$$<mark style="color:red;">中在可接近性（approachability）方面「無用」的點。為如果平均回報接近這些點，對手可以通過策略</mark>$$q$$<mark style="color:red;">迫使平均回報遠離</mark>$$S$$。
 
 ### <mark style="color:red;">非次要點</mark>
 
-點$$x$$對於集合$$S$$不是次要點，若：$$\forall q \in \Delta(\mathcal{A}_2)$$與$$\lambda: \mathcal{T}(q) \rightarrow (0,1]$$，總是滿足：
+點$$x$$對於集合$$S$$不是次要點，若：$$\forall q \in \Delta(\mathcal{A}_2)$$與$$\lambda: \mathcal{T}(q) \rightarrow (0,1]$$，總是滿足：$$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) =0$$
 
-* $$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) =0$$或者
-* 不存在統一的$$\delta >0$$使得$$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) \geq \delta$$
 * 換句話說，對於所有$$q$$和$$\lambda(y)$$，從$$x$$到$$\mathcal{T}(q)$$的凸組合中，總能找到一些點無限靠近$$S$$（距離可以任意小）。即無論對手選擇什麼混合策略$$q$$，從$$x$$到$$\mathcal{T}(q)$$的凸包$$C(x,t)$$ 中，總存在一些路徑或點可以非常靠近$$S$$。而不會被對手的策略$$q$$ 完全阻斷。
 * 因此則對於任意$$q$$，存在從$$x$$到$$\mathcal{T}(q)$$的連續路徑，完全留在$$S$$的某個鄰域內（例如$$S_\epsilon$$ ​ ），而不必進入$$(S_\epsilon)^c$$ 。
 
@@ -356,17 +356,17 @@ $$\lambda(y)$$是從$$\mathcal{T}(q)$$到實數區間$$(0,1]$$的連續函數，
 
 註：次要點的性質應該與Blackwell中的[theorem 3](./#theorem-3-tu-ji-he-ke-jie-jin-de-chong-yao-tiao-jian)接近的充要條件有關。即閉凸集合$$S$$為可接近集合 ⟺ $$S$$與任意的凸包$$\mathcal{T}(q),  ~\forall q \in \Delta(\mathcal{A}_2)$$都有交集。而且可接近集的超集合也是可接近集，因此除了最小的可接近集之外，其它的可接近集中的點都是次要點(?)。
 
-假設$$𝑥$$是次要點，對手可以選擇一個固定的策略$$q$$，使得從$$x$$出發，沿著到$$\mathcal{T}(q)$$的任何「路徑」（由凸組合表示），總會偏離$$S$$一段距離（至少$$\delta$$）。 這意味著$$x$$無法作為接近$$S$$的穩定起點，因為對手可以迫使平均回報遠離 $$S$$。
+假設$$𝑥$$是次要點，對手可以選擇一個固定的策略$$q$$，使得從$$x$$出發，沿著到$$\mathcal{T}(q)$$的任何「路徑」（由凸組合表示），總會偏離$$S$$一段距離（至少$$\delta$$）。 <mark style="color:red;">這意味著</mark>$$x$$<mark style="color:red;">無法作為接近</mark>$$S$$<mark style="color:red;">的穩定起點，因為對手可以迫使平均回報遠離</mark> $$S$$。
 
 在重複賽局中，如果平均報酬$$\overline{x}_n$$ 接近次要點$$x$$，對手通過策略$$q$$可以讓未來的平均報酬偏離$$S$$，從而破壞玩家的可接近性策略。
-
-給定回報$$x \in X$$與對手的混合策略$$q \in \Delta(\mathcal{A}_2)$$，令$$C(x,q)=\{cx +(1-c)y ~|~ c \in [0,1], y \in \mathcal{T}(q)\}$$為回報$$x$$與給定對手的混合策略$$q$$​回報形成的凸包$$\mathcal{T}(q)$$的凸包。(這是由單點$$x$$與凸集合$$\mathcal{T}(q)$$形成的凸包，等於將單點與凸集合內的每一點形成的線段形成的集合)。
 
 ### 性質1：次要點至給定對手策略報酬集的連續路徑都會經過距離集合至少長度δ的區域
 
 > 若$$x$$為集合$$S$$的δ次要點，則存在對手策略$$q \in \Delta(\mathcal{A}_2)$$使得所有在集合$$C(x,q)$$中從$$x$$到回報集合$$\mathcal{T}(q)$$的連續路徑都無法避免進入$$(S_\delta)^c$$。
 >
-> 即δ次要點$$x$$到$$\mathcal{T}(q)$$的任何連續路徑都會經過距離$$S$$長度至少 δ 的區域。
+> 即δ次要點$$x$$到$$\mathcal{T}(q)$$的任何連續路徑與集合$$S$$的最近距離至少 δ ，因此所有連續路徑都會必定與$$(S_\delta)^c$$有交集。
+
+給定回報$$x \in X$$與對手的混合策略$$q \in \Delta(\mathcal{A}_2)$$，令$$C(x,q)=\{cx +(1-c)y ~|~ c \in [0,1], y \in \mathcal{T}(q)\}$$為回報$$x$$與給定對手的混合策略$$q$$​回報形成的凸包$$\mathcal{T}(q)$$的凸包。(這是由單點$$x$$與凸集合$$\mathcal{T}(q)$$形成的凸包，等於將單點與凸集合內的每一點形成的線段形成的集合)。
 
 <details>
 

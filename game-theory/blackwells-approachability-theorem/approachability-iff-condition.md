@@ -401,22 +401,22 @@ $$S_{\epsilon} \setminus S = (S_{\epsilon}^1 \cap S_{\epsilon}^2 ) \setminus (S_
 給定回報$$x \in X$$與對手的混合策略$$q \in \Delta(\mathcal{A}_2)$$，定義$$C(x,q)=\{\lambda x +(1-\lambda)y ~|~ \lambda \in [0,1], y \in \mathcal{T}(q)\}$$為回報$$x$$與給定對手的混合策略$$q$$​回報形成的凸包$$\mathcal{T}(q)$$的凸包。
 
 * 這是由單點$$x$$與凸集合$$\mathcal{T}(q)$$形成的凸包，等於將單點與凸集合內的每一點形成的線段形成的集合。
-* 如果要強調參數$$\lambda$$對於相異的$$y_1, y_2 \in \mathcal{T}(q)$$與$$x$$形成不同的線段時，可將$$\lambda$$改寫成$$\lambda(y)$$的函數形式。
+* 如果要強調參數$$\lambda$$對於相異的$$y_1, y_2 \in \mathcal{T}(q)$$與$$x$$形成不同的路徑時，可將$$\lambda$$改寫成$$\lambda(y)$$的函數形式。
 * <mark style="color:red;">此處不必關心</mark>$$\lambda(y)$$<mark style="color:red;">的實際形式，重點在於</mark>$$\lambda(y)x + (1-\lambda(y))y$$<mark style="color:red;">形成了</mark>$$x,y$$<mark style="color:red;">之間的連續路徑即可</mark>。
 * $$\lambda(y)$$是從$$\mathcal{T}(q)$$到實數區間$$(0,1]$$的連續函數，對每個回報$$y \in \mathcal{T}(q)$$指定一個權重，表示從$$x$$到$$y$$ 的「路徑」($$\lambda(y)x +(1-\lambda(y))y$$形成點$$x,y$$的線段)上的某個點。$$\lambda(y)$$可以看作一個「調節器」，它決定從起點$$x$$到終點$$y \in \mathcal{T}(q)$$的線段上，選擇哪個中間點來檢查是否靠近$$S$$。
-* $$\lambda(y)$$就像一個「滑塊」，沿著從$$x$$到每個$$y$$的直線滑動，產生一系列點。次要點的條件要求，無論$$y$$如何選擇，這個滑塊產生的點總是距離$$S$$至少$$\delta$$，也就是說，這些點無法「靠近」 $$S$$。
-* 在重複賽局，平均回報$$\overline{x}_n$$ 可以看作從初始點（如$$x$$）向$$\mathcal{T}(q)$$移動的結果。$$\lambda(y)$$ 表示這種移動過程中，回報軌跡上的某個位置。如果$$x$$ 是次要點，對手通過固定策略$$q$$和適當的$$\lambda(y)$$，可以確保平均回報的軌跡永遠不會太靠近$$S$$，無論玩家如何調整。
+* <mark style="color:blue;">在重複賽局，平均回報</mark>$$\overline{x}_n$$ <mark style="color:blue;">可以看作從初始點</mark>$$x$$<mark style="color:blue;">，向</mark>$$\mathcal{T}(q)$$<mark style="color:blue;">移動的結果。</mark>$$\lambda(y)$$ <mark style="color:blue;">表示這種移動過程中，回報軌跡上的某個位置。而回報軌跡不會是一條直線，因為在對手使用固定混合策略</mark>$$q$$<mark style="color:blue;">時，玩家除非總是採取固定行動</mark>$$i$$<mark style="color:blue;">才會得到固定的回報</mark>$$y_i \in \mathcal{T}(q)$$<mark style="color:blue;">，若是玩家採用混合策略</mark>$$p$$<mark style="color:blue;">時，則會得到報酬</mark>$$y_{t_1}, y_{t_2}, \dots$$<mark style="color:blue;">，而每一點</mark>$$y_{t_k} \in \mathcal{T}(q)$$<mark style="color:blue;">，因此從</mark>$$x$$<mark style="color:blue;">為起點得到的回報軌跡會落在</mark>$$C(x,q)$$<mark style="color:blue;">內但通常不是直線，而是曲折的線段，當無限多輪時，可視為連續路徑。</mark>
+* 如果$$x$$ 是次要點，對手通過固定策略$$q$$和適當的$$\lambda(y)$$，可以確保平均回報的軌跡永遠不會太靠近$$S$$，無論玩家如何調整。
 * $$\lambda(y)$$的連續性確保從$$x$$到$$\mathcal{T}(q)$$ 的「路徑」是平滑的，避免跳躍或不一致的情況。如果$$\lambda(y)$$ 不連續，可能存在某些$$y$$使得線段突然靠近$$S$$，破壞次要點的「遠離」特性。
 
 > 定義：回報向量$$x \in X$$是(緊緻)集合$$S$$的<mark style="color:red;">δ次要點</mark>，若存在對手混合策略$$q \in \Delta (\mathcal{A}_2)$$與連續函數$$\lambda: \mathcal{T}(q) \rightarrow (0,1]$$滿足$$\displaystyle \min_{y \in \mathcal{T}(q)} d_S(\lambda(y)x +(1-\lambda(y))y) \geq \delta$$。
 >
-> 換句話說，無論玩家如何選擇策略，得到的回報$$y$$與$$x$$形成的連續路徑，這些路徑中的任意點都無法靠近$$S$$（距離至少保持$$\delta$$）。
+> 換句話說，無論玩家如何選擇策略，得到的回報$$y$$與$$x$$形成的連續路徑(限制在$$C(x,q)$$中)，這些路徑中的點任意點都無法靠近$$S$$（距離至少保持$$\delta$$）。
 >
 > 其中$$\mathcal{T}(q)$$為對手選擇混合策略$$q$$時，玩家的所有可能回報集合。
 >
 > 此處$$\lambda(y) \neq 0$$是因為$$x$$可能位在集合$$S$$的內部，即$$x \in S$$。
 >
-> 此處$$\lambda(y)$$是針對每一個$$y \in \mathcal{T}(q)$$相對於$$x$$而變動，形成$$x,y$$之間的連續路徑(線段)。
+> 此處$$\lambda(y)$$是針對每一個$$y \in \mathcal{T}(q)$$相對於$$x$$而變動，形成$$x,y$$之間的連續路徑(不一定是線段)。
 >
 > 定義：<mark style="color:red;">次要點</mark>，回報向量$$x$$對於集合$$S$$是次要點若存在$$\delta >0$$使得$$x$$是集合$$S$$的δ次要點。
 >
@@ -429,11 +429,9 @@ $$S_{\epsilon} \setminus S = (S_{\epsilon}^1 \cap S_{\epsilon}^2 ) \setminus (S_
 * 換句話說，對於所有$$q$$和$$\lambda(y)$$，從$$x$$到$$\mathcal{T}(q)$$的凸組合中，總能找到一些點無限靠近$$S$$（距離可以任意小）。即無論對手選擇什麼混合策略$$q$$，從$$x$$到$$\mathcal{T}(q)$$的凸包$$C(x,t)$$ 中，總存在一些路徑或點可以非常靠近$$S$$。而不會被對手的策略$$q$$ 完全阻斷。
 * 因此則對於任意$$q$$，存在從$$x$$到$$\mathcal{T}(q)$$的連續路徑，完全留在$$S$$的某個鄰域內（例如$$S_\epsilon$$ ​ ），而不必進入$$(S_\epsilon)^c$$ 。
 
-
-
 註：次要點的性質應該與Blackwell中的[theorem 3](./#theorem-3-tu-ji-he-ke-jie-jin-de-chong-yao-tiao-jian)接近的充要條件有關。即閉凸集合$$S$$為可接近集合 ⟺ $$S$$與任意的凸包$$\mathcal{T}(q),  ~\forall q \in \Delta(\mathcal{A}_2)$$都有交集。而且可接近集的超集合也是可接近集，因此除了最小的可接近集之外，其它的可接近集中的點都是次要點(?)。
 
-假設$$𝑥$$是次要點，對手可以選擇一個固定的策略$$q$$，使得從$$x$$出發，沿著到$$\mathcal{T}(q)$$的任何「路徑」（由凸組合表示），總會偏離$$S$$一段距離（至少$$\delta$$）。 <mark style="color:red;">這意味著</mark>$$x$$<mark style="color:red;">無法作為接近</mark>$$S$$<mark style="color:red;">的穩定起點，因為對手可以迫使平均回報遠離</mark> $$S$$。
+假設$$𝑥$$是次要點，對手可以選擇一個固定的策略$$q$$，使得從$$x$$出發，沿著到$$\mathcal{T}(q)$$的任何「連續路徑」（由凸組合表示），總會偏離$$S$$一段距離（至少$$\delta$$）。 <mark style="color:red;">這意味著</mark>$$x$$<mark style="color:red;">無法作為接近</mark>$$S$$<mark style="color:red;">的穩定起點，因為對手可以迫使平均回報遠離</mark> $$S$$。
 
 在重複賽局中，如果平均報酬$$\overline{x}_n$$ 接近次要點$$x$$，對手通過策略$$q$$可以讓未來的平均報酬偏離$$S$$，從而破壞玩家的可接近性策略。
 
@@ -441,9 +439,7 @@ $$S_{\epsilon} \setminus S = (S_{\epsilon}^1 \cap S_{\epsilon}^2 ) \setminus (S_
 
 > 若$$x$$為集合$$S$$的δ次要點，則存在對手策略$$q \in \Delta(\mathcal{A}_2)$$使得所有在集合$$C(x,q)$$中從$$x$$到回報集合$$\mathcal{T}(q)$$的連續路徑都無法避免進入$$(S_\delta)^c$$。
 >
-> 即δ次要點$$x$$到$$\mathcal{T}(q)$$的任何連續路徑與集合$$S$$的最近距離至少 δ ，因此所有連續路徑都會必定與$$(S_\delta)^c$$有交集。
-
-給定回報$$x \in X$$與對手的混合策略$$q \in \Delta(\mathcal{A}_2)$$，令$$C(x,q)=\{cx +(1-c)y ~|~ c \in [0,1], y \in \mathcal{T}(q)\}$$為回報$$x$$與給定對手的混合策略$$q$$​回報形成的凸包$$\mathcal{T}(q)$$的凸包。(這是由單點$$x$$與凸集合$$\mathcal{T}(q)$$形成的凸包，等於將單點與凸集合內的每一點形成的線段形成的集合)。
+> 即δ次要點$$x$$到$$\mathcal{T}(q)$$的所有連續路徑與集合$$S$$的最近距離至少 δ ，因此所有連續路徑都會必定與$$(S_\delta)^c$$有交集。
 
 <details>
 

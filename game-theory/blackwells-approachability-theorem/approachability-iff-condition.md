@@ -6,7 +6,7 @@ description: >-
 
 # 可接近集的充要條件
 
-## 摘要
+摘要
 
 在具有向量收益的賽局中，Blackwell(1956）提出的「可接近性」（approachability）理論在賽局論中已有廣泛應用，例如用於研究單邊資訊不完全的重複賽局（Aumann and Maschler, 1995），或校準與學習過程問題（Foster and Vohra, 1997; Hart and Mas-Colell, 1997）。
 
@@ -183,7 +183,7 @@ $$S$$包含了一個可接近的子集$$\mathcal{R}(p)$$，因為可接近集的
 
 註：邊界點的每個鄰域都同時包含集合的點和補集的點，即$$x \in \partial S \Leftrightarrow \forall \epsilon >0, ~x \cap S_\epsilon \neq \emptyset$$且$$x \cap S_\epsilon^c \neq \emptyset$$。
 
-### Lemma 3: 緊緻集的鄰域中存在點有唯&#x4E00;_&#x6295;_&#x5F71;點
+### Lemma 3: 緊緻集的鄰域中存在單點有唯&#x4E00;_&#x6295;_&#x5F71;點
 
 > 令$$S$$為緊致集(有界閉集合)且$$x \in S^c$$，則$$\forall y \in \prod_S(x)$$($$x$$在$$S$$上的投影集的所有點)與$$\forall \epsilon >0 \exists z \in S_\epsilon \setminus S \ni \prod_S(z)=\{y\}$$。
 >
@@ -193,11 +193,15 @@ $$S$$包含了一個可接近的子集$$\mathcal{R}(p)$$，因為可接近集的
 
 <details>
 
-<summary>proof: (x,y)為實數上的開區間且長度>0，依實數稠密性必存在<span class="math">z \in (x,y)</span>且<span class="math">z \in S^c</span>。</summary>
+<summary>proof: 線段(x,y)為實數上的開區間且長度>0，依實數稠密性必存在<span class="math">z \in (x,y)</span>且<span class="math">z \in S^c</span>。</summary>
+
+存在性：
 
 因為$$d(x, S) >0$$，且$$y$$為其投影點，取$$0< \epsilon < d(x,S)$$。
 
 因此可在直線開區間$$(x,y)$$中取一點$$z \in S_{\epsilon}$$。
+
+唯一性：
 
 因為$$z \in (x,y)$$，且$$y \in S$$是集合上離$$x$$最近的點，若$$z$$有另一個投影$$y^{'} \in S$$，則$$d(x,y^{'}) < d(x,y)$$，與$$y \in \prod_S(x)$$矛盾，因此$$\prod_S(z)=\{y\}$$。
 
@@ -209,11 +213,11 @@ $$S$$包含了一個可接近的子集$$\mathcal{R}(p)$$，因為可接近集的
 
 > 邊界點$$y \in \partial S$$稱為集合$$S$$的外露點，若存在$$x \in S^c$$滿足$$\prod_S(x)=\{y\}$$。即$$y$$是$$x$$ 在$$S$$上的唯一最近點。
 >
-> 定義所有外露點的集合為$$\mathrm{Exp}(S)$$。
+> 定義所有<mark style="color:red;">外露點的集合為</mark>$$\mathrm{Exp}(S)$$，即$$y \in \mathrm{Exp}(S) \Leftrightarrow y \in \partial(S) \text{ and } \exists x \in S^c \ni \prod_S(x)={y}$$。
 >
-> 由定義得<mark style="color:red;">外露點集為邊界點的子集合</mark>，即$$\mathrm{Exp}(S) \subseteq \partial (S)$$。
+> <mark style="color:red;">由定義得外露點集為邊界點的子集合</mark>，即$$\mathrm{Exp}(S) \subseteq \partial S$$。
 >
-> 由凸集合的外部投影點有唯一性得若$$S$$為閉嚴格凸集合，則$$\mathrm{Exp}(S) = \partial (S)$$。
+> 由凸集合的外部投影點有唯一性得若$$S$$為<mark style="color:red;">閉嚴格凸集合</mark>，則$$\mathrm{Exp}(S) = \partial S$$。
 >
 > <mark style="color:red;">註：外露點為只考慮(可能有多個)外點在集合上有唯一投影點的邊界點。</mark>
 
@@ -221,21 +225,19 @@ $$S$$包含了一個可接近的子集$$\mathcal{R}(p)$$，因為可接近集的
 
 <mark style="color:red;">邊界點但非外露點的條件</mark>：$$\forall x \in S^c, \prod_S(x) \neq \{y\}$$，即邊點界$$y$$不是所有外點的單獨投影點。
 
-### 範例：邊界點但非外露點
+### 範例：非嚴格凸集合中存在邊界點但非外露點
 
-考慮二維空間集合$$S=\{(x,y) \in \mathbb{R}^2 ~|~ y \geq 0\} \cup \{(x,0) ~|~ x \leq 0\}$$為上半平面加上$$x$$軸$$x\leq 0$$的的部份。則點$$y=(0,0)$$為邊界點但不是外露點。
+考慮二維空間中的單位正方形$$S=[0,1] \times [0,1]$$為凸集合，但不是嚴格凸集合。
 
-假設$$y$$是外露點，即$$\exists x \in S^c \ni \prod_S(x)=\{(0,0)\}$$。
+$$y=(0,0.5)$$為邊界點但不是暴露點。
 
-而$$S^c=\{(x,y) \in \mathbb{R}^2 ~|~ y <0, ~ x >0\}$$，取任意$$x =(a,b)\in S^c$$
+因為不存在$$x \in S^c \ni \prod_S(x)=\{(0, 0.5)\}$$，因為$$y$$的任意$$\epsilon$$鄰域中，都存在多點的投影點為$$y$$。
 
-* 到$$y=0$$的最近點是$$(a,0)\in S$$，距離為$$|b|$$。
-* 到(0,0)的距離是$$(a^2+b^2) > |b|$$
-* 因此$$\prod_S(x)$$總是包含$$(a,0)$$，且$$a \neq 0$$時，$$(0,0)$$不是最近點。
+而正方形中的四個點(0,0), (0,1), (1,0), (1,1)為外露點，因為(0,0)存在(-1,-1)其投影點只有(0,0)。
 
-所以不存在$$x \in S^c \ni \prod_S(x)=\{(0,0)\}$$，因為$$(0,0)$$週圍的$$S$$總會提供其它更近的點。
 
-<figure><img src="../../.gitbook/assets/boundary_not_exposed_point.png" alt="" width="375"><figcaption><p>邊界點但非外露點</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/cvx_set_boundary_not_exposed.png" alt="" width="375"><figcaption><p>凸集合中存在邊界點但不是外露點</p></figcaption></figure>
 
 ### Blackwell條件的等價寫法
 

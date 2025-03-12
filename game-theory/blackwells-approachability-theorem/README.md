@@ -737,12 +737,16 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 ## 參考資料
 
 * \[原始論文] David Blackwell, "[An analog of the minimax-theorem for vector payoffs](https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-6/issue-1/An-analog-of-the-minimax-theorem-for-vector-payoffs/pjm/1103044235.pdf), " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
+* Abraham Wald, "[Note on zero sum two person games](https://www.jstor.org/stable/1969446)," Annals of mathematics, Vol. 52, No.3 pp. 739-742, 1950.
 * Tien-Fang Hou, "[Weak approachability in a two-person gam](https://www.jstor.org/stable/2239629)e," The Annals of Mathematical Statistics, Vol.  40, No. 3, pp. 789-813, 1969.
 * Tien-Fang Hou, ["Approachability in a two-person game](https://www.jstor.org/stable/2239818)," The Annals of Mathematical Statistics Vol. 42, No. 2, pp. 735-744, 1971.
 * Harold Sackrowitz, "[A note on approachability in a two-person game](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-43/issue-3/A-Note-on-Approachability-in-a-Two-person-Game/10.1214/aoms/1177692567.full)," The Annals of Mathematical Statistics, Vol. 43, No.3, pp. 1017-1019, 1972.
+* Melvin Katz, "[Infinitely repeatable games](https://msp.org/pjm/1960/10-3/pjm-v10-n3-s.pdf#page=151)," Pacific J. Math. Vol. 10, No. 4 pp. 879-885, 1960.
 * Nicolas Vieille, "[Weak approachability](https://pubsonline.informs.org/doi/abs/10.1287/moor.17.4.781)," Mathematics of operations research, Vol. 17, No.4,pp. 781-791, 1992.
 * Barak Shani and Eilon Solan, "[Strong approachability](https://www.aimsciences.org/article/doi/10.3934/jdg.2014.1.507)," Journal of Dynamics and Games, Vol. 1, No.3 ,pp. 507-535, 2014.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
 * Jacob Abernethy, Peter L. Bartlett, and Elad Hazan, "Blackwell approachability and no-regret learning are equivalent," Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.
 * \[可[接近定理幾何性質\] Xavier Spinat, "A necessary and sufficient condition for approachability." Mathematics of operations research, Vol. 27, No. 1, pp. 31-44, 2002.](approachability-iff-condition.md)
 * \[wiki][https://en.wikipedia.org/wiki/Minimax\_theorem](https://en.wikipedia.org/wiki/Minimax_theorem)[\[wiki\] Minimax theorem](https://en.wikipedia.org/wiki/Minimax_theorem)
+* \[book]Sylvain Sorin, A first course on zero-sum repeated games. Vol. 37. Springer Science & Business Media, 2002.
+* \[book]Dario Bauso,  Game theory with engineering applications. Society for industrial and applied mathematics, 2016.

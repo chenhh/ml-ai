@@ -334,6 +334,7 @@
   * [有限制式向量報酬的可接近集](game-theory/blackwells-approachability-theorem/constraint-approachability.md)
   * [廣義退出賽局中凸集的可接近性](game-theory/blackwells-approachability-theorem/generalized-quit-game-constraint-approachability.md)
   * [考慮折扣報酬的可接近集](game-theory/blackwells-approachability-theorem/discount-payoff-constraint-approachability.md)
+  * [延遲訊息的可接近性](game-theory/blackwells-approachability-theorem/approachability-with-delayed-information.md)
   * [可接近性的近似演算法](game-theory/blackwells-approachability-theorem/approachability-approximation.md)
   * [透過預測可接近性加快賽局求解速度](game-theory/blackwells-approachability-theorem/faster-game-solving-using-predicitive-approachability.md)
   * [可到達集合(attainable set)](game-theory/blackwells-approachability-theorem/attainable-set.md)

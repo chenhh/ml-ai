@@ -340,6 +340,7 @@
   * [可到達集合(attainable set)](game-theory/blackwells-approachability-theorem/attainable-set.md)
   * [有限記憶策略的可接近性](game-theory/blackwells-approachability-theorem/approachability-with-bounded-memory.md)
   * [有限計算能力下的可排除集](game-theory/blackwells-approachability-theorem/bounded-computation-exclude-set.md)
+  * [部份監控賽局凸集的可接近性](game-theory/blackwells-approachability-theorem/convex-approachability-partial-monitoring-game.md)
   * [隨機賽局中向量報酬的可接近集](game-theory/blackwells-approachability-theorem/approachable-sets-in-stochastic-games.md)
 * [納許均衡](game-theory/nash-equilibrium.md)
 * [相關均衡(correlated equilibrium)](game-theory/correlated-equilibrium.md)

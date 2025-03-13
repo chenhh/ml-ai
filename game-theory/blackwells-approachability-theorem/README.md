@@ -16,6 +16,8 @@ description: >-
 
 <mark style="color:red;">內部或外部遺憾最小化問題的一個共同特點是，它們可以被寫成某些向量回報賽局中精心選擇的目標集的可接近性的一個具體案例</mark>。
 
+<mark style="background-color:red;">Blackwell在原始論文(1956)中討論的是隨機回報，即玩家與對手分別選定行動</mark>$$i,j$$<mark style="background-color:red;">時，得到的回報</mark>$$m(i,j)$$<mark style="background-color:red;">是某個機率分佈的隨機值；</mark><mark style="color:red;background-color:red;">而Hou(1971, theorem 5)證明玩家與對手的向量可接近集，只與回報的機率分佈平均值</mark>$$\overline{m(i,j)}$$<mark style="color:red;background-color:red;">有關，而與其機率分佈無關</mark>。因此後期的論文通常把$$m(i,j)$$視為向量而非機率分佈討論。
+
 ## 最小最大理論(Minmax theorem)
 
 > 給定<mark style="color:blue;">單期</mark>雙人零和賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，記行動集$$\mathcal{A}_1=\{1,2,\dots, r\}$$，$$\mathcal{A}_2=\{1,2,\dots, s\}$$。

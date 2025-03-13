@@ -1,7 +1,7 @@
 ---
 description: >-
   David Blackwell, "An analog of the minimax-theorem for vector payoffs, "
-  Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
+  Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956. 以及學生的延伸論文
 ---
 
 # Blackwell's Approachability Theorem
@@ -18,10 +18,10 @@ description: >-
 
 ## 最小最大理論(Minmax theorem)
 
-> 給定<mark style="color:blue;">單期</mark>雙人零和賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，記行動集$$\mathcal{A}_1=\{1,2,\dots, r\}$$，$$\mathcal{A}_2={1,2,\dots, s}$$。
+> 給定<mark style="color:blue;">單期</mark>雙人零和賽局，玩家1,2的行動集合分別有$$r,s$$個(有限個)行動，記行動集$$\mathcal{A}_1=\{1,2,\dots, r\}$$，$$\mathcal{A}_2=\{1,2,\dots, s\}$$。
 >
 > * 玩家1(玩家)的混合策略為$$\displaystyle \mathbf{p}=(p_1, p_2, \dots, p_r) \in \Delta(\mathcal{A}_1), \Delta(\mathcal{A}_1)=\left\{ \mathbf{p} \in \mathbb{R}_{+}^r~|~ \sum_{i=1}^r p_i = 1\right\}$$。
-> * 玩家2(對手或環境)的混合策略為$$\displaystyle \mathbf{q}=(p_1, p_2, \dots, p_r) \in \Delta(\mathcal{A}_2), \Delta(\mathcal{A}_2)=\left\{ \mathbf{q} \in \mathbb{R}_{+}^r~|~ \sum_{i=1}^s q_i = 1\right\}$$。
+> * 玩家2(對手或環境)的混合策略為$$\displaystyle \mathbf{q}=(p_1, p_2, \dots, p_r) \in \Delta(\mathcal{A}_2), \Delta(\mathcal{A}_2)=\left\{ \mathbf{q} \in \mathbb{R}_{+}^s~|~ \sum_{i=1}^s q_i = 1\right\}$$。
 > * $$m(i,j) \in \mathbb{R}$$為玩家1,2分別採取實際行動$$i,j$$時，玩家1的回報\[越高越好]\(payoff)(零和遊戲，所以玩家2的回報為$$-m(i,j)$$)。
 >
 > 則存在$$\mathbf{p} \in \Delta(\mathcal{A}_1), ~ \mathbf{q} \in \Delta(\mathcal{A}_2), ~ v \in \mathbb{R}$$ 滿足$$\displaystyle \sum_{i=1}^r p_i m(i, j) \geq v \geq \sum_{j=1}^s q_j m(i,j), ~ \forall i, j$$。
@@ -287,9 +287,9 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 ### 直觀引理
 
-由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(</mark><mark style="background-color:red;">若</mark>$$S$$<mark style="background-color:red;">為可接近，且</mark>$$S \subseteq Q$$<mark style="background-color:red;">，則</mark>$$Q$$<mark style="background-color:red;">為可接近集。</mark><mark style="color:red;">因為當</mark>$$\delta_n = d(\overline{x}_n, S)=0$$，可得$$d(\overline{x}_n, Q)=0$$)<mark style="color:red;">，且可排除集合的子集合仍為可排除集合(若</mark>$$S$$為可排除集合，且$$T \subseteq S$$，則$$T$$為可排除集合。因為$$\delta_n = d(\overline{x}_n, S) > d)$$，可得$$d(\overline{x}_, T)>d$$<mark style="color:red;">)</mark>。
+由定義知<mark style="color:red;">可接近集合的超集合必為可接近集合(</mark><mark style="background-color:red;">若</mark>$$S$$<mark style="background-color:red;">為可接近，且</mark>$$S \subseteq Q$$<mark style="background-color:red;">，則</mark>$$Q$$<mark style="background-color:red;">為可接近集。</mark><mark style="color:red;">因為當</mark>$$\delta_n = d(\overline{x}_n, S)=0$$，可得$$d(\overline{x}_n, Q)=0$$)<mark style="color:red;">，</mark><mark style="color:red;background-color:red;">且可排除集合的子集合仍為可排除集合</mark><mark style="color:red;">(若</mark>$$S$$為可排除集合，且$$T \subseteq S$$，則$$T$$為可排除集合。因為$$\delta_n = d(\overline{x}_n, S) > d)$$，可得$$d(\overline{x}_, T)>d$$<mark style="color:red;">)</mark>。
 
-不存在同時為可接近且為可排除的集合(因為$$\delta_n$$只能等於0或大於0)。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)。
+<mark style="background-color:red;">不存在同時為可接近且為可排除的集合</mark>(因為$$\delta_n$$只能等於0或大於0)。所以任意可接近集合$$S$$與可排除集合$$T$$的交集必為空集合，<mark style="background-color:red;">但是兩者並不是宇集合的分割(只有實數上可分割為可接近或可排除集合)</mark>。
 
 由定義可知可接近(可排除)集合$$S$$的閉包$$\overline{S}$$也是可接近(可排除)集合(因為$$d(\overline{x}_n, S)=d(\overline{x}_n, \overline{S})$$)，反之亦然，<mark style="color:red;">因此令</mark>$$S$$<mark style="color:red;">為閉集合</mark>。
 
@@ -297,11 +297,13 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 
 idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回報矩陣是$$-M$$而不是$$M^\top$$。因此$$M^{\top}$$應解釋為在決策時從對手的角度來看的玩家回報；
 
+註：在之後的論文中不使用$$M^\top$$的方式分析，而是給定對手的策略$$q \in \Delta(\mathcal{A}_2)$$，玩家的報酬會在凸包$$\mathcal{T}(q)$$中來分析行為。
+
 ### 可接近性的充份條件(sufficient condition)
 
-#### 主要性質
+### B集合性質(B-set)
 
-$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過$$y$$且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$(由三角不等式得出)。此為<mark style="color:red;">可接近集的充分條件</mark>。
+$$x,y \in \mathbb{R}^N$$為相異兩點，而$$H$$為通過$$y$$且正交於線段$$xy$$的超平面，$$z \in \mathbb{R}^N$$為$$H$$上的任意點或者為$$x$$相對於$$H$$在另一側的任意點，那麼所有位於線段$$xz$$ 內部且充分接近 $$x$$ 的點都比 $$x$$ 更接近 $$y$$(由三角不等式得出)。此為<mark style="color:red;">可接近集</mark>$$y \in S$$<mark style="color:red;">的充分條件</mark>。
 
 註：$$x$$為平均回報，$$H$$為目標集合上任意點的切平面，如果玩家選定行為的下一期回報$$z$$滿足上述性質，則可保證新的平均回報往可接近集前進。
 
@@ -376,15 +378,17 @@ plt.show()
 
 ## 可接近性集合定理(存在性與充分條件)
 
+> <mark style="background-color:red;">若緊致集合</mark>$$S$$<mark style="background-color:red;">​為B集合時⟹則</mark>$$S$$<mark style="background-color:red;">為可接近集</mark>。
+>
 > 定義平均回報矩陣$$\overline{M} \in \mathbb{R}^{r \times s \times N}$$，其第$$i,j$$個元素$$\overline{m}(i,j) \in \mathbb{R}^N$$為機率分佈$$m(i,j)$$的平均值。
 >
 > 對於$$\Delta(\mathcal{A}_1)$$中的任意分佈$$\mathbf{p}=(p_1,\dots,p_r), ~\sum_{i=1}^r p_i=1$$，定義$$\mathcal{R}(p)$$為$$s$$個點$$\sum_{i} p_{i=1}^r p_i \overline{m}(i,j), ~j=1,2,\dots,s$$形成的玩家回報凸包(convex hull)，則可接近集合的充分條件如下：
 >
-> 令$$S$$為任意閉集合(不必為凸集合)，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \Delta(\mathcal{A}_1)$$滿足$$\displaystyle y = \argmin_{x \in \mathbb{R}^N} d(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩側，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
+> 令$$S$$為任意有界閉集合(不必為凸集合，在歐式空間中等價於緊緻集合(compact set))，若對於任意向量(點)$$x \notin S$$存在混合策略$$p(x) \in \Delta(\mathcal{A}_1)$$滿足$$\displaystyle y = \argmin_{x \in \mathbb{R}^N} d(x,S)$$為集合$$S$$中距離$$x$$最近點，存在超平面$$H$$經過$$y$$，$$H$$正交於線段$$xy$$且$$H$$將$$x$$與閉包$$\mathcal{R}(\mathbf{p})$$分為相異兩側，則$$S$$為策略$$f:f_n$$的可接近集合，其中：
 >
 > $$f_n = \begin{cases} p(\overline{x}_n),& \text{ if } n > 0 \text { and } \overline{x}_n =(\frac{1}{n} \sum_{i=1}^n x_i) \notin S, \\ \text{ arbitrary,} & \text{ if } n = 0 \text{ or } \overline{x}_n \in S.  \end{cases}$$
 
-<mark style="color:red;">註：因為只有假設</mark>$$S$$<mark style="color:red;">為閉集合，因此</mark>$$S$$<mark style="color:red;">中距離</mark>$$x$$<mark style="color:red;">最近的點</mark>$$y$$<mark style="color:red;">不唯一</mark>。
+<mark style="color:red;">註：因為只有假設</mark>$$S$$<mark style="color:red;">為有界閉集合，因此</mark>$$S$$<mark style="color:red;">中距離</mark>$$x$$<mark style="color:red;">最近的點</mark>$$y$$<mark style="color:red;">不唯一</mark>。
 
 在決策時，每次你離目標的距離（ $$\delta_n$$ ​ ）都有機會變小一點點（因為期望值減小），而且你不能跳太遠（變化有限）。雖然有時可能因為隨機性稍微偏離，但整體趨勢是越來越靠近目標。證明就像在說：只要你玩夠多次，距離幾乎一定會變得很小，偏離的機會微乎其微。
 
@@ -594,7 +598,7 @@ $$\forall n,k, ~n \leq k$$定義了另一個變數$$𝑧_{𝑛 𝑘}$$ ​ ，�
 
 ## Theorem 3: 凸集合可接近的充要條件
 
-> 閉凸集合$$S$$為可接近集合 ⟺ $$S$$與任意的凸包$$T(q), \forall q \in \Delta(Q)$$都有交集。
+> 有界閉凸集合$$S$$為可接近集合 ⟺ $$S$$與任意的凸包$$T(q), \forall q \in \Delta(\mathcal{A}_2)$$都有交集。
 >
 > 若是存在凸包$$T(q_0) \cap S = \emptyset$$，則對手可使用策略$$q_0$$使得$$S$$為可排除集合。
 
@@ -626,7 +630,7 @@ corollary 1 是定理 3 的一個特殊情況。令$$S=\mathcal{R}(p)$$，則對
 
 ### corollary 2: 玩家必須有能力在每個方向上讓回報的投影至少和S在此方向上的下限一樣好
 
-> 一個閉凸集$$𝑆$$是可接近的⟺對於每一個向量$$u$$，賽局的價值 $$v(u)$$滿足以下不等式：
+> 一個有界閉凸集$$𝑆$$是可接近的⟺對於每一個向量$$u \in \mathbb{R}^N$$，賽局的價值 $$v(u)$$滿足以下不等式：
 >
 > $$\displaystyle v(u) \geq \min_{s \in S}\langle u, s \rangle$$。
 >
@@ -737,12 +741,12 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 ## 參考資料
 
 * \[原始論文] David Blackwell, "[An analog of the minimax-theorem for vector payoffs](https://projecteuclid.org/journals/pacific-journal-of-mathematics/volume-6/issue-1/An-analog-of-the-minimax-theorem-for-vector-payoffs/pjm/1103044235.pdf), " Pacific Journal of Mathematics, Vol. 6.1 pp. 1-8, 1956.
-* Abraham Wald, "[Note on zero sum two person games](https://www.jstor.org/stable/1969446)," Annals of mathematics, Vol. 52, No.3 pp. 739-742, 1950.
-* Tien-Fang Hou, "[Weak approachability in a two-person gam](https://www.jstor.org/stable/2239629)e," The Annals of Mathematical Statistics, Vol.  40, No. 3, pp. 789-813, 1969.
-* Tien-Fang Hou, ["Approachability in a two-person game](https://www.jstor.org/stable/2239818)," The Annals of Mathematical Statistics Vol. 42, No. 2, pp. 735-744, 1971.
-* Harold Sackrowitz, "[A note on approachability in a two-person game](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-43/issue-3/A-Note-on-Approachability-in-a-Two-person-Game/10.1214/aoms/1177692567.full)," The Annals of Mathematical Statistics, Vol. 43, No.3, pp. 1017-1019, 1972.
+* \[Blackwell的學生，為原始論文的延伸]Tien-Fang Hou, "[Weak approachability in a two-person gam](https://www.jstor.org/stable/2239629)e," The Annals of Mathematical Statistics, Vol.  40, No. 3, pp. 789-813, 1969.
+* \[Blackwell的學生，為原始論文的延伸]Tien-Fang Hou, ["Approachability in a two-person game](https://www.jstor.org/stable/2239818)," The Annals of Mathematical Statistics Vol. 42, No. 2, pp. 735-744, 1971.
+* \[Hou72論文的延伸]Harold Sackrowitz, "[A note on approachability in a two-person game](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-43/issue-3/A-Note-on-Approachability-in-a-Two-person-Game/10.1214/aoms/1177692567.full)," The Annals of Mathematical Statistics, Vol. 43, No.3, pp. 1017-1019, 1972.
+* \[Von Neumann論文的延伸]Abraham Wald, "[Note on zero sum two person games](https://www.jstor.org/stable/1969446)," Annals of mathematics, Vol. 52, No.3 pp. 739-742, 1950.
 * Melvin Katz, "[Infinitely repeatable games](https://msp.org/pjm/1960/10-3/pjm-v10-n3-s.pdf#page=151)," Pacific J. Math. Vol. 10, No. 4 pp. 879-885, 1960.
-* Nicolas Vieille, "[Weak approachability](https://pubsonline.informs.org/doi/abs/10.1287/moor.17.4.781)," Mathematics of operations research, Vol. 17, No.4,pp. 781-791, 1992.
+* \[應用在微分賽局上]Nicolas Vieille, "[Weak approachability](https://pubsonline.informs.org/doi/abs/10.1287/moor.17.4.781)," Mathematics of operations research, Vol. 17, No.4,pp. 781-791, 1992.
 * Barak Shani and Eilon Solan, "[Strong approachability](https://www.aimsciences.org/article/doi/10.3934/jdg.2014.1.507)," Journal of Dynamics and Games, Vol. 1, No.3 ,pp. 507-535, 2014.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
 * Jacob Abernethy, Peter L. Bartlett, and Elad Hazan, "Blackwell approachability and no-regret learning are equivalent," Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.

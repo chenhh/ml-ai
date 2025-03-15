@@ -16,11 +16,13 @@ description: >-
 
 <mark style="color:red;">內部或外部遺憾最小化問題的一個共同特點是，它們可以被寫成某些向量回報賽局中精心選擇的目標集的可接近性的一個具體案例</mark>。
 
-#### 可接近集合的幾何性質主要有以下三篇論文
+#### 可接近集合的幾何性質主要有以下四篇論文
 
 <mark style="background-color:red;">Blackwell在原始論文(1956)中討論的是隨機回報，即玩家與對手分別選定行動</mark>$$i,j$$<mark style="background-color:red;">時，得到的回報</mark>$$m(i,j)$$<mark style="background-color:red;">是某個機率分佈的隨機值；</mark>
 
 <mark style="color:red;background-color:red;">Hou(1971, theorem 5)證明玩家與對手的向量可接近集，只與回報的機率分佈平均值</mark>$$\overline{m(i,j)}$$<mark style="color:red;background-color:red;">有關，而與其機率分佈無關</mark>。因此後期的論文通常把$$m(i,j)$$視為向量而非機率分佈討論。Hou(1971)的論文為Blackwell論文的延伸，而且數學符號表示精準。
+
+Vieille(1992)專門討論weak approachability的性質與微分賽局。
 
 Spinat(2002)討論了可接近集合的充要條件，並提出了次要集、主要集以及最小可接近集的概念與性質。
 
@@ -754,6 +756,7 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 * \[Hou72論文的延伸]Harold Sackrowitz, "[A note on approachability in a two-person game](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-43/issue-3/A-Note-on-Approachability-in-a-Two-person-Game/10.1214/aoms/1177692567.full)," The Annals of Mathematical Statistics, Vol. 43, No.3, pp. 1017-1019, 1972.
 * \[Von Neumann論文的延伸]Abraham Wald, "[Note on zero sum two person games](https://www.jstor.org/stable/1969446)," Annals of mathematics, Vol. 52, No.3 pp. 739-742, 1950.
 * Melvin Katz, "[Infinitely repeatable games](https://msp.org/pjm/1960/10-3/pjm-v10-n3-s.pdf#page=151)," Pacific J. Math. Vol. 10, No. 4 pp. 879-885, 1960.
+* \[討論向量收益的早期論文]Lloyd S. Shapley and Fred D. Rigby. "Equilibrium points in games with vector payoffs," Naval Research Logistics Quarterly Vol. 6, No.1, pp. 57-61, 1959.
 * \[應用在微分賽局上]Nicolas Vieille, "[Weak approachability](https://pubsonline.informs.org/doi/abs/10.1287/moor.17.4.781)," Mathematics of operations research, Vol. 17, No.4,pp. 781-791, 1992.
 * Barak Shani and Eilon Solan, "[Strong approachability](https://www.aimsciences.org/article/doi/10.3934/jdg.2014.1.507)," Journal of Dynamics and Games, Vol. 1, No.3 ,pp. 507-535, 2014.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.

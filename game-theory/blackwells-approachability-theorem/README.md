@@ -757,7 +757,9 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 * \[Von Neumann論文的延伸]Abraham Wald, "[Note on zero sum two person games](https://www.jstor.org/stable/1969446)," Annals of mathematics, Vol. 52, No.3 pp. 739-742, 1950.
 * Melvin Katz, "[Infinitely repeatable games](https://msp.org/pjm/1960/10-3/pjm-v10-n3-s.pdf#page=151)," Pacific J. Math. Vol. 10, No. 4 pp. 879-885, 1960.
 * \[討論向量收益的早期論文]Lloyd S. Shapley and Fred D. Rigby. "Equilibrium points in games with vector payoffs," Naval Research Logistics Quarterly Vol. 6, No.1, pp. 57-61, 1959.
-* \[應用在微分賽局上]Nicolas Vieille, "[Weak approachability](https://pubsonline.informs.org/doi/abs/10.1287/moor.17.4.781)," Mathematics of operations research, Vol. 17, No.4,pp. 781-791, 1992.
+* \[向量收益賽局中最佳混合策略的充要條件]Herbert W. Corley,  "Games with vector payoffs," Journal of Optimization theory and applications, Vol. 47, pp. 491-498, 1985.
+* \[弱可接近集與微分賽局]Nicolas Vieille, "[Weak approachability](https://pubsonline.informs.org/doi/abs/10.1287/moor.17.4.781)," Mathematics of operations research, Vol. 17, No.4,pp. 781-791, 1992.
+* \[討論在動態環境中追跡好的策略時，應捨棄太久以前的資料] Karl H. Schlag and Andriy Zapechelnyuk, "Dynamic benchmark targeting," Journal of Economic Theory, Vol. 169, pp. 145-169, 2017.
 * Barak Shani and Eilon Solan, "[Strong approachability](https://www.aimsciences.org/article/doi/10.3934/jdg.2014.1.507)," Journal of Dynamics and Games, Vol. 1, No.3 ,pp. 507-535, 2014.
 * <mark style="background-color:red;">Hannan, James. "Approximation to Bayes risk in repeated play." Contributions to the Theory of Games 3.2 (1957): 97-139</mark>.
 * Jacob Abernethy, Peter L. Bartlett, and Elad Hazan, "Blackwell approachability and no-regret learning are equivalent," Proceedings of the 24th Annual Conference on Learning Theory. JMLR Workshop and Conference Proceedings, 2011.

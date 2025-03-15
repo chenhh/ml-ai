@@ -120,7 +120,7 @@ v (博弈值) = -1.000000
 
 ### 無鞍點範例(改為混合策略即可)
 
-<table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=3</span></td><td><span class="math">m(1,2)=-1</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=2</span></td><td><span class="math">m(2,2)=1</span></td><td>1</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=0</span></td><td><span class="math">m(3,2)=4</span></td><td>0</td></tr><tr><td>max M</td><td>3</td><td>4</td><td></td></tr></tbody></table>
+<table><thead><tr><th>R\S</th><th>s1</th><th>s2</th><th width="100">min M</th></tr></thead><tbody><tr><td><span class="math">r_1</span></td><td><span class="math">m(1,1)=3</span></td><td><span class="math">m(1,2)=-1</span></td><td>-1</td></tr><tr><td><span class="math">r_2</span></td><td><span class="math">m(2,1)=2</span></td><td><span class="math">m(2,2)=1</span></td><td>1</td></tr><tr><td><span class="math">r_3</span></td><td><span class="math">m(3,1)=0</span></td><td><span class="math">m(3,2)=4</span></td><td>0</td></tr><tr><td>max M</td><td>3</td><td>4</td><td>1.6</td></tr></tbody></table>
 
 玩家最佳解：$$\mathbf{p}=(0, 0.8, 0.2)$$，對手最佳解：$$\mathbf{q}=(0.6, 0.4)$$。
 
@@ -244,7 +244,11 @@ v (博弈值) = 1.600000
 
 論文中考慮的是每一個機率分佈$$m(i,j)$$的期望值$$\overline{m}(i,j)$$，表示多次決策後，行動對$$(i,j)$$的回報會趨近於$$\overline{m}(i,j)$$，則回報矩陣$$\overline{M}$$含$$r\times s$$個向量點。
 
+<mark style="color:red;">\[Hou71]更明確的定義</mark>$$m(i,j)$$<mark style="color:red;">的機率分佈須滿足</mark>$$\alpha$$<mark style="color:red;">階範數的期望值為有限值，即</mark>$$E(\| \cdot\|^{\alpha}) <\infty, ~\alpha > 1$$。
+
 ### 混合策略序列
+
+每一回合玩家與對手在第$$n$$期選擇行動時，都不知道當期對方的選擇，但是雙方都知對方的歷史行動與回報$$(i_0, j_0), (i_1, j_1, x_1), \dots, (i_{n-1}, j_{n-1}, x_{n-1})$$。
 
 玩家使用混合策略序列$$f_{0:n} \equiv \{f_0, f_1(x_1), \dots, f_n(x_1, \dots, x_n)\}, ~f_n: (x_1, x_2, \dots, x_n) \rightarrow \Delta(\mathcal{A_1}), ~x_i \in X$$，其中$$(x_1,x_2,\dots, x_n)$$為到第$$n$$期時已觀察到的回報(根據$$m(i,j)$$機率分佈選擇行動的實現值)(history)。
 
@@ -261,6 +265,8 @@ v (博弈值) = 1.600000
 
 <mark style="background-color:red;">因此玩家與對手的混合策略</mark>$$(f,g)$$<mark style="background-color:red;">對序列以及回報的機率分佈矩陣</mark>$$M$$<mark style="background-color:red;">​可決定向量回報隨機變數序列</mark>$$x_1, x_2, \dots$$。
 
+<mark style="color:red;">目標是研究長期(無限期)實際向量回報的重心</mark>$$\overline{x}_n= \sum_{i=1}^n x_i$$<mark style="color:red;">的可控制性</mark>。
+
 令$$S \subseteq \mathbb{R}^N$$為任意集合，$$\delta_n = d(\overline{x}_n, S)$$是平均向量回報$$\overline{x}_n = \sum_{i=1}^n x_i/n$$至集合$$S$$​的距離。依定義$$S \subseteq X$$才有意義(因為$$X$$中任意向量的均值必定還是在$$X$$中，所以討論$$X^c$$集合沒有意義)。
 
 ### 可接近集合(approachable)
@@ -269,9 +275,11 @@ v (博弈值) = 1.600000
 
 $$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
 
-* $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略$$f^{*}$$與任意對手策略$$g \equiv g_{0:n}$$​所得到。
+* $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略$$f^{*}$$與任意對手策略$$g \equiv g_{0:n}$$​所得到的回報序列。
 * 即只要輪數$$n$$夠多，不論對手使用任意策略$$g$$​，平均回報向量與集合的距離機率收斂至0。
 * 在$$n \geq n_0$$後，雖然有些時候$$\delta_n \geq \epsilon$$，但發生機率小於$$\epsilon$$趨近於0。
+
+<mark style="color:red;">Hou71是定義為</mark>$$d(\overline{x}_n, S) \rightarrow 0, \text{ a.s. }$$<mark style="color:red;">時，</mark>$$S$$<mark style="color:red;">為可接近集合</mark>。其中$$x_1, x_2, \dots$$由$$(f^{*},g)$$所決定。
 
 ### 可排除集合(excludable)
 

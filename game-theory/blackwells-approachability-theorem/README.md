@@ -273,23 +273,25 @@ v (博弈值) = 1.600000
 
 定義$$S$$​為使用在回報矩陣$$M$$中以玩家策略$$f^{*} \equiv f^{*}_{0:n}$$的<mark style="color:red;">可接近集合(approachable)</mark>若：
 
-$$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$
+$$\forall \epsilon > 0~ \exists n_0 \in \mathbb{N} \ni$$$$\forall g ~ ,\mathrm{P}(\delta_n \geq \epsilon  \text{ for some } n \geq n_0 ) < \epsilon$$ (機率收斂)
 
 * $$x_1,x_2, \dots, x_n$$​是由特定的玩家策略$$f^{*}$$與任意對手策略$$g \equiv g_{0:n}$$​所得到的回報序列。
 * 即只要輪數$$n$$夠多，不論對手使用任意策略$$g$$​，平均回報向量與集合的距離機率收斂至0。
 * 在$$n \geq n_0$$後，雖然有些時候$$\delta_n \geq \epsilon$$，但發生機率小於$$\epsilon$$趨近於0。
 
-<mark style="color:red;">Hou71是定義為</mark>$$d(\overline{x}_n, S) \rightarrow 0, \text{ a.s. }$$<mark style="color:red;">時，</mark>$$S$$<mark style="color:red;">為可接近集合</mark>。其中$$x_1, x_2, \dots$$由$$(f^{*},g)$$所決定。
+<mark style="color:red;">Hou71是定義為</mark>$$d(\overline{x}_n, S) \rightarrow 0, \text{ a.s. }$$<mark style="color:red;">時(幾乎確定收斂)，</mark>$$S$$<mark style="color:red;">為可接近集合</mark>。其中$$x_1, x_2, \dots$$由$$(f^{*},g)$$所決定。
 
 ### 可排除集合(excludable)
 
 稱$$S$$​為使用在回報矩陣$$M$$​中以對手特定策略$$g^{*}$$的<mark style="color:red;">可排除集合(excludable)</mark>若：
 
-$$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\mathrm{P}(\delta_n \geq d ~ \forall n \geq n_0) > 1- \epsilon$$
+$$\exists d >0 \ni \forall \epsilon > 0, ~ n_0 \in \mathbb{N} \ni \forall f, ~\mathrm{P}(\delta_n \geq d ~ \forall n \geq n_0) > 1- \epsilon$$ (機率收斂)
 
 * $$x_1, x_2,\dots, x_n$$​是玩家任意策略$$f_{0:n}$$​與對手特定策略$$g^{*}\equiv g^{*}_{0:n}$$所得到。
 * 只要輪數$$n$$​夠多，不論玩家使用任意策略$$f$$​，對手可用特定策略$$g^{*}$$使得平均回報至集合的距離無法機率收斂。
 * 在$$n \geq n_0$$後，偶爾會出現$$\delta_n <d$$，但幾乎都是$$\delta_n \geq d$$。
+
+<mark style="color:red;">Hou71是定義為</mark>$$d(\overline{x}_n, S^{'}) \rightarrow 0, \text{ a.s. }$$<mark style="color:red;">時(幾乎確定收斂)，</mark>$$S$$<mark style="color:red;">為可接近集合且</mark>$$d(S, S^{'})>0$$。其中$$x_1, x_2, \dots$$由$$(f^{*},g)$$所決定。注意這邊是玩家的特定策略$$f^{*}$$與對手的任意策略$$g$$，與Blackwell定義不同。
 
 ### 實數賽局的可接近/可排除集合
 
@@ -316,6 +318,14 @@ Minimax定理($$N=1$$)以上述形式可改寫為：賽局價值$$v \in \mathbb{
 idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回報矩陣是$$-M$$而不是$$M^\top$$。因此$$M^{\top}$$應解釋為在決策時從對手的角度來看的玩家回報；
 
 註：在之後的論文中不使用$$M^\top$$的方式分析，而是給定對手的策略$$q \in \Delta(\mathcal{A}_2)$$，玩家的報酬會在凸包$$\mathcal{T}(q)$$中來分析行為。
+
+### 回報的期望值與回報條件期望值的平均值幾乎確定收斂(強大數定理，Hou71)
+
+> 令$$M$$為$$r\times s$$維的回報矩陣，其元素$$m(i,j)$$為有限$$\alpha$$階期望值的機率分佈。
+>
+> 此處以$$X_n$$表示玩家與對手分別採取行動$$i_n, j_n$$後，從分佈$$m(i,j)$$得到的回報隨機向量。
+>
+> 令回報條件期望值$$\omega_n = \mathrm{E}(X_n~|~ i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n), n \in \mathbb{N}$$與其平均值$$\overline{\omega}_n = \sum_{i=1}^n \omega_i/n$$，則可得：$$d(\overline{X}_n, \overline{\omega}_n) \rightarrow 0, \text{ a.s. }$$。
 
 ### 可接近性的充份條件(sufficient condition)
 

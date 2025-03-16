@@ -244,7 +244,23 @@ v (博弈值) = 1.600000
 
 論文中考慮的是每一個機率分佈$$m(i,j)$$的期望值$$\overline{m}(i,j)$$，表示多次決策後，行動對$$(i,j)$$的回報會趨近於$$\overline{m}(i,j)$$，則回報矩陣$$\overline{M}$$含$$r\times s$$個向量點。
 
-<mark style="color:red;">\[Hou71]更明確的定義</mark>$$m(i,j)$$<mark style="color:red;">的機率分佈須滿足</mark>$$\alpha$$<mark style="color:red;">階範數的期望值為有限值，即</mark>$$E(\| \cdot\|^{\alpha}) <\infty, ~\alpha > 1$$。
+<mark style="color:red;">Hou71的定義：</mark>
+
+<mark style="color:red;">更明確的定義</mark>$$m(i,j)$$<mark style="color:red;">的機率分佈的隨機變數須滿足範數</mark>$$\alpha$$<mark style="color:red;">次方的期望值為有限值，即</mark>$$E(\|X\|^{\alpha}) <\infty, ~\alpha > 1$$。
+
+令$$\overline{M}=\| \overline{m}(i,j\| \in \mathbb{R}^{(r \times s) \times N}$$為回報矩陣$$M$$中，每一個分佈$$m(i,j)$$取平均值形成的矩陣。
+
+令$$\mathcal{M}$$為所有向量報酬$$\overline{m}(i,j)$$形成的凸包，可得$$\mathcal{M}$$為凸緊緻集(有界閉集合)，令其長度$$K=\sup_{x,y \in \mathcal{M}} d(x,y)$$。
+
+令$$\displaystyle \omega(p,q) = \sum_{i=1}^r \sum_{j=1}^s p_i \overline{m}(i,j) q_j, ~ p \in \Delta(\mathcal{A}_1), ~q \in \Delta(\mathcal{A}_2)$$ 為玩家與對手採取混合策略$$p,q$$時得到的期望報酬。
+
+對於$$n$$輪賽局可得$$\displaystyle \omega_n = \mathrm{E}(X_n ~|~ p_n, q_n) = \sum_{i=1}^r \sum_{j=1}^s p_{n,i} \overline{m}(i,j) q_{n,j} = \omega (p_n, q_n) \in \mathcal{M}$$。此與定理「[實際平均回報與條件期望回報的平均值幾乎確定收斂](./#shi-ji-ping-jun-hui-bao-yu-tiao-jian-qi-wang-hui-bao-de-ping-jun-zhi-ji-hu-que-ding-shou-lian-qiang)」中定義$$\omega_n = \mathrm{E}(X_n~|~ i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n), n \in \mathbb{N}$$等價。因為當期的回報只與當期的行動有關，與之前的行動和歷史回報無關。
+
+令玩家給定混合策略$$p \in \Delta(\mathcal{A}_1)$$後，對手所有可能的混合策略回報形成的凸包為$$\mathcal{R}(p) = \{ \omega(p,q), q \in \Delta(\mathcal{A}_2)\}$$。
+
+令對手給定混合策略$$q \in \Delta(\mathcal{A}_2)$$後，玩家所有可能的混合策略回報形成的凸包為$$\mathcal{T}(q) = \{ \omega(p,q), p \in \Delta(\mathcal{A}_1)\}$$。
+
+
 
 ### 混合策略序列
 

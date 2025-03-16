@@ -326,6 +326,75 @@ idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回
 > 此處以$$X_n$$表示玩家與對手分別採取行動$$i_n, j_n$$後，從分佈$$m(i,j)$$得到的回報隨機向量。
 >
 > 令回報條件期望值$$\omega_n = \mathrm{E}(X_n~|~ i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n), n \in \mathbb{N}$$與其平均值$$\overline{\omega}_n = \sum_{i=1}^n \omega_i/n$$，則可得：$$d(\overline{X}_n, \overline{\omega}_n) \rightarrow 0, \text{ a.s. }$$。
+>
+> 註：在長期的賽局中，實際平均回報$$\overline{X}_n$$與條件期望的回報$$\overline{\omega}_n$$之間的距離幾乎必然收斂至0。
+>
+> 隨著賽局次數$$n$$，實際平均回報$$\overline{X}_n$$（玩家實際得到的平均回報）會趨近於條件期望的平均值$$\omega_n$$\
+> 。
+
+Theorem 1 是強大數定理在隨機向量收益賽局中的應用。傳統強大數定理適用於獨立同分佈的標量隨機變量，而這裡的$$X_n$$是 $$k$$-維向量，且分佈隨玩家策略$$(p_n, q_n)$$動態變化。定理表明，即使收益是隨機的，平均收益$$\overline{X}_n$$仍會追隨其條件期望的平均$$\overline{\omega}_n$$。<mark style="color:red;">為後續分析奠定了基礎，因為</mark>$$\overline{\omega}_n$$\ <mark style="color:red;">比</mark>$$\overline{X}_n$$<mark style="color:red;">更容易通過策略控制</mark>。
+
+在第$$n$$次賽局中，回報$$X_n$$由當前行動$$(p_n, q_n)$$決定，其平均值(期望)是$$\omega_n = \mathrm{E}(X_n~|~ i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n)$$
+
+$$\omega_n$$確實依賴當期的$$p_n, q_n$$，但不直接依賴於之前的回報$$X_1, \dots, X_{n-1}$$，除非策略$$p_n, q_n$$直接依賴於歷史回報。
+
+<details>
+
+<summary>proof: martingle收斂定理與Kronecker 引理</summary>
+
+step 1. 定義鞅序列
+
+定義$$Z_n = X_n - \omega_n$$，其中$$X_n$$是第$$n$$次賽局(玩家)的隨機收益向量，依據$$m(i,j)$$的分佈生成。
+
+因為條件期望值$$\mathrm{E}(X|Y) = \mathrm{E}(X|\sigma(Y))$$\[註：因為隨機變數$$Y$$，與其σ-代數提供的資訊相同)。
+
+，令$$\mathcal{F}_{n=1}=$$ $$\sigma(i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n)$$為其生成的σ-代數，表示第$$n-1$$次賽局結束時的所有資訊，則可改寫為 $$\omega_n = \mathrm{E}(X_n~|~ \mathcal{F}_{n-1})$$。
+
+可得$$\begin{aligned} \mathrm{E}(Z_n ~|~ \mathcal{F}_{n-1}) & =  \mathrm{E}(X_n - \omega_n ~|~ \mathcal{F}_{n-1})\\ & = \mathrm{E}(X_n ~|~ \mathcal{F}_{n-1}) - \mathrm{E}(\omega_n ~|~ \mathcal{F}_{n-1}) \\ & = \omega_n - \omega_n \\& = 0  \end{aligned}$$
+
+<mark style="color:red;">因此</mark>$$\{Z_n\}$$<mark style="color:red;">為martingle difference序列，且</mark>$$\displaystyle \sum_{i=1}^n Z_n = \sum_{i=1}^n (Y_i - \omega_n)$$<mark style="color:red;">為martingle</mark>。
+
+step2 : 使用martingle收斂定理
+
+因為假設$$m(i,j)$$的分佈滿足高階期望值有界，即$$\mathrm{E}(\| X_n \|^\alpha) \leq \sigma^\alpha < \infty, ~(\alpha > 1)$$。
+
+由Minkowski 不等式和條件期望的性質因此$$Z_n$$的高階期望值有界，即$$\mathrm{E}(\| Z_n \|^\alpha)  = \mathrm{E}(\| X_n - \omega_n \|^\alpha) \leq \sigma^\alpha$$。
+
+考慮加權和的收斂性： $$\displaystyle \sum_{n=1}^\infty \frac{\mathrm{E}(| Z_n |^\alpha) }{n^\theta} \leq \sum_{n=1}^\infty \frac{\sigma^\alpha}{n^\theta}$$，其中$$\theta = \min(\alpha, 2)$$。
+
+因為$$\theta > 1$$ ，級數收斂得$$\displaystyle \sum_{n=1}^\infty \frac{\sigma^\alpha}{n^\theta} < \infty$$。
+
+根據martingle收斂定理，若$$\displaystyle  \sum_{n=1}^\infty \frac{\mathrm{E}(| Z_n |^\alpha) }{n^\theta} < \infty$$，則級數$$\displaystyle \sum_{i=1}^n \frac{Z_i}{i}$$幾乎必然收斂到某個有限值。
+
+step 3: 應用 Kronecker 引理
+
+令$$S_n = \sum_{i=1}^n Z_i$$，則$$\displaystyle  \frac{S_n}{n}= \frac{\sum_{i=1}^n(X_i - \omega_i)}{n} = \overline{X}_n - \overline{\omega}_n$$。
+
+由Kronecker 引理得若$$\displaystyle \sum_{i=1}^n \frac{S_i}{i}$$收斂，則對任意正數序列$$\{a_n\}$$的平均值收斂；取$$a_n=n$$得平均值$$\frac{\sum_{i=1}^n S_i}{i} \rightarrow 0 \text{ a.s. }$$
+
+因此$$\overline{X}_n - \overline{\omega}_n \rightarrow 0 \text{ a.s. }$$
+
+得$$d(\overline{X}_n, \overline{\omega}_n )=\|\overline{X}_n- \overline{\omega}_n\| \rightarrow 0 \text{ a.s. }$$
+
+(QED)
+
+</details>
+
+### 範例：擲硬幣遊戲
+
+玩家1（你）選擇賭正面或反面的比例$$p_n$$（例如 60% 正面，40% 反面）。
+
+玩家2（莊家）選擇賠率的調整$$q_n$$（例如調整賠率分佈）。
+
+每次結果$$X_n$$是隨機的（例如贏 1 元或輸 1 元），其分佈由$$(p_n, q_n)$$決定。
+
+$$\omega_n$$是當前賭局的期望收益（例如根據$$(p_n, q_n)$$計算出的平均贏利）。
+
+$$\overline{X}_n$$是你玩了$$n$$次後的平均收益，$$\overline{\omega}_n$$是這些期望收益的平均。
+
+不管你過去贏了多少次或輸了多少次（歷史收益$$X_1, \dots, X_{n-1}$$），只要你和莊家持續選擇策略\
+$$(p_n, q_n)$$，你的長期平均收益$$\overline{X}_n$$會趨近於每一局期望收益的平均$$\overline{\omega}_n$$。而下一局的期望收益\
+$$\omega_n$$只看當前策略，而不是過去的具體結果。但長期來看，實際收益會穩定到這個期望平均值。
 
 ### 可接近性的充份條件(sufficient condition)
 

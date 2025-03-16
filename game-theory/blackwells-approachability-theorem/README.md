@@ -319,9 +319,9 @@ idea: $$M$$為玩家的回報矩陣，因為是零和賽局，所以對手的回
 
 註：在之後的論文中不使用$$M^\top$$的方式分析，而是給定對手的策略$$q \in \Delta(\mathcal{A}_2)$$，玩家的報酬會在凸包$$\mathcal{T}(q)$$中來分析行為。
 
-### 回報的期望值與回報條件期望值的平均值幾乎確定收斂(強大數定理，Hou71)
+### 實際平均回報與條件期望回報的平均值幾乎確定收斂(強大數定理)
 
-> 令$$M$$為$$r\times s$$維的回報矩陣，其元素$$m(i,j)$$為有限$$\alpha$$階期望值的機率分佈。
+> \[Hou71 ]令$$M$$為$$r\times s$$維的回報矩陣，其元素$$m(i,j)$$為有限$$\alpha$$階期望值的機率分佈。
 >
 > 此處以$$X_n$$表示玩家與對手分別採取行動$$i_n, j_n$$後，從分佈$$m(i,j)$$得到的回報隨機向量。
 >
@@ -370,7 +370,7 @@ step 3: 應用 Kronecker 引理
 
 令$$S_n = \sum_{i=1}^n Z_i$$，則$$\displaystyle  \frac{S_n}{n}= \frac{\sum_{i=1}^n(X_i - \omega_i)}{n} = \overline{X}_n - \overline{\omega}_n$$。
 
-由Kronecker 引理得若$$\displaystyle \sum_{i=1}^n \frac{S_i}{i}$$收斂，則對任意正數序列$$\{a_n\}$$的平均值收斂；取$$a_n=n$$得平均值$$\frac{\sum_{i=1}^n S_i}{i} \rightarrow 0 \text{ a.s. }$$
+由Kronecker 引理(即使每輪回報波動，只要加權回報（除以輪數）收斂，長期平均就不會累積到無限大，而是穩定下來。)得若$$\displaystyle \sum_{i=1}^n \frac{S_i}{i}$$收斂，則對任意正數序列$$\{a_n\}$$的平均值收斂；取$$a_n=n$$得平均值$$\frac{\sum_{i=1}^n S_i}{i} \rightarrow 0 \text{ a.s. }$$
 
 因此$$\overline{X}_n - \overline{\omega}_n \rightarrow 0 \text{ a.s. }$$
 

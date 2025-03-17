@@ -252,13 +252,13 @@ v (博弈值) = 1.600000
 
 令$$\mathcal{M}$$為所有向量報酬$$\overline{m}(i,j)$$形成的凸包，可得$$\mathcal{M}$$為凸緊緻集(有界閉集合)，令其長度$$K=\sup_{x,y \in \mathcal{M}} d(x,y)$$。
 
-令$$\displaystyle \omega(p,q) = \sum_{i=1}^r \sum_{j=1}^s p_i \overline{m}(i,j) q_j, ~ p \in \Delta(\mathcal{A}_1), ~q \in \Delta(\mathcal{A}_2)$$ 為玩家與對手採取混合策略$$p,q$$時得到的期望報酬。
+令$$\displaystyle \omega(p,q) = \sum_{i=1}^r \sum_{j=1}^s p_i \overline{m}(i,j) q_j = p^\top \overline{M} q, ~ p \in \Delta(\mathcal{A}_1), ~q \in \Delta(\mathcal{A}_2)$$ 為玩家與對手採取混合策略$$p,q$$時得到的期望報酬。
 
-對於$$n$$輪賽局可得$$\displaystyle \omega_n = \mathrm{E}(X_n ~|~ p_n, q_n) = \sum_{i=1}^r \sum_{j=1}^s p_{n,i} \overline{m}(i,j) q_{n,j} = \omega (p_n, q_n) \in \mathcal{M}$$。此與定理「[實際平均回報與條件期望回報的平均值幾乎確定收斂](./#shi-ji-ping-jun-hui-bao-yu-tiao-jian-qi-wang-hui-bao-de-ping-jun-zhi-ji-hu-que-ding-shou-lian-qiang)」中定義$$\omega_n = \mathrm{E}(X_n~|~ i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n), n \in \mathbb{N}$$等價。因為當期的回報只與當期的行動有關，與之前的行動和歷史回報無關。
+對於$$n$$輪賽局可得$$\displaystyle \omega_n = \mathrm{E}(X_n ~|~ p_n, q_n) = \sum_{i=1}^r \sum_{j=1}^s p_{n,i} \overline{m}(i,j) q_{n,j} =p^\top \overline{M} q = \omega (p_n, q_n) \in \mathcal{M}$$。此與定理「[實際平均回報與條件期望回報的平均值幾乎確定收斂](./#shi-ji-ping-jun-hui-bao-yu-tiao-jian-qi-wang-hui-bao-de-ping-jun-zhi-ji-hu-que-ding-shou-lian-qiang)」中定義$$\omega_n = \mathrm{E}(X_n~|~ i_1, j_1, X_1, \dots, i_{n-1}, j_{n-1}, X_{n-1}, i_n, j_n), n \in \mathbb{N}$$等價。因為當期的回報只與當期的行動有關，與之前的行動和歷史回報無關。
 
-令玩家給定混合策略$$p \in \Delta(\mathcal{A}_1)$$後，對手所有可能的混合策略回報形成的凸包為$$\mathcal{R}(p) = \{ \omega(p,q), q \in \Delta(\mathcal{A}_2)\}$$。
+令玩家給定混合策略$$p \in \Delta(\mathcal{A}_1)$$後，對手所有可能的混合策略回報形成的凸包為$$\mathcal{R}(p) = \{ \omega(p,q) \equiv p^\top \overline{M} q, ~\forall q \in \Delta(\mathcal{A}_2)\}$$。
 
-令對手給定混合策略$$q \in \Delta(\mathcal{A}_2)$$後，玩家所有可能的混合策略回報形成的凸包為$$\mathcal{T}(q) = \{ \omega(p,q), p \in \Delta(\mathcal{A}_1)\}$$。
+令對手給定混合策略$$q \in \Delta(\mathcal{A}_2)$$後，玩家所有可能的混合策略回報形成的凸包為$$\mathcal{T}(q) = \{ \omega(p,q) \equiv p^\top \overline{M}q, ~\forall p \in \Delta(\mathcal{A}_1)\}$$。
 
 
 
@@ -850,6 +850,44 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
   * 類似內部或交換遺憾最小化算法。
 
 為什麼需要這個概念？因為高維度空間中，存在集合既不是 approachable（可接近的），也不是 excludable（可排除的）。在這種情況下，弱可接近(weakly approachable)提供了一個中間的概念。雖然$$𝑆$$不是可接近，但它是弱可接近的，意味著玩家仍然有一定的控制能力：通過根據$$n$$調整策略，確保在每個足夠大的$$n$$下，$$\overline{x}_n$$ 大機率接近$$𝑆$$。
+
+## 不足子集(insufficient subset)
+
+> 定義：\[Hou71]對於玩家，一個非空子集$$B \subseteq \mathcal{M}$$ 稱為閉集合$$S \subseteq \mathcal{M}$$的不足子集(insufficient subset)，若存在一個開集合$$U(B) \subseteq \mathbb{R}^N$$與一個正實數$$\Delta >0$$滿足以下條件：
+>
+> 1. $$S \cap U(B) = B$$
+> 2. 對每個整數$$n > \frac{10K}{\Delta}$$ ($$K$$為集合$$\mathcal{M}$$的直徑)和點$$u \in U(B)$$，存在對手的特定策略$$g^{*}$$使得玩家的任意策略$$f$$滿足：$$\mathrm{P}\left\{ d\left( \frac{n}{N}u + (1- \frac{n}{N}) \overline{\omega}_{N-n}, S \right) \geq \Delta, \text{ for some integer } N \geq n ~|~ f, g^{(*)} \right\} = 1$$
+>
+> 其中$$\displaystyle \overline{\omega}_{N-n}=\frac{1}{N-n} \sum_{i=n+1}^N \omega(p_i, q_i)$$
+
+已知$$S$$ 是目標集合，玩家試圖使平均收益$$\overline{\omega}_n$$趨近於$$S$$。$$B$$是$$𝑆$$的一個子集，滿足$$B=S \cap U(B)$$，即$$𝐵$$是$$S$$在某個開集$$U(B)$$ 內的部分。
+
+$$U(B)$$為包含$$B$$的開集，表示$$B$$的鄰域，即$$U(B)$$是$$\overline{\omega}_n$$可能進入的一個區域。雖然$$B \subseteq S$$，但是$$U(B)$$可能包含非$$S$$的元素。
+
+$$\Delta > 0$$為一正實數閥值，用於量測$$\overline{\omega}_n$$是否遠離$$S$$。
+
+Ｉ假設$$u \in U(B)$$，假設在第$$n$$輪賽局後，$$\overline{\omega}_n = u$$即平均回報在$$U(B)$$內。
+
+
+
+#### **直觀意義**
+
+「不足子集」描述了$$S$$ 中這樣一部分割槽域$$B$$：
+
+* 如果平均收益$$\overline{\omega}_n$$​ 進入$$B$$的鄰域$$U(B)$$，且賽局已進行足夠多次$$n>10K/\Delta$$，則對手可以通過某個策略$$g^{*}$$保證未來某時刻的$$\overline{\omega}_N$$遠離$$S$$（距離至少為$$\Delta$$）。
+* **「不足」的原因**：對玩家來說，$$B$$ 是「不足以接近」的，因為一旦$$\overline{\omega}_n$$進入這個區域，對手 有能力打破接近$$S$$的目標。換句話說，$$B$$是玩家無法穩定控制的部分。
+* **玩家1的挑戰**：玩家1的目標是使$$\overline{\omega}_n \rightarrow S$$。如果$$S$$包含「不足子集」$$B$$，則當$$\overline{\omega}_n$$進入$$U(B)$$時，玩家2可以利用$$g^{*}$$ 阻止接近。
+* **不足子集的角色**：$$B$$表示$$S$$中那些對手有能力「排除」的部分。這些部分的集合（後續定義為$$B^{*}$$）是$$S$$中不可接近的區域。
+* **與可接近性的關係**：
+  * 如果$$S$$的所有子集都是「不足子集」，則$$S$$不可接近（$$S^{'}=\emptyset$$）。
+  * 如果$$S$$存在非「不足子集」的部分（即充分子集$$S^{′}$$），則玩家可以穩定趨近這部分，使$$S$$ 可接近。
+* **核心思想**：$$B$$是玩家無法穩定控制的區域，反映了對手的反制能力。這為後續判斷$$S$$是否可接近提供了關鍵依據，即$$S$$ 必須剔除所有不足子集後仍有非空部分（充分子集$$S^{'}$$）。
+
+
+
+
+
+
 
 ## 參考資料
 

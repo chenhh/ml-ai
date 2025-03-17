@@ -861,6 +861,8 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 > 其中$$\displaystyle \overline{\omega}_{N}= \frac{n}{N}\overline{\omega}_{n} +  (1- \frac{n}{N}) (\frac{1}{N-n} \sum_{j=n+1}^N \omega_j)$$
 >
 > 在經過$$n$$輪賽局後，$$n > 10K/\Delta$$，$$\overline{\omega}_n \in U(B)$$平均回報在$$U(B)$$內，則存在對手的一連串策略$$q_{n+1}, q_{n+2}, \dots$$使得玩家以機率一在輪數$$N \geq n$$後，會使得平均回報與目標集合的距離大於$$\Delta$$，即$$d(\overline{\omega}_N, S) \geq \Delta$$。
+>
+> 令$$\Delta(B)$$為滿足上述條件的所有正實數$$\Delta$$的最小上界。
 
 而$$n > 10K/\Delta$$是為了限制$$n$$下界，使得單次回報最大的影響$$K/n$$相對於ΔΔ 變得微不足道。
 
@@ -877,8 +879,6 @@ $$\Delta > 0$$為一正實數閾值，用於量測$$\overline{\omega}_n$$是否�
 
 <mark style="color:red;">註：不足子集比Spinat2002中定義的次要點(secondary point)條件還要強，似乎可得到次要點集合為不足子集的子集合</mark>。
 
-
-
 #### **直觀意義**
 
 「不足子集」描述了$$S$$ 中這樣一部分割槽域$$B$$：
@@ -892,7 +892,17 @@ $$\Delta > 0$$為一正實數閾值，用於量測$$\overline{\omega}_n$$是否�
   * 如果$$S$$存在非「不足子集」的部分（即充分子集$$S^{′}$$），則玩家可以穩定趨近這部分，使$$S$$ 可接近。
 * **核心思想**：$$B$$是玩家無法穩定控制的區域，反映了對手的反制能力。這為後續判斷$$S$$是否可接近提供了關鍵依據，即$$S$$ 必須剔除所有不足子集後仍有非空部分（充分子集$$S^{'}$$）。
 
+### 充分子集(suffiicient subset)
 
+> 給定閉集合$$S \subseteq \mathcal{M}$$，令$$\mathcal{B}$$為所有$$S$$不足子集的集合族，定義：
+>
+> * $$\displaystyle B^{*}= \bigcup_{B \in \mathcal{B}} B$$為是所有不足子集的聯集。
+> * $$\displaystyle U^{*}= \bigcup_{B \in \mathcal{B}} U(B)$$是所有不足子集點對應開集的聯集 (開集合)。
+> * $$S^{'}=S \setminus B^{*}$$為$$S$$中排除所有不足子集的部份，稱為$$S$$的充分子集且為閉子集。
+>
+> 由不足子集的定義$$S \cap U(B) = B$$可得$$S \cap U^{*} = B^{*}$$，且$$S^{*}=S \setminus U^{*}$$。
+>
+>
 
 
 

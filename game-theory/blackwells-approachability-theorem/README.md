@@ -860,11 +860,13 @@ corollary 2 其實是theorem 3 的另一種表達方式。定理 3 說$$𝑆$$�
 >
 > 其中$$\displaystyle \overline{\omega}_{N}= \frac{n}{N}\overline{\omega}_{n} +  (1- \frac{n}{N}) (\frac{1}{N-n} \sum_{j=n+1}^N \omega_j)$$
 >
-> 在經過$$n$$輪賽局後，$$n > 10K/\Delta$$，$$\overline{\omega}_n \in U(B)$$平均回報在$$U(B)$$內，則存在對手的一連串策略$$q_{n+1}, q_{n+2}, \dots$$使得玩家以機率一在輪數$$N \geq n$$後，會使得平均回報與目標集合的距離大於$$\Delta$$，即$$d(\overline{\omega}_N, S) \geq \Delta$$。
+> 在經過$$n$$輪賽局後，$$n > 10K/\Delta$$，$$\overline{\omega}_n \in U(B)$$令平均回報在$$U(B)$$內，則存在對手的一連串策略$$q_{n+1}, q_{n+2}, \dots$$使得玩家以機率一在輪數$$N \geq n$$後，會使得平均回報與目標集合的距離大於$$\Delta$$，即$$d(\overline{\omega}_N, S) \geq \Delta$$。
 >
 > 令$$\Delta(B)$$為滿足上述條件的所有正實數$$\Delta$$的最小上界。
+>
+> 簡單的說，不足子集$$B$$為$$S$$內的子集合且存在對手策略可使得平均回報無法穩定接近$$B$$。
 
-而$$n > 10K/\Delta$$是為了限制$$n$$下界，使得單次回報最大的影響$$K/n$$相對於ΔΔ 變得微不足道。
+而$$n > 10K/\Delta$$是為了限制$$n$$下界，使得單次回報最大值$$K/n$$相對於Δ 變得微不足道。
 
 * 因為$$d(\overline{\omega}_n, \overline{\omega}_{n-1})=d({\omega}_n, \overline{\omega}_{n-1})/n \leq K/n$$，即單次回報$$\omega_n$$對平均回報$$\overline{\omega}_n$$的影響隨著$$n$$增大而減小，上界為$$K/n$$。如果$$n$$太小，則$$K/n$$可能比$$\Delta$$大，單次收益的波動會顯著干擾平均值的穩定性。$$\frac{K}{n} < \frac{K}{10K/\Delta}=\frac{\Delta}{10}$$保證了單次收益$$\omega_n$$對平均回報$$\overline{\omega}_n$$的影響遠小於$$\Delta$$(具體來說小於$$\Delta/10$$)，使得平均值的變化足夠平滑，對手的長期策略可以主導$$\overline{\omega}_N$$的行為，而不會被短期波動掩蓋。
 * 論文中未嚴格證明為何選 10（而非其他數如 5 或 100），但這是一個常見的保守選擇。
@@ -875,7 +877,7 @@ $$U(B)$$為包含$$B$$的開集，表示$$B$$的鄰域，即$$U(B)$$是$$\overli
 
 $$\Delta > 0$$為一正實數閾值，用於量測$$\overline{\omega}_n$$是否遠離$$S$$。
 
-Ｉ假設$$u \in U(B)$$，假設在第$$n$$輪賽局後，$$\overline{\omega}_n = u$$即平均回報在$$U(B)$$內。
+假設$$u \in U(B)$$，假設在第$$n$$輪賽局後，$$\overline{\omega}_n = u$$即平均回報在$$U(B)$$內。
 
 <mark style="color:red;">註：不足子集比Spinat2002中定義的次要點(secondary point)條件還要強，而次要點可以為</mark>$$S^c$$<mark style="color:red;">中的點，因此似乎可得到不足子集為次要點集合的子集合</mark>。
 
@@ -884,8 +886,8 @@ $$\Delta > 0$$為一正實數閾值，用於量測$$\overline{\omega}_n$$是否�
 「不足子集」描述了$$S$$ 中這樣一部分割槽域$$B$$：
 
 * 如果平均收益$$\overline{\omega}_n$$​ 進入$$B$$的鄰域$$U(B)$$，且賽局已進行足夠多次$$n>10K/\Delta$$，則對手可以通過某個策略$$g^{*}$$保證未來某時刻的$$\overline{\omega}_N$$遠離$$S$$（距離至少為$$\Delta$$）。
-* **「不足」的原因**：對玩家來說，$$B$$ 是「不足以接近」的，因為一旦$$\overline{\omega}_n$$進入這個區域，對手 有能力打破接近$$S$$的目標。換句話說，$$B$$是玩家無法穩定控制的部分。
-* **玩家1的挑戰**：玩家1的目標是使$$\overline{\omega}_n \rightarrow S$$。如果$$S$$包含「不足子集」$$B$$，則當$$\overline{\omega}_n$$進入$$U(B)$$時，玩家2可以利用$$g^{*}$$ 阻止接近。
+* **「不足」的原因**：對玩家來說，$$B$$ 是「不足以接近」的，因為一旦$$\overline{\omega}_n$$進入這個區域，對手有能力打破接近$$S$$的目標。換句話說，$$B$$是玩家無法穩定控制的部分。
+* **玩家的挑戰**：玩家的目標是使$$\overline{\omega}_n \rightarrow S$$。如果$$S$$包含「不足子集」$$B$$，則當$$\overline{\omega}_n$$進入$$U(B)$$時，對手可以利用$$g^{*}$$ 阻止接近。
 * **不足子集的角色**：$$B$$表示$$S$$中那些對手有能力「排除」的部分。這些部分的集合（後續定義為$$B^{*}$$）是$$S$$中不可接近的區域。
 * **與可接近性的關係**：
   * 如果$$S$$的所有子集都是「不足子集」，則$$S$$不可接近（$$S^{'}=\emptyset$$）。
@@ -896,13 +898,11 @@ $$\Delta > 0$$為一正實數閾值，用於量測$$\overline{\omega}_n$$是否�
 
 > 給定閉集合$$S \subseteq \mathcal{M}$$，令$$\mathcal{B}$$為所有$$S$$不足子集的集合族，定義：
 >
-> * $$\displaystyle B^{*}= \bigcup_{B \in \mathcal{B}} B$$為是所有不足子集的聯集。
-> * $$\displaystyle U^{*}= \bigcup_{B \in \mathcal{B}} U(B)$$是所有不足子集點對應開集的聯集 (開集合)。
-> * $$S^{'}=S \setminus B^{*}$$為$$S$$中排除所有不足子集的部份，稱為$$S$$的充分子集(sufficient subset)且為閉子集。
+> * $$\displaystyle B^{*}= \bigcup_{B \in \mathcal{B}} B$$ 為所有不足子集的聯集。
+> * $$\displaystyle U^{*}= \bigcup_{B \in \mathcal{B}} U(B)$$為所有不足子集點對應開集的聯集 (仍為開集合)。
+> * $$S^{'}=S \setminus B^{*}$$為$$S$$中排除所有不足子集的部份，稱為$$S$$的充分子集(sufficient subset)且為閉子集(可能為空集合)。
 >
 > 由不足子集的定義$$S \cap U(B) = B$$可得$$S \cap U^{*} = B^{*}$$，且$$S^{’}=S \setminus U^{*}$$。
->
->
 
 ### Theorem: 充分子集不包含任何不足子集
 

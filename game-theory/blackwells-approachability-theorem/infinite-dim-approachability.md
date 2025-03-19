@@ -34,6 +34,24 @@ Blackwell的可接近定理被擴展到無限維回報空間。兩個玩家(玩�
 
 **總而言之，這篇文章重點關注將Blackwell 的可逼近性理論擴充套件到更複雜的賽局場景，特別是**<mark style="color:red;">**無限維收益空間和非完全活躍賽局的情況**</mark>**，並回顧了該理論的重要應用和相關研究進展。**
 
+### 幾乎確定收斂和機率收斂
+
+將 Blackwell 的方法（另見 Mertens, Sorin 和 Zamir（1994）第二章第四節）應用到無限維情況下，只能保證在收益空間的範數意義下的可接近性。讀者不應混淆 Blackwell 在其可接近性論述中的「幾乎確定」與平均收益的「依機率接近」。Blackwell 證明了，在幾乎所有的賽局路徑(play-path)中，平均收益與目標集合之間的歐氏範數距離會收斂到零。<mark style="color:red;">因此，「幾乎確定」這一陳述指的是賽局路徑的空間，而平均收益的收斂則是在歐氏範數意義下的收斂。</mark>
+
+當賽局收益是定義在某個機率空間上的隨機變數時，L² 範數下的收斂僅意味著平均收益隨機變數<mark style="color:red;">依機率收斂</mark>，而非幾乎確定收斂。要證明平均收益的幾乎確定收斂需要使用一種與 Blackwell 所用方法不同的技術。
+
+## 符號
+
+考慮雙人重複賽局中，玩家與對手分別從可測集$$S_1, S_2$$中選取行動，令$$(s_1^n, s_2^n) \in S_1 \times S_2$$為兩人在時間$$n$$的行動對。
+
+長度為$$n$$的歷史(history)為已觀測的行動序列$$h^n\equiv (s_1^1, s_2^1, s_1^2, s_2^2, \dots, s_1^n, s_2^n)$$。有限長度的歷史集合為$$H=\bigcup_n (S_1 \times S_2)^n$$。
+
+&#x20;對於兩個有限長度的歷史$$h^s, h^n \in H$$，當$$h^s \leq h^n$$時，稱$$h^s$$為$$h^n$$的字首(prefix)(註：即$$h^n$$中，前$$s$$輪的行動序列和$$h^s$$完全相同，之後再進行$$n-s$$輪。)
+
+定義$$\mathscr{H}=(S_1 \times S_2)^\infty$$為無限長度的歷史集合。對於無限長度的歷史$$h^\infty \in \mathscr{H}$$，記$$h^n$$為其第$$n$$個字首。
+
+
+
 ## 參考資料
 
 * Ehud Lehrer,  "[Approachability in infinite dimensional spaces](https://link.springer.com/article/10.1007/s001820200115)," International Journal of Game Theory, Vol.31, No.2, pp. 253-268, 2003.

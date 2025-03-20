@@ -358,6 +358,7 @@
 * [在線凸最佳化相關資料](online-convex-optimization/oco-introduction.md)
 * [外部、內部、交換遺憾](online-convex-optimization/external-internal-swap-regret.md)
 * [校準(calibration)](online-convex-optimization/calibration/README.md)
+  * [The Well-Calibrated Bayesian](online-convex-optimization/calibration/the-well-calibrated-bayesian.md)
   * [漸近校準](online-convex-optimization/calibration/asymptoic-calibration.md)
   * [校準的幾何證明](online-convex-optimization/calibration/xiao-zhun-de-ji-he-zheng-ming.md)
 * [最小遺憾](online-convex-optimization/minimize-regret/README.md)

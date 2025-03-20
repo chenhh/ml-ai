@@ -72,10 +72,9 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 >
 > $$h_\epsilon(x) \leq f(x) \leq g_\epsilon(x)$$且$$0 \leq g_\epsilon(x) - h_\epsilon(x) < \epsilon, ~\forall x \in E$$。
 >
-> <mark style="color:blue;">註：</mark>$$f$$<mark style="color:blue;">必須有界才能保證切值域時，兩點之間長度小於$$\epsilon$$ </mark>。
-> 
-> 因為函數$$f$$有界，因此將值域切$$n$$段，每段的長度均小於$$\epsilon$$。令其中第$$k$$段為$$I_k=[y_{k-1}, y_k)$$，取所有的$$y_{k-1}$$
-> 得簡單函數$$$$h_\epsilon(x) = \sum_{k=1}^n y_{k-1} \chi_{E_k}(x)$$與$$g_\epsilon(x) = \sum_{k=1}^n y_{k} \chi_{E_k}(x)$$夾擠$$f(x)$$。
+> <mark style="color:blue;">註：</mark>$$f$$<mark style="color:blue;">必須有界才能保證切值域時，兩點之間長度小於</mark>$$\epsilon$$ 。
+>
+> 因為函數$$f$$有界，因此將值域切$$n$$段，每段的長度均小於$$\epsilon$$。令其中第$$k$$段為$$I_k=[y_{k-1}, y_k)$$，取所有的$$y_{k-1}$$ 得簡單函數\$$\$$h\_\epsilon(x) = \sum\_{k=1}^n y\_{k-1} \chi\_{E\_k}(x)$$與$$g\_\epsilon(x) = \sum\_{k=1}^n y\_{k} \chi\_{E\_k}(x)$$夾擠$$f(x)\$$。
 
 <details>
 
@@ -83,7 +82,7 @@ $$E_i =f^{-1}(c_i)=\{x \in E ~|~ f(x)=c_i\}$$。
 
 因為$$f$$為有界函數，令有界開區間包含函數值域，即$$f(E) \subseteq (c,d)$$且切割為$$c=y_0 < y_1<\dots<y_n=d$$。給定$$\epsilon > 0$$，此切割必須滿足$$y_k - y_{k-1}<\epsilon, ~ 1\leq k \leq n$$。
 
-令$$I_k=[y_{k-1}, y_k)$$且$$E_k=f^{-1}(I_k),  1 \leq k \leq n$$為前像。
+令$$I_k=[y_{k-1}, y_k)$$且$$E_k=f^{-1}(I_k), 1 \leq k \leq n$$為前像。
 
 因為$$I_k$$為實數區間(Borel可測)，且$$f$$為可測函數，因此$$E_k$$為可測集。--(1)
 
@@ -124,7 +123,7 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 而函數值大於等於$$k$$的區間記為$$E_k=\{x \in E ~|~ f(x) \geq k\}$$。<mark style="background-color:red;">此集合是用於定義函數值為無窮大時的前像</mark>。
 
-取(值域)函數序列：$$\displaystyle  	h_k(x)=\left\{ 	\begin{aligned} 	&\frac{j-1}{2^k}, & x \in E_{k,j} \\ 	&k, & x \in E_k 	\end{aligned} 	\right. 	~j=1,2,\dots, k2^k, ~ k \in \mathbb{N}$$。
+取(值域)函數序列：$$\displaystyle h_k(x)=\left\{ \begin{aligned} &\frac{j-1}{2^k}, & x \in E_{k,j} \\ &k, & x \in E_k \end{aligned} \right. ~j=1,2,\dots, k2^k, ~ k \in \mathbb{N}$$。
 
 記$$\displaystyle h_k(x)=k \cdot \chi_{E_k}(x) + \sum_{j=1}^{k \cdot 2^k} \frac{j-1}{2^k}\chi_{E_{k,j}}(x), ~ x \in E$$。<mark style="color:blue;">因此該簡單函數的上限值為</mark>$$k$$<mark style="color:blue;">，而小於</mark>$$k$$<mark style="color:blue;">的值域切分成</mark>$$k\cdot 2^k$$<mark style="color:blue;">塊，每塊值域的長度為</mark>$$\frac{1}{2^k}$$。
 
@@ -132,15 +131,13 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 因為給定$$x \in E$$時，若$$f(x)$$落在$$E_{k,j}$$時，表示$$\frac{j-1}{2^k}\leq f(x) < \frac{j}{2^k}$$，若切分更細時，同樣的函數值$$f(x)$$會落在比$$E_{k,j}$$切分更細的集合，即$$\frac{m-1}{2^{k+1}}\leq f(x) < \frac{m}{2^{k+1}}$$，且$$\frac{j-1}{2^k} \leq \frac{m-1}{2^{k+1}}$$，因此可得$$h_k (x) \leq h_{h+1}(x) \leq f(x)$$，$$x \in E, ~ k \in \mathbb{N}$$ 為遞增函數序列。
 
-若$$\forall x \in E$$，函數有界，即$$\exists M < \infty \ni f(x) \leq M$$，則當$$k  > M$$時，可得$$f$$與$$h_k(x)$$的差值上限為$$2^{-k}$$，即$$0 \leq f(x) - h_{k}(x) \leq 2^{-k}, ~ x \in E$$。
+若$$\forall x \in E$$，函數有界，即$$\exists M < \infty \ni f(x) \leq M$$，則當$$k > M$$時，可得$$f$$與$$h_k(x)$$的差值上限為$$2^{-k}$$，即$$0 \leq f(x) - h_{k}(x) \leq 2^{-k}, ~ x \in E$$。
 
 若 $$f(x) = \infty$$，可得$$h_k(x) = k, k \in \mathbb{N}$$
 
 因此$$\displaystyle \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ \forall x \in E$$ (QED)
 
 </details>
-
-
 
 ## 一般函數可測若且唯若存在可測簡單函數逼近一般函數(the simple approximation theorem)
 
@@ -162,7 +159,7 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 
 由於$$h_k(x)=m_k(x) - n_k(x)$$為可測簡單函數，且由極限的線性性質得 $$\displaystyle \lim_{k \rightarrow \infty }m_k(x)-n_k(x)=f^{+}(x) - f^{-}(x)=f(x), ~ x \in E$$。 (QED )
 
-\=>  ($$f \geq 0$$不必為有界函數, proof 2)
+\=> ($$f \geq 0$$不必為有界函數, proof 2)
 
 不失一般性令且$$f \geq 0$$為非負可測函數。
 
@@ -186,7 +183,7 @@ $$\forall k \in \mathbb{N}$$，可將(值域)閉區間$$[0,k]$$分為$$k \cdot 2
 * $$\displaystyle \sup |f^{+}(x) - m_k(x)| \leq \frac{1}{2^k}, ~ x \in E$$
 * $$\displaystyle \sup |f^{-}(x) - n_k(x)| \leq \frac{1}{2^k}, ~ x \in E$$
 
-因此可得$$\displaystyle  \begin{aligned} & \lim_{k \rightarrow \infty} \sup{(f(x)-(m_k(x) - n_k(x))}  \\ & \leq \lim_{k \rightarrow \infty}\sup |f^{+}(x) - m_k(x)| + \lim_{k \rightarrow \infty}\sup |f^{-}(x) - n_k(x)| \\ & \leq \lim_{k \rightarrow \infty}\frac{1}{2^k} + \lim_{k \rightarrow \infty}\frac{1}{2^k} \\ & \leq 0   \end{aligned}$$
+因此可得$$\displaystyle \begin{aligned} & \lim_{k \rightarrow \infty} \sup{(f(x)-(m_k(x) - n_k(x))} \\ & \leq \lim_{k \rightarrow \infty}\sup |f^{+}(x) - m_k(x)| + \lim_{k \rightarrow \infty}\sup |f^{-}(x) - n_k(x)| \\ & \leq \lim_{k \rightarrow \infty}\frac{1}{2^k} + \lim_{k \rightarrow \infty}\frac{1}{2^k} \\ & \leq 0 \end{aligned}$$
 
 (QED)
 
@@ -210,6 +207,6 @@ $$\forall k$$令$$g_k(x) = h_k(x) \chi_{B_k(0)}(x), ~ x \in E$$
 
 則$$g_k(x)$$仍為可測函數且有緊緻支撐集。
 
-若$$x \in E$$，則存在$$k_0 \ni k \geq k_0$$時，$$x \in B_k(0)$$，此時可得 $$\displaystyle  lim_{k \rightarrow \infty} g_k(x) = \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$ (QED)
+若$$x \in E$$，則存在$$k_0 \ni k \geq k_0$$時，$$x \in B_k(0)$$，此時可得 $$\displaystyle lim_{k \rightarrow \infty} g_k(x) = \lim_{k \rightarrow \infty} h_k(x) = f(x), ~ x \in E$$ (QED)
 
 </details>

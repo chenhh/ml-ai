@@ -2,6 +2,10 @@
 
 在機率論中，Martingale 泛指一類特定的隨機過程。
 
+鞅是一種隨機過程，描述了一個序列的條件期望保持不變。簡單說，它像一個「公平遊戲」，未來期望值等於當前值。
+
+例子：賭徒的累計財富，若每次賭博期望收益為 0，則財富序列是鞅。
+
 ## 平賭過程(martingale process)
 
 > $$(\Omega, \mathcal{F}, \mathrm{P})$$為機率空間，$$\mathcal{F}_t$$為filitration(即$$\mathcal{F}_t \subseteq \mathcal{F}_{t+1}, ~\forall t$$均為sigma-field)。$$\{X(t), t \geq 0\}$$為隨機過程，當此隨機過程滿足以下條件時，稱為平賭過程。
@@ -32,4 +36,20 @@ $$\begin{aligned} \mathrm{E}(|X_t|) & = \mathrm{E}(|Y_1 + \dots + Y_t|) \\ 	&\le
 平賭性質：$$\forall t \geq 1$$
 
 $$\begin{aligned} \mathrm{E}(X_{t+1} | \mathcal{F}_t) & =  	\mathrm{E}(Y_1 + \dots + Y_{t+1} | \mathcal{F}_t) \\ 	& = (Y_1 + \dots + Y_t) + \mathrm{E}(Y_{t+1}|\mathcal{F}_t) \\ 	& = X_t + \mathrm{E}(Y_{t+1}) \\ 	& = X_t + (1/2 \times 1 + 1/2 \times (-1)) \\ 	& = X_t \end{aligned}$$
+
+## 平賭收斂定理(martingale convergence theorem)
+
+> * **核心內容**：在一定條件下，鞅序列 (Xn) (X\_n) (Xn​) 會隨著 n→∞ n \to \infty n→∞ 幾乎必然（almost surely）收斂到某個有限極限。
+> * **直觀解釋**：鞅的隨機波動不會無限增長，而是最終穩定下來，趨向某個值。
+> *   Martingale Convergence Theorem 是分析隨機過程收斂性的強大工具，特別適用於研究長期行為或漸近性質。
+>
+>     鞅收斂定理有多個版本，以下是常見的兩種：
+>
+>     1. **L1 L^1 L1 有界鞅（均值有界）**：
+>        * **條件**：若 (Xn) (X\_n) (Xn​) 是鞅，且 E(∣Xn∣)≤C<∞ E(|X\_n|) \leq C < \infty E(∣Xn​∣)≤C<∞（均值有統一上界）。
+>        * **結論**：存在隨機變數 X∞ X\_\infty X∞​，使得 Xn→X∞ X\_n \to X\_\infty Xn​→X∞​ 幾乎必然，且 E(∣X∞∣)<∞ E(|X\_\infty|) < \infty E(∣X∞​∣)<∞。
+>        * **例子**：若 Xn X\_n Xn​ 是賭徒財富，總期望損益有界，則財富最終穩定。
+>     2. **L2 L^2 L2 有界鞅（方差有界）**：
+>        * **條件**：若 (Xn) (X\_n) (Xn​) 是鞅，且 E(Xn2)≤C<∞ E(X\_n^2) \leq C < \infty E(Xn2​)≤C<∞（二階矩有統一上界）。
+>        * **結論**：Xn→X∞ X\_n \to X\_\infty Xn​→X∞​ 幾乎必然，且 X∞ X\_\infty X∞​ 在 L2 L^2 L2 中（方差有限）。
 

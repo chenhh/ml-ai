@@ -169,7 +169,65 @@ $$\Pi$$按序列進行的，但不再做其他假設。
 
 **Kronecker引理** ：將鞅的收斂性轉化為目標結論 Pk​−πk​→0。
 
+給定輔助變數$$\beta_i= \begin{cases} \frac{1}{v_i},& \text{ if } v_i = \sum_{j=1}^i \xi_j > 0, \\ 0,& \text{ if } v_i = 0. \end{cases}$$是截至第$$i$$天選入測試集日期數量的倒數，用以標準化計算。
 
+令$$X_i = \beta_i \xi_i (Y_i - \hat{Y}_i)$$：
+
+* $$Y_i -\hat{Y}_i$$是實際結果與預測機率的偏差。
+* $$\xi_i$$決定是否選入當日(1或0)。
+* $$\beta_i$$調整權重，使選入的日期數增加而減小。
+
+***
+
+定義$$U_k = \sum_{i=1}^k X_i$$，要證明$$U_k$$為鞅序列。
+
+因為$$\beta_i, \xi_i, \hat{Y}_i$$都是$$\mathcal{B}_{i-1}$$可測(基於第$$i-1$$日的資訊，已知)，且$$\hat{Y}_i   = \mathrm{E}(Y_i | \mathcal{B}_{i-1})$$。
+
+所以$$\mathrm{E}(Y_i - \hat{Y}_i| \mathcal{B}_{i-1}) =  \mathrm{E}(Y_i | \mathcal{B}_{i-1}) - \mathrm{E}(\hat{Y}_i| \mathcal{B}_{i-1}) =  \mathrm{E}(Y_i | \mathcal{B}_{i-1}) - \hat{Y}_i =  \hat{Y}_i - \hat{Y}_i = 0$$。
+
+可得$$\mathrm{E}(X_i|\mathcal{B}_{i-1})=\beta_i \xi_i \cdot 0 = 0$$&#x20;
+
+$$\mathrm{E}(U_k | \mathcal{B}_{k-1})= U_{k-1} + \mathrm{E}(X_k | \mathcal{B}_{k-1}) = U_{k-1} + 0 = U_{k-1}$$，因此$$\{U_k\}$$為相對於flibration $$\{\mathcal{B}_k\}$$的martingle。
+
+***
+
+計算$$U_k$$的二階動差並證明有界性
+
+$$\mathrm{E}(X_i^2) = \mathrm{E}((\beta_i \xi_i)^2 (Y_i - \hat{Y}_i)^2)$$，因為$$\beta_i, \xi_i, \hat{Y}_i$$都是$$\mathcal{B}_{i-1}$$可測，由重複期望值定理可得：$$\begin{aligned} \mathrm{E}(X_i^2) &= \mathrm{E}(\mathrm{E}((\beta_i \xi_i)^2 (Y_i - \hat{Y}_i)^2~|~ \mathcal{B}_{i-1})) \\ & = \mathrm{E}((\beta_i \xi_i)^2  \mathrm{E}((Y_i - \hat{Y}_i)^2~|~ \mathcal{B}_{i-1})  ) \\ & = \mathrm{E}((\beta_i \xi_i)^2  \mathrm{Var}(Y_i ~|~ \mathcal{B}_{i-1})  ) \\  \end{aligned}$$
+
+因為$$Y_i$$取值為0或1，因此變異數最大值為1/4，$$\mathrm{Var}(Y_i| \mathcal{B}_{i-1}) = \hat{Y}_i (1- \hat{Y}_i) \leq 1/4$$。
+
+可得$$\mathrm{E}(X_i^2) \leq \mathrm{E}((\beta_i \xi_i)^2 \cdot 1/4) = \frac{1}{4} \mathrm{E}((\beta_i \xi_i)^2)$$
+
+得總和變數量$$\mathrm{E}(U_k^2) = \sum_{i=1}^k \mathrm{E}(X_i^2) \leq  \frac{1}{4} \mathrm{E}( \sum_{i=1}^k(\beta_i \xi_i)^2)$$--(1)
+
+由於$$\xi_i$$取值也為0或1，所以$$(\beta_i \xi_i)^2 = \begin{cases} (\beta_i)^2, & \text{ if } \xi_i = 1, \\ 0, & \text{ if } \xi_i = 0. \end{cases}$$
+
+其中非零項的序列如$$1, (1/2)^2, (1/3)^2, \dots$$
+
+可得不等式$$\sum_{i=1}^k (\beta_i \xi_i)^2 \leq \sum_{n=1}^\infty \frac{1}{n^2} = \pi^2/6$$--(2)
+
+由(1,2)得$$\mathrm{E}(U_k^2) \leq \frac{1}{4} \cdot \frac{\pi^2}{6} = \frac{\pi^2}{24}$$，因此有上界且獨立於$$k$$，即變異數有界(可控)--(3)。
+
+因為$$\{U_k\}$$為martingle且$$\mathrm{E}(U_k^2)$$有界，由martingle convergence theorem得$$U_k$$幾乎必然（almost surely）收斂到某有限極限。
+
+因此以$$\Pi$$機率1，$$U_k = \sum_{i=1}^k \beta_i \xi_i (Y_i -\hat{Y}_i)$$收斂。--(4)
+
+***
+
+應用 Kronecker 引理
+
+**Kronecker 引理**（Feller 1971）：若 $$\sum a_i$$ 收斂，且 $$\{b_i\}$$ 單調趨於 0，則 $$b_k \sum_{i=1}^k a_i \to 0$$。此處：
+
+* $$a_i = \xi_i(Y_i - \hat{Y}_i)$$，$$U_k = \sum_{i=1}^k \beta_i a_i$$收斂。
+* $$b_k = \beta_k =\frac{1}{v_k}$$ (若$$v_k >0$$)，當$$v_k \to \infty$$時，$$\beta_k$$單調趨近於0。
+* 因此$$p_k - \pi_k = \frac{1}{v_k} \sum_{i=1}^k \xi_i (Y_i - \hat{Y}i)=\beta_kU_k \to 0$$ (以$$\Pi$$機率1)。
+
+因此當$$v_k \to 0$$，$$p_k - \pi_k \to 0$$幾乎必然成立。
+
+注意，如果$$\xi_i$$依賴於$$Y_i$$(not admissible)，則$$\mathrm{E}(X_i| \mathcal{B}_{i-1}) \neq 0$$，martingle性質不成立，結論可能失效。
+
+(QED)
 
 </details>
 

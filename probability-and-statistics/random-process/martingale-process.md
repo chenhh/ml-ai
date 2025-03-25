@@ -8,9 +8,9 @@
 
 > $$(\Omega, \mathcal{F}, \mathrm{P})$$為機率空間，$$\mathcal{F}_t$$為filitration(即$$\mathcal{F}_t \subseteq \mathcal{F}_{t+1}, ~\forall t$$均為σ域)。$$\{X_t, t \geq 0\}$$為隨機過程($$t$$可為離散或連續)，當此隨機過程滿足以下條件時，稱為平賭過程。
 >
-> * \[可測條件]$$X_t$$ 為$$\mathcal{F}_t$$-可測(measurable)(或者說$$X_t$$ 適應於(adapted to) $$F_t$$)，
-> * \[可積分條件] $$\mathrm{E}(|X_t|) < \infty$$ 且
-> * \[平賭性質]$$\mathrm{E}(X_{t+1}|\mathcal{F}_t)=X_t$$或$$\mathrm{E}(X_t|\mathcal{F}_s)=X_s, \text{ a.s. }~ \forall s < t$$。
+> * \[可測條件]$$X_t$$ 為$$\mathcal{F}_t$$-可測(measurable)(或者說$$X_t$$ 適應於(adapted to) $$F_t$$)，即$$X_t$$的值僅依賴於截至第$$t$$步之前的所有資訊（歷史資訊）$$\mathcal{F}_t$$，而不能依賴未來的資訊。
+> * \[可積分條件] $$\mathrm{E}(|X_t|) < \infty$$ ，鞅的期望值有限，確保鞅過程的數學操作（如求和或積分）是良定義的。(註：但$$X_t$$的取值可為$$\pm \infty$$，只要期望值有限即可，如常態分佈)。
+> * \[平賭性質]$$\mathrm{E}(X_{t+1}|\mathcal{F}_t)=X_t$$或$$\mathrm{E}(X_t|\mathcal{F}_s)=X_s, \text{ a.s. }~ \forall s < t$$。鞅過程沒有系統性的增長或下降趨勢，波動純粹是隨機的。
 >
 > 如果$$\mathrm{E}(X_t|\mathcal{F}_s)\geq X_s$$稱為子鞅(sub-martingale)，表示期望值傾向增加。
 >
@@ -44,12 +44,26 @@ $$\begin{aligned} \mathrm{E}(X_{t+1} | \mathcal{F}_t) & =  	\mathrm{E}(Y_1 + \do
 
 ### 鞅差的期望為零
 
-> 每一步的變化（差值）平均是零，這是鞅「不偏不倚」的證明。
+> $$\{X_t\}$$為平賭過程，每一步的變化（差值）平均是零，這是鞅「不偏不倚」的證明。
 >
-> $$\forall s < t, \mathrm{E}(X_t - X_s | \mathcal{F}_s)= \mathrm{E}(X_t  | \mathcal{F}_s) - \mathrm{E}(X_s | \mathcal{F}_s) = X_s - X_s =0$$
+> $$\forall s < t, \mathrm{E}(X_t - X_s | \mathcal{F}_s)= \mathrm{E}(X_t  | \mathcal{F}_s) - \mathrm{E}(X_s | \mathcal{F}_s) = X_s - X_s =0$$。
+>
+> 或 $$\mathrm{E}(X_{t+1} - X_t ~|~ \mathcal{F}_t)=0$$。
 
 註：$$\mathrm{E}(X_s|\mathcal{F}_s) =X_s$$是更基本的性質，講的是「現在對現在」，任何適應$$\mathcal{F}_s$$的$$X_s$$\
 都成立，不限於鞅。因為$$X_s$$是$$\mathcal{𝐹}_s$$的一部分(更精確的說，$$X_s$$的前像均為$$\mathcal{F}_s$$中的元素)，給定$$\mathcal{F}_s$$的資訊，$$X_s$$已經是確定的，沒什麼好「平均」的，直接就是它自己。
+
+### 鞅的波動（變異數）可能會隨時間變大
+
+> $$\{X_t\}$$為鞅過程，$$X_0=0$$且每步獨立變化，則$$\mathrm{Var}(X_n)=\sum_{i=1}^n \mathrm{Var}(X_i - X_{i-1})$$會累積變大。
+>
+> $$\mathrm{Var}(X_{t+1} ~|~ \mathcal{F}_t)= \mathrm{E}((X_{t+1}-X_t)^2 ~|~ \mathcal{F}_t)$$，鞅過程的波動性由其增量的變異數決定。
+
+### 鞅的變換性質（Martingale Transforms）
+
+> $$\{X_t\}$$為鞅過程，$$\{H_t\}$$是可預測過程(即$$H_t$$是$$\mathcal{F}_{t-1}$$可測)，則：
+>
+> $$(H\cdot X)_t = \sum_{i=1}^t H_i(X_i - X_{i-1})$$仍為鞅。
 
 ### 停止時間性質（可選停定理, Optional Stopping Theorem）
 
@@ -59,15 +73,25 @@ $$\begin{aligned} \mathrm{E}(X_{t+1} | \mathcal{F}_t) & =  	\mathrm{E}(Y_1 + \do
 >
 > 這表示無論你選擇何時停止觀察，期望值仍然保持不變。
 
-### 鞅的波動（變異數）可能會隨時間變大
+## Doob 分解
 
-> 假設$$\{X(t)\}$$為平賭過程，$$X_0=0$$且每步獨立變化，則$$\mathrm{Var}(X_n)=\sum_{i=1}^n \mathrm{Var}(X_i - X_{i-1})$$會累積變大。
+> 任何適應於過濾$$\{ \mathcal{F}_t\}$$ 的隨機過程$$\{Y_t\}$$都可以分解為一個鞅部分$$\{X_t\}$$和一個可預測部分$$\{A_t\}$$：$$Y_t = X_t + A_t$$
+
+## Doob最大值不等式（Maximal Inequalities）
+
+> (?)$$\{X_t\}$$為平賭過程，令$$M_t = \max_{k \leq t} X_k$$，則：$$\mathrm{P}(M_t \geq a ) \leq \frac{\mathrm{E}(|X_t|)}{a}, ~\forall a > 0$$。
+>
+> 在$$L^p$$空間可表示為$$\displaystyle \| \max_{k \leq t} |X_k|\|_p \leq \frac{p}{p-1} \| X_t\|_p$$
+>
+> 這表明鞅的最大值受到其期望值的限制。
+>
+> 直觀意義 ：鞅的最大值不太可能遠離其初始值。
 
 ## 鞅收斂定理(martingale convergence theorem)
 
 > 如果鞅的數值不會變得太大（有個上限），它長期會穩定下來，不會一直亂跳。
 >
-> 直觀想法：如果一個隨機過程的期望值在時間上保持穩定（鞅性質），並且該過程不會「爆炸」（有界性條件，變異數受控制），那麼該過程不可能無限振盪或發散，最終會收斂於某個穩定值。
+> 直觀想法：如果一個隨機過程的期望值在時間上保持穩定（鞅性質），並且該過程不會「爆炸」(發散)（有界性條件，變異數受控制），那麼該過程不可能無限振盪或發散，最終會收斂於某個穩定值。
 >
 > 關鍵分析工具：Doob 的分解和不等式，分析鞅的上下穿越次數，證明振盪有限。
 >
@@ -80,15 +104,19 @@ $$\begin{aligned} \mathrm{E}(X_{t+1} | \mathcal{F}_t) & =  	\mathrm{E}(Y_1 + \do
 >     鞅收斂定理有多個版本，以下是常見的版本：
 >
 >     1. $$L^1$$ **有界鞅（均值有界）**：
->        * **條件**：若$$\{X_t)\}$$是鞅，且$$\mathrm{E}(|X_t|) \leq C < \infty$$（均值有常數上界）。
+>        * **條件**：若$$\{X_t)\}$$是鞅，且$$\mathrm{E}(|X_t|) \leq C < \infty$$（均值有一致上界, uniform bounded）。
 >        * **結論**：存在隨機變數$$X_\infty$$，使得 $$X_t \to X_\infty$$ 幾乎必然，且$$\mathrm{E}(|X_\infty|) < \infty$$。
 >        * **例子**：若$$\{X_t\}$$是賭徒財富，總期望損益有界，則財富最終穩定。
 >     2. $$L^2$$**有界鞅（變異數有界）**：
->        * **條件**：若$$\{X_t\}$$是鞅，且$$\mathrm{E}(X_t^2) \leq C < \infty$$（二階動差有常數上界）。
+>        * **條件**：若$$\{X_t\}$$是鞅，且$$\mathrm{E}(X_t^2) \leq C < \infty$$（二階動差有一致上界）。
 >        * **結論**：$$X_t \to X_\infty$$幾乎必然，且$$X_\infty$$ 在$$L^2$$ 中（變異數有限）。
 >     3. $$L^p$$收斂：
->        * **條件**：若$$\{X_t\}$$是鞅，me 且$$L^p, ~p>1$$有界，即$$\sup_t \mathrm{E}(|X_t|^p)<\infty$$。
+>        * **條件**：若$$\{X_t\}$$是鞅，me 且$$L^p, ~p>1$$有界，即$$\sup_t \mathrm{E}(|X_t|^p)<\infty$$(期望有界)。
 >        * **結論**：$$X_t \to X_\infty$$幾乎必然，且$$X_\infty$$ 在$$L^p$$ 中。
 >
 > 常見範例：簡單隨機漫步，如果隨機漫步的步長均值為0，則該過程是一個鞅。根據鞅收斂定理，若該過程有界，則它會收斂於某個隨機變數。
 
+在實際應用中，有界性條件有助於提高模型的穩定性。例如：
+
+* **金融數學**：資產價格通常被建模為有界的隨機過程，以避免不現實的無限價格。
+* **物理系統**：有界性條件反映了系統的物理限制，例如能量或位置的限制

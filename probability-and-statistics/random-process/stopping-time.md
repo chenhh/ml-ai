@@ -22,7 +22,7 @@ Stopping Time（停時） 是一個隨機變數，而不是隨機過程。但定
 >
 > 因為$$\mathcal{F}_t$$為σ域，因此等價於:
 >
-> * $$\forall t \in \mathcal{T}, \{\tau = t\} \in \mathcal{F}_t$$。
+> * $$\forall t \in \mathcal{T}, \{\tau = t\} = \{\tau \leq t\} \setminus \{\tau < t\} \in \mathcal{F}_t$$。
 > * $$\forall t \in \mathcal{T}, \{\tau > t\} \in \mathcal{F}_t$$。
 
 $$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，在每一個時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，均足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來或者說事件是否已發生，或者在之前就停下來，而不需要使用到未來</mark>$$\{\tau > t\}$$<mark style="color:red;">的資訊</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
@@ -34,8 +34,6 @@ $$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style
 某些停時可能永遠不會發生（例如，如果條件永遠不滿足），此時停時可能取值為無窮大（$$\tau = \infty$$）。
 
 什麼不是停時：一個依賴於未來信息的隨機時間不是停時。例如$$\{B_t\}$$為布朗運動，$$\tau=\inf\{ t \in (0,1] ~|~B_t = \max_{s \in [0,1]}B_s\}$$不是一個停時，因為要判斷$$\tau \leq t$$，們需要知道$$B$$在整個時間區間$$[0,1]$$的最大值，這包括了時間$$t$$之後的信息。
-
-
 
 <details>
 
@@ -81,12 +79,18 @@ $$\{\tau \leq t\} = \{X_0 = 1 \} \cup \{X_1 \cup 1 \} \cup \dots \cup \{X_t \leq
 
 ## 兩個停時取最小或最大運算仍為停時
 
-> 令$$\tau_1, \tau_2$$為相對於filtration $$\mathcal{F}_t$$的停時，令:
+> 令$$\tau_1, \tau_2$$為相對於濾流 $$\mathcal{F}_t$$的停時，令:
 >
 > * $$\tau_{\max} = \max\{ \tau_1, \tau_2\}$$。
 > * $$\tau_{\min} = \min\{\tau_1, \tau_2\}$$。
 >
 > 則$$\tau_{\max}, \tau_{\min}$$為相對於filtration $$\mathcal{F}_t$$的停時。
+>
+> 因為$$\{ \max(\tau_1, \tau_2) \leq t \} = \{ \tau_1 \leq t \} \cup \{ \tau_2 \leq t\} \in \mathcal{F}_t$$。
+>
+> $$\{ \min(\tau_1, \tau_2) \leq t \} = \{ \tau_1 \leq t \} \cap \{ \tau_2 \leq t\} \in \mathcal{F}_t$$。
+>
+> <mark style="background-color:red;">注：由於常數</mark>$$c \geq 0$$<mark style="background-color:red;">是停時，因此</mark>$$\min(\tau, c), \max(\tau, c)$$<mark style="background-color:red;">也是停時</mark>。
 
 <details>
 
@@ -119,6 +123,14 @@ $$\{\tau_{\min} = t\}$$可能是$$\tau_1 \leq \tau_2$$得到$$\{\tau_1 = t\}$$�
 (QED)
 
 </details>
+
+## 有限和
+
+> 令$$\tau_1, \tau_2$$為相對於濾流 $$\mathcal{F}_t$$的停時，則$$\tau_1 + \tau_2$$不一定是停時。
+>
+> 因為$$\{\tau_1 + \tau_2  \leq t\}$$可能依賴於未來信息。
+>
+> 例如$$\tau_1$$為布朗運動第一次到達1，$$\tau_2$$是布朗連動第一次到達2，則$$\tau_1 + \tau_2$$需要$$\tau_2$$的值，可能非$$\mathcal{F}_t$$可測。
 
 ## 包含停時的σ域
 

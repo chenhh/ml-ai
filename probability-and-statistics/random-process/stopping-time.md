@@ -2,14 +2,15 @@
 
 ## 簡介
 
-Stopping Time（停時） 是一個隨機變數，而不是隨機過程。但定義停時會使用隨機過程。
+Stopping Time（停時） 是一個隨機變數，而不是隨機過程。但定義停時會使用隨機過程。其發生與否只能依賴當前及過去的信息$$\{\tau \leq t \} \in \mathcal{F}_t \equiv \{\omega \in \Omega ~|~ \tau(\omega) \leq t \} \in \mathcal{F}_t$$。
 
+* $$t$$：是一個特定的時間點（在離散時間中通常是整數，在連續時間中是非負實數）。
+* $$\{\omega \in \Omega~|~ \tau (\omega) \leq t\}$$：表示所有使得停時$$\tau$$ 的值小於或等於$$t$$ 的樣本點 ω 的集合。換句話說，這是事件「停時在時間 $$t$$或之前發生」。
+* $$\mathcal{F}_t$$：表示在時間$$t$$ 或之前可獲得的所有信息的 σ域。事件屬於$$\mathcal{F}_t$$意味著我們可以僅僅基於到時間$$t$$ 為止的信息來判斷該事件是否發生。
 * 停時 τ 的值是隨機的，因為它取決於隨機過程的實現（sample path）。例如，在布朗運動中，停時可能是粒子首次達到某個特定位置的時間。
-* 停時的輸出是一個單一的數值（通常是時間點），而不是一個隨時間變化的函式。因此，停時是一個隨機變數，而不是隨機過程。
-
-停時這是指一個隨機過程停止的時間點，因為無法事先知道過程何時會停止，這個時間點通常是個隨機變數。通常有一個事先訂好的停止條件，只要隨機過程符合此條件，隨機過程就停下來。
-
-關於隨機過程$$X\equiv (X_t)_{t \in T}$$的停時是隨機變數$$\tau$$ ，這一隨機變數具有如下性質：對於每一個時間 ，事件 $$\tau=t$$ 的發生與否僅取決於$$\{X_s, ~ s \leq t\}$$ 的取值。簡單的說在任一特定時刻$$t$$，由現在的資訊$$\mathcal{F}_t$$可以判別在這一時刻隨機過程是否到了停時。
+* 停時的輸出是一個單一的數值（通常是時間點），而不是一個隨時間變化的函數。因此，停時是一個隨機變數，而不是隨機過程。
+* 它捕捉了隨機過程中「首次事件」的時間，具有因果性質。
+* <mark style="background-color:red;">一個依賴於未來信息的隨機時間不是停時</mark>。
 
 停時為隨機變數，且等價於停止過程(stopping process)，即初始值為1，在某時刻變為0隨機過程。討論詳見Fischer(2013)。
 
@@ -17,16 +18,24 @@ Stopping Time（停時） 是一個隨機變數，而不是隨機過程。但定
 
 > 定義：停時
 >
-> 給定$$\mathcal{T}=[0, \infty)$$與機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$，則幾乎確定有限的隨機變數$$\tau: \Omega\rightarrow \mathcal{T} \cup \{\infty\}$$稱為停時，若滿足$$\forall t \in \mathcal{T}, \{ \tau \leq t \} \in \mathcal{F}_t$$。
+> 給定$$\mathcal{T}=[0, \infty)$$與機率空間$$(\Omega, \mathcal{F}, \mathcal{F}_t, \mathrm{P})$$，則幾乎確定有限的隨機變數$$\tau: \Omega\rightarrow \mathcal{T} \cup \{\infty\}$$稱為停時，若滿足$$\forall t \in \mathcal{T}, \{ \tau \leq t \} \in \mathcal{F}_t$$。表示在某個隨機過程中停止觀察或採取行動的時間點。
 >
-> 等價於:
+> 因為$$\mathcal{F}_t$$為σ域，因此等價於:
 >
 > * $$\forall t \in \mathcal{T}, \{\tau = t\} \in \mathcal{F}_t$$。
 > * $$\forall t \in \mathcal{T}, \{\tau > t\} \in \mathcal{F}_t$$。
 
-$$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，在每一個時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，均足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來，或者在之前就停下來，而不需要使用到未來</mark>$$\{\tau > t\}$$<mark style="color:red;">的資訊</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
+$$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style="color:red;">的意義就是，在每一個時間</mark>$$t$$<mark style="color:red;">所擁有的資訊</mark>$$\mathcal{F}_t$$<mark style="color:red;">，均足夠判斷是否在間</mark>$$t$$<mark style="color:red;">停下來或者說事件是否已發生，或者在之前就停下來，而不需要使用到未來</mark>$$\{\tau > t\}$$<mark style="color:red;">的資訊</mark>。停時就是滿足一定可測條件的隨機時間。截止到目前為止，所擁有的資訊能足夠做出決定是否停止。
+
+停時的本質是「不提前偷看未來」。決定$$\tau$$是否發生只能依賴當前及之前的資訊$$\mathcal{F}_t$$，而不能依賴未來的資訊。例如，$$\tau$$可以是某個隨機過程首次達到某個值的時間，但這個決定必須基於當時的觀測。
+
+停時用來描述在隨機過程中某個事件首次發生的時間。它與濾流（filtration）密切相關，運用在鞅理論、次鞅、超鞅以及隨機分析中。
 
 某些停時可能永遠不會發生（例如，如果條件永遠不滿足），此時停時可能取值為無窮大（$$\tau = \infty$$）。
+
+什麼不是停時：一個依賴於未來信息的隨機時間不是停時。例如$$\{B_t\}$$為布朗運動，$$\tau=\inf\{ t \in (0,1] ~|~B_t = \max_{s \in [0,1]}B_s\}$$不是一個停時，因為要判斷$$\tau \leq t$$，們需要知道$$B$$在整個時間區間$$[0,1]$$的最大值，這包括了時間$$t$$之後的信息。
+
+
 
 <details>
 
@@ -61,6 +70,14 @@ $$\forall t \in \mathcal{T}, ~$$$$\{\tau \leq t\} \in \mathcal{F}_t$$<mark style
 &#x20;考慮獨立同分佈(i.i.d.)的Bernoulli序列$$X: \Omega \rightarrow \{0, 1\}^{\mathbb{N}}$$，且定義到時間$$n$$試驗成功的次數為$$S_n \equiv \sum_{i=1}^n X_i$$，則可定義停時為 $$T_k \equiv \min\{ n \in \mathbb{N} ~|~ S_n = k\}, ~ \forall \in \mathbb{N}$$為成功$$k$$次所需的最短時間。
 
 由定義可得$$T_k$$幾乎確定有限，且$$\{T_k=n\} = \bigcap_{i=1}^{n-1} \{S_i < k\} \cap \{S_n =k\} \in \mathcal{F}_n$$
+
+## 範例：首次到達時間
+
+設$$\{X_t\}$$是簡單隨機遊走（每次以機率$$𝑝$$增加 1，以$$1−p$$ 減少 1），定義$$\tau = \inf\{t \geq 0, X_t=1\}$$為首次到達 1 的時間。
+
+$$\{\tau \leq t\} = \{X_0 = 1 \} \cup \{X_1 \cup 1 \} \cup \dots \cup \{X_t \leq 1\}$$，由於$$X_k$$是$$\mathcal{F}_k$$可測，且$$\mathcal{F}_k \subseteq F_{t}$$，可得$$\{\tau \leq t \} \in \mathcal{F}_t$$為停時。
+
+
 
 ## 兩個停時取最小或最大運算仍為停時
 

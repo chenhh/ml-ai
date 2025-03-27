@@ -6,7 +6,14 @@ description: absolutely continuous
 
 ## 簡介
 
-絕對連續測度的概念，主要用於Raydon-Nikodym導數，可保證RK導數不會出現分母為0而分子不為0的情況，只會出現分母為0且分子同時為0之值。
+<mark style="background-color:red;">絕對連續測度表明一個測度的「零測度集」必然是另一個測度的「零測度集」，並且在 σ-有限的條件下，絕對連續測度可以通過積分的形式表示出來</mark>。
+
+絕對連續測度的概念，主要用於Raydon-Nikodym(RK)導數，可保證RK導數不會出現分母為0而分子不為0的情況，只會出現分母為0且分子同時為0之值。
+
+* 當$$\nu \ll \mu$$且為σ-有限測度時，Radon-Nikodym 定理保證存在一個非負可測函數$$f: X \to [0, \infty)$$使得對於任意可測集合$$E \in \Sigma$$，$$\nu(E) = \int_E f d\mu$$，$$f=\frac{d\nu}{d\mu}$$稱為$$\nu$$對$$\mu$$的的Radon-Nikodym 導數。
+* 例如，在機率論中，如果$$\nu$$是一個機率測度，並且$$\mu$$是 Lebesgue 測度，那麼$$f(x)$$就是機率密度函數。
+
+想像$$\mu$$和$$\nu$$分別代表在空間$$X$$上分配某種「質量」或「密度」的方式。如果$$\nu \ll \mu$$，這意味著如果一個區域在$$\mu$$的分配下沒有任何質量（測度為零），那麼在這個區域$$\nu$$的分配下也不可能有任何質量。換句話說，$$\nu$$的「存在」完全依賴於$$\mu$$的「存在」。$$\nu$$不會在$$\mu$$視為「無關緊要」的地方（即$$\mu$$為零測度的地方）分配任何質量。
 
 而RK導數主要應用在一般化的條件期望值的存在性，即$$Z=\mathrm{E}(X|\mathcal{F})$$隨機變數的存在性。
 
@@ -324,5 +331,5 @@ $$\nu_2 \perp \mu$$，則存在$$X=P \cup N, P \cap N =\emptyset$$ ，$$\nu_2$$�
 ## 參考資料
 
 * [https://zhuanlan.zhihu.com/p/37493234](https://zhuanlan.zhihu.com/p/37493234)
-* [https://en.wikipedia.org/wiki/Absolute\_continuity](https://en.wikipedia.org/wiki/Absolute\_continuity)
+* [https://en.wikipedia.org/wiki/Absolute\_continuity](https://en.wikipedia.org/wiki/Absolute_continuity)
 * [https://zhuanlan.zhihu.com/p/75414600](https://zhuanlan.zhihu.com/p/75414600)

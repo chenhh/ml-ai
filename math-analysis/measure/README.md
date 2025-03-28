@@ -74,7 +74,7 @@
 * 實數的有限或可數無限子集都是零測集。自然數集合和有理數集合都是實數集的可數無限子集，因此它們是零測集。Cantor集是一個不可數的零測集。
 * 可數零測集的聯集仍為零測集。
 * 零測集的可測子集為零測集。
-* [https://en.wikipedia.org/wiki/Null\_set](https://en.wikipedia.org/wiki/Null\_set)
+* [https://en.wikipedia.org/wiki/Null\_set](https://en.wikipedia.org/wiki/Null_set)
 
 ## 測度的有限可加性
 
@@ -192,15 +192,19 @@ $$\mu(\mathbb{R})=\infty$$，因此實數的長度不是有限測度。
 
 <mark style="color:blue;">所有的機率測度都是有限測度</mark>，因為$$\mu(\Omega) =1$$。
 
-> \[<mark style="color:red;">σ有限測度</mark>] $$\exists \{E_n \}\subseteq \Sigma, ~ X=\bigcup_n E_n \ni \mu(E_n )< \infty, ~ \forall n$$。
+> \[<mark style="color:red;">σ有限測度</mark>] $$\exists \{E_n \}_{n \in \mathbb{N}}\subseteq \Sigma, ~ X=\bigcup_{n=1}^\infty E_n \ni \mu(E_n )< \infty, ~ \forall  n \in \mathbb{N}$$。
 >
 > 但不要求$$\mu(X)<\infty$$。只要求$$X$$的可數分割中，每一個分割集的測度有限即可。
 >
 > 由定義可知<mark style="color:blue;">有限測度</mark>⊆<mark style="color:blue;">σ有限測度</mark>。因為若$$\mu(X)<\infty$$，則其任意可測子集$$\mu(E) < \infty$$。
 
+如果集合$$X$$可以表示為可數個集合的聯集，則可轉換成可數個分割的聯集，只要每個分割的測度有限，則得σ有限測度。<mark style="background-color:red;">σ-有限測度可以看作是「局部有限」的，即整個空間可以被分解成可數個測度有限的部分</mark>。
+
 實數的長度不是有限測度，<mark style="color:blue;">但是</mark>σ<mark style="color:blue;">有限測度</mark>，因為可將實數拆解為多個有限長度的線段的聯集。$$\mathbb{R} = \cdots \cup [-n, -n+1] \cup \cdots \cup[-1,1]\cup [1,2]\cup \cdots \cup [n, n+1] \cup \cdots$$且$$\mu([n, n+1])=1, \forall n$$。
 
 <mark style="color:blue;">一般常用的測度大多為σ有限測度</mark>。如Lebesgue測度($$\mathbb{R}^n$$)，計數測度。
+
+
 
 ## 非互斥集合聯集與交集測度之和等於各別集合測度之和(排容原理)
 
@@ -367,7 +371,7 @@ $$\displaystyle \limsup_{n \rightarrow \infty} \mu(E_n) \leq \mu(\limsup_{n \rig
 
 [https://zhuanlan.zhihu.com/p/318640829](https://zhuanlan.zhihu.com/p/318640829)
 
-[https://en.wikipedia.org/wiki/Fatou's\_lemma#Examples\_for\_strict\_inequality](https://en.wikipedia.org/wiki/Fatou's\_lemma#Examples\_for\_strict\_inequality)
+[https://en.wikipedia.org/wiki/Fatou's\_lemma#Examples\_for\_strict\_inequality](https://en.wikipedia.org/wiki/Fatou's_lemma#Examples_for_strict_inequality)
 
 [https://www.zhihu.com/question/328909025](https://www.zhihu.com/question/328909025)
 

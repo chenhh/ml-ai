@@ -32,7 +32,7 @@
 > 給定序列$$\{y_t\}_{t=-\infty}^{\infty}$$，若對於任意的時間跨度$$k$$，序列的統計量滿足：
 >
 > 1. \[平均值為固定值(非時變)] $$\mathrm{E}(y_t)=\mu$$
-> 2. \[變異數為有限值(可時變)] $$\mathrm{Var}(y_t) < \infty$$
+> 2. \[變異數為固定有限值(可非變)] $$\mathrm{Var}(y_t) =\sigma^2< \infty$$
 > 3. \[共變異數只與時間跨度有關，與特定時間點$$t$$無關] $$\mathrm{Cov}(y_t, y_{t-k})=\mathrm{E}(y_t - \mu)(y_{t-k} - \mu)=\gamma(k)$$
 >
 > 則稱為弱定態(weak stationary)或共變異定態(covariance stationary)，或簡稱為定態時間序列。
@@ -77,7 +77,7 @@ $$\hat{\rho}(k)=\frac{\hat{\mathrm{Cov}}(y_t, y_{t-k})}{\hat{\mathrm{Var}(y_t)}}
 >
 > 註：有些論文定義白噪音為i.i.d.的樣本序列，比不相關條件更強。
 
-![白噪音的ACF](../../.gitbook/assets/white\_noise-min.png)
+![白噪音的ACF](../../.gitbook/assets/white_noise-min.png)
 
 ```python
 def white_noise(n_point=10000):

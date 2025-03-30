@@ -217,6 +217,7 @@
 
 * [簡介](time-series/time-series-introduction.md)
 * [時間序列性質](time-series/property/README.md)
+  * [落後運算子](time-series/property/lag-operator.md)
   * [平穩性、定態(stationary)](time-series/property/ping-wen-xing-ding-tai-stationary.md)
   * [單根檢定(unit root test)](time-series/property/unit-root-test.md)
 * [自共變異數/自相關函數](time-series/autocovariance-autocorrelation-function.md)

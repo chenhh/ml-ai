@@ -12,46 +12,14 @@ $$\Delta y_t \equiv y_t - y_{t-1}$$稱為$$y_t$$的<mark style="color:red;">一�
 
 當$$y_t$$變動不大時，$$\Delta \ln y_t$$是變動量的良好近似值，經常用於報酬率的計算。
 
-## 落後算子(lag operator)
+在時間序列分析中，使用滯後運運算元（lag operator）有幾個重要的原因：
 
-> Definition: lag operator L
->
-> $$L$$(有時使用符號$$B$$)稱為落後運算子，定義$$L^ky_t = L^k(y_t) \equiv y_{t-k}$$
->
-> 其中$$L^k$$為落後運算子作用$$k$$次。
->
-> <mark style="color:red;">由定義可得</mark>$$L$$<mark style="color:red;">為</mark>[<mark style="color:red;">線性算子</mark>](../../linear-algebra/linear-transform/#xian-xing-ying-she-zhuan-huan-linear-mapping-or-linear-transform)。
->
-> * $$L^k(cy_t)=cL^k(y_t)=cy_{t-k}$$
-> * $$L^k(x_t+y_t)=L^k x_t+L^ky_t=x_{t-k}+y_{t-k}$$
+1. 簡化模型表示。用$$L$$可以簡潔地表示過去值，而不必每次都寫出$$X_{t-1}, X_{t-2},\dots$$。
+2. 捕捉時間依賴性。
+3. 分析時間序列的動態特性。
+4. 模型識別和診斷。
 
-$$\forall a,b \in \mathbb{R},~aL^k(y_t)+b=ay_{t-k}+b$$
-
-$$\forall c \in \mathbb{R} ~, Lc=c$$
-
-$$L^kL^j(y_t) = L^k (y_{t-j})=y_{t-j-k}$$
-
-$$L^0(y_t)=y_t$$
-
-$$L^{-k}y_t=y_{t+k}$$
-
-$$\forall |c|<1 ~, (1+cL+c^2L^2+c^3L^3+\cdots)y_t = \frac{1}{1-cL}y_t$$
-
-## 落後運子表示差分
-
-$$y_t$$的<mark style="color:red;">一階差分</mark>可表示為$$\Delta y_t= y_t -y_{t-1}=y_t - Ly_t=(1-L)y_t$$。
-
-<mark style="color:red;">二階差分</mark>可表示為$$\Delta^2 y_t =y_t-2y_{t-1}+y_{t-2}=(1-2B+B^2)y_t=(1-B)^2y_t$$。
-
-以此類推，<mark style="color:red;">d階差分</mark>可表示為$$(1-B)^dy_t$$。
-
-## 落後多項式(polynomial in the lag operator)
-
-> 有限期：$$\phi(L)=1-\phi_1L-\phi_2 L^2-\cdots - \phi_p L^p=\sum_{j=0}^p \phi_j L^j,~\phi_0=1$$
->
-> 無限期：$$\phi(L)=1-\phi_1L-\phi_2L^2-\cdots-=\sum_{j=0}^\infty \phi_j L^j$$
-
-可得$$\phi(L)y_t=(1-\phi_1L-\phi_2 L^2-\cdots - \phi_p L^p)y_t=y_t-\phi_1y_{t-1}-\phi_2y_{t-2}-\cdots-\phi_p y_{t-p}$$
+##
 
 
 

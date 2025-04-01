@@ -101,13 +101,28 @@ print(f"phase: {cmath.phase(a)}")
 
 
 
-![負號表示變換方向(180度)](../.gitbook/assets/real\_number\_direction-min.jpg)
+![負號表示變換方向(180度)](../.gitbook/assets/real_number_direction-min.jpg)
 
 這裡有一條數線，在數線上有一個紅色的線段，它的長度是1。當它乘以3 的時候，它的長度發生了變化，變成了藍色的線段，而當它乘以-1 的時候，就變成了綠色的線段，或者說線段在數軸上圍繞原點旋轉了180 度。
 
 我們知道乘-1 其實就是乘了兩次$$i$$ 使線段旋轉了180 度，那麼乘一次$$i$$ 呢？答案很簡單：旋轉了90 度。
 
 同時，我們獲得了一個垂直的虛數軸。<mark style="background-color:red;">實數軸與虛數軸共同構成了一個複數的平面，也稱複平面</mark>。這樣我們就了解到，<mark style="background-color:red;">**虛數**</mark>$$i$$<mark style="background-color:red;">**乘法運算的一個功能：平面上的旋轉**</mark>。
+
+以下是虛數在物理學中的主要應用及其物理意義：
+
+* 波動與振盪：用 Euler 公式 $$e^{i\omega t}=\cos (\omega t)+ i \sin(\omega t)$$簡化對正弦波和餘弦波的處理。
+* 虛數用於描述量子態的相干性和干涉效應。
+* 在交流電路分析中，虛數用於描述阻抗（impedance）(感抗和容抗)和電壓與電流之間的相位差相位差。
+* 在訊號處理和控制理論中，虛數用於傅立葉變換和拉普拉斯變換。
+  * 音訊訊號處理中，複數用於分析訊號的頻譜成分。
+  * 控制系統中，虛數部分反映系統的振盪行為。
+* 虛數可以用來描述二維平面上的旋轉。複數乘法對應於平面旋轉。
+* 虛數的概念可以推廣到四元數，用於描述三維空間中的旋轉。
+* 熱力學和流體力學中，虛數用於解決某些偏微分方程。
+  * 理想流體中，速度場可以用複勢函式來描述，其中實部和虛部分別對應流函式和勢函式。
+  * 流體力學中的線性穩定性分析經常涉及複數特徵值，其中虛數部分反映振盪頻率。
+* 虛數用於描述光的偏振和干涉效應。
 
 ### 複數的四則運算
 
@@ -133,13 +148,13 @@ print(f"phase: {cmath.phase(a)}")
 
 
 
-![複數加法等價於向量加法](../.gitbook/assets/complex-num\_add-min.png)
+![複數加法等價於向量加法](../.gitbook/assets/complex-num_add-min.png)
 
-![複數乘法為長度相乘與角度相加](../.gitbook/assets/complex\_mul-min.png)
+![複數乘法為長度相乘與角度相加](../.gitbook/assets/complex_mul-min.png)
 
 ![複數除法為長度相除與角度相減](../.gitbook/assets/complex-div-min.jpg)
 
-![乘以複數為旋轉arg(z)度後，再放大|z|倍(或先放大再旋轉)](../.gitbook/assets/1195px-Complex\_multi-min.png)
+![乘以複數為旋轉arg(z)度後，再放大|z|倍(或先放大再旋轉)](../.gitbook/assets/1195px-Complex_multi-min.png)
 
 * $$z_1 (z_2+z_3 )=z_1 z_2+z_1 z_3$$
 * $$z_1 z_2=0 \Leftrightarrow z_1=0 \lor z_2=0$$
@@ -164,21 +179,23 @@ print(f"phase: {cmath.phase(a)}")
 
 
 
-![共軛複數對稱於實數軸](../.gitbook/assets/800px-Complex\_conjugate\_picture-min.png)
+![共軛複數對稱於實數軸](../.gitbook/assets/800px-Complex_conjugate_picture-min.png)
 
 > $$\displaystyle \overline{\sum_{i=1}^n z_i} = \sum_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
 
-* $$\overline{z_1 + z_2}=\overline{(x_1 + x_2)+ i (y_1 +y_2)}=(x_1 + x_2) - i(y_1 + y_2) = \overline{z_1} + \overline{z_2}$$
-* 其它可用數學歸納法得出 (QED)
+$$\overline{z_1 + z_2}=\overline{(x_1 + x_2)+ i (y_1 +y_2)}=(x_1 + x_2) - i(y_1 + y_2) = \overline{z_1} + \overline{z_2}$$
+
+其它可用數學歸納法得出 (QED)
 
 > $$\displaystyle \overline{\prod_{i=1}^n z_i} = \prod_{i=1}^n \overline{z_i}, ~ \forall n \in \mathbb{N}, z_i \in \mathbb{C}$$
 
-* $$\overline{z_1 z_2}=\overline{(x_1 x_2 -y_1 y_2) + i(x_1 y_2 + x_2 y_1)}=(x_1 x_2 - y_1 y_2) - i(x_1 y_2 + x_2 y_1)=\overline{z_1} \overline{z_2}$$
-* 其它可用數學歸納法得出 (QED)
+$$\overline{z_1 z_2}=\overline{(x_1 x_2 -y_1 y_2) + i(x_1 y_2 + x_2 y_1)}=(x_1 x_2 - y_1 y_2) - i(x_1 y_2 + x_2 y_1)=\overline{z_1} \overline{z_2}$$
+
+其它可用數學歸納法得出 (QED)
 
 > $$|z|^2 = z \overline{z}=| \overline{z}|^2  \geq 0, ~ \forall z \in \mathbb{C}$$
 
-* $$z \overline{z} = (x+iy)(x-iy)=(x^2+y^2)=|z|^2$$(QED)
+$$z \overline{z} = (x+iy)(x-iy)=(x^2+y^2)=|z|^2$$(QED)
 
 > $$\max\{|\mathrm{Re}(z)|, |\mathrm{Im}(z)| \} \leq |z|  \leq | \mathrm{Re}(z)| + |\mathrm{Re}(z)| \leq \sqrt{2} |z|, ~ \forall z \in \mathbb{C}$$
 
@@ -219,7 +236,7 @@ print(f"phase: {cmath.phase(a)}")
 * $$\mathrm{arg}(\frac{z_1}{z_2}) = \mathrm{arg}(z_1) - \mathrm{arg}(z_2)$$
 * \[**棣美弗定理 de Moivre's formula**], $$z=|z|(\cos⁡\theta,~\sin\theta )\in \mathbb{C}\setminus\{0\} \Rightarrow z^n=|z|^n (\cos (n\theta),~ \sin (n \theta)), ~\forall n \in \mathbb{Z}$$
 
-## 歐拉公式(Euler formula)
+## <mark style="color:red;">歐拉公式(Euler formula)</mark>
 
 > 歐拉公式提出，$$\forall x \in \mathbb{R}$$，均存在 $$e^{ix} = \cos x + i \sin x$$。
 >
@@ -229,17 +246,65 @@ print(f"phase: {cmath.phase(a)}")
 
 proof (Taylor series)：
 
-* 由Taylor  series 得$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +\ldots$$
-* 因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$(QED)
+由Taylor級數得$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +\ldots$$
+
+因此 $$e^{ix} = 1 + (ix)+ \frac{(ix)^2}{2!}+\frac{(ix)^3}{3!}+\cdots = 1+ix- \frac{x^2}{2!} +i\frac{x^3}{3!}+\cdots=(1-\frac{x^2}{2!} + \frac{x^4}{4!}+\cdots)+i(x - \frac{x^3}{3!} + \frac{x^5}{5!}+\cdots) = \cos x + i \sin x$$(QED)
+
+proof(極限法)：
+
+指數的定義$$\displaystyle e^{ix}= \lim_{n \to \infty} (1+\frac{ix}{n})^n$$。
+
+考慮$$n$$很大，而$$x/n$$很小(趨近於0)，可得近似值$$1+\frac{ix}{n} \approx \cos(x/n) + i \sin(x/n)$$。
+
+因此得$$(1+\frac{ix}{n})^n \approx [\cos (\frac{x}{n}) + i \sin(\frac{x}{n})]^n$$。
+
+利用De Moivre's formula）得$$e^{ix}=(1+\frac{ix}{n})^n \approx cos(x) + i \sin(x)$$&#x20;
+
+(QED)
 
 proof (函數微分)：
 
-* 令$$f(x) = \frac{\cos x + i \sin x}{e^{ix}}$$，因為$$e^{ix} e^{-ix}=e^0=1$$，分母必不為0，定義成立。
-* $$f^{'}(x)=\frac{(-\sin x + i \cos x)e^{ix} - (\cos x + i \sin x)ie^{ix} }{(e^{ix})^2}= \frac{-\sin xe^{ix} + \sin x e^{ix}}{(e^{ix})^2} =0$$
-* 由微分結果知$$f$$為常數函數，因此 $$f(0)=\frac{\cos 0 + i \sin 0}{e^{i0}}=1$$
-* 可得 $$e^{ix} = \cos x + i \sin x$$ (QED)
+令$$f(x) = \frac{\cos x + i \sin x}{e^{ix}}$$，因為$$e^{ix} e^{-ix}=e^0=1$$，分母必不為0，定義成立。
 
-![歐拉公式的圖](../.gitbook/assets/Euler\_formula-min.png)
+$$f^{'}(x)=\frac{(-\sin x + i \cos x)e^{ix} - (\cos x + i \sin x)ie^{ix} }{(e^{ix})^2}= \frac{-\sin xe^{ix} + \sin x e^{ix}}{(e^{ix})^2} =0$$
+
+由微分結果知$$f$$為常數函數，因此 $$f(0)=\frac{\cos 0 + i \sin 0}{e^{i0}}=1$$
+
+可得 $$e^{ix} = \cos x + i \sin x$$ (QED)
+
+proof(微分方程)：
+
+令複數函數$$f(x)=e^{ix}$$，對$$x$$微分得$$df/dx=ie^{ix}=if(x)$$，且初始條件為$$f(0)=1$$。
+
+假設函數的解形式為$$f(x)=A(x)+iB(x)$$，其中$$A(x), B(x)$$為實函數，微入微分方程得：
+
+$$d(A+iB)/dx=i(A+iB)$$。
+
+整理得$$A^{'}+iB^{'}=-B+iA$$，因此$$A^{'}=-B$$且$$B^{'}=A$$。
+
+對$$A^{'}=-B$$再微分得$$A^{''}=-B^{'}=-A$$得$$A^{''}+A=0$$，這是一個諧振子方程，其通解為$$A(x)=C \cos(x) + D \sin(x)$$。
+
+由$$B=-A$$得$$B(x)=C \sin(x) - D \cos(x)$$。
+
+由初始條件$$f(0)=1$$得$$A(0)+iB(0)=C+i(-D)=1$$得$$C=1, D=0$$。
+
+Ｆ所以$$f(x)=\cos(x) + i \sin(x)$$。
+
+(QED)
+
+proof(極坐標表示)：
+
+在複數平面中，任何複數$$z$$都可以表示為：$$z=r e^{i\theta}$$，其中$$r=|z|$$為模長，$$\theta$$為與實軸的夾角（稱為幅角）。
+
+單位圓($$r=1$$)上的點滿足$$x^2 + y^2=1$$，可用三角函數表示為$$x=\cos \theta, ~y=\sin \theta$$。$$\theta = \tan^{-1}(y/x)$$。因此複平面上的單位圓上的點可表示為$$z=x+iy=\cos\theta+i \sin \theta$$。
+
+因此單位圓上的任意點可表示為$$z=e^{i\theta}=\cos \theta + i \sin \theta$$。
+
+(QED)
+
+
+
+![歐拉公式的圖](../.gitbook/assets/Euler_formula-min.png)
 
 ### 幾何意義
 
@@ -251,7 +316,7 @@ proof (函數微分)：
 
 
 
-![歐拉公式的幾何意義](../.gitbook/assets/euler\_geo-min.png)
+![歐拉公式的幾何意義](../.gitbook/assets/euler_geo-min.png)
 
 * &#x20;\[Euler identity] $$e^{i \pi}+1=0$$
 * \[De Moivre's Theorem] $$z^n=(re^{i \theta} )^n=r^n e^{in\theta+2k\pi}=r^n (\cos⁡(n \theta+2k \pi)+i \sin⁡(n \theta+2k\pi) )$$, $$\forall k \in \mathbb{Z}$$

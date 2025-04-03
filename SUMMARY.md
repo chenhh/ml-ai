@@ -113,6 +113,8 @@
 
 * [機率的解釋](probability-and-statistics/definition-of-probability.md)
 * [隨機變數（random variable）](probability-and-statistics/random-variable/README.md)
+  * [期望值](probability-and-statistics/random-variable/expectation.md)
+  * [變異數](probability-and-statistics/random-variable/variance.md)
   * [隨機變數的收斂](probability-and-statistics/random-variable/nvergence-of-rv.md)
 * [條件期望值](probability-and-statistics/conditional-expectation/README.md)
   * [一般化的條件期望值](probability-and-statistics/conditional-expectation/conditional-variable.md)

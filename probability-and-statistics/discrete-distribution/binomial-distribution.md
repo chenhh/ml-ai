@@ -22,61 +22,44 @@ description: binomial distribution
 
 {% tabs %}
 {% tab title="分佈" %}
-
-
-![二項分佈, N=100, p=0.2](../../.gitbook/assets/binomial_dist_100_0.2-min.png)
+<figure><img src="../../.gitbook/assets/binomial_dist.png" alt=""><figcaption><p>N=100，p=0.1, 0.3, 0.5, 0.7, 0.9時的二項式分佈</p></figcaption></figure>
 {% endtab %}
 
 {% tab title="python" %}
 ```python
-import matplotlib.pyplot as plt
 import numpy as np
-import scipy.stats as spstats
+import matplotlib.pyplot as plt
+from scipy.stats import binom
 
-def binomial_distribution(n_point=10000, n=100, p=0.2):
-    # 生成二項式分佈隨機變數
-    values = np.random.binomial(n, p, n_point)
-    q = 1 - p
+# 參數設定
+N = 100  # 試驗次數
+p_values = [0.1, 0.3, 0.5, 0.7, 0.9]  # 不同成功概率
+colors = ['blue', 'green', 'red', 'purple', 'orange']  # 對應顏色
 
-    # 以套件計算動差
-    mu = values.mean()
-    var = values.var()
-    skew = spstats.skew(values)
-    kurt = spstats.kurtosis(values)
+# 創建 x 軸範圍（成功次數 k 的可能值）
+x = np.arange(0, N + 1)
 
-    # skewness of scipy, Fisher-Pearson coefficient
-    m2 = ((values - mu) ** 2).mean()  # variance
-    m3 = ((values - mu) ** 3).mean()
-    g1 = m3 / (m2 ** 1.5)
-    g1f = (q - p) / np.sqrt(n * p * q)  # 偏度公式與樣本計算值偏差大
+# 創建圖形
+plt.figure(figsize=(12, 6))
 
-    # kurtosis of scipy
-    m4 = ((values - mu) ** 4).mean()
-    g2 = m4 / m2 / m2 - 3
-    g2f = (1 - 6 * p * q) / (n * p * q)  # 峰度公式與樣本計算值偏差大
-    print(f"{mu}, var:{var}, m2:{m2} "
-          f"skew: {skew}, {g1}, {g1f}, "
-          f"kurt:{kurt}, {g2}, {g2f}")
+# 繪製每個 p 值的二項式分佈柱狀圖
+width = 0.15  # 柱寬
+for i, (p, color) in enumerate(zip(p_values, colors)):
+    # 計算二項式分佈的 PMF
+    pmf = binom.pmf(x, N, p)
+    # 繪製柱狀圖，偏移位置避免重疊
+    plt.bar(x + i * width, pmf, width=width, color=color, label=f'p = {p}', alpha=0.7)
 
-    # 驗證套件與手動計算動差的一致性
-    np.testing.assert_approx_equal(mu, n * p, significant=2)
-    np.testing.assert_approx_equal(var, n * p * (1 - p), significant=2)
-    np.testing.assert_approx_equal(var, m2, significant=7)
-    np.testing.assert_approx_equal(skew, g1, significant=7)
-    np.testing.assert_approx_equal(kurt, g2, significant=7)
-    
-    # plot
-    fig, ax = plt.subplots()
-    ax.hist(values, bins=50, density=True, label='binomial distribution')
-    ax.set_ylabel('Frequency')
-    ax.set_title(f'Binomial (N=100, p=0.2) $\mu = {mu:.2f}, \sigma^2={var:.2f}$')
-    ax.legend(fontsize=20)
-    fig.tight_layout()
-    plt.show()
+# 添加圖表元素
+plt.title(f'Binomial Distribution (N = {N})', fontsize=14)
+plt.xlabel('Number of Successes (k)', fontsize=12)
+plt.ylabel('Probability', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()  # 添加圖例
+plt.tight_layout()
 
-if __name__ == '__main__':
-    binomial_distribution()
-
+# 顯示圖表
+plt.show()
 ```
 {% endtab %}
 {% endtabs %}
@@ -147,10 +130,108 @@ if __name__ == '__main__':
 
 即$$B(N, p) \rightarrow N(Np, Np(1-p))$$as $$N \rightarrow \infty$$。
 
-![二項分佈在試驗次數夠大時(機率不變)，可逼近常態分佈](../../.gitbook/assets/Binomial_Distribution-min.png)
+
+
+{% tabs %}
+{% tab title="plot" %}
+<figure><img src="../../.gitbook/assets/binomial_normal.png" alt=""><figcaption><p>二項式分佈逼近常態分佈</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom, norm
+
+# 參數設定
+N = 20  # 二項式分佈的試驗次數
+p = 0.6  # 二項式分佈的成功概率
+mu_normal = N*p  # 正態分佈均值
+sigma_normal = np.sqrt(N*p*(1-p))  # 正態分佈標準差
+
+# 創建 x 軸範圍
+x_binom = np.arange(0, N + 1)  # 二項式分佈的 k 值
+x_normal = np.linspace(0, 20, 1000)  # 正態分佈的連續範圍，涵蓋二項式範圍
+
+# 計算分佈
+binom_pmf = binom.pmf(x_binom, N, p)  # 二項式分佈 PMF
+normal_pdf = norm.pdf(x_normal, mu_normal, sigma_normal)  # 正態分佈 PDF
+
+# 創建圖形
+plt.figure(figsize=(10, 6))
+
+# 繪製二項式分佈（柱狀圖）
+plt.bar(x_binom, binom_pmf, width=1.0, color='blue', alpha=0.6, label=f'Binomial (N={N}, p={p})')
+
+# 繪製正態分佈（曲線）
+plt.plot(x_normal, normal_pdf, color='red', linewidth=2, label=f'Normal (μ={mu_normal}, σ={sigma_normal:.2f})')
+
+# 添加圖表元素
+plt.title('Binomial vs Normal Distribution', fontsize=14)
+plt.xlabel('Value', fontsize=12)
+plt.ylabel('Probability / Density', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+plt.tight_layout()
+
+# 顯示圖表
+plt.show()
+```
+{% endtab %}
+{% endtabs %}
 
 ## 二項分布可逼近泊松分佈
 
-若試驗的次數$$N$$足夠大時，且機率$$p$$很小時，$$Np \approx \lambda$$。$$X \sim \text{Poisson}(Np)$$。
+若試驗的次數$$N$$足夠大時(一般建議$$𝑁\geq 20$$，最好$$𝑁 \geq 100$$)，且機率$$p$$很小時(建議$$p \leq 0.1$$)，$$Np \approx \lambda$$(通常$$\lambda \leq 20$$或更小)。$$X \sim \text{Poisson}(Np)$$。
 
 適用於稀有事件，如機器故障率、呼叫中心來電數）。
+
+當$$p > 0.1$$時，逼近效果變差，因為變異數差異顯著，且二項式分佈趨向正態分佈而非泊松分佈。
+
+{% tabs %}
+{% tab title="First Tab" %}
+<figure><img src="../../.gitbook/assets/binomial_poisson.png" alt=""><figcaption><p>二項式分佈逼近泊松分佈</p></figcaption></figure>
+{% endtab %}
+
+{% tab title="python" %}
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import binom, poisson
+
+# 參數設定
+N = 200  # 二項式分佈的試驗次數
+p = 0.05  # 二項式分佈的成功概率
+lambda_poisson = 10  # 泊松分佈的參數
+
+# 創建 x 軸範圍
+x_binom = np.arange(0, 30)  # 二項式分佈的 k 值，限制在 0-30（涵蓋主要概率區域）
+x_poisson = np.arange(0, 30)  # 泊松分佈的離散範圍
+
+# 計算分佈
+binom_pmf = binom.pmf(x_binom, N, p)  # 二項式分佈 PMF
+poisson_pmf = poisson.pmf(x_poisson, lambda_poisson)  # 泊松分佈 PMF
+
+# 創建圖形
+plt.figure(figsize=(10, 6))
+
+# 繪製二項式分佈（柱狀圖）
+plt.bar(x_binom, binom_pmf, width=0.8, color='blue', alpha=0.6, label=f'Binomial (N={N}, p={p})')
+
+# 繪製泊松分佈（點圖連線）
+plt.plot(x_poisson, poisson_pmf, color='red', linewidth=2, marker='o', markersize=4, 
+         label=f'Poisson (λ={lambda_poisson})')
+
+# 添加圖表元素
+plt.title('Binomial vs Poisson Distribution', fontsize=14)
+plt.xlabel('Number of Successes', fontsize=12)
+plt.ylabel('Probability', fontsize=12)
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.legend()
+plt.tight_layout()
+
+# 顯示圖表
+plt.show()
+```
+{% endtab %}
+{% endtabs %}

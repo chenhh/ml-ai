@@ -154,6 +154,7 @@
 * [測量尺度](probability-and-statistics/scale-of-measure.md)
 * [簡單迴歸分析](probability-and-statistics/simple-regression-analysis.md)
 * [隨機過程](probability-and-statistics/random-process/README.md)
+  * [隨機過程連續性](probability-and-statistics/random-process/continuous-prop.md)
   * [停時(stopping time)](probability-and-statistics/random-process/stopping-time.md)
   * [定態過程(stationary process)](probability-and-statistics/random-process/stationary-process.md)
   * [計數過程(counting process)](probability-and-statistics/random-process/counting-process.md)

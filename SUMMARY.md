@@ -157,6 +157,7 @@
   * [隨機過程連續性](probability-and-statistics/random-process/continuous-prop.md)
   * [停時(stopping time)](probability-and-statistics/random-process/stopping-time.md)
   * [定態過程(stationary process)](probability-and-statistics/random-process/stationary-process.md)
+  * [獨立增量過程](probability-and-statistics/random-process/independent-increment-process.md)
   * [計數過程(counting process)](probability-and-statistics/random-process/counting-process.md)
   * [卜瓦松過程(Poisson process)](probability-and-statistics/random-process/poisson-process.md)
   * [高斯過程(Gaussian process)](probability-and-statistics/random-process/gaussian-process.md)

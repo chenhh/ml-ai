@@ -4,15 +4,23 @@ description: 平穩過程
 
 # 定態過程(stationary process)
 
-時間序列討論的實數值離散隨機過程$$\{X_t, t \in T\}$$，即$$T=\mathbb{Z} \equiv \{0, \pm 1, \pm2, \dots,\}$$，且$$X_t(\omega) \in \mathbb{R}, ~\forall \omega \in \Omega$$。
+## 簡介
 
-## 定態過程
+定態過程（Stationary Process）是其統計性質不隨時間變化的隨機過程。
 
-給定離散或連續隨機過程$$\{X_t, t \in T\}$$，<mark style="color:blue;">強定態過程要求聯合機率分佈與時間點</mark>$$t$$<mark style="color:blue;">無關(機率分佈非時變)，只與時間跨度有關，因此在平均值、變異數存在時(分佈可能不存在高階動差，如Cauchy分佈)，可得時間點</mark>$$t$$<mark style="color:blue;">(單變數)分佈的平均值、變異數為常數，而任兩個時間點間隨變數(聯合分佈)的共變異數與相關係數只與時間跨度</mark>$$h$$<mark style="color:blue;">有關</mark>。
+定態過程通常分為兩種主要類型：嚴格定態(強定態)（Strict Stationarity）和弱定態（Weak Stationarity）（二階定態）。
+
+定態過程特性與意義.：
+
+* **時間平移不變性**：定態過程的統計性質不依賴於絕對時間，只與相對時間差有關，這簡化了分析和建模。
+* **頻譜分析**：定態過程的自協方差函數可以用傅里葉變換轉換為功率譜密度，便於研究其頻率特性。
+* **長期行為**：定態過程的長期統計行為是可預測的，這在預測和模擬中非常有用。
+
+給定離散或連續時間隨機過程$$\{X_t, t \in T\}$$，<mark style="color:blue;">強定態過程要求聯合機率分佈與時間點</mark>$$t$$<mark style="color:blue;">無關(機率分佈非時變)，只與時間跨度有關，因此在平均值、變異數存在時(分佈可能不存在高階動差，如Cauchy分佈)，可得時間點</mark>$$t$$<mark style="color:blue;">(單變數)分佈的平均值、變異數為常數，而任兩個時間點間隨變數(聯合分佈)的共變異數與相關係數只與時間跨度</mark>$$h$$<mark style="color:blue;">有關</mark>。
 
 常見的強定態過程為獨立同分佈(i.i.d.)的抽樣樣本，白噪音。
 
-在一般應用中，聯合分佈機率分佈非時間的條件相當嚴格，因此通常<mark style="color:blue;">只要求隨機過程的平均值與變異數存在且非時變，且共變異數與相關係數只與時間跨度</mark>$$h$$<mark style="color:blue;">有關，稱為弱定態過程</mark>。
+在一般應用中，聯合分佈機率分佈非時間的條件相當嚴格，因此通常<mark style="color:blue;">只要求隨機過程的平均值與變異數存在且為常數(非時變)，共變異數與相關係數只與時間跨度</mark>$$h$$<mark style="color:blue;">有關，稱為弱定態過程</mark>。
 
 在機率分佈中，給定前四階動差(平均值、變異數、偏度、峰度)相對於只給定平均值與變異數，對於分佈的形狀誤差會更少(可由動差/特徵生成函數的性質得出)。而弱定態過程不要求偏度、峰度非時變，因此相對於強定態過程放寬了分佈非時變的限制。
 
@@ -36,9 +44,11 @@ description: 平穩過程
 >
 > 隨機過程的任意聯合分佈不隨時間變化(分佈非時變)。
 >
-> <mark style="color:blue;">強定態過程只要求分佈非時變，但不要求分佈的動差必須存在(動差可為</mark>$$\pm \infty$$<mark style="color:blue;">)</mark>。
+> 給定任意有限個時間點$$t_1, t_2, \dots, t_n \in T$$與時間跨度$$h$$，隨機過程$$X_t$$的有限維分佈保持不變，即：$$\displaystyle F_{t_1, t_2, \dots, t_n}(x_1, x_2, \dots, x_n)=F_{t_1+h, t_2+h, \dots, t_n+h}(x_1, x_2, \dots, x_n)$$
 >
-> <mark style="color:red;">因為強定態過程中，動差不一定存在(如i.i.d. 的Cauchy隨機變數過程)，因此存在非弱定態過程的強定態過程</mark>。
+> 整個聯合機率分佈不隨時間移動而改變，包含所有統計特性（如均值、變異數、高階動差等）。
+>
+> <mark style="color:blue;">但強定態過程只要求分佈非時變，但不要求分佈的動差必須存在(動差可為</mark>$$\pm \infty$$<mark style="color:blue;">)</mark>。<mark style="color:red;">因為強定態過程中，動差不一定存在(如i.i.d. 的Cauchy隨機變數過程)，因此存在非弱定態過程的強定態過程</mark>。
 >
 > <mark style="color:blue;">當</mark>強定態過程的均值和變異數存在時，可得均值和變異數為常數，且共變異數和相關係數為時間跨度的函數<mark style="color:red;">。</mark>
 
@@ -46,11 +56,11 @@ description: 平穩過程
 
 <mark style="color:blue;">強定態過程條件非常嚴格，通常是人為製造的序列(如i.i.d.的樣本抽樣)</mark>。
 
-令$$n$$維的機率分佈為：$$F_{X_1, \dots, X_n}(x_1, \dots, x_n) = \mathrm{P}(\omega \in \Omega ~|~ X_1 \leq x_1, \dots, X_h \leq x_n)$$，$$x_i \in \mathbb{R}$$。
+令$$n$$維的機率分佈為：$$F_{t_1, \dots, t_n}(x_1, \dots, x_n) = \mathrm{P}(\omega \in \Omega ~|~ X_{t_1} \leq x_1, \dots, X_{t_n} \leq x_n)$$$$x_i \in \mathbb{R}$$。
 
-* 1階強定態過程滿足$$F_{X_1}(x_1) = F_{X_{1+h}}(x_1), ~ \forall h$$
-* 2階強定態過程滿足$$F_{X_1, X_2}(x_1, x_2) = F_{X_{1+h}, X_{2+h}}(x_1, x_2), ~ \forall h$$
-* n階強定態過程滿足$$F_{X_1, \dots, X_n}(x_1, \dots,x_n) = F_{X_{1+h},\dots, X_{n+h}}(x_1, \dots,x_n), ~ \forall h$$
+* 1階強定態過程滿足$$F_{t_1}(x_1) = F_{X_{t_1+h}}(x_1), ~ \forall h$$
+* 2階強定態過程滿足$$F_{t_1, t_2}(x_1, x_2) = F_{t_1+h, t_2+h}(x_1, x_2), ~ \forall h$$
+* n階強定態過程滿足$$F_{t_1, \dots, t_n}(x_1, \dots,x_n) = F_{t_1+h,\dots, t_n+h}(x_1, \dots,x_n), ~ \forall h$$
 
 <mark style="color:red;">對於任意</mark>$$n$$<mark style="color:red;">，均為n階強定態過程的隨機過程稱為強定態過程</mark>。
 

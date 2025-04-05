@@ -41,6 +41,10 @@ description: moment：動差(tw)，矩(cn)
 * 三階中央動差為偏度(skewness)，描述分佈左、右偏移的程度。
 * 四階中央動差為峰度(kurtosis)，述述分佈尖聳的程度。
 
+以此類推，高階動差提供了關於分佈更細緻的形狀資訊。直觀上，如果兩個分佈的所有動差都相同，那麼它們在中心位置、散佈程度、對稱性、尾部行為等方面都應該一致。
+
+<mark style="color:red;">在極端情況下，可能存在兩個不同分佈但具有相同動差序列。然而，這種情況通常發生在動差生成函數不存在或動差增長過快時。只要動差生成函數在</mark>$$t=0$$<mark style="color:red;">附近某區間內存在，這種反例就不會出現</mark>。
+
 ## 範例：常態分佈的動差
 
 <details>
@@ -84,7 +88,7 @@ if __name__ == '__main__':
 >
 > 動差生成函式只有在$$t$$的某個鄰域內（通常包括$$t=0$$）收斂時才存在。
 >
-> 注意此處的$$X$$是隨機變數(可測函數)。
+> 注意此處的$$X$$是隨機變數(可測函數)。因為$$e^{tx}$$在$$x \in \mathbb{R}$$均有定義，而$$\forall \omega \in \Omega, X(\omega) \in \mathbb{R}$$，因此$$e^{tX}$$可視為從單點的$$x$$轉換成函數$$X$$，仍然成立。
 
 $$e^{tX}=1+tX+ \frac{t^2X^2}{2!}+ \dots + \frac{t^nX^n}{n!}+ \dots$$
 
@@ -101,15 +105,45 @@ $$\because \mathrm{E}(e^{tY})=\mathrm{E}(e^{t(aX+b)})=e^{tb}\mathrm{E}(e^{taX})=
 
 ### 動差生成函數的唯一性
 
-> 若兩個隨機變數的動差生成函數存在且相同，則它們具有相同的機率分佈。
+> 若兩個隨機變數的動差生成函數存在且相同，若且唯若它們具有相同的機率分佈。
 >
 > 隨機變數的MGF$$M(t)$$不一定存在，<mark style="color:red;">但存在時與分佈函數</mark>$$F(x)$$<mark style="color:red;">有一對一的關係</mark>。若$$M_X(t), M_Y(t)$$存在，則$$F_X=F_Y \Leftrightarrow M_X(t)=M_Y(t)$$。
 >
 > **此性質的主要用途是證明兩個相異隨機變數有相同的機率分佈**。
+>
+> 註：有些分佈動差存在但可能MGF不存在(或者$$t$$只在某些實數集成立)，如[log-normal分佈](https://en.wikipedia.org/wiki/Log-normal_distribution)。
 
 > 特徵生成函數 $$\phi(t) \equiv \operatorname{E}(e^{itX}) = \int_{-\infty}^{\infty} e^{itx}dF(x) \text{ or} \sum_{i=1}^n e^{i t x_i} \mathrm{P}(x_i)$$，可視為隨機變數的傅立葉轉換。
 >
 > 隨機變數的CHF 一定存在，且與機率分佈$$F(x)$$有一對一的關係。即$$F_X = F_Y \Leftrightarrow\phi_X(t)=\phi_Y(t)$$。
+
+<details>
+
+<summary>proof: ⇒ 當兩隨機變數的機率分佈相同時，可得全部動差均相同，因此MGF相同。<br>&#x3C;= MGF相同可得兩變數全部動差相同，得機率分佈相同。</summary>
+
+⇒ 給定兩隨機變數$$X,Y$$有相同的(累積)機率分佈$$F_X(x)= F_Y(x), \forall x$$。
+
+因為$$M_X(t)=\int_{-\infty}^\infty e^{tx}f_X(x)dx$$，$$M_Y(t)=\int_{-\infty}^\infty e^{tx}f_Y(x)dx$$，因為$$f_X(x)=f_Y(x)$$可得$$M_X(t)=M_Y(t)$$。
+
+也可以說因為$$F_X(x)= F_Y(x), \forall x$$，所以$$\mathrm{E}(X^k)=\mathrm{E}(Y^k), \forall k \in \mathbb{N}$$，因此$$M_X(t)=M_Y(t)$$。
+
+因此，若$$𝑋, Y$$的分佈相同，則它們的動差生成函數必然相等。
+
+
+
+(QED)
+
+<=給定$$M_X(t)=M_Y(t)$$在某個$$t=0$$的開區間成立
+
+動差生成函數的 Taylor 展開式（在$$t=0$$ 附近）給出了隨機變數的所有動差$$M_X(t)=\mathrm{E}(e^{tX})=1+t\mathrm{E}(X)+\frac{t^2}{2!}\mathrm{E}(X^2)+\frac{t^3}{3!}\mathrm{E}(X^3)+\dots$$。
+
+$$M_Y(t)=\mathrm{E}(e^{tY})=1+t\mathrm{E}(Y)+\frac{t^2}{2!}\mathrm{E}(Y^2)+\frac{t^3}{3!}\mathrm{E}(Y^3)+\dots$$
+
+因為$$M_X(t)=M_Y(t)$$在$$t \in (-h,h)$$成立，因此兩函數的Taylot級數相同，因此所有動差相同$$\mathrm{E}(X^k)=\mathrm{E}(Y^k), \forall k \in \mathbb{N}$$。
+
+如果一個隨機變數的所有動差存在且唯一決定其分佈（即動差問題的解是唯一的），則$$X,Y$$的分佈必須相同。(QED)
+
+</details>
 
 ## 由動差生成函數求動差值
 

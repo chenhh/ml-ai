@@ -123,6 +123,8 @@
   * [Wasserstein distance](probability-and-statistics/distribution-function/wasserstein-distance.md)
 * [機率測度(probability measure)](probability-and-statistics/probability-measure.md)
 * [動差生成函數(moment generating function)](probability-and-statistics/moment-generating-function.md)
+* [累積量生成函數(cumulant generating function)](probability-and-statistics/cumulant-generating-function.md)
+* [機率生成函數(probability generating function)](probability-and-statistics/probability-generating-function.md)
 * [特徵函數(characteristic function)](probability-and-statistics/characteristic-function.md)
 * [機率不等式](probability-and-statistics/probability-inequality.md)
 * [中央極限定理(CLT)](probability-and-statistics/central-limit-theorem.md)

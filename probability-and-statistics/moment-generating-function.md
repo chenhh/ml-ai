@@ -30,8 +30,8 @@ description: moment：動差(tw)，矩(cn)
 
 > 令隨機變數$$X$$的機率密度函數為$$f$$，則（以0為中心）$$k$$次動差為：
 >
-> * $$X$$為離散隨機變數，$$\displaystyle \operatorname{E}(X^k) = \sum_{i=1}^{\infty} x_i^k f(x_i)$$, $$x_i$$為可能的實現值。
-> * $$X$$為連續隨機變數，$$\displaystyle \operatorname{E}(X^k) = \int_{-\infty}^{\infty} x^k f(x)dx = \int_{-\infty}^{\infty} x^k dF(x)$$
+> * $$X$$為離散隨機變數，$$\displaystyle \operatorname{E}(X^k)  \equiv m_k = \sum_{i=1}^{\infty} x_i^k f(x_i)$$, $$x_i$$為可能的實現值。
+> * $$X$$為連續隨機變數，$$\displaystyle \operatorname{E}(X^k)  \equiv m_k = \int_{-\infty}^{\infty} x^k f(x)dx = \int_{-\infty}^{\infty} x^k dF(x)$$
 > * 如果$$X$$的觀察值(樣本)為$$x_1, x_2,\ldots, x_N$$，則$$k$$次動差為$$\displaystyle \operatorname{E}(X^k) = \frac{1}{N} \sum_{i=1}^N x_i^k$$。
 >
 > 以期望值為中心的$$k$$次動差為 $$\displaystyle   \operatorname{E}((X-\mu)^k)=\int_{-\infty}^{\infty}x^k dF(x)$$

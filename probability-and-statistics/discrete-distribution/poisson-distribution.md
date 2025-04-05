@@ -29,6 +29,16 @@ description: 卜阿松分佈, Poisson distribution
 
 卜瓦松分佈有一個很方便的特徵：它的<mark style="color:red;">平均值就是變異數</mark>，再開平方根就是標準差。
 
+### 估計參數方法
+
+無先驗資訊時，直接使用樣本均值$$\bar{X}$$作為$$\lambda$$的估計。若資料量小或有歷史資訊，可嘗試貝氏方法。
+
+| 方法         | 估計量公式                                                       | 適用場景           |
+| ---------- | ----------------------------------------------------------- | -------------- |
+| **最大似然估計** | $$\hat{\lambda}=\bar{X}$$                                   | 默認方法，無先驗資訊時使用  |
+| **矩估計**    | $$\hat{\lambda}=\bar{X}$$                                   | 結果與MLE相同，理論驗證用 |
+| **貝氏估計**   | $$\hat{\lambda}=\frac{\alpha + \sum_{i=1}^N X_i}{\beta+N}$$ | 有先驗知識時使用       |
+
 
 
 ## 泊松分佈定義
@@ -49,19 +59,20 @@ description: 卜阿松分佈, Poisson distribution
 
 由動差生成函數證明。
 
-## <mark style="color:red;">泊松分佈可由二項分佈逼近</mark>
+## <mark style="color:red;">泊松分佈機率質量函數可由二項分佈逼近</mark>
 
-當一個事件，在單位時間內中可能發生的次數是$$\lambda$$ 。由假設可知經過時間$$T$$ ，該事件發生的期望次數是$$\mathrm{E} ( X )=\lambda T$$ 。&#x20;
+當一個事件，在單位時間內中可能發生的次數是$$\lambda$$ 。由假設可知經過時間$$\Delta t$$ ，該事件發生的期望次數是$$\mathrm{E} ( X )=\lambda \Delta t$$ 。&#x20;
 
-若將這段時間$$T$$等分成$$n$$ 個時間段，當$$n \rightarrow \infty$$ 時，每個微小的時間段內最多發生一次該事件。那麼每個微小的時間段，可以視爲是一個Bernoulli實驗（事件發生或不發生），那麼這整段時間\
-$$T$$ 內發生的事件可以視爲是一個二項分佈實驗。
+若將這段時間$$T$$等分成$$n$$ 個時間段，當$$n \rightarrow \infty$$ 時，每個微小的時間段$$\Delta t = T/n$$內發生事件的機率約為$$\lambda \Delta t/n=\mu/n$$且發生多於一個事件的機率趨近於零。因此每個微小的時間段，可以視爲是一個Bernoulli實驗（事件發生或不發生）。
+
+那麼這整段時間$$T$$ 內發生的事件可以視爲是一個二項分佈實驗，試驗次數$$N$$且試驗成功的機率為$$p=\mu/n$$。
 
 * 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty$$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!}$$
 * 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於泊分佈。
 
-$$n \rightarrow \infty$$​，$$n$$​為時間段。在每個分割好的時間段內，事件發生的機率都是$$p=\frac{\lambda T}{n}$$。
+$$n \rightarrow \infty$$​，在每個分割好的時間段內，事件發生的機率都是$$p=\frac{\lambda \Delta t}{n} = \mu/n$$。
 
-$$\begin{aligned} \mathrm{P}(X=x) & =  \binom{n}{x} p^x (1-p)^{n-x} \\ 	& =  \binom{n}{x} (\frac{\mu}{n})^x (1-\frac{\mu}{n})^{n-x} \\ 	& =  \frac{n!}{x! (n-x)!} (\frac{\mu}{n})^x (1-\frac{\mu}{n})^{n-x} \\ 	& =  \frac{n!}{x! (n-x)!} \frac{\mu ^x}{x!} (1-\frac{\mu}{n})^{n-x} \\  \end{aligned}$$
+$$\begin{aligned} \mathrm{P}(X=x) & =  \binom{n}{x} p^x (1-p)^{n-x} \\ 	& =  \binom{n}{x} (\frac{\mu}{n})^x (1-\frac{\mu}{n})^{n-x} \\ 	& =  \frac{n!}{x! (n-x)!} (\frac{\mu}{n})^x (1-\frac{\mu}{n})^{n-x} \\ 	& =  \frac{n!}{n^x (n-x)!} \frac{\mu ^x}{x!} (1-\frac{\mu}{n})^{n-x} \\  \end{aligned}$$
 
 當 $$n \rightarrow \infty$$時且$$x << n$$​，可得
 
@@ -69,17 +80,45 @@ $$\frac{n!}{n^x (n-x)!} = \frac{n(n-1)\cdots(n-x+1) }{n^x} \rightarrow  1$$
 
 所以$$(1-\frac{\mu}{n})^{n-x} \approx ((1-\frac{\mu}{n})^{n}) \rightarrow e^{- \mu}$$
 
-因此$$\mathrm{P}(X=x) \rightarrow \frac{\mu^x}{x!}e^{-\mu}$$
+因此$$\mathrm{P}(X=x) \rightarrow \frac{\mu^x}{x!}e^{-\mu}$$，其中$$\mu=\lambda t$$表示固定時間內的平均事件數。而在$$t=1$$(單位時間)$$\mu=\lambda$$ 為標準泊松分佈。
 
 
 
-## MLE參數估計
+## 最大似然估計(MLE)參數估計
 
-給定獨立同分佈泊松分佈的$$N$$個隨機樣本值，希望得到從中推測出總體的泊松分佈參數$$\lambda$$的估計。
+給定獨立同分佈泊松分佈的$$N$$個隨機變數$$X_1, \dots, X_N$$的樣本值$$x_1, \dots, x_n$$，希望得到從中推測出總體的泊松分佈參數$$\lambda$$的估計。
 
-* log-likelihood function $$\begin{aligned} \displaystyle l(\lambda|X) & =\log \bigg({\prod_{i=1}^N f(x_i | \lambda)} \bigg) \\ &=\sum_{i=1}^N \log \bigg(\frac{e^{- \lambda \lambda ^{x_i}}}{x_i !} \bigg) \\ &= -N \lambda + \bigg(\sum_{i=1}^N x_i\bigg) \log \lambda - \sum_{i=1}^N \log(x_i!) \end{aligned}$$
-* 令$$\frac{\partial l}{\partial \lambda} = 0$$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$
-* 所以 $$\hat{\lambda}_{MLE}= \frac{1}{N} \sum_{i=1}^N x_i$$。
+**對數似然函數(**&#x6C;og-likelihood function)
+
+&#x20;$$\begin{aligned} \displaystyle l(\lambda|X) & =\log \bigg({\prod_{i=1}^N f(x_i | \lambda)} \bigg) \\ &=\sum_{i=1}^N \log \bigg(\frac{e^{- \lambda \lambda ^{x_i}}}{x_i !} \bigg) \\ &= -N \lambda + \bigg(\sum_{i=1}^N x_i\bigg) \log \lambda - \sum_{i=1}^N \log(x_i!) \end{aligned}$$
+
+令$$\frac{\partial l}{\partial \lambda} = 0$$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$
+
+所以 $$\hat{\lambda}_{MLE}= \frac{1}{N} \sum_{i=1}^N x_i$$。
+
+<mark style="color:red;">即參數</mark>$$\lambda$$<mark style="color:red;">的最大似然估計是樣本均值</mark>$$\overline{X}$$。
+
+## 動差參數估計（Method of Moments, MOM）
+
+給定獨立同分佈泊松分佈的$$N$$個隨機變數$$X_1, \dots, X_N$$的樣本值$$x_1, \dots, x_n$$，希望得到從中推測出總體的泊松分佈參數$$\lambda$$的估計。
+
+泊松分佈的理論均值：$$\mathrm{E}(X)=\lambda$$。
+
+用樣本均值匹配理論均值：$$\overline{X}=\frac{1}{N}\sum_{i=1}^n x_i = \hat{\lambda}_{MOM}$$。
+
+<mark style="color:red;">可得動差估計和最大似然估計的參數一致。</mark>
+
+## 貝氏估計（Bayesian Estimation）
+
+適用場景：當有先驗知識時，可結合先驗分佈更新估計。
+
+泊松分佈的共軛先驗是 Gamma分佈$$Gamma(\alpha, \beta)$$，其機率密度函數為$$f(\lambda) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} \lambda^{\alpha -1}e^{- \beta \lambda}$$。
+
+給定隨機資料$$X_1, \dots, X_N$$後，後驗分佈為$$\lambda |X \sim Gamma(\alpha + \sum_{i=1}^N x_i, \beta +N)$$。
+
+後驗均值估計：$$\hat{\lambda}_{Bayes} = \frac{\alpha + \sum_{i=1}^N X_i}{\beta+N}$$。
+
+<mark style="color:red;">當</mark>$$\alpha \to 0, \beta \to 0$$<mark style="color:red;">時，（無資訊先驗）時，貝氏估計退化為MLE</mark>。
 
 ## 範例
 

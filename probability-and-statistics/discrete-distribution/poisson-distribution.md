@@ -16,7 +16,7 @@ description: 卜阿松分佈, Poisson distribution
 
 * **事件是隨機發生的。**
 * **事件之間是相互獨立的。** 一個事件的發生不影響另一個事件發生的機率。
-* **事件發生的平均速率**$$\lambda$$**在給定的間隔內是恆定的。**
+* **事件發生的平均速率**$$\lambda$$**在給定的間隔內是恆定的(非時變)。**
 * **我們感興趣的是在一個固定的間隔（時間、空間等）內發生的事件次數。**
 
 卜瓦松分佈的假設：
@@ -49,15 +49,15 @@ description: 卜阿松分佈, Poisson distribution
 
 由動差生成函數證明。
 
-### &#x20;<mark style="color:red;">卜瓦松分佈可由二項分佈逼近</mark>
+## <mark style="color:red;">泊松分佈可由二項分佈逼近</mark>
 
-當一個事件，在一段時間$$T$$ 中可能發生的次數是$$\lambda$$ 。那麼可以認爲，經過時間$$T$$ ，該事件發生的期望次數是$$\mathrm{E} ( X )=\lambda T$$ 。&#x20;
+當一個事件，在單位時間內中可能發生的次數是$$\lambda$$ 。由假設可知經過時間$$T$$ ，該事件發生的期望次數是$$\mathrm{E} ( X )=\lambda T$$ 。&#x20;
 
-若將這段時間$$T$$等分成$$n$$ 個時間段，當$$n \rightarrow \infty$$ 時，每個微小的時間段內最多發生一次該事件。那麼每每個微小的時間段，可以視爲是一個Bernoulli實驗（事件發生或不發生），那麼這整段時間\
+若將這段時間$$T$$等分成$$n$$ 個時間段，當$$n \rightarrow \infty$$ 時，每個微小的時間段內最多發生一次該事件。那麼每個微小的時間段，可以視爲是一個Bernoulli實驗（事件發生或不發生），那麼這整段時間\
 $$T$$ 內發生的事件可以視爲是一個二項分佈實驗。
 
 * 若$$X \sim B(N,p)$$，則當$$N \rightarrow \infty$$ 且$$p \rightarrow 0$$時，  $$f_X(x| N,p) \rightarrow e^{-\lambda} \frac{\lambda^x}{x!}$$
-* 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於卜瓦松分佈。
+* 即二項式分佈的隨機變數，在試驗次數$$N$$夠多且成功機率$$p$$夠小時（但$$Np < \infty$$），此隨機變數會近似於泊分佈。
 
 $$n \rightarrow \infty$$​，$$n$$​為時間段。在每個分割好的時間段內，事件發生的機率都是$$p=\frac{\lambda T}{n}$$。
 
@@ -71,13 +71,11 @@ $$\frac{n!}{n^x (n-x)!} = \frac{n(n-1)\cdots(n-x+1) }{n^x} \rightarrow  1$$
 
 因此$$\mathrm{P}(X=x) \rightarrow \frac{\mu^x}{x!}e^{-\mu}$$
 
-​
 
 
+## MLE參數估計
 
-### MLE參數估計
-
-給定獨立同卜瓦松分佈的$$N$$個隨機樣本值，希望得到從中推測出總體的卜瓦松分佈參數$$\lambda$$的估計。
+給定獨立同分佈泊松分佈的$$N$$個隨機樣本值，希望得到從中推測出總體的泊松分佈參數$$\lambda$$的估計。
 
 * log-likelihood function $$\begin{aligned} \displaystyle l(\lambda|X) & =\log \bigg({\prod_{i=1}^N f(x_i | \lambda)} \bigg) \\ &=\sum_{i=1}^N \log \bigg(\frac{e^{- \lambda \lambda ^{x_i}}}{x_i !} \bigg) \\ &= -N \lambda + \bigg(\sum_{i=1}^N x_i\bigg) \log \lambda - \sum_{i=1}^N \log(x_i!) \end{aligned}$$
 * 令$$\frac{\partial l}{\partial \lambda} = 0$$，得 $$-N + \bigg(\sum_{i=１}^N x_i\bigg) \frac{1}{\lambda}=0$$

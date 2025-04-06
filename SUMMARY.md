@@ -125,7 +125,7 @@
 * [動差生成函數(moment generating function)](probability-and-statistics/moment-generating-function.md)
 * [累積量生成函數(cumulant generating function)](probability-and-statistics/cumulant-generating-function.md)
 * [機率生成函數(probability generating function)](probability-and-statistics/probability-generating-function.md)
-* [特徵函數(characteristic function)](probability-and-statistics/characteristic-function.md)
+* [特徵生成函數(characteristic generating function)](probability-and-statistics/characteristic-generating-function.md)
 * [機率不等式](probability-and-statistics/probability-inequality.md)
 * [中央極限定理(CLT)](probability-and-statistics/central-limit-theorem.md)
 * [統計量(statistics)](probability-and-statistics/statistics/README.md)

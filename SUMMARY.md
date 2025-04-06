@@ -511,7 +511,9 @@
 ## 複雜系統 <a href="#complex-system" id="complex-system"></a>
 
 * [\[book\]模型思維(the model thinker)](complex-system/mo-xing-si-wei-the-model-thinker.md)
+* [複雜系統](complex-system/complex-system.md)
 * [碎形(分形) (fractal)](complex-system/fractal.md)
+* [混沌理論](complex-system/chaos-theory.md)
 * [相空間重構](complex-system/phase-space-reconstruction.md)
 
 ## 資料融合 <a href="#data-fusion" id="data-fusion"></a>

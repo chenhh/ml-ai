@@ -20,8 +20,9 @@
 
 * 計數過程定義強調分佈性質，便於計算機率。
 * 小區間機率極限機率定義從微觀角度刻畫動態行為。
+* 右連續非遞減步增函數定義則提供了事件發生的跳躍性。
 * 等待時間定義突出間隔時間的指數分佈和無記憶性。
-* 條件均勻性定義則提供了事件時間點的分佈特性。
+*
 
 ### 計數過程定義(基於事件次數分佈）
 
@@ -48,18 +49,22 @@
 > * \[初始條件] $$N(0)=0$$。
 > * \[獨立增量性]同上。
 > * \[定態增量]同上，但不假設增量為泊松分佈，而是用稀有事件假設。
-> * 〔**\[稀有事件條件（Orderliness）] 在給定上面三條件時等價於泊松增量分佈條件。**
+> * 〔**\[稀有事件條件（orderliness）] 在給定上面三條件時等價於泊松增量分佈條件。**
 >   * 在極短時間$$\Delta t$$內，
->   * 不發生事件的機率：$$\mathrm{P}(N(\Delta t) =0) = 1-\lambda h + o(\Delta t)$$。
->   * 發生一次事件的機率與$$\Delta t$$成正比：$$\mathrm{P}(N(\Delta t) =1) = \lambda \Delta t + o(\Delta t)$$。
->   * 發生一次以上事件的機率可忽略，即：$$\mathrm{P}(N(\Delta t) \geq 2) = o (\Delta t)$$。
+>   * 不發生事件的機率：$$\mathrm{P}(N(\Delta t) =0) = 1-\lambda h + o(\Delta t) \approx 1-\lambda \Delta t$$。
+>   * 發生一次事件的機率與$$\Delta t$$成正比：$$\mathrm{P}(N(\Delta t) =1) = \lambda \Delta t + o(\Delta t) \approx \lambda \Delta t$$。
+>   * 發生一次以上事件的機率可忽略，即：$$\mathrm{P}(N(\Delta t) \geq 2) = o (\Delta t) \approx 0$$。
 >   * 其中$$\displaystyle   f(t) = o(\Delta t) \equiv \lim_{ \Delta t \to 0}\frac{f(\Delta t)}{ \Delta t} = 0$$。
+
+以車輛通過次數的例子，稀有事件條件只不過說當時段$$[0,\Delta t]$$ 很短的時候， 在時段 $$[0,\Delta t]$$ 中通過一輛車的機率大概正是比於時段的長度$$\Delta t$$，其比例常數就是$$\lambda$$。 另外這條件又說在時段$$[0,\Delta t]$$ 中，通過兩部車以上的機率幾乎是零。 這樣的假定似乎是很接近現實的。
 
 <mark style="color:red;">可證明在給定初始條件、獨立獨量性與定態增量條件下，增量為泊松分佈與稀有事件假設兩者等價</mark>。
 
 <details>
 
-<summary>proof: 增量為泊松分佈&#x3C;⇒ 稀有事件假設</summary>
+<summary>proof: 增量為泊松分佈&#x3C;⇒ 稀有事件假設<br>[證明1，Kolmogorov方程式]稀有事件假設⇒ 增量為泊松分佈<br>[證明2，用二項分佈近泊松分佈] 稀有事件假設⇒ 增量為泊松分佈</summary>
+
+
 
 增量為泊松分佈=> 稀有事件假設
 
@@ -67,13 +72,13 @@
 
 可得當$$k=0, 1$$時，由Taylor級數$$e^x=1+x+\frac{x^2}{2!}+\dots$$得：
 
-* $$\mathrm{P}(N(\tau)=0)=e^{-\lambda \tau}=1-\lambda \tau + \frac{(\lambda \tau)}{2!} + \dots = 1- \lambda \tau + o(\tau)$$。
+* $$\mathrm{P}(N(\tau)=0)=e^{-\lambda \tau}=1-\lambda \tau + \frac{(\lambda \tau)^2}{2!} + \dots = 1- \lambda \tau + o(\tau)$$。
 * $$\mathrm{P}(N(\tau)=1)=e^{-\lambda \tau}(\lambda \tau) = (\lambda \tau)(1- \lambda \tau + o(\tau))=\lambda \tau + o(\tau)$$。
 * 所以$$\mathrm{P}(N(\tau) \geq 2) = 1 - \mathrm{P}(N(\tau) = 0 ) - \mathrm{P}(N(\tau) =1)=o(\tau)$$。
 
 (QED)
 
-稀有事件假設⇒ 增量為泊松分佈
+\[證明1，Kolmogorov方程式]稀有事件假設⇒ 增量為泊松分佈
 
 在時間$$t+\tau$$發生事件$$k$$次，可拆解為區間$$[0,t)$$發生$$k$$次，且區間$$[t,t+\tau)$$區間發生$$0$$次；區間$$[0,t)$$發生$$k-1$$次，且區間$$[t,t+\tau)$$區間發生$$1$$次; 以此類推到區間$$[0,t)$$發生$$0$$次，且區間$$[t,t+\tau)$$區間發生$$k$$次的機率總和。
 
@@ -107,13 +112,51 @@ $$\begin{cases} \mathrm{P}^{'}(N(t)= k) &= -\lambda \mathrm{P}(N(t)= k) + \lambd
 
 (QED)
 
+\[證明2，用二項分佈近泊松分佈] 稀有事件假設⇒ 增量為泊松分佈
+
+將時間$$[0,t]$$分為$$n$$等分，$$0=t_0 < t_1 <t_2< \dots <t_n=t$$，$$\Delta t=t_i - t_{i-1}=\frac{t}{n}$$。
+
+由獨立增量條件得$$N(t_1)-N(t_0), N(t_2)-N(t_1), \dots, N(t_n)-N(t_{n-1})$$為兩兩獨立的變數，且定態分佈條件得這些變數有相同的機率分佈。
+
+因為稀有事件假設得
+
+* $$\mathrm{P}(N(t_i) - N(t_{i-1}) =0)=\mathrm{P}(N(\Delta t) =0)  \approx 1-\lambda \Delta t = 1 - \lambda \frac{t}{n}$$。
+* $$\mathrm{P}(N(t_i) - N(t_{i-1}) =1)=\mathrm{P}(N(\Delta t) =1)  \approx  \lambda \frac{t}{n}$$。
+* $$\mathrm{P}(N(t_i) - N(t_{i-1}) \geq 2) \approx 0$$
+
+所以每個增量$$N(t_i)-N(t_{i-1})$$等價丟一個銅板的機率，正面的機率為$$\lambda \frac{t}{n}$$，反面的機率是$$(1-\lambda \frac{t}{n})$$，且$$n$$個隨機變數獨立，因此出現正面$$n$$次的隨機變數$$X(t)=|X(t_{n})- X(t_{n-1})| + |X(t_{n-1})- X(t_{n-2})|+\dots + |X(t_{1})- X(t_{0})|$$
+
+為二項式分佈$$X(t) \sim B(n, \frac{\lambda t}{n}$$)。
+
+由於二項式分佈在$$n \to \infty$$時，$$np=n \cdot \lambda \frac{t}{n}=\lambda t$$逼近泊松分佈$$Poisson(\lambda t)$$。
+
+因此$$\mathrm{P}(X(t)=k) \approx \binom{n}{k}\frac{\lambda t}{n}(1- \frac{\lambda t}{n}) \to \frac{(\lambda t)^k}{k!} e^{- \lambda t}$$。
+
+(QED)
+
 </details>
+
+
 
 ### 事件間隔(等待)時間（Interarrival Times） 定義
 
-> 泊松過程可以通過事件之間的等待時間來定義：
+> 若一個計數過程$$\{N_t, t \geq 0\}$$  滿足以下四個條件時，稱為速度$$\lambda > 0$$的泊松過程：
+>
+> * \[初始條件] $$N(0)=0$$。
+> * \[獨立增量性]同上。
+> * \[定態增量]同上，但不假設增量為泊松分佈 。
+> * \[獨立同指數分佈的間隔時間] 令$$T_1, T_2, \dots \sim Exp(\lambda)$$為獨立分佈指數函數的等待時間。$$S_n=T_1 + T_2 + \dots +T_n$$為第$$n$$次事件發生的時間，則$$N(t) = \max\{n ~|~ S_n \leq t\}$$為速率為$$\lambda$$的泊松過程。
 
-### 條件均勻性定義
+這一定義利用了泊松過程的無記憶性，指數分佈是其核心特徵。
+
+### 右連續非遞減步增函數定義
+
+> 若一個計數過程$$\{N_t, t \geq 0\}$$  滿足以下四個條件時，稱為速度$$\lambda > 0$$的泊松過程：
+>
+> * \[初始條件] $$N(0)=0$$。
+> * \[獨立增量性]同上。
+> * \[定態增量]同上，但不假設增量為泊松分佈，而是用右連續非遞減函數。
+> * \[右連續非遞減步增函數] 對於每個時間點，函數$$t \to X(t)$$是是一個取值 0 或正整數的右連續， 非遞減函式 (non-decreaing function)，且每次增值不超過 1， 即對每個時間點$$t$$，$$X(t)-X(t-)=1 \text{ or } 0$$。
 
 
 
@@ -136,4 +179,3 @@ $$\begin{cases} \mathrm{P}^{'}(N(t)= k) &= -\lambda \mathrm{P}(N(t)= k) + \lambd
 
 
 
-

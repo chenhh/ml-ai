@@ -27,18 +27,87 @@
 
 > 若一個計數過程$$\{N_t, t \geq 0\}$$  滿足以下三個條件時，稱為速度$$\lambda > 0$$的泊松過程：
 >
-> * \[初始條件 ]$$N(0)=0$$，即在初始時刻沒有事件發生。。
-> * \[定態增量且為Poisson分佈, stationary Increments] 在任意長度為$$\tau$$ 的時間間隔內，發生事件的機率僅依賴於該間隔長度，而非時間起點，且事件數服從 Poisson 分佈。 $$s <t$$，計數增量$$N(t) - N(s)  \sim Poisson(\lambda (t-s))$$為參數是$$\lambda(t-s)$$的泊松隨機變數(j機率分佈僅於$$\tau=t-s$$有關，與起點$$s$$無關)。可得$$N(t) - N(s) \overset{d}{=} N(t-s)$$且 $$\mathrm{P}(N(t) - N(s) =k)= \frac{(\lambda(t-s))^ke^{-\lambda (t-s)}}{k!}, ~ k=0,1,2,\ldots$$.。
+> * \[初始條件 ]$$N(0)=0$$，即在初始時刻沒有事件發生。
 > * \[獨立增量性, independent Increments] 考慮不相交的時間區間$$(t_1,t_2 ], (t_2,t_3 ],\ldots ,(t_n,t_{n+1}]$$，則不相交區間的增量$$N({t_2})−N(t_1), N(t_3)-N(t_2),\ldots, N(t_{n+1}) - N(t_n)$$ 全為獨立。
+> * \[定態增量 stationary Increments] 在任意長度為$$\tau$$ 的時間間隔內，發生事件的機率分佈相同。$$\forall 0 \leq s <t$$，$$N(t) = N(t)-N(0) \overset{d}{=} N(t+s) - N(s)$$。
+> * \[增量為泊松分佈]：事件數服從 Poisson($$\lambda \tau$$) 分佈。 $$0\leq s <t$$，$$N(t) - N(s)  \sim Poisson(\lambda (t-s))$$為參數是$$\lambda(t-s)$$的泊松隨機變數(機率分佈僅於$$\tau=t-s$$有關，與起點$$s$$無關)。給定$$\lambda >0$$，得$$\mathrm{P}(N(t) - N(s) =k)= \frac{(\lambda(t-s))^ke^{-\lambda (t-s)}}{k!}, ~ k=0,1,2,\ldots$$.。
+
+假想我們在一條公路上某點觀察通過這點的交通量。 令 $$N(t)$$ 為從時間 0 到時間$$t$$通過這點的汽車總數。 則
+
+* \[初始條件]表示在時間 0 時，通過的車數是 0。&#x20;
+* \[獨立增量條件]說在互不相交的時段內通過的車數是相互獨立的。&#x20;
+* \[定態增量條件]說只要時段長度相同， 不同時段內通過的車數有相同的機率分佈。&#x20;
+* \[增量為泊松分佈條件]$$N(t)$$有一個具有引數$$\lambda t$$的泊松分佈。
+
+&#x20;如果觀察的全部時間不太長的話， 獨立增量條件和定態增量也是很合理的。 Poisson分佈條件在一般實測的交通量的紀錄也支援這一假定的。
 
 ### 小區間機率極限定義(微觀角度)
 
-**\[稀有事件假設（Orderliness）]**
+> 若一個計數過程$$\{N_t, t \geq 0\}$$  滿足以下四個條件時，稱為速度$$\lambda > 0$$的泊松過程：
+>
+> * \[初始條件] $$N(0)=0$$。
+> * \[獨立增量性]同上。
+> * \[定態增量]同上，但不假設增量為泊松分佈，而是用稀有事件假設。
+> * 〔**\[稀有事件條件（Orderliness）] 在給定上面三條件時等價於泊松增量分佈條件。**
+>   * 在極短時間$$\Delta t$$內，
+>   * 不發生事件的機率：$$\mathrm{P}(N(\Delta t) =0) = 1-\lambda h + o(\Delta t)$$。
+>   * 發生一次事件的機率與$$\Delta t$$成正比：$$\mathrm{P}(N(\Delta t) =1) = \lambda \Delta t + o(\Delta t)$$。
+>   * 發生一次以上事件的機率可忽略，即：$$\mathrm{P}(N(\Delta t) \geq 2) = o (\Delta t)$$。
+>   * 其中$$\displaystyle   f(t) = o(\Delta t) \equiv \lim_{ \Delta t \to 0}\frac{f(\Delta t)}{ \Delta t} = 0$$。
 
-* 在極短時間$$\Delta t$$內，發生 一次以上 事件的機率可忽略，即：$$\mathrm{P}(N(\Delta t) \geq 2) = o (\Delta t)$$。
-* 發生 一次事件的機率與$$\Delta t$$成正比：$$\mathrm{P}(N(\Delta t) =1) = \lambda \Delta t + o(\Delta t)$$。
+<mark style="color:red;">可證明在給定初始條件、獨立獨量性與定態增量條件下，增量為泊松分佈與稀有事件假設兩者等價</mark>。
 
+<details>
 
+<summary>proof: 增量為泊松分佈&#x3C;⇒ 稀有事件假設</summary>
+
+增量為泊松分佈=> 稀有事件假設
+
+給定$$\tau = t-s$$，已知$$\mathrm{P}(N(\tau)=k)=  \frac{(\lambda \tau)^ke^{-\lambda \tau}}{k!}, ~ k=0,1,2,\ldots$$
+
+可得當$$k=0, 1$$時，由Taylor級數$$e^x=1+x+\frac{x^2}{2!}+\dots$$得：
+
+* $$\mathrm{P}(N(\tau)=0)=e^{-\lambda \tau}=1-\lambda \tau + \frac{(\lambda \tau)}{2!} + \dots = 1- \lambda \tau + o(\tau)$$。
+* $$\mathrm{P}(N(\tau)=1)=e^{-\lambda \tau}(\lambda \tau) = (\lambda \tau)(1- \lambda \tau + o(\tau))=\lambda \tau + o(\tau)$$。
+* 所以$$\mathrm{P}(N(\tau) \geq 2) = 1 - \mathrm{P}(N(\tau) = 0 ) - \mathrm{P}(N(\tau) =1)=o(\tau)$$。
+
+(QED)
+
+稀有事件假設⇒ 增量為泊松分佈
+
+在時間$$t+\tau$$發生事件$$k$$次，可拆解為區間$$[0,t)$$發生$$k$$次，且區間$$[t,t+\tau)$$區間發生$$0$$次；區間$$[0,t)$$發生$$k-1$$次，且區間$$[t,t+\tau)$$區間發生$$1$$次; 以此類推到區間$$[0,t)$$發生$$0$$次，且區間$$[t,t+\tau)$$區間發生$$k$$次的機率總和。
+
+$$\begin{aligned} \mathrm{P}(N(t + \tau) = k) &= \mathrm{P}(N(t)= k \land N(t + \tau) - N(t)= 0)  \\  &+  \mathrm{P}(N(t)= k-1 \land N(t + \tau) - N(t)= 1) \\  &+ \mathrm{P}(N(t)= k-2 \land N(t + \tau) - N(t)= 2) \\  &+  \dots \\  &+  \mathrm{P}(N(t)= 0 \land N(t + \tau) - N(t)= k) \\ \end{aligned}$$--(1)
+
+因為區間$$[0,t), [t+\tau)$$不相交，由獨立增量條件得：$$\mathrm{P}(N(t)= k \land N(t + \tau) - N(t)= 0) =  \mathrm{P}(N(t)= k) \mathrm{P}(N(t + \tau) - N(t)= 0)$$--(2)
+
+再由定態分佈得$$\mathrm{P}(  N(t + \tau) - N(t)= 0) = \mathrm{P}(  N(\tau)= 0)$$--(3)
+
+整理(1)(2)(3)得：
+
+$$\begin{aligned} \mathrm{P}(N(t + \tau) = k) &= \mathrm{P}(N(t)= k)\cdot \mathrm{P}(  N(t + \tau) - N(t)= 0) ) \\  &+  \mathrm{P}(N(t)= k-1) \cdot \mathrm{P}( N(t + \tau) - N(t)= 1)) \\  &+ \mathrm{P}(N(t)= k-2) \cdot \mathrm{P}( N(t + \tau) - N(t)= 2)) \\  &+  \dots \\  &+  \mathrm{P}(N(t)= 0) \cdot \mathrm{P}( N(t + \tau) - N(t)= k)) \\ \end{aligned}$$$$\begin{aligned} \mathrm{P}(N(t + \tau) = k) &= \mathrm{P}(N(t)= k)\cdot \mathrm{P}(   N(\tau)= 0) \\  &+  \mathrm{P}(N(t)= k-1) \cdot \mathrm{P}(  N(\tau)= 1) \\  &+ \mathrm{P}(N(t)= k-2) \cdot \mathrm{P}(  N(\tau)= 2) \\  &+  \dots \\  &+  \mathrm{P}(N(t)= 0) \cdot \mathrm{P}(  N(\tau)= k) \\ \end{aligned}$$--(4)
+
+由稀有事件條件代入(4)得：
+
+$$\begin{aligned} \mathrm{P}(N(t + \tau) = k) &= \mathrm{P}(N(t)= k)\cdot (1-\lambda \tau + o(\tau)) \\  &+  \mathrm{P}(N(t)= k-1) \cdot (\lambda \tau + o(\tau)) \\  &+ \mathrm{P}(N(t)= k-2) \cdot o(\tau) \\  &+  \dots \\  &+  \mathrm{P}(N(t)= 0) \cdot o(\tau) \\  & = \mathrm{P}(N(t)= k) - \lambda \tau \mathrm{P}(N(t)= k) + \lambda \tau  \mathrm{P}(N(t)= k-1) + o(\tau) \end{aligned}$$因為$$\tau \neq 0$$，在$$k\geq 1$$時移項得：
+
+$$\frac{ \mathrm{P}(N(t+\tau)= k) - \mathrm{P}(N(t)= k) }{\tau} = -\lambda \mathrm{P}(N(t)= k) +  \lambda \mathrm{P}(N(t)= k-1)  + o(1)$$
+
+取極限$$\tau \to 0$$得Kolmogorov方程式：
+
+$$\begin{cases} \mathrm{P}^{'}(N(t)= k) &= -\lambda \mathrm{P}(N(t)= k) + \lambda \mathrm{P}(N(t)= k-1), \quad k = 1,2,\dots, \\ \mathrm{P}^{'}(N(t)= 0) &=  -\lambda \mathrm{P}(N(t)= 0) \end{cases}$$--(5)
+
+解$$\mathrm{P}^{'}(N(t)= 0) =  -\lambda \mathrm{P}(N(t)= 0)$$得$$\log \mathrm{P}(N(t)= 0) = -\lambda t + c$$ 或$$\mathrm{P}(N(t)= 0)= c e^{-\lambda t}$$。
+
+由初始條件$$\mathrm{P}(N(0)= 0)=1$$得$$c=1$$，因此$$\mathrm{P}(N(t)= 0) = e^{-\lambda t}$$--(6)
+
+由數學歸納法解$$\mathrm{P}^{'}(N(t)= k) = -\lambda \mathrm{P}(N(t)= k) + \lambda \mathrm{P}(N(t)= k-1), \quad k = 1,2,\dots,$$
+
+初始條件為$$\mathrm{P}(N(0)= k)=0, k \neq 0$$，可得$$\mathrm{P}(N(t)= k)=\frac{(\lambda t)^k}{k!}e^{-\lambda t}, k \in \mathbb{N}$$
+
+(QED)
+
+</details>
 
 ### 事件間隔(等待)時間（Interarrival Times） 定義
 

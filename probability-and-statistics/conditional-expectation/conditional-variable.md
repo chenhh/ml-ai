@@ -398,21 +398,37 @@ $$\displaystyle  \begin{aligned} & \int_A (c_1 \mathrm{E}(X_1|\mathcal{G}) + c_2
 
 
 
-## 參考資料
+## 濾流
 
-* [\[知乎\] 淺談條件期望](https://zhuanlan.zhihu.com/p/23670286)
-* [\[知乎\] 條件期望值的初步理解](https://zhuanlan.zhihu.com/p/50757083)
-* [\[statlect\] Conditional probability with respect to a sigma-algebra](https://www.statlect.com/fundamentals-of-probability/conditional-probability-as-a-random-variable)
-* [\[wiki\] conditional expectation](https://en.wikipedia.org/wiki/Conditional\_expectation#Conditional\_expectation\_with\_respect\_to\_a\_.CF.83-algebra)
-* [\[知乎\] 條件期望與全期望公式](https://zhuanlan.zhihu.com/p/417592820)
-* [\[知乎\] 重期望公式及實例運用](https://zhuanlan.zhihu.com/p/163363352)
-* [\[譚升的部落格\] 條件期望](https://face2ai.com/Math-Probability-4-7-Conditional-Expectation/)
-* [Lecture 10 Conditional Expectation](https://web.ma.utexas.edu/users/gordanz/notes/conditional\_expectation.pdf)
-  * [https://web.ma.utexas.edu/users/gordanz/lecture\_notes\_page.html](https://web.ma.utexas.edu/users/gordanz/lecture\_notes\_page.html)
-* [Conditional expectation toy example](https://people.maths.bris.ac.uk/\~mb13434/cond\_expn\_example\_balazs.pdf)
-* 鍾開萊，A course in porbability theory, 3th edition, ch9.
+> 令 $$\Omega$$為一個樣本空間，$$\mathcal{F}$$為事件 (可測集) 組成的σ域，$$\mathrm{P}: \mathcal{F} \rightarrow [0,1]$$為一個測度且$$\mathrm{P}(\Omega)=1$$ 。把$$(\Omega, \mathcal{F}, \mathrm{P})$$稱為機率空間。
+>
+> 將滿足以下性質的一族σ域$$\{ \mathcal{F}_t\}$$稱為濾流：
+>
+> * \[遞增集合]若$$s<t$$，則$$\mathcal{F}_s \subseteq \mathcal{F}_t$$
+> * 對於 $$\displaystyle \sigma(\cup_t \mathcal{F}_t)\equiv \mathcal{F}_\infty \subseteq \mathcal{F}$$
+>
+> 稱$$(\Omega, \mathcal{F}, \{\mathcal{F}_t\}, \mathrm{P})$$為filtrated 機率空間。通常用於隨機過程中。
+
+### 濾流與情境樹(scenario tree)的條件期望值
+
+<mark style="color:red;">離散隨機過程的濾流可先將樣本路徑表示為情境樹(scenario tree)，每個時間點的σ域</mark>$$\mathcal{F}_t$$<mark style="color:red;">可由在樹上同一層的樣本節點生成。</mark>
+
+自然濾流常用於建模隨機過程中的資訊流，特別是在金融工程、風險管理以及動態決策問題中，用於描述「到某一時刻為止所知道的所有資訊」。
+
+情景樹將隨機過程的不確定性離散化為有限的情景（Scenarios），每個情景代表一種可能的未來實現。情景樹由節點和分支構成，其中：
+
+* 情景樹的每一層對應一個時間步長 t，每個節點代表該時刻的一個狀態或信息集合。
+* 情景樹的**每一層**對應自然濾流的一個時間點$$t$$，樹的層級結構直接體現了$$\mathcal{F}_t$$ 的遞增性。根節點：$$\mathcal{F}_0$$（初始資訊，通常無隨機性）。
+* **第**$$t$$**層節點**：對應$$\mathcal{F}_t$$​，表示到時間$$t$$為止已實現的資訊。
+* 分支：表示從當前狀態到下一狀態的可能轉移路徑。從節點分出的路徑代表$$\mathcal{F}_{t+1}$$中可能的新資訊。
+* 給定某個節點$$n$$，其對應的 σ代數$$\mathcal{F}_t$$​ 包含了從初始節點到節點$$n$$的所有路徑資訊。
+* 在情景樹中，條件期望$$\mathrm{E}(X_t| \mathcal{F}_t)$$ 表示在給定當前節點$$n$$的情況下，對未來隨機變數$$X_t$$\
+  的加權平均值。具體計算如下：
+  * 從節點$$n$$出發的所有分支對應不同的未來情景，每條分支上附有一個機率值$$p_i$$且$$\sum_{i}p_i=1$$​。
+  * 對於每個子節點$$i$$，假設其對應的隨機變數值為$$X_{t,i}$$，則條件期望為：$$\mathrm{E}(X_t| \mathcal{F}_t)=\sum_i p_i X_{t,i}$$。(註：這是指時間$$t$$的某一個節點的期望計算值，而時間$$t$$有$$k$$個節點時，$$\mathrm{E}(X_t|\mathcal{F}_t)$$為這$$k$$個節點的各自的期望計算值。)
 
 
 
+在情境樹表示下：
 
-
+* $$\mathrm{E}(X_t|\sigma(\{0, \Omega\})=\mathrm{E}(X)$$為一常數值，表示在根節點(root)上，算每一條從根節點到葉節點的機率$$p_i$$與隨機值$$X_{0,i}$$的加權值$$\sum_i p_i X_{0,i}$$。

@@ -6,7 +6,7 @@ description: conditional expectation
 
 ## 簡介
 
-* 隨機變數$$X$$的期望值$$\mathrm{E}(X) \equiv \mathrm{E}(X~|~\Omega)$$為<mark style="color:blue;">常數值</mark>。
+* 隨機變數$$X$$的期望值$$\mathrm{E}(X) \equiv \mathrm{E}(X~|~\Omega) = \mathrm{E}(X~|~\sigma\{\emptyset, \Omega\})$$為<mark style="color:blue;">常數值</mark>。
 * 隨機變數$$X$$相對於隨機變數$$Y$$的特定實現值$$Y=y$$的期望值$$\mathrm{E}(X|Y=y)$$為<mark style="color:blue;">常數值</mark>。
 * 隨機變數$$X$$相對於隨機變數$$Y$$的期望值$$\mathrm{E}(X|Y)$$$$=f(Y)$$為<mark style="color:blue;">隨機變數</mark>，依賴於$$Y$$的實現值。更準確的說是依賴於實現值前像集合對宇集合的分割，即相異$$E_i=f^{-1}(y_i)=\{\omega \in ~\Omega ~|~ f(Y)=y_i\}$$為$$\Omega$$的分割，$$\bigcup_{i \in I} E_i =\Omega, ~ E_i \cap E_j=\emptyset, ~\forall i \neq j$$，而每一個分割$$E_i$$中，均可以算出$$X$$在此分割的期望值(常數)。由於無法確定那一個實現值$$y_i$$(前像為$$E_i$$)會發生，因此為隨機變數。
 * 隨機變數$$X$$相對於事件集合$$E$$的期望值$$\mathrm{E}(X|E)$$為常數。
@@ -23,7 +23,7 @@ description: conditional expectation
 
 離散隨機變數的條件期望值$$\mathrm{E}(X~|~Y)$$實際上就是把先把$$Y$$限制在某些值（比如2,1,7）上，求得對應的事件件（比如{a, b},{c, d}或{e, f}）（也就是可測函數的前像），然後找到$$X$$中對應的事件求均值，各個集合
 
-### σ域中必包含對於宇集合的分割
+### σ域中必包含對於宇集合的一組分割
 
 令$$\mathcal{G}$$為σ域，不失一般性令$$A,B \in \mathcal{G}$$，$$A \cup B =\mathcal{G}$$，但是$$A \cap B = F\neq \emptyset$$。
 
@@ -63,7 +63,7 @@ description: conditional expectation
 
 > $$\displaystyle \mathrm{E}(Y|X) = \arg \min_{g(X)} \mathrm{E}(Y-g(X))^2$$，即$$\mathrm{E}(Y|X)$$為對於$$Y$$的最佳預測值。
 >
-> 註：也可用內積空間的[最小平方解](../../linear-algebra/inner-product-space/least-square-solution.md)得出。[https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/01\_law\_of\_iterated\_expectations.svg/1024px-01\_law\_of\_iterated\_expectations.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/01\_law\_of\_iterated\_expectations.svg/1024px-01\_law\_of\_iterated\_expectations.svg.png)
+> 註：也可用內積空間的[最小平方解](../../linear-algebra/inner-product-space/least-square-solution.md)得出。[https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/01\_law\_of\_iterated\_expectations.svg/1024px-01\_law\_of\_iterated\_expectations.svg.png](https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/01_law_of_iterated_expectations.svg/1024px-01_law_of_iterated_expectations.svg.png)
 
 <details>
 

@@ -18,11 +18,15 @@ description: conditional expectation with respect to sigma-field.
 2. 依賴於隨機變數的值域$$\mathrm{E}(X|Y)=g(y)$$，為隨機變數。假設$$Y$$為離散隨機變數，此處給定的多個事件機率$$A_i=\{\omega \in \Omega | Y(\omega)=y_i\}$$，<mark style="color:blue;">且</mark>$$A_i$$<mark style="color:blue;">為</mark>$$\Omega$$<mark style="color:blue;">的分割</mark>，而在事件$$A_i$$下的條件期望值為該集合的均值，因此$$\mathrm{E}(X|Y)$$為相異$$y_i$$事件集合中均值形成的隨機變數。
 3. 依賴於給定的σ域  $$\mathrm{E}(X|\sigma(Y))$$，為隨機變數，該定義的主要優點是它允許我們以零機率事件為條件。
 
-註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割條件不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。
+註：給定隨機變數$$Y$$與給定事件集合$$B$$的條件期望值意義相同，因為兩者均是對宇集合$$\Omega$$做分割，只是兩者的分割方法不同。例如離散隨機變數$$A_i=\{\omega \in \Omega ~|~ Y=y_i\}$$，$$B=\{\omega \in B\}$$。
 
 一般化的條件期望值通常無法計算(除了有限個取值的離散隨機變數)，因此知道一般化條件期望值的特性比計算重要，特別是在隨機過程中常使用遞增的σ域(filitration)時條件期望值會因給定的條件不同而異。
 
 <mark style="background-color:red;">一般化期望值為隨機變數，但因為名稱和考慮全體σ域時計算時為常數，容易誤解為常數</mark>。
+
+<mark style="color:red;">σ域</mark>$$\sigma(Y)$$<mark style="color:red;">與</mark>$$\mathcal{G}$$<mark style="color:red;">可解釋為對宇集合</mark>$$\Omega$$<mark style="color:red;">的特定切割分式，因此條件期望值</mark>$$\mathrm{E}(X|\sigma(Y))$$<mark style="color:red;">或</mark>$$\mathrm{E}(X|\mathcal{G})$$<mark style="color:red;">可視為在給定宇集合</mark>$$\Omega$$<mark style="color:red;">特定分割方式</mark>$$\{A_i\}_{i \in I}$$<mark style="color:red;">時，隨機變數</mark>$$X$$<mark style="color:red;">在每一個分割</mark>$$A_i$$<mark style="color:red;">中平均值形成的新的隨機變數</mark>。因此$$\mathrm{E}(X)=\mathrm{E}(X|\Omega)=\mathrm{E}(X|\{\emptyset, \Omega\})$$，且$$X = \mathrm{E}(X|\sigma(X))$$。
+
+
 
 ## 事件的條件機率為期望值的特例
 
@@ -36,7 +40,7 @@ $$\Omega=\{1,2,3,4\}$$，$$\mathcal{F}=\sigma(\{1\}, \{2\}, \{3\}, \{4\})$$。
 
 $$\mathrm{P}(\{1\})=\frac{1}{2}$$，$$\mathrm{P}(\{2\})=\frac{1}{4}$$， $$\mathrm{P}(\{3\})=\frac{1}{6}$$，$$\mathrm{P}(\{4\})=\frac{1}{12}$$。
 
-令事件集合$$B=\{1,2,3\}$$，則任意的事件集合$$A$$的條件機率：$$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\frac{1}{2}+\frac{1}{4}+\frac{1}{6}}=\frac{12}{11}\mathrm{P}(A \cap B)$$。
+令事件集合$$B=\{1,2,3\}$$，則任意的事件集合$$A$$的條件機率：$$\mathrm{P}(A|B)=\frac{\mathrm{P}(A \cap B)}{\mathrm{P}(B)}=\frac{\mathrm{P}(A \cap B)}{\frac{1}{2}+\frac{1}{4}+\frac{1}{6}}=\frac{12}{11}\mathrm{P}(A \cap B)$$。
 
 因此可得條件機率：
 

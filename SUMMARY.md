@@ -149,6 +149,7 @@
   * [F分佈](probability-and-statistics/continuous-distribution/f-distribution.md)
   * [beta分佈](probability-and-statistics/continuous-distribution/beta-distribution.md)
   * [gamma分佈](probability-and-statistics/continuous-distribution/gamma-distribution.md)
+  * [Boltzmann分佈](probability-and-statistics/continuous-distribution/boltzmann-dist.md)
 * [假設檢定](probability-and-statistics/hypothesis-test/README.md)
   * [Neyman–Pearson引理](probability-and-statistics/hypothesis-test/neyman-pearson-lemma.md)
   * [似然比檢定](probability-and-statistics/hypothesis-test/likelihood-ratio-test.md)

@@ -68,7 +68,7 @@ description: σ代數
 
 ### 範例
 
-* $$A_1 = \{ 1, 3\}$$,  $$F=\{A_1, A_2\}=\{(1,3), \{2,4,5,6\}\}$$，則$$F$$為域。
+* $$A_1 = \{ 1, 3\}$$,  $$F=\{A_1, A_2\}=\{\emptyset, (1,3), \{2,4,5,6\}, \{1,2,3,4,5,6\}\}$$，則$$F$$為域。
 * $$F=\{ \emptyset, S\}$$，則$$F$$為域。
 * $$F=\{$$包含所有$$S$$的子集合, 即$$S$$的冪集合$$\}$$, 則$$F$$為域。
 
@@ -84,9 +84,11 @@ description: σ代數
 >
 > 由定義可知 σ域 <mark style="color:red;">必為域</mark>。
 
-* \[<mark style="color:blue;">F在可數交集下為閉集</mark>]如果$$F$$為σ域，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
-* 空集合$$\emptyset$$與宇集合$$S$$也都是$$F$$的元素。
-* 若$$A_1, A_2,\dots \in F$$，由定義知$$\displaystyle \limsup_{n \rightarrow \infty} A_n \equiv \bigcap_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$，同理$$\displaystyle \liminf_{n \rightarrow \infty} A_n \equiv \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$。
+\[<mark style="color:blue;">F在可數交集下為閉集</mark>]如果$$F$$為σ域，則$$\forall A_i \in F, i \in \mathbb{N}, \ \cap_{i=1}^\infty A_i \in F$$。
+
+空集合$$\emptyset$$與宇集合$$S$$也都是$$F$$的元素。
+
+若$$A_1, A_2,\dots \in F$$，由定義知$$\displaystyle \limsup_{n \rightarrow \infty} A_n \equiv \bigcap_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$，同理$$\displaystyle \liminf_{n \rightarrow \infty} A_n \equiv \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k \in F$$。
 
 ### σ域的原子集合(atomic set)
 
@@ -135,7 +137,35 @@ $$S=\mathbb{N}$$則：
 
 ### <mark style="color:red;">任意σ域的的交集仍為σ域</mark>
 
-#### 範例：σ域的聯集不一定為σ域
+> $$\{F_i\}_{i \in I}$$為宇集合$$\Omega$$的σ域族，則$$F=\bigcap_{i \in I} F_i$$仍為σ域。
+>
+> 由定義得$$\emptyset, \Omega \in \bigcap_{i \in I} F_i=F$$，因此只要證明補集和可數聯集也為其中元素即可。
+
+<details>
+
+<summary>proof: 只要證明補集和可數聯集也為其中元素即可。</summary>
+
+補集：
+
+令$$S \in \bigcap_{i \in I} F_i \equiv F$$。
+
+可得$$S \in F_i, \forall i$$，因為每個$$F_i$$都是σ域，所以$$S^c \in F_i, \forall i$$，所以$$S^c \in \bigcap_{i \in I} F_i$$--(1)。
+
+可數聯集：
+
+假設$$\{S_k\}_{ k \in \mathbb{N}} \subseteq \bigcap_{i \in I} F_i$$，即$$S_k \in  F_i, \forall i$$。
+
+因為每個$$F_i$$都是σ域，所以$$\bigcup_{k \in \mathbb{N}} S_k \in F_i, \forall i \in I$$，所以$$\bigcup_{k \in \mathbb{N}} S_k \in \bigcap_{i \in I} F_i \equiv F$$--(2)。
+
+由(1,2)與$$\emptyset, \Omega \in \bigcap_{i \in I} F_i=F$$得$$F$$為σ域(QED)
+
+</details>
+
+### 範例：σ域的聯集不一定為σ域
+
+宇集合$$\Omega=\{1,2,3\}$$，σ域$$F_1=\{\emptyset, \{1\}, \{2,3\}, \Omega\}$$，σ域$$F_2=\{\emptyset, \{2\}, \{1,3\}, \Omega\}$$。
+
+則$$F_1 \cup F_2 = \{ \emptyset, \{1\}, \{2\}, \{2,3\}, \{1,3\}, \Omega\}$$不是σ域，因為$$\{1\} \cup \{2\} = \{1,2\} \notin F_1 \cup F_2$$。
 
 ### 包含集合族的最小的σ域
 
@@ -184,7 +214,7 @@ $$S=\{1,2,3,4\}$$，$$G=\{\{1,2\},\{4\}\}$$，則$$\sigma(G)=\{\phi, \{1,2,\}  \
 
 對於隨機過程的一條路徑，從時間0到某個時間$$t$$ ，有一些事件是可以被確定的，有一些則不能，濾流把可以被確定的那些事件選出來。
 
-###
+
 
 
 

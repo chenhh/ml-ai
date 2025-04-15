@@ -4,15 +4,15 @@
 
 以下檢定方法的**虛無假設**$$H_0$$ 都是：「資料**服從常態分佈**」。
 
-| 方法名稱                              | 適用情況                   | 特點                                     | 實作                                                                                                                           |
-| --------------------------------- | ---------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| **Shapiro-Wilk test**（最推薦）        | 小到中樣本（$$n \leq 2000$$） | 最常用、靈敏度高。但大樣本可能過於嚴格。                   | scipy.stats.shapiro                                                                                                          |
-| **Kolmogorov-Smirnov test (K-S)** | 適用於一般情況                | 假設完整分佈已知，但對參數估計敏感。                     | scipy.stats.kstest                                                                                                           |
-| **Lilliefors test**               | K-S 的變形，μ 和 σ 為未知      | 常見於軟體套件。                               | statsmodels.stats.diagnostic.lilliefors                                                                                      |
-| **Anderson-Darling test**         | 小樣本也可用                 | 比 K-S 更重視尾部行為，但計算較複雜。                  | scipy.stats.anderson                                                                                                         |
-| **Jarque-Bera test**              | 大樣本                    | 基於偏態與峰度（Skewness & Kurtosis），但對小樣本不敏感。 | scipy.stats.jarque\_bera                                                                                                     |
-| **D'Agostino's K² test**          | 中至大樣本                  | 同樣基於偏態與峰度，檢定更全面                        | scipy.stats.normaltest                                                                                                       |
-| **QQ Plot（視覺）**                   | 輔助工具                   | 非正式，但直觀有效                              | <p></p><ul><li>Q-Q 圖：scipy.stats.probplot</li><li>直方圖：matplotlib.pyplot.hist</li><li>箱型圖：matplotlib.pyplot.boxplot</li></ul> |
+| 方法名稱                              | 適用情況                   | 特點                                     | 實作                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------------------- | ---------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Shapiro-Wilk test**（最推薦）        | 小到中樣本（$$n \leq 2000$$） | 最常用、靈敏度高。但大樣本可能過於嚴格。                   | [scipy.stats.shapiro](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html)                                                                                                                                                                                                                                                                                                   |
+| **Kolmogorov-Smirnov test (K-S)** | 適用於一般情況                | 假設完整分佈已知，但對參數估計敏感。                     | [scipy.stats.kstest](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kstest.html)                                                                                                                                                                                                                                                                                                     |
+| **Lilliefors test**               | K-S 的變形，μ 和 σ 為未知      | 常見於軟體套件。                               | [statsmodels.stats.diagnostic.lilliefors](https://www.statsmodels.org/dev/generated/statsmodels.stats.diagnostic.lilliefors.html)                                                                                                                                                                                                                                                                      |
+| **Anderson-Darling test**         | 小樣本也可用                 | 比 K-S 更重視尾部行為，但計算較複雜。                  | [scipy.stats.anderson](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.anderson.html)                                                                                                                                                                                                                                                                                                 |
+| **Jarque-Bera test**              | 大樣本                    | 基於偏態與峰度（Skewness & Kurtosis），但對小樣本不敏感。 | [scipy.stats.jarque\_bera](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.jarque_bera.html)                                                                                                                                                                                                                                                                                          |
+| **D'Agostino's K² test**          | 中至大樣本                  | 同樣基於偏態與峰度，檢定更全面                        | [scipy.stats.normaltest](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.normaltest.html)                                                                                                                                                                                                                                                                                             |
+| **QQ Plot（視覺）**                   | 輔助工具                   | 非正式，但直觀有效                              | <p></p><ul><li>Q-Q 圖：<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.probplot.html">scipy.stats.probplot</a></li><li>直方圖：<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html">matplotlib.pyplot.hist</a></li><li>箱型圖：<a href="https://app.gitbook.com/s/hxLbxPthAx6a1D9i59ud/economics/economics-reading">matplotlib.pyplot.boxplot</a></li></ul> |
 
 ### 檢定原理
 
@@ -67,15 +67,4 @@
 
 * Keya Rani Das and A. H. M. R. Imon. "A brief review of tests for normality," pp. 5-12, Vol. 5.1, American Journal of Theoretical and Applied Statistics, 2016.
 * <mark style="color:red;">Hugo Hernandez, "Testing for normality: what is the best method," Vol. 6, 2021-05, ForsChem Research Reports, 2021</mark>.
-
-## Geary檢定
-
-Ｇeary檢定對$$\gamma_1=0$$且$$\gamma_2 \neq 3$$而的非常態分佈檢定力較JB強。
-
-### 參考資料
-
-* Robert Charles. Geary,  "Testing for normality,"pp. 209-242, Vol. 34, No. 3/4, Biometrika, 1947 .
-* Ralph B.D'Agostino and Bernard Rosman. "The power of Geary's test of normality," pp. 181-184, Vol. 61.1, Biometrika,1974.
-
-## D'Agostino D檢定
 

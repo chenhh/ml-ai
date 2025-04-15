@@ -17,7 +17,7 @@ JB檢定：令$$X$$則常態分佈, 則三階與四階樣本動差為：
 * $$\mathrm{E}(\gamma_1)\equiv g_1=0$$
 * $$\mathrm{Var}(\gamma_1)=\frac{6(n-2)}{(n+1)(n+3)} \approx \frac{6}{n}$$
 * $$\mathrm{E}(\gamma_2)\equiv g_2=\frac{3(n-1)}{(n+1)} \approx 3$$
-* $$\mathrm{E}(\gamma_2) = \frac{24n(n-2)(n-3)}{(n+1)^2 (n+3)(n+5)} \approx \frac{24}{n}$$
+* $$\mathrm{Var}(\gamma_2) = \frac{24n(n-2)(n-3)}{(n+1)^2 (n+3)(n+5)} \approx \frac{24}{n}$$
 
 虛無假設$$H_0$$將$$g_1, g_2$$標準化後平方的統計量$$JB$$為：$$\displaystyle JB =  \left( \frac{\gamma_1}{\sqrt{6}{n}} \right)^2  +  \left( \frac{\gamma_2 - 3}{\sqrt{24}{n}} \right)^2  = \frac{n\gamma_1^2}{6} + \frac{n(\gamma_2 - 3)^2}{24} \sim \chi^2(2)$$
 

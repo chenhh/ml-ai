@@ -144,6 +144,7 @@
 * [連續分佈](probability-and-statistics/continuous-distribution/README.md)
   * [指數分佈](probability-and-statistics/continuous-distribution/exponential-distribution.md)
   * [常態分佈](probability-and-statistics/continuous-distribution/normal-distribution.md)
+  * [對數常態分佈](probability-and-statistics/continuous-distribution/log-normal-distribution.md)
   * [t分佈](probability-and-statistics/continuous-distribution/t-distribution.md)
   * [卡方分佈](probability-and-statistics/continuous-distribution/chi-distribution.md)
   * [F分佈](probability-and-statistics/continuous-distribution/f-distribution.md)

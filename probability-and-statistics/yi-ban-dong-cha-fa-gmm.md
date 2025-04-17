@@ -12,7 +12,7 @@ GMM的產生主要使用時機是最小平方法(OLS)的嚴格假設條件不成
 
 ## 動差估計法(method of moments)
 
-動差估計法是估計母體母數的方法。\[參考：[隨機變數的k次動差](moment-generating-function.md#sui-ji-bian-shu-dekci-dong-cha-kth-moment)]
+動差估計法是估計母體母數的方法。\[參考：[隨機變數的k次動差](moment-generating-function/#sui-ji-bian-shu-dekci-dong-cha-kth-moment)]
 
 * 首先推導涉及感興趣的母數的母體動差（即所考慮的隨機變數的冪的期望值）的方程式。
 * 然後取出一個樣本並從這個樣本估計母體動差。

@@ -105,9 +105,9 @@ $$\displaystyle  \begin{aligned} \mathrm{E}(X_{t+1} ~|~ X_1, X_2, \dots, X_t)  &
 
 > $$\Delta S_t = \mu S_{t-1} + \sigma S_{t-1} \Delta W_t$$ <mark style="color:red;">為Black-Scholes股價模型的離散型式。</mark>
 >
-> $$W_t\sim \text{i.i.d}(0,1)$$為獨立同分佈，平均值為0，變異數為1的隨機變數(白噪音)。
+> $$W_t\sim \text{i.i.d}(0,1)$$為獨立同分佈，平均值為0，變異數為1的隨機變數(白噪音)，通常假設為標準常態分佈$$N(0,1)$$。
 >
-> $$\mu, \sigma^2$$分別為股價漲跌比例的期望值與變異數。
+> $$\mu, \sigma^2$$分別為股價連續報酬的期望值與變異數。
 >
 > 連續型式為$$d S_t = \mu S_t dt + \sigma S_t dW_t$$。
 

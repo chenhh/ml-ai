@@ -174,7 +174,7 @@ $$\Delta \log S_t = \mu + \sigma \Delta W_t$$--(6)
 
 <mark style="color:red;">連續型式為</mark>$$\frac{dS_t}{dt} = \mu S_t + \sigma S_t \frac{dW_t}{dt}$$<mark style="color:red;">，通常寫為</mark>$$d S_t = \mu S_t dt + \sigma S_t dW_t$$。
 
-此處$$W_t$$為期望值0，變異數1的隨機漫步。
+此處$$W_t$$為期望值0，變異數1的隨機漫步(通常假設為常態分佈)。
 
 {% tabs %}
 {% tab title="股價隨機漫步" %}
@@ -306,3 +306,7 @@ plt.show()
 ```
 {% endtab %}
 {% endtabs %}
+
+### 當連續報酬非獨立時，股價不是隨機漫步
+
+> $$S_t = S_{t-1}+\epsilon_t$$，當連續報酬$$\epsilon_t$$不是獨立同分佈$$(0, \sigma^2)$$時，而且AR(1)過程$$\epsilon_t = \rho \epsilon_{t-1}+v_t, ~|\rho|<1, ~ v_t \sim \text{i.i.d.}(0, \sigma_v^2)$$時，則$$S_t$$不是隨機漫步。

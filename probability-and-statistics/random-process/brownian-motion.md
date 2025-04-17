@@ -4,7 +4,7 @@
 
 布朗運動是由Rober Brown(1828)首先觀察花粉分子存浮於液體內上下變動的一種物理過程。1990年時，Bachellier在他的博士論文中，將布朗運動運用在股價變動的模型。在1923年，由N.Wiener{維納）研究布朗運動的數學理論，嚴謹定義存在性，它是標度隨機漫步（scaled random walk）的極限隨機過程。因此布朗運動也稱為維納過程。Paul Samuelson（1970年諾貝爾經濟學獎得主）在1969年引入布朗運動研究財務經濟學的模型。
 
-<mark style="color:red;">布朗運動為一特殊的高斯過程(Gaussian process)</mark>。
+<mark style="color:red;">布朗運動為獨立增量的高斯過程(Gaussian process)</mark>。
 
 整理：
 
@@ -13,6 +13,12 @@
 3. $$\forall t>0, B_t \sim N(0, \sigma^2 t)$$
 4. $$B(t)$$為時間的連續的函數。
 
+{% tabs %}
+{% tab title="Brown運動" %}
+
+{% endtab %}
+
+{% tab title="標準Brown模擬" %}
 ```python
 # https://scipy-cookbook.readthedocs.io/items/BrownianMotion.html
 # 要注意給定的是標準差還是變異數
@@ -32,7 +38,9 @@ for k in range(n_step):
     x = x + norm.rvs(scale=delta**2*dt)
     print(x)
 ```
+{% endtab %}
 
+{% tab title="標準Brown繪圖" %}
 ```python
 """
 Standard Brownian Motion
@@ -108,6 +116,8 @@ ax.set_xlabel("Time")
 ax.set_ylabel("Asset Value")
 plt.show()
 ```
+{% endtab %}
+{% endtabs %}
 
 ## 布朗運動
 
@@ -183,10 +193,16 @@ $$\displaystyle  \begin{aligned} \mathrm{Var}(aB_s + bB_t)   & = a^2 \mathrm{Var
 
 > \[time homogeneity] $$W(t+h) - W(t), ~ t \geq 0$$是布朗運動。
 
+## 股價的隨機漫步模型
+
+
+
+
+
 ## 參考資料
 
 * [https://zhuanlan.zhihu.com/p/260675093](https://zhuanlan.zhihu.com/p/260675093)
-* [https://www.zhihu.com/column/c\_1355638234190479360](https://www.zhihu.com/column/c\_1355638234190479360)
+* [https://www.zhihu.com/column/c\_1355638234190479360](https://www.zhihu.com/column/c_1355638234190479360)
 * [https://zhuanlan.zhihu.com/p/383030923](https://zhuanlan.zhihu.com/p/383030923)
 * [https://songhuiming.github.io/pages/2017/06/03/mai-ru-gu-piao-shi-mai-ru-jie-zhi-shao-she-wei-duo-shao-cai-neng-bao-zheng-you-jiu-cheng-de-ba-wo-zai-dang-tian-cheng-jiao/](https://songhuiming.github.io/pages/2017/06/03/mai-ru-gu-piao-shi-mai-ru-jie-zhi-shao-she-wei-duo-shao-cai-neng-bao-zheng-you-jiu-cheng-de-ba-wo-zai-dang-tian-cheng-jiao/)
 

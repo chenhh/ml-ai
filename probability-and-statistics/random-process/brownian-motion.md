@@ -4,6 +4,22 @@
 
 布朗運動是由Rober Brown(1828)首先觀察花粉分子存浮於液體內上下變動的一種物理過程。1990年時，Bachellier在他的博士論文中，將布朗運動運用在股價變動的模型。在1923年，由N.Wiener{維納）研究布朗運動的數學理論，嚴謹定義存在性，它是標度隨機漫步（scaled random walk）的極限隨機過程。因此布朗運動也稱為維納過程。Paul Samuelson（1970年諾貝爾經濟學獎得主）在1969年引入布朗運動研究財務經濟學的模型。
 
+## Ｉ由隨機漫步到布朗運動
+
+[股價的隨機漫步模型(binomial model)](brownian-motion.md#gu-jia-de-sui-ji-man-bu-mo-xing)
+
+> 二項式股價隨機過程：$$\log S_t = \log S_0 + \sum_{i=1}^t \epsilon_t = \log S_0 + \mu t + \sigma W_t$$。
+>
+> 其中$$\epsilon_t = \log X_t = \begin{cases} \log u,& \text{ prob. p } \\ \log d,& \text{ prob. q = 1-p} \end{cases}$$為單期連續報酬率，$$1 \geq u < \infty, ~0<d < 1$$，$$X_t=\frac{S_t}{S_{t-1}}$$為相對價格。
+>
+> 則$$\mathrm{E}(\epsilon_t) = p \log u + q \log d \equiv \mu$$，$$\mathrm{Var}(\epsilon_t)= pq (\log u - log d)^2 \equiv \sigma^2$$。
+>
+> $$W_t = \sum_{i=1}^t Z_i$$，$$W_0=0$$，其中$$Z_t = \frac{\epsilon_t - \mu}{\sigma} \sim N(0,1)$$為獨立同標準常態分佈的變數。
+
+因為二項式分佈$$B(N,p)$$在試驗次數$$N$$足夠大，且機率$$p$$不變時，可近似常態分佈，因此將拆解標準常態變數$$Z_t$$如下：
+
+
+
 <mark style="color:red;">布朗運動為獨立增量的高斯過程(Gaussian process)</mark>。
 
 整理：

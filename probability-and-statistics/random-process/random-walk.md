@@ -310,3 +310,17 @@ plt.show()
 ### 當連續報酬非獨立時，股價不是隨機漫步
 
 > $$S_t = S_{t-1}+\epsilon_t$$，當連續報酬$$\epsilon_t$$不是獨立同分佈$$(0, \sigma^2)$$時，而且AR(1)過程$$\epsilon_t = \rho \epsilon_{t-1}+v_t, ~|\rho|<1, ~ v_t \sim \text{i.i.d.}(0, \sigma_v^2)$$時，則$$S_t$$不是隨機漫步。
+>
+> 且給定濾流$$\mathcal{F}_{t-1}$$(含$$S_{t-1}$$與$$\epsilon_{t-1}$$的訊息)條件時，$$S_t$$的最佳預測為$$\mathrm{E}(S_t|\mathcal{F}_{t-1})=S_{t-1}+\rho \epsilon_{t-1}$$。
+>
+> 更一般的情況為$$\mathrm{E}(S_{t+s}|\mathcal{F}_{t-1})=\mathrm{E}(S_{t+s-1}|\mathcal{F}_{t-1})+\rho^{s+1}\epsilon_{t-1}$$。
+>
+> 因此$$S_{t}$$不是平賭過程(martingale)。
+>
+> 即使$$\epsilon_t$$為獨立或無相關，若期望值不為0時，$$S_t$$非平賭過程。
+
+因為$$S_{t+1}=S_{t-1}+\epsilon_t = S_{t-1}+\rho \epsilon_{t-1} + v_t$$
+
+且$$\mathrm{E}(S_{t-1}|\mathcal{F}_{t-1})=S_{t-1}$$，$$\mathrm{E}(\epsilon_{t-1}|\mathcal{F}_{t-1})=\epsilon_{t-1}$$且$$\mathrm{E}(v_t|\mathcal{F}_{t-1})=0$$
+
+由條件期望值的線性性質得$$\mathrm{E}(S_t|\mathcal{F}_{t-1})=S_{t-1}+\rho \epsilon_{t-1}$$。

@@ -16,7 +16,29 @@
 >
 > $$W_t = \sum_{i=1}^t Z_i$$，$$W_0=0$$，其中$$Z_t = \frac{\epsilon_t - \mu}{\sigma} \sim N(0,1)$$為獨立同標準常態分佈的變數。
 
-因為二項式分佈$$B(N,p)$$在試驗次數$$N$$足夠大，且機率$$p$$不變時，可近似常態分佈，因此將拆解標準常態變數$$Z_t$$如下：
+#### <mark style="color:orange;">簡單隨機漫步模型</mark>
+
+二項式分佈$$B(N,p)$$在試驗次數$$N$$足夠大，且機率$$p$$不變時，可近似常態分佈。
+
+考慮時間步長為$$\Delta t$$，在每個時間點$$t = n \Delta t, ~ n \in \mathbb{N}$$的簡單隨機漫步$$S_t = S_{t-1}+\epsilon_t$$，初始條件$$S_0=0$$。
+
+其中$$\epsilon_t$$為獨立同分佈的隨機變數，表示每一步的位移，假設：$$\epsilon_t =  \begin{cases} + \sqrt{\Delta t}, & \text{ prob. p=1/2} \\ - \sqrt{\Delta t}, & \text{ prob. q=1-p=1/2}  \end{cases}$$
+
+則期望值$$\mathrm{E}(\epsilon_t)=0$$，變異數$$\mathrm{Var}(\epsilon)=\Delta x$$。
+
+#### <mark style="color:red;">連續時間和空間的縮放</mark>
+
+為了得到布朗運動，我們需要讓時間步長$$\Delta t \to 0$$，且空間步長$$\Delta x \to 0$$，並確保隨機漫步的行為在極限下收斂到連續過程。關鍵是選擇適當的縮放關係。
+
+考慮時間區間$$[0,T]$$分為$$N$$步，則$$\Delta t = \frac{T}{N}$$。在時間$$t = n \Delta t$$時，隨機漫步的位置為$$S_t = \sum_{i=1}^t \epsilon_i$$。
+
+<mark style="background-color:blue;">為了讓過程在極限下有意義，假設空間步長</mark>$$\Delta x$$<mark style="background-color:blue;">Δx和時間步長Δt 滿足某種關係</mark>。
+
+布朗運動的特徵是其增量的變異數與時間成正比，因此我們要求：$$\mathrm{Var}(S_t)=n \cdot \mathrm{Var}(\epsilon_i)=n \Delta t$$。
+
+
+
+
 
 
 

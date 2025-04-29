@@ -4,10 +4,12 @@
 
 黎曼（Riemann）積分的收斂概念與函數的點連續相似。
 
-* 函數$$f$$在點$$c$$連續$$\lim_{x \rightarrow c}⁡ f(x)=f(c) \Leftrightarrow \forall \epsilon> 0 ~ \exists \delta >0 \ni |f(x)−f(c)|<\epsilon ~  \forall |x−c|<\delta$$
+* 函數$$f$$在點$$c$$連續$$\displaystyle \lim_{x \to c}⁡ f(x)=f(c) \Leftrightarrow \forall \epsilon> 0 ~ \exists \delta >0 \ni |f(x)−f(c)|<\epsilon ~  \forall |x−c|<\delta$$
 *   同樣黎曼積分$$S(P,f,\alpha)=a \Leftrightarrow \forall \epsilon >0~ \exists \delta >0 \ni |S(P,f,\alpha)−a|<\epsilon ~\forall  \text{ partition }P[a,b], ~ \| P\| < \delta$$
 
     即要求積分值$$S(P,f,\alpha)$$與$$a$$的差值小於$$\epsilon$$， 必定可以找到某個定義域的分割方式$$P$$，其分割最大區間小於$$\delta$$時可滿足此條件。
+
+積分$$\int f dg$$中，$$f$$為被積分函數(integrand)，$$g$$為積分函數(integrator)。重點在討論$$g$$非連續函數時須滿足什麼條件才可積分。
 
 ## 更細的分割（finer partition）
 
@@ -115,7 +117,7 @@ proof:
 
 > $$u(x)v(x)|_{x=a}^b=u(b)v(b)-u(a)v(a)=\int_a^b u(x)dv(x)+\int_a^b v(x)du(x)$$
 
-![分部積分](../.gitbook/assets/integral\_by\_part.gif)
+![分部積分](../.gitbook/assets/integral_by_part.gif)
 
 ## 變數變換（change of variable）
 

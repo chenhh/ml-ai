@@ -14,11 +14,11 @@ description: simple market model
 
 ## 基本假設
 
-* 隨機性/離散單位價格(randomness)：風險資產的未來價格為隨機變數，且風險資產的未來價格為有限個實現值。
-* 價格的正性(positive of price)：所有資產價格大於等於0。
-* 可分性、流動性與放空(divisibliy, liquidity and short selling)：一定可買賣任意數量(實數)的商品。
-* 償付能力(solvency)：投資組合的價值在投資過程中必定大於等於0 。
-* <mark style="color:red;">無套利原則(no-arbitrage principle)：不存在無初始資產的無風險利潤</mark>。
+* <mark style="color:red;">**隨機性/離散單位價格(randomness)**</mark>：風險資產的未來價格為隨機變數，且風險資產的未來價格為有限個實現值。
+* <mark style="color:red;">**價格的正性(positive of price)**</mark>：所有資產價格大於等於0。
+* <mark style="color:red;">**可分性、流動性與放空(divisibliy, liquidity and short selling)**</mark>：一定可買賣任意數量(實數)的商品。
+* <mark style="color:red;">**償付能力(solvency)**</mark>：投資組合的價值在投資過程中必定大於等於0 。
+* <mark style="color:red;">**無套利原則(no-arbitrage principle)**</mark><mark style="color:red;">：不存在無初始資產的無風險利潤</mark>。
 
 假設只有一個風險(risky)資產與一個無風險(risk-free)資產形成的投資組合(portfolio)，且投資只有兩期$$t=0$$是現在，$$t=1$$是未來。
 
@@ -37,9 +37,9 @@ description: simple market model
 
 ### 價格的正性
 
-> $$p_{s,t} >0, ~ p_{a,t} > 0, ~ t=0,1$$
+> $$p_{s,t} >0, ~ p_{a,t} > 0, ~ t=0,1$$。
 
-此假設在一般的金融商品成立，<mark style="color:red;">但在2020年曾經出現石油價格為負值，而此存在資產為負值的選擇權定價模型</mark>。
+此假設在一般的金融商品成立，<mark style="color:red;">但在2020年曾經出現石油價格為負值(特例)，而此存在資產為負值的選擇權定價模型</mark>。
 
 <figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption><p>2020/04/21 西德州原油負油價</p></figcaption></figure>
 
@@ -154,4 +154,5 @@ proof:
 
 ## 參考資料
 
-* Marek Capinski and Tomasz Zastawniak, Mathematics for finance: an introduction to financial engineering, 1st, Springer, 2002.
+* \[入門] Marek Capinski and Tomasz Zastawniak, "Mathematics for finance: an introduction to financial engineering," 1st, Springer, 2002.
+* \[入門]  Martin Baxter and Andrew Rennie, "Financial Calculus: An Introduction to Derivative Pricing", Cambridge university press, 1996.

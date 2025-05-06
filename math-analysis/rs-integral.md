@@ -11,25 +11,31 @@
 
 積分$$\int f dg$$中，$$f$$為被積分函數(integrand)，$$g$$為積分函數(integrator)。重點在討論$$g$$非連續函數時須滿足什麼條件才可積分。
 
-## 更細的分割（finer partition）
+## 精細分割（finer partition）
 
 > 給定實數閉區間$$[a,b]$$，區間的分割（partition）$$P=\{ x_0, x_1, \ldots, x_n\},~ a=x_0<x_1< \ldots <x_n=b$$
 >
 > 若$$P^{'}$$為比$$P$$更細的分割，則$$P \subseteq P^{'}$$，即更細的分割必須包含原始的分割所有的點且有更多的點。
 >
-> 令區間$$[a,b]$$所有的分割形成的集合記為$$\mathcal{P}[a,b]$$
+> 令區間$$[a,b]$$所有的分割形成的集合記為$$\mathcal{P}[a,b]$$.&#x20;
 
-* 令$$\|P\|$$為分割$$P$$中，長度最大的區間。
-* 可得$$P \subseteq P^{'} \Rightarrow \| P^{'}\| \leq \| P \|$$，反之不成立。
-  * $$P=\{0,1,2\}$$ , $$\|P\|=1$$
-  * $$P^′=\{0, 0.5, 1,5, 2\}$$, $$\|P^{′} \|=1$$
-  * $$\|P^{′} \| \leq \|P\|$$  but $$P \nsubseteq P^{'}$$&#x20;
+令$$\displaystyle \|P\| = \sup_{1 \leq k \leq n} |x_k - x_{k-1}|$$為分割$$P$$中，長度最大的區間。
+
+可得$$P \subseteq P^{'} \Rightarrow \| P^{'}\| \leq \| P \|$$，反之不成立。
+
+* $$P=\{0,1,2\}$$ , $$\|P\|=1$$
+* $$P^′=\{0, 0.5, 1,5, 2\}$$, $$\|P^{′} \|=1$$
+* $$\|P^{′} \| \leq \|P\|$$  but $$P \nsubseteq P^{'}$$&#x20;
 
 ## Riemann-Stieltjes積分
 
-> * 令$$P$$ 為區間 $$[a,b]$$的分割，且$$t_k \in [x_{k−1}, x_k ]$$
-> * 定義 $$\begin{aligned} \displaystyle S(P, f, \alpha) & =\sum_{k=1}^nf(t_k)(\alpha(x_k) - \alpha(x_{k-1})) \\ &= \sum_{k=1}^n f(t_k)\Delta\alpha_k  \end{aligned}$$
-> * 稱為 Riemann-Stieltjes sum of function $$f$$ (integrand, 被積分函數) with respect to $$\alpha$$ (integrator, 積分函數).
+> 令$$P$$ 為區間 $$[a,b]$$的分割，且$$t_k \in [x_{k−1}, x_k ]$$
+>
+> 定義 $$\begin{aligned} \displaystyle S(P, f, \alpha) & =\sum_{k=1}^nf(t_k)(\alpha(x_k) - \alpha(x_{k-1})) \\ &= \sum_{k=1}^n f(t_k)\Delta\alpha_k  \end{aligned}$$
+>
+> 稱為 Riemann-Stieltjes sum of function $$f$$ (integrand, 被積分函數) with respect to $$\alpha$$ (integrator, 積分函數)。積分存在時記為$$f \in R(\alpha) \text{ on }[a,b]$$。
+>
+>
 >
 > 當積分函數$$\alpha(x)=x$$時，為一般的Riemann積分，如下圖。
 
@@ -37,14 +43,29 @@
 
 ## 黎曼可積分函數(Riemann-integrable function)
 
-> * $$f \in R(\alpha)$$  in $$[a,b]$$代表Riemann-integrable w.r.t. $$\alpha$$ if
->   * 定義1: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\subseteq P_{\epsilon} [a,b]$$
->   * 定義2: $$∀\epsilon>0 ~\exists \delta>0 \ni  |S(P,f,\alpha)−A|< \epsilon, \forall \text{ partition } P, ~ \|P\|< \delta$$
-> * &#x20;當要求$$S(P,f,\alpha)$$與$$A$$的差值小於$$\epsilon$$時，只要選定更細的分割$$P$$,，其最大的區間長度小於$$\delta$$即可達成。>
+> $$f$$為被積函數(integrand)，$$\alpha$$為積分函數(integrator)。
+>
+> $$f \in R(\alpha)$$  in $$[a,b]$$代表黎曼可積相對於函數$$\alpha$$(Riemann-integrable w.r.t. $$\alpha$$ )若存在$$A \in \mathbb{R}$$：
+>
+> 定義1: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\subseteq P_{\epsilon} [a,b]$$
+>
+> * 此處的分割$$P$$是比最大區間為$$\epsilon$$的$$P_{\epsilon}[a,b]$$更精細的分割。
+>
+> 定義2: $$∀\epsilon>0 ~\exists \delta>0 \ni  |S(P,f,\alpha)−A|< \epsilon, \forall \text{ partition } P, ~ \|P\|< \delta$$
+>
+> * 當要求$$S(P,f,\alpha)$$與$$A$$的差值小於$$\epsilon$$時，只要選定更小的分割$$P$$,，其最大的區間長度小於$$\delta$$即可達成，但是$$P$$不一定要滿足特定的精細分割。
+>
+> 黎曼可積分函數對於分割的方式沒有特定要求，因為均會收斂到相到的值；而若是隨機積分時，選相異的分割方式可能會收斂的不同值或是不同強度的收斂(機乎確定收斂或機率收斂)。
+>
+>>
 
-當積分存在時，記為$$\displaystyle \int_a^b f d\alpha =A$$或 $$\displaystyle \int_a^b f(x)d\alpha(x)=A$$
+當積分存在時，記為$$\displaystyle \int_a^b f d\alpha =A < \infty$$或 $$\displaystyle \int_a^b f(x)d\alpha(x)=A< \infty$$。
 
 為如果把$$f$$的定義域越切越細時，則分割每一區間面積的加總，會逐漸逼近至積分值。
+
+由定義可得積分存在時，$$\int_a^b d\alpha(x) = \alpha(b) - \alpha(a)$$。
+
+若$$f \in R(\alpha)$$ on \[a,b]且$$\int_a^b f d\alpha =0$$，$$f$$在區間$$[a,b]$$為單調函數，則$$\alpha$$在區間$$[a,b]$$為單調函數。
 
 ![可積分函數](../.gitbook/assets/Riemann-integrable.gif)
 

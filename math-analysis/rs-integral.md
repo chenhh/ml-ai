@@ -27,6 +27,8 @@
 * $$P^′=\{0, 0.5, 1,5, 2\}$$, $$\|P^{′} \|=1$$
 * $$\|P^{′} \| \leq \|P\|$$  but $$P \nsubseteq P^{'}$$&#x20;
 
+$$\displaystyle \begin{aligned} \sum_{k=1}^n \Delta \alpha_k & = \sum_{k=1}^n (\alpha(x_k)  - \alpha(x_{k-1}))  \\     & = (\alpha(x_n)  - \alpha(x_{n-1})) +(\alpha(x_{n-1})  - \alpha(x_{n-2})) + \dots + (\alpha(x_1)  - \alpha(x_{0})) \\     & = \alpha(x_n) - \alpha(x_0) \\     & = \alpha(b) - \alpha(a)  \end{aligned}$$
+
 ## Riemann-Stieltjes積分
 
 > 令$$P$$ 為區間 $$[a,b]$$的分割，且$$t_k \in [x_{k−1}, x_k ]$$
@@ -49,7 +51,7 @@
 >
 > 定義1: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\subseteq P_{\epsilon} [a,b]$$
 >
-> * 此處的分割$$P$$是比最大區間為$$\epsilon$$的$$P_{\epsilon}[a,b]$$更精細的分割。
+> * 此處的分割$$P$$是比最大區間為$$\epsilon$$的$$P_{\epsilon}[a,b]$$更精細的分割。因此$$\|P\| \leq \|P_{\epsilon}\|$$。
 >
 > 定義2: $$∀\epsilon>0 ~\exists \delta>0 \ni  |S(P,f,\alpha)−A|< \epsilon, \forall \text{ partition } P, ~ \|P\|< \delta$$
 >

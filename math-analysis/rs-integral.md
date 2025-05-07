@@ -13,7 +13,9 @@
 
 ## 精細分割（finer partition）
 
-> 給定實數閉區間$$[a,b]$$，區間的分割（partition）$$P=\{ x_0, x_1, \ldots, x_n\},~ a=x_0<x_1< \ldots <x_n=b$$
+> 給定實數閉區間$$[a,b]$$，區間的分割（partition）$$P=\{ x_0, x_1, \ldots, x_n\},~ a=x_0<x_1< \ldots <x_n=b$$。
+>
+> $$\Delta x_k = x_k - x_{k-1}$$。
 >
 > 若$$P^{'}$$為比$$P$$更細的分割，則$$P \subseteq P^{'}$$，即更細的分割必須包含原始的分割所有的點且有更多的點。
 >
@@ -45,29 +47,62 @@ $$\displaystyle \begin{aligned} \sum_{k=1}^n \Delta \alpha_k & = \sum_{k=1}^n (\
 
 ## 黎曼可積分函數(Riemann-integrable function)
 
-> $$f$$為被積函數(integrand)，$$\alpha$$為積分函數(integrator)。
+> $$f$$為被積函數(integrand)，$$\alpha$$為積分函數(integrator)。此處不限定$$f, \alpha$$的性質，只定義積分存在時的性質。
 >
 > $$f \in R(\alpha)$$  in $$[a,b]$$代表黎曼可積相對於函數$$\alpha$$(Riemann-integrable w.r.t. $$\alpha$$ )若存在$$A \in \mathbb{R}$$：
 >
-> 定義1: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\subseteq P_{\epsilon} [a,b]$$
+> <mark style="background-color:red;">\[精細分割定義]</mark>: $$∀\epsilon >0 ~ \exists \text{ partition  }P_\epsilon [a,b] \ni  |S(P,f,\alpha)−A|<\epsilon ~ \forall P\subseteq P_{\epsilon} [a,b]$$且$$\forall t_k \in [x_{k-1}, x_k]$$。
 >
-> * 此處的分割$$P$$是比最大區間為$$\epsilon$$的$$P_{\epsilon}[a,b]$$更精細的分割。因此$$\|P\| \leq \|P_{\epsilon}\|$$。
+> * 此處的分割$$P$$是比最大區間為$$\epsilon$$的$$P_{\epsilon}[a,b]$$更精細的分割，即$$P_\epsilon \subseteq P$$。因此$$\|P\| \leq \|P_{\epsilon}\|$$。
 >
-> 定義2: $$∀\epsilon>0 ~\exists \delta>0 \ni  |S(P,f,\alpha)−A|< \epsilon, \forall \text{ partition } P, ~ \|P\|< \delta$$
+> <mark style="background-color:red;">\[最大區間定義]</mark>: $$∀\epsilon>0 ~\exists \delta>0 \ni  |S(P,f,\alpha)−A|< \epsilon, \forall \text{ partition } P, ~ \|P\|< \delta$$且$$\forall t_k \in [x_{k-1}, x_k]$$
 >
-> * 當要求$$S(P,f,\alpha)$$與$$A$$的差值小於$$\epsilon$$時，只要選定更小的分割$$P$$,，其最大的區間長度小於$$\delta$$即可達成，但是$$P$$不一定要滿足特定的精細分割。
+> * 當要求$$S(P,f,\alpha)$$與$$A$$的差值小於$$\epsilon$$時，只要選定更小的分割$$P$$，其最大的區間長度小於$$\delta$$即可達成，但是$$P$$不一定是$$P_{\epsilon}$$的精細分割。
+> * 令滿足上述條件的分割$$P_{\delta}[a,b]$$，如果$$\|P\| < \|P_\delta\|$$且$$\|P\|$$不是$$\|P_\delta\|$$的精細分割，則$$P$$中存在部份分割不是$$P_\delta$$分割的子集合，且這些部份分割的長度小於等於$$\|P\|$$，因此可將這些部份分割再切細至成為$$P_\delta$$分割的子集合且長度小於等於$$\|P\|$$。
+>
+> <mark style="color:red;">兩種定義不等價，見以下範例</mark>。
+>
+> <mark style="color:red;">由</mark>$$S(P, f, \alpha)$$<mark style="color:red;">的定義可知積分存在的條件在於分割區間時，函數</mark>$$f$$<mark style="color:red;">與</mark>$$\alpha$$<mark style="color:red;">的區間值級數和是否收斂</mark>。
 >
 > 黎曼可積分函數對於分割的方式沒有特定要求，因為均會收斂到相到的值；而若是隨機積分時，選相異的分割方式可能會收斂的不同值或是不同強度的收斂(機乎確定收斂或機率收斂)。
 >
 >>
 
-當積分存在時，記為$$\displaystyle \int_a^b f d\alpha =A < \infty$$或 $$\displaystyle \int_a^b f(x)d\alpha(x)=A< \infty$$。
+<mark style="color:red;">當積分存在時，滿足唯一性</mark>，記為$$\displaystyle \int_a^b f d\alpha =A < \infty$$或 $$\displaystyle \int_a^b f(x)d\alpha(x)=A< \infty$$。
 
 為如果把$$f$$的定義域越切越細時，則分割每一區間面積的加總，會逐漸逼近至積分值。
 
+### 範例：精細分割可積但最大區間不可積
+
+> 令$$f(x)=\alpha (x) =0, ~ \forall a \leq x <c$$且$$f(x)=\alpha(x)=1, ~ \forall c < x \leq b$$。且$$f(c)=0, \alpha(c)=1$$。
+>
+> 則$$\int_a^b f d\alpha$$依精細分割定義存在，但依最大區間定義不存在。
+
+### 常數函數與積分函數的積分
+
 由定義可得積分存在時，$$\int_a^b d\alpha(x) = \alpha(b) - \alpha(a)$$。
 
-若$$f \in R(\alpha)$$ on \[a,b]且$$\int_a^b f d\alpha =0$$，$$f$$在區間$$[a,b]$$為單調函數，則$$\alpha$$在區間$$[a,b]$$為單調函數。
+<details>
+
+<summary>proof: 由<span class="math">\int_a^b d \alpha(x) = \sum_{k=1}^n \alpha(x_k) - \alpha(x_{k-1})= \alpha(b) - \alpha(a)</span></summary>
+
+若$$\int_a^b d \alpha(x)$$存在時，$$\forall \epsilon > 0 \exists P_{\epsilon}[a,b] \ni |\int_a^b d \alpha (x) - A| < \epsilon$$，$$\forall P \subseteq  P_{\epsilon}$$。
+
+因此令$$P = \{x_0, x_1, \dots , x_n\}, \|P\| < \epsilon$$。
+
+所以$$\int_a^b d \alpha(x) = \sum_{k=1}^n  \Delta \alpha_k, ~ t_k \in [x_{k-1}, x_k]$$$$\displaystyle \begin{aligned} \sum_{k=1}^n \Delta \alpha_k & = \sum_{k=1}^n (\alpha(x_k)  - \alpha(x_{k-1}))  \\     & = (\alpha(x_n)  - \alpha(x_{n-1})) +(\alpha(x_{n-1})  - \alpha(x_{n-2})) + \dots + (\alpha(x_1)  - \alpha(x_{0})) \\     & = \alpha(x_n) - \alpha(x_0) \\     & = \alpha(b) - \alpha(a)  \end{aligned}$$(QED)
+
+</details>
+
+### 單調函數積分為0時，積分函數為常數
+
+若$$f \in R(\alpha)$$ on \[a,b]且$$\int_a^b f d\alpha =0$$，$$f$$在區間$$[a,b]$$為單調函數，則$$\alpha$$在區間$$[a,b]$$為常數。
+
+
+
+
+
+
 
 ![可積分函數](../.gitbook/assets/Riemann-integrable.gif)
 

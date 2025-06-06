@@ -15,6 +15,8 @@
 
 **股東權益變動表**則詳細記錄了股東權益(股本(Share Capital)與資本公積 (Additional Paid In Capital，APIC）及保留盈餘(Retained Earnings))在期末餘額的變化來源，補足了資產負債表中股東權益部分僅呈現總額的資訊。藉由這三個項目之間的組成及變化過程，可以推估企業的營運資金來源、資源配置及資金分配、股東投資效益、歷年盈餘狀態。
 
+<figure><img src="../.gitbook/assets/realtion.png" alt="" width="563"><figcaption><p>營收與現金流量</p></figcaption></figure>
+
 ## 四大報表
 
 企業常用的財務報表如下：

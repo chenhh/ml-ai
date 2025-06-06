@@ -15,7 +15,7 @@
 
 **股東權益變動表**則詳細記錄了股東權益(股本(Share Capital)與資本公積 (Additional Paid In Capital，APIC）及保留盈餘(Retained Earnings))在期末餘額的變化來源，補足了資產負債表中股東權益部分僅呈現總額的資訊。藉由這三個項目之間的組成及變化過程，可以推估企業的營運資金來源、資源配置及資金分配、股東投資效益、歷年盈餘狀態。
 
-<figure><img src="../.gitbook/assets/realtion.png" alt="" width="563"><figcaption><p>營收與現金流量</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/realtion.png" alt="" width="563"><figcaption><p>營收與現金流量</p></figcaption></figure>
 
 ## 四大報表
 
@@ -30,7 +30,7 @@
   * **股東權益**：企業所有者對企業的剩餘權利，也就是資產減去負債後的淨值。
 * <mark style="color:red;">**平衡原理**</mark><mark style="color:red;">：資產 = 負債 + 股東權益</mark>。
 
-<figure><img src="../.gitbook/assets/balance_sheet.png" alt="" width="563"><figcaption><p>資訊負債表</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/balance_sheet.png" alt="" width="563"><figcaption><p>資訊負債表</p></figcaption></figure>
 
 **綜合損益表 (Income Statement / Profit and Loss Statement / Statement of Comprehensive Income)**：
 
@@ -40,7 +40,7 @@
   * **費用**：企業在經營過程中為獲得收入所發生的成本，如銷售成本、管理費用、研發費用等。
 * **結果**：最終計算出企業的**淨利潤 (Net Income)** 或**淨虧損 (Net Loss)**。
 
-<figure><img src="../.gitbook/assets/revenue-profit.jpg" alt="" width="563"><figcaption><p>綜合損益表結構</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/revenue-profit.jpg" alt="" width="563"><figcaption><p>綜合損益表結構</p></figcaption></figure>
 
 **現金流量表 (Statement of Cash Flows)**：
 

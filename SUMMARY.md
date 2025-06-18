@@ -545,5 +545,6 @@
 
 * [龍王理論](financial-prediction/dragon-king-theory.md)
 * [LPPLS模型](financial-prediction/lppls-model.md)
+* [vnpy](financial-prediction/vnpy.md)
 * [財務報表](financial-prediction/financial-statement/README.md)
   * [公司的品格](financial-prediction/financial-statement/corporate-goverance.md)

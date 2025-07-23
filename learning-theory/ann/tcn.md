@@ -10,7 +10,7 @@ description: Temporal Convolution Network
 
 因果卷積一開始的提出：是為瞭解決圖片的分割為題，會跳過部分輸入，提升 image recognition的準確率，同時它允許卷積的時的輸入存在間隔取樣。
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>從時間序列中提取具有不同時間間隔的功能，並最終結合這些功能。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>從時間序列中提取具有不同時間間隔的功能，並最終結合這些功能。</p></figcaption></figure>
 
 #### 序列建模的時序預測
 
@@ -25,7 +25,7 @@ description: Temporal Convolution Network
 
 下圖為 TCN 整體模型架構：(a) 為因果卷積示意圖 ; (b) 為殘差模組內部構造 ; (c) 為殘差卷積的跳層連線在 TCN 的示意圖（較下層的特徵跳層連線到上層，提高模型準確度）
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>TCN論文圖1。TCN中的基本元素。</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>TCN論文圖1。TCN中的基本元素。</p></figcaption></figure>
 
 ##
 

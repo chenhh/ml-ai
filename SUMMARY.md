@@ -546,6 +546,13 @@
 * [龍王理論](financial-prediction/dragon-king-theory.md)
 * [LPPLS模型](financial-prediction/lppls-model.md)
 * [vnpy](financial-prediction/vnpy.md)
-* [財務報表](financial-prediction/financial-statement/README.md)
-  * [公司的品格](financial-prediction/financial-statement/corporate-goverance.md)
-  * [運勢](financial-prediction/financial-statement/yun-shi.md)
+* [財務報表](financial-prediction/financial-statement.md)
+
+## 公司治理 <a href="#corporate-governance" id="corporate-governance"></a>
+
+* [公司的品格](corporate-governance/corporate-goverance.md)
+* [運：唐吉訶德的致勝秘密](corporate-governance/trend_don_quijote.md)
+
+## 交易與投資 <a href="#trading_investment" id="trading_investment"></a>
+
+* [韓國最強法人交易員的獲利關鍵](trading_investment/han-guo-zui-qiang-fa-ren-jiao-yi-yuan-de-huo-li-guan-jian.md)
